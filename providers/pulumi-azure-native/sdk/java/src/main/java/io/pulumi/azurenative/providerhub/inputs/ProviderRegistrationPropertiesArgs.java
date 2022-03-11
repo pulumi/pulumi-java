@@ -15,7 +15,7 @@ import io.pulumi.azurenative.providerhub.inputs.ResourceProviderManifestProperti
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderManifestPropertiesRequestHeaderOptionsArgs;
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -29,126 +29,126 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
     public static final ProviderRegistrationPropertiesArgs Empty = new ProviderRegistrationPropertiesArgs();
 
     @InputImport(name="capabilities")
-      private final @Nullable Input<List<ResourceProviderCapabilitiesArgs>> capabilities;
+      private final @Nullable Output<List<ResourceProviderCapabilitiesArgs>> capabilities;
 
-    public Input<List<ResourceProviderCapabilitiesArgs>> getCapabilities() {
-        return this.capabilities == null ? Input.empty() : this.capabilities;
+    public Output<List<ResourceProviderCapabilitiesArgs>> getCapabilities() {
+        return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
     @InputImport(name="featuresRule")
-      private final @Nullable Input<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule;
+      private final @Nullable Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule;
 
-    public Input<ResourceProviderManifestPropertiesFeaturesRuleArgs> getFeaturesRule() {
-        return this.featuresRule == null ? Input.empty() : this.featuresRule;
+    public Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> getFeaturesRule() {
+        return this.featuresRule == null ? Output.empty() : this.featuresRule;
     }
 
     @InputImport(name="management")
-      private final @Nullable Input<ResourceProviderManifestPropertiesManagementArgs> management;
+      private final @Nullable Output<ResourceProviderManifestPropertiesManagementArgs> management;
 
-    public Input<ResourceProviderManifestPropertiesManagementArgs> getManagement() {
-        return this.management == null ? Input.empty() : this.management;
+    public Output<ResourceProviderManifestPropertiesManagementArgs> getManagement() {
+        return this.management == null ? Output.empty() : this.management;
     }
 
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     @InputImport(name="providerAuthentication")
-      private final @Nullable Input<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication;
+      private final @Nullable Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication;
 
-    public Input<ResourceProviderManifestPropertiesProviderAuthenticationArgs> getProviderAuthentication() {
-        return this.providerAuthentication == null ? Input.empty() : this.providerAuthentication;
+    public Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> getProviderAuthentication() {
+        return this.providerAuthentication == null ? Output.empty() : this.providerAuthentication;
     }
 
     @InputImport(name="providerAuthorizations")
-      private final @Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
+      private final @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
 
-    public Input<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
-        return this.providerAuthorizations == null ? Input.empty() : this.providerAuthorizations;
+    public Output<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
+        return this.providerAuthorizations == null ? Output.empty() : this.providerAuthorizations;
     }
 
     @InputImport(name="providerHubMetadata")
-      private final @Nullable Input<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata;
+      private final @Nullable Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata;
 
-    public Input<ProviderRegistrationPropertiesProviderHubMetadataArgs> getProviderHubMetadata() {
-        return this.providerHubMetadata == null ? Input.empty() : this.providerHubMetadata;
+    public Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> getProviderHubMetadata() {
+        return this.providerHubMetadata == null ? Output.empty() : this.providerHubMetadata;
     }
 
     @InputImport(name="providerType")
-      private final @Nullable Input<Either<String,ResourceProviderType>> providerType;
+      private final @Nullable Output<Either<String,ResourceProviderType>> providerType;
 
-    public Input<Either<String,ResourceProviderType>> getProviderType() {
-        return this.providerType == null ? Input.empty() : this.providerType;
+    public Output<Either<String,ResourceProviderType>> getProviderType() {
+        return this.providerType == null ? Output.empty() : this.providerType;
     }
 
     @InputImport(name="providerVersion")
-      private final @Nullable Input<String> providerVersion;
+      private final @Nullable Output<String> providerVersion;
 
-    public Input<String> getProviderVersion() {
-        return this.providerVersion == null ? Input.empty() : this.providerVersion;
+    public Output<String> getProviderVersion() {
+        return this.providerVersion == null ? Output.empty() : this.providerVersion;
     }
 
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Input<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     @InputImport(name="requestHeaderOptions")
-      private final @Nullable Input<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
+      private final @Nullable Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
 
-    public Input<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> getRequestHeaderOptions() {
-        return this.requestHeaderOptions == null ? Input.empty() : this.requestHeaderOptions;
+    public Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> getRequestHeaderOptions() {
+        return this.requestHeaderOptions == null ? Output.empty() : this.requestHeaderOptions;
     }
 
     @InputImport(name="requiredFeatures")
-      private final @Nullable Input<List<String>> requiredFeatures;
+      private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Input<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
+    public Output<List<String>> getRequiredFeatures() {
+        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
     }
 
     @InputImport(name="subscriptionLifecycleNotificationSpecifications")
-      private final @Nullable Input<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
+      private final @Nullable Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
 
-    public Input<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> getSubscriptionLifecycleNotificationSpecifications() {
-        return this.subscriptionLifecycleNotificationSpecifications == null ? Input.empty() : this.subscriptionLifecycleNotificationSpecifications;
+    public Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> getSubscriptionLifecycleNotificationSpecifications() {
+        return this.subscriptionLifecycleNotificationSpecifications == null ? Output.empty() : this.subscriptionLifecycleNotificationSpecifications;
     }
 
     @InputImport(name="templateDeploymentOptions")
-      private final @Nullable Input<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
+      private final @Nullable Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
 
-    public Input<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> getTemplateDeploymentOptions() {
-        return this.templateDeploymentOptions == null ? Input.empty() : this.templateDeploymentOptions;
+    public Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> getTemplateDeploymentOptions() {
+        return this.templateDeploymentOptions == null ? Output.empty() : this.templateDeploymentOptions;
     }
 
     public ProviderRegistrationPropertiesArgs(
-        @Nullable Input<List<ResourceProviderCapabilitiesArgs>> capabilities,
-        @Nullable Input<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule,
-        @Nullable Input<ResourceProviderManifestPropertiesManagementArgs> management,
-        @Nullable Input<Object> metadata,
-        @Nullable Input<String> namespace,
-        @Nullable Input<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication,
-        @Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations,
-        @Nullable Input<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata,
-        @Nullable Input<Either<String,ResourceProviderType>> providerType,
-        @Nullable Input<String> providerVersion,
-        @Nullable Input<Either<String,ProvisioningState>> provisioningState,
-        @Nullable Input<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions,
-        @Nullable Input<List<String>> requiredFeatures,
-        @Nullable Input<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications,
-        @Nullable Input<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions) {
+        @Nullable Output<List<ResourceProviderCapabilitiesArgs>> capabilities,
+        @Nullable Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule,
+        @Nullable Output<ResourceProviderManifestPropertiesManagementArgs> management,
+        @Nullable Output<Object> metadata,
+        @Nullable Output<String> namespace,
+        @Nullable Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication,
+        @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations,
+        @Nullable Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata,
+        @Nullable Output<Either<String,ResourceProviderType>> providerType,
+        @Nullable Output<String> providerVersion,
+        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
+        @Nullable Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions,
+        @Nullable Output<List<String>> requiredFeatures,
+        @Nullable Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications,
+        @Nullable Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions) {
         this.capabilities = capabilities;
         this.featuresRule = featuresRule;
         this.management = management;
@@ -167,21 +167,21 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
     }
 
     private ProviderRegistrationPropertiesArgs() {
-        this.capabilities = Input.empty();
-        this.featuresRule = Input.empty();
-        this.management = Input.empty();
-        this.metadata = Input.empty();
-        this.namespace = Input.empty();
-        this.providerAuthentication = Input.empty();
-        this.providerAuthorizations = Input.empty();
-        this.providerHubMetadata = Input.empty();
-        this.providerType = Input.empty();
-        this.providerVersion = Input.empty();
-        this.provisioningState = Input.empty();
-        this.requestHeaderOptions = Input.empty();
-        this.requiredFeatures = Input.empty();
-        this.subscriptionLifecycleNotificationSpecifications = Input.empty();
-        this.templateDeploymentOptions = Input.empty();
+        this.capabilities = Output.empty();
+        this.featuresRule = Output.empty();
+        this.management = Output.empty();
+        this.metadata = Output.empty();
+        this.namespace = Output.empty();
+        this.providerAuthentication = Output.empty();
+        this.providerAuthorizations = Output.empty();
+        this.providerHubMetadata = Output.empty();
+        this.providerType = Output.empty();
+        this.providerVersion = Output.empty();
+        this.provisioningState = Output.empty();
+        this.requestHeaderOptions = Output.empty();
+        this.requiredFeatures = Output.empty();
+        this.subscriptionLifecycleNotificationSpecifications = Output.empty();
+        this.templateDeploymentOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -193,21 +193,21 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ResourceProviderCapabilitiesArgs>> capabilities;
-        private @Nullable Input<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule;
-        private @Nullable Input<ResourceProviderManifestPropertiesManagementArgs> management;
-        private @Nullable Input<Object> metadata;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication;
-        private @Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
-        private @Nullable Input<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata;
-        private @Nullable Input<Either<String,ResourceProviderType>> providerType;
-        private @Nullable Input<String> providerVersion;
-        private @Nullable Input<Either<String,ProvisioningState>> provisioningState;
-        private @Nullable Input<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
-        private @Nullable Input<List<String>> requiredFeatures;
-        private @Nullable Input<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
-        private @Nullable Input<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
+        private @Nullable Output<List<ResourceProviderCapabilitiesArgs>> capabilities;
+        private @Nullable Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule;
+        private @Nullable Output<ResourceProviderManifestPropertiesManagementArgs> management;
+        private @Nullable Output<Object> metadata;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication;
+        private @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
+        private @Nullable Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata;
+        private @Nullable Output<Either<String,ResourceProviderType>> providerType;
+        private @Nullable Output<String> providerVersion;
+        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+        private @Nullable Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
+        private @Nullable Output<List<String>> requiredFeatures;
+        private @Nullable Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
+        private @Nullable Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
 
         public Builder() {
     	      // Empty
@@ -232,153 +232,153 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
     	      this.templateDeploymentOptions = defaults.templateDeploymentOptions;
         }
 
-        public Builder capabilities(@Nullable Input<List<ResourceProviderCapabilitiesArgs>> capabilities) {
+        public Builder capabilities(@Nullable Output<List<ResourceProviderCapabilitiesArgs>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
         public Builder capabilities(@Nullable List<ResourceProviderCapabilitiesArgs> capabilities) {
-            this.capabilities = Input.ofNullable(capabilities);
+            this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
 
-        public Builder featuresRule(@Nullable Input<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule) {
+        public Builder featuresRule(@Nullable Output<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
 
         public Builder featuresRule(@Nullable ResourceProviderManifestPropertiesFeaturesRuleArgs featuresRule) {
-            this.featuresRule = Input.ofNullable(featuresRule);
+            this.featuresRule = Output.ofNullable(featuresRule);
             return this;
         }
 
-        public Builder management(@Nullable Input<ResourceProviderManifestPropertiesManagementArgs> management) {
+        public Builder management(@Nullable Output<ResourceProviderManifestPropertiesManagementArgs> management) {
             this.management = management;
             return this;
         }
 
         public Builder management(@Nullable ResourceProviderManifestPropertiesManagementArgs management) {
-            this.management = Input.ofNullable(management);
+            this.management = Output.ofNullable(management);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder providerAuthentication(@Nullable Input<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication) {
+        public Builder providerAuthentication(@Nullable Output<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication) {
             this.providerAuthentication = providerAuthentication;
             return this;
         }
 
         public Builder providerAuthentication(@Nullable ResourceProviderManifestPropertiesProviderAuthenticationArgs providerAuthentication) {
-            this.providerAuthentication = Input.ofNullable(providerAuthentication);
+            this.providerAuthentication = Output.ofNullable(providerAuthentication);
             return this;
         }
 
-        public Builder providerAuthorizations(@Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
+        public Builder providerAuthorizations(@Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
             this.providerAuthorizations = providerAuthorizations;
             return this;
         }
 
         public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
-            this.providerAuthorizations = Input.ofNullable(providerAuthorizations);
+            this.providerAuthorizations = Output.ofNullable(providerAuthorizations);
             return this;
         }
 
-        public Builder providerHubMetadata(@Nullable Input<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata) {
+        public Builder providerHubMetadata(@Nullable Output<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata) {
             this.providerHubMetadata = providerHubMetadata;
             return this;
         }
 
         public Builder providerHubMetadata(@Nullable ProviderRegistrationPropertiesProviderHubMetadataArgs providerHubMetadata) {
-            this.providerHubMetadata = Input.ofNullable(providerHubMetadata);
+            this.providerHubMetadata = Output.ofNullable(providerHubMetadata);
             return this;
         }
 
-        public Builder providerType(@Nullable Input<Either<String,ResourceProviderType>> providerType) {
+        public Builder providerType(@Nullable Output<Either<String,ResourceProviderType>> providerType) {
             this.providerType = providerType;
             return this;
         }
 
         public Builder providerType(@Nullable Either<String,ResourceProviderType> providerType) {
-            this.providerType = Input.ofNullable(providerType);
+            this.providerType = Output.ofNullable(providerType);
             return this;
         }
 
-        public Builder providerVersion(@Nullable Input<String> providerVersion) {
+        public Builder providerVersion(@Nullable Output<String> providerVersion) {
             this.providerVersion = providerVersion;
             return this;
         }
 
         public Builder providerVersion(@Nullable String providerVersion) {
-            this.providerVersion = Input.ofNullable(providerVersion);
+            this.providerVersion = Output.ofNullable(providerVersion);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder requestHeaderOptions(@Nullable Input<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {
+        public Builder requestHeaderOptions(@Nullable Output<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {
             this.requestHeaderOptions = requestHeaderOptions;
             return this;
         }
 
         public Builder requestHeaderOptions(@Nullable ResourceProviderManifestPropertiesRequestHeaderOptionsArgs requestHeaderOptions) {
-            this.requestHeaderOptions = Input.ofNullable(requestHeaderOptions);
+            this.requestHeaderOptions = Output.ofNullable(requestHeaderOptions);
             return this;
         }
 
-        public Builder requiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Input.ofNullable(requiredFeatures);
+            this.requiredFeatures = Output.ofNullable(requiredFeatures);
             return this;
         }
 
-        public Builder subscriptionLifecycleNotificationSpecifications(@Nullable Input<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications) {
+        public Builder subscriptionLifecycleNotificationSpecifications(@Nullable Output<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = subscriptionLifecycleNotificationSpecifications;
             return this;
         }
 
         public Builder subscriptionLifecycleNotificationSpecifications(@Nullable ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs subscriptionLifecycleNotificationSpecifications) {
-            this.subscriptionLifecycleNotificationSpecifications = Input.ofNullable(subscriptionLifecycleNotificationSpecifications);
+            this.subscriptionLifecycleNotificationSpecifications = Output.ofNullable(subscriptionLifecycleNotificationSpecifications);
             return this;
         }
 
-        public Builder templateDeploymentOptions(@Nullable Input<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions) {
+        public Builder templateDeploymentOptions(@Nullable Output<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions) {
             this.templateDeploymentOptions = templateDeploymentOptions;
             return this;
         }
 
         public Builder templateDeploymentOptions(@Nullable ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs templateDeploymentOptions) {
-            this.templateDeploymentOptions = Input.ofNullable(templateDeploymentOptions);
+            this.templateDeploymentOptions = Output.ofNullable(templateDeploymentOptions);
             return this;
         }
         public ProviderRegistrationPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="cpuIdle")
-      private final @Nullable Input<Boolean> cpuIdle;
+      private final @Nullable Output<Boolean> cpuIdle;
 
-    public Input<Boolean> getCpuIdle() {
-        return this.cpuIdle == null ? Input.empty() : this.cpuIdle;
+    public Output<Boolean> getCpuIdle() {
+        return this.cpuIdle == null ? Output.empty() : this.cpuIdle;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="limits")
-      private final @Nullable Input<Map<String,String>> limits;
+      private final @Nullable Output<Map<String,String>> limits;
 
-    public Input<Map<String,String>> getLimits() {
-        return this.limits == null ? Input.empty() : this.limits;
+    public Output<Map<String,String>> getLimits() {
+        return this.limits == null ? Output.empty() : this.limits;
     }
 
     public GoogleCloudRunOpV2ResourceRequirementsArgs(
-        @Nullable Input<Boolean> cpuIdle,
-        @Nullable Input<Map<String,String>> limits) {
+        @Nullable Output<Boolean> cpuIdle,
+        @Nullable Output<Map<String,String>> limits) {
         this.cpuIdle = cpuIdle;
         this.limits = limits;
     }
 
     private GoogleCloudRunOpV2ResourceRequirementsArgs() {
-        this.cpuIdle = Input.empty();
-        this.limits = Input.empty();
+        this.cpuIdle = Output.empty();
+        this.limits = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> cpuIdle;
-        private @Nullable Input<Map<String,String>> limits;
+        private @Nullable Output<Boolean> cpuIdle;
+        private @Nullable Output<Map<String,String>> limits;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
     	      this.limits = defaults.limits;
         }
 
-        public Builder cpuIdle(@Nullable Input<Boolean> cpuIdle) {
+        public Builder cpuIdle(@Nullable Output<Boolean> cpuIdle) {
             this.cpuIdle = cpuIdle;
             return this;
         }
 
         public Builder cpuIdle(@Nullable Boolean cpuIdle) {
-            this.cpuIdle = Input.ofNullable(cpuIdle);
+            this.cpuIdle = Output.ofNullable(cpuIdle);
             return this;
         }
 
-        public Builder limits(@Nullable Input<Map<String,String>> limits) {
+        public Builder limits(@Nullable Output<Map<String,String>> limits) {
             this.limits = limits;
             return this;
         }
 
         public Builder limits(@Nullable Map<String,String> limits) {
-            this.limits = Input.ofNullable(limits);
+            this.limits = Output.ofNullable(limits);
             return this;
         }
         public GoogleCloudRunOpV2ResourceRequirementsArgs build() {

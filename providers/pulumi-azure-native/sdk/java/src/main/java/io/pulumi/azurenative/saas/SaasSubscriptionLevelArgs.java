@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.saas;
 
 import io.pulumi.azurenative.saas.inputs.SaasCreationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<SaasCreationPropertiesArgs> properties;
+      private final @Nullable Output<SaasCreationPropertiesArgs> properties;
 
-    public Input<SaasCreationPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<SaasCreationPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,10 +65,10 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SaasSubscriptionLevelArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<SaasCreationPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<SaasCreationPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.name = name;
         this.properties = properties;
@@ -98,12 +98,12 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     }
 
     private SaasSubscriptionLevelArgs() {
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<SaasCreationPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SaasCreationPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder properties(@Nullable Input<SaasCreationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<SaasCreationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable SaasCreationPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SaasSubscriptionLevelArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,9 +30,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataSetId", required=true)
-      private final Input<String> dataSetId;
+      private final Output<String> dataSetId;
 
-    public Input<String> getDataSetId() {
+    public Output<String> getDataSetId() {
         return this.dataSetId;
     }
 
@@ -41,10 +41,10 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataSetMappingName")
-      private final @Nullable Input<String> dataSetMappingName;
+      private final @Nullable Output<String> dataSetMappingName;
 
-    public Input<String> getDataSetMappingName() {
-        return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
+    public Output<String> getDataSetMappingName() {
+        return this.dataSetMappingName == null ? Output.empty() : this.dataSetMappingName;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -64,9 +64,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -75,9 +75,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -86,9 +86,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="schemaName", required=true)
-      private final Input<String> schemaName;
+      private final Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
+    public Output<String> getSchemaName() {
         return this.schemaName;
     }
 
@@ -97,9 +97,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-      private final Input<String> shareSubscriptionName;
+      private final Output<String> shareSubscriptionName;
 
-    public Input<String> getShareSubscriptionName() {
+    public Output<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -108,9 +108,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sqlServerResourceId", required=true)
-      private final Input<String> sqlServerResourceId;
+      private final Output<String> sqlServerResourceId;
 
-    public Input<String> getSqlServerResourceId() {
+    public Output<String> getSqlServerResourceId() {
         return this.sqlServerResourceId;
     }
 
@@ -119,23 +119,23 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public SqlDBTableDataSetMappingArgs(
-        Input<String> accountName,
-        Input<String> dataSetId,
-        @Nullable Input<String> dataSetMappingName,
-        Input<String> databaseName,
-        Input<String> kind,
-        Input<String> resourceGroupName,
-        Input<String> schemaName,
-        Input<String> shareSubscriptionName,
-        Input<String> sqlServerResourceId,
-        Input<String> tableName) {
+        Output<String> accountName,
+        Output<String> dataSetId,
+        @Nullable Output<String> dataSetMappingName,
+        Output<String> databaseName,
+        Output<String> kind,
+        Output<String> resourceGroupName,
+        Output<String> schemaName,
+        Output<String> shareSubscriptionName,
+        Output<String> sqlServerResourceId,
+        Output<String> tableName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dataSetId = Objects.requireNonNull(dataSetId, "expected parameter 'dataSetId' to be non-null");
         this.dataSetMappingName = dataSetMappingName;
@@ -149,16 +149,16 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     }
 
     private SqlDBTableDataSetMappingArgs() {
-        this.accountName = Input.empty();
-        this.dataSetId = Input.empty();
-        this.dataSetMappingName = Input.empty();
-        this.databaseName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.schemaName = Input.empty();
-        this.shareSubscriptionName = Input.empty();
-        this.sqlServerResourceId = Input.empty();
-        this.tableName = Input.empty();
+        this.accountName = Output.empty();
+        this.dataSetId = Output.empty();
+        this.dataSetMappingName = Output.empty();
+        this.databaseName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.schemaName = Output.empty();
+        this.shareSubscriptionName = Output.empty();
+        this.sqlServerResourceId = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,16 +170,16 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> dataSetId;
-        private @Nullable Input<String> dataSetMappingName;
-        private Input<String> databaseName;
-        private Input<String> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> schemaName;
-        private Input<String> shareSubscriptionName;
-        private Input<String> sqlServerResourceId;
-        private Input<String> tableName;
+        private Output<String> accountName;
+        private Output<String> dataSetId;
+        private @Nullable Output<String> dataSetMappingName;
+        private Output<String> databaseName;
+        private Output<String> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> schemaName;
+        private Output<String> shareSubscriptionName;
+        private Output<String> sqlServerResourceId;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -199,103 +199,103 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder dataSetId(Input<String> dataSetId) {
+        public Builder dataSetId(Output<String> dataSetId) {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
 
         public Builder dataSetId(String dataSetId) {
-            this.dataSetId = Input.of(Objects.requireNonNull(dataSetId));
+            this.dataSetId = Output.of(Objects.requireNonNull(dataSetId));
             return this;
         }
 
-        public Builder dataSetMappingName(@Nullable Input<String> dataSetMappingName) {
+        public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
             this.dataSetMappingName = dataSetMappingName;
             return this;
         }
 
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Input.ofNullable(dataSetMappingName);
+            this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder schemaName(Input<String> schemaName) {
+        public Builder schemaName(Output<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
         public Builder schemaName(String schemaName) {
-            this.schemaName = Input.of(Objects.requireNonNull(schemaName));
+            this.schemaName = Output.of(Objects.requireNonNull(schemaName));
             return this;
         }
 
-        public Builder shareSubscriptionName(Input<String> shareSubscriptionName) {
+        public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
 
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Input.of(Objects.requireNonNull(shareSubscriptionName));
+            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
 
-        public Builder sqlServerResourceId(Input<String> sqlServerResourceId) {
+        public Builder sqlServerResourceId(Output<String> sqlServerResourceId) {
             this.sqlServerResourceId = Objects.requireNonNull(sqlServerResourceId);
             return this;
         }
 
         public Builder sqlServerResourceId(String sqlServerResourceId) {
-            this.sqlServerResourceId = Input.of(Objects.requireNonNull(sqlServerResourceId));
+            this.sqlServerResourceId = Output.of(Objects.requireNonNull(sqlServerResourceId));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public SqlDBTableDataSetMappingArgs build() {

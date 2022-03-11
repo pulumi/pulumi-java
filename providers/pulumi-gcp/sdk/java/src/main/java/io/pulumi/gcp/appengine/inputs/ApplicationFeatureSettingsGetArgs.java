@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ApplicationFeatureSettingsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="splitHealthChecks", required=true)
-      private final Input<Boolean> splitHealthChecks;
+      private final Output<Boolean> splitHealthChecks;
 
-    public Input<Boolean> getSplitHealthChecks() {
+    public Output<Boolean> getSplitHealthChecks() {
         return this.splitHealthChecks;
     }
 
-    public ApplicationFeatureSettingsGetArgs(Input<Boolean> splitHealthChecks) {
+    public ApplicationFeatureSettingsGetArgs(Output<Boolean> splitHealthChecks) {
         this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks, "expected parameter 'splitHealthChecks' to be non-null");
     }
 
     private ApplicationFeatureSettingsGetArgs() {
-        this.splitHealthChecks = Input.empty();
+        this.splitHealthChecks = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ApplicationFeatureSettingsGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<Boolean> splitHealthChecks;
+        private Output<Boolean> splitHealthChecks;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ApplicationFeatureSettingsGetArgs extends io.pulumi.resources
     	      this.splitHealthChecks = defaults.splitHealthChecks;
         }
 
-        public Builder splitHealthChecks(Input<Boolean> splitHealthChecks) {
+        public Builder splitHealthChecks(Output<Boolean> splitHealthChecks) {
             this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
             return this;
         }
 
         public Builder splitHealthChecks(Boolean splitHealthChecks) {
-            this.splitHealthChecks = Input.of(Objects.requireNonNull(splitHealthChecks));
+            this.splitHealthChecks = Output.of(Objects.requireNonNull(splitHealthChecks));
             return this;
         }
         public ApplicationFeatureSettingsGetArgs build() {

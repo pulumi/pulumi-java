@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreJsonConfigurationArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreParquetConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class DatastoreFileFormatConfigurationArgs extends io.pulumi.resour
     public static final DatastoreFileFormatConfigurationArgs Empty = new DatastoreFileFormatConfigurationArgs();
 
     @InputImport(name="jsonConfiguration")
-      private final @Nullable Input<DatastoreJsonConfigurationArgs> jsonConfiguration;
+      private final @Nullable Output<DatastoreJsonConfigurationArgs> jsonConfiguration;
 
-    public Input<DatastoreJsonConfigurationArgs> getJsonConfiguration() {
-        return this.jsonConfiguration == null ? Input.empty() : this.jsonConfiguration;
+    public Output<DatastoreJsonConfigurationArgs> getJsonConfiguration() {
+        return this.jsonConfiguration == null ? Output.empty() : this.jsonConfiguration;
     }
 
     @InputImport(name="parquetConfiguration")
-      private final @Nullable Input<DatastoreParquetConfigurationArgs> parquetConfiguration;
+      private final @Nullable Output<DatastoreParquetConfigurationArgs> parquetConfiguration;
 
-    public Input<DatastoreParquetConfigurationArgs> getParquetConfiguration() {
-        return this.parquetConfiguration == null ? Input.empty() : this.parquetConfiguration;
+    public Output<DatastoreParquetConfigurationArgs> getParquetConfiguration() {
+        return this.parquetConfiguration == null ? Output.empty() : this.parquetConfiguration;
     }
 
     public DatastoreFileFormatConfigurationArgs(
-        @Nullable Input<DatastoreJsonConfigurationArgs> jsonConfiguration,
-        @Nullable Input<DatastoreParquetConfigurationArgs> parquetConfiguration) {
+        @Nullable Output<DatastoreJsonConfigurationArgs> jsonConfiguration,
+        @Nullable Output<DatastoreParquetConfigurationArgs> parquetConfiguration) {
         this.jsonConfiguration = jsonConfiguration;
         this.parquetConfiguration = parquetConfiguration;
     }
 
     private DatastoreFileFormatConfigurationArgs() {
-        this.jsonConfiguration = Input.empty();
-        this.parquetConfiguration = Input.empty();
+        this.jsonConfiguration = Output.empty();
+        this.parquetConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DatastoreFileFormatConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<DatastoreJsonConfigurationArgs> jsonConfiguration;
-        private @Nullable Input<DatastoreParquetConfigurationArgs> parquetConfiguration;
+        private @Nullable Output<DatastoreJsonConfigurationArgs> jsonConfiguration;
+        private @Nullable Output<DatastoreParquetConfigurationArgs> parquetConfiguration;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DatastoreFileFormatConfigurationArgs extends io.pulumi.resour
     	      this.parquetConfiguration = defaults.parquetConfiguration;
         }
 
-        public Builder jsonConfiguration(@Nullable Input<DatastoreJsonConfigurationArgs> jsonConfiguration) {
+        public Builder jsonConfiguration(@Nullable Output<DatastoreJsonConfigurationArgs> jsonConfiguration) {
             this.jsonConfiguration = jsonConfiguration;
             return this;
         }
 
         public Builder jsonConfiguration(@Nullable DatastoreJsonConfigurationArgs jsonConfiguration) {
-            this.jsonConfiguration = Input.ofNullable(jsonConfiguration);
+            this.jsonConfiguration = Output.ofNullable(jsonConfiguration);
             return this;
         }
 
-        public Builder parquetConfiguration(@Nullable Input<DatastoreParquetConfigurationArgs> parquetConfiguration) {
+        public Builder parquetConfiguration(@Nullable Output<DatastoreParquetConfigurationArgs> parquetConfiguration) {
             this.parquetConfiguration = parquetConfiguration;
             return this;
         }
 
         public Builder parquetConfiguration(@Nullable DatastoreParquetConfigurationArgs parquetConfiguration) {
-            this.parquetConfiguration = Input.ofNullable(parquetConfiguration);
+            this.parquetConfiguration = Output.ofNullable(parquetConfiguration);
             return this;
         }
         public DatastoreFileFormatConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,39 +19,39 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<String> environment;
+      private final @Nullable Output<String> environment;
 
-    public Input<String> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<String> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public InstanceAttachmentArgs(
-        @Nullable Input<String> environment,
-        Input<String> instanceId,
-        Input<String> organizationId) {
+        @Nullable Output<String> environment,
+        Output<String> instanceId,
+        Output<String> organizationId) {
         this.environment = environment;
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
         this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
     }
 
     private InstanceAttachmentArgs() {
-        this.environment = Input.empty();
-        this.instanceId = Input.empty();
-        this.organizationId = Input.empty();
+        this.environment = Output.empty();
+        this.instanceId = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> environment;
-        private Input<String> instanceId;
-        private Input<String> organizationId;
+        private @Nullable Output<String> environment;
+        private Output<String> instanceId;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder environment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Output<String> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable String environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public InstanceAttachmentArgs build() {

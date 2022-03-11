@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="locations")
-      private final @Nullable Input<List<String>> locations;
+      private final @Nullable Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
-        return this.locations == null ? Input.empty() : this.locations;
+    public Output<List<String>> getLocations() {
+        return this.locations == null ? Output.empty() : this.locations;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public ServiceEndpointPropertiesFormatArgs(
-        @Nullable Input<List<String>> locations,
-        @Nullable Input<String> service) {
+        @Nullable Output<List<String>> locations,
+        @Nullable Output<String> service) {
         this.locations = locations;
         this.service = service;
     }
 
     private ServiceEndpointPropertiesFormatArgs() {
-        this.locations = Input.empty();
-        this.service = Input.empty();
+        this.locations = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> locations;
-        private @Nullable Input<String> service;
+        private @Nullable Output<List<String>> locations;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
     	      this.service = defaults.service;
         }
 
-        public Builder locations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Input.ofNullable(locations);
+            this.locations = Output.ofNullable(locations);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public ServiceEndpointPropertiesFormatArgs build() {

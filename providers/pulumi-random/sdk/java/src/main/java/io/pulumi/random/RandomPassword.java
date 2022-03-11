@@ -3,19 +3,13 @@
 
 package io.pulumi.random;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.random.RandomPasswordArgs;
-import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomPasswordState;
-import java.lang.Boolean;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
-import java.util.Map;
+
 import javax.annotation.Nullable;
+import java.util.Map;
 
 /**
  * Identical to random.RandomString with the exception that the result is treated as sensitive and, thus, _not_ displayed in console output.
@@ -242,14 +236,14 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RandomPassword(String name, RandomPasswordArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("random:index/randomPassword:RandomPassword", name, args == null ? RandomPasswordArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("random:index/randomPassword:RandomPassword", name, args == null ? RandomPasswordArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RandomPassword(String name, Input<String> id, @Nullable RandomPasswordState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RandomPassword(String name, Output<String> id, @Nullable RandomPasswordState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("random:index/randomPassword:RandomPassword", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -265,7 +259,7 @@ public class RandomPassword extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RandomPassword get(String name, Input<String> id, @Nullable RandomPasswordState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RandomPassword get(String name, Output<String> id, @Nullable RandomPasswordState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RandomPassword(name, id, state, options);
     }
 }

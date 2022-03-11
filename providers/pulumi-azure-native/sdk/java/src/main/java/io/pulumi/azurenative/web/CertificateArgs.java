@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="canonicalName")
-      private final @Nullable Input<String> canonicalName;
+      private final @Nullable Output<String> canonicalName;
 
-    public Input<String> getCanonicalName() {
-        return this.canonicalName == null ? Input.empty() : this.canonicalName;
+    public Output<String> getCanonicalName() {
+        return this.canonicalName == null ? Output.empty() : this.canonicalName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainValidationMethod")
-      private final @Nullable Input<String> domainValidationMethod;
+      private final @Nullable Output<String> domainValidationMethod;
 
-    public Input<String> getDomainValidationMethod() {
-        return this.domainValidationMethod == null ? Input.empty() : this.domainValidationMethod;
+    public Output<String> getDomainValidationMethod() {
+        return this.domainValidationMethod == null ? Output.empty() : this.domainValidationMethod;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostNames")
-      private final @Nullable Input<List<String>> hostNames;
+      private final @Nullable Output<List<String>> hostNames;
 
-    public Input<List<String>> getHostNames() {
-        return this.hostNames == null ? Input.empty() : this.hostNames;
+    public Output<List<String>> getHostNames() {
+        return this.hostNames == null ? Output.empty() : this.hostNames;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultId")
-      private final @Nullable Input<String> keyVaultId;
+      private final @Nullable Output<String> keyVaultId;
 
-    public Input<String> getKeyVaultId() {
-        return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
+    public Output<String> getKeyVaultId() {
+        return this.keyVaultId == null ? Output.empty() : this.keyVaultId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultSecretName")
-      private final @Nullable Input<String> keyVaultSecretName;
+      private final @Nullable Output<String> keyVaultSecretName;
 
-    public Input<String> getKeyVaultSecretName() {
-        return this.keyVaultSecretName == null ? Input.empty() : this.keyVaultSecretName;
+    public Output<String> getKeyVaultSecretName() {
+        return this.keyVaultSecretName == null ? Output.empty() : this.keyVaultSecretName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pfxBlob")
-      private final @Nullable Input<String> pfxBlob;
+      private final @Nullable Output<String> pfxBlob;
 
-    public Input<String> getPfxBlob() {
-        return this.pfxBlob == null ? Input.empty() : this.pfxBlob;
+    public Output<String> getPfxBlob() {
+        return this.pfxBlob == null ? Output.empty() : this.pfxBlob;
     }
 
     /**
@@ -131,9 +131,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -142,10 +142,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverFarmId")
-      private final @Nullable Input<String> serverFarmId;
+      private final @Nullable Output<String> serverFarmId;
 
-    public Input<String> getServerFarmId() {
-        return this.serverFarmId == null ? Input.empty() : this.serverFarmId;
+    public Output<String> getServerFarmId() {
+        return this.serverFarmId == null ? Output.empty() : this.serverFarmId;
     }
 
     /**
@@ -153,26 +153,26 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CertificateArgs(
-        @Nullable Input<String> canonicalName,
-        @Nullable Input<String> domainValidationMethod,
-        @Nullable Input<List<String>> hostNames,
-        @Nullable Input<String> keyVaultId,
-        @Nullable Input<String> keyVaultSecretName,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> password,
-        @Nullable Input<String> pfxBlob,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serverFarmId,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> canonicalName,
+        @Nullable Output<String> domainValidationMethod,
+        @Nullable Output<List<String>> hostNames,
+        @Nullable Output<String> keyVaultId,
+        @Nullable Output<String> keyVaultSecretName,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> password,
+        @Nullable Output<String> pfxBlob,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serverFarmId,
+        @Nullable Output<Map<String,String>> tags) {
         this.canonicalName = canonicalName;
         this.domainValidationMethod = domainValidationMethod;
         this.hostNames = hostNames;
@@ -189,19 +189,19 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.canonicalName = Input.empty();
-        this.domainValidationMethod = Input.empty();
-        this.hostNames = Input.empty();
-        this.keyVaultId = Input.empty();
-        this.keyVaultSecretName = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.password = Input.empty();
-        this.pfxBlob = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverFarmId = Input.empty();
-        this.tags = Input.empty();
+        this.canonicalName = Output.empty();
+        this.domainValidationMethod = Output.empty();
+        this.hostNames = Output.empty();
+        this.keyVaultId = Output.empty();
+        this.keyVaultSecretName = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.password = Output.empty();
+        this.pfxBlob = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverFarmId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -213,19 +213,19 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> canonicalName;
-        private @Nullable Input<String> domainValidationMethod;
-        private @Nullable Input<List<String>> hostNames;
-        private @Nullable Input<String> keyVaultId;
-        private @Nullable Input<String> keyVaultSecretName;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> pfxBlob;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serverFarmId;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> canonicalName;
+        private @Nullable Output<String> domainValidationMethod;
+        private @Nullable Output<List<String>> hostNames;
+        private @Nullable Output<String> keyVaultId;
+        private @Nullable Output<String> keyVaultSecretName;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> pfxBlob;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serverFarmId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -248,133 +248,133 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder canonicalName(@Nullable Input<String> canonicalName) {
+        public Builder canonicalName(@Nullable Output<String> canonicalName) {
             this.canonicalName = canonicalName;
             return this;
         }
 
         public Builder canonicalName(@Nullable String canonicalName) {
-            this.canonicalName = Input.ofNullable(canonicalName);
+            this.canonicalName = Output.ofNullable(canonicalName);
             return this;
         }
 
-        public Builder domainValidationMethod(@Nullable Input<String> domainValidationMethod) {
+        public Builder domainValidationMethod(@Nullable Output<String> domainValidationMethod) {
             this.domainValidationMethod = domainValidationMethod;
             return this;
         }
 
         public Builder domainValidationMethod(@Nullable String domainValidationMethod) {
-            this.domainValidationMethod = Input.ofNullable(domainValidationMethod);
+            this.domainValidationMethod = Output.ofNullable(domainValidationMethod);
             return this;
         }
 
-        public Builder hostNames(@Nullable Input<List<String>> hostNames) {
+        public Builder hostNames(@Nullable Output<List<String>> hostNames) {
             this.hostNames = hostNames;
             return this;
         }
 
         public Builder hostNames(@Nullable List<String> hostNames) {
-            this.hostNames = Input.ofNullable(hostNames);
+            this.hostNames = Output.ofNullable(hostNames);
             return this;
         }
 
-        public Builder keyVaultId(@Nullable Input<String> keyVaultId) {
+        public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Input.ofNullable(keyVaultId);
+            this.keyVaultId = Output.ofNullable(keyVaultId);
             return this;
         }
 
-        public Builder keyVaultSecretName(@Nullable Input<String> keyVaultSecretName) {
+        public Builder keyVaultSecretName(@Nullable Output<String> keyVaultSecretName) {
             this.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
 
         public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
-            this.keyVaultSecretName = Input.ofNullable(keyVaultSecretName);
+            this.keyVaultSecretName = Output.ofNullable(keyVaultSecretName);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder pfxBlob(@Nullable Input<String> pfxBlob) {
+        public Builder pfxBlob(@Nullable Output<String> pfxBlob) {
             this.pfxBlob = pfxBlob;
             return this;
         }
 
         public Builder pfxBlob(@Nullable String pfxBlob) {
-            this.pfxBlob = Input.ofNullable(pfxBlob);
+            this.pfxBlob = Output.ofNullable(pfxBlob);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverFarmId(@Nullable Input<String> serverFarmId) {
+        public Builder serverFarmId(@Nullable Output<String> serverFarmId) {
             this.serverFarmId = serverFarmId;
             return this;
         }
 
         public Builder serverFarmId(@Nullable String serverFarmId) {
-            this.serverFarmId = Input.ofNullable(serverFarmId);
+            this.serverFarmId = Output.ofNullable(serverFarmId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CertificateArgs build() {

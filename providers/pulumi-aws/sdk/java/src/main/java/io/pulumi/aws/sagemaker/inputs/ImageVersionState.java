@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseImage")
-      private final @Nullable Input<String> baseImage;
+      private final @Nullable Output<String> baseImage;
 
-    public Input<String> getBaseImage() {
-        return this.baseImage == null ? Input.empty() : this.baseImage;
+    public Output<String> getBaseImage() {
+        return this.baseImage == null ? Output.empty() : this.baseImage;
     }
 
     /**
@@ -43,17 +43,17 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerImage")
-      private final @Nullable Input<String> containerImage;
+      private final @Nullable Output<String> containerImage;
 
-    public Input<String> getContainerImage() {
-        return this.containerImage == null ? Input.empty() : this.containerImage;
+    public Output<String> getContainerImage() {
+        return this.containerImage == null ? Output.empty() : this.containerImage;
     }
 
     @InputImport(name="imageArn")
-      private final @Nullable Input<String> imageArn;
+      private final @Nullable Output<String> imageArn;
 
-    public Input<String> getImageArn() {
-        return this.imageArn == null ? Input.empty() : this.imageArn;
+    public Output<String> getImageArn() {
+        return this.imageArn == null ? Output.empty() : this.imageArn;
     }
 
     /**
@@ -61,26 +61,26 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageName")
-      private final @Nullable Input<String> imageName;
+      private final @Nullable Output<String> imageName;
 
-    public Input<String> getImageName() {
-        return this.imageName == null ? Input.empty() : this.imageName;
+    public Output<String> getImageName() {
+        return this.imageName == null ? Output.empty() : this.imageName;
     }
 
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ImageVersionState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> baseImage,
-        @Nullable Input<String> containerImage,
-        @Nullable Input<String> imageArn,
-        @Nullable Input<String> imageName,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> baseImage,
+        @Nullable Output<String> containerImage,
+        @Nullable Output<String> imageArn,
+        @Nullable Output<String> imageName,
+        @Nullable Output<Integer> version) {
         this.arn = arn;
         this.baseImage = baseImage;
         this.containerImage = containerImage;
@@ -90,12 +90,12 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageVersionState() {
-        this.arn = Input.empty();
-        this.baseImage = Input.empty();
-        this.containerImage = Input.empty();
-        this.imageArn = Input.empty();
-        this.imageName = Input.empty();
-        this.version = Input.empty();
+        this.arn = Output.empty();
+        this.baseImage = Output.empty();
+        this.containerImage = Output.empty();
+        this.imageArn = Output.empty();
+        this.imageName = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,12 +107,12 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> baseImage;
-        private @Nullable Input<String> containerImage;
-        private @Nullable Input<String> imageArn;
-        private @Nullable Input<String> imageName;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> baseImage;
+        private @Nullable Output<String> containerImage;
+        private @Nullable Output<String> imageArn;
+        private @Nullable Output<String> imageName;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -128,63 +128,63 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder baseImage(@Nullable Input<String> baseImage) {
+        public Builder baseImage(@Nullable Output<String> baseImage) {
             this.baseImage = baseImage;
             return this;
         }
 
         public Builder baseImage(@Nullable String baseImage) {
-            this.baseImage = Input.ofNullable(baseImage);
+            this.baseImage = Output.ofNullable(baseImage);
             return this;
         }
 
-        public Builder containerImage(@Nullable Input<String> containerImage) {
+        public Builder containerImage(@Nullable Output<String> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
 
         public Builder containerImage(@Nullable String containerImage) {
-            this.containerImage = Input.ofNullable(containerImage);
+            this.containerImage = Output.ofNullable(containerImage);
             return this;
         }
 
-        public Builder imageArn(@Nullable Input<String> imageArn) {
+        public Builder imageArn(@Nullable Output<String> imageArn) {
             this.imageArn = imageArn;
             return this;
         }
 
         public Builder imageArn(@Nullable String imageArn) {
-            this.imageArn = Input.ofNullable(imageArn);
+            this.imageArn = Output.ofNullable(imageArn);
             return this;
         }
 
-        public Builder imageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Input.ofNullable(imageName);
+            this.imageName = Output.ofNullable(imageName);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ImageVersionState build() {

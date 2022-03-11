@@ -6,7 +6,6 @@ package io.pulumi.aws.cloudwatch;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.EventBusArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventBusState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,14 +140,14 @@ public class EventBus extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventBus(String name, @Nullable EventBusArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/eventBus:EventBus", name, args == null ? EventBusArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudwatch/eventBus:EventBus", name, args == null ? EventBusArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventBus(String name, Input<String> id, @Nullable EventBusState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventBus(String name, Output<String> id, @Nullable EventBusState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudwatch/eventBus:EventBus", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -164,7 +163,7 @@ public class EventBus extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventBus get(String name, Input<String> id, @Nullable EventBusState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventBus get(String name, Output<String> id, @Nullable EventBusState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventBus(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class ConnectionClientParametersArgs extends io.pulumi.resources.Re
     public static final ConnectionClientParametersArgs Empty = new ConnectionClientParametersArgs();
 
     @InputImport(name="clientID", required=true)
-      private final Input<String> clientID;
+      private final Output<String> clientID;
 
-    public Input<String> getClientID() {
+    public Output<String> getClientID() {
         return this.clientID;
     }
 
     @InputImport(name="clientSecret", required=true)
-      private final Input<String> clientSecret;
+      private final Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
+    public Output<String> getClientSecret() {
         return this.clientSecret;
     }
 
     public ConnectionClientParametersArgs(
-        Input<String> clientID,
-        Input<String> clientSecret) {
+        Output<String> clientID,
+        Output<String> clientSecret) {
         this.clientID = Objects.requireNonNull(clientID, "expected parameter 'clientID' to be non-null");
         this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
     }
 
     private ConnectionClientParametersArgs() {
-        this.clientID = Input.empty();
-        this.clientSecret = Input.empty();
+        this.clientID = Output.empty();
+        this.clientSecret = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class ConnectionClientParametersArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> clientID;
-        private Input<String> clientSecret;
+        private Output<String> clientID;
+        private Output<String> clientSecret;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class ConnectionClientParametersArgs extends io.pulumi.resources.Re
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder clientID(Input<String> clientID) {
+        public Builder clientID(Output<String> clientID) {
             this.clientID = Objects.requireNonNull(clientID);
             return this;
         }
 
         public Builder clientID(String clientID) {
-            this.clientID = Input.of(Objects.requireNonNull(clientID));
+            this.clientID = Output.of(Objects.requireNonNull(clientID));
             return this;
         }
 
-        public Builder clientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
+            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
         public ConnectionClientParametersArgs build() {

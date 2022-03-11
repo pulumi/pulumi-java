@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RouterBgpArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgp")
-      private final @Nullable Input<RouterBgpArgs> bgp;
+      private final @Nullable Output<RouterBgpArgs> bgp;
 
-    public Input<RouterBgpArgs> getBgp() {
-        return this.bgp == null ? Input.empty() : this.bgp;
+    public Output<RouterBgpArgs> getBgp() {
+        return this.bgp == null ? Output.empty() : this.bgp;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptedInterconnectRouter")
-      private final @Nullable Input<Boolean> encryptedInterconnectRouter;
+      private final @Nullable Output<Boolean> encryptedInterconnectRouter;
 
-    public Input<Boolean> getEncryptedInterconnectRouter() {
-        return this.encryptedInterconnectRouter == null ? Input.empty() : this.encryptedInterconnectRouter;
+    public Output<Boolean> getEncryptedInterconnectRouter() {
+        return this.encryptedInterconnectRouter == null ? Output.empty() : this.encryptedInterconnectRouter;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -73,9 +73,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-      private final Input<String> network;
+      private final Output<String> network;
 
-    public Input<String> getNetwork() {
+    public Output<String> getNetwork() {
         return this.network;
     }
 
@@ -85,10 +85,10 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -96,20 +96,20 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     public RouterArgs(
-        @Nullable Input<RouterBgpArgs> bgp,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> encryptedInterconnectRouter,
-        @Nullable Input<String> name,
-        Input<String> network,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region) {
+        @Nullable Output<RouterBgpArgs> bgp,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> encryptedInterconnectRouter,
+        @Nullable Output<String> name,
+        Output<String> network,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region) {
         this.bgp = bgp;
         this.description = description;
         this.encryptedInterconnectRouter = encryptedInterconnectRouter;
@@ -120,13 +120,13 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterArgs() {
-        this.bgp = Input.empty();
-        this.description = Input.empty();
-        this.encryptedInterconnectRouter = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
+        this.bgp = Output.empty();
+        this.description = Output.empty();
+        this.encryptedInterconnectRouter = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
     }
 
     public static Builder builder() {
@@ -138,13 +138,13 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RouterBgpArgs> bgp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> encryptedInterconnectRouter;
-        private @Nullable Input<String> name;
-        private Input<String> network;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
+        private @Nullable Output<RouterBgpArgs> bgp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> encryptedInterconnectRouter;
+        private @Nullable Output<String> name;
+        private Output<String> network;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
 
         public Builder() {
     	      // Empty
@@ -161,73 +161,73 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.region = defaults.region;
         }
 
-        public Builder bgp(@Nullable Input<RouterBgpArgs> bgp) {
+        public Builder bgp(@Nullable Output<RouterBgpArgs> bgp) {
             this.bgp = bgp;
             return this;
         }
 
         public Builder bgp(@Nullable RouterBgpArgs bgp) {
-            this.bgp = Input.ofNullable(bgp);
+            this.bgp = Output.ofNullable(bgp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedInterconnectRouter(@Nullable Input<Boolean> encryptedInterconnectRouter) {
+        public Builder encryptedInterconnectRouter(@Nullable Output<Boolean> encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = encryptedInterconnectRouter;
             return this;
         }
 
         public Builder encryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
-            this.encryptedInterconnectRouter = Input.ofNullable(encryptedInterconnectRouter);
+            this.encryptedInterconnectRouter = Output.ofNullable(encryptedInterconnectRouter);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(Input<String> network) {
+        public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
         public Builder network(String network) {
-            this.network = Input.of(Objects.requireNonNull(network));
+            this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
         public RouterArgs build() {

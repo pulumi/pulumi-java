@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.HorizontalPodAutoscalerConditionArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricStatusArgs;
@@ -27,10 +27,10 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<HorizontalPodAutoscalerConditionArgs>> conditions;
+      private final @Nullable Output<List<HorizontalPodAutoscalerConditionArgs>> conditions;
 
-    public Input<List<HorizontalPodAutoscalerConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<HorizontalPodAutoscalerConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="currentMetrics")
-      private final @Nullable Input<List<MetricStatusArgs>> currentMetrics;
+      private final @Nullable Output<List<MetricStatusArgs>> currentMetrics;
 
-    public Input<List<MetricStatusArgs>> getCurrentMetrics() {
-        return this.currentMetrics == null ? Input.empty() : this.currentMetrics;
+    public Output<List<MetricStatusArgs>> getCurrentMetrics() {
+        return this.currentMetrics == null ? Output.empty() : this.currentMetrics;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="currentReplicas", required=true)
-      private final Input<Integer> currentReplicas;
+      private final Output<Integer> currentReplicas;
 
-    public Input<Integer> getCurrentReplicas() {
+    public Output<Integer> getCurrentReplicas() {
         return this.currentReplicas;
     }
 
@@ -60,9 +60,9 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="desiredReplicas", required=true)
-      private final Input<Integer> desiredReplicas;
+      private final Output<Integer> desiredReplicas;
 
-    public Input<Integer> getDesiredReplicas() {
+    public Output<Integer> getDesiredReplicas() {
         return this.desiredReplicas;
     }
 
@@ -71,10 +71,10 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="lastScaleTime")
-      private final @Nullable Input<String> lastScaleTime;
+      private final @Nullable Output<String> lastScaleTime;
 
-    public Input<String> getLastScaleTime() {
-        return this.lastScaleTime == null ? Input.empty() : this.lastScaleTime;
+    public Output<String> getLastScaleTime() {
+        return this.lastScaleTime == null ? Output.empty() : this.lastScaleTime;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     public HorizontalPodAutoscalerStatusArgs(
-        @Nullable Input<List<HorizontalPodAutoscalerConditionArgs>> conditions,
-        @Nullable Input<List<MetricStatusArgs>> currentMetrics,
-        Input<Integer> currentReplicas,
-        Input<Integer> desiredReplicas,
-        @Nullable Input<String> lastScaleTime,
-        @Nullable Input<Integer> observedGeneration) {
+        @Nullable Output<List<HorizontalPodAutoscalerConditionArgs>> conditions,
+        @Nullable Output<List<MetricStatusArgs>> currentMetrics,
+        Output<Integer> currentReplicas,
+        Output<Integer> desiredReplicas,
+        @Nullable Output<String> lastScaleTime,
+        @Nullable Output<Integer> observedGeneration) {
         this.conditions = conditions;
         this.currentMetrics = currentMetrics;
         this.currentReplicas = Objects.requireNonNull(currentReplicas, "expected parameter 'currentReplicas' to be non-null");
@@ -104,12 +104,12 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     }
 
     private HorizontalPodAutoscalerStatusArgs() {
-        this.conditions = Input.empty();
-        this.currentMetrics = Input.empty();
-        this.currentReplicas = Input.empty();
-        this.desiredReplicas = Input.empty();
-        this.lastScaleTime = Input.empty();
-        this.observedGeneration = Input.empty();
+        this.conditions = Output.empty();
+        this.currentMetrics = Output.empty();
+        this.currentReplicas = Output.empty();
+        this.desiredReplicas = Output.empty();
+        this.lastScaleTime = Output.empty();
+        this.observedGeneration = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<List<HorizontalPodAutoscalerConditionArgs>> conditions;
-        private @Nullable Input<List<MetricStatusArgs>> currentMetrics;
-        private Input<Integer> currentReplicas;
-        private Input<Integer> desiredReplicas;
-        private @Nullable Input<String> lastScaleTime;
-        private @Nullable Input<Integer> observedGeneration;
+        private @Nullable Output<List<HorizontalPodAutoscalerConditionArgs>> conditions;
+        private @Nullable Output<List<MetricStatusArgs>> currentMetrics;
+        private Output<Integer> currentReplicas;
+        private Output<Integer> desiredReplicas;
+        private @Nullable Output<String> lastScaleTime;
+        private @Nullable Output<Integer> observedGeneration;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     	      this.observedGeneration = defaults.observedGeneration;
         }
 
-        public Builder conditions(@Nullable Input<List<HorizontalPodAutoscalerConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<HorizontalPodAutoscalerConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<HorizontalPodAutoscalerConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder currentMetrics(@Nullable Input<List<MetricStatusArgs>> currentMetrics) {
+        public Builder currentMetrics(@Nullable Output<List<MetricStatusArgs>> currentMetrics) {
             this.currentMetrics = currentMetrics;
             return this;
         }
 
         public Builder currentMetrics(@Nullable List<MetricStatusArgs> currentMetrics) {
-            this.currentMetrics = Input.ofNullable(currentMetrics);
+            this.currentMetrics = Output.ofNullable(currentMetrics);
             return this;
         }
 
-        public Builder currentReplicas(Input<Integer> currentReplicas) {
+        public Builder currentReplicas(Output<Integer> currentReplicas) {
             this.currentReplicas = Objects.requireNonNull(currentReplicas);
             return this;
         }
 
         public Builder currentReplicas(Integer currentReplicas) {
-            this.currentReplicas = Input.of(Objects.requireNonNull(currentReplicas));
+            this.currentReplicas = Output.of(Objects.requireNonNull(currentReplicas));
             return this;
         }
 
-        public Builder desiredReplicas(Input<Integer> desiredReplicas) {
+        public Builder desiredReplicas(Output<Integer> desiredReplicas) {
             this.desiredReplicas = Objects.requireNonNull(desiredReplicas);
             return this;
         }
 
         public Builder desiredReplicas(Integer desiredReplicas) {
-            this.desiredReplicas = Input.of(Objects.requireNonNull(desiredReplicas));
+            this.desiredReplicas = Output.of(Objects.requireNonNull(desiredReplicas));
             return this;
         }
 
-        public Builder lastScaleTime(@Nullable Input<String> lastScaleTime) {
+        public Builder lastScaleTime(@Nullable Output<String> lastScaleTime) {
             this.lastScaleTime = lastScaleTime;
             return this;
         }
 
         public Builder lastScaleTime(@Nullable String lastScaleTime) {
-            this.lastScaleTime = Input.ofNullable(lastScaleTime);
+            this.lastScaleTime = Output.ofNullable(lastScaleTime);
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
         public HorizontalPodAutoscalerStatusArgs build() {

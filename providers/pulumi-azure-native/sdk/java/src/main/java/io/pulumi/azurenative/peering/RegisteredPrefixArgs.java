@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="peeringName", required=true)
-      private final Input<String> peeringName;
+      private final Output<String> peeringName;
 
-    public Input<String> getPeeringName() {
+    public Output<String> getPeeringName() {
         return this.peeringName;
     }
 
@@ -30,10 +30,10 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="registeredPrefixName")
-      private final @Nullable Input<String> registeredPrefixName;
+      private final @Nullable Output<String> registeredPrefixName;
 
-    public Input<String> getRegisteredPrefixName() {
-        return this.registeredPrefixName == null ? Input.empty() : this.registeredPrefixName;
+    public Output<String> getRegisteredPrefixName() {
+        return this.registeredPrefixName == null ? Output.empty() : this.registeredPrefixName;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public RegisteredPrefixArgs(
-        Input<String> peeringName,
-        @Nullable Input<String> prefix,
-        @Nullable Input<String> registeredPrefixName,
-        Input<String> resourceGroupName) {
+        Output<String> peeringName,
+        @Nullable Output<String> prefix,
+        @Nullable Output<String> registeredPrefixName,
+        Output<String> resourceGroupName) {
         this.peeringName = Objects.requireNonNull(peeringName, "expected parameter 'peeringName' to be non-null");
         this.prefix = prefix;
         this.registeredPrefixName = registeredPrefixName;
@@ -70,10 +70,10 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RegisteredPrefixArgs() {
-        this.peeringName = Input.empty();
-        this.prefix = Input.empty();
-        this.registeredPrefixName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.peeringName = Output.empty();
+        this.prefix = Output.empty();
+        this.registeredPrefixName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> peeringName;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<String> registeredPrefixName;
-        private Input<String> resourceGroupName;
+        private Output<String> peeringName;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<String> registeredPrefixName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder peeringName(Input<String> peeringName) {
+        public Builder peeringName(Output<String> peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
         public Builder peeringName(String peeringName) {
-            this.peeringName = Input.of(Objects.requireNonNull(peeringName));
+            this.peeringName = Output.of(Objects.requireNonNull(peeringName));
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder registeredPrefixName(@Nullable Input<String> registeredPrefixName) {
+        public Builder registeredPrefixName(@Nullable Output<String> registeredPrefixName) {
             this.registeredPrefixName = registeredPrefixName;
             return this;
         }
 
         public Builder registeredPrefixName(@Nullable String registeredPrefixName) {
-            this.registeredPrefixName = Input.ofNullable(registeredPrefixName);
+            this.registeredPrefixName = Output.ofNullable(registeredPrefixName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public RegisteredPrefixArgs build() {

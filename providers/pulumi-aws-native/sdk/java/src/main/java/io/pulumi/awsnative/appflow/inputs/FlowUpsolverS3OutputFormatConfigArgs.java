@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.enums.FlowFileType;
 import io.pulumi.awsnative.appflow.inputs.FlowAggregationConfigArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowPrefixConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,39 +17,39 @@ public final class FlowUpsolverS3OutputFormatConfigArgs extends io.pulumi.resour
     public static final FlowUpsolverS3OutputFormatConfigArgs Empty = new FlowUpsolverS3OutputFormatConfigArgs();
 
     @InputImport(name="aggregationConfig")
-      private final @Nullable Input<FlowAggregationConfigArgs> aggregationConfig;
+      private final @Nullable Output<FlowAggregationConfigArgs> aggregationConfig;
 
-    public Input<FlowAggregationConfigArgs> getAggregationConfig() {
-        return this.aggregationConfig == null ? Input.empty() : this.aggregationConfig;
+    public Output<FlowAggregationConfigArgs> getAggregationConfig() {
+        return this.aggregationConfig == null ? Output.empty() : this.aggregationConfig;
     }
 
     @InputImport(name="fileType")
-      private final @Nullable Input<FlowFileType> fileType;
+      private final @Nullable Output<FlowFileType> fileType;
 
-    public Input<FlowFileType> getFileType() {
-        return this.fileType == null ? Input.empty() : this.fileType;
+    public Output<FlowFileType> getFileType() {
+        return this.fileType == null ? Output.empty() : this.fileType;
     }
 
     @InputImport(name="prefixConfig", required=true)
-      private final Input<FlowPrefixConfigArgs> prefixConfig;
+      private final Output<FlowPrefixConfigArgs> prefixConfig;
 
-    public Input<FlowPrefixConfigArgs> getPrefixConfig() {
+    public Output<FlowPrefixConfigArgs> getPrefixConfig() {
         return this.prefixConfig;
     }
 
     public FlowUpsolverS3OutputFormatConfigArgs(
-        @Nullable Input<FlowAggregationConfigArgs> aggregationConfig,
-        @Nullable Input<FlowFileType> fileType,
-        Input<FlowPrefixConfigArgs> prefixConfig) {
+        @Nullable Output<FlowAggregationConfigArgs> aggregationConfig,
+        @Nullable Output<FlowFileType> fileType,
+        Output<FlowPrefixConfigArgs> prefixConfig) {
         this.aggregationConfig = aggregationConfig;
         this.fileType = fileType;
         this.prefixConfig = Objects.requireNonNull(prefixConfig, "expected parameter 'prefixConfig' to be non-null");
     }
 
     private FlowUpsolverS3OutputFormatConfigArgs() {
-        this.aggregationConfig = Input.empty();
-        this.fileType = Input.empty();
-        this.prefixConfig = Input.empty();
+        this.aggregationConfig = Output.empty();
+        this.fileType = Output.empty();
+        this.prefixConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class FlowUpsolverS3OutputFormatConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowAggregationConfigArgs> aggregationConfig;
-        private @Nullable Input<FlowFileType> fileType;
-        private Input<FlowPrefixConfigArgs> prefixConfig;
+        private @Nullable Output<FlowAggregationConfigArgs> aggregationConfig;
+        private @Nullable Output<FlowFileType> fileType;
+        private Output<FlowPrefixConfigArgs> prefixConfig;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class FlowUpsolverS3OutputFormatConfigArgs extends io.pulumi.resour
     	      this.prefixConfig = defaults.prefixConfig;
         }
 
-        public Builder aggregationConfig(@Nullable Input<FlowAggregationConfigArgs> aggregationConfig) {
+        public Builder aggregationConfig(@Nullable Output<FlowAggregationConfigArgs> aggregationConfig) {
             this.aggregationConfig = aggregationConfig;
             return this;
         }
 
         public Builder aggregationConfig(@Nullable FlowAggregationConfigArgs aggregationConfig) {
-            this.aggregationConfig = Input.ofNullable(aggregationConfig);
+            this.aggregationConfig = Output.ofNullable(aggregationConfig);
             return this;
         }
 
-        public Builder fileType(@Nullable Input<FlowFileType> fileType) {
+        public Builder fileType(@Nullable Output<FlowFileType> fileType) {
             this.fileType = fileType;
             return this;
         }
 
         public Builder fileType(@Nullable FlowFileType fileType) {
-            this.fileType = Input.ofNullable(fileType);
+            this.fileType = Output.ofNullable(fileType);
             return this;
         }
 
-        public Builder prefixConfig(Input<FlowPrefixConfigArgs> prefixConfig) {
+        public Builder prefixConfig(Output<FlowPrefixConfigArgs> prefixConfig) {
             this.prefixConfig = Objects.requireNonNull(prefixConfig);
             return this;
         }
 
         public Builder prefixConfig(FlowPrefixConfigArgs prefixConfig) {
-            this.prefixConfig = Input.of(Objects.requireNonNull(prefixConfig));
+            this.prefixConfig = Output.of(Objects.requireNonNull(prefixConfig));
             return this;
         }
         public FlowUpsolverS3OutputFormatConfigArgs build() {

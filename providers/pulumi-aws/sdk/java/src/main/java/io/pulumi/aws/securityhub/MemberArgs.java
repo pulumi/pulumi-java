@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-      private final Input<String> accountId;
+      private final Output<String> accountId;
 
-    public Input<String> getAccountId() {
+    public Output<String> getAccountId() {
         return this.accountId;
     }
 
@@ -31,9 +31,9 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
@@ -42,25 +42,25 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invite")
-      private final @Nullable Input<Boolean> invite;
+      private final @Nullable Output<Boolean> invite;
 
-    public Input<Boolean> getInvite() {
-        return this.invite == null ? Input.empty() : this.invite;
+    public Output<Boolean> getInvite() {
+        return this.invite == null ? Output.empty() : this.invite;
     }
 
     public MemberArgs(
-        Input<String> accountId,
-        Input<String> email,
-        @Nullable Input<Boolean> invite) {
+        Output<String> accountId,
+        Output<String> email,
+        @Nullable Output<Boolean> invite) {
         this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
         this.invite = invite;
     }
 
     private MemberArgs() {
-        this.accountId = Input.empty();
-        this.email = Input.empty();
-        this.invite = Input.empty();
+        this.accountId = Output.empty();
+        this.email = Output.empty();
+        this.invite = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountId;
-        private Input<String> email;
-        private @Nullable Input<Boolean> invite;
+        private Output<String> accountId;
+        private Output<String> email;
+        private @Nullable Output<Boolean> invite;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.invite = defaults.invite;
         }
 
-        public Builder accountId(Input<String> accountId) {
+        public Builder accountId(Output<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Input.of(Objects.requireNonNull(accountId));
+            this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder invite(@Nullable Input<Boolean> invite) {
+        public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
 
         public Builder invite(@Nullable Boolean invite) {
-            this.invite = Input.ofNullable(invite);
+            this.invite = Output.ofNullable(invite);
             return this;
         }
         public MemberArgs build() {

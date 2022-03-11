@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
 import io.pulumi.kubernetes.core_v1.inputs.ServicePortArgs;
@@ -31,10 +31,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocateLoadBalancerNodePorts")
-      private final @Nullable Input<Boolean> allocateLoadBalancerNodePorts;
+      private final @Nullable Output<Boolean> allocateLoadBalancerNodePorts;
 
-    public Input<Boolean> getAllocateLoadBalancerNodePorts() {
-        return this.allocateLoadBalancerNodePorts == null ? Input.empty() : this.allocateLoadBalancerNodePorts;
+    public Output<Boolean> getAllocateLoadBalancerNodePorts() {
+        return this.allocateLoadBalancerNodePorts == null ? Output.empty() : this.allocateLoadBalancerNodePorts;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIP")
-      private final @Nullable Input<String> clusterIP;
+      private final @Nullable Output<String> clusterIP;
 
-    public Input<String> getClusterIP() {
-        return this.clusterIP == null ? Input.empty() : this.clusterIP;
+    public Output<String> getClusterIP() {
+        return this.clusterIP == null ? Output.empty() : this.clusterIP;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIPs")
-      private final @Nullable Input<List<String>> clusterIPs;
+      private final @Nullable Output<List<String>> clusterIPs;
 
-    public Input<List<String>> getClusterIPs() {
-        return this.clusterIPs == null ? Input.empty() : this.clusterIPs;
+    public Output<List<String>> getClusterIPs() {
+        return this.clusterIPs == null ? Output.empty() : this.clusterIPs;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalIPs")
-      private final @Nullable Input<List<String>> externalIPs;
+      private final @Nullable Output<List<String>> externalIPs;
 
-    public Input<List<String>> getExternalIPs() {
-        return this.externalIPs == null ? Input.empty() : this.externalIPs;
+    public Output<List<String>> getExternalIPs() {
+        return this.externalIPs == null ? Output.empty() : this.externalIPs;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalName")
-      private final @Nullable Input<String> externalName;
+      private final @Nullable Output<String> externalName;
 
-    public Input<String> getExternalName() {
-        return this.externalName == null ? Input.empty() : this.externalName;
+    public Output<String> getExternalName() {
+        return this.externalName == null ? Output.empty() : this.externalName;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalTrafficPolicy")
-      private final @Nullable Input<String> externalTrafficPolicy;
+      private final @Nullable Output<String> externalTrafficPolicy;
 
-    public Input<String> getExternalTrafficPolicy() {
-        return this.externalTrafficPolicy == null ? Input.empty() : this.externalTrafficPolicy;
+    public Output<String> getExternalTrafficPolicy() {
+        return this.externalTrafficPolicy == null ? Output.empty() : this.externalTrafficPolicy;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckNodePort")
-      private final @Nullable Input<Integer> healthCheckNodePort;
+      private final @Nullable Output<Integer> healthCheckNodePort;
 
-    public Input<Integer> getHealthCheckNodePort() {
-        return this.healthCheckNodePort == null ? Input.empty() : this.healthCheckNodePort;
+    public Output<Integer> getHealthCheckNodePort() {
+        return this.healthCheckNodePort == null ? Output.empty() : this.healthCheckNodePort;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internalTrafficPolicy")
-      private final @Nullable Input<String> internalTrafficPolicy;
+      private final @Nullable Output<String> internalTrafficPolicy;
 
-    public Input<String> getInternalTrafficPolicy() {
-        return this.internalTrafficPolicy == null ? Input.empty() : this.internalTrafficPolicy;
+    public Output<String> getInternalTrafficPolicy() {
+        return this.internalTrafficPolicy == null ? Output.empty() : this.internalTrafficPolicy;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipFamilies")
-      private final @Nullable Input<List<String>> ipFamilies;
+      private final @Nullable Output<List<String>> ipFamilies;
 
-    public Input<List<String>> getIpFamilies() {
-        return this.ipFamilies == null ? Input.empty() : this.ipFamilies;
+    public Output<List<String>> getIpFamilies() {
+        return this.ipFamilies == null ? Output.empty() : this.ipFamilies;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipFamily")
-      private final @Nullable Input<String> ipFamily;
+      private final @Nullable Output<String> ipFamily;
 
-    public Input<String> getIpFamily() {
-        return this.ipFamily == null ? Input.empty() : this.ipFamily;
+    public Output<String> getIpFamily() {
+        return this.ipFamily == null ? Output.empty() : this.ipFamily;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipFamilyPolicy")
-      private final @Nullable Input<String> ipFamilyPolicy;
+      private final @Nullable Output<String> ipFamilyPolicy;
 
-    public Input<String> getIpFamilyPolicy() {
-        return this.ipFamilyPolicy == null ? Input.empty() : this.ipFamilyPolicy;
+    public Output<String> getIpFamilyPolicy() {
+        return this.ipFamilyPolicy == null ? Output.empty() : this.ipFamilyPolicy;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerClass")
-      private final @Nullable Input<String> loadBalancerClass;
+      private final @Nullable Output<String> loadBalancerClass;
 
-    public Input<String> getLoadBalancerClass() {
-        return this.loadBalancerClass == null ? Input.empty() : this.loadBalancerClass;
+    public Output<String> getLoadBalancerClass() {
+        return this.loadBalancerClass == null ? Output.empty() : this.loadBalancerClass;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerIP")
-      private final @Nullable Input<String> loadBalancerIP;
+      private final @Nullable Output<String> loadBalancerIP;
 
-    public Input<String> getLoadBalancerIP() {
-        return this.loadBalancerIP == null ? Input.empty() : this.loadBalancerIP;
+    public Output<String> getLoadBalancerIP() {
+        return this.loadBalancerIP == null ? Output.empty() : this.loadBalancerIP;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerSourceRanges")
-      private final @Nullable Input<List<String>> loadBalancerSourceRanges;
+      private final @Nullable Output<List<String>> loadBalancerSourceRanges;
 
-    public Input<List<String>> getLoadBalancerSourceRanges() {
-        return this.loadBalancerSourceRanges == null ? Input.empty() : this.loadBalancerSourceRanges;
+    public Output<List<String>> getLoadBalancerSourceRanges() {
+        return this.loadBalancerSourceRanges == null ? Output.empty() : this.loadBalancerSourceRanges;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<ServicePortArgs>> ports;
+      private final @Nullable Output<List<ServicePortArgs>> ports;
 
-    public Input<List<ServicePortArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<ServicePortArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishNotReadyAddresses")
-      private final @Nullable Input<Boolean> publishNotReadyAddresses;
+      private final @Nullable Output<Boolean> publishNotReadyAddresses;
 
-    public Input<Boolean> getPublishNotReadyAddresses() {
-        return this.publishNotReadyAddresses == null ? Input.empty() : this.publishNotReadyAddresses;
+    public Output<Boolean> getPublishNotReadyAddresses() {
+        return this.publishNotReadyAddresses == null ? Output.empty() : this.publishNotReadyAddresses;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<Map<String,String>> selector;
+      private final @Nullable Output<Map<String,String>> selector;
 
-    public Input<Map<String,String>> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<Map<String,String>> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     /**
@@ -230,10 +230,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinity")
-      private final @Nullable Input<String> sessionAffinity;
+      private final @Nullable Output<String> sessionAffinity;
 
-    public Input<String> getSessionAffinity() {
-        return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
+    public Output<String> getSessionAffinity() {
+        return this.sessionAffinity == null ? Output.empty() : this.sessionAffinity;
     }
 
     /**
@@ -241,10 +241,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinityConfig")
-      private final @Nullable Input<SessionAffinityConfigArgs> sessionAffinityConfig;
+      private final @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig;
 
-    public Input<SessionAffinityConfigArgs> getSessionAffinityConfig() {
-        return this.sessionAffinityConfig == null ? Input.empty() : this.sessionAffinityConfig;
+    public Output<SessionAffinityConfigArgs> getSessionAffinityConfig() {
+        return this.sessionAffinityConfig == null ? Output.empty() : this.sessionAffinityConfig;
     }
 
     /**
@@ -252,10 +252,10 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topologyKeys")
-      private final @Nullable Input<List<String>> topologyKeys;
+      private final @Nullable Output<List<String>> topologyKeys;
 
-    public Input<List<String>> getTopologyKeys() {
-        return this.topologyKeys == null ? Input.empty() : this.topologyKeys;
+    public Output<List<String>> getTopologyKeys() {
+        return this.topologyKeys == null ? Output.empty() : this.topologyKeys;
     }
 
     /**
@@ -269,34 +269,34 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ServiceSpecType>> type;
+      private final @Nullable Output<Either<String,ServiceSpecType>> type;
 
-    public Input<Either<String,ServiceSpecType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ServiceSpecType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ServiceSpecArgs(
-        @Nullable Input<Boolean> allocateLoadBalancerNodePorts,
-        @Nullable Input<String> clusterIP,
-        @Nullable Input<List<String>> clusterIPs,
-        @Nullable Input<List<String>> externalIPs,
-        @Nullable Input<String> externalName,
-        @Nullable Input<String> externalTrafficPolicy,
-        @Nullable Input<Integer> healthCheckNodePort,
-        @Nullable Input<String> internalTrafficPolicy,
-        @Nullable Input<List<String>> ipFamilies,
-        @Nullable Input<String> ipFamily,
-        @Nullable Input<String> ipFamilyPolicy,
-        @Nullable Input<String> loadBalancerClass,
-        @Nullable Input<String> loadBalancerIP,
-        @Nullable Input<List<String>> loadBalancerSourceRanges,
-        @Nullable Input<List<ServicePortArgs>> ports,
-        @Nullable Input<Boolean> publishNotReadyAddresses,
-        @Nullable Input<Map<String,String>> selector,
-        @Nullable Input<String> sessionAffinity,
-        @Nullable Input<SessionAffinityConfigArgs> sessionAffinityConfig,
-        @Nullable Input<List<String>> topologyKeys,
-        @Nullable Input<Either<String,ServiceSpecType>> type) {
+        @Nullable Output<Boolean> allocateLoadBalancerNodePorts,
+        @Nullable Output<String> clusterIP,
+        @Nullable Output<List<String>> clusterIPs,
+        @Nullable Output<List<String>> externalIPs,
+        @Nullable Output<String> externalName,
+        @Nullable Output<String> externalTrafficPolicy,
+        @Nullable Output<Integer> healthCheckNodePort,
+        @Nullable Output<String> internalTrafficPolicy,
+        @Nullable Output<List<String>> ipFamilies,
+        @Nullable Output<String> ipFamily,
+        @Nullable Output<String> ipFamilyPolicy,
+        @Nullable Output<String> loadBalancerClass,
+        @Nullable Output<String> loadBalancerIP,
+        @Nullable Output<List<String>> loadBalancerSourceRanges,
+        @Nullable Output<List<ServicePortArgs>> ports,
+        @Nullable Output<Boolean> publishNotReadyAddresses,
+        @Nullable Output<Map<String,String>> selector,
+        @Nullable Output<String> sessionAffinity,
+        @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig,
+        @Nullable Output<List<String>> topologyKeys,
+        @Nullable Output<Either<String,ServiceSpecType>> type) {
         this.allocateLoadBalancerNodePorts = allocateLoadBalancerNodePorts;
         this.clusterIP = clusterIP;
         this.clusterIPs = clusterIPs;
@@ -321,27 +321,27 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceSpecArgs() {
-        this.allocateLoadBalancerNodePorts = Input.empty();
-        this.clusterIP = Input.empty();
-        this.clusterIPs = Input.empty();
-        this.externalIPs = Input.empty();
-        this.externalName = Input.empty();
-        this.externalTrafficPolicy = Input.empty();
-        this.healthCheckNodePort = Input.empty();
-        this.internalTrafficPolicy = Input.empty();
-        this.ipFamilies = Input.empty();
-        this.ipFamily = Input.empty();
-        this.ipFamilyPolicy = Input.empty();
-        this.loadBalancerClass = Input.empty();
-        this.loadBalancerIP = Input.empty();
-        this.loadBalancerSourceRanges = Input.empty();
-        this.ports = Input.empty();
-        this.publishNotReadyAddresses = Input.empty();
-        this.selector = Input.empty();
-        this.sessionAffinity = Input.empty();
-        this.sessionAffinityConfig = Input.empty();
-        this.topologyKeys = Input.empty();
-        this.type = Input.empty();
+        this.allocateLoadBalancerNodePorts = Output.empty();
+        this.clusterIP = Output.empty();
+        this.clusterIPs = Output.empty();
+        this.externalIPs = Output.empty();
+        this.externalName = Output.empty();
+        this.externalTrafficPolicy = Output.empty();
+        this.healthCheckNodePort = Output.empty();
+        this.internalTrafficPolicy = Output.empty();
+        this.ipFamilies = Output.empty();
+        this.ipFamily = Output.empty();
+        this.ipFamilyPolicy = Output.empty();
+        this.loadBalancerClass = Output.empty();
+        this.loadBalancerIP = Output.empty();
+        this.loadBalancerSourceRanges = Output.empty();
+        this.ports = Output.empty();
+        this.publishNotReadyAddresses = Output.empty();
+        this.selector = Output.empty();
+        this.sessionAffinity = Output.empty();
+        this.sessionAffinityConfig = Output.empty();
+        this.topologyKeys = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -353,27 +353,27 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allocateLoadBalancerNodePorts;
-        private @Nullable Input<String> clusterIP;
-        private @Nullable Input<List<String>> clusterIPs;
-        private @Nullable Input<List<String>> externalIPs;
-        private @Nullable Input<String> externalName;
-        private @Nullable Input<String> externalTrafficPolicy;
-        private @Nullable Input<Integer> healthCheckNodePort;
-        private @Nullable Input<String> internalTrafficPolicy;
-        private @Nullable Input<List<String>> ipFamilies;
-        private @Nullable Input<String> ipFamily;
-        private @Nullable Input<String> ipFamilyPolicy;
-        private @Nullable Input<String> loadBalancerClass;
-        private @Nullable Input<String> loadBalancerIP;
-        private @Nullable Input<List<String>> loadBalancerSourceRanges;
-        private @Nullable Input<List<ServicePortArgs>> ports;
-        private @Nullable Input<Boolean> publishNotReadyAddresses;
-        private @Nullable Input<Map<String,String>> selector;
-        private @Nullable Input<String> sessionAffinity;
-        private @Nullable Input<SessionAffinityConfigArgs> sessionAffinityConfig;
-        private @Nullable Input<List<String>> topologyKeys;
-        private @Nullable Input<Either<String,ServiceSpecType>> type;
+        private @Nullable Output<Boolean> allocateLoadBalancerNodePorts;
+        private @Nullable Output<String> clusterIP;
+        private @Nullable Output<List<String>> clusterIPs;
+        private @Nullable Output<List<String>> externalIPs;
+        private @Nullable Output<String> externalName;
+        private @Nullable Output<String> externalTrafficPolicy;
+        private @Nullable Output<Integer> healthCheckNodePort;
+        private @Nullable Output<String> internalTrafficPolicy;
+        private @Nullable Output<List<String>> ipFamilies;
+        private @Nullable Output<String> ipFamily;
+        private @Nullable Output<String> ipFamilyPolicy;
+        private @Nullable Output<String> loadBalancerClass;
+        private @Nullable Output<String> loadBalancerIP;
+        private @Nullable Output<List<String>> loadBalancerSourceRanges;
+        private @Nullable Output<List<ServicePortArgs>> ports;
+        private @Nullable Output<Boolean> publishNotReadyAddresses;
+        private @Nullable Output<Map<String,String>> selector;
+        private @Nullable Output<String> sessionAffinity;
+        private @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig;
+        private @Nullable Output<List<String>> topologyKeys;
+        private @Nullable Output<Either<String,ServiceSpecType>> type;
 
         public Builder() {
     	      // Empty
@@ -404,213 +404,213 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder allocateLoadBalancerNodePorts(@Nullable Input<Boolean> allocateLoadBalancerNodePorts) {
+        public Builder allocateLoadBalancerNodePorts(@Nullable Output<Boolean> allocateLoadBalancerNodePorts) {
             this.allocateLoadBalancerNodePorts = allocateLoadBalancerNodePorts;
             return this;
         }
 
         public Builder allocateLoadBalancerNodePorts(@Nullable Boolean allocateLoadBalancerNodePorts) {
-            this.allocateLoadBalancerNodePorts = Input.ofNullable(allocateLoadBalancerNodePorts);
+            this.allocateLoadBalancerNodePorts = Output.ofNullable(allocateLoadBalancerNodePorts);
             return this;
         }
 
-        public Builder clusterIP(@Nullable Input<String> clusterIP) {
+        public Builder clusterIP(@Nullable Output<String> clusterIP) {
             this.clusterIP = clusterIP;
             return this;
         }
 
         public Builder clusterIP(@Nullable String clusterIP) {
-            this.clusterIP = Input.ofNullable(clusterIP);
+            this.clusterIP = Output.ofNullable(clusterIP);
             return this;
         }
 
-        public Builder clusterIPs(@Nullable Input<List<String>> clusterIPs) {
+        public Builder clusterIPs(@Nullable Output<List<String>> clusterIPs) {
             this.clusterIPs = clusterIPs;
             return this;
         }
 
         public Builder clusterIPs(@Nullable List<String> clusterIPs) {
-            this.clusterIPs = Input.ofNullable(clusterIPs);
+            this.clusterIPs = Output.ofNullable(clusterIPs);
             return this;
         }
 
-        public Builder externalIPs(@Nullable Input<List<String>> externalIPs) {
+        public Builder externalIPs(@Nullable Output<List<String>> externalIPs) {
             this.externalIPs = externalIPs;
             return this;
         }
 
         public Builder externalIPs(@Nullable List<String> externalIPs) {
-            this.externalIPs = Input.ofNullable(externalIPs);
+            this.externalIPs = Output.ofNullable(externalIPs);
             return this;
         }
 
-        public Builder externalName(@Nullable Input<String> externalName) {
+        public Builder externalName(@Nullable Output<String> externalName) {
             this.externalName = externalName;
             return this;
         }
 
         public Builder externalName(@Nullable String externalName) {
-            this.externalName = Input.ofNullable(externalName);
+            this.externalName = Output.ofNullable(externalName);
             return this;
         }
 
-        public Builder externalTrafficPolicy(@Nullable Input<String> externalTrafficPolicy) {
+        public Builder externalTrafficPolicy(@Nullable Output<String> externalTrafficPolicy) {
             this.externalTrafficPolicy = externalTrafficPolicy;
             return this;
         }
 
         public Builder externalTrafficPolicy(@Nullable String externalTrafficPolicy) {
-            this.externalTrafficPolicy = Input.ofNullable(externalTrafficPolicy);
+            this.externalTrafficPolicy = Output.ofNullable(externalTrafficPolicy);
             return this;
         }
 
-        public Builder healthCheckNodePort(@Nullable Input<Integer> healthCheckNodePort) {
+        public Builder healthCheckNodePort(@Nullable Output<Integer> healthCheckNodePort) {
             this.healthCheckNodePort = healthCheckNodePort;
             return this;
         }
 
         public Builder healthCheckNodePort(@Nullable Integer healthCheckNodePort) {
-            this.healthCheckNodePort = Input.ofNullable(healthCheckNodePort);
+            this.healthCheckNodePort = Output.ofNullable(healthCheckNodePort);
             return this;
         }
 
-        public Builder internalTrafficPolicy(@Nullable Input<String> internalTrafficPolicy) {
+        public Builder internalTrafficPolicy(@Nullable Output<String> internalTrafficPolicy) {
             this.internalTrafficPolicy = internalTrafficPolicy;
             return this;
         }
 
         public Builder internalTrafficPolicy(@Nullable String internalTrafficPolicy) {
-            this.internalTrafficPolicy = Input.ofNullable(internalTrafficPolicy);
+            this.internalTrafficPolicy = Output.ofNullable(internalTrafficPolicy);
             return this;
         }
 
-        public Builder ipFamilies(@Nullable Input<List<String>> ipFamilies) {
+        public Builder ipFamilies(@Nullable Output<List<String>> ipFamilies) {
             this.ipFamilies = ipFamilies;
             return this;
         }
 
         public Builder ipFamilies(@Nullable List<String> ipFamilies) {
-            this.ipFamilies = Input.ofNullable(ipFamilies);
+            this.ipFamilies = Output.ofNullable(ipFamilies);
             return this;
         }
 
-        public Builder ipFamily(@Nullable Input<String> ipFamily) {
+        public Builder ipFamily(@Nullable Output<String> ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }
 
         public Builder ipFamily(@Nullable String ipFamily) {
-            this.ipFamily = Input.ofNullable(ipFamily);
+            this.ipFamily = Output.ofNullable(ipFamily);
             return this;
         }
 
-        public Builder ipFamilyPolicy(@Nullable Input<String> ipFamilyPolicy) {
+        public Builder ipFamilyPolicy(@Nullable Output<String> ipFamilyPolicy) {
             this.ipFamilyPolicy = ipFamilyPolicy;
             return this;
         }
 
         public Builder ipFamilyPolicy(@Nullable String ipFamilyPolicy) {
-            this.ipFamilyPolicy = Input.ofNullable(ipFamilyPolicy);
+            this.ipFamilyPolicy = Output.ofNullable(ipFamilyPolicy);
             return this;
         }
 
-        public Builder loadBalancerClass(@Nullable Input<String> loadBalancerClass) {
+        public Builder loadBalancerClass(@Nullable Output<String> loadBalancerClass) {
             this.loadBalancerClass = loadBalancerClass;
             return this;
         }
 
         public Builder loadBalancerClass(@Nullable String loadBalancerClass) {
-            this.loadBalancerClass = Input.ofNullable(loadBalancerClass);
+            this.loadBalancerClass = Output.ofNullable(loadBalancerClass);
             return this;
         }
 
-        public Builder loadBalancerIP(@Nullable Input<String> loadBalancerIP) {
+        public Builder loadBalancerIP(@Nullable Output<String> loadBalancerIP) {
             this.loadBalancerIP = loadBalancerIP;
             return this;
         }
 
         public Builder loadBalancerIP(@Nullable String loadBalancerIP) {
-            this.loadBalancerIP = Input.ofNullable(loadBalancerIP);
+            this.loadBalancerIP = Output.ofNullable(loadBalancerIP);
             return this;
         }
 
-        public Builder loadBalancerSourceRanges(@Nullable Input<List<String>> loadBalancerSourceRanges) {
+        public Builder loadBalancerSourceRanges(@Nullable Output<List<String>> loadBalancerSourceRanges) {
             this.loadBalancerSourceRanges = loadBalancerSourceRanges;
             return this;
         }
 
         public Builder loadBalancerSourceRanges(@Nullable List<String> loadBalancerSourceRanges) {
-            this.loadBalancerSourceRanges = Input.ofNullable(loadBalancerSourceRanges);
+            this.loadBalancerSourceRanges = Output.ofNullable(loadBalancerSourceRanges);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<ServicePortArgs>> ports) {
+        public Builder ports(@Nullable Output<List<ServicePortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<ServicePortArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
 
-        public Builder publishNotReadyAddresses(@Nullable Input<Boolean> publishNotReadyAddresses) {
+        public Builder publishNotReadyAddresses(@Nullable Output<Boolean> publishNotReadyAddresses) {
             this.publishNotReadyAddresses = publishNotReadyAddresses;
             return this;
         }
 
         public Builder publishNotReadyAddresses(@Nullable Boolean publishNotReadyAddresses) {
-            this.publishNotReadyAddresses = Input.ofNullable(publishNotReadyAddresses);
+            this.publishNotReadyAddresses = Output.ofNullable(publishNotReadyAddresses);
             return this;
         }
 
-        public Builder selector(@Nullable Input<Map<String,String>> selector) {
+        public Builder selector(@Nullable Output<Map<String,String>> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable Map<String,String> selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
 
-        public Builder sessionAffinity(@Nullable Input<String> sessionAffinity) {
+        public Builder sessionAffinity(@Nullable Output<String> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
 
         public Builder sessionAffinity(@Nullable String sessionAffinity) {
-            this.sessionAffinity = Input.ofNullable(sessionAffinity);
+            this.sessionAffinity = Output.ofNullable(sessionAffinity);
             return this;
         }
 
-        public Builder sessionAffinityConfig(@Nullable Input<SessionAffinityConfigArgs> sessionAffinityConfig) {
+        public Builder sessionAffinityConfig(@Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig) {
             this.sessionAffinityConfig = sessionAffinityConfig;
             return this;
         }
 
         public Builder sessionAffinityConfig(@Nullable SessionAffinityConfigArgs sessionAffinityConfig) {
-            this.sessionAffinityConfig = Input.ofNullable(sessionAffinityConfig);
+            this.sessionAffinityConfig = Output.ofNullable(sessionAffinityConfig);
             return this;
         }
 
-        public Builder topologyKeys(@Nullable Input<List<String>> topologyKeys) {
+        public Builder topologyKeys(@Nullable Output<List<String>> topologyKeys) {
             this.topologyKeys = topologyKeys;
             return this;
         }
 
         public Builder topologyKeys(@Nullable List<String> topologyKeys) {
-            this.topologyKeys = Input.ofNullable(topologyKeys);
+            this.topologyKeys = Output.ofNullable(topologyKeys);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,ServiceSpecType>> type) {
+        public Builder type(@Nullable Output<Either<String,ServiceSpecType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ServiceSpecType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ServiceSpecArgs build() {

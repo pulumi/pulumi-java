@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.KnownSyslogDataSourceFacilityNames;
 import io.pulumi.azurenative.insights.enums.KnownSyslogDataSourceLogLevels;
 import io.pulumi.azurenative.insights.enums.KnownSyslogDataSourceStreams;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="facilityNames")
-      private final @Nullable Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
+      private final @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
 
-    public Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> getFacilityNames() {
-        return this.facilityNames == null ? Input.empty() : this.facilityNames;
+    public Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> getFacilityNames() {
+        return this.facilityNames == null ? Output.empty() : this.facilityNames;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logLevels")
-      private final @Nullable Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
+      private final @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
 
-    public Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> getLogLevels() {
-        return this.logLevels == null ? Input.empty() : this.logLevels;
+    public Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> getLogLevels() {
+        return this.logLevels == null ? Output.empty() : this.logLevels;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -64,17 +64,17 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="streams")
-      private final @Nullable Input<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
+      private final @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
 
-    public Input<List<Either<String,KnownSyslogDataSourceStreams>>> getStreams() {
-        return this.streams == null ? Input.empty() : this.streams;
+    public Output<List<Either<String,KnownSyslogDataSourceStreams>>> getStreams() {
+        return this.streams == null ? Output.empty() : this.streams;
     }
 
     public SyslogDataSourceArgs(
-        @Nullable Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames,
-        @Nullable Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels,
-        @Nullable Input<String> name,
-        @Nullable Input<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
+        @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames,
+        @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels,
+        @Nullable Output<String> name,
+        @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
         this.facilityNames = facilityNames;
         this.logLevels = logLevels;
         this.name = name;
@@ -82,10 +82,10 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SyslogDataSourceArgs() {
-        this.facilityNames = Input.empty();
-        this.logLevels = Input.empty();
-        this.name = Input.empty();
-        this.streams = Input.empty();
+        this.facilityNames = Output.empty();
+        this.logLevels = Output.empty();
+        this.name = Output.empty();
+        this.streams = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,10 +97,10 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
-        private @Nullable Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
+        private @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
+        private @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
 
         public Builder() {
     	      // Empty
@@ -114,43 +114,43 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.streams = defaults.streams;
         }
 
-        public Builder facilityNames(@Nullable Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames) {
+        public Builder facilityNames(@Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames) {
             this.facilityNames = facilityNames;
             return this;
         }
 
         public Builder facilityNames(@Nullable List<Either<String,KnownSyslogDataSourceFacilityNames>> facilityNames) {
-            this.facilityNames = Input.ofNullable(facilityNames);
+            this.facilityNames = Output.ofNullable(facilityNames);
             return this;
         }
 
-        public Builder logLevels(@Nullable Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels) {
+        public Builder logLevels(@Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels) {
             this.logLevels = logLevels;
             return this;
         }
 
         public Builder logLevels(@Nullable List<Either<String,KnownSyslogDataSourceLogLevels>> logLevels) {
-            this.logLevels = Input.ofNullable(logLevels);
+            this.logLevels = Output.ofNullable(logLevels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder streams(@Nullable Input<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
+        public Builder streams(@Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
             this.streams = streams;
             return this;
         }
 
         public Builder streams(@Nullable List<Either<String,KnownSyslogDataSourceStreams>> streams) {
-            this.streams = Input.ofNullable(streams);
+            this.streams = Output.ofNullable(streams);
             return this;
         }
         public SyslogDataSourceArgs build() {

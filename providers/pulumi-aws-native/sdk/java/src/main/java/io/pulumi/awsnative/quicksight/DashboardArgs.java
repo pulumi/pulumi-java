@@ -8,7 +8,7 @@ import io.pulumi.awsnative.quicksight.inputs.DashboardPublishOptionsArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,24 +21,24 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     public static final DashboardArgs Empty = new DashboardArgs();
 
     @InputImport(name="awsAccountId", required=true)
-      private final Input<String> awsAccountId;
+      private final Output<String> awsAccountId;
 
-    public Input<String> getAwsAccountId() {
+    public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
 
     @InputImport(name="dashboardId", required=true)
-      private final Input<String> dashboardId;
+      private final Output<String> dashboardId;
 
-    public Input<String> getDashboardId() {
+    public Output<String> getDashboardId() {
         return this.dashboardId;
     }
 
     @InputImport(name="dashboardPublishOptions")
-      private final @Nullable Input<DashboardPublishOptionsArgs> dashboardPublishOptions;
+      private final @Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions;
 
-    public Input<DashboardPublishOptionsArgs> getDashboardPublishOptions() {
-        return this.dashboardPublishOptions == null ? Input.empty() : this.dashboardPublishOptions;
+    public Output<DashboardPublishOptionsArgs> getDashboardPublishOptions() {
+        return this.dashboardPublishOptions == null ? Output.empty() : this.dashboardPublishOptions;
     }
 
     /**
@@ -46,17 +46,17 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="parameters")
-      private final @Nullable Input<DashboardParametersArgs> parameters;
+      private final @Nullable Output<DashboardParametersArgs> parameters;
 
-    public Input<DashboardParametersArgs> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<DashboardParametersArgs> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -68,16 +68,16 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<DashboardResourcePermissionArgs>> permissions;
+      private final @Nullable Output<List<DashboardResourcePermissionArgs>> permissions;
 
-    public Input<List<DashboardResourcePermissionArgs>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<DashboardResourcePermissionArgs>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     @InputImport(name="sourceEntity", required=true)
-      private final Input<DashboardSourceEntityArgs> sourceEntity;
+      private final Output<DashboardSourceEntityArgs> sourceEntity;
 
-    public Input<DashboardSourceEntityArgs> getSourceEntity() {
+    public Output<DashboardSourceEntityArgs> getSourceEntity() {
         return this.sourceEntity;
     }
 
@@ -87,10 +87,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DashboardTagArgs>> tags;
+      private final @Nullable Output<List<DashboardTagArgs>> tags;
 
-    public Input<List<DashboardTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DashboardTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="themeArn")
-      private final @Nullable Input<String> themeArn;
+      private final @Nullable Output<String> themeArn;
 
-    public Input<String> getThemeArn() {
-        return this.themeArn == null ? Input.empty() : this.themeArn;
+    public Output<String> getThemeArn() {
+        return this.themeArn == null ? Output.empty() : this.themeArn;
     }
 
     /**
@@ -112,23 +112,23 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionDescription")
-      private final @Nullable Input<String> versionDescription;
+      private final @Nullable Output<String> versionDescription;
 
-    public Input<String> getVersionDescription() {
-        return this.versionDescription == null ? Input.empty() : this.versionDescription;
+    public Output<String> getVersionDescription() {
+        return this.versionDescription == null ? Output.empty() : this.versionDescription;
     }
 
     public DashboardArgs(
-        Input<String> awsAccountId,
-        Input<String> dashboardId,
-        @Nullable Input<DashboardPublishOptionsArgs> dashboardPublishOptions,
-        @Nullable Input<String> name,
-        @Nullable Input<DashboardParametersArgs> parameters,
-        @Nullable Input<List<DashboardResourcePermissionArgs>> permissions,
-        Input<DashboardSourceEntityArgs> sourceEntity,
-        @Nullable Input<List<DashboardTagArgs>> tags,
-        @Nullable Input<String> themeArn,
-        @Nullable Input<String> versionDescription) {
+        Output<String> awsAccountId,
+        Output<String> dashboardId,
+        @Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions,
+        @Nullable Output<String> name,
+        @Nullable Output<DashboardParametersArgs> parameters,
+        @Nullable Output<List<DashboardResourcePermissionArgs>> permissions,
+        Output<DashboardSourceEntityArgs> sourceEntity,
+        @Nullable Output<List<DashboardTagArgs>> tags,
+        @Nullable Output<String> themeArn,
+        @Nullable Output<String> versionDescription) {
         this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
         this.dashboardId = Objects.requireNonNull(dashboardId, "expected parameter 'dashboardId' to be non-null");
         this.dashboardPublishOptions = dashboardPublishOptions;
@@ -142,16 +142,16 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardArgs() {
-        this.awsAccountId = Input.empty();
-        this.dashboardId = Input.empty();
-        this.dashboardPublishOptions = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.permissions = Input.empty();
-        this.sourceEntity = Input.empty();
-        this.tags = Input.empty();
-        this.themeArn = Input.empty();
-        this.versionDescription = Input.empty();
+        this.awsAccountId = Output.empty();
+        this.dashboardId = Output.empty();
+        this.dashboardPublishOptions = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.permissions = Output.empty();
+        this.sourceEntity = Output.empty();
+        this.tags = Output.empty();
+        this.themeArn = Output.empty();
+        this.versionDescription = Output.empty();
     }
 
     public static Builder builder() {
@@ -163,16 +163,16 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> awsAccountId;
-        private Input<String> dashboardId;
-        private @Nullable Input<DashboardPublishOptionsArgs> dashboardPublishOptions;
-        private @Nullable Input<String> name;
-        private @Nullable Input<DashboardParametersArgs> parameters;
-        private @Nullable Input<List<DashboardResourcePermissionArgs>> permissions;
-        private Input<DashboardSourceEntityArgs> sourceEntity;
-        private @Nullable Input<List<DashboardTagArgs>> tags;
-        private @Nullable Input<String> themeArn;
-        private @Nullable Input<String> versionDescription;
+        private Output<String> awsAccountId;
+        private Output<String> dashboardId;
+        private @Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions;
+        private @Nullable Output<String> name;
+        private @Nullable Output<DashboardParametersArgs> parameters;
+        private @Nullable Output<List<DashboardResourcePermissionArgs>> permissions;
+        private Output<DashboardSourceEntityArgs> sourceEntity;
+        private @Nullable Output<List<DashboardTagArgs>> tags;
+        private @Nullable Output<String> themeArn;
+        private @Nullable Output<String> versionDescription;
 
         public Builder() {
     	      // Empty
@@ -192,103 +192,103 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionDescription = defaults.versionDescription;
         }
 
-        public Builder awsAccountId(Input<String> awsAccountId) {
+        public Builder awsAccountId(Output<String> awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Input.of(Objects.requireNonNull(awsAccountId));
+            this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
 
-        public Builder dashboardId(Input<String> dashboardId) {
+        public Builder dashboardId(Output<String> dashboardId) {
             this.dashboardId = Objects.requireNonNull(dashboardId);
             return this;
         }
 
         public Builder dashboardId(String dashboardId) {
-            this.dashboardId = Input.of(Objects.requireNonNull(dashboardId));
+            this.dashboardId = Output.of(Objects.requireNonNull(dashboardId));
             return this;
         }
 
-        public Builder dashboardPublishOptions(@Nullable Input<DashboardPublishOptionsArgs> dashboardPublishOptions) {
+        public Builder dashboardPublishOptions(@Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions) {
             this.dashboardPublishOptions = dashboardPublishOptions;
             return this;
         }
 
         public Builder dashboardPublishOptions(@Nullable DashboardPublishOptionsArgs dashboardPublishOptions) {
-            this.dashboardPublishOptions = Input.ofNullable(dashboardPublishOptions);
+            this.dashboardPublishOptions = Output.ofNullable(dashboardPublishOptions);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<DashboardParametersArgs> parameters) {
+        public Builder parameters(@Nullable Output<DashboardParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable DashboardParametersArgs parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<List<DashboardResourcePermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Output<List<DashboardResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<DashboardResourcePermissionArgs> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder sourceEntity(Input<DashboardSourceEntityArgs> sourceEntity) {
+        public Builder sourceEntity(Output<DashboardSourceEntityArgs> sourceEntity) {
             this.sourceEntity = Objects.requireNonNull(sourceEntity);
             return this;
         }
 
         public Builder sourceEntity(DashboardSourceEntityArgs sourceEntity) {
-            this.sourceEntity = Input.of(Objects.requireNonNull(sourceEntity));
+            this.sourceEntity = Output.of(Objects.requireNonNull(sourceEntity));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DashboardTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DashboardTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DashboardTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder themeArn(@Nullable Input<String> themeArn) {
+        public Builder themeArn(@Nullable Output<String> themeArn) {
             this.themeArn = themeArn;
             return this;
         }
 
         public Builder themeArn(@Nullable String themeArn) {
-            this.themeArn = Input.ofNullable(themeArn);
+            this.themeArn = Output.ofNullable(themeArn);
             return this;
         }
 
-        public Builder versionDescription(@Nullable Input<String> versionDescription) {
+        public Builder versionDescription(@Nullable Output<String> versionDescription) {
             this.versionDescription = versionDescription;
             return this;
         }
 
         public Builder versionDescription(@Nullable String versionDescription) {
-            this.versionDescription = Input.ofNullable(versionDescription);
+            this.versionDescription = Output.ofNullable(versionDescription);
             return this;
         }
         public DashboardArgs build() {

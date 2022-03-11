@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.ExpiryDetailArgs;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.RestrictionEvaluationsArgs;
@@ -25,10 +25,10 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiryDetail")
-      private final @Nullable Input<ExpiryDetailArgs> expiryDetail;
+      private final @Nullable Output<ExpiryDetailArgs> expiryDetail;
 
-    public Input<ExpiryDetailArgs> getExpiryDetail() {
-        return this.expiryDetail == null ? Input.empty() : this.expiryDetail;
+    public Output<ExpiryDetailArgs> getExpiryDetail() {
+        return this.expiryDetail == null ? Output.empty() : this.expiryDetail;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restrictionEvaluations")
-      private final @Nullable Input<RestrictionEvaluationsArgs> restrictionEvaluations;
+      private final @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations;
 
-    public Input<RestrictionEvaluationsArgs> getRestrictionEvaluations() {
-        return this.restrictionEvaluations == null ? Input.empty() : this.restrictionEvaluations;
+    public Output<RestrictionEvaluationsArgs> getRestrictionEvaluations() {
+        return this.restrictionEvaluations == null ? Output.empty() : this.restrictionEvaluations;
     }
 
     public MembershipRoleArgs(
-        @Nullable Input<ExpiryDetailArgs> expiryDetail,
-        @Nullable Input<String> name,
-        @Nullable Input<RestrictionEvaluationsArgs> restrictionEvaluations) {
+        @Nullable Output<ExpiryDetailArgs> expiryDetail,
+        @Nullable Output<String> name,
+        @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations) {
         this.expiryDetail = expiryDetail;
         this.name = name;
         this.restrictionEvaluations = restrictionEvaluations;
     }
 
     private MembershipRoleArgs() {
-        this.expiryDetail = Input.empty();
-        this.name = Input.empty();
-        this.restrictionEvaluations = Input.empty();
+        this.expiryDetail = Output.empty();
+        this.name = Output.empty();
+        this.restrictionEvaluations = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ExpiryDetailArgs> expiryDetail;
-        private @Nullable Input<String> name;
-        private @Nullable Input<RestrictionEvaluationsArgs> restrictionEvaluations;
+        private @Nullable Output<ExpiryDetailArgs> expiryDetail;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restrictionEvaluations = defaults.restrictionEvaluations;
         }
 
-        public Builder expiryDetail(@Nullable Input<ExpiryDetailArgs> expiryDetail) {
+        public Builder expiryDetail(@Nullable Output<ExpiryDetailArgs> expiryDetail) {
             this.expiryDetail = expiryDetail;
             return this;
         }
 
         public Builder expiryDetail(@Nullable ExpiryDetailArgs expiryDetail) {
-            this.expiryDetail = Input.ofNullable(expiryDetail);
+            this.expiryDetail = Output.ofNullable(expiryDetail);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder restrictionEvaluations(@Nullable Input<RestrictionEvaluationsArgs> restrictionEvaluations) {
+        public Builder restrictionEvaluations(@Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations) {
             this.restrictionEvaluations = restrictionEvaluations;
             return this;
         }
 
         public Builder restrictionEvaluations(@Nullable RestrictionEvaluationsArgs restrictionEvaluations) {
-            this.restrictionEvaluations = Input.ofNullable(restrictionEvaluations);
+            this.restrictionEvaluations = Output.ofNullable(restrictionEvaluations);
             return this;
         }
         public MembershipRoleArgs build() {

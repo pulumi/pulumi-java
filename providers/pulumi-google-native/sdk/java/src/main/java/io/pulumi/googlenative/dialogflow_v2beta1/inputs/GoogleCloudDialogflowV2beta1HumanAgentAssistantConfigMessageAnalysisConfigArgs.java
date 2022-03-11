@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
      * 
      */
     @InputImport(name="enableEntityExtraction")
-      private final @Nullable Input<Boolean> enableEntityExtraction;
+      private final @Nullable Output<Boolean> enableEntityExtraction;
 
-    public Input<Boolean> getEnableEntityExtraction() {
-        return this.enableEntityExtraction == null ? Input.empty() : this.enableEntityExtraction;
+    public Output<Boolean> getEnableEntityExtraction() {
+        return this.enableEntityExtraction == null ? Output.empty() : this.enableEntityExtraction;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
      * 
      */
     @InputImport(name="enableSentimentAnalysis")
-      private final @Nullable Input<Boolean> enableSentimentAnalysis;
+      private final @Nullable Output<Boolean> enableSentimentAnalysis;
 
-    public Input<Boolean> getEnableSentimentAnalysis() {
-        return this.enableSentimentAnalysis == null ? Input.empty() : this.enableSentimentAnalysis;
+    public Output<Boolean> getEnableSentimentAnalysis() {
+        return this.enableSentimentAnalysis == null ? Output.empty() : this.enableSentimentAnalysis;
     }
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs(
-        @Nullable Input<Boolean> enableEntityExtraction,
-        @Nullable Input<Boolean> enableSentimentAnalysis) {
+        @Nullable Output<Boolean> enableEntityExtraction,
+        @Nullable Output<Boolean> enableSentimentAnalysis) {
         this.enableEntityExtraction = enableEntityExtraction;
         this.enableSentimentAnalysis = enableSentimentAnalysis;
     }
 
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs() {
-        this.enableEntityExtraction = Input.empty();
-        this.enableSentimentAnalysis = Input.empty();
+        this.enableEntityExtraction = Output.empty();
+        this.enableSentimentAnalysis = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableEntityExtraction;
-        private @Nullable Input<Boolean> enableSentimentAnalysis;
+        private @Nullable Output<Boolean> enableEntityExtraction;
+        private @Nullable Output<Boolean> enableSentimentAnalysis;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
     	      this.enableSentimentAnalysis = defaults.enableSentimentAnalysis;
         }
 
-        public Builder enableEntityExtraction(@Nullable Input<Boolean> enableEntityExtraction) {
+        public Builder enableEntityExtraction(@Nullable Output<Boolean> enableEntityExtraction) {
             this.enableEntityExtraction = enableEntityExtraction;
             return this;
         }
 
         public Builder enableEntityExtraction(@Nullable Boolean enableEntityExtraction) {
-            this.enableEntityExtraction = Input.ofNullable(enableEntityExtraction);
+            this.enableEntityExtraction = Output.ofNullable(enableEntityExtraction);
             return this;
         }
 
-        public Builder enableSentimentAnalysis(@Nullable Input<Boolean> enableSentimentAnalysis) {
+        public Builder enableSentimentAnalysis(@Nullable Output<Boolean> enableSentimentAnalysis) {
             this.enableSentimentAnalysis = enableSentimentAnalysis;
             return this;
         }
 
         public Builder enableSentimentAnalysis(@Nullable Boolean enableSentimentAnalysis) {
-            this.enableSentimentAnalysis = Input.ofNullable(enableSentimentAnalysis);
+            this.enableSentimentAnalysis = Output.ofNullable(enableSentimentAnalysis);
             return this;
         }
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.ConnectionStringType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionString")
-      private final @Nullable Input<String> connectionString;
+      private final @Nullable Output<String> connectionString;
 
-    public Input<String> getConnectionString() {
-        return this.connectionString == null ? Input.empty() : this.connectionString;
+    public Output<String> getConnectionString() {
+        return this.connectionString == null ? Output.empty() : this.connectionString;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<ConnectionStringType> type;
+      private final @Nullable Output<ConnectionStringType> type;
 
-    public Input<ConnectionStringType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ConnectionStringType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ConnStringInfoArgs(
-        @Nullable Input<String> connectionString,
-        @Nullable Input<String> name,
-        @Nullable Input<ConnectionStringType> type) {
+        @Nullable Output<String> connectionString,
+        @Nullable Output<String> name,
+        @Nullable Output<ConnectionStringType> type) {
         this.connectionString = connectionString;
         this.name = name;
         this.type = type;
     }
 
     private ConnStringInfoArgs() {
-        this.connectionString = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.connectionString = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectionString;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ConnectionStringType> type;
+        private @Nullable Output<String> connectionString;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ConnectionStringType> type;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder connectionString(@Nullable Input<String> connectionString) {
+        public Builder connectionString(@Nullable Output<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Input.ofNullable(connectionString);
+            this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder type(@Nullable Input<ConnectionStringType> type) {
+        public Builder type(@Nullable Output<ConnectionStringType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ConnectionStringType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ConnStringInfoArgs build() {

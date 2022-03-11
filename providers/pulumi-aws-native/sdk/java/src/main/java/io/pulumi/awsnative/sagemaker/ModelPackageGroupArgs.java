@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelPackageGroupTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -18,24 +18,24 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     public static final ModelPackageGroupArgs Empty = new ModelPackageGroupArgs();
 
     @InputImport(name="modelPackageGroupDescription")
-      private final @Nullable Input<String> modelPackageGroupDescription;
+      private final @Nullable Output<String> modelPackageGroupDescription;
 
-    public Input<String> getModelPackageGroupDescription() {
-        return this.modelPackageGroupDescription == null ? Input.empty() : this.modelPackageGroupDescription;
+    public Output<String> getModelPackageGroupDescription() {
+        return this.modelPackageGroupDescription == null ? Output.empty() : this.modelPackageGroupDescription;
     }
 
     @InputImport(name="modelPackageGroupName")
-      private final @Nullable Input<String> modelPackageGroupName;
+      private final @Nullable Output<String> modelPackageGroupName;
 
-    public Input<String> getModelPackageGroupName() {
-        return this.modelPackageGroupName == null ? Input.empty() : this.modelPackageGroupName;
+    public Output<String> getModelPackageGroupName() {
+        return this.modelPackageGroupName == null ? Output.empty() : this.modelPackageGroupName;
     }
 
     @InputImport(name="modelPackageGroupPolicy")
-      private final @Nullable Input<Object> modelPackageGroupPolicy;
+      private final @Nullable Output<Object> modelPackageGroupPolicy;
 
-    public Input<Object> getModelPackageGroupPolicy() {
-        return this.modelPackageGroupPolicy == null ? Input.empty() : this.modelPackageGroupPolicy;
+    public Output<Object> getModelPackageGroupPolicy() {
+        return this.modelPackageGroupPolicy == null ? Output.empty() : this.modelPackageGroupPolicy;
     }
 
     /**
@@ -43,17 +43,17 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ModelPackageGroupTagArgs>> tags;
+      private final @Nullable Output<List<ModelPackageGroupTagArgs>> tags;
 
-    public Input<List<ModelPackageGroupTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ModelPackageGroupTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ModelPackageGroupArgs(
-        @Nullable Input<String> modelPackageGroupDescription,
-        @Nullable Input<String> modelPackageGroupName,
-        @Nullable Input<Object> modelPackageGroupPolicy,
-        @Nullable Input<List<ModelPackageGroupTagArgs>> tags) {
+        @Nullable Output<String> modelPackageGroupDescription,
+        @Nullable Output<String> modelPackageGroupName,
+        @Nullable Output<Object> modelPackageGroupPolicy,
+        @Nullable Output<List<ModelPackageGroupTagArgs>> tags) {
         this.modelPackageGroupDescription = modelPackageGroupDescription;
         this.modelPackageGroupName = modelPackageGroupName;
         this.modelPackageGroupPolicy = modelPackageGroupPolicy;
@@ -61,10 +61,10 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ModelPackageGroupArgs() {
-        this.modelPackageGroupDescription = Input.empty();
-        this.modelPackageGroupName = Input.empty();
-        this.modelPackageGroupPolicy = Input.empty();
-        this.tags = Input.empty();
+        this.modelPackageGroupDescription = Output.empty();
+        this.modelPackageGroupName = Output.empty();
+        this.modelPackageGroupPolicy = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,10 +76,10 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> modelPackageGroupDescription;
-        private @Nullable Input<String> modelPackageGroupName;
-        private @Nullable Input<Object> modelPackageGroupPolicy;
-        private @Nullable Input<List<ModelPackageGroupTagArgs>> tags;
+        private @Nullable Output<String> modelPackageGroupDescription;
+        private @Nullable Output<String> modelPackageGroupName;
+        private @Nullable Output<Object> modelPackageGroupPolicy;
+        private @Nullable Output<List<ModelPackageGroupTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -93,43 +93,43 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder modelPackageGroupDescription(@Nullable Input<String> modelPackageGroupDescription) {
+        public Builder modelPackageGroupDescription(@Nullable Output<String> modelPackageGroupDescription) {
             this.modelPackageGroupDescription = modelPackageGroupDescription;
             return this;
         }
 
         public Builder modelPackageGroupDescription(@Nullable String modelPackageGroupDescription) {
-            this.modelPackageGroupDescription = Input.ofNullable(modelPackageGroupDescription);
+            this.modelPackageGroupDescription = Output.ofNullable(modelPackageGroupDescription);
             return this;
         }
 
-        public Builder modelPackageGroupName(@Nullable Input<String> modelPackageGroupName) {
+        public Builder modelPackageGroupName(@Nullable Output<String> modelPackageGroupName) {
             this.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
 
         public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
-            this.modelPackageGroupName = Input.ofNullable(modelPackageGroupName);
+            this.modelPackageGroupName = Output.ofNullable(modelPackageGroupName);
             return this;
         }
 
-        public Builder modelPackageGroupPolicy(@Nullable Input<Object> modelPackageGroupPolicy) {
+        public Builder modelPackageGroupPolicy(@Nullable Output<Object> modelPackageGroupPolicy) {
             this.modelPackageGroupPolicy = modelPackageGroupPolicy;
             return this;
         }
 
         public Builder modelPackageGroupPolicy(@Nullable Object modelPackageGroupPolicy) {
-            this.modelPackageGroupPolicy = Input.ofNullable(modelPackageGroupPolicy);
+            this.modelPackageGroupPolicy = Output.ofNullable(modelPackageGroupPolicy);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ModelPackageGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ModelPackageGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ModelPackageGroupTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ModelPackageGroupArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetId")
-      private final @Nullable Input<String> targetId;
+      private final @Nullable Output<String> targetId;
 
-    public Input<String> getTargetId() {
-        return this.targetId == null ? Input.empty() : this.targetId;
+    public Output<String> getTargetId() {
+        return this.targetId == null ? Output.empty() : this.targetId;
     }
 
     public MoveResourceDependencyOverrideArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> targetId) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> targetId) {
         this.id = id;
         this.targetId = targetId;
     }
 
     private MoveResourceDependencyOverrideArgs() {
-        this.id = Input.empty();
-        this.targetId = Input.empty();
+        this.id = Output.empty();
+        this.targetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> targetId;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> targetId;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MoveResourceDependencyOverrideArgs extends io.pulumi.resource
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder targetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Input.ofNullable(targetId);
+            this.targetId = Output.ofNullable(targetId);
             return this;
         }
         public MoveResourceDependencyOverrideArgs build() {

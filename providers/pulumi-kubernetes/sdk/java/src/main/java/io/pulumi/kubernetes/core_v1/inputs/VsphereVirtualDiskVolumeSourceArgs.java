@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="fsType")
-      private final @Nullable Input<String> fsType;
+      private final @Nullable Output<String> fsType;
 
-    public Input<String> getFsType() {
-        return this.fsType == null ? Input.empty() : this.fsType;
+    public Output<String> getFsType() {
+        return this.fsType == null ? Output.empty() : this.fsType;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storagePolicyID")
-      private final @Nullable Input<String> storagePolicyID;
+      private final @Nullable Output<String> storagePolicyID;
 
-    public Input<String> getStoragePolicyID() {
-        return this.storagePolicyID == null ? Input.empty() : this.storagePolicyID;
+    public Output<String> getStoragePolicyID() {
+        return this.storagePolicyID == null ? Output.empty() : this.storagePolicyID;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storagePolicyName")
-      private final @Nullable Input<String> storagePolicyName;
+      private final @Nullable Output<String> storagePolicyName;
 
-    public Input<String> getStoragePolicyName() {
-        return this.storagePolicyName == null ? Input.empty() : this.storagePolicyName;
+    public Output<String> getStoragePolicyName() {
+        return this.storagePolicyName == null ? Output.empty() : this.storagePolicyName;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumePath", required=true)
-      private final Input<String> volumePath;
+      private final Output<String> volumePath;
 
-    public Input<String> getVolumePath() {
+    public Output<String> getVolumePath() {
         return this.volumePath;
     }
 
     public VsphereVirtualDiskVolumeSourceArgs(
-        @Nullable Input<String> fsType,
-        @Nullable Input<String> storagePolicyID,
-        @Nullable Input<String> storagePolicyName,
-        Input<String> volumePath) {
+        @Nullable Output<String> fsType,
+        @Nullable Output<String> storagePolicyID,
+        @Nullable Output<String> storagePolicyName,
+        Output<String> volumePath) {
         this.fsType = fsType;
         this.storagePolicyID = storagePolicyID;
         this.storagePolicyName = storagePolicyName;
@@ -74,10 +74,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
     }
 
     private VsphereVirtualDiskVolumeSourceArgs() {
-        this.fsType = Input.empty();
-        this.storagePolicyID = Input.empty();
-        this.storagePolicyName = Input.empty();
-        this.volumePath = Input.empty();
+        this.fsType = Output.empty();
+        this.storagePolicyID = Output.empty();
+        this.storagePolicyName = Output.empty();
+        this.volumePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fsType;
-        private @Nullable Input<String> storagePolicyID;
-        private @Nullable Input<String> storagePolicyName;
-        private Input<String> volumePath;
+        private @Nullable Output<String> fsType;
+        private @Nullable Output<String> storagePolicyID;
+        private @Nullable Output<String> storagePolicyName;
+        private Output<String> volumePath;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
     	      this.volumePath = defaults.volumePath;
         }
 
-        public Builder fsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Input.ofNullable(fsType);
+            this.fsType = Output.ofNullable(fsType);
             return this;
         }
 
-        public Builder storagePolicyID(@Nullable Input<String> storagePolicyID) {
+        public Builder storagePolicyID(@Nullable Output<String> storagePolicyID) {
             this.storagePolicyID = storagePolicyID;
             return this;
         }
 
         public Builder storagePolicyID(@Nullable String storagePolicyID) {
-            this.storagePolicyID = Input.ofNullable(storagePolicyID);
+            this.storagePolicyID = Output.ofNullable(storagePolicyID);
             return this;
         }
 
-        public Builder storagePolicyName(@Nullable Input<String> storagePolicyName) {
+        public Builder storagePolicyName(@Nullable Output<String> storagePolicyName) {
             this.storagePolicyName = storagePolicyName;
             return this;
         }
 
         public Builder storagePolicyName(@Nullable String storagePolicyName) {
-            this.storagePolicyName = Input.ofNullable(storagePolicyName);
+            this.storagePolicyName = Output.ofNullable(storagePolicyName);
             return this;
         }
 
-        public Builder volumePath(Input<String> volumePath) {
+        public Builder volumePath(Output<String> volumePath) {
             this.volumePath = Objects.requireNonNull(volumePath);
             return this;
         }
 
         public Builder volumePath(String volumePath) {
-            this.volumePath = Input.of(Objects.requireNonNull(volumePath));
+            this.volumePath = Output.of(Objects.requireNonNull(volumePath));
             return this;
         }
         public VsphereVirtualDiskVolumeSourceArgs build() {

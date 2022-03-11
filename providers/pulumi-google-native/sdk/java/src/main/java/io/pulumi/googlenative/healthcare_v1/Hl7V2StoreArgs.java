@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.inputs.Hl7V2NotificationConfigArgs;
 import io.pulumi.googlenative.healthcare_v1.inputs.ParserConfigArgs;
@@ -20,17 +20,17 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final Hl7V2StoreArgs Empty = new Hl7V2StoreArgs();
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="hl7V2StoreId")
-      private final @Nullable Input<String> hl7V2StoreId;
+      private final @Nullable Output<String> hl7V2StoreId;
 
-    public Input<String> getHl7V2StoreId() {
-        return this.hl7V2StoreId == null ? Input.empty() : this.hl7V2StoreId;
+    public Output<String> getHl7V2StoreId() {
+        return this.hl7V2StoreId == null ? Output.empty() : this.hl7V2StoreId;
     }
 
     /**
@@ -38,17 +38,17 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfigs")
-      private final @Nullable Input<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
+      private final @Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
 
-    public Input<List<Hl7V2NotificationConfigArgs>> getNotificationConfigs() {
-        return this.notificationConfigs == null ? Input.empty() : this.notificationConfigs;
+    public Output<List<Hl7V2NotificationConfigArgs>> getNotificationConfigs() {
+        return this.notificationConfigs == null ? Output.empty() : this.notificationConfigs;
     }
 
     /**
@@ -78,17 +78,17 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parserConfig")
-      private final @Nullable Input<ParserConfigArgs> parserConfig;
+      private final @Nullable Output<ParserConfigArgs> parserConfig;
 
-    public Input<ParserConfigArgs> getParserConfig() {
-        return this.parserConfig == null ? Input.empty() : this.parserConfig;
+    public Output<ParserConfigArgs> getParserConfig() {
+        return this.parserConfig == null ? Output.empty() : this.parserConfig;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -96,22 +96,22 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rejectDuplicateMessage")
-      private final @Nullable Input<Boolean> rejectDuplicateMessage;
+      private final @Nullable Output<Boolean> rejectDuplicateMessage;
 
-    public Input<Boolean> getRejectDuplicateMessage() {
-        return this.rejectDuplicateMessage == null ? Input.empty() : this.rejectDuplicateMessage;
+    public Output<Boolean> getRejectDuplicateMessage() {
+        return this.rejectDuplicateMessage == null ? Output.empty() : this.rejectDuplicateMessage;
     }
 
     public Hl7V2StoreArgs(
-        Input<String> datasetId,
-        @Nullable Input<String> hl7V2StoreId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<List<Hl7V2NotificationConfigArgs>> notificationConfigs,
-        @Nullable Input<ParserConfigArgs> parserConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<Boolean> rejectDuplicateMessage) {
+        Output<String> datasetId,
+        @Nullable Output<String> hl7V2StoreId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs,
+        @Nullable Output<ParserConfigArgs> parserConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<Boolean> rejectDuplicateMessage) {
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.hl7V2StoreId = hl7V2StoreId;
         this.labels = labels;
@@ -124,15 +124,15 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private Hl7V2StoreArgs() {
-        this.datasetId = Input.empty();
-        this.hl7V2StoreId = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.notificationConfigs = Input.empty();
-        this.parserConfig = Input.empty();
-        this.project = Input.empty();
-        this.rejectDuplicateMessage = Input.empty();
+        this.datasetId = Output.empty();
+        this.hl7V2StoreId = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.notificationConfigs = Output.empty();
+        this.parserConfig = Output.empty();
+        this.project = Output.empty();
+        this.rejectDuplicateMessage = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,15 +144,15 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> datasetId;
-        private @Nullable Input<String> hl7V2StoreId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
-        private @Nullable Input<ParserConfigArgs> parserConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Boolean> rejectDuplicateMessage;
+        private Output<String> datasetId;
+        private @Nullable Output<String> hl7V2StoreId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
+        private @Nullable Output<ParserConfigArgs> parserConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Boolean> rejectDuplicateMessage;
 
         public Builder() {
     	      // Empty
@@ -171,93 +171,93 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rejectDuplicateMessage = defaults.rejectDuplicateMessage;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder hl7V2StoreId(@Nullable Input<String> hl7V2StoreId) {
+        public Builder hl7V2StoreId(@Nullable Output<String> hl7V2StoreId) {
             this.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
 
         public Builder hl7V2StoreId(@Nullable String hl7V2StoreId) {
-            this.hl7V2StoreId = Input.ofNullable(hl7V2StoreId);
+            this.hl7V2StoreId = Output.ofNullable(hl7V2StoreId);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationConfigs(@Nullable Input<List<Hl7V2NotificationConfigArgs>> notificationConfigs) {
+        public Builder notificationConfigs(@Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs) {
             this.notificationConfigs = notificationConfigs;
             return this;
         }
 
         public Builder notificationConfigs(@Nullable List<Hl7V2NotificationConfigArgs> notificationConfigs) {
-            this.notificationConfigs = Input.ofNullable(notificationConfigs);
+            this.notificationConfigs = Output.ofNullable(notificationConfigs);
             return this;
         }
 
-        public Builder parserConfig(@Nullable Input<ParserConfigArgs> parserConfig) {
+        public Builder parserConfig(@Nullable Output<ParserConfigArgs> parserConfig) {
             this.parserConfig = parserConfig;
             return this;
         }
 
         public Builder parserConfig(@Nullable ParserConfigArgs parserConfig) {
-            this.parserConfig = Input.ofNullable(parserConfig);
+            this.parserConfig = Output.ofNullable(parserConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rejectDuplicateMessage(@Nullable Input<Boolean> rejectDuplicateMessage) {
+        public Builder rejectDuplicateMessage(@Nullable Output<Boolean> rejectDuplicateMessage) {
             this.rejectDuplicateMessage = rejectDuplicateMessage;
             return this;
         }
 
         public Builder rejectDuplicateMessage(@Nullable Boolean rejectDuplicateMessage) {
-            this.rejectDuplicateMessage = Input.ofNullable(rejectDuplicateMessage);
+            this.rejectDuplicateMessage = Output.ofNullable(rejectDuplicateMessage);
             return this;
         }
         public Hl7V2StoreArgs build() {

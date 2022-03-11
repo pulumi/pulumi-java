@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArg
      * 
      */
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
@@ -33,10 +33,10 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArg
      * 
      */
     @InputImport(name="fieldToMatch")
-      private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch;
+      private final @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
+    public Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> getFieldToMatch() {
+        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArg
      * 
      */
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations;
+      private final Output<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations;
 
-    public Input<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArgs(
-        Input<String> arn,
-        @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch,
-        Input<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations) {
+        Output<String> arn,
+        @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch,
+        Output<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
     }
 
     private RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArgs() {
-        this.arn = Input.empty();
-        this.fieldToMatch = Input.empty();
-        this.textTransformations = Input.empty();
+        this.arn = Output.empty();
+        this.fieldToMatch = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArg
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch;
-        private Input<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations;
+        private Output<String> arn;
+        private @Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch;
+        private Output<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArg
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder fieldToMatch(@Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch) {
+        public Builder fieldToMatch(@Nullable Output<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
 
         public Builder fieldToMatch(@Nullable RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Input.ofNullable(fieldToMatch);
+            this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
 
-        public Builder textTransformations(Input<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArgs build() {

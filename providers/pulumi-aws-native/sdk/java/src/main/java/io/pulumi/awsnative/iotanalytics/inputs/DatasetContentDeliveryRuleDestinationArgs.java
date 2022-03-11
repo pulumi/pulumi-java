@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetIotEventsDestinationConfigurationArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetS3DestinationConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
     public static final DatasetContentDeliveryRuleDestinationArgs Empty = new DatasetContentDeliveryRuleDestinationArgs();
 
     @InputImport(name="iotEventsDestinationConfiguration")
-      private final @Nullable Input<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration;
+      private final @Nullable Output<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration;
 
-    public Input<DatasetIotEventsDestinationConfigurationArgs> getIotEventsDestinationConfiguration() {
-        return this.iotEventsDestinationConfiguration == null ? Input.empty() : this.iotEventsDestinationConfiguration;
+    public Output<DatasetIotEventsDestinationConfigurationArgs> getIotEventsDestinationConfiguration() {
+        return this.iotEventsDestinationConfiguration == null ? Output.empty() : this.iotEventsDestinationConfiguration;
     }
 
     @InputImport(name="s3DestinationConfiguration")
-      private final @Nullable Input<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration;
+      private final @Nullable Output<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
-    public Input<DatasetS3DestinationConfigurationArgs> getS3DestinationConfiguration() {
-        return this.s3DestinationConfiguration == null ? Input.empty() : this.s3DestinationConfiguration;
+    public Output<DatasetS3DestinationConfigurationArgs> getS3DestinationConfiguration() {
+        return this.s3DestinationConfiguration == null ? Output.empty() : this.s3DestinationConfiguration;
     }
 
     public DatasetContentDeliveryRuleDestinationArgs(
-        @Nullable Input<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration,
-        @Nullable Input<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration) {
+        @Nullable Output<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration,
+        @Nullable Output<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration) {
         this.iotEventsDestinationConfiguration = iotEventsDestinationConfiguration;
         this.s3DestinationConfiguration = s3DestinationConfiguration;
     }
 
     private DatasetContentDeliveryRuleDestinationArgs() {
-        this.iotEventsDestinationConfiguration = Input.empty();
-        this.s3DestinationConfiguration = Input.empty();
+        this.iotEventsDestinationConfiguration = Output.empty();
+        this.s3DestinationConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration;
-        private @Nullable Input<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration;
+        private @Nullable Output<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration;
+        private @Nullable Output<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
     	      this.s3DestinationConfiguration = defaults.s3DestinationConfiguration;
         }
 
-        public Builder iotEventsDestinationConfiguration(@Nullable Input<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration) {
+        public Builder iotEventsDestinationConfiguration(@Nullable Output<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration) {
             this.iotEventsDestinationConfiguration = iotEventsDestinationConfiguration;
             return this;
         }
 
         public Builder iotEventsDestinationConfiguration(@Nullable DatasetIotEventsDestinationConfigurationArgs iotEventsDestinationConfiguration) {
-            this.iotEventsDestinationConfiguration = Input.ofNullable(iotEventsDestinationConfiguration);
+            this.iotEventsDestinationConfiguration = Output.ofNullable(iotEventsDestinationConfiguration);
             return this;
         }
 
-        public Builder s3DestinationConfiguration(@Nullable Input<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration) {
+        public Builder s3DestinationConfiguration(@Nullable Output<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration) {
             this.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
         }
 
         public Builder s3DestinationConfiguration(@Nullable DatasetS3DestinationConfigurationArgs s3DestinationConfiguration) {
-            this.s3DestinationConfiguration = Input.ofNullable(s3DestinationConfiguration);
+            this.s3DestinationConfiguration = Output.ofNullable(s3DestinationConfiguration);
             return this;
         }
         public DatasetContentDeliveryRuleDestinationArgs build() {

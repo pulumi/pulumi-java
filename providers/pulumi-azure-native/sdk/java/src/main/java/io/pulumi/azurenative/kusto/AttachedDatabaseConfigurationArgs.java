@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.kusto.enums.DefaultPrincipalsModificationKind;
 import io.pulumi.azurenative.kusto.inputs.TableLevelSharingPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="attachedDatabaseConfigurationName")
-      private final @Nullable Input<String> attachedDatabaseConfigurationName;
+      private final @Nullable Output<String> attachedDatabaseConfigurationName;
 
-    public Input<String> getAttachedDatabaseConfigurationName() {
-        return this.attachedDatabaseConfigurationName == null ? Input.empty() : this.attachedDatabaseConfigurationName;
+    public Output<String> getAttachedDatabaseConfigurationName() {
+        return this.attachedDatabaseConfigurationName == null ? Output.empty() : this.attachedDatabaseConfigurationName;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -44,9 +44,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterResourceId", required=true)
-      private final Input<String> clusterResourceId;
+      private final Output<String> clusterResourceId;
 
-    public Input<String> getClusterResourceId() {
+    public Output<String> getClusterResourceId() {
         return this.clusterResourceId;
     }
 
@@ -55,9 +55,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -66,9 +66,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="defaultPrincipalsModificationKind", required=true)
-      private final Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
+      private final Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
-    public Input<Either<String,DefaultPrincipalsModificationKind>> getDefaultPrincipalsModificationKind() {
+    public Output<Either<String,DefaultPrincipalsModificationKind>> getDefaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
 
@@ -77,10 +77,10 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -88,9 +88,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,21 +99,21 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="tableLevelSharingProperties")
-      private final @Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
+      private final @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
-    public Input<TableLevelSharingPropertiesArgs> getTableLevelSharingProperties() {
-        return this.tableLevelSharingProperties == null ? Input.empty() : this.tableLevelSharingProperties;
+    public Output<TableLevelSharingPropertiesArgs> getTableLevelSharingProperties() {
+        return this.tableLevelSharingProperties == null ? Output.empty() : this.tableLevelSharingProperties;
     }
 
     public AttachedDatabaseConfigurationArgs(
-        @Nullable Input<String> attachedDatabaseConfigurationName,
-        Input<String> clusterName,
-        Input<String> clusterResourceId,
-        Input<String> databaseName,
-        Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
+        @Nullable Output<String> attachedDatabaseConfigurationName,
+        Output<String> clusterName,
+        Output<String> clusterResourceId,
+        Output<String> databaseName,
+        Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
         this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.clusterResourceId = Objects.requireNonNull(clusterResourceId, "expected parameter 'clusterResourceId' to be non-null");
@@ -125,14 +125,14 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
     }
 
     private AttachedDatabaseConfigurationArgs() {
-        this.attachedDatabaseConfigurationName = Input.empty();
-        this.clusterName = Input.empty();
-        this.clusterResourceId = Input.empty();
-        this.databaseName = Input.empty();
-        this.defaultPrincipalsModificationKind = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tableLevelSharingProperties = Input.empty();
+        this.attachedDatabaseConfigurationName = Output.empty();
+        this.clusterName = Output.empty();
+        this.clusterResourceId = Output.empty();
+        this.databaseName = Output.empty();
+        this.defaultPrincipalsModificationKind = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tableLevelSharingProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attachedDatabaseConfigurationName;
-        private Input<String> clusterName;
-        private Input<String> clusterResourceId;
-        private Input<String> databaseName;
-        private Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
+        private @Nullable Output<String> attachedDatabaseConfigurationName;
+        private Output<String> clusterName;
+        private Output<String> clusterResourceId;
+        private Output<String> databaseName;
+        private Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
     	      this.tableLevelSharingProperties = defaults.tableLevelSharingProperties;
         }
 
-        public Builder attachedDatabaseConfigurationName(@Nullable Input<String> attachedDatabaseConfigurationName) {
+        public Builder attachedDatabaseConfigurationName(@Nullable Output<String> attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
 
         public Builder attachedDatabaseConfigurationName(@Nullable String attachedDatabaseConfigurationName) {
-            this.attachedDatabaseConfigurationName = Input.ofNullable(attachedDatabaseConfigurationName);
+            this.attachedDatabaseConfigurationName = Output.ofNullable(attachedDatabaseConfigurationName);
             return this;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder clusterResourceId(Input<String> clusterResourceId) {
+        public Builder clusterResourceId(Output<String> clusterResourceId) {
             this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
             return this;
         }
 
         public Builder clusterResourceId(String clusterResourceId) {
-            this.clusterResourceId = Input.of(Objects.requireNonNull(clusterResourceId));
+            this.clusterResourceId = Output.of(Objects.requireNonNull(clusterResourceId));
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder defaultPrincipalsModificationKind(Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
+        public Builder defaultPrincipalsModificationKind(Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
             return this;
         }
 
         public Builder defaultPrincipalsModificationKind(Either<String,DefaultPrincipalsModificationKind> defaultPrincipalsModificationKind) {
-            this.defaultPrincipalsModificationKind = Input.of(Objects.requireNonNull(defaultPrincipalsModificationKind));
+            this.defaultPrincipalsModificationKind = Output.of(Objects.requireNonNull(defaultPrincipalsModificationKind));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tableLevelSharingProperties(@Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
+        public Builder tableLevelSharingProperties(@Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
             this.tableLevelSharingProperties = tableLevelSharingProperties;
             return this;
         }
 
         public Builder tableLevelSharingProperties(@Nullable TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
-            this.tableLevelSharingProperties = Input.ofNullable(tableLevelSharingProperties);
+            this.tableLevelSharingProperties = Output.ofNullable(tableLevelSharingProperties);
             return this;
         }
         public AttachedDatabaseConfigurationArgs build() {

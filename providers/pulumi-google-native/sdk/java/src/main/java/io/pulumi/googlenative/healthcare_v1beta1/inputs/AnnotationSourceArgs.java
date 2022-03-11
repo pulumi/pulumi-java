@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.CloudHealthcareSourceArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudHealthcareSource")
-      private final @Nullable Input<CloudHealthcareSourceArgs> cloudHealthcareSource;
+      private final @Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource;
 
-    public Input<CloudHealthcareSourceArgs> getCloudHealthcareSource() {
-        return this.cloudHealthcareSource == null ? Input.empty() : this.cloudHealthcareSource;
+    public Output<CloudHealthcareSourceArgs> getCloudHealthcareSource() {
+        return this.cloudHealthcareSource == null ? Output.empty() : this.cloudHealthcareSource;
     }
 
-    public AnnotationSourceArgs(@Nullable Input<CloudHealthcareSourceArgs> cloudHealthcareSource) {
+    public AnnotationSourceArgs(@Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource) {
         this.cloudHealthcareSource = cloudHealthcareSource;
     }
 
     private AnnotationSourceArgs() {
-        this.cloudHealthcareSource = Input.empty();
+        this.cloudHealthcareSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<CloudHealthcareSourceArgs> cloudHealthcareSource;
+        private @Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.cloudHealthcareSource = defaults.cloudHealthcareSource;
         }
 
-        public Builder cloudHealthcareSource(@Nullable Input<CloudHealthcareSourceArgs> cloudHealthcareSource) {
+        public Builder cloudHealthcareSource(@Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource) {
             this.cloudHealthcareSource = cloudHealthcareSource;
             return this;
         }
 
         public Builder cloudHealthcareSource(@Nullable CloudHealthcareSourceArgs cloudHealthcareSource) {
-            this.cloudHealthcareSource = Input.ofNullable(cloudHealthcareSource);
+            this.cloudHealthcareSource = Output.ofNullable(cloudHealthcareSource);
             return this;
         }
         public AnnotationSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1DateRangeArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="csvDelimiter")
-      private final @Nullable Input<String> csvDelimiter;
+      private final @Nullable Output<String> csvDelimiter;
 
-    public Input<String> getCsvDelimiter() {
-        return this.csvDelimiter == null ? Input.empty() : this.csvDelimiter;
+    public Output<String> getCsvDelimiter() {
+        return this.csvDelimiter == null ? Output.empty() : this.csvDelimiter;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreName", required=true)
-      private final Input<String> datastoreName;
+      private final Output<String> datastoreName;
 
-    public Input<String> getDatastoreName() {
+    public Output<String> getDatastoreName() {
         return this.datastoreName;
     }
 
@@ -42,9 +42,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dateRange", required=true)
-      private final Input<GoogleCloudApigeeV1DateRangeArgs> dateRange;
+      private final Output<GoogleCloudApigeeV1DateRangeArgs> dateRange;
 
-    public Input<GoogleCloudApigeeV1DateRangeArgs> getDateRange() {
+    public Output<GoogleCloudApigeeV1DateRangeArgs> getDateRange() {
         return this.dateRange;
     }
 
@@ -53,16 +53,16 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -71,16 +71,16 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -89,21 +89,21 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputFormat")
-      private final @Nullable Input<String> outputFormat;
+      private final @Nullable Output<String> outputFormat;
 
-    public Input<String> getOutputFormat() {
-        return this.outputFormat == null ? Input.empty() : this.outputFormat;
+    public Output<String> getOutputFormat() {
+        return this.outputFormat == null ? Output.empty() : this.outputFormat;
     }
 
     public ExportArgs(
-        @Nullable Input<String> csvDelimiter,
-        Input<String> datastoreName,
-        Input<GoogleCloudApigeeV1DateRangeArgs> dateRange,
-        @Nullable Input<String> description,
-        Input<String> environmentId,
-        @Nullable Input<String> name,
-        Input<String> organizationId,
-        @Nullable Input<String> outputFormat) {
+        @Nullable Output<String> csvDelimiter,
+        Output<String> datastoreName,
+        Output<GoogleCloudApigeeV1DateRangeArgs> dateRange,
+        @Nullable Output<String> description,
+        Output<String> environmentId,
+        @Nullable Output<String> name,
+        Output<String> organizationId,
+        @Nullable Output<String> outputFormat) {
         this.csvDelimiter = csvDelimiter;
         this.datastoreName = Objects.requireNonNull(datastoreName, "expected parameter 'datastoreName' to be non-null");
         this.dateRange = Objects.requireNonNull(dateRange, "expected parameter 'dateRange' to be non-null");
@@ -115,14 +115,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExportArgs() {
-        this.csvDelimiter = Input.empty();
-        this.datastoreName = Input.empty();
-        this.dateRange = Input.empty();
-        this.description = Input.empty();
-        this.environmentId = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
-        this.outputFormat = Input.empty();
+        this.csvDelimiter = Output.empty();
+        this.datastoreName = Output.empty();
+        this.dateRange = Output.empty();
+        this.description = Output.empty();
+        this.environmentId = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
+        this.outputFormat = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,14 +134,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> csvDelimiter;
-        private Input<String> datastoreName;
-        private Input<GoogleCloudApigeeV1DateRangeArgs> dateRange;
-        private @Nullable Input<String> description;
-        private Input<String> environmentId;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
-        private @Nullable Input<String> outputFormat;
+        private @Nullable Output<String> csvDelimiter;
+        private Output<String> datastoreName;
+        private Output<GoogleCloudApigeeV1DateRangeArgs> dateRange;
+        private @Nullable Output<String> description;
+        private Output<String> environmentId;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
+        private @Nullable Output<String> outputFormat;
 
         public Builder() {
     	      // Empty
@@ -159,83 +159,83 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.outputFormat = defaults.outputFormat;
         }
 
-        public Builder csvDelimiter(@Nullable Input<String> csvDelimiter) {
+        public Builder csvDelimiter(@Nullable Output<String> csvDelimiter) {
             this.csvDelimiter = csvDelimiter;
             return this;
         }
 
         public Builder csvDelimiter(@Nullable String csvDelimiter) {
-            this.csvDelimiter = Input.ofNullable(csvDelimiter);
+            this.csvDelimiter = Output.ofNullable(csvDelimiter);
             return this;
         }
 
-        public Builder datastoreName(Input<String> datastoreName) {
+        public Builder datastoreName(Output<String> datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
 
         public Builder datastoreName(String datastoreName) {
-            this.datastoreName = Input.of(Objects.requireNonNull(datastoreName));
+            this.datastoreName = Output.of(Objects.requireNonNull(datastoreName));
             return this;
         }
 
-        public Builder dateRange(Input<GoogleCloudApigeeV1DateRangeArgs> dateRange) {
+        public Builder dateRange(Output<GoogleCloudApigeeV1DateRangeArgs> dateRange) {
             this.dateRange = Objects.requireNonNull(dateRange);
             return this;
         }
 
         public Builder dateRange(GoogleCloudApigeeV1DateRangeArgs dateRange) {
-            this.dateRange = Input.of(Objects.requireNonNull(dateRange));
+            this.dateRange = Output.of(Objects.requireNonNull(dateRange));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder outputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Input.ofNullable(outputFormat);
+            this.outputFormat = Output.ofNullable(outputFormat);
             return this;
         }
         public ExportArgs build() {

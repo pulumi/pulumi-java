@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.AutoscalingPolicyBasicAlgorithmGetArgs;
 import io.pulumi.gcp.dataproc.inputs.AutoscalingPolicySecondaryWorkerConfigGetArgs;
@@ -23,10 +23,10 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="basicAlgorithm")
-      private final @Nullable Input<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm;
+      private final @Nullable Output<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm;
 
-    public Input<AutoscalingPolicyBasicAlgorithmGetArgs> getBasicAlgorithm() {
-        return this.basicAlgorithm == null ? Input.empty() : this.basicAlgorithm;
+    public Output<AutoscalingPolicyBasicAlgorithmGetArgs> getBasicAlgorithm() {
+        return this.basicAlgorithm == null ? Output.empty() : this.basicAlgorithm;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="secondaryWorkerConfig")
-      private final @Nullable Input<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
+      private final @Nullable Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
 
-    public Input<AutoscalingPolicySecondaryWorkerConfigGetArgs> getSecondaryWorkerConfig() {
-        return this.secondaryWorkerConfig == null ? Input.empty() : this.secondaryWorkerConfig;
+    public Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> getSecondaryWorkerConfig() {
+        return this.secondaryWorkerConfig == null ? Output.empty() : this.secondaryWorkerConfig;
     }
 
     /**
@@ -95,20 +95,20 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workerConfig")
-      private final @Nullable Input<AutoscalingPolicyWorkerConfigGetArgs> workerConfig;
+      private final @Nullable Output<AutoscalingPolicyWorkerConfigGetArgs> workerConfig;
 
-    public Input<AutoscalingPolicyWorkerConfigGetArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Input.empty() : this.workerConfig;
+    public Output<AutoscalingPolicyWorkerConfigGetArgs> getWorkerConfig() {
+        return this.workerConfig == null ? Output.empty() : this.workerConfig;
     }
 
     public AutoscalingPolicyState(
-        @Nullable Input<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> policyId,
-        @Nullable Input<String> project,
-        @Nullable Input<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig,
-        @Nullable Input<AutoscalingPolicyWorkerConfigGetArgs> workerConfig) {
+        @Nullable Output<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> policyId,
+        @Nullable Output<String> project,
+        @Nullable Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig,
+        @Nullable Output<AutoscalingPolicyWorkerConfigGetArgs> workerConfig) {
         this.basicAlgorithm = basicAlgorithm;
         this.location = location;
         this.name = name;
@@ -119,13 +119,13 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     }
 
     private AutoscalingPolicyState() {
-        this.basicAlgorithm = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.policyId = Input.empty();
-        this.project = Input.empty();
-        this.secondaryWorkerConfig = Input.empty();
-        this.workerConfig = Input.empty();
+        this.basicAlgorithm = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.policyId = Output.empty();
+        this.project = Output.empty();
+        this.secondaryWorkerConfig = Output.empty();
+        this.workerConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,13 +137,13 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policyId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
-        private @Nullable Input<AutoscalingPolicyWorkerConfigGetArgs> workerConfig;
+        private @Nullable Output<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policyId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
+        private @Nullable Output<AutoscalingPolicyWorkerConfigGetArgs> workerConfig;
 
         public Builder() {
     	      // Empty
@@ -160,73 +160,73 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder basicAlgorithm(@Nullable Input<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm) {
+        public Builder basicAlgorithm(@Nullable Output<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm) {
             this.basicAlgorithm = basicAlgorithm;
             return this;
         }
 
         public Builder basicAlgorithm(@Nullable AutoscalingPolicyBasicAlgorithmGetArgs basicAlgorithm) {
-            this.basicAlgorithm = Input.ofNullable(basicAlgorithm);
+            this.basicAlgorithm = Output.ofNullable(basicAlgorithm);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder secondaryWorkerConfig(@Nullable Input<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(@Nullable Output<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig) {
             this.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
 
         public Builder secondaryWorkerConfig(@Nullable AutoscalingPolicySecondaryWorkerConfigGetArgs secondaryWorkerConfig) {
-            this.secondaryWorkerConfig = Input.ofNullable(secondaryWorkerConfig);
+            this.secondaryWorkerConfig = Output.ofNullable(secondaryWorkerConfig);
             return this;
         }
 
-        public Builder workerConfig(@Nullable Input<AutoscalingPolicyWorkerConfigGetArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Output<AutoscalingPolicyWorkerConfigGetArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
         public Builder workerConfig(@Nullable AutoscalingPolicyWorkerConfigGetArgs workerConfig) {
-            this.workerConfig = Input.ofNullable(workerConfig);
+            this.workerConfig = Output.ofNullable(workerConfig);
             return this;
         }
         public AutoscalingPolicyState build() {

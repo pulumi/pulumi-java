@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="modifiedPath")
-      private final @Nullable Input<String> modifiedPath;
+      private final @Nullable Output<String> modifiedPath;
 
-    public Input<String> getModifiedPath() {
-        return this.modifiedPath == null ? Input.empty() : this.modifiedPath;
+    public Output<String> getModifiedPath() {
+        return this.modifiedPath == null ? Output.empty() : this.modifiedPath;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="modifiedQueryString")
-      private final @Nullable Input<String> modifiedQueryString;
+      private final @Nullable Output<String> modifiedQueryString;
 
-    public Input<String> getModifiedQueryString() {
-        return this.modifiedQueryString == null ? Input.empty() : this.modifiedQueryString;
+    public Output<String> getModifiedQueryString() {
+        return this.modifiedQueryString == null ? Output.empty() : this.modifiedQueryString;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="reroute")
-      private final @Nullable Input<Boolean> reroute;
+      private final @Nullable Output<Boolean> reroute;
 
-    public Input<Boolean> getReroute() {
-        return this.reroute == null ? Input.empty() : this.reroute;
+    public Output<Boolean> getReroute() {
+        return this.reroute == null ? Output.empty() : this.reroute;
     }
 
     public ApplicationGatewayUrlConfigurationArgs(
-        @Nullable Input<String> modifiedPath,
-        @Nullable Input<String> modifiedQueryString,
-        @Nullable Input<Boolean> reroute) {
+        @Nullable Output<String> modifiedPath,
+        @Nullable Output<String> modifiedQueryString,
+        @Nullable Output<Boolean> reroute) {
         this.modifiedPath = modifiedPath;
         this.modifiedQueryString = modifiedQueryString;
         this.reroute = reroute;
     }
 
     private ApplicationGatewayUrlConfigurationArgs() {
-        this.modifiedPath = Input.empty();
-        this.modifiedQueryString = Input.empty();
-        this.reroute = Input.empty();
+        this.modifiedPath = Output.empty();
+        this.modifiedQueryString = Output.empty();
+        this.reroute = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> modifiedPath;
-        private @Nullable Input<String> modifiedQueryString;
-        private @Nullable Input<Boolean> reroute;
+        private @Nullable Output<String> modifiedPath;
+        private @Nullable Output<String> modifiedQueryString;
+        private @Nullable Output<Boolean> reroute;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ApplicationGatewayUrlConfigurationArgs extends io.pulumi.reso
     	      this.reroute = defaults.reroute;
         }
 
-        public Builder modifiedPath(@Nullable Input<String> modifiedPath) {
+        public Builder modifiedPath(@Nullable Output<String> modifiedPath) {
             this.modifiedPath = modifiedPath;
             return this;
         }
 
         public Builder modifiedPath(@Nullable String modifiedPath) {
-            this.modifiedPath = Input.ofNullable(modifiedPath);
+            this.modifiedPath = Output.ofNullable(modifiedPath);
             return this;
         }
 
-        public Builder modifiedQueryString(@Nullable Input<String> modifiedQueryString) {
+        public Builder modifiedQueryString(@Nullable Output<String> modifiedQueryString) {
             this.modifiedQueryString = modifiedQueryString;
             return this;
         }
 
         public Builder modifiedQueryString(@Nullable String modifiedQueryString) {
-            this.modifiedQueryString = Input.ofNullable(modifiedQueryString);
+            this.modifiedQueryString = Output.ofNullable(modifiedQueryString);
             return this;
         }
 
-        public Builder reroute(@Nullable Input<Boolean> reroute) {
+        public Builder reroute(@Nullable Output<Boolean> reroute) {
             this.reroute = reroute;
             return this;
         }
 
         public Builder reroute(@Nullable Boolean reroute) {
-            this.reroute = Input.ofNullable(reroute);
+            this.reroute = Output.ofNullable(reroute);
             return this;
         }
         public ApplicationGatewayUrlConfigurationArgs build() {

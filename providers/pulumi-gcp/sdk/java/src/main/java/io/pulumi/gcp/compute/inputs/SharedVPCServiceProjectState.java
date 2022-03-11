@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hostProject")
-      private final @Nullable Input<String> hostProject;
+      private final @Nullable Output<String> hostProject;
 
-    public Input<String> getHostProject() {
-        return this.hostProject == null ? Input.empty() : this.hostProject;
+    public Output<String> getHostProject() {
+        return this.hostProject == null ? Output.empty() : this.hostProject;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serviceProject")
-      private final @Nullable Input<String> serviceProject;
+      private final @Nullable Output<String> serviceProject;
 
-    public Input<String> getServiceProject() {
-        return this.serviceProject == null ? Input.empty() : this.serviceProject;
+    public Output<String> getServiceProject() {
+        return this.serviceProject == null ? Output.empty() : this.serviceProject;
     }
 
     public SharedVPCServiceProjectState(
-        @Nullable Input<String> hostProject,
-        @Nullable Input<String> serviceProject) {
+        @Nullable Output<String> hostProject,
+        @Nullable Output<String> serviceProject) {
         this.hostProject = hostProject;
         this.serviceProject = serviceProject;
     }
 
     private SharedVPCServiceProjectState() {
-        this.hostProject = Input.empty();
-        this.serviceProject = Input.empty();
+        this.hostProject = Output.empty();
+        this.serviceProject = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostProject;
-        private @Nullable Input<String> serviceProject;
+        private @Nullable Output<String> hostProject;
+        private @Nullable Output<String> serviceProject;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
     	      this.serviceProject = defaults.serviceProject;
         }
 
-        public Builder hostProject(@Nullable Input<String> hostProject) {
+        public Builder hostProject(@Nullable Output<String> hostProject) {
             this.hostProject = hostProject;
             return this;
         }
 
         public Builder hostProject(@Nullable String hostProject) {
-            this.hostProject = Input.ofNullable(hostProject);
+            this.hostProject = Output.ofNullable(hostProject);
             return this;
         }
 
-        public Builder serviceProject(@Nullable Input<String> serviceProject) {
+        public Builder serviceProject(@Nullable Output<String> serviceProject) {
             this.serviceProject = serviceProject;
             return this;
         }
 
         public Builder serviceProject(@Nullable String serviceProject) {
-            this.serviceProject = Input.ofNullable(serviceProject);
+            this.serviceProject = Output.ofNullable(serviceProject);
             return this;
         }
         public SharedVPCServiceProjectState build() {

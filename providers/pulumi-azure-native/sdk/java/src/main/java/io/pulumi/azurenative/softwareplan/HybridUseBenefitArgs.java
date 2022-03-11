@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.softwareplan;
 
 import io.pulumi.azurenative.softwareplan.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="planId")
-      private final @Nullable Input<String> planId;
+      private final @Nullable Output<String> planId;
 
-    public Input<String> getPlanId() {
-        return this.planId == null ? Input.empty() : this.planId;
+    public Output<String> getPlanId() {
+        return this.planId == null ? Output.empty() : this.planId;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -42,25 +42,25 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
     public HybridUseBenefitArgs(
-        @Nullable Input<String> planId,
-        Input<String> scope,
-        Input<SkuArgs> sku) {
+        @Nullable Output<String> planId,
+        Output<String> scope,
+        Output<SkuArgs> sku) {
         this.planId = planId;
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
     }
 
     private HybridUseBenefitArgs() {
-        this.planId = Input.empty();
-        this.scope = Input.empty();
-        this.sku = Input.empty();
+        this.planId = Output.empty();
+        this.scope = Output.empty();
+        this.sku = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> planId;
-        private Input<String> scope;
-        private Input<SkuArgs> sku;
+        private @Nullable Output<String> planId;
+        private Output<String> scope;
+        private Output<SkuArgs> sku;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
     	      this.sku = defaults.sku;
         }
 
-        public Builder planId(@Nullable Input<String> planId) {
+        public Builder planId(@Nullable Output<String> planId) {
             this.planId = planId;
             return this;
         }
 
         public Builder planId(@Nullable String planId) {
-            this.planId = Input.ofNullable(planId);
+            this.planId = Output.ofNullable(planId);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
         public HybridUseBenefitArgs build() {

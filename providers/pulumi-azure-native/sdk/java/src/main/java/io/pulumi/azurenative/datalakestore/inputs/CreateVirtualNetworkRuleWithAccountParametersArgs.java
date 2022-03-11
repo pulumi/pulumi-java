@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -33,22 +33,22 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public CreateVirtualNetworkRuleWithAccountParametersArgs(
-        Input<String> name,
-        Input<String> subnetId) {
+        Output<String> name,
+        Output<String> subnetId) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
     }
 
     private CreateVirtualNetworkRuleWithAccountParametersArgs() {
-        this.name = Input.empty();
-        this.subnetId = Input.empty();
+        this.name = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> subnetId;
+        private Output<String> name;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public CreateVirtualNetworkRuleWithAccountParametersArgs build() {

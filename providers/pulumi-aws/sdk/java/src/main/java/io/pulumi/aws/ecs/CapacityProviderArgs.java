@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs;
 
 import io.pulumi.aws.ecs.inputs.CapacityProviderAutoScalingGroupProviderArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoScalingGroupProvider", required=true)
-      private final Input<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider;
+      private final Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider;
 
-    public Input<CapacityProviderAutoScalingGroupProviderArgs> getAutoScalingGroupProvider() {
+    public Output<CapacityProviderAutoScalingGroupProviderArgs> getAutoScalingGroupProvider() {
         return this.autoScalingGroupProvider;
     }
 
@@ -32,10 +32,10 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CapacityProviderArgs(
-        Input<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.autoScalingGroupProvider = Objects.requireNonNull(autoScalingGroupProvider, "expected parameter 'autoScalingGroupProvider' to be non-null");
         this.name = name;
         this.tags = tags;
     }
 
     private CapacityProviderArgs() {
-        this.autoScalingGroupProvider = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.autoScalingGroupProvider = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder autoScalingGroupProvider(Input<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider) {
+        public Builder autoScalingGroupProvider(Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider) {
             this.autoScalingGroupProvider = Objects.requireNonNull(autoScalingGroupProvider);
             return this;
         }
 
         public Builder autoScalingGroupProvider(CapacityProviderAutoScalingGroupProviderArgs autoScalingGroupProvider) {
-            this.autoScalingGroupProvider = Input.of(Objects.requireNonNull(autoScalingGroupProvider));
+            this.autoScalingGroupProvider = Output.of(Objects.requireNonNull(autoScalingGroupProvider));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CapacityProviderArgs build() {

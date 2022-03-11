@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.inputs.ErrorResponseArgs;
 import io.pulumi.azurenative.automation.inputs.SUCSchedulePropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.SoftwareUpdateConfigurationTasksArgs;
 import io.pulumi.azurenative.automation.inputs.UpdateConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -34,10 +34,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="error")
-      private final @Nullable Input<ErrorResponseArgs> error;
+      private final @Nullable Output<ErrorResponseArgs> error;
 
-    public Input<ErrorResponseArgs> getError() {
-        return this.error == null ? Input.empty() : this.error;
+    public Output<ErrorResponseArgs> getError() {
+        return this.error == null ? Output.empty() : this.error;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,9 +56,9 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scheduleInfo", required=true)
-      private final Input<SUCSchedulePropertiesArgs> scheduleInfo;
+      private final Output<SUCSchedulePropertiesArgs> scheduleInfo;
 
-    public Input<SUCSchedulePropertiesArgs> getScheduleInfo() {
+    public Output<SUCSchedulePropertiesArgs> getScheduleInfo() {
         return this.scheduleInfo;
     }
 
@@ -67,10 +67,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="softwareUpdateConfigurationName")
-      private final @Nullable Input<String> softwareUpdateConfigurationName;
+      private final @Nullable Output<String> softwareUpdateConfigurationName;
 
-    public Input<String> getSoftwareUpdateConfigurationName() {
-        return this.softwareUpdateConfigurationName == null ? Input.empty() : this.softwareUpdateConfigurationName;
+    public Output<String> getSoftwareUpdateConfigurationName() {
+        return this.softwareUpdateConfigurationName == null ? Output.empty() : this.softwareUpdateConfigurationName;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="tasks")
-      private final @Nullable Input<SoftwareUpdateConfigurationTasksArgs> tasks;
+      private final @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks;
 
-    public Input<SoftwareUpdateConfigurationTasksArgs> getTasks() {
-        return this.tasks == null ? Input.empty() : this.tasks;
+    public Output<SoftwareUpdateConfigurationTasksArgs> getTasks() {
+        return this.tasks == null ? Output.empty() : this.tasks;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="updateConfiguration", required=true)
-      private final Input<UpdateConfigurationArgs> updateConfiguration;
+      private final Output<UpdateConfigurationArgs> updateConfiguration;
 
-    public Input<UpdateConfigurationArgs> getUpdateConfiguration() {
+    public Output<UpdateConfigurationArgs> getUpdateConfiguration() {
         return this.updateConfiguration;
     }
 
     public SoftwareUpdateConfigurationByNameArgs(
-        Input<String> automationAccountName,
-        @Nullable Input<ErrorResponseArgs> error,
-        Input<String> resourceGroupName,
-        Input<SUCSchedulePropertiesArgs> scheduleInfo,
-        @Nullable Input<String> softwareUpdateConfigurationName,
-        @Nullable Input<SoftwareUpdateConfigurationTasksArgs> tasks,
-        Input<UpdateConfigurationArgs> updateConfiguration) {
+        Output<String> automationAccountName,
+        @Nullable Output<ErrorResponseArgs> error,
+        Output<String> resourceGroupName,
+        Output<SUCSchedulePropertiesArgs> scheduleInfo,
+        @Nullable Output<String> softwareUpdateConfigurationName,
+        @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks,
+        Output<UpdateConfigurationArgs> updateConfiguration) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.error = error;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -113,13 +113,13 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     }
 
     private SoftwareUpdateConfigurationByNameArgs() {
-        this.automationAccountName = Input.empty();
-        this.error = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scheduleInfo = Input.empty();
-        this.softwareUpdateConfigurationName = Input.empty();
-        this.tasks = Input.empty();
-        this.updateConfiguration = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.error = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scheduleInfo = Output.empty();
+        this.softwareUpdateConfigurationName = Output.empty();
+        this.tasks = Output.empty();
+        this.updateConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private @Nullable Input<ErrorResponseArgs> error;
-        private Input<String> resourceGroupName;
-        private Input<SUCSchedulePropertiesArgs> scheduleInfo;
-        private @Nullable Input<String> softwareUpdateConfigurationName;
-        private @Nullable Input<SoftwareUpdateConfigurationTasksArgs> tasks;
-        private Input<UpdateConfigurationArgs> updateConfiguration;
+        private Output<String> automationAccountName;
+        private @Nullable Output<ErrorResponseArgs> error;
+        private Output<String> resourceGroupName;
+        private Output<SUCSchedulePropertiesArgs> scheduleInfo;
+        private @Nullable Output<String> softwareUpdateConfigurationName;
+        private @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks;
+        private Output<UpdateConfigurationArgs> updateConfiguration;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     	      this.updateConfiguration = defaults.updateConfiguration;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder error(@Nullable Input<ErrorResponseArgs> error) {
+        public Builder error(@Nullable Output<ErrorResponseArgs> error) {
             this.error = error;
             return this;
         }
 
         public Builder error(@Nullable ErrorResponseArgs error) {
-            this.error = Input.ofNullable(error);
+            this.error = Output.ofNullable(error);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scheduleInfo(Input<SUCSchedulePropertiesArgs> scheduleInfo) {
+        public Builder scheduleInfo(Output<SUCSchedulePropertiesArgs> scheduleInfo) {
             this.scheduleInfo = Objects.requireNonNull(scheduleInfo);
             return this;
         }
 
         public Builder scheduleInfo(SUCSchedulePropertiesArgs scheduleInfo) {
-            this.scheduleInfo = Input.of(Objects.requireNonNull(scheduleInfo));
+            this.scheduleInfo = Output.of(Objects.requireNonNull(scheduleInfo));
             return this;
         }
 
-        public Builder softwareUpdateConfigurationName(@Nullable Input<String> softwareUpdateConfigurationName) {
+        public Builder softwareUpdateConfigurationName(@Nullable Output<String> softwareUpdateConfigurationName) {
             this.softwareUpdateConfigurationName = softwareUpdateConfigurationName;
             return this;
         }
 
         public Builder softwareUpdateConfigurationName(@Nullable String softwareUpdateConfigurationName) {
-            this.softwareUpdateConfigurationName = Input.ofNullable(softwareUpdateConfigurationName);
+            this.softwareUpdateConfigurationName = Output.ofNullable(softwareUpdateConfigurationName);
             return this;
         }
 
-        public Builder tasks(@Nullable Input<SoftwareUpdateConfigurationTasksArgs> tasks) {
+        public Builder tasks(@Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks) {
             this.tasks = tasks;
             return this;
         }
 
         public Builder tasks(@Nullable SoftwareUpdateConfigurationTasksArgs tasks) {
-            this.tasks = Input.ofNullable(tasks);
+            this.tasks = Output.ofNullable(tasks);
             return this;
         }
 
-        public Builder updateConfiguration(Input<UpdateConfigurationArgs> updateConfiguration) {
+        public Builder updateConfiguration(Output<UpdateConfigurationArgs> updateConfiguration) {
             this.updateConfiguration = Objects.requireNonNull(updateConfiguration);
             return this;
         }
 
         public Builder updateConfiguration(UpdateConfigurationArgs updateConfiguration) {
-            this.updateConfiguration = Input.of(Objects.requireNonNull(updateConfiguration));
+            this.updateConfiguration = Output.of(Objects.requireNonNull(updateConfiguration));
             return this;
         }
         public SoftwareUpdateConfigurationByNameArgs build() {

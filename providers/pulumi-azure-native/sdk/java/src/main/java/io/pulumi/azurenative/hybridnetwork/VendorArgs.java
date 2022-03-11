@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class VendorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vendorName")
-      private final @Nullable Input<String> vendorName;
+      private final @Nullable Output<String> vendorName;
 
-    public Input<String> getVendorName() {
-        return this.vendorName == null ? Input.empty() : this.vendorName;
+    public Output<String> getVendorName() {
+        return this.vendorName == null ? Output.empty() : this.vendorName;
     }
 
-    public VendorArgs(@Nullable Input<String> vendorName) {
+    public VendorArgs(@Nullable Output<String> vendorName) {
         this.vendorName = vendorName;
     }
 
     private VendorArgs() {
-        this.vendorName = Input.empty();
+        this.vendorName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VendorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> vendorName;
+        private @Nullable Output<String> vendorName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VendorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder vendorName(@Nullable Input<String> vendorName) {
+        public Builder vendorName(@Nullable Output<String> vendorName) {
             this.vendorName = vendorName;
             return this;
         }
 
         public Builder vendorName(@Nullable String vendorName) {
-            this.vendorName = Input.ofNullable(vendorName);
+            this.vendorName = Output.ofNullable(vendorName);
             return this;
         }
         public VendorArgs build() {

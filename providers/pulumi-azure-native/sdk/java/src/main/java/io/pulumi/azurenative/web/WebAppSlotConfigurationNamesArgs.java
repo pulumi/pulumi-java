@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="appSettingNames")
-      private final @Nullable Input<List<String>> appSettingNames;
+      private final @Nullable Output<List<String>> appSettingNames;
 
-    public Input<List<String>> getAppSettingNames() {
-        return this.appSettingNames == null ? Input.empty() : this.appSettingNames;
+    public Output<List<String>> getAppSettingNames() {
+        return this.appSettingNames == null ? Output.empty() : this.appSettingNames;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="azureStorageConfigNames")
-      private final @Nullable Input<List<String>> azureStorageConfigNames;
+      private final @Nullable Output<List<String>> azureStorageConfigNames;
 
-    public Input<List<String>> getAzureStorageConfigNames() {
-        return this.azureStorageConfigNames == null ? Input.empty() : this.azureStorageConfigNames;
+    public Output<List<String>> getAzureStorageConfigNames() {
+        return this.azureStorageConfigNames == null ? Output.empty() : this.azureStorageConfigNames;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="connectionStringNames")
-      private final @Nullable Input<List<String>> connectionStringNames;
+      private final @Nullable Output<List<String>> connectionStringNames;
 
-    public Input<List<String>> getConnectionStringNames() {
-        return this.connectionStringNames == null ? Input.empty() : this.connectionStringNames;
+    public Output<List<String>> getConnectionStringNames() {
+        return this.connectionStringNames == null ? Output.empty() : this.connectionStringNames;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -75,19 +75,19 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public WebAppSlotConfigurationNamesArgs(
-        @Nullable Input<List<String>> appSettingNames,
-        @Nullable Input<List<String>> azureStorageConfigNames,
-        @Nullable Input<List<String>> connectionStringNames,
-        @Nullable Input<String> kind,
-        Input<String> name,
-        Input<String> resourceGroupName) {
+        @Nullable Output<List<String>> appSettingNames,
+        @Nullable Output<List<String>> azureStorageConfigNames,
+        @Nullable Output<List<String>> connectionStringNames,
+        @Nullable Output<String> kind,
+        Output<String> name,
+        Output<String> resourceGroupName) {
         this.appSettingNames = appSettingNames;
         this.azureStorageConfigNames = azureStorageConfigNames;
         this.connectionStringNames = connectionStringNames;
@@ -97,12 +97,12 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     }
 
     private WebAppSlotConfigurationNamesArgs() {
-        this.appSettingNames = Input.empty();
-        this.azureStorageConfigNames = Input.empty();
-        this.connectionStringNames = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.appSettingNames = Output.empty();
+        this.azureStorageConfigNames = Output.empty();
+        this.connectionStringNames = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> appSettingNames;
-        private @Nullable Input<List<String>> azureStorageConfigNames;
-        private @Nullable Input<List<String>> connectionStringNames;
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<List<String>> appSettingNames;
+        private @Nullable Output<List<String>> azureStorageConfigNames;
+        private @Nullable Output<List<String>> connectionStringNames;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder appSettingNames(@Nullable Input<List<String>> appSettingNames) {
+        public Builder appSettingNames(@Nullable Output<List<String>> appSettingNames) {
             this.appSettingNames = appSettingNames;
             return this;
         }
 
         public Builder appSettingNames(@Nullable List<String> appSettingNames) {
-            this.appSettingNames = Input.ofNullable(appSettingNames);
+            this.appSettingNames = Output.ofNullable(appSettingNames);
             return this;
         }
 
-        public Builder azureStorageConfigNames(@Nullable Input<List<String>> azureStorageConfigNames) {
+        public Builder azureStorageConfigNames(@Nullable Output<List<String>> azureStorageConfigNames) {
             this.azureStorageConfigNames = azureStorageConfigNames;
             return this;
         }
 
         public Builder azureStorageConfigNames(@Nullable List<String> azureStorageConfigNames) {
-            this.azureStorageConfigNames = Input.ofNullable(azureStorageConfigNames);
+            this.azureStorageConfigNames = Output.ofNullable(azureStorageConfigNames);
             return this;
         }
 
-        public Builder connectionStringNames(@Nullable Input<List<String>> connectionStringNames) {
+        public Builder connectionStringNames(@Nullable Output<List<String>> connectionStringNames) {
             this.connectionStringNames = connectionStringNames;
             return this;
         }
 
         public Builder connectionStringNames(@Nullable List<String> connectionStringNames) {
-            this.connectionStringNames = Input.ofNullable(connectionStringNames);
+            this.connectionStringNames = Output.ofNullable(connectionStringNames);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public WebAppSlotConfigurationNamesArgs build() {

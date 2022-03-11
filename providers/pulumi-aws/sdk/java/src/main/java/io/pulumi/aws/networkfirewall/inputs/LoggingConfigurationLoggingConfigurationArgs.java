@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class LoggingConfigurationLoggingConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="logDestinationConfigs", required=true)
-      private final Input<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
+      private final Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
 
-    public Input<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> getLogDestinationConfigs() {
+    public Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> getLogDestinationConfigs() {
         return this.logDestinationConfigs;
     }
 
-    public LoggingConfigurationLoggingConfigurationArgs(Input<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs) {
+    public LoggingConfigurationLoggingConfigurationArgs(Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs) {
         this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs, "expected parameter 'logDestinationConfigs' to be non-null");
     }
 
     private LoggingConfigurationLoggingConfigurationArgs() {
-        this.logDestinationConfigs = Input.empty();
+        this.logDestinationConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class LoggingConfigurationLoggingConfigurationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
+        private Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class LoggingConfigurationLoggingConfigurationArgs extends io.pulum
     	      this.logDestinationConfigs = defaults.logDestinationConfigs;
         }
 
-        public Builder logDestinationConfigs(Input<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs) {
+        public Builder logDestinationConfigs(Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs) {
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }
 
         public Builder logDestinationConfigs(List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs> logDestinationConfigs) {
-            this.logDestinationConfigs = Input.of(Objects.requireNonNull(logDestinationConfigs));
+            this.logDestinationConfigs = Output.of(Objects.requireNonNull(logDestinationConfigs));
             return this;
         }
         public LoggingConfigurationLoggingConfigurationArgs build() {

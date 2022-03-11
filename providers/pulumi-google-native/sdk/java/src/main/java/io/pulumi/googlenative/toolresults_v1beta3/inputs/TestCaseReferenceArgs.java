@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="className")
-      private final @Nullable Input<String> className;
+      private final @Nullable Output<String> className;
 
-    public Input<String> getClassName() {
-        return this.className == null ? Input.empty() : this.className;
+    public Output<String> getClassName() {
+        return this.className == null ? Output.empty() : this.className;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testSuiteName")
-      private final @Nullable Input<String> testSuiteName;
+      private final @Nullable Output<String> testSuiteName;
 
-    public Input<String> getTestSuiteName() {
-        return this.testSuiteName == null ? Input.empty() : this.testSuiteName;
+    public Output<String> getTestSuiteName() {
+        return this.testSuiteName == null ? Output.empty() : this.testSuiteName;
     }
 
     public TestCaseReferenceArgs(
-        @Nullable Input<String> className,
-        @Nullable Input<String> name,
-        @Nullable Input<String> testSuiteName) {
+        @Nullable Output<String> className,
+        @Nullable Output<String> name,
+        @Nullable Output<String> testSuiteName) {
         this.className = className;
         this.name = name;
         this.testSuiteName = testSuiteName;
     }
 
     private TestCaseReferenceArgs() {
-        this.className = Input.empty();
-        this.name = Input.empty();
-        this.testSuiteName = Input.empty();
+        this.className = Output.empty();
+        this.name = Output.empty();
+        this.testSuiteName = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> className;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> testSuiteName;
+        private @Nullable Output<String> className;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> testSuiteName;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
     	      this.testSuiteName = defaults.testSuiteName;
         }
 
-        public Builder className(@Nullable Input<String> className) {
+        public Builder className(@Nullable Output<String> className) {
             this.className = className;
             return this;
         }
 
         public Builder className(@Nullable String className) {
-            this.className = Input.ofNullable(className);
+            this.className = Output.ofNullable(className);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder testSuiteName(@Nullable Input<String> testSuiteName) {
+        public Builder testSuiteName(@Nullable Output<String> testSuiteName) {
             this.testSuiteName = testSuiteName;
             return this;
         }
 
         public Builder testSuiteName(@Nullable String testSuiteName) {
-            this.testSuiteName = Input.ofNullable(testSuiteName);
+            this.testSuiteName = Output.ofNullable(testSuiteName);
             return this;
         }
         public TestCaseReferenceArgs build() {

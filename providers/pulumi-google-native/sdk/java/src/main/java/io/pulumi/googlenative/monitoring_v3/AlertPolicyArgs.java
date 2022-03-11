@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.AlertPolicyCombiner;
 import io.pulumi.googlenative.monitoring_v3.inputs.AlertStrategyArgs;
@@ -28,10 +28,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertStrategy")
-      private final @Nullable Input<AlertStrategyArgs> alertStrategy;
+      private final @Nullable Output<AlertStrategyArgs> alertStrategy;
 
-    public Input<AlertStrategyArgs> getAlertStrategy() {
-        return this.alertStrategy == null ? Input.empty() : this.alertStrategy;
+    public Output<AlertStrategyArgs> getAlertStrategy() {
+        return this.alertStrategy == null ? Output.empty() : this.alertStrategy;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="combiner")
-      private final @Nullable Input<AlertPolicyCombiner> combiner;
+      private final @Nullable Output<AlertPolicyCombiner> combiner;
 
-    public Input<AlertPolicyCombiner> getCombiner() {
-        return this.combiner == null ? Input.empty() : this.combiner;
+    public Output<AlertPolicyCombiner> getCombiner() {
+        return this.combiner == null ? Output.empty() : this.combiner;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<ConditionArgs>> conditions;
+      private final @Nullable Output<List<ConditionArgs>> conditions;
 
-    public Input<List<ConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<ConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationRecord")
-      private final @Nullable Input<MutationRecordArgs> creationRecord;
+      private final @Nullable Output<MutationRecordArgs> creationRecord;
 
-    public Input<MutationRecordArgs> getCreationRecord() {
-        return this.creationRecord == null ? Input.empty() : this.creationRecord;
+    public Output<MutationRecordArgs> getCreationRecord() {
+        return this.creationRecord == null ? Output.empty() : this.creationRecord;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentation")
-      private final @Nullable Input<DocumentationArgs> documentation;
+      private final @Nullable Output<DocumentationArgs> documentation;
 
-    public Input<DocumentationArgs> getDocumentation() {
-        return this.documentation == null ? Input.empty() : this.documentation;
+    public Output<DocumentationArgs> getDocumentation() {
+        return this.documentation == null ? Output.empty() : this.documentation;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutationRecord")
-      private final @Nullable Input<MutationRecordArgs> mutationRecord;
+      private final @Nullable Output<MutationRecordArgs> mutationRecord;
 
-    public Input<MutationRecordArgs> getMutationRecord() {
-        return this.mutationRecord == null ? Input.empty() : this.mutationRecord;
+    public Output<MutationRecordArgs> getMutationRecord() {
+        return this.mutationRecord == null ? Output.empty() : this.mutationRecord;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -127,17 +127,17 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationChannels")
-      private final @Nullable Input<List<String>> notificationChannels;
+      private final @Nullable Output<List<String>> notificationChannels;
 
-    public Input<List<String>> getNotificationChannels() {
-        return this.notificationChannels == null ? Input.empty() : this.notificationChannels;
+    public Output<List<String>> getNotificationChannels() {
+        return this.notificationChannels == null ? Output.empty() : this.notificationChannels;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userLabels")
-      private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Input<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Input.empty() : this.userLabels;
+    public Output<Map<String,String>> getUserLabels() {
+        return this.userLabels == null ? Output.empty() : this.userLabels;
     }
 
     /**
@@ -156,26 +156,26 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validity")
-      private final @Nullable Input<StatusArgs> validity;
+      private final @Nullable Output<StatusArgs> validity;
 
-    public Input<StatusArgs> getValidity() {
-        return this.validity == null ? Input.empty() : this.validity;
+    public Output<StatusArgs> getValidity() {
+        return this.validity == null ? Output.empty() : this.validity;
     }
 
     public AlertPolicyArgs(
-        @Nullable Input<AlertStrategyArgs> alertStrategy,
-        @Nullable Input<AlertPolicyCombiner> combiner,
-        @Nullable Input<List<ConditionArgs>> conditions,
-        @Nullable Input<MutationRecordArgs> creationRecord,
-        @Nullable Input<String> displayName,
-        @Nullable Input<DocumentationArgs> documentation,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<MutationRecordArgs> mutationRecord,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> notificationChannels,
-        @Nullable Input<String> project,
-        @Nullable Input<Map<String,String>> userLabels,
-        @Nullable Input<StatusArgs> validity) {
+        @Nullable Output<AlertStrategyArgs> alertStrategy,
+        @Nullable Output<AlertPolicyCombiner> combiner,
+        @Nullable Output<List<ConditionArgs>> conditions,
+        @Nullable Output<MutationRecordArgs> creationRecord,
+        @Nullable Output<String> displayName,
+        @Nullable Output<DocumentationArgs> documentation,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<MutationRecordArgs> mutationRecord,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> notificationChannels,
+        @Nullable Output<String> project,
+        @Nullable Output<Map<String,String>> userLabels,
+        @Nullable Output<StatusArgs> validity) {
         this.alertStrategy = alertStrategy;
         this.combiner = combiner;
         this.conditions = conditions;
@@ -192,19 +192,19 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlertPolicyArgs() {
-        this.alertStrategy = Input.empty();
-        this.combiner = Input.empty();
-        this.conditions = Input.empty();
-        this.creationRecord = Input.empty();
-        this.displayName = Input.empty();
-        this.documentation = Input.empty();
-        this.enabled = Input.empty();
-        this.mutationRecord = Input.empty();
-        this.name = Input.empty();
-        this.notificationChannels = Input.empty();
-        this.project = Input.empty();
-        this.userLabels = Input.empty();
-        this.validity = Input.empty();
+        this.alertStrategy = Output.empty();
+        this.combiner = Output.empty();
+        this.conditions = Output.empty();
+        this.creationRecord = Output.empty();
+        this.displayName = Output.empty();
+        this.documentation = Output.empty();
+        this.enabled = Output.empty();
+        this.mutationRecord = Output.empty();
+        this.name = Output.empty();
+        this.notificationChannels = Output.empty();
+        this.project = Output.empty();
+        this.userLabels = Output.empty();
+        this.validity = Output.empty();
     }
 
     public static Builder builder() {
@@ -216,19 +216,19 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AlertStrategyArgs> alertStrategy;
-        private @Nullable Input<AlertPolicyCombiner> combiner;
-        private @Nullable Input<List<ConditionArgs>> conditions;
-        private @Nullable Input<MutationRecordArgs> creationRecord;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<DocumentationArgs> documentation;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<MutationRecordArgs> mutationRecord;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> notificationChannels;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Map<String,String>> userLabels;
-        private @Nullable Input<StatusArgs> validity;
+        private @Nullable Output<AlertStrategyArgs> alertStrategy;
+        private @Nullable Output<AlertPolicyCombiner> combiner;
+        private @Nullable Output<List<ConditionArgs>> conditions;
+        private @Nullable Output<MutationRecordArgs> creationRecord;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<DocumentationArgs> documentation;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<MutationRecordArgs> mutationRecord;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> notificationChannels;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Map<String,String>> userLabels;
+        private @Nullable Output<StatusArgs> validity;
 
         public Builder() {
     	      // Empty
@@ -251,133 +251,133 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validity = defaults.validity;
         }
 
-        public Builder alertStrategy(@Nullable Input<AlertStrategyArgs> alertStrategy) {
+        public Builder alertStrategy(@Nullable Output<AlertStrategyArgs> alertStrategy) {
             this.alertStrategy = alertStrategy;
             return this;
         }
 
         public Builder alertStrategy(@Nullable AlertStrategyArgs alertStrategy) {
-            this.alertStrategy = Input.ofNullable(alertStrategy);
+            this.alertStrategy = Output.ofNullable(alertStrategy);
             return this;
         }
 
-        public Builder combiner(@Nullable Input<AlertPolicyCombiner> combiner) {
+        public Builder combiner(@Nullable Output<AlertPolicyCombiner> combiner) {
             this.combiner = combiner;
             return this;
         }
 
         public Builder combiner(@Nullable AlertPolicyCombiner combiner) {
-            this.combiner = Input.ofNullable(combiner);
+            this.combiner = Output.ofNullable(combiner);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<ConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder creationRecord(@Nullable Input<MutationRecordArgs> creationRecord) {
+        public Builder creationRecord(@Nullable Output<MutationRecordArgs> creationRecord) {
             this.creationRecord = creationRecord;
             return this;
         }
 
         public Builder creationRecord(@Nullable MutationRecordArgs creationRecord) {
-            this.creationRecord = Input.ofNullable(creationRecord);
+            this.creationRecord = Output.ofNullable(creationRecord);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder documentation(@Nullable Input<DocumentationArgs> documentation) {
+        public Builder documentation(@Nullable Output<DocumentationArgs> documentation) {
             this.documentation = documentation;
             return this;
         }
 
         public Builder documentation(@Nullable DocumentationArgs documentation) {
-            this.documentation = Input.ofNullable(documentation);
+            this.documentation = Output.ofNullable(documentation);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder mutationRecord(@Nullable Input<MutationRecordArgs> mutationRecord) {
+        public Builder mutationRecord(@Nullable Output<MutationRecordArgs> mutationRecord) {
             this.mutationRecord = mutationRecord;
             return this;
         }
 
         public Builder mutationRecord(@Nullable MutationRecordArgs mutationRecord) {
-            this.mutationRecord = Input.ofNullable(mutationRecord);
+            this.mutationRecord = Output.ofNullable(mutationRecord);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationChannels(@Nullable Input<List<String>> notificationChannels) {
+        public Builder notificationChannels(@Nullable Output<List<String>> notificationChannels) {
             this.notificationChannels = notificationChannels;
             return this;
         }
 
         public Builder notificationChannels(@Nullable List<String> notificationChannels) {
-            this.notificationChannels = Input.ofNullable(notificationChannels);
+            this.notificationChannels = Output.ofNullable(notificationChannels);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Input.ofNullable(userLabels);
+            this.userLabels = Output.ofNullable(userLabels);
             return this;
         }
 
-        public Builder validity(@Nullable Input<StatusArgs> validity) {
+        public Builder validity(@Nullable Output<StatusArgs> validity) {
             this.validity = validity;
             return this;
         }
 
         public Builder validity(@Nullable StatusArgs validity) {
-            this.validity = Input.ofNullable(validity);
+            this.validity = Output.ofNullable(validity);
             return this;
         }
         public AlertPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blockchain.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endIpAddress")
-      private final @Nullable Input<String> endIpAddress;
+      private final @Nullable Output<String> endIpAddress;
 
-    public Input<String> getEndIpAddress() {
-        return this.endIpAddress == null ? Input.empty() : this.endIpAddress;
+    public Output<String> getEndIpAddress() {
+        return this.endIpAddress == null ? Output.empty() : this.endIpAddress;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startIpAddress")
-      private final @Nullable Input<String> startIpAddress;
+      private final @Nullable Output<String> startIpAddress;
 
-    public Input<String> getStartIpAddress() {
-        return this.startIpAddress == null ? Input.empty() : this.startIpAddress;
+    public Output<String> getStartIpAddress() {
+        return this.startIpAddress == null ? Output.empty() : this.startIpAddress;
     }
 
     public FirewallRuleArgs(
-        @Nullable Input<String> endIpAddress,
-        @Nullable Input<String> ruleName,
-        @Nullable Input<String> startIpAddress) {
+        @Nullable Output<String> endIpAddress,
+        @Nullable Output<String> ruleName,
+        @Nullable Output<String> startIpAddress) {
         this.endIpAddress = endIpAddress;
         this.ruleName = ruleName;
         this.startIpAddress = startIpAddress;
     }
 
     private FirewallRuleArgs() {
-        this.endIpAddress = Input.empty();
-        this.ruleName = Input.empty();
-        this.startIpAddress = Input.empty();
+        this.endIpAddress = Output.empty();
+        this.ruleName = Output.empty();
+        this.startIpAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endIpAddress;
-        private @Nullable Input<String> ruleName;
-        private @Nullable Input<String> startIpAddress;
+        private @Nullable Output<String> endIpAddress;
+        private @Nullable Output<String> ruleName;
+        private @Nullable Output<String> startIpAddress;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startIpAddress = defaults.startIpAddress;
         }
 
-        public Builder endIpAddress(@Nullable Input<String> endIpAddress) {
+        public Builder endIpAddress(@Nullable Output<String> endIpAddress) {
             this.endIpAddress = endIpAddress;
             return this;
         }
 
         public Builder endIpAddress(@Nullable String endIpAddress) {
-            this.endIpAddress = Input.ofNullable(endIpAddress);
+            this.endIpAddress = Output.ofNullable(endIpAddress);
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
 
-        public Builder startIpAddress(@Nullable Input<String> startIpAddress) {
+        public Builder startIpAddress(@Nullable Output<String> startIpAddress) {
             this.startIpAddress = startIpAddress;
             return this;
         }
 
         public Builder startIpAddress(@Nullable String startIpAddress) {
-            this.startIpAddress = Input.ofNullable(startIpAddress);
+            this.startIpAddress = Output.ofNullable(startIpAddress);
             return this;
         }
         public FirewallRuleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventPattern")
-      private final @Nullable Input<String> eventPattern;
+      private final @Nullable Output<String> eventPattern;
 
-    public Input<String> getEventPattern() {
-        return this.eventPattern == null ? Input.empty() : this.eventPattern;
+    public Output<String> getEventPattern() {
+        return this.eventPattern == null ? Output.empty() : this.eventPattern;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventSourceArn")
-      private final @Nullable Input<String> eventSourceArn;
+      private final @Nullable Output<String> eventSourceArn;
 
-    public Input<String> getEventSourceArn() {
-        return this.eventSourceArn == null ? Input.empty() : this.eventSourceArn;
+    public Output<String> getEventSourceArn() {
+        return this.eventSourceArn == null ? Output.empty() : this.eventSourceArn;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionDays")
-      private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Output<Integer> retentionDays;
 
-    public Input<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Input.empty() : this.retentionDays;
+    public Output<Integer> getRetentionDays() {
+        return this.retentionDays == null ? Output.empty() : this.retentionDays;
     }
 
     public EventArchiveState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> eventPattern,
-        @Nullable Input<String> eventSourceArn,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> retentionDays) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> eventPattern,
+        @Nullable Output<String> eventSourceArn,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> retentionDays) {
         this.arn = arn;
         this.description = description;
         this.eventPattern = eventPattern;
@@ -97,12 +97,12 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventArchiveState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.eventPattern = Input.empty();
-        this.eventSourceArn = Input.empty();
-        this.name = Input.empty();
-        this.retentionDays = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.eventPattern = Output.empty();
+        this.eventSourceArn = Output.empty();
+        this.name = Output.empty();
+        this.retentionDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> eventPattern;
-        private @Nullable Input<String> eventSourceArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> retentionDays;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> eventPattern;
+        private @Nullable Output<String> eventSourceArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> retentionDays;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
     	      this.retentionDays = defaults.retentionDays;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder eventPattern(@Nullable Input<String> eventPattern) {
+        public Builder eventPattern(@Nullable Output<String> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
 
         public Builder eventPattern(@Nullable String eventPattern) {
-            this.eventPattern = Input.ofNullable(eventPattern);
+            this.eventPattern = Output.ofNullable(eventPattern);
             return this;
         }
 
-        public Builder eventSourceArn(@Nullable Input<String> eventSourceArn) {
+        public Builder eventSourceArn(@Nullable Output<String> eventSourceArn) {
             this.eventSourceArn = eventSourceArn;
             return this;
         }
 
         public Builder eventSourceArn(@Nullable String eventSourceArn) {
-            this.eventSourceArn = Input.ofNullable(eventSourceArn);
+            this.eventSourceArn = Output.ofNullable(eventSourceArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Input.ofNullable(retentionDays);
+            this.retentionDays = Output.ofNullable(retentionDays);
             return this;
         }
         public EventArchiveState build() {

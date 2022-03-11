@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionMonitorTestName")
-      private final @Nullable Input<String> connectionMonitorTestName;
+      private final @Nullable Output<String> connectionMonitorTestName;
 
-    public Input<String> getConnectionMonitorTestName() {
-        return this.connectionMonitorTestName == null ? Input.empty() : this.connectionMonitorTestName;
+    public Output<String> getConnectionMonitorTestName() {
+        return this.connectionMonitorTestName == null ? Output.empty() : this.connectionMonitorTestName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="destinationPort")
-      private final @Nullable Input<Integer> destinationPort;
+      private final @Nullable Output<Integer> destinationPort;
 
-    public Input<Integer> getDestinationPort() {
-        return this.destinationPort == null ? Input.empty() : this.destinationPort;
+    public Output<Integer> getDestinationPort() {
+        return this.destinationPort == null ? Output.empty() : this.destinationPort;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="peeringServiceName", required=true)
-      private final Input<String> peeringServiceName;
+      private final Output<String> peeringServiceName;
 
-    public Input<String> getPeeringServiceName() {
+    public Output<String> getPeeringServiceName() {
         return this.peeringServiceName;
     }
 
@@ -64,9 +64,9 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,10 +75,10 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceAgent")
-      private final @Nullable Input<String> sourceAgent;
+      private final @Nullable Output<String> sourceAgent;
 
-    public Input<String> getSourceAgent() {
-        return this.sourceAgent == null ? Input.empty() : this.sourceAgent;
+    public Output<String> getSourceAgent() {
+        return this.sourceAgent == null ? Output.empty() : this.sourceAgent;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="testFrequencyInSec")
-      private final @Nullable Input<Integer> testFrequencyInSec;
+      private final @Nullable Output<Integer> testFrequencyInSec;
 
-    public Input<Integer> getTestFrequencyInSec() {
-        return this.testFrequencyInSec == null ? Input.empty() : this.testFrequencyInSec;
+    public Output<Integer> getTestFrequencyInSec() {
+        return this.testFrequencyInSec == null ? Output.empty() : this.testFrequencyInSec;
     }
 
     public ConnectionMonitorTestArgs(
-        @Nullable Input<String> connectionMonitorTestName,
-        @Nullable Input<String> destination,
-        @Nullable Input<Integer> destinationPort,
-        Input<String> peeringServiceName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sourceAgent,
-        @Nullable Input<Integer> testFrequencyInSec) {
+        @Nullable Output<String> connectionMonitorTestName,
+        @Nullable Output<String> destination,
+        @Nullable Output<Integer> destinationPort,
+        Output<String> peeringServiceName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sourceAgent,
+        @Nullable Output<Integer> testFrequencyInSec) {
         this.connectionMonitorTestName = connectionMonitorTestName;
         this.destination = destination;
         this.destinationPort = destinationPort;
@@ -110,13 +110,13 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     }
 
     private ConnectionMonitorTestArgs() {
-        this.connectionMonitorTestName = Input.empty();
-        this.destination = Input.empty();
-        this.destinationPort = Input.empty();
-        this.peeringServiceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sourceAgent = Input.empty();
-        this.testFrequencyInSec = Input.empty();
+        this.connectionMonitorTestName = Output.empty();
+        this.destination = Output.empty();
+        this.destinationPort = Output.empty();
+        this.peeringServiceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sourceAgent = Output.empty();
+        this.testFrequencyInSec = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectionMonitorTestName;
-        private @Nullable Input<String> destination;
-        private @Nullable Input<Integer> destinationPort;
-        private Input<String> peeringServiceName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sourceAgent;
-        private @Nullable Input<Integer> testFrequencyInSec;
+        private @Nullable Output<String> connectionMonitorTestName;
+        private @Nullable Output<String> destination;
+        private @Nullable Output<Integer> destinationPort;
+        private Output<String> peeringServiceName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sourceAgent;
+        private @Nullable Output<Integer> testFrequencyInSec;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     	      this.testFrequencyInSec = defaults.testFrequencyInSec;
         }
 
-        public Builder connectionMonitorTestName(@Nullable Input<String> connectionMonitorTestName) {
+        public Builder connectionMonitorTestName(@Nullable Output<String> connectionMonitorTestName) {
             this.connectionMonitorTestName = connectionMonitorTestName;
             return this;
         }
 
         public Builder connectionMonitorTestName(@Nullable String connectionMonitorTestName) {
-            this.connectionMonitorTestName = Input.ofNullable(connectionMonitorTestName);
+            this.connectionMonitorTestName = Output.ofNullable(connectionMonitorTestName);
             return this;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Input.ofNullable(destinationPort);
+            this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder peeringServiceName(Input<String> peeringServiceName) {
+        public Builder peeringServiceName(Output<String> peeringServiceName) {
             this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
             return this;
         }
 
         public Builder peeringServiceName(String peeringServiceName) {
-            this.peeringServiceName = Input.of(Objects.requireNonNull(peeringServiceName));
+            this.peeringServiceName = Output.of(Objects.requireNonNull(peeringServiceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sourceAgent(@Nullable Input<String> sourceAgent) {
+        public Builder sourceAgent(@Nullable Output<String> sourceAgent) {
             this.sourceAgent = sourceAgent;
             return this;
         }
 
         public Builder sourceAgent(@Nullable String sourceAgent) {
-            this.sourceAgent = Input.ofNullable(sourceAgent);
+            this.sourceAgent = Output.ofNullable(sourceAgent);
             return this;
         }
 
-        public Builder testFrequencyInSec(@Nullable Input<Integer> testFrequencyInSec) {
+        public Builder testFrequencyInSec(@Nullable Output<Integer> testFrequencyInSec) {
             this.testFrequencyInSec = testFrequencyInSec;
             return this;
         }
 
         public Builder testFrequencyInSec(@Nullable Integer testFrequencyInSec) {
-            this.testFrequencyInSec = Input.ofNullable(testFrequencyInSec);
+            this.testFrequencyInSec = Output.ofNullable(testFrequencyInSec);
             return this;
         }
         public ConnectionMonitorTestArgs build() {

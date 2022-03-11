@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.enums.FunctionType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="function", required=true)
-      private final Input<Either<String,FunctionType>> function;
+      private final Output<Either<String,FunctionType>> function;
 
-    public Input<Either<String,FunctionType>> getFunction() {
+    public Output<Either<String,FunctionType>> getFunction() {
         return this.function;
     }
 
@@ -35,22 +35,22 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public ReportAggregationArgs(
-        Input<Either<String,FunctionType>> function,
-        Input<String> name) {
+        Output<Either<String,FunctionType>> function,
+        Output<String> name) {
         this.function = Objects.requireNonNull(function, "expected parameter 'function' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private ReportAggregationArgs() {
-        this.function = Input.empty();
-        this.name = Input.empty();
+        this.function = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Either<String,FunctionType>> function;
-        private Input<String> name;
+        private Output<Either<String,FunctionType>> function;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
     	      this.name = defaults.name;
         }
 
-        public Builder function(Input<Either<String,FunctionType>> function) {
+        public Builder function(Output<Either<String,FunctionType>> function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
         public Builder function(Either<String,FunctionType> function) {
-            this.function = Input.of(Objects.requireNonNull(function));
+            this.function = Output.of(Objects.requireNonNull(function));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ReportAggregationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public VpcEndpointServicePrivateDnsNameConfigurationArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> state,
-        @Nullable Input<String> type,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> state,
+        @Nullable Output<String> type,
+        @Nullable Output<String> value) {
         this.name = name;
         this.state = state;
         this.type = type;
@@ -70,10 +70,10 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
     }
 
     private VpcEndpointServicePrivateDnsNameConfigurationArgs() {
-        this.name = Input.empty();
-        this.state = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.name = Output.empty();
+        this.state = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
     	      this.value = defaults.value;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public VpcEndpointServicePrivateDnsNameConfigurationArgs build() {

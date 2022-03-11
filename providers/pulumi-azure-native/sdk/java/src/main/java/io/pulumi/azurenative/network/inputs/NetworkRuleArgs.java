@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.FirewallPolicyRuleNetworkProtocol;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationAddresses")
-      private final @Nullable Input<List<String>> destinationAddresses;
+      private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Input<List<String>> getDestinationAddresses() {
-        return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
+    public Output<List<String>> getDestinationAddresses() {
+        return this.destinationAddresses == null ? Output.empty() : this.destinationAddresses;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationFqdns")
-      private final @Nullable Input<List<String>> destinationFqdns;
+      private final @Nullable Output<List<String>> destinationFqdns;
 
-    public Input<List<String>> getDestinationFqdns() {
-        return this.destinationFqdns == null ? Input.empty() : this.destinationFqdns;
+    public Output<List<String>> getDestinationFqdns() {
+        return this.destinationFqdns == null ? Output.empty() : this.destinationFqdns;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationIpGroups")
-      private final @Nullable Input<List<String>> destinationIpGroups;
+      private final @Nullable Output<List<String>> destinationIpGroups;
 
-    public Input<List<String>> getDestinationIpGroups() {
-        return this.destinationIpGroups == null ? Input.empty() : this.destinationIpGroups;
+    public Output<List<String>> getDestinationIpGroups() {
+        return this.destinationIpGroups == null ? Output.empty() : this.destinationIpGroups;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationPorts")
-      private final @Nullable Input<List<String>> destinationPorts;
+      private final @Nullable Output<List<String>> destinationPorts;
 
-    public Input<List<String>> getDestinationPorts() {
-        return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
+    public Output<List<String>> getDestinationPorts() {
+        return this.destinationPorts == null ? Output.empty() : this.destinationPorts;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipProtocols")
-      private final @Nullable Input<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
+      private final @Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
 
-    public Input<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> getIpProtocols() {
-        return this.ipProtocols == null ? Input.empty() : this.ipProtocols;
+    public Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> getIpProtocols() {
+        return this.ipProtocols == null ? Output.empty() : this.ipProtocols;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -104,9 +104,9 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleType", required=true)
-      private final Input<String> ruleType;
+      private final Output<String> ruleType;
 
-    public Input<String> getRuleType() {
+    public Output<String> getRuleType() {
         return this.ruleType;
     }
 
@@ -115,10 +115,10 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAddresses")
-      private final @Nullable Input<List<String>> sourceAddresses;
+      private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Input<List<String>> getSourceAddresses() {
-        return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
+    public Output<List<String>> getSourceAddresses() {
+        return this.sourceAddresses == null ? Output.empty() : this.sourceAddresses;
     }
 
     /**
@@ -126,23 +126,23 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceIpGroups")
-      private final @Nullable Input<List<String>> sourceIpGroups;
+      private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Input<List<String>> getSourceIpGroups() {
-        return this.sourceIpGroups == null ? Input.empty() : this.sourceIpGroups;
+    public Output<List<String>> getSourceIpGroups() {
+        return this.sourceIpGroups == null ? Output.empty() : this.sourceIpGroups;
     }
 
     public NetworkRuleArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> destinationAddresses,
-        @Nullable Input<List<String>> destinationFqdns,
-        @Nullable Input<List<String>> destinationIpGroups,
-        @Nullable Input<List<String>> destinationPorts,
-        @Nullable Input<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols,
-        @Nullable Input<String> name,
-        Input<String> ruleType,
-        @Nullable Input<List<String>> sourceAddresses,
-        @Nullable Input<List<String>> sourceIpGroups) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> destinationAddresses,
+        @Nullable Output<List<String>> destinationFqdns,
+        @Nullable Output<List<String>> destinationIpGroups,
+        @Nullable Output<List<String>> destinationPorts,
+        @Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols,
+        @Nullable Output<String> name,
+        Output<String> ruleType,
+        @Nullable Output<List<String>> sourceAddresses,
+        @Nullable Output<List<String>> sourceIpGroups) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.destinationFqdns = destinationFqdns;
@@ -156,16 +156,16 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkRuleArgs() {
-        this.description = Input.empty();
-        this.destinationAddresses = Input.empty();
-        this.destinationFqdns = Input.empty();
-        this.destinationIpGroups = Input.empty();
-        this.destinationPorts = Input.empty();
-        this.ipProtocols = Input.empty();
-        this.name = Input.empty();
-        this.ruleType = Input.empty();
-        this.sourceAddresses = Input.empty();
-        this.sourceIpGroups = Input.empty();
+        this.description = Output.empty();
+        this.destinationAddresses = Output.empty();
+        this.destinationFqdns = Output.empty();
+        this.destinationIpGroups = Output.empty();
+        this.destinationPorts = Output.empty();
+        this.ipProtocols = Output.empty();
+        this.name = Output.empty();
+        this.ruleType = Output.empty();
+        this.sourceAddresses = Output.empty();
+        this.sourceIpGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -177,16 +177,16 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> destinationAddresses;
-        private @Nullable Input<List<String>> destinationFqdns;
-        private @Nullable Input<List<String>> destinationIpGroups;
-        private @Nullable Input<List<String>> destinationPorts;
-        private @Nullable Input<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
-        private @Nullable Input<String> name;
-        private Input<String> ruleType;
-        private @Nullable Input<List<String>> sourceAddresses;
-        private @Nullable Input<List<String>> sourceIpGroups;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> destinationAddresses;
+        private @Nullable Output<List<String>> destinationFqdns;
+        private @Nullable Output<List<String>> destinationIpGroups;
+        private @Nullable Output<List<String>> destinationPorts;
+        private @Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
+        private @Nullable Output<String> name;
+        private Output<String> ruleType;
+        private @Nullable Output<List<String>> sourceAddresses;
+        private @Nullable Output<List<String>> sourceIpGroups;
 
         public Builder() {
     	      // Empty
@@ -206,103 +206,103 @@ public final class NetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceIpGroups = defaults.sourceIpGroups;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationAddresses(@Nullable Input<List<String>> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Input.ofNullable(destinationAddresses);
+            this.destinationAddresses = Output.ofNullable(destinationAddresses);
             return this;
         }
 
-        public Builder destinationFqdns(@Nullable Input<List<String>> destinationFqdns) {
+        public Builder destinationFqdns(@Nullable Output<List<String>> destinationFqdns) {
             this.destinationFqdns = destinationFqdns;
             return this;
         }
 
         public Builder destinationFqdns(@Nullable List<String> destinationFqdns) {
-            this.destinationFqdns = Input.ofNullable(destinationFqdns);
+            this.destinationFqdns = Output.ofNullable(destinationFqdns);
             return this;
         }
 
-        public Builder destinationIpGroups(@Nullable Input<List<String>> destinationIpGroups) {
+        public Builder destinationIpGroups(@Nullable Output<List<String>> destinationIpGroups) {
             this.destinationIpGroups = destinationIpGroups;
             return this;
         }
 
         public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
-            this.destinationIpGroups = Input.ofNullable(destinationIpGroups);
+            this.destinationIpGroups = Output.ofNullable(destinationIpGroups);
             return this;
         }
 
-        public Builder destinationPorts(@Nullable Input<List<String>> destinationPorts) {
+        public Builder destinationPorts(@Nullable Output<List<String>> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = Input.ofNullable(destinationPorts);
+            this.destinationPorts = Output.ofNullable(destinationPorts);
             return this;
         }
 
-        public Builder ipProtocols(@Nullable Input<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols) {
+        public Builder ipProtocols(@Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols) {
             this.ipProtocols = ipProtocols;
             return this;
         }
 
         public Builder ipProtocols(@Nullable List<Either<String,FirewallPolicyRuleNetworkProtocol>> ipProtocols) {
-            this.ipProtocols = Input.ofNullable(ipProtocols);
+            this.ipProtocols = Output.ofNullable(ipProtocols);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ruleType(Input<String> ruleType) {
+        public Builder ruleType(Output<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
         public Builder ruleType(String ruleType) {
-            this.ruleType = Input.of(Objects.requireNonNull(ruleType));
+            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
 
-        public Builder sourceAddresses(@Nullable Input<List<String>> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Input.ofNullable(sourceAddresses);
+            this.sourceAddresses = Output.ofNullable(sourceAddresses);
             return this;
         }
 
-        public Builder sourceIpGroups(@Nullable Input<List<String>> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Input.ofNullable(sourceIpGroups);
+            this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
             return this;
         }
         public NetworkRuleArgs build() {

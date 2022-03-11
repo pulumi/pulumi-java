@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceTagFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ScalingPlanApplicationSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudformationStackArn")
-      private final @Nullable Input<String> cloudformationStackArn;
+      private final @Nullable Output<String> cloudformationStackArn;
 
-    public Input<String> getCloudformationStackArn() {
-        return this.cloudformationStackArn == null ? Input.empty() : this.cloudformationStackArn;
+    public Output<String> getCloudformationStackArn() {
+        return this.cloudformationStackArn == null ? Output.empty() : this.cloudformationStackArn;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ScalingPlanApplicationSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tagFilters")
-      private final @Nullable Input<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters;
+      private final @Nullable Output<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters;
 
-    public Input<List<ScalingPlanApplicationSourceTagFilterArgs>> getTagFilters() {
-        return this.tagFilters == null ? Input.empty() : this.tagFilters;
+    public Output<List<ScalingPlanApplicationSourceTagFilterArgs>> getTagFilters() {
+        return this.tagFilters == null ? Output.empty() : this.tagFilters;
     }
 
     public ScalingPlanApplicationSourceArgs(
-        @Nullable Input<String> cloudformationStackArn,
-        @Nullable Input<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters) {
+        @Nullable Output<String> cloudformationStackArn,
+        @Nullable Output<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters) {
         this.cloudformationStackArn = cloudformationStackArn;
         this.tagFilters = tagFilters;
     }
 
     private ScalingPlanApplicationSourceArgs() {
-        this.cloudformationStackArn = Input.empty();
-        this.tagFilters = Input.empty();
+        this.cloudformationStackArn = Output.empty();
+        this.tagFilters = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ScalingPlanApplicationSourceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudformationStackArn;
-        private @Nullable Input<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters;
+        private @Nullable Output<String> cloudformationStackArn;
+        private @Nullable Output<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ScalingPlanApplicationSourceArgs extends io.pulumi.resources.
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder cloudformationStackArn(@Nullable Input<String> cloudformationStackArn) {
+        public Builder cloudformationStackArn(@Nullable Output<String> cloudformationStackArn) {
             this.cloudformationStackArn = cloudformationStackArn;
             return this;
         }
 
         public Builder cloudformationStackArn(@Nullable String cloudformationStackArn) {
-            this.cloudformationStackArn = Input.ofNullable(cloudformationStackArn);
+            this.cloudformationStackArn = Output.ofNullable(cloudformationStackArn);
             return this;
         }
 
-        public Builder tagFilters(@Nullable Input<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters) {
+        public Builder tagFilters(@Nullable Output<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
 
         public Builder tagFilters(@Nullable List<ScalingPlanApplicationSourceTagFilterArgs> tagFilters) {
-            this.tagFilters = Input.ofNullable(tagFilters);
+            this.tagFilters = Output.ofNullable(tagFilters);
             return this;
         }
         public ScalingPlanApplicationSourceArgs build() {

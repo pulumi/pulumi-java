@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.CorsRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="corsRules")
-      private final @Nullable Input<List<CorsRuleArgs>> corsRules;
+      private final @Nullable Output<List<CorsRuleArgs>> corsRules;
 
-    public Input<List<CorsRuleArgs>> getCorsRules() {
-        return this.corsRules == null ? Input.empty() : this.corsRules;
+    public Output<List<CorsRuleArgs>> getCorsRules() {
+        return this.corsRules == null ? Output.empty() : this.corsRules;
     }
 
-    public CorsRulesArgs(@Nullable Input<List<CorsRuleArgs>> corsRules) {
+    public CorsRulesArgs(@Nullable Output<List<CorsRuleArgs>> corsRules) {
         this.corsRules = corsRules;
     }
 
     private CorsRulesArgs() {
-        this.corsRules = Input.empty();
+        this.corsRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CorsRuleArgs>> corsRules;
+        private @Nullable Output<List<CorsRuleArgs>> corsRules;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.corsRules = defaults.corsRules;
         }
 
-        public Builder corsRules(@Nullable Input<List<CorsRuleArgs>> corsRules) {
+        public Builder corsRules(@Nullable Output<List<CorsRuleArgs>> corsRules) {
             this.corsRules = corsRules;
             return this;
         }
 
         public Builder corsRules(@Nullable List<CorsRuleArgs> corsRules) {
-            this.corsRules = Input.ofNullable(corsRules);
+            this.corsRules = Output.ofNullable(corsRules);
             return this;
         }
         public CorsRulesArgs build() {

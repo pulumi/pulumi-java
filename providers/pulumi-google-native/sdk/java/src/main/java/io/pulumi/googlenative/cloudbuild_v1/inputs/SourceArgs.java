@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.RepoSourceArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceArgs;
@@ -25,10 +25,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoSource")
-      private final @Nullable Input<RepoSourceArgs> repoSource;
+      private final @Nullable Output<RepoSourceArgs> repoSource;
 
-    public Input<RepoSourceArgs> getRepoSource() {
-        return this.repoSource == null ? Input.empty() : this.repoSource;
+    public Output<RepoSourceArgs> getRepoSource() {
+        return this.repoSource == null ? Output.empty() : this.repoSource;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageSource")
-      private final @Nullable Input<StorageSourceArgs> storageSource;
+      private final @Nullable Output<StorageSourceArgs> storageSource;
 
-    public Input<StorageSourceArgs> getStorageSource() {
-        return this.storageSource == null ? Input.empty() : this.storageSource;
+    public Output<StorageSourceArgs> getStorageSource() {
+        return this.storageSource == null ? Output.empty() : this.storageSource;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageSourceManifest")
-      private final @Nullable Input<StorageSourceManifestArgs> storageSourceManifest;
+      private final @Nullable Output<StorageSourceManifestArgs> storageSourceManifest;
 
-    public Input<StorageSourceManifestArgs> getStorageSourceManifest() {
-        return this.storageSourceManifest == null ? Input.empty() : this.storageSourceManifest;
+    public Output<StorageSourceManifestArgs> getStorageSourceManifest() {
+        return this.storageSourceManifest == null ? Output.empty() : this.storageSourceManifest;
     }
 
     public SourceArgs(
-        @Nullable Input<RepoSourceArgs> repoSource,
-        @Nullable Input<StorageSourceArgs> storageSource,
-        @Nullable Input<StorageSourceManifestArgs> storageSourceManifest) {
+        @Nullable Output<RepoSourceArgs> repoSource,
+        @Nullable Output<StorageSourceArgs> storageSource,
+        @Nullable Output<StorageSourceManifestArgs> storageSourceManifest) {
         this.repoSource = repoSource;
         this.storageSource = storageSource;
         this.storageSourceManifest = storageSourceManifest;
     }
 
     private SourceArgs() {
-        this.repoSource = Input.empty();
-        this.storageSource = Input.empty();
-        this.storageSourceManifest = Input.empty();
+        this.repoSource = Output.empty();
+        this.storageSource = Output.empty();
+        this.storageSourceManifest = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RepoSourceArgs> repoSource;
-        private @Nullable Input<StorageSourceArgs> storageSource;
-        private @Nullable Input<StorageSourceManifestArgs> storageSourceManifest;
+        private @Nullable Output<RepoSourceArgs> repoSource;
+        private @Nullable Output<StorageSourceArgs> storageSource;
+        private @Nullable Output<StorageSourceManifestArgs> storageSourceManifest;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageSourceManifest = defaults.storageSourceManifest;
         }
 
-        public Builder repoSource(@Nullable Input<RepoSourceArgs> repoSource) {
+        public Builder repoSource(@Nullable Output<RepoSourceArgs> repoSource) {
             this.repoSource = repoSource;
             return this;
         }
 
         public Builder repoSource(@Nullable RepoSourceArgs repoSource) {
-            this.repoSource = Input.ofNullable(repoSource);
+            this.repoSource = Output.ofNullable(repoSource);
             return this;
         }
 
-        public Builder storageSource(@Nullable Input<StorageSourceArgs> storageSource) {
+        public Builder storageSource(@Nullable Output<StorageSourceArgs> storageSource) {
             this.storageSource = storageSource;
             return this;
         }
 
         public Builder storageSource(@Nullable StorageSourceArgs storageSource) {
-            this.storageSource = Input.ofNullable(storageSource);
+            this.storageSource = Output.ofNullable(storageSource);
             return this;
         }
 
-        public Builder storageSourceManifest(@Nullable Input<StorageSourceManifestArgs> storageSourceManifest) {
+        public Builder storageSourceManifest(@Nullable Output<StorageSourceManifestArgs> storageSourceManifest) {
             this.storageSourceManifest = storageSourceManifest;
             return this;
         }
 
         public Builder storageSourceManifest(@Nullable StorageSourceManifestArgs storageSourceManifest) {
-            this.storageSourceManifest = Input.ofNullable(storageSourceManifest);
+            this.storageSourceManifest = Output.ofNullable(storageSourceManifest);
             return this;
         }
         public SourceArgs build() {

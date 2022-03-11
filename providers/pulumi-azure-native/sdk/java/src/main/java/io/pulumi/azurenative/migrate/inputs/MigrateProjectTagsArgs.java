@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
     public static final MigrateProjectTagsArgs Empty = new MigrateProjectTagsArgs();
 
     @InputImport(name="additionalProperties")
-      private final @Nullable Input<String> additionalProperties;
+      private final @Nullable Output<String> additionalProperties;
 
-    public Input<String> getAdditionalProperties() {
-        return this.additionalProperties == null ? Input.empty() : this.additionalProperties;
+    public Output<String> getAdditionalProperties() {
+        return this.additionalProperties == null ? Output.empty() : this.additionalProperties;
     }
 
-    public MigrateProjectTagsArgs(@Nullable Input<String> additionalProperties) {
+    public MigrateProjectTagsArgs(@Nullable Output<String> additionalProperties) {
         this.additionalProperties = additionalProperties;
     }
 
     private MigrateProjectTagsArgs() {
-        this.additionalProperties = Input.empty();
+        this.additionalProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> additionalProperties;
+        private @Nullable Output<String> additionalProperties;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
     	      this.additionalProperties = defaults.additionalProperties;
         }
 
-        public Builder additionalProperties(@Nullable Input<String> additionalProperties) {
+        public Builder additionalProperties(@Nullable Output<String> additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }
 
         public Builder additionalProperties(@Nullable String additionalProperties) {
-            this.additionalProperties = Input.ofNullable(additionalProperties);
+            this.additionalProperties = Output.ofNullable(additionalProperties);
             return this;
         }
         public MigrateProjectTagsArgs build() {

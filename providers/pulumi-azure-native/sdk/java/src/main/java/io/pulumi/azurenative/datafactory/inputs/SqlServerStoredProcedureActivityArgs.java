@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.StoredProcedureParameterArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -64,9 +64,9 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -75,10 +75,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -86,9 +86,9 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storedProcedureName", required=true)
-      private final Input<Object> storedProcedureName;
+      private final Output<Object> storedProcedureName;
 
-    public Input<Object> getStoredProcedureName() {
+    public Output<Object> getStoredProcedureName() {
         return this.storedProcedureName;
     }
 
@@ -97,10 +97,10 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storedProcedureParameters")
-      private final @Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
+      private final @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
-    public Input<Map<String,StoredProcedureParameterArgs>> getStoredProcedureParameters() {
-        return this.storedProcedureParameters == null ? Input.empty() : this.storedProcedureParameters;
+    public Output<Map<String,StoredProcedureParameterArgs>> getStoredProcedureParameters() {
+        return this.storedProcedureParameters == null ? Output.empty() : this.storedProcedureParameters;
     }
 
     /**
@@ -109,9 +109,9 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -120,22 +120,22 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public SqlServerStoredProcedureActivityArgs(
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        Input<LinkedServiceReferenceArgs> linkedServiceName,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        Input<Object> storedProcedureName,
-        @Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        Output<LinkedServiceReferenceArgs> linkedServiceName,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        Output<Object> storedProcedureName,
+        @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
@@ -148,15 +148,15 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     }
 
     private SqlServerStoredProcedureActivityArgs() {
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.storedProcedureName = Input.empty();
-        this.storedProcedureParameters = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.storedProcedureName = Output.empty();
+        this.storedProcedureParameters = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -168,15 +168,15 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private Input<Object> storedProcedureName;
-        private @Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private Output<Object> storedProcedureName;
+        private @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -195,93 +195,93 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
+            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder storedProcedureName(Input<Object> storedProcedureName) {
+        public Builder storedProcedureName(Output<Object> storedProcedureName) {
             this.storedProcedureName = Objects.requireNonNull(storedProcedureName);
             return this;
         }
 
         public Builder storedProcedureName(Object storedProcedureName) {
-            this.storedProcedureName = Input.of(Objects.requireNonNull(storedProcedureName));
+            this.storedProcedureName = Output.of(Objects.requireNonNull(storedProcedureName));
             return this;
         }
 
-        public Builder storedProcedureParameters(@Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
             this.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
 
         public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
-            this.storedProcedureParameters = Input.ofNullable(storedProcedureParameters);
+            this.storedProcedureParameters = Output.ofNullable(storedProcedureParameters);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public SqlServerStoredProcedureActivityArgs build() {

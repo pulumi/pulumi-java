@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fileName")
-      private final @Nullable Input<Object> fileName;
+      private final @Nullable Output<Object> fileName;
 
-    public Input<Object> getFileName() {
-        return this.fileName == null ? Input.empty() : this.fileName;
+    public Output<Object> getFileName() {
+        return this.fileName == null ? Output.empty() : this.fileName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="folderPath")
-      private final @Nullable Input<Object> folderPath;
+      private final @Nullable Output<Object> folderPath;
 
-    public Input<Object> getFolderPath() {
-        return this.folderPath == null ? Input.empty() : this.folderPath;
+    public Output<Object> getFolderPath() {
+        return this.folderPath == null ? Output.empty() : this.folderPath;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="relativeUrl")
-      private final @Nullable Input<Object> relativeUrl;
+      private final @Nullable Output<Object> relativeUrl;
 
-    public Input<Object> getRelativeUrl() {
-        return this.relativeUrl == null ? Input.empty() : this.relativeUrl;
+    public Output<Object> getRelativeUrl() {
+        return this.relativeUrl == null ? Output.empty() : this.relativeUrl;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public HttpServerLocationArgs(
-        @Nullable Input<Object> fileName,
-        @Nullable Input<Object> folderPath,
-        @Nullable Input<Object> relativeUrl,
-        Input<String> type) {
+        @Nullable Output<Object> fileName,
+        @Nullable Output<Object> folderPath,
+        @Nullable Output<Object> relativeUrl,
+        Output<String> type) {
         this.fileName = fileName;
         this.folderPath = folderPath;
         this.relativeUrl = relativeUrl;
@@ -76,10 +76,10 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private HttpServerLocationArgs() {
-        this.fileName = Input.empty();
-        this.folderPath = Input.empty();
-        this.relativeUrl = Input.empty();
-        this.type = Input.empty();
+        this.fileName = Output.empty();
+        this.folderPath = Output.empty();
+        this.relativeUrl = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> fileName;
-        private @Nullable Input<Object> folderPath;
-        private @Nullable Input<Object> relativeUrl;
-        private Input<String> type;
+        private @Nullable Output<Object> fileName;
+        private @Nullable Output<Object> folderPath;
+        private @Nullable Output<Object> relativeUrl;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder fileName(@Nullable Input<Object> fileName) {
+        public Builder fileName(@Nullable Output<Object> fileName) {
             this.fileName = fileName;
             return this;
         }
 
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Input.ofNullable(fileName);
+            this.fileName = Output.ofNullable(fileName);
             return this;
         }
 
-        public Builder folderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Input.ofNullable(folderPath);
+            this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
 
-        public Builder relativeUrl(@Nullable Input<Object> relativeUrl) {
+        public Builder relativeUrl(@Nullable Output<Object> relativeUrl) {
             this.relativeUrl = relativeUrl;
             return this;
         }
 
         public Builder relativeUrl(@Nullable Object relativeUrl) {
-            this.relativeUrl = Input.ofNullable(relativeUrl);
+            this.relativeUrl = Output.ofNullable(relativeUrl);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public HttpServerLocationArgs build() {

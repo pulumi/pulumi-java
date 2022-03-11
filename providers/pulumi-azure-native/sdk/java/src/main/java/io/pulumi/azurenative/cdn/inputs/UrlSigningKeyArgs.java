@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.KeyVaultSigningKeyParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-      private final Input<String> keyId;
+      private final Output<String> keyId;
 
-    public Input<String> getKeyId() {
+    public Output<String> getKeyId() {
         return this.keyId;
     }
 
@@ -34,22 +34,22 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySourceParameters", required=true)
-      private final Input<KeyVaultSigningKeyParametersArgs> keySourceParameters;
+      private final Output<KeyVaultSigningKeyParametersArgs> keySourceParameters;
 
-    public Input<KeyVaultSigningKeyParametersArgs> getKeySourceParameters() {
+    public Output<KeyVaultSigningKeyParametersArgs> getKeySourceParameters() {
         return this.keySourceParameters;
     }
 
     public UrlSigningKeyArgs(
-        Input<String> keyId,
-        Input<KeyVaultSigningKeyParametersArgs> keySourceParameters) {
+        Output<String> keyId,
+        Output<KeyVaultSigningKeyParametersArgs> keySourceParameters) {
         this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
         this.keySourceParameters = Objects.requireNonNull(keySourceParameters, "expected parameter 'keySourceParameters' to be non-null");
     }
 
     private UrlSigningKeyArgs() {
-        this.keyId = Input.empty();
-        this.keySourceParameters = Input.empty();
+        this.keyId = Output.empty();
+        this.keySourceParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> keyId;
-        private Input<KeyVaultSigningKeyParametersArgs> keySourceParameters;
+        private Output<String> keyId;
+        private Output<KeyVaultSigningKeyParametersArgs> keySourceParameters;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keySourceParameters = defaults.keySourceParameters;
         }
 
-        public Builder keyId(Input<String> keyId) {
+        public Builder keyId(Output<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Input.of(Objects.requireNonNull(keyId));
+            this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
 
-        public Builder keySourceParameters(Input<KeyVaultSigningKeyParametersArgs> keySourceParameters) {
+        public Builder keySourceParameters(Output<KeyVaultSigningKeyParametersArgs> keySourceParameters) {
             this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
             return this;
         }
 
         public Builder keySourceParameters(KeyVaultSigningKeyParametersArgs keySourceParameters) {
-            this.keySourceParameters = Input.of(Objects.requireNonNull(keySourceParameters));
+            this.keySourceParameters = Output.of(Objects.requireNonNull(keySourceParameters));
             return this;
         }
         public UrlSigningKeyArgs build() {

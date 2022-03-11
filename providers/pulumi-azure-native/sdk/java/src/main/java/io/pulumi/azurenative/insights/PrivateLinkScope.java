@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.PrivateLinkScopeArgs;
 import io.pulumi.azurenative.insights.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -156,19 +155,19 @@ public class PrivateLinkScope extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateLinkScope(String name, PrivateLinkScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:PrivateLinkScope", name, args == null ? PrivateLinkScopeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:insights:PrivateLinkScope", name, args == null ? PrivateLinkScopeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PrivateLinkScope(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PrivateLinkScope(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:PrivateLinkScope", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:insights/v20191017preview:PrivateLinkScope").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20210701preview:PrivateLinkScope").build())
+                Output.of(Alias.builder().setType("azure-native:insights/v20191017preview:PrivateLinkScope").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20210701preview:PrivateLinkScope").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -182,7 +181,7 @@ public class PrivateLinkScope extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrivateLinkScope get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PrivateLinkScope get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateLinkScope(name, id, options);
     }
 }

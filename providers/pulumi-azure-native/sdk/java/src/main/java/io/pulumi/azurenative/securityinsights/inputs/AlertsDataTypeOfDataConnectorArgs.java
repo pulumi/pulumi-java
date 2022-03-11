@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.DataConnectorDataTypeCommonArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class AlertsDataTypeOfDataConnectorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="alerts")
-      private final @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
+      private final @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
 
-    public Input<DataConnectorDataTypeCommonArgs> getAlerts() {
-        return this.alerts == null ? Input.empty() : this.alerts;
+    public Output<DataConnectorDataTypeCommonArgs> getAlerts() {
+        return this.alerts == null ? Output.empty() : this.alerts;
     }
 
-    public AlertsDataTypeOfDataConnectorArgs(@Nullable Input<DataConnectorDataTypeCommonArgs> alerts) {
+    public AlertsDataTypeOfDataConnectorArgs(@Nullable Output<DataConnectorDataTypeCommonArgs> alerts) {
         this.alerts = alerts;
     }
 
     private AlertsDataTypeOfDataConnectorArgs() {
-        this.alerts = Input.empty();
+        this.alerts = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AlertsDataTypeOfDataConnectorArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
+        private @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AlertsDataTypeOfDataConnectorArgs extends io.pulumi.resources
     	      this.alerts = defaults.alerts;
         }
 
-        public Builder alerts(@Nullable Input<DataConnectorDataTypeCommonArgs> alerts) {
+        public Builder alerts(@Nullable Output<DataConnectorDataTypeCommonArgs> alerts) {
             this.alerts = alerts;
             return this;
         }
 
         public Builder alerts(@Nullable DataConnectorDataTypeCommonArgs alerts) {
-            this.alerts = Input.ofNullable(alerts);
+            this.alerts = Output.ofNullable(alerts);
             return this;
         }
         public AlertsDataTypeOfDataConnectorArgs build() {

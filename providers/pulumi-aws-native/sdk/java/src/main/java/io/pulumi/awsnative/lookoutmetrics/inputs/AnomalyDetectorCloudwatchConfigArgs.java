@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class AnomalyDetectorCloudwatchConfigArgs extends io.pulumi.resourc
     public static final AnomalyDetectorCloudwatchConfigArgs Empty = new AnomalyDetectorCloudwatchConfigArgs();
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    public AnomalyDetectorCloudwatchConfigArgs(Input<String> roleArn) {
+    public AnomalyDetectorCloudwatchConfigArgs(Output<String> roleArn) {
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private AnomalyDetectorCloudwatchConfigArgs() {
-        this.roleArn = Input.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class AnomalyDetectorCloudwatchConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> roleArn;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class AnomalyDetectorCloudwatchConfigArgs extends io.pulumi.resourc
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public AnomalyDetectorCloudwatchConfigArgs build() {

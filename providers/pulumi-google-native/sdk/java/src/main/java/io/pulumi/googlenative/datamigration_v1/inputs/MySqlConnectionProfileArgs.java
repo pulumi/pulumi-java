@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datamigration_v1.inputs.SslConfigArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cloudSqlId")
-      private final @Nullable Input<String> cloudSqlId;
+      private final @Nullable Output<String> cloudSqlId;
 
-    public Input<String> getCloudSqlId() {
-        return this.cloudSqlId == null ? Input.empty() : this.cloudSqlId;
+    public Output<String> getCloudSqlId() {
+        return this.cloudSqlId == null ? Output.empty() : this.cloudSqlId;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
@@ -47,9 +47,9 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -58,9 +58,9 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
@@ -69,10 +69,10 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ssl")
-      private final @Nullable Input<SslConfigArgs> ssl;
+      private final @Nullable Output<SslConfigArgs> ssl;
 
-    public Input<SslConfigArgs> getSsl() {
-        return this.ssl == null ? Input.empty() : this.ssl;
+    public Output<SslConfigArgs> getSsl() {
+        return this.ssl == null ? Output.empty() : this.ssl;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public MySqlConnectionProfileArgs(
-        @Nullable Input<String> cloudSqlId,
-        Input<String> host,
-        Input<String> password,
-        Input<Integer> port,
-        @Nullable Input<SslConfigArgs> ssl,
-        Input<String> username) {
+        @Nullable Output<String> cloudSqlId,
+        Output<String> host,
+        Output<String> password,
+        Output<Integer> port,
+        @Nullable Output<SslConfigArgs> ssl,
+        Output<String> username) {
         this.cloudSqlId = cloudSqlId;
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
@@ -102,12 +102,12 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
     }
 
     private MySqlConnectionProfileArgs() {
-        this.cloudSqlId = Input.empty();
-        this.host = Input.empty();
-        this.password = Input.empty();
-        this.port = Input.empty();
-        this.ssl = Input.empty();
-        this.username = Input.empty();
+        this.cloudSqlId = Output.empty();
+        this.host = Output.empty();
+        this.password = Output.empty();
+        this.port = Output.empty();
+        this.ssl = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudSqlId;
-        private Input<String> host;
-        private Input<String> password;
-        private Input<Integer> port;
-        private @Nullable Input<SslConfigArgs> ssl;
-        private Input<String> username;
+        private @Nullable Output<String> cloudSqlId;
+        private Output<String> host;
+        private Output<String> password;
+        private Output<Integer> port;
+        private @Nullable Output<SslConfigArgs> ssl;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
     	      this.username = defaults.username;
         }
 
-        public Builder cloudSqlId(@Nullable Input<String> cloudSqlId) {
+        public Builder cloudSqlId(@Nullable Output<String> cloudSqlId) {
             this.cloudSqlId = cloudSqlId;
             return this;
         }
 
         public Builder cloudSqlId(@Nullable String cloudSqlId) {
-            this.cloudSqlId = Input.ofNullable(cloudSqlId);
+            this.cloudSqlId = Output.ofNullable(cloudSqlId);
             return this;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder ssl(@Nullable Input<SslConfigArgs> ssl) {
+        public Builder ssl(@Nullable Output<SslConfigArgs> ssl) {
             this.ssl = ssl;
             return this;
         }
 
         public Builder ssl(@Nullable SslConfigArgs ssl) {
-            this.ssl = Input.ofNullable(ssl);
+            this.ssl = Output.ofNullable(ssl);
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public MySqlConnectionProfileArgs build() {

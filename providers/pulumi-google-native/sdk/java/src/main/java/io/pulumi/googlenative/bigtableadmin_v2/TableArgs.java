@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.enums.TableGranularity;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.SplitArgs;
@@ -23,10 +23,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnFamilies")
-      private final @Nullable Input<Map<String,String>> columnFamilies;
+      private final @Nullable Output<Map<String,String>> columnFamilies;
 
-    public Input<Map<String,String>> getColumnFamilies() {
-        return this.columnFamilies == null ? Input.empty() : this.columnFamilies;
+    public Output<Map<String,String>> getColumnFamilies() {
+        return this.columnFamilies == null ? Output.empty() : this.columnFamilies;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="granularity")
-      private final @Nullable Input<TableGranularity> granularity;
+      private final @Nullable Output<TableGranularity> granularity;
 
-    public Input<TableGranularity> getGranularity() {
-        return this.granularity == null ? Input.empty() : this.granularity;
+    public Output<TableGranularity> getGranularity() {
+        return this.granularity == null ? Output.empty() : this.granularity;
     }
 
     /**
@@ -45,16 +45,16 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialSplits")
-      private final @Nullable Input<List<SplitArgs>> initialSplits;
+      private final @Nullable Output<List<SplitArgs>> initialSplits;
 
-    public Input<List<SplitArgs>> getInitialSplits() {
-        return this.initialSplits == null ? Input.empty() : this.initialSplits;
+    public Output<List<SplitArgs>> getInitialSplits() {
+        return this.initialSplits == null ? Output.empty() : this.initialSplits;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -63,17 +63,17 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -81,20 +81,20 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableId", required=true)
-      private final Input<String> tableId;
+      private final Output<String> tableId;
 
-    public Input<String> getTableId() {
+    public Output<String> getTableId() {
         return this.tableId;
     }
 
     public TableArgs(
-        @Nullable Input<Map<String,String>> columnFamilies,
-        @Nullable Input<TableGranularity> granularity,
-        @Nullable Input<List<SplitArgs>> initialSplits,
-        Input<String> instanceId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> tableId) {
+        @Nullable Output<Map<String,String>> columnFamilies,
+        @Nullable Output<TableGranularity> granularity,
+        @Nullable Output<List<SplitArgs>> initialSplits,
+        Output<String> instanceId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> tableId) {
         this.columnFamilies = columnFamilies;
         this.granularity = granularity;
         this.initialSplits = initialSplits;
@@ -105,13 +105,13 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableArgs() {
-        this.columnFamilies = Input.empty();
-        this.granularity = Input.empty();
-        this.initialSplits = Input.empty();
-        this.instanceId = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.tableId = Input.empty();
+        this.columnFamilies = Output.empty();
+        this.granularity = Output.empty();
+        this.initialSplits = Output.empty();
+        this.instanceId = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.tableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,13 +123,13 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> columnFamilies;
-        private @Nullable Input<TableGranularity> granularity;
-        private @Nullable Input<List<SplitArgs>> initialSplits;
-        private Input<String> instanceId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> tableId;
+        private @Nullable Output<Map<String,String>> columnFamilies;
+        private @Nullable Output<TableGranularity> granularity;
+        private @Nullable Output<List<SplitArgs>> initialSplits;
+        private Output<String> instanceId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> tableId;
 
         public Builder() {
     	      // Empty
@@ -146,73 +146,73 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder columnFamilies(@Nullable Input<Map<String,String>> columnFamilies) {
+        public Builder columnFamilies(@Nullable Output<Map<String,String>> columnFamilies) {
             this.columnFamilies = columnFamilies;
             return this;
         }
 
         public Builder columnFamilies(@Nullable Map<String,String> columnFamilies) {
-            this.columnFamilies = Input.ofNullable(columnFamilies);
+            this.columnFamilies = Output.ofNullable(columnFamilies);
             return this;
         }
 
-        public Builder granularity(@Nullable Input<TableGranularity> granularity) {
+        public Builder granularity(@Nullable Output<TableGranularity> granularity) {
             this.granularity = granularity;
             return this;
         }
 
         public Builder granularity(@Nullable TableGranularity granularity) {
-            this.granularity = Input.ofNullable(granularity);
+            this.granularity = Output.ofNullable(granularity);
             return this;
         }
 
-        public Builder initialSplits(@Nullable Input<List<SplitArgs>> initialSplits) {
+        public Builder initialSplits(@Nullable Output<List<SplitArgs>> initialSplits) {
             this.initialSplits = initialSplits;
             return this;
         }
 
         public Builder initialSplits(@Nullable List<SplitArgs> initialSplits) {
-            this.initialSplits = Input.ofNullable(initialSplits);
+            this.initialSplits = Output.ofNullable(initialSplits);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tableId(Input<String> tableId) {
+        public Builder tableId(Output<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
         public Builder tableId(String tableId) {
-            this.tableId = Input.of(Objects.requireNonNull(tableId));
+            this.tableId = Output.of(Objects.requireNonNull(tableId));
             return this;
         }
         public TableArgs build() {

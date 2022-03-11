@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.DataMaskingState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataMaskingPolicyName")
-      private final @Nullable Input<String> dataMaskingPolicyName;
+      private final @Nullable Output<String> dataMaskingPolicyName;
 
-    public Input<String> getDataMaskingPolicyName() {
-        return this.dataMaskingPolicyName == null ? Input.empty() : this.dataMaskingPolicyName;
+    public Output<String> getDataMaskingPolicyName() {
+        return this.dataMaskingPolicyName == null ? Output.empty() : this.dataMaskingPolicyName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataMaskingState", required=true)
-      private final Input<DataMaskingState> dataMaskingState;
+      private final Output<DataMaskingState> dataMaskingState;
 
-    public Input<DataMaskingState> getDataMaskingState() {
+    public Output<DataMaskingState> getDataMaskingState() {
         return this.dataMaskingState;
     }
 
@@ -42,9 +42,9 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -53,10 +53,10 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="exemptPrincipals")
-      private final @Nullable Input<String> exemptPrincipals;
+      private final @Nullable Output<String> exemptPrincipals;
 
-    public Input<String> getExemptPrincipals() {
-        return this.exemptPrincipals == null ? Input.empty() : this.exemptPrincipals;
+    public Output<String> getExemptPrincipals() {
+        return this.exemptPrincipals == null ? Output.empty() : this.exemptPrincipals;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,19 +75,19 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
     public DataMaskingPolicyArgs(
-        @Nullable Input<String> dataMaskingPolicyName,
-        Input<DataMaskingState> dataMaskingState,
-        Input<String> databaseName,
-        @Nullable Input<String> exemptPrincipals,
-        Input<String> resourceGroupName,
-        Input<String> serverName) {
+        @Nullable Output<String> dataMaskingPolicyName,
+        Output<DataMaskingState> dataMaskingState,
+        Output<String> databaseName,
+        @Nullable Output<String> exemptPrincipals,
+        Output<String> resourceGroupName,
+        Output<String> serverName) {
         this.dataMaskingPolicyName = dataMaskingPolicyName;
         this.dataMaskingState = Objects.requireNonNull(dataMaskingState, "expected parameter 'dataMaskingState' to be non-null");
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
@@ -97,12 +97,12 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DataMaskingPolicyArgs() {
-        this.dataMaskingPolicyName = Input.empty();
-        this.dataMaskingState = Input.empty();
-        this.databaseName = Input.empty();
-        this.exemptPrincipals = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
+        this.dataMaskingPolicyName = Output.empty();
+        this.dataMaskingState = Output.empty();
+        this.databaseName = Output.empty();
+        this.exemptPrincipals = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataMaskingPolicyName;
-        private Input<DataMaskingState> dataMaskingState;
-        private Input<String> databaseName;
-        private @Nullable Input<String> exemptPrincipals;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
+        private @Nullable Output<String> dataMaskingPolicyName;
+        private Output<DataMaskingState> dataMaskingState;
+        private Output<String> databaseName;
+        private @Nullable Output<String> exemptPrincipals;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder dataMaskingPolicyName(@Nullable Input<String> dataMaskingPolicyName) {
+        public Builder dataMaskingPolicyName(@Nullable Output<String> dataMaskingPolicyName) {
             this.dataMaskingPolicyName = dataMaskingPolicyName;
             return this;
         }
 
         public Builder dataMaskingPolicyName(@Nullable String dataMaskingPolicyName) {
-            this.dataMaskingPolicyName = Input.ofNullable(dataMaskingPolicyName);
+            this.dataMaskingPolicyName = Output.ofNullable(dataMaskingPolicyName);
             return this;
         }
 
-        public Builder dataMaskingState(Input<DataMaskingState> dataMaskingState) {
+        public Builder dataMaskingState(Output<DataMaskingState> dataMaskingState) {
             this.dataMaskingState = Objects.requireNonNull(dataMaskingState);
             return this;
         }
 
         public Builder dataMaskingState(DataMaskingState dataMaskingState) {
-            this.dataMaskingState = Input.of(Objects.requireNonNull(dataMaskingState));
+            this.dataMaskingState = Output.of(Objects.requireNonNull(dataMaskingState));
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder exemptPrincipals(@Nullable Input<String> exemptPrincipals) {
+        public Builder exemptPrincipals(@Nullable Output<String> exemptPrincipals) {
             this.exemptPrincipals = exemptPrincipals;
             return this;
         }
 
         public Builder exemptPrincipals(@Nullable String exemptPrincipals) {
-            this.exemptPrincipals = Input.ofNullable(exemptPrincipals);
+            this.exemptPrincipals = Output.ofNullable(exemptPrincipals);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
         public DataMaskingPolicyArgs build() {

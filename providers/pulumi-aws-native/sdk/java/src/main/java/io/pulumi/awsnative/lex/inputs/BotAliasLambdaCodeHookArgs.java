@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="codeHookInterfaceVersion", required=true)
-      private final Input<String> codeHookInterfaceVersion;
+      private final Output<String> codeHookInterfaceVersion;
 
-    public Input<String> getCodeHookInterfaceVersion() {
+    public Output<String> getCodeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
     }
 
@@ -33,22 +33,22 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lambdaArn", required=true)
-      private final Input<String> lambdaArn;
+      private final Output<String> lambdaArn;
 
-    public Input<String> getLambdaArn() {
+    public Output<String> getLambdaArn() {
         return this.lambdaArn;
     }
 
     public BotAliasLambdaCodeHookArgs(
-        Input<String> codeHookInterfaceVersion,
-        Input<String> lambdaArn) {
+        Output<String> codeHookInterfaceVersion,
+        Output<String> lambdaArn) {
         this.codeHookInterfaceVersion = Objects.requireNonNull(codeHookInterfaceVersion, "expected parameter 'codeHookInterfaceVersion' to be non-null");
         this.lambdaArn = Objects.requireNonNull(lambdaArn, "expected parameter 'lambdaArn' to be non-null");
     }
 
     private BotAliasLambdaCodeHookArgs() {
-        this.codeHookInterfaceVersion = Input.empty();
-        this.lambdaArn = Input.empty();
+        this.codeHookInterfaceVersion = Output.empty();
+        this.lambdaArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> codeHookInterfaceVersion;
-        private Input<String> lambdaArn;
+        private Output<String> codeHookInterfaceVersion;
+        private Output<String> lambdaArn;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
     	      this.lambdaArn = defaults.lambdaArn;
         }
 
-        public Builder codeHookInterfaceVersion(Input<String> codeHookInterfaceVersion) {
+        public Builder codeHookInterfaceVersion(Output<String> codeHookInterfaceVersion) {
             this.codeHookInterfaceVersion = Objects.requireNonNull(codeHookInterfaceVersion);
             return this;
         }
 
         public Builder codeHookInterfaceVersion(String codeHookInterfaceVersion) {
-            this.codeHookInterfaceVersion = Input.of(Objects.requireNonNull(codeHookInterfaceVersion));
+            this.codeHookInterfaceVersion = Output.of(Objects.requireNonNull(codeHookInterfaceVersion));
             return this;
         }
 
-        public Builder lambdaArn(Input<String> lambdaArn) {
+        public Builder lambdaArn(Output<String> lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
 
         public Builder lambdaArn(String lambdaArn) {
-            this.lambdaArn = Input.of(Objects.requireNonNull(lambdaArn));
+            this.lambdaArn = Output.of(Objects.requireNonNull(lambdaArn));
             return this;
         }
         public BotAliasLambdaCodeHookArgs build() {

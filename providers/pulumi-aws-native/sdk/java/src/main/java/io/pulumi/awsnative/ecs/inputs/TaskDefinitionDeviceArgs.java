@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,39 +16,39 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
     public static final TaskDefinitionDeviceArgs Empty = new TaskDefinitionDeviceArgs();
 
     @InputImport(name="containerPath")
-      private final @Nullable Input<String> containerPath;
+      private final @Nullable Output<String> containerPath;
 
-    public Input<String> getContainerPath() {
-        return this.containerPath == null ? Input.empty() : this.containerPath;
+    public Output<String> getContainerPath() {
+        return this.containerPath == null ? Output.empty() : this.containerPath;
     }
 
     @InputImport(name="hostPath")
-      private final @Nullable Input<String> hostPath;
+      private final @Nullable Output<String> hostPath;
 
-    public Input<String> getHostPath() {
-        return this.hostPath == null ? Input.empty() : this.hostPath;
+    public Output<String> getHostPath() {
+        return this.hostPath == null ? Output.empty() : this.hostPath;
     }
 
     @InputImport(name="permissions")
-      private final @Nullable Input<List<String>> permissions;
+      private final @Nullable Output<List<String>> permissions;
 
-    public Input<List<String>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<String>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     public TaskDefinitionDeviceArgs(
-        @Nullable Input<String> containerPath,
-        @Nullable Input<String> hostPath,
-        @Nullable Input<List<String>> permissions) {
+        @Nullable Output<String> containerPath,
+        @Nullable Output<String> hostPath,
+        @Nullable Output<List<String>> permissions) {
         this.containerPath = containerPath;
         this.hostPath = hostPath;
         this.permissions = permissions;
     }
 
     private TaskDefinitionDeviceArgs() {
-        this.containerPath = Input.empty();
-        this.hostPath = Input.empty();
-        this.permissions = Input.empty();
+        this.containerPath = Output.empty();
+        this.hostPath = Output.empty();
+        this.permissions = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerPath;
-        private @Nullable Input<String> hostPath;
-        private @Nullable Input<List<String>> permissions;
+        private @Nullable Output<String> containerPath;
+        private @Nullable Output<String> hostPath;
+        private @Nullable Output<List<String>> permissions;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder containerPath(@Nullable Input<String> containerPath) {
+        public Builder containerPath(@Nullable Output<String> containerPath) {
             this.containerPath = containerPath;
             return this;
         }
 
         public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Input.ofNullable(containerPath);
+            this.containerPath = Output.ofNullable(containerPath);
             return this;
         }
 
-        public Builder hostPath(@Nullable Input<String> hostPath) {
+        public Builder hostPath(@Nullable Output<String> hostPath) {
             this.hostPath = hostPath;
             return this;
         }
 
         public Builder hostPath(@Nullable String hostPath) {
-            this.hostPath = Input.ofNullable(hostPath);
+            this.hostPath = Output.ofNullable(hostPath);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<List<String>> permissions) {
+        public Builder permissions(@Nullable Output<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
         public TaskDefinitionDeviceArgs build() {

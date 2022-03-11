@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.OutputType;
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorWorkspaceSettingsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,OutputType>> type;
+      private final @Nullable Output<Either<String,OutputType>> type;
 
-    public Input<Either<String,OutputType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,OutputType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="workspaceSettings")
-      private final @Nullable Input<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
+      private final @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
 
-    public Input<ConnectionMonitorWorkspaceSettingsArgs> getWorkspaceSettings() {
-        return this.workspaceSettings == null ? Input.empty() : this.workspaceSettings;
+    public Output<ConnectionMonitorWorkspaceSettingsArgs> getWorkspaceSettings() {
+        return this.workspaceSettings == null ? Output.empty() : this.workspaceSettings;
     }
 
     public ConnectionMonitorOutputArgs(
-        @Nullable Input<Either<String,OutputType>> type,
-        @Nullable Input<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
+        @Nullable Output<Either<String,OutputType>> type,
+        @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
         this.type = type;
         this.workspaceSettings = workspaceSettings;
     }
 
     private ConnectionMonitorOutputArgs() {
-        this.type = Input.empty();
-        this.workspaceSettings = Input.empty();
+        this.type = Output.empty();
+        this.workspaceSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,OutputType>> type;
-        private @Nullable Input<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
+        private @Nullable Output<Either<String,OutputType>> type;
+        private @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
     	      this.workspaceSettings = defaults.workspaceSettings;
         }
 
-        public Builder type(@Nullable Input<Either<String,OutputType>> type) {
+        public Builder type(@Nullable Output<Either<String,OutputType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,OutputType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder workspaceSettings(@Nullable Input<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
+        public Builder workspaceSettings(@Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
             this.workspaceSettings = workspaceSettings;
             return this;
         }
 
         public Builder workspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsArgs workspaceSettings) {
-            this.workspaceSettings = Input.ofNullable(workspaceSettings);
+            this.workspaceSettings = Output.ofNullable(workspaceSettings);
             return this;
         }
         public ConnectionMonitorOutputArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class MembershipAuthorityGetArgs extends io.pulumi.resources.Resour
     public static final MembershipAuthorityGetArgs Empty = new MembershipAuthorityGetArgs();
 
     @InputImport(name="issuer", required=true)
-      private final Input<String> issuer;
+      private final Output<String> issuer;
 
-    public Input<String> getIssuer() {
+    public Output<String> getIssuer() {
         return this.issuer;
     }
 
-    public MembershipAuthorityGetArgs(Input<String> issuer) {
+    public MembershipAuthorityGetArgs(Output<String> issuer) {
         this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
     }
 
     private MembershipAuthorityGetArgs() {
-        this.issuer = Input.empty();
+        this.issuer = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class MembershipAuthorityGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> issuer;
+        private Output<String> issuer;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class MembershipAuthorityGetArgs extends io.pulumi.resources.Resour
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder issuer(Input<String> issuer) {
+        public Builder issuer(Output<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
         public Builder issuer(String issuer) {
-            this.issuer = Input.of(Objects.requireNonNull(issuer));
+            this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
         }
         public MembershipAuthorityGetArgs build() {

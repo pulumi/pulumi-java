@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codecommit.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloneUrlHttp")
-      private final @Nullable Input<String> cloneUrlHttp;
+      private final @Nullable Output<String> cloneUrlHttp;
 
-    public Input<String> getCloneUrlHttp() {
-        return this.cloneUrlHttp == null ? Input.empty() : this.cloneUrlHttp;
+    public Output<String> getCloneUrlHttp() {
+        return this.cloneUrlHttp == null ? Output.empty() : this.cloneUrlHttp;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloneUrlSsh")
-      private final @Nullable Input<String> cloneUrlSsh;
+      private final @Nullable Output<String> cloneUrlSsh;
 
-    public Input<String> getCloneUrlSsh() {
-        return this.cloneUrlSsh == null ? Input.empty() : this.cloneUrlSsh;
+    public Output<String> getCloneUrlSsh() {
+        return this.cloneUrlSsh == null ? Output.empty() : this.cloneUrlSsh;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultBranch")
-      private final @Nullable Input<String> defaultBranch;
+      private final @Nullable Output<String> defaultBranch;
 
-    public Input<String> getDefaultBranch() {
-        return this.defaultBranch == null ? Input.empty() : this.defaultBranch;
+    public Output<String> getDefaultBranch() {
+        return this.defaultBranch == null ? Output.empty() : this.defaultBranch;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryId")
-      private final @Nullable Input<String> repositoryId;
+      private final @Nullable Output<String> repositoryId;
 
-    public Input<String> getRepositoryId() {
-        return this.repositoryId == null ? Input.empty() : this.repositoryId;
+    public Output<String> getRepositoryId() {
+        return this.repositoryId == null ? Output.empty() : this.repositoryId;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName")
-      private final @Nullable Input<String> repositoryName;
+      private final @Nullable Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
-        return this.repositoryName == null ? Input.empty() : this.repositoryName;
+    public Output<String> getRepositoryName() {
+        return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public RepositoryState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> cloneUrlHttp,
-        @Nullable Input<String> cloneUrlSsh,
-        @Nullable Input<String> defaultBranch,
-        @Nullable Input<String> description,
-        @Nullable Input<String> repositoryId,
-        @Nullable Input<String> repositoryName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> cloneUrlHttp,
+        @Nullable Output<String> cloneUrlSsh,
+        @Nullable Output<String> defaultBranch,
+        @Nullable Output<String> description,
+        @Nullable Output<String> repositoryId,
+        @Nullable Output<String> repositoryName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.cloneUrlHttp = cloneUrlHttp;
         this.cloneUrlSsh = cloneUrlSsh;
@@ -136,15 +136,15 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryState() {
-        this.arn = Input.empty();
-        this.cloneUrlHttp = Input.empty();
-        this.cloneUrlSsh = Input.empty();
-        this.defaultBranch = Input.empty();
-        this.description = Input.empty();
-        this.repositoryId = Input.empty();
-        this.repositoryName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.cloneUrlHttp = Output.empty();
+        this.cloneUrlSsh = Output.empty();
+        this.defaultBranch = Output.empty();
+        this.description = Output.empty();
+        this.repositoryId = Output.empty();
+        this.repositoryName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> cloneUrlHttp;
-        private @Nullable Input<String> cloneUrlSsh;
-        private @Nullable Input<String> defaultBranch;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> repositoryId;
-        private @Nullable Input<String> repositoryName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> cloneUrlHttp;
+        private @Nullable Output<String> cloneUrlSsh;
+        private @Nullable Output<String> defaultBranch;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> repositoryId;
+        private @Nullable Output<String> repositoryName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder cloneUrlHttp(@Nullable Input<String> cloneUrlHttp) {
+        public Builder cloneUrlHttp(@Nullable Output<String> cloneUrlHttp) {
             this.cloneUrlHttp = cloneUrlHttp;
             return this;
         }
 
         public Builder cloneUrlHttp(@Nullable String cloneUrlHttp) {
-            this.cloneUrlHttp = Input.ofNullable(cloneUrlHttp);
+            this.cloneUrlHttp = Output.ofNullable(cloneUrlHttp);
             return this;
         }
 
-        public Builder cloneUrlSsh(@Nullable Input<String> cloneUrlSsh) {
+        public Builder cloneUrlSsh(@Nullable Output<String> cloneUrlSsh) {
             this.cloneUrlSsh = cloneUrlSsh;
             return this;
         }
 
         public Builder cloneUrlSsh(@Nullable String cloneUrlSsh) {
-            this.cloneUrlSsh = Input.ofNullable(cloneUrlSsh);
+            this.cloneUrlSsh = Output.ofNullable(cloneUrlSsh);
             return this;
         }
 
-        public Builder defaultBranch(@Nullable Input<String> defaultBranch) {
+        public Builder defaultBranch(@Nullable Output<String> defaultBranch) {
             this.defaultBranch = defaultBranch;
             return this;
         }
 
         public Builder defaultBranch(@Nullable String defaultBranch) {
-            this.defaultBranch = Input.ofNullable(defaultBranch);
+            this.defaultBranch = Output.ofNullable(defaultBranch);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder repositoryId(@Nullable Input<String> repositoryId) {
+        public Builder repositoryId(@Nullable Output<String> repositoryId) {
             this.repositoryId = repositoryId;
             return this;
         }
 
         public Builder repositoryId(@Nullable String repositoryId) {
-            this.repositoryId = Input.ofNullable(repositoryId);
+            this.repositoryId = Output.ofNullable(repositoryId);
             return this;
         }
 
-        public Builder repositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Input.ofNullable(repositoryName);
+            this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public RepositoryState build() {

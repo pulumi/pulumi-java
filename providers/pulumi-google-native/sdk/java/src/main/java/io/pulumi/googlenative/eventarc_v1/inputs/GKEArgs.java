@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster", required=true)
-      private final Input<String> cluster;
+      private final Output<String> cluster;
 
-    public Input<String> getCluster() {
+    public Output<String> getCluster() {
         return this.cluster;
     }
 
@@ -34,9 +34,9 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -45,9 +45,9 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
@@ -56,10 +56,10 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public GKEArgs(
-        Input<String> cluster,
-        Input<String> location,
-        Input<String> namespace,
-        @Nullable Input<String> path,
-        Input<String> service) {
+        Output<String> cluster,
+        Output<String> location,
+        Output<String> namespace,
+        @Nullable Output<String> path,
+        Output<String> service) {
         this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
@@ -87,11 +87,11 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GKEArgs() {
-        this.cluster = Input.empty();
-        this.location = Input.empty();
-        this.namespace = Input.empty();
-        this.path = Input.empty();
-        this.service = Input.empty();
+        this.cluster = Output.empty();
+        this.location = Output.empty();
+        this.namespace = Output.empty();
+        this.path = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cluster;
-        private Input<String> location;
-        private Input<String> namespace;
-        private @Nullable Input<String> path;
-        private Input<String> service;
+        private Output<String> cluster;
+        private Output<String> location;
+        private Output<String> namespace;
+        private @Nullable Output<String> path;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder cluster(Input<String> cluster) {
+        public Builder cluster(Output<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Input.of(Objects.requireNonNull(cluster));
+            this.cluster = Output.of(Objects.requireNonNull(cluster));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public GKEArgs build() {

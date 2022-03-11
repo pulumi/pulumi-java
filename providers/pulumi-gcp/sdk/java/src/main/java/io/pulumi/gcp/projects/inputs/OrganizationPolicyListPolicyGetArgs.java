@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.projects.inputs.OrganizationPolicyListPolicyAllowGetArgs;
 import io.pulumi.gcp.projects.inputs.OrganizationPolicyListPolicyDenyGetArgs;
@@ -22,17 +22,17 @@ public final class OrganizationPolicyListPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="allow")
-      private final @Nullable Input<OrganizationPolicyListPolicyAllowGetArgs> allow;
+      private final @Nullable Output<OrganizationPolicyListPolicyAllowGetArgs> allow;
 
-    public Input<OrganizationPolicyListPolicyAllowGetArgs> getAllow() {
-        return this.allow == null ? Input.empty() : this.allow;
+    public Output<OrganizationPolicyListPolicyAllowGetArgs> getAllow() {
+        return this.allow == null ? Output.empty() : this.allow;
     }
 
     @InputImport(name="deny")
-      private final @Nullable Input<OrganizationPolicyListPolicyDenyGetArgs> deny;
+      private final @Nullable Output<OrganizationPolicyListPolicyDenyGetArgs> deny;
 
-    public Input<OrganizationPolicyListPolicyDenyGetArgs> getDeny() {
-        return this.deny == null ? Input.empty() : this.deny;
+    public Output<OrganizationPolicyListPolicyDenyGetArgs> getDeny() {
+        return this.deny == null ? Output.empty() : this.deny;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class OrganizationPolicyListPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="inheritFromParent")
-      private final @Nullable Input<Boolean> inheritFromParent;
+      private final @Nullable Output<Boolean> inheritFromParent;
 
-    public Input<Boolean> getInheritFromParent() {
-        return this.inheritFromParent == null ? Input.empty() : this.inheritFromParent;
+    public Output<Boolean> getInheritFromParent() {
+        return this.inheritFromParent == null ? Output.empty() : this.inheritFromParent;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class OrganizationPolicyListPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="suggestedValue")
-      private final @Nullable Input<String> suggestedValue;
+      private final @Nullable Output<String> suggestedValue;
 
-    public Input<String> getSuggestedValue() {
-        return this.suggestedValue == null ? Input.empty() : this.suggestedValue;
+    public Output<String> getSuggestedValue() {
+        return this.suggestedValue == null ? Output.empty() : this.suggestedValue;
     }
 
     public OrganizationPolicyListPolicyGetArgs(
-        @Nullable Input<OrganizationPolicyListPolicyAllowGetArgs> allow,
-        @Nullable Input<OrganizationPolicyListPolicyDenyGetArgs> deny,
-        @Nullable Input<Boolean> inheritFromParent,
-        @Nullable Input<String> suggestedValue) {
+        @Nullable Output<OrganizationPolicyListPolicyAllowGetArgs> allow,
+        @Nullable Output<OrganizationPolicyListPolicyDenyGetArgs> deny,
+        @Nullable Output<Boolean> inheritFromParent,
+        @Nullable Output<String> suggestedValue) {
         this.allow = allow;
         this.deny = deny;
         this.inheritFromParent = inheritFromParent;
@@ -70,10 +70,10 @@ public final class OrganizationPolicyListPolicyGetArgs extends io.pulumi.resourc
     }
 
     private OrganizationPolicyListPolicyGetArgs() {
-        this.allow = Input.empty();
-        this.deny = Input.empty();
-        this.inheritFromParent = Input.empty();
-        this.suggestedValue = Input.empty();
+        this.allow = Output.empty();
+        this.deny = Output.empty();
+        this.inheritFromParent = Output.empty();
+        this.suggestedValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class OrganizationPolicyListPolicyGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<OrganizationPolicyListPolicyAllowGetArgs> allow;
-        private @Nullable Input<OrganizationPolicyListPolicyDenyGetArgs> deny;
-        private @Nullable Input<Boolean> inheritFromParent;
-        private @Nullable Input<String> suggestedValue;
+        private @Nullable Output<OrganizationPolicyListPolicyAllowGetArgs> allow;
+        private @Nullable Output<OrganizationPolicyListPolicyDenyGetArgs> deny;
+        private @Nullable Output<Boolean> inheritFromParent;
+        private @Nullable Output<String> suggestedValue;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class OrganizationPolicyListPolicyGetArgs extends io.pulumi.resourc
     	      this.suggestedValue = defaults.suggestedValue;
         }
 
-        public Builder allow(@Nullable Input<OrganizationPolicyListPolicyAllowGetArgs> allow) {
+        public Builder allow(@Nullable Output<OrganizationPolicyListPolicyAllowGetArgs> allow) {
             this.allow = allow;
             return this;
         }
 
         public Builder allow(@Nullable OrganizationPolicyListPolicyAllowGetArgs allow) {
-            this.allow = Input.ofNullable(allow);
+            this.allow = Output.ofNullable(allow);
             return this;
         }
 
-        public Builder deny(@Nullable Input<OrganizationPolicyListPolicyDenyGetArgs> deny) {
+        public Builder deny(@Nullable Output<OrganizationPolicyListPolicyDenyGetArgs> deny) {
             this.deny = deny;
             return this;
         }
 
         public Builder deny(@Nullable OrganizationPolicyListPolicyDenyGetArgs deny) {
-            this.deny = Input.ofNullable(deny);
+            this.deny = Output.ofNullable(deny);
             return this;
         }
 
-        public Builder inheritFromParent(@Nullable Input<Boolean> inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
 
         public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
-            this.inheritFromParent = Input.ofNullable(inheritFromParent);
+            this.inheritFromParent = Output.ofNullable(inheritFromParent);
             return this;
         }
 
-        public Builder suggestedValue(@Nullable Input<String> suggestedValue) {
+        public Builder suggestedValue(@Nullable Output<String> suggestedValue) {
             this.suggestedValue = suggestedValue;
             return this;
         }
 
         public Builder suggestedValue(@Nullable String suggestedValue) {
-            this.suggestedValue = Input.ofNullable(suggestedValue);
+            this.suggestedValue = Output.ofNullable(suggestedValue);
             return this;
         }
         public OrganizationPolicyListPolicyGetArgs build() {

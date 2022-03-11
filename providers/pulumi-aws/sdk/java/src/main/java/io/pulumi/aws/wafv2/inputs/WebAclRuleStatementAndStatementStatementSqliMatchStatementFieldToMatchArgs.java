@@ -10,7 +10,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementSqliMa
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,10 +25,10 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
      * 
      */
     @InputImport(name="allQueryArguments")
-      private final @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
+      private final @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
-    public Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
-        return this.allQueryArguments == null ? Input.empty() : this.allQueryArguments;
+    public Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
+        return this.allQueryArguments == null ? Output.empty() : this.allQueryArguments;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body;
+      private final @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body;
 
-    public Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
      * 
      */
     @InputImport(name="method")
-      private final @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method;
+      private final @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method;
 
-    public Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> getMethod() {
-        return this.method == null ? Input.empty() : this.method;
+    public Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> getMethod() {
+        return this.method == null ? Output.empty() : this.method;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
      * 
      */
     @InputImport(name="queryString")
-      private final @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString;
+      private final @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString;
 
-    public Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
-        return this.queryString == null ? Input.empty() : this.queryString;
+    public Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
+        return this.queryString == null ? Output.empty() : this.queryString;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
      * 
      */
     @InputImport(name="singleHeader")
-      private final @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
+      private final @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
-    public Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
-        return this.singleHeader == null ? Input.empty() : this.singleHeader;
+    public Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
+        return this.singleHeader == null ? Output.empty() : this.singleHeader;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
      * 
      */
     @InputImport(name="singleQueryArgument")
-      private final @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
+      private final @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
-    public Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
-        return this.singleQueryArgument == null ? Input.empty() : this.singleQueryArgument;
+    public Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
+        return this.singleQueryArgument == null ? Output.empty() : this.singleQueryArgument;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
      * 
      */
     @InputImport(name="uriPath")
-      private final @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath;
+      private final @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath;
 
-    public Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> getUriPath() {
-        return this.uriPath == null ? Input.empty() : this.uriPath;
+    public Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> getUriPath() {
+        return this.uriPath == null ? Output.empty() : this.uriPath;
     }
 
     public WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs(
-        @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments,
-        @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body,
-        @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method,
-        @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString,
-        @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader,
-        @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument,
-        @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath) {
+        @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments,
+        @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body,
+        @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method,
+        @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString,
+        @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader,
+        @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument,
+        @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.method = method;
@@ -115,13 +115,13 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
     }
 
     private WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs() {
-        this.allQueryArguments = Input.empty();
-        this.body = Input.empty();
-        this.method = Input.empty();
-        this.queryString = Input.empty();
-        this.singleHeader = Input.empty();
-        this.singleQueryArgument = Input.empty();
-        this.uriPath = Input.empty();
+        this.allQueryArguments = Output.empty();
+        this.body = Output.empty();
+        this.method = Output.empty();
+        this.queryString = Output.empty();
+        this.singleHeader = Output.empty();
+        this.singleQueryArgument = Output.empty();
+        this.uriPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
-        private @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body;
-        private @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method;
-        private @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString;
-        private @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
-        private @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
-        private @Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath;
+        private @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
+        private @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body;
+        private @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method;
+        private @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString;
+        private @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
+        private @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
+        private @Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder allQueryArguments(@Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments) {
+        public Builder allQueryArguments(@Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments) {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
 
         public Builder allQueryArguments(@Nullable WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs allQueryArguments) {
-            this.allQueryArguments = Input.ofNullable(allQueryArguments);
+            this.allQueryArguments = Output.ofNullable(allQueryArguments);
             return this;
         }
 
-        public Builder body(@Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body) {
+        public Builder body(@Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder method(@Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method) {
+        public Builder method(@Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method) {
             this.method = method;
             return this;
         }
 
         public Builder method(@Nullable WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs method) {
-            this.method = Input.ofNullable(method);
+            this.method = Output.ofNullable(method);
             return this;
         }
 
-        public Builder queryString(@Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString) {
+        public Builder queryString(@Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString) {
             this.queryString = queryString;
             return this;
         }
 
         public Builder queryString(@Nullable WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs queryString) {
-            this.queryString = Input.ofNullable(queryString);
+            this.queryString = Output.ofNullable(queryString);
             return this;
         }
 
-        public Builder singleHeader(@Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader) {
+        public Builder singleHeader(@Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
         public Builder singleHeader(@Nullable WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs singleHeader) {
-            this.singleHeader = Input.ofNullable(singleHeader);
+            this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
 
-        public Builder singleQueryArgument(@Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
         public Builder singleQueryArgument(@Nullable WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs singleQueryArgument) {
-            this.singleQueryArgument = Input.ofNullable(singleQueryArgument);
+            this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
             return this;
         }
 
-        public Builder uriPath(@Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath) {
+        public Builder uriPath(@Nullable Output<WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
 
         public Builder uriPath(@Nullable WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs uriPath) {
-            this.uriPath = Input.ofNullable(uriPath);
+            this.uriPath = Output.ofNullable(uriPath);
             return this;
         }
         public WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs build() {

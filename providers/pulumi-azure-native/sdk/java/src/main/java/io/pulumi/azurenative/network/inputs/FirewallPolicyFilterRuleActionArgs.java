@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.FirewallPolicyFilterRuleActionType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class FirewallPolicyFilterRuleActionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,FirewallPolicyFilterRuleActionType>> type;
+      private final @Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type;
 
-    public Input<Either<String,FirewallPolicyFilterRuleActionType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,FirewallPolicyFilterRuleActionType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public FirewallPolicyFilterRuleActionArgs(@Nullable Input<Either<String,FirewallPolicyFilterRuleActionType>> type) {
+    public FirewallPolicyFilterRuleActionArgs(@Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type) {
         this.type = type;
     }
 
     private FirewallPolicyFilterRuleActionArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class FirewallPolicyFilterRuleActionArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,FirewallPolicyFilterRuleActionType>> type;
+        private @Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class FirewallPolicyFilterRuleActionArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<Either<String,FirewallPolicyFilterRuleActionType>> type) {
+        public Builder type(@Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,FirewallPolicyFilterRuleActionType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public FirewallPolicyFilterRuleActionArgs build() {

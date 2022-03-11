@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,38 +15,38 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
     public static final PublicKeyConfigArgs Empty = new PublicKeyConfigArgs();
 
     @InputImport(name="callerReference", required=true)
-      private final Input<String> callerReference;
+      private final Output<String> callerReference;
 
-    public Input<String> getCallerReference() {
+    public Output<String> getCallerReference() {
         return this.callerReference;
     }
 
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     @InputImport(name="encodedKey", required=true)
-      private final Input<String> encodedKey;
+      private final Output<String> encodedKey;
 
-    public Input<String> getEncodedKey() {
+    public Output<String> getEncodedKey() {
         return this.encodedKey;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public PublicKeyConfigArgs(
-        Input<String> callerReference,
-        @Nullable Input<String> comment,
-        Input<String> encodedKey,
-        Input<String> name) {
+        Output<String> callerReference,
+        @Nullable Output<String> comment,
+        Output<String> encodedKey,
+        Output<String> name) {
         this.callerReference = Objects.requireNonNull(callerReference, "expected parameter 'callerReference' to be non-null");
         this.comment = comment;
         this.encodedKey = Objects.requireNonNull(encodedKey, "expected parameter 'encodedKey' to be non-null");
@@ -54,10 +54,10 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PublicKeyConfigArgs() {
-        this.callerReference = Input.empty();
-        this.comment = Input.empty();
-        this.encodedKey = Input.empty();
-        this.name = Input.empty();
+        this.callerReference = Output.empty();
+        this.comment = Output.empty();
+        this.encodedKey = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,10 +69,10 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> callerReference;
-        private @Nullable Input<String> comment;
-        private Input<String> encodedKey;
-        private Input<String> name;
+        private Output<String> callerReference;
+        private @Nullable Output<String> comment;
+        private Output<String> encodedKey;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -86,43 +86,43 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder callerReference(Input<String> callerReference) {
+        public Builder callerReference(Output<String> callerReference) {
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
 
         public Builder callerReference(String callerReference) {
-            this.callerReference = Input.of(Objects.requireNonNull(callerReference));
+            this.callerReference = Output.of(Objects.requireNonNull(callerReference));
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder encodedKey(Input<String> encodedKey) {
+        public Builder encodedKey(Output<String> encodedKey) {
             this.encodedKey = Objects.requireNonNull(encodedKey);
             return this;
         }
 
         public Builder encodedKey(String encodedKey) {
-            this.encodedKey = Input.of(Objects.requireNonNull(encodedKey));
+            this.encodedKey = Output.of(Objects.requireNonNull(encodedKey));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public PublicKeyConfigArgs build() {

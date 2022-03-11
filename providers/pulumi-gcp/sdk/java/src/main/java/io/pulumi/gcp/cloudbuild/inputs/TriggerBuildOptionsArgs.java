@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildOptionsVolumeArgs;
 import java.lang.Boolean;
@@ -27,10 +27,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Output<Integer> diskSizeGb;
 
-    public Input<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<Integer> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dynamicSubstitutions")
-      private final @Nullable Input<Boolean> dynamicSubstitutions;
+      private final @Nullable Output<Boolean> dynamicSubstitutions;
 
-    public Input<Boolean> getDynamicSubstitutions() {
-        return this.dynamicSubstitutions == null ? Input.empty() : this.dynamicSubstitutions;
+    public Output<Boolean> getDynamicSubstitutions() {
+        return this.dynamicSubstitutions == null ? Output.empty() : this.dynamicSubstitutions;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="envs")
-      private final @Nullable Input<List<String>> envs;
+      private final @Nullable Output<List<String>> envs;
 
-    public Input<List<String>> getEnvs() {
-        return this.envs == null ? Input.empty() : this.envs;
+    public Output<List<String>> getEnvs() {
+        return this.envs == null ? Output.empty() : this.envs;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="logStreamingOption")
-      private final @Nullable Input<String> logStreamingOption;
+      private final @Nullable Output<String> logStreamingOption;
 
-    public Input<String> getLogStreamingOption() {
-        return this.logStreamingOption == null ? Input.empty() : this.logStreamingOption;
+    public Output<String> getLogStreamingOption() {
+        return this.logStreamingOption == null ? Output.empty() : this.logStreamingOption;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="logging")
-      private final @Nullable Input<String> logging;
+      private final @Nullable Output<String> logging;
 
-    public Input<String> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<String> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="requestedVerifyOption")
-      private final @Nullable Input<String> requestedVerifyOption;
+      private final @Nullable Output<String> requestedVerifyOption;
 
-    public Input<String> getRequestedVerifyOption() {
-        return this.requestedVerifyOption == null ? Input.empty() : this.requestedVerifyOption;
+    public Output<String> getRequestedVerifyOption() {
+        return this.requestedVerifyOption == null ? Output.empty() : this.requestedVerifyOption;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="secretEnvs")
-      private final @Nullable Input<List<String>> secretEnvs;
+      private final @Nullable Output<List<String>> secretEnvs;
 
-    public Input<List<String>> getSecretEnvs() {
-        return this.secretEnvs == null ? Input.empty() : this.secretEnvs;
+    public Output<List<String>> getSecretEnvs() {
+        return this.secretEnvs == null ? Output.empty() : this.secretEnvs;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceProvenanceHashes")
-      private final @Nullable Input<List<String>> sourceProvenanceHashes;
+      private final @Nullable Output<List<String>> sourceProvenanceHashes;
 
-    public Input<List<String>> getSourceProvenanceHashes() {
-        return this.sourceProvenanceHashes == null ? Input.empty() : this.sourceProvenanceHashes;
+    public Output<List<String>> getSourceProvenanceHashes() {
+        return this.sourceProvenanceHashes == null ? Output.empty() : this.sourceProvenanceHashes;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="substitutionOption")
-      private final @Nullable Input<String> substitutionOption;
+      private final @Nullable Output<String> substitutionOption;
 
-    public Input<String> getSubstitutionOption() {
-        return this.substitutionOption == null ? Input.empty() : this.substitutionOption;
+    public Output<String> getSubstitutionOption() {
+        return this.substitutionOption == null ? Output.empty() : this.substitutionOption;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<TriggerBuildOptionsVolumeArgs>> volumes;
+      private final @Nullable Output<List<TriggerBuildOptionsVolumeArgs>> volumes;
 
-    public Input<List<TriggerBuildOptionsVolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<TriggerBuildOptionsVolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     /**
@@ -169,25 +169,25 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workerPool")
-      private final @Nullable Input<String> workerPool;
+      private final @Nullable Output<String> workerPool;
 
-    public Input<String> getWorkerPool() {
-        return this.workerPool == null ? Input.empty() : this.workerPool;
+    public Output<String> getWorkerPool() {
+        return this.workerPool == null ? Output.empty() : this.workerPool;
     }
 
     public TriggerBuildOptionsArgs(
-        @Nullable Input<Integer> diskSizeGb,
-        @Nullable Input<Boolean> dynamicSubstitutions,
-        @Nullable Input<List<String>> envs,
-        @Nullable Input<String> logStreamingOption,
-        @Nullable Input<String> logging,
-        @Nullable Input<String> machineType,
-        @Nullable Input<String> requestedVerifyOption,
-        @Nullable Input<List<String>> secretEnvs,
-        @Nullable Input<List<String>> sourceProvenanceHashes,
-        @Nullable Input<String> substitutionOption,
-        @Nullable Input<List<TriggerBuildOptionsVolumeArgs>> volumes,
-        @Nullable Input<String> workerPool) {
+        @Nullable Output<Integer> diskSizeGb,
+        @Nullable Output<Boolean> dynamicSubstitutions,
+        @Nullable Output<List<String>> envs,
+        @Nullable Output<String> logStreamingOption,
+        @Nullable Output<String> logging,
+        @Nullable Output<String> machineType,
+        @Nullable Output<String> requestedVerifyOption,
+        @Nullable Output<List<String>> secretEnvs,
+        @Nullable Output<List<String>> sourceProvenanceHashes,
+        @Nullable Output<String> substitutionOption,
+        @Nullable Output<List<TriggerBuildOptionsVolumeArgs>> volumes,
+        @Nullable Output<String> workerPool) {
         this.diskSizeGb = diskSizeGb;
         this.dynamicSubstitutions = dynamicSubstitutions;
         this.envs = envs;
@@ -203,18 +203,18 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     private TriggerBuildOptionsArgs() {
-        this.diskSizeGb = Input.empty();
-        this.dynamicSubstitutions = Input.empty();
-        this.envs = Input.empty();
-        this.logStreamingOption = Input.empty();
-        this.logging = Input.empty();
-        this.machineType = Input.empty();
-        this.requestedVerifyOption = Input.empty();
-        this.secretEnvs = Input.empty();
-        this.sourceProvenanceHashes = Input.empty();
-        this.substitutionOption = Input.empty();
-        this.volumes = Input.empty();
-        this.workerPool = Input.empty();
+        this.diskSizeGb = Output.empty();
+        this.dynamicSubstitutions = Output.empty();
+        this.envs = Output.empty();
+        this.logStreamingOption = Output.empty();
+        this.logging = Output.empty();
+        this.machineType = Output.empty();
+        this.requestedVerifyOption = Output.empty();
+        this.secretEnvs = Output.empty();
+        this.sourceProvenanceHashes = Output.empty();
+        this.substitutionOption = Output.empty();
+        this.volumes = Output.empty();
+        this.workerPool = Output.empty();
     }
 
     public static Builder builder() {
@@ -226,18 +226,18 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> diskSizeGb;
-        private @Nullable Input<Boolean> dynamicSubstitutions;
-        private @Nullable Input<List<String>> envs;
-        private @Nullable Input<String> logStreamingOption;
-        private @Nullable Input<String> logging;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<String> requestedVerifyOption;
-        private @Nullable Input<List<String>> secretEnvs;
-        private @Nullable Input<List<String>> sourceProvenanceHashes;
-        private @Nullable Input<String> substitutionOption;
-        private @Nullable Input<List<TriggerBuildOptionsVolumeArgs>> volumes;
-        private @Nullable Input<String> workerPool;
+        private @Nullable Output<Integer> diskSizeGb;
+        private @Nullable Output<Boolean> dynamicSubstitutions;
+        private @Nullable Output<List<String>> envs;
+        private @Nullable Output<String> logStreamingOption;
+        private @Nullable Output<String> logging;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<String> requestedVerifyOption;
+        private @Nullable Output<List<String>> secretEnvs;
+        private @Nullable Output<List<String>> sourceProvenanceHashes;
+        private @Nullable Output<String> substitutionOption;
+        private @Nullable Output<List<TriggerBuildOptionsVolumeArgs>> volumes;
+        private @Nullable Output<String> workerPool;
 
         public Builder() {
     	      // Empty
@@ -259,123 +259,123 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     	      this.workerPool = defaults.workerPool;
         }
 
-        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder dynamicSubstitutions(@Nullable Input<Boolean> dynamicSubstitutions) {
+        public Builder dynamicSubstitutions(@Nullable Output<Boolean> dynamicSubstitutions) {
             this.dynamicSubstitutions = dynamicSubstitutions;
             return this;
         }
 
         public Builder dynamicSubstitutions(@Nullable Boolean dynamicSubstitutions) {
-            this.dynamicSubstitutions = Input.ofNullable(dynamicSubstitutions);
+            this.dynamicSubstitutions = Output.ofNullable(dynamicSubstitutions);
             return this;
         }
 
-        public Builder envs(@Nullable Input<List<String>> envs) {
+        public Builder envs(@Nullable Output<List<String>> envs) {
             this.envs = envs;
             return this;
         }
 
         public Builder envs(@Nullable List<String> envs) {
-            this.envs = Input.ofNullable(envs);
+            this.envs = Output.ofNullable(envs);
             return this;
         }
 
-        public Builder logStreamingOption(@Nullable Input<String> logStreamingOption) {
+        public Builder logStreamingOption(@Nullable Output<String> logStreamingOption) {
             this.logStreamingOption = logStreamingOption;
             return this;
         }
 
         public Builder logStreamingOption(@Nullable String logStreamingOption) {
-            this.logStreamingOption = Input.ofNullable(logStreamingOption);
+            this.logStreamingOption = Output.ofNullable(logStreamingOption);
             return this;
         }
 
-        public Builder logging(@Nullable Input<String> logging) {
+        public Builder logging(@Nullable Output<String> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable String logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder requestedVerifyOption(@Nullable Input<String> requestedVerifyOption) {
+        public Builder requestedVerifyOption(@Nullable Output<String> requestedVerifyOption) {
             this.requestedVerifyOption = requestedVerifyOption;
             return this;
         }
 
         public Builder requestedVerifyOption(@Nullable String requestedVerifyOption) {
-            this.requestedVerifyOption = Input.ofNullable(requestedVerifyOption);
+            this.requestedVerifyOption = Output.ofNullable(requestedVerifyOption);
             return this;
         }
 
-        public Builder secretEnvs(@Nullable Input<List<String>> secretEnvs) {
+        public Builder secretEnvs(@Nullable Output<List<String>> secretEnvs) {
             this.secretEnvs = secretEnvs;
             return this;
         }
 
         public Builder secretEnvs(@Nullable List<String> secretEnvs) {
-            this.secretEnvs = Input.ofNullable(secretEnvs);
+            this.secretEnvs = Output.ofNullable(secretEnvs);
             return this;
         }
 
-        public Builder sourceProvenanceHashes(@Nullable Input<List<String>> sourceProvenanceHashes) {
+        public Builder sourceProvenanceHashes(@Nullable Output<List<String>> sourceProvenanceHashes) {
             this.sourceProvenanceHashes = sourceProvenanceHashes;
             return this;
         }
 
         public Builder sourceProvenanceHashes(@Nullable List<String> sourceProvenanceHashes) {
-            this.sourceProvenanceHashes = Input.ofNullable(sourceProvenanceHashes);
+            this.sourceProvenanceHashes = Output.ofNullable(sourceProvenanceHashes);
             return this;
         }
 
-        public Builder substitutionOption(@Nullable Input<String> substitutionOption) {
+        public Builder substitutionOption(@Nullable Output<String> substitutionOption) {
             this.substitutionOption = substitutionOption;
             return this;
         }
 
         public Builder substitutionOption(@Nullable String substitutionOption) {
-            this.substitutionOption = Input.ofNullable(substitutionOption);
+            this.substitutionOption = Output.ofNullable(substitutionOption);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<TriggerBuildOptionsVolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<TriggerBuildOptionsVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<TriggerBuildOptionsVolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
 
-        public Builder workerPool(@Nullable Input<String> workerPool) {
+        public Builder workerPool(@Nullable Output<String> workerPool) {
             this.workerPool = workerPool;
             return this;
         }
 
         public Builder workerPool(@Nullable String workerPool) {
-            this.workerPool = Input.ofNullable(workerPool);
+            this.workerPool = Output.ofNullable(workerPool);
             return this;
         }
         public TriggerBuildOptionsArgs build() {

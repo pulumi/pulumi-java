@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs;
 import java.lang.String;
@@ -25,29 +25,29 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="items")
-      private final @Nullable Input<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
+      private final @Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
 
-    public Input<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     public RRSetRoutingPolicyGeoPolicyArgs(
-        @Nullable Input<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items,
-        @Nullable Input<String> kind) {
+        @Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items,
+        @Nullable Output<String> kind) {
         this.items = items;
         this.kind = kind;
     }
 
     private RRSetRoutingPolicyGeoPolicyArgs() {
-        this.items = Input.empty();
-        this.kind = Input.empty();
+        this.items = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
-        private @Nullable Input<String> kind;
+        private @Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
+        private @Nullable Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
     	      this.kind = defaults.kind;
         }
 
-        public Builder items(@Nullable Input<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items) {
+        public Builder items(@Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public RRSetRoutingPolicyGeoPolicyArgs build() {

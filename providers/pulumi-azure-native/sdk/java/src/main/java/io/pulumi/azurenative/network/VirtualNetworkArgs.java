@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkBgpCommunitiesArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkPeeringArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressSpace")
-      private final @Nullable Input<AddressSpaceArgs> addressSpace;
+      private final @Nullable Output<AddressSpaceArgs> addressSpace;
 
-    public Input<AddressSpaceArgs> getAddressSpace() {
-        return this.addressSpace == null ? Input.empty() : this.addressSpace;
+    public Output<AddressSpaceArgs> getAddressSpace() {
+        return this.addressSpace == null ? Output.empty() : this.addressSpace;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpCommunities")
-      private final @Nullable Input<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
+      private final @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
 
-    public Input<VirtualNetworkBgpCommunitiesArgs> getBgpCommunities() {
-        return this.bgpCommunities == null ? Input.empty() : this.bgpCommunities;
+    public Output<VirtualNetworkBgpCommunitiesArgs> getBgpCommunities() {
+        return this.bgpCommunities == null ? Output.empty() : this.bgpCommunities;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ddosProtectionPlan")
-      private final @Nullable Input<SubResourceArgs> ddosProtectionPlan;
+      private final @Nullable Output<SubResourceArgs> ddosProtectionPlan;
 
-    public Input<SubResourceArgs> getDdosProtectionPlan() {
-        return this.ddosProtectionPlan == null ? Input.empty() : this.ddosProtectionPlan;
+    public Output<SubResourceArgs> getDdosProtectionPlan() {
+        return this.ddosProtectionPlan == null ? Output.empty() : this.ddosProtectionPlan;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dhcpOptions")
-      private final @Nullable Input<DhcpOptionsArgs> dhcpOptions;
+      private final @Nullable Output<DhcpOptionsArgs> dhcpOptions;
 
-    public Input<DhcpOptionsArgs> getDhcpOptions() {
-        return this.dhcpOptions == null ? Input.empty() : this.dhcpOptions;
+    public Output<DhcpOptionsArgs> getDhcpOptions() {
+        return this.dhcpOptions == null ? Output.empty() : this.dhcpOptions;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDdosProtection")
-      private final @Nullable Input<Boolean> enableDdosProtection;
+      private final @Nullable Output<Boolean> enableDdosProtection;
 
-    public Input<Boolean> getEnableDdosProtection() {
-        return this.enableDdosProtection == null ? Input.empty() : this.enableDdosProtection;
+    public Output<Boolean> getEnableDdosProtection() {
+        return this.enableDdosProtection == null ? Output.empty() : this.enableDdosProtection;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableVmProtection")
-      private final @Nullable Input<Boolean> enableVmProtection;
+      private final @Nullable Output<Boolean> enableVmProtection;
 
-    public Input<Boolean> getEnableVmProtection() {
-        return this.enableVmProtection == null ? Input.empty() : this.enableVmProtection;
+    public Output<Boolean> getEnableVmProtection() {
+        return this.enableVmProtection == null ? Output.empty() : this.enableVmProtection;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAllocations")
-      private final @Nullable Input<List<SubResourceArgs>> ipAllocations;
+      private final @Nullable Output<List<SubResourceArgs>> ipAllocations;
 
-    public Input<List<SubResourceArgs>> getIpAllocations() {
-        return this.ipAllocations == null ? Input.empty() : this.ipAllocations;
+    public Output<List<SubResourceArgs>> getIpAllocations() {
+        return this.ipAllocations == null ? Output.empty() : this.ipAllocations;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -139,9 +139,9 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -150,10 +150,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets")
-      private final @Nullable Input<List<SubnetArgs>> subnets;
+      private final @Nullable Output<List<SubnetArgs>> subnets;
 
-    public Input<List<SubnetArgs>> getSubnets() {
-        return this.subnets == null ? Input.empty() : this.subnets;
+    public Output<List<SubnetArgs>> getSubnets() {
+        return this.subnets == null ? Output.empty() : this.subnets;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkName")
-      private final @Nullable Input<String> virtualNetworkName;
+      private final @Nullable Output<String> virtualNetworkName;
 
-    public Input<String> getVirtualNetworkName() {
-        return this.virtualNetworkName == null ? Input.empty() : this.virtualNetworkName;
+    public Output<String> getVirtualNetworkName() {
+        return this.virtualNetworkName == null ? Output.empty() : this.virtualNetworkName;
     }
 
     /**
@@ -183,34 +183,34 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkPeerings")
-      private final @Nullable Input<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
+      private final @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
 
-    public Input<List<VirtualNetworkPeeringArgs>> getVirtualNetworkPeerings() {
-        return this.virtualNetworkPeerings == null ? Input.empty() : this.virtualNetworkPeerings;
+    public Output<List<VirtualNetworkPeeringArgs>> getVirtualNetworkPeerings() {
+        return this.virtualNetworkPeerings == null ? Output.empty() : this.virtualNetworkPeerings;
     }
 
     public VirtualNetworkArgs(
-        @Nullable Input<AddressSpaceArgs> addressSpace,
-        @Nullable Input<VirtualNetworkBgpCommunitiesArgs> bgpCommunities,
-        @Nullable Input<SubResourceArgs> ddosProtectionPlan,
-        @Nullable Input<DhcpOptionsArgs> dhcpOptions,
-        @Nullable Input<Boolean> enableDdosProtection,
-        @Nullable Input<Boolean> enableVmProtection,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<String> id,
-        @Nullable Input<List<SubResourceArgs>> ipAllocations,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<SubnetArgs>> subnets,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> virtualNetworkName,
-        @Nullable Input<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings) {
+        @Nullable Output<AddressSpaceArgs> addressSpace,
+        @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities,
+        @Nullable Output<SubResourceArgs> ddosProtectionPlan,
+        @Nullable Output<DhcpOptionsArgs> dhcpOptions,
+        @Nullable Output<Boolean> enableDdosProtection,
+        @Nullable Output<Boolean> enableVmProtection,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<String> id,
+        @Nullable Output<List<SubResourceArgs>> ipAllocations,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<SubnetArgs>> subnets,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> virtualNetworkName,
+        @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings) {
         this.addressSpace = addressSpace;
         this.bgpCommunities = bgpCommunities;
         this.ddosProtectionPlan = ddosProtectionPlan;
         this.dhcpOptions = dhcpOptions;
-        this.enableDdosProtection = enableDdosProtection == null ? Input.ofNullable(false) : enableDdosProtection;
-        this.enableVmProtection = enableVmProtection == null ? Input.ofNullable(false) : enableVmProtection;
+        this.enableDdosProtection = enableDdosProtection == null ? Output.ofNullable(false) : enableDdosProtection;
+        this.enableVmProtection = enableVmProtection == null ? Output.ofNullable(false) : enableVmProtection;
         this.extendedLocation = extendedLocation;
         this.id = id;
         this.ipAllocations = ipAllocations;
@@ -223,21 +223,21 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualNetworkArgs() {
-        this.addressSpace = Input.empty();
-        this.bgpCommunities = Input.empty();
-        this.ddosProtectionPlan = Input.empty();
-        this.dhcpOptions = Input.empty();
-        this.enableDdosProtection = Input.empty();
-        this.enableVmProtection = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.id = Input.empty();
-        this.ipAllocations = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.subnets = Input.empty();
-        this.tags = Input.empty();
-        this.virtualNetworkName = Input.empty();
-        this.virtualNetworkPeerings = Input.empty();
+        this.addressSpace = Output.empty();
+        this.bgpCommunities = Output.empty();
+        this.ddosProtectionPlan = Output.empty();
+        this.dhcpOptions = Output.empty();
+        this.enableDdosProtection = Output.empty();
+        this.enableVmProtection = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.id = Output.empty();
+        this.ipAllocations = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.subnets = Output.empty();
+        this.tags = Output.empty();
+        this.virtualNetworkName = Output.empty();
+        this.virtualNetworkPeerings = Output.empty();
     }
 
     public static Builder builder() {
@@ -249,21 +249,21 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AddressSpaceArgs> addressSpace;
-        private @Nullable Input<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
-        private @Nullable Input<SubResourceArgs> ddosProtectionPlan;
-        private @Nullable Input<DhcpOptionsArgs> dhcpOptions;
-        private @Nullable Input<Boolean> enableDdosProtection;
-        private @Nullable Input<Boolean> enableVmProtection;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<SubResourceArgs>> ipAllocations;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<SubnetArgs>> subnets;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> virtualNetworkName;
-        private @Nullable Input<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
+        private @Nullable Output<AddressSpaceArgs> addressSpace;
+        private @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
+        private @Nullable Output<SubResourceArgs> ddosProtectionPlan;
+        private @Nullable Output<DhcpOptionsArgs> dhcpOptions;
+        private @Nullable Output<Boolean> enableDdosProtection;
+        private @Nullable Output<Boolean> enableVmProtection;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<SubResourceArgs>> ipAllocations;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<SubnetArgs>> subnets;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> virtualNetworkName;
+        private @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
 
         public Builder() {
     	      // Empty
@@ -288,153 +288,153 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkPeerings = defaults.virtualNetworkPeerings;
         }
 
-        public Builder addressSpace(@Nullable Input<AddressSpaceArgs> addressSpace) {
+        public Builder addressSpace(@Nullable Output<AddressSpaceArgs> addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }
 
         public Builder addressSpace(@Nullable AddressSpaceArgs addressSpace) {
-            this.addressSpace = Input.ofNullable(addressSpace);
+            this.addressSpace = Output.ofNullable(addressSpace);
             return this;
         }
 
-        public Builder bgpCommunities(@Nullable Input<VirtualNetworkBgpCommunitiesArgs> bgpCommunities) {
+        public Builder bgpCommunities(@Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities) {
             this.bgpCommunities = bgpCommunities;
             return this;
         }
 
         public Builder bgpCommunities(@Nullable VirtualNetworkBgpCommunitiesArgs bgpCommunities) {
-            this.bgpCommunities = Input.ofNullable(bgpCommunities);
+            this.bgpCommunities = Output.ofNullable(bgpCommunities);
             return this;
         }
 
-        public Builder ddosProtectionPlan(@Nullable Input<SubResourceArgs> ddosProtectionPlan) {
+        public Builder ddosProtectionPlan(@Nullable Output<SubResourceArgs> ddosProtectionPlan) {
             this.ddosProtectionPlan = ddosProtectionPlan;
             return this;
         }
 
         public Builder ddosProtectionPlan(@Nullable SubResourceArgs ddosProtectionPlan) {
-            this.ddosProtectionPlan = Input.ofNullable(ddosProtectionPlan);
+            this.ddosProtectionPlan = Output.ofNullable(ddosProtectionPlan);
             return this;
         }
 
-        public Builder dhcpOptions(@Nullable Input<DhcpOptionsArgs> dhcpOptions) {
+        public Builder dhcpOptions(@Nullable Output<DhcpOptionsArgs> dhcpOptions) {
             this.dhcpOptions = dhcpOptions;
             return this;
         }
 
         public Builder dhcpOptions(@Nullable DhcpOptionsArgs dhcpOptions) {
-            this.dhcpOptions = Input.ofNullable(dhcpOptions);
+            this.dhcpOptions = Output.ofNullable(dhcpOptions);
             return this;
         }
 
-        public Builder enableDdosProtection(@Nullable Input<Boolean> enableDdosProtection) {
+        public Builder enableDdosProtection(@Nullable Output<Boolean> enableDdosProtection) {
             this.enableDdosProtection = enableDdosProtection;
             return this;
         }
 
         public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
-            this.enableDdosProtection = Input.ofNullable(enableDdosProtection);
+            this.enableDdosProtection = Output.ofNullable(enableDdosProtection);
             return this;
         }
 
-        public Builder enableVmProtection(@Nullable Input<Boolean> enableVmProtection) {
+        public Builder enableVmProtection(@Nullable Output<Boolean> enableVmProtection) {
             this.enableVmProtection = enableVmProtection;
             return this;
         }
 
         public Builder enableVmProtection(@Nullable Boolean enableVmProtection) {
-            this.enableVmProtection = Input.ofNullable(enableVmProtection);
+            this.enableVmProtection = Output.ofNullable(enableVmProtection);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipAllocations(@Nullable Input<List<SubResourceArgs>> ipAllocations) {
+        public Builder ipAllocations(@Nullable Output<List<SubResourceArgs>> ipAllocations) {
             this.ipAllocations = ipAllocations;
             return this;
         }
 
         public Builder ipAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
-            this.ipAllocations = Input.ofNullable(ipAllocations);
+            this.ipAllocations = Output.ofNullable(ipAllocations);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder subnets(@Nullable Input<List<SubnetArgs>> subnets) {
+        public Builder subnets(@Nullable Output<List<SubnetArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
         public Builder subnets(@Nullable List<SubnetArgs> subnets) {
-            this.subnets = Input.ofNullable(subnets);
+            this.subnets = Output.ofNullable(subnets);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualNetworkName(@Nullable Input<String> virtualNetworkName) {
+        public Builder virtualNetworkName(@Nullable Output<String> virtualNetworkName) {
             this.virtualNetworkName = virtualNetworkName;
             return this;
         }
 
         public Builder virtualNetworkName(@Nullable String virtualNetworkName) {
-            this.virtualNetworkName = Input.ofNullable(virtualNetworkName);
+            this.virtualNetworkName = Output.ofNullable(virtualNetworkName);
             return this;
         }
 
-        public Builder virtualNetworkPeerings(@Nullable Input<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings) {
+        public Builder virtualNetworkPeerings(@Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings) {
             this.virtualNetworkPeerings = virtualNetworkPeerings;
             return this;
         }
 
         public Builder virtualNetworkPeerings(@Nullable List<VirtualNetworkPeeringArgs> virtualNetworkPeerings) {
-            this.virtualNetworkPeerings = Input.ofNullable(virtualNetworkPeerings);
+            this.virtualNetworkPeerings = Output.ofNullable(virtualNetworkPeerings);
             return this;
         }
         public VirtualNetworkArgs build() {

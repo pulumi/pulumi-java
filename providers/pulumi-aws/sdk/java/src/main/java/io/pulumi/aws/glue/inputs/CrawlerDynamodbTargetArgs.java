@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -21,9 +21,9 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -32,10 +32,10 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="scanAll")
-      private final @Nullable Input<Boolean> scanAll;
+      private final @Nullable Output<Boolean> scanAll;
 
-    public Input<Boolean> getScanAll() {
-        return this.scanAll == null ? Input.empty() : this.scanAll;
+    public Output<Boolean> getScanAll() {
+        return this.scanAll == null ? Output.empty() : this.scanAll;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="scanRate")
-      private final @Nullable Input<Double> scanRate;
+      private final @Nullable Output<Double> scanRate;
 
-    public Input<Double> getScanRate() {
-        return this.scanRate == null ? Input.empty() : this.scanRate;
+    public Output<Double> getScanRate() {
+        return this.scanRate == null ? Output.empty() : this.scanRate;
     }
 
     public CrawlerDynamodbTargetArgs(
-        Input<String> path,
-        @Nullable Input<Boolean> scanAll,
-        @Nullable Input<Double> scanRate) {
+        Output<String> path,
+        @Nullable Output<Boolean> scanAll,
+        @Nullable Output<Double> scanRate) {
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
         this.scanAll = scanAll;
         this.scanRate = scanRate;
     }
 
     private CrawlerDynamodbTargetArgs() {
-        this.path = Input.empty();
-        this.scanAll = Input.empty();
-        this.scanRate = Input.empty();
+        this.path = Output.empty();
+        this.scanAll = Output.empty();
+        this.scanRate = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> path;
-        private @Nullable Input<Boolean> scanAll;
-        private @Nullable Input<Double> scanRate;
+        private Output<String> path;
+        private @Nullable Output<Boolean> scanAll;
+        private @Nullable Output<Double> scanRate;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
     	      this.scanRate = defaults.scanRate;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder scanAll(@Nullable Input<Boolean> scanAll) {
+        public Builder scanAll(@Nullable Output<Boolean> scanAll) {
             this.scanAll = scanAll;
             return this;
         }
 
         public Builder scanAll(@Nullable Boolean scanAll) {
-            this.scanAll = Input.ofNullable(scanAll);
+            this.scanAll = Output.ofNullable(scanAll);
             return this;
         }
 
-        public Builder scanRate(@Nullable Input<Double> scanRate) {
+        public Builder scanRate(@Nullable Output<Double> scanRate) {
             this.scanRate = scanRate;
             return this;
         }
 
         public Builder scanRate(@Nullable Double scanRate) {
-            this.scanRate = Input.ofNullable(scanRate);
+            this.scanRate = Output.ofNullable(scanRate);
             return this;
         }
         public CrawlerDynamodbTargetArgs build() {

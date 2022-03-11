@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.LaunchTemplateBlockDeviceMappingEbsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="ebs")
-      private final @Nullable Input<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs;
+      private final @Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs;
 
-    public Input<LaunchTemplateBlockDeviceMappingEbsGetArgs> getEbs() {
-        return this.ebs == null ? Input.empty() : this.ebs;
+    public Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> getEbs() {
+        return this.ebs == null ? Output.empty() : this.ebs;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="noDevice")
-      private final @Nullable Input<String> noDevice;
+      private final @Nullable Output<String> noDevice;
 
-    public Input<String> getNoDevice() {
-        return this.noDevice == null ? Input.empty() : this.noDevice;
+    public Output<String> getNoDevice() {
+        return this.noDevice == null ? Output.empty() : this.noDevice;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="virtualName")
-      private final @Nullable Input<String> virtualName;
+      private final @Nullable Output<String> virtualName;
 
-    public Input<String> getVirtualName() {
-        return this.virtualName == null ? Input.empty() : this.virtualName;
+    public Output<String> getVirtualName() {
+        return this.virtualName == null ? Output.empty() : this.virtualName;
     }
 
     public LaunchTemplateBlockDeviceMappingGetArgs(
-        @Nullable Input<String> deviceName,
-        @Nullable Input<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs,
-        @Nullable Input<String> noDevice,
-        @Nullable Input<String> virtualName) {
+        @Nullable Output<String> deviceName,
+        @Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs,
+        @Nullable Output<String> noDevice,
+        @Nullable Output<String> virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;
@@ -73,10 +73,10 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
     }
 
     private LaunchTemplateBlockDeviceMappingGetArgs() {
-        this.deviceName = Input.empty();
-        this.ebs = Input.empty();
-        this.noDevice = Input.empty();
-        this.virtualName = Input.empty();
+        this.deviceName = Output.empty();
+        this.ebs = Output.empty();
+        this.noDevice = Output.empty();
+        this.virtualName = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs;
-        private @Nullable Input<String> noDevice;
-        private @Nullable Input<String> virtualName;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs;
+        private @Nullable Output<String> noDevice;
+        private @Nullable Output<String> virtualName;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder ebs(@Nullable Input<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs) {
+        public Builder ebs(@Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs) {
             this.ebs = ebs;
             return this;
         }
 
         public Builder ebs(@Nullable LaunchTemplateBlockDeviceMappingEbsGetArgs ebs) {
-            this.ebs = Input.ofNullable(ebs);
+            this.ebs = Output.ofNullable(ebs);
             return this;
         }
 
-        public Builder noDevice(@Nullable Input<String> noDevice) {
+        public Builder noDevice(@Nullable Output<String> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
         public Builder noDevice(@Nullable String noDevice) {
-            this.noDevice = Input.ofNullable(noDevice);
+            this.noDevice = Output.ofNullable(noDevice);
             return this;
         }
 
-        public Builder virtualName(@Nullable Input<String> virtualName) {
+        public Builder virtualName(@Nullable Output<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
 
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Input.ofNullable(virtualName);
+            this.virtualName = Output.ofNullable(virtualName);
             return this;
         }
         public LaunchTemplateBlockDeviceMappingGetArgs build() {

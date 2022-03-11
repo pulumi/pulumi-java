@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.SolutionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="migrateProjectName", required=true)
-      private final Input<String> migrateProjectName;
+      private final Output<String> migrateProjectName;
 
-    public Input<String> getMigrateProjectName() {
+    public Output<String> getMigrateProjectName() {
         return this.migrateProjectName;
     }
 
@@ -31,10 +31,10 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<SolutionPropertiesArgs> properties;
+      private final @Nullable Output<SolutionPropertiesArgs> properties;
 
-    public Input<SolutionPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<SolutionPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="solutionName")
-      private final @Nullable Input<String> solutionName;
+      private final @Nullable Output<String> solutionName;
 
-    public Input<String> getSolutionName() {
-        return this.solutionName == null ? Input.empty() : this.solutionName;
+    public Output<String> getSolutionName() {
+        return this.solutionName == null ? Output.empty() : this.solutionName;
     }
 
     public SolutionArgs(
-        Input<String> migrateProjectName,
-        @Nullable Input<SolutionPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> solutionName) {
+        Output<String> migrateProjectName,
+        @Nullable Output<SolutionPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> solutionName) {
         this.migrateProjectName = Objects.requireNonNull(migrateProjectName, "expected parameter 'migrateProjectName' to be non-null");
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SolutionArgs() {
-        this.migrateProjectName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.solutionName = Input.empty();
+        this.migrateProjectName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.solutionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> migrateProjectName;
-        private @Nullable Input<SolutionPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> solutionName;
+        private Output<String> migrateProjectName;
+        private @Nullable Output<SolutionPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> solutionName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.solutionName = defaults.solutionName;
         }
 
-        public Builder migrateProjectName(Input<String> migrateProjectName) {
+        public Builder migrateProjectName(Output<String> migrateProjectName) {
             this.migrateProjectName = Objects.requireNonNull(migrateProjectName);
             return this;
         }
 
         public Builder migrateProjectName(String migrateProjectName) {
-            this.migrateProjectName = Input.of(Objects.requireNonNull(migrateProjectName));
+            this.migrateProjectName = Output.of(Objects.requireNonNull(migrateProjectName));
             return this;
         }
 
-        public Builder properties(@Nullable Input<SolutionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<SolutionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable SolutionPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder solutionName(@Nullable Input<String> solutionName) {
+        public Builder solutionName(@Nullable Output<String> solutionName) {
             this.solutionName = solutionName;
             return this;
         }
 
         public Builder solutionName(@Nullable String solutionName) {
-            this.solutionName = Input.ofNullable(solutionName);
+            this.solutionName = Output.ofNullable(solutionName);
             return this;
         }
         public SolutionArgs build() {

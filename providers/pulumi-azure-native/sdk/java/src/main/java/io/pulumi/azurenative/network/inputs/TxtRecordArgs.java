@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<List<String>> value;
+      private final @Nullable Output<List<String>> value;
 
-    public Input<List<String>> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<List<String>> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
-    public TxtRecordArgs(@Nullable Input<List<String>> value) {
+    public TxtRecordArgs(@Nullable Output<List<String>> value) {
         this.value = value;
     }
 
     private TxtRecordArgs() {
-        this.value = Input.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> value;
+        private @Nullable Output<List<String>> value;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder value(@Nullable Input<List<String>> value) {
+        public Builder value(@Nullable Output<List<String>> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable List<String> value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public TxtRecordArgs build() {

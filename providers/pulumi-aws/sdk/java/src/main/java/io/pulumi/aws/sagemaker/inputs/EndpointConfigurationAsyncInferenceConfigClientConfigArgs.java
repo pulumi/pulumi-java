@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigArgs ext
      * 
      */
     @InputImport(name="maxConcurrentInvocationsPerInstance")
-      private final @Nullable Input<Integer> maxConcurrentInvocationsPerInstance;
+      private final @Nullable Output<Integer> maxConcurrentInvocationsPerInstance;
 
-    public Input<Integer> getMaxConcurrentInvocationsPerInstance() {
-        return this.maxConcurrentInvocationsPerInstance == null ? Input.empty() : this.maxConcurrentInvocationsPerInstance;
+    public Output<Integer> getMaxConcurrentInvocationsPerInstance() {
+        return this.maxConcurrentInvocationsPerInstance == null ? Output.empty() : this.maxConcurrentInvocationsPerInstance;
     }
 
-    public EndpointConfigurationAsyncInferenceConfigClientConfigArgs(@Nullable Input<Integer> maxConcurrentInvocationsPerInstance) {
+    public EndpointConfigurationAsyncInferenceConfigClientConfigArgs(@Nullable Output<Integer> maxConcurrentInvocationsPerInstance) {
         this.maxConcurrentInvocationsPerInstance = maxConcurrentInvocationsPerInstance;
     }
 
     private EndpointConfigurationAsyncInferenceConfigClientConfigArgs() {
-        this.maxConcurrentInvocationsPerInstance = Input.empty();
+        this.maxConcurrentInvocationsPerInstance = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxConcurrentInvocationsPerInstance;
+        private @Nullable Output<Integer> maxConcurrentInvocationsPerInstance;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigArgs ext
     	      this.maxConcurrentInvocationsPerInstance = defaults.maxConcurrentInvocationsPerInstance;
         }
 
-        public Builder maxConcurrentInvocationsPerInstance(@Nullable Input<Integer> maxConcurrentInvocationsPerInstance) {
+        public Builder maxConcurrentInvocationsPerInstance(@Nullable Output<Integer> maxConcurrentInvocationsPerInstance) {
             this.maxConcurrentInvocationsPerInstance = maxConcurrentInvocationsPerInstance;
             return this;
         }
 
         public Builder maxConcurrentInvocationsPerInstance(@Nullable Integer maxConcurrentInvocationsPerInstance) {
-            this.maxConcurrentInvocationsPerInstance = Input.ofNullable(maxConcurrentInvocationsPerInstance);
+            this.maxConcurrentInvocationsPerInstance = Output.ofNullable(maxConcurrentInvocationsPerInstance);
             return this;
         }
         public EndpointConfigurationAsyncInferenceConfigClientConfigArgs build() {

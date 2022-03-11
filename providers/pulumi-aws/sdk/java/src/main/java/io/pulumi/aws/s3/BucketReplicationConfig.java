@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.s3.BucketReplicationConfigArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigState;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRule;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -126,14 +125,14 @@ public class BucketReplicationConfig extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketReplicationConfig(String name, BucketReplicationConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3/bucketReplicationConfig:BucketReplicationConfig", name, args == null ? BucketReplicationConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:s3/bucketReplicationConfig:BucketReplicationConfig", name, args == null ? BucketReplicationConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BucketReplicationConfig(String name, Input<String> id, @Nullable BucketReplicationConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BucketReplicationConfig(String name, Output<String> id, @Nullable BucketReplicationConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:s3/bucketReplicationConfig:BucketReplicationConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -149,7 +148,7 @@ public class BucketReplicationConfig extends io.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BucketReplicationConfig get(String name, Input<String> id, @Nullable BucketReplicationConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BucketReplicationConfig get(String name, Output<String> id, @Nullable BucketReplicationConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BucketReplicationConfig(name, id, state, options);
     }
 }

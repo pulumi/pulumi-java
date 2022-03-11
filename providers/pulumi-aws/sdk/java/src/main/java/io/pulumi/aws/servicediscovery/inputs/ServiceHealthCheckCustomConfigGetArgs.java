@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicediscovery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ServiceHealthCheckCustomConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="failureThreshold")
-      private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Output<Integer> failureThreshold;
 
-    public Input<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
+    public Output<Integer> getFailureThreshold() {
+        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
     }
 
-    public ServiceHealthCheckCustomConfigGetArgs(@Nullable Input<Integer> failureThreshold) {
+    public ServiceHealthCheckCustomConfigGetArgs(@Nullable Output<Integer> failureThreshold) {
         this.failureThreshold = failureThreshold;
     }
 
     private ServiceHealthCheckCustomConfigGetArgs() {
-        this.failureThreshold = Input.empty();
+        this.failureThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ServiceHealthCheckCustomConfigGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> failureThreshold;
+        private @Nullable Output<Integer> failureThreshold;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ServiceHealthCheckCustomConfigGetArgs extends io.pulumi.resou
     	      this.failureThreshold = defaults.failureThreshold;
         }
 
-        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Input.ofNullable(failureThreshold);
+            this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
         public ServiceHealthCheckCustomConfigGetArgs build() {

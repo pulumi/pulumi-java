@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="error")
-      private final @Nullable Input<String> error;
+      private final @Nullable Output<String> error;
 
-    public Input<String> getError() {
-        return this.error == null ? Input.empty() : this.error;
+    public Output<String> getError() {
+        return this.error == null ? Output.empty() : this.error;
     }
 
     public SchematizedDataArgs(
-        @Nullable Input<String> data,
-        @Nullable Input<String> error) {
+        @Nullable Output<String> data,
+        @Nullable Output<String> error) {
         this.data = data;
         this.error = error;
     }
 
     private SchematizedDataArgs() {
-        this.data = Input.empty();
-        this.error = Input.empty();
+        this.data = Output.empty();
+        this.error = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> data;
-        private @Nullable Input<String> error;
+        private @Nullable Output<String> data;
+        private @Nullable Output<String> error;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
     	      this.error = defaults.error;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder error(@Nullable Input<String> error) {
+        public Builder error(@Nullable Output<String> error) {
             this.error = error;
             return this;
         }
 
         public Builder error(@Nullable String error) {
-            this.error = Input.ofNullable(error);
+            this.error = Output.ofNullable(error);
             return this;
         }
         public SchematizedDataArgs build() {

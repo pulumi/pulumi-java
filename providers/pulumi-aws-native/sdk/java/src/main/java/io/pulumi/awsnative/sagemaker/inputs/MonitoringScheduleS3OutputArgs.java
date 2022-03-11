@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleS3OutputS3UploadMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class MonitoringScheduleS3OutputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="localPath", required=true)
-      private final Input<String> localPath;
+      private final Output<String> localPath;
 
-    public Input<String> getLocalPath() {
+    public Output<String> getLocalPath() {
         return this.localPath;
     }
 
@@ -35,10 +35,10 @@ public final class MonitoringScheduleS3OutputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="s3UploadMode")
-      private final @Nullable Input<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode;
+      private final @Nullable Output<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode;
 
-    public Input<MonitoringScheduleS3OutputS3UploadMode> getS3UploadMode() {
-        return this.s3UploadMode == null ? Input.empty() : this.s3UploadMode;
+    public Output<MonitoringScheduleS3OutputS3UploadMode> getS3UploadMode() {
+        return this.s3UploadMode == null ? Output.empty() : this.s3UploadMode;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class MonitoringScheduleS3OutputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="s3Uri", required=true)
-      private final Input<String> s3Uri;
+      private final Output<String> s3Uri;
 
-    public Input<String> getS3Uri() {
+    public Output<String> getS3Uri() {
         return this.s3Uri;
     }
 
     public MonitoringScheduleS3OutputArgs(
-        Input<String> localPath,
-        @Nullable Input<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode,
-        Input<String> s3Uri) {
+        Output<String> localPath,
+        @Nullable Output<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode,
+        Output<String> s3Uri) {
         this.localPath = Objects.requireNonNull(localPath, "expected parameter 'localPath' to be non-null");
         this.s3UploadMode = s3UploadMode;
         this.s3Uri = Objects.requireNonNull(s3Uri, "expected parameter 's3Uri' to be non-null");
     }
 
     private MonitoringScheduleS3OutputArgs() {
-        this.localPath = Input.empty();
-        this.s3UploadMode = Input.empty();
-        this.s3Uri = Input.empty();
+        this.localPath = Output.empty();
+        this.s3UploadMode = Output.empty();
+        this.s3Uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class MonitoringScheduleS3OutputArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> localPath;
-        private @Nullable Input<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode;
-        private Input<String> s3Uri;
+        private Output<String> localPath;
+        private @Nullable Output<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode;
+        private Output<String> s3Uri;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class MonitoringScheduleS3OutputArgs extends io.pulumi.resources.Re
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder localPath(Input<String> localPath) {
+        public Builder localPath(Output<String> localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
         public Builder localPath(String localPath) {
-            this.localPath = Input.of(Objects.requireNonNull(localPath));
+            this.localPath = Output.of(Objects.requireNonNull(localPath));
             return this;
         }
 
-        public Builder s3UploadMode(@Nullable Input<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode) {
+        public Builder s3UploadMode(@Nullable Output<MonitoringScheduleS3OutputS3UploadMode> s3UploadMode) {
             this.s3UploadMode = s3UploadMode;
             return this;
         }
 
         public Builder s3UploadMode(@Nullable MonitoringScheduleS3OutputS3UploadMode s3UploadMode) {
-            this.s3UploadMode = Input.ofNullable(s3UploadMode);
+            this.s3UploadMode = Output.ofNullable(s3UploadMode);
             return this;
         }
 
-        public Builder s3Uri(Input<String> s3Uri) {
+        public Builder s3Uri(Output<String> s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
 
         public Builder s3Uri(String s3Uri) {
-            this.s3Uri = Input.of(Objects.requireNonNull(s3Uri));
+            this.s3Uri = Output.of(Objects.requireNonNull(s3Uri));
             return this;
         }
         public MonitoringScheduleS3OutputArgs build() {

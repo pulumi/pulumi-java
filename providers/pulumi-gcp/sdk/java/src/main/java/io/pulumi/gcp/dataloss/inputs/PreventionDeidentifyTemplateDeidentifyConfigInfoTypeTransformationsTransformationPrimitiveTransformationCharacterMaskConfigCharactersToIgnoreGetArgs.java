@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="charactersToSkip")
-      private final @Nullable Input<String> charactersToSkip;
+      private final @Nullable Output<String> charactersToSkip;
 
-    public Input<String> getCharactersToSkip() {
-        return this.charactersToSkip == null ? Input.empty() : this.charactersToSkip;
+    public Output<String> getCharactersToSkip() {
+        return this.charactersToSkip == null ? Output.empty() : this.charactersToSkip;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="commonCharactersToIgnore")
-      private final @Nullable Input<String> commonCharactersToIgnore;
+      private final @Nullable Output<String> commonCharactersToIgnore;
 
-    public Input<String> getCommonCharactersToIgnore() {
-        return this.commonCharactersToIgnore == null ? Input.empty() : this.commonCharactersToIgnore;
+    public Output<String> getCommonCharactersToIgnore() {
+        return this.commonCharactersToIgnore == null ? Output.empty() : this.commonCharactersToIgnore;
     }
 
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs(
-        @Nullable Input<String> charactersToSkip,
-        @Nullable Input<String> commonCharactersToIgnore) {
+        @Nullable Output<String> charactersToSkip,
+        @Nullable Output<String> commonCharactersToIgnore) {
         this.charactersToSkip = charactersToSkip;
         this.commonCharactersToIgnore = commonCharactersToIgnore;
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs() {
-        this.charactersToSkip = Input.empty();
-        this.commonCharactersToIgnore = Input.empty();
+        this.charactersToSkip = Output.empty();
+        this.commonCharactersToIgnore = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     public static final class Builder {
-        private @Nullable Input<String> charactersToSkip;
-        private @Nullable Input<String> commonCharactersToIgnore;
+        private @Nullable Output<String> charactersToSkip;
+        private @Nullable Output<String> commonCharactersToIgnore;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.commonCharactersToIgnore = defaults.commonCharactersToIgnore;
         }
 
-        public Builder charactersToSkip(@Nullable Input<String> charactersToSkip) {
+        public Builder charactersToSkip(@Nullable Output<String> charactersToSkip) {
             this.charactersToSkip = charactersToSkip;
             return this;
         }
 
         public Builder charactersToSkip(@Nullable String charactersToSkip) {
-            this.charactersToSkip = Input.ofNullable(charactersToSkip);
+            this.charactersToSkip = Output.ofNullable(charactersToSkip);
             return this;
         }
 
-        public Builder commonCharactersToIgnore(@Nullable Input<String> commonCharactersToIgnore) {
+        public Builder commonCharactersToIgnore(@Nullable Output<String> commonCharactersToIgnore) {
             this.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;
         }
 
         public Builder commonCharactersToIgnore(@Nullable String commonCharactersToIgnore) {
-            this.commonCharactersToIgnore = Input.ofNullable(commonCharactersToIgnore);
+            this.commonCharactersToIgnore = Output.ofNullable(commonCharactersToIgnore);
             return this;
         }
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs build() {

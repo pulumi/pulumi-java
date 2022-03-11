@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.PrivateLinkServiceConnectionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class PrivateEndpointPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="manualPrivateLinkServiceConnections")
-      private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
+      private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
-    public Input<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections == null ? Input.empty() : this.manualPrivateLinkServiceConnections;
+    public Output<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
+        return this.manualPrivateLinkServiceConnections == null ? Output.empty() : this.manualPrivateLinkServiceConnections;
     }
 
-    public PrivateEndpointPropertiesArgs(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
+    public PrivateEndpointPropertiesArgs(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
         this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
     }
 
     private PrivateEndpointPropertiesArgs() {
-        this.manualPrivateLinkServiceConnections = Input.empty();
+        this.manualPrivateLinkServiceConnections = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class PrivateEndpointPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
+        private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class PrivateEndpointPropertiesArgs extends io.pulumi.resources.Res
     	      this.manualPrivateLinkServiceConnections = defaults.manualPrivateLinkServiceConnections;
         }
 
-        public Builder manualPrivateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
+        public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = Input.ofNullable(manualPrivateLinkServiceConnections);
+            this.manualPrivateLinkServiceConnections = Output.ofNullable(manualPrivateLinkServiceConnections);
             return this;
         }
         public PrivateEndpointPropertiesArgs build() {

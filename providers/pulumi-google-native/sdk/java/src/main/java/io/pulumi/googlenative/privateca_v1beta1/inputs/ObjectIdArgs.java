@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectIdPath", required=true)
-      private final Input<List<Integer>> objectIdPath;
+      private final Output<List<Integer>> objectIdPath;
 
-    public Input<List<Integer>> getObjectIdPath() {
+    public Output<List<Integer>> getObjectIdPath() {
         return this.objectIdPath;
     }
 
-    public ObjectIdArgs(Input<List<Integer>> objectIdPath) {
+    public ObjectIdArgs(Output<List<Integer>> objectIdPath) {
         this.objectIdPath = Objects.requireNonNull(objectIdPath, "expected parameter 'objectIdPath' to be non-null");
     }
 
     private ObjectIdArgs() {
-        this.objectIdPath = Input.empty();
+        this.objectIdPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<Integer>> objectIdPath;
+        private Output<List<Integer>> objectIdPath;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
     	      this.objectIdPath = defaults.objectIdPath;
         }
 
-        public Builder objectIdPath(Input<List<Integer>> objectIdPath) {
+        public Builder objectIdPath(Output<List<Integer>> objectIdPath) {
             this.objectIdPath = Objects.requireNonNull(objectIdPath);
             return this;
         }
 
         public Builder objectIdPath(List<Integer> objectIdPath) {
-            this.objectIdPath = Input.of(Objects.requireNonNull(objectIdPath));
+            this.objectIdPath = Output.of(Objects.requireNonNull(objectIdPath));
             return this;
         }
         public ObjectIdArgs build() {

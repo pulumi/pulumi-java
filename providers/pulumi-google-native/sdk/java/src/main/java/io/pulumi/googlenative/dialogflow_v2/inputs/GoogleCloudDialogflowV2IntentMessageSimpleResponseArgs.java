@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
      * 
      */
     @InputImport(name="displayText")
-      private final @Nullable Input<String> displayText;
+      private final @Nullable Output<String> displayText;
 
-    public Input<String> getDisplayText() {
-        return this.displayText == null ? Input.empty() : this.displayText;
+    public Output<String> getDisplayText() {
+        return this.displayText == null ? Output.empty() : this.displayText;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
      * 
      */
     @InputImport(name="ssml")
-      private final @Nullable Input<String> ssml;
+      private final @Nullable Output<String> ssml;
 
-    public Input<String> getSsml() {
-        return this.ssml == null ? Input.empty() : this.ssml;
+    public Output<String> getSsml() {
+        return this.ssml == null ? Output.empty() : this.ssml;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
      * 
      */
     @InputImport(name="textToSpeech")
-      private final @Nullable Input<String> textToSpeech;
+      private final @Nullable Output<String> textToSpeech;
 
-    public Input<String> getTextToSpeech() {
-        return this.textToSpeech == null ? Input.empty() : this.textToSpeech;
+    public Output<String> getTextToSpeech() {
+        return this.textToSpeech == null ? Output.empty() : this.textToSpeech;
     }
 
     public GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs(
-        @Nullable Input<String> displayText,
-        @Nullable Input<String> ssml,
-        @Nullable Input<String> textToSpeech) {
+        @Nullable Output<String> displayText,
+        @Nullable Output<String> ssml,
+        @Nullable Output<String> textToSpeech) {
         this.displayText = displayText;
         this.ssml = ssml;
         this.textToSpeech = textToSpeech;
     }
 
     private GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs() {
-        this.displayText = Input.empty();
-        this.ssml = Input.empty();
-        this.textToSpeech = Input.empty();
+        this.displayText = Output.empty();
+        this.ssml = Output.empty();
+        this.textToSpeech = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayText;
-        private @Nullable Input<String> ssml;
-        private @Nullable Input<String> textToSpeech;
+        private @Nullable Output<String> displayText;
+        private @Nullable Output<String> ssml;
+        private @Nullable Output<String> textToSpeech;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
     	      this.textToSpeech = defaults.textToSpeech;
         }
 
-        public Builder displayText(@Nullable Input<String> displayText) {
+        public Builder displayText(@Nullable Output<String> displayText) {
             this.displayText = displayText;
             return this;
         }
 
         public Builder displayText(@Nullable String displayText) {
-            this.displayText = Input.ofNullable(displayText);
+            this.displayText = Output.ofNullable(displayText);
             return this;
         }
 
-        public Builder ssml(@Nullable Input<String> ssml) {
+        public Builder ssml(@Nullable Output<String> ssml) {
             this.ssml = ssml;
             return this;
         }
 
         public Builder ssml(@Nullable String ssml) {
-            this.ssml = Input.ofNullable(ssml);
+            this.ssml = Output.ofNullable(ssml);
             return this;
         }
 
-        public Builder textToSpeech(@Nullable Input<String> textToSpeech) {
+        public Builder textToSpeech(@Nullable Output<String> textToSpeech) {
             this.textToSpeech = textToSpeech;
             return this;
         }
 
         public Builder textToSpeech(@Nullable String textToSpeech) {
-            this.textToSpeech = Input.ofNullable(textToSpeech);
+            this.textToSpeech = Output.ofNullable(textToSpeech);
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.ApplicationLogsConfigArgs;
 import io.pulumi.azurenative.web.inputs.EnabledConfigArgs;
 import io.pulumi.azurenative.web.inputs.HttpLogsConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="applicationLogs")
-      private final @Nullable Input<ApplicationLogsConfigArgs> applicationLogs;
+      private final @Nullable Output<ApplicationLogsConfigArgs> applicationLogs;
 
-    public Input<ApplicationLogsConfigArgs> getApplicationLogs() {
-        return this.applicationLogs == null ? Input.empty() : this.applicationLogs;
+    public Output<ApplicationLogsConfigArgs> getApplicationLogs() {
+        return this.applicationLogs == null ? Output.empty() : this.applicationLogs;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="detailedErrorMessages")
-      private final @Nullable Input<EnabledConfigArgs> detailedErrorMessages;
+      private final @Nullable Output<EnabledConfigArgs> detailedErrorMessages;
 
-    public Input<EnabledConfigArgs> getDetailedErrorMessages() {
-        return this.detailedErrorMessages == null ? Input.empty() : this.detailedErrorMessages;
+    public Output<EnabledConfigArgs> getDetailedErrorMessages() {
+        return this.detailedErrorMessages == null ? Output.empty() : this.detailedErrorMessages;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="failedRequestsTracing")
-      private final @Nullable Input<EnabledConfigArgs> failedRequestsTracing;
+      private final @Nullable Output<EnabledConfigArgs> failedRequestsTracing;
 
-    public Input<EnabledConfigArgs> getFailedRequestsTracing() {
-        return this.failedRequestsTracing == null ? Input.empty() : this.failedRequestsTracing;
+    public Output<EnabledConfigArgs> getFailedRequestsTracing() {
+        return this.failedRequestsTracing == null ? Output.empty() : this.failedRequestsTracing;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="httpLogs")
-      private final @Nullable Input<HttpLogsConfigArgs> httpLogs;
+      private final @Nullable Output<HttpLogsConfigArgs> httpLogs;
 
-    public Input<HttpLogsConfigArgs> getHttpLogs() {
-        return this.httpLogs == null ? Input.empty() : this.httpLogs;
+    public Output<HttpLogsConfigArgs> getHttpLogs() {
+        return this.httpLogs == null ? Output.empty() : this.httpLogs;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -88,20 +88,20 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public WebAppDiagnosticLogsConfigurationArgs(
-        @Nullable Input<ApplicationLogsConfigArgs> applicationLogs,
-        @Nullable Input<EnabledConfigArgs> detailedErrorMessages,
-        @Nullable Input<EnabledConfigArgs> failedRequestsTracing,
-        @Nullable Input<HttpLogsConfigArgs> httpLogs,
-        @Nullable Input<String> kind,
-        Input<String> name,
-        Input<String> resourceGroupName) {
+        @Nullable Output<ApplicationLogsConfigArgs> applicationLogs,
+        @Nullable Output<EnabledConfigArgs> detailedErrorMessages,
+        @Nullable Output<EnabledConfigArgs> failedRequestsTracing,
+        @Nullable Output<HttpLogsConfigArgs> httpLogs,
+        @Nullable Output<String> kind,
+        Output<String> name,
+        Output<String> resourceGroupName) {
         this.applicationLogs = applicationLogs;
         this.detailedErrorMessages = detailedErrorMessages;
         this.failedRequestsTracing = failedRequestsTracing;
@@ -112,13 +112,13 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     }
 
     private WebAppDiagnosticLogsConfigurationArgs() {
-        this.applicationLogs = Input.empty();
-        this.detailedErrorMessages = Input.empty();
-        this.failedRequestsTracing = Input.empty();
-        this.httpLogs = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.applicationLogs = Output.empty();
+        this.detailedErrorMessages = Output.empty();
+        this.failedRequestsTracing = Output.empty();
+        this.httpLogs = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationLogsConfigArgs> applicationLogs;
-        private @Nullable Input<EnabledConfigArgs> detailedErrorMessages;
-        private @Nullable Input<EnabledConfigArgs> failedRequestsTracing;
-        private @Nullable Input<HttpLogsConfigArgs> httpLogs;
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<ApplicationLogsConfigArgs> applicationLogs;
+        private @Nullable Output<EnabledConfigArgs> detailedErrorMessages;
+        private @Nullable Output<EnabledConfigArgs> failedRequestsTracing;
+        private @Nullable Output<HttpLogsConfigArgs> httpLogs;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder applicationLogs(@Nullable Input<ApplicationLogsConfigArgs> applicationLogs) {
+        public Builder applicationLogs(@Nullable Output<ApplicationLogsConfigArgs> applicationLogs) {
             this.applicationLogs = applicationLogs;
             return this;
         }
 
         public Builder applicationLogs(@Nullable ApplicationLogsConfigArgs applicationLogs) {
-            this.applicationLogs = Input.ofNullable(applicationLogs);
+            this.applicationLogs = Output.ofNullable(applicationLogs);
             return this;
         }
 
-        public Builder detailedErrorMessages(@Nullable Input<EnabledConfigArgs> detailedErrorMessages) {
+        public Builder detailedErrorMessages(@Nullable Output<EnabledConfigArgs> detailedErrorMessages) {
             this.detailedErrorMessages = detailedErrorMessages;
             return this;
         }
 
         public Builder detailedErrorMessages(@Nullable EnabledConfigArgs detailedErrorMessages) {
-            this.detailedErrorMessages = Input.ofNullable(detailedErrorMessages);
+            this.detailedErrorMessages = Output.ofNullable(detailedErrorMessages);
             return this;
         }
 
-        public Builder failedRequestsTracing(@Nullable Input<EnabledConfigArgs> failedRequestsTracing) {
+        public Builder failedRequestsTracing(@Nullable Output<EnabledConfigArgs> failedRequestsTracing) {
             this.failedRequestsTracing = failedRequestsTracing;
             return this;
         }
 
         public Builder failedRequestsTracing(@Nullable EnabledConfigArgs failedRequestsTracing) {
-            this.failedRequestsTracing = Input.ofNullable(failedRequestsTracing);
+            this.failedRequestsTracing = Output.ofNullable(failedRequestsTracing);
             return this;
         }
 
-        public Builder httpLogs(@Nullable Input<HttpLogsConfigArgs> httpLogs) {
+        public Builder httpLogs(@Nullable Output<HttpLogsConfigArgs> httpLogs) {
             this.httpLogs = httpLogs;
             return this;
         }
 
         public Builder httpLogs(@Nullable HttpLogsConfigArgs httpLogs) {
-            this.httpLogs = Input.ofNullable(httpLogs);
+            this.httpLogs = Output.ofNullable(httpLogs);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public WebAppDiagnosticLogsConfigurationArgs build() {

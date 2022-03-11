@@ -3,7 +3,7 @@
 
 package io.pulumi.docker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ServiceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data", required=true)
-      private final Input<String> data;
+      private final Output<String> data;
 
-    public Input<String> getData() {
+    public Output<String> getData() {
         return this.data;
     }
 
@@ -30,22 +30,22 @@ public final class ServiceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ServiceConfigArgs(
-        Input<String> data,
-        @Nullable Input<String> name) {
+        Output<String> data,
+        @Nullable Output<String> name) {
         this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
         this.name = name;
     }
 
     private ServiceConfigArgs() {
-        this.data = Input.empty();
-        this.name = Input.empty();
+        this.data = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ServiceConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> data;
-        private @Nullable Input<String> name;
+        private Output<String> data;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ServiceConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder data(Input<String> data) {
+        public Builder data(Output<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
         public Builder data(String data) {
-            this.data = Input.of(Objects.requireNonNull(data));
+            this.data = Output.of(Objects.requireNonNull(data));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ServiceConfigArgs build() {

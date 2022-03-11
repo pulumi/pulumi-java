@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.RowArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rows")
-      private final @Nullable Input<List<RowArgs>> rows;
+      private final @Nullable Output<List<RowArgs>> rows;
 
-    public Input<List<RowArgs>> getRows() {
-        return this.rows == null ? Input.empty() : this.rows;
+    public Output<List<RowArgs>> getRows() {
+        return this.rows == null ? Output.empty() : this.rows;
     }
 
-    public RowLayoutArgs(@Nullable Input<List<RowArgs>> rows) {
+    public RowLayoutArgs(@Nullable Output<List<RowArgs>> rows) {
         this.rows = rows;
     }
 
     private RowLayoutArgs() {
-        this.rows = Input.empty();
+        this.rows = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RowArgs>> rows;
+        private @Nullable Output<List<RowArgs>> rows;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rows = defaults.rows;
         }
 
-        public Builder rows(@Nullable Input<List<RowArgs>> rows) {
+        public Builder rows(@Nullable Output<List<RowArgs>> rows) {
             this.rows = rows;
             return this;
         }
 
         public Builder rows(@Nullable List<RowArgs> rows) {
-            this.rows = Input.ofNullable(rows);
+            this.rows = Output.ofNullable(rows);
             return this;
         }
         public RowLayoutArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class MonitoringDestinationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metrics")
-      private final @Nullable Input<List<String>> metrics;
+      private final @Nullable Output<List<String>> metrics;
 
-    public Input<List<String>> getMetrics() {
-        return this.metrics == null ? Input.empty() : this.metrics;
+    public Output<List<String>> getMetrics() {
+        return this.metrics == null ? Output.empty() : this.metrics;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MonitoringDestinationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="monitoredResource")
-      private final @Nullable Input<String> monitoredResource;
+      private final @Nullable Output<String> monitoredResource;
 
-    public Input<String> getMonitoredResource() {
-        return this.monitoredResource == null ? Input.empty() : this.monitoredResource;
+    public Output<String> getMonitoredResource() {
+        return this.monitoredResource == null ? Output.empty() : this.monitoredResource;
     }
 
     public MonitoringDestinationArgs(
-        @Nullable Input<List<String>> metrics,
-        @Nullable Input<String> monitoredResource) {
+        @Nullable Output<List<String>> metrics,
+        @Nullable Output<String> monitoredResource) {
         this.metrics = metrics;
         this.monitoredResource = monitoredResource;
     }
 
     private MonitoringDestinationArgs() {
-        this.metrics = Input.empty();
-        this.monitoredResource = Input.empty();
+        this.metrics = Output.empty();
+        this.monitoredResource = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MonitoringDestinationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> metrics;
-        private @Nullable Input<String> monitoredResource;
+        private @Nullable Output<List<String>> metrics;
+        private @Nullable Output<String> monitoredResource;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MonitoringDestinationArgs extends io.pulumi.resources.Resourc
     	      this.monitoredResource = defaults.monitoredResource;
         }
 
-        public Builder metrics(@Nullable Input<List<String>> metrics) {
+        public Builder metrics(@Nullable Output<List<String>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
         public Builder metrics(@Nullable List<String> metrics) {
-            this.metrics = Input.ofNullable(metrics);
+            this.metrics = Output.ofNullable(metrics);
             return this;
         }
 
-        public Builder monitoredResource(@Nullable Input<String> monitoredResource) {
+        public Builder monitoredResource(@Nullable Output<String> monitoredResource) {
             this.monitoredResource = monitoredResource;
             return this;
         }
 
         public Builder monitoredResource(@Nullable String monitoredResource) {
-            this.monitoredResource = Input.ofNullable(monitoredResource);
+            this.monitoredResource = Output.ofNullable(monitoredResource);
             return this;
         }
         public MonitoringDestinationArgs build() {

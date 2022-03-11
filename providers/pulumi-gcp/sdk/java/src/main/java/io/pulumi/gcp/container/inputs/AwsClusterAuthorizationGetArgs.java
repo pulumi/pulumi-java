@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AwsClusterAuthorizationAdminUserGetArgs;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class AwsClusterAuthorizationGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="adminUsers", required=true)
-      private final Input<List<AwsClusterAuthorizationAdminUserGetArgs>> adminUsers;
+      private final Output<List<AwsClusterAuthorizationAdminUserGetArgs>> adminUsers;
 
-    public Input<List<AwsClusterAuthorizationAdminUserGetArgs>> getAdminUsers() {
+    public Output<List<AwsClusterAuthorizationAdminUserGetArgs>> getAdminUsers() {
         return this.adminUsers;
     }
 
-    public AwsClusterAuthorizationGetArgs(Input<List<AwsClusterAuthorizationAdminUserGetArgs>> adminUsers) {
+    public AwsClusterAuthorizationGetArgs(Output<List<AwsClusterAuthorizationAdminUserGetArgs>> adminUsers) {
         this.adminUsers = Objects.requireNonNull(adminUsers, "expected parameter 'adminUsers' to be non-null");
     }
 
     private AwsClusterAuthorizationGetArgs() {
-        this.adminUsers = Input.empty();
+        this.adminUsers = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AwsClusterAuthorizationGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<List<AwsClusterAuthorizationAdminUserGetArgs>> adminUsers;
+        private Output<List<AwsClusterAuthorizationAdminUserGetArgs>> adminUsers;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AwsClusterAuthorizationGetArgs extends io.pulumi.resources.Re
     	      this.adminUsers = defaults.adminUsers;
         }
 
-        public Builder adminUsers(Input<List<AwsClusterAuthorizationAdminUserGetArgs>> adminUsers) {
+        public Builder adminUsers(Output<List<AwsClusterAuthorizationAdminUserGetArgs>> adminUsers) {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }
 
         public Builder adminUsers(List<AwsClusterAuthorizationAdminUserGetArgs> adminUsers) {
-            this.adminUsers = Input.of(Objects.requireNonNull(adminUsers));
+            this.adminUsers = Output.of(Objects.requireNonNull(adminUsers));
             return this;
         }
         public AwsClusterAuthorizationGetArgs build() {

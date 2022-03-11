@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.filestore.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectMode")
-      private final @Nullable Input<String> connectMode;
+      private final @Nullable Output<String> connectMode;
 
-    public Input<String> getConnectMode() {
-        return this.connectMode == null ? Input.empty() : this.connectMode;
+    public Output<String> getConnectMode() {
+        return this.connectMode == null ? Output.empty() : this.connectMode;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ipAddresses")
-      private final @Nullable Input<List<String>> ipAddresses;
+      private final @Nullable Output<List<String>> ipAddresses;
 
-    public Input<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
+    public Output<List<String>> getIpAddresses() {
+        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="modes", required=true)
-      private final Input<List<String>> modes;
+      private final Output<List<String>> modes;
 
-    public Input<List<String>> getModes() {
+    public Output<List<String>> getModes() {
         return this.modes;
     }
 
@@ -61,9 +61,9 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="network", required=true)
-      private final Input<String> network;
+      private final Output<String> network;
 
-    public Input<String> getNetwork() {
+    public Output<String> getNetwork() {
         return this.network;
     }
 
@@ -73,18 +73,18 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="reservedIpRange")
-      private final @Nullable Input<String> reservedIpRange;
+      private final @Nullable Output<String> reservedIpRange;
 
-    public Input<String> getReservedIpRange() {
-        return this.reservedIpRange == null ? Input.empty() : this.reservedIpRange;
+    public Output<String> getReservedIpRange() {
+        return this.reservedIpRange == null ? Output.empty() : this.reservedIpRange;
     }
 
     public InstanceNetworkGetArgs(
-        @Nullable Input<String> connectMode,
-        @Nullable Input<List<String>> ipAddresses,
-        Input<List<String>> modes,
-        Input<String> network,
-        @Nullable Input<String> reservedIpRange) {
+        @Nullable Output<String> connectMode,
+        @Nullable Output<List<String>> ipAddresses,
+        Output<List<String>> modes,
+        Output<String> network,
+        @Nullable Output<String> reservedIpRange) {
         this.connectMode = connectMode;
         this.ipAddresses = ipAddresses;
         this.modes = Objects.requireNonNull(modes, "expected parameter 'modes' to be non-null");
@@ -93,11 +93,11 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceNetworkGetArgs() {
-        this.connectMode = Input.empty();
-        this.ipAddresses = Input.empty();
-        this.modes = Input.empty();
-        this.network = Input.empty();
-        this.reservedIpRange = Input.empty();
+        this.connectMode = Output.empty();
+        this.ipAddresses = Output.empty();
+        this.modes = Output.empty();
+        this.network = Output.empty();
+        this.reservedIpRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectMode;
-        private @Nullable Input<List<String>> ipAddresses;
-        private Input<List<String>> modes;
-        private Input<String> network;
-        private @Nullable Input<String> reservedIpRange;
+        private @Nullable Output<String> connectMode;
+        private @Nullable Output<List<String>> ipAddresses;
+        private Output<List<String>> modes;
+        private Output<String> network;
+        private @Nullable Output<String> reservedIpRange;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder connectMode(@Nullable Input<String> connectMode) {
+        public Builder connectMode(@Nullable Output<String> connectMode) {
             this.connectMode = connectMode;
             return this;
         }
 
         public Builder connectMode(@Nullable String connectMode) {
-            this.connectMode = Input.ofNullable(connectMode);
+            this.connectMode = Output.ofNullable(connectMode);
             return this;
         }
 
-        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Input.ofNullable(ipAddresses);
+            this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder modes(Input<List<String>> modes) {
+        public Builder modes(Output<List<String>> modes) {
             this.modes = Objects.requireNonNull(modes);
             return this;
         }
 
         public Builder modes(List<String> modes) {
-            this.modes = Input.of(Objects.requireNonNull(modes));
+            this.modes = Output.of(Objects.requireNonNull(modes));
             return this;
         }
 
-        public Builder network(Input<String> network) {
+        public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
         public Builder network(String network) {
-            this.network = Input.of(Objects.requireNonNull(network));
+            this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder reservedIpRange(@Nullable Input<String> reservedIpRange) {
+        public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
 
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Input.ofNullable(reservedIpRange);
+            this.reservedIpRange = Output.ofNullable(reservedIpRange);
             return this;
         }
         public InstanceNetworkGetArgs build() {

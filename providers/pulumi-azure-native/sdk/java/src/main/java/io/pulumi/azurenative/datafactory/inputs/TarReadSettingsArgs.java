@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TarReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="preserveCompressionFileNameAsFolder")
-      private final @Nullable Input<Object> preserveCompressionFileNameAsFolder;
+      private final @Nullable Output<Object> preserveCompressionFileNameAsFolder;
 
-    public Input<Object> getPreserveCompressionFileNameAsFolder() {
-        return this.preserveCompressionFileNameAsFolder == null ? Input.empty() : this.preserveCompressionFileNameAsFolder;
+    public Output<Object> getPreserveCompressionFileNameAsFolder() {
+        return this.preserveCompressionFileNameAsFolder == null ? Output.empty() : this.preserveCompressionFileNameAsFolder;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class TarReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public TarReadSettingsArgs(
-        @Nullable Input<Object> preserveCompressionFileNameAsFolder,
-        Input<String> type) {
+        @Nullable Output<Object> preserveCompressionFileNameAsFolder,
+        Output<String> type) {
         this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private TarReadSettingsArgs() {
-        this.preserveCompressionFileNameAsFolder = Input.empty();
-        this.type = Input.empty();
+        this.preserveCompressionFileNameAsFolder = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class TarReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> preserveCompressionFileNameAsFolder;
-        private Input<String> type;
+        private @Nullable Output<Object> preserveCompressionFileNameAsFolder;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class TarReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder preserveCompressionFileNameAsFolder(@Nullable Input<Object> preserveCompressionFileNameAsFolder) {
+        public Builder preserveCompressionFileNameAsFolder(@Nullable Output<Object> preserveCompressionFileNameAsFolder) {
             this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
             return this;
         }
 
         public Builder preserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
-            this.preserveCompressionFileNameAsFolder = Input.ofNullable(preserveCompressionFileNameAsFolder);
+            this.preserveCompressionFileNameAsFolder = Output.ofNullable(preserveCompressionFileNameAsFolder);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TarReadSettingsArgs build() {

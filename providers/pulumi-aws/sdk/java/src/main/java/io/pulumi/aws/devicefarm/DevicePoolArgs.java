@@ -4,7 +4,7 @@
 package io.pulumi.aws.devicefarm;
 
 import io.pulumi.aws.devicefarm.inputs.DevicePoolRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDevices")
-      private final @Nullable Input<Integer> maxDevices;
+      private final @Nullable Output<Integer> maxDevices;
 
-    public Input<Integer> getMaxDevices() {
-        return this.maxDevices == null ? Input.empty() : this.maxDevices;
+    public Output<Integer> getMaxDevices() {
+        return this.maxDevices == null ? Output.empty() : this.maxDevices;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectArn", required=true)
-      private final Input<String> projectArn;
+      private final Output<String> projectArn;
 
-    public Input<String> getProjectArn() {
+    public Output<String> getProjectArn() {
         return this.projectArn;
     }
 
@@ -67,9 +67,9 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<DevicePoolRuleArgs>> rules;
+      private final Output<List<DevicePoolRuleArgs>> rules;
 
-    public Input<List<DevicePoolRuleArgs>> getRules() {
+    public Output<List<DevicePoolRuleArgs>> getRules() {
         return this.rules;
     }
 
@@ -78,10 +78,10 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public DevicePoolArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> maxDevices,
-        @Nullable Input<String> name,
-        Input<String> projectArn,
-        Input<List<DevicePoolRuleArgs>> rules,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> maxDevices,
+        @Nullable Output<String> name,
+        Output<String> projectArn,
+        Output<List<DevicePoolRuleArgs>> rules,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.description = description;
         this.maxDevices = maxDevices;
         this.name = name;
@@ -113,13 +113,13 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DevicePoolArgs() {
-        this.description = Input.empty();
-        this.maxDevices = Input.empty();
-        this.name = Input.empty();
-        this.projectArn = Input.empty();
-        this.rules = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.description = Output.empty();
+        this.maxDevices = Output.empty();
+        this.name = Output.empty();
+        this.projectArn = Output.empty();
+        this.rules = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> maxDevices;
-        private @Nullable Input<String> name;
-        private Input<String> projectArn;
-        private Input<List<DevicePoolRuleArgs>> rules;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> maxDevices;
+        private @Nullable Output<String> name;
+        private Output<String> projectArn;
+        private Output<List<DevicePoolRuleArgs>> rules;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder maxDevices(@Nullable Input<Integer> maxDevices) {
+        public Builder maxDevices(@Nullable Output<Integer> maxDevices) {
             this.maxDevices = maxDevices;
             return this;
         }
 
         public Builder maxDevices(@Nullable Integer maxDevices) {
-            this.maxDevices = Input.ofNullable(maxDevices);
+            this.maxDevices = Output.ofNullable(maxDevices);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder projectArn(Input<String> projectArn) {
+        public Builder projectArn(Output<String> projectArn) {
             this.projectArn = Objects.requireNonNull(projectArn);
             return this;
         }
 
         public Builder projectArn(String projectArn) {
-            this.projectArn = Input.of(Objects.requireNonNull(projectArn));
+            this.projectArn = Output.of(Objects.requireNonNull(projectArn));
             return this;
         }
 
-        public Builder rules(Input<List<DevicePoolRuleArgs>> rules) {
+        public Builder rules(Output<List<DevicePoolRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<DevicePoolRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public DevicePoolArgs build() {

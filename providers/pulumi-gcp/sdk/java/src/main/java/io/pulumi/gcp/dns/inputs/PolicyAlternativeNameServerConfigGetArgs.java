@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.PolicyAlternativeNameServerConfigTargetNameServerGetArgs;
 import java.util.List;
@@ -22,18 +22,18 @@ public final class PolicyAlternativeNameServerConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetNameServers", required=true)
-      private final Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers;
+      private final Output<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers;
 
-    public Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> getTargetNameServers() {
+    public Output<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> getTargetNameServers() {
         return this.targetNameServers;
     }
 
-    public PolicyAlternativeNameServerConfigGetArgs(Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers) {
+    public PolicyAlternativeNameServerConfigGetArgs(Output<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers) {
         this.targetNameServers = Objects.requireNonNull(targetNameServers, "expected parameter 'targetNameServers' to be non-null");
     }
 
     private PolicyAlternativeNameServerConfigGetArgs() {
-        this.targetNameServers = Input.empty();
+        this.targetNameServers = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class PolicyAlternativeNameServerConfigGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers;
+        private Output<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class PolicyAlternativeNameServerConfigGetArgs extends io.pulumi.re
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder targetNameServers(Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers) {
+        public Builder targetNameServers(Output<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
 
         public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs> targetNameServers) {
-            this.targetNameServers = Input.of(Objects.requireNonNull(targetNameServers));
+            this.targetNameServers = Output.of(Objects.requireNonNull(targetNameServers));
             return this;
         }
         public PolicyAlternativeNameServerConfigGetArgs build() {

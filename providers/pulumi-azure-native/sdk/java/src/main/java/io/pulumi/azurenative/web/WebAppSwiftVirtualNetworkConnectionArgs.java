@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -42,9 +42,9 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,10 +53,10 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="subnetResourceId")
-      private final @Nullable Input<String> subnetResourceId;
+      private final @Nullable Output<String> subnetResourceId;
 
-    public Input<String> getSubnetResourceId() {
-        return this.subnetResourceId == null ? Input.empty() : this.subnetResourceId;
+    public Output<String> getSubnetResourceId() {
+        return this.subnetResourceId == null ? Output.empty() : this.subnetResourceId;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="swiftSupported")
-      private final @Nullable Input<Boolean> swiftSupported;
+      private final @Nullable Output<Boolean> swiftSupported;
 
-    public Input<Boolean> getSwiftSupported() {
-        return this.swiftSupported == null ? Input.empty() : this.swiftSupported;
+    public Output<Boolean> getSwiftSupported() {
+        return this.swiftSupported == null ? Output.empty() : this.swiftSupported;
     }
 
     public WebAppSwiftVirtualNetworkConnectionArgs(
-        @Nullable Input<String> kind,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> subnetResourceId,
-        @Nullable Input<Boolean> swiftSupported) {
+        @Nullable Output<String> kind,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> subnetResourceId,
+        @Nullable Output<Boolean> swiftSupported) {
         this.kind = kind;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -84,11 +84,11 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
     }
 
     private WebAppSwiftVirtualNetworkConnectionArgs() {
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.subnetResourceId = Input.empty();
-        this.swiftSupported = Input.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.subnetResourceId = Output.empty();
+        this.swiftSupported = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> subnetResourceId;
-        private @Nullable Input<Boolean> swiftSupported;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> subnetResourceId;
+        private @Nullable Output<Boolean> swiftSupported;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
     	      this.swiftSupported = defaults.swiftSupported;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder subnetResourceId(@Nullable Input<String> subnetResourceId) {
+        public Builder subnetResourceId(@Nullable Output<String> subnetResourceId) {
             this.subnetResourceId = subnetResourceId;
             return this;
         }
 
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
-            this.subnetResourceId = Input.ofNullable(subnetResourceId);
+            this.subnetResourceId = Output.ofNullable(subnetResourceId);
             return this;
         }
 
-        public Builder swiftSupported(@Nullable Input<Boolean> swiftSupported) {
+        public Builder swiftSupported(@Nullable Output<Boolean> swiftSupported) {
             this.swiftSupported = swiftSupported;
             return this;
         }
 
         public Builder swiftSupported(@Nullable Boolean swiftSupported) {
-            this.swiftSupported = Input.ofNullable(swiftSupported);
+            this.swiftSupported = Output.ofNullable(swiftSupported);
             return this;
         }
         public WebAppSwiftVirtualNetworkConnectionArgs build() {

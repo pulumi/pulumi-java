@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="ownerGid", required=true)
-      private final Input<Integer> ownerGid;
+      private final Output<Integer> ownerGid;
 
-    public Input<Integer> getOwnerGid() {
+    public Output<Integer> getOwnerGid() {
         return this.ownerGid;
     }
 
@@ -30,9 +30,9 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="ownerUid", required=true)
-      private final Input<Integer> ownerUid;
+      private final Output<Integer> ownerUid;
 
-    public Input<Integer> getOwnerUid() {
+    public Output<Integer> getOwnerUid() {
         return this.ownerUid;
     }
 
@@ -41,25 +41,25 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="permissions", required=true)
-      private final Input<String> permissions;
+      private final Output<String> permissions;
 
-    public Input<String> getPermissions() {
+    public Output<String> getPermissions() {
         return this.permissions;
     }
 
     public AccessPointRootDirectoryCreationInfoArgs(
-        Input<Integer> ownerGid,
-        Input<Integer> ownerUid,
-        Input<String> permissions) {
+        Output<Integer> ownerGid,
+        Output<Integer> ownerUid,
+        Output<String> permissions) {
         this.ownerGid = Objects.requireNonNull(ownerGid, "expected parameter 'ownerGid' to be non-null");
         this.ownerUid = Objects.requireNonNull(ownerUid, "expected parameter 'ownerUid' to be non-null");
         this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
     }
 
     private AccessPointRootDirectoryCreationInfoArgs() {
-        this.ownerGid = Input.empty();
-        this.ownerUid = Input.empty();
-        this.permissions = Input.empty();
+        this.ownerGid = Output.empty();
+        this.ownerUid = Output.empty();
+        this.permissions = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<Integer> ownerGid;
-        private Input<Integer> ownerUid;
-        private Input<String> permissions;
+        private Output<Integer> ownerGid;
+        private Output<Integer> ownerUid;
+        private Output<String> permissions;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder ownerGid(Input<Integer> ownerGid) {
+        public Builder ownerGid(Output<Integer> ownerGid) {
             this.ownerGid = Objects.requireNonNull(ownerGid);
             return this;
         }
 
         public Builder ownerGid(Integer ownerGid) {
-            this.ownerGid = Input.of(Objects.requireNonNull(ownerGid));
+            this.ownerGid = Output.of(Objects.requireNonNull(ownerGid));
             return this;
         }
 
-        public Builder ownerUid(Input<Integer> ownerUid) {
+        public Builder ownerUid(Output<Integer> ownerUid) {
             this.ownerUid = Objects.requireNonNull(ownerUid);
             return this;
         }
 
         public Builder ownerUid(Integer ownerUid) {
-            this.ownerUid = Input.of(Objects.requireNonNull(ownerUid));
+            this.ownerUid = Output.of(Objects.requireNonNull(ownerUid));
             return this;
         }
 
-        public Builder permissions(Input<String> permissions) {
+        public Builder permissions(Output<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
         public Builder permissions(String permissions) {
-            this.permissions = Input.of(Objects.requireNonNull(permissions));
+            this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
         public AccessPointRootDirectoryCreationInfoArgs build() {

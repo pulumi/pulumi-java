@@ -5,7 +5,7 @@ package io.pulumi.aws.backup;
 
 import io.pulumi.aws.backup.inputs.SelectionConditionArgs;
 import io.pulumi.aws.backup.inputs.SelectionSelectionTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<SelectionConditionArgs>> conditions;
+      private final @Nullable Output<List<SelectionConditionArgs>> conditions;
 
-    public Input<List<SelectionConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<SelectionConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleArn", required=true)
-      private final Input<String> iamRoleArn;
+      private final Output<String> iamRoleArn;
 
-    public Input<String> getIamRoleArn() {
+    public Output<String> getIamRoleArn() {
         return this.iamRoleArn;
     }
 
@@ -44,10 +44,10 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notResources")
-      private final @Nullable Input<List<String>> notResources;
+      private final @Nullable Output<List<String>> notResources;
 
-    public Input<List<String>> getNotResources() {
-        return this.notResources == null ? Input.empty() : this.notResources;
+    public Output<List<String>> getNotResources() {
+        return this.notResources == null ? Output.empty() : this.notResources;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="planId", required=true)
-      private final Input<String> planId;
+      private final Output<String> planId;
 
-    public Input<String> getPlanId() {
+    public Output<String> getPlanId() {
         return this.planId;
     }
 
@@ -77,10 +77,10 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<List<String>> resources;
+      private final @Nullable Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<String>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selectionTags")
-      private final @Nullable Input<List<SelectionSelectionTagArgs>> selectionTags;
+      private final @Nullable Output<List<SelectionSelectionTagArgs>> selectionTags;
 
-    public Input<List<SelectionSelectionTagArgs>> getSelectionTags() {
-        return this.selectionTags == null ? Input.empty() : this.selectionTags;
+    public Output<List<SelectionSelectionTagArgs>> getSelectionTags() {
+        return this.selectionTags == null ? Output.empty() : this.selectionTags;
     }
 
     public SelectionArgs(
-        @Nullable Input<List<SelectionConditionArgs>> conditions,
-        Input<String> iamRoleArn,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> notResources,
-        Input<String> planId,
-        @Nullable Input<List<String>> resources,
-        @Nullable Input<List<SelectionSelectionTagArgs>> selectionTags) {
+        @Nullable Output<List<SelectionConditionArgs>> conditions,
+        Output<String> iamRoleArn,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> notResources,
+        Output<String> planId,
+        @Nullable Output<List<String>> resources,
+        @Nullable Output<List<SelectionSelectionTagArgs>> selectionTags) {
         this.conditions = conditions;
         this.iamRoleArn = Objects.requireNonNull(iamRoleArn, "expected parameter 'iamRoleArn' to be non-null");
         this.name = name;
@@ -112,13 +112,13 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SelectionArgs() {
-        this.conditions = Input.empty();
-        this.iamRoleArn = Input.empty();
-        this.name = Input.empty();
-        this.notResources = Input.empty();
-        this.planId = Input.empty();
-        this.resources = Input.empty();
-        this.selectionTags = Input.empty();
+        this.conditions = Output.empty();
+        this.iamRoleArn = Output.empty();
+        this.name = Output.empty();
+        this.notResources = Output.empty();
+        this.planId = Output.empty();
+        this.resources = Output.empty();
+        this.selectionTags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SelectionConditionArgs>> conditions;
-        private Input<String> iamRoleArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> notResources;
-        private Input<String> planId;
-        private @Nullable Input<List<String>> resources;
-        private @Nullable Input<List<SelectionSelectionTagArgs>> selectionTags;
+        private @Nullable Output<List<SelectionConditionArgs>> conditions;
+        private Output<String> iamRoleArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> notResources;
+        private Output<String> planId;
+        private @Nullable Output<List<String>> resources;
+        private @Nullable Output<List<SelectionSelectionTagArgs>> selectionTags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selectionTags = defaults.selectionTags;
         }
 
-        public Builder conditions(@Nullable Input<List<SelectionConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<SelectionConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<SelectionConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder iamRoleArn(Input<String> iamRoleArn) {
+        public Builder iamRoleArn(Output<String> iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
 
         public Builder iamRoleArn(String iamRoleArn) {
-            this.iamRoleArn = Input.of(Objects.requireNonNull(iamRoleArn));
+            this.iamRoleArn = Output.of(Objects.requireNonNull(iamRoleArn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notResources(@Nullable Input<List<String>> notResources) {
+        public Builder notResources(@Nullable Output<List<String>> notResources) {
             this.notResources = notResources;
             return this;
         }
 
         public Builder notResources(@Nullable List<String> notResources) {
-            this.notResources = Input.ofNullable(notResources);
+            this.notResources = Output.ofNullable(notResources);
             return this;
         }
 
-        public Builder planId(Input<String> planId) {
+        public Builder planId(Output<String> planId) {
             this.planId = Objects.requireNonNull(planId);
             return this;
         }
 
         public Builder planId(String planId) {
-            this.planId = Input.of(Objects.requireNonNull(planId));
+            this.planId = Output.of(Objects.requireNonNull(planId));
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder selectionTags(@Nullable Input<List<SelectionSelectionTagArgs>> selectionTags) {
+        public Builder selectionTags(@Nullable Output<List<SelectionSelectionTagArgs>> selectionTags) {
             this.selectionTags = selectionTags;
             return this;
         }
 
         public Builder selectionTags(@Nullable List<SelectionSelectionTagArgs> selectionTags) {
-            this.selectionTags = Input.ofNullable(selectionTags);
+            this.selectionTags = Output.ofNullable(selectionTags);
             return this;
         }
         public SelectionArgs build() {

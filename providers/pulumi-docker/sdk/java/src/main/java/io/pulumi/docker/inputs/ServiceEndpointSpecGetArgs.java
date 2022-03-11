@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ServiceEndpointSpecPortGetArgs;
 import java.lang.String;
@@ -17,29 +17,29 @@ public final class ServiceEndpointSpecGetArgs extends io.pulumi.resources.Resour
     public static final ServiceEndpointSpecGetArgs Empty = new ServiceEndpointSpecGetArgs();
 
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     @InputImport(name="ports")
-      private final @Nullable Input<List<ServiceEndpointSpecPortGetArgs>> ports;
+      private final @Nullable Output<List<ServiceEndpointSpecPortGetArgs>> ports;
 
-    public Input<List<ServiceEndpointSpecPortGetArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<ServiceEndpointSpecPortGetArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     public ServiceEndpointSpecGetArgs(
-        @Nullable Input<String> mode,
-        @Nullable Input<List<ServiceEndpointSpecPortGetArgs>> ports) {
+        @Nullable Output<String> mode,
+        @Nullable Output<List<ServiceEndpointSpecPortGetArgs>> ports) {
         this.mode = mode;
         this.ports = ports;
     }
 
     private ServiceEndpointSpecGetArgs() {
-        this.mode = Input.empty();
-        this.ports = Input.empty();
+        this.mode = Output.empty();
+        this.ports = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class ServiceEndpointSpecGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> mode;
-        private @Nullable Input<List<ServiceEndpointSpecPortGetArgs>> ports;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<List<ServiceEndpointSpecPortGetArgs>> ports;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class ServiceEndpointSpecGetArgs extends io.pulumi.resources.Resour
     	      this.ports = defaults.ports;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<ServiceEndpointSpecPortGetArgs>> ports) {
+        public Builder ports(@Nullable Output<List<ServiceEndpointSpecPortGetArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<ServiceEndpointSpecPortGetArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
         public ServiceEndpointSpecGetArgs build() {

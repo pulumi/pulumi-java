@@ -6,7 +6,6 @@ package io.pulumi.aws.rds;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.rds.ProxyEndpointArgs;
 import io.pulumi.aws.rds.inputs.ProxyEndpointState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -217,14 +216,14 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProxyEndpoint(String name, ProxyEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:rds/proxyEndpoint:ProxyEndpoint", name, args == null ? ProxyEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:rds/proxyEndpoint:ProxyEndpoint", name, args == null ? ProxyEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProxyEndpoint(String name, Input<String> id, @Nullable ProxyEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProxyEndpoint(String name, Output<String> id, @Nullable ProxyEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:rds/proxyEndpoint:ProxyEndpoint", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -240,7 +239,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProxyEndpoint get(String name, Input<String> id, @Nullable ProxyEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProxyEndpoint get(String name, Output<String> id, @Nullable ProxyEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProxyEndpoint(name, id, state, options);
     }
 }

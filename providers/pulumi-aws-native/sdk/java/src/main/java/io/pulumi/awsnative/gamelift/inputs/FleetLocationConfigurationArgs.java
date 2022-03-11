@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.awsnative.gamelift.inputs.FleetLocationCapacityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class FleetLocationConfigurationArgs extends io.pulumi.resources.Re
     public static final FleetLocationConfigurationArgs Empty = new FleetLocationConfigurationArgs();
 
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
     @InputImport(name="locationCapacity")
-      private final @Nullable Input<FleetLocationCapacityArgs> locationCapacity;
+      private final @Nullable Output<FleetLocationCapacityArgs> locationCapacity;
 
-    public Input<FleetLocationCapacityArgs> getLocationCapacity() {
-        return this.locationCapacity == null ? Input.empty() : this.locationCapacity;
+    public Output<FleetLocationCapacityArgs> getLocationCapacity() {
+        return this.locationCapacity == null ? Output.empty() : this.locationCapacity;
     }
 
     public FleetLocationConfigurationArgs(
-        Input<String> location,
-        @Nullable Input<FleetLocationCapacityArgs> locationCapacity) {
+        Output<String> location,
+        @Nullable Output<FleetLocationCapacityArgs> locationCapacity) {
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.locationCapacity = locationCapacity;
     }
 
     private FleetLocationConfigurationArgs() {
-        this.location = Input.empty();
-        this.locationCapacity = Input.empty();
+        this.location = Output.empty();
+        this.locationCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class FleetLocationConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> location;
-        private @Nullable Input<FleetLocationCapacityArgs> locationCapacity;
+        private Output<String> location;
+        private @Nullable Output<FleetLocationCapacityArgs> locationCapacity;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class FleetLocationConfigurationArgs extends io.pulumi.resources.Re
     	      this.locationCapacity = defaults.locationCapacity;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder locationCapacity(@Nullable Input<FleetLocationCapacityArgs> locationCapacity) {
+        public Builder locationCapacity(@Nullable Output<FleetLocationCapacityArgs> locationCapacity) {
             this.locationCapacity = locationCapacity;
             return this;
         }
 
         public Builder locationCapacity(@Nullable FleetLocationCapacityArgs locationCapacity) {
-            this.locationCapacity = Input.ofNullable(locationCapacity);
+            this.locationCapacity = Output.ofNullable(locationCapacity);
             return this;
         }
         public FleetLocationConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DataSourceManifestFileLocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class DataSourceS3ParametersArgs extends io.pulumi.resources.Resour
     public static final DataSourceS3ParametersArgs Empty = new DataSourceS3ParametersArgs();
 
     @InputImport(name="manifestFileLocation", required=true)
-      private final Input<DataSourceManifestFileLocationArgs> manifestFileLocation;
+      private final Output<DataSourceManifestFileLocationArgs> manifestFileLocation;
 
-    public Input<DataSourceManifestFileLocationArgs> getManifestFileLocation() {
+    public Output<DataSourceManifestFileLocationArgs> getManifestFileLocation() {
         return this.manifestFileLocation;
     }
 
-    public DataSourceS3ParametersArgs(Input<DataSourceManifestFileLocationArgs> manifestFileLocation) {
+    public DataSourceS3ParametersArgs(Output<DataSourceManifestFileLocationArgs> manifestFileLocation) {
         this.manifestFileLocation = Objects.requireNonNull(manifestFileLocation, "expected parameter 'manifestFileLocation' to be non-null");
     }
 
     private DataSourceS3ParametersArgs() {
-        this.manifestFileLocation = Input.empty();
+        this.manifestFileLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DataSourceS3ParametersArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<DataSourceManifestFileLocationArgs> manifestFileLocation;
+        private Output<DataSourceManifestFileLocationArgs> manifestFileLocation;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DataSourceS3ParametersArgs extends io.pulumi.resources.Resour
     	      this.manifestFileLocation = defaults.manifestFileLocation;
         }
 
-        public Builder manifestFileLocation(Input<DataSourceManifestFileLocationArgs> manifestFileLocation) {
+        public Builder manifestFileLocation(Output<DataSourceManifestFileLocationArgs> manifestFileLocation) {
             this.manifestFileLocation = Objects.requireNonNull(manifestFileLocation);
             return this;
         }
 
         public Builder manifestFileLocation(DataSourceManifestFileLocationArgs manifestFileLocation) {
-            this.manifestFileLocation = Input.of(Objects.requireNonNull(manifestFileLocation));
+            this.manifestFileLocation = Output.of(Objects.requireNonNull(manifestFileLocation));
             return this;
         }
         public DataSourceS3ParametersArgs build() {

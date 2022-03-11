@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authenticationType")
-      private final @Nullable Input<String> authenticationType;
+      private final @Nullable Output<String> authenticationType;
 
-    public Input<String> getAuthenticationType() {
-        return this.authenticationType == null ? Input.empty() : this.authenticationType;
+    public Output<String> getAuthenticationType() {
+        return this.authenticationType == null ? Output.empty() : this.authenticationType;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sendEmailNotification")
-      private final @Nullable Input<Boolean> sendEmailNotification;
+      private final @Nullable Output<Boolean> sendEmailNotification;
 
-    public Input<Boolean> getSendEmailNotification() {
-        return this.sendEmailNotification == null ? Input.empty() : this.sendEmailNotification;
+    public Output<Boolean> getSendEmailNotification() {
+        return this.sendEmailNotification == null ? Output.empty() : this.sendEmailNotification;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="stackName")
-      private final @Nullable Input<String> stackName;
+      private final @Nullable Output<String> stackName;
 
-    public Input<String> getStackName() {
-        return this.stackName == null ? Input.empty() : this.stackName;
+    public Output<String> getStackName() {
+        return this.stackName == null ? Output.empty() : this.stackName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public UserStackAssociationState(
-        @Nullable Input<String> authenticationType,
-        @Nullable Input<Boolean> sendEmailNotification,
-        @Nullable Input<String> stackName,
-        @Nullable Input<String> userName) {
+        @Nullable Output<String> authenticationType,
+        @Nullable Output<Boolean> sendEmailNotification,
+        @Nullable Output<String> stackName,
+        @Nullable Output<String> userName) {
         this.authenticationType = authenticationType;
         this.sendEmailNotification = sendEmailNotification;
         this.stackName = stackName;
@@ -71,10 +71,10 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
     }
 
     private UserStackAssociationState() {
-        this.authenticationType = Input.empty();
-        this.sendEmailNotification = Input.empty();
-        this.stackName = Input.empty();
-        this.userName = Input.empty();
+        this.authenticationType = Output.empty();
+        this.sendEmailNotification = Output.empty();
+        this.stackName = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authenticationType;
-        private @Nullable Input<Boolean> sendEmailNotification;
-        private @Nullable Input<String> stackName;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<String> authenticationType;
+        private @Nullable Output<Boolean> sendEmailNotification;
+        private @Nullable Output<String> stackName;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
     	      this.userName = defaults.userName;
         }
 
-        public Builder authenticationType(@Nullable Input<String> authenticationType) {
+        public Builder authenticationType(@Nullable Output<String> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = Input.ofNullable(authenticationType);
+            this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder sendEmailNotification(@Nullable Input<Boolean> sendEmailNotification) {
+        public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
             this.sendEmailNotification = sendEmailNotification;
             return this;
         }
 
         public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
-            this.sendEmailNotification = Input.ofNullable(sendEmailNotification);
+            this.sendEmailNotification = Output.ofNullable(sendEmailNotification);
             return this;
         }
 
-        public Builder stackName(@Nullable Input<String> stackName) {
+        public Builder stackName(@Nullable Output<String> stackName) {
             this.stackName = stackName;
             return this;
         }
 
         public Builder stackName(@Nullable String stackName) {
-            this.stackName = Input.ofNullable(stackName);
+            this.stackName = Output.ofNullable(stackName);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public UserStackAssociationState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
     public static final ExtendedLocationOptionsArgs Empty = new ExtendedLocationOptionsArgs();
 
     @InputImport(name="supportedPolicy")
-      private final @Nullable Input<String> supportedPolicy;
+      private final @Nullable Output<String> supportedPolicy;
 
-    public Input<String> getSupportedPolicy() {
-        return this.supportedPolicy == null ? Input.empty() : this.supportedPolicy;
+    public Output<String> getSupportedPolicy() {
+        return this.supportedPolicy == null ? Output.empty() : this.supportedPolicy;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ExtendedLocationOptionsArgs(
-        @Nullable Input<String> supportedPolicy,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> supportedPolicy,
+        @Nullable Output<String> type) {
         this.supportedPolicy = supportedPolicy;
         this.type = type;
     }
 
     private ExtendedLocationOptionsArgs() {
-        this.supportedPolicy = Input.empty();
-        this.type = Input.empty();
+        this.supportedPolicy = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> supportedPolicy;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> supportedPolicy;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder supportedPolicy(@Nullable Input<String> supportedPolicy) {
+        public Builder supportedPolicy(@Nullable Output<String> supportedPolicy) {
             this.supportedPolicy = supportedPolicy;
             return this;
         }
 
         public Builder supportedPolicy(@Nullable String supportedPolicy) {
-            this.supportedPolicy = Input.ofNullable(supportedPolicy);
+            this.supportedPolicy = Output.ofNullable(supportedPolicy);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ExtendedLocationOptionsArgs build() {

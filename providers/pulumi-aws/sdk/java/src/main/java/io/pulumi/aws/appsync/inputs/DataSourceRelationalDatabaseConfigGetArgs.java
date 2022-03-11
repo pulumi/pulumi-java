@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="httpEndpointConfig")
-      private final @Nullable Input<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig;
+      private final @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig;
 
-    public Input<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> getHttpEndpointConfig() {
-        return this.httpEndpointConfig == null ? Input.empty() : this.httpEndpointConfig;
+    public Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> getHttpEndpointConfig() {
+        return this.httpEndpointConfig == null ? Output.empty() : this.httpEndpointConfig;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="sourceType")
-      private final @Nullable Input<String> sourceType;
+      private final @Nullable Output<String> sourceType;
 
-    public Input<String> getSourceType() {
-        return this.sourceType == null ? Input.empty() : this.sourceType;
+    public Output<String> getSourceType() {
+        return this.sourceType == null ? Output.empty() : this.sourceType;
     }
 
     public DataSourceRelationalDatabaseConfigGetArgs(
-        @Nullable Input<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig,
-        @Nullable Input<String> sourceType) {
+        @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig,
+        @Nullable Output<String> sourceType) {
         this.httpEndpointConfig = httpEndpointConfig;
         this.sourceType = sourceType;
     }
 
     private DataSourceRelationalDatabaseConfigGetArgs() {
-        this.httpEndpointConfig = Input.empty();
-        this.sourceType = Input.empty();
+        this.httpEndpointConfig = Output.empty();
+        this.sourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig;
-        private @Nullable Input<String> sourceType;
+        private @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig;
+        private @Nullable Output<String> sourceType;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder httpEndpointConfig(@Nullable Input<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig) {
+        public Builder httpEndpointConfig(@Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig) {
             this.httpEndpointConfig = httpEndpointConfig;
             return this;
         }
 
         public Builder httpEndpointConfig(@Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs httpEndpointConfig) {
-            this.httpEndpointConfig = Input.ofNullable(httpEndpointConfig);
+            this.httpEndpointConfig = Output.ofNullable(httpEndpointConfig);
             return this;
         }
 
-        public Builder sourceType(@Nullable Input<String> sourceType) {
+        public Builder sourceType(@Nullable Output<String> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
         public Builder sourceType(@Nullable String sourceType) {
-            this.sourceType = Input.ofNullable(sourceType);
+            this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
         public DataSourceRelationalDatabaseConfigGetArgs build() {

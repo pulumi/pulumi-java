@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="restartCheckCommand")
-      private final @Nullable Input<String> restartCheckCommand;
+      private final @Nullable Output<String> restartCheckCommand;
 
-    public Input<String> getRestartCheckCommand() {
-        return this.restartCheckCommand == null ? Input.empty() : this.restartCheckCommand;
+    public Output<String> getRestartCheckCommand() {
+        return this.restartCheckCommand == null ? Output.empty() : this.restartCheckCommand;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="restartCommand")
-      private final @Nullable Input<String> restartCommand;
+      private final @Nullable Output<String> restartCommand;
 
-    public Input<String> getRestartCommand() {
-        return this.restartCommand == null ? Input.empty() : this.restartCommand;
+    public Output<String> getRestartCommand() {
+        return this.restartCommand == null ? Output.empty() : this.restartCommand;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="restartTimeout")
-      private final @Nullable Input<String> restartTimeout;
+      private final @Nullable Output<String> restartTimeout;
 
-    public Input<String> getRestartTimeout() {
-        return this.restartTimeout == null ? Input.empty() : this.restartTimeout;
+    public Output<String> getRestartTimeout() {
+        return this.restartTimeout == null ? Output.empty() : this.restartTimeout;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ImageTemplateRestartCustomizerArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> restartCheckCommand,
-        @Nullable Input<String> restartCommand,
-        @Nullable Input<String> restartTimeout,
-        Input<String> type) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> restartCheckCommand,
+        @Nullable Output<String> restartCommand,
+        @Nullable Output<String> restartTimeout,
+        Output<String> type) {
         this.name = name;
         this.restartCheckCommand = restartCheckCommand;
         this.restartCommand = restartCommand;
@@ -88,11 +88,11 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     }
 
     private ImageTemplateRestartCustomizerArgs() {
-        this.name = Input.empty();
-        this.restartCheckCommand = Input.empty();
-        this.restartCommand = Input.empty();
-        this.restartTimeout = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.restartCheckCommand = Output.empty();
+        this.restartCommand = Output.empty();
+        this.restartTimeout = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> restartCheckCommand;
-        private @Nullable Input<String> restartCommand;
-        private @Nullable Input<String> restartTimeout;
-        private Input<String> type;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> restartCheckCommand;
+        private @Nullable Output<String> restartCommand;
+        private @Nullable Output<String> restartTimeout;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder restartCheckCommand(@Nullable Input<String> restartCheckCommand) {
+        public Builder restartCheckCommand(@Nullable Output<String> restartCheckCommand) {
             this.restartCheckCommand = restartCheckCommand;
             return this;
         }
 
         public Builder restartCheckCommand(@Nullable String restartCheckCommand) {
-            this.restartCheckCommand = Input.ofNullable(restartCheckCommand);
+            this.restartCheckCommand = Output.ofNullable(restartCheckCommand);
             return this;
         }
 
-        public Builder restartCommand(@Nullable Input<String> restartCommand) {
+        public Builder restartCommand(@Nullable Output<String> restartCommand) {
             this.restartCommand = restartCommand;
             return this;
         }
 
         public Builder restartCommand(@Nullable String restartCommand) {
-            this.restartCommand = Input.ofNullable(restartCommand);
+            this.restartCommand = Output.ofNullable(restartCommand);
             return this;
         }
 
-        public Builder restartTimeout(@Nullable Input<String> restartTimeout) {
+        public Builder restartTimeout(@Nullable Output<String> restartTimeout) {
             this.restartTimeout = restartTimeout;
             return this;
         }
 
         public Builder restartTimeout(@Nullable String restartTimeout) {
-            this.restartTimeout = Input.ofNullable(restartTimeout);
+            this.restartTimeout = Output.ofNullable(restartTimeout);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ImageTemplateRestartCustomizerArgs build() {

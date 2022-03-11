@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.enums.DirectoryType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="aaddsResourceId")
-      private final @Nullable Input<String> aaddsResourceId;
+      private final @Nullable Output<String> aaddsResourceId;
 
-    public Input<String> getAaddsResourceId() {
-        return this.aaddsResourceId == null ? Input.empty() : this.aaddsResourceId;
+    public Output<String> getAaddsResourceId() {
+        return this.aaddsResourceId == null ? Output.empty() : this.aaddsResourceId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterUsersGroupDNs")
-      private final @Nullable Input<List<String>> clusterUsersGroupDNs;
+      private final @Nullable Output<List<String>> clusterUsersGroupDNs;
 
-    public Input<List<String>> getClusterUsersGroupDNs() {
-        return this.clusterUsersGroupDNs == null ? Input.empty() : this.clusterUsersGroupDNs;
+    public Output<List<String>> getClusterUsersGroupDNs() {
+        return this.clusterUsersGroupDNs == null ? Output.empty() : this.clusterUsersGroupDNs;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="directoryType")
-      private final @Nullable Input<DirectoryType> directoryType;
+      private final @Nullable Output<DirectoryType> directoryType;
 
-    public Input<DirectoryType> getDirectoryType() {
-        return this.directoryType == null ? Input.empty() : this.directoryType;
+    public Output<DirectoryType> getDirectoryType() {
+        return this.directoryType == null ? Output.empty() : this.directoryType;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domainUserPassword")
-      private final @Nullable Input<String> domainUserPassword;
+      private final @Nullable Output<String> domainUserPassword;
 
-    public Input<String> getDomainUserPassword() {
-        return this.domainUserPassword == null ? Input.empty() : this.domainUserPassword;
+    public Output<String> getDomainUserPassword() {
+        return this.domainUserPassword == null ? Output.empty() : this.domainUserPassword;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domainUsername")
-      private final @Nullable Input<String> domainUsername;
+      private final @Nullable Output<String> domainUsername;
 
-    public Input<String> getDomainUsername() {
-        return this.domainUsername == null ? Input.empty() : this.domainUsername;
+    public Output<String> getDomainUsername() {
+        return this.domainUsername == null ? Output.empty() : this.domainUsername;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ldapsUrls")
-      private final @Nullable Input<List<String>> ldapsUrls;
+      private final @Nullable Output<List<String>> ldapsUrls;
 
-    public Input<List<String>> getLdapsUrls() {
-        return this.ldapsUrls == null ? Input.empty() : this.ldapsUrls;
+    public Output<List<String>> getLdapsUrls() {
+        return this.ldapsUrls == null ? Output.empty() : this.ldapsUrls;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="msiResourceId")
-      private final @Nullable Input<String> msiResourceId;
+      private final @Nullable Output<String> msiResourceId;
 
-    public Input<String> getMsiResourceId() {
-        return this.msiResourceId == null ? Input.empty() : this.msiResourceId;
+    public Output<String> getMsiResourceId() {
+        return this.msiResourceId == null ? Output.empty() : this.msiResourceId;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="organizationalUnitDN")
-      private final @Nullable Input<String> organizationalUnitDN;
+      private final @Nullable Output<String> organizationalUnitDN;
 
-    public Input<String> getOrganizationalUnitDN() {
-        return this.organizationalUnitDN == null ? Input.empty() : this.organizationalUnitDN;
+    public Output<String> getOrganizationalUnitDN() {
+        return this.organizationalUnitDN == null ? Output.empty() : this.organizationalUnitDN;
     }
 
     public SecurityProfileArgs(
-        @Nullable Input<String> aaddsResourceId,
-        @Nullable Input<List<String>> clusterUsersGroupDNs,
-        @Nullable Input<DirectoryType> directoryType,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> domainUserPassword,
-        @Nullable Input<String> domainUsername,
-        @Nullable Input<List<String>> ldapsUrls,
-        @Nullable Input<String> msiResourceId,
-        @Nullable Input<String> organizationalUnitDN) {
+        @Nullable Output<String> aaddsResourceId,
+        @Nullable Output<List<String>> clusterUsersGroupDNs,
+        @Nullable Output<DirectoryType> directoryType,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> domainUserPassword,
+        @Nullable Output<String> domainUsername,
+        @Nullable Output<List<String>> ldapsUrls,
+        @Nullable Output<String> msiResourceId,
+        @Nullable Output<String> organizationalUnitDN) {
         this.aaddsResourceId = aaddsResourceId;
         this.clusterUsersGroupDNs = clusterUsersGroupDNs;
         this.directoryType = directoryType;
@@ -141,15 +141,15 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecurityProfileArgs() {
-        this.aaddsResourceId = Input.empty();
-        this.clusterUsersGroupDNs = Input.empty();
-        this.directoryType = Input.empty();
-        this.domain = Input.empty();
-        this.domainUserPassword = Input.empty();
-        this.domainUsername = Input.empty();
-        this.ldapsUrls = Input.empty();
-        this.msiResourceId = Input.empty();
-        this.organizationalUnitDN = Input.empty();
+        this.aaddsResourceId = Output.empty();
+        this.clusterUsersGroupDNs = Output.empty();
+        this.directoryType = Output.empty();
+        this.domain = Output.empty();
+        this.domainUserPassword = Output.empty();
+        this.domainUsername = Output.empty();
+        this.ldapsUrls = Output.empty();
+        this.msiResourceId = Output.empty();
+        this.organizationalUnitDN = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aaddsResourceId;
-        private @Nullable Input<List<String>> clusterUsersGroupDNs;
-        private @Nullable Input<DirectoryType> directoryType;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> domainUserPassword;
-        private @Nullable Input<String> domainUsername;
-        private @Nullable Input<List<String>> ldapsUrls;
-        private @Nullable Input<String> msiResourceId;
-        private @Nullable Input<String> organizationalUnitDN;
+        private @Nullable Output<String> aaddsResourceId;
+        private @Nullable Output<List<String>> clusterUsersGroupDNs;
+        private @Nullable Output<DirectoryType> directoryType;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> domainUserPassword;
+        private @Nullable Output<String> domainUsername;
+        private @Nullable Output<List<String>> ldapsUrls;
+        private @Nullable Output<String> msiResourceId;
+        private @Nullable Output<String> organizationalUnitDN;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     	      this.organizationalUnitDN = defaults.organizationalUnitDN;
         }
 
-        public Builder aaddsResourceId(@Nullable Input<String> aaddsResourceId) {
+        public Builder aaddsResourceId(@Nullable Output<String> aaddsResourceId) {
             this.aaddsResourceId = aaddsResourceId;
             return this;
         }
 
         public Builder aaddsResourceId(@Nullable String aaddsResourceId) {
-            this.aaddsResourceId = Input.ofNullable(aaddsResourceId);
+            this.aaddsResourceId = Output.ofNullable(aaddsResourceId);
             return this;
         }
 
-        public Builder clusterUsersGroupDNs(@Nullable Input<List<String>> clusterUsersGroupDNs) {
+        public Builder clusterUsersGroupDNs(@Nullable Output<List<String>> clusterUsersGroupDNs) {
             this.clusterUsersGroupDNs = clusterUsersGroupDNs;
             return this;
         }
 
         public Builder clusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
-            this.clusterUsersGroupDNs = Input.ofNullable(clusterUsersGroupDNs);
+            this.clusterUsersGroupDNs = Output.ofNullable(clusterUsersGroupDNs);
             return this;
         }
 
-        public Builder directoryType(@Nullable Input<DirectoryType> directoryType) {
+        public Builder directoryType(@Nullable Output<DirectoryType> directoryType) {
             this.directoryType = directoryType;
             return this;
         }
 
         public Builder directoryType(@Nullable DirectoryType directoryType) {
-            this.directoryType = Input.ofNullable(directoryType);
+            this.directoryType = Output.ofNullable(directoryType);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder domainUserPassword(@Nullable Input<String> domainUserPassword) {
+        public Builder domainUserPassword(@Nullable Output<String> domainUserPassword) {
             this.domainUserPassword = domainUserPassword;
             return this;
         }
 
         public Builder domainUserPassword(@Nullable String domainUserPassword) {
-            this.domainUserPassword = Input.ofNullable(domainUserPassword);
+            this.domainUserPassword = Output.ofNullable(domainUserPassword);
             return this;
         }
 
-        public Builder domainUsername(@Nullable Input<String> domainUsername) {
+        public Builder domainUsername(@Nullable Output<String> domainUsername) {
             this.domainUsername = domainUsername;
             return this;
         }
 
         public Builder domainUsername(@Nullable String domainUsername) {
-            this.domainUsername = Input.ofNullable(domainUsername);
+            this.domainUsername = Output.ofNullable(domainUsername);
             return this;
         }
 
-        public Builder ldapsUrls(@Nullable Input<List<String>> ldapsUrls) {
+        public Builder ldapsUrls(@Nullable Output<List<String>> ldapsUrls) {
             this.ldapsUrls = ldapsUrls;
             return this;
         }
 
         public Builder ldapsUrls(@Nullable List<String> ldapsUrls) {
-            this.ldapsUrls = Input.ofNullable(ldapsUrls);
+            this.ldapsUrls = Output.ofNullable(ldapsUrls);
             return this;
         }
 
-        public Builder msiResourceId(@Nullable Input<String> msiResourceId) {
+        public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
 
         public Builder msiResourceId(@Nullable String msiResourceId) {
-            this.msiResourceId = Input.ofNullable(msiResourceId);
+            this.msiResourceId = Output.ofNullable(msiResourceId);
             return this;
         }
 
-        public Builder organizationalUnitDN(@Nullable Input<String> organizationalUnitDN) {
+        public Builder organizationalUnitDN(@Nullable Output<String> organizationalUnitDN) {
             this.organizationalUnitDN = organizationalUnitDN;
             return this;
         }
 
         public Builder organizationalUnitDN(@Nullable String organizationalUnitDN) {
-            this.organizationalUnitDN = Input.ofNullable(organizationalUnitDN);
+            this.organizationalUnitDN = Output.ofNullable(organizationalUnitDN);
             return this;
         }
         public SecurityProfileArgs build() {

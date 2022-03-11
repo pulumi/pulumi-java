@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentId", required=true)
-      private final Input<String> parentId;
+      private final Output<String> parentId;
 
-    public Input<String> getParentId() {
+    public Output<String> getParentId() {
         return this.parentId;
     }
 
@@ -29,9 +29,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathPart", required=true)
-      private final Input<String> pathPart;
+      private final Output<String> pathPart;
 
-    public Input<String> getPathPart() {
+    public Output<String> getPathPart() {
         return this.pathPart;
     }
 
@@ -40,25 +40,25 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-      private final Input<String> restApiId;
+      private final Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
+    public Output<String> getRestApiId() {
         return this.restApiId;
     }
 
     public ResourceArgs(
-        Input<String> parentId,
-        Input<String> pathPart,
-        Input<String> restApiId) {
+        Output<String> parentId,
+        Output<String> pathPart,
+        Output<String> restApiId) {
         this.parentId = Objects.requireNonNull(parentId, "expected parameter 'parentId' to be non-null");
         this.pathPart = Objects.requireNonNull(pathPart, "expected parameter 'pathPart' to be non-null");
         this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
     }
 
     private ResourceArgs() {
-        this.parentId = Input.empty();
-        this.pathPart = Input.empty();
-        this.restApiId = Input.empty();
+        this.parentId = Output.empty();
+        this.pathPart = Output.empty();
+        this.restApiId = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> parentId;
-        private Input<String> pathPart;
-        private Input<String> restApiId;
+        private Output<String> parentId;
+        private Output<String> pathPart;
+        private Output<String> restApiId;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder parentId(Input<String> parentId) {
+        public Builder parentId(Output<String> parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
 
         public Builder parentId(String parentId) {
-            this.parentId = Input.of(Objects.requireNonNull(parentId));
+            this.parentId = Output.of(Objects.requireNonNull(parentId));
             return this;
         }
 
-        public Builder pathPart(Input<String> pathPart) {
+        public Builder pathPart(Output<String> pathPart) {
             this.pathPart = Objects.requireNonNull(pathPart);
             return this;
         }
 
         public Builder pathPart(String pathPart) {
-            this.pathPart = Input.of(Objects.requireNonNull(pathPart));
+            this.pathPart = Output.of(Objects.requireNonNull(pathPart));
             return this;
         }
 
-        public Builder restApiId(Input<String> restApiId) {
+        public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
         public Builder restApiId(String restApiId) {
-            this.restApiId = Input.of(Objects.requireNonNull(restApiId));
+            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
         }
         public ResourceArgs build() {

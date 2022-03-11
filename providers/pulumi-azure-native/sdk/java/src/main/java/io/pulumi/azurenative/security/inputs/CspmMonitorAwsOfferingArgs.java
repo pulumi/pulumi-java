@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.CspmMonitorAwsOfferingNativeCloudConnectionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="nativeCloudConnection")
-      private final @Nullable Input<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
+      private final @Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
 
-    public Input<CspmMonitorAwsOfferingNativeCloudConnectionArgs> getNativeCloudConnection() {
-        return this.nativeCloudConnection == null ? Input.empty() : this.nativeCloudConnection;
+    public Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> getNativeCloudConnection() {
+        return this.nativeCloudConnection == null ? Output.empty() : this.nativeCloudConnection;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="offeringType", required=true)
-      private final Input<String> offeringType;
+      private final Output<String> offeringType;
 
-    public Input<String> getOfferingType() {
+    public Output<String> getOfferingType() {
         return this.offeringType;
     }
 
     public CspmMonitorAwsOfferingArgs(
-        @Nullable Input<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection,
-        Input<String> offeringType) {
+        @Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection,
+        Output<String> offeringType) {
         this.nativeCloudConnection = nativeCloudConnection;
         this.offeringType = Objects.requireNonNull(offeringType, "expected parameter 'offeringType' to be non-null");
     }
 
     private CspmMonitorAwsOfferingArgs() {
-        this.nativeCloudConnection = Input.empty();
-        this.offeringType = Input.empty();
+        this.nativeCloudConnection = Output.empty();
+        this.offeringType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
-        private Input<String> offeringType;
+        private @Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
+        private Output<String> offeringType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
     	      this.offeringType = defaults.offeringType;
         }
 
-        public Builder nativeCloudConnection(@Nullable Input<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection) {
+        public Builder nativeCloudConnection(@Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection) {
             this.nativeCloudConnection = nativeCloudConnection;
             return this;
         }
 
         public Builder nativeCloudConnection(@Nullable CspmMonitorAwsOfferingNativeCloudConnectionArgs nativeCloudConnection) {
-            this.nativeCloudConnection = Input.ofNullable(nativeCloudConnection);
+            this.nativeCloudConnection = Output.ofNullable(nativeCloudConnection);
             return this;
         }
 
-        public Builder offeringType(Input<String> offeringType) {
+        public Builder offeringType(Output<String> offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
 
         public Builder offeringType(String offeringType) {
-            this.offeringType = Input.of(Objects.requireNonNull(offeringType));
+            this.offeringType = Output.of(Objects.requireNonNull(offeringType));
             return this;
         }
         public CspmMonitorAwsOfferingArgs build() {

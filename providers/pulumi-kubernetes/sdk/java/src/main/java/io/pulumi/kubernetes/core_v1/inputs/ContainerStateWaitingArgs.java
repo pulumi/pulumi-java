@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ContainerStateWaitingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ContainerStateWaitingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reason")
-      private final @Nullable Input<String> reason;
+      private final @Nullable Output<String> reason;
 
-    public Input<String> getReason() {
-        return this.reason == null ? Input.empty() : this.reason;
+    public Output<String> getReason() {
+        return this.reason == null ? Output.empty() : this.reason;
     }
 
     public ContainerStateWaitingArgs(
-        @Nullable Input<String> message,
-        @Nullable Input<String> reason) {
+        @Nullable Output<String> message,
+        @Nullable Output<String> reason) {
         this.message = message;
         this.reason = reason;
     }
 
     private ContainerStateWaitingArgs() {
-        this.message = Input.empty();
-        this.reason = Input.empty();
+        this.message = Output.empty();
+        this.reason = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ContainerStateWaitingArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> reason;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> reason;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ContainerStateWaitingArgs extends io.pulumi.resources.Resourc
     	      this.reason = defaults.reason;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder reason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
 
         public Builder reason(@Nullable String reason) {
-            this.reason = Input.ofNullable(reason);
+            this.reason = Output.ofNullable(reason);
             return this;
         }
         public ContainerStateWaitingArgs build() {

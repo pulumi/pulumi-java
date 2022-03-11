@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.PartitionIndexPartitionIndexArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -42,9 +42,9 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionIndex", required=true)
-      private final Input<PartitionIndexPartitionIndexArgs> partitionIndex;
+      private final Output<PartitionIndexPartitionIndexArgs> partitionIndex;
 
-    public Input<PartitionIndexPartitionIndexArgs> getPartitionIndex() {
+    public Output<PartitionIndexPartitionIndexArgs> getPartitionIndex() {
         return this.partitionIndex;
     }
 
@@ -53,17 +53,17 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public PartitionIndexArgs(
-        @Nullable Input<String> catalogId,
-        Input<String> databaseName,
-        Input<PartitionIndexPartitionIndexArgs> partitionIndex,
-        Input<String> tableName) {
+        @Nullable Output<String> catalogId,
+        Output<String> databaseName,
+        Output<PartitionIndexPartitionIndexArgs> partitionIndex,
+        Output<String> tableName) {
         this.catalogId = catalogId;
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.partitionIndex = Objects.requireNonNull(partitionIndex, "expected parameter 'partitionIndex' to be non-null");
@@ -71,10 +71,10 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PartitionIndexArgs() {
-        this.catalogId = Input.empty();
-        this.databaseName = Input.empty();
-        this.partitionIndex = Input.empty();
-        this.tableName = Input.empty();
+        this.catalogId = Output.empty();
+        this.databaseName = Output.empty();
+        this.partitionIndex = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private Input<String> databaseName;
-        private Input<PartitionIndexPartitionIndexArgs> partitionIndex;
-        private Input<String> tableName;
+        private @Nullable Output<String> catalogId;
+        private Output<String> databaseName;
+        private Output<PartitionIndexPartitionIndexArgs> partitionIndex;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder partitionIndex(Input<PartitionIndexPartitionIndexArgs> partitionIndex) {
+        public Builder partitionIndex(Output<PartitionIndexPartitionIndexArgs> partitionIndex) {
             this.partitionIndex = Objects.requireNonNull(partitionIndex);
             return this;
         }
 
         public Builder partitionIndex(PartitionIndexPartitionIndexArgs partitionIndex) {
-            this.partitionIndex = Input.of(Objects.requireNonNull(partitionIndex));
+            this.partitionIndex = Output.of(Objects.requireNonNull(partitionIndex));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public PartitionIndexArgs build() {

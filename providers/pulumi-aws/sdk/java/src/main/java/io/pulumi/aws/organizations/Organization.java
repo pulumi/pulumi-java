@@ -9,7 +9,6 @@ import io.pulumi.aws.organizations.inputs.OrganizationState;
 import io.pulumi.aws.organizations.outputs.OrganizationAccount;
 import io.pulumi.aws.organizations.outputs.OrganizationNonMasterAccount;
 import io.pulumi.aws.organizations.outputs.OrganizationRoot;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -214,14 +213,14 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Organization(String name, @Nullable OrganizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:organizations/organization:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:organizations/organization:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Organization(String name, Input<String> id, @Nullable OrganizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Organization(String name, Output<String> id, @Nullable OrganizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:organizations/organization:Organization", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -237,7 +236,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Organization get(String name, Input<String> id, @Nullable OrganizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Organization get(String name, Output<String> id, @Nullable OrganizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Organization(name, id, state, options);
     }
 }

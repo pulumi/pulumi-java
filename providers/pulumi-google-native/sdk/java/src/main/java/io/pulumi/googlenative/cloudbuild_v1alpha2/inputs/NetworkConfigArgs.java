@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-      private final Input<String> peeredNetwork;
+      private final Output<String> peeredNetwork;
 
-    public Input<String> getPeeredNetwork() {
+    public Output<String> getPeeredNetwork() {
         return this.peeredNetwork;
     }
 
-    public NetworkConfigArgs(Input<String> peeredNetwork) {
+    public NetworkConfigArgs(Output<String> peeredNetwork) {
         this.peeredNetwork = Objects.requireNonNull(peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
     }
 
     private NetworkConfigArgs() {
-        this.peeredNetwork = Input.empty();
+        this.peeredNetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> peeredNetwork;
+        private Output<String> peeredNetwork;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.peeredNetwork = defaults.peeredNetwork;
         }
 
-        public Builder peeredNetwork(Input<String> peeredNetwork) {
+        public Builder peeredNetwork(Output<String> peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
 
         public Builder peeredNetwork(String peeredNetwork) {
-            this.peeredNetwork = Input.of(Objects.requireNonNull(peeredNetwork));
+            this.peeredNetwork = Output.of(Objects.requireNonNull(peeredNetwork));
             return this;
         }
         public NetworkConfigArgs build() {

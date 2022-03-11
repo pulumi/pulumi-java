@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="componentArn")
-      private final @Nullable Input<String> componentArn;
+      private final @Nullable Output<String> componentArn;
 
-    public Input<String> getComponentArn() {
-        return this.componentArn == null ? Input.empty() : this.componentArn;
+    public Output<String> getComponentArn() {
+        return this.componentArn == null ? Output.empty() : this.componentArn;
     }
 
-    public ContainerRecipeComponentConfigurationArgs(@Nullable Input<String> componentArn) {
+    public ContainerRecipeComponentConfigurationArgs(@Nullable Output<String> componentArn) {
         this.componentArn = componentArn;
     }
 
     private ContainerRecipeComponentConfigurationArgs() {
-        this.componentArn = Input.empty();
+        this.componentArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> componentArn;
+        private @Nullable Output<String> componentArn;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
     	      this.componentArn = defaults.componentArn;
         }
 
-        public Builder componentArn(@Nullable Input<String> componentArn) {
+        public Builder componentArn(@Nullable Output<String> componentArn) {
             this.componentArn = componentArn;
             return this;
         }
 
         public Builder componentArn(@Nullable String componentArn) {
-            this.componentArn = Input.ofNullable(componentArn);
+            this.componentArn = Output.ofNullable(componentArn);
             return this;
         }
         public ContainerRecipeComponentConfigurationArgs build() {

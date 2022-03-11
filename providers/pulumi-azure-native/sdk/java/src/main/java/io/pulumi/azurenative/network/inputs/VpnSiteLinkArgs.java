@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.VpnLinkBgpSettingsArgs;
 import io.pulumi.azurenative.network.inputs.VpnLinkProviderPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpProperties")
-      private final @Nullable Input<VpnLinkBgpSettingsArgs> bgpProperties;
+      private final @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties;
 
-    public Input<VpnLinkBgpSettingsArgs> getBgpProperties() {
-        return this.bgpProperties == null ? Input.empty() : this.bgpProperties;
+    public Output<VpnLinkBgpSettingsArgs> getBgpProperties() {
+        return this.bgpProperties == null ? Output.empty() : this.bgpProperties;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fqdn")
-      private final @Nullable Input<String> fqdn;
+      private final @Nullable Output<String> fqdn;
 
-    public Input<String> getFqdn() {
-        return this.fqdn == null ? Input.empty() : this.fqdn;
+    public Output<String> getFqdn() {
+        return this.fqdn == null ? Output.empty() : this.fqdn;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkProperties")
-      private final @Nullable Input<VpnLinkProviderPropertiesArgs> linkProperties;
+      private final @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties;
 
-    public Input<VpnLinkProviderPropertiesArgs> getLinkProperties() {
-        return this.linkProperties == null ? Input.empty() : this.linkProperties;
+    public Output<VpnLinkProviderPropertiesArgs> getLinkProperties() {
+        return this.linkProperties == null ? Output.empty() : this.linkProperties;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public VpnSiteLinkArgs(
-        @Nullable Input<VpnLinkBgpSettingsArgs> bgpProperties,
-        @Nullable Input<String> fqdn,
-        @Nullable Input<String> id,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<VpnLinkProviderPropertiesArgs> linkProperties,
-        @Nullable Input<String> name) {
+        @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties,
+        @Nullable Output<String> fqdn,
+        @Nullable Output<String> id,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties,
+        @Nullable Output<String> name) {
         this.bgpProperties = bgpProperties;
         this.fqdn = fqdn;
         this.id = id;
@@ -102,12 +102,12 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpnSiteLinkArgs() {
-        this.bgpProperties = Input.empty();
-        this.fqdn = Input.empty();
-        this.id = Input.empty();
-        this.ipAddress = Input.empty();
-        this.linkProperties = Input.empty();
-        this.name = Input.empty();
+        this.bgpProperties = Output.empty();
+        this.fqdn = Output.empty();
+        this.id = Output.empty();
+        this.ipAddress = Output.empty();
+        this.linkProperties = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<VpnLinkBgpSettingsArgs> bgpProperties;
-        private @Nullable Input<String> fqdn;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<VpnLinkProviderPropertiesArgs> linkProperties;
-        private @Nullable Input<String> name;
+        private @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties;
+        private @Nullable Output<String> fqdn;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder bgpProperties(@Nullable Input<VpnLinkBgpSettingsArgs> bgpProperties) {
+        public Builder bgpProperties(@Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties) {
             this.bgpProperties = bgpProperties;
             return this;
         }
 
         public Builder bgpProperties(@Nullable VpnLinkBgpSettingsArgs bgpProperties) {
-            this.bgpProperties = Input.ofNullable(bgpProperties);
+            this.bgpProperties = Output.ofNullable(bgpProperties);
             return this;
         }
 
-        public Builder fqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Input.ofNullable(fqdn);
+            this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder linkProperties(@Nullable Input<VpnLinkProviderPropertiesArgs> linkProperties) {
+        public Builder linkProperties(@Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties) {
             this.linkProperties = linkProperties;
             return this;
         }
 
         public Builder linkProperties(@Nullable VpnLinkProviderPropertiesArgs linkProperties) {
-            this.linkProperties = Input.ofNullable(linkProperties);
+            this.linkProperties = Output.ofNullable(linkProperties);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public VpnSiteLinkArgs build() {

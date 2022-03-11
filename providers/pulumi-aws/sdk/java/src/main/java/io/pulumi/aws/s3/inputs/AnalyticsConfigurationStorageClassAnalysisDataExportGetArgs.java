@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination;
+      private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination;
 
-    public Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> getDestination() {
+    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> getDestination() {
         return this.destination;
     }
 
@@ -31,22 +31,22 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
      * 
      */
     @InputImport(name="outputSchemaVersion")
-      private final @Nullable Input<String> outputSchemaVersion;
+      private final @Nullable Output<String> outputSchemaVersion;
 
-    public Input<String> getOutputSchemaVersion() {
-        return this.outputSchemaVersion == null ? Input.empty() : this.outputSchemaVersion;
+    public Output<String> getOutputSchemaVersion() {
+        return this.outputSchemaVersion == null ? Output.empty() : this.outputSchemaVersion;
     }
 
     public AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs(
-        Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination,
-        @Nullable Input<String> outputSchemaVersion) {
+        Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination,
+        @Nullable Output<String> outputSchemaVersion) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.outputSchemaVersion = outputSchemaVersion;
     }
 
     private AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs() {
-        this.destination = Input.empty();
-        this.outputSchemaVersion = Input.empty();
+        this.destination = Output.empty();
+        this.outputSchemaVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
     }
 
     public static final class Builder {
-        private Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination;
-        private @Nullable Input<String> outputSchemaVersion;
+        private Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination;
+        private @Nullable Output<String> outputSchemaVersion;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
     	      this.outputSchemaVersion = defaults.outputSchemaVersion;
         }
 
-        public Builder destination(Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination) {
+        public Builder destination(Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder outputSchemaVersion(@Nullable Input<String> outputSchemaVersion) {
+        public Builder outputSchemaVersion(@Nullable Output<String> outputSchemaVersion) {
             this.outputSchemaVersion = outputSchemaVersion;
             return this;
         }
 
         public Builder outputSchemaVersion(@Nullable String outputSchemaVersion) {
-            this.outputSchemaVersion = Input.ofNullable(outputSchemaVersion);
+            this.outputSchemaVersion = Output.ofNullable(outputSchemaVersion);
             return this;
         }
         public AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs build() {

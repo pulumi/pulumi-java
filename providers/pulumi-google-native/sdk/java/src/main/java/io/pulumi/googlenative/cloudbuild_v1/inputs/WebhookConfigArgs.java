@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.WebhookConfigState;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret", required=true)
-      private final Input<String> secret;
+      private final Output<String> secret;
 
-    public Input<String> getSecret() {
+    public Output<String> getSecret() {
         return this.secret;
     }
 
@@ -35,22 +35,22 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<WebhookConfigState> state;
+      private final @Nullable Output<WebhookConfigState> state;
 
-    public Input<WebhookConfigState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<WebhookConfigState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public WebhookConfigArgs(
-        Input<String> secret,
-        @Nullable Input<WebhookConfigState> state) {
+        Output<String> secret,
+        @Nullable Output<WebhookConfigState> state) {
         this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
         this.state = state;
     }
 
     private WebhookConfigArgs() {
-        this.secret = Input.empty();
-        this.state = Input.empty();
+        this.secret = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> secret;
-        private @Nullable Input<WebhookConfigState> state;
+        private Output<String> secret;
+        private @Nullable Output<WebhookConfigState> state;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder secret(Input<String> secret) {
+        public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
         public Builder secret(String secret) {
-            this.secret = Input.of(Objects.requireNonNull(secret));
+            this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
 
-        public Builder state(@Nullable Input<WebhookConfigState> state) {
+        public Builder state(@Nullable Output<WebhookConfigState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable WebhookConfigState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public WebhookConfigArgs build() {

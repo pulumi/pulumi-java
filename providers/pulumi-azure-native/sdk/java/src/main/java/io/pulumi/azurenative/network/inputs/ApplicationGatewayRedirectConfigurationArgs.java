@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.ApplicationGatewayRedirectType;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="includePath")
-      private final @Nullable Input<Boolean> includePath;
+      private final @Nullable Output<Boolean> includePath;
 
-    public Input<Boolean> getIncludePath() {
-        return this.includePath == null ? Input.empty() : this.includePath;
+    public Output<Boolean> getIncludePath() {
+        return this.includePath == null ? Output.empty() : this.includePath;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="includeQueryString")
-      private final @Nullable Input<Boolean> includeQueryString;
+      private final @Nullable Output<Boolean> includeQueryString;
 
-    public Input<Boolean> getIncludeQueryString() {
-        return this.includeQueryString == null ? Input.empty() : this.includeQueryString;
+    public Output<Boolean> getIncludeQueryString() {
+        return this.includeQueryString == null ? Output.empty() : this.includeQueryString;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="pathRules")
-      private final @Nullable Input<List<SubResourceArgs>> pathRules;
+      private final @Nullable Output<List<SubResourceArgs>> pathRules;
 
-    public Input<List<SubResourceArgs>> getPathRules() {
-        return this.pathRules == null ? Input.empty() : this.pathRules;
+    public Output<List<SubResourceArgs>> getPathRules() {
+        return this.pathRules == null ? Output.empty() : this.pathRules;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="redirectType")
-      private final @Nullable Input<Either<String,ApplicationGatewayRedirectType>> redirectType;
+      private final @Nullable Output<Either<String,ApplicationGatewayRedirectType>> redirectType;
 
-    public Input<Either<String,ApplicationGatewayRedirectType>> getRedirectType() {
-        return this.redirectType == null ? Input.empty() : this.redirectType;
+    public Output<Either<String,ApplicationGatewayRedirectType>> getRedirectType() {
+        return this.redirectType == null ? Output.empty() : this.redirectType;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="requestRoutingRules")
-      private final @Nullable Input<List<SubResourceArgs>> requestRoutingRules;
+      private final @Nullable Output<List<SubResourceArgs>> requestRoutingRules;
 
-    public Input<List<SubResourceArgs>> getRequestRoutingRules() {
-        return this.requestRoutingRules == null ? Input.empty() : this.requestRoutingRules;
+    public Output<List<SubResourceArgs>> getRequestRoutingRules() {
+        return this.requestRoutingRules == null ? Output.empty() : this.requestRoutingRules;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetListener")
-      private final @Nullable Input<SubResourceArgs> targetListener;
+      private final @Nullable Output<SubResourceArgs> targetListener;
 
-    public Input<SubResourceArgs> getTargetListener() {
-        return this.targetListener == null ? Input.empty() : this.targetListener;
+    public Output<SubResourceArgs> getTargetListener() {
+        return this.targetListener == null ? Output.empty() : this.targetListener;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="targetUrl")
-      private final @Nullable Input<String> targetUrl;
+      private final @Nullable Output<String> targetUrl;
 
-    public Input<String> getTargetUrl() {
-        return this.targetUrl == null ? Input.empty() : this.targetUrl;
+    public Output<String> getTargetUrl() {
+        return this.targetUrl == null ? Output.empty() : this.targetUrl;
     }
 
     /**
@@ -127,23 +127,23 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="urlPathMaps")
-      private final @Nullable Input<List<SubResourceArgs>> urlPathMaps;
+      private final @Nullable Output<List<SubResourceArgs>> urlPathMaps;
 
-    public Input<List<SubResourceArgs>> getUrlPathMaps() {
-        return this.urlPathMaps == null ? Input.empty() : this.urlPathMaps;
+    public Output<List<SubResourceArgs>> getUrlPathMaps() {
+        return this.urlPathMaps == null ? Output.empty() : this.urlPathMaps;
     }
 
     public ApplicationGatewayRedirectConfigurationArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<Boolean> includePath,
-        @Nullable Input<Boolean> includeQueryString,
-        @Nullable Input<String> name,
-        @Nullable Input<List<SubResourceArgs>> pathRules,
-        @Nullable Input<Either<String,ApplicationGatewayRedirectType>> redirectType,
-        @Nullable Input<List<SubResourceArgs>> requestRoutingRules,
-        @Nullable Input<SubResourceArgs> targetListener,
-        @Nullable Input<String> targetUrl,
-        @Nullable Input<List<SubResourceArgs>> urlPathMaps) {
+        @Nullable Output<String> id,
+        @Nullable Output<Boolean> includePath,
+        @Nullable Output<Boolean> includeQueryString,
+        @Nullable Output<String> name,
+        @Nullable Output<List<SubResourceArgs>> pathRules,
+        @Nullable Output<Either<String,ApplicationGatewayRedirectType>> redirectType,
+        @Nullable Output<List<SubResourceArgs>> requestRoutingRules,
+        @Nullable Output<SubResourceArgs> targetListener,
+        @Nullable Output<String> targetUrl,
+        @Nullable Output<List<SubResourceArgs>> urlPathMaps) {
         this.id = id;
         this.includePath = includePath;
         this.includeQueryString = includeQueryString;
@@ -157,16 +157,16 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
     }
 
     private ApplicationGatewayRedirectConfigurationArgs() {
-        this.id = Input.empty();
-        this.includePath = Input.empty();
-        this.includeQueryString = Input.empty();
-        this.name = Input.empty();
-        this.pathRules = Input.empty();
-        this.redirectType = Input.empty();
-        this.requestRoutingRules = Input.empty();
-        this.targetListener = Input.empty();
-        this.targetUrl = Input.empty();
-        this.urlPathMaps = Input.empty();
+        this.id = Output.empty();
+        this.includePath = Output.empty();
+        this.includeQueryString = Output.empty();
+        this.name = Output.empty();
+        this.pathRules = Output.empty();
+        this.redirectType = Output.empty();
+        this.requestRoutingRules = Output.empty();
+        this.targetListener = Output.empty();
+        this.targetUrl = Output.empty();
+        this.urlPathMaps = Output.empty();
     }
 
     public static Builder builder() {
@@ -178,16 +178,16 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<Boolean> includePath;
-        private @Nullable Input<Boolean> includeQueryString;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<SubResourceArgs>> pathRules;
-        private @Nullable Input<Either<String,ApplicationGatewayRedirectType>> redirectType;
-        private @Nullable Input<List<SubResourceArgs>> requestRoutingRules;
-        private @Nullable Input<SubResourceArgs> targetListener;
-        private @Nullable Input<String> targetUrl;
-        private @Nullable Input<List<SubResourceArgs>> urlPathMaps;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Boolean> includePath;
+        private @Nullable Output<Boolean> includeQueryString;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<SubResourceArgs>> pathRules;
+        private @Nullable Output<Either<String,ApplicationGatewayRedirectType>> redirectType;
+        private @Nullable Output<List<SubResourceArgs>> requestRoutingRules;
+        private @Nullable Output<SubResourceArgs> targetListener;
+        private @Nullable Output<String> targetUrl;
+        private @Nullable Output<List<SubResourceArgs>> urlPathMaps;
 
         public Builder() {
     	      // Empty
@@ -207,103 +207,103 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
     	      this.urlPathMaps = defaults.urlPathMaps;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder includePath(@Nullable Input<Boolean> includePath) {
+        public Builder includePath(@Nullable Output<Boolean> includePath) {
             this.includePath = includePath;
             return this;
         }
 
         public Builder includePath(@Nullable Boolean includePath) {
-            this.includePath = Input.ofNullable(includePath);
+            this.includePath = Output.ofNullable(includePath);
             return this;
         }
 
-        public Builder includeQueryString(@Nullable Input<Boolean> includeQueryString) {
+        public Builder includeQueryString(@Nullable Output<Boolean> includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
 
         public Builder includeQueryString(@Nullable Boolean includeQueryString) {
-            this.includeQueryString = Input.ofNullable(includeQueryString);
+            this.includeQueryString = Output.ofNullable(includeQueryString);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pathRules(@Nullable Input<List<SubResourceArgs>> pathRules) {
+        public Builder pathRules(@Nullable Output<List<SubResourceArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
         public Builder pathRules(@Nullable List<SubResourceArgs> pathRules) {
-            this.pathRules = Input.ofNullable(pathRules);
+            this.pathRules = Output.ofNullable(pathRules);
             return this;
         }
 
-        public Builder redirectType(@Nullable Input<Either<String,ApplicationGatewayRedirectType>> redirectType) {
+        public Builder redirectType(@Nullable Output<Either<String,ApplicationGatewayRedirectType>> redirectType) {
             this.redirectType = redirectType;
             return this;
         }
 
         public Builder redirectType(@Nullable Either<String,ApplicationGatewayRedirectType> redirectType) {
-            this.redirectType = Input.ofNullable(redirectType);
+            this.redirectType = Output.ofNullable(redirectType);
             return this;
         }
 
-        public Builder requestRoutingRules(@Nullable Input<List<SubResourceArgs>> requestRoutingRules) {
+        public Builder requestRoutingRules(@Nullable Output<List<SubResourceArgs>> requestRoutingRules) {
             this.requestRoutingRules = requestRoutingRules;
             return this;
         }
 
         public Builder requestRoutingRules(@Nullable List<SubResourceArgs> requestRoutingRules) {
-            this.requestRoutingRules = Input.ofNullable(requestRoutingRules);
+            this.requestRoutingRules = Output.ofNullable(requestRoutingRules);
             return this;
         }
 
-        public Builder targetListener(@Nullable Input<SubResourceArgs> targetListener) {
+        public Builder targetListener(@Nullable Output<SubResourceArgs> targetListener) {
             this.targetListener = targetListener;
             return this;
         }
 
         public Builder targetListener(@Nullable SubResourceArgs targetListener) {
-            this.targetListener = Input.ofNullable(targetListener);
+            this.targetListener = Output.ofNullable(targetListener);
             return this;
         }
 
-        public Builder targetUrl(@Nullable Input<String> targetUrl) {
+        public Builder targetUrl(@Nullable Output<String> targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
 
         public Builder targetUrl(@Nullable String targetUrl) {
-            this.targetUrl = Input.ofNullable(targetUrl);
+            this.targetUrl = Output.ofNullable(targetUrl);
             return this;
         }
 
-        public Builder urlPathMaps(@Nullable Input<List<SubResourceArgs>> urlPathMaps) {
+        public Builder urlPathMaps(@Nullable Output<List<SubResourceArgs>> urlPathMaps) {
             this.urlPathMaps = urlPathMaps;
             return this;
         }
 
         public Builder urlPathMaps(@Nullable List<SubResourceArgs> urlPathMaps) {
-            this.urlPathMaps = Input.ofNullable(urlPathMaps);
+            this.urlPathMaps = Output.ofNullable(urlPathMaps);
             return this;
         }
         public ApplicationGatewayRedirectConfigurationArgs build() {

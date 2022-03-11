@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directoryservice;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="directoryId", required=true)
-      private final Input<String> directoryId;
+      private final Output<String> directoryId;
 
-    public Input<String> getDirectoryId() {
+    public Output<String> getDirectoryId() {
         return this.directoryId;
     }
 
@@ -30,9 +30,9 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dnsIps", required=true)
-      private final Input<List<String>> dnsIps;
+      private final Output<List<String>> dnsIps;
 
-    public Input<List<String>> getDnsIps() {
+    public Output<List<String>> getDnsIps() {
         return this.dnsIps;
     }
 
@@ -41,25 +41,25 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="remoteDomainName", required=true)
-      private final Input<String> remoteDomainName;
+      private final Output<String> remoteDomainName;
 
-    public Input<String> getRemoteDomainName() {
+    public Output<String> getRemoteDomainName() {
         return this.remoteDomainName;
     }
 
     public ConditionalForwaderArgs(
-        Input<String> directoryId,
-        Input<List<String>> dnsIps,
-        Input<String> remoteDomainName) {
+        Output<String> directoryId,
+        Output<List<String>> dnsIps,
+        Output<String> remoteDomainName) {
         this.directoryId = Objects.requireNonNull(directoryId, "expected parameter 'directoryId' to be non-null");
         this.dnsIps = Objects.requireNonNull(dnsIps, "expected parameter 'dnsIps' to be non-null");
         this.remoteDomainName = Objects.requireNonNull(remoteDomainName, "expected parameter 'remoteDomainName' to be non-null");
     }
 
     private ConditionalForwaderArgs() {
-        this.directoryId = Input.empty();
-        this.dnsIps = Input.empty();
-        this.remoteDomainName = Input.empty();
+        this.directoryId = Output.empty();
+        this.dnsIps = Output.empty();
+        this.remoteDomainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> directoryId;
-        private Input<List<String>> dnsIps;
-        private Input<String> remoteDomainName;
+        private Output<String> directoryId;
+        private Output<List<String>> dnsIps;
+        private Output<String> remoteDomainName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
     	      this.remoteDomainName = defaults.remoteDomainName;
         }
 
-        public Builder directoryId(Input<String> directoryId) {
+        public Builder directoryId(Output<String> directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
 
         public Builder directoryId(String directoryId) {
-            this.directoryId = Input.of(Objects.requireNonNull(directoryId));
+            this.directoryId = Output.of(Objects.requireNonNull(directoryId));
             return this;
         }
 
-        public Builder dnsIps(Input<List<String>> dnsIps) {
+        public Builder dnsIps(Output<List<String>> dnsIps) {
             this.dnsIps = Objects.requireNonNull(dnsIps);
             return this;
         }
 
         public Builder dnsIps(List<String> dnsIps) {
-            this.dnsIps = Input.of(Objects.requireNonNull(dnsIps));
+            this.dnsIps = Output.of(Objects.requireNonNull(dnsIps));
             return this;
         }
 
-        public Builder remoteDomainName(Input<String> remoteDomainName) {
+        public Builder remoteDomainName(Output<String> remoteDomainName) {
             this.remoteDomainName = Objects.requireNonNull(remoteDomainName);
             return this;
         }
 
         public Builder remoteDomainName(String remoteDomainName) {
-            this.remoteDomainName = Input.of(Objects.requireNonNull(remoteDomainName));
+            this.remoteDomainName = Output.of(Objects.requireNonNull(remoteDomainName));
             return this;
         }
         public ConditionalForwaderArgs build() {

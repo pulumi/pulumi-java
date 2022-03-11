@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RouterBgpGetArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgp")
-      private final @Nullable Input<RouterBgpGetArgs> bgp;
+      private final @Nullable Output<RouterBgpGetArgs> bgp;
 
-    public Input<RouterBgpGetArgs> getBgp() {
-        return this.bgp == null ? Input.empty() : this.bgp;
+    public Output<RouterBgpGetArgs> getBgp() {
+        return this.bgp == null ? Output.empty() : this.bgp;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptedInterconnectRouter")
-      private final @Nullable Input<Boolean> encryptedInterconnectRouter;
+      private final @Nullable Output<Boolean> encryptedInterconnectRouter;
 
-    public Input<Boolean> getEncryptedInterconnectRouter() {
-        return this.encryptedInterconnectRouter == null ? Input.empty() : this.encryptedInterconnectRouter;
+    public Output<Boolean> getEncryptedInterconnectRouter() {
+        return this.encryptedInterconnectRouter == null ? Output.empty() : this.encryptedInterconnectRouter;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -118,22 +118,22 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     public RouterState(
-        @Nullable Input<RouterBgpGetArgs> bgp,
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> encryptedInterconnectRouter,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> selfLink) {
+        @Nullable Output<RouterBgpGetArgs> bgp,
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> encryptedInterconnectRouter,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> selfLink) {
         this.bgp = bgp;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -146,15 +146,15 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterState() {
-        this.bgp = Input.empty();
-        this.creationTimestamp = Input.empty();
-        this.description = Input.empty();
-        this.encryptedInterconnectRouter = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.selfLink = Input.empty();
+        this.bgp = Output.empty();
+        this.creationTimestamp = Output.empty();
+        this.description = Output.empty();
+        this.encryptedInterconnectRouter = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.selfLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -166,15 +166,15 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RouterBgpGetArgs> bgp;
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> encryptedInterconnectRouter;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> selfLink;
+        private @Nullable Output<RouterBgpGetArgs> bgp;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> encryptedInterconnectRouter;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> selfLink;
 
         public Builder() {
     	      // Empty
@@ -193,93 +193,93 @@ public final class RouterState extends io.pulumi.resources.ResourceArgs {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder bgp(@Nullable Input<RouterBgpGetArgs> bgp) {
+        public Builder bgp(@Nullable Output<RouterBgpGetArgs> bgp) {
             this.bgp = bgp;
             return this;
         }
 
         public Builder bgp(@Nullable RouterBgpGetArgs bgp) {
-            this.bgp = Input.ofNullable(bgp);
+            this.bgp = Output.ofNullable(bgp);
             return this;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedInterconnectRouter(@Nullable Input<Boolean> encryptedInterconnectRouter) {
+        public Builder encryptedInterconnectRouter(@Nullable Output<Boolean> encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = encryptedInterconnectRouter;
             return this;
         }
 
         public Builder encryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
-            this.encryptedInterconnectRouter = Input.ofNullable(encryptedInterconnectRouter);
+            this.encryptedInterconnectRouter = Output.ofNullable(encryptedInterconnectRouter);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
         public RouterState build() {

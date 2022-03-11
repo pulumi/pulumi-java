@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds;
 
 import io.pulumi.aws.rds.inputs.ProxyAuthArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,9 +24,9 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auths", required=true)
-      private final Input<List<ProxyAuthArgs>> auths;
+      private final Output<List<ProxyAuthArgs>> auths;
 
-    public Input<List<ProxyAuthArgs>> getAuths() {
+    public Output<List<ProxyAuthArgs>> getAuths() {
         return this.auths;
     }
 
@@ -35,10 +35,10 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="debugLogging")
-      private final @Nullable Input<Boolean> debugLogging;
+      private final @Nullable Output<Boolean> debugLogging;
 
-    public Input<Boolean> getDebugLogging() {
-        return this.debugLogging == null ? Input.empty() : this.debugLogging;
+    public Output<Boolean> getDebugLogging() {
+        return this.debugLogging == null ? Output.empty() : this.debugLogging;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineFamily", required=true)
-      private final Input<String> engineFamily;
+      private final Output<String> engineFamily;
 
-    public Input<String> getEngineFamily() {
+    public Output<String> getEngineFamily() {
         return this.engineFamily;
     }
 
@@ -57,10 +57,10 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleClientTimeout")
-      private final @Nullable Input<Integer> idleClientTimeout;
+      private final @Nullable Output<Integer> idleClientTimeout;
 
-    public Input<Integer> getIdleClientTimeout() {
-        return this.idleClientTimeout == null ? Input.empty() : this.idleClientTimeout;
+    public Output<Integer> getIdleClientTimeout() {
+        return this.idleClientTimeout == null ? Output.empty() : this.idleClientTimeout;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireTls")
-      private final @Nullable Input<Boolean> requireTls;
+      private final @Nullable Output<Boolean> requireTls;
 
-    public Input<Boolean> getRequireTls() {
-        return this.requireTls == null ? Input.empty() : this.requireTls;
+    public Output<Boolean> getRequireTls() {
+        return this.requireTls == null ? Output.empty() : this.requireTls;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -101,10 +101,10 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Input<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
+    public Output<List<String>> getVpcSecurityGroupIds() {
+        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSubnetIds", required=true)
-      private final Input<List<String>> vpcSubnetIds;
+      private final Output<List<String>> vpcSubnetIds;
 
-    public Input<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
     public ProxyArgs(
-        Input<List<ProxyAuthArgs>> auths,
-        @Nullable Input<Boolean> debugLogging,
-        Input<String> engineFamily,
-        @Nullable Input<Integer> idleClientTimeout,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> requireTls,
-        Input<String> roleArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<String>> vpcSecurityGroupIds,
-        Input<List<String>> vpcSubnetIds) {
+        Output<List<ProxyAuthArgs>> auths,
+        @Nullable Output<Boolean> debugLogging,
+        Output<String> engineFamily,
+        @Nullable Output<Integer> idleClientTimeout,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> requireTls,
+        Output<String> roleArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<String>> vpcSecurityGroupIds,
+        Output<List<String>> vpcSubnetIds) {
         this.auths = Objects.requireNonNull(auths, "expected parameter 'auths' to be non-null");
         this.debugLogging = debugLogging;
         this.engineFamily = Objects.requireNonNull(engineFamily, "expected parameter 'engineFamily' to be non-null");
@@ -153,16 +153,16 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProxyArgs() {
-        this.auths = Input.empty();
-        this.debugLogging = Input.empty();
-        this.engineFamily = Input.empty();
-        this.idleClientTimeout = Input.empty();
-        this.name = Input.empty();
-        this.requireTls = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
-        this.vpcSecurityGroupIds = Input.empty();
-        this.vpcSubnetIds = Input.empty();
+        this.auths = Output.empty();
+        this.debugLogging = Output.empty();
+        this.engineFamily = Output.empty();
+        this.idleClientTimeout = Output.empty();
+        this.name = Output.empty();
+        this.requireTls = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
+        this.vpcSecurityGroupIds = Output.empty();
+        this.vpcSubnetIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<ProxyAuthArgs>> auths;
-        private @Nullable Input<Boolean> debugLogging;
-        private Input<String> engineFamily;
-        private @Nullable Input<Integer> idleClientTimeout;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> requireTls;
-        private Input<String> roleArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<String>> vpcSecurityGroupIds;
-        private Input<List<String>> vpcSubnetIds;
+        private Output<List<ProxyAuthArgs>> auths;
+        private @Nullable Output<Boolean> debugLogging;
+        private Output<String> engineFamily;
+        private @Nullable Output<Integer> idleClientTimeout;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> requireTls;
+        private Output<String> roleArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<String>> vpcSecurityGroupIds;
+        private Output<List<String>> vpcSubnetIds;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSubnetIds = defaults.vpcSubnetIds;
         }
 
-        public Builder auths(Input<List<ProxyAuthArgs>> auths) {
+        public Builder auths(Output<List<ProxyAuthArgs>> auths) {
             this.auths = Objects.requireNonNull(auths);
             return this;
         }
 
         public Builder auths(List<ProxyAuthArgs> auths) {
-            this.auths = Input.of(Objects.requireNonNull(auths));
+            this.auths = Output.of(Objects.requireNonNull(auths));
             return this;
         }
 
-        public Builder debugLogging(@Nullable Input<Boolean> debugLogging) {
+        public Builder debugLogging(@Nullable Output<Boolean> debugLogging) {
             this.debugLogging = debugLogging;
             return this;
         }
 
         public Builder debugLogging(@Nullable Boolean debugLogging) {
-            this.debugLogging = Input.ofNullable(debugLogging);
+            this.debugLogging = Output.ofNullable(debugLogging);
             return this;
         }
 
-        public Builder engineFamily(Input<String> engineFamily) {
+        public Builder engineFamily(Output<String> engineFamily) {
             this.engineFamily = Objects.requireNonNull(engineFamily);
             return this;
         }
 
         public Builder engineFamily(String engineFamily) {
-            this.engineFamily = Input.of(Objects.requireNonNull(engineFamily));
+            this.engineFamily = Output.of(Objects.requireNonNull(engineFamily));
             return this;
         }
 
-        public Builder idleClientTimeout(@Nullable Input<Integer> idleClientTimeout) {
+        public Builder idleClientTimeout(@Nullable Output<Integer> idleClientTimeout) {
             this.idleClientTimeout = idleClientTimeout;
             return this;
         }
 
         public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
-            this.idleClientTimeout = Input.ofNullable(idleClientTimeout);
+            this.idleClientTimeout = Output.ofNullable(idleClientTimeout);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder requireTls(@Nullable Input<Boolean> requireTls) {
+        public Builder requireTls(@Nullable Output<Boolean> requireTls) {
             this.requireTls = requireTls;
             return this;
         }
 
         public Builder requireTls(@Nullable Boolean requireTls) {
-            this.requireTls = Input.ofNullable(requireTls);
+            this.requireTls = Output.ofNullable(requireTls);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
 
-        public Builder vpcSubnetIds(Input<List<String>> vpcSubnetIds) {
+        public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
 
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
-            this.vpcSubnetIds = Input.of(Objects.requireNonNull(vpcSubnetIds));
+            this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }
         public ProxyArgs build() {

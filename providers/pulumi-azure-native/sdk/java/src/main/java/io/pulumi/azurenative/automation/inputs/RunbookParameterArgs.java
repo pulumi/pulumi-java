@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<String> defaultValue;
+      private final @Nullable Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<String> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="isMandatory")
-      private final @Nullable Input<Boolean> isMandatory;
+      private final @Nullable Output<Boolean> isMandatory;
 
-    public Input<Boolean> getIsMandatory() {
-        return this.isMandatory == null ? Input.empty() : this.isMandatory;
+    public Output<Boolean> getIsMandatory() {
+        return this.isMandatory == null ? Output.empty() : this.isMandatory;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="position")
-      private final @Nullable Input<Integer> position;
+      private final @Nullable Output<Integer> position;
 
-    public Input<Integer> getPosition() {
-        return this.position == null ? Input.empty() : this.position;
+    public Output<Integer> getPosition() {
+        return this.position == null ? Output.empty() : this.position;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public RunbookParameterArgs(
-        @Nullable Input<String> defaultValue,
-        @Nullable Input<Boolean> isMandatory,
-        @Nullable Input<Integer> position,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> defaultValue,
+        @Nullable Output<Boolean> isMandatory,
+        @Nullable Output<Integer> position,
+        @Nullable Output<String> type) {
         this.defaultValue = defaultValue;
         this.isMandatory = isMandatory;
         this.position = position;
@@ -76,10 +76,10 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RunbookParameterArgs() {
-        this.defaultValue = Input.empty();
-        this.isMandatory = Input.empty();
-        this.position = Input.empty();
-        this.type = Input.empty();
+        this.defaultValue = Output.empty();
+        this.isMandatory = Output.empty();
+        this.position = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultValue;
-        private @Nullable Input<Boolean> isMandatory;
-        private @Nullable Input<Integer> position;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> defaultValue;
+        private @Nullable Output<Boolean> isMandatory;
+        private @Nullable Output<Integer> position;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder defaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder isMandatory(@Nullable Input<Boolean> isMandatory) {
+        public Builder isMandatory(@Nullable Output<Boolean> isMandatory) {
             this.isMandatory = isMandatory;
             return this;
         }
 
         public Builder isMandatory(@Nullable Boolean isMandatory) {
-            this.isMandatory = Input.ofNullable(isMandatory);
+            this.isMandatory = Output.ofNullable(isMandatory);
             return this;
         }
 
-        public Builder position(@Nullable Input<Integer> position) {
+        public Builder position(@Nullable Output<Integer> position) {
             this.position = position;
             return this;
         }
 
         public Builder position(@Nullable Integer position) {
-            this.position = Input.ofNullable(position);
+            this.position = Output.ofNullable(position);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RunbookParameterArgs build() {

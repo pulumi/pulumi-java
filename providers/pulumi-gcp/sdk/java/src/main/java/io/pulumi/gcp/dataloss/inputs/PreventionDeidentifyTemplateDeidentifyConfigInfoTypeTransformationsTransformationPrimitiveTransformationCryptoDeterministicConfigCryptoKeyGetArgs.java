@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs;
@@ -22,10 +22,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="kmsWrapped")
-      private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs> kmsWrapped;
+      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs> kmsWrapped;
 
-    public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs> getKmsWrapped() {
-        return this.kmsWrapped == null ? Input.empty() : this.kmsWrapped;
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs> getKmsWrapped() {
+        return this.kmsWrapped == null ? Output.empty() : this.kmsWrapped;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="transient")
-      private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs> $transient;
+      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs> $transient;
 
-    public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs> get$transient() {
-        return this.$transient == null ? Input.empty() : this.$transient;
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs> get$transient() {
+        return this.$transient == null ? Output.empty() : this.$transient;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="unwrapped")
-      private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs> unwrapped;
+      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs> unwrapped;
 
-    public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs> getUnwrapped() {
-        return this.unwrapped == null ? Input.empty() : this.unwrapped;
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs> getUnwrapped() {
+        return this.unwrapped == null ? Output.empty() : this.unwrapped;
     }
 
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyGetArgs(
-        @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs> kmsWrapped,
-        @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs> $transient,
-        @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs> unwrapped) {
+        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs> kmsWrapped,
+        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs> $transient,
+        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs> unwrapped) {
         this.kmsWrapped = kmsWrapped;
         this.$transient = $transient;
         this.unwrapped = unwrapped;
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyGetArgs() {
-        this.kmsWrapped = Input.empty();
-        this.$transient = Input.empty();
-        this.unwrapped = Input.empty();
+        this.kmsWrapped = Output.empty();
+        this.$transient = Output.empty();
+        this.unwrapped = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     public static final class Builder {
-        private @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs> kmsWrapped;
-        private @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs> $transient;
-        private @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs> unwrapped;
+        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs> kmsWrapped;
+        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs> $transient;
+        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs> unwrapped;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.unwrapped = defaults.unwrapped;
         }
 
-        public Builder kmsWrapped(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs> kmsWrapped) {
+        public Builder kmsWrapped(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs> kmsWrapped) {
             this.kmsWrapped = kmsWrapped;
             return this;
         }
 
         public Builder kmsWrapped(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedGetArgs kmsWrapped) {
-            this.kmsWrapped = Input.ofNullable(kmsWrapped);
+            this.kmsWrapped = Output.ofNullable(kmsWrapped);
             return this;
         }
 
-        public Builder $transient(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs> $transient) {
+        public Builder $transient(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs> $transient) {
             this.$transient = $transient;
             return this;
         }
 
         public Builder $transient(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientGetArgs $transient) {
-            this.$transient = Input.ofNullable($transient);
+            this.$transient = Output.ofNullable($transient);
             return this;
         }
 
-        public Builder unwrapped(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs> unwrapped) {
+        public Builder unwrapped(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs> unwrapped) {
             this.unwrapped = unwrapped;
             return this;
         }
 
         public Builder unwrapped(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedGetArgs unwrapped) {
-            this.unwrapped = Input.ofNullable(unwrapped);
+            this.unwrapped = Output.ofNullable(unwrapped);
             return this;
         }
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyGetArgs build() {

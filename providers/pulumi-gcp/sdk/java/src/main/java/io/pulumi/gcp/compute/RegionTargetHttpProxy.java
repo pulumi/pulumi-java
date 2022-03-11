@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -218,14 +217,14 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionTargetHttpProxy(String name, RegionTargetHttpProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy", name, args == null ? RegionTargetHttpProxyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy", name, args == null ? RegionTargetHttpProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RegionTargetHttpProxy(String name, Input<String> id, @Nullable RegionTargetHttpProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RegionTargetHttpProxy(String name, Output<String> id, @Nullable RegionTargetHttpProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -241,7 +240,7 @@ public class RegionTargetHttpProxy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionTargetHttpProxy get(String name, Input<String> id, @Nullable RegionTargetHttpProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RegionTargetHttpProxy get(String name, Output<String> id, @Nullable RegionTargetHttpProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegionTargetHttpProxy(name, id, state, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceHttpConfigAuthorizationConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="authorizationConfig")
-      private final @Nullable Input<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig;
+      private final @Nullable Output<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig;
 
-    public Input<DataSourceHttpConfigAuthorizationConfigGetArgs> getAuthorizationConfig() {
-        return this.authorizationConfig == null ? Input.empty() : this.authorizationConfig;
+    public Output<DataSourceHttpConfigAuthorizationConfigGetArgs> getAuthorizationConfig() {
+        return this.authorizationConfig == null ? Output.empty() : this.authorizationConfig;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="endpoint", required=true)
-      private final Input<String> endpoint;
+      private final Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
+    public Output<String> getEndpoint() {
         return this.endpoint;
     }
 
     public DataSourceHttpConfigGetArgs(
-        @Nullable Input<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig,
-        Input<String> endpoint) {
+        @Nullable Output<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig,
+        Output<String> endpoint) {
         this.authorizationConfig = authorizationConfig;
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
     }
 
     private DataSourceHttpConfigGetArgs() {
-        this.authorizationConfig = Input.empty();
-        this.endpoint = Input.empty();
+        this.authorizationConfig = Output.empty();
+        this.endpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig;
-        private Input<String> endpoint;
+        private @Nullable Output<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig;
+        private Output<String> endpoint;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder authorizationConfig(@Nullable Input<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig) {
+        public Builder authorizationConfig(@Nullable Output<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig) {
             this.authorizationConfig = authorizationConfig;
             return this;
         }
 
         public Builder authorizationConfig(@Nullable DataSourceHttpConfigAuthorizationConfigGetArgs authorizationConfig) {
-            this.authorizationConfig = Input.ofNullable(authorizationConfig);
+            this.authorizationConfig = Output.ofNullable(authorizationConfig);
             return this;
         }
 
-        public Builder endpoint(Input<String> endpoint) {
+        public Builder endpoint(Output<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Input.of(Objects.requireNonNull(endpoint));
+            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
         public DataSourceHttpConfigGetArgs build() {

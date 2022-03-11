@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__ParameterSpecScaleType;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__ParameterSpecType;
@@ -27,10 +27,10 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="categoricalValues")
-      private final @Nullable Input<List<String>> categoricalValues;
+      private final @Nullable Output<List<String>> categoricalValues;
 
-    public Input<List<String>> getCategoricalValues() {
-        return this.categoricalValues == null ? Input.empty() : this.categoricalValues;
+    public Output<List<String>> getCategoricalValues() {
+        return this.categoricalValues == null ? Output.empty() : this.categoricalValues;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="discreteValues")
-      private final @Nullable Input<List<Double>> discreteValues;
+      private final @Nullable Output<List<Double>> discreteValues;
 
-    public Input<List<Double>> getDiscreteValues() {
-        return this.discreteValues == null ? Input.empty() : this.discreteValues;
+    public Output<List<Double>> getDiscreteValues() {
+        return this.discreteValues == null ? Output.empty() : this.discreteValues;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxValue")
-      private final @Nullable Input<Double> maxValue;
+      private final @Nullable Output<Double> maxValue;
 
-    public Input<Double> getMaxValue() {
-        return this.maxValue == null ? Input.empty() : this.maxValue;
+    public Output<Double> getMaxValue() {
+        return this.maxValue == null ? Output.empty() : this.maxValue;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="minValue")
-      private final @Nullable Input<Double> minValue;
+      private final @Nullable Output<Double> minValue;
 
-    public Input<Double> getMinValue() {
-        return this.minValue == null ? Input.empty() : this.minValue;
+    public Output<Double> getMinValue() {
+        return this.minValue == null ? Output.empty() : this.minValue;
     }
 
     /**
@@ -71,9 +71,9 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameterName", required=true)
-      private final Input<String> parameterName;
+      private final Output<String> parameterName;
 
-    public Input<String> getParameterName() {
+    public Output<String> getParameterName() {
         return this.parameterName;
     }
 
@@ -82,10 +82,10 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scaleType")
-      private final @Nullable Input<GoogleCloudMlV1__ParameterSpecScaleType> scaleType;
+      private final @Nullable Output<GoogleCloudMlV1__ParameterSpecScaleType> scaleType;
 
-    public Input<GoogleCloudMlV1__ParameterSpecScaleType> getScaleType() {
-        return this.scaleType == null ? Input.empty() : this.scaleType;
+    public Output<GoogleCloudMlV1__ParameterSpecScaleType> getScaleType() {
+        return this.scaleType == null ? Output.empty() : this.scaleType;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<GoogleCloudMlV1__ParameterSpecType> type;
+      private final Output<GoogleCloudMlV1__ParameterSpecType> type;
 
-    public Input<GoogleCloudMlV1__ParameterSpecType> getType() {
+    public Output<GoogleCloudMlV1__ParameterSpecType> getType() {
         return this.type;
     }
 
     public GoogleCloudMlV1__ParameterSpecArgs(
-        @Nullable Input<List<String>> categoricalValues,
-        @Nullable Input<List<Double>> discreteValues,
-        @Nullable Input<Double> maxValue,
-        @Nullable Input<Double> minValue,
-        Input<String> parameterName,
-        @Nullable Input<GoogleCloudMlV1__ParameterSpecScaleType> scaleType,
-        Input<GoogleCloudMlV1__ParameterSpecType> type) {
+        @Nullable Output<List<String>> categoricalValues,
+        @Nullable Output<List<Double>> discreteValues,
+        @Nullable Output<Double> maxValue,
+        @Nullable Output<Double> minValue,
+        Output<String> parameterName,
+        @Nullable Output<GoogleCloudMlV1__ParameterSpecScaleType> scaleType,
+        Output<GoogleCloudMlV1__ParameterSpecType> type) {
         this.categoricalValues = categoricalValues;
         this.discreteValues = discreteValues;
         this.maxValue = maxValue;
@@ -117,13 +117,13 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     }
 
     private GoogleCloudMlV1__ParameterSpecArgs() {
-        this.categoricalValues = Input.empty();
-        this.discreteValues = Input.empty();
-        this.maxValue = Input.empty();
-        this.minValue = Input.empty();
-        this.parameterName = Input.empty();
-        this.scaleType = Input.empty();
-        this.type = Input.empty();
+        this.categoricalValues = Output.empty();
+        this.discreteValues = Output.empty();
+        this.maxValue = Output.empty();
+        this.minValue = Output.empty();
+        this.parameterName = Output.empty();
+        this.scaleType = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> categoricalValues;
-        private @Nullable Input<List<Double>> discreteValues;
-        private @Nullable Input<Double> maxValue;
-        private @Nullable Input<Double> minValue;
-        private Input<String> parameterName;
-        private @Nullable Input<GoogleCloudMlV1__ParameterSpecScaleType> scaleType;
-        private Input<GoogleCloudMlV1__ParameterSpecType> type;
+        private @Nullable Output<List<String>> categoricalValues;
+        private @Nullable Output<List<Double>> discreteValues;
+        private @Nullable Output<Double> maxValue;
+        private @Nullable Output<Double> minValue;
+        private Output<String> parameterName;
+        private @Nullable Output<GoogleCloudMlV1__ParameterSpecScaleType> scaleType;
+        private Output<GoogleCloudMlV1__ParameterSpecType> type;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder categoricalValues(@Nullable Input<List<String>> categoricalValues) {
+        public Builder categoricalValues(@Nullable Output<List<String>> categoricalValues) {
             this.categoricalValues = categoricalValues;
             return this;
         }
 
         public Builder categoricalValues(@Nullable List<String> categoricalValues) {
-            this.categoricalValues = Input.ofNullable(categoricalValues);
+            this.categoricalValues = Output.ofNullable(categoricalValues);
             return this;
         }
 
-        public Builder discreteValues(@Nullable Input<List<Double>> discreteValues) {
+        public Builder discreteValues(@Nullable Output<List<Double>> discreteValues) {
             this.discreteValues = discreteValues;
             return this;
         }
 
         public Builder discreteValues(@Nullable List<Double> discreteValues) {
-            this.discreteValues = Input.ofNullable(discreteValues);
+            this.discreteValues = Output.ofNullable(discreteValues);
             return this;
         }
 
-        public Builder maxValue(@Nullable Input<Double> maxValue) {
+        public Builder maxValue(@Nullable Output<Double> maxValue) {
             this.maxValue = maxValue;
             return this;
         }
 
         public Builder maxValue(@Nullable Double maxValue) {
-            this.maxValue = Input.ofNullable(maxValue);
+            this.maxValue = Output.ofNullable(maxValue);
             return this;
         }
 
-        public Builder minValue(@Nullable Input<Double> minValue) {
+        public Builder minValue(@Nullable Output<Double> minValue) {
             this.minValue = minValue;
             return this;
         }
 
         public Builder minValue(@Nullable Double minValue) {
-            this.minValue = Input.ofNullable(minValue);
+            this.minValue = Output.ofNullable(minValue);
             return this;
         }
 
-        public Builder parameterName(Input<String> parameterName) {
+        public Builder parameterName(Output<String> parameterName) {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
 
         public Builder parameterName(String parameterName) {
-            this.parameterName = Input.of(Objects.requireNonNull(parameterName));
+            this.parameterName = Output.of(Objects.requireNonNull(parameterName));
             return this;
         }
 
-        public Builder scaleType(@Nullable Input<GoogleCloudMlV1__ParameterSpecScaleType> scaleType) {
+        public Builder scaleType(@Nullable Output<GoogleCloudMlV1__ParameterSpecScaleType> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
 
         public Builder scaleType(@Nullable GoogleCloudMlV1__ParameterSpecScaleType scaleType) {
-            this.scaleType = Input.ofNullable(scaleType);
+            this.scaleType = Output.ofNullable(scaleType);
             return this;
         }
 
-        public Builder type(Input<GoogleCloudMlV1__ParameterSpecType> type) {
+        public Builder type(Output<GoogleCloudMlV1__ParameterSpecType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(GoogleCloudMlV1__ParameterSpecType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public GoogleCloudMlV1__ParameterSpecArgs build() {

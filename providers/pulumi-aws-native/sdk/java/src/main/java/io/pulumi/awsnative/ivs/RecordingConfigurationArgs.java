@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ivs;
 import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationDestinationConfigurationArgs;
 import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationTagArgs;
 import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationThumbnailConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
     public static final RecordingConfigurationArgs Empty = new RecordingConfigurationArgs();
 
     @InputImport(name="destinationConfiguration", required=true)
-      private final Input<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
+      private final Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
 
-    public Input<RecordingConfigurationDestinationConfigurationArgs> getDestinationConfiguration() {
+    public Output<RecordingConfigurationDestinationConfigurationArgs> getDestinationConfiguration() {
         return this.destinationConfiguration;
     }
 
@@ -30,10 +30,10 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,24 +41,24 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<RecordingConfigurationTagArgs>> tags;
+      private final @Nullable Output<List<RecordingConfigurationTagArgs>> tags;
 
-    public Input<List<RecordingConfigurationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RecordingConfigurationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="thumbnailConfiguration")
-      private final @Nullable Input<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
+      private final @Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
 
-    public Input<RecordingConfigurationThumbnailConfigurationArgs> getThumbnailConfiguration() {
-        return this.thumbnailConfiguration == null ? Input.empty() : this.thumbnailConfiguration;
+    public Output<RecordingConfigurationThumbnailConfigurationArgs> getThumbnailConfiguration() {
+        return this.thumbnailConfiguration == null ? Output.empty() : this.thumbnailConfiguration;
     }
 
     public RecordingConfigurationArgs(
-        Input<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration,
-        @Nullable Input<String> name,
-        @Nullable Input<List<RecordingConfigurationTagArgs>> tags,
-        @Nullable Input<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration) {
+        Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration,
+        @Nullable Output<String> name,
+        @Nullable Output<List<RecordingConfigurationTagArgs>> tags,
+        @Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration) {
         this.destinationConfiguration = Objects.requireNonNull(destinationConfiguration, "expected parameter 'destinationConfiguration' to be non-null");
         this.name = name;
         this.tags = tags;
@@ -66,10 +66,10 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private RecordingConfigurationArgs() {
-        this.destinationConfiguration = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.thumbnailConfiguration = Input.empty();
+        this.destinationConfiguration = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.thumbnailConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,10 +81,10 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<RecordingConfigurationTagArgs>> tags;
-        private @Nullable Input<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
+        private Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<RecordingConfigurationTagArgs>> tags;
+        private @Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
 
         public Builder() {
     	      // Empty
@@ -98,43 +98,43 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
     	      this.thumbnailConfiguration = defaults.thumbnailConfiguration;
         }
 
-        public Builder destinationConfiguration(Input<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration) {
+        public Builder destinationConfiguration(Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration) {
             this.destinationConfiguration = Objects.requireNonNull(destinationConfiguration);
             return this;
         }
 
         public Builder destinationConfiguration(RecordingConfigurationDestinationConfigurationArgs destinationConfiguration) {
-            this.destinationConfiguration = Input.of(Objects.requireNonNull(destinationConfiguration));
+            this.destinationConfiguration = Output.of(Objects.requireNonNull(destinationConfiguration));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RecordingConfigurationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RecordingConfigurationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RecordingConfigurationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder thumbnailConfiguration(@Nullable Input<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration) {
+        public Builder thumbnailConfiguration(@Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration) {
             this.thumbnailConfiguration = thumbnailConfiguration;
             return this;
         }
 
         public Builder thumbnailConfiguration(@Nullable RecordingConfigurationThumbnailConfigurationArgs thumbnailConfiguration) {
-            this.thumbnailConfiguration = Input.ofNullable(thumbnailConfiguration);
+            this.thumbnailConfiguration = Output.ofNullable(thumbnailConfiguration);
             return this;
         }
         public RecordingConfigurationArgs build() {

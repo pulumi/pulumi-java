@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="componentId", required=true)
-      private final Input<String> componentId;
+      private final Output<String> componentId;
 
-    public Input<String> getComponentId() {
+    public Output<String> getComponentId() {
         return this.componentId;
     }
 
@@ -34,9 +34,9 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="failedLocationCount", required=true)
-      private final Input<Double> failedLocationCount;
+      private final Output<Double> failedLocationCount;
 
-    public Input<Double> getFailedLocationCount() {
+    public Output<Double> getFailedLocationCount() {
         return this.failedLocationCount;
     }
 
@@ -46,9 +46,9 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -57,17 +57,17 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="webTestId", required=true)
-      private final Input<String> webTestId;
+      private final Output<String> webTestId;
 
-    public Input<String> getWebTestId() {
+    public Output<String> getWebTestId() {
         return this.webTestId;
     }
 
     public WebtestLocationAvailabilityCriteriaArgs(
-        Input<String> componentId,
-        Input<Double> failedLocationCount,
-        Input<String> odataType,
-        Input<String> webTestId) {
+        Output<String> componentId,
+        Output<Double> failedLocationCount,
+        Output<String> odataType,
+        Output<String> webTestId) {
         this.componentId = Objects.requireNonNull(componentId, "expected parameter 'componentId' to be non-null");
         this.failedLocationCount = Objects.requireNonNull(failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
@@ -75,10 +75,10 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     }
 
     private WebtestLocationAvailabilityCriteriaArgs() {
-        this.componentId = Input.empty();
-        this.failedLocationCount = Input.empty();
-        this.odataType = Input.empty();
-        this.webTestId = Input.empty();
+        this.componentId = Output.empty();
+        this.failedLocationCount = Output.empty();
+        this.odataType = Output.empty();
+        this.webTestId = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> componentId;
-        private Input<Double> failedLocationCount;
-        private Input<String> odataType;
-        private Input<String> webTestId;
+        private Output<String> componentId;
+        private Output<Double> failedLocationCount;
+        private Output<String> odataType;
+        private Output<String> webTestId;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     	      this.webTestId = defaults.webTestId;
         }
 
-        public Builder componentId(Input<String> componentId) {
+        public Builder componentId(Output<String> componentId) {
             this.componentId = Objects.requireNonNull(componentId);
             return this;
         }
 
         public Builder componentId(String componentId) {
-            this.componentId = Input.of(Objects.requireNonNull(componentId));
+            this.componentId = Output.of(Objects.requireNonNull(componentId));
             return this;
         }
 
-        public Builder failedLocationCount(Input<Double> failedLocationCount) {
+        public Builder failedLocationCount(Output<Double> failedLocationCount) {
             this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
             return this;
         }
 
         public Builder failedLocationCount(Double failedLocationCount) {
-            this.failedLocationCount = Input.of(Objects.requireNonNull(failedLocationCount));
+            this.failedLocationCount = Output.of(Objects.requireNonNull(failedLocationCount));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder webTestId(Input<String> webTestId) {
+        public Builder webTestId(Output<String> webTestId) {
             this.webTestId = Objects.requireNonNull(webTestId);
             return this;
         }
 
         public Builder webTestId(String webTestId) {
-            this.webTestId = Input.of(Objects.requireNonNull(webTestId));
+            this.webTestId = Output.of(Objects.requireNonNull(webTestId));
             return this;
         }
         public WebtestLocationAvailabilityCriteriaArgs build() {

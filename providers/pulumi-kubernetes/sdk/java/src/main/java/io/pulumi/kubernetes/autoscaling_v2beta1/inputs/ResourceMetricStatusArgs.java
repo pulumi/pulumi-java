@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="currentAverageUtilization")
-      private final @Nullable Input<Integer> currentAverageUtilization;
+      private final @Nullable Output<Integer> currentAverageUtilization;
 
-    public Input<Integer> getCurrentAverageUtilization() {
-        return this.currentAverageUtilization == null ? Input.empty() : this.currentAverageUtilization;
+    public Output<Integer> getCurrentAverageUtilization() {
+        return this.currentAverageUtilization == null ? Output.empty() : this.currentAverageUtilization;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="currentAverageValue", required=true)
-      private final Input<String> currentAverageValue;
+      private final Output<String> currentAverageValue;
 
-    public Input<String> getCurrentAverageValue() {
+    public Output<String> getCurrentAverageValue() {
         return this.currentAverageValue;
     }
 
@@ -46,25 +46,25 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public ResourceMetricStatusArgs(
-        @Nullable Input<Integer> currentAverageUtilization,
-        Input<String> currentAverageValue,
-        Input<String> name) {
+        @Nullable Output<Integer> currentAverageUtilization,
+        Output<String> currentAverageValue,
+        Output<String> name) {
         this.currentAverageUtilization = currentAverageUtilization;
         this.currentAverageValue = Objects.requireNonNull(currentAverageValue, "expected parameter 'currentAverageValue' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private ResourceMetricStatusArgs() {
-        this.currentAverageUtilization = Input.empty();
-        this.currentAverageValue = Input.empty();
-        this.name = Input.empty();
+        this.currentAverageUtilization = Output.empty();
+        this.currentAverageValue = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> currentAverageUtilization;
-        private Input<String> currentAverageValue;
-        private Input<String> name;
+        private @Nullable Output<Integer> currentAverageUtilization;
+        private Output<String> currentAverageValue;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder currentAverageUtilization(@Nullable Input<Integer> currentAverageUtilization) {
+        public Builder currentAverageUtilization(@Nullable Output<Integer> currentAverageUtilization) {
             this.currentAverageUtilization = currentAverageUtilization;
             return this;
         }
 
         public Builder currentAverageUtilization(@Nullable Integer currentAverageUtilization) {
-            this.currentAverageUtilization = Input.ofNullable(currentAverageUtilization);
+            this.currentAverageUtilization = Output.ofNullable(currentAverageUtilization);
             return this;
         }
 
-        public Builder currentAverageValue(Input<String> currentAverageValue) {
+        public Builder currentAverageValue(Output<String> currentAverageValue) {
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
 
         public Builder currentAverageValue(String currentAverageValue) {
-            this.currentAverageValue = Input.of(Objects.requireNonNull(currentAverageValue));
+            this.currentAverageValue = Output.of(Objects.requireNonNull(currentAverageValue));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ResourceMetricStatusArgs build() {

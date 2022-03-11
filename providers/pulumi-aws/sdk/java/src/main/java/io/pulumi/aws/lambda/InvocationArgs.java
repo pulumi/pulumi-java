@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionName", required=true)
-      private final Input<String> functionName;
+      private final Output<String> functionName;
 
-    public Input<String> getFunctionName() {
+    public Output<String> getFunctionName() {
         return this.functionName;
     }
 
@@ -31,9 +31,9 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="input", required=true)
-      private final Input<String> input;
+      private final Output<String> input;
 
-    public Input<String> getInput() {
+    public Output<String> getInput() {
         return this.input;
     }
 
@@ -42,24 +42,24 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qualifier")
-      private final @Nullable Input<String> qualifier;
+      private final @Nullable Output<String> qualifier;
 
-    public Input<String> getQualifier() {
-        return this.qualifier == null ? Input.empty() : this.qualifier;
+    public Output<String> getQualifier() {
+        return this.qualifier == null ? Output.empty() : this.qualifier;
     }
 
     @InputImport(name="triggers")
-      private final @Nullable Input<Map<String,String>> triggers;
+      private final @Nullable Output<Map<String,String>> triggers;
 
-    public Input<Map<String,String>> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<Map<String,String>> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     public InvocationArgs(
-        Input<String> functionName,
-        Input<String> input,
-        @Nullable Input<String> qualifier,
-        @Nullable Input<Map<String,String>> triggers) {
+        Output<String> functionName,
+        Output<String> input,
+        @Nullable Output<String> qualifier,
+        @Nullable Output<Map<String,String>> triggers) {
         this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
         this.input = Objects.requireNonNull(input, "expected parameter 'input' to be non-null");
         this.qualifier = qualifier;
@@ -67,10 +67,10 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InvocationArgs() {
-        this.functionName = Input.empty();
-        this.input = Input.empty();
-        this.qualifier = Input.empty();
-        this.triggers = Input.empty();
+        this.functionName = Output.empty();
+        this.input = Output.empty();
+        this.qualifier = Output.empty();
+        this.triggers = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> functionName;
-        private Input<String> input;
-        private @Nullable Input<String> qualifier;
-        private @Nullable Input<Map<String,String>> triggers;
+        private Output<String> functionName;
+        private Output<String> input;
+        private @Nullable Output<String> qualifier;
+        private @Nullable Output<Map<String,String>> triggers;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder functionName(Input<String> functionName) {
+        public Builder functionName(Output<String> functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
         public Builder functionName(String functionName) {
-            this.functionName = Input.of(Objects.requireNonNull(functionName));
+            this.functionName = Output.of(Objects.requireNonNull(functionName));
             return this;
         }
 
-        public Builder input(Input<String> input) {
+        public Builder input(Output<String> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
         public Builder input(String input) {
-            this.input = Input.of(Objects.requireNonNull(input));
+            this.input = Output.of(Objects.requireNonNull(input));
             return this;
         }
 
-        public Builder qualifier(@Nullable Input<String> qualifier) {
+        public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Input.ofNullable(qualifier);
+            this.qualifier = Output.ofNullable(qualifier);
             return this;
         }
 
-        public Builder triggers(@Nullable Input<Map<String,String>> triggers) {
+        public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
         public InvocationArgs build() {

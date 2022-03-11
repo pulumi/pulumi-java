@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hostPoolArmPath")
-      private final @Nullable Input<String> hostPoolArmPath;
+      private final @Nullable Output<String> hostPoolArmPath;
 
-    public Input<String> getHostPoolArmPath() {
-        return this.hostPoolArmPath == null ? Input.empty() : this.hostPoolArmPath;
+    public Output<String> getHostPoolArmPath() {
+        return this.hostPoolArmPath == null ? Output.empty() : this.hostPoolArmPath;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="scalingPlanEnabled")
-      private final @Nullable Input<Boolean> scalingPlanEnabled;
+      private final @Nullable Output<Boolean> scalingPlanEnabled;
 
-    public Input<Boolean> getScalingPlanEnabled() {
-        return this.scalingPlanEnabled == null ? Input.empty() : this.scalingPlanEnabled;
+    public Output<Boolean> getScalingPlanEnabled() {
+        return this.scalingPlanEnabled == null ? Output.empty() : this.scalingPlanEnabled;
     }
 
     public ScalingHostPoolReferenceArgs(
-        @Nullable Input<String> hostPoolArmPath,
-        @Nullable Input<Boolean> scalingPlanEnabled) {
+        @Nullable Output<String> hostPoolArmPath,
+        @Nullable Output<Boolean> scalingPlanEnabled) {
         this.hostPoolArmPath = hostPoolArmPath;
         this.scalingPlanEnabled = scalingPlanEnabled;
     }
 
     private ScalingHostPoolReferenceArgs() {
-        this.hostPoolArmPath = Input.empty();
-        this.scalingPlanEnabled = Input.empty();
+        this.hostPoolArmPath = Output.empty();
+        this.scalingPlanEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostPoolArmPath;
-        private @Nullable Input<Boolean> scalingPlanEnabled;
+        private @Nullable Output<String> hostPoolArmPath;
+        private @Nullable Output<Boolean> scalingPlanEnabled;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
     	      this.scalingPlanEnabled = defaults.scalingPlanEnabled;
         }
 
-        public Builder hostPoolArmPath(@Nullable Input<String> hostPoolArmPath) {
+        public Builder hostPoolArmPath(@Nullable Output<String> hostPoolArmPath) {
             this.hostPoolArmPath = hostPoolArmPath;
             return this;
         }
 
         public Builder hostPoolArmPath(@Nullable String hostPoolArmPath) {
-            this.hostPoolArmPath = Input.ofNullable(hostPoolArmPath);
+            this.hostPoolArmPath = Output.ofNullable(hostPoolArmPath);
             return this;
         }
 
-        public Builder scalingPlanEnabled(@Nullable Input<Boolean> scalingPlanEnabled) {
+        public Builder scalingPlanEnabled(@Nullable Output<Boolean> scalingPlanEnabled) {
             this.scalingPlanEnabled = scalingPlanEnabled;
             return this;
         }
 
         public Builder scalingPlanEnabled(@Nullable Boolean scalingPlanEnabled) {
-            this.scalingPlanEnabled = Input.ofNullable(scalingPlanEnabled);
+            this.scalingPlanEnabled = Output.ofNullable(scalingPlanEnabled);
             return this;
         }
         public ScalingHostPoolReferenceArgs build() {

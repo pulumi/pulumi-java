@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.EgressFromIdentityType;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identities")
-      private final @Nullable Input<List<String>> identities;
+      private final @Nullable Output<List<String>> identities;
 
-    public Input<List<String>> getIdentities() {
-        return this.identities == null ? Input.empty() : this.identities;
+    public Output<List<String>> getIdentities() {
+        return this.identities == null ? Output.empty() : this.identities;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityType")
-      private final @Nullable Input<EgressFromIdentityType> identityType;
+      private final @Nullable Output<EgressFromIdentityType> identityType;
 
-    public Input<EgressFromIdentityType> getIdentityType() {
-        return this.identityType == null ? Input.empty() : this.identityType;
+    public Output<EgressFromIdentityType> getIdentityType() {
+        return this.identityType == null ? Output.empty() : this.identityType;
     }
 
     public EgressFromArgs(
-        @Nullable Input<List<String>> identities,
-        @Nullable Input<EgressFromIdentityType> identityType) {
+        @Nullable Output<List<String>> identities,
+        @Nullable Output<EgressFromIdentityType> identityType) {
         this.identities = identities;
         this.identityType = identityType;
     }
 
     private EgressFromArgs() {
-        this.identities = Input.empty();
-        this.identityType = Input.empty();
+        this.identities = Output.empty();
+        this.identityType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> identities;
-        private @Nullable Input<EgressFromIdentityType> identityType;
+        private @Nullable Output<List<String>> identities;
+        private @Nullable Output<EgressFromIdentityType> identityType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder identities(@Nullable Input<List<String>> identities) {
+        public Builder identities(@Nullable Output<List<String>> identities) {
             this.identities = identities;
             return this;
         }
 
         public Builder identities(@Nullable List<String> identities) {
-            this.identities = Input.ofNullable(identities);
+            this.identities = Output.ofNullable(identities);
             return this;
         }
 
-        public Builder identityType(@Nullable Input<EgressFromIdentityType> identityType) {
+        public Builder identityType(@Nullable Output<EgressFromIdentityType> identityType) {
             this.identityType = identityType;
             return this;
         }
 
         public Builder identityType(@Nullable EgressFromIdentityType identityType) {
-            this.identityType = Input.ofNullable(identityType);
+            this.identityType = Output.ofNullable(identityType);
             return this;
         }
         public EgressFromArgs build() {

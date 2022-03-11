@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceMetadataGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceStatusGetArgs;
@@ -29,10 +29,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autogenerateRevisionName")
-      private final @Nullable Input<Boolean> autogenerateRevisionName;
+      private final @Nullable Output<Boolean> autogenerateRevisionName;
 
-    public Input<Boolean> getAutogenerateRevisionName() {
-        return this.autogenerateRevisionName == null ? Input.empty() : this.autogenerateRevisionName;
+    public Output<Boolean> getAutogenerateRevisionName() {
+        return this.autogenerateRevisionName == null ? Output.empty() : this.autogenerateRevisionName;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ServiceMetadataGetArgs> metadata;
+      private final @Nullable Output<ServiceMetadataGetArgs> metadata;
 
-    public Input<ServiceMetadataGetArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ServiceMetadataGetArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statuses")
-      private final @Nullable Input<List<ServiceStatusGetArgs>> statuses;
+      private final @Nullable Output<List<ServiceStatusGetArgs>> statuses;
 
-    public Input<List<ServiceStatusGetArgs>> getStatuses() {
-        return this.statuses == null ? Input.empty() : this.statuses;
+    public Output<List<ServiceStatusGetArgs>> getStatuses() {
+        return this.statuses == null ? Output.empty() : this.statuses;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-      private final @Nullable Input<ServiceTemplateGetArgs> template;
+      private final @Nullable Output<ServiceTemplateGetArgs> template;
 
-    public Input<ServiceTemplateGetArgs> getTemplate() {
-        return this.template == null ? Input.empty() : this.template;
+    public Output<ServiceTemplateGetArgs> getTemplate() {
+        return this.template == null ? Output.empty() : this.template;
     }
 
     /**
@@ -120,21 +120,21 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffics")
-      private final @Nullable Input<List<ServiceTrafficGetArgs>> traffics;
+      private final @Nullable Output<List<ServiceTrafficGetArgs>> traffics;
 
-    public Input<List<ServiceTrafficGetArgs>> getTraffics() {
-        return this.traffics == null ? Input.empty() : this.traffics;
+    public Output<List<ServiceTrafficGetArgs>> getTraffics() {
+        return this.traffics == null ? Output.empty() : this.traffics;
     }
 
     public ServiceState(
-        @Nullable Input<Boolean> autogenerateRevisionName,
-        @Nullable Input<String> location,
-        @Nullable Input<ServiceMetadataGetArgs> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<ServiceStatusGetArgs>> statuses,
-        @Nullable Input<ServiceTemplateGetArgs> template,
-        @Nullable Input<List<ServiceTrafficGetArgs>> traffics) {
+        @Nullable Output<Boolean> autogenerateRevisionName,
+        @Nullable Output<String> location,
+        @Nullable Output<ServiceMetadataGetArgs> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<ServiceStatusGetArgs>> statuses,
+        @Nullable Output<ServiceTemplateGetArgs> template,
+        @Nullable Output<List<ServiceTrafficGetArgs>> traffics) {
         this.autogenerateRevisionName = autogenerateRevisionName;
         this.location = location;
         this.metadata = metadata;
@@ -146,14 +146,14 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceState() {
-        this.autogenerateRevisionName = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.statuses = Input.empty();
-        this.template = Input.empty();
-        this.traffics = Input.empty();
+        this.autogenerateRevisionName = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.statuses = Output.empty();
+        this.template = Output.empty();
+        this.traffics = Output.empty();
     }
 
     public static Builder builder() {
@@ -165,14 +165,14 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autogenerateRevisionName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ServiceMetadataGetArgs> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<ServiceStatusGetArgs>> statuses;
-        private @Nullable Input<ServiceTemplateGetArgs> template;
-        private @Nullable Input<List<ServiceTrafficGetArgs>> traffics;
+        private @Nullable Output<Boolean> autogenerateRevisionName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ServiceMetadataGetArgs> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<ServiceStatusGetArgs>> statuses;
+        private @Nullable Output<ServiceTemplateGetArgs> template;
+        private @Nullable Output<List<ServiceTrafficGetArgs>> traffics;
 
         public Builder() {
     	      // Empty
@@ -190,83 +190,83 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.traffics = defaults.traffics;
         }
 
-        public Builder autogenerateRevisionName(@Nullable Input<Boolean> autogenerateRevisionName) {
+        public Builder autogenerateRevisionName(@Nullable Output<Boolean> autogenerateRevisionName) {
             this.autogenerateRevisionName = autogenerateRevisionName;
             return this;
         }
 
         public Builder autogenerateRevisionName(@Nullable Boolean autogenerateRevisionName) {
-            this.autogenerateRevisionName = Input.ofNullable(autogenerateRevisionName);
+            this.autogenerateRevisionName = Output.ofNullable(autogenerateRevisionName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ServiceMetadataGetArgs> metadata) {
+        public Builder metadata(@Nullable Output<ServiceMetadataGetArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ServiceMetadataGetArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder statuses(@Nullable Input<List<ServiceStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Output<List<ServiceStatusGetArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
         public Builder statuses(@Nullable List<ServiceStatusGetArgs> statuses) {
-            this.statuses = Input.ofNullable(statuses);
+            this.statuses = Output.ofNullable(statuses);
             return this;
         }
 
-        public Builder template(@Nullable Input<ServiceTemplateGetArgs> template) {
+        public Builder template(@Nullable Output<ServiceTemplateGetArgs> template) {
             this.template = template;
             return this;
         }
 
         public Builder template(@Nullable ServiceTemplateGetArgs template) {
-            this.template = Input.ofNullable(template);
+            this.template = Output.ofNullable(template);
             return this;
         }
 
-        public Builder traffics(@Nullable Input<List<ServiceTrafficGetArgs>> traffics) {
+        public Builder traffics(@Nullable Output<List<ServiceTrafficGetArgs>> traffics) {
             this.traffics = traffics;
             return this;
         }
 
         public Builder traffics(@Nullable List<ServiceTrafficGetArgs> traffics) {
-            this.traffics = Input.ofNullable(traffics);
+            this.traffics = Output.ofNullable(traffics);
             return this;
         }
         public ServiceState build() {

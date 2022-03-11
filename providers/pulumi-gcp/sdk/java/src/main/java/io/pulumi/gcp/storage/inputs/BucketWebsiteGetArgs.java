@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mainPageSuffix")
-      private final @Nullable Input<String> mainPageSuffix;
+      private final @Nullable Output<String> mainPageSuffix;
 
-    public Input<String> getMainPageSuffix() {
-        return this.mainPageSuffix == null ? Input.empty() : this.mainPageSuffix;
+    public Output<String> getMainPageSuffix() {
+        return this.mainPageSuffix == null ? Output.empty() : this.mainPageSuffix;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notFoundPage")
-      private final @Nullable Input<String> notFoundPage;
+      private final @Nullable Output<String> notFoundPage;
 
-    public Input<String> getNotFoundPage() {
-        return this.notFoundPage == null ? Input.empty() : this.notFoundPage;
+    public Output<String> getNotFoundPage() {
+        return this.notFoundPage == null ? Output.empty() : this.notFoundPage;
     }
 
     public BucketWebsiteGetArgs(
-        @Nullable Input<String> mainPageSuffix,
-        @Nullable Input<String> notFoundPage) {
+        @Nullable Output<String> mainPageSuffix,
+        @Nullable Output<String> notFoundPage) {
         this.mainPageSuffix = mainPageSuffix;
         this.notFoundPage = notFoundPage;
     }
 
     private BucketWebsiteGetArgs() {
-        this.mainPageSuffix = Input.empty();
-        this.notFoundPage = Input.empty();
+        this.mainPageSuffix = Output.empty();
+        this.notFoundPage = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> mainPageSuffix;
-        private @Nullable Input<String> notFoundPage;
+        private @Nullable Output<String> mainPageSuffix;
+        private @Nullable Output<String> notFoundPage;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.notFoundPage = defaults.notFoundPage;
         }
 
-        public Builder mainPageSuffix(@Nullable Input<String> mainPageSuffix) {
+        public Builder mainPageSuffix(@Nullable Output<String> mainPageSuffix) {
             this.mainPageSuffix = mainPageSuffix;
             return this;
         }
 
         public Builder mainPageSuffix(@Nullable String mainPageSuffix) {
-            this.mainPageSuffix = Input.ofNullable(mainPageSuffix);
+            this.mainPageSuffix = Output.ofNullable(mainPageSuffix);
             return this;
         }
 
-        public Builder notFoundPage(@Nullable Input<String> notFoundPage) {
+        public Builder notFoundPage(@Nullable Output<String> notFoundPage) {
             this.notFoundPage = notFoundPage;
             return this;
         }
 
         public Builder notFoundPage(@Nullable String notFoundPage) {
-            this.notFoundPage = Input.ofNullable(notFoundPage);
+            this.notFoundPage = Output.ofNullable(notFoundPage);
             return this;
         }
         public BucketWebsiteGetArgs build() {

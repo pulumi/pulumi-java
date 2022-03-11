@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.LoadBalancerConfigurationArgs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="loadBalancerConfigurations")
-      private final @Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
+      private final @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
-    public Input<List<LoadBalancerConfigurationArgs>> getLoadBalancerConfigurations() {
-        return this.loadBalancerConfigurations == null ? Input.empty() : this.loadBalancerConfigurations;
+    public Output<List<LoadBalancerConfigurationArgs>> getLoadBalancerConfigurations() {
+        return this.loadBalancerConfigurations == null ? Output.empty() : this.loadBalancerConfigurations;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="swappableCloudService")
-      private final @Nullable Input<SubResourceArgs> swappableCloudService;
+      private final @Nullable Output<SubResourceArgs> swappableCloudService;
 
-    public Input<SubResourceArgs> getSwappableCloudService() {
-        return this.swappableCloudService == null ? Input.empty() : this.swappableCloudService;
+    public Output<SubResourceArgs> getSwappableCloudService() {
+        return this.swappableCloudService == null ? Output.empty() : this.swappableCloudService;
     }
 
     public CloudServiceNetworkProfileArgs(
-        @Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations,
-        @Nullable Input<SubResourceArgs> swappableCloudService) {
+        @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations,
+        @Nullable Output<SubResourceArgs> swappableCloudService) {
         this.loadBalancerConfigurations = loadBalancerConfigurations;
         this.swappableCloudService = swappableCloudService;
     }
 
     private CloudServiceNetworkProfileArgs() {
-        this.loadBalancerConfigurations = Input.empty();
-        this.swappableCloudService = Input.empty();
+        this.loadBalancerConfigurations = Output.empty();
+        this.swappableCloudService = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
-        private @Nullable Input<SubResourceArgs> swappableCloudService;
+        private @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
+        private @Nullable Output<SubResourceArgs> swappableCloudService;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
     	      this.swappableCloudService = defaults.swappableCloudService;
         }
 
-        public Builder loadBalancerConfigurations(@Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
+        public Builder loadBalancerConfigurations(@Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
             this.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
 
         public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
-            this.loadBalancerConfigurations = Input.ofNullable(loadBalancerConfigurations);
+            this.loadBalancerConfigurations = Output.ofNullable(loadBalancerConfigurations);
             return this;
         }
 
-        public Builder swappableCloudService(@Nullable Input<SubResourceArgs> swappableCloudService) {
+        public Builder swappableCloudService(@Nullable Output<SubResourceArgs> swappableCloudService) {
             this.swappableCloudService = swappableCloudService;
             return this;
         }
 
         public Builder swappableCloudService(@Nullable SubResourceArgs swappableCloudService) {
-            this.swappableCloudService = Input.ofNullable(swappableCloudService);
+            this.swappableCloudService = Output.ofNullable(swappableCloudService);
             return this;
         }
         public CloudServiceNetworkProfileArgs build() {

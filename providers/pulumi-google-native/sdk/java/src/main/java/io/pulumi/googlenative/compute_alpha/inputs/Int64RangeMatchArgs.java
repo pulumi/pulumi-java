@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rangeEnd")
-      private final @Nullable Input<String> rangeEnd;
+      private final @Nullable Output<String> rangeEnd;
 
-    public Input<String> getRangeEnd() {
-        return this.rangeEnd == null ? Input.empty() : this.rangeEnd;
+    public Output<String> getRangeEnd() {
+        return this.rangeEnd == null ? Output.empty() : this.rangeEnd;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rangeStart")
-      private final @Nullable Input<String> rangeStart;
+      private final @Nullable Output<String> rangeStart;
 
-    public Input<String> getRangeStart() {
-        return this.rangeStart == null ? Input.empty() : this.rangeStart;
+    public Output<String> getRangeStart() {
+        return this.rangeStart == null ? Output.empty() : this.rangeStart;
     }
 
     public Int64RangeMatchArgs(
-        @Nullable Input<String> rangeEnd,
-        @Nullable Input<String> rangeStart) {
+        @Nullable Output<String> rangeEnd,
+        @Nullable Output<String> rangeStart) {
         this.rangeEnd = rangeEnd;
         this.rangeStart = rangeStart;
     }
 
     private Int64RangeMatchArgs() {
-        this.rangeEnd = Input.empty();
-        this.rangeStart = Input.empty();
+        this.rangeEnd = Output.empty();
+        this.rangeStart = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> rangeEnd;
-        private @Nullable Input<String> rangeStart;
+        private @Nullable Output<String> rangeEnd;
+        private @Nullable Output<String> rangeStart;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
     	      this.rangeStart = defaults.rangeStart;
         }
 
-        public Builder rangeEnd(@Nullable Input<String> rangeEnd) {
+        public Builder rangeEnd(@Nullable Output<String> rangeEnd) {
             this.rangeEnd = rangeEnd;
             return this;
         }
 
         public Builder rangeEnd(@Nullable String rangeEnd) {
-            this.rangeEnd = Input.ofNullable(rangeEnd);
+            this.rangeEnd = Output.ofNullable(rangeEnd);
             return this;
         }
 
-        public Builder rangeStart(@Nullable Input<String> rangeStart) {
+        public Builder rangeStart(@Nullable Output<String> rangeStart) {
             this.rangeStart = rangeStart;
             return this;
         }
 
         public Builder rangeStart(@Nullable String rangeStart) {
-            this.rangeStart = Input.ofNullable(rangeStart);
+            this.rangeStart = Output.ofNullable(rangeStart);
             return this;
         }
         public Int64RangeMatchArgs build() {

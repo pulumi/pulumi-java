@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn", required=true)
-      private final Input<String> certificateArn;
+      private final Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
+    public Output<String> getCertificateArn() {
         return this.certificateArn;
     }
 
@@ -30,10 +30,10 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
     public DomainNameArgs(
-        Input<String> certificateArn,
-        @Nullable Input<String> description,
-        Input<String> domainName) {
+        Output<String> certificateArn,
+        @Nullable Output<String> description,
+        Output<String> domainName) {
         this.certificateArn = Objects.requireNonNull(certificateArn, "expected parameter 'certificateArn' to be non-null");
         this.description = description;
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
     }
 
     private DomainNameArgs() {
-        this.certificateArn = Input.empty();
-        this.description = Input.empty();
-        this.domainName = Input.empty();
+        this.certificateArn = Output.empty();
+        this.description = Output.empty();
+        this.domainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> certificateArn;
-        private @Nullable Input<String> description;
-        private Input<String> domainName;
+        private Output<String> certificateArn;
+        private @Nullable Output<String> description;
+        private Output<String> domainName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder certificateArn(Input<String> certificateArn) {
+        public Builder certificateArn(Output<String> certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
 
         public Builder certificateArn(String certificateArn) {
-            this.certificateArn = Input.of(Objects.requireNonNull(certificateArn));
+            this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
         public DomainNameArgs build() {

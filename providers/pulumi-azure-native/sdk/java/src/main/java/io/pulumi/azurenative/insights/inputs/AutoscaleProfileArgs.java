@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.RecurrenceArgs;
 import io.pulumi.azurenative.insights.inputs.ScaleCapacityArgs;
 import io.pulumi.azurenative.insights.inputs.ScaleRuleArgs;
 import io.pulumi.azurenative.insights.inputs.TimeWindowArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,9 +28,9 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="capacity", required=true)
-      private final Input<ScaleCapacityArgs> capacity;
+      private final Output<ScaleCapacityArgs> capacity;
 
-    public Input<ScaleCapacityArgs> getCapacity() {
+    public Output<ScaleCapacityArgs> getCapacity() {
         return this.capacity;
     }
 
@@ -39,10 +39,10 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fixedDate")
-      private final @Nullable Input<TimeWindowArgs> fixedDate;
+      private final @Nullable Output<TimeWindowArgs> fixedDate;
 
-    public Input<TimeWindowArgs> getFixedDate() {
-        return this.fixedDate == null ? Input.empty() : this.fixedDate;
+    public Output<TimeWindowArgs> getFixedDate() {
+        return this.fixedDate == null ? Output.empty() : this.fixedDate;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -61,10 +61,10 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="recurrence")
-      private final @Nullable Input<RecurrenceArgs> recurrence;
+      private final @Nullable Output<RecurrenceArgs> recurrence;
 
-    public Input<RecurrenceArgs> getRecurrence() {
-        return this.recurrence == null ? Input.empty() : this.recurrence;
+    public Output<RecurrenceArgs> getRecurrence() {
+        return this.recurrence == null ? Output.empty() : this.recurrence;
     }
 
     /**
@@ -72,18 +72,18 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<ScaleRuleArgs>> rules;
+      private final Output<List<ScaleRuleArgs>> rules;
 
-    public Input<List<ScaleRuleArgs>> getRules() {
+    public Output<List<ScaleRuleArgs>> getRules() {
         return this.rules;
     }
 
     public AutoscaleProfileArgs(
-        Input<ScaleCapacityArgs> capacity,
-        @Nullable Input<TimeWindowArgs> fixedDate,
-        Input<String> name,
-        @Nullable Input<RecurrenceArgs> recurrence,
-        Input<List<ScaleRuleArgs>> rules) {
+        Output<ScaleCapacityArgs> capacity,
+        @Nullable Output<TimeWindowArgs> fixedDate,
+        Output<String> name,
+        @Nullable Output<RecurrenceArgs> recurrence,
+        Output<List<ScaleRuleArgs>> rules) {
         this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
         this.fixedDate = fixedDate;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -92,11 +92,11 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AutoscaleProfileArgs() {
-        this.capacity = Input.empty();
-        this.fixedDate = Input.empty();
-        this.name = Input.empty();
-        this.recurrence = Input.empty();
-        this.rules = Input.empty();
+        this.capacity = Output.empty();
+        this.fixedDate = Output.empty();
+        this.name = Output.empty();
+        this.recurrence = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<ScaleCapacityArgs> capacity;
-        private @Nullable Input<TimeWindowArgs> fixedDate;
-        private Input<String> name;
-        private @Nullable Input<RecurrenceArgs> recurrence;
-        private Input<List<ScaleRuleArgs>> rules;
+        private Output<ScaleCapacityArgs> capacity;
+        private @Nullable Output<TimeWindowArgs> fixedDate;
+        private Output<String> name;
+        private @Nullable Output<RecurrenceArgs> recurrence;
+        private Output<List<ScaleRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     	      this.rules = defaults.rules;
         }
 
-        public Builder capacity(Input<ScaleCapacityArgs> capacity) {
+        public Builder capacity(Output<ScaleCapacityArgs> capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
         public Builder capacity(ScaleCapacityArgs capacity) {
-            this.capacity = Input.of(Objects.requireNonNull(capacity));
+            this.capacity = Output.of(Objects.requireNonNull(capacity));
             return this;
         }
 
-        public Builder fixedDate(@Nullable Input<TimeWindowArgs> fixedDate) {
+        public Builder fixedDate(@Nullable Output<TimeWindowArgs> fixedDate) {
             this.fixedDate = fixedDate;
             return this;
         }
 
         public Builder fixedDate(@Nullable TimeWindowArgs fixedDate) {
-            this.fixedDate = Input.ofNullable(fixedDate);
+            this.fixedDate = Output.ofNullable(fixedDate);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder recurrence(@Nullable Input<RecurrenceArgs> recurrence) {
+        public Builder recurrence(@Nullable Output<RecurrenceArgs> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
         public Builder recurrence(@Nullable RecurrenceArgs recurrence) {
-            this.recurrence = Input.ofNullable(recurrence);
+            this.recurrence = Output.ofNullable(recurrence);
             return this;
         }
 
-        public Builder rules(Input<List<ScaleRuleArgs>> rules) {
+        public Builder rules(Output<List<ScaleRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<ScaleRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
         public AutoscaleProfileArgs build() {

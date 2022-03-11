@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="trafficAnalyticsInterval")
-      private final @Nullable Input<Integer> trafficAnalyticsInterval;
+      private final @Nullable Output<Integer> trafficAnalyticsInterval;
 
-    public Input<Integer> getTrafficAnalyticsInterval() {
-        return this.trafficAnalyticsInterval == null ? Input.empty() : this.trafficAnalyticsInterval;
+    public Output<Integer> getTrafficAnalyticsInterval() {
+        return this.trafficAnalyticsInterval == null ? Output.empty() : this.trafficAnalyticsInterval;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="workspaceId")
-      private final @Nullable Input<String> workspaceId;
+      private final @Nullable Output<String> workspaceId;
 
-    public Input<String> getWorkspaceId() {
-        return this.workspaceId == null ? Input.empty() : this.workspaceId;
+    public Output<String> getWorkspaceId() {
+        return this.workspaceId == null ? Output.empty() : this.workspaceId;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="workspaceRegion")
-      private final @Nullable Input<String> workspaceRegion;
+      private final @Nullable Output<String> workspaceRegion;
 
-    public Input<String> getWorkspaceRegion() {
-        return this.workspaceRegion == null ? Input.empty() : this.workspaceRegion;
+    public Output<String> getWorkspaceRegion() {
+        return this.workspaceRegion == null ? Output.empty() : this.workspaceRegion;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="workspaceResourceId")
-      private final @Nullable Input<String> workspaceResourceId;
+      private final @Nullable Output<String> workspaceResourceId;
 
-    public Input<String> getWorkspaceResourceId() {
-        return this.workspaceResourceId == null ? Input.empty() : this.workspaceResourceId;
+    public Output<String> getWorkspaceResourceId() {
+        return this.workspaceResourceId == null ? Output.empty() : this.workspaceResourceId;
     }
 
     public TrafficAnalyticsConfigurationPropertiesArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Integer> trafficAnalyticsInterval,
-        @Nullable Input<String> workspaceId,
-        @Nullable Input<String> workspaceRegion,
-        @Nullable Input<String> workspaceResourceId) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Integer> trafficAnalyticsInterval,
+        @Nullable Output<String> workspaceId,
+        @Nullable Output<String> workspaceRegion,
+        @Nullable Output<String> workspaceResourceId) {
         this.enabled = enabled;
         this.trafficAnalyticsInterval = trafficAnalyticsInterval;
         this.workspaceId = workspaceId;
@@ -89,11 +89,11 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
     }
 
     private TrafficAnalyticsConfigurationPropertiesArgs() {
-        this.enabled = Input.empty();
-        this.trafficAnalyticsInterval = Input.empty();
-        this.workspaceId = Input.empty();
-        this.workspaceRegion = Input.empty();
-        this.workspaceResourceId = Input.empty();
+        this.enabled = Output.empty();
+        this.trafficAnalyticsInterval = Output.empty();
+        this.workspaceId = Output.empty();
+        this.workspaceRegion = Output.empty();
+        this.workspaceResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Integer> trafficAnalyticsInterval;
-        private @Nullable Input<String> workspaceId;
-        private @Nullable Input<String> workspaceRegion;
-        private @Nullable Input<String> workspaceResourceId;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Integer> trafficAnalyticsInterval;
+        private @Nullable Output<String> workspaceId;
+        private @Nullable Output<String> workspaceRegion;
+        private @Nullable Output<String> workspaceResourceId;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder trafficAnalyticsInterval(@Nullable Input<Integer> trafficAnalyticsInterval) {
+        public Builder trafficAnalyticsInterval(@Nullable Output<Integer> trafficAnalyticsInterval) {
             this.trafficAnalyticsInterval = trafficAnalyticsInterval;
             return this;
         }
 
         public Builder trafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
-            this.trafficAnalyticsInterval = Input.ofNullable(trafficAnalyticsInterval);
+            this.trafficAnalyticsInterval = Output.ofNullable(trafficAnalyticsInterval);
             return this;
         }
 
-        public Builder workspaceId(@Nullable Input<String> workspaceId) {
+        public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Input.ofNullable(workspaceId);
+            this.workspaceId = Output.ofNullable(workspaceId);
             return this;
         }
 
-        public Builder workspaceRegion(@Nullable Input<String> workspaceRegion) {
+        public Builder workspaceRegion(@Nullable Output<String> workspaceRegion) {
             this.workspaceRegion = workspaceRegion;
             return this;
         }
 
         public Builder workspaceRegion(@Nullable String workspaceRegion) {
-            this.workspaceRegion = Input.ofNullable(workspaceRegion);
+            this.workspaceRegion = Output.ofNullable(workspaceRegion);
             return this;
         }
 
-        public Builder workspaceResourceId(@Nullable Input<String> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = Input.ofNullable(workspaceResourceId);
+            this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
             return this;
         }
         public TrafficAnalyticsConfigurationPropertiesArgs build() {

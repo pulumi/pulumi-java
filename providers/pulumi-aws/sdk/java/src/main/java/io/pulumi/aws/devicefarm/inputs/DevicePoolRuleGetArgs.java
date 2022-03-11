@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.devicefarm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DevicePoolRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="attribute")
-      private final @Nullable Input<String> attribute;
+      private final @Nullable Output<String> attribute;
 
-    public Input<String> getAttribute() {
-        return this.attribute == null ? Input.empty() : this.attribute;
+    public Output<String> getAttribute() {
+        return this.attribute == null ? Output.empty() : this.attribute;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DevicePoolRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="operator")
-      private final @Nullable Input<String> operator;
+      private final @Nullable Output<String> operator;
 
-    public Input<String> getOperator() {
-        return this.operator == null ? Input.empty() : this.operator;
+    public Output<String> getOperator() {
+        return this.operator == null ? Output.empty() : this.operator;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class DevicePoolRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public DevicePoolRuleGetArgs(
-        @Nullable Input<String> attribute,
-        @Nullable Input<String> operator,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> attribute,
+        @Nullable Output<String> operator,
+        @Nullable Output<String> value) {
         this.attribute = attribute;
         this.operator = operator;
         this.value = value;
     }
 
     private DevicePoolRuleGetArgs() {
-        this.attribute = Input.empty();
-        this.operator = Input.empty();
-        this.value = Input.empty();
+        this.attribute = Output.empty();
+        this.operator = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DevicePoolRuleGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attribute;
-        private @Nullable Input<String> operator;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> attribute;
+        private @Nullable Output<String> operator;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DevicePoolRuleGetArgs extends io.pulumi.resources.ResourceArg
     	      this.value = defaults.value;
         }
 
-        public Builder attribute(@Nullable Input<String> attribute) {
+        public Builder attribute(@Nullable Output<String> attribute) {
             this.attribute = attribute;
             return this;
         }
 
         public Builder attribute(@Nullable String attribute) {
-            this.attribute = Input.ofNullable(attribute);
+            this.attribute = Output.ofNullable(attribute);
             return this;
         }
 
-        public Builder operator(@Nullable Input<String> operator) {
+        public Builder operator(@Nullable Output<String> operator) {
             this.operator = operator;
             return this;
         }
 
         public Builder operator(@Nullable String operator) {
-            this.operator = Input.ofNullable(operator);
+            this.operator = Output.ofNullable(operator);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public DevicePoolRuleGetArgs build() {

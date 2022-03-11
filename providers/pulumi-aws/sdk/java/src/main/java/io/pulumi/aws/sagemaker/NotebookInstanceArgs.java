@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="additionalCodeRepositories")
-      private final @Nullable Input<List<String>> additionalCodeRepositories;
+      private final @Nullable Output<List<String>> additionalCodeRepositories;
 
-    public Input<List<String>> getAdditionalCodeRepositories() {
-        return this.additionalCodeRepositories == null ? Input.empty() : this.additionalCodeRepositories;
+    public Output<List<String>> getAdditionalCodeRepositories() {
+        return this.additionalCodeRepositories == null ? Output.empty() : this.additionalCodeRepositories;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="defaultCodeRepository")
-      private final @Nullable Input<String> defaultCodeRepository;
+      private final @Nullable Output<String> defaultCodeRepository;
 
-    public Input<String> getDefaultCodeRepository() {
-        return this.defaultCodeRepository == null ? Input.empty() : this.defaultCodeRepository;
+    public Output<String> getDefaultCodeRepository() {
+        return this.defaultCodeRepository == null ? Output.empty() : this.defaultCodeRepository;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="directInternetAccess")
-      private final @Nullable Input<String> directInternetAccess;
+      private final @Nullable Output<String> directInternetAccess;
 
-    public Input<String> getDirectInternetAccess() {
-        return this.directInternetAccess == null ? Input.empty() : this.directInternetAccess;
+    public Output<String> getDirectInternetAccess() {
+        return this.directInternetAccess == null ? Output.empty() : this.directInternetAccess;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -67,10 +67,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lifecycleConfigName")
-      private final @Nullable Input<String> lifecycleConfigName;
+      private final @Nullable Output<String> lifecycleConfigName;
 
-    public Input<String> getLifecycleConfigName() {
-        return this.lifecycleConfigName == null ? Input.empty() : this.lifecycleConfigName;
+    public Output<String> getLifecycleConfigName() {
+        return this.lifecycleConfigName == null ? Output.empty() : this.lifecycleConfigName;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="platformIdentifier")
-      private final @Nullable Input<String> platformIdentifier;
+      private final @Nullable Output<String> platformIdentifier;
 
-    public Input<String> getPlatformIdentifier() {
-        return this.platformIdentifier == null ? Input.empty() : this.platformIdentifier;
+    public Output<String> getPlatformIdentifier() {
+        return this.platformIdentifier == null ? Output.empty() : this.platformIdentifier;
     }
 
     /**
@@ -111,9 +111,9 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -122,10 +122,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rootAccess")
-      private final @Nullable Input<String> rootAccess;
+      private final @Nullable Output<String> rootAccess;
 
-    public Input<String> getRootAccess() {
-        return this.rootAccess == null ? Input.empty() : this.rootAccess;
+    public Output<String> getRootAccess() {
+        return this.rootAccess == null ? Output.empty() : this.rootAccess;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -166,27 +166,27 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="volumeSize")
-      private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Output<Integer> volumeSize;
 
-    public Input<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Input.empty() : this.volumeSize;
+    public Output<Integer> getVolumeSize() {
+        return this.volumeSize == null ? Output.empty() : this.volumeSize;
     }
 
     public NotebookInstanceArgs(
-        @Nullable Input<List<String>> additionalCodeRepositories,
-        @Nullable Input<String> defaultCodeRepository,
-        @Nullable Input<String> directInternetAccess,
-        Input<String> instanceType,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> lifecycleConfigName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> platformIdentifier,
-        Input<String> roleArn,
-        @Nullable Input<String> rootAccess,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> volumeSize) {
+        @Nullable Output<List<String>> additionalCodeRepositories,
+        @Nullable Output<String> defaultCodeRepository,
+        @Nullable Output<String> directInternetAccess,
+        Output<String> instanceType,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> lifecycleConfigName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> platformIdentifier,
+        Output<String> roleArn,
+        @Nullable Output<String> rootAccess,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> volumeSize) {
         this.additionalCodeRepositories = additionalCodeRepositories;
         this.defaultCodeRepository = defaultCodeRepository;
         this.directInternetAccess = directInternetAccess;
@@ -204,20 +204,20 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NotebookInstanceArgs() {
-        this.additionalCodeRepositories = Input.empty();
-        this.defaultCodeRepository = Input.empty();
-        this.directInternetAccess = Input.empty();
-        this.instanceType = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.lifecycleConfigName = Input.empty();
-        this.name = Input.empty();
-        this.platformIdentifier = Input.empty();
-        this.roleArn = Input.empty();
-        this.rootAccess = Input.empty();
-        this.securityGroups = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
-        this.volumeSize = Input.empty();
+        this.additionalCodeRepositories = Output.empty();
+        this.defaultCodeRepository = Output.empty();
+        this.directInternetAccess = Output.empty();
+        this.instanceType = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.lifecycleConfigName = Output.empty();
+        this.name = Output.empty();
+        this.platformIdentifier = Output.empty();
+        this.roleArn = Output.empty();
+        this.rootAccess = Output.empty();
+        this.securityGroups = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
+        this.volumeSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -229,20 +229,20 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> additionalCodeRepositories;
-        private @Nullable Input<String> defaultCodeRepository;
-        private @Nullable Input<String> directInternetAccess;
-        private Input<String> instanceType;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> lifecycleConfigName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> platformIdentifier;
-        private Input<String> roleArn;
-        private @Nullable Input<String> rootAccess;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> volumeSize;
+        private @Nullable Output<List<String>> additionalCodeRepositories;
+        private @Nullable Output<String> defaultCodeRepository;
+        private @Nullable Output<String> directInternetAccess;
+        private Output<String> instanceType;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> lifecycleConfigName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> platformIdentifier;
+        private Output<String> roleArn;
+        private @Nullable Output<String> rootAccess;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> volumeSize;
 
         public Builder() {
     	      // Empty
@@ -266,143 +266,143 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.volumeSize = defaults.volumeSize;
         }
 
-        public Builder additionalCodeRepositories(@Nullable Input<List<String>> additionalCodeRepositories) {
+        public Builder additionalCodeRepositories(@Nullable Output<List<String>> additionalCodeRepositories) {
             this.additionalCodeRepositories = additionalCodeRepositories;
             return this;
         }
 
         public Builder additionalCodeRepositories(@Nullable List<String> additionalCodeRepositories) {
-            this.additionalCodeRepositories = Input.ofNullable(additionalCodeRepositories);
+            this.additionalCodeRepositories = Output.ofNullable(additionalCodeRepositories);
             return this;
         }
 
-        public Builder defaultCodeRepository(@Nullable Input<String> defaultCodeRepository) {
+        public Builder defaultCodeRepository(@Nullable Output<String> defaultCodeRepository) {
             this.defaultCodeRepository = defaultCodeRepository;
             return this;
         }
 
         public Builder defaultCodeRepository(@Nullable String defaultCodeRepository) {
-            this.defaultCodeRepository = Input.ofNullable(defaultCodeRepository);
+            this.defaultCodeRepository = Output.ofNullable(defaultCodeRepository);
             return this;
         }
 
-        public Builder directInternetAccess(@Nullable Input<String> directInternetAccess) {
+        public Builder directInternetAccess(@Nullable Output<String> directInternetAccess) {
             this.directInternetAccess = directInternetAccess;
             return this;
         }
 
         public Builder directInternetAccess(@Nullable String directInternetAccess) {
-            this.directInternetAccess = Input.ofNullable(directInternetAccess);
+            this.directInternetAccess = Output.ofNullable(directInternetAccess);
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder lifecycleConfigName(@Nullable Input<String> lifecycleConfigName) {
+        public Builder lifecycleConfigName(@Nullable Output<String> lifecycleConfigName) {
             this.lifecycleConfigName = lifecycleConfigName;
             return this;
         }
 
         public Builder lifecycleConfigName(@Nullable String lifecycleConfigName) {
-            this.lifecycleConfigName = Input.ofNullable(lifecycleConfigName);
+            this.lifecycleConfigName = Output.ofNullable(lifecycleConfigName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder platformIdentifier(@Nullable Input<String> platformIdentifier) {
+        public Builder platformIdentifier(@Nullable Output<String> platformIdentifier) {
             this.platformIdentifier = platformIdentifier;
             return this;
         }
 
         public Builder platformIdentifier(@Nullable String platformIdentifier) {
-            this.platformIdentifier = Input.ofNullable(platformIdentifier);
+            this.platformIdentifier = Output.ofNullable(platformIdentifier);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder rootAccess(@Nullable Input<String> rootAccess) {
+        public Builder rootAccess(@Nullable Output<String> rootAccess) {
             this.rootAccess = rootAccess;
             return this;
         }
 
         public Builder rootAccess(@Nullable String rootAccess) {
-            this.rootAccess = Input.ofNullable(rootAccess);
+            this.rootAccess = Output.ofNullable(rootAccess);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder volumeSize(@Nullable Input<Integer> volumeSize) {
+        public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Input.ofNullable(volumeSize);
+            this.volumeSize = Output.ofNullable(volumeSize);
             return this;
         }
         public NotebookInstanceArgs build() {

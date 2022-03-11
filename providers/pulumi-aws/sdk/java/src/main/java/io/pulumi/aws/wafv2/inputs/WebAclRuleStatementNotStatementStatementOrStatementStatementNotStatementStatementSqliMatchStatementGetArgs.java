@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
      * 
      */
     @InputImport(name="fieldToMatch")
-      private final @Nullable Input<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch;
+      private final @Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Input<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
+    public Output<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> getFieldToMatch() {
+        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
      * 
      */
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations;
+      private final Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations;
 
-    public Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementGetArgs(
-        @Nullable Input<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch,
-        Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations) {
+        @Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch,
+        Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
     }
 
     private WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementGetArgs() {
-        this.fieldToMatch = Input.empty();
-        this.textTransformations = Input.empty();
+        this.fieldToMatch = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch;
-        private Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations;
+        private @Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch;
+        private Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder fieldToMatch(@Nullable Input<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch) {
+        public Builder fieldToMatch(@Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
 
         public Builder fieldToMatch(@Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Input.ofNullable(fieldToMatch);
+            this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
 
-        public Builder textTransformations(Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSqliMatchStatementGetArgs build() {

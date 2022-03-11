@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectAltNamesArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectArgs;
@@ -24,9 +24,9 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subject", required=true)
-      private final Input<SubjectArgs> subject;
+      private final Output<SubjectArgs> subject;
 
-    public Input<SubjectArgs> getSubject() {
+    public Output<SubjectArgs> getSubject() {
         return this.subject;
     }
 
@@ -35,22 +35,22 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjectAltName")
-      private final @Nullable Input<SubjectAltNamesArgs> subjectAltName;
+      private final @Nullable Output<SubjectAltNamesArgs> subjectAltName;
 
-    public Input<SubjectAltNamesArgs> getSubjectAltName() {
-        return this.subjectAltName == null ? Input.empty() : this.subjectAltName;
+    public Output<SubjectAltNamesArgs> getSubjectAltName() {
+        return this.subjectAltName == null ? Output.empty() : this.subjectAltName;
     }
 
     public SubjectConfigArgs(
-        Input<SubjectArgs> subject,
-        @Nullable Input<SubjectAltNamesArgs> subjectAltName) {
+        Output<SubjectArgs> subject,
+        @Nullable Output<SubjectAltNamesArgs> subjectAltName) {
         this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
         this.subjectAltName = subjectAltName;
     }
 
     private SubjectConfigArgs() {
-        this.subject = Input.empty();
-        this.subjectAltName = Input.empty();
+        this.subject = Output.empty();
+        this.subjectAltName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<SubjectArgs> subject;
-        private @Nullable Input<SubjectAltNamesArgs> subjectAltName;
+        private Output<SubjectArgs> subject;
+        private @Nullable Output<SubjectAltNamesArgs> subjectAltName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder subject(Input<SubjectArgs> subject) {
+        public Builder subject(Output<SubjectArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
         public Builder subject(SubjectArgs subject) {
-            this.subject = Input.of(Objects.requireNonNull(subject));
+            this.subject = Output.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder subjectAltName(@Nullable Input<SubjectAltNamesArgs> subjectAltName) {
+        public Builder subjectAltName(@Nullable Output<SubjectAltNamesArgs> subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
         }
 
         public Builder subjectAltName(@Nullable SubjectAltNamesArgs subjectAltName) {
-            this.subjectAltName = Input.ofNullable(subjectAltName);
+            this.subjectAltName = Output.ofNullable(subjectAltName);
             return this;
         }
         public SubjectConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.aps;
 
 import io.pulumi.awsnative.aps.inputs.RuleGroupsNamespaceTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="data", required=true)
-      private final Input<String> data;
+      private final Output<String> data;
 
-    public Input<String> getData() {
+    public Output<String> getData() {
         return this.data;
     }
 
@@ -32,10 +32,10 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<RuleGroupsNamespaceTagArgs>> tags;
+      private final @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags;
 
-    public Input<List<RuleGroupsNamespaceTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RuleGroupsNamespaceTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workspace", required=true)
-      private final Input<String> workspace;
+      private final Output<String> workspace;
 
-    public Input<String> getWorkspace() {
+    public Output<String> getWorkspace() {
         return this.workspace;
     }
 
     public RuleGroupsNamespaceArgs(
-        Input<String> data,
-        @Nullable Input<String> name,
-        @Nullable Input<List<RuleGroupsNamespaceTagArgs>> tags,
-        Input<String> workspace) {
+        Output<String> data,
+        @Nullable Output<String> name,
+        @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags,
+        Output<String> workspace) {
         this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
         this.name = name;
         this.tags = tags;
@@ -72,10 +72,10 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
     }
 
     private RuleGroupsNamespaceArgs() {
-        this.data = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.workspace = Input.empty();
+        this.data = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.workspace = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> data;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<RuleGroupsNamespaceTagArgs>> tags;
-        private Input<String> workspace;
+        private Output<String> data;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags;
+        private Output<String> workspace;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
     	      this.workspace = defaults.workspace;
         }
 
-        public Builder data(Input<String> data) {
+        public Builder data(Output<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
         public Builder data(String data) {
-            this.data = Input.of(Objects.requireNonNull(data));
+            this.data = Output.of(Objects.requireNonNull(data));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RuleGroupsNamespaceTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RuleGroupsNamespaceTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspace(Input<String> workspace) {
+        public Builder workspace(Output<String> workspace) {
             this.workspace = Objects.requireNonNull(workspace);
             return this;
         }
 
         public Builder workspace(String workspace) {
-            this.workspace = Input.of(Objects.requireNonNull(workspace));
+            this.workspace = Output.of(Objects.requireNonNull(workspace));
             return this;
         }
         public RuleGroupsNamespaceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.filestore;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.filestore.inputs.InstanceFileSharesArgs;
 import io.pulumi.gcp.filestore.inputs.InstanceNetworkArgs;
@@ -23,10 +23,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileShares", required=true)
-      private final Input<InstanceFileSharesArgs> fileShares;
+      private final Output<InstanceFileSharesArgs> fileShares;
 
-    public Input<InstanceFileSharesArgs> getFileShares() {
+    public Output<InstanceFileSharesArgs> getFileShares() {
         return this.fileShares;
     }
 
@@ -47,10 +47,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -82,9 +82,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networks", required=true)
-      private final Input<List<InstanceNetworkArgs>> networks;
+      private final Output<List<InstanceNetworkArgs>> networks;
 
-    public Input<List<InstanceNetworkArgs>> getNetworks() {
+    public Output<List<InstanceNetworkArgs>> getNetworks() {
         return this.networks;
     }
 
@@ -94,10 +94,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -106,9 +106,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-      private final Input<String> tier;
+      private final Output<String> tier;
 
-    public Input<String> getTier() {
+    public Output<String> getTier() {
         return this.tier;
     }
 
@@ -123,23 +123,23 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Deprecated in favor of location. */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
     @Deprecated /* Deprecated in favor of location. */
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public InstanceArgs(
-        @Nullable Input<String> description,
-        Input<InstanceFileSharesArgs> fileShares,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<List<InstanceNetworkArgs>> networks,
-        @Nullable Input<String> project,
-        Input<String> tier,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> description,
+        Output<InstanceFileSharesArgs> fileShares,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<List<InstanceNetworkArgs>> networks,
+        @Nullable Output<String> project,
+        Output<String> tier,
+        @Nullable Output<String> zone) {
         this.description = description;
         this.fileShares = Objects.requireNonNull(fileShares, "expected parameter 'fileShares' to be non-null");
         this.labels = labels;
@@ -152,15 +152,15 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.description = Input.empty();
-        this.fileShares = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.networks = Input.empty();
-        this.project = Input.empty();
-        this.tier = Input.empty();
-        this.zone = Input.empty();
+        this.description = Output.empty();
+        this.fileShares = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.networks = Output.empty();
+        this.project = Output.empty();
+        this.tier = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,15 +172,15 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<InstanceFileSharesArgs> fileShares;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<List<InstanceNetworkArgs>> networks;
-        private @Nullable Input<String> project;
-        private Input<String> tier;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> description;
+        private Output<InstanceFileSharesArgs> fileShares;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<List<InstanceNetworkArgs>> networks;
+        private @Nullable Output<String> project;
+        private Output<String> tier;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -199,93 +199,93 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fileShares(Input<InstanceFileSharesArgs> fileShares) {
+        public Builder fileShares(Output<InstanceFileSharesArgs> fileShares) {
             this.fileShares = Objects.requireNonNull(fileShares);
             return this;
         }
 
         public Builder fileShares(InstanceFileSharesArgs fileShares) {
-            this.fileShares = Input.of(Objects.requireNonNull(fileShares));
+            this.fileShares = Output.of(Objects.requireNonNull(fileShares));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networks(Input<List<InstanceNetworkArgs>> networks) {
+        public Builder networks(Output<List<InstanceNetworkArgs>> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
 
         public Builder networks(List<InstanceNetworkArgs> networks) {
-            this.networks = Input.of(Objects.requireNonNull(networks));
+            this.networks = Output.of(Objects.requireNonNull(networks));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tier(Input<String> tier) {
+        public Builder tier(Output<String> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
         public Builder tier(String tier) {
-            this.tier = Input.of(Objects.requireNonNull(tier));
+            this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public InstanceArgs build() {

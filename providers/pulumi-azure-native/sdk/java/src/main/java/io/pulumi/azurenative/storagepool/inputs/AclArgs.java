@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagepool.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initiatorIqn", required=true)
-      private final Input<String> initiatorIqn;
+      private final Output<String> initiatorIqn;
 
-    public Input<String> getInitiatorIqn() {
+    public Output<String> getInitiatorIqn() {
         return this.initiatorIqn;
     }
 
@@ -34,9 +34,9 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mappedLuns", required=true)
-      private final Input<List<String>> mappedLuns;
+      private final Output<List<String>> mappedLuns;
 
-    public Input<List<String>> getMappedLuns() {
+    public Output<List<String>> getMappedLuns() {
         return this.mappedLuns;
     }
 
@@ -45,9 +45,9 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -56,17 +56,17 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public AclArgs(
-        Input<String> initiatorIqn,
-        Input<List<String>> mappedLuns,
-        Input<String> password,
-        Input<String> username) {
+        Output<String> initiatorIqn,
+        Output<List<String>> mappedLuns,
+        Output<String> password,
+        Output<String> username) {
         this.initiatorIqn = Objects.requireNonNull(initiatorIqn, "expected parameter 'initiatorIqn' to be non-null");
         this.mappedLuns = Objects.requireNonNull(mappedLuns, "expected parameter 'mappedLuns' to be non-null");
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
@@ -74,10 +74,10 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AclArgs() {
-        this.initiatorIqn = Input.empty();
-        this.mappedLuns = Input.empty();
-        this.password = Input.empty();
-        this.username = Input.empty();
+        this.initiatorIqn = Output.empty();
+        this.mappedLuns = Output.empty();
+        this.password = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> initiatorIqn;
-        private Input<List<String>> mappedLuns;
-        private Input<String> password;
-        private Input<String> username;
+        private Output<String> initiatorIqn;
+        private Output<List<String>> mappedLuns;
+        private Output<String> password;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder initiatorIqn(Input<String> initiatorIqn) {
+        public Builder initiatorIqn(Output<String> initiatorIqn) {
             this.initiatorIqn = Objects.requireNonNull(initiatorIqn);
             return this;
         }
 
         public Builder initiatorIqn(String initiatorIqn) {
-            this.initiatorIqn = Input.of(Objects.requireNonNull(initiatorIqn));
+            this.initiatorIqn = Output.of(Objects.requireNonNull(initiatorIqn));
             return this;
         }
 
-        public Builder mappedLuns(Input<List<String>> mappedLuns) {
+        public Builder mappedLuns(Output<List<String>> mappedLuns) {
             this.mappedLuns = Objects.requireNonNull(mappedLuns);
             return this;
         }
 
         public Builder mappedLuns(List<String> mappedLuns) {
-            this.mappedLuns = Input.of(Objects.requireNonNull(mappedLuns));
+            this.mappedLuns = Output.of(Objects.requireNonNull(mappedLuns));
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public AclArgs build() {

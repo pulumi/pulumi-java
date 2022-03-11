@@ -5,7 +5,7 @@ package io.pulumi.aws.batch;
 
 import io.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyArgs;
 import io.pulumi.aws.batch.inputs.JobDefinitionTimeoutArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerProperties")
-      private final @Nullable Input<String> containerProperties;
+      private final @Nullable Output<String> containerProperties;
 
-    public Input<String> getContainerProperties() {
-        return this.containerProperties == null ? Input.empty() : this.containerProperties;
+    public Output<String> getContainerProperties() {
+        return this.containerProperties == null ? Output.empty() : this.containerProperties;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformCapabilities")
-      private final @Nullable Input<List<String>> platformCapabilities;
+      private final @Nullable Output<List<String>> platformCapabilities;
 
-    public Input<List<String>> getPlatformCapabilities() {
-        return this.platformCapabilities == null ? Input.empty() : this.platformCapabilities;
+    public Output<List<String>> getPlatformCapabilities() {
+        return this.platformCapabilities == null ? Output.empty() : this.platformCapabilities;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="propagateTags")
-      private final @Nullable Input<Boolean> propagateTags;
+      private final @Nullable Output<Boolean> propagateTags;
 
-    public Input<Boolean> getPropagateTags() {
-        return this.propagateTags == null ? Input.empty() : this.propagateTags;
+    public Output<Boolean> getPropagateTags() {
+        return this.propagateTags == null ? Output.empty() : this.propagateTags;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryStrategy")
-      private final @Nullable Input<JobDefinitionRetryStrategyArgs> retryStrategy;
+      private final @Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy;
 
-    public Input<JobDefinitionRetryStrategyArgs> getRetryStrategy() {
-        return this.retryStrategy == null ? Input.empty() : this.retryStrategy;
+    public Output<JobDefinitionRetryStrategyArgs> getRetryStrategy() {
+        return this.retryStrategy == null ? Output.empty() : this.retryStrategy;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<JobDefinitionTimeoutArgs> timeout;
+      private final @Nullable Output<JobDefinitionTimeoutArgs> timeout;
 
-    public Input<JobDefinitionTimeoutArgs> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<JobDefinitionTimeoutArgs> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public JobDefinitionArgs(
-        @Nullable Input<String> containerProperties,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<List<String>> platformCapabilities,
-        @Nullable Input<Boolean> propagateTags,
-        @Nullable Input<JobDefinitionRetryStrategyArgs> retryStrategy,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<JobDefinitionTimeoutArgs> timeout,
-        Input<String> type) {
+        @Nullable Output<String> containerProperties,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<List<String>> platformCapabilities,
+        @Nullable Output<Boolean> propagateTags,
+        @Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<JobDefinitionTimeoutArgs> timeout,
+        Output<String> type) {
         this.containerProperties = containerProperties;
         this.name = name;
         this.parameters = parameters;
@@ -142,15 +142,15 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobDefinitionArgs() {
-        this.containerProperties = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.platformCapabilities = Input.empty();
-        this.propagateTags = Input.empty();
-        this.retryStrategy = Input.empty();
-        this.tags = Input.empty();
-        this.timeout = Input.empty();
-        this.type = Input.empty();
+        this.containerProperties = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.platformCapabilities = Output.empty();
+        this.propagateTags = Output.empty();
+        this.retryStrategy = Output.empty();
+        this.tags = Output.empty();
+        this.timeout = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerProperties;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<List<String>> platformCapabilities;
-        private @Nullable Input<Boolean> propagateTags;
-        private @Nullable Input<JobDefinitionRetryStrategyArgs> retryStrategy;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<JobDefinitionTimeoutArgs> timeout;
-        private Input<String> type;
+        private @Nullable Output<String> containerProperties;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<List<String>> platformCapabilities;
+        private @Nullable Output<Boolean> propagateTags;
+        private @Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<JobDefinitionTimeoutArgs> timeout;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder containerProperties(@Nullable Input<String> containerProperties) {
+        public Builder containerProperties(@Nullable Output<String> containerProperties) {
             this.containerProperties = containerProperties;
             return this;
         }
 
         public Builder containerProperties(@Nullable String containerProperties) {
-            this.containerProperties = Input.ofNullable(containerProperties);
+            this.containerProperties = Output.ofNullable(containerProperties);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder platformCapabilities(@Nullable Input<List<String>> platformCapabilities) {
+        public Builder platformCapabilities(@Nullable Output<List<String>> platformCapabilities) {
             this.platformCapabilities = platformCapabilities;
             return this;
         }
 
         public Builder platformCapabilities(@Nullable List<String> platformCapabilities) {
-            this.platformCapabilities = Input.ofNullable(platformCapabilities);
+            this.platformCapabilities = Output.ofNullable(platformCapabilities);
             return this;
         }
 
-        public Builder propagateTags(@Nullable Input<Boolean> propagateTags) {
+        public Builder propagateTags(@Nullable Output<Boolean> propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
 
         public Builder propagateTags(@Nullable Boolean propagateTags) {
-            this.propagateTags = Input.ofNullable(propagateTags);
+            this.propagateTags = Output.ofNullable(propagateTags);
             return this;
         }
 
-        public Builder retryStrategy(@Nullable Input<JobDefinitionRetryStrategyArgs> retryStrategy) {
+        public Builder retryStrategy(@Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy) {
             this.retryStrategy = retryStrategy;
             return this;
         }
 
         public Builder retryStrategy(@Nullable JobDefinitionRetryStrategyArgs retryStrategy) {
-            this.retryStrategy = Input.ofNullable(retryStrategy);
+            this.retryStrategy = Output.ofNullable(retryStrategy);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<JobDefinitionTimeoutArgs> timeout) {
+        public Builder timeout(@Nullable Output<JobDefinitionTimeoutArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable JobDefinitionTimeoutArgs timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public JobDefinitionArgs build() {

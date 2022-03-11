@@ -5,7 +5,7 @@ package io.pulumi.aws.backup;
 
 import io.pulumi.aws.backup.inputs.PlanAdvancedBackupSettingArgs;
 import io.pulumi.aws.backup.inputs.PlanRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advancedBackupSettings")
-      private final @Nullable Input<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings;
+      private final @Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings;
 
-    public Input<List<PlanAdvancedBackupSettingArgs>> getAdvancedBackupSettings() {
-        return this.advancedBackupSettings == null ? Input.empty() : this.advancedBackupSettings;
+    public Output<List<PlanAdvancedBackupSettingArgs>> getAdvancedBackupSettings() {
+        return this.advancedBackupSettings == null ? Output.empty() : this.advancedBackupSettings;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<PlanRuleArgs>> rules;
+      private final Output<List<PlanRuleArgs>> rules;
 
-    public Input<List<PlanRuleArgs>> getRules() {
+    public Output<List<PlanRuleArgs>> getRules() {
         return this.rules;
     }
 
@@ -56,17 +56,17 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PlanArgs(
-        @Nullable Input<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings,
-        @Nullable Input<String> name,
-        Input<List<PlanRuleArgs>> rules,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings,
+        @Nullable Output<String> name,
+        Output<List<PlanRuleArgs>> rules,
+        @Nullable Output<Map<String,String>> tags) {
         this.advancedBackupSettings = advancedBackupSettings;
         this.name = name;
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
@@ -74,10 +74,10 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlanArgs() {
-        this.advancedBackupSettings = Input.empty();
-        this.name = Input.empty();
-        this.rules = Input.empty();
-        this.tags = Input.empty();
+        this.advancedBackupSettings = Output.empty();
+        this.name = Output.empty();
+        this.rules = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings;
-        private @Nullable Input<String> name;
-        private Input<List<PlanRuleArgs>> rules;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings;
+        private @Nullable Output<String> name;
+        private Output<List<PlanRuleArgs>> rules;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder advancedBackupSettings(@Nullable Input<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings) {
+        public Builder advancedBackupSettings(@Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings) {
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
 
         public Builder advancedBackupSettings(@Nullable List<PlanAdvancedBackupSettingArgs> advancedBackupSettings) {
-            this.advancedBackupSettings = Input.ofNullable(advancedBackupSettings);
+            this.advancedBackupSettings = Output.ofNullable(advancedBackupSettings);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rules(Input<List<PlanRuleArgs>> rules) {
+        public Builder rules(Output<List<PlanRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<PlanRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PlanArgs build() {

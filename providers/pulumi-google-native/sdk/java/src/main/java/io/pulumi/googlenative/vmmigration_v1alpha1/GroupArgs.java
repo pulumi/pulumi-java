@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,24 +30,24 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="groupId", required=true)
-      private final Input<String> groupId;
+      private final Output<String> groupId;
 
-    public Input<String> getGroupId() {
+    public Output<String> getGroupId() {
         return this.groupId;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,34 +55,34 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     public GroupArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> groupId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> groupId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId) {
         this.description = description;
         this.displayName = displayName;
         this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
@@ -93,13 +93,13 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.groupId = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.groupId = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,13 +111,13 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> groupId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> groupId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
 
         public Builder() {
     	      // Empty
@@ -134,73 +134,73 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder groupId(Input<String> groupId) {
+        public Builder groupId(Output<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Input.of(Objects.requireNonNull(groupId));
+            this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
         public GroupArgs build() {

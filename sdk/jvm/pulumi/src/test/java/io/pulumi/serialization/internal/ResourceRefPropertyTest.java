@@ -4,8 +4,8 @@ import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import io.pulumi.Stack;
-import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -56,8 +56,8 @@ class ResourceRefPropertyTest {
                 .orElse(null);
         assertThat(res).isNotNull();
 
-        var urn = InputOutputTests.waitFor(res.getUrn()).getValueNullable();
-        var id = InputOutputTests.waitFor(res.getId()).getValueOrDefault("");
+        var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
+        var id = OutputTests.waitFor(res.getId()).getValueOrDefault("");
 
         var v = serializeToValueAsync(res).join();
 
@@ -102,7 +102,7 @@ class ResourceRefPropertyTest {
                 .orElse(null);
         assertThat(stack).isNotNull();
 
-        var values = InputOutputTests.waitFor(stack.values).getValueNullable();
+        var values = OutputTests.waitFor(stack.values).getValueNullable();
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
         assertThat(values.get("expectedId")).isEqualTo(values.get("actualId"));
@@ -124,7 +124,7 @@ class ResourceRefPropertyTest {
                 .orElse(null);
         assertThat(stack).isNotNull();
 
-        var values = InputOutputTests.waitFor(stack.values).getValueNullable();
+        var values = OutputTests.waitFor(stack.values).getValueNullable();
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
     }
@@ -145,7 +145,7 @@ class ResourceRefPropertyTest {
                 .orElse(null);
         assertThat(res).isNotNull();
 
-        var urn = InputOutputTests.waitFor(res.getUrn()).getValueNullable();
+        var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
         var v = serializeToValueAsync(res).join();
 
         assertThat(v).isEqualTo(createComponentResourceReference(urn));
@@ -189,7 +189,7 @@ class ResourceRefPropertyTest {
                 .orElse(null);
         assertThat(stack).isNotNull();
 
-        var values = InputOutputTests.waitFor(stack.values).getValueNullable();
+        var values = OutputTests.waitFor(stack.values).getValueNullable();
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
     }
@@ -210,7 +210,7 @@ class ResourceRefPropertyTest {
                 .orElse(null);
         assertThat(stack).isNotNull();
 
-        var values = InputOutputTests.waitFor(stack.values).getValueNullable();
+        var values = OutputTests.waitFor(stack.values).getValueNullable();
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
     }
@@ -260,8 +260,8 @@ class ResourceRefPropertyTest {
         public DeserializeCustomResourceStack() {
             var res = new MyCustomResource("test", null, null);
 
-            var urn = InputOutputTests.waitFor(res.getUrn()).getValueOrDefault("");
-            var id = InputOutputTests.waitFor(res.getId()).getValueOrDefault("");
+            var urn = OutputTests.waitFor(res.getUrn()).getValueOrDefault("");
+            var id = OutputTests.waitFor(res.getId()).getValueOrDefault("");
 
             var v = deserializeFromValue(
                     createCustomResourceReference(urn, ""),
@@ -271,8 +271,8 @@ class ResourceRefPropertyTest {
             this.values = Output.of(ImmutableMap.of(
                     "expectedUrn", urn,
                     "expectedId", id,
-                    "actualUrn", InputOutputTests.waitFor(v.getUrn()).getValueOrDefault(""),
-                    "actualId", InputOutputTests.waitFor(v.getId()).getValueOrDefault("")
+                    "actualUrn", OutputTests.waitFor(v.getUrn()).getValueOrDefault(""),
+                    "actualId", OutputTests.waitFor(v.getId()).getValueOrDefault("")
             ));
         }
     }
@@ -285,7 +285,7 @@ class ResourceRefPropertyTest {
         public DeserializeMissingCustomResourceStack() {
             var res = new MissingCustomResource("test", null, null);
 
-            var urn = InputOutputTests.waitFor(res.getUrn()).getValueNullable();
+            var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
 
             var v = deserializeFromValue(
                     createCustomResourceReference(urn, ""),
@@ -294,7 +294,7 @@ class ResourceRefPropertyTest {
 
             this.values = Output.of(ImmutableMap.of(
                     "expectedUrn", urn,
-                    "actualUrn", InputOutputTests.waitFor(v.getUrn()).getValueNullable()
+                    "actualUrn", OutputTests.waitFor(v.getUrn()).getValueNullable()
             ));
         }
     }
@@ -307,7 +307,7 @@ class ResourceRefPropertyTest {
         public DeserializeComponentResourceStack() {
             var res = new MyComponentResource("test", null, null);
 
-            var urn = InputOutputTests.waitFor(res.getUrn()).getValueNullable();
+            var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
 
             var v = deserializeFromValue(
                     createComponentResourceReference(urn),
@@ -316,7 +316,7 @@ class ResourceRefPropertyTest {
 
             this.values = Output.of(ImmutableMap.of(
                     "expectedUrn", urn,
-                    "actualUrn", InputOutputTests.waitFor(v.getUrn()).getValueNullable()
+                    "actualUrn", OutputTests.waitFor(v.getUrn()).getValueNullable()
             ));
         }
     }
@@ -329,7 +329,7 @@ class ResourceRefPropertyTest {
         public DeserializeMissingComponentResourceStack() {
             var res = new MissingComponentResource("test", null, null);
 
-            var urn = InputOutputTests.waitFor(res.getUrn()).getValueNullable();
+            var urn = OutputTests.waitFor(res.getUrn()).getValueNullable();
 
             var v = deserializeFromValue(
                     createComponentResourceReference(urn),
@@ -338,7 +338,7 @@ class ResourceRefPropertyTest {
 
             this.values = Output.of(ImmutableMap.of(
                     "expectedUrn", urn,
-                    "actualUrn", InputOutputTests.waitFor(v.getUrn()).getValueNullable()
+                    "actualUrn", OutputTests.waitFor(v.getUrn()).getValueNullable()
             ));
         }
     }

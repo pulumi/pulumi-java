@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.DaemonSetConditionArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="collisionCount")
-      private final @Nullable Input<Integer> collisionCount;
+      private final @Nullable Output<Integer> collisionCount;
 
-    public Input<Integer> getCollisionCount() {
-        return this.collisionCount == null ? Input.empty() : this.collisionCount;
+    public Output<Integer> getCollisionCount() {
+        return this.collisionCount == null ? Output.empty() : this.collisionCount;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<DaemonSetConditionArgs>> conditions;
+      private final @Nullable Output<List<DaemonSetConditionArgs>> conditions;
 
-    public Input<List<DaemonSetConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<DaemonSetConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="currentNumberScheduled", required=true)
-      private final Input<Integer> currentNumberScheduled;
+      private final Output<Integer> currentNumberScheduled;
 
-    public Input<Integer> getCurrentNumberScheduled() {
+    public Output<Integer> getCurrentNumberScheduled() {
         return this.currentNumberScheduled;
     }
 
@@ -58,9 +58,9 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="desiredNumberScheduled", required=true)
-      private final Input<Integer> desiredNumberScheduled;
+      private final Output<Integer> desiredNumberScheduled;
 
-    public Input<Integer> getDesiredNumberScheduled() {
+    public Output<Integer> getDesiredNumberScheduled() {
         return this.desiredNumberScheduled;
     }
 
@@ -69,10 +69,10 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numberAvailable")
-      private final @Nullable Input<Integer> numberAvailable;
+      private final @Nullable Output<Integer> numberAvailable;
 
-    public Input<Integer> getNumberAvailable() {
-        return this.numberAvailable == null ? Input.empty() : this.numberAvailable;
+    public Output<Integer> getNumberAvailable() {
+        return this.numberAvailable == null ? Output.empty() : this.numberAvailable;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numberMisscheduled", required=true)
-      private final Input<Integer> numberMisscheduled;
+      private final Output<Integer> numberMisscheduled;
 
-    public Input<Integer> getNumberMisscheduled() {
+    public Output<Integer> getNumberMisscheduled() {
         return this.numberMisscheduled;
     }
 
@@ -91,9 +91,9 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numberReady", required=true)
-      private final Input<Integer> numberReady;
+      private final Output<Integer> numberReady;
 
-    public Input<Integer> getNumberReady() {
+    public Output<Integer> getNumberReady() {
         return this.numberReady;
     }
 
@@ -102,10 +102,10 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numberUnavailable")
-      private final @Nullable Input<Integer> numberUnavailable;
+      private final @Nullable Output<Integer> numberUnavailable;
 
-    public Input<Integer> getNumberUnavailable() {
-        return this.numberUnavailable == null ? Input.empty() : this.numberUnavailable;
+    public Output<Integer> getNumberUnavailable() {
+        return this.numberUnavailable == null ? Output.empty() : this.numberUnavailable;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="updatedNumberScheduled")
-      private final @Nullable Input<Integer> updatedNumberScheduled;
+      private final @Nullable Output<Integer> updatedNumberScheduled;
 
-    public Input<Integer> getUpdatedNumberScheduled() {
-        return this.updatedNumberScheduled == null ? Input.empty() : this.updatedNumberScheduled;
+    public Output<Integer> getUpdatedNumberScheduled() {
+        return this.updatedNumberScheduled == null ? Output.empty() : this.updatedNumberScheduled;
     }
 
     public DaemonSetStatusArgs(
-        @Nullable Input<Integer> collisionCount,
-        @Nullable Input<List<DaemonSetConditionArgs>> conditions,
-        Input<Integer> currentNumberScheduled,
-        Input<Integer> desiredNumberScheduled,
-        @Nullable Input<Integer> numberAvailable,
-        Input<Integer> numberMisscheduled,
-        Input<Integer> numberReady,
-        @Nullable Input<Integer> numberUnavailable,
-        @Nullable Input<Integer> observedGeneration,
-        @Nullable Input<Integer> updatedNumberScheduled) {
+        @Nullable Output<Integer> collisionCount,
+        @Nullable Output<List<DaemonSetConditionArgs>> conditions,
+        Output<Integer> currentNumberScheduled,
+        Output<Integer> desiredNumberScheduled,
+        @Nullable Output<Integer> numberAvailable,
+        Output<Integer> numberMisscheduled,
+        Output<Integer> numberReady,
+        @Nullable Output<Integer> numberUnavailable,
+        @Nullable Output<Integer> observedGeneration,
+        @Nullable Output<Integer> updatedNumberScheduled) {
         this.collisionCount = collisionCount;
         this.conditions = conditions;
         this.currentNumberScheduled = Objects.requireNonNull(currentNumberScheduled, "expected parameter 'currentNumberScheduled' to be non-null");
@@ -154,16 +154,16 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DaemonSetStatusArgs() {
-        this.collisionCount = Input.empty();
-        this.conditions = Input.empty();
-        this.currentNumberScheduled = Input.empty();
-        this.desiredNumberScheduled = Input.empty();
-        this.numberAvailable = Input.empty();
-        this.numberMisscheduled = Input.empty();
-        this.numberReady = Input.empty();
-        this.numberUnavailable = Input.empty();
-        this.observedGeneration = Input.empty();
-        this.updatedNumberScheduled = Input.empty();
+        this.collisionCount = Output.empty();
+        this.conditions = Output.empty();
+        this.currentNumberScheduled = Output.empty();
+        this.desiredNumberScheduled = Output.empty();
+        this.numberAvailable = Output.empty();
+        this.numberMisscheduled = Output.empty();
+        this.numberReady = Output.empty();
+        this.numberUnavailable = Output.empty();
+        this.observedGeneration = Output.empty();
+        this.updatedNumberScheduled = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> collisionCount;
-        private @Nullable Input<List<DaemonSetConditionArgs>> conditions;
-        private Input<Integer> currentNumberScheduled;
-        private Input<Integer> desiredNumberScheduled;
-        private @Nullable Input<Integer> numberAvailable;
-        private Input<Integer> numberMisscheduled;
-        private Input<Integer> numberReady;
-        private @Nullable Input<Integer> numberUnavailable;
-        private @Nullable Input<Integer> observedGeneration;
-        private @Nullable Input<Integer> updatedNumberScheduled;
+        private @Nullable Output<Integer> collisionCount;
+        private @Nullable Output<List<DaemonSetConditionArgs>> conditions;
+        private Output<Integer> currentNumberScheduled;
+        private Output<Integer> desiredNumberScheduled;
+        private @Nullable Output<Integer> numberAvailable;
+        private Output<Integer> numberMisscheduled;
+        private Output<Integer> numberReady;
+        private @Nullable Output<Integer> numberUnavailable;
+        private @Nullable Output<Integer> observedGeneration;
+        private @Nullable Output<Integer> updatedNumberScheduled;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
     	      this.updatedNumberScheduled = defaults.updatedNumberScheduled;
         }
 
-        public Builder collisionCount(@Nullable Input<Integer> collisionCount) {
+        public Builder collisionCount(@Nullable Output<Integer> collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
 
         public Builder collisionCount(@Nullable Integer collisionCount) {
-            this.collisionCount = Input.ofNullable(collisionCount);
+            this.collisionCount = Output.ofNullable(collisionCount);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<DaemonSetConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<DaemonSetConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<DaemonSetConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder currentNumberScheduled(Input<Integer> currentNumberScheduled) {
+        public Builder currentNumberScheduled(Output<Integer> currentNumberScheduled) {
             this.currentNumberScheduled = Objects.requireNonNull(currentNumberScheduled);
             return this;
         }
 
         public Builder currentNumberScheduled(Integer currentNumberScheduled) {
-            this.currentNumberScheduled = Input.of(Objects.requireNonNull(currentNumberScheduled));
+            this.currentNumberScheduled = Output.of(Objects.requireNonNull(currentNumberScheduled));
             return this;
         }
 
-        public Builder desiredNumberScheduled(Input<Integer> desiredNumberScheduled) {
+        public Builder desiredNumberScheduled(Output<Integer> desiredNumberScheduled) {
             this.desiredNumberScheduled = Objects.requireNonNull(desiredNumberScheduled);
             return this;
         }
 
         public Builder desiredNumberScheduled(Integer desiredNumberScheduled) {
-            this.desiredNumberScheduled = Input.of(Objects.requireNonNull(desiredNumberScheduled));
+            this.desiredNumberScheduled = Output.of(Objects.requireNonNull(desiredNumberScheduled));
             return this;
         }
 
-        public Builder numberAvailable(@Nullable Input<Integer> numberAvailable) {
+        public Builder numberAvailable(@Nullable Output<Integer> numberAvailable) {
             this.numberAvailable = numberAvailable;
             return this;
         }
 
         public Builder numberAvailable(@Nullable Integer numberAvailable) {
-            this.numberAvailable = Input.ofNullable(numberAvailable);
+            this.numberAvailable = Output.ofNullable(numberAvailable);
             return this;
         }
 
-        public Builder numberMisscheduled(Input<Integer> numberMisscheduled) {
+        public Builder numberMisscheduled(Output<Integer> numberMisscheduled) {
             this.numberMisscheduled = Objects.requireNonNull(numberMisscheduled);
             return this;
         }
 
         public Builder numberMisscheduled(Integer numberMisscheduled) {
-            this.numberMisscheduled = Input.of(Objects.requireNonNull(numberMisscheduled));
+            this.numberMisscheduled = Output.of(Objects.requireNonNull(numberMisscheduled));
             return this;
         }
 
-        public Builder numberReady(Input<Integer> numberReady) {
+        public Builder numberReady(Output<Integer> numberReady) {
             this.numberReady = Objects.requireNonNull(numberReady);
             return this;
         }
 
         public Builder numberReady(Integer numberReady) {
-            this.numberReady = Input.of(Objects.requireNonNull(numberReady));
+            this.numberReady = Output.of(Objects.requireNonNull(numberReady));
             return this;
         }
 
-        public Builder numberUnavailable(@Nullable Input<Integer> numberUnavailable) {
+        public Builder numberUnavailable(@Nullable Output<Integer> numberUnavailable) {
             this.numberUnavailable = numberUnavailable;
             return this;
         }
 
         public Builder numberUnavailable(@Nullable Integer numberUnavailable) {
-            this.numberUnavailable = Input.ofNullable(numberUnavailable);
+            this.numberUnavailable = Output.ofNullable(numberUnavailable);
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder updatedNumberScheduled(@Nullable Input<Integer> updatedNumberScheduled) {
+        public Builder updatedNumberScheduled(@Nullable Output<Integer> updatedNumberScheduled) {
             this.updatedNumberScheduled = updatedNumberScheduled;
             return this;
         }
 
         public Builder updatedNumberScheduled(@Nullable Integer updatedNumberScheduled) {
-            this.updatedNumberScheduled = Input.ofNullable(updatedNumberScheduled);
+            this.updatedNumberScheduled = Output.ofNullable(updatedNumberScheduled);
             return this;
         }
         public DaemonSetStatusArgs build() {

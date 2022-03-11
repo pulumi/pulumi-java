@@ -9,7 +9,6 @@ import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentProperti
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentSkuResponse;
 import io.pulumi.azurenative.logic.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -172,18 +171,18 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public IntegrationServiceEnvironment(String name, IntegrationServiceEnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:logic:IntegrationServiceEnvironment", name, args == null ? IntegrationServiceEnvironmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:logic:IntegrationServiceEnvironment", name, args == null ? IntegrationServiceEnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IntegrationServiceEnvironment(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IntegrationServiceEnvironment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:IntegrationServiceEnvironment", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:logic/v20190501:IntegrationServiceEnvironment").build())
+                Output.of(Alias.builder().setType("azure-native:logic/v20190501:IntegrationServiceEnvironment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -197,7 +196,7 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IntegrationServiceEnvironment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IntegrationServiceEnvironment get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationServiceEnvironment(name, id, options);
     }
 }

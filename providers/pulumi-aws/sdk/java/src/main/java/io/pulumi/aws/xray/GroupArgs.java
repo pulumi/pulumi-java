@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.xray;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterExpression", required=true)
-      private final Input<String> filterExpression;
+      private final Output<String> filterExpression;
 
-    public Input<String> getFilterExpression() {
+    public Output<String> getFilterExpression() {
         return this.filterExpression;
     }
 
@@ -31,9 +31,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-      private final Input<String> groupName;
+      private final Output<String> groupName;
 
-    public Input<String> getGroupName() {
+    public Output<String> getGroupName() {
         return this.groupName;
     }
 
@@ -42,25 +42,25 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GroupArgs(
-        Input<String> filterExpression,
-        Input<String> groupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> filterExpression,
+        Output<String> groupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.filterExpression = Objects.requireNonNull(filterExpression, "expected parameter 'filterExpression' to be non-null");
         this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
         this.tags = tags;
     }
 
     private GroupArgs() {
-        this.filterExpression = Input.empty();
-        this.groupName = Input.empty();
-        this.tags = Input.empty();
+        this.filterExpression = Output.empty();
+        this.groupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> filterExpression;
-        private Input<String> groupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> filterExpression;
+        private Output<String> groupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder filterExpression(Input<String> filterExpression) {
+        public Builder filterExpression(Output<String> filterExpression) {
             this.filterExpression = Objects.requireNonNull(filterExpression);
             return this;
         }
 
         public Builder filterExpression(String filterExpression) {
-            this.filterExpression = Input.of(Objects.requireNonNull(filterExpression));
+            this.filterExpression = Output.of(Objects.requireNonNull(filterExpression));
             return this;
         }
 
-        public Builder groupName(Input<String> groupName) {
+        public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
         public Builder groupName(String groupName) {
-            this.groupName = Input.of(Objects.requireNonNull(groupName));
+            this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GroupArgs build() {

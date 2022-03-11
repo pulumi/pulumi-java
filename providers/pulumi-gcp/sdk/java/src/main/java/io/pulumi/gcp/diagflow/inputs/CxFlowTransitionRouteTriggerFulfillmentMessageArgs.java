@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageArgs extends io
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text;
+      private final @Nullable Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text;
 
-    public Input<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
-    public CxFlowTransitionRouteTriggerFulfillmentMessageArgs(@Nullable Input<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text) {
+    public CxFlowTransitionRouteTriggerFulfillmentMessageArgs(@Nullable Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text) {
         this.text = text;
     }
 
     private CxFlowTransitionRouteTriggerFulfillmentMessageArgs() {
-        this.text = Input.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text;
+        private @Nullable Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageArgs extends io
     	      this.text = defaults.text;
         }
 
-        public Builder text(@Nullable Input<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text) {
+        public Builder text(@Nullable Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable CxFlowTransitionRouteTriggerFulfillmentMessageTextArgs text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
         public CxFlowTransitionRouteTriggerFulfillmentMessageArgs build() {

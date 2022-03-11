@@ -14,7 +14,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.inputs.ServerConfigurationsManage
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.StorageConfigurationSettingsArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.WsfcDomainCredentialsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -31,10 +31,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoBackupSettings")
-      private final @Nullable Input<AutoBackupSettingsArgs> autoBackupSettings;
+      private final @Nullable Output<AutoBackupSettingsArgs> autoBackupSettings;
 
-    public Input<AutoBackupSettingsArgs> getAutoBackupSettings() {
-        return this.autoBackupSettings == null ? Input.empty() : this.autoBackupSettings;
+    public Output<AutoBackupSettingsArgs> getAutoBackupSettings() {
+        return this.autoBackupSettings == null ? Output.empty() : this.autoBackupSettings;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoPatchingSettings")
-      private final @Nullable Input<AutoPatchingSettingsArgs> autoPatchingSettings;
+      private final @Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings;
 
-    public Input<AutoPatchingSettingsArgs> getAutoPatchingSettings() {
-        return this.autoPatchingSettings == null ? Input.empty() : this.autoPatchingSettings;
+    public Output<AutoPatchingSettingsArgs> getAutoPatchingSettings() {
+        return this.autoPatchingSettings == null ? Output.empty() : this.autoPatchingSettings;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ResourceIdentityArgs> identity;
+      private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Input<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ResourceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyVaultCredentialSettings")
-      private final @Nullable Input<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
+      private final @Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
 
-    public Input<KeyVaultCredentialSettingsArgs> getKeyVaultCredentialSettings() {
-        return this.keyVaultCredentialSettings == null ? Input.empty() : this.keyVaultCredentialSettings;
+    public Output<KeyVaultCredentialSettingsArgs> getKeyVaultCredentialSettings() {
+        return this.keyVaultCredentialSettings == null ? Output.empty() : this.keyVaultCredentialSettings;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -86,9 +86,9 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -97,10 +97,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serverConfigurationsManagementSettings")
-      private final @Nullable Input<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
+      private final @Nullable Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
 
-    public Input<ServerConfigurationsManagementSettingsArgs> getServerConfigurationsManagementSettings() {
-        return this.serverConfigurationsManagementSettings == null ? Input.empty() : this.serverConfigurationsManagementSettings;
+    public Output<ServerConfigurationsManagementSettingsArgs> getServerConfigurationsManagementSettings() {
+        return this.serverConfigurationsManagementSettings == null ? Output.empty() : this.serverConfigurationsManagementSettings;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlImageOffer")
-      private final @Nullable Input<String> sqlImageOffer;
+      private final @Nullable Output<String> sqlImageOffer;
 
-    public Input<String> getSqlImageOffer() {
-        return this.sqlImageOffer == null ? Input.empty() : this.sqlImageOffer;
+    public Output<String> getSqlImageOffer() {
+        return this.sqlImageOffer == null ? Output.empty() : this.sqlImageOffer;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlImageSku")
-      private final @Nullable Input<Either<String,SqlImageSku>> sqlImageSku;
+      private final @Nullable Output<Either<String,SqlImageSku>> sqlImageSku;
 
-    public Input<Either<String,SqlImageSku>> getSqlImageSku() {
-        return this.sqlImageSku == null ? Input.empty() : this.sqlImageSku;
+    public Output<Either<String,SqlImageSku>> getSqlImageSku() {
+        return this.sqlImageSku == null ? Output.empty() : this.sqlImageSku;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlManagement")
-      private final @Nullable Input<Either<String,SqlManagementMode>> sqlManagement;
+      private final @Nullable Output<Either<String,SqlManagementMode>> sqlManagement;
 
-    public Input<Either<String,SqlManagementMode>> getSqlManagement() {
-        return this.sqlManagement == null ? Input.empty() : this.sqlManagement;
+    public Output<Either<String,SqlManagementMode>> getSqlManagement() {
+        return this.sqlManagement == null ? Output.empty() : this.sqlManagement;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlServerLicenseType")
-      private final @Nullable Input<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
+      private final @Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
 
-    public Input<Either<String,SqlServerLicenseType>> getSqlServerLicenseType() {
-        return this.sqlServerLicenseType == null ? Input.empty() : this.sqlServerLicenseType;
+    public Output<Either<String,SqlServerLicenseType>> getSqlServerLicenseType() {
+        return this.sqlServerLicenseType == null ? Output.empty() : this.sqlServerLicenseType;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlVirtualMachineGroupResourceId")
-      private final @Nullable Input<String> sqlVirtualMachineGroupResourceId;
+      private final @Nullable Output<String> sqlVirtualMachineGroupResourceId;
 
-    public Input<String> getSqlVirtualMachineGroupResourceId() {
-        return this.sqlVirtualMachineGroupResourceId == null ? Input.empty() : this.sqlVirtualMachineGroupResourceId;
+    public Output<String> getSqlVirtualMachineGroupResourceId() {
+        return this.sqlVirtualMachineGroupResourceId == null ? Output.empty() : this.sqlVirtualMachineGroupResourceId;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlVirtualMachineName")
-      private final @Nullable Input<String> sqlVirtualMachineName;
+      private final @Nullable Output<String> sqlVirtualMachineName;
 
-    public Input<String> getSqlVirtualMachineName() {
-        return this.sqlVirtualMachineName == null ? Input.empty() : this.sqlVirtualMachineName;
+    public Output<String> getSqlVirtualMachineName() {
+        return this.sqlVirtualMachineName == null ? Output.empty() : this.sqlVirtualMachineName;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageConfigurationSettings")
-      private final @Nullable Input<StorageConfigurationSettingsArgs> storageConfigurationSettings;
+      private final @Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings;
 
-    public Input<StorageConfigurationSettingsArgs> getStorageConfigurationSettings() {
-        return this.storageConfigurationSettings == null ? Input.empty() : this.storageConfigurationSettings;
+    public Output<StorageConfigurationSettingsArgs> getStorageConfigurationSettings() {
+        return this.storageConfigurationSettings == null ? Output.empty() : this.storageConfigurationSettings;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="virtualMachineResourceId")
-      private final @Nullable Input<String> virtualMachineResourceId;
+      private final @Nullable Output<String> virtualMachineResourceId;
 
-    public Input<String> getVirtualMachineResourceId() {
-        return this.virtualMachineResourceId == null ? Input.empty() : this.virtualMachineResourceId;
+    public Output<String> getVirtualMachineResourceId() {
+        return this.virtualMachineResourceId == null ? Output.empty() : this.virtualMachineResourceId;
     }
 
     /**
@@ -207,30 +207,30 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="wsfcDomainCredentials")
-      private final @Nullable Input<WsfcDomainCredentialsArgs> wsfcDomainCredentials;
+      private final @Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials;
 
-    public Input<WsfcDomainCredentialsArgs> getWsfcDomainCredentials() {
-        return this.wsfcDomainCredentials == null ? Input.empty() : this.wsfcDomainCredentials;
+    public Output<WsfcDomainCredentialsArgs> getWsfcDomainCredentials() {
+        return this.wsfcDomainCredentials == null ? Output.empty() : this.wsfcDomainCredentials;
     }
 
     public SqlVirtualMachineArgs(
-        @Nullable Input<AutoBackupSettingsArgs> autoBackupSettings,
-        @Nullable Input<AutoPatchingSettingsArgs> autoPatchingSettings,
-        @Nullable Input<ResourceIdentityArgs> identity,
-        @Nullable Input<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings,
-        @Nullable Input<String> sqlImageOffer,
-        @Nullable Input<Either<String,SqlImageSku>> sqlImageSku,
-        @Nullable Input<Either<String,SqlManagementMode>> sqlManagement,
-        @Nullable Input<Either<String,SqlServerLicenseType>> sqlServerLicenseType,
-        @Nullable Input<String> sqlVirtualMachineGroupResourceId,
-        @Nullable Input<String> sqlVirtualMachineName,
-        @Nullable Input<StorageConfigurationSettingsArgs> storageConfigurationSettings,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> virtualMachineResourceId,
-        @Nullable Input<WsfcDomainCredentialsArgs> wsfcDomainCredentials) {
+        @Nullable Output<AutoBackupSettingsArgs> autoBackupSettings,
+        @Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings,
+        @Nullable Output<ResourceIdentityArgs> identity,
+        @Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings,
+        @Nullable Output<String> sqlImageOffer,
+        @Nullable Output<Either<String,SqlImageSku>> sqlImageSku,
+        @Nullable Output<Either<String,SqlManagementMode>> sqlManagement,
+        @Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType,
+        @Nullable Output<String> sqlVirtualMachineGroupResourceId,
+        @Nullable Output<String> sqlVirtualMachineName,
+        @Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> virtualMachineResourceId,
+        @Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials) {
         this.autoBackupSettings = autoBackupSettings;
         this.autoPatchingSettings = autoPatchingSettings;
         this.identity = identity;
@@ -251,23 +251,23 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SqlVirtualMachineArgs() {
-        this.autoBackupSettings = Input.empty();
-        this.autoPatchingSettings = Input.empty();
-        this.identity = Input.empty();
-        this.keyVaultCredentialSettings = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverConfigurationsManagementSettings = Input.empty();
-        this.sqlImageOffer = Input.empty();
-        this.sqlImageSku = Input.empty();
-        this.sqlManagement = Input.empty();
-        this.sqlServerLicenseType = Input.empty();
-        this.sqlVirtualMachineGroupResourceId = Input.empty();
-        this.sqlVirtualMachineName = Input.empty();
-        this.storageConfigurationSettings = Input.empty();
-        this.tags = Input.empty();
-        this.virtualMachineResourceId = Input.empty();
-        this.wsfcDomainCredentials = Input.empty();
+        this.autoBackupSettings = Output.empty();
+        this.autoPatchingSettings = Output.empty();
+        this.identity = Output.empty();
+        this.keyVaultCredentialSettings = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverConfigurationsManagementSettings = Output.empty();
+        this.sqlImageOffer = Output.empty();
+        this.sqlImageSku = Output.empty();
+        this.sqlManagement = Output.empty();
+        this.sqlServerLicenseType = Output.empty();
+        this.sqlVirtualMachineGroupResourceId = Output.empty();
+        this.sqlVirtualMachineName = Output.empty();
+        this.storageConfigurationSettings = Output.empty();
+        this.tags = Output.empty();
+        this.virtualMachineResourceId = Output.empty();
+        this.wsfcDomainCredentials = Output.empty();
     }
 
     public static Builder builder() {
@@ -279,23 +279,23 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoBackupSettingsArgs> autoBackupSettings;
-        private @Nullable Input<AutoPatchingSettingsArgs> autoPatchingSettings;
-        private @Nullable Input<ResourceIdentityArgs> identity;
-        private @Nullable Input<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
-        private @Nullable Input<String> sqlImageOffer;
-        private @Nullable Input<Either<String,SqlImageSku>> sqlImageSku;
-        private @Nullable Input<Either<String,SqlManagementMode>> sqlManagement;
-        private @Nullable Input<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
-        private @Nullable Input<String> sqlVirtualMachineGroupResourceId;
-        private @Nullable Input<String> sqlVirtualMachineName;
-        private @Nullable Input<StorageConfigurationSettingsArgs> storageConfigurationSettings;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> virtualMachineResourceId;
-        private @Nullable Input<WsfcDomainCredentialsArgs> wsfcDomainCredentials;
+        private @Nullable Output<AutoBackupSettingsArgs> autoBackupSettings;
+        private @Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings;
+        private @Nullable Output<ResourceIdentityArgs> identity;
+        private @Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
+        private @Nullable Output<String> sqlImageOffer;
+        private @Nullable Output<Either<String,SqlImageSku>> sqlImageSku;
+        private @Nullable Output<Either<String,SqlManagementMode>> sqlManagement;
+        private @Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
+        private @Nullable Output<String> sqlVirtualMachineGroupResourceId;
+        private @Nullable Output<String> sqlVirtualMachineName;
+        private @Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> virtualMachineResourceId;
+        private @Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials;
 
         public Builder() {
     	      // Empty
@@ -322,173 +322,173 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
     	      this.wsfcDomainCredentials = defaults.wsfcDomainCredentials;
         }
 
-        public Builder autoBackupSettings(@Nullable Input<AutoBackupSettingsArgs> autoBackupSettings) {
+        public Builder autoBackupSettings(@Nullable Output<AutoBackupSettingsArgs> autoBackupSettings) {
             this.autoBackupSettings = autoBackupSettings;
             return this;
         }
 
         public Builder autoBackupSettings(@Nullable AutoBackupSettingsArgs autoBackupSettings) {
-            this.autoBackupSettings = Input.ofNullable(autoBackupSettings);
+            this.autoBackupSettings = Output.ofNullable(autoBackupSettings);
             return this;
         }
 
-        public Builder autoPatchingSettings(@Nullable Input<AutoPatchingSettingsArgs> autoPatchingSettings) {
+        public Builder autoPatchingSettings(@Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings) {
             this.autoPatchingSettings = autoPatchingSettings;
             return this;
         }
 
         public Builder autoPatchingSettings(@Nullable AutoPatchingSettingsArgs autoPatchingSettings) {
-            this.autoPatchingSettings = Input.ofNullable(autoPatchingSettings);
+            this.autoPatchingSettings = Output.ofNullable(autoPatchingSettings);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder keyVaultCredentialSettings(@Nullable Input<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings) {
+        public Builder keyVaultCredentialSettings(@Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings) {
             this.keyVaultCredentialSettings = keyVaultCredentialSettings;
             return this;
         }
 
         public Builder keyVaultCredentialSettings(@Nullable KeyVaultCredentialSettingsArgs keyVaultCredentialSettings) {
-            this.keyVaultCredentialSettings = Input.ofNullable(keyVaultCredentialSettings);
+            this.keyVaultCredentialSettings = Output.ofNullable(keyVaultCredentialSettings);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverConfigurationsManagementSettings(@Nullable Input<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings) {
+        public Builder serverConfigurationsManagementSettings(@Nullable Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings) {
             this.serverConfigurationsManagementSettings = serverConfigurationsManagementSettings;
             return this;
         }
 
         public Builder serverConfigurationsManagementSettings(@Nullable ServerConfigurationsManagementSettingsArgs serverConfigurationsManagementSettings) {
-            this.serverConfigurationsManagementSettings = Input.ofNullable(serverConfigurationsManagementSettings);
+            this.serverConfigurationsManagementSettings = Output.ofNullable(serverConfigurationsManagementSettings);
             return this;
         }
 
-        public Builder sqlImageOffer(@Nullable Input<String> sqlImageOffer) {
+        public Builder sqlImageOffer(@Nullable Output<String> sqlImageOffer) {
             this.sqlImageOffer = sqlImageOffer;
             return this;
         }
 
         public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
-            this.sqlImageOffer = Input.ofNullable(sqlImageOffer);
+            this.sqlImageOffer = Output.ofNullable(sqlImageOffer);
             return this;
         }
 
-        public Builder sqlImageSku(@Nullable Input<Either<String,SqlImageSku>> sqlImageSku) {
+        public Builder sqlImageSku(@Nullable Output<Either<String,SqlImageSku>> sqlImageSku) {
             this.sqlImageSku = sqlImageSku;
             return this;
         }
 
         public Builder sqlImageSku(@Nullable Either<String,SqlImageSku> sqlImageSku) {
-            this.sqlImageSku = Input.ofNullable(sqlImageSku);
+            this.sqlImageSku = Output.ofNullable(sqlImageSku);
             return this;
         }
 
-        public Builder sqlManagement(@Nullable Input<Either<String,SqlManagementMode>> sqlManagement) {
+        public Builder sqlManagement(@Nullable Output<Either<String,SqlManagementMode>> sqlManagement) {
             this.sqlManagement = sqlManagement;
             return this;
         }
 
         public Builder sqlManagement(@Nullable Either<String,SqlManagementMode> sqlManagement) {
-            this.sqlManagement = Input.ofNullable(sqlManagement);
+            this.sqlManagement = Output.ofNullable(sqlManagement);
             return this;
         }
 
-        public Builder sqlServerLicenseType(@Nullable Input<Either<String,SqlServerLicenseType>> sqlServerLicenseType) {
+        public Builder sqlServerLicenseType(@Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType) {
             this.sqlServerLicenseType = sqlServerLicenseType;
             return this;
         }
 
         public Builder sqlServerLicenseType(@Nullable Either<String,SqlServerLicenseType> sqlServerLicenseType) {
-            this.sqlServerLicenseType = Input.ofNullable(sqlServerLicenseType);
+            this.sqlServerLicenseType = Output.ofNullable(sqlServerLicenseType);
             return this;
         }
 
-        public Builder sqlVirtualMachineGroupResourceId(@Nullable Input<String> sqlVirtualMachineGroupResourceId) {
+        public Builder sqlVirtualMachineGroupResourceId(@Nullable Output<String> sqlVirtualMachineGroupResourceId) {
             this.sqlVirtualMachineGroupResourceId = sqlVirtualMachineGroupResourceId;
             return this;
         }
 
         public Builder sqlVirtualMachineGroupResourceId(@Nullable String sqlVirtualMachineGroupResourceId) {
-            this.sqlVirtualMachineGroupResourceId = Input.ofNullable(sqlVirtualMachineGroupResourceId);
+            this.sqlVirtualMachineGroupResourceId = Output.ofNullable(sqlVirtualMachineGroupResourceId);
             return this;
         }
 
-        public Builder sqlVirtualMachineName(@Nullable Input<String> sqlVirtualMachineName) {
+        public Builder sqlVirtualMachineName(@Nullable Output<String> sqlVirtualMachineName) {
             this.sqlVirtualMachineName = sqlVirtualMachineName;
             return this;
         }
 
         public Builder sqlVirtualMachineName(@Nullable String sqlVirtualMachineName) {
-            this.sqlVirtualMachineName = Input.ofNullable(sqlVirtualMachineName);
+            this.sqlVirtualMachineName = Output.ofNullable(sqlVirtualMachineName);
             return this;
         }
 
-        public Builder storageConfigurationSettings(@Nullable Input<StorageConfigurationSettingsArgs> storageConfigurationSettings) {
+        public Builder storageConfigurationSettings(@Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings) {
             this.storageConfigurationSettings = storageConfigurationSettings;
             return this;
         }
 
         public Builder storageConfigurationSettings(@Nullable StorageConfigurationSettingsArgs storageConfigurationSettings) {
-            this.storageConfigurationSettings = Input.ofNullable(storageConfigurationSettings);
+            this.storageConfigurationSettings = Output.ofNullable(storageConfigurationSettings);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualMachineResourceId(@Nullable Input<String> virtualMachineResourceId) {
+        public Builder virtualMachineResourceId(@Nullable Output<String> virtualMachineResourceId) {
             this.virtualMachineResourceId = virtualMachineResourceId;
             return this;
         }
 
         public Builder virtualMachineResourceId(@Nullable String virtualMachineResourceId) {
-            this.virtualMachineResourceId = Input.ofNullable(virtualMachineResourceId);
+            this.virtualMachineResourceId = Output.ofNullable(virtualMachineResourceId);
             return this;
         }
 
-        public Builder wsfcDomainCredentials(@Nullable Input<WsfcDomainCredentialsArgs> wsfcDomainCredentials) {
+        public Builder wsfcDomainCredentials(@Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials) {
             this.wsfcDomainCredentials = wsfcDomainCredentials;
             return this;
         }
 
         public Builder wsfcDomainCredentials(@Nullable WsfcDomainCredentialsArgs wsfcDomainCredentials) {
-            this.wsfcDomainCredentials = Input.ofNullable(wsfcDomainCredentials);
+            this.wsfcDomainCredentials = Output.ofNullable(wsfcDomainCredentials);
             return this;
         }
         public SqlVirtualMachineArgs build() {

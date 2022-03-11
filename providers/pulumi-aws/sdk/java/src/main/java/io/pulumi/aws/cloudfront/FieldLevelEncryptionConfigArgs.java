@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="contentTypeProfileConfig", required=true)
-      private final Input<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
+      private final Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
 
-    public Input<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> getContentTypeProfileConfig() {
+    public Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> getContentTypeProfileConfig() {
         return this.contentTypeProfileConfig;
     }
 
@@ -43,25 +43,25 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="queryArgProfileConfig", required=true)
-      private final Input<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
+      private final Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
 
-    public Input<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> getQueryArgProfileConfig() {
+    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> getQueryArgProfileConfig() {
         return this.queryArgProfileConfig;
     }
 
     public FieldLevelEncryptionConfigArgs(
-        @Nullable Input<String> comment,
-        Input<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig,
-        Input<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig) {
+        @Nullable Output<String> comment,
+        Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig,
+        Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig) {
         this.comment = comment;
         this.contentTypeProfileConfig = Objects.requireNonNull(contentTypeProfileConfig, "expected parameter 'contentTypeProfileConfig' to be non-null");
         this.queryArgProfileConfig = Objects.requireNonNull(queryArgProfileConfig, "expected parameter 'queryArgProfileConfig' to be non-null");
     }
 
     private FieldLevelEncryptionConfigArgs() {
-        this.comment = Input.empty();
-        this.contentTypeProfileConfig = Input.empty();
-        this.queryArgProfileConfig = Input.empty();
+        this.comment = Output.empty();
+        this.contentTypeProfileConfig = Output.empty();
+        this.queryArgProfileConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private Input<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
-        private Input<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
+        private @Nullable Output<String> comment;
+        private Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
+        private Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
     	      this.queryArgProfileConfig = defaults.queryArgProfileConfig;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder contentTypeProfileConfig(Input<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig) {
+        public Builder contentTypeProfileConfig(Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig) {
             this.contentTypeProfileConfig = Objects.requireNonNull(contentTypeProfileConfig);
             return this;
         }
 
         public Builder contentTypeProfileConfig(FieldLevelEncryptionConfigContentTypeProfileConfigArgs contentTypeProfileConfig) {
-            this.contentTypeProfileConfig = Input.of(Objects.requireNonNull(contentTypeProfileConfig));
+            this.contentTypeProfileConfig = Output.of(Objects.requireNonNull(contentTypeProfileConfig));
             return this;
         }
 
-        public Builder queryArgProfileConfig(Input<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig) {
+        public Builder queryArgProfileConfig(Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig) {
             this.queryArgProfileConfig = Objects.requireNonNull(queryArgProfileConfig);
             return this;
         }
 
         public Builder queryArgProfileConfig(FieldLevelEncryptionConfigQueryArgProfileConfigArgs queryArgProfileConfig) {
-            this.queryArgProfileConfig = Input.of(Objects.requireNonNull(queryArgProfileConfig));
+            this.queryArgProfileConfig = Output.of(Objects.requireNonNull(queryArgProfileConfig));
             return this;
         }
         public FieldLevelEncryptionConfigArgs build() {

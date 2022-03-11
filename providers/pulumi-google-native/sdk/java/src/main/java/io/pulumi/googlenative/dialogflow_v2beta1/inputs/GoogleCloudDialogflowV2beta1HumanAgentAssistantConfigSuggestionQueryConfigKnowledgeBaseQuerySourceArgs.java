@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @InputImport(name="knowledgeBases", required=true)
-      private final Input<List<String>> knowledgeBases;
+      private final Output<List<String>> knowledgeBases;
 
-    public Input<List<String>> getKnowledgeBases() {
+    public Output<List<String>> getKnowledgeBases() {
         return this.knowledgeBases;
     }
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs(Input<List<String>> knowledgeBases) {
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs(Output<List<String>> knowledgeBases) {
         this.knowledgeBases = Objects.requireNonNull(knowledgeBases, "expected parameter 'knowledgeBases' to be non-null");
     }
 
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs() {
-        this.knowledgeBases = Input.empty();
+        this.knowledgeBases = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     }
 
     public static final class Builder {
-        private Input<List<String>> knowledgeBases;
+        private Output<List<String>> knowledgeBases;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     	      this.knowledgeBases = defaults.knowledgeBases;
         }
 
-        public Builder knowledgeBases(Input<List<String>> knowledgeBases) {
+        public Builder knowledgeBases(Output<List<String>> knowledgeBases) {
             this.knowledgeBases = Objects.requireNonNull(knowledgeBases);
             return this;
         }
 
         public Builder knowledgeBases(List<String> knowledgeBases) {
-            this.knowledgeBases = Input.of(Objects.requireNonNull(knowledgeBases));
+            this.knowledgeBases = Output.of(Objects.requireNonNull(knowledgeBases));
             return this;
         }
         public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceArgs build() {

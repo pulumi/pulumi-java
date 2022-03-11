@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration;
 
 import io.pulumi.azurenative.datamigration.inputs.ProjectFilePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileName")
-      private final @Nullable Input<String> fileName;
+      private final @Nullable Output<String> fileName;
 
-    public Input<String> getFileName() {
-        return this.fileName == null ? Input.empty() : this.fileName;
+    public Output<String> getFileName() {
+        return this.fileName == null ? Output.empty() : this.fileName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-      private final Input<String> groupName;
+      private final Output<String> groupName;
 
-    public Input<String> getGroupName() {
+    public Output<String> getGroupName() {
         return this.groupName;
     }
 
@@ -42,9 +42,9 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-      private final Input<String> projectName;
+      private final Output<String> projectName;
 
-    public Input<String> getProjectName() {
+    public Output<String> getProjectName() {
         return this.projectName;
     }
 
@@ -53,10 +53,10 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ProjectFilePropertiesArgs> properties;
+      private final @Nullable Output<ProjectFilePropertiesArgs> properties;
 
-    public Input<ProjectFilePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ProjectFilePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public FileArgs(
-        @Nullable Input<String> fileName,
-        Input<String> groupName,
-        Input<String> projectName,
-        @Nullable Input<ProjectFilePropertiesArgs> properties,
-        Input<String> serviceName) {
+        @Nullable Output<String> fileName,
+        Output<String> groupName,
+        Output<String> projectName,
+        @Nullable Output<ProjectFilePropertiesArgs> properties,
+        Output<String> serviceName) {
         this.fileName = fileName;
         this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
         this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
@@ -84,11 +84,11 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileArgs() {
-        this.fileName = Input.empty();
-        this.groupName = Input.empty();
-        this.projectName = Input.empty();
-        this.properties = Input.empty();
-        this.serviceName = Input.empty();
+        this.fileName = Output.empty();
+        this.groupName = Output.empty();
+        this.projectName = Output.empty();
+        this.properties = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fileName;
-        private Input<String> groupName;
-        private Input<String> projectName;
-        private @Nullable Input<ProjectFilePropertiesArgs> properties;
-        private Input<String> serviceName;
+        private @Nullable Output<String> fileName;
+        private Output<String> groupName;
+        private Output<String> projectName;
+        private @Nullable Output<ProjectFilePropertiesArgs> properties;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder fileName(@Nullable Input<String> fileName) {
+        public Builder fileName(@Nullable Output<String> fileName) {
             this.fileName = fileName;
             return this;
         }
 
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = Input.ofNullable(fileName);
+            this.fileName = Output.ofNullable(fileName);
             return this;
         }
 
-        public Builder groupName(Input<String> groupName) {
+        public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
         public Builder groupName(String groupName) {
-            this.groupName = Input.of(Objects.requireNonNull(groupName));
+            this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder projectName(Input<String> projectName) {
+        public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Input.of(Objects.requireNonNull(projectName));
+            this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder properties(@Nullable Input<ProjectFilePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ProjectFilePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ProjectFilePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public FileArgs build() {

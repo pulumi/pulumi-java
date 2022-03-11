@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.enums.AuthenticationType;
 import io.pulumi.azurenative.datamigration.enums.SqlSourcePlatform;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="additionalSettings")
-      private final @Nullable Input<String> additionalSettings;
+      private final @Nullable Output<String> additionalSettings;
 
-    public Input<String> getAdditionalSettings() {
-        return this.additionalSettings == null ? Input.empty() : this.additionalSettings;
+    public Output<String> getAdditionalSettings() {
+        return this.additionalSettings == null ? Output.empty() : this.additionalSettings;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authentication")
-      private final @Nullable Input<Either<String,AuthenticationType>> authentication;
+      private final @Nullable Output<Either<String,AuthenticationType>> authentication;
 
-    public Input<Either<String,AuthenticationType>> getAuthentication() {
-        return this.authentication == null ? Input.empty() : this.authentication;
+    public Output<Either<String,AuthenticationType>> getAuthentication() {
+        return this.authentication == null ? Output.empty() : this.authentication;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataSource", required=true)
-      private final Input<String> dataSource;
+      private final Output<String> dataSource;
 
-    public Input<String> getDataSource() {
+    public Output<String> getDataSource() {
         return this.dataSource;
     }
 
@@ -60,10 +60,10 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptConnection")
-      private final @Nullable Input<Boolean> encryptConnection;
+      private final @Nullable Output<Boolean> encryptConnection;
 
-    public Input<Boolean> getEncryptConnection() {
-        return this.encryptConnection == null ? Input.empty() : this.encryptConnection;
+    public Output<Boolean> getEncryptConnection() {
+        return this.encryptConnection == null ? Output.empty() : this.encryptConnection;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="platform")
-      private final @Nullable Input<Either<String,SqlSourcePlatform>> platform;
+      private final @Nullable Output<Either<String,SqlSourcePlatform>> platform;
 
-    public Input<Either<String,SqlSourcePlatform>> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<Either<String,SqlSourcePlatform>> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="trustServerCertificate")
-      private final @Nullable Input<Boolean> trustServerCertificate;
+      private final @Nullable Output<Boolean> trustServerCertificate;
 
-    public Input<Boolean> getTrustServerCertificate() {
-        return this.trustServerCertificate == null ? Input.empty() : this.trustServerCertificate;
+    public Output<Boolean> getTrustServerCertificate() {
+        return this.trustServerCertificate == null ? Output.empty() : this.trustServerCertificate;
     }
 
     /**
@@ -105,9 +105,9 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -116,43 +116,43 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public SqlConnectionInfoArgs(
-        @Nullable Input<String> additionalSettings,
-        @Nullable Input<Either<String,AuthenticationType>> authentication,
-        Input<String> dataSource,
-        @Nullable Input<Boolean> encryptConnection,
-        @Nullable Input<String> password,
-        @Nullable Input<Either<String,SqlSourcePlatform>> platform,
-        @Nullable Input<Boolean> trustServerCertificate,
-        Input<String> type,
-        @Nullable Input<String> userName) {
+        @Nullable Output<String> additionalSettings,
+        @Nullable Output<Either<String,AuthenticationType>> authentication,
+        Output<String> dataSource,
+        @Nullable Output<Boolean> encryptConnection,
+        @Nullable Output<String> password,
+        @Nullable Output<Either<String,SqlSourcePlatform>> platform,
+        @Nullable Output<Boolean> trustServerCertificate,
+        Output<String> type,
+        @Nullable Output<String> userName) {
         this.additionalSettings = additionalSettings;
         this.authentication = authentication;
         this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
-        this.encryptConnection = encryptConnection == null ? Input.ofNullable(true) : encryptConnection;
+        this.encryptConnection = encryptConnection == null ? Output.ofNullable(true) : encryptConnection;
         this.password = password;
         this.platform = platform;
-        this.trustServerCertificate = trustServerCertificate == null ? Input.ofNullable(false) : trustServerCertificate;
+        this.trustServerCertificate = trustServerCertificate == null ? Output.ofNullable(false) : trustServerCertificate;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.userName = userName;
     }
 
     private SqlConnectionInfoArgs() {
-        this.additionalSettings = Input.empty();
-        this.authentication = Input.empty();
-        this.dataSource = Input.empty();
-        this.encryptConnection = Input.empty();
-        this.password = Input.empty();
-        this.platform = Input.empty();
-        this.trustServerCertificate = Input.empty();
-        this.type = Input.empty();
-        this.userName = Input.empty();
+        this.additionalSettings = Output.empty();
+        this.authentication = Output.empty();
+        this.dataSource = Output.empty();
+        this.encryptConnection = Output.empty();
+        this.password = Output.empty();
+        this.platform = Output.empty();
+        this.trustServerCertificate = Output.empty();
+        this.type = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -164,15 +164,15 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> additionalSettings;
-        private @Nullable Input<Either<String,AuthenticationType>> authentication;
-        private Input<String> dataSource;
-        private @Nullable Input<Boolean> encryptConnection;
-        private @Nullable Input<String> password;
-        private @Nullable Input<Either<String,SqlSourcePlatform>> platform;
-        private @Nullable Input<Boolean> trustServerCertificate;
-        private Input<String> type;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<String> additionalSettings;
+        private @Nullable Output<Either<String,AuthenticationType>> authentication;
+        private Output<String> dataSource;
+        private @Nullable Output<Boolean> encryptConnection;
+        private @Nullable Output<String> password;
+        private @Nullable Output<Either<String,SqlSourcePlatform>> platform;
+        private @Nullable Output<Boolean> trustServerCertificate;
+        private Output<String> type;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -191,93 +191,93 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     	      this.userName = defaults.userName;
         }
 
-        public Builder additionalSettings(@Nullable Input<String> additionalSettings) {
+        public Builder additionalSettings(@Nullable Output<String> additionalSettings) {
             this.additionalSettings = additionalSettings;
             return this;
         }
 
         public Builder additionalSettings(@Nullable String additionalSettings) {
-            this.additionalSettings = Input.ofNullable(additionalSettings);
+            this.additionalSettings = Output.ofNullable(additionalSettings);
             return this;
         }
 
-        public Builder authentication(@Nullable Input<Either<String,AuthenticationType>> authentication) {
+        public Builder authentication(@Nullable Output<Either<String,AuthenticationType>> authentication) {
             this.authentication = authentication;
             return this;
         }
 
         public Builder authentication(@Nullable Either<String,AuthenticationType> authentication) {
-            this.authentication = Input.ofNullable(authentication);
+            this.authentication = Output.ofNullable(authentication);
             return this;
         }
 
-        public Builder dataSource(Input<String> dataSource) {
+        public Builder dataSource(Output<String> dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
 
         public Builder dataSource(String dataSource) {
-            this.dataSource = Input.of(Objects.requireNonNull(dataSource));
+            this.dataSource = Output.of(Objects.requireNonNull(dataSource));
             return this;
         }
 
-        public Builder encryptConnection(@Nullable Input<Boolean> encryptConnection) {
+        public Builder encryptConnection(@Nullable Output<Boolean> encryptConnection) {
             this.encryptConnection = encryptConnection;
             return this;
         }
 
         public Builder encryptConnection(@Nullable Boolean encryptConnection) {
-            this.encryptConnection = Input.ofNullable(encryptConnection);
+            this.encryptConnection = Output.ofNullable(encryptConnection);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder platform(@Nullable Input<Either<String,SqlSourcePlatform>> platform) {
+        public Builder platform(@Nullable Output<Either<String,SqlSourcePlatform>> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable Either<String,SqlSourcePlatform> platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder trustServerCertificate(@Nullable Input<Boolean> trustServerCertificate) {
+        public Builder trustServerCertificate(@Nullable Output<Boolean> trustServerCertificate) {
             this.trustServerCertificate = trustServerCertificate;
             return this;
         }
 
         public Builder trustServerCertificate(@Nullable Boolean trustServerCertificate) {
-            this.trustServerCertificate = Input.ofNullable(trustServerCertificate);
+            this.trustServerCertificate = Output.ofNullable(trustServerCertificate);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public SqlConnectionInfoArgs build() {

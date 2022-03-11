@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -36,9 +36,9 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<String> schedule;
+      private final Output<String> schedule;
 
-    public Input<String> getSchedule() {
+    public Output<String> getSchedule() {
         return this.schedule;
     }
 
@@ -47,25 +47,25 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,TriggerStatus>> status;
+      private final @Nullable Output<Either<String,TriggerStatus>> status;
 
-    public Input<Either<String,TriggerStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,TriggerStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public TimerTriggerArgs(
-        Input<String> name,
-        Input<String> schedule,
-        @Nullable Input<Either<String,TriggerStatus>> status) {
+        Output<String> name,
+        Output<String> schedule,
+        @Nullable Output<Either<String,TriggerStatus>> status) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.status = status == null ? Input.ofLeft("Enabled") : status;
+        this.status = status == null ? Output.ofLeft("Enabled") : status;
     }
 
     private TimerTriggerArgs() {
-        this.name = Input.empty();
-        this.schedule = Input.empty();
-        this.status = Input.empty();
+        this.name = Output.empty();
+        this.schedule = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> schedule;
-        private @Nullable Input<Either<String,TriggerStatus>> status;
+        private Output<String> name;
+        private Output<String> schedule;
+        private @Nullable Output<Either<String,TriggerStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder schedule(Input<String> schedule) {
+        public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,TriggerStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,TriggerStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,TriggerStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public TimerTriggerArgs build() {

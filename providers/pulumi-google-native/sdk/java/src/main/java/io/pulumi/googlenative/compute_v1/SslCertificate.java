@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.compute_v1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -242,14 +241,14 @@ public class SslCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SslCertificate(String name, @Nullable SslCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/v1:SslCertificate", name, args == null ? SslCertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:compute/v1:SslCertificate", name, args == null ? SslCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SslCertificate(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SslCertificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:compute/v1:SslCertificate", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -264,7 +263,7 @@ public class SslCertificate extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SslCertificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SslCertificate get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SslCertificate(name, id, options);
     }
 }

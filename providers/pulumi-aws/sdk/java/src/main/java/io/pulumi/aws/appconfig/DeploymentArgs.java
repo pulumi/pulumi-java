@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appconfig;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId", required=true)
-      private final Input<String> applicationId;
+      private final Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
+    public Output<String> getApplicationId() {
         return this.applicationId;
     }
 
@@ -31,9 +31,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationProfileId", required=true)
-      private final Input<String> configurationProfileId;
+      private final Output<String> configurationProfileId;
 
-    public Input<String> getConfigurationProfileId() {
+    public Output<String> getConfigurationProfileId() {
         return this.configurationProfileId;
     }
 
@@ -42,9 +42,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationVersion", required=true)
-      private final Input<String> configurationVersion;
+      private final Output<String> configurationVersion;
 
-    public Input<String> getConfigurationVersion() {
+    public Output<String> getConfigurationVersion() {
         return this.configurationVersion;
     }
 
@@ -53,9 +53,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentStrategyId", required=true)
-      private final Input<String> deploymentStrategyId;
+      private final Output<String> deploymentStrategyId;
 
-    public Input<String> getDeploymentStrategyId() {
+    public Output<String> getDeploymentStrategyId() {
         return this.deploymentStrategyId;
     }
 
@@ -64,10 +64,10 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -86,20 +86,20 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DeploymentArgs(
-        Input<String> applicationId,
-        Input<String> configurationProfileId,
-        Input<String> configurationVersion,
-        Input<String> deploymentStrategyId,
-        @Nullable Input<String> description,
-        Input<String> environmentId,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> applicationId,
+        Output<String> configurationProfileId,
+        Output<String> configurationVersion,
+        Output<String> deploymentStrategyId,
+        @Nullable Output<String> description,
+        Output<String> environmentId,
+        @Nullable Output<Map<String,String>> tags) {
         this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
         this.configurationProfileId = Objects.requireNonNull(configurationProfileId, "expected parameter 'configurationProfileId' to be non-null");
         this.configurationVersion = Objects.requireNonNull(configurationVersion, "expected parameter 'configurationVersion' to be non-null");
@@ -110,13 +110,13 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.applicationId = Input.empty();
-        this.configurationProfileId = Input.empty();
-        this.configurationVersion = Input.empty();
-        this.deploymentStrategyId = Input.empty();
-        this.description = Input.empty();
-        this.environmentId = Input.empty();
-        this.tags = Input.empty();
+        this.applicationId = Output.empty();
+        this.configurationProfileId = Output.empty();
+        this.configurationVersion = Output.empty();
+        this.deploymentStrategyId = Output.empty();
+        this.description = Output.empty();
+        this.environmentId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> applicationId;
-        private Input<String> configurationProfileId;
-        private Input<String> configurationVersion;
-        private Input<String> deploymentStrategyId;
-        private @Nullable Input<String> description;
-        private Input<String> environmentId;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> applicationId;
+        private Output<String> configurationProfileId;
+        private Output<String> configurationVersion;
+        private Output<String> deploymentStrategyId;
+        private @Nullable Output<String> description;
+        private Output<String> environmentId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder applicationId(Input<String> applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Input.of(Objects.requireNonNull(applicationId));
+            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder configurationProfileId(Input<String> configurationProfileId) {
+        public Builder configurationProfileId(Output<String> configurationProfileId) {
             this.configurationProfileId = Objects.requireNonNull(configurationProfileId);
             return this;
         }
 
         public Builder configurationProfileId(String configurationProfileId) {
-            this.configurationProfileId = Input.of(Objects.requireNonNull(configurationProfileId));
+            this.configurationProfileId = Output.of(Objects.requireNonNull(configurationProfileId));
             return this;
         }
 
-        public Builder configurationVersion(Input<String> configurationVersion) {
+        public Builder configurationVersion(Output<String> configurationVersion) {
             this.configurationVersion = Objects.requireNonNull(configurationVersion);
             return this;
         }
 
         public Builder configurationVersion(String configurationVersion) {
-            this.configurationVersion = Input.of(Objects.requireNonNull(configurationVersion));
+            this.configurationVersion = Output.of(Objects.requireNonNull(configurationVersion));
             return this;
         }
 
-        public Builder deploymentStrategyId(Input<String> deploymentStrategyId) {
+        public Builder deploymentStrategyId(Output<String> deploymentStrategyId) {
             this.deploymentStrategyId = Objects.requireNonNull(deploymentStrategyId);
             return this;
         }
 
         public Builder deploymentStrategyId(String deploymentStrategyId) {
-            this.deploymentStrategyId = Input.of(Objects.requireNonNull(deploymentStrategyId));
+            this.deploymentStrategyId = Output.of(Objects.requireNonNull(deploymentStrategyId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DeploymentArgs build() {

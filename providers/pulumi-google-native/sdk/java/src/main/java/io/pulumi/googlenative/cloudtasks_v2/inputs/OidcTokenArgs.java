@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audience")
-      private final @Nullable Input<String> audience;
+      private final @Nullable Output<String> audience;
 
-    public Input<String> getAudience() {
-        return this.audience == null ? Input.empty() : this.audience;
+    public Output<String> getAudience() {
+        return this.audience == null ? Output.empty() : this.audience;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-      private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Output<String> serviceAccountEmail;
 
-    public Input<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
+    public Output<String> getServiceAccountEmail() {
+        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
     }
 
     public OidcTokenArgs(
-        @Nullable Input<String> audience,
-        @Nullable Input<String> serviceAccountEmail) {
+        @Nullable Output<String> audience,
+        @Nullable Output<String> serviceAccountEmail) {
         this.audience = audience;
         this.serviceAccountEmail = serviceAccountEmail;
     }
 
     private OidcTokenArgs() {
-        this.audience = Input.empty();
-        this.serviceAccountEmail = Input.empty();
+        this.audience = Output.empty();
+        this.serviceAccountEmail = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audience;
-        private @Nullable Input<String> serviceAccountEmail;
+        private @Nullable Output<String> audience;
+        private @Nullable Output<String> serviceAccountEmail;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccountEmail = defaults.serviceAccountEmail;
         }
 
-        public Builder audience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = Input.ofNullable(audience);
+            this.audience = Output.ofNullable(audience);
             return this;
         }
 
-        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
         public OidcTokenArgs build() {

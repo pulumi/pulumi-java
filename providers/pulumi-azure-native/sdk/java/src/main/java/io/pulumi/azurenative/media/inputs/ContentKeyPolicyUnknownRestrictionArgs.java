@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ContentKeyPolicyUnknownRestrictionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
-    public ContentKeyPolicyUnknownRestrictionArgs(Input<String> odataType) {
+    public ContentKeyPolicyUnknownRestrictionArgs(Output<String> odataType) {
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private ContentKeyPolicyUnknownRestrictionArgs() {
-        this.odataType = Input.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ContentKeyPolicyUnknownRestrictionArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> odataType;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ContentKeyPolicyUnknownRestrictionArgs extends io.pulumi.reso
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public ContentKeyPolicyUnknownRestrictionArgs build() {

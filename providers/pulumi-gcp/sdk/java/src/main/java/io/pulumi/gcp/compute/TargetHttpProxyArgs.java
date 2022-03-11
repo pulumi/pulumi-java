@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyBind")
-      private final @Nullable Input<Boolean> proxyBind;
+      private final @Nullable Output<Boolean> proxyBind;
 
-    public Input<Boolean> getProxyBind() {
-        return this.proxyBind == null ? Input.empty() : this.proxyBind;
+    public Output<Boolean> getProxyBind() {
+        return this.proxyBind == null ? Output.empty() : this.proxyBind;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="urlMap", required=true)
-      private final Input<String> urlMap;
+      private final Output<String> urlMap;
 
-    public Input<String> getUrlMap() {
+    public Output<String> getUrlMap() {
         return this.urlMap;
     }
 
     public TargetHttpProxyArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<Boolean> proxyBind,
-        Input<String> urlMap) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<Boolean> proxyBind,
+        Output<String> urlMap) {
         this.description = description;
         this.name = name;
         this.project = project;
@@ -93,11 +93,11 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TargetHttpProxyArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.proxyBind = Input.empty();
-        this.urlMap = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.proxyBind = Output.empty();
+        this.urlMap = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Boolean> proxyBind;
-        private Input<String> urlMap;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Boolean> proxyBind;
+        private Output<String> urlMap;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.urlMap = defaults.urlMap;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder proxyBind(@Nullable Input<Boolean> proxyBind) {
+        public Builder proxyBind(@Nullable Output<Boolean> proxyBind) {
             this.proxyBind = proxyBind;
             return this;
         }
 
         public Builder proxyBind(@Nullable Boolean proxyBind) {
-            this.proxyBind = Input.ofNullable(proxyBind);
+            this.proxyBind = Output.ofNullable(proxyBind);
             return this;
         }
 
-        public Builder urlMap(Input<String> urlMap) {
+        public Builder urlMap(Output<String> urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
 
         public Builder urlMap(String urlMap) {
-            this.urlMap = Input.of(Objects.requireNonNull(urlMap));
+            this.urlMap = Output.of(Objects.requireNonNull(urlMap));
             return this;
         }
         public TargetHttpProxyArgs build() {

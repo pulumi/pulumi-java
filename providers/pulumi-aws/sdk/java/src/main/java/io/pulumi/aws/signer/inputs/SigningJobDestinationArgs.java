@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.aws.signer.inputs.SigningJobDestinationS3Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class SigningJobDestinationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="s3", required=true)
-      private final Input<SigningJobDestinationS3Args> s3;
+      private final Output<SigningJobDestinationS3Args> s3;
 
-    public Input<SigningJobDestinationS3Args> getS3() {
+    public Output<SigningJobDestinationS3Args> getS3() {
         return this.s3;
     }
 
-    public SigningJobDestinationArgs(Input<SigningJobDestinationS3Args> s3) {
+    public SigningJobDestinationArgs(Output<SigningJobDestinationS3Args> s3) {
         this.s3 = Objects.requireNonNull(s3, "expected parameter 's3' to be non-null");
     }
 
     private SigningJobDestinationArgs() {
-        this.s3 = Input.empty();
+        this.s3 = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class SigningJobDestinationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<SigningJobDestinationS3Args> s3;
+        private Output<SigningJobDestinationS3Args> s3;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class SigningJobDestinationArgs extends io.pulumi.resources.Resourc
     	      this.s3 = defaults.s3;
         }
 
-        public Builder s3(Input<SigningJobDestinationS3Args> s3) {
+        public Builder s3(Output<SigningJobDestinationS3Args> s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
 
         public Builder s3(SigningJobDestinationS3Args s3) {
-            this.s3 = Input.of(Objects.requireNonNull(s3));
+            this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
         }
         public SigningJobDestinationArgs build() {

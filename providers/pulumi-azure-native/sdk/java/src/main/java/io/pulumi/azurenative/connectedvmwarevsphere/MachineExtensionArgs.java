@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -22,10 +22,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Input<Boolean> getAutoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
+    public Output<Boolean> getAutoUpgradeMinorVersion() {
+        return this.autoUpgradeMinorVersion == null ? Output.empty() : this.autoUpgradeMinorVersion;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="extensionName")
-      private final @Nullable Input<String> extensionName;
+      private final @Nullable Output<String> extensionName;
 
-    public Input<String> getExtensionName() {
-        return this.extensionName == null ? Input.empty() : this.extensionName;
+    public Output<String> getExtensionName() {
+        return this.extensionName == null ? Output.empty() : this.extensionName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="forceUpdateTag")
-      private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Output<String> forceUpdateTag;
 
-    public Input<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
+    public Output<String> getForceUpdateTag() {
+        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -77,10 +77,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protectedSettings")
-      private final @Nullable Input<Object> protectedSettings;
+      private final @Nullable Output<Object> protectedSettings;
 
-    public Input<Object> getProtectedSettings() {
-        return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
+    public Output<Object> getProtectedSettings() {
+        return this.protectedSettings == null ? Output.empty() : this.protectedSettings;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publisher")
-      private final @Nullable Input<String> publisher;
+      private final @Nullable Output<String> publisher;
 
-    public Input<String> getPublisher() {
-        return this.publisher == null ? Input.empty() : this.publisher;
+    public Output<String> getPublisher() {
+        return this.publisher == null ? Output.empty() : this.publisher;
     }
 
     /**
@@ -99,9 +99,9 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -110,10 +110,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<Object> settings;
+      private final @Nullable Output<Object> settings;
 
-    public Input<Object> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<Object> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -143,25 +143,25 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="typeHandlerVersion")
-      private final @Nullable Input<String> typeHandlerVersion;
+      private final @Nullable Output<String> typeHandlerVersion;
 
-    public Input<String> getTypeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
+    public Output<String> getTypeHandlerVersion() {
+        return this.typeHandlerVersion == null ? Output.empty() : this.typeHandlerVersion;
     }
 
     public MachineExtensionArgs(
-        @Nullable Input<Boolean> autoUpgradeMinorVersion,
-        @Nullable Input<String> extensionName,
-        @Nullable Input<String> forceUpdateTag,
-        @Nullable Input<String> location,
-        Input<String> name,
-        @Nullable Input<Object> protectedSettings,
-        @Nullable Input<String> publisher,
-        Input<String> resourceGroupName,
-        @Nullable Input<Object> settings,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> type,
-        @Nullable Input<String> typeHandlerVersion) {
+        @Nullable Output<Boolean> autoUpgradeMinorVersion,
+        @Nullable Output<String> extensionName,
+        @Nullable Output<String> forceUpdateTag,
+        @Nullable Output<String> location,
+        Output<String> name,
+        @Nullable Output<Object> protectedSettings,
+        @Nullable Output<String> publisher,
+        Output<String> resourceGroupName,
+        @Nullable Output<Object> settings,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> type,
+        @Nullable Output<String> typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.extensionName = extensionName;
         this.forceUpdateTag = forceUpdateTag;
@@ -177,18 +177,18 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MachineExtensionArgs() {
-        this.autoUpgradeMinorVersion = Input.empty();
-        this.extensionName = Input.empty();
-        this.forceUpdateTag = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.protectedSettings = Input.empty();
-        this.publisher = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.settings = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
-        this.typeHandlerVersion = Input.empty();
+        this.autoUpgradeMinorVersion = Output.empty();
+        this.extensionName = Output.empty();
+        this.forceUpdateTag = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.protectedSettings = Output.empty();
+        this.publisher = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.settings = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
+        this.typeHandlerVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -200,18 +200,18 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoUpgradeMinorVersion;
-        private @Nullable Input<String> extensionName;
-        private @Nullable Input<String> forceUpdateTag;
-        private @Nullable Input<String> location;
-        private Input<String> name;
-        private @Nullable Input<Object> protectedSettings;
-        private @Nullable Input<String> publisher;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Object> settings;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> typeHandlerVersion;
+        private @Nullable Output<Boolean> autoUpgradeMinorVersion;
+        private @Nullable Output<String> extensionName;
+        private @Nullable Output<String> forceUpdateTag;
+        private @Nullable Output<String> location;
+        private Output<String> name;
+        private @Nullable Output<Object> protectedSettings;
+        private @Nullable Output<String> publisher;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Object> settings;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> typeHandlerVersion;
 
         public Builder() {
     	      // Empty
@@ -233,123 +233,123 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder autoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Input.ofNullable(autoUpgradeMinorVersion);
+            this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
 
-        public Builder extensionName(@Nullable Input<String> extensionName) {
+        public Builder extensionName(@Nullable Output<String> extensionName) {
             this.extensionName = extensionName;
             return this;
         }
 
         public Builder extensionName(@Nullable String extensionName) {
-            this.extensionName = Input.ofNullable(extensionName);
+            this.extensionName = Output.ofNullable(extensionName);
             return this;
         }
 
-        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder protectedSettings(@Nullable Input<Object> protectedSettings) {
+        public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
         public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Input.ofNullable(protectedSettings);
+            this.protectedSettings = Output.ofNullable(protectedSettings);
             return this;
         }
 
-        public Builder publisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Input.ofNullable(publisher);
+            this.publisher = Output.ofNullable(publisher);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder settings(@Nullable Input<Object> settings) {
+        public Builder settings(@Nullable Output<Object> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable Object settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder typeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
+            this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
         }
         public MachineExtensionArgs build() {

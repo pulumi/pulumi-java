@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kmsKeyVersionName")
-      private final @Nullable Input<String> kmsKeyVersionName;
+      private final @Nullable Output<String> kmsKeyVersionName;
 
-    public Input<String> getKmsKeyVersionName() {
-        return this.kmsKeyVersionName == null ? Input.empty() : this.kmsKeyVersionName;
+    public Output<String> getKmsKeyVersionName() {
+        return this.kmsKeyVersionName == null ? Output.empty() : this.kmsKeyVersionName;
     }
 
     public DiskEncryptionStatusArgs(
-        @Nullable Input<String> kind,
-        @Nullable Input<String> kmsKeyVersionName) {
+        @Nullable Output<String> kind,
+        @Nullable Output<String> kmsKeyVersionName) {
         this.kind = kind;
         this.kmsKeyVersionName = kmsKeyVersionName;
     }
 
     private DiskEncryptionStatusArgs() {
-        this.kind = Input.empty();
-        this.kmsKeyVersionName = Input.empty();
+        this.kind = Output.empty();
+        this.kmsKeyVersionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> kmsKeyVersionName;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> kmsKeyVersionName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
     	      this.kmsKeyVersionName = defaults.kmsKeyVersionName;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder kmsKeyVersionName(@Nullable Input<String> kmsKeyVersionName) {
+        public Builder kmsKeyVersionName(@Nullable Output<String> kmsKeyVersionName) {
             this.kmsKeyVersionName = kmsKeyVersionName;
             return this;
         }
 
         public Builder kmsKeyVersionName(@Nullable String kmsKeyVersionName) {
-            this.kmsKeyVersionName = Input.ofNullable(kmsKeyVersionName);
+            this.kmsKeyVersionName = Output.ofNullable(kmsKeyVersionName);
             return this;
         }
         public DiskEncryptionStatusArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs extends io.pu
      * 
      */
     @InputImport(name="filePatterns", required=true)
-      private final Input<List<String>> filePatterns;
+      private final Output<List<String>> filePatterns;
 
-    public Input<List<String>> getFilePatterns() {
+    public Output<List<String>> getFilePatterns() {
         return this.filePatterns;
     }
 
-    public GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs(Input<List<String>> filePatterns) {
+    public GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs(Output<List<String>> filePatterns) {
         this.filePatterns = Objects.requireNonNull(filePatterns, "expected parameter 'filePatterns' to be non-null");
     }
 
     private GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs() {
-        this.filePatterns = Input.empty();
+        this.filePatterns = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<List<String>> filePatterns;
+        private Output<List<String>> filePatterns;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs extends io.pu
     	      this.filePatterns = defaults.filePatterns;
         }
 
-        public Builder filePatterns(Input<List<String>> filePatterns) {
+        public Builder filePatterns(Output<List<String>> filePatterns) {
             this.filePatterns = Objects.requireNonNull(filePatterns);
             return this;
         }
 
         public Builder filePatterns(List<String> filePatterns) {
-            this.filePatterns = Input.of(Objects.requireNonNull(filePatterns));
+            this.filePatterns = Output.of(Objects.requireNonNull(filePatterns));
             return this;
         }
         public GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs build() {

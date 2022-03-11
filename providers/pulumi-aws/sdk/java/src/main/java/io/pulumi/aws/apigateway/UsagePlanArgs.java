@@ -6,7 +6,7 @@ package io.pulumi.aws.apigateway;
 import io.pulumi.aws.apigateway.inputs.UsagePlanApiStageArgs;
 import io.pulumi.aws.apigateway.inputs.UsagePlanQuotaSettingsArgs;
 import io.pulumi.aws.apigateway.inputs.UsagePlanThrottleSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiStages")
-      private final @Nullable Input<List<UsagePlanApiStageArgs>> apiStages;
+      private final @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
 
-    public Input<List<UsagePlanApiStageArgs>> getApiStages() {
-        return this.apiStages == null ? Input.empty() : this.apiStages;
+    public Output<List<UsagePlanApiStageArgs>> getApiStages() {
+        return this.apiStages == null ? Output.empty() : this.apiStages;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productCode")
-      private final @Nullable Input<String> productCode;
+      private final @Nullable Output<String> productCode;
 
-    public Input<String> getProductCode() {
-        return this.productCode == null ? Input.empty() : this.productCode;
+    public Output<String> getProductCode() {
+        return this.productCode == null ? Output.empty() : this.productCode;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quotaSettings")
-      private final @Nullable Input<UsagePlanQuotaSettingsArgs> quotaSettings;
+      private final @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings;
 
-    public Input<UsagePlanQuotaSettingsArgs> getQuotaSettings() {
-        return this.quotaSettings == null ? Input.empty() : this.quotaSettings;
+    public Output<UsagePlanQuotaSettingsArgs> getQuotaSettings() {
+        return this.quotaSettings == null ? Output.empty() : this.quotaSettings;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throttleSettings")
-      private final @Nullable Input<UsagePlanThrottleSettingsArgs> throttleSettings;
+      private final @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings;
 
-    public Input<UsagePlanThrottleSettingsArgs> getThrottleSettings() {
-        return this.throttleSettings == null ? Input.empty() : this.throttleSettings;
+    public Output<UsagePlanThrottleSettingsArgs> getThrottleSettings() {
+        return this.throttleSettings == null ? Output.empty() : this.throttleSettings;
     }
 
     public UsagePlanArgs(
-        @Nullable Input<List<UsagePlanApiStageArgs>> apiStages,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> productCode,
-        @Nullable Input<UsagePlanQuotaSettingsArgs> quotaSettings,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<UsagePlanThrottleSettingsArgs> throttleSettings) {
+        @Nullable Output<List<UsagePlanApiStageArgs>> apiStages,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> productCode,
+        @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings) {
         this.apiStages = apiStages;
         this.description = description;
         this.name = name;
@@ -114,13 +114,13 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UsagePlanArgs() {
-        this.apiStages = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.productCode = Input.empty();
-        this.quotaSettings = Input.empty();
-        this.tags = Input.empty();
-        this.throttleSettings = Input.empty();
+        this.apiStages = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.productCode = Output.empty();
+        this.quotaSettings = Output.empty();
+        this.tags = Output.empty();
+        this.throttleSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<UsagePlanApiStageArgs>> apiStages;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> productCode;
-        private @Nullable Input<UsagePlanQuotaSettingsArgs> quotaSettings;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<UsagePlanThrottleSettingsArgs> throttleSettings;
+        private @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> productCode;
+        private @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.throttleSettings = defaults.throttleSettings;
         }
 
-        public Builder apiStages(@Nullable Input<List<UsagePlanApiStageArgs>> apiStages) {
+        public Builder apiStages(@Nullable Output<List<UsagePlanApiStageArgs>> apiStages) {
             this.apiStages = apiStages;
             return this;
         }
 
         public Builder apiStages(@Nullable List<UsagePlanApiStageArgs> apiStages) {
-            this.apiStages = Input.ofNullable(apiStages);
+            this.apiStages = Output.ofNullable(apiStages);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder productCode(@Nullable Input<String> productCode) {
+        public Builder productCode(@Nullable Output<String> productCode) {
             this.productCode = productCode;
             return this;
         }
 
         public Builder productCode(@Nullable String productCode) {
-            this.productCode = Input.ofNullable(productCode);
+            this.productCode = Output.ofNullable(productCode);
             return this;
         }
 
-        public Builder quotaSettings(@Nullable Input<UsagePlanQuotaSettingsArgs> quotaSettings) {
+        public Builder quotaSettings(@Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings) {
             this.quotaSettings = quotaSettings;
             return this;
         }
 
         public Builder quotaSettings(@Nullable UsagePlanQuotaSettingsArgs quotaSettings) {
-            this.quotaSettings = Input.ofNullable(quotaSettings);
+            this.quotaSettings = Output.ofNullable(quotaSettings);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder throttleSettings(@Nullable Input<UsagePlanThrottleSettingsArgs> throttleSettings) {
+        public Builder throttleSettings(@Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings) {
             this.throttleSettings = throttleSettings;
             return this;
         }
 
         public Builder throttleSettings(@Nullable UsagePlanThrottleSettingsArgs throttleSettings) {
-            this.throttleSettings = Input.ofNullable(throttleSettings);
+            this.throttleSettings = Output.ofNullable(throttleSettings);
             return this;
         }
         public UsagePlanArgs build() {

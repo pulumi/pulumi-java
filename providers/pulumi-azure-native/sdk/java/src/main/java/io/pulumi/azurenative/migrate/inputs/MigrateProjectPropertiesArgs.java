@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.enums.ProvisioningState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class MigrateProjectPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Input<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class MigrateProjectPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="registeredTools")
-      private final @Nullable Input<List<String>> registeredTools;
+      private final @Nullable Output<List<String>> registeredTools;
 
-    public Input<List<String>> getRegisteredTools() {
-        return this.registeredTools == null ? Input.empty() : this.registeredTools;
+    public Output<List<String>> getRegisteredTools() {
+        return this.registeredTools == null ? Output.empty() : this.registeredTools;
     }
 
     public MigrateProjectPropertiesArgs(
-        @Nullable Input<Either<String,ProvisioningState>> provisioningState,
-        @Nullable Input<List<String>> registeredTools) {
+        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
+        @Nullable Output<List<String>> registeredTools) {
         this.provisioningState = provisioningState;
         this.registeredTools = registeredTools;
     }
 
     private MigrateProjectPropertiesArgs() {
-        this.provisioningState = Input.empty();
-        this.registeredTools = Input.empty();
+        this.provisioningState = Output.empty();
+        this.registeredTools = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class MigrateProjectPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ProvisioningState>> provisioningState;
-        private @Nullable Input<List<String>> registeredTools;
+        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+        private @Nullable Output<List<String>> registeredTools;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class MigrateProjectPropertiesArgs extends io.pulumi.resources.Reso
     	      this.registeredTools = defaults.registeredTools;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder registeredTools(@Nullable Input<List<String>> registeredTools) {
+        public Builder registeredTools(@Nullable Output<List<String>> registeredTools) {
             this.registeredTools = registeredTools;
             return this;
         }
 
         public Builder registeredTools(@Nullable List<String> registeredTools) {
-            this.registeredTools = Input.ofNullable(registeredTools);
+            this.registeredTools = Output.ofNullable(registeredTools);
             return this;
         }
         public MigrateProjectPropertiesArgs build() {

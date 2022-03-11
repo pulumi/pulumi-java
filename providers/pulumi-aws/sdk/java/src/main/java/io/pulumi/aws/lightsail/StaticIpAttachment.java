@@ -6,7 +6,6 @@ package io.pulumi.aws.lightsail;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lightsail.StaticIpAttachmentArgs;
 import io.pulumi.aws.lightsail.inputs.StaticIpAttachmentState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -104,14 +103,14 @@ public class StaticIpAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StaticIpAttachment(String name, StaticIpAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lightsail/staticIpAttachment:StaticIpAttachment", name, args == null ? StaticIpAttachmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:lightsail/staticIpAttachment:StaticIpAttachment", name, args == null ? StaticIpAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private StaticIpAttachment(String name, Input<String> id, @Nullable StaticIpAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private StaticIpAttachment(String name, Output<String> id, @Nullable StaticIpAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:lightsail/staticIpAttachment:StaticIpAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -127,7 +126,7 @@ public class StaticIpAttachment extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static StaticIpAttachment get(String name, Input<String> id, @Nullable StaticIpAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static StaticIpAttachment get(String name, Output<String> id, @Nullable StaticIpAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StaticIpAttachment(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2clientvpn;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clientVpnEndpointId", required=true)
-      private final Input<String> clientVpnEndpointId;
+      private final Output<String> clientVpnEndpointId;
 
-    public Input<String> getClientVpnEndpointId() {
+    public Output<String> getClientVpnEndpointId() {
         return this.clientVpnEndpointId;
     }
 
@@ -31,10 +31,10 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public NetworkAssociationArgs(
-        Input<String> clientVpnEndpointId,
-        @Nullable Input<List<String>> securityGroups,
-        Input<String> subnetId) {
+        Output<String> clientVpnEndpointId,
+        @Nullable Output<List<String>> securityGroups,
+        Output<String> subnetId) {
         this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId, "expected parameter 'clientVpnEndpointId' to be non-null");
         this.securityGroups = securityGroups;
         this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
     }
 
     private NetworkAssociationArgs() {
-        this.clientVpnEndpointId = Input.empty();
-        this.securityGroups = Input.empty();
-        this.subnetId = Input.empty();
+        this.clientVpnEndpointId = Output.empty();
+        this.securityGroups = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> clientVpnEndpointId;
-        private @Nullable Input<List<String>> securityGroups;
-        private Input<String> subnetId;
+        private Output<String> clientVpnEndpointId;
+        private @Nullable Output<List<String>> securityGroups;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder clientVpnEndpointId(Input<String> clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(Output<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
             return this;
         }
 
         public Builder clientVpnEndpointId(String clientVpnEndpointId) {
-            this.clientVpnEndpointId = Input.of(Objects.requireNonNull(clientVpnEndpointId));
+            this.clientVpnEndpointId = Output.of(Objects.requireNonNull(clientVpnEndpointId));
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public NetworkAssociationArgs build() {

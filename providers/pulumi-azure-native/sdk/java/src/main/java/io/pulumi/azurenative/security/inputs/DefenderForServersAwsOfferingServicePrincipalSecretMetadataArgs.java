@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
      * 
      */
     @InputImport(name="expiryDate")
-      private final @Nullable Input<String> expiryDate;
+      private final @Nullable Output<String> expiryDate;
 
-    public Input<String> getExpiryDate() {
-        return this.expiryDate == null ? Input.empty() : this.expiryDate;
+    public Output<String> getExpiryDate() {
+        return this.expiryDate == null ? Output.empty() : this.expiryDate;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
      * 
      */
     @InputImport(name="parameterNameInStore")
-      private final @Nullable Input<String> parameterNameInStore;
+      private final @Nullable Output<String> parameterNameInStore;
 
-    public Input<String> getParameterNameInStore() {
-        return this.parameterNameInStore == null ? Input.empty() : this.parameterNameInStore;
+    public Output<String> getParameterNameInStore() {
+        return this.parameterNameInStore == null ? Output.empty() : this.parameterNameInStore;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
      * 
      */
     @InputImport(name="parameterStoreRegion")
-      private final @Nullable Input<String> parameterStoreRegion;
+      private final @Nullable Output<String> parameterStoreRegion;
 
-    public Input<String> getParameterStoreRegion() {
-        return this.parameterStoreRegion == null ? Input.empty() : this.parameterStoreRegion;
+    public Output<String> getParameterStoreRegion() {
+        return this.parameterStoreRegion == null ? Output.empty() : this.parameterStoreRegion;
     }
 
     public DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs(
-        @Nullable Input<String> expiryDate,
-        @Nullable Input<String> parameterNameInStore,
-        @Nullable Input<String> parameterStoreRegion) {
+        @Nullable Output<String> expiryDate,
+        @Nullable Output<String> parameterNameInStore,
+        @Nullable Output<String> parameterStoreRegion) {
         this.expiryDate = expiryDate;
         this.parameterNameInStore = parameterNameInStore;
         this.parameterStoreRegion = parameterStoreRegion;
     }
 
     private DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs() {
-        this.expiryDate = Input.empty();
-        this.parameterNameInStore = Input.empty();
-        this.parameterStoreRegion = Input.empty();
+        this.expiryDate = Output.empty();
+        this.parameterNameInStore = Output.empty();
+        this.parameterStoreRegion = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expiryDate;
-        private @Nullable Input<String> parameterNameInStore;
-        private @Nullable Input<String> parameterStoreRegion;
+        private @Nullable Output<String> expiryDate;
+        private @Nullable Output<String> parameterNameInStore;
+        private @Nullable Output<String> parameterStoreRegion;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     	      this.parameterStoreRegion = defaults.parameterStoreRegion;
         }
 
-        public Builder expiryDate(@Nullable Input<String> expiryDate) {
+        public Builder expiryDate(@Nullable Output<String> expiryDate) {
             this.expiryDate = expiryDate;
             return this;
         }
 
         public Builder expiryDate(@Nullable String expiryDate) {
-            this.expiryDate = Input.ofNullable(expiryDate);
+            this.expiryDate = Output.ofNullable(expiryDate);
             return this;
         }
 
-        public Builder parameterNameInStore(@Nullable Input<String> parameterNameInStore) {
+        public Builder parameterNameInStore(@Nullable Output<String> parameterNameInStore) {
             this.parameterNameInStore = parameterNameInStore;
             return this;
         }
 
         public Builder parameterNameInStore(@Nullable String parameterNameInStore) {
-            this.parameterNameInStore = Input.ofNullable(parameterNameInStore);
+            this.parameterNameInStore = Output.ofNullable(parameterNameInStore);
             return this;
         }
 
-        public Builder parameterStoreRegion(@Nullable Input<String> parameterStoreRegion) {
+        public Builder parameterStoreRegion(@Nullable Output<String> parameterStoreRegion) {
             this.parameterStoreRegion = parameterStoreRegion;
             return this;
         }
 
         public Builder parameterStoreRegion(@Nullable String parameterStoreRegion) {
-            this.parameterStoreRegion = Input.ofNullable(parameterStoreRegion);
+            this.parameterStoreRegion = Output.ofNullable(parameterStoreRegion);
             return this;
         }
         public DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs build() {

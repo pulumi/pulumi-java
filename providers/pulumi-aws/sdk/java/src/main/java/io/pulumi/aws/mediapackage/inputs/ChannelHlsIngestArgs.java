@@ -4,7 +4,7 @@
 package io.pulumi.aws.mediapackage.inputs;
 
 import io.pulumi.aws.mediapackage.inputs.ChannelHlsIngestIngestEndpointArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class ChannelHlsIngestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ingestEndpoints")
-      private final @Nullable Input<List<ChannelHlsIngestIngestEndpointArgs>> ingestEndpoints;
+      private final @Nullable Output<List<ChannelHlsIngestIngestEndpointArgs>> ingestEndpoints;
 
-    public Input<List<ChannelHlsIngestIngestEndpointArgs>> getIngestEndpoints() {
-        return this.ingestEndpoints == null ? Input.empty() : this.ingestEndpoints;
+    public Output<List<ChannelHlsIngestIngestEndpointArgs>> getIngestEndpoints() {
+        return this.ingestEndpoints == null ? Output.empty() : this.ingestEndpoints;
     }
 
-    public ChannelHlsIngestArgs(@Nullable Input<List<ChannelHlsIngestIngestEndpointArgs>> ingestEndpoints) {
+    public ChannelHlsIngestArgs(@Nullable Output<List<ChannelHlsIngestIngestEndpointArgs>> ingestEndpoints) {
         this.ingestEndpoints = ingestEndpoints;
     }
 
     private ChannelHlsIngestArgs() {
-        this.ingestEndpoints = Input.empty();
+        this.ingestEndpoints = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ChannelHlsIngestArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ChannelHlsIngestIngestEndpointArgs>> ingestEndpoints;
+        private @Nullable Output<List<ChannelHlsIngestIngestEndpointArgs>> ingestEndpoints;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ChannelHlsIngestArgs extends io.pulumi.resources.ResourceArgs
     	      this.ingestEndpoints = defaults.ingestEndpoints;
         }
 
-        public Builder ingestEndpoints(@Nullable Input<List<ChannelHlsIngestIngestEndpointArgs>> ingestEndpoints) {
+        public Builder ingestEndpoints(@Nullable Output<List<ChannelHlsIngestIngestEndpointArgs>> ingestEndpoints) {
             this.ingestEndpoints = ingestEndpoints;
             return this;
         }
 
         public Builder ingestEndpoints(@Nullable List<ChannelHlsIngestIngestEndpointArgs> ingestEndpoints) {
-            this.ingestEndpoints = Input.ofNullable(ingestEndpoints);
+            this.ingestEndpoints = Output.ofNullable(ingestEndpoints);
             return this;
         }
         public ChannelHlsIngestArgs build() {

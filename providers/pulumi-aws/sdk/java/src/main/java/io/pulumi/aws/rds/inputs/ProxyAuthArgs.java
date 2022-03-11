@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authScheme")
-      private final @Nullable Input<String> authScheme;
+      private final @Nullable Output<String> authScheme;
 
-    public Input<String> getAuthScheme() {
-        return this.authScheme == null ? Input.empty() : this.authScheme;
+    public Output<String> getAuthScheme() {
+        return this.authScheme == null ? Output.empty() : this.authScheme;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamAuth")
-      private final @Nullable Input<String> iamAuth;
+      private final @Nullable Output<String> iamAuth;
 
-    public Input<String> getIamAuth() {
-        return this.iamAuth == null ? Input.empty() : this.iamAuth;
+    public Output<String> getIamAuth() {
+        return this.iamAuth == null ? Output.empty() : this.iamAuth;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretArn")
-      private final @Nullable Input<String> secretArn;
+      private final @Nullable Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
-        return this.secretArn == null ? Input.empty() : this.secretArn;
+    public Output<String> getSecretArn() {
+        return this.secretArn == null ? Output.empty() : this.secretArn;
     }
 
     public ProxyAuthArgs(
-        @Nullable Input<String> authScheme,
-        @Nullable Input<String> description,
-        @Nullable Input<String> iamAuth,
-        @Nullable Input<String> secretArn) {
+        @Nullable Output<String> authScheme,
+        @Nullable Output<String> description,
+        @Nullable Output<String> iamAuth,
+        @Nullable Output<String> secretArn) {
         this.authScheme = authScheme;
         this.description = description;
         this.iamAuth = iamAuth;
@@ -70,10 +70,10 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProxyAuthArgs() {
-        this.authScheme = Input.empty();
-        this.description = Input.empty();
-        this.iamAuth = Input.empty();
-        this.secretArn = Input.empty();
+        this.authScheme = Output.empty();
+        this.description = Output.empty();
+        this.iamAuth = Output.empty();
+        this.secretArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authScheme;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> iamAuth;
-        private @Nullable Input<String> secretArn;
+        private @Nullable Output<String> authScheme;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> iamAuth;
+        private @Nullable Output<String> secretArn;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder authScheme(@Nullable Input<String> authScheme) {
+        public Builder authScheme(@Nullable Output<String> authScheme) {
             this.authScheme = authScheme;
             return this;
         }
 
         public Builder authScheme(@Nullable String authScheme) {
-            this.authScheme = Input.ofNullable(authScheme);
+            this.authScheme = Output.ofNullable(authScheme);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder iamAuth(@Nullable Input<String> iamAuth) {
+        public Builder iamAuth(@Nullable Output<String> iamAuth) {
             this.iamAuth = iamAuth;
             return this;
         }
 
         public Builder iamAuth(@Nullable String iamAuth) {
-            this.iamAuth = Input.ofNullable(iamAuth);
+            this.iamAuth = Output.ofNullable(iamAuth);
             return this;
         }
 
-        public Builder secretArn(@Nullable Input<String> secretArn) {
+        public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Input.ofNullable(secretArn);
+            this.secretArn = Output.ofNullable(secretArn);
             return this;
         }
         public ProxyAuthArgs build() {

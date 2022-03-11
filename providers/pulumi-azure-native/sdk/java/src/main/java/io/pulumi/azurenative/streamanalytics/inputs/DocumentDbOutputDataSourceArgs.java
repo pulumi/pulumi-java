@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accountKey")
-      private final @Nullable Input<String> accountKey;
+      private final @Nullable Output<String> accountKey;
 
-    public Input<String> getAccountKey() {
-        return this.accountKey == null ? Input.empty() : this.accountKey;
+    public Output<String> getAccountKey() {
+        return this.accountKey == null ? Output.empty() : this.accountKey;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="collectionNamePattern")
-      private final @Nullable Input<String> collectionNamePattern;
+      private final @Nullable Output<String> collectionNamePattern;
 
-    public Input<String> getCollectionNamePattern() {
-        return this.collectionNamePattern == null ? Input.empty() : this.collectionNamePattern;
+    public Output<String> getCollectionNamePattern() {
+        return this.collectionNamePattern == null ? Output.empty() : this.collectionNamePattern;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<String> database;
+      private final @Nullable Output<String> database;
 
-    public Input<String> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<String> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="documentId")
-      private final @Nullable Input<String> documentId;
+      private final @Nullable Output<String> documentId;
 
-    public Input<String> getDocumentId() {
-        return this.documentId == null ? Input.empty() : this.documentId;
+    public Output<String> getDocumentId() {
+        return this.documentId == null ? Output.empty() : this.documentId;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="partitionKey")
-      private final @Nullable Input<String> partitionKey;
+      private final @Nullable Output<String> partitionKey;
 
-    public Input<String> getPartitionKey() {
-        return this.partitionKey == null ? Input.empty() : this.partitionKey;
+    public Output<String> getPartitionKey() {
+        return this.partitionKey == null ? Output.empty() : this.partitionKey;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public DocumentDbOutputDataSourceArgs(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> accountKey,
-        @Nullable Input<String> collectionNamePattern,
-        @Nullable Input<String> database,
-        @Nullable Input<String> documentId,
-        @Nullable Input<String> partitionKey,
-        Input<String> type) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> accountKey,
+        @Nullable Output<String> collectionNamePattern,
+        @Nullable Output<String> database,
+        @Nullable Output<String> documentId,
+        @Nullable Output<String> partitionKey,
+        Output<String> type) {
         this.accountId = accountId;
         this.accountKey = accountKey;
         this.collectionNamePattern = collectionNamePattern;
@@ -114,13 +114,13 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     }
 
     private DocumentDbOutputDataSourceArgs() {
-        this.accountId = Input.empty();
-        this.accountKey = Input.empty();
-        this.collectionNamePattern = Input.empty();
-        this.database = Input.empty();
-        this.documentId = Input.empty();
-        this.partitionKey = Input.empty();
-        this.type = Input.empty();
+        this.accountId = Output.empty();
+        this.accountKey = Output.empty();
+        this.collectionNamePattern = Output.empty();
+        this.database = Output.empty();
+        this.documentId = Output.empty();
+        this.partitionKey = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> accountKey;
-        private @Nullable Input<String> collectionNamePattern;
-        private @Nullable Input<String> database;
-        private @Nullable Input<String> documentId;
-        private @Nullable Input<String> partitionKey;
-        private Input<String> type;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> accountKey;
+        private @Nullable Output<String> collectionNamePattern;
+        private @Nullable Output<String> database;
+        private @Nullable Output<String> documentId;
+        private @Nullable Output<String> partitionKey;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder accountKey(@Nullable Input<String> accountKey) {
+        public Builder accountKey(@Nullable Output<String> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Input.ofNullable(accountKey);
+            this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
 
-        public Builder collectionNamePattern(@Nullable Input<String> collectionNamePattern) {
+        public Builder collectionNamePattern(@Nullable Output<String> collectionNamePattern) {
             this.collectionNamePattern = collectionNamePattern;
             return this;
         }
 
         public Builder collectionNamePattern(@Nullable String collectionNamePattern) {
-            this.collectionNamePattern = Input.ofNullable(collectionNamePattern);
+            this.collectionNamePattern = Output.ofNullable(collectionNamePattern);
             return this;
         }
 
-        public Builder database(@Nullable Input<String> database) {
+        public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable String database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder documentId(@Nullable Input<String> documentId) {
+        public Builder documentId(@Nullable Output<String> documentId) {
             this.documentId = documentId;
             return this;
         }
 
         public Builder documentId(@Nullable String documentId) {
-            this.documentId = Input.ofNullable(documentId);
+            this.documentId = Output.ofNullable(documentId);
             return this;
         }
 
-        public Builder partitionKey(@Nullable Input<String> partitionKey) {
+        public Builder partitionKey(@Nullable Output<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Input.ofNullable(partitionKey);
+            this.partitionKey = Output.ofNullable(partitionKey);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DocumentDbOutputDataSourceArgs build() {

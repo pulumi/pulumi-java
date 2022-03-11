@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.enums.ChannelMapping;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="channelMapping")
-      private final @Nullable Input<Either<String,ChannelMapping>> channelMapping;
+      private final @Nullable Output<Either<String,ChannelMapping>> channelMapping;
 
-    public Input<Either<String,ChannelMapping>> getChannelMapping() {
-        return this.channelMapping == null ? Input.empty() : this.channelMapping;
+    public Output<Either<String,ChannelMapping>> getChannelMapping() {
+        return this.channelMapping == null ? Output.empty() : this.channelMapping;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -49,25 +49,25 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="trackId", required=true)
-      private final Input<Double> trackId;
+      private final Output<Double> trackId;
 
-    public Input<Double> getTrackId() {
+    public Output<Double> getTrackId() {
         return this.trackId;
     }
 
     public SelectAudioTrackByIdArgs(
-        @Nullable Input<Either<String,ChannelMapping>> channelMapping,
-        Input<String> odataType,
-        Input<Double> trackId) {
+        @Nullable Output<Either<String,ChannelMapping>> channelMapping,
+        Output<String> odataType,
+        Output<Double> trackId) {
         this.channelMapping = channelMapping;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.trackId = Objects.requireNonNull(trackId, "expected parameter 'trackId' to be non-null");
     }
 
     private SelectAudioTrackByIdArgs() {
-        this.channelMapping = Input.empty();
-        this.odataType = Input.empty();
-        this.trackId = Input.empty();
+        this.channelMapping = Output.empty();
+        this.odataType = Output.empty();
+        this.trackId = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ChannelMapping>> channelMapping;
-        private Input<String> odataType;
-        private Input<Double> trackId;
+        private @Nullable Output<Either<String,ChannelMapping>> channelMapping;
+        private Output<String> odataType;
+        private Output<Double> trackId;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
     	      this.trackId = defaults.trackId;
         }
 
-        public Builder channelMapping(@Nullable Input<Either<String,ChannelMapping>> channelMapping) {
+        public Builder channelMapping(@Nullable Output<Either<String,ChannelMapping>> channelMapping) {
             this.channelMapping = channelMapping;
             return this;
         }
 
         public Builder channelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
-            this.channelMapping = Input.ofNullable(channelMapping);
+            this.channelMapping = Output.ofNullable(channelMapping);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder trackId(Input<Double> trackId) {
+        public Builder trackId(Output<Double> trackId) {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }
 
         public Builder trackId(Double trackId) {
-            this.trackId = Input.of(Objects.requireNonNull(trackId));
+            this.trackId = Output.of(Objects.requireNonNull(trackId));
             return this;
         }
         public SelectAudioTrackByIdArgs build() {

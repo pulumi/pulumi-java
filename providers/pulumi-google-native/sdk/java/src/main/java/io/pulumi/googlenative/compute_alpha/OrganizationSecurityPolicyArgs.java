@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.OrganizationSecurityPolicyType;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyAdaptiveProtectionConfigArgs;
@@ -25,17 +25,17 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     public static final OrganizationSecurityPolicyArgs Empty = new OrganizationSecurityPolicyArgs();
 
     @InputImport(name="adaptiveProtectionConfig")
-      private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
+      private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
-    public Input<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
-        return this.adaptiveProtectionConfig == null ? Input.empty() : this.adaptiveProtectionConfig;
+    public Output<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
+        return this.adaptiveProtectionConfig == null ? Output.empty() : this.adaptiveProtectionConfig;
     }
 
     @InputImport(name="advancedOptionsConfig")
-      private final @Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
+      private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
 
-    public Input<SecurityPolicyAdvancedOptionsConfigArgs> getAdvancedOptionsConfig() {
-        return this.advancedOptionsConfig == null ? Input.empty() : this.advancedOptionsConfig;
+    public Output<SecurityPolicyAdvancedOptionsConfigArgs> getAdvancedOptionsConfig() {
+        return this.advancedOptionsConfig == null ? Output.empty() : this.advancedOptionsConfig;
     }
 
     /**
@@ -43,24 +43,24 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="associations")
-      private final @Nullable Input<List<SecurityPolicyAssociationArgs>> associations;
+      private final @Nullable Output<List<SecurityPolicyAssociationArgs>> associations;
 
-    public Input<List<SecurityPolicyAssociationArgs>> getAssociations() {
-        return this.associations == null ? Input.empty() : this.associations;
+    public Output<List<SecurityPolicyAssociationArgs>> getAssociations() {
+        return this.associations == null ? Output.empty() : this.associations;
     }
 
     @InputImport(name="cloudArmorConfig")
-      private final @Nullable Input<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig;
+      private final @Nullable Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig;
 
-    public Input<SecurityPolicyCloudArmorConfigArgs> getCloudArmorConfig() {
-        return this.cloudArmorConfig == null ? Input.empty() : this.cloudArmorConfig;
+    public Output<SecurityPolicyCloudArmorConfigArgs> getCloudArmorConfig() {
+        return this.cloudArmorConfig == null ? Output.empty() : this.cloudArmorConfig;
     }
 
     @InputImport(name="ddosProtectionConfig")
-      private final @Nullable Input<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig;
+      private final @Nullable Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig;
 
-    public Input<SecurityPolicyDdosProtectionConfigArgs> getDdosProtectionConfig() {
-        return this.ddosProtectionConfig == null ? Input.empty() : this.ddosProtectionConfig;
+    public Output<SecurityPolicyDdosProtectionConfigArgs> getDdosProtectionConfig() {
+        return this.ddosProtectionConfig == null ? Output.empty() : this.ddosProtectionConfig;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -101,31 +101,31 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="parentId")
-      private final @Nullable Input<String> parentId;
+      private final @Nullable Output<String> parentId;
 
-    public Input<String> getParentId() {
-        return this.parentId == null ? Input.empty() : this.parentId;
+    public Output<String> getParentId() {
+        return this.parentId == null ? Output.empty() : this.parentId;
     }
 
     @InputImport(name="recaptchaOptionsConfig")
-      private final @Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
+      private final @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
 
-    public Input<SecurityPolicyRecaptchaOptionsConfigArgs> getRecaptchaOptionsConfig() {
-        return this.recaptchaOptionsConfig == null ? Input.empty() : this.recaptchaOptionsConfig;
+    public Output<SecurityPolicyRecaptchaOptionsConfigArgs> getRecaptchaOptionsConfig() {
+        return this.recaptchaOptionsConfig == null ? Output.empty() : this.recaptchaOptionsConfig;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<SecurityPolicyRuleArgs>> rules;
+      private final @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
-    public Input<List<SecurityPolicyRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<SecurityPolicyRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -144,27 +144,27 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<OrganizationSecurityPolicyType> type;
+      private final @Nullable Output<OrganizationSecurityPolicyType> type;
 
-    public Input<OrganizationSecurityPolicyType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<OrganizationSecurityPolicyType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public OrganizationSecurityPolicyArgs(
-        @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig,
-        @Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig,
-        @Nullable Input<List<SecurityPolicyAssociationArgs>> associations,
-        @Nullable Input<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig,
-        @Nullable Input<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parentId,
-        @Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig,
-        @Nullable Input<String> requestId,
-        @Nullable Input<List<SecurityPolicyRuleArgs>> rules,
-        @Nullable Input<OrganizationSecurityPolicyType> type) {
+        @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig,
+        @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig,
+        @Nullable Output<List<SecurityPolicyAssociationArgs>> associations,
+        @Nullable Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig,
+        @Nullable Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parentId,
+        @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig,
+        @Nullable Output<String> requestId,
+        @Nullable Output<List<SecurityPolicyRuleArgs>> rules,
+        @Nullable Output<OrganizationSecurityPolicyType> type) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         this.advancedOptionsConfig = advancedOptionsConfig;
         this.associations = associations;
@@ -182,20 +182,20 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     }
 
     private OrganizationSecurityPolicyArgs() {
-        this.adaptiveProtectionConfig = Input.empty();
-        this.advancedOptionsConfig = Input.empty();
-        this.associations = Input.empty();
-        this.cloudArmorConfig = Input.empty();
-        this.ddosProtectionConfig = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.parentId = Input.empty();
-        this.recaptchaOptionsConfig = Input.empty();
-        this.requestId = Input.empty();
-        this.rules = Input.empty();
-        this.type = Input.empty();
+        this.adaptiveProtectionConfig = Output.empty();
+        this.advancedOptionsConfig = Output.empty();
+        this.associations = Output.empty();
+        this.cloudArmorConfig = Output.empty();
+        this.ddosProtectionConfig = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.parentId = Output.empty();
+        this.recaptchaOptionsConfig = Output.empty();
+        this.requestId = Output.empty();
+        this.rules = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -207,20 +207,20 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
-        private @Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
-        private @Nullable Input<List<SecurityPolicyAssociationArgs>> associations;
-        private @Nullable Input<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig;
-        private @Nullable Input<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parentId;
-        private @Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<List<SecurityPolicyRuleArgs>> rules;
-        private @Nullable Input<OrganizationSecurityPolicyType> type;
+        private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
+        private @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
+        private @Nullable Output<List<SecurityPolicyAssociationArgs>> associations;
+        private @Nullable Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig;
+        private @Nullable Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parentId;
+        private @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
+        private @Nullable Output<OrganizationSecurityPolicyType> type;
 
         public Builder() {
     	      // Empty
@@ -244,143 +244,143 @@ public final class OrganizationSecurityPolicyArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder adaptiveProtectionConfig(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
 
         public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = Input.ofNullable(adaptiveProtectionConfig);
+            this.adaptiveProtectionConfig = Output.ofNullable(adaptiveProtectionConfig);
             return this;
         }
 
-        public Builder advancedOptionsConfig(@Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig) {
+        public Builder advancedOptionsConfig(@Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig) {
             this.advancedOptionsConfig = advancedOptionsConfig;
             return this;
         }
 
         public Builder advancedOptionsConfig(@Nullable SecurityPolicyAdvancedOptionsConfigArgs advancedOptionsConfig) {
-            this.advancedOptionsConfig = Input.ofNullable(advancedOptionsConfig);
+            this.advancedOptionsConfig = Output.ofNullable(advancedOptionsConfig);
             return this;
         }
 
-        public Builder associations(@Nullable Input<List<SecurityPolicyAssociationArgs>> associations) {
+        public Builder associations(@Nullable Output<List<SecurityPolicyAssociationArgs>> associations) {
             this.associations = associations;
             return this;
         }
 
         public Builder associations(@Nullable List<SecurityPolicyAssociationArgs> associations) {
-            this.associations = Input.ofNullable(associations);
+            this.associations = Output.ofNullable(associations);
             return this;
         }
 
-        public Builder cloudArmorConfig(@Nullable Input<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig) {
+        public Builder cloudArmorConfig(@Nullable Output<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig) {
             this.cloudArmorConfig = cloudArmorConfig;
             return this;
         }
 
         public Builder cloudArmorConfig(@Nullable SecurityPolicyCloudArmorConfigArgs cloudArmorConfig) {
-            this.cloudArmorConfig = Input.ofNullable(cloudArmorConfig);
+            this.cloudArmorConfig = Output.ofNullable(cloudArmorConfig);
             return this;
         }
 
-        public Builder ddosProtectionConfig(@Nullable Input<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig) {
+        public Builder ddosProtectionConfig(@Nullable Output<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig) {
             this.ddosProtectionConfig = ddosProtectionConfig;
             return this;
         }
 
         public Builder ddosProtectionConfig(@Nullable SecurityPolicyDdosProtectionConfigArgs ddosProtectionConfig) {
-            this.ddosProtectionConfig = Input.ofNullable(ddosProtectionConfig);
+            this.ddosProtectionConfig = Output.ofNullable(ddosProtectionConfig);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentId(@Nullable Input<String> parentId) {
+        public Builder parentId(@Nullable Output<String> parentId) {
             this.parentId = parentId;
             return this;
         }
 
         public Builder parentId(@Nullable String parentId) {
-            this.parentId = Input.ofNullable(parentId);
+            this.parentId = Output.ofNullable(parentId);
             return this;
         }
 
-        public Builder recaptchaOptionsConfig(@Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig) {
+        public Builder recaptchaOptionsConfig(@Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = recaptchaOptionsConfig;
             return this;
         }
 
         public Builder recaptchaOptionsConfig(@Nullable SecurityPolicyRecaptchaOptionsConfigArgs recaptchaOptionsConfig) {
-            this.recaptchaOptionsConfig = Input.ofNullable(recaptchaOptionsConfig);
+            this.recaptchaOptionsConfig = Output.ofNullable(recaptchaOptionsConfig);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<SecurityPolicyRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<SecurityPolicyRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder type(@Nullable Input<OrganizationSecurityPolicyType> type) {
+        public Builder type(@Nullable Output<OrganizationSecurityPolicyType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable OrganizationSecurityPolicyType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public OrganizationSecurityPolicyArgs build() {

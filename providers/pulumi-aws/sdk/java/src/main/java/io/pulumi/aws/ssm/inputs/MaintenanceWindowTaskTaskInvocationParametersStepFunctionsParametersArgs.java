@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
      * 
      */
     @InputImport(name="input")
-      private final @Nullable Input<String> input;
+      private final @Nullable Output<String> input;
 
-    public Input<String> getInput() {
-        return this.input == null ? Input.empty() : this.input;
+    public Output<String> getInput() {
+        return this.input == null ? Output.empty() : this.input;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs(
-        @Nullable Input<String> input,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> input,
+        @Nullable Output<String> name) {
         this.input = input;
         this.name = name;
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs() {
-        this.input = Input.empty();
-        this.name = Input.empty();
+        this.input = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
     }
 
     public static final class Builder {
-        private @Nullable Input<String> input;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> input;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
     	      this.name = defaults.name;
         }
 
-        public Builder input(@Nullable Input<String> input) {
+        public Builder input(@Nullable Output<String> input) {
             this.input = input;
             return this;
         }
 
         public Builder input(@Nullable String input) {
-            this.input = Input.ofNullable(input);
+            this.input = Output.ofNullable(input);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs build() {

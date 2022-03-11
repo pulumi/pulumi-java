@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsPublicAccessBlockGetArgs;
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsRegionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -33,10 +33,10 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="publicAccessBlock")
-      private final @Nullable Input<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock;
+      private final @Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock;
 
-    public Input<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> getPublicAccessBlock() {
-        return this.publicAccessBlock == null ? Input.empty() : this.publicAccessBlock;
+    public Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> getPublicAccessBlock() {
+        return this.publicAccessBlock == null ? Output.empty() : this.publicAccessBlock;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="regions", required=true)
-      private final Input<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions;
+      private final Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions;
 
-    public Input<List<MultiRegionAccessPointDetailsRegionGetArgs>> getRegions() {
+    public Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> getRegions() {
         return this.regions;
     }
 
     public MultiRegionAccessPointDetailsGetArgs(
-        Input<String> name,
-        @Nullable Input<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock,
-        Input<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions) {
+        Output<String> name,
+        @Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock,
+        Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.publicAccessBlock = publicAccessBlock;
         this.regions = Objects.requireNonNull(regions, "expected parameter 'regions' to be non-null");
     }
 
     private MultiRegionAccessPointDetailsGetArgs() {
-        this.name = Input.empty();
-        this.publicAccessBlock = Input.empty();
-        this.regions = Input.empty();
+        this.name = Output.empty();
+        this.publicAccessBlock = Output.empty();
+        this.regions = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock;
-        private Input<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions;
+        private Output<String> name;
+        private @Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock;
+        private Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
     	      this.regions = defaults.regions;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder publicAccessBlock(@Nullable Input<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock) {
+        public Builder publicAccessBlock(@Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock) {
             this.publicAccessBlock = publicAccessBlock;
             return this;
         }
 
         public Builder publicAccessBlock(@Nullable MultiRegionAccessPointDetailsPublicAccessBlockGetArgs publicAccessBlock) {
-            this.publicAccessBlock = Input.ofNullable(publicAccessBlock);
+            this.publicAccessBlock = Output.ofNullable(publicAccessBlock);
             return this;
         }
 
-        public Builder regions(Input<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions) {
+        public Builder regions(Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
 
         public Builder regions(List<MultiRegionAccessPointDetailsRegionGetArgs> regions) {
-            this.regions = Input.of(Objects.requireNonNull(regions));
+            this.regions = Output.of(Objects.requireNonNull(regions));
             return this;
         }
         public MultiRegionAccessPointDetailsGetArgs build() {

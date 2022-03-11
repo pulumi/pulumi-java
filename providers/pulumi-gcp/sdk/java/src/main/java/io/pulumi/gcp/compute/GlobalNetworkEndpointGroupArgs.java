@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defaultPort")
-      private final @Nullable Input<Integer> defaultPort;
+      private final @Nullable Output<Integer> defaultPort;
 
-    public Input<Integer> getDefaultPort() {
-        return this.defaultPort == null ? Input.empty() : this.defaultPort;
+    public Output<Integer> getDefaultPort() {
+        return this.defaultPort == null ? Output.empty() : this.defaultPort;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkEndpointType", required=true)
-      private final Input<String> networkEndpointType;
+      private final Output<String> networkEndpointType;
 
-    public Input<String> getNetworkEndpointType() {
+    public Output<String> getNetworkEndpointType() {
         return this.networkEndpointType;
     }
 
@@ -74,18 +74,18 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public GlobalNetworkEndpointGroupArgs(
-        @Nullable Input<Integer> defaultPort,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<String> networkEndpointType,
-        @Nullable Input<String> project) {
+        @Nullable Output<Integer> defaultPort,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<String> networkEndpointType,
+        @Nullable Output<String> project) {
         this.defaultPort = defaultPort;
         this.description = description;
         this.name = name;
@@ -94,11 +94,11 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     }
 
     private GlobalNetworkEndpointGroupArgs() {
-        this.defaultPort = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.networkEndpointType = Input.empty();
-        this.project = Input.empty();
+        this.defaultPort = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.networkEndpointType = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,11 +110,11 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> defaultPort;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<String> networkEndpointType;
-        private @Nullable Input<String> project;
+        private @Nullable Output<Integer> defaultPort;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<String> networkEndpointType;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -129,53 +129,53 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     	      this.project = defaults.project;
         }
 
-        public Builder defaultPort(@Nullable Input<Integer> defaultPort) {
+        public Builder defaultPort(@Nullable Output<Integer> defaultPort) {
             this.defaultPort = defaultPort;
             return this;
         }
 
         public Builder defaultPort(@Nullable Integer defaultPort) {
-            this.defaultPort = Input.ofNullable(defaultPort);
+            this.defaultPort = Output.ofNullable(defaultPort);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkEndpointType(Input<String> networkEndpointType) {
+        public Builder networkEndpointType(Output<String> networkEndpointType) {
             this.networkEndpointType = Objects.requireNonNull(networkEndpointType);
             return this;
         }
 
         public Builder networkEndpointType(String networkEndpointType) {
-            this.networkEndpointType = Input.of(Objects.requireNonNull(networkEndpointType));
+            this.networkEndpointType = Output.of(Objects.requireNonNull(networkEndpointType));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public GlobalNetworkEndpointGroupArgs build() {

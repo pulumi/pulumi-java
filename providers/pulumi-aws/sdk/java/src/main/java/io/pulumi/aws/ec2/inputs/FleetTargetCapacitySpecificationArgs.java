@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultTargetCapacityType", required=true)
-      private final Input<String> defaultTargetCapacityType;
+      private final Output<String> defaultTargetCapacityType;
 
-    public Input<String> getDefaultTargetCapacityType() {
+    public Output<String> getDefaultTargetCapacityType() {
         return this.defaultTargetCapacityType;
     }
 
@@ -31,10 +31,10 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="onDemandTargetCapacity")
-      private final @Nullable Input<Integer> onDemandTargetCapacity;
+      private final @Nullable Output<Integer> onDemandTargetCapacity;
 
-    public Input<Integer> getOnDemandTargetCapacity() {
-        return this.onDemandTargetCapacity == null ? Input.empty() : this.onDemandTargetCapacity;
+    public Output<Integer> getOnDemandTargetCapacity() {
+        return this.onDemandTargetCapacity == null ? Output.empty() : this.onDemandTargetCapacity;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="spotTargetCapacity")
-      private final @Nullable Input<Integer> spotTargetCapacity;
+      private final @Nullable Output<Integer> spotTargetCapacity;
 
-    public Input<Integer> getSpotTargetCapacity() {
-        return this.spotTargetCapacity == null ? Input.empty() : this.spotTargetCapacity;
+    public Output<Integer> getSpotTargetCapacity() {
+        return this.spotTargetCapacity == null ? Output.empty() : this.spotTargetCapacity;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="totalTargetCapacity", required=true)
-      private final Input<Integer> totalTargetCapacity;
+      private final Output<Integer> totalTargetCapacity;
 
-    public Input<Integer> getTotalTargetCapacity() {
+    public Output<Integer> getTotalTargetCapacity() {
         return this.totalTargetCapacity;
     }
 
     public FleetTargetCapacitySpecificationArgs(
-        Input<String> defaultTargetCapacityType,
-        @Nullable Input<Integer> onDemandTargetCapacity,
-        @Nullable Input<Integer> spotTargetCapacity,
-        Input<Integer> totalTargetCapacity) {
+        Output<String> defaultTargetCapacityType,
+        @Nullable Output<Integer> onDemandTargetCapacity,
+        @Nullable Output<Integer> spotTargetCapacity,
+        Output<Integer> totalTargetCapacity) {
         this.defaultTargetCapacityType = Objects.requireNonNull(defaultTargetCapacityType, "expected parameter 'defaultTargetCapacityType' to be non-null");
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         this.spotTargetCapacity = spotTargetCapacity;
@@ -71,10 +71,10 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
     }
 
     private FleetTargetCapacitySpecificationArgs() {
-        this.defaultTargetCapacityType = Input.empty();
-        this.onDemandTargetCapacity = Input.empty();
-        this.spotTargetCapacity = Input.empty();
-        this.totalTargetCapacity = Input.empty();
+        this.defaultTargetCapacityType = Output.empty();
+        this.onDemandTargetCapacity = Output.empty();
+        this.spotTargetCapacity = Output.empty();
+        this.totalTargetCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> defaultTargetCapacityType;
-        private @Nullable Input<Integer> onDemandTargetCapacity;
-        private @Nullable Input<Integer> spotTargetCapacity;
-        private Input<Integer> totalTargetCapacity;
+        private Output<String> defaultTargetCapacityType;
+        private @Nullable Output<Integer> onDemandTargetCapacity;
+        private @Nullable Output<Integer> spotTargetCapacity;
+        private Output<Integer> totalTargetCapacity;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
     	      this.totalTargetCapacity = defaults.totalTargetCapacity;
         }
 
-        public Builder defaultTargetCapacityType(Input<String> defaultTargetCapacityType) {
+        public Builder defaultTargetCapacityType(Output<String> defaultTargetCapacityType) {
             this.defaultTargetCapacityType = Objects.requireNonNull(defaultTargetCapacityType);
             return this;
         }
 
         public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
-            this.defaultTargetCapacityType = Input.of(Objects.requireNonNull(defaultTargetCapacityType));
+            this.defaultTargetCapacityType = Output.of(Objects.requireNonNull(defaultTargetCapacityType));
             return this;
         }
 
-        public Builder onDemandTargetCapacity(@Nullable Input<Integer> onDemandTargetCapacity) {
+        public Builder onDemandTargetCapacity(@Nullable Output<Integer> onDemandTargetCapacity) {
             this.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
 
         public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
-            this.onDemandTargetCapacity = Input.ofNullable(onDemandTargetCapacity);
+            this.onDemandTargetCapacity = Output.ofNullable(onDemandTargetCapacity);
             return this;
         }
 
-        public Builder spotTargetCapacity(@Nullable Input<Integer> spotTargetCapacity) {
+        public Builder spotTargetCapacity(@Nullable Output<Integer> spotTargetCapacity) {
             this.spotTargetCapacity = spotTargetCapacity;
             return this;
         }
 
         public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
-            this.spotTargetCapacity = Input.ofNullable(spotTargetCapacity);
+            this.spotTargetCapacity = Output.ofNullable(spotTargetCapacity);
             return this;
         }
 
-        public Builder totalTargetCapacity(Input<Integer> totalTargetCapacity) {
+        public Builder totalTargetCapacity(Output<Integer> totalTargetCapacity) {
             this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
             return this;
         }
 
         public Builder totalTargetCapacity(Integer totalTargetCapacity) {
-            this.totalTargetCapacity = Input.of(Objects.requireNonNull(totalTargetCapacity));
+            this.totalTargetCapacity = Output.of(Objects.requireNonNull(totalTargetCapacity));
             return this;
         }
         public FleetTargetCapacitySpecificationArgs build() {

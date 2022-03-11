@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.enums.OptInHeaderType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,18 +17,18 @@ public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs ex
     public static final ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs Empty = new ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs();
 
     @InputImport(name="optInHeaders")
-      private final @Nullable Input<Either<String,OptInHeaderType>> optInHeaders;
+      private final @Nullable Output<Either<String,OptInHeaderType>> optInHeaders;
 
-    public Input<Either<String,OptInHeaderType>> getOptInHeaders() {
-        return this.optInHeaders == null ? Input.empty() : this.optInHeaders;
+    public Output<Either<String,OptInHeaderType>> getOptInHeaders() {
+        return this.optInHeaders == null ? Output.empty() : this.optInHeaders;
     }
 
-    public ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs(@Nullable Input<Either<String,OptInHeaderType>> optInHeaders) {
+    public ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs(@Nullable Output<Either<String,OptInHeaderType>> optInHeaders) {
         this.optInHeaders = optInHeaders;
     }
 
     private ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs() {
-        this.optInHeaders = Input.empty();
+        this.optInHeaders = Output.empty();
     }
 
     public static Builder builder() {
@@ -40,7 +40,7 @@ public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,OptInHeaderType>> optInHeaders;
+        private @Nullable Output<Either<String,OptInHeaderType>> optInHeaders;
 
         public Builder() {
     	      // Empty
@@ -51,13 +51,13 @@ public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs ex
     	      this.optInHeaders = defaults.optInHeaders;
         }
 
-        public Builder optInHeaders(@Nullable Input<Either<String,OptInHeaderType>> optInHeaders) {
+        public Builder optInHeaders(@Nullable Output<Either<String,OptInHeaderType>> optInHeaders) {
             this.optInHeaders = optInHeaders;
             return this;
         }
 
         public Builder optInHeaders(@Nullable Either<String,OptInHeaderType> optInHeaders) {
-            this.optInHeaders = Input.ofNullable(optInHeaders);
+            this.optInHeaders = Output.ofNullable(optInHeaders);
             return this;
         }
         public ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs build() {

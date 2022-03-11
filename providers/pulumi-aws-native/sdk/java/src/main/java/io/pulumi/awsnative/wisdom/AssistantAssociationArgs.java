@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wisdom;
 import io.pulumi.awsnative.wisdom.enums.AssistantAssociationAssociationType;
 import io.pulumi.awsnative.wisdom.inputs.AssistantAssociationAssociationDataArgs;
 import io.pulumi.awsnative.wisdom.inputs.AssistantAssociationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,38 +19,38 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
     public static final AssistantAssociationArgs Empty = new AssistantAssociationArgs();
 
     @InputImport(name="assistantId", required=true)
-      private final Input<String> assistantId;
+      private final Output<String> assistantId;
 
-    public Input<String> getAssistantId() {
+    public Output<String> getAssistantId() {
         return this.assistantId;
     }
 
     @InputImport(name="association", required=true)
-      private final Input<AssistantAssociationAssociationDataArgs> association;
+      private final Output<AssistantAssociationAssociationDataArgs> association;
 
-    public Input<AssistantAssociationAssociationDataArgs> getAssociation() {
+    public Output<AssistantAssociationAssociationDataArgs> getAssociation() {
         return this.association;
     }
 
     @InputImport(name="associationType", required=true)
-      private final Input<AssistantAssociationAssociationType> associationType;
+      private final Output<AssistantAssociationAssociationType> associationType;
 
-    public Input<AssistantAssociationAssociationType> getAssociationType() {
+    public Output<AssistantAssociationAssociationType> getAssociationType() {
         return this.associationType;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<AssistantAssociationTagArgs>> tags;
+      private final @Nullable Output<List<AssistantAssociationTagArgs>> tags;
 
-    public Input<List<AssistantAssociationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AssistantAssociationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AssistantAssociationArgs(
-        Input<String> assistantId,
-        Input<AssistantAssociationAssociationDataArgs> association,
-        Input<AssistantAssociationAssociationType> associationType,
-        @Nullable Input<List<AssistantAssociationTagArgs>> tags) {
+        Output<String> assistantId,
+        Output<AssistantAssociationAssociationDataArgs> association,
+        Output<AssistantAssociationAssociationType> associationType,
+        @Nullable Output<List<AssistantAssociationTagArgs>> tags) {
         this.assistantId = Objects.requireNonNull(assistantId, "expected parameter 'assistantId' to be non-null");
         this.association = Objects.requireNonNull(association, "expected parameter 'association' to be non-null");
         this.associationType = Objects.requireNonNull(associationType, "expected parameter 'associationType' to be non-null");
@@ -58,10 +58,10 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
     }
 
     private AssistantAssociationArgs() {
-        this.assistantId = Input.empty();
-        this.association = Input.empty();
-        this.associationType = Input.empty();
-        this.tags = Input.empty();
+        this.assistantId = Output.empty();
+        this.association = Output.empty();
+        this.associationType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> assistantId;
-        private Input<AssistantAssociationAssociationDataArgs> association;
-        private Input<AssistantAssociationAssociationType> associationType;
-        private @Nullable Input<List<AssistantAssociationTagArgs>> tags;
+        private Output<String> assistantId;
+        private Output<AssistantAssociationAssociationDataArgs> association;
+        private Output<AssistantAssociationAssociationType> associationType;
+        private @Nullable Output<List<AssistantAssociationTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder assistantId(Input<String> assistantId) {
+        public Builder assistantId(Output<String> assistantId) {
             this.assistantId = Objects.requireNonNull(assistantId);
             return this;
         }
 
         public Builder assistantId(String assistantId) {
-            this.assistantId = Input.of(Objects.requireNonNull(assistantId));
+            this.assistantId = Output.of(Objects.requireNonNull(assistantId));
             return this;
         }
 
-        public Builder association(Input<AssistantAssociationAssociationDataArgs> association) {
+        public Builder association(Output<AssistantAssociationAssociationDataArgs> association) {
             this.association = Objects.requireNonNull(association);
             return this;
         }
 
         public Builder association(AssistantAssociationAssociationDataArgs association) {
-            this.association = Input.of(Objects.requireNonNull(association));
+            this.association = Output.of(Objects.requireNonNull(association));
             return this;
         }
 
-        public Builder associationType(Input<AssistantAssociationAssociationType> associationType) {
+        public Builder associationType(Output<AssistantAssociationAssociationType> associationType) {
             this.associationType = Objects.requireNonNull(associationType);
             return this;
         }
 
         public Builder associationType(AssistantAssociationAssociationType associationType) {
-            this.associationType = Input.of(Objects.requireNonNull(associationType));
+            this.associationType = Output.of(Objects.requireNonNull(associationType));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AssistantAssociationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AssistantAssociationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AssistantAssociationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AssistantAssociationArgs build() {

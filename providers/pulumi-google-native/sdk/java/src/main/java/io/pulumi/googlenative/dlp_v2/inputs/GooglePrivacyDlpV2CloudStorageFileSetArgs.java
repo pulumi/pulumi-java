@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
-    public GooglePrivacyDlpV2CloudStorageFileSetArgs(@Nullable Input<String> url) {
+    public GooglePrivacyDlpV2CloudStorageFileSetArgs(@Nullable Output<String> url) {
         this.url = url;
     }
 
     private GooglePrivacyDlpV2CloudStorageFileSetArgs() {
-        this.url = Input.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends io.pulumi.r
     	      this.url = defaults.url;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public GooglePrivacyDlpV2CloudStorageFileSetArgs build() {

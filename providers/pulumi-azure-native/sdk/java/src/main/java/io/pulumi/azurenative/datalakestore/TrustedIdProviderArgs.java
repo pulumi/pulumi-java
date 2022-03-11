@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,9 +30,9 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="idProvider", required=true)
-      private final Input<String> idProvider;
+      private final Output<String> idProvider;
 
-    public Input<String> getIdProvider() {
+    public Output<String> getIdProvider() {
         return this.idProvider;
     }
 
@@ -41,9 +41,9 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,17 +52,17 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="trustedIdProviderName")
-      private final @Nullable Input<String> trustedIdProviderName;
+      private final @Nullable Output<String> trustedIdProviderName;
 
-    public Input<String> getTrustedIdProviderName() {
-        return this.trustedIdProviderName == null ? Input.empty() : this.trustedIdProviderName;
+    public Output<String> getTrustedIdProviderName() {
+        return this.trustedIdProviderName == null ? Output.empty() : this.trustedIdProviderName;
     }
 
     public TrustedIdProviderArgs(
-        Input<String> accountName,
-        Input<String> idProvider,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> trustedIdProviderName) {
+        Output<String> accountName,
+        Output<String> idProvider,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> trustedIdProviderName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.idProvider = Objects.requireNonNull(idProvider, "expected parameter 'idProvider' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -70,10 +70,10 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TrustedIdProviderArgs() {
-        this.accountName = Input.empty();
-        this.idProvider = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.trustedIdProviderName = Input.empty();
+        this.accountName = Output.empty();
+        this.idProvider = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.trustedIdProviderName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> idProvider;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> trustedIdProviderName;
+        private Output<String> accountName;
+        private Output<String> idProvider;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> trustedIdProviderName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     	      this.trustedIdProviderName = defaults.trustedIdProviderName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder idProvider(Input<String> idProvider) {
+        public Builder idProvider(Output<String> idProvider) {
             this.idProvider = Objects.requireNonNull(idProvider);
             return this;
         }
 
         public Builder idProvider(String idProvider) {
-            this.idProvider = Input.of(Objects.requireNonNull(idProvider));
+            this.idProvider = Output.of(Objects.requireNonNull(idProvider));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder trustedIdProviderName(@Nullable Input<String> trustedIdProviderName) {
+        public Builder trustedIdProviderName(@Nullable Output<String> trustedIdProviderName) {
             this.trustedIdProviderName = trustedIdProviderName;
             return this;
         }
 
         public Builder trustedIdProviderName(@Nullable String trustedIdProviderName) {
-            this.trustedIdProviderName = Input.ofNullable(trustedIdProviderName);
+            this.trustedIdProviderName = Output.ofNullable(trustedIdProviderName);
             return this;
         }
         public TrustedIdProviderArgs build() {

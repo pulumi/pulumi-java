@@ -14,7 +14,6 @@ import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningKeyResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -416,30 +415,30 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Endpoint(String name, EndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cdn:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:cdn:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Endpoint(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Endpoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:Endpoint", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:cdn/v20150601:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20160402:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20161002:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20170402:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20171012:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20190415:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20190615:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20190615preview:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20191231:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20200331:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20200415:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20200901:Endpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20210601:Endpoint").build())
+                Output.of(Alias.builder().setType("azure-native:cdn/v20150601:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20160402:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20161002:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20170402:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20171012:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20190415:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20190615:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20190615preview:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20191231:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20200331:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20200415:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20200901:Endpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20210601:Endpoint").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -453,7 +452,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Endpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Endpoint get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Endpoint(name, id, options);
     }
 }

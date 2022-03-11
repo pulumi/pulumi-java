@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.enums.NotificationMode;
 import io.pulumi.azurenative.providerhub.enums.ProvisioningState;
 import io.pulumi.azurenative.providerhub.inputs.NotificationEndpointArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,46 +21,46 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
     public static final NotificationRegistrationPropertiesArgs Empty = new NotificationRegistrationPropertiesArgs();
 
     @InputImport(name="includedEvents")
-      private final @Nullable Input<List<String>> includedEvents;
+      private final @Nullable Output<List<String>> includedEvents;
 
-    public Input<List<String>> getIncludedEvents() {
-        return this.includedEvents == null ? Input.empty() : this.includedEvents;
+    public Output<List<String>> getIncludedEvents() {
+        return this.includedEvents == null ? Output.empty() : this.includedEvents;
     }
 
     @InputImport(name="messageScope")
-      private final @Nullable Input<Either<String,MessageScope>> messageScope;
+      private final @Nullable Output<Either<String,MessageScope>> messageScope;
 
-    public Input<Either<String,MessageScope>> getMessageScope() {
-        return this.messageScope == null ? Input.empty() : this.messageScope;
+    public Output<Either<String,MessageScope>> getMessageScope() {
+        return this.messageScope == null ? Output.empty() : this.messageScope;
     }
 
     @InputImport(name="notificationEndpoints")
-      private final @Nullable Input<List<NotificationEndpointArgs>> notificationEndpoints;
+      private final @Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints;
 
-    public Input<List<NotificationEndpointArgs>> getNotificationEndpoints() {
-        return this.notificationEndpoints == null ? Input.empty() : this.notificationEndpoints;
+    public Output<List<NotificationEndpointArgs>> getNotificationEndpoints() {
+        return this.notificationEndpoints == null ? Output.empty() : this.notificationEndpoints;
     }
 
     @InputImport(name="notificationMode")
-      private final @Nullable Input<Either<String,NotificationMode>> notificationMode;
+      private final @Nullable Output<Either<String,NotificationMode>> notificationMode;
 
-    public Input<Either<String,NotificationMode>> getNotificationMode() {
-        return this.notificationMode == null ? Input.empty() : this.notificationMode;
+    public Output<Either<String,NotificationMode>> getNotificationMode() {
+        return this.notificationMode == null ? Output.empty() : this.notificationMode;
     }
 
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Input<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     public NotificationRegistrationPropertiesArgs(
-        @Nullable Input<List<String>> includedEvents,
-        @Nullable Input<Either<String,MessageScope>> messageScope,
-        @Nullable Input<List<NotificationEndpointArgs>> notificationEndpoints,
-        @Nullable Input<Either<String,NotificationMode>> notificationMode,
-        @Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        @Nullable Output<List<String>> includedEvents,
+        @Nullable Output<Either<String,MessageScope>> messageScope,
+        @Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints,
+        @Nullable Output<Either<String,NotificationMode>> notificationMode,
+        @Nullable Output<Either<String,ProvisioningState>> provisioningState) {
         this.includedEvents = includedEvents;
         this.messageScope = messageScope;
         this.notificationEndpoints = notificationEndpoints;
@@ -69,11 +69,11 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
     }
 
     private NotificationRegistrationPropertiesArgs() {
-        this.includedEvents = Input.empty();
-        this.messageScope = Input.empty();
-        this.notificationEndpoints = Input.empty();
-        this.notificationMode = Input.empty();
-        this.provisioningState = Input.empty();
+        this.includedEvents = Output.empty();
+        this.messageScope = Output.empty();
+        this.notificationEndpoints = Output.empty();
+        this.notificationMode = Output.empty();
+        this.provisioningState = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,11 +85,11 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> includedEvents;
-        private @Nullable Input<Either<String,MessageScope>> messageScope;
-        private @Nullable Input<List<NotificationEndpointArgs>> notificationEndpoints;
-        private @Nullable Input<Either<String,NotificationMode>> notificationMode;
-        private @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+        private @Nullable Output<List<String>> includedEvents;
+        private @Nullable Output<Either<String,MessageScope>> messageScope;
+        private @Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints;
+        private @Nullable Output<Either<String,NotificationMode>> notificationMode;
+        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
         public Builder() {
     	      // Empty
@@ -104,53 +104,53 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder includedEvents(@Nullable Input<List<String>> includedEvents) {
+        public Builder includedEvents(@Nullable Output<List<String>> includedEvents) {
             this.includedEvents = includedEvents;
             return this;
         }
 
         public Builder includedEvents(@Nullable List<String> includedEvents) {
-            this.includedEvents = Input.ofNullable(includedEvents);
+            this.includedEvents = Output.ofNullable(includedEvents);
             return this;
         }
 
-        public Builder messageScope(@Nullable Input<Either<String,MessageScope>> messageScope) {
+        public Builder messageScope(@Nullable Output<Either<String,MessageScope>> messageScope) {
             this.messageScope = messageScope;
             return this;
         }
 
         public Builder messageScope(@Nullable Either<String,MessageScope> messageScope) {
-            this.messageScope = Input.ofNullable(messageScope);
+            this.messageScope = Output.ofNullable(messageScope);
             return this;
         }
 
-        public Builder notificationEndpoints(@Nullable Input<List<NotificationEndpointArgs>> notificationEndpoints) {
+        public Builder notificationEndpoints(@Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints) {
             this.notificationEndpoints = notificationEndpoints;
             return this;
         }
 
         public Builder notificationEndpoints(@Nullable List<NotificationEndpointArgs> notificationEndpoints) {
-            this.notificationEndpoints = Input.ofNullable(notificationEndpoints);
+            this.notificationEndpoints = Output.ofNullable(notificationEndpoints);
             return this;
         }
 
-        public Builder notificationMode(@Nullable Input<Either<String,NotificationMode>> notificationMode) {
+        public Builder notificationMode(@Nullable Output<Either<String,NotificationMode>> notificationMode) {
             this.notificationMode = notificationMode;
             return this;
         }
 
         public Builder notificationMode(@Nullable Either<String,NotificationMode> notificationMode) {
-            this.notificationMode = Input.ofNullable(notificationMode);
+            this.notificationMode = Output.ofNullable(notificationMode);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
         public NotificationRegistrationPropertiesArgs build() {

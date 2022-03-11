@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class LatencyCriteriaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="threshold")
-      private final @Nullable Input<String> threshold;
+      private final @Nullable Output<String> threshold;
 
-    public Input<String> getThreshold() {
-        return this.threshold == null ? Input.empty() : this.threshold;
+    public Output<String> getThreshold() {
+        return this.threshold == null ? Output.empty() : this.threshold;
     }
 
-    public LatencyCriteriaArgs(@Nullable Input<String> threshold) {
+    public LatencyCriteriaArgs(@Nullable Output<String> threshold) {
         this.threshold = threshold;
     }
 
     private LatencyCriteriaArgs() {
-        this.threshold = Input.empty();
+        this.threshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LatencyCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> threshold;
+        private @Nullable Output<String> threshold;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LatencyCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder threshold(@Nullable Input<String> threshold) {
+        public Builder threshold(@Nullable Output<String> threshold) {
             this.threshold = threshold;
             return this;
         }
 
         public Builder threshold(@Nullable String threshold) {
-            this.threshold = Input.ofNullable(threshold);
+            this.threshold = Output.ofNullable(threshold);
             return this;
         }
         public LatencyCriteriaArgs build() {

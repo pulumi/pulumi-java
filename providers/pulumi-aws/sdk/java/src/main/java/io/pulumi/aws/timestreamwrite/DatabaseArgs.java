@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.timestreamwrite;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -31,10 +31,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DatabaseArgs(
-        Input<String> databaseName,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> databaseName,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<Map<String,String>> tags) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.kmsKeyId = kmsKeyId;
         this.tags = tags;
     }
 
     private DatabaseArgs() {
-        this.databaseName = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.tags = Input.empty();
+        this.databaseName = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> databaseName;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DatabaseArgs build() {

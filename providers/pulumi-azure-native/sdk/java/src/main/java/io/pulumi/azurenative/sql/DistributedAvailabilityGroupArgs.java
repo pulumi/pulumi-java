@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.ReplicationMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="distributedAvailabilityGroupName")
-      private final @Nullable Input<String> distributedAvailabilityGroupName;
+      private final @Nullable Output<String> distributedAvailabilityGroupName;
 
-    public Input<String> getDistributedAvailabilityGroupName() {
-        return this.distributedAvailabilityGroupName == null ? Input.empty() : this.distributedAvailabilityGroupName;
+    public Output<String> getDistributedAvailabilityGroupName() {
+        return this.distributedAvailabilityGroupName == null ? Output.empty() : this.distributedAvailabilityGroupName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-      private final Input<String> managedInstanceName;
+      private final Output<String> managedInstanceName;
 
-    public Input<String> getManagedInstanceName() {
+    public Output<String> getManagedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -43,10 +43,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="primaryAvailabilityGroupName")
-      private final @Nullable Input<String> primaryAvailabilityGroupName;
+      private final @Nullable Output<String> primaryAvailabilityGroupName;
 
-    public Input<String> getPrimaryAvailabilityGroupName() {
-        return this.primaryAvailabilityGroupName == null ? Input.empty() : this.primaryAvailabilityGroupName;
+    public Output<String> getPrimaryAvailabilityGroupName() {
+        return this.primaryAvailabilityGroupName == null ? Output.empty() : this.primaryAvailabilityGroupName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="replicationMode")
-      private final @Nullable Input<Either<String,ReplicationMode>> replicationMode;
+      private final @Nullable Output<Either<String,ReplicationMode>> replicationMode;
 
-    public Input<Either<String,ReplicationMode>> getReplicationMode() {
-        return this.replicationMode == null ? Input.empty() : this.replicationMode;
+    public Output<Either<String,ReplicationMode>> getReplicationMode() {
+        return this.replicationMode == null ? Output.empty() : this.replicationMode;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,10 +76,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secondaryAvailabilityGroupName")
-      private final @Nullable Input<String> secondaryAvailabilityGroupName;
+      private final @Nullable Output<String> secondaryAvailabilityGroupName;
 
-    public Input<String> getSecondaryAvailabilityGroupName() {
-        return this.secondaryAvailabilityGroupName == null ? Input.empty() : this.secondaryAvailabilityGroupName;
+    public Output<String> getSecondaryAvailabilityGroupName() {
+        return this.secondaryAvailabilityGroupName == null ? Output.empty() : this.secondaryAvailabilityGroupName;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceEndpoint")
-      private final @Nullable Input<String> sourceEndpoint;
+      private final @Nullable Output<String> sourceEndpoint;
 
-    public Input<String> getSourceEndpoint() {
-        return this.sourceEndpoint == null ? Input.empty() : this.sourceEndpoint;
+    public Output<String> getSourceEndpoint() {
+        return this.sourceEndpoint == null ? Output.empty() : this.sourceEndpoint;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetDatabase")
-      private final @Nullable Input<String> targetDatabase;
+      private final @Nullable Output<String> targetDatabase;
 
-    public Input<String> getTargetDatabase() {
-        return this.targetDatabase == null ? Input.empty() : this.targetDatabase;
+    public Output<String> getTargetDatabase() {
+        return this.targetDatabase == null ? Output.empty() : this.targetDatabase;
     }
 
     public DistributedAvailabilityGroupArgs(
-        @Nullable Input<String> distributedAvailabilityGroupName,
-        Input<String> managedInstanceName,
-        @Nullable Input<String> primaryAvailabilityGroupName,
-        @Nullable Input<Either<String,ReplicationMode>> replicationMode,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> secondaryAvailabilityGroupName,
-        @Nullable Input<String> sourceEndpoint,
-        @Nullable Input<String> targetDatabase) {
+        @Nullable Output<String> distributedAvailabilityGroupName,
+        Output<String> managedInstanceName,
+        @Nullable Output<String> primaryAvailabilityGroupName,
+        @Nullable Output<Either<String,ReplicationMode>> replicationMode,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> secondaryAvailabilityGroupName,
+        @Nullable Output<String> sourceEndpoint,
+        @Nullable Output<String> targetDatabase) {
         this.distributedAvailabilityGroupName = distributedAvailabilityGroupName;
         this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
         this.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
@@ -124,14 +124,14 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
     }
 
     private DistributedAvailabilityGroupArgs() {
-        this.distributedAvailabilityGroupName = Input.empty();
-        this.managedInstanceName = Input.empty();
-        this.primaryAvailabilityGroupName = Input.empty();
-        this.replicationMode = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.secondaryAvailabilityGroupName = Input.empty();
-        this.sourceEndpoint = Input.empty();
-        this.targetDatabase = Input.empty();
+        this.distributedAvailabilityGroupName = Output.empty();
+        this.managedInstanceName = Output.empty();
+        this.primaryAvailabilityGroupName = Output.empty();
+        this.replicationMode = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.secondaryAvailabilityGroupName = Output.empty();
+        this.sourceEndpoint = Output.empty();
+        this.targetDatabase = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> distributedAvailabilityGroupName;
-        private Input<String> managedInstanceName;
-        private @Nullable Input<String> primaryAvailabilityGroupName;
-        private @Nullable Input<Either<String,ReplicationMode>> replicationMode;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> secondaryAvailabilityGroupName;
-        private @Nullable Input<String> sourceEndpoint;
-        private @Nullable Input<String> targetDatabase;
+        private @Nullable Output<String> distributedAvailabilityGroupName;
+        private Output<String> managedInstanceName;
+        private @Nullable Output<String> primaryAvailabilityGroupName;
+        private @Nullable Output<Either<String,ReplicationMode>> replicationMode;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> secondaryAvailabilityGroupName;
+        private @Nullable Output<String> sourceEndpoint;
+        private @Nullable Output<String> targetDatabase;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
     	      this.targetDatabase = defaults.targetDatabase;
         }
 
-        public Builder distributedAvailabilityGroupName(@Nullable Input<String> distributedAvailabilityGroupName) {
+        public Builder distributedAvailabilityGroupName(@Nullable Output<String> distributedAvailabilityGroupName) {
             this.distributedAvailabilityGroupName = distributedAvailabilityGroupName;
             return this;
         }
 
         public Builder distributedAvailabilityGroupName(@Nullable String distributedAvailabilityGroupName) {
-            this.distributedAvailabilityGroupName = Input.ofNullable(distributedAvailabilityGroupName);
+            this.distributedAvailabilityGroupName = Output.ofNullable(distributedAvailabilityGroupName);
             return this;
         }
 
-        public Builder managedInstanceName(Input<String> managedInstanceName) {
+        public Builder managedInstanceName(Output<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
 
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Input.of(Objects.requireNonNull(managedInstanceName));
+            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
 
-        public Builder primaryAvailabilityGroupName(@Nullable Input<String> primaryAvailabilityGroupName) {
+        public Builder primaryAvailabilityGroupName(@Nullable Output<String> primaryAvailabilityGroupName) {
             this.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
             return this;
         }
 
         public Builder primaryAvailabilityGroupName(@Nullable String primaryAvailabilityGroupName) {
-            this.primaryAvailabilityGroupName = Input.ofNullable(primaryAvailabilityGroupName);
+            this.primaryAvailabilityGroupName = Output.ofNullable(primaryAvailabilityGroupName);
             return this;
         }
 
-        public Builder replicationMode(@Nullable Input<Either<String,ReplicationMode>> replicationMode) {
+        public Builder replicationMode(@Nullable Output<Either<String,ReplicationMode>> replicationMode) {
             this.replicationMode = replicationMode;
             return this;
         }
 
         public Builder replicationMode(@Nullable Either<String,ReplicationMode> replicationMode) {
-            this.replicationMode = Input.ofNullable(replicationMode);
+            this.replicationMode = Output.ofNullable(replicationMode);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder secondaryAvailabilityGroupName(@Nullable Input<String> secondaryAvailabilityGroupName) {
+        public Builder secondaryAvailabilityGroupName(@Nullable Output<String> secondaryAvailabilityGroupName) {
             this.secondaryAvailabilityGroupName = secondaryAvailabilityGroupName;
             return this;
         }
 
         public Builder secondaryAvailabilityGroupName(@Nullable String secondaryAvailabilityGroupName) {
-            this.secondaryAvailabilityGroupName = Input.ofNullable(secondaryAvailabilityGroupName);
+            this.secondaryAvailabilityGroupName = Output.ofNullable(secondaryAvailabilityGroupName);
             return this;
         }
 
-        public Builder sourceEndpoint(@Nullable Input<String> sourceEndpoint) {
+        public Builder sourceEndpoint(@Nullable Output<String> sourceEndpoint) {
             this.sourceEndpoint = sourceEndpoint;
             return this;
         }
 
         public Builder sourceEndpoint(@Nullable String sourceEndpoint) {
-            this.sourceEndpoint = Input.ofNullable(sourceEndpoint);
+            this.sourceEndpoint = Output.ofNullable(sourceEndpoint);
             return this;
         }
 
-        public Builder targetDatabase(@Nullable Input<String> targetDatabase) {
+        public Builder targetDatabase(@Nullable Output<String> targetDatabase) {
             this.targetDatabase = targetDatabase;
             return this;
         }
 
         public Builder targetDatabase(@Nullable String targetDatabase) {
-            this.targetDatabase = Input.ofNullable(targetDatabase);
+            this.targetDatabase = Output.ofNullable(targetDatabase);
             return this;
         }
         public DistributedAvailabilityGroupArgs build() {

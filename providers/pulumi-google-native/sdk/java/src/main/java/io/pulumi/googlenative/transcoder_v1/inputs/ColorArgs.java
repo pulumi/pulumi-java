@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brightness")
-      private final @Nullable Input<Double> brightness;
+      private final @Nullable Output<Double> brightness;
 
-    public Input<Double> getBrightness() {
-        return this.brightness == null ? Input.empty() : this.brightness;
+    public Output<Double> getBrightness() {
+        return this.brightness == null ? Output.empty() : this.brightness;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contrast")
-      private final @Nullable Input<Double> contrast;
+      private final @Nullable Output<Double> contrast;
 
-    public Input<Double> getContrast() {
-        return this.contrast == null ? Input.empty() : this.contrast;
+    public Output<Double> getContrast() {
+        return this.contrast == null ? Output.empty() : this.contrast;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="saturation")
-      private final @Nullable Input<Double> saturation;
+      private final @Nullable Output<Double> saturation;
 
-    public Input<Double> getSaturation() {
-        return this.saturation == null ? Input.empty() : this.saturation;
+    public Output<Double> getSaturation() {
+        return this.saturation == null ? Output.empty() : this.saturation;
     }
 
     public ColorArgs(
-        @Nullable Input<Double> brightness,
-        @Nullable Input<Double> contrast,
-        @Nullable Input<Double> saturation) {
+        @Nullable Output<Double> brightness,
+        @Nullable Output<Double> contrast,
+        @Nullable Output<Double> saturation) {
         this.brightness = brightness;
         this.contrast = contrast;
         this.saturation = saturation;
     }
 
     private ColorArgs() {
-        this.brightness = Input.empty();
-        this.contrast = Input.empty();
-        this.saturation = Input.empty();
+        this.brightness = Output.empty();
+        this.contrast = Output.empty();
+        this.saturation = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> brightness;
-        private @Nullable Input<Double> contrast;
-        private @Nullable Input<Double> saturation;
+        private @Nullable Output<Double> brightness;
+        private @Nullable Output<Double> contrast;
+        private @Nullable Output<Double> saturation;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.saturation = defaults.saturation;
         }
 
-        public Builder brightness(@Nullable Input<Double> brightness) {
+        public Builder brightness(@Nullable Output<Double> brightness) {
             this.brightness = brightness;
             return this;
         }
 
         public Builder brightness(@Nullable Double brightness) {
-            this.brightness = Input.ofNullable(brightness);
+            this.brightness = Output.ofNullable(brightness);
             return this;
         }
 
-        public Builder contrast(@Nullable Input<Double> contrast) {
+        public Builder contrast(@Nullable Output<Double> contrast) {
             this.contrast = contrast;
             return this;
         }
 
         public Builder contrast(@Nullable Double contrast) {
-            this.contrast = Input.ofNullable(contrast);
+            this.contrast = Output.ofNullable(contrast);
             return this;
         }
 
-        public Builder saturation(@Nullable Input<Double> saturation) {
+        public Builder saturation(@Nullable Output<Double> saturation) {
             this.saturation = saturation;
             return this;
         }
 
         public Builder saturation(@Nullable Double saturation) {
-            this.saturation = Input.ofNullable(saturation);
+            this.saturation = Output.ofNullable(saturation);
             return this;
         }
         public ColorArgs build() {

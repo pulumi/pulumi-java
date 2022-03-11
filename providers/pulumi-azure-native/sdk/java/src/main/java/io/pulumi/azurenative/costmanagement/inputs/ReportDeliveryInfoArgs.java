@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportDeliveryDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<ReportDeliveryDestinationArgs> destination;
+      private final Output<ReportDeliveryDestinationArgs> destination;
 
-    public Input<ReportDeliveryDestinationArgs> getDestination() {
+    public Output<ReportDeliveryDestinationArgs> getDestination() {
         return this.destination;
     }
 
-    public ReportDeliveryInfoArgs(Input<ReportDeliveryDestinationArgs> destination) {
+    public ReportDeliveryInfoArgs(Output<ReportDeliveryDestinationArgs> destination) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
     }
 
     private ReportDeliveryInfoArgs() {
-        this.destination = Input.empty();
+        this.destination = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<ReportDeliveryDestinationArgs> destination;
+        private Output<ReportDeliveryDestinationArgs> destination;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
     	      this.destination = defaults.destination;
         }
 
-        public Builder destination(Input<ReportDeliveryDestinationArgs> destination) {
+        public Builder destination(Output<ReportDeliveryDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(ReportDeliveryDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
         public ReportDeliveryInfoArgs build() {

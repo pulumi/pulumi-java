@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<Object> clientId;
+      private final Output<Object> clientId;
 
-    public Input<Object> getClientId() {
+    public Output<Object> getClientId() {
         return this.clientId;
     }
 
@@ -53,10 +53,10 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -97,9 +97,9 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="endpoint", required=true)
-      private final Input<Object> endpoint;
+      private final Output<Object> endpoint;
 
-    public Input<Object> getEndpoint() {
+    public Output<Object> getEndpoint() {
         return this.endpoint;
     }
 
@@ -108,10 +108,10 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -120,9 +120,9 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -131,10 +131,10 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-      private final @Nullable Input<Object> useEncryptedEndpoints;
+      private final @Nullable Output<Object> useEncryptedEndpoints;
 
-    public Input<Object> getUseEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
+    public Output<Object> getUseEncryptedEndpoints() {
+        return this.useEncryptedEndpoints == null ? Output.empty() : this.useEncryptedEndpoints;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="useHostVerification")
-      private final @Nullable Input<Object> useHostVerification;
+      private final @Nullable Output<Object> useHostVerification;
 
-    public Input<Object> getUseHostVerification() {
-        return this.useHostVerification == null ? Input.empty() : this.useHostVerification;
+    public Output<Object> getUseHostVerification() {
+        return this.useHostVerification == null ? Output.empty() : this.useHostVerification;
     }
 
     /**
@@ -153,25 +153,25 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="usePeerVerification")
-      private final @Nullable Input<Object> usePeerVerification;
+      private final @Nullable Output<Object> usePeerVerification;
 
-    public Input<Object> getUsePeerVerification() {
-        return this.usePeerVerification == null ? Input.empty() : this.usePeerVerification;
+    public Output<Object> getUsePeerVerification() {
+        return this.usePeerVerification == null ? Output.empty() : this.usePeerVerification;
     }
 
     public ResponsysLinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        Input<Object> clientId,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        Input<Object> endpoint,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        Input<String> type,
-        @Nullable Input<Object> useEncryptedEndpoints,
-        @Nullable Input<Object> useHostVerification,
-        @Nullable Input<Object> usePeerVerification) {
+        @Nullable Output<List<Object>> annotations,
+        Output<Object> clientId,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        Output<Object> endpoint,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        Output<String> type,
+        @Nullable Output<Object> useEncryptedEndpoints,
+        @Nullable Output<Object> useHostVerification,
+        @Nullable Output<Object> usePeerVerification) {
         this.annotations = annotations;
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.clientSecret = clientSecret;
@@ -187,18 +187,18 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
     }
 
     private ResponsysLinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.connectVia = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.endpoint = Input.empty();
-        this.parameters = Input.empty();
-        this.type = Input.empty();
-        this.useEncryptedEndpoints = Input.empty();
-        this.useHostVerification = Input.empty();
-        this.usePeerVerification = Input.empty();
+        this.annotations = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.connectVia = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.endpoint = Output.empty();
+        this.parameters = Output.empty();
+        this.type = Output.empty();
+        this.useEncryptedEndpoints = Output.empty();
+        this.useHostVerification = Output.empty();
+        this.usePeerVerification = Output.empty();
     }
 
     public static Builder builder() {
@@ -210,18 +210,18 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private Input<Object> clientId;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private Input<Object> endpoint;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private Input<String> type;
-        private @Nullable Input<Object> useEncryptedEndpoints;
-        private @Nullable Input<Object> useHostVerification;
-        private @Nullable Input<Object> usePeerVerification;
+        private @Nullable Output<List<Object>> annotations;
+        private Output<Object> clientId;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private Output<Object> endpoint;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private Output<String> type;
+        private @Nullable Output<Object> useEncryptedEndpoints;
+        private @Nullable Output<Object> useHostVerification;
+        private @Nullable Output<Object> usePeerVerification;
 
         public Builder() {
     	      // Empty
@@ -243,123 +243,123 @@ public final class ResponsysLinkedServiceArgs extends io.pulumi.resources.Resour
     	      this.usePeerVerification = defaults.usePeerVerification;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder clientId(Input<Object> clientId) {
+        public Builder clientId(Output<Object> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(Object clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
+        public Builder clientSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder endpoint(Input<Object> endpoint) {
+        public Builder endpoint(Output<Object> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
         public Builder endpoint(Object endpoint) {
-            this.endpoint = Input.of(Objects.requireNonNull(endpoint));
+            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder useEncryptedEndpoints(@Nullable Input<Object> useEncryptedEndpoints) {
+        public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
 
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = Input.ofNullable(useEncryptedEndpoints);
+            this.useEncryptedEndpoints = Output.ofNullable(useEncryptedEndpoints);
             return this;
         }
 
-        public Builder useHostVerification(@Nullable Input<Object> useHostVerification) {
+        public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
             this.useHostVerification = useHostVerification;
             return this;
         }
 
         public Builder useHostVerification(@Nullable Object useHostVerification) {
-            this.useHostVerification = Input.ofNullable(useHostVerification);
+            this.useHostVerification = Output.ofNullable(useHostVerification);
             return this;
         }
 
-        public Builder usePeerVerification(@Nullable Input<Object> usePeerVerification) {
+        public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
 
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
-            this.usePeerVerification = Input.ofNullable(usePeerVerification);
+            this.usePeerVerification = Output.ofNullable(usePeerVerification);
             return this;
         }
         public ResponsysLinkedServiceArgs build() {

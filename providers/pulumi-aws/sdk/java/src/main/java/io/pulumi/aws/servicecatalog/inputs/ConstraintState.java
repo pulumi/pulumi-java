@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<String> parameters;
+      private final @Nullable Output<String> parameters;
 
-    public Input<String> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<String> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portfolioId")
-      private final @Nullable Input<String> portfolioId;
+      private final @Nullable Output<String> portfolioId;
 
-    public Input<String> getPortfolioId() {
-        return this.portfolioId == null ? Input.empty() : this.portfolioId;
+    public Output<String> getPortfolioId() {
+        return this.portfolioId == null ? Output.empty() : this.portfolioId;
     }
 
     /**
@@ -74,17 +74,17 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productId")
-      private final @Nullable Input<String> productId;
+      private final @Nullable Output<String> productId;
 
-    public Input<String> getProductId() {
-        return this.productId == null ? Input.empty() : this.productId;
+    public Output<String> getProductId() {
+        return this.productId == null ? Output.empty() : this.productId;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -92,21 +92,21 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ConstraintState(
-        @Nullable Input<String> acceptLanguage,
-        @Nullable Input<String> description,
-        @Nullable Input<String> owner,
-        @Nullable Input<String> parameters,
-        @Nullable Input<String> portfolioId,
-        @Nullable Input<String> productId,
-        @Nullable Input<String> status,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> acceptLanguage,
+        @Nullable Output<String> description,
+        @Nullable Output<String> owner,
+        @Nullable Output<String> parameters,
+        @Nullable Output<String> portfolioId,
+        @Nullable Output<String> productId,
+        @Nullable Output<String> status,
+        @Nullable Output<String> type) {
         this.acceptLanguage = acceptLanguage;
         this.description = description;
         this.owner = owner;
@@ -118,14 +118,14 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConstraintState() {
-        this.acceptLanguage = Input.empty();
-        this.description = Input.empty();
-        this.owner = Input.empty();
-        this.parameters = Input.empty();
-        this.portfolioId = Input.empty();
-        this.productId = Input.empty();
-        this.status = Input.empty();
-        this.type = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.description = Output.empty();
+        this.owner = Output.empty();
+        this.parameters = Output.empty();
+        this.portfolioId = Output.empty();
+        this.productId = Output.empty();
+        this.status = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,14 +137,14 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<String> parameters;
-        private @Nullable Input<String> portfolioId;
-        private @Nullable Input<String> productId;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> acceptLanguage;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<String> parameters;
+        private @Nullable Output<String> portfolioId;
+        private @Nullable Output<String> productId;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -162,83 +162,83 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<String> parameters) {
+        public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder portfolioId(@Nullable Input<String> portfolioId) {
+        public Builder portfolioId(@Nullable Output<String> portfolioId) {
             this.portfolioId = portfolioId;
             return this;
         }
 
         public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Input.ofNullable(portfolioId);
+            this.portfolioId = Output.ofNullable(portfolioId);
             return this;
         }
 
-        public Builder productId(@Nullable Input<String> productId) {
+        public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
 
         public Builder productId(@Nullable String productId) {
-            this.productId = Input.ofNullable(productId);
+            this.productId = Output.ofNullable(productId);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ConstraintState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class FeatureEntityOverrideArgs extends io.pulumi.resources.Resourc
     public static final FeatureEntityOverrideArgs Empty = new FeatureEntityOverrideArgs();
 
     @InputImport(name="entityId")
-      private final @Nullable Input<String> entityId;
+      private final @Nullable Output<String> entityId;
 
-    public Input<String> getEntityId() {
-        return this.entityId == null ? Input.empty() : this.entityId;
+    public Output<String> getEntityId() {
+        return this.entityId == null ? Output.empty() : this.entityId;
     }
 
     @InputImport(name="variation")
-      private final @Nullable Input<String> variation;
+      private final @Nullable Output<String> variation;
 
-    public Input<String> getVariation() {
-        return this.variation == null ? Input.empty() : this.variation;
+    public Output<String> getVariation() {
+        return this.variation == null ? Output.empty() : this.variation;
     }
 
     public FeatureEntityOverrideArgs(
-        @Nullable Input<String> entityId,
-        @Nullable Input<String> variation) {
+        @Nullable Output<String> entityId,
+        @Nullable Output<String> variation) {
         this.entityId = entityId;
         this.variation = variation;
     }
 
     private FeatureEntityOverrideArgs() {
-        this.entityId = Input.empty();
-        this.variation = Input.empty();
+        this.entityId = Output.empty();
+        this.variation = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class FeatureEntityOverrideArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> entityId;
-        private @Nullable Input<String> variation;
+        private @Nullable Output<String> entityId;
+        private @Nullable Output<String> variation;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class FeatureEntityOverrideArgs extends io.pulumi.resources.Resourc
     	      this.variation = defaults.variation;
         }
 
-        public Builder entityId(@Nullable Input<String> entityId) {
+        public Builder entityId(@Nullable Output<String> entityId) {
             this.entityId = entityId;
             return this;
         }
 
         public Builder entityId(@Nullable String entityId) {
-            this.entityId = Input.ofNullable(entityId);
+            this.entityId = Output.ofNullable(entityId);
             return this;
         }
 
-        public Builder variation(@Nullable Input<String> variation) {
+        public Builder variation(@Nullable Output<String> variation) {
             this.variation = variation;
             return this;
         }
 
         public Builder variation(@Nullable String variation) {
-            this.variation = Input.ofNullable(variation);
+            this.variation = Output.ofNullable(variation);
             return this;
         }
         public FeatureEntityOverrideArgs build() {

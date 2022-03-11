@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -21,78 +21,78 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
     public static final BqmlTrainingRunTrainingOptionsArgs Empty = new BqmlTrainingRunTrainingOptionsArgs();
 
     @InputImport(name="earlyStop")
-      private final @Nullable Input<Boolean> earlyStop;
+      private final @Nullable Output<Boolean> earlyStop;
 
-    public Input<Boolean> getEarlyStop() {
-        return this.earlyStop == null ? Input.empty() : this.earlyStop;
+    public Output<Boolean> getEarlyStop() {
+        return this.earlyStop == null ? Output.empty() : this.earlyStop;
     }
 
     @InputImport(name="l1Reg")
-      private final @Nullable Input<Double> l1Reg;
+      private final @Nullable Output<Double> l1Reg;
 
-    public Input<Double> getL1Reg() {
-        return this.l1Reg == null ? Input.empty() : this.l1Reg;
+    public Output<Double> getL1Reg() {
+        return this.l1Reg == null ? Output.empty() : this.l1Reg;
     }
 
     @InputImport(name="l2Reg")
-      private final @Nullable Input<Double> l2Reg;
+      private final @Nullable Output<Double> l2Reg;
 
-    public Input<Double> getL2Reg() {
-        return this.l2Reg == null ? Input.empty() : this.l2Reg;
+    public Output<Double> getL2Reg() {
+        return this.l2Reg == null ? Output.empty() : this.l2Reg;
     }
 
     @InputImport(name="learnRate")
-      private final @Nullable Input<Double> learnRate;
+      private final @Nullable Output<Double> learnRate;
 
-    public Input<Double> getLearnRate() {
-        return this.learnRate == null ? Input.empty() : this.learnRate;
+    public Output<Double> getLearnRate() {
+        return this.learnRate == null ? Output.empty() : this.learnRate;
     }
 
     @InputImport(name="learnRateStrategy")
-      private final @Nullable Input<String> learnRateStrategy;
+      private final @Nullable Output<String> learnRateStrategy;
 
-    public Input<String> getLearnRateStrategy() {
-        return this.learnRateStrategy == null ? Input.empty() : this.learnRateStrategy;
+    public Output<String> getLearnRateStrategy() {
+        return this.learnRateStrategy == null ? Output.empty() : this.learnRateStrategy;
     }
 
     @InputImport(name="lineSearchInitLearnRate")
-      private final @Nullable Input<Double> lineSearchInitLearnRate;
+      private final @Nullable Output<Double> lineSearchInitLearnRate;
 
-    public Input<Double> getLineSearchInitLearnRate() {
-        return this.lineSearchInitLearnRate == null ? Input.empty() : this.lineSearchInitLearnRate;
+    public Output<Double> getLineSearchInitLearnRate() {
+        return this.lineSearchInitLearnRate == null ? Output.empty() : this.lineSearchInitLearnRate;
     }
 
     @InputImport(name="maxIteration")
-      private final @Nullable Input<String> maxIteration;
+      private final @Nullable Output<String> maxIteration;
 
-    public Input<String> getMaxIteration() {
-        return this.maxIteration == null ? Input.empty() : this.maxIteration;
+    public Output<String> getMaxIteration() {
+        return this.maxIteration == null ? Output.empty() : this.maxIteration;
     }
 
     @InputImport(name="minRelProgress")
-      private final @Nullable Input<Double> minRelProgress;
+      private final @Nullable Output<Double> minRelProgress;
 
-    public Input<Double> getMinRelProgress() {
-        return this.minRelProgress == null ? Input.empty() : this.minRelProgress;
+    public Output<Double> getMinRelProgress() {
+        return this.minRelProgress == null ? Output.empty() : this.minRelProgress;
     }
 
     @InputImport(name="warmStart")
-      private final @Nullable Input<Boolean> warmStart;
+      private final @Nullable Output<Boolean> warmStart;
 
-    public Input<Boolean> getWarmStart() {
-        return this.warmStart == null ? Input.empty() : this.warmStart;
+    public Output<Boolean> getWarmStart() {
+        return this.warmStart == null ? Output.empty() : this.warmStart;
     }
 
     public BqmlTrainingRunTrainingOptionsArgs(
-        @Nullable Input<Boolean> earlyStop,
-        @Nullable Input<Double> l1Reg,
-        @Nullable Input<Double> l2Reg,
-        @Nullable Input<Double> learnRate,
-        @Nullable Input<String> learnRateStrategy,
-        @Nullable Input<Double> lineSearchInitLearnRate,
-        @Nullable Input<String> maxIteration,
-        @Nullable Input<Double> minRelProgress,
-        @Nullable Input<Boolean> warmStart) {
+        @Nullable Output<Boolean> earlyStop,
+        @Nullable Output<Double> l1Reg,
+        @Nullable Output<Double> l2Reg,
+        @Nullable Output<Double> learnRate,
+        @Nullable Output<String> learnRateStrategy,
+        @Nullable Output<Double> lineSearchInitLearnRate,
+        @Nullable Output<String> maxIteration,
+        @Nullable Output<Double> minRelProgress,
+        @Nullable Output<Boolean> warmStart) {
         this.earlyStop = earlyStop;
         this.l1Reg = l1Reg;
         this.l2Reg = l2Reg;
@@ -105,15 +105,15 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
     }
 
     private BqmlTrainingRunTrainingOptionsArgs() {
-        this.earlyStop = Input.empty();
-        this.l1Reg = Input.empty();
-        this.l2Reg = Input.empty();
-        this.learnRate = Input.empty();
-        this.learnRateStrategy = Input.empty();
-        this.lineSearchInitLearnRate = Input.empty();
-        this.maxIteration = Input.empty();
-        this.minRelProgress = Input.empty();
-        this.warmStart = Input.empty();
+        this.earlyStop = Output.empty();
+        this.l1Reg = Output.empty();
+        this.l2Reg = Output.empty();
+        this.learnRate = Output.empty();
+        this.learnRateStrategy = Output.empty();
+        this.lineSearchInitLearnRate = Output.empty();
+        this.maxIteration = Output.empty();
+        this.minRelProgress = Output.empty();
+        this.warmStart = Output.empty();
     }
 
     public static Builder builder() {
@@ -125,15 +125,15 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> earlyStop;
-        private @Nullable Input<Double> l1Reg;
-        private @Nullable Input<Double> l2Reg;
-        private @Nullable Input<Double> learnRate;
-        private @Nullable Input<String> learnRateStrategy;
-        private @Nullable Input<Double> lineSearchInitLearnRate;
-        private @Nullable Input<String> maxIteration;
-        private @Nullable Input<Double> minRelProgress;
-        private @Nullable Input<Boolean> warmStart;
+        private @Nullable Output<Boolean> earlyStop;
+        private @Nullable Output<Double> l1Reg;
+        private @Nullable Output<Double> l2Reg;
+        private @Nullable Output<Double> learnRate;
+        private @Nullable Output<String> learnRateStrategy;
+        private @Nullable Output<Double> lineSearchInitLearnRate;
+        private @Nullable Output<String> maxIteration;
+        private @Nullable Output<Double> minRelProgress;
+        private @Nullable Output<Boolean> warmStart;
 
         public Builder() {
     	      // Empty
@@ -152,93 +152,93 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
     	      this.warmStart = defaults.warmStart;
         }
 
-        public Builder earlyStop(@Nullable Input<Boolean> earlyStop) {
+        public Builder earlyStop(@Nullable Output<Boolean> earlyStop) {
             this.earlyStop = earlyStop;
             return this;
         }
 
         public Builder earlyStop(@Nullable Boolean earlyStop) {
-            this.earlyStop = Input.ofNullable(earlyStop);
+            this.earlyStop = Output.ofNullable(earlyStop);
             return this;
         }
 
-        public Builder l1Reg(@Nullable Input<Double> l1Reg) {
+        public Builder l1Reg(@Nullable Output<Double> l1Reg) {
             this.l1Reg = l1Reg;
             return this;
         }
 
         public Builder l1Reg(@Nullable Double l1Reg) {
-            this.l1Reg = Input.ofNullable(l1Reg);
+            this.l1Reg = Output.ofNullable(l1Reg);
             return this;
         }
 
-        public Builder l2Reg(@Nullable Input<Double> l2Reg) {
+        public Builder l2Reg(@Nullable Output<Double> l2Reg) {
             this.l2Reg = l2Reg;
             return this;
         }
 
         public Builder l2Reg(@Nullable Double l2Reg) {
-            this.l2Reg = Input.ofNullable(l2Reg);
+            this.l2Reg = Output.ofNullable(l2Reg);
             return this;
         }
 
-        public Builder learnRate(@Nullable Input<Double> learnRate) {
+        public Builder learnRate(@Nullable Output<Double> learnRate) {
             this.learnRate = learnRate;
             return this;
         }
 
         public Builder learnRate(@Nullable Double learnRate) {
-            this.learnRate = Input.ofNullable(learnRate);
+            this.learnRate = Output.ofNullable(learnRate);
             return this;
         }
 
-        public Builder learnRateStrategy(@Nullable Input<String> learnRateStrategy) {
+        public Builder learnRateStrategy(@Nullable Output<String> learnRateStrategy) {
             this.learnRateStrategy = learnRateStrategy;
             return this;
         }
 
         public Builder learnRateStrategy(@Nullable String learnRateStrategy) {
-            this.learnRateStrategy = Input.ofNullable(learnRateStrategy);
+            this.learnRateStrategy = Output.ofNullable(learnRateStrategy);
             return this;
         }
 
-        public Builder lineSearchInitLearnRate(@Nullable Input<Double> lineSearchInitLearnRate) {
+        public Builder lineSearchInitLearnRate(@Nullable Output<Double> lineSearchInitLearnRate) {
             this.lineSearchInitLearnRate = lineSearchInitLearnRate;
             return this;
         }
 
         public Builder lineSearchInitLearnRate(@Nullable Double lineSearchInitLearnRate) {
-            this.lineSearchInitLearnRate = Input.ofNullable(lineSearchInitLearnRate);
+            this.lineSearchInitLearnRate = Output.ofNullable(lineSearchInitLearnRate);
             return this;
         }
 
-        public Builder maxIteration(@Nullable Input<String> maxIteration) {
+        public Builder maxIteration(@Nullable Output<String> maxIteration) {
             this.maxIteration = maxIteration;
             return this;
         }
 
         public Builder maxIteration(@Nullable String maxIteration) {
-            this.maxIteration = Input.ofNullable(maxIteration);
+            this.maxIteration = Output.ofNullable(maxIteration);
             return this;
         }
 
-        public Builder minRelProgress(@Nullable Input<Double> minRelProgress) {
+        public Builder minRelProgress(@Nullable Output<Double> minRelProgress) {
             this.minRelProgress = minRelProgress;
             return this;
         }
 
         public Builder minRelProgress(@Nullable Double minRelProgress) {
-            this.minRelProgress = Input.ofNullable(minRelProgress);
+            this.minRelProgress = Output.ofNullable(minRelProgress);
             return this;
         }
 
-        public Builder warmStart(@Nullable Input<Boolean> warmStart) {
+        public Builder warmStart(@Nullable Output<Boolean> warmStart) {
             this.warmStart = warmStart;
             return this;
         }
 
         public Builder warmStart(@Nullable Boolean warmStart) {
-            this.warmStart = Input.ofNullable(warmStart);
+            this.warmStart = Output.ofNullable(warmStart);
             return this;
         }
         public BqmlTrainingRunTrainingOptionsArgs build() {

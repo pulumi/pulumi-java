@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupId")
-      private final @Nullable Input<String> groupId;
+      private final @Nullable Output<String> groupId;
 
-    public Input<String> getGroupId() {
-        return this.groupId == null ? Input.empty() : this.groupId;
+    public Output<String> getGroupId() {
+        return this.groupId == null ? Output.empty() : this.groupId;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="requiredMembers")
-      private final @Nullable Input<List<String>> requiredMembers;
+      private final @Nullable Output<List<String>> requiredMembers;
 
-    public Input<List<String>> getRequiredMembers() {
-        return this.requiredMembers == null ? Input.empty() : this.requiredMembers;
+    public Output<List<String>> getRequiredMembers() {
+        return this.requiredMembers == null ? Output.empty() : this.requiredMembers;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public PrivateLinkResourceArgs(
-        @Nullable Input<String> groupId,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> requiredMembers,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> groupId,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> requiredMembers,
+        @Nullable Output<String> type) {
         this.groupId = groupId;
         this.id = id;
         this.name = name;
@@ -88,11 +88,11 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
     }
 
     private PrivateLinkResourceArgs() {
-        this.groupId = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.requiredMembers = Input.empty();
-        this.type = Input.empty();
+        this.groupId = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.requiredMembers = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupId;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> requiredMembers;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> groupId;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> requiredMembers;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder groupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Input.ofNullable(groupId);
+            this.groupId = Output.ofNullable(groupId);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder requiredMembers(@Nullable Input<List<String>> requiredMembers) {
+        public Builder requiredMembers(@Nullable Output<List<String>> requiredMembers) {
             this.requiredMembers = requiredMembers;
             return this;
         }
 
         public Builder requiredMembers(@Nullable List<String> requiredMembers) {
-            this.requiredMembers = Input.ofNullable(requiredMembers);
+            this.requiredMembers = Output.ofNullable(requiredMembers);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public PrivateLinkResourceArgs build() {

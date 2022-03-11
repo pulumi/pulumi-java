@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressBackendArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="backend", required=true)
-      private final Input<IngressBackendArgs> backend;
+      private final Output<IngressBackendArgs> backend;
 
-    public Input<IngressBackendArgs> getBackend() {
+    public Output<IngressBackendArgs> getBackend() {
         return this.backend;
     }
 
@@ -35,10 +35,10 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -56,25 +56,25 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pathType", required=true)
-      private final Input<String> pathType;
+      private final Output<String> pathType;
 
-    public Input<String> getPathType() {
+    public Output<String> getPathType() {
         return this.pathType;
     }
 
     public HTTPIngressPathArgs(
-        Input<IngressBackendArgs> backend,
-        @Nullable Input<String> path,
-        Input<String> pathType) {
+        Output<IngressBackendArgs> backend,
+        @Nullable Output<String> path,
+        Output<String> pathType) {
         this.backend = Objects.requireNonNull(backend, "expected parameter 'backend' to be non-null");
         this.path = path;
         this.pathType = Objects.requireNonNull(pathType, "expected parameter 'pathType' to be non-null");
     }
 
     private HTTPIngressPathArgs() {
-        this.backend = Input.empty();
-        this.path = Input.empty();
-        this.pathType = Input.empty();
+        this.backend = Output.empty();
+        this.path = Output.empty();
+        this.pathType = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,9 +86,9 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<IngressBackendArgs> backend;
-        private @Nullable Input<String> path;
-        private Input<String> pathType;
+        private Output<IngressBackendArgs> backend;
+        private @Nullable Output<String> path;
+        private Output<String> pathType;
 
         public Builder() {
     	      // Empty
@@ -101,33 +101,33 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
     	      this.pathType = defaults.pathType;
         }
 
-        public Builder backend(Input<IngressBackendArgs> backend) {
+        public Builder backend(Output<IngressBackendArgs> backend) {
             this.backend = Objects.requireNonNull(backend);
             return this;
         }
 
         public Builder backend(IngressBackendArgs backend) {
-            this.backend = Input.of(Objects.requireNonNull(backend));
+            this.backend = Output.of(Objects.requireNonNull(backend));
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder pathType(Input<String> pathType) {
+        public Builder pathType(Output<String> pathType) {
             this.pathType = Objects.requireNonNull(pathType);
             return this;
         }
 
         public Builder pathType(String pathType) {
-            this.pathType = Input.of(Objects.requireNonNull(pathType));
+            this.pathType = Output.of(Objects.requireNonNull(pathType));
             return this;
         }
         public HTTPIngressPathArgs build() {

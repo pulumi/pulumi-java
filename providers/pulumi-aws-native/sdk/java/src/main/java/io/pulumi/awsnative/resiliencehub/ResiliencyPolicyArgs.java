@@ -7,7 +7,7 @@ import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyDataLocationConst
 import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyTier;
 import io.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyPolicyMapArgs;
 import io.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyTagMapArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,16 +23,16 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataLocationConstraint")
-      private final @Nullable Input<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
+      private final @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
-    public Input<ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
-        return this.dataLocationConstraint == null ? Input.empty() : this.dataLocationConstraint;
+    public Output<ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
+        return this.dataLocationConstraint == null ? Output.empty() : this.dataLocationConstraint;
     }
 
     @InputImport(name="policy", required=true)
-      private final Input<ResiliencyPolicyPolicyMapArgs> policy;
+      private final Output<ResiliencyPolicyPolicyMapArgs> policy;
 
-    public Input<ResiliencyPolicyPolicyMapArgs> getPolicy() {
+    public Output<ResiliencyPolicyPolicyMapArgs> getPolicy() {
         return this.policy;
     }
 
@@ -41,10 +41,10 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyDescription")
-      private final @Nullable Input<String> policyDescription;
+      private final @Nullable Output<String> policyDescription;
 
-    public Input<String> getPolicyDescription() {
-        return this.policyDescription == null ? Input.empty() : this.policyDescription;
+    public Output<String> getPolicyDescription() {
+        return this.policyDescription == null ? Output.empty() : this.policyDescription;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyName", required=true)
-      private final Input<String> policyName;
+      private final Output<String> policyName;
 
-    public Input<String> getPolicyName() {
+    public Output<String> getPolicyName() {
         return this.policyName;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<ResiliencyPolicyTagMapArgs> tags;
+      private final @Nullable Output<ResiliencyPolicyTagMapArgs> tags;
 
-    public Input<ResiliencyPolicyTagMapArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<ResiliencyPolicyTagMapArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -70,19 +70,19 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tier", required=true)
-      private final Input<ResiliencyPolicyTier> tier;
+      private final Output<ResiliencyPolicyTier> tier;
 
-    public Input<ResiliencyPolicyTier> getTier() {
+    public Output<ResiliencyPolicyTier> getTier() {
         return this.tier;
     }
 
     public ResiliencyPolicyArgs(
-        @Nullable Input<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint,
-        Input<ResiliencyPolicyPolicyMapArgs> policy,
-        @Nullable Input<String> policyDescription,
-        Input<String> policyName,
-        @Nullable Input<ResiliencyPolicyTagMapArgs> tags,
-        Input<ResiliencyPolicyTier> tier) {
+        @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint,
+        Output<ResiliencyPolicyPolicyMapArgs> policy,
+        @Nullable Output<String> policyDescription,
+        Output<String> policyName,
+        @Nullable Output<ResiliencyPolicyTagMapArgs> tags,
+        Output<ResiliencyPolicyTier> tier) {
         this.dataLocationConstraint = dataLocationConstraint;
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
         this.policyDescription = policyDescription;
@@ -92,12 +92,12 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResiliencyPolicyArgs() {
-        this.dataLocationConstraint = Input.empty();
-        this.policy = Input.empty();
-        this.policyDescription = Input.empty();
-        this.policyName = Input.empty();
-        this.tags = Input.empty();
-        this.tier = Input.empty();
+        this.dataLocationConstraint = Output.empty();
+        this.policy = Output.empty();
+        this.policyDescription = Output.empty();
+        this.policyName = Output.empty();
+        this.tags = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,12 +109,12 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
-        private Input<ResiliencyPolicyPolicyMapArgs> policy;
-        private @Nullable Input<String> policyDescription;
-        private Input<String> policyName;
-        private @Nullable Input<ResiliencyPolicyTagMapArgs> tags;
-        private Input<ResiliencyPolicyTier> tier;
+        private @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
+        private Output<ResiliencyPolicyPolicyMapArgs> policy;
+        private @Nullable Output<String> policyDescription;
+        private Output<String> policyName;
+        private @Nullable Output<ResiliencyPolicyTagMapArgs> tags;
+        private Output<ResiliencyPolicyTier> tier;
 
         public Builder() {
     	      // Empty
@@ -130,63 +130,63 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.tier = defaults.tier;
         }
 
-        public Builder dataLocationConstraint(@Nullable Input<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint) {
+        public Builder dataLocationConstraint(@Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint) {
             this.dataLocationConstraint = dataLocationConstraint;
             return this;
         }
 
         public Builder dataLocationConstraint(@Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
-            this.dataLocationConstraint = Input.ofNullable(dataLocationConstraint);
+            this.dataLocationConstraint = Output.ofNullable(dataLocationConstraint);
             return this;
         }
 
-        public Builder policy(Input<ResiliencyPolicyPolicyMapArgs> policy) {
+        public Builder policy(Output<ResiliencyPolicyPolicyMapArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(ResiliencyPolicyPolicyMapArgs policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder policyDescription(@Nullable Input<String> policyDescription) {
+        public Builder policyDescription(@Nullable Output<String> policyDescription) {
             this.policyDescription = policyDescription;
             return this;
         }
 
         public Builder policyDescription(@Nullable String policyDescription) {
-            this.policyDescription = Input.ofNullable(policyDescription);
+            this.policyDescription = Output.ofNullable(policyDescription);
             return this;
         }
 
-        public Builder policyName(Input<String> policyName) {
+        public Builder policyName(Output<String> policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
 
         public Builder policyName(String policyName) {
-            this.policyName = Input.of(Objects.requireNonNull(policyName));
+            this.policyName = Output.of(Objects.requireNonNull(policyName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<ResiliencyPolicyTagMapArgs> tags) {
+        public Builder tags(@Nullable Output<ResiliencyPolicyTagMapArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable ResiliencyPolicyTagMapArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tier(Input<ResiliencyPolicyTier> tier) {
+        public Builder tier(Output<ResiliencyPolicyTier> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
         public Builder tier(ResiliencyPolicyTier tier) {
-            this.tier = Input.of(Objects.requireNonNull(tier));
+            this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
         public ResiliencyPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="httpsProxy")
-      private final @Nullable Input<String> httpsProxy;
+      private final @Nullable Output<String> httpsProxy;
 
-    public Input<String> getHttpsProxy() {
-        return this.httpsProxy == null ? Input.empty() : this.httpsProxy;
+    public Output<String> getHttpsProxy() {
+        return this.httpsProxy == null ? Output.empty() : this.httpsProxy;
     }
 
-    public HttpProxyConfigurationArgs(@Nullable Input<String> httpsProxy) {
+    public HttpProxyConfigurationArgs(@Nullable Output<String> httpsProxy) {
         this.httpsProxy = httpsProxy;
     }
 
     private HttpProxyConfigurationArgs() {
-        this.httpsProxy = Input.empty();
+        this.httpsProxy = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> httpsProxy;
+        private @Nullable Output<String> httpsProxy;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
     	      this.httpsProxy = defaults.httpsProxy;
         }
 
-        public Builder httpsProxy(@Nullable Input<String> httpsProxy) {
+        public Builder httpsProxy(@Nullable Output<String> httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }
 
         public Builder httpsProxy(@Nullable String httpsProxy) {
-            this.httpsProxy = Input.ofNullable(httpsProxy);
+            this.httpsProxy = Output.ofNullable(httpsProxy);
             return this;
         }
         public HttpProxyConfigurationArgs build() {

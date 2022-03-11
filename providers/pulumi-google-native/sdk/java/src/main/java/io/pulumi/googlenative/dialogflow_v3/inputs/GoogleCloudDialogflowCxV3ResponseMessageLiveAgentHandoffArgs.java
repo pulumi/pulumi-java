@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,18 +24,18 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs 
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
-    public GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs(@Nullable Input<Map<String,String>> metadata) {
+    public GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs(@Nullable Output<Map<String,String>> metadata) {
         this.metadata = metadata;
     }
 
     private GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs() {
-        this.metadata = Input.empty();
+        this.metadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> metadata;
+        private @Nullable Output<Map<String,String>> metadata;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs 
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
         public GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs build() {

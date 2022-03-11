@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConnectorOAuthRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
      * 
      */
     @InputImport(name="accessToken")
-      private final @Nullable Input<String> accessToken;
+      private final @Nullable Output<String> accessToken;
 
-    public Input<String> getAccessToken() {
-        return this.accessToken == null ? Input.empty() : this.accessToken;
+    public Output<String> getAccessToken() {
+        return this.accessToken == null ? Output.empty() : this.accessToken;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -42,9 +42,9 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
      * 
      */
     @InputImport(name="clientSecret", required=true)
-      private final Input<String> clientSecret;
+      private final Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
+    public Output<String> getClientSecret() {
         return this.clientSecret;
     }
 
@@ -53,17 +53,17 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
      * 
      */
     @InputImport(name="connectorOAuthRequest")
-      private final @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
+      private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
-    public Input<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
-        return this.connectorOAuthRequest == null ? Input.empty() : this.connectorOAuthRequest;
+    public Output<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
+        return this.connectorOAuthRequest == null ? Output.empty() : this.connectorOAuthRequest;
     }
 
     public ConnectorProfileMarketoConnectorProfileCredentialsArgs(
-        @Nullable Input<String> accessToken,
-        Input<String> clientId,
-        Input<String> clientSecret,
-        @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
+        @Nullable Output<String> accessToken,
+        Output<String> clientId,
+        Output<String> clientSecret,
+        @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
         this.accessToken = accessToken;
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
@@ -71,10 +71,10 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
     }
 
     private ConnectorProfileMarketoConnectorProfileCredentialsArgs() {
-        this.accessToken = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.connectorOAuthRequest = Input.empty();
+        this.accessToken = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.connectorOAuthRequest = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessToken;
-        private Input<String> clientId;
-        private Input<String> clientSecret;
-        private @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
+        private @Nullable Output<String> accessToken;
+        private Output<String> clientId;
+        private Output<String> clientSecret;
+        private @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
     	      this.connectorOAuthRequest = defaults.connectorOAuthRequest;
         }
 
-        public Builder accessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Output<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Input.ofNullable(accessToken);
+            this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder clientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
+            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
 
-        public Builder connectorOAuthRequest(@Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
+        public Builder connectorOAuthRequest(@Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
 
         public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
-            this.connectorOAuthRequest = Input.ofNullable(connectorOAuthRequest);
+            this.connectorOAuthRequest = Output.ofNullable(connectorOAuthRequest);
             return this;
         }
         public ConnectorProfileMarketoConnectorProfileCredentialsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configFilePath")
-      private final @Nullable Input<String> configFilePath;
+      private final @Nullable Output<String> configFilePath;
 
-    public Input<String> getConfigFilePath() {
-        return this.configFilePath == null ? Input.empty() : this.configFilePath;
+    public Output<String> getConfigFilePath() {
+        return this.configFilePath == null ? Output.empty() : this.configFilePath;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeVersion")
-      private final @Nullable Input<String> runtimeVersion;
+      private final @Nullable Output<String> runtimeVersion;
 
-    public Input<String> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
+    public Output<String> getRuntimeVersion() {
+        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
     }
 
     public AuthPlatformArgs(
-        @Nullable Input<String> configFilePath,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> runtimeVersion) {
+        @Nullable Output<String> configFilePath,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> runtimeVersion) {
         this.configFilePath = configFilePath;
         this.enabled = enabled;
         this.runtimeVersion = runtimeVersion;
     }
 
     private AuthPlatformArgs() {
-        this.configFilePath = Input.empty();
-        this.enabled = Input.empty();
-        this.runtimeVersion = Input.empty();
+        this.configFilePath = Output.empty();
+        this.enabled = Output.empty();
+        this.runtimeVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configFilePath;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> runtimeVersion;
+        private @Nullable Output<String> configFilePath;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> runtimeVersion;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder configFilePath(@Nullable Input<String> configFilePath) {
+        public Builder configFilePath(@Nullable Output<String> configFilePath) {
             this.configFilePath = configFilePath;
             return this;
         }
 
         public Builder configFilePath(@Nullable String configFilePath) {
-            this.configFilePath = Input.ofNullable(configFilePath);
+            this.configFilePath = Output.ofNullable(configFilePath);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Input.ofNullable(runtimeVersion);
+            this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
         }
         public AuthPlatformArgs build() {

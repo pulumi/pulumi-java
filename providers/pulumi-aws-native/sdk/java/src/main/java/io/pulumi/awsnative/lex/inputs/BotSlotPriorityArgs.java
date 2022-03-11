@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
     public static final BotSlotPriorityArgs Empty = new BotSlotPriorityArgs();
 
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -30,22 +30,22 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="slotName", required=true)
-      private final Input<String> slotName;
+      private final Output<String> slotName;
 
-    public Input<String> getSlotName() {
+    public Output<String> getSlotName() {
         return this.slotName;
     }
 
     public BotSlotPriorityArgs(
-        Input<Integer> priority,
-        Input<String> slotName) {
+        Output<Integer> priority,
+        Output<String> slotName) {
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
         this.slotName = Objects.requireNonNull(slotName, "expected parameter 'slotName' to be non-null");
     }
 
     private BotSlotPriorityArgs() {
-        this.priority = Input.empty();
-        this.slotName = Input.empty();
+        this.priority = Output.empty();
+        this.slotName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<Integer> priority;
-        private Input<String> slotName;
+        private Output<Integer> priority;
+        private Output<String> slotName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.slotName = defaults.slotName;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder slotName(Input<String> slotName) {
+        public Builder slotName(Output<String> slotName) {
             this.slotName = Objects.requireNonNull(slotName);
             return this;
         }
 
         public Builder slotName(String slotName) {
-            this.slotName = Input.of(Objects.requireNonNull(slotName));
+            this.slotName = Output.of(Objects.requireNonNull(slotName));
             return this;
         }
         public BotSlotPriorityArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,17 +15,17 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigGetArgs extends io.pu
     public static final InstanceNetworkInterfaceIpv6AccessConfigGetArgs Empty = new InstanceNetworkInterfaceIpv6AccessConfigGetArgs();
 
     @InputImport(name="externalIpv6")
-      private final @Nullable Input<String> externalIpv6;
+      private final @Nullable Output<String> externalIpv6;
 
-    public Input<String> getExternalIpv6() {
-        return this.externalIpv6 == null ? Input.empty() : this.externalIpv6;
+    public Output<String> getExternalIpv6() {
+        return this.externalIpv6 == null ? Output.empty() : this.externalIpv6;
     }
 
     @InputImport(name="externalIpv6PrefixLength")
-      private final @Nullable Input<String> externalIpv6PrefixLength;
+      private final @Nullable Output<String> externalIpv6PrefixLength;
 
-    public Input<String> getExternalIpv6PrefixLength() {
-        return this.externalIpv6PrefixLength == null ? Input.empty() : this.externalIpv6PrefixLength;
+    public Output<String> getExternalIpv6PrefixLength() {
+        return this.externalIpv6PrefixLength == null ? Output.empty() : this.externalIpv6PrefixLength;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigGetArgs extends io.pu
      * 
      */
     @InputImport(name="networkTier", required=true)
-      private final Input<String> networkTier;
+      private final Output<String> networkTier;
 
-    public Input<String> getNetworkTier() {
+    public Output<String> getNetworkTier() {
         return this.networkTier;
     }
 
@@ -46,17 +46,17 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigGetArgs extends io.pu
      * 
      */
     @InputImport(name="publicPtrDomainName")
-      private final @Nullable Input<String> publicPtrDomainName;
+      private final @Nullable Output<String> publicPtrDomainName;
 
-    public Input<String> getPublicPtrDomainName() {
-        return this.publicPtrDomainName == null ? Input.empty() : this.publicPtrDomainName;
+    public Output<String> getPublicPtrDomainName() {
+        return this.publicPtrDomainName == null ? Output.empty() : this.publicPtrDomainName;
     }
 
     public InstanceNetworkInterfaceIpv6AccessConfigGetArgs(
-        @Nullable Input<String> externalIpv6,
-        @Nullable Input<String> externalIpv6PrefixLength,
-        Input<String> networkTier,
-        @Nullable Input<String> publicPtrDomainName) {
+        @Nullable Output<String> externalIpv6,
+        @Nullable Output<String> externalIpv6PrefixLength,
+        Output<String> networkTier,
+        @Nullable Output<String> publicPtrDomainName) {
         this.externalIpv6 = externalIpv6;
         this.externalIpv6PrefixLength = externalIpv6PrefixLength;
         this.networkTier = Objects.requireNonNull(networkTier, "expected parameter 'networkTier' to be non-null");
@@ -64,10 +64,10 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigGetArgs extends io.pu
     }
 
     private InstanceNetworkInterfaceIpv6AccessConfigGetArgs() {
-        this.externalIpv6 = Input.empty();
-        this.externalIpv6PrefixLength = Input.empty();
-        this.networkTier = Input.empty();
-        this.publicPtrDomainName = Input.empty();
+        this.externalIpv6 = Output.empty();
+        this.externalIpv6PrefixLength = Output.empty();
+        this.networkTier = Output.empty();
+        this.publicPtrDomainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,10 +79,10 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> externalIpv6;
-        private @Nullable Input<String> externalIpv6PrefixLength;
-        private Input<String> networkTier;
-        private @Nullable Input<String> publicPtrDomainName;
+        private @Nullable Output<String> externalIpv6;
+        private @Nullable Output<String> externalIpv6PrefixLength;
+        private Output<String> networkTier;
+        private @Nullable Output<String> publicPtrDomainName;
 
         public Builder() {
     	      // Empty
@@ -96,43 +96,43 @@ public final class InstanceNetworkInterfaceIpv6AccessConfigGetArgs extends io.pu
     	      this.publicPtrDomainName = defaults.publicPtrDomainName;
         }
 
-        public Builder externalIpv6(@Nullable Input<String> externalIpv6) {
+        public Builder externalIpv6(@Nullable Output<String> externalIpv6) {
             this.externalIpv6 = externalIpv6;
             return this;
         }
 
         public Builder externalIpv6(@Nullable String externalIpv6) {
-            this.externalIpv6 = Input.ofNullable(externalIpv6);
+            this.externalIpv6 = Output.ofNullable(externalIpv6);
             return this;
         }
 
-        public Builder externalIpv6PrefixLength(@Nullable Input<String> externalIpv6PrefixLength) {
+        public Builder externalIpv6PrefixLength(@Nullable Output<String> externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
 
         public Builder externalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
-            this.externalIpv6PrefixLength = Input.ofNullable(externalIpv6PrefixLength);
+            this.externalIpv6PrefixLength = Output.ofNullable(externalIpv6PrefixLength);
             return this;
         }
 
-        public Builder networkTier(Input<String> networkTier) {
+        public Builder networkTier(Output<String> networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
 
         public Builder networkTier(String networkTier) {
-            this.networkTier = Input.of(Objects.requireNonNull(networkTier));
+            this.networkTier = Output.of(Objects.requireNonNull(networkTier));
             return this;
         }
 
-        public Builder publicPtrDomainName(@Nullable Input<String> publicPtrDomainName) {
+        public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
 
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
-            this.publicPtrDomainName = Input.ofNullable(publicPtrDomainName);
+            this.publicPtrDomainName = Output.ofNullable(publicPtrDomainName);
             return this;
         }
         public InstanceNetworkInterfaceIpv6AccessConfigGetArgs build() {

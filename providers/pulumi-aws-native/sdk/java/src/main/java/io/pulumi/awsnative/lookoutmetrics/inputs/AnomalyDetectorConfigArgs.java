@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorFrequency;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class AnomalyDetectorConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="anomalyDetectorFrequency", required=true)
-      private final Input<AnomalyDetectorFrequency> anomalyDetectorFrequency;
+      private final Output<AnomalyDetectorFrequency> anomalyDetectorFrequency;
 
-    public Input<AnomalyDetectorFrequency> getAnomalyDetectorFrequency() {
+    public Output<AnomalyDetectorFrequency> getAnomalyDetectorFrequency() {
         return this.anomalyDetectorFrequency;
     }
 
-    public AnomalyDetectorConfigArgs(Input<AnomalyDetectorFrequency> anomalyDetectorFrequency) {
+    public AnomalyDetectorConfigArgs(Output<AnomalyDetectorFrequency> anomalyDetectorFrequency) {
         this.anomalyDetectorFrequency = Objects.requireNonNull(anomalyDetectorFrequency, "expected parameter 'anomalyDetectorFrequency' to be non-null");
     }
 
     private AnomalyDetectorConfigArgs() {
-        this.anomalyDetectorFrequency = Input.empty();
+        this.anomalyDetectorFrequency = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AnomalyDetectorConfigArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<AnomalyDetectorFrequency> anomalyDetectorFrequency;
+        private Output<AnomalyDetectorFrequency> anomalyDetectorFrequency;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AnomalyDetectorConfigArgs extends io.pulumi.resources.Resourc
     	      this.anomalyDetectorFrequency = defaults.anomalyDetectorFrequency;
         }
 
-        public Builder anomalyDetectorFrequency(Input<AnomalyDetectorFrequency> anomalyDetectorFrequency) {
+        public Builder anomalyDetectorFrequency(Output<AnomalyDetectorFrequency> anomalyDetectorFrequency) {
             this.anomalyDetectorFrequency = Objects.requireNonNull(anomalyDetectorFrequency);
             return this;
         }
 
         public Builder anomalyDetectorFrequency(AnomalyDetectorFrequency anomalyDetectorFrequency) {
-            this.anomalyDetectorFrequency = Input.of(Objects.requireNonNull(anomalyDetectorFrequency));
+            this.anomalyDetectorFrequency = Output.of(Objects.requireNonNull(anomalyDetectorFrequency));
             return this;
         }
         public AnomalyDetectorConfigArgs build() {

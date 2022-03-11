@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueCategory;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueSeverity;
@@ -27,10 +27,10 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<TestIssueCategory> category;
+      private final @Nullable Output<TestIssueCategory> category;
 
-    public Input<TestIssueCategory> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<TestIssueCategory> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorMessage")
-      private final @Nullable Input<String> errorMessage;
+      private final @Nullable Output<String> errorMessage;
 
-    public Input<String> getErrorMessage() {
-        return this.errorMessage == null ? Input.empty() : this.errorMessage;
+    public Output<String> getErrorMessage() {
+        return this.errorMessage == null ? Output.empty() : this.errorMessage;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity")
-      private final @Nullable Input<TestIssueSeverity> severity;
+      private final @Nullable Output<TestIssueSeverity> severity;
 
-    public Input<TestIssueSeverity> getSeverity() {
-        return this.severity == null ? Input.empty() : this.severity;
+    public Output<TestIssueSeverity> getSeverity() {
+        return this.severity == null ? Output.empty() : this.severity;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<TestIssueType> type;
+      private final @Nullable Output<TestIssueType> type;
 
-    public Input<TestIssueType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<TestIssueType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="warning")
-      private final @Nullable Input<AnyArgs> warning;
+      private final @Nullable Output<AnyArgs> warning;
 
-    public Input<AnyArgs> getWarning() {
-        return this.warning == null ? Input.empty() : this.warning;
+    public Output<AnyArgs> getWarning() {
+        return this.warning == null ? Output.empty() : this.warning;
     }
 
     public TestIssueArgs(
-        @Nullable Input<TestIssueCategory> category,
-        @Nullable Input<String> errorMessage,
-        @Nullable Input<TestIssueSeverity> severity,
-        @Nullable Input<TestIssueType> type,
-        @Nullable Input<AnyArgs> warning) {
+        @Nullable Output<TestIssueCategory> category,
+        @Nullable Output<String> errorMessage,
+        @Nullable Output<TestIssueSeverity> severity,
+        @Nullable Output<TestIssueType> type,
+        @Nullable Output<AnyArgs> warning) {
         this.category = category;
         this.errorMessage = errorMessage;
         this.severity = severity;
@@ -91,11 +91,11 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TestIssueArgs() {
-        this.category = Input.empty();
-        this.errorMessage = Input.empty();
-        this.severity = Input.empty();
-        this.type = Input.empty();
-        this.warning = Input.empty();
+        this.category = Output.empty();
+        this.errorMessage = Output.empty();
+        this.severity = Output.empty();
+        this.type = Output.empty();
+        this.warning = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TestIssueCategory> category;
-        private @Nullable Input<String> errorMessage;
-        private @Nullable Input<TestIssueSeverity> severity;
-        private @Nullable Input<TestIssueType> type;
-        private @Nullable Input<AnyArgs> warning;
+        private @Nullable Output<TestIssueCategory> category;
+        private @Nullable Output<String> errorMessage;
+        private @Nullable Output<TestIssueSeverity> severity;
+        private @Nullable Output<TestIssueType> type;
+        private @Nullable Output<AnyArgs> warning;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.warning = defaults.warning;
         }
 
-        public Builder category(@Nullable Input<TestIssueCategory> category) {
+        public Builder category(@Nullable Output<TestIssueCategory> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable TestIssueCategory category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder errorMessage(@Nullable Input<String> errorMessage) {
+        public Builder errorMessage(@Nullable Output<String> errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
         public Builder errorMessage(@Nullable String errorMessage) {
-            this.errorMessage = Input.ofNullable(errorMessage);
+            this.errorMessage = Output.ofNullable(errorMessage);
             return this;
         }
 
-        public Builder severity(@Nullable Input<TestIssueSeverity> severity) {
+        public Builder severity(@Nullable Output<TestIssueSeverity> severity) {
             this.severity = severity;
             return this;
         }
 
         public Builder severity(@Nullable TestIssueSeverity severity) {
-            this.severity = Input.ofNullable(severity);
+            this.severity = Output.ofNullable(severity);
             return this;
         }
 
-        public Builder type(@Nullable Input<TestIssueType> type) {
+        public Builder type(@Nullable Output<TestIssueType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable TestIssueType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder warning(@Nullable Input<AnyArgs> warning) {
+        public Builder warning(@Nullable Output<AnyArgs> warning) {
             this.warning = warning;
             return this;
         }
 
         public Builder warning(@Nullable AnyArgs warning) {
-            this.warning = Input.ofNullable(warning);
+            this.warning = Output.ofNullable(warning);
             return this;
         }
         public TestIssueArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class ConfigurationAggregatorAccountAggregationSourceGetArgs extend
      * 
      */
     @InputImport(name="accountIds", required=true)
-      private final Input<List<String>> accountIds;
+      private final Output<List<String>> accountIds;
 
-    public Input<List<String>> getAccountIds() {
+    public Output<List<String>> getAccountIds() {
         return this.accountIds;
     }
 
@@ -32,10 +32,10 @@ public final class ConfigurationAggregatorAccountAggregationSourceGetArgs extend
      * 
      */
     @InputImport(name="allRegions")
-      private final @Nullable Input<Boolean> allRegions;
+      private final @Nullable Output<Boolean> allRegions;
 
-    public Input<Boolean> getAllRegions() {
-        return this.allRegions == null ? Input.empty() : this.allRegions;
+    public Output<Boolean> getAllRegions() {
+        return this.allRegions == null ? Output.empty() : this.allRegions;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class ConfigurationAggregatorAccountAggregationSourceGetArgs extend
      * 
      */
     @InputImport(name="regions")
-      private final @Nullable Input<List<String>> regions;
+      private final @Nullable Output<List<String>> regions;
 
-    public Input<List<String>> getRegions() {
-        return this.regions == null ? Input.empty() : this.regions;
+    public Output<List<String>> getRegions() {
+        return this.regions == null ? Output.empty() : this.regions;
     }
 
     public ConfigurationAggregatorAccountAggregationSourceGetArgs(
-        Input<List<String>> accountIds,
-        @Nullable Input<Boolean> allRegions,
-        @Nullable Input<List<String>> regions) {
+        Output<List<String>> accountIds,
+        @Nullable Output<Boolean> allRegions,
+        @Nullable Output<List<String>> regions) {
         this.accountIds = Objects.requireNonNull(accountIds, "expected parameter 'accountIds' to be non-null");
         this.allRegions = allRegions;
         this.regions = regions;
     }
 
     private ConfigurationAggregatorAccountAggregationSourceGetArgs() {
-        this.accountIds = Input.empty();
-        this.allRegions = Input.empty();
-        this.regions = Input.empty();
+        this.accountIds = Output.empty();
+        this.allRegions = Output.empty();
+        this.regions = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ConfigurationAggregatorAccountAggregationSourceGetArgs extend
     }
 
     public static final class Builder {
-        private Input<List<String>> accountIds;
-        private @Nullable Input<Boolean> allRegions;
-        private @Nullable Input<List<String>> regions;
+        private Output<List<String>> accountIds;
+        private @Nullable Output<Boolean> allRegions;
+        private @Nullable Output<List<String>> regions;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ConfigurationAggregatorAccountAggregationSourceGetArgs extend
     	      this.regions = defaults.regions;
         }
 
-        public Builder accountIds(Input<List<String>> accountIds) {
+        public Builder accountIds(Output<List<String>> accountIds) {
             this.accountIds = Objects.requireNonNull(accountIds);
             return this;
         }
 
         public Builder accountIds(List<String> accountIds) {
-            this.accountIds = Input.of(Objects.requireNonNull(accountIds));
+            this.accountIds = Output.of(Objects.requireNonNull(accountIds));
             return this;
         }
 
-        public Builder allRegions(@Nullable Input<Boolean> allRegions) {
+        public Builder allRegions(@Nullable Output<Boolean> allRegions) {
             this.allRegions = allRegions;
             return this;
         }
 
         public Builder allRegions(@Nullable Boolean allRegions) {
-            this.allRegions = Input.ofNullable(allRegions);
+            this.allRegions = Output.ofNullable(allRegions);
             return this;
         }
 
-        public Builder regions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Input.ofNullable(regions);
+            this.regions = Output.ofNullable(regions);
             return this;
         }
         public ConfigurationAggregatorAccountAggregationSourceGetArgs build() {

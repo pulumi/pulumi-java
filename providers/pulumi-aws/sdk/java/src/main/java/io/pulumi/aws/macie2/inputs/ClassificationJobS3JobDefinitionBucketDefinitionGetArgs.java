@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionGetArgs exten
      * 
      */
     @InputImport(name="accountId", required=true)
-      private final Input<String> accountId;
+      private final Output<String> accountId;
 
-    public Input<String> getAccountId() {
+    public Output<String> getAccountId() {
         return this.accountId;
     }
 
@@ -30,22 +30,22 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionGetArgs exten
      * 
      */
     @InputImport(name="buckets", required=true)
-      private final Input<List<String>> buckets;
+      private final Output<List<String>> buckets;
 
-    public Input<List<String>> getBuckets() {
+    public Output<List<String>> getBuckets() {
         return this.buckets;
     }
 
     public ClassificationJobS3JobDefinitionBucketDefinitionGetArgs(
-        Input<String> accountId,
-        Input<List<String>> buckets) {
+        Output<String> accountId,
+        Output<List<String>> buckets) {
         this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
         this.buckets = Objects.requireNonNull(buckets, "expected parameter 'buckets' to be non-null");
     }
 
     private ClassificationJobS3JobDefinitionBucketDefinitionGetArgs() {
-        this.accountId = Input.empty();
-        this.buckets = Input.empty();
+        this.accountId = Output.empty();
+        this.buckets = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionGetArgs exten
     }
 
     public static final class Builder {
-        private Input<String> accountId;
-        private Input<List<String>> buckets;
+        private Output<String> accountId;
+        private Output<List<String>> buckets;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionGetArgs exten
     	      this.buckets = defaults.buckets;
         }
 
-        public Builder accountId(Input<String> accountId) {
+        public Builder accountId(Output<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Input.of(Objects.requireNonNull(accountId));
+            this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder buckets(Input<List<String>> buckets) {
+        public Builder buckets(Output<List<String>> buckets) {
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }
 
         public Builder buckets(List<String> buckets) {
-            this.buckets = Input.of(Objects.requireNonNull(buckets));
+            this.buckets = Output.of(Objects.requireNonNull(buckets));
             return this;
         }
         public ClassificationJobS3JobDefinitionBucketDefinitionGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.DistributionCutArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.TimeSeriesRatioArgs;
@@ -24,10 +24,10 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="distributionCut")
-      private final @Nullable Input<DistributionCutArgs> distributionCut;
+      private final @Nullable Output<DistributionCutArgs> distributionCut;
 
-    public Input<DistributionCutArgs> getDistributionCut() {
-        return this.distributionCut == null ? Input.empty() : this.distributionCut;
+    public Output<DistributionCutArgs> getDistributionCut() {
+        return this.distributionCut == null ? Output.empty() : this.distributionCut;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="goodTotalRatio")
-      private final @Nullable Input<TimeSeriesRatioArgs> goodTotalRatio;
+      private final @Nullable Output<TimeSeriesRatioArgs> goodTotalRatio;
 
-    public Input<TimeSeriesRatioArgs> getGoodTotalRatio() {
-        return this.goodTotalRatio == null ? Input.empty() : this.goodTotalRatio;
+    public Output<TimeSeriesRatioArgs> getGoodTotalRatio() {
+        return this.goodTotalRatio == null ? Output.empty() : this.goodTotalRatio;
     }
 
     public RequestBasedSliArgs(
-        @Nullable Input<DistributionCutArgs> distributionCut,
-        @Nullable Input<TimeSeriesRatioArgs> goodTotalRatio) {
+        @Nullable Output<DistributionCutArgs> distributionCut,
+        @Nullable Output<TimeSeriesRatioArgs> goodTotalRatio) {
         this.distributionCut = distributionCut;
         this.goodTotalRatio = goodTotalRatio;
     }
 
     private RequestBasedSliArgs() {
-        this.distributionCut = Input.empty();
-        this.goodTotalRatio = Input.empty();
+        this.distributionCut = Output.empty();
+        this.goodTotalRatio = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<DistributionCutArgs> distributionCut;
-        private @Nullable Input<TimeSeriesRatioArgs> goodTotalRatio;
+        private @Nullable Output<DistributionCutArgs> distributionCut;
+        private @Nullable Output<TimeSeriesRatioArgs> goodTotalRatio;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
     	      this.goodTotalRatio = defaults.goodTotalRatio;
         }
 
-        public Builder distributionCut(@Nullable Input<DistributionCutArgs> distributionCut) {
+        public Builder distributionCut(@Nullable Output<DistributionCutArgs> distributionCut) {
             this.distributionCut = distributionCut;
             return this;
         }
 
         public Builder distributionCut(@Nullable DistributionCutArgs distributionCut) {
-            this.distributionCut = Input.ofNullable(distributionCut);
+            this.distributionCut = Output.ofNullable(distributionCut);
             return this;
         }
 
-        public Builder goodTotalRatio(@Nullable Input<TimeSeriesRatioArgs> goodTotalRatio) {
+        public Builder goodTotalRatio(@Nullable Output<TimeSeriesRatioArgs> goodTotalRatio) {
             this.goodTotalRatio = goodTotalRatio;
             return this;
         }
 
         public Builder goodTotalRatio(@Nullable TimeSeriesRatioArgs goodTotalRatio) {
-            this.goodTotalRatio = Input.ofNullable(goodTotalRatio);
+            this.goodTotalRatio = Output.ofNullable(goodTotalRatio);
             return this;
         }
         public RequestBasedSliArgs build() {

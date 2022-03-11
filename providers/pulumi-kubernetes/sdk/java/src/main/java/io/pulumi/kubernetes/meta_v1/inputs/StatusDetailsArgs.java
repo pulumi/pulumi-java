@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.StatusCauseArgs;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="causes")
-      private final @Nullable Input<List<StatusCauseArgs>> causes;
+      private final @Nullable Output<List<StatusCauseArgs>> causes;
 
-    public Input<List<StatusCauseArgs>> getCauses() {
-        return this.causes == null ? Input.empty() : this.causes;
+    public Output<List<StatusCauseArgs>> getCauses() {
+        return this.causes == null ? Output.empty() : this.causes;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="group")
-      private final @Nullable Input<String> group;
+      private final @Nullable Output<String> group;
 
-    public Input<String> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<String> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryAfterSeconds")
-      private final @Nullable Input<Integer> retryAfterSeconds;
+      private final @Nullable Output<Integer> retryAfterSeconds;
 
-    public Input<Integer> getRetryAfterSeconds() {
-        return this.retryAfterSeconds == null ? Input.empty() : this.retryAfterSeconds;
+    public Output<Integer> getRetryAfterSeconds() {
+        return this.retryAfterSeconds == null ? Output.empty() : this.retryAfterSeconds;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     public StatusDetailsArgs(
-        @Nullable Input<List<StatusCauseArgs>> causes,
-        @Nullable Input<String> group,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> retryAfterSeconds,
-        @Nullable Input<String> uid) {
+        @Nullable Output<List<StatusCauseArgs>> causes,
+        @Nullable Output<String> group,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> retryAfterSeconds,
+        @Nullable Output<String> uid) {
         this.causes = causes;
         this.group = group;
         this.kind = kind;
@@ -103,12 +103,12 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StatusDetailsArgs() {
-        this.causes = Input.empty();
-        this.group = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.retryAfterSeconds = Input.empty();
-        this.uid = Input.empty();
+        this.causes = Output.empty();
+        this.group = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.retryAfterSeconds = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<StatusCauseArgs>> causes;
-        private @Nullable Input<String> group;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> retryAfterSeconds;
-        private @Nullable Input<String> uid;
+        private @Nullable Output<List<StatusCauseArgs>> causes;
+        private @Nullable Output<String> group;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> retryAfterSeconds;
+        private @Nullable Output<String> uid;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uid = defaults.uid;
         }
 
-        public Builder causes(@Nullable Input<List<StatusCauseArgs>> causes) {
+        public Builder causes(@Nullable Output<List<StatusCauseArgs>> causes) {
             this.causes = causes;
             return this;
         }
 
         public Builder causes(@Nullable List<StatusCauseArgs> causes) {
-            this.causes = Input.ofNullable(causes);
+            this.causes = Output.ofNullable(causes);
             return this;
         }
 
-        public Builder group(@Nullable Input<String> group) {
+        public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
 
         public Builder group(@Nullable String group) {
-            this.group = Input.ofNullable(group);
+            this.group = Output.ofNullable(group);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder retryAfterSeconds(@Nullable Input<Integer> retryAfterSeconds) {
+        public Builder retryAfterSeconds(@Nullable Output<Integer> retryAfterSeconds) {
             this.retryAfterSeconds = retryAfterSeconds;
             return this;
         }
 
         public Builder retryAfterSeconds(@Nullable Integer retryAfterSeconds) {
-            this.retryAfterSeconds = Input.ofNullable(retryAfterSeconds);
+            this.retryAfterSeconds = Output.ofNullable(retryAfterSeconds);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
         public StatusDetailsArgs build() {

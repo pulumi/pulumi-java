@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.GrpcServiceConfigArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grpcServiceConfig")
-      private final @Nullable Input<GrpcServiceConfigArgs> grpcServiceConfig;
+      private final @Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig;
 
-    public Input<GrpcServiceConfigArgs> getGrpcServiceConfig() {
-        return this.grpcServiceConfig == null ? Input.empty() : this.grpcServiceConfig;
+    public Output<GrpcServiceConfigArgs> getGrpcServiceConfig() {
+        return this.grpcServiceConfig == null ? Output.empty() : this.grpcServiceConfig;
     }
 
-    public SdsConfigArgs(@Nullable Input<GrpcServiceConfigArgs> grpcServiceConfig) {
+    public SdsConfigArgs(@Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig) {
         this.grpcServiceConfig = grpcServiceConfig;
     }
 
     private SdsConfigArgs() {
-        this.grpcServiceConfig = Input.empty();
+        this.grpcServiceConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GrpcServiceConfigArgs> grpcServiceConfig;
+        private @Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.grpcServiceConfig = defaults.grpcServiceConfig;
         }
 
-        public Builder grpcServiceConfig(@Nullable Input<GrpcServiceConfigArgs> grpcServiceConfig) {
+        public Builder grpcServiceConfig(@Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig) {
             this.grpcServiceConfig = grpcServiceConfig;
             return this;
         }
 
         public Builder grpcServiceConfig(@Nullable GrpcServiceConfigArgs grpcServiceConfig) {
-            this.grpcServiceConfig = Input.ofNullable(grpcServiceConfig);
+            this.grpcServiceConfig = Output.ofNullable(grpcServiceConfig);
             return this;
         }
         public SdsConfigArgs build() {

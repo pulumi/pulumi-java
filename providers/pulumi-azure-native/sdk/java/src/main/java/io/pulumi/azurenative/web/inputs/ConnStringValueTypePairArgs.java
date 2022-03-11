@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.ConnectionStringType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<ConnectionStringType> type;
+      private final Output<ConnectionStringType> type;
 
-    public Input<ConnectionStringType> getType() {
+    public Output<ConnectionStringType> getType() {
         return this.type;
     }
 
@@ -34,22 +34,22 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ConnStringValueTypePairArgs(
-        Input<ConnectionStringType> type,
-        Input<String> value) {
+        Output<ConnectionStringType> type,
+        Output<String> value) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ConnStringValueTypePairArgs() {
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<ConnectionStringType> type;
-        private Input<String> value;
+        private Output<ConnectionStringType> type;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ConnStringValueTypePairArgs extends io.pulumi.resources.Resou
     	      this.value = defaults.value;
         }
 
-        public Builder type(Input<ConnectionStringType> type) {
+        public Builder type(Output<ConnectionStringType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ConnectionStringType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ConnStringValueTypePairArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudkms_v1.inputs.CertificateArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endpointFilter")
-      private final @Nullable Input<String> endpointFilter;
+      private final @Nullable Output<String> endpointFilter;
 
-    public Input<String> getEndpointFilter() {
-        return this.endpointFilter == null ? Input.empty() : this.endpointFilter;
+    public Output<String> getEndpointFilter() {
+        return this.endpointFilter == null ? Output.empty() : this.endpointFilter;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hostname", required=true)
-      private final Input<String> hostname;
+      private final Output<String> hostname;
 
-    public Input<String> getHostname() {
+    public Output<String> getHostname() {
         return this.hostname;
     }
 
@@ -47,9 +47,9 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serverCertificates", required=true)
-      private final Input<List<CertificateArgs>> serverCertificates;
+      private final Output<List<CertificateArgs>> serverCertificates;
 
-    public Input<List<CertificateArgs>> getServerCertificates() {
+    public Output<List<CertificateArgs>> getServerCertificates() {
         return this.serverCertificates;
     }
 
@@ -58,17 +58,17 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceDirectoryService", required=true)
-      private final Input<String> serviceDirectoryService;
+      private final Output<String> serviceDirectoryService;
 
-    public Input<String> getServiceDirectoryService() {
+    public Output<String> getServiceDirectoryService() {
         return this.serviceDirectoryService;
     }
 
     public ServiceResolverArgs(
-        @Nullable Input<String> endpointFilter,
-        Input<String> hostname,
-        Input<List<CertificateArgs>> serverCertificates,
-        Input<String> serviceDirectoryService) {
+        @Nullable Output<String> endpointFilter,
+        Output<String> hostname,
+        Output<List<CertificateArgs>> serverCertificates,
+        Output<String> serviceDirectoryService) {
         this.endpointFilter = endpointFilter;
         this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
         this.serverCertificates = Objects.requireNonNull(serverCertificates, "expected parameter 'serverCertificates' to be non-null");
@@ -76,10 +76,10 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServiceResolverArgs() {
-        this.endpointFilter = Input.empty();
-        this.hostname = Input.empty();
-        this.serverCertificates = Input.empty();
-        this.serviceDirectoryService = Input.empty();
+        this.endpointFilter = Output.empty();
+        this.hostname = Output.empty();
+        this.serverCertificates = Output.empty();
+        this.serviceDirectoryService = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endpointFilter;
-        private Input<String> hostname;
-        private Input<List<CertificateArgs>> serverCertificates;
-        private Input<String> serviceDirectoryService;
+        private @Nullable Output<String> endpointFilter;
+        private Output<String> hostname;
+        private Output<List<CertificateArgs>> serverCertificates;
+        private Output<String> serviceDirectoryService;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     	      this.serviceDirectoryService = defaults.serviceDirectoryService;
         }
 
-        public Builder endpointFilter(@Nullable Input<String> endpointFilter) {
+        public Builder endpointFilter(@Nullable Output<String> endpointFilter) {
             this.endpointFilter = endpointFilter;
             return this;
         }
 
         public Builder endpointFilter(@Nullable String endpointFilter) {
-            this.endpointFilter = Input.ofNullable(endpointFilter);
+            this.endpointFilter = Output.ofNullable(endpointFilter);
             return this;
         }
 
-        public Builder hostname(Input<String> hostname) {
+        public Builder hostname(Output<String> hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
         public Builder hostname(String hostname) {
-            this.hostname = Input.of(Objects.requireNonNull(hostname));
+            this.hostname = Output.of(Objects.requireNonNull(hostname));
             return this;
         }
 
-        public Builder serverCertificates(Input<List<CertificateArgs>> serverCertificates) {
+        public Builder serverCertificates(Output<List<CertificateArgs>> serverCertificates) {
             this.serverCertificates = Objects.requireNonNull(serverCertificates);
             return this;
         }
 
         public Builder serverCertificates(List<CertificateArgs> serverCertificates) {
-            this.serverCertificates = Input.of(Objects.requireNonNull(serverCertificates));
+            this.serverCertificates = Output.of(Objects.requireNonNull(serverCertificates));
             return this;
         }
 
-        public Builder serviceDirectoryService(Input<String> serviceDirectoryService) {
+        public Builder serviceDirectoryService(Output<String> serviceDirectoryService) {
             this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
             return this;
         }
 
         public Builder serviceDirectoryService(String serviceDirectoryService) {
-            this.serviceDirectoryService = Input.of(Objects.requireNonNull(serviceDirectoryService));
+            this.serviceDirectoryService = Output.of(Objects.requireNonNull(serviceDirectoryService));
             return this;
         }
         public ServiceResolverArgs build() {

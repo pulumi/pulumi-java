@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class DataRepositoryAssociationS3AutoImportPolicyArgs extends io.pu
      * 
      */
     @InputImport(name="events")
-      private final @Nullable Input<List<String>> events;
+      private final @Nullable Output<List<String>> events;
 
-    public Input<List<String>> getEvents() {
-        return this.events == null ? Input.empty() : this.events;
+    public Output<List<String>> getEvents() {
+        return this.events == null ? Output.empty() : this.events;
     }
 
-    public DataRepositoryAssociationS3AutoImportPolicyArgs(@Nullable Input<List<String>> events) {
+    public DataRepositoryAssociationS3AutoImportPolicyArgs(@Nullable Output<List<String>> events) {
         this.events = events;
     }
 
     private DataRepositoryAssociationS3AutoImportPolicyArgs() {
-        this.events = Input.empty();
+        this.events = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class DataRepositoryAssociationS3AutoImportPolicyArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> events;
+        private @Nullable Output<List<String>> events;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class DataRepositoryAssociationS3AutoImportPolicyArgs extends io.pu
     	      this.events = defaults.events;
         }
 
-        public Builder events(@Nullable Input<List<String>> events) {
+        public Builder events(@Nullable Output<List<String>> events) {
             this.events = events;
             return this;
         }
 
         public Builder events(@Nullable List<String> events) {
-            this.events = Input.ofNullable(events);
+            this.events = Output.ofNullable(events);
             return this;
         }
         public DataRepositoryAssociationS3AutoImportPolicyArgs build() {

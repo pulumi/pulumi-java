@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs extends i
      * 
      */
     @InputImport(name="mode", required=true)
-      private final Input<String> mode;
+      private final Output<String> mode;
 
-    public Input<String> getMode() {
+    public Output<String> getMode() {
         return this.mode;
     }
 
-    public ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs(Input<String> mode) {
+    public ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs(Output<String> mode) {
         this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
     }
 
     private ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs() {
-        this.mode = Input.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs extends i
     }
 
     public static final class Builder {
-        private Input<String> mode;
+        private Output<String> mode;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs extends i
     	      this.mode = defaults.mode;
         }
 
-        public Builder mode(Input<String> mode) {
+        public Builder mode(Output<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
         public Builder mode(String mode) {
-            this.mode = Input.of(Objects.requireNonNull(mode));
+            this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
         public ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs build() {

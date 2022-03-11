@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
      * 
      */
     @InputImport(name="count", required=true)
-      private final Input<Integer> count;
+      private final Output<Integer> count;
 
-    public Input<Integer> getCount() {
+    public Output<Integer> getCount() {
         return this.count;
     }
 
@@ -35,9 +35,9 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
      * 
      */
     @InputImport(name="highKey", required=true)
-      private final Input<String> highKey;
+      private final Output<String> highKey;
 
-    public Input<String> getHighKey() {
+    public Output<String> getHighKey() {
         return this.highKey;
     }
 
@@ -47,9 +47,9 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
      * 
      */
     @InputImport(name="lowKey", required=true)
-      private final Input<String> lowKey;
+      private final Output<String> lowKey;
 
-    public Input<String> getLowKey() {
+    public Output<String> getLowKey() {
         return this.lowKey;
     }
 
@@ -59,17 +59,17 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
      * 
      */
     @InputImport(name="partitionScheme", required=true)
-      private final Input<String> partitionScheme;
+      private final Output<String> partitionScheme;
 
-    public Input<String> getPartitionScheme() {
+    public Output<String> getPartitionScheme() {
         return this.partitionScheme;
     }
 
     public UniformInt64RangePartitionSchemeDescriptionArgs(
-        Input<Integer> count,
-        Input<String> highKey,
-        Input<String> lowKey,
-        Input<String> partitionScheme) {
+        Output<Integer> count,
+        Output<String> highKey,
+        Output<String> lowKey,
+        Output<String> partitionScheme) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.highKey = Objects.requireNonNull(highKey, "expected parameter 'highKey' to be non-null");
         this.lowKey = Objects.requireNonNull(lowKey, "expected parameter 'lowKey' to be non-null");
@@ -77,10 +77,10 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     }
 
     private UniformInt64RangePartitionSchemeDescriptionArgs() {
-        this.count = Input.empty();
-        this.highKey = Input.empty();
-        this.lowKey = Input.empty();
-        this.partitionScheme = Input.empty();
+        this.count = Output.empty();
+        this.highKey = Output.empty();
+        this.lowKey = Output.empty();
+        this.partitionScheme = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<Integer> count;
-        private Input<String> highKey;
-        private Input<String> lowKey;
-        private Input<String> partitionScheme;
+        private Output<Integer> count;
+        private Output<String> highKey;
+        private Output<String> lowKey;
+        private Output<String> partitionScheme;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     	      this.partitionScheme = defaults.partitionScheme;
         }
 
-        public Builder count(Input<Integer> count) {
+        public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
         public Builder count(Integer count) {
-            this.count = Input.of(Objects.requireNonNull(count));
+            this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder highKey(Input<String> highKey) {
+        public Builder highKey(Output<String> highKey) {
             this.highKey = Objects.requireNonNull(highKey);
             return this;
         }
 
         public Builder highKey(String highKey) {
-            this.highKey = Input.of(Objects.requireNonNull(highKey));
+            this.highKey = Output.of(Objects.requireNonNull(highKey));
             return this;
         }
 
-        public Builder lowKey(Input<String> lowKey) {
+        public Builder lowKey(Output<String> lowKey) {
             this.lowKey = Objects.requireNonNull(lowKey);
             return this;
         }
 
         public Builder lowKey(String lowKey) {
-            this.lowKey = Input.of(Objects.requireNonNull(lowKey));
+            this.lowKey = Output.of(Objects.requireNonNull(lowKey));
             return this;
         }
 
-        public Builder partitionScheme(Input<String> partitionScheme) {
+        public Builder partitionScheme(Output<String> partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
 
         public Builder partitionScheme(String partitionScheme) {
-            this.partitionScheme = Input.of(Objects.requireNonNull(partitionScheme));
+            this.partitionScheme = Output.of(Objects.requireNonNull(partitionScheme));
             return this;
         }
         public UniformInt64RangePartitionSchemeDescriptionArgs build() {

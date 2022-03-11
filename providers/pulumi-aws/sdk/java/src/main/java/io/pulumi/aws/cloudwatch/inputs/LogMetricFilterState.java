@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.LogMetricFilterMetricTransformationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logGroupName")
-      private final @Nullable Input<String> logGroupName;
+      private final @Nullable Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
-        return this.logGroupName == null ? Input.empty() : this.logGroupName;
+    public Output<String> getLogGroupName() {
+        return this.logGroupName == null ? Output.empty() : this.logGroupName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricTransformation")
-      private final @Nullable Input<LogMetricFilterMetricTransformationGetArgs> metricTransformation;
+      private final @Nullable Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation;
 
-    public Input<LogMetricFilterMetricTransformationGetArgs> getMetricTransformation() {
-        return this.metricTransformation == null ? Input.empty() : this.metricTransformation;
+    public Output<LogMetricFilterMetricTransformationGetArgs> getMetricTransformation() {
+        return this.metricTransformation == null ? Output.empty() : this.metricTransformation;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pattern")
-      private final @Nullable Input<String> pattern;
+      private final @Nullable Output<String> pattern;
 
-    public Input<String> getPattern() {
-        return this.pattern == null ? Input.empty() : this.pattern;
+    public Output<String> getPattern() {
+        return this.pattern == null ? Output.empty() : this.pattern;
     }
 
     public LogMetricFilterState(
-        @Nullable Input<String> logGroupName,
-        @Nullable Input<LogMetricFilterMetricTransformationGetArgs> metricTransformation,
-        @Nullable Input<String> name,
-        @Nullable Input<String> pattern) {
+        @Nullable Output<String> logGroupName,
+        @Nullable Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation,
+        @Nullable Output<String> name,
+        @Nullable Output<String> pattern) {
         this.logGroupName = logGroupName;
         this.metricTransformation = metricTransformation;
         this.name = name;
@@ -72,10 +72,10 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     }
 
     private LogMetricFilterState() {
-        this.logGroupName = Input.empty();
-        this.metricTransformation = Input.empty();
-        this.name = Input.empty();
-        this.pattern = Input.empty();
+        this.logGroupName = Output.empty();
+        this.metricTransformation = Output.empty();
+        this.name = Output.empty();
+        this.pattern = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> logGroupName;
-        private @Nullable Input<LogMetricFilterMetricTransformationGetArgs> metricTransformation;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> pattern;
+        private @Nullable Output<String> logGroupName;
+        private @Nullable Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> pattern;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder logGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Input.ofNullable(logGroupName);
+            this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder metricTransformation(@Nullable Input<LogMetricFilterMetricTransformationGetArgs> metricTransformation) {
+        public Builder metricTransformation(@Nullable Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation) {
             this.metricTransformation = metricTransformation;
             return this;
         }
 
         public Builder metricTransformation(@Nullable LogMetricFilterMetricTransformationGetArgs metricTransformation) {
-            this.metricTransformation = Input.ofNullable(metricTransformation);
+            this.metricTransformation = Output.ofNullable(metricTransformation);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Output<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Input.ofNullable(pattern);
+            this.pattern = Output.ofNullable(pattern);
             return this;
         }
         public LogMetricFilterState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -43,9 +43,9 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
@@ -54,17 +54,17 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public VpcLinkArgs(
-        @Nullable Input<String> name,
-        Input<List<String>> securityGroupIds,
-        Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> name,
+        Output<List<String>> securityGroupIds,
+        Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags) {
         this.name = name;
         this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
         this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
@@ -72,10 +72,10 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpcLinkArgs() {
-        this.name = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<List<String>> securityGroupIds;
-        private Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> name;
+        private Output<List<String>> securityGroupIds;
+        private Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public VpcLinkArgs build() {

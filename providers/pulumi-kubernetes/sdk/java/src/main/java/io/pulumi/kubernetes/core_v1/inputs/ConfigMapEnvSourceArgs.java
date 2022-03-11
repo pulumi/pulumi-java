@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="optional")
-      private final @Nullable Input<Boolean> optional;
+      private final @Nullable Output<Boolean> optional;
 
-    public Input<Boolean> getOptional() {
-        return this.optional == null ? Input.empty() : this.optional;
+    public Output<Boolean> getOptional() {
+        return this.optional == null ? Output.empty() : this.optional;
     }
 
     public ConfigMapEnvSourceArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> optional) {
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> optional) {
         this.name = name;
         this.optional = optional;
     }
 
     private ConfigMapEnvSourceArgs() {
-        this.name = Input.empty();
-        this.optional = Input.empty();
+        this.name = Output.empty();
+        this.optional = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> optional;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> optional;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.optional = defaults.optional;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder optional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
         public Builder optional(@Nullable Boolean optional) {
-            this.optional = Input.ofNullable(optional);
+            this.optional = Output.ofNullable(optional);
             return this;
         }
         public ConfigMapEnvSourceArgs build() {

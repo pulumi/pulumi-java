@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="datastoreName")
-      private final @Nullable Input<String> datastoreName;
+      private final @Nullable Output<String> datastoreName;
 
-    public Input<String> getDatastoreName() {
-        return this.datastoreName == null ? Input.empty() : this.datastoreName;
+    public Output<String> getDatastoreName() {
+        return this.datastoreName == null ? Output.empty() : this.datastoreName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="relativePath")
-      private final @Nullable Input<String> relativePath;
+      private final @Nullable Output<String> relativePath;
 
-    public Input<String> getRelativePath() {
-        return this.relativePath == null ? Input.empty() : this.relativePath;
+    public Output<String> getRelativePath() {
+        return this.relativePath == null ? Output.empty() : this.relativePath;
     }
 
     public DatasetCreateRequestDataPathArgs(
-        @Nullable Input<String> datastoreName,
-        @Nullable Input<String> relativePath) {
+        @Nullable Output<String> datastoreName,
+        @Nullable Output<String> relativePath) {
         this.datastoreName = datastoreName;
         this.relativePath = relativePath;
     }
 
     private DatasetCreateRequestDataPathArgs() {
-        this.datastoreName = Input.empty();
-        this.relativePath = Input.empty();
+        this.datastoreName = Output.empty();
+        this.relativePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datastoreName;
-        private @Nullable Input<String> relativePath;
+        private @Nullable Output<String> datastoreName;
+        private @Nullable Output<String> relativePath;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
     	      this.relativePath = defaults.relativePath;
         }
 
-        public Builder datastoreName(@Nullable Input<String> datastoreName) {
+        public Builder datastoreName(@Nullable Output<String> datastoreName) {
             this.datastoreName = datastoreName;
             return this;
         }
 
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Input.ofNullable(datastoreName);
+            this.datastoreName = Output.ofNullable(datastoreName);
             return this;
         }
 
-        public Builder relativePath(@Nullable Input<String> relativePath) {
+        public Builder relativePath(@Nullable Output<String> relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
         public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = Input.ofNullable(relativePath);
+            this.relativePath = Output.ofNullable(relativePath);
             return this;
         }
         public DatasetCreateRequestDataPathArgs build() {

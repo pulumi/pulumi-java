@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableAutomaticUpdates")
-      private final @Nullable Input<Boolean> enableAutomaticUpdates;
+      private final @Nullable Output<Boolean> enableAutomaticUpdates;
 
-    public Input<Boolean> getEnableAutomaticUpdates() {
-        return this.enableAutomaticUpdates == null ? Input.empty() : this.enableAutomaticUpdates;
+    public Output<Boolean> getEnableAutomaticUpdates() {
+        return this.enableAutomaticUpdates == null ? Output.empty() : this.enableAutomaticUpdates;
     }
 
-    public WindowsConfigurationArgs(@Nullable Input<Boolean> enableAutomaticUpdates) {
+    public WindowsConfigurationArgs(@Nullable Output<Boolean> enableAutomaticUpdates) {
         this.enableAutomaticUpdates = enableAutomaticUpdates;
     }
 
     private WindowsConfigurationArgs() {
-        this.enableAutomaticUpdates = Input.empty();
+        this.enableAutomaticUpdates = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableAutomaticUpdates;
+        private @Nullable Output<Boolean> enableAutomaticUpdates;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     	      this.enableAutomaticUpdates = defaults.enableAutomaticUpdates;
         }
 
-        public Builder enableAutomaticUpdates(@Nullable Input<Boolean> enableAutomaticUpdates) {
+        public Builder enableAutomaticUpdates(@Nullable Output<Boolean> enableAutomaticUpdates) {
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
 
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
-            this.enableAutomaticUpdates = Input.ofNullable(enableAutomaticUpdates);
+            this.enableAutomaticUpdates = Output.ofNullable(enableAutomaticUpdates);
             return this;
         }
         public WindowsConfigurationArgs build() {

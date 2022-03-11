@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceDynamodbConfigDeltaSyncConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
     public static final DataSourceDynamodbConfigArgs Empty = new DataSourceDynamodbConfigArgs();
 
     @InputImport(name="deltaSyncConfig")
-      private final @Nullable Input<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig;
+      private final @Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig;
 
-    public Input<DataSourceDynamodbConfigDeltaSyncConfigArgs> getDeltaSyncConfig() {
-        return this.deltaSyncConfig == null ? Input.empty() : this.deltaSyncConfig;
+    public Output<DataSourceDynamodbConfigDeltaSyncConfigArgs> getDeltaSyncConfig() {
+        return this.deltaSyncConfig == null ? Output.empty() : this.deltaSyncConfig;
     }
 
     /**
@@ -28,10 +28,10 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -39,9 +39,9 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
@@ -50,25 +50,25 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="useCallerCredentials")
-      private final @Nullable Input<Boolean> useCallerCredentials;
+      private final @Nullable Output<Boolean> useCallerCredentials;
 
-    public Input<Boolean> getUseCallerCredentials() {
-        return this.useCallerCredentials == null ? Input.empty() : this.useCallerCredentials;
+    public Output<Boolean> getUseCallerCredentials() {
+        return this.useCallerCredentials == null ? Output.empty() : this.useCallerCredentials;
     }
 
     @InputImport(name="versioned")
-      private final @Nullable Input<Boolean> versioned;
+      private final @Nullable Output<Boolean> versioned;
 
-    public Input<Boolean> getVersioned() {
-        return this.versioned == null ? Input.empty() : this.versioned;
+    public Output<Boolean> getVersioned() {
+        return this.versioned == null ? Output.empty() : this.versioned;
     }
 
     public DataSourceDynamodbConfigArgs(
-        @Nullable Input<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig,
-        @Nullable Input<String> region,
-        Input<String> tableName,
-        @Nullable Input<Boolean> useCallerCredentials,
-        @Nullable Input<Boolean> versioned) {
+        @Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig,
+        @Nullable Output<String> region,
+        Output<String> tableName,
+        @Nullable Output<Boolean> useCallerCredentials,
+        @Nullable Output<Boolean> versioned) {
         this.deltaSyncConfig = deltaSyncConfig;
         this.region = region;
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
@@ -77,11 +77,11 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
     }
 
     private DataSourceDynamodbConfigArgs() {
-        this.deltaSyncConfig = Input.empty();
-        this.region = Input.empty();
-        this.tableName = Input.empty();
-        this.useCallerCredentials = Input.empty();
-        this.versioned = Input.empty();
+        this.deltaSyncConfig = Output.empty();
+        this.region = Output.empty();
+        this.tableName = Output.empty();
+        this.useCallerCredentials = Output.empty();
+        this.versioned = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,11 +93,11 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig;
-        private @Nullable Input<String> region;
-        private Input<String> tableName;
-        private @Nullable Input<Boolean> useCallerCredentials;
-        private @Nullable Input<Boolean> versioned;
+        private @Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig;
+        private @Nullable Output<String> region;
+        private Output<String> tableName;
+        private @Nullable Output<Boolean> useCallerCredentials;
+        private @Nullable Output<Boolean> versioned;
 
         public Builder() {
     	      // Empty
@@ -112,53 +112,53 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
     	      this.versioned = defaults.versioned;
         }
 
-        public Builder deltaSyncConfig(@Nullable Input<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig) {
+        public Builder deltaSyncConfig(@Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig) {
             this.deltaSyncConfig = deltaSyncConfig;
             return this;
         }
 
         public Builder deltaSyncConfig(@Nullable DataSourceDynamodbConfigDeltaSyncConfigArgs deltaSyncConfig) {
-            this.deltaSyncConfig = Input.ofNullable(deltaSyncConfig);
+            this.deltaSyncConfig = Output.ofNullable(deltaSyncConfig);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
 
-        public Builder useCallerCredentials(@Nullable Input<Boolean> useCallerCredentials) {
+        public Builder useCallerCredentials(@Nullable Output<Boolean> useCallerCredentials) {
             this.useCallerCredentials = useCallerCredentials;
             return this;
         }
 
         public Builder useCallerCredentials(@Nullable Boolean useCallerCredentials) {
-            this.useCallerCredentials = Input.ofNullable(useCallerCredentials);
+            this.useCallerCredentials = Output.ofNullable(useCallerCredentials);
             return this;
         }
 
-        public Builder versioned(@Nullable Input<Boolean> versioned) {
+        public Builder versioned(@Nullable Output<Boolean> versioned) {
             this.versioned = versioned;
             return this;
         }
 
         public Builder versioned(@Nullable Boolean versioned) {
-            this.versioned = Input.ofNullable(versioned);
+            this.versioned = Output.ofNullable(versioned);
             return this;
         }
         public DataSourceDynamodbConfigArgs build() {

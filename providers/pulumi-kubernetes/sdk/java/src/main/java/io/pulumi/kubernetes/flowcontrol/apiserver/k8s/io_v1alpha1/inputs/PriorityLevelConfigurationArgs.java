@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.PriorityLevelConfigurationSpecArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.PriorityLevelConfigurationStatusArgs;
@@ -26,10 +26,10 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<PriorityLevelConfigurationSpecArgs> spec;
+      private final @Nullable Output<PriorityLevelConfigurationSpecArgs> spec;
 
-    public Input<PriorityLevelConfigurationSpecArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<PriorityLevelConfigurationSpecArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<PriorityLevelConfigurationStatusArgs> status;
+      private final @Nullable Output<PriorityLevelConfigurationStatusArgs> status;
 
-    public Input<PriorityLevelConfigurationStatusArgs> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<PriorityLevelConfigurationStatusArgs> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public PriorityLevelConfigurationArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> kind,
-        @Nullable Input<ObjectMetaArgs> metadata,
-        @Nullable Input<PriorityLevelConfigurationSpecArgs> spec,
-        @Nullable Input<PriorityLevelConfigurationStatusArgs> status) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> kind,
+        @Nullable Output<ObjectMetaArgs> metadata,
+        @Nullable Output<PriorityLevelConfigurationSpecArgs> spec,
+        @Nullable Output<PriorityLevelConfigurationStatusArgs> status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
@@ -90,11 +90,11 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private PriorityLevelConfigurationArgs() {
-        this.apiVersion = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
-        this.spec = Input.empty();
-        this.status = Input.empty();
+        this.apiVersion = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
+        this.spec = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private @Nullable Input<PriorityLevelConfigurationSpecArgs> spec;
-        private @Nullable Input<PriorityLevelConfigurationStatusArgs> status;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private @Nullable Output<PriorityLevelConfigurationSpecArgs> spec;
+        private @Nullable Output<PriorityLevelConfigurationStatusArgs> status;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
     	      this.status = defaults.status;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder spec(@Nullable Input<PriorityLevelConfigurationSpecArgs> spec) {
+        public Builder spec(@Nullable Output<PriorityLevelConfigurationSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable PriorityLevelConfigurationSpecArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
 
-        public Builder status(@Nullable Input<PriorityLevelConfigurationStatusArgs> status) {
+        public Builder status(@Nullable Output<PriorityLevelConfigurationStatusArgs> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable PriorityLevelConfigurationStatusArgs status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public PriorityLevelConfigurationArgs build() {

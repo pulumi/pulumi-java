@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalRequired")
-      private final @Nullable Input<Boolean> approvalRequired;
+      private final @Nullable Output<Boolean> approvalRequired;
 
-    public Input<Boolean> getApprovalRequired() {
-        return this.approvalRequired == null ? Input.empty() : this.approvalRequired;
+    public Output<Boolean> getApprovalRequired() {
+        return this.approvalRequired == null ? Output.empty() : this.approvalRequired;
     }
 
-    public ApprovalConfigArgs(@Nullable Input<Boolean> approvalRequired) {
+    public ApprovalConfigArgs(@Nullable Output<Boolean> approvalRequired) {
         this.approvalRequired = approvalRequired;
     }
 
     private ApprovalConfigArgs() {
-        this.approvalRequired = Input.empty();
+        this.approvalRequired = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> approvalRequired;
+        private @Nullable Output<Boolean> approvalRequired;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.approvalRequired = defaults.approvalRequired;
         }
 
-        public Builder approvalRequired(@Nullable Input<Boolean> approvalRequired) {
+        public Builder approvalRequired(@Nullable Output<Boolean> approvalRequired) {
             this.approvalRequired = approvalRequired;
             return this;
         }
 
         public Builder approvalRequired(@Nullable Boolean approvalRequired) {
-            this.approvalRequired = Input.ofNullable(approvalRequired);
+            this.approvalRequired = Output.ofNullable(approvalRequired);
             return this;
         }
         public ApprovalConfigArgs build() {

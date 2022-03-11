@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     public static final BackupArgs Empty = new BackupArgs();
 
     @InputImport(name="backupId", required=true)
-      private final Input<String> backupId;
+      private final Output<String> backupId;
 
-    public Input<String> getBackupId() {
+    public Output<String> getBackupId() {
         return this.backupId;
     }
 
@@ -26,24 +26,24 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<String> database;
+      private final @Nullable Output<String> database;
 
-    public Input<String> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<String> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     @InputImport(name="encryptionConfigEncryptionType", required=true)
-      private final Input<String> encryptionConfigEncryptionType;
+      private final Output<String> encryptionConfigEncryptionType;
 
-    public Input<String> getEncryptionConfigEncryptionType() {
+    public Output<String> getEncryptionConfigEncryptionType() {
         return this.encryptionConfigEncryptionType;
     }
 
     @InputImport(name="encryptionConfigKmsKeyName")
-      private final @Nullable Input<String> encryptionConfigKmsKeyName;
+      private final @Nullable Output<String> encryptionConfigKmsKeyName;
 
-    public Input<String> getEncryptionConfigKmsKeyName() {
-        return this.encryptionConfigKmsKeyName == null ? Input.empty() : this.encryptionConfigKmsKeyName;
+    public Output<String> getEncryptionConfigKmsKeyName() {
+        return this.encryptionConfigKmsKeyName == null ? Output.empty() : this.encryptionConfigKmsKeyName;
     }
 
     /**
@@ -51,16 +51,16 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-      private final @Nullable Input<String> expireTime;
+      private final @Nullable Output<String> expireTime;
 
-    public Input<String> getExpireTime() {
-        return this.expireTime == null ? Input.empty() : this.expireTime;
+    public Output<String> getExpireTime() {
+        return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -69,17 +69,17 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -87,22 +87,22 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionTime")
-      private final @Nullable Input<String> versionTime;
+      private final @Nullable Output<String> versionTime;
 
-    public Input<String> getVersionTime() {
-        return this.versionTime == null ? Input.empty() : this.versionTime;
+    public Output<String> getVersionTime() {
+        return this.versionTime == null ? Output.empty() : this.versionTime;
     }
 
     public BackupArgs(
-        Input<String> backupId,
-        @Nullable Input<String> database,
-        Input<String> encryptionConfigEncryptionType,
-        @Nullable Input<String> encryptionConfigKmsKeyName,
-        @Nullable Input<String> expireTime,
-        Input<String> instanceId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> versionTime) {
+        Output<String> backupId,
+        @Nullable Output<String> database,
+        Output<String> encryptionConfigEncryptionType,
+        @Nullable Output<String> encryptionConfigKmsKeyName,
+        @Nullable Output<String> expireTime,
+        Output<String> instanceId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> versionTime) {
         this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
         this.database = database;
         this.encryptionConfigEncryptionType = Objects.requireNonNull(encryptionConfigEncryptionType, "expected parameter 'encryptionConfigEncryptionType' to be non-null");
@@ -115,15 +115,15 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupArgs() {
-        this.backupId = Input.empty();
-        this.database = Input.empty();
-        this.encryptionConfigEncryptionType = Input.empty();
-        this.encryptionConfigKmsKeyName = Input.empty();
-        this.expireTime = Input.empty();
-        this.instanceId = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.versionTime = Input.empty();
+        this.backupId = Output.empty();
+        this.database = Output.empty();
+        this.encryptionConfigEncryptionType = Output.empty();
+        this.encryptionConfigKmsKeyName = Output.empty();
+        this.expireTime = Output.empty();
+        this.instanceId = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.versionTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,15 +135,15 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> backupId;
-        private @Nullable Input<String> database;
-        private Input<String> encryptionConfigEncryptionType;
-        private @Nullable Input<String> encryptionConfigKmsKeyName;
-        private @Nullable Input<String> expireTime;
-        private Input<String> instanceId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> versionTime;
+        private Output<String> backupId;
+        private @Nullable Output<String> database;
+        private Output<String> encryptionConfigEncryptionType;
+        private @Nullable Output<String> encryptionConfigKmsKeyName;
+        private @Nullable Output<String> expireTime;
+        private Output<String> instanceId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> versionTime;
 
         public Builder() {
     	      // Empty
@@ -162,93 +162,93 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionTime = defaults.versionTime;
         }
 
-        public Builder backupId(Input<String> backupId) {
+        public Builder backupId(Output<String> backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
         public Builder backupId(String backupId) {
-            this.backupId = Input.of(Objects.requireNonNull(backupId));
+            this.backupId = Output.of(Objects.requireNonNull(backupId));
             return this;
         }
 
-        public Builder database(@Nullable Input<String> database) {
+        public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable String database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder encryptionConfigEncryptionType(Input<String> encryptionConfigEncryptionType) {
+        public Builder encryptionConfigEncryptionType(Output<String> encryptionConfigEncryptionType) {
             this.encryptionConfigEncryptionType = Objects.requireNonNull(encryptionConfigEncryptionType);
             return this;
         }
 
         public Builder encryptionConfigEncryptionType(String encryptionConfigEncryptionType) {
-            this.encryptionConfigEncryptionType = Input.of(Objects.requireNonNull(encryptionConfigEncryptionType));
+            this.encryptionConfigEncryptionType = Output.of(Objects.requireNonNull(encryptionConfigEncryptionType));
             return this;
         }
 
-        public Builder encryptionConfigKmsKeyName(@Nullable Input<String> encryptionConfigKmsKeyName) {
+        public Builder encryptionConfigKmsKeyName(@Nullable Output<String> encryptionConfigKmsKeyName) {
             this.encryptionConfigKmsKeyName = encryptionConfigKmsKeyName;
             return this;
         }
 
         public Builder encryptionConfigKmsKeyName(@Nullable String encryptionConfigKmsKeyName) {
-            this.encryptionConfigKmsKeyName = Input.ofNullable(encryptionConfigKmsKeyName);
+            this.encryptionConfigKmsKeyName = Output.ofNullable(encryptionConfigKmsKeyName);
             return this;
         }
 
-        public Builder expireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Input.ofNullable(expireTime);
+            this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder versionTime(@Nullable Input<String> versionTime) {
+        public Builder versionTime(@Nullable Output<String> versionTime) {
             this.versionTime = versionTime;
             return this;
         }
 
         public Builder versionTime(@Nullable String versionTime) {
-            this.versionTime = Input.ofNullable(versionTime);
+            this.versionTime = Output.ofNullable(versionTime);
             return this;
         }
         public BackupArgs build() {

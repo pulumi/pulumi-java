@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-      private final Input<Integer> diskSizeGb;
+      private final Output<Integer> diskSizeGb;
 
-    public Input<Integer> getDiskSizeGb() {
+    public Output<Integer> getDiskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -33,22 +33,22 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
      * 
      */
     @InputImport(name="interface")
-      private final @Nullable Input<String> $interface;
+      private final @Nullable Output<String> $interface;
 
-    public Input<String> get$interface() {
-        return this.$interface == null ? Input.empty() : this.$interface;
+    public Output<String> get$interface() {
+        return this.$interface == null ? Output.empty() : this.$interface;
     }
 
     public ReservationSpecificReservationInstancePropertiesLocalSsdArgs(
-        Input<Integer> diskSizeGb,
-        @Nullable Input<String> $interface) {
+        Output<Integer> diskSizeGb,
+        @Nullable Output<String> $interface) {
         this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
         this.$interface = $interface;
     }
 
     private ReservationSpecificReservationInstancePropertiesLocalSsdArgs() {
-        this.diskSizeGb = Input.empty();
-        this.$interface = Input.empty();
+        this.diskSizeGb = Output.empty();
+        this.$interface = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
     }
 
     public static final class Builder {
-        private Input<Integer> diskSizeGb;
-        private @Nullable Input<String> $interface;
+        private Output<Integer> diskSizeGb;
+        private @Nullable Output<String> $interface;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
     	      this.$interface = defaults.$interface;
         }
 
-        public Builder diskSizeGb(Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(Output<Integer> diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
         public Builder diskSizeGb(Integer diskSizeGb) {
-            this.diskSizeGb = Input.of(Objects.requireNonNull(diskSizeGb));
+            this.diskSizeGb = Output.of(Objects.requireNonNull(diskSizeGb));
             return this;
         }
 
-        public Builder $interface(@Nullable Input<String> $interface) {
+        public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
 
         public Builder $interface(@Nullable String $interface) {
-            this.$interface = Input.ofNullable($interface);
+            this.$interface = Output.ofNullable($interface);
             return this;
         }
         public ReservationSpecificReservationInstancePropertiesLocalSsdArgs build() {

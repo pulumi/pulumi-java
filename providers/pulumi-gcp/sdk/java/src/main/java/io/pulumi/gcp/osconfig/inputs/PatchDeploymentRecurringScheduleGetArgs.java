@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleMonthlyGetArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleTimeOfDayGetArgs;
@@ -24,10 +24,10 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="lastExecuteTime")
-      private final @Nullable Input<String> lastExecuteTime;
+      private final @Nullable Output<String> lastExecuteTime;
 
-    public Input<String> getLastExecuteTime() {
-        return this.lastExecuteTime == null ? Input.empty() : this.lastExecuteTime;
+    public Output<String> getLastExecuteTime() {
+        return this.lastExecuteTime == null ? Output.empty() : this.lastExecuteTime;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="monthly")
-      private final @Nullable Input<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly;
+      private final @Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly;
 
-    public Input<PatchDeploymentRecurringScheduleMonthlyGetArgs> getMonthly() {
-        return this.monthly == null ? Input.empty() : this.monthly;
+    public Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> getMonthly() {
+        return this.monthly == null ? Output.empty() : this.monthly;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="nextExecuteTime")
-      private final @Nullable Input<String> nextExecuteTime;
+      private final @Nullable Output<String> nextExecuteTime;
 
-    public Input<String> getNextExecuteTime() {
-        return this.nextExecuteTime == null ? Input.empty() : this.nextExecuteTime;
+    public Output<String> getNextExecuteTime() {
+        return this.nextExecuteTime == null ? Output.empty() : this.nextExecuteTime;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -86,9 +86,9 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="timeOfDay", required=true)
-      private final Input<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay;
+      private final Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay;
 
-    public Input<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> getTimeOfDay() {
+    public Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> getTimeOfDay() {
         return this.timeOfDay;
     }
 
@@ -99,9 +99,9 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="timeZone", required=true)
-      private final Input<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone;
+      private final Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone;
 
-    public Input<PatchDeploymentRecurringScheduleTimeZoneGetArgs> getTimeZone() {
+    public Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> getTimeZone() {
         return this.timeZone;
     }
 
@@ -111,21 +111,21 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="weekly")
-      private final @Nullable Input<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly;
+      private final @Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly;
 
-    public Input<PatchDeploymentRecurringScheduleWeeklyGetArgs> getWeekly() {
-        return this.weekly == null ? Input.empty() : this.weekly;
+    public Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> getWeekly() {
+        return this.weekly == null ? Output.empty() : this.weekly;
     }
 
     public PatchDeploymentRecurringScheduleGetArgs(
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> lastExecuteTime,
-        @Nullable Input<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly,
-        @Nullable Input<String> nextExecuteTime,
-        @Nullable Input<String> startTime,
-        Input<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay,
-        Input<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone,
-        @Nullable Input<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly) {
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> lastExecuteTime,
+        @Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly,
+        @Nullable Output<String> nextExecuteTime,
+        @Nullable Output<String> startTime,
+        Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay,
+        Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone,
+        @Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly) {
         this.endTime = endTime;
         this.lastExecuteTime = lastExecuteTime;
         this.monthly = monthly;
@@ -137,14 +137,14 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
     }
 
     private PatchDeploymentRecurringScheduleGetArgs() {
-        this.endTime = Input.empty();
-        this.lastExecuteTime = Input.empty();
-        this.monthly = Input.empty();
-        this.nextExecuteTime = Input.empty();
-        this.startTime = Input.empty();
-        this.timeOfDay = Input.empty();
-        this.timeZone = Input.empty();
-        this.weekly = Input.empty();
+        this.endTime = Output.empty();
+        this.lastExecuteTime = Output.empty();
+        this.monthly = Output.empty();
+        this.nextExecuteTime = Output.empty();
+        this.startTime = Output.empty();
+        this.timeOfDay = Output.empty();
+        this.timeZone = Output.empty();
+        this.weekly = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,14 +156,14 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> lastExecuteTime;
-        private @Nullable Input<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly;
-        private @Nullable Input<String> nextExecuteTime;
-        private @Nullable Input<String> startTime;
-        private Input<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay;
-        private Input<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone;
-        private @Nullable Input<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> lastExecuteTime;
+        private @Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly;
+        private @Nullable Output<String> nextExecuteTime;
+        private @Nullable Output<String> startTime;
+        private Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay;
+        private Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone;
+        private @Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly;
 
         public Builder() {
     	      // Empty
@@ -181,83 +181,83 @@ public final class PatchDeploymentRecurringScheduleGetArgs extends io.pulumi.res
     	      this.weekly = defaults.weekly;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder lastExecuteTime(@Nullable Input<String> lastExecuteTime) {
+        public Builder lastExecuteTime(@Nullable Output<String> lastExecuteTime) {
             this.lastExecuteTime = lastExecuteTime;
             return this;
         }
 
         public Builder lastExecuteTime(@Nullable String lastExecuteTime) {
-            this.lastExecuteTime = Input.ofNullable(lastExecuteTime);
+            this.lastExecuteTime = Output.ofNullable(lastExecuteTime);
             return this;
         }
 
-        public Builder monthly(@Nullable Input<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly) {
+        public Builder monthly(@Nullable Output<PatchDeploymentRecurringScheduleMonthlyGetArgs> monthly) {
             this.monthly = monthly;
             return this;
         }
 
         public Builder monthly(@Nullable PatchDeploymentRecurringScheduleMonthlyGetArgs monthly) {
-            this.monthly = Input.ofNullable(monthly);
+            this.monthly = Output.ofNullable(monthly);
             return this;
         }
 
-        public Builder nextExecuteTime(@Nullable Input<String> nextExecuteTime) {
+        public Builder nextExecuteTime(@Nullable Output<String> nextExecuteTime) {
             this.nextExecuteTime = nextExecuteTime;
             return this;
         }
 
         public Builder nextExecuteTime(@Nullable String nextExecuteTime) {
-            this.nextExecuteTime = Input.ofNullable(nextExecuteTime);
+            this.nextExecuteTime = Output.ofNullable(nextExecuteTime);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder timeOfDay(Input<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay) {
+        public Builder timeOfDay(Output<PatchDeploymentRecurringScheduleTimeOfDayGetArgs> timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
 
         public Builder timeOfDay(PatchDeploymentRecurringScheduleTimeOfDayGetArgs timeOfDay) {
-            this.timeOfDay = Input.of(Objects.requireNonNull(timeOfDay));
+            this.timeOfDay = Output.of(Objects.requireNonNull(timeOfDay));
             return this;
         }
 
-        public Builder timeZone(Input<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone) {
+        public Builder timeZone(Output<PatchDeploymentRecurringScheduleTimeZoneGetArgs> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
         public Builder timeZone(PatchDeploymentRecurringScheduleTimeZoneGetArgs timeZone) {
-            this.timeZone = Input.of(Objects.requireNonNull(timeZone));
+            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
         }
 
-        public Builder weekly(@Nullable Input<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly) {
+        public Builder weekly(@Nullable Output<PatchDeploymentRecurringScheduleWeeklyGetArgs> weekly) {
             this.weekly = weekly;
             return this;
         }
 
         public Builder weekly(@Nullable PatchDeploymentRecurringScheduleWeeklyGetArgs weekly) {
-            this.weekly = Input.ofNullable(weekly);
+            this.weekly = Output.ofNullable(weekly);
             return this;
         }
         public PatchDeploymentRecurringScheduleGetArgs build() {

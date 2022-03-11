@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIdentityArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicyIdentity", required=true)
-      private final Input<AccessPolicyIdentityArgs> accessPolicyIdentity;
+      private final Output<AccessPolicyIdentityArgs> accessPolicyIdentity;
 
-    public Input<AccessPolicyIdentityArgs> getAccessPolicyIdentity() {
+    public Output<AccessPolicyIdentityArgs> getAccessPolicyIdentity() {
         return this.accessPolicyIdentity;
     }
 
@@ -31,9 +31,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicyPermission", required=true)
-      private final Input<String> accessPolicyPermission;
+      private final Output<String> accessPolicyPermission;
 
-    public Input<String> getAccessPolicyPermission() {
+    public Output<String> getAccessPolicyPermission() {
         return this.accessPolicyPermission;
     }
 
@@ -42,25 +42,25 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicyResource", required=true)
-      private final Input<AccessPolicyResourceArgs> accessPolicyResource;
+      private final Output<AccessPolicyResourceArgs> accessPolicyResource;
 
-    public Input<AccessPolicyResourceArgs> getAccessPolicyResource() {
+    public Output<AccessPolicyResourceArgs> getAccessPolicyResource() {
         return this.accessPolicyResource;
     }
 
     public AccessPolicyArgs(
-        Input<AccessPolicyIdentityArgs> accessPolicyIdentity,
-        Input<String> accessPolicyPermission,
-        Input<AccessPolicyResourceArgs> accessPolicyResource) {
+        Output<AccessPolicyIdentityArgs> accessPolicyIdentity,
+        Output<String> accessPolicyPermission,
+        Output<AccessPolicyResourceArgs> accessPolicyResource) {
         this.accessPolicyIdentity = Objects.requireNonNull(accessPolicyIdentity, "expected parameter 'accessPolicyIdentity' to be non-null");
         this.accessPolicyPermission = Objects.requireNonNull(accessPolicyPermission, "expected parameter 'accessPolicyPermission' to be non-null");
         this.accessPolicyResource = Objects.requireNonNull(accessPolicyResource, "expected parameter 'accessPolicyResource' to be non-null");
     }
 
     private AccessPolicyArgs() {
-        this.accessPolicyIdentity = Input.empty();
-        this.accessPolicyPermission = Input.empty();
-        this.accessPolicyResource = Input.empty();
+        this.accessPolicyIdentity = Output.empty();
+        this.accessPolicyPermission = Output.empty();
+        this.accessPolicyResource = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<AccessPolicyIdentityArgs> accessPolicyIdentity;
-        private Input<String> accessPolicyPermission;
-        private Input<AccessPolicyResourceArgs> accessPolicyResource;
+        private Output<AccessPolicyIdentityArgs> accessPolicyIdentity;
+        private Output<String> accessPolicyPermission;
+        private Output<AccessPolicyResourceArgs> accessPolicyResource;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.accessPolicyResource = defaults.accessPolicyResource;
         }
 
-        public Builder accessPolicyIdentity(Input<AccessPolicyIdentityArgs> accessPolicyIdentity) {
+        public Builder accessPolicyIdentity(Output<AccessPolicyIdentityArgs> accessPolicyIdentity) {
             this.accessPolicyIdentity = Objects.requireNonNull(accessPolicyIdentity);
             return this;
         }
 
         public Builder accessPolicyIdentity(AccessPolicyIdentityArgs accessPolicyIdentity) {
-            this.accessPolicyIdentity = Input.of(Objects.requireNonNull(accessPolicyIdentity));
+            this.accessPolicyIdentity = Output.of(Objects.requireNonNull(accessPolicyIdentity));
             return this;
         }
 
-        public Builder accessPolicyPermission(Input<String> accessPolicyPermission) {
+        public Builder accessPolicyPermission(Output<String> accessPolicyPermission) {
             this.accessPolicyPermission = Objects.requireNonNull(accessPolicyPermission);
             return this;
         }
 
         public Builder accessPolicyPermission(String accessPolicyPermission) {
-            this.accessPolicyPermission = Input.of(Objects.requireNonNull(accessPolicyPermission));
+            this.accessPolicyPermission = Output.of(Objects.requireNonNull(accessPolicyPermission));
             return this;
         }
 
-        public Builder accessPolicyResource(Input<AccessPolicyResourceArgs> accessPolicyResource) {
+        public Builder accessPolicyResource(Output<AccessPolicyResourceArgs> accessPolicyResource) {
             this.accessPolicyResource = Objects.requireNonNull(accessPolicyResource);
             return this;
         }
 
         public Builder accessPolicyResource(AccessPolicyResourceArgs accessPolicyResource) {
-            this.accessPolicyResource = Input.of(Objects.requireNonNull(accessPolicyResource));
+            this.accessPolicyResource = Output.of(Objects.requireNonNull(accessPolicyResource));
             return this;
         }
         public AccessPolicyArgs build() {

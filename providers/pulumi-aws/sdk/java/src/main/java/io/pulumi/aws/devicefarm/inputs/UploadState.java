@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.devicefarm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<String> category;
+      private final @Nullable Output<String> category;
 
-    public Input<String> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<String> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<String> metadata;
+      private final @Nullable Output<String> metadata;
 
-    public Input<String> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<String> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectArn")
-      private final @Nullable Input<String> projectArn;
+      private final @Nullable Output<String> projectArn;
 
-    public Input<String> getProjectArn() {
-        return this.projectArn == null ? Input.empty() : this.projectArn;
+    public Output<String> getProjectArn() {
+        return this.projectArn == null ? Output.empty() : this.projectArn;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -96,21 +96,21 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public UploadState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> category,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> projectArn,
-        @Nullable Input<String> type,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> category,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> projectArn,
+        @Nullable Output<String> type,
+        @Nullable Output<String> url) {
         this.arn = arn;
         this.category = category;
         this.contentType = contentType;
@@ -122,14 +122,14 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UploadState() {
-        this.arn = Input.empty();
-        this.category = Input.empty();
-        this.contentType = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.projectArn = Input.empty();
-        this.type = Input.empty();
-        this.url = Input.empty();
+        this.arn = Output.empty();
+        this.category = Output.empty();
+        this.contentType = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.projectArn = Output.empty();
+        this.type = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> category;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> projectArn;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> category;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> projectArn;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder category(@Nullable Input<String> category) {
+        public Builder category(@Nullable Output<String> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable String category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<String> metadata) {
+        public Builder metadata(@Nullable Output<String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable String metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder projectArn(@Nullable Input<String> projectArn) {
+        public Builder projectArn(@Nullable Output<String> projectArn) {
             this.projectArn = projectArn;
             return this;
         }
 
         public Builder projectArn(@Nullable String projectArn) {
-            this.projectArn = Input.ofNullable(projectArn);
+            this.projectArn = Output.ofNullable(projectArn);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public UploadState build() {

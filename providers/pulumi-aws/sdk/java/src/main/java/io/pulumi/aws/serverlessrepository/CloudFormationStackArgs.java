@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.serverlessrepository;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="applicationId", required=true)
-      private final Input<String> applicationId;
+      private final Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
+    public Output<String> getApplicationId() {
         return this.applicationId;
     }
 
@@ -32,9 +32,9 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="capabilities", required=true)
-      private final Input<List<String>> capabilities;
+      private final Output<List<String>> capabilities;
 
-    public Input<List<String>> getCapabilities() {
+    public Output<List<String>> getCapabilities() {
         return this.capabilities;
     }
 
@@ -43,10 +43,10 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="semanticVersion")
-      private final @Nullable Input<String> semanticVersion;
+      private final @Nullable Output<String> semanticVersion;
 
-    public Input<String> getSemanticVersion() {
-        return this.semanticVersion == null ? Input.empty() : this.semanticVersion;
+    public Output<String> getSemanticVersion() {
+        return this.semanticVersion == null ? Output.empty() : this.semanticVersion;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CloudFormationStackArgs(
-        Input<String> applicationId,
-        Input<List<String>> capabilities,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<String> semanticVersion,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> applicationId,
+        Output<List<String>> capabilities,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<String> semanticVersion,
+        @Nullable Output<Map<String,String>> tags) {
         this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
         this.capabilities = Objects.requireNonNull(capabilities, "expected parameter 'capabilities' to be non-null");
         this.name = name;
@@ -98,12 +98,12 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     }
 
     private CloudFormationStackArgs() {
-        this.applicationId = Input.empty();
-        this.capabilities = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.semanticVersion = Input.empty();
-        this.tags = Input.empty();
+        this.applicationId = Output.empty();
+        this.capabilities = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.semanticVersion = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> applicationId;
-        private Input<List<String>> capabilities;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<String> semanticVersion;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> applicationId;
+        private Output<List<String>> capabilities;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<String> semanticVersion;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder applicationId(Input<String> applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Input.of(Objects.requireNonNull(applicationId));
+            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder capabilities(Input<List<String>> capabilities) {
+        public Builder capabilities(Output<List<String>> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
 
         public Builder capabilities(List<String> capabilities) {
-            this.capabilities = Input.of(Objects.requireNonNull(capabilities));
+            this.capabilities = Output.of(Objects.requireNonNull(capabilities));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder semanticVersion(@Nullable Input<String> semanticVersion) {
+        public Builder semanticVersion(@Nullable Output<String> semanticVersion) {
             this.semanticVersion = semanticVersion;
             return this;
         }
 
         public Builder semanticVersion(@Nullable String semanticVersion) {
-            this.semanticVersion = Input.ofNullable(semanticVersion);
+            this.semanticVersion = Output.ofNullable(semanticVersion);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CloudFormationStackArgs build() {

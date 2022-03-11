@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class DetectorModelSetVariableArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
@@ -33,22 +33,22 @@ public final class DetectorModelSetVariableArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="variableName", required=true)
-      private final Input<String> variableName;
+      private final Output<String> variableName;
 
-    public Input<String> getVariableName() {
+    public Output<String> getVariableName() {
         return this.variableName;
     }
 
     public DetectorModelSetVariableArgs(
-        Input<String> value,
-        Input<String> variableName) {
+        Output<String> value,
+        Output<String> variableName) {
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
         this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
     }
 
     private DetectorModelSetVariableArgs() {
-        this.value = Input.empty();
-        this.variableName = Input.empty();
+        this.value = Output.empty();
+        this.variableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class DetectorModelSetVariableArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> value;
-        private Input<String> variableName;
+        private Output<String> value;
+        private Output<String> variableName;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class DetectorModelSetVariableArgs extends io.pulumi.resources.Reso
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
 
-        public Builder variableName(Input<String> variableName) {
+        public Builder variableName(Output<String> variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
 
         public Builder variableName(String variableName) {
-            this.variableName = Input.of(Objects.requireNonNull(variableName));
+            this.variableName = Output.of(Objects.requireNonNull(variableName));
             return this;
         }
         public DetectorModelSetVariableArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accessanalyzer")
-      private final @Nullable Input<String> accessanalyzer;
+      private final @Nullable Output<String> accessanalyzer;
 
-    public Input<String> getAccessanalyzer() {
-        return this.accessanalyzer == null ? Input.empty() : this.accessanalyzer;
+    public Output<String> getAccessanalyzer() {
+        return this.accessanalyzer == null ? Output.empty() : this.accessanalyzer;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="acm")
-      private final @Nullable Input<String> acm;
+      private final @Nullable Output<String> acm;
 
-    public Input<String> getAcm() {
-        return this.acm == null ? Input.empty() : this.acm;
+    public Output<String> getAcm() {
+        return this.acm == null ? Output.empty() : this.acm;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="acmpca")
-      private final @Nullable Input<String> acmpca;
+      private final @Nullable Output<String> acmpca;
 
-    public Input<String> getAcmpca() {
-        return this.acmpca == null ? Input.empty() : this.acmpca;
+    public Output<String> getAcmpca() {
+        return this.acmpca == null ? Output.empty() : this.acmpca;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="amplify")
-      private final @Nullable Input<String> amplify;
+      private final @Nullable Output<String> amplify;
 
-    public Input<String> getAmplify() {
-        return this.amplify == null ? Input.empty() : this.amplify;
+    public Output<String> getAmplify() {
+        return this.amplify == null ? Output.empty() : this.amplify;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="appconfig")
-      private final @Nullable Input<String> appconfig;
+      private final @Nullable Output<String> appconfig;
 
-    public Input<String> getAppconfig() {
-        return this.appconfig == null ? Input.empty() : this.appconfig;
+    public Output<String> getAppconfig() {
+        return this.appconfig == null ? Output.empty() : this.appconfig;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="applicationautoscaling")
-      private final @Nullable Input<String> applicationautoscaling;
+      private final @Nullable Output<String> applicationautoscaling;
 
-    public Input<String> getApplicationautoscaling() {
-        return this.applicationautoscaling == null ? Input.empty() : this.applicationautoscaling;
+    public Output<String> getApplicationautoscaling() {
+        return this.applicationautoscaling == null ? Output.empty() : this.applicationautoscaling;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="applicationinsights")
-      private final @Nullable Input<String> applicationinsights;
+      private final @Nullable Output<String> applicationinsights;
 
-    public Input<String> getApplicationinsights() {
-        return this.applicationinsights == null ? Input.empty() : this.applicationinsights;
+    public Output<String> getApplicationinsights() {
+        return this.applicationinsights == null ? Output.empty() : this.applicationinsights;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="appmesh")
-      private final @Nullable Input<String> appmesh;
+      private final @Nullable Output<String> appmesh;
 
-    public Input<String> getAppmesh() {
-        return this.appmesh == null ? Input.empty() : this.appmesh;
+    public Output<String> getAppmesh() {
+        return this.appmesh == null ? Output.empty() : this.appmesh;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="apprunner")
-      private final @Nullable Input<String> apprunner;
+      private final @Nullable Output<String> apprunner;
 
-    public Input<String> getApprunner() {
-        return this.apprunner == null ? Input.empty() : this.apprunner;
+    public Output<String> getApprunner() {
+        return this.apprunner == null ? Output.empty() : this.apprunner;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="appstream")
-      private final @Nullable Input<String> appstream;
+      private final @Nullable Output<String> appstream;
 
-    public Input<String> getAppstream() {
-        return this.appstream == null ? Input.empty() : this.appstream;
+    public Output<String> getAppstream() {
+        return this.appstream == null ? Output.empty() : this.appstream;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="appsync")
-      private final @Nullable Input<String> appsync;
+      private final @Nullable Output<String> appsync;
 
-    public Input<String> getAppsync() {
-        return this.appsync == null ? Input.empty() : this.appsync;
+    public Output<String> getAppsync() {
+        return this.appsync == null ? Output.empty() : this.appsync;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="athena")
-      private final @Nullable Input<String> athena;
+      private final @Nullable Output<String> athena;
 
-    public Input<String> getAthena() {
-        return this.athena == null ? Input.empty() : this.athena;
+    public Output<String> getAthena() {
+        return this.athena == null ? Output.empty() : this.athena;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="auditmanager")
-      private final @Nullable Input<String> auditmanager;
+      private final @Nullable Output<String> auditmanager;
 
-    public Input<String> getAuditmanager() {
-        return this.auditmanager == null ? Input.empty() : this.auditmanager;
+    public Output<String> getAuditmanager() {
+        return this.auditmanager == null ? Output.empty() : this.auditmanager;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoscaling")
-      private final @Nullable Input<String> autoscaling;
+      private final @Nullable Output<String> autoscaling;
 
-    public Input<String> getAutoscaling() {
-        return this.autoscaling == null ? Input.empty() : this.autoscaling;
+    public Output<String> getAutoscaling() {
+        return this.autoscaling == null ? Output.empty() : this.autoscaling;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="backup")
-      private final @Nullable Input<String> backup;
+      private final @Nullable Output<String> backup;
 
-    public Input<String> getBackup() {
-        return this.backup == null ? Input.empty() : this.backup;
+    public Output<String> getBackup() {
+        return this.backup == null ? Output.empty() : this.backup;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="batch")
-      private final @Nullable Input<String> batch;
+      private final @Nullable Output<String> batch;
 
-    public Input<String> getBatch() {
-        return this.batch == null ? Input.empty() : this.batch;
+    public Output<String> getBatch() {
+        return this.batch == null ? Output.empty() : this.batch;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="budgets")
-      private final @Nullable Input<String> budgets;
+      private final @Nullable Output<String> budgets;
 
-    public Input<String> getBudgets() {
-        return this.budgets == null ? Input.empty() : this.budgets;
+    public Output<String> getBudgets() {
+        return this.budgets == null ? Output.empty() : this.budgets;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="chime")
-      private final @Nullable Input<String> chime;
+      private final @Nullable Output<String> chime;
 
-    public Input<String> getChime() {
-        return this.chime == null ? Input.empty() : this.chime;
+    public Output<String> getChime() {
+        return this.chime == null ? Output.empty() : this.chime;
     }
 
     /**
@@ -221,10 +221,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloud9")
-      private final @Nullable Input<String> cloud9;
+      private final @Nullable Output<String> cloud9;
 
-    public Input<String> getCloud9() {
-        return this.cloud9 == null ? Input.empty() : this.cloud9;
+    public Output<String> getCloud9() {
+        return this.cloud9 == null ? Output.empty() : this.cloud9;
     }
 
     /**
@@ -232,10 +232,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudformation")
-      private final @Nullable Input<String> cloudformation;
+      private final @Nullable Output<String> cloudformation;
 
-    public Input<String> getCloudformation() {
-        return this.cloudformation == null ? Input.empty() : this.cloudformation;
+    public Output<String> getCloudformation() {
+        return this.cloudformation == null ? Output.empty() : this.cloudformation;
     }
 
     /**
@@ -243,10 +243,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudfront")
-      private final @Nullable Input<String> cloudfront;
+      private final @Nullable Output<String> cloudfront;
 
-    public Input<String> getCloudfront() {
-        return this.cloudfront == null ? Input.empty() : this.cloudfront;
+    public Output<String> getCloudfront() {
+        return this.cloudfront == null ? Output.empty() : this.cloudfront;
     }
 
     /**
@@ -254,10 +254,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudhsm")
-      private final @Nullable Input<String> cloudhsm;
+      private final @Nullable Output<String> cloudhsm;
 
-    public Input<String> getCloudhsm() {
-        return this.cloudhsm == null ? Input.empty() : this.cloudhsm;
+    public Output<String> getCloudhsm() {
+        return this.cloudhsm == null ? Output.empty() : this.cloudhsm;
     }
 
     /**
@@ -265,10 +265,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudsearch")
-      private final @Nullable Input<String> cloudsearch;
+      private final @Nullable Output<String> cloudsearch;
 
-    public Input<String> getCloudsearch() {
-        return this.cloudsearch == null ? Input.empty() : this.cloudsearch;
+    public Output<String> getCloudsearch() {
+        return this.cloudsearch == null ? Output.empty() : this.cloudsearch;
     }
 
     /**
@@ -276,10 +276,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudtrail")
-      private final @Nullable Input<String> cloudtrail;
+      private final @Nullable Output<String> cloudtrail;
 
-    public Input<String> getCloudtrail() {
-        return this.cloudtrail == null ? Input.empty() : this.cloudtrail;
+    public Output<String> getCloudtrail() {
+        return this.cloudtrail == null ? Output.empty() : this.cloudtrail;
     }
 
     /**
@@ -287,10 +287,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudwatch")
-      private final @Nullable Input<String> cloudwatch;
+      private final @Nullable Output<String> cloudwatch;
 
-    public Input<String> getCloudwatch() {
-        return this.cloudwatch == null ? Input.empty() : this.cloudwatch;
+    public Output<String> getCloudwatch() {
+        return this.cloudwatch == null ? Output.empty() : this.cloudwatch;
     }
 
     /**
@@ -298,10 +298,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudwatchevents")
-      private final @Nullable Input<String> cloudwatchevents;
+      private final @Nullable Output<String> cloudwatchevents;
 
-    public Input<String> getCloudwatchevents() {
-        return this.cloudwatchevents == null ? Input.empty() : this.cloudwatchevents;
+    public Output<String> getCloudwatchevents() {
+        return this.cloudwatchevents == null ? Output.empty() : this.cloudwatchevents;
     }
 
     /**
@@ -309,10 +309,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudwatchlogs")
-      private final @Nullable Input<String> cloudwatchlogs;
+      private final @Nullable Output<String> cloudwatchlogs;
 
-    public Input<String> getCloudwatchlogs() {
-        return this.cloudwatchlogs == null ? Input.empty() : this.cloudwatchlogs;
+    public Output<String> getCloudwatchlogs() {
+        return this.cloudwatchlogs == null ? Output.empty() : this.cloudwatchlogs;
     }
 
     /**
@@ -320,10 +320,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codeartifact")
-      private final @Nullable Input<String> codeartifact;
+      private final @Nullable Output<String> codeartifact;
 
-    public Input<String> getCodeartifact() {
-        return this.codeartifact == null ? Input.empty() : this.codeartifact;
+    public Output<String> getCodeartifact() {
+        return this.codeartifact == null ? Output.empty() : this.codeartifact;
     }
 
     /**
@@ -331,10 +331,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codebuild")
-      private final @Nullable Input<String> codebuild;
+      private final @Nullable Output<String> codebuild;
 
-    public Input<String> getCodebuild() {
-        return this.codebuild == null ? Input.empty() : this.codebuild;
+    public Output<String> getCodebuild() {
+        return this.codebuild == null ? Output.empty() : this.codebuild;
     }
 
     /**
@@ -342,10 +342,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codecommit")
-      private final @Nullable Input<String> codecommit;
+      private final @Nullable Output<String> codecommit;
 
-    public Input<String> getCodecommit() {
-        return this.codecommit == null ? Input.empty() : this.codecommit;
+    public Output<String> getCodecommit() {
+        return this.codecommit == null ? Output.empty() : this.codecommit;
     }
 
     /**
@@ -353,10 +353,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codedeploy")
-      private final @Nullable Input<String> codedeploy;
+      private final @Nullable Output<String> codedeploy;
 
-    public Input<String> getCodedeploy() {
-        return this.codedeploy == null ? Input.empty() : this.codedeploy;
+    public Output<String> getCodedeploy() {
+        return this.codedeploy == null ? Output.empty() : this.codedeploy;
     }
 
     /**
@@ -364,10 +364,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codepipeline")
-      private final @Nullable Input<String> codepipeline;
+      private final @Nullable Output<String> codepipeline;
 
-    public Input<String> getCodepipeline() {
-        return this.codepipeline == null ? Input.empty() : this.codepipeline;
+    public Output<String> getCodepipeline() {
+        return this.codepipeline == null ? Output.empty() : this.codepipeline;
     }
 
     /**
@@ -375,10 +375,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="codestarconnections")
-      private final @Nullable Input<String> codestarconnections;
+      private final @Nullable Output<String> codestarconnections;
 
-    public Input<String> getCodestarconnections() {
-        return this.codestarconnections == null ? Input.empty() : this.codestarconnections;
+    public Output<String> getCodestarconnections() {
+        return this.codestarconnections == null ? Output.empty() : this.codestarconnections;
     }
 
     /**
@@ -386,10 +386,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cognitoidentity")
-      private final @Nullable Input<String> cognitoidentity;
+      private final @Nullable Output<String> cognitoidentity;
 
-    public Input<String> getCognitoidentity() {
-        return this.cognitoidentity == null ? Input.empty() : this.cognitoidentity;
+    public Output<String> getCognitoidentity() {
+        return this.cognitoidentity == null ? Output.empty() : this.cognitoidentity;
     }
 
     /**
@@ -397,10 +397,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configservice")
-      private final @Nullable Input<String> configservice;
+      private final @Nullable Output<String> configservice;
 
-    public Input<String> getConfigservice() {
-        return this.configservice == null ? Input.empty() : this.configservice;
+    public Output<String> getConfigservice() {
+        return this.configservice == null ? Output.empty() : this.configservice;
     }
 
     /**
@@ -408,10 +408,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connect")
-      private final @Nullable Input<String> connect;
+      private final @Nullable Output<String> connect;
 
-    public Input<String> getConnect() {
-        return this.connect == null ? Input.empty() : this.connect;
+    public Output<String> getConnect() {
+        return this.connect == null ? Output.empty() : this.connect;
     }
 
     /**
@@ -419,10 +419,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cur")
-      private final @Nullable Input<String> cur;
+      private final @Nullable Output<String> cur;
 
-    public Input<String> getCur() {
-        return this.cur == null ? Input.empty() : this.cur;
+    public Output<String> getCur() {
+        return this.cur == null ? Output.empty() : this.cur;
     }
 
     /**
@@ -430,10 +430,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataexchange")
-      private final @Nullable Input<String> dataexchange;
+      private final @Nullable Output<String> dataexchange;
 
-    public Input<String> getDataexchange() {
-        return this.dataexchange == null ? Input.empty() : this.dataexchange;
+    public Output<String> getDataexchange() {
+        return this.dataexchange == null ? Output.empty() : this.dataexchange;
     }
 
     /**
@@ -441,10 +441,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datapipeline")
-      private final @Nullable Input<String> datapipeline;
+      private final @Nullable Output<String> datapipeline;
 
-    public Input<String> getDatapipeline() {
-        return this.datapipeline == null ? Input.empty() : this.datapipeline;
+    public Output<String> getDatapipeline() {
+        return this.datapipeline == null ? Output.empty() : this.datapipeline;
     }
 
     /**
@@ -452,10 +452,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datasync")
-      private final @Nullable Input<String> datasync;
+      private final @Nullable Output<String> datasync;
 
-    public Input<String> getDatasync() {
-        return this.datasync == null ? Input.empty() : this.datasync;
+    public Output<String> getDatasync() {
+        return this.datasync == null ? Output.empty() : this.datasync;
     }
 
     /**
@@ -463,10 +463,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dax")
-      private final @Nullable Input<String> dax;
+      private final @Nullable Output<String> dax;
 
-    public Input<String> getDax() {
-        return this.dax == null ? Input.empty() : this.dax;
+    public Output<String> getDax() {
+        return this.dax == null ? Output.empty() : this.dax;
     }
 
     /**
@@ -474,10 +474,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="detective")
-      private final @Nullable Input<String> detective;
+      private final @Nullable Output<String> detective;
 
-    public Input<String> getDetective() {
-        return this.detective == null ? Input.empty() : this.detective;
+    public Output<String> getDetective() {
+        return this.detective == null ? Output.empty() : this.detective;
     }
 
     /**
@@ -485,10 +485,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="devicefarm")
-      private final @Nullable Input<String> devicefarm;
+      private final @Nullable Output<String> devicefarm;
 
-    public Input<String> getDevicefarm() {
-        return this.devicefarm == null ? Input.empty() : this.devicefarm;
+    public Output<String> getDevicefarm() {
+        return this.devicefarm == null ? Output.empty() : this.devicefarm;
     }
 
     /**
@@ -496,10 +496,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="directconnect")
-      private final @Nullable Input<String> directconnect;
+      private final @Nullable Output<String> directconnect;
 
-    public Input<String> getDirectconnect() {
-        return this.directconnect == null ? Input.empty() : this.directconnect;
+    public Output<String> getDirectconnect() {
+        return this.directconnect == null ? Output.empty() : this.directconnect;
     }
 
     /**
@@ -507,10 +507,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dlm")
-      private final @Nullable Input<String> dlm;
+      private final @Nullable Output<String> dlm;
 
-    public Input<String> getDlm() {
-        return this.dlm == null ? Input.empty() : this.dlm;
+    public Output<String> getDlm() {
+        return this.dlm == null ? Output.empty() : this.dlm;
     }
 
     /**
@@ -518,10 +518,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dms")
-      private final @Nullable Input<String> dms;
+      private final @Nullable Output<String> dms;
 
-    public Input<String> getDms() {
-        return this.dms == null ? Input.empty() : this.dms;
+    public Output<String> getDms() {
+        return this.dms == null ? Output.empty() : this.dms;
     }
 
     /**
@@ -529,10 +529,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="docdb")
-      private final @Nullable Input<String> docdb;
+      private final @Nullable Output<String> docdb;
 
-    public Input<String> getDocdb() {
-        return this.docdb == null ? Input.empty() : this.docdb;
+    public Output<String> getDocdb() {
+        return this.docdb == null ? Output.empty() : this.docdb;
     }
 
     /**
@@ -540,10 +540,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ds")
-      private final @Nullable Input<String> ds;
+      private final @Nullable Output<String> ds;
 
-    public Input<String> getDs() {
-        return this.ds == null ? Input.empty() : this.ds;
+    public Output<String> getDs() {
+        return this.ds == null ? Output.empty() : this.ds;
     }
 
     /**
@@ -551,10 +551,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dynamodb")
-      private final @Nullable Input<String> dynamodb;
+      private final @Nullable Output<String> dynamodb;
 
-    public Input<String> getDynamodb() {
-        return this.dynamodb == null ? Input.empty() : this.dynamodb;
+    public Output<String> getDynamodb() {
+        return this.dynamodb == null ? Output.empty() : this.dynamodb;
     }
 
     /**
@@ -562,10 +562,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ec2")
-      private final @Nullable Input<String> ec2;
+      private final @Nullable Output<String> ec2;
 
-    public Input<String> getEc2() {
-        return this.ec2 == null ? Input.empty() : this.ec2;
+    public Output<String> getEc2() {
+        return this.ec2 == null ? Output.empty() : this.ec2;
     }
 
     /**
@@ -573,10 +573,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ecr")
-      private final @Nullable Input<String> ecr;
+      private final @Nullable Output<String> ecr;
 
-    public Input<String> getEcr() {
-        return this.ecr == null ? Input.empty() : this.ecr;
+    public Output<String> getEcr() {
+        return this.ecr == null ? Output.empty() : this.ecr;
     }
 
     /**
@@ -584,10 +584,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ecrpublic")
-      private final @Nullable Input<String> ecrpublic;
+      private final @Nullable Output<String> ecrpublic;
 
-    public Input<String> getEcrpublic() {
-        return this.ecrpublic == null ? Input.empty() : this.ecrpublic;
+    public Output<String> getEcrpublic() {
+        return this.ecrpublic == null ? Output.empty() : this.ecrpublic;
     }
 
     /**
@@ -595,10 +595,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ecs")
-      private final @Nullable Input<String> ecs;
+      private final @Nullable Output<String> ecs;
 
-    public Input<String> getEcs() {
-        return this.ecs == null ? Input.empty() : this.ecs;
+    public Output<String> getEcs() {
+        return this.ecs == null ? Output.empty() : this.ecs;
     }
 
     /**
@@ -606,10 +606,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="efs")
-      private final @Nullable Input<String> efs;
+      private final @Nullable Output<String> efs;
 
-    public Input<String> getEfs() {
-        return this.efs == null ? Input.empty() : this.efs;
+    public Output<String> getEfs() {
+        return this.efs == null ? Output.empty() : this.efs;
     }
 
     /**
@@ -617,10 +617,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eks")
-      private final @Nullable Input<String> eks;
+      private final @Nullable Output<String> eks;
 
-    public Input<String> getEks() {
-        return this.eks == null ? Input.empty() : this.eks;
+    public Output<String> getEks() {
+        return this.eks == null ? Output.empty() : this.eks;
     }
 
     /**
@@ -628,10 +628,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="elasticache")
-      private final @Nullable Input<String> elasticache;
+      private final @Nullable Output<String> elasticache;
 
-    public Input<String> getElasticache() {
-        return this.elasticache == null ? Input.empty() : this.elasticache;
+    public Output<String> getElasticache() {
+        return this.elasticache == null ? Output.empty() : this.elasticache;
     }
 
     /**
@@ -639,10 +639,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="elasticbeanstalk")
-      private final @Nullable Input<String> elasticbeanstalk;
+      private final @Nullable Output<String> elasticbeanstalk;
 
-    public Input<String> getElasticbeanstalk() {
-        return this.elasticbeanstalk == null ? Input.empty() : this.elasticbeanstalk;
+    public Output<String> getElasticbeanstalk() {
+        return this.elasticbeanstalk == null ? Output.empty() : this.elasticbeanstalk;
     }
 
     /**
@@ -650,10 +650,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="elastictranscoder")
-      private final @Nullable Input<String> elastictranscoder;
+      private final @Nullable Output<String> elastictranscoder;
 
-    public Input<String> getElastictranscoder() {
-        return this.elastictranscoder == null ? Input.empty() : this.elastictranscoder;
+    public Output<String> getElastictranscoder() {
+        return this.elastictranscoder == null ? Output.empty() : this.elastictranscoder;
     }
 
     /**
@@ -661,10 +661,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="elb")
-      private final @Nullable Input<String> elb;
+      private final @Nullable Output<String> elb;
 
-    public Input<String> getElb() {
-        return this.elb == null ? Input.empty() : this.elb;
+    public Output<String> getElb() {
+        return this.elb == null ? Output.empty() : this.elb;
     }
 
     /**
@@ -672,10 +672,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="elbv2")
-      private final @Nullable Input<String> elbv2;
+      private final @Nullable Output<String> elbv2;
 
-    public Input<String> getElbv2() {
-        return this.elbv2 == null ? Input.empty() : this.elbv2;
+    public Output<String> getElbv2() {
+        return this.elbv2 == null ? Output.empty() : this.elbv2;
     }
 
     /**
@@ -683,10 +683,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="emr")
-      private final @Nullable Input<String> emr;
+      private final @Nullable Output<String> emr;
 
-    public Input<String> getEmr() {
-        return this.emr == null ? Input.empty() : this.emr;
+    public Output<String> getEmr() {
+        return this.emr == null ? Output.empty() : this.emr;
     }
 
     /**
@@ -694,10 +694,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="emrcontainers")
-      private final @Nullable Input<String> emrcontainers;
+      private final @Nullable Output<String> emrcontainers;
 
-    public Input<String> getEmrcontainers() {
-        return this.emrcontainers == null ? Input.empty() : this.emrcontainers;
+    public Output<String> getEmrcontainers() {
+        return this.emrcontainers == null ? Output.empty() : this.emrcontainers;
     }
 
     /**
@@ -705,10 +705,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="es")
-      private final @Nullable Input<String> es;
+      private final @Nullable Output<String> es;
 
-    public Input<String> getEs() {
-        return this.es == null ? Input.empty() : this.es;
+    public Output<String> getEs() {
+        return this.es == null ? Output.empty() : this.es;
     }
 
     /**
@@ -716,10 +716,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="firehose")
-      private final @Nullable Input<String> firehose;
+      private final @Nullable Output<String> firehose;
 
-    public Input<String> getFirehose() {
-        return this.firehose == null ? Input.empty() : this.firehose;
+    public Output<String> getFirehose() {
+        return this.firehose == null ? Output.empty() : this.firehose;
     }
 
     /**
@@ -727,10 +727,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fms")
-      private final @Nullable Input<String> fms;
+      private final @Nullable Output<String> fms;
 
-    public Input<String> getFms() {
-        return this.fms == null ? Input.empty() : this.fms;
+    public Output<String> getFms() {
+        return this.fms == null ? Output.empty() : this.fms;
     }
 
     /**
@@ -738,10 +738,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="forecast")
-      private final @Nullable Input<String> forecast;
+      private final @Nullable Output<String> forecast;
 
-    public Input<String> getForecast() {
-        return this.forecast == null ? Input.empty() : this.forecast;
+    public Output<String> getForecast() {
+        return this.forecast == null ? Output.empty() : this.forecast;
     }
 
     /**
@@ -749,10 +749,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fsx")
-      private final @Nullable Input<String> fsx;
+      private final @Nullable Output<String> fsx;
 
-    public Input<String> getFsx() {
-        return this.fsx == null ? Input.empty() : this.fsx;
+    public Output<String> getFsx() {
+        return this.fsx == null ? Output.empty() : this.fsx;
     }
 
     /**
@@ -760,10 +760,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="gamelift")
-      private final @Nullable Input<String> gamelift;
+      private final @Nullable Output<String> gamelift;
 
-    public Input<String> getGamelift() {
-        return this.gamelift == null ? Input.empty() : this.gamelift;
+    public Output<String> getGamelift() {
+        return this.gamelift == null ? Output.empty() : this.gamelift;
     }
 
     /**
@@ -771,10 +771,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="glacier")
-      private final @Nullable Input<String> glacier;
+      private final @Nullable Output<String> glacier;
 
-    public Input<String> getGlacier() {
-        return this.glacier == null ? Input.empty() : this.glacier;
+    public Output<String> getGlacier() {
+        return this.glacier == null ? Output.empty() : this.glacier;
     }
 
     /**
@@ -782,10 +782,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="globalaccelerator")
-      private final @Nullable Input<String> globalaccelerator;
+      private final @Nullable Output<String> globalaccelerator;
 
-    public Input<String> getGlobalaccelerator() {
-        return this.globalaccelerator == null ? Input.empty() : this.globalaccelerator;
+    public Output<String> getGlobalaccelerator() {
+        return this.globalaccelerator == null ? Output.empty() : this.globalaccelerator;
     }
 
     /**
@@ -793,10 +793,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="glue")
-      private final @Nullable Input<String> glue;
+      private final @Nullable Output<String> glue;
 
-    public Input<String> getGlue() {
-        return this.glue == null ? Input.empty() : this.glue;
+    public Output<String> getGlue() {
+        return this.glue == null ? Output.empty() : this.glue;
     }
 
     /**
@@ -804,10 +804,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="greengrass")
-      private final @Nullable Input<String> greengrass;
+      private final @Nullable Output<String> greengrass;
 
-    public Input<String> getGreengrass() {
-        return this.greengrass == null ? Input.empty() : this.greengrass;
+    public Output<String> getGreengrass() {
+        return this.greengrass == null ? Output.empty() : this.greengrass;
     }
 
     /**
@@ -815,10 +815,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="guardduty")
-      private final @Nullable Input<String> guardduty;
+      private final @Nullable Output<String> guardduty;
 
-    public Input<String> getGuardduty() {
-        return this.guardduty == null ? Input.empty() : this.guardduty;
+    public Output<String> getGuardduty() {
+        return this.guardduty == null ? Output.empty() : this.guardduty;
     }
 
     /**
@@ -826,10 +826,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="iam")
-      private final @Nullable Input<String> iam;
+      private final @Nullable Output<String> iam;
 
-    public Input<String> getIam() {
-        return this.iam == null ? Input.empty() : this.iam;
+    public Output<String> getIam() {
+        return this.iam == null ? Output.empty() : this.iam;
     }
 
     /**
@@ -837,10 +837,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identitystore")
-      private final @Nullable Input<String> identitystore;
+      private final @Nullable Output<String> identitystore;
 
-    public Input<String> getIdentitystore() {
-        return this.identitystore == null ? Input.empty() : this.identitystore;
+    public Output<String> getIdentitystore() {
+        return this.identitystore == null ? Output.empty() : this.identitystore;
     }
 
     /**
@@ -848,10 +848,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="imagebuilder")
-      private final @Nullable Input<String> imagebuilder;
+      private final @Nullable Output<String> imagebuilder;
 
-    public Input<String> getImagebuilder() {
-        return this.imagebuilder == null ? Input.empty() : this.imagebuilder;
+    public Output<String> getImagebuilder() {
+        return this.imagebuilder == null ? Output.empty() : this.imagebuilder;
     }
 
     /**
@@ -859,10 +859,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="inspector")
-      private final @Nullable Input<String> inspector;
+      private final @Nullable Output<String> inspector;
 
-    public Input<String> getInspector() {
-        return this.inspector == null ? Input.empty() : this.inspector;
+    public Output<String> getInspector() {
+        return this.inspector == null ? Output.empty() : this.inspector;
     }
 
     /**
@@ -870,10 +870,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="iot")
-      private final @Nullable Input<String> iot;
+      private final @Nullable Output<String> iot;
 
-    public Input<String> getIot() {
-        return this.iot == null ? Input.empty() : this.iot;
+    public Output<String> getIot() {
+        return this.iot == null ? Output.empty() : this.iot;
     }
 
     /**
@@ -881,10 +881,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="iotanalytics")
-      private final @Nullable Input<String> iotanalytics;
+      private final @Nullable Output<String> iotanalytics;
 
-    public Input<String> getIotanalytics() {
-        return this.iotanalytics == null ? Input.empty() : this.iotanalytics;
+    public Output<String> getIotanalytics() {
+        return this.iotanalytics == null ? Output.empty() : this.iotanalytics;
     }
 
     /**
@@ -892,10 +892,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="iotevents")
-      private final @Nullable Input<String> iotevents;
+      private final @Nullable Output<String> iotevents;
 
-    public Input<String> getIotevents() {
-        return this.iotevents == null ? Input.empty() : this.iotevents;
+    public Output<String> getIotevents() {
+        return this.iotevents == null ? Output.empty() : this.iotevents;
     }
 
     /**
@@ -903,10 +903,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kafka")
-      private final @Nullable Input<String> kafka;
+      private final @Nullable Output<String> kafka;
 
-    public Input<String> getKafka() {
-        return this.kafka == null ? Input.empty() : this.kafka;
+    public Output<String> getKafka() {
+        return this.kafka == null ? Output.empty() : this.kafka;
     }
 
     /**
@@ -914,10 +914,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kinesis")
-      private final @Nullable Input<String> kinesis;
+      private final @Nullable Output<String> kinesis;
 
-    public Input<String> getKinesis() {
-        return this.kinesis == null ? Input.empty() : this.kinesis;
+    public Output<String> getKinesis() {
+        return this.kinesis == null ? Output.empty() : this.kinesis;
     }
 
     /**
@@ -925,10 +925,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kinesisanalytics")
-      private final @Nullable Input<String> kinesisanalytics;
+      private final @Nullable Output<String> kinesisanalytics;
 
-    public Input<String> getKinesisanalytics() {
-        return this.kinesisanalytics == null ? Input.empty() : this.kinesisanalytics;
+    public Output<String> getKinesisanalytics() {
+        return this.kinesisanalytics == null ? Output.empty() : this.kinesisanalytics;
     }
 
     /**
@@ -936,10 +936,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kinesisanalyticsv2")
-      private final @Nullable Input<String> kinesisanalyticsv2;
+      private final @Nullable Output<String> kinesisanalyticsv2;
 
-    public Input<String> getKinesisanalyticsv2() {
-        return this.kinesisanalyticsv2 == null ? Input.empty() : this.kinesisanalyticsv2;
+    public Output<String> getKinesisanalyticsv2() {
+        return this.kinesisanalyticsv2 == null ? Output.empty() : this.kinesisanalyticsv2;
     }
 
     /**
@@ -947,10 +947,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kinesisvideo")
-      private final @Nullable Input<String> kinesisvideo;
+      private final @Nullable Output<String> kinesisvideo;
 
-    public Input<String> getKinesisvideo() {
-        return this.kinesisvideo == null ? Input.empty() : this.kinesisvideo;
+    public Output<String> getKinesisvideo() {
+        return this.kinesisvideo == null ? Output.empty() : this.kinesisvideo;
     }
 
     /**
@@ -958,10 +958,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kms")
-      private final @Nullable Input<String> kms;
+      private final @Nullable Output<String> kms;
 
-    public Input<String> getKms() {
-        return this.kms == null ? Input.empty() : this.kms;
+    public Output<String> getKms() {
+        return this.kms == null ? Output.empty() : this.kms;
     }
 
     /**
@@ -969,10 +969,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lakeformation")
-      private final @Nullable Input<String> lakeformation;
+      private final @Nullable Output<String> lakeformation;
 
-    public Input<String> getLakeformation() {
-        return this.lakeformation == null ? Input.empty() : this.lakeformation;
+    public Output<String> getLakeformation() {
+        return this.lakeformation == null ? Output.empty() : this.lakeformation;
     }
 
     /**
@@ -980,10 +980,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lambda")
-      private final @Nullable Input<String> lambda;
+      private final @Nullable Output<String> lambda;
 
-    public Input<String> getLambda() {
-        return this.lambda == null ? Input.empty() : this.lambda;
+    public Output<String> getLambda() {
+        return this.lambda == null ? Output.empty() : this.lambda;
     }
 
     /**
@@ -991,10 +991,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lexmodels")
-      private final @Nullable Input<String> lexmodels;
+      private final @Nullable Output<String> lexmodels;
 
-    public Input<String> getLexmodels() {
-        return this.lexmodels == null ? Input.empty() : this.lexmodels;
+    public Output<String> getLexmodels() {
+        return this.lexmodels == null ? Output.empty() : this.lexmodels;
     }
 
     /**
@@ -1002,10 +1002,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="licensemanager")
-      private final @Nullable Input<String> licensemanager;
+      private final @Nullable Output<String> licensemanager;
 
-    public Input<String> getLicensemanager() {
-        return this.licensemanager == null ? Input.empty() : this.licensemanager;
+    public Output<String> getLicensemanager() {
+        return this.licensemanager == null ? Output.empty() : this.licensemanager;
     }
 
     /**
@@ -1013,10 +1013,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lightsail")
-      private final @Nullable Input<String> lightsail;
+      private final @Nullable Output<String> lightsail;
 
-    public Input<String> getLightsail() {
-        return this.lightsail == null ? Input.empty() : this.lightsail;
+    public Output<String> getLightsail() {
+        return this.lightsail == null ? Output.empty() : this.lightsail;
     }
 
     /**
@@ -1024,10 +1024,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -1035,10 +1035,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="macie")
-      private final @Nullable Input<String> macie;
+      private final @Nullable Output<String> macie;
 
-    public Input<String> getMacie() {
-        return this.macie == null ? Input.empty() : this.macie;
+    public Output<String> getMacie() {
+        return this.macie == null ? Output.empty() : this.macie;
     }
 
     /**
@@ -1046,10 +1046,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="macie2")
-      private final @Nullable Input<String> macie2;
+      private final @Nullable Output<String> macie2;
 
-    public Input<String> getMacie2() {
-        return this.macie2 == null ? Input.empty() : this.macie2;
+    public Output<String> getMacie2() {
+        return this.macie2 == null ? Output.empty() : this.macie2;
     }
 
     /**
@@ -1057,10 +1057,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="managedblockchain")
-      private final @Nullable Input<String> managedblockchain;
+      private final @Nullable Output<String> managedblockchain;
 
-    public Input<String> getManagedblockchain() {
-        return this.managedblockchain == null ? Input.empty() : this.managedblockchain;
+    public Output<String> getManagedblockchain() {
+        return this.managedblockchain == null ? Output.empty() : this.managedblockchain;
     }
 
     /**
@@ -1068,10 +1068,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="marketplacecatalog")
-      private final @Nullable Input<String> marketplacecatalog;
+      private final @Nullable Output<String> marketplacecatalog;
 
-    public Input<String> getMarketplacecatalog() {
-        return this.marketplacecatalog == null ? Input.empty() : this.marketplacecatalog;
+    public Output<String> getMarketplacecatalog() {
+        return this.marketplacecatalog == null ? Output.empty() : this.marketplacecatalog;
     }
 
     /**
@@ -1079,10 +1079,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mediaconnect")
-      private final @Nullable Input<String> mediaconnect;
+      private final @Nullable Output<String> mediaconnect;
 
-    public Input<String> getMediaconnect() {
-        return this.mediaconnect == null ? Input.empty() : this.mediaconnect;
+    public Output<String> getMediaconnect() {
+        return this.mediaconnect == null ? Output.empty() : this.mediaconnect;
     }
 
     /**
@@ -1090,10 +1090,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mediaconvert")
-      private final @Nullable Input<String> mediaconvert;
+      private final @Nullable Output<String> mediaconvert;
 
-    public Input<String> getMediaconvert() {
-        return this.mediaconvert == null ? Input.empty() : this.mediaconvert;
+    public Output<String> getMediaconvert() {
+        return this.mediaconvert == null ? Output.empty() : this.mediaconvert;
     }
 
     /**
@@ -1101,10 +1101,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="medialive")
-      private final @Nullable Input<String> medialive;
+      private final @Nullable Output<String> medialive;
 
-    public Input<String> getMedialive() {
-        return this.medialive == null ? Input.empty() : this.medialive;
+    public Output<String> getMedialive() {
+        return this.medialive == null ? Output.empty() : this.medialive;
     }
 
     /**
@@ -1112,10 +1112,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mediapackage")
-      private final @Nullable Input<String> mediapackage;
+      private final @Nullable Output<String> mediapackage;
 
-    public Input<String> getMediapackage() {
-        return this.mediapackage == null ? Input.empty() : this.mediapackage;
+    public Output<String> getMediapackage() {
+        return this.mediapackage == null ? Output.empty() : this.mediapackage;
     }
 
     /**
@@ -1123,10 +1123,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mediastore")
-      private final @Nullable Input<String> mediastore;
+      private final @Nullable Output<String> mediastore;
 
-    public Input<String> getMediastore() {
-        return this.mediastore == null ? Input.empty() : this.mediastore;
+    public Output<String> getMediastore() {
+        return this.mediastore == null ? Output.empty() : this.mediastore;
     }
 
     /**
@@ -1134,10 +1134,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mediastoredata")
-      private final @Nullable Input<String> mediastoredata;
+      private final @Nullable Output<String> mediastoredata;
 
-    public Input<String> getMediastoredata() {
-        return this.mediastoredata == null ? Input.empty() : this.mediastoredata;
+    public Output<String> getMediastoredata() {
+        return this.mediastoredata == null ? Output.empty() : this.mediastoredata;
     }
 
     /**
@@ -1145,10 +1145,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memorydb")
-      private final @Nullable Input<String> memorydb;
+      private final @Nullable Output<String> memorydb;
 
-    public Input<String> getMemorydb() {
-        return this.memorydb == null ? Input.empty() : this.memorydb;
+    public Output<String> getMemorydb() {
+        return this.memorydb == null ? Output.empty() : this.memorydb;
     }
 
     /**
@@ -1156,10 +1156,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mq")
-      private final @Nullable Input<String> mq;
+      private final @Nullable Output<String> mq;
 
-    public Input<String> getMq() {
-        return this.mq == null ? Input.empty() : this.mq;
+    public Output<String> getMq() {
+        return this.mq == null ? Output.empty() : this.mq;
     }
 
     /**
@@ -1167,10 +1167,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mwaa")
-      private final @Nullable Input<String> mwaa;
+      private final @Nullable Output<String> mwaa;
 
-    public Input<String> getMwaa() {
-        return this.mwaa == null ? Input.empty() : this.mwaa;
+    public Output<String> getMwaa() {
+        return this.mwaa == null ? Output.empty() : this.mwaa;
     }
 
     /**
@@ -1178,10 +1178,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="neptune")
-      private final @Nullable Input<String> neptune;
+      private final @Nullable Output<String> neptune;
 
-    public Input<String> getNeptune() {
-        return this.neptune == null ? Input.empty() : this.neptune;
+    public Output<String> getNeptune() {
+        return this.neptune == null ? Output.empty() : this.neptune;
     }
 
     /**
@@ -1189,10 +1189,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkfirewall")
-      private final @Nullable Input<String> networkfirewall;
+      private final @Nullable Output<String> networkfirewall;
 
-    public Input<String> getNetworkfirewall() {
-        return this.networkfirewall == null ? Input.empty() : this.networkfirewall;
+    public Output<String> getNetworkfirewall() {
+        return this.networkfirewall == null ? Output.empty() : this.networkfirewall;
     }
 
     /**
@@ -1200,10 +1200,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkmanager")
-      private final @Nullable Input<String> networkmanager;
+      private final @Nullable Output<String> networkmanager;
 
-    public Input<String> getNetworkmanager() {
-        return this.networkmanager == null ? Input.empty() : this.networkmanager;
+    public Output<String> getNetworkmanager() {
+        return this.networkmanager == null ? Output.empty() : this.networkmanager;
     }
 
     /**
@@ -1211,10 +1211,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="opsworks")
-      private final @Nullable Input<String> opsworks;
+      private final @Nullable Output<String> opsworks;
 
-    public Input<String> getOpsworks() {
-        return this.opsworks == null ? Input.empty() : this.opsworks;
+    public Output<String> getOpsworks() {
+        return this.opsworks == null ? Output.empty() : this.opsworks;
     }
 
     /**
@@ -1222,10 +1222,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="organizations")
-      private final @Nullable Input<String> organizations;
+      private final @Nullable Output<String> organizations;
 
-    public Input<String> getOrganizations() {
-        return this.organizations == null ? Input.empty() : this.organizations;
+    public Output<String> getOrganizations() {
+        return this.organizations == null ? Output.empty() : this.organizations;
     }
 
     /**
@@ -1233,10 +1233,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="outposts")
-      private final @Nullable Input<String> outposts;
+      private final @Nullable Output<String> outposts;
 
-    public Input<String> getOutposts() {
-        return this.outposts == null ? Input.empty() : this.outposts;
+    public Output<String> getOutposts() {
+        return this.outposts == null ? Output.empty() : this.outposts;
     }
 
     /**
@@ -1244,10 +1244,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="personalize")
-      private final @Nullable Input<String> personalize;
+      private final @Nullable Output<String> personalize;
 
-    public Input<String> getPersonalize() {
-        return this.personalize == null ? Input.empty() : this.personalize;
+    public Output<String> getPersonalize() {
+        return this.personalize == null ? Output.empty() : this.personalize;
     }
 
     /**
@@ -1255,10 +1255,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pinpoint")
-      private final @Nullable Input<String> pinpoint;
+      private final @Nullable Output<String> pinpoint;
 
-    public Input<String> getPinpoint() {
-        return this.pinpoint == null ? Input.empty() : this.pinpoint;
+    public Output<String> getPinpoint() {
+        return this.pinpoint == null ? Output.empty() : this.pinpoint;
     }
 
     /**
@@ -1266,10 +1266,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pricing")
-      private final @Nullable Input<String> pricing;
+      private final @Nullable Output<String> pricing;
 
-    public Input<String> getPricing() {
-        return this.pricing == null ? Input.empty() : this.pricing;
+    public Output<String> getPricing() {
+        return this.pricing == null ? Output.empty() : this.pricing;
     }
 
     /**
@@ -1277,10 +1277,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="qldb")
-      private final @Nullable Input<String> qldb;
+      private final @Nullable Output<String> qldb;
 
-    public Input<String> getQldb() {
-        return this.qldb == null ? Input.empty() : this.qldb;
+    public Output<String> getQldb() {
+        return this.qldb == null ? Output.empty() : this.qldb;
     }
 
     /**
@@ -1288,10 +1288,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="quicksight")
-      private final @Nullable Input<String> quicksight;
+      private final @Nullable Output<String> quicksight;
 
-    public Input<String> getQuicksight() {
-        return this.quicksight == null ? Input.empty() : this.quicksight;
+    public Output<String> getQuicksight() {
+        return this.quicksight == null ? Output.empty() : this.quicksight;
     }
 
     /**
@@ -1299,10 +1299,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ram")
-      private final @Nullable Input<String> ram;
+      private final @Nullable Output<String> ram;
 
-    public Input<String> getRam() {
-        return this.ram == null ? Input.empty() : this.ram;
+    public Output<String> getRam() {
+        return this.ram == null ? Output.empty() : this.ram;
     }
 
     /**
@@ -1310,10 +1310,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rds")
-      private final @Nullable Input<String> rds;
+      private final @Nullable Output<String> rds;
 
-    public Input<String> getRds() {
-        return this.rds == null ? Input.empty() : this.rds;
+    public Output<String> getRds() {
+        return this.rds == null ? Output.empty() : this.rds;
     }
 
     /**
@@ -1321,10 +1321,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="redshift")
-      private final @Nullable Input<String> redshift;
+      private final @Nullable Output<String> redshift;
 
-    public Input<String> getRedshift() {
-        return this.redshift == null ? Input.empty() : this.redshift;
+    public Output<String> getRedshift() {
+        return this.redshift == null ? Output.empty() : this.redshift;
     }
 
     /**
@@ -1332,10 +1332,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourcegroups")
-      private final @Nullable Input<String> resourcegroups;
+      private final @Nullable Output<String> resourcegroups;
 
-    public Input<String> getResourcegroups() {
-        return this.resourcegroups == null ? Input.empty() : this.resourcegroups;
+    public Output<String> getResourcegroups() {
+        return this.resourcegroups == null ? Output.empty() : this.resourcegroups;
     }
 
     /**
@@ -1343,10 +1343,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourcegroupstaggingapi")
-      private final @Nullable Input<String> resourcegroupstaggingapi;
+      private final @Nullable Output<String> resourcegroupstaggingapi;
 
-    public Input<String> getResourcegroupstaggingapi() {
-        return this.resourcegroupstaggingapi == null ? Input.empty() : this.resourcegroupstaggingapi;
+    public Output<String> getResourcegroupstaggingapi() {
+        return this.resourcegroupstaggingapi == null ? Output.empty() : this.resourcegroupstaggingapi;
     }
 
     /**
@@ -1354,10 +1354,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="route53")
-      private final @Nullable Input<String> route53;
+      private final @Nullable Output<String> route53;
 
-    public Input<String> getRoute53() {
-        return this.route53 == null ? Input.empty() : this.route53;
+    public Output<String> getRoute53() {
+        return this.route53 == null ? Output.empty() : this.route53;
     }
 
     /**
@@ -1365,10 +1365,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="route53domains")
-      private final @Nullable Input<String> route53domains;
+      private final @Nullable Output<String> route53domains;
 
-    public Input<String> getRoute53domains() {
-        return this.route53domains == null ? Input.empty() : this.route53domains;
+    public Output<String> getRoute53domains() {
+        return this.route53domains == null ? Output.empty() : this.route53domains;
     }
 
     /**
@@ -1376,10 +1376,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="route53recoverycontrolconfig")
-      private final @Nullable Input<String> route53recoverycontrolconfig;
+      private final @Nullable Output<String> route53recoverycontrolconfig;
 
-    public Input<String> getRoute53recoverycontrolconfig() {
-        return this.route53recoverycontrolconfig == null ? Input.empty() : this.route53recoverycontrolconfig;
+    public Output<String> getRoute53recoverycontrolconfig() {
+        return this.route53recoverycontrolconfig == null ? Output.empty() : this.route53recoverycontrolconfig;
     }
 
     /**
@@ -1387,10 +1387,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="route53recoveryreadiness")
-      private final @Nullable Input<String> route53recoveryreadiness;
+      private final @Nullable Output<String> route53recoveryreadiness;
 
-    public Input<String> getRoute53recoveryreadiness() {
-        return this.route53recoveryreadiness == null ? Input.empty() : this.route53recoveryreadiness;
+    public Output<String> getRoute53recoveryreadiness() {
+        return this.route53recoveryreadiness == null ? Output.empty() : this.route53recoveryreadiness;
     }
 
     /**
@@ -1398,10 +1398,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="route53resolver")
-      private final @Nullable Input<String> route53resolver;
+      private final @Nullable Output<String> route53resolver;
 
-    public Input<String> getRoute53resolver() {
-        return this.route53resolver == null ? Input.empty() : this.route53resolver;
+    public Output<String> getRoute53resolver() {
+        return this.route53resolver == null ? Output.empty() : this.route53resolver;
     }
 
     /**
@@ -1409,10 +1409,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3")
-      private final @Nullable Input<String> s3;
+      private final @Nullable Output<String> s3;
 
-    public Input<String> getS3() {
-        return this.s3 == null ? Input.empty() : this.s3;
+    public Output<String> getS3() {
+        return this.s3 == null ? Output.empty() : this.s3;
     }
 
     /**
@@ -1420,10 +1420,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3control")
-      private final @Nullable Input<String> s3control;
+      private final @Nullable Output<String> s3control;
 
-    public Input<String> getS3control() {
-        return this.s3control == null ? Input.empty() : this.s3control;
+    public Output<String> getS3control() {
+        return this.s3control == null ? Output.empty() : this.s3control;
     }
 
     /**
@@ -1431,10 +1431,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3outposts")
-      private final @Nullable Input<String> s3outposts;
+      private final @Nullable Output<String> s3outposts;
 
-    public Input<String> getS3outposts() {
-        return this.s3outposts == null ? Input.empty() : this.s3outposts;
+    public Output<String> getS3outposts() {
+        return this.s3outposts == null ? Output.empty() : this.s3outposts;
     }
 
     /**
@@ -1442,10 +1442,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sagemaker")
-      private final @Nullable Input<String> sagemaker;
+      private final @Nullable Output<String> sagemaker;
 
-    public Input<String> getSagemaker() {
-        return this.sagemaker == null ? Input.empty() : this.sagemaker;
+    public Output<String> getSagemaker() {
+        return this.sagemaker == null ? Output.empty() : this.sagemaker;
     }
 
     /**
@@ -1453,10 +1453,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="schemas")
-      private final @Nullable Input<String> schemas;
+      private final @Nullable Output<String> schemas;
 
-    public Input<String> getSchemas() {
-        return this.schemas == null ? Input.empty() : this.schemas;
+    public Output<String> getSchemas() {
+        return this.schemas == null ? Output.empty() : this.schemas;
     }
 
     /**
@@ -1464,10 +1464,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sdb")
-      private final @Nullable Input<String> sdb;
+      private final @Nullable Output<String> sdb;
 
-    public Input<String> getSdb() {
-        return this.sdb == null ? Input.empty() : this.sdb;
+    public Output<String> getSdb() {
+        return this.sdb == null ? Output.empty() : this.sdb;
     }
 
     /**
@@ -1475,10 +1475,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="secretsmanager")
-      private final @Nullable Input<String> secretsmanager;
+      private final @Nullable Output<String> secretsmanager;
 
-    public Input<String> getSecretsmanager() {
-        return this.secretsmanager == null ? Input.empty() : this.secretsmanager;
+    public Output<String> getSecretsmanager() {
+        return this.secretsmanager == null ? Output.empty() : this.secretsmanager;
     }
 
     /**
@@ -1486,10 +1486,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="securityhub")
-      private final @Nullable Input<String> securityhub;
+      private final @Nullable Output<String> securityhub;
 
-    public Input<String> getSecurityhub() {
-        return this.securityhub == null ? Input.empty() : this.securityhub;
+    public Output<String> getSecurityhub() {
+        return this.securityhub == null ? Output.empty() : this.securityhub;
     }
 
     /**
@@ -1497,10 +1497,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverlessrepo")
-      private final @Nullable Input<String> serverlessrepo;
+      private final @Nullable Output<String> serverlessrepo;
 
-    public Input<String> getServerlessrepo() {
-        return this.serverlessrepo == null ? Input.empty() : this.serverlessrepo;
+    public Output<String> getServerlessrepo() {
+        return this.serverlessrepo == null ? Output.empty() : this.serverlessrepo;
     }
 
     /**
@@ -1508,10 +1508,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="servicecatalog")
-      private final @Nullable Input<String> servicecatalog;
+      private final @Nullable Output<String> servicecatalog;
 
-    public Input<String> getServicecatalog() {
-        return this.servicecatalog == null ? Input.empty() : this.servicecatalog;
+    public Output<String> getServicecatalog() {
+        return this.servicecatalog == null ? Output.empty() : this.servicecatalog;
     }
 
     /**
@@ -1519,10 +1519,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="servicediscovery")
-      private final @Nullable Input<String> servicediscovery;
+      private final @Nullable Output<String> servicediscovery;
 
-    public Input<String> getServicediscovery() {
-        return this.servicediscovery == null ? Input.empty() : this.servicediscovery;
+    public Output<String> getServicediscovery() {
+        return this.servicediscovery == null ? Output.empty() : this.servicediscovery;
     }
 
     /**
@@ -1530,10 +1530,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="servicequotas")
-      private final @Nullable Input<String> servicequotas;
+      private final @Nullable Output<String> servicequotas;
 
-    public Input<String> getServicequotas() {
-        return this.servicequotas == null ? Input.empty() : this.servicequotas;
+    public Output<String> getServicequotas() {
+        return this.servicequotas == null ? Output.empty() : this.servicequotas;
     }
 
     /**
@@ -1541,10 +1541,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ses")
-      private final @Nullable Input<String> ses;
+      private final @Nullable Output<String> ses;
 
-    public Input<String> getSes() {
-        return this.ses == null ? Input.empty() : this.ses;
+    public Output<String> getSes() {
+        return this.ses == null ? Output.empty() : this.ses;
     }
 
     /**
@@ -1552,10 +1552,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="shield")
-      private final @Nullable Input<String> shield;
+      private final @Nullable Output<String> shield;
 
-    public Input<String> getShield() {
-        return this.shield == null ? Input.empty() : this.shield;
+    public Output<String> getShield() {
+        return this.shield == null ? Output.empty() : this.shield;
     }
 
     /**
@@ -1563,10 +1563,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="signer")
-      private final @Nullable Input<String> signer;
+      private final @Nullable Output<String> signer;
 
-    public Input<String> getSigner() {
-        return this.signer == null ? Input.empty() : this.signer;
+    public Output<String> getSigner() {
+        return this.signer == null ? Output.empty() : this.signer;
     }
 
     /**
@@ -1574,10 +1574,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sns")
-      private final @Nullable Input<String> sns;
+      private final @Nullable Output<String> sns;
 
-    public Input<String> getSns() {
-        return this.sns == null ? Input.empty() : this.sns;
+    public Output<String> getSns() {
+        return this.sns == null ? Output.empty() : this.sns;
     }
 
     /**
@@ -1585,10 +1585,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sqs")
-      private final @Nullable Input<String> sqs;
+      private final @Nullable Output<String> sqs;
 
-    public Input<String> getSqs() {
-        return this.sqs == null ? Input.empty() : this.sqs;
+    public Output<String> getSqs() {
+        return this.sqs == null ? Output.empty() : this.sqs;
     }
 
     /**
@@ -1596,10 +1596,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ssm")
-      private final @Nullable Input<String> ssm;
+      private final @Nullable Output<String> ssm;
 
-    public Input<String> getSsm() {
-        return this.ssm == null ? Input.empty() : this.ssm;
+    public Output<String> getSsm() {
+        return this.ssm == null ? Output.empty() : this.ssm;
     }
 
     /**
@@ -1607,10 +1607,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ssoadmin")
-      private final @Nullable Input<String> ssoadmin;
+      private final @Nullable Output<String> ssoadmin;
 
-    public Input<String> getSsoadmin() {
-        return this.ssoadmin == null ? Input.empty() : this.ssoadmin;
+    public Output<String> getSsoadmin() {
+        return this.ssoadmin == null ? Output.empty() : this.ssoadmin;
     }
 
     /**
@@ -1618,10 +1618,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="stepfunctions")
-      private final @Nullable Input<String> stepfunctions;
+      private final @Nullable Output<String> stepfunctions;
 
-    public Input<String> getStepfunctions() {
-        return this.stepfunctions == null ? Input.empty() : this.stepfunctions;
+    public Output<String> getStepfunctions() {
+        return this.stepfunctions == null ? Output.empty() : this.stepfunctions;
     }
 
     /**
@@ -1629,10 +1629,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storagegateway")
-      private final @Nullable Input<String> storagegateway;
+      private final @Nullable Output<String> storagegateway;
 
-    public Input<String> getStoragegateway() {
-        return this.storagegateway == null ? Input.empty() : this.storagegateway;
+    public Output<String> getStoragegateway() {
+        return this.storagegateway == null ? Output.empty() : this.storagegateway;
     }
 
     /**
@@ -1640,10 +1640,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sts")
-      private final @Nullable Input<String> sts;
+      private final @Nullable Output<String> sts;
 
-    public Input<String> getSts() {
-        return this.sts == null ? Input.empty() : this.sts;
+    public Output<String> getSts() {
+        return this.sts == null ? Output.empty() : this.sts;
     }
 
     /**
@@ -1651,10 +1651,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="swf")
-      private final @Nullable Input<String> swf;
+      private final @Nullable Output<String> swf;
 
-    public Input<String> getSwf() {
-        return this.swf == null ? Input.empty() : this.swf;
+    public Output<String> getSwf() {
+        return this.swf == null ? Output.empty() : this.swf;
     }
 
     /**
@@ -1662,10 +1662,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="synthetics")
-      private final @Nullable Input<String> synthetics;
+      private final @Nullable Output<String> synthetics;
 
-    public Input<String> getSynthetics() {
-        return this.synthetics == null ? Input.empty() : this.synthetics;
+    public Output<String> getSynthetics() {
+        return this.synthetics == null ? Output.empty() : this.synthetics;
     }
 
     /**
@@ -1673,10 +1673,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timestreamwrite")
-      private final @Nullable Input<String> timestreamwrite;
+      private final @Nullable Output<String> timestreamwrite;
 
-    public Input<String> getTimestreamwrite() {
-        return this.timestreamwrite == null ? Input.empty() : this.timestreamwrite;
+    public Output<String> getTimestreamwrite() {
+        return this.timestreamwrite == null ? Output.empty() : this.timestreamwrite;
     }
 
     /**
@@ -1684,10 +1684,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="transfer")
-      private final @Nullable Input<String> transfer;
+      private final @Nullable Output<String> transfer;
 
-    public Input<String> getTransfer() {
-        return this.transfer == null ? Input.empty() : this.transfer;
+    public Output<String> getTransfer() {
+        return this.transfer == null ? Output.empty() : this.transfer;
     }
 
     /**
@@ -1695,10 +1695,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="waf")
-      private final @Nullable Input<String> waf;
+      private final @Nullable Output<String> waf;
 
-    public Input<String> getWaf() {
-        return this.waf == null ? Input.empty() : this.waf;
+    public Output<String> getWaf() {
+        return this.waf == null ? Output.empty() : this.waf;
     }
 
     /**
@@ -1706,10 +1706,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="wafregional")
-      private final @Nullable Input<String> wafregional;
+      private final @Nullable Output<String> wafregional;
 
-    public Input<String> getWafregional() {
-        return this.wafregional == null ? Input.empty() : this.wafregional;
+    public Output<String> getWafregional() {
+        return this.wafregional == null ? Output.empty() : this.wafregional;
     }
 
     /**
@@ -1717,10 +1717,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="wafv2")
-      private final @Nullable Input<String> wafv2;
+      private final @Nullable Output<String> wafv2;
 
-    public Input<String> getWafv2() {
-        return this.wafv2 == null ? Input.empty() : this.wafv2;
+    public Output<String> getWafv2() {
+        return this.wafv2 == null ? Output.empty() : this.wafv2;
     }
 
     /**
@@ -1728,10 +1728,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="worklink")
-      private final @Nullable Input<String> worklink;
+      private final @Nullable Output<String> worklink;
 
-    public Input<String> getWorklink() {
-        return this.worklink == null ? Input.empty() : this.worklink;
+    public Output<String> getWorklink() {
+        return this.worklink == null ? Output.empty() : this.worklink;
     }
 
     /**
@@ -1739,10 +1739,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workmail")
-      private final @Nullable Input<String> workmail;
+      private final @Nullable Output<String> workmail;
 
-    public Input<String> getWorkmail() {
-        return this.workmail == null ? Input.empty() : this.workmail;
+    public Output<String> getWorkmail() {
+        return this.workmail == null ? Output.empty() : this.workmail;
     }
 
     /**
@@ -1750,10 +1750,10 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workspaces")
-      private final @Nullable Input<String> workspaces;
+      private final @Nullable Output<String> workspaces;
 
-    public Input<String> getWorkspaces() {
-        return this.workspaces == null ? Input.empty() : this.workspaces;
+    public Output<String> getWorkspaces() {
+        return this.workspaces == null ? Output.empty() : this.workspaces;
     }
 
     /**
@@ -1761,172 +1761,172 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="xray")
-      private final @Nullable Input<String> xray;
+      private final @Nullable Output<String> xray;
 
-    public Input<String> getXray() {
-        return this.xray == null ? Input.empty() : this.xray;
+    public Output<String> getXray() {
+        return this.xray == null ? Output.empty() : this.xray;
     }
 
     public ProviderEndpointArgs(
-        @Nullable Input<String> accessanalyzer,
-        @Nullable Input<String> acm,
-        @Nullable Input<String> acmpca,
-        @Nullable Input<String> amplify,
-        @Nullable Input<String> appconfig,
-        @Nullable Input<String> applicationautoscaling,
-        @Nullable Input<String> applicationinsights,
-        @Nullable Input<String> appmesh,
-        @Nullable Input<String> apprunner,
-        @Nullable Input<String> appstream,
-        @Nullable Input<String> appsync,
-        @Nullable Input<String> athena,
-        @Nullable Input<String> auditmanager,
-        @Nullable Input<String> autoscaling,
-        @Nullable Input<String> backup,
-        @Nullable Input<String> batch,
-        @Nullable Input<String> budgets,
-        @Nullable Input<String> chime,
-        @Nullable Input<String> cloud9,
-        @Nullable Input<String> cloudformation,
-        @Nullable Input<String> cloudfront,
-        @Nullable Input<String> cloudhsm,
-        @Nullable Input<String> cloudsearch,
-        @Nullable Input<String> cloudtrail,
-        @Nullable Input<String> cloudwatch,
-        @Nullable Input<String> cloudwatchevents,
-        @Nullable Input<String> cloudwatchlogs,
-        @Nullable Input<String> codeartifact,
-        @Nullable Input<String> codebuild,
-        @Nullable Input<String> codecommit,
-        @Nullable Input<String> codedeploy,
-        @Nullable Input<String> codepipeline,
-        @Nullable Input<String> codestarconnections,
-        @Nullable Input<String> cognitoidentity,
-        @Nullable Input<String> configservice,
-        @Nullable Input<String> connect,
-        @Nullable Input<String> cur,
-        @Nullable Input<String> dataexchange,
-        @Nullable Input<String> datapipeline,
-        @Nullable Input<String> datasync,
-        @Nullable Input<String> dax,
-        @Nullable Input<String> detective,
-        @Nullable Input<String> devicefarm,
-        @Nullable Input<String> directconnect,
-        @Nullable Input<String> dlm,
-        @Nullable Input<String> dms,
-        @Nullable Input<String> docdb,
-        @Nullable Input<String> ds,
-        @Nullable Input<String> dynamodb,
-        @Nullable Input<String> ec2,
-        @Nullable Input<String> ecr,
-        @Nullable Input<String> ecrpublic,
-        @Nullable Input<String> ecs,
-        @Nullable Input<String> efs,
-        @Nullable Input<String> eks,
-        @Nullable Input<String> elasticache,
-        @Nullable Input<String> elasticbeanstalk,
-        @Nullable Input<String> elastictranscoder,
-        @Nullable Input<String> elb,
-        @Nullable Input<String> elbv2,
-        @Nullable Input<String> emr,
-        @Nullable Input<String> emrcontainers,
-        @Nullable Input<String> es,
-        @Nullable Input<String> firehose,
-        @Nullable Input<String> fms,
-        @Nullable Input<String> forecast,
-        @Nullable Input<String> fsx,
-        @Nullable Input<String> gamelift,
-        @Nullable Input<String> glacier,
-        @Nullable Input<String> globalaccelerator,
-        @Nullable Input<String> glue,
-        @Nullable Input<String> greengrass,
-        @Nullable Input<String> guardduty,
-        @Nullable Input<String> iam,
-        @Nullable Input<String> identitystore,
-        @Nullable Input<String> imagebuilder,
-        @Nullable Input<String> inspector,
-        @Nullable Input<String> iot,
-        @Nullable Input<String> iotanalytics,
-        @Nullable Input<String> iotevents,
-        @Nullable Input<String> kafka,
-        @Nullable Input<String> kinesis,
-        @Nullable Input<String> kinesisanalytics,
-        @Nullable Input<String> kinesisanalyticsv2,
-        @Nullable Input<String> kinesisvideo,
-        @Nullable Input<String> kms,
-        @Nullable Input<String> lakeformation,
-        @Nullable Input<String> lambda,
-        @Nullable Input<String> lexmodels,
-        @Nullable Input<String> licensemanager,
-        @Nullable Input<String> lightsail,
-        @Nullable Input<String> location,
-        @Nullable Input<String> macie,
-        @Nullable Input<String> macie2,
-        @Nullable Input<String> managedblockchain,
-        @Nullable Input<String> marketplacecatalog,
-        @Nullable Input<String> mediaconnect,
-        @Nullable Input<String> mediaconvert,
-        @Nullable Input<String> medialive,
-        @Nullable Input<String> mediapackage,
-        @Nullable Input<String> mediastore,
-        @Nullable Input<String> mediastoredata,
-        @Nullable Input<String> memorydb,
-        @Nullable Input<String> mq,
-        @Nullable Input<String> mwaa,
-        @Nullable Input<String> neptune,
-        @Nullable Input<String> networkfirewall,
-        @Nullable Input<String> networkmanager,
-        @Nullable Input<String> opsworks,
-        @Nullable Input<String> organizations,
-        @Nullable Input<String> outposts,
-        @Nullable Input<String> personalize,
-        @Nullable Input<String> pinpoint,
-        @Nullable Input<String> pricing,
-        @Nullable Input<String> qldb,
-        @Nullable Input<String> quicksight,
-        @Nullable Input<String> ram,
-        @Nullable Input<String> rds,
-        @Nullable Input<String> redshift,
-        @Nullable Input<String> resourcegroups,
-        @Nullable Input<String> resourcegroupstaggingapi,
-        @Nullable Input<String> route53,
-        @Nullable Input<String> route53domains,
-        @Nullable Input<String> route53recoverycontrolconfig,
-        @Nullable Input<String> route53recoveryreadiness,
-        @Nullable Input<String> route53resolver,
-        @Nullable Input<String> s3,
-        @Nullable Input<String> s3control,
-        @Nullable Input<String> s3outposts,
-        @Nullable Input<String> sagemaker,
-        @Nullable Input<String> schemas,
-        @Nullable Input<String> sdb,
-        @Nullable Input<String> secretsmanager,
-        @Nullable Input<String> securityhub,
-        @Nullable Input<String> serverlessrepo,
-        @Nullable Input<String> servicecatalog,
-        @Nullable Input<String> servicediscovery,
-        @Nullable Input<String> servicequotas,
-        @Nullable Input<String> ses,
-        @Nullable Input<String> shield,
-        @Nullable Input<String> signer,
-        @Nullable Input<String> sns,
-        @Nullable Input<String> sqs,
-        @Nullable Input<String> ssm,
-        @Nullable Input<String> ssoadmin,
-        @Nullable Input<String> stepfunctions,
-        @Nullable Input<String> storagegateway,
-        @Nullable Input<String> sts,
-        @Nullable Input<String> swf,
-        @Nullable Input<String> synthetics,
-        @Nullable Input<String> timestreamwrite,
-        @Nullable Input<String> transfer,
-        @Nullable Input<String> waf,
-        @Nullable Input<String> wafregional,
-        @Nullable Input<String> wafv2,
-        @Nullable Input<String> worklink,
-        @Nullable Input<String> workmail,
-        @Nullable Input<String> workspaces,
-        @Nullable Input<String> xray) {
+        @Nullable Output<String> accessanalyzer,
+        @Nullable Output<String> acm,
+        @Nullable Output<String> acmpca,
+        @Nullable Output<String> amplify,
+        @Nullable Output<String> appconfig,
+        @Nullable Output<String> applicationautoscaling,
+        @Nullable Output<String> applicationinsights,
+        @Nullable Output<String> appmesh,
+        @Nullable Output<String> apprunner,
+        @Nullable Output<String> appstream,
+        @Nullable Output<String> appsync,
+        @Nullable Output<String> athena,
+        @Nullable Output<String> auditmanager,
+        @Nullable Output<String> autoscaling,
+        @Nullable Output<String> backup,
+        @Nullable Output<String> batch,
+        @Nullable Output<String> budgets,
+        @Nullable Output<String> chime,
+        @Nullable Output<String> cloud9,
+        @Nullable Output<String> cloudformation,
+        @Nullable Output<String> cloudfront,
+        @Nullable Output<String> cloudhsm,
+        @Nullable Output<String> cloudsearch,
+        @Nullable Output<String> cloudtrail,
+        @Nullable Output<String> cloudwatch,
+        @Nullable Output<String> cloudwatchevents,
+        @Nullable Output<String> cloudwatchlogs,
+        @Nullable Output<String> codeartifact,
+        @Nullable Output<String> codebuild,
+        @Nullable Output<String> codecommit,
+        @Nullable Output<String> codedeploy,
+        @Nullable Output<String> codepipeline,
+        @Nullable Output<String> codestarconnections,
+        @Nullable Output<String> cognitoidentity,
+        @Nullable Output<String> configservice,
+        @Nullable Output<String> connect,
+        @Nullable Output<String> cur,
+        @Nullable Output<String> dataexchange,
+        @Nullable Output<String> datapipeline,
+        @Nullable Output<String> datasync,
+        @Nullable Output<String> dax,
+        @Nullable Output<String> detective,
+        @Nullable Output<String> devicefarm,
+        @Nullable Output<String> directconnect,
+        @Nullable Output<String> dlm,
+        @Nullable Output<String> dms,
+        @Nullable Output<String> docdb,
+        @Nullable Output<String> ds,
+        @Nullable Output<String> dynamodb,
+        @Nullable Output<String> ec2,
+        @Nullable Output<String> ecr,
+        @Nullable Output<String> ecrpublic,
+        @Nullable Output<String> ecs,
+        @Nullable Output<String> efs,
+        @Nullable Output<String> eks,
+        @Nullable Output<String> elasticache,
+        @Nullable Output<String> elasticbeanstalk,
+        @Nullable Output<String> elastictranscoder,
+        @Nullable Output<String> elb,
+        @Nullable Output<String> elbv2,
+        @Nullable Output<String> emr,
+        @Nullable Output<String> emrcontainers,
+        @Nullable Output<String> es,
+        @Nullable Output<String> firehose,
+        @Nullable Output<String> fms,
+        @Nullable Output<String> forecast,
+        @Nullable Output<String> fsx,
+        @Nullable Output<String> gamelift,
+        @Nullable Output<String> glacier,
+        @Nullable Output<String> globalaccelerator,
+        @Nullable Output<String> glue,
+        @Nullable Output<String> greengrass,
+        @Nullable Output<String> guardduty,
+        @Nullable Output<String> iam,
+        @Nullable Output<String> identitystore,
+        @Nullable Output<String> imagebuilder,
+        @Nullable Output<String> inspector,
+        @Nullable Output<String> iot,
+        @Nullable Output<String> iotanalytics,
+        @Nullable Output<String> iotevents,
+        @Nullable Output<String> kafka,
+        @Nullable Output<String> kinesis,
+        @Nullable Output<String> kinesisanalytics,
+        @Nullable Output<String> kinesisanalyticsv2,
+        @Nullable Output<String> kinesisvideo,
+        @Nullable Output<String> kms,
+        @Nullable Output<String> lakeformation,
+        @Nullable Output<String> lambda,
+        @Nullable Output<String> lexmodels,
+        @Nullable Output<String> licensemanager,
+        @Nullable Output<String> lightsail,
+        @Nullable Output<String> location,
+        @Nullable Output<String> macie,
+        @Nullable Output<String> macie2,
+        @Nullable Output<String> managedblockchain,
+        @Nullable Output<String> marketplacecatalog,
+        @Nullable Output<String> mediaconnect,
+        @Nullable Output<String> mediaconvert,
+        @Nullable Output<String> medialive,
+        @Nullable Output<String> mediapackage,
+        @Nullable Output<String> mediastore,
+        @Nullable Output<String> mediastoredata,
+        @Nullable Output<String> memorydb,
+        @Nullable Output<String> mq,
+        @Nullable Output<String> mwaa,
+        @Nullable Output<String> neptune,
+        @Nullable Output<String> networkfirewall,
+        @Nullable Output<String> networkmanager,
+        @Nullable Output<String> opsworks,
+        @Nullable Output<String> organizations,
+        @Nullable Output<String> outposts,
+        @Nullable Output<String> personalize,
+        @Nullable Output<String> pinpoint,
+        @Nullable Output<String> pricing,
+        @Nullable Output<String> qldb,
+        @Nullable Output<String> quicksight,
+        @Nullable Output<String> ram,
+        @Nullable Output<String> rds,
+        @Nullable Output<String> redshift,
+        @Nullable Output<String> resourcegroups,
+        @Nullable Output<String> resourcegroupstaggingapi,
+        @Nullable Output<String> route53,
+        @Nullable Output<String> route53domains,
+        @Nullable Output<String> route53recoverycontrolconfig,
+        @Nullable Output<String> route53recoveryreadiness,
+        @Nullable Output<String> route53resolver,
+        @Nullable Output<String> s3,
+        @Nullable Output<String> s3control,
+        @Nullable Output<String> s3outposts,
+        @Nullable Output<String> sagemaker,
+        @Nullable Output<String> schemas,
+        @Nullable Output<String> sdb,
+        @Nullable Output<String> secretsmanager,
+        @Nullable Output<String> securityhub,
+        @Nullable Output<String> serverlessrepo,
+        @Nullable Output<String> servicecatalog,
+        @Nullable Output<String> servicediscovery,
+        @Nullable Output<String> servicequotas,
+        @Nullable Output<String> ses,
+        @Nullable Output<String> shield,
+        @Nullable Output<String> signer,
+        @Nullable Output<String> sns,
+        @Nullable Output<String> sqs,
+        @Nullable Output<String> ssm,
+        @Nullable Output<String> ssoadmin,
+        @Nullable Output<String> stepfunctions,
+        @Nullable Output<String> storagegateway,
+        @Nullable Output<String> sts,
+        @Nullable Output<String> swf,
+        @Nullable Output<String> synthetics,
+        @Nullable Output<String> timestreamwrite,
+        @Nullable Output<String> transfer,
+        @Nullable Output<String> waf,
+        @Nullable Output<String> wafregional,
+        @Nullable Output<String> wafv2,
+        @Nullable Output<String> worklink,
+        @Nullable Output<String> workmail,
+        @Nullable Output<String> workspaces,
+        @Nullable Output<String> xray) {
         this.accessanalyzer = accessanalyzer;
         this.acm = acm;
         this.acmpca = acmpca;
@@ -2089,165 +2089,165 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ProviderEndpointArgs() {
-        this.accessanalyzer = Input.empty();
-        this.acm = Input.empty();
-        this.acmpca = Input.empty();
-        this.amplify = Input.empty();
-        this.appconfig = Input.empty();
-        this.applicationautoscaling = Input.empty();
-        this.applicationinsights = Input.empty();
-        this.appmesh = Input.empty();
-        this.apprunner = Input.empty();
-        this.appstream = Input.empty();
-        this.appsync = Input.empty();
-        this.athena = Input.empty();
-        this.auditmanager = Input.empty();
-        this.autoscaling = Input.empty();
-        this.backup = Input.empty();
-        this.batch = Input.empty();
-        this.budgets = Input.empty();
-        this.chime = Input.empty();
-        this.cloud9 = Input.empty();
-        this.cloudformation = Input.empty();
-        this.cloudfront = Input.empty();
-        this.cloudhsm = Input.empty();
-        this.cloudsearch = Input.empty();
-        this.cloudtrail = Input.empty();
-        this.cloudwatch = Input.empty();
-        this.cloudwatchevents = Input.empty();
-        this.cloudwatchlogs = Input.empty();
-        this.codeartifact = Input.empty();
-        this.codebuild = Input.empty();
-        this.codecommit = Input.empty();
-        this.codedeploy = Input.empty();
-        this.codepipeline = Input.empty();
-        this.codestarconnections = Input.empty();
-        this.cognitoidentity = Input.empty();
-        this.configservice = Input.empty();
-        this.connect = Input.empty();
-        this.cur = Input.empty();
-        this.dataexchange = Input.empty();
-        this.datapipeline = Input.empty();
-        this.datasync = Input.empty();
-        this.dax = Input.empty();
-        this.detective = Input.empty();
-        this.devicefarm = Input.empty();
-        this.directconnect = Input.empty();
-        this.dlm = Input.empty();
-        this.dms = Input.empty();
-        this.docdb = Input.empty();
-        this.ds = Input.empty();
-        this.dynamodb = Input.empty();
-        this.ec2 = Input.empty();
-        this.ecr = Input.empty();
-        this.ecrpublic = Input.empty();
-        this.ecs = Input.empty();
-        this.efs = Input.empty();
-        this.eks = Input.empty();
-        this.elasticache = Input.empty();
-        this.elasticbeanstalk = Input.empty();
-        this.elastictranscoder = Input.empty();
-        this.elb = Input.empty();
-        this.elbv2 = Input.empty();
-        this.emr = Input.empty();
-        this.emrcontainers = Input.empty();
-        this.es = Input.empty();
-        this.firehose = Input.empty();
-        this.fms = Input.empty();
-        this.forecast = Input.empty();
-        this.fsx = Input.empty();
-        this.gamelift = Input.empty();
-        this.glacier = Input.empty();
-        this.globalaccelerator = Input.empty();
-        this.glue = Input.empty();
-        this.greengrass = Input.empty();
-        this.guardduty = Input.empty();
-        this.iam = Input.empty();
-        this.identitystore = Input.empty();
-        this.imagebuilder = Input.empty();
-        this.inspector = Input.empty();
-        this.iot = Input.empty();
-        this.iotanalytics = Input.empty();
-        this.iotevents = Input.empty();
-        this.kafka = Input.empty();
-        this.kinesis = Input.empty();
-        this.kinesisanalytics = Input.empty();
-        this.kinesisanalyticsv2 = Input.empty();
-        this.kinesisvideo = Input.empty();
-        this.kms = Input.empty();
-        this.lakeformation = Input.empty();
-        this.lambda = Input.empty();
-        this.lexmodels = Input.empty();
-        this.licensemanager = Input.empty();
-        this.lightsail = Input.empty();
-        this.location = Input.empty();
-        this.macie = Input.empty();
-        this.macie2 = Input.empty();
-        this.managedblockchain = Input.empty();
-        this.marketplacecatalog = Input.empty();
-        this.mediaconnect = Input.empty();
-        this.mediaconvert = Input.empty();
-        this.medialive = Input.empty();
-        this.mediapackage = Input.empty();
-        this.mediastore = Input.empty();
-        this.mediastoredata = Input.empty();
-        this.memorydb = Input.empty();
-        this.mq = Input.empty();
-        this.mwaa = Input.empty();
-        this.neptune = Input.empty();
-        this.networkfirewall = Input.empty();
-        this.networkmanager = Input.empty();
-        this.opsworks = Input.empty();
-        this.organizations = Input.empty();
-        this.outposts = Input.empty();
-        this.personalize = Input.empty();
-        this.pinpoint = Input.empty();
-        this.pricing = Input.empty();
-        this.qldb = Input.empty();
-        this.quicksight = Input.empty();
-        this.ram = Input.empty();
-        this.rds = Input.empty();
-        this.redshift = Input.empty();
-        this.resourcegroups = Input.empty();
-        this.resourcegroupstaggingapi = Input.empty();
-        this.route53 = Input.empty();
-        this.route53domains = Input.empty();
-        this.route53recoverycontrolconfig = Input.empty();
-        this.route53recoveryreadiness = Input.empty();
-        this.route53resolver = Input.empty();
-        this.s3 = Input.empty();
-        this.s3control = Input.empty();
-        this.s3outposts = Input.empty();
-        this.sagemaker = Input.empty();
-        this.schemas = Input.empty();
-        this.sdb = Input.empty();
-        this.secretsmanager = Input.empty();
-        this.securityhub = Input.empty();
-        this.serverlessrepo = Input.empty();
-        this.servicecatalog = Input.empty();
-        this.servicediscovery = Input.empty();
-        this.servicequotas = Input.empty();
-        this.ses = Input.empty();
-        this.shield = Input.empty();
-        this.signer = Input.empty();
-        this.sns = Input.empty();
-        this.sqs = Input.empty();
-        this.ssm = Input.empty();
-        this.ssoadmin = Input.empty();
-        this.stepfunctions = Input.empty();
-        this.storagegateway = Input.empty();
-        this.sts = Input.empty();
-        this.swf = Input.empty();
-        this.synthetics = Input.empty();
-        this.timestreamwrite = Input.empty();
-        this.transfer = Input.empty();
-        this.waf = Input.empty();
-        this.wafregional = Input.empty();
-        this.wafv2 = Input.empty();
-        this.worklink = Input.empty();
-        this.workmail = Input.empty();
-        this.workspaces = Input.empty();
-        this.xray = Input.empty();
+        this.accessanalyzer = Output.empty();
+        this.acm = Output.empty();
+        this.acmpca = Output.empty();
+        this.amplify = Output.empty();
+        this.appconfig = Output.empty();
+        this.applicationautoscaling = Output.empty();
+        this.applicationinsights = Output.empty();
+        this.appmesh = Output.empty();
+        this.apprunner = Output.empty();
+        this.appstream = Output.empty();
+        this.appsync = Output.empty();
+        this.athena = Output.empty();
+        this.auditmanager = Output.empty();
+        this.autoscaling = Output.empty();
+        this.backup = Output.empty();
+        this.batch = Output.empty();
+        this.budgets = Output.empty();
+        this.chime = Output.empty();
+        this.cloud9 = Output.empty();
+        this.cloudformation = Output.empty();
+        this.cloudfront = Output.empty();
+        this.cloudhsm = Output.empty();
+        this.cloudsearch = Output.empty();
+        this.cloudtrail = Output.empty();
+        this.cloudwatch = Output.empty();
+        this.cloudwatchevents = Output.empty();
+        this.cloudwatchlogs = Output.empty();
+        this.codeartifact = Output.empty();
+        this.codebuild = Output.empty();
+        this.codecommit = Output.empty();
+        this.codedeploy = Output.empty();
+        this.codepipeline = Output.empty();
+        this.codestarconnections = Output.empty();
+        this.cognitoidentity = Output.empty();
+        this.configservice = Output.empty();
+        this.connect = Output.empty();
+        this.cur = Output.empty();
+        this.dataexchange = Output.empty();
+        this.datapipeline = Output.empty();
+        this.datasync = Output.empty();
+        this.dax = Output.empty();
+        this.detective = Output.empty();
+        this.devicefarm = Output.empty();
+        this.directconnect = Output.empty();
+        this.dlm = Output.empty();
+        this.dms = Output.empty();
+        this.docdb = Output.empty();
+        this.ds = Output.empty();
+        this.dynamodb = Output.empty();
+        this.ec2 = Output.empty();
+        this.ecr = Output.empty();
+        this.ecrpublic = Output.empty();
+        this.ecs = Output.empty();
+        this.efs = Output.empty();
+        this.eks = Output.empty();
+        this.elasticache = Output.empty();
+        this.elasticbeanstalk = Output.empty();
+        this.elastictranscoder = Output.empty();
+        this.elb = Output.empty();
+        this.elbv2 = Output.empty();
+        this.emr = Output.empty();
+        this.emrcontainers = Output.empty();
+        this.es = Output.empty();
+        this.firehose = Output.empty();
+        this.fms = Output.empty();
+        this.forecast = Output.empty();
+        this.fsx = Output.empty();
+        this.gamelift = Output.empty();
+        this.glacier = Output.empty();
+        this.globalaccelerator = Output.empty();
+        this.glue = Output.empty();
+        this.greengrass = Output.empty();
+        this.guardduty = Output.empty();
+        this.iam = Output.empty();
+        this.identitystore = Output.empty();
+        this.imagebuilder = Output.empty();
+        this.inspector = Output.empty();
+        this.iot = Output.empty();
+        this.iotanalytics = Output.empty();
+        this.iotevents = Output.empty();
+        this.kafka = Output.empty();
+        this.kinesis = Output.empty();
+        this.kinesisanalytics = Output.empty();
+        this.kinesisanalyticsv2 = Output.empty();
+        this.kinesisvideo = Output.empty();
+        this.kms = Output.empty();
+        this.lakeformation = Output.empty();
+        this.lambda = Output.empty();
+        this.lexmodels = Output.empty();
+        this.licensemanager = Output.empty();
+        this.lightsail = Output.empty();
+        this.location = Output.empty();
+        this.macie = Output.empty();
+        this.macie2 = Output.empty();
+        this.managedblockchain = Output.empty();
+        this.marketplacecatalog = Output.empty();
+        this.mediaconnect = Output.empty();
+        this.mediaconvert = Output.empty();
+        this.medialive = Output.empty();
+        this.mediapackage = Output.empty();
+        this.mediastore = Output.empty();
+        this.mediastoredata = Output.empty();
+        this.memorydb = Output.empty();
+        this.mq = Output.empty();
+        this.mwaa = Output.empty();
+        this.neptune = Output.empty();
+        this.networkfirewall = Output.empty();
+        this.networkmanager = Output.empty();
+        this.opsworks = Output.empty();
+        this.organizations = Output.empty();
+        this.outposts = Output.empty();
+        this.personalize = Output.empty();
+        this.pinpoint = Output.empty();
+        this.pricing = Output.empty();
+        this.qldb = Output.empty();
+        this.quicksight = Output.empty();
+        this.ram = Output.empty();
+        this.rds = Output.empty();
+        this.redshift = Output.empty();
+        this.resourcegroups = Output.empty();
+        this.resourcegroupstaggingapi = Output.empty();
+        this.route53 = Output.empty();
+        this.route53domains = Output.empty();
+        this.route53recoverycontrolconfig = Output.empty();
+        this.route53recoveryreadiness = Output.empty();
+        this.route53resolver = Output.empty();
+        this.s3 = Output.empty();
+        this.s3control = Output.empty();
+        this.s3outposts = Output.empty();
+        this.sagemaker = Output.empty();
+        this.schemas = Output.empty();
+        this.sdb = Output.empty();
+        this.secretsmanager = Output.empty();
+        this.securityhub = Output.empty();
+        this.serverlessrepo = Output.empty();
+        this.servicecatalog = Output.empty();
+        this.servicediscovery = Output.empty();
+        this.servicequotas = Output.empty();
+        this.ses = Output.empty();
+        this.shield = Output.empty();
+        this.signer = Output.empty();
+        this.sns = Output.empty();
+        this.sqs = Output.empty();
+        this.ssm = Output.empty();
+        this.ssoadmin = Output.empty();
+        this.stepfunctions = Output.empty();
+        this.storagegateway = Output.empty();
+        this.sts = Output.empty();
+        this.swf = Output.empty();
+        this.synthetics = Output.empty();
+        this.timestreamwrite = Output.empty();
+        this.transfer = Output.empty();
+        this.waf = Output.empty();
+        this.wafregional = Output.empty();
+        this.wafv2 = Output.empty();
+        this.worklink = Output.empty();
+        this.workmail = Output.empty();
+        this.workspaces = Output.empty();
+        this.xray = Output.empty();
     }
 
     public static Builder builder() {
@@ -2259,165 +2259,165 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessanalyzer;
-        private @Nullable Input<String> acm;
-        private @Nullable Input<String> acmpca;
-        private @Nullable Input<String> amplify;
-        private @Nullable Input<String> appconfig;
-        private @Nullable Input<String> applicationautoscaling;
-        private @Nullable Input<String> applicationinsights;
-        private @Nullable Input<String> appmesh;
-        private @Nullable Input<String> apprunner;
-        private @Nullable Input<String> appstream;
-        private @Nullable Input<String> appsync;
-        private @Nullable Input<String> athena;
-        private @Nullable Input<String> auditmanager;
-        private @Nullable Input<String> autoscaling;
-        private @Nullable Input<String> backup;
-        private @Nullable Input<String> batch;
-        private @Nullable Input<String> budgets;
-        private @Nullable Input<String> chime;
-        private @Nullable Input<String> cloud9;
-        private @Nullable Input<String> cloudformation;
-        private @Nullable Input<String> cloudfront;
-        private @Nullable Input<String> cloudhsm;
-        private @Nullable Input<String> cloudsearch;
-        private @Nullable Input<String> cloudtrail;
-        private @Nullable Input<String> cloudwatch;
-        private @Nullable Input<String> cloudwatchevents;
-        private @Nullable Input<String> cloudwatchlogs;
-        private @Nullable Input<String> codeartifact;
-        private @Nullable Input<String> codebuild;
-        private @Nullable Input<String> codecommit;
-        private @Nullable Input<String> codedeploy;
-        private @Nullable Input<String> codepipeline;
-        private @Nullable Input<String> codestarconnections;
-        private @Nullable Input<String> cognitoidentity;
-        private @Nullable Input<String> configservice;
-        private @Nullable Input<String> connect;
-        private @Nullable Input<String> cur;
-        private @Nullable Input<String> dataexchange;
-        private @Nullable Input<String> datapipeline;
-        private @Nullable Input<String> datasync;
-        private @Nullable Input<String> dax;
-        private @Nullable Input<String> detective;
-        private @Nullable Input<String> devicefarm;
-        private @Nullable Input<String> directconnect;
-        private @Nullable Input<String> dlm;
-        private @Nullable Input<String> dms;
-        private @Nullable Input<String> docdb;
-        private @Nullable Input<String> ds;
-        private @Nullable Input<String> dynamodb;
-        private @Nullable Input<String> ec2;
-        private @Nullable Input<String> ecr;
-        private @Nullable Input<String> ecrpublic;
-        private @Nullable Input<String> ecs;
-        private @Nullable Input<String> efs;
-        private @Nullable Input<String> eks;
-        private @Nullable Input<String> elasticache;
-        private @Nullable Input<String> elasticbeanstalk;
-        private @Nullable Input<String> elastictranscoder;
-        private @Nullable Input<String> elb;
-        private @Nullable Input<String> elbv2;
-        private @Nullable Input<String> emr;
-        private @Nullable Input<String> emrcontainers;
-        private @Nullable Input<String> es;
-        private @Nullable Input<String> firehose;
-        private @Nullable Input<String> fms;
-        private @Nullable Input<String> forecast;
-        private @Nullable Input<String> fsx;
-        private @Nullable Input<String> gamelift;
-        private @Nullable Input<String> glacier;
-        private @Nullable Input<String> globalaccelerator;
-        private @Nullable Input<String> glue;
-        private @Nullable Input<String> greengrass;
-        private @Nullable Input<String> guardduty;
-        private @Nullable Input<String> iam;
-        private @Nullable Input<String> identitystore;
-        private @Nullable Input<String> imagebuilder;
-        private @Nullable Input<String> inspector;
-        private @Nullable Input<String> iot;
-        private @Nullable Input<String> iotanalytics;
-        private @Nullable Input<String> iotevents;
-        private @Nullable Input<String> kafka;
-        private @Nullable Input<String> kinesis;
-        private @Nullable Input<String> kinesisanalytics;
-        private @Nullable Input<String> kinesisanalyticsv2;
-        private @Nullable Input<String> kinesisvideo;
-        private @Nullable Input<String> kms;
-        private @Nullable Input<String> lakeformation;
-        private @Nullable Input<String> lambda;
-        private @Nullable Input<String> lexmodels;
-        private @Nullable Input<String> licensemanager;
-        private @Nullable Input<String> lightsail;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> macie;
-        private @Nullable Input<String> macie2;
-        private @Nullable Input<String> managedblockchain;
-        private @Nullable Input<String> marketplacecatalog;
-        private @Nullable Input<String> mediaconnect;
-        private @Nullable Input<String> mediaconvert;
-        private @Nullable Input<String> medialive;
-        private @Nullable Input<String> mediapackage;
-        private @Nullable Input<String> mediastore;
-        private @Nullable Input<String> mediastoredata;
-        private @Nullable Input<String> memorydb;
-        private @Nullable Input<String> mq;
-        private @Nullable Input<String> mwaa;
-        private @Nullable Input<String> neptune;
-        private @Nullable Input<String> networkfirewall;
-        private @Nullable Input<String> networkmanager;
-        private @Nullable Input<String> opsworks;
-        private @Nullable Input<String> organizations;
-        private @Nullable Input<String> outposts;
-        private @Nullable Input<String> personalize;
-        private @Nullable Input<String> pinpoint;
-        private @Nullable Input<String> pricing;
-        private @Nullable Input<String> qldb;
-        private @Nullable Input<String> quicksight;
-        private @Nullable Input<String> ram;
-        private @Nullable Input<String> rds;
-        private @Nullable Input<String> redshift;
-        private @Nullable Input<String> resourcegroups;
-        private @Nullable Input<String> resourcegroupstaggingapi;
-        private @Nullable Input<String> route53;
-        private @Nullable Input<String> route53domains;
-        private @Nullable Input<String> route53recoverycontrolconfig;
-        private @Nullable Input<String> route53recoveryreadiness;
-        private @Nullable Input<String> route53resolver;
-        private @Nullable Input<String> s3;
-        private @Nullable Input<String> s3control;
-        private @Nullable Input<String> s3outposts;
-        private @Nullable Input<String> sagemaker;
-        private @Nullable Input<String> schemas;
-        private @Nullable Input<String> sdb;
-        private @Nullable Input<String> secretsmanager;
-        private @Nullable Input<String> securityhub;
-        private @Nullable Input<String> serverlessrepo;
-        private @Nullable Input<String> servicecatalog;
-        private @Nullable Input<String> servicediscovery;
-        private @Nullable Input<String> servicequotas;
-        private @Nullable Input<String> ses;
-        private @Nullable Input<String> shield;
-        private @Nullable Input<String> signer;
-        private @Nullable Input<String> sns;
-        private @Nullable Input<String> sqs;
-        private @Nullable Input<String> ssm;
-        private @Nullable Input<String> ssoadmin;
-        private @Nullable Input<String> stepfunctions;
-        private @Nullable Input<String> storagegateway;
-        private @Nullable Input<String> sts;
-        private @Nullable Input<String> swf;
-        private @Nullable Input<String> synthetics;
-        private @Nullable Input<String> timestreamwrite;
-        private @Nullable Input<String> transfer;
-        private @Nullable Input<String> waf;
-        private @Nullable Input<String> wafregional;
-        private @Nullable Input<String> wafv2;
-        private @Nullable Input<String> worklink;
-        private @Nullable Input<String> workmail;
-        private @Nullable Input<String> workspaces;
-        private @Nullable Input<String> xray;
+        private @Nullable Output<String> accessanalyzer;
+        private @Nullable Output<String> acm;
+        private @Nullable Output<String> acmpca;
+        private @Nullable Output<String> amplify;
+        private @Nullable Output<String> appconfig;
+        private @Nullable Output<String> applicationautoscaling;
+        private @Nullable Output<String> applicationinsights;
+        private @Nullable Output<String> appmesh;
+        private @Nullable Output<String> apprunner;
+        private @Nullable Output<String> appstream;
+        private @Nullable Output<String> appsync;
+        private @Nullable Output<String> athena;
+        private @Nullable Output<String> auditmanager;
+        private @Nullable Output<String> autoscaling;
+        private @Nullable Output<String> backup;
+        private @Nullable Output<String> batch;
+        private @Nullable Output<String> budgets;
+        private @Nullable Output<String> chime;
+        private @Nullable Output<String> cloud9;
+        private @Nullable Output<String> cloudformation;
+        private @Nullable Output<String> cloudfront;
+        private @Nullable Output<String> cloudhsm;
+        private @Nullable Output<String> cloudsearch;
+        private @Nullable Output<String> cloudtrail;
+        private @Nullable Output<String> cloudwatch;
+        private @Nullable Output<String> cloudwatchevents;
+        private @Nullable Output<String> cloudwatchlogs;
+        private @Nullable Output<String> codeartifact;
+        private @Nullable Output<String> codebuild;
+        private @Nullable Output<String> codecommit;
+        private @Nullable Output<String> codedeploy;
+        private @Nullable Output<String> codepipeline;
+        private @Nullable Output<String> codestarconnections;
+        private @Nullable Output<String> cognitoidentity;
+        private @Nullable Output<String> configservice;
+        private @Nullable Output<String> connect;
+        private @Nullable Output<String> cur;
+        private @Nullable Output<String> dataexchange;
+        private @Nullable Output<String> datapipeline;
+        private @Nullable Output<String> datasync;
+        private @Nullable Output<String> dax;
+        private @Nullable Output<String> detective;
+        private @Nullable Output<String> devicefarm;
+        private @Nullable Output<String> directconnect;
+        private @Nullable Output<String> dlm;
+        private @Nullable Output<String> dms;
+        private @Nullable Output<String> docdb;
+        private @Nullable Output<String> ds;
+        private @Nullable Output<String> dynamodb;
+        private @Nullable Output<String> ec2;
+        private @Nullable Output<String> ecr;
+        private @Nullable Output<String> ecrpublic;
+        private @Nullable Output<String> ecs;
+        private @Nullable Output<String> efs;
+        private @Nullable Output<String> eks;
+        private @Nullable Output<String> elasticache;
+        private @Nullable Output<String> elasticbeanstalk;
+        private @Nullable Output<String> elastictranscoder;
+        private @Nullable Output<String> elb;
+        private @Nullable Output<String> elbv2;
+        private @Nullable Output<String> emr;
+        private @Nullable Output<String> emrcontainers;
+        private @Nullable Output<String> es;
+        private @Nullable Output<String> firehose;
+        private @Nullable Output<String> fms;
+        private @Nullable Output<String> forecast;
+        private @Nullable Output<String> fsx;
+        private @Nullable Output<String> gamelift;
+        private @Nullable Output<String> glacier;
+        private @Nullable Output<String> globalaccelerator;
+        private @Nullable Output<String> glue;
+        private @Nullable Output<String> greengrass;
+        private @Nullable Output<String> guardduty;
+        private @Nullable Output<String> iam;
+        private @Nullable Output<String> identitystore;
+        private @Nullable Output<String> imagebuilder;
+        private @Nullable Output<String> inspector;
+        private @Nullable Output<String> iot;
+        private @Nullable Output<String> iotanalytics;
+        private @Nullable Output<String> iotevents;
+        private @Nullable Output<String> kafka;
+        private @Nullable Output<String> kinesis;
+        private @Nullable Output<String> kinesisanalytics;
+        private @Nullable Output<String> kinesisanalyticsv2;
+        private @Nullable Output<String> kinesisvideo;
+        private @Nullable Output<String> kms;
+        private @Nullable Output<String> lakeformation;
+        private @Nullable Output<String> lambda;
+        private @Nullable Output<String> lexmodels;
+        private @Nullable Output<String> licensemanager;
+        private @Nullable Output<String> lightsail;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> macie;
+        private @Nullable Output<String> macie2;
+        private @Nullable Output<String> managedblockchain;
+        private @Nullable Output<String> marketplacecatalog;
+        private @Nullable Output<String> mediaconnect;
+        private @Nullable Output<String> mediaconvert;
+        private @Nullable Output<String> medialive;
+        private @Nullable Output<String> mediapackage;
+        private @Nullable Output<String> mediastore;
+        private @Nullable Output<String> mediastoredata;
+        private @Nullable Output<String> memorydb;
+        private @Nullable Output<String> mq;
+        private @Nullable Output<String> mwaa;
+        private @Nullable Output<String> neptune;
+        private @Nullable Output<String> networkfirewall;
+        private @Nullable Output<String> networkmanager;
+        private @Nullable Output<String> opsworks;
+        private @Nullable Output<String> organizations;
+        private @Nullable Output<String> outposts;
+        private @Nullable Output<String> personalize;
+        private @Nullable Output<String> pinpoint;
+        private @Nullable Output<String> pricing;
+        private @Nullable Output<String> qldb;
+        private @Nullable Output<String> quicksight;
+        private @Nullable Output<String> ram;
+        private @Nullable Output<String> rds;
+        private @Nullable Output<String> redshift;
+        private @Nullable Output<String> resourcegroups;
+        private @Nullable Output<String> resourcegroupstaggingapi;
+        private @Nullable Output<String> route53;
+        private @Nullable Output<String> route53domains;
+        private @Nullable Output<String> route53recoverycontrolconfig;
+        private @Nullable Output<String> route53recoveryreadiness;
+        private @Nullable Output<String> route53resolver;
+        private @Nullable Output<String> s3;
+        private @Nullable Output<String> s3control;
+        private @Nullable Output<String> s3outposts;
+        private @Nullable Output<String> sagemaker;
+        private @Nullable Output<String> schemas;
+        private @Nullable Output<String> sdb;
+        private @Nullable Output<String> secretsmanager;
+        private @Nullable Output<String> securityhub;
+        private @Nullable Output<String> serverlessrepo;
+        private @Nullable Output<String> servicecatalog;
+        private @Nullable Output<String> servicediscovery;
+        private @Nullable Output<String> servicequotas;
+        private @Nullable Output<String> ses;
+        private @Nullable Output<String> shield;
+        private @Nullable Output<String> signer;
+        private @Nullable Output<String> sns;
+        private @Nullable Output<String> sqs;
+        private @Nullable Output<String> ssm;
+        private @Nullable Output<String> ssoadmin;
+        private @Nullable Output<String> stepfunctions;
+        private @Nullable Output<String> storagegateway;
+        private @Nullable Output<String> sts;
+        private @Nullable Output<String> swf;
+        private @Nullable Output<String> synthetics;
+        private @Nullable Output<String> timestreamwrite;
+        private @Nullable Output<String> transfer;
+        private @Nullable Output<String> waf;
+        private @Nullable Output<String> wafregional;
+        private @Nullable Output<String> wafv2;
+        private @Nullable Output<String> worklink;
+        private @Nullable Output<String> workmail;
+        private @Nullable Output<String> workspaces;
+        private @Nullable Output<String> xray;
 
         public Builder() {
     	      // Empty
@@ -2586,1593 +2586,1593 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     	      this.xray = defaults.xray;
         }
 
-        public Builder accessanalyzer(@Nullable Input<String> accessanalyzer) {
+        public Builder accessanalyzer(@Nullable Output<String> accessanalyzer) {
             this.accessanalyzer = accessanalyzer;
             return this;
         }
 
         public Builder accessanalyzer(@Nullable String accessanalyzer) {
-            this.accessanalyzer = Input.ofNullable(accessanalyzer);
+            this.accessanalyzer = Output.ofNullable(accessanalyzer);
             return this;
         }
 
-        public Builder acm(@Nullable Input<String> acm) {
+        public Builder acm(@Nullable Output<String> acm) {
             this.acm = acm;
             return this;
         }
 
         public Builder acm(@Nullable String acm) {
-            this.acm = Input.ofNullable(acm);
+            this.acm = Output.ofNullable(acm);
             return this;
         }
 
-        public Builder acmpca(@Nullable Input<String> acmpca) {
+        public Builder acmpca(@Nullable Output<String> acmpca) {
             this.acmpca = acmpca;
             return this;
         }
 
         public Builder acmpca(@Nullable String acmpca) {
-            this.acmpca = Input.ofNullable(acmpca);
+            this.acmpca = Output.ofNullable(acmpca);
             return this;
         }
 
-        public Builder amplify(@Nullable Input<String> amplify) {
+        public Builder amplify(@Nullable Output<String> amplify) {
             this.amplify = amplify;
             return this;
         }
 
         public Builder amplify(@Nullable String amplify) {
-            this.amplify = Input.ofNullable(amplify);
+            this.amplify = Output.ofNullable(amplify);
             return this;
         }
 
-        public Builder appconfig(@Nullable Input<String> appconfig) {
+        public Builder appconfig(@Nullable Output<String> appconfig) {
             this.appconfig = appconfig;
             return this;
         }
 
         public Builder appconfig(@Nullable String appconfig) {
-            this.appconfig = Input.ofNullable(appconfig);
+            this.appconfig = Output.ofNullable(appconfig);
             return this;
         }
 
-        public Builder applicationautoscaling(@Nullable Input<String> applicationautoscaling) {
+        public Builder applicationautoscaling(@Nullable Output<String> applicationautoscaling) {
             this.applicationautoscaling = applicationautoscaling;
             return this;
         }
 
         public Builder applicationautoscaling(@Nullable String applicationautoscaling) {
-            this.applicationautoscaling = Input.ofNullable(applicationautoscaling);
+            this.applicationautoscaling = Output.ofNullable(applicationautoscaling);
             return this;
         }
 
-        public Builder applicationinsights(@Nullable Input<String> applicationinsights) {
+        public Builder applicationinsights(@Nullable Output<String> applicationinsights) {
             this.applicationinsights = applicationinsights;
             return this;
         }
 
         public Builder applicationinsights(@Nullable String applicationinsights) {
-            this.applicationinsights = Input.ofNullable(applicationinsights);
+            this.applicationinsights = Output.ofNullable(applicationinsights);
             return this;
         }
 
-        public Builder appmesh(@Nullable Input<String> appmesh) {
+        public Builder appmesh(@Nullable Output<String> appmesh) {
             this.appmesh = appmesh;
             return this;
         }
 
         public Builder appmesh(@Nullable String appmesh) {
-            this.appmesh = Input.ofNullable(appmesh);
+            this.appmesh = Output.ofNullable(appmesh);
             return this;
         }
 
-        public Builder apprunner(@Nullable Input<String> apprunner) {
+        public Builder apprunner(@Nullable Output<String> apprunner) {
             this.apprunner = apprunner;
             return this;
         }
 
         public Builder apprunner(@Nullable String apprunner) {
-            this.apprunner = Input.ofNullable(apprunner);
+            this.apprunner = Output.ofNullable(apprunner);
             return this;
         }
 
-        public Builder appstream(@Nullable Input<String> appstream) {
+        public Builder appstream(@Nullable Output<String> appstream) {
             this.appstream = appstream;
             return this;
         }
 
         public Builder appstream(@Nullable String appstream) {
-            this.appstream = Input.ofNullable(appstream);
+            this.appstream = Output.ofNullable(appstream);
             return this;
         }
 
-        public Builder appsync(@Nullable Input<String> appsync) {
+        public Builder appsync(@Nullable Output<String> appsync) {
             this.appsync = appsync;
             return this;
         }
 
         public Builder appsync(@Nullable String appsync) {
-            this.appsync = Input.ofNullable(appsync);
+            this.appsync = Output.ofNullable(appsync);
             return this;
         }
 
-        public Builder athena(@Nullable Input<String> athena) {
+        public Builder athena(@Nullable Output<String> athena) {
             this.athena = athena;
             return this;
         }
 
         public Builder athena(@Nullable String athena) {
-            this.athena = Input.ofNullable(athena);
+            this.athena = Output.ofNullable(athena);
             return this;
         }
 
-        public Builder auditmanager(@Nullable Input<String> auditmanager) {
+        public Builder auditmanager(@Nullable Output<String> auditmanager) {
             this.auditmanager = auditmanager;
             return this;
         }
 
         public Builder auditmanager(@Nullable String auditmanager) {
-            this.auditmanager = Input.ofNullable(auditmanager);
+            this.auditmanager = Output.ofNullable(auditmanager);
             return this;
         }
 
-        public Builder autoscaling(@Nullable Input<String> autoscaling) {
+        public Builder autoscaling(@Nullable Output<String> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
         public Builder autoscaling(@Nullable String autoscaling) {
-            this.autoscaling = Input.ofNullable(autoscaling);
+            this.autoscaling = Output.ofNullable(autoscaling);
             return this;
         }
 
-        public Builder backup(@Nullable Input<String> backup) {
+        public Builder backup(@Nullable Output<String> backup) {
             this.backup = backup;
             return this;
         }
 
         public Builder backup(@Nullable String backup) {
-            this.backup = Input.ofNullable(backup);
+            this.backup = Output.ofNullable(backup);
             return this;
         }
 
-        public Builder batch(@Nullable Input<String> batch) {
+        public Builder batch(@Nullable Output<String> batch) {
             this.batch = batch;
             return this;
         }
 
         public Builder batch(@Nullable String batch) {
-            this.batch = Input.ofNullable(batch);
+            this.batch = Output.ofNullable(batch);
             return this;
         }
 
-        public Builder budgets(@Nullable Input<String> budgets) {
+        public Builder budgets(@Nullable Output<String> budgets) {
             this.budgets = budgets;
             return this;
         }
 
         public Builder budgets(@Nullable String budgets) {
-            this.budgets = Input.ofNullable(budgets);
+            this.budgets = Output.ofNullable(budgets);
             return this;
         }
 
-        public Builder chime(@Nullable Input<String> chime) {
+        public Builder chime(@Nullable Output<String> chime) {
             this.chime = chime;
             return this;
         }
 
         public Builder chime(@Nullable String chime) {
-            this.chime = Input.ofNullable(chime);
+            this.chime = Output.ofNullable(chime);
             return this;
         }
 
-        public Builder cloud9(@Nullable Input<String> cloud9) {
+        public Builder cloud9(@Nullable Output<String> cloud9) {
             this.cloud9 = cloud9;
             return this;
         }
 
         public Builder cloud9(@Nullable String cloud9) {
-            this.cloud9 = Input.ofNullable(cloud9);
+            this.cloud9 = Output.ofNullable(cloud9);
             return this;
         }
 
-        public Builder cloudformation(@Nullable Input<String> cloudformation) {
+        public Builder cloudformation(@Nullable Output<String> cloudformation) {
             this.cloudformation = cloudformation;
             return this;
         }
 
         public Builder cloudformation(@Nullable String cloudformation) {
-            this.cloudformation = Input.ofNullable(cloudformation);
+            this.cloudformation = Output.ofNullable(cloudformation);
             return this;
         }
 
-        public Builder cloudfront(@Nullable Input<String> cloudfront) {
+        public Builder cloudfront(@Nullable Output<String> cloudfront) {
             this.cloudfront = cloudfront;
             return this;
         }
 
         public Builder cloudfront(@Nullable String cloudfront) {
-            this.cloudfront = Input.ofNullable(cloudfront);
+            this.cloudfront = Output.ofNullable(cloudfront);
             return this;
         }
 
-        public Builder cloudhsm(@Nullable Input<String> cloudhsm) {
+        public Builder cloudhsm(@Nullable Output<String> cloudhsm) {
             this.cloudhsm = cloudhsm;
             return this;
         }
 
         public Builder cloudhsm(@Nullable String cloudhsm) {
-            this.cloudhsm = Input.ofNullable(cloudhsm);
+            this.cloudhsm = Output.ofNullable(cloudhsm);
             return this;
         }
 
-        public Builder cloudsearch(@Nullable Input<String> cloudsearch) {
+        public Builder cloudsearch(@Nullable Output<String> cloudsearch) {
             this.cloudsearch = cloudsearch;
             return this;
         }
 
         public Builder cloudsearch(@Nullable String cloudsearch) {
-            this.cloudsearch = Input.ofNullable(cloudsearch);
+            this.cloudsearch = Output.ofNullable(cloudsearch);
             return this;
         }
 
-        public Builder cloudtrail(@Nullable Input<String> cloudtrail) {
+        public Builder cloudtrail(@Nullable Output<String> cloudtrail) {
             this.cloudtrail = cloudtrail;
             return this;
         }
 
         public Builder cloudtrail(@Nullable String cloudtrail) {
-            this.cloudtrail = Input.ofNullable(cloudtrail);
+            this.cloudtrail = Output.ofNullable(cloudtrail);
             return this;
         }
 
-        public Builder cloudwatch(@Nullable Input<String> cloudwatch) {
+        public Builder cloudwatch(@Nullable Output<String> cloudwatch) {
             this.cloudwatch = cloudwatch;
             return this;
         }
 
         public Builder cloudwatch(@Nullable String cloudwatch) {
-            this.cloudwatch = Input.ofNullable(cloudwatch);
+            this.cloudwatch = Output.ofNullable(cloudwatch);
             return this;
         }
 
-        public Builder cloudwatchevents(@Nullable Input<String> cloudwatchevents) {
+        public Builder cloudwatchevents(@Nullable Output<String> cloudwatchevents) {
             this.cloudwatchevents = cloudwatchevents;
             return this;
         }
 
         public Builder cloudwatchevents(@Nullable String cloudwatchevents) {
-            this.cloudwatchevents = Input.ofNullable(cloudwatchevents);
+            this.cloudwatchevents = Output.ofNullable(cloudwatchevents);
             return this;
         }
 
-        public Builder cloudwatchlogs(@Nullable Input<String> cloudwatchlogs) {
+        public Builder cloudwatchlogs(@Nullable Output<String> cloudwatchlogs) {
             this.cloudwatchlogs = cloudwatchlogs;
             return this;
         }
 
         public Builder cloudwatchlogs(@Nullable String cloudwatchlogs) {
-            this.cloudwatchlogs = Input.ofNullable(cloudwatchlogs);
+            this.cloudwatchlogs = Output.ofNullable(cloudwatchlogs);
             return this;
         }
 
-        public Builder codeartifact(@Nullable Input<String> codeartifact) {
+        public Builder codeartifact(@Nullable Output<String> codeartifact) {
             this.codeartifact = codeartifact;
             return this;
         }
 
         public Builder codeartifact(@Nullable String codeartifact) {
-            this.codeartifact = Input.ofNullable(codeartifact);
+            this.codeartifact = Output.ofNullable(codeartifact);
             return this;
         }
 
-        public Builder codebuild(@Nullable Input<String> codebuild) {
+        public Builder codebuild(@Nullable Output<String> codebuild) {
             this.codebuild = codebuild;
             return this;
         }
 
         public Builder codebuild(@Nullable String codebuild) {
-            this.codebuild = Input.ofNullable(codebuild);
+            this.codebuild = Output.ofNullable(codebuild);
             return this;
         }
 
-        public Builder codecommit(@Nullable Input<String> codecommit) {
+        public Builder codecommit(@Nullable Output<String> codecommit) {
             this.codecommit = codecommit;
             return this;
         }
 
         public Builder codecommit(@Nullable String codecommit) {
-            this.codecommit = Input.ofNullable(codecommit);
+            this.codecommit = Output.ofNullable(codecommit);
             return this;
         }
 
-        public Builder codedeploy(@Nullable Input<String> codedeploy) {
+        public Builder codedeploy(@Nullable Output<String> codedeploy) {
             this.codedeploy = codedeploy;
             return this;
         }
 
         public Builder codedeploy(@Nullable String codedeploy) {
-            this.codedeploy = Input.ofNullable(codedeploy);
+            this.codedeploy = Output.ofNullable(codedeploy);
             return this;
         }
 
-        public Builder codepipeline(@Nullable Input<String> codepipeline) {
+        public Builder codepipeline(@Nullable Output<String> codepipeline) {
             this.codepipeline = codepipeline;
             return this;
         }
 
         public Builder codepipeline(@Nullable String codepipeline) {
-            this.codepipeline = Input.ofNullable(codepipeline);
+            this.codepipeline = Output.ofNullable(codepipeline);
             return this;
         }
 
-        public Builder codestarconnections(@Nullable Input<String> codestarconnections) {
+        public Builder codestarconnections(@Nullable Output<String> codestarconnections) {
             this.codestarconnections = codestarconnections;
             return this;
         }
 
         public Builder codestarconnections(@Nullable String codestarconnections) {
-            this.codestarconnections = Input.ofNullable(codestarconnections);
+            this.codestarconnections = Output.ofNullable(codestarconnections);
             return this;
         }
 
-        public Builder cognitoidentity(@Nullable Input<String> cognitoidentity) {
+        public Builder cognitoidentity(@Nullable Output<String> cognitoidentity) {
             this.cognitoidentity = cognitoidentity;
             return this;
         }
 
         public Builder cognitoidentity(@Nullable String cognitoidentity) {
-            this.cognitoidentity = Input.ofNullable(cognitoidentity);
+            this.cognitoidentity = Output.ofNullable(cognitoidentity);
             return this;
         }
 
-        public Builder configservice(@Nullable Input<String> configservice) {
+        public Builder configservice(@Nullable Output<String> configservice) {
             this.configservice = configservice;
             return this;
         }
 
         public Builder configservice(@Nullable String configservice) {
-            this.configservice = Input.ofNullable(configservice);
+            this.configservice = Output.ofNullable(configservice);
             return this;
         }
 
-        public Builder connect(@Nullable Input<String> connect) {
+        public Builder connect(@Nullable Output<String> connect) {
             this.connect = connect;
             return this;
         }
 
         public Builder connect(@Nullable String connect) {
-            this.connect = Input.ofNullable(connect);
+            this.connect = Output.ofNullable(connect);
             return this;
         }
 
-        public Builder cur(@Nullable Input<String> cur) {
+        public Builder cur(@Nullable Output<String> cur) {
             this.cur = cur;
             return this;
         }
 
         public Builder cur(@Nullable String cur) {
-            this.cur = Input.ofNullable(cur);
+            this.cur = Output.ofNullable(cur);
             return this;
         }
 
-        public Builder dataexchange(@Nullable Input<String> dataexchange) {
+        public Builder dataexchange(@Nullable Output<String> dataexchange) {
             this.dataexchange = dataexchange;
             return this;
         }
 
         public Builder dataexchange(@Nullable String dataexchange) {
-            this.dataexchange = Input.ofNullable(dataexchange);
+            this.dataexchange = Output.ofNullable(dataexchange);
             return this;
         }
 
-        public Builder datapipeline(@Nullable Input<String> datapipeline) {
+        public Builder datapipeline(@Nullable Output<String> datapipeline) {
             this.datapipeline = datapipeline;
             return this;
         }
 
         public Builder datapipeline(@Nullable String datapipeline) {
-            this.datapipeline = Input.ofNullable(datapipeline);
+            this.datapipeline = Output.ofNullable(datapipeline);
             return this;
         }
 
-        public Builder datasync(@Nullable Input<String> datasync) {
+        public Builder datasync(@Nullable Output<String> datasync) {
             this.datasync = datasync;
             return this;
         }
 
         public Builder datasync(@Nullable String datasync) {
-            this.datasync = Input.ofNullable(datasync);
+            this.datasync = Output.ofNullable(datasync);
             return this;
         }
 
-        public Builder dax(@Nullable Input<String> dax) {
+        public Builder dax(@Nullable Output<String> dax) {
             this.dax = dax;
             return this;
         }
 
         public Builder dax(@Nullable String dax) {
-            this.dax = Input.ofNullable(dax);
+            this.dax = Output.ofNullable(dax);
             return this;
         }
 
-        public Builder detective(@Nullable Input<String> detective) {
+        public Builder detective(@Nullable Output<String> detective) {
             this.detective = detective;
             return this;
         }
 
         public Builder detective(@Nullable String detective) {
-            this.detective = Input.ofNullable(detective);
+            this.detective = Output.ofNullable(detective);
             return this;
         }
 
-        public Builder devicefarm(@Nullable Input<String> devicefarm) {
+        public Builder devicefarm(@Nullable Output<String> devicefarm) {
             this.devicefarm = devicefarm;
             return this;
         }
 
         public Builder devicefarm(@Nullable String devicefarm) {
-            this.devicefarm = Input.ofNullable(devicefarm);
+            this.devicefarm = Output.ofNullable(devicefarm);
             return this;
         }
 
-        public Builder directconnect(@Nullable Input<String> directconnect) {
+        public Builder directconnect(@Nullable Output<String> directconnect) {
             this.directconnect = directconnect;
             return this;
         }
 
         public Builder directconnect(@Nullable String directconnect) {
-            this.directconnect = Input.ofNullable(directconnect);
+            this.directconnect = Output.ofNullable(directconnect);
             return this;
         }
 
-        public Builder dlm(@Nullable Input<String> dlm) {
+        public Builder dlm(@Nullable Output<String> dlm) {
             this.dlm = dlm;
             return this;
         }
 
         public Builder dlm(@Nullable String dlm) {
-            this.dlm = Input.ofNullable(dlm);
+            this.dlm = Output.ofNullable(dlm);
             return this;
         }
 
-        public Builder dms(@Nullable Input<String> dms) {
+        public Builder dms(@Nullable Output<String> dms) {
             this.dms = dms;
             return this;
         }
 
         public Builder dms(@Nullable String dms) {
-            this.dms = Input.ofNullable(dms);
+            this.dms = Output.ofNullable(dms);
             return this;
         }
 
-        public Builder docdb(@Nullable Input<String> docdb) {
+        public Builder docdb(@Nullable Output<String> docdb) {
             this.docdb = docdb;
             return this;
         }
 
         public Builder docdb(@Nullable String docdb) {
-            this.docdb = Input.ofNullable(docdb);
+            this.docdb = Output.ofNullable(docdb);
             return this;
         }
 
-        public Builder ds(@Nullable Input<String> ds) {
+        public Builder ds(@Nullable Output<String> ds) {
             this.ds = ds;
             return this;
         }
 
         public Builder ds(@Nullable String ds) {
-            this.ds = Input.ofNullable(ds);
+            this.ds = Output.ofNullable(ds);
             return this;
         }
 
-        public Builder dynamodb(@Nullable Input<String> dynamodb) {
+        public Builder dynamodb(@Nullable Output<String> dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
 
         public Builder dynamodb(@Nullable String dynamodb) {
-            this.dynamodb = Input.ofNullable(dynamodb);
+            this.dynamodb = Output.ofNullable(dynamodb);
             return this;
         }
 
-        public Builder ec2(@Nullable Input<String> ec2) {
+        public Builder ec2(@Nullable Output<String> ec2) {
             this.ec2 = ec2;
             return this;
         }
 
         public Builder ec2(@Nullable String ec2) {
-            this.ec2 = Input.ofNullable(ec2);
+            this.ec2 = Output.ofNullable(ec2);
             return this;
         }
 
-        public Builder ecr(@Nullable Input<String> ecr) {
+        public Builder ecr(@Nullable Output<String> ecr) {
             this.ecr = ecr;
             return this;
         }
 
         public Builder ecr(@Nullable String ecr) {
-            this.ecr = Input.ofNullable(ecr);
+            this.ecr = Output.ofNullable(ecr);
             return this;
         }
 
-        public Builder ecrpublic(@Nullable Input<String> ecrpublic) {
+        public Builder ecrpublic(@Nullable Output<String> ecrpublic) {
             this.ecrpublic = ecrpublic;
             return this;
         }
 
         public Builder ecrpublic(@Nullable String ecrpublic) {
-            this.ecrpublic = Input.ofNullable(ecrpublic);
+            this.ecrpublic = Output.ofNullable(ecrpublic);
             return this;
         }
 
-        public Builder ecs(@Nullable Input<String> ecs) {
+        public Builder ecs(@Nullable Output<String> ecs) {
             this.ecs = ecs;
             return this;
         }
 
         public Builder ecs(@Nullable String ecs) {
-            this.ecs = Input.ofNullable(ecs);
+            this.ecs = Output.ofNullable(ecs);
             return this;
         }
 
-        public Builder efs(@Nullable Input<String> efs) {
+        public Builder efs(@Nullable Output<String> efs) {
             this.efs = efs;
             return this;
         }
 
         public Builder efs(@Nullable String efs) {
-            this.efs = Input.ofNullable(efs);
+            this.efs = Output.ofNullable(efs);
             return this;
         }
 
-        public Builder eks(@Nullable Input<String> eks) {
+        public Builder eks(@Nullable Output<String> eks) {
             this.eks = eks;
             return this;
         }
 
         public Builder eks(@Nullable String eks) {
-            this.eks = Input.ofNullable(eks);
+            this.eks = Output.ofNullable(eks);
             return this;
         }
 
-        public Builder elasticache(@Nullable Input<String> elasticache) {
+        public Builder elasticache(@Nullable Output<String> elasticache) {
             this.elasticache = elasticache;
             return this;
         }
 
         public Builder elasticache(@Nullable String elasticache) {
-            this.elasticache = Input.ofNullable(elasticache);
+            this.elasticache = Output.ofNullable(elasticache);
             return this;
         }
 
-        public Builder elasticbeanstalk(@Nullable Input<String> elasticbeanstalk) {
+        public Builder elasticbeanstalk(@Nullable Output<String> elasticbeanstalk) {
             this.elasticbeanstalk = elasticbeanstalk;
             return this;
         }
 
         public Builder elasticbeanstalk(@Nullable String elasticbeanstalk) {
-            this.elasticbeanstalk = Input.ofNullable(elasticbeanstalk);
+            this.elasticbeanstalk = Output.ofNullable(elasticbeanstalk);
             return this;
         }
 
-        public Builder elastictranscoder(@Nullable Input<String> elastictranscoder) {
+        public Builder elastictranscoder(@Nullable Output<String> elastictranscoder) {
             this.elastictranscoder = elastictranscoder;
             return this;
         }
 
         public Builder elastictranscoder(@Nullable String elastictranscoder) {
-            this.elastictranscoder = Input.ofNullable(elastictranscoder);
+            this.elastictranscoder = Output.ofNullable(elastictranscoder);
             return this;
         }
 
-        public Builder elb(@Nullable Input<String> elb) {
+        public Builder elb(@Nullable Output<String> elb) {
             this.elb = elb;
             return this;
         }
 
         public Builder elb(@Nullable String elb) {
-            this.elb = Input.ofNullable(elb);
+            this.elb = Output.ofNullable(elb);
             return this;
         }
 
-        public Builder elbv2(@Nullable Input<String> elbv2) {
+        public Builder elbv2(@Nullable Output<String> elbv2) {
             this.elbv2 = elbv2;
             return this;
         }
 
         public Builder elbv2(@Nullable String elbv2) {
-            this.elbv2 = Input.ofNullable(elbv2);
+            this.elbv2 = Output.ofNullable(elbv2);
             return this;
         }
 
-        public Builder emr(@Nullable Input<String> emr) {
+        public Builder emr(@Nullable Output<String> emr) {
             this.emr = emr;
             return this;
         }
 
         public Builder emr(@Nullable String emr) {
-            this.emr = Input.ofNullable(emr);
+            this.emr = Output.ofNullable(emr);
             return this;
         }
 
-        public Builder emrcontainers(@Nullable Input<String> emrcontainers) {
+        public Builder emrcontainers(@Nullable Output<String> emrcontainers) {
             this.emrcontainers = emrcontainers;
             return this;
         }
 
         public Builder emrcontainers(@Nullable String emrcontainers) {
-            this.emrcontainers = Input.ofNullable(emrcontainers);
+            this.emrcontainers = Output.ofNullable(emrcontainers);
             return this;
         }
 
-        public Builder es(@Nullable Input<String> es) {
+        public Builder es(@Nullable Output<String> es) {
             this.es = es;
             return this;
         }
 
         public Builder es(@Nullable String es) {
-            this.es = Input.ofNullable(es);
+            this.es = Output.ofNullable(es);
             return this;
         }
 
-        public Builder firehose(@Nullable Input<String> firehose) {
+        public Builder firehose(@Nullable Output<String> firehose) {
             this.firehose = firehose;
             return this;
         }
 
         public Builder firehose(@Nullable String firehose) {
-            this.firehose = Input.ofNullable(firehose);
+            this.firehose = Output.ofNullable(firehose);
             return this;
         }
 
-        public Builder fms(@Nullable Input<String> fms) {
+        public Builder fms(@Nullable Output<String> fms) {
             this.fms = fms;
             return this;
         }
 
         public Builder fms(@Nullable String fms) {
-            this.fms = Input.ofNullable(fms);
+            this.fms = Output.ofNullable(fms);
             return this;
         }
 
-        public Builder forecast(@Nullable Input<String> forecast) {
+        public Builder forecast(@Nullable Output<String> forecast) {
             this.forecast = forecast;
             return this;
         }
 
         public Builder forecast(@Nullable String forecast) {
-            this.forecast = Input.ofNullable(forecast);
+            this.forecast = Output.ofNullable(forecast);
             return this;
         }
 
-        public Builder fsx(@Nullable Input<String> fsx) {
+        public Builder fsx(@Nullable Output<String> fsx) {
             this.fsx = fsx;
             return this;
         }
 
         public Builder fsx(@Nullable String fsx) {
-            this.fsx = Input.ofNullable(fsx);
+            this.fsx = Output.ofNullable(fsx);
             return this;
         }
 
-        public Builder gamelift(@Nullable Input<String> gamelift) {
+        public Builder gamelift(@Nullable Output<String> gamelift) {
             this.gamelift = gamelift;
             return this;
         }
 
         public Builder gamelift(@Nullable String gamelift) {
-            this.gamelift = Input.ofNullable(gamelift);
+            this.gamelift = Output.ofNullable(gamelift);
             return this;
         }
 
-        public Builder glacier(@Nullable Input<String> glacier) {
+        public Builder glacier(@Nullable Output<String> glacier) {
             this.glacier = glacier;
             return this;
         }
 
         public Builder glacier(@Nullable String glacier) {
-            this.glacier = Input.ofNullable(glacier);
+            this.glacier = Output.ofNullable(glacier);
             return this;
         }
 
-        public Builder globalaccelerator(@Nullable Input<String> globalaccelerator) {
+        public Builder globalaccelerator(@Nullable Output<String> globalaccelerator) {
             this.globalaccelerator = globalaccelerator;
             return this;
         }
 
         public Builder globalaccelerator(@Nullable String globalaccelerator) {
-            this.globalaccelerator = Input.ofNullable(globalaccelerator);
+            this.globalaccelerator = Output.ofNullable(globalaccelerator);
             return this;
         }
 
-        public Builder glue(@Nullable Input<String> glue) {
+        public Builder glue(@Nullable Output<String> glue) {
             this.glue = glue;
             return this;
         }
 
         public Builder glue(@Nullable String glue) {
-            this.glue = Input.ofNullable(glue);
+            this.glue = Output.ofNullable(glue);
             return this;
         }
 
-        public Builder greengrass(@Nullable Input<String> greengrass) {
+        public Builder greengrass(@Nullable Output<String> greengrass) {
             this.greengrass = greengrass;
             return this;
         }
 
         public Builder greengrass(@Nullable String greengrass) {
-            this.greengrass = Input.ofNullable(greengrass);
+            this.greengrass = Output.ofNullable(greengrass);
             return this;
         }
 
-        public Builder guardduty(@Nullable Input<String> guardduty) {
+        public Builder guardduty(@Nullable Output<String> guardduty) {
             this.guardduty = guardduty;
             return this;
         }
 
         public Builder guardduty(@Nullable String guardduty) {
-            this.guardduty = Input.ofNullable(guardduty);
+            this.guardduty = Output.ofNullable(guardduty);
             return this;
         }
 
-        public Builder iam(@Nullable Input<String> iam) {
+        public Builder iam(@Nullable Output<String> iam) {
             this.iam = iam;
             return this;
         }
 
         public Builder iam(@Nullable String iam) {
-            this.iam = Input.ofNullable(iam);
+            this.iam = Output.ofNullable(iam);
             return this;
         }
 
-        public Builder identitystore(@Nullable Input<String> identitystore) {
+        public Builder identitystore(@Nullable Output<String> identitystore) {
             this.identitystore = identitystore;
             return this;
         }
 
         public Builder identitystore(@Nullable String identitystore) {
-            this.identitystore = Input.ofNullable(identitystore);
+            this.identitystore = Output.ofNullable(identitystore);
             return this;
         }
 
-        public Builder imagebuilder(@Nullable Input<String> imagebuilder) {
+        public Builder imagebuilder(@Nullable Output<String> imagebuilder) {
             this.imagebuilder = imagebuilder;
             return this;
         }
 
         public Builder imagebuilder(@Nullable String imagebuilder) {
-            this.imagebuilder = Input.ofNullable(imagebuilder);
+            this.imagebuilder = Output.ofNullable(imagebuilder);
             return this;
         }
 
-        public Builder inspector(@Nullable Input<String> inspector) {
+        public Builder inspector(@Nullable Output<String> inspector) {
             this.inspector = inspector;
             return this;
         }
 
         public Builder inspector(@Nullable String inspector) {
-            this.inspector = Input.ofNullable(inspector);
+            this.inspector = Output.ofNullable(inspector);
             return this;
         }
 
-        public Builder iot(@Nullable Input<String> iot) {
+        public Builder iot(@Nullable Output<String> iot) {
             this.iot = iot;
             return this;
         }
 
         public Builder iot(@Nullable String iot) {
-            this.iot = Input.ofNullable(iot);
+            this.iot = Output.ofNullable(iot);
             return this;
         }
 
-        public Builder iotanalytics(@Nullable Input<String> iotanalytics) {
+        public Builder iotanalytics(@Nullable Output<String> iotanalytics) {
             this.iotanalytics = iotanalytics;
             return this;
         }
 
         public Builder iotanalytics(@Nullable String iotanalytics) {
-            this.iotanalytics = Input.ofNullable(iotanalytics);
+            this.iotanalytics = Output.ofNullable(iotanalytics);
             return this;
         }
 
-        public Builder iotevents(@Nullable Input<String> iotevents) {
+        public Builder iotevents(@Nullable Output<String> iotevents) {
             this.iotevents = iotevents;
             return this;
         }
 
         public Builder iotevents(@Nullable String iotevents) {
-            this.iotevents = Input.ofNullable(iotevents);
+            this.iotevents = Output.ofNullable(iotevents);
             return this;
         }
 
-        public Builder kafka(@Nullable Input<String> kafka) {
+        public Builder kafka(@Nullable Output<String> kafka) {
             this.kafka = kafka;
             return this;
         }
 
         public Builder kafka(@Nullable String kafka) {
-            this.kafka = Input.ofNullable(kafka);
+            this.kafka = Output.ofNullable(kafka);
             return this;
         }
 
-        public Builder kinesis(@Nullable Input<String> kinesis) {
+        public Builder kinesis(@Nullable Output<String> kinesis) {
             this.kinesis = kinesis;
             return this;
         }
 
         public Builder kinesis(@Nullable String kinesis) {
-            this.kinesis = Input.ofNullable(kinesis);
+            this.kinesis = Output.ofNullable(kinesis);
             return this;
         }
 
-        public Builder kinesisanalytics(@Nullable Input<String> kinesisanalytics) {
+        public Builder kinesisanalytics(@Nullable Output<String> kinesisanalytics) {
             this.kinesisanalytics = kinesisanalytics;
             return this;
         }
 
         public Builder kinesisanalytics(@Nullable String kinesisanalytics) {
-            this.kinesisanalytics = Input.ofNullable(kinesisanalytics);
+            this.kinesisanalytics = Output.ofNullable(kinesisanalytics);
             return this;
         }
 
-        public Builder kinesisanalyticsv2(@Nullable Input<String> kinesisanalyticsv2) {
+        public Builder kinesisanalyticsv2(@Nullable Output<String> kinesisanalyticsv2) {
             this.kinesisanalyticsv2 = kinesisanalyticsv2;
             return this;
         }
 
         public Builder kinesisanalyticsv2(@Nullable String kinesisanalyticsv2) {
-            this.kinesisanalyticsv2 = Input.ofNullable(kinesisanalyticsv2);
+            this.kinesisanalyticsv2 = Output.ofNullable(kinesisanalyticsv2);
             return this;
         }
 
-        public Builder kinesisvideo(@Nullable Input<String> kinesisvideo) {
+        public Builder kinesisvideo(@Nullable Output<String> kinesisvideo) {
             this.kinesisvideo = kinesisvideo;
             return this;
         }
 
         public Builder kinesisvideo(@Nullable String kinesisvideo) {
-            this.kinesisvideo = Input.ofNullable(kinesisvideo);
+            this.kinesisvideo = Output.ofNullable(kinesisvideo);
             return this;
         }
 
-        public Builder kms(@Nullable Input<String> kms) {
+        public Builder kms(@Nullable Output<String> kms) {
             this.kms = kms;
             return this;
         }
 
         public Builder kms(@Nullable String kms) {
-            this.kms = Input.ofNullable(kms);
+            this.kms = Output.ofNullable(kms);
             return this;
         }
 
-        public Builder lakeformation(@Nullable Input<String> lakeformation) {
+        public Builder lakeformation(@Nullable Output<String> lakeformation) {
             this.lakeformation = lakeformation;
             return this;
         }
 
         public Builder lakeformation(@Nullable String lakeformation) {
-            this.lakeformation = Input.ofNullable(lakeformation);
+            this.lakeformation = Output.ofNullable(lakeformation);
             return this;
         }
 
-        public Builder lambda(@Nullable Input<String> lambda) {
+        public Builder lambda(@Nullable Output<String> lambda) {
             this.lambda = lambda;
             return this;
         }
 
         public Builder lambda(@Nullable String lambda) {
-            this.lambda = Input.ofNullable(lambda);
+            this.lambda = Output.ofNullable(lambda);
             return this;
         }
 
-        public Builder lexmodels(@Nullable Input<String> lexmodels) {
+        public Builder lexmodels(@Nullable Output<String> lexmodels) {
             this.lexmodels = lexmodels;
             return this;
         }
 
         public Builder lexmodels(@Nullable String lexmodels) {
-            this.lexmodels = Input.ofNullable(lexmodels);
+            this.lexmodels = Output.ofNullable(lexmodels);
             return this;
         }
 
-        public Builder licensemanager(@Nullable Input<String> licensemanager) {
+        public Builder licensemanager(@Nullable Output<String> licensemanager) {
             this.licensemanager = licensemanager;
             return this;
         }
 
         public Builder licensemanager(@Nullable String licensemanager) {
-            this.licensemanager = Input.ofNullable(licensemanager);
+            this.licensemanager = Output.ofNullable(licensemanager);
             return this;
         }
 
-        public Builder lightsail(@Nullable Input<String> lightsail) {
+        public Builder lightsail(@Nullable Output<String> lightsail) {
             this.lightsail = lightsail;
             return this;
         }
 
         public Builder lightsail(@Nullable String lightsail) {
-            this.lightsail = Input.ofNullable(lightsail);
+            this.lightsail = Output.ofNullable(lightsail);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder macie(@Nullable Input<String> macie) {
+        public Builder macie(@Nullable Output<String> macie) {
             this.macie = macie;
             return this;
         }
 
         public Builder macie(@Nullable String macie) {
-            this.macie = Input.ofNullable(macie);
+            this.macie = Output.ofNullable(macie);
             return this;
         }
 
-        public Builder macie2(@Nullable Input<String> macie2) {
+        public Builder macie2(@Nullable Output<String> macie2) {
             this.macie2 = macie2;
             return this;
         }
 
         public Builder macie2(@Nullable String macie2) {
-            this.macie2 = Input.ofNullable(macie2);
+            this.macie2 = Output.ofNullable(macie2);
             return this;
         }
 
-        public Builder managedblockchain(@Nullable Input<String> managedblockchain) {
+        public Builder managedblockchain(@Nullable Output<String> managedblockchain) {
             this.managedblockchain = managedblockchain;
             return this;
         }
 
         public Builder managedblockchain(@Nullable String managedblockchain) {
-            this.managedblockchain = Input.ofNullable(managedblockchain);
+            this.managedblockchain = Output.ofNullable(managedblockchain);
             return this;
         }
 
-        public Builder marketplacecatalog(@Nullable Input<String> marketplacecatalog) {
+        public Builder marketplacecatalog(@Nullable Output<String> marketplacecatalog) {
             this.marketplacecatalog = marketplacecatalog;
             return this;
         }
 
         public Builder marketplacecatalog(@Nullable String marketplacecatalog) {
-            this.marketplacecatalog = Input.ofNullable(marketplacecatalog);
+            this.marketplacecatalog = Output.ofNullable(marketplacecatalog);
             return this;
         }
 
-        public Builder mediaconnect(@Nullable Input<String> mediaconnect) {
+        public Builder mediaconnect(@Nullable Output<String> mediaconnect) {
             this.mediaconnect = mediaconnect;
             return this;
         }
 
         public Builder mediaconnect(@Nullable String mediaconnect) {
-            this.mediaconnect = Input.ofNullable(mediaconnect);
+            this.mediaconnect = Output.ofNullable(mediaconnect);
             return this;
         }
 
-        public Builder mediaconvert(@Nullable Input<String> mediaconvert) {
+        public Builder mediaconvert(@Nullable Output<String> mediaconvert) {
             this.mediaconvert = mediaconvert;
             return this;
         }
 
         public Builder mediaconvert(@Nullable String mediaconvert) {
-            this.mediaconvert = Input.ofNullable(mediaconvert);
+            this.mediaconvert = Output.ofNullable(mediaconvert);
             return this;
         }
 
-        public Builder medialive(@Nullable Input<String> medialive) {
+        public Builder medialive(@Nullable Output<String> medialive) {
             this.medialive = medialive;
             return this;
         }
 
         public Builder medialive(@Nullable String medialive) {
-            this.medialive = Input.ofNullable(medialive);
+            this.medialive = Output.ofNullable(medialive);
             return this;
         }
 
-        public Builder mediapackage(@Nullable Input<String> mediapackage) {
+        public Builder mediapackage(@Nullable Output<String> mediapackage) {
             this.mediapackage = mediapackage;
             return this;
         }
 
         public Builder mediapackage(@Nullable String mediapackage) {
-            this.mediapackage = Input.ofNullable(mediapackage);
+            this.mediapackage = Output.ofNullable(mediapackage);
             return this;
         }
 
-        public Builder mediastore(@Nullable Input<String> mediastore) {
+        public Builder mediastore(@Nullable Output<String> mediastore) {
             this.mediastore = mediastore;
             return this;
         }
 
         public Builder mediastore(@Nullable String mediastore) {
-            this.mediastore = Input.ofNullable(mediastore);
+            this.mediastore = Output.ofNullable(mediastore);
             return this;
         }
 
-        public Builder mediastoredata(@Nullable Input<String> mediastoredata) {
+        public Builder mediastoredata(@Nullable Output<String> mediastoredata) {
             this.mediastoredata = mediastoredata;
             return this;
         }
 
         public Builder mediastoredata(@Nullable String mediastoredata) {
-            this.mediastoredata = Input.ofNullable(mediastoredata);
+            this.mediastoredata = Output.ofNullable(mediastoredata);
             return this;
         }
 
-        public Builder memorydb(@Nullable Input<String> memorydb) {
+        public Builder memorydb(@Nullable Output<String> memorydb) {
             this.memorydb = memorydb;
             return this;
         }
 
         public Builder memorydb(@Nullable String memorydb) {
-            this.memorydb = Input.ofNullable(memorydb);
+            this.memorydb = Output.ofNullable(memorydb);
             return this;
         }
 
-        public Builder mq(@Nullable Input<String> mq) {
+        public Builder mq(@Nullable Output<String> mq) {
             this.mq = mq;
             return this;
         }
 
         public Builder mq(@Nullable String mq) {
-            this.mq = Input.ofNullable(mq);
+            this.mq = Output.ofNullable(mq);
             return this;
         }
 
-        public Builder mwaa(@Nullable Input<String> mwaa) {
+        public Builder mwaa(@Nullable Output<String> mwaa) {
             this.mwaa = mwaa;
             return this;
         }
 
         public Builder mwaa(@Nullable String mwaa) {
-            this.mwaa = Input.ofNullable(mwaa);
+            this.mwaa = Output.ofNullable(mwaa);
             return this;
         }
 
-        public Builder neptune(@Nullable Input<String> neptune) {
+        public Builder neptune(@Nullable Output<String> neptune) {
             this.neptune = neptune;
             return this;
         }
 
         public Builder neptune(@Nullable String neptune) {
-            this.neptune = Input.ofNullable(neptune);
+            this.neptune = Output.ofNullable(neptune);
             return this;
         }
 
-        public Builder networkfirewall(@Nullable Input<String> networkfirewall) {
+        public Builder networkfirewall(@Nullable Output<String> networkfirewall) {
             this.networkfirewall = networkfirewall;
             return this;
         }
 
         public Builder networkfirewall(@Nullable String networkfirewall) {
-            this.networkfirewall = Input.ofNullable(networkfirewall);
+            this.networkfirewall = Output.ofNullable(networkfirewall);
             return this;
         }
 
-        public Builder networkmanager(@Nullable Input<String> networkmanager) {
+        public Builder networkmanager(@Nullable Output<String> networkmanager) {
             this.networkmanager = networkmanager;
             return this;
         }
 
         public Builder networkmanager(@Nullable String networkmanager) {
-            this.networkmanager = Input.ofNullable(networkmanager);
+            this.networkmanager = Output.ofNullable(networkmanager);
             return this;
         }
 
-        public Builder opsworks(@Nullable Input<String> opsworks) {
+        public Builder opsworks(@Nullable Output<String> opsworks) {
             this.opsworks = opsworks;
             return this;
         }
 
         public Builder opsworks(@Nullable String opsworks) {
-            this.opsworks = Input.ofNullable(opsworks);
+            this.opsworks = Output.ofNullable(opsworks);
             return this;
         }
 
-        public Builder organizations(@Nullable Input<String> organizations) {
+        public Builder organizations(@Nullable Output<String> organizations) {
             this.organizations = organizations;
             return this;
         }
 
         public Builder organizations(@Nullable String organizations) {
-            this.organizations = Input.ofNullable(organizations);
+            this.organizations = Output.ofNullable(organizations);
             return this;
         }
 
-        public Builder outposts(@Nullable Input<String> outposts) {
+        public Builder outposts(@Nullable Output<String> outposts) {
             this.outposts = outposts;
             return this;
         }
 
         public Builder outposts(@Nullable String outposts) {
-            this.outposts = Input.ofNullable(outposts);
+            this.outposts = Output.ofNullable(outposts);
             return this;
         }
 
-        public Builder personalize(@Nullable Input<String> personalize) {
+        public Builder personalize(@Nullable Output<String> personalize) {
             this.personalize = personalize;
             return this;
         }
 
         public Builder personalize(@Nullable String personalize) {
-            this.personalize = Input.ofNullable(personalize);
+            this.personalize = Output.ofNullable(personalize);
             return this;
         }
 
-        public Builder pinpoint(@Nullable Input<String> pinpoint) {
+        public Builder pinpoint(@Nullable Output<String> pinpoint) {
             this.pinpoint = pinpoint;
             return this;
         }
 
         public Builder pinpoint(@Nullable String pinpoint) {
-            this.pinpoint = Input.ofNullable(pinpoint);
+            this.pinpoint = Output.ofNullable(pinpoint);
             return this;
         }
 
-        public Builder pricing(@Nullable Input<String> pricing) {
+        public Builder pricing(@Nullable Output<String> pricing) {
             this.pricing = pricing;
             return this;
         }
 
         public Builder pricing(@Nullable String pricing) {
-            this.pricing = Input.ofNullable(pricing);
+            this.pricing = Output.ofNullable(pricing);
             return this;
         }
 
-        public Builder qldb(@Nullable Input<String> qldb) {
+        public Builder qldb(@Nullable Output<String> qldb) {
             this.qldb = qldb;
             return this;
         }
 
         public Builder qldb(@Nullable String qldb) {
-            this.qldb = Input.ofNullable(qldb);
+            this.qldb = Output.ofNullable(qldb);
             return this;
         }
 
-        public Builder quicksight(@Nullable Input<String> quicksight) {
+        public Builder quicksight(@Nullable Output<String> quicksight) {
             this.quicksight = quicksight;
             return this;
         }
 
         public Builder quicksight(@Nullable String quicksight) {
-            this.quicksight = Input.ofNullable(quicksight);
+            this.quicksight = Output.ofNullable(quicksight);
             return this;
         }
 
-        public Builder ram(@Nullable Input<String> ram) {
+        public Builder ram(@Nullable Output<String> ram) {
             this.ram = ram;
             return this;
         }
 
         public Builder ram(@Nullable String ram) {
-            this.ram = Input.ofNullable(ram);
+            this.ram = Output.ofNullable(ram);
             return this;
         }
 
-        public Builder rds(@Nullable Input<String> rds) {
+        public Builder rds(@Nullable Output<String> rds) {
             this.rds = rds;
             return this;
         }
 
         public Builder rds(@Nullable String rds) {
-            this.rds = Input.ofNullable(rds);
+            this.rds = Output.ofNullable(rds);
             return this;
         }
 
-        public Builder redshift(@Nullable Input<String> redshift) {
+        public Builder redshift(@Nullable Output<String> redshift) {
             this.redshift = redshift;
             return this;
         }
 
         public Builder redshift(@Nullable String redshift) {
-            this.redshift = Input.ofNullable(redshift);
+            this.redshift = Output.ofNullable(redshift);
             return this;
         }
 
-        public Builder resourcegroups(@Nullable Input<String> resourcegroups) {
+        public Builder resourcegroups(@Nullable Output<String> resourcegroups) {
             this.resourcegroups = resourcegroups;
             return this;
         }
 
         public Builder resourcegroups(@Nullable String resourcegroups) {
-            this.resourcegroups = Input.ofNullable(resourcegroups);
+            this.resourcegroups = Output.ofNullable(resourcegroups);
             return this;
         }
 
-        public Builder resourcegroupstaggingapi(@Nullable Input<String> resourcegroupstaggingapi) {
+        public Builder resourcegroupstaggingapi(@Nullable Output<String> resourcegroupstaggingapi) {
             this.resourcegroupstaggingapi = resourcegroupstaggingapi;
             return this;
         }
 
         public Builder resourcegroupstaggingapi(@Nullable String resourcegroupstaggingapi) {
-            this.resourcegroupstaggingapi = Input.ofNullable(resourcegroupstaggingapi);
+            this.resourcegroupstaggingapi = Output.ofNullable(resourcegroupstaggingapi);
             return this;
         }
 
-        public Builder route53(@Nullable Input<String> route53) {
+        public Builder route53(@Nullable Output<String> route53) {
             this.route53 = route53;
             return this;
         }
 
         public Builder route53(@Nullable String route53) {
-            this.route53 = Input.ofNullable(route53);
+            this.route53 = Output.ofNullable(route53);
             return this;
         }
 
-        public Builder route53domains(@Nullable Input<String> route53domains) {
+        public Builder route53domains(@Nullable Output<String> route53domains) {
             this.route53domains = route53domains;
             return this;
         }
 
         public Builder route53domains(@Nullable String route53domains) {
-            this.route53domains = Input.ofNullable(route53domains);
+            this.route53domains = Output.ofNullable(route53domains);
             return this;
         }
 
-        public Builder route53recoverycontrolconfig(@Nullable Input<String> route53recoverycontrolconfig) {
+        public Builder route53recoverycontrolconfig(@Nullable Output<String> route53recoverycontrolconfig) {
             this.route53recoverycontrolconfig = route53recoverycontrolconfig;
             return this;
         }
 
         public Builder route53recoverycontrolconfig(@Nullable String route53recoverycontrolconfig) {
-            this.route53recoverycontrolconfig = Input.ofNullable(route53recoverycontrolconfig);
+            this.route53recoverycontrolconfig = Output.ofNullable(route53recoverycontrolconfig);
             return this;
         }
 
-        public Builder route53recoveryreadiness(@Nullable Input<String> route53recoveryreadiness) {
+        public Builder route53recoveryreadiness(@Nullable Output<String> route53recoveryreadiness) {
             this.route53recoveryreadiness = route53recoveryreadiness;
             return this;
         }
 
         public Builder route53recoveryreadiness(@Nullable String route53recoveryreadiness) {
-            this.route53recoveryreadiness = Input.ofNullable(route53recoveryreadiness);
+            this.route53recoveryreadiness = Output.ofNullable(route53recoveryreadiness);
             return this;
         }
 
-        public Builder route53resolver(@Nullable Input<String> route53resolver) {
+        public Builder route53resolver(@Nullable Output<String> route53resolver) {
             this.route53resolver = route53resolver;
             return this;
         }
 
         public Builder route53resolver(@Nullable String route53resolver) {
-            this.route53resolver = Input.ofNullable(route53resolver);
+            this.route53resolver = Output.ofNullable(route53resolver);
             return this;
         }
 
-        public Builder s3(@Nullable Input<String> s3) {
+        public Builder s3(@Nullable Output<String> s3) {
             this.s3 = s3;
             return this;
         }
 
         public Builder s3(@Nullable String s3) {
-            this.s3 = Input.ofNullable(s3);
+            this.s3 = Output.ofNullable(s3);
             return this;
         }
 
-        public Builder s3control(@Nullable Input<String> s3control) {
+        public Builder s3control(@Nullable Output<String> s3control) {
             this.s3control = s3control;
             return this;
         }
 
         public Builder s3control(@Nullable String s3control) {
-            this.s3control = Input.ofNullable(s3control);
+            this.s3control = Output.ofNullable(s3control);
             return this;
         }
 
-        public Builder s3outposts(@Nullable Input<String> s3outposts) {
+        public Builder s3outposts(@Nullable Output<String> s3outposts) {
             this.s3outposts = s3outposts;
             return this;
         }
 
         public Builder s3outposts(@Nullable String s3outposts) {
-            this.s3outposts = Input.ofNullable(s3outposts);
+            this.s3outposts = Output.ofNullable(s3outposts);
             return this;
         }
 
-        public Builder sagemaker(@Nullable Input<String> sagemaker) {
+        public Builder sagemaker(@Nullable Output<String> sagemaker) {
             this.sagemaker = sagemaker;
             return this;
         }
 
         public Builder sagemaker(@Nullable String sagemaker) {
-            this.sagemaker = Input.ofNullable(sagemaker);
+            this.sagemaker = Output.ofNullable(sagemaker);
             return this;
         }
 
-        public Builder schemas(@Nullable Input<String> schemas) {
+        public Builder schemas(@Nullable Output<String> schemas) {
             this.schemas = schemas;
             return this;
         }
 
         public Builder schemas(@Nullable String schemas) {
-            this.schemas = Input.ofNullable(schemas);
+            this.schemas = Output.ofNullable(schemas);
             return this;
         }
 
-        public Builder sdb(@Nullable Input<String> sdb) {
+        public Builder sdb(@Nullable Output<String> sdb) {
             this.sdb = sdb;
             return this;
         }
 
         public Builder sdb(@Nullable String sdb) {
-            this.sdb = Input.ofNullable(sdb);
+            this.sdb = Output.ofNullable(sdb);
             return this;
         }
 
-        public Builder secretsmanager(@Nullable Input<String> secretsmanager) {
+        public Builder secretsmanager(@Nullable Output<String> secretsmanager) {
             this.secretsmanager = secretsmanager;
             return this;
         }
 
         public Builder secretsmanager(@Nullable String secretsmanager) {
-            this.secretsmanager = Input.ofNullable(secretsmanager);
+            this.secretsmanager = Output.ofNullable(secretsmanager);
             return this;
         }
 
-        public Builder securityhub(@Nullable Input<String> securityhub) {
+        public Builder securityhub(@Nullable Output<String> securityhub) {
             this.securityhub = securityhub;
             return this;
         }
 
         public Builder securityhub(@Nullable String securityhub) {
-            this.securityhub = Input.ofNullable(securityhub);
+            this.securityhub = Output.ofNullable(securityhub);
             return this;
         }
 
-        public Builder serverlessrepo(@Nullable Input<String> serverlessrepo) {
+        public Builder serverlessrepo(@Nullable Output<String> serverlessrepo) {
             this.serverlessrepo = serverlessrepo;
             return this;
         }
 
         public Builder serverlessrepo(@Nullable String serverlessrepo) {
-            this.serverlessrepo = Input.ofNullable(serverlessrepo);
+            this.serverlessrepo = Output.ofNullable(serverlessrepo);
             return this;
         }
 
-        public Builder servicecatalog(@Nullable Input<String> servicecatalog) {
+        public Builder servicecatalog(@Nullable Output<String> servicecatalog) {
             this.servicecatalog = servicecatalog;
             return this;
         }
 
         public Builder servicecatalog(@Nullable String servicecatalog) {
-            this.servicecatalog = Input.ofNullable(servicecatalog);
+            this.servicecatalog = Output.ofNullable(servicecatalog);
             return this;
         }
 
-        public Builder servicediscovery(@Nullable Input<String> servicediscovery) {
+        public Builder servicediscovery(@Nullable Output<String> servicediscovery) {
             this.servicediscovery = servicediscovery;
             return this;
         }
 
         public Builder servicediscovery(@Nullable String servicediscovery) {
-            this.servicediscovery = Input.ofNullable(servicediscovery);
+            this.servicediscovery = Output.ofNullable(servicediscovery);
             return this;
         }
 
-        public Builder servicequotas(@Nullable Input<String> servicequotas) {
+        public Builder servicequotas(@Nullable Output<String> servicequotas) {
             this.servicequotas = servicequotas;
             return this;
         }
 
         public Builder servicequotas(@Nullable String servicequotas) {
-            this.servicequotas = Input.ofNullable(servicequotas);
+            this.servicequotas = Output.ofNullable(servicequotas);
             return this;
         }
 
-        public Builder ses(@Nullable Input<String> ses) {
+        public Builder ses(@Nullable Output<String> ses) {
             this.ses = ses;
             return this;
         }
 
         public Builder ses(@Nullable String ses) {
-            this.ses = Input.ofNullable(ses);
+            this.ses = Output.ofNullable(ses);
             return this;
         }
 
-        public Builder shield(@Nullable Input<String> shield) {
+        public Builder shield(@Nullable Output<String> shield) {
             this.shield = shield;
             return this;
         }
 
         public Builder shield(@Nullable String shield) {
-            this.shield = Input.ofNullable(shield);
+            this.shield = Output.ofNullable(shield);
             return this;
         }
 
-        public Builder signer(@Nullable Input<String> signer) {
+        public Builder signer(@Nullable Output<String> signer) {
             this.signer = signer;
             return this;
         }
 
         public Builder signer(@Nullable String signer) {
-            this.signer = Input.ofNullable(signer);
+            this.signer = Output.ofNullable(signer);
             return this;
         }
 
-        public Builder sns(@Nullable Input<String> sns) {
+        public Builder sns(@Nullable Output<String> sns) {
             this.sns = sns;
             return this;
         }
 
         public Builder sns(@Nullable String sns) {
-            this.sns = Input.ofNullable(sns);
+            this.sns = Output.ofNullable(sns);
             return this;
         }
 
-        public Builder sqs(@Nullable Input<String> sqs) {
+        public Builder sqs(@Nullable Output<String> sqs) {
             this.sqs = sqs;
             return this;
         }
 
         public Builder sqs(@Nullable String sqs) {
-            this.sqs = Input.ofNullable(sqs);
+            this.sqs = Output.ofNullable(sqs);
             return this;
         }
 
-        public Builder ssm(@Nullable Input<String> ssm) {
+        public Builder ssm(@Nullable Output<String> ssm) {
             this.ssm = ssm;
             return this;
         }
 
         public Builder ssm(@Nullable String ssm) {
-            this.ssm = Input.ofNullable(ssm);
+            this.ssm = Output.ofNullable(ssm);
             return this;
         }
 
-        public Builder ssoadmin(@Nullable Input<String> ssoadmin) {
+        public Builder ssoadmin(@Nullable Output<String> ssoadmin) {
             this.ssoadmin = ssoadmin;
             return this;
         }
 
         public Builder ssoadmin(@Nullable String ssoadmin) {
-            this.ssoadmin = Input.ofNullable(ssoadmin);
+            this.ssoadmin = Output.ofNullable(ssoadmin);
             return this;
         }
 
-        public Builder stepfunctions(@Nullable Input<String> stepfunctions) {
+        public Builder stepfunctions(@Nullable Output<String> stepfunctions) {
             this.stepfunctions = stepfunctions;
             return this;
         }
 
         public Builder stepfunctions(@Nullable String stepfunctions) {
-            this.stepfunctions = Input.ofNullable(stepfunctions);
+            this.stepfunctions = Output.ofNullable(stepfunctions);
             return this;
         }
 
-        public Builder storagegateway(@Nullable Input<String> storagegateway) {
+        public Builder storagegateway(@Nullable Output<String> storagegateway) {
             this.storagegateway = storagegateway;
             return this;
         }
 
         public Builder storagegateway(@Nullable String storagegateway) {
-            this.storagegateway = Input.ofNullable(storagegateway);
+            this.storagegateway = Output.ofNullable(storagegateway);
             return this;
         }
 
-        public Builder sts(@Nullable Input<String> sts) {
+        public Builder sts(@Nullable Output<String> sts) {
             this.sts = sts;
             return this;
         }
 
         public Builder sts(@Nullable String sts) {
-            this.sts = Input.ofNullable(sts);
+            this.sts = Output.ofNullable(sts);
             return this;
         }
 
-        public Builder swf(@Nullable Input<String> swf) {
+        public Builder swf(@Nullable Output<String> swf) {
             this.swf = swf;
             return this;
         }
 
         public Builder swf(@Nullable String swf) {
-            this.swf = Input.ofNullable(swf);
+            this.swf = Output.ofNullable(swf);
             return this;
         }
 
-        public Builder synthetics(@Nullable Input<String> synthetics) {
+        public Builder synthetics(@Nullable Output<String> synthetics) {
             this.synthetics = synthetics;
             return this;
         }
 
         public Builder synthetics(@Nullable String synthetics) {
-            this.synthetics = Input.ofNullable(synthetics);
+            this.synthetics = Output.ofNullable(synthetics);
             return this;
         }
 
-        public Builder timestreamwrite(@Nullable Input<String> timestreamwrite) {
+        public Builder timestreamwrite(@Nullable Output<String> timestreamwrite) {
             this.timestreamwrite = timestreamwrite;
             return this;
         }
 
         public Builder timestreamwrite(@Nullable String timestreamwrite) {
-            this.timestreamwrite = Input.ofNullable(timestreamwrite);
+            this.timestreamwrite = Output.ofNullable(timestreamwrite);
             return this;
         }
 
-        public Builder transfer(@Nullable Input<String> transfer) {
+        public Builder transfer(@Nullable Output<String> transfer) {
             this.transfer = transfer;
             return this;
         }
 
         public Builder transfer(@Nullable String transfer) {
-            this.transfer = Input.ofNullable(transfer);
+            this.transfer = Output.ofNullable(transfer);
             return this;
         }
 
-        public Builder waf(@Nullable Input<String> waf) {
+        public Builder waf(@Nullable Output<String> waf) {
             this.waf = waf;
             return this;
         }
 
         public Builder waf(@Nullable String waf) {
-            this.waf = Input.ofNullable(waf);
+            this.waf = Output.ofNullable(waf);
             return this;
         }
 
-        public Builder wafregional(@Nullable Input<String> wafregional) {
+        public Builder wafregional(@Nullable Output<String> wafregional) {
             this.wafregional = wafregional;
             return this;
         }
 
         public Builder wafregional(@Nullable String wafregional) {
-            this.wafregional = Input.ofNullable(wafregional);
+            this.wafregional = Output.ofNullable(wafregional);
             return this;
         }
 
-        public Builder wafv2(@Nullable Input<String> wafv2) {
+        public Builder wafv2(@Nullable Output<String> wafv2) {
             this.wafv2 = wafv2;
             return this;
         }
 
         public Builder wafv2(@Nullable String wafv2) {
-            this.wafv2 = Input.ofNullable(wafv2);
+            this.wafv2 = Output.ofNullable(wafv2);
             return this;
         }
 
-        public Builder worklink(@Nullable Input<String> worklink) {
+        public Builder worklink(@Nullable Output<String> worklink) {
             this.worklink = worklink;
             return this;
         }
 
         public Builder worklink(@Nullable String worklink) {
-            this.worklink = Input.ofNullable(worklink);
+            this.worklink = Output.ofNullable(worklink);
             return this;
         }
 
-        public Builder workmail(@Nullable Input<String> workmail) {
+        public Builder workmail(@Nullable Output<String> workmail) {
             this.workmail = workmail;
             return this;
         }
 
         public Builder workmail(@Nullable String workmail) {
-            this.workmail = Input.ofNullable(workmail);
+            this.workmail = Output.ofNullable(workmail);
             return this;
         }
 
-        public Builder workspaces(@Nullable Input<String> workspaces) {
+        public Builder workspaces(@Nullable Output<String> workspaces) {
             this.workspaces = workspaces;
             return this;
         }
 
         public Builder workspaces(@Nullable String workspaces) {
-            this.workspaces = Input.ofNullable(workspaces);
+            this.workspaces = Output.ofNullable(workspaces);
             return this;
         }
 
-        public Builder xray(@Nullable Input<String> xray) {
+        public Builder xray(@Nullable Output<String> xray) {
             this.xray = xray;
             return this;
         }
 
         public Builder xray(@Nullable String xray) {
-            this.xray = Input.ofNullable(xray);
+            this.xray = Output.ofNullable(xray);
             return this;
         }
         public ProviderEndpointArgs build() {

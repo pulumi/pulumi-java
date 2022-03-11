@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.ObjectTypeKeyStandardIdentifiersItem;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldNames")
-      private final @Nullable Input<List<String>> fieldNames;
+      private final @Nullable Output<List<String>> fieldNames;
 
-    public Input<List<String>> getFieldNames() {
-        return this.fieldNames == null ? Input.empty() : this.fieldNames;
+    public Output<List<String>> getFieldNames() {
+        return this.fieldNames == null ? Output.empty() : this.fieldNames;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="standardIdentifiers")
-      private final @Nullable Input<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
+      private final @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
 
-    public Input<List<ObjectTypeKeyStandardIdentifiersItem>> getStandardIdentifiers() {
-        return this.standardIdentifiers == null ? Input.empty() : this.standardIdentifiers;
+    public Output<List<ObjectTypeKeyStandardIdentifiersItem>> getStandardIdentifiers() {
+        return this.standardIdentifiers == null ? Output.empty() : this.standardIdentifiers;
     }
 
     public ObjectTypeKeyArgs(
-        @Nullable Input<List<String>> fieldNames,
-        @Nullable Input<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers) {
+        @Nullable Output<List<String>> fieldNames,
+        @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers) {
         this.fieldNames = fieldNames;
         this.standardIdentifiers = standardIdentifiers;
     }
 
     private ObjectTypeKeyArgs() {
-        this.fieldNames = Input.empty();
-        this.standardIdentifiers = Input.empty();
+        this.fieldNames = Output.empty();
+        this.standardIdentifiers = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> fieldNames;
-        private @Nullable Input<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
+        private @Nullable Output<List<String>> fieldNames;
+        private @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.standardIdentifiers = defaults.standardIdentifiers;
         }
 
-        public Builder fieldNames(@Nullable Input<List<String>> fieldNames) {
+        public Builder fieldNames(@Nullable Output<List<String>> fieldNames) {
             this.fieldNames = fieldNames;
             return this;
         }
 
         public Builder fieldNames(@Nullable List<String> fieldNames) {
-            this.fieldNames = Input.ofNullable(fieldNames);
+            this.fieldNames = Output.ofNullable(fieldNames);
             return this;
         }
 
-        public Builder standardIdentifiers(@Nullable Input<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers) {
+        public Builder standardIdentifiers(@Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers) {
             this.standardIdentifiers = standardIdentifiers;
             return this;
         }
 
         public Builder standardIdentifiers(@Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
-            this.standardIdentifiers = Input.ofNullable(standardIdentifiers);
+            this.standardIdentifiers = Output.ofNullable(standardIdentifiers);
             return this;
         }
         public ObjectTypeKeyArgs build() {

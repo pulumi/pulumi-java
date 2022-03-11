@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="folder")
-      private final @Nullable Input<String> folder;
+      private final @Nullable Output<String> folder;
 
-    public Input<String> getFolder() {
-        return this.folder == null ? Input.empty() : this.folder;
+    public Output<String> getFolder() {
+        return this.folder == null ? Output.empty() : this.folder;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public FolderExclusionState(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<String> filter,
-        @Nullable Input<String> folder,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<String> filter,
+        @Nullable Output<String> folder,
+        @Nullable Output<String> name) {
         this.description = description;
         this.disabled = disabled;
         this.filter = filter;
@@ -88,11 +88,11 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
     }
 
     private FolderExclusionState() {
-        this.description = Input.empty();
-        this.disabled = Input.empty();
-        this.filter = Input.empty();
-        this.folder = Input.empty();
-        this.name = Input.empty();
+        this.description = Output.empty();
+        this.disabled = Output.empty();
+        this.filter = Output.empty();
+        this.folder = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<String> folder;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<String> folder;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class FolderExclusionState extends io.pulumi.resources.ResourceArgs
     	      this.name = defaults.name;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder folder(@Nullable Input<String> folder) {
+        public Builder folder(@Nullable Output<String> folder) {
             this.folder = folder;
             return this;
         }
 
         public Builder folder(@Nullable String folder) {
-            this.folder = Input.ofNullable(folder);
+            this.folder = Output.ofNullable(folder);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public FolderExclusionState build() {

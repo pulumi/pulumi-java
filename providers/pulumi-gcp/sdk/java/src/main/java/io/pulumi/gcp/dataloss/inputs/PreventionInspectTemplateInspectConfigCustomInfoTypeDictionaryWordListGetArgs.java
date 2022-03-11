@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @InputImport(name="words", required=true)
-      private final Input<List<String>> words;
+      private final Output<List<String>> words;
 
-    public Input<List<String>> getWords() {
+    public Output<List<String>> getWords() {
         return this.words;
     }
 
-    public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs(Input<List<String>> words) {
+    public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs(Output<List<String>> words) {
         this.words = Objects.requireNonNull(words, "expected parameter 'words' to be non-null");
     }
 
     private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs() {
-        this.words = Input.empty();
+        this.words = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     }
 
     public static final class Builder {
-        private Input<List<String>> words;
+        private Output<List<String>> words;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     	      this.words = defaults.words;
         }
 
-        public Builder words(Input<List<String>> words) {
+        public Builder words(Output<List<String>> words) {
             this.words = Objects.requireNonNull(words);
             return this;
         }
 
         public Builder words(List<String> words) {
-            this.words = Input.of(Objects.requireNonNull(words));
+            this.words = Output.of(Objects.requireNonNull(words));
             return this;
         }
         public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs build() {

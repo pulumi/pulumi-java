@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssoadmin;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="inlinePolicy", required=true)
-      private final Input<String> inlinePolicy;
+      private final Output<String> inlinePolicy;
 
-    public Input<String> getInlinePolicy() {
+    public Output<String> getInlinePolicy() {
         return this.inlinePolicy;
     }
 
@@ -29,9 +29,9 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="instanceArn", required=true)
-      private final Input<String> instanceArn;
+      private final Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
+    public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
 
@@ -40,25 +40,25 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="permissionSetArn", required=true)
-      private final Input<String> permissionSetArn;
+      private final Output<String> permissionSetArn;
 
-    public Input<String> getPermissionSetArn() {
+    public Output<String> getPermissionSetArn() {
         return this.permissionSetArn;
     }
 
     public PermissionSetInlinePolicyArgs(
-        Input<String> inlinePolicy,
-        Input<String> instanceArn,
-        Input<String> permissionSetArn) {
+        Output<String> inlinePolicy,
+        Output<String> instanceArn,
+        Output<String> permissionSetArn) {
         this.inlinePolicy = Objects.requireNonNull(inlinePolicy, "expected parameter 'inlinePolicy' to be non-null");
         this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
         this.permissionSetArn = Objects.requireNonNull(permissionSetArn, "expected parameter 'permissionSetArn' to be non-null");
     }
 
     private PermissionSetInlinePolicyArgs() {
-        this.inlinePolicy = Input.empty();
-        this.instanceArn = Input.empty();
-        this.permissionSetArn = Input.empty();
+        this.inlinePolicy = Output.empty();
+        this.instanceArn = Output.empty();
+        this.permissionSetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> inlinePolicy;
-        private Input<String> instanceArn;
-        private Input<String> permissionSetArn;
+        private Output<String> inlinePolicy;
+        private Output<String> instanceArn;
+        private Output<String> permissionSetArn;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
     	      this.permissionSetArn = defaults.permissionSetArn;
         }
 
-        public Builder inlinePolicy(Input<String> inlinePolicy) {
+        public Builder inlinePolicy(Output<String> inlinePolicy) {
             this.inlinePolicy = Objects.requireNonNull(inlinePolicy);
             return this;
         }
 
         public Builder inlinePolicy(String inlinePolicy) {
-            this.inlinePolicy = Input.of(Objects.requireNonNull(inlinePolicy));
+            this.inlinePolicy = Output.of(Objects.requireNonNull(inlinePolicy));
             return this;
         }
 
-        public Builder instanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
+            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder permissionSetArn(Input<String> permissionSetArn) {
+        public Builder permissionSetArn(Output<String> permissionSetArn) {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
 
         public Builder permissionSetArn(String permissionSetArn) {
-            this.permissionSetArn = Input.of(Objects.requireNonNull(permissionSetArn));
+            this.permissionSetArn = Output.of(Objects.requireNonNull(permissionSetArn));
             return this;
         }
         public PermissionSetInlinePolicyArgs build() {

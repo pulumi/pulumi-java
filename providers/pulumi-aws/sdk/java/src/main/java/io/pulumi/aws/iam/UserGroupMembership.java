@@ -6,7 +6,6 @@ package io.pulumi.aws.iam;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.UserGroupMembershipArgs;
 import io.pulumi.aws.iam.inputs.UserGroupMembershipState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -102,14 +101,14 @@ public class UserGroupMembership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserGroupMembership(String name, UserGroupMembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/userGroupMembership:UserGroupMembership", name, args == null ? UserGroupMembershipArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:iam/userGroupMembership:UserGroupMembership", name, args == null ? UserGroupMembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private UserGroupMembership(String name, Input<String> id, @Nullable UserGroupMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private UserGroupMembership(String name, Output<String> id, @Nullable UserGroupMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:iam/userGroupMembership:UserGroupMembership", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -125,7 +124,7 @@ public class UserGroupMembership extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static UserGroupMembership get(String name, Input<String> id, @Nullable UserGroupMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static UserGroupMembership get(String name, Output<String> id, @Nullable UserGroupMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new UserGroupMembership(name, id, state, options);
     }
 }

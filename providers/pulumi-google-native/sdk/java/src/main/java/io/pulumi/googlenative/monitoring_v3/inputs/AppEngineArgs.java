@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moduleId")
-      private final @Nullable Input<String> moduleId;
+      private final @Nullable Output<String> moduleId;
 
-    public Input<String> getModuleId() {
-        return this.moduleId == null ? Input.empty() : this.moduleId;
+    public Output<String> getModuleId() {
+        return this.moduleId == null ? Output.empty() : this.moduleId;
     }
 
-    public AppEngineArgs(@Nullable Input<String> moduleId) {
+    public AppEngineArgs(@Nullable Output<String> moduleId) {
         this.moduleId = moduleId;
     }
 
     private AppEngineArgs() {
-        this.moduleId = Input.empty();
+        this.moduleId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> moduleId;
+        private @Nullable Output<String> moduleId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.moduleId = defaults.moduleId;
         }
 
-        public Builder moduleId(@Nullable Input<String> moduleId) {
+        public Builder moduleId(@Nullable Output<String> moduleId) {
             this.moduleId = moduleId;
             return this;
         }
 
         public Builder moduleId(@Nullable String moduleId) {
-            this.moduleId = Input.ofNullable(moduleId);
+            this.moduleId = Output.ofNullable(moduleId);
             return this;
         }
         public AppEngineArgs build() {

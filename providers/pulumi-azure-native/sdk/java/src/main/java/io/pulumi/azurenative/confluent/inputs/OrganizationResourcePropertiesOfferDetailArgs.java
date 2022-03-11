@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confluent.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * 
      */
     @InputImport(name="planId")
-      private final @Nullable Input<String> planId;
+      private final @Nullable Output<String> planId;
 
-    public Input<String> getPlanId() {
-        return this.planId == null ? Input.empty() : this.planId;
+    public Output<String> getPlanId() {
+        return this.planId == null ? Output.empty() : this.planId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * 
      */
     @InputImport(name="planName")
-      private final @Nullable Input<String> planName;
+      private final @Nullable Output<String> planName;
 
-    public Input<String> getPlanName() {
-        return this.planName == null ? Input.empty() : this.planName;
+    public Output<String> getPlanName() {
+        return this.planName == null ? Output.empty() : this.planName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * 
      */
     @InputImport(name="publisherId")
-      private final @Nullable Input<String> publisherId;
+      private final @Nullable Output<String> publisherId;
 
-    public Input<String> getPublisherId() {
-        return this.publisherId == null ? Input.empty() : this.publisherId;
+    public Output<String> getPublisherId() {
+        return this.publisherId == null ? Output.empty() : this.publisherId;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * 
      */
     @InputImport(name="termUnit")
-      private final @Nullable Input<String> termUnit;
+      private final @Nullable Output<String> termUnit;
 
-    public Input<String> getTermUnit() {
-        return this.termUnit == null ? Input.empty() : this.termUnit;
+    public Output<String> getTermUnit() {
+        return this.termUnit == null ? Output.empty() : this.termUnit;
     }
 
     public OrganizationResourcePropertiesOfferDetailArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> planId,
-        @Nullable Input<String> planName,
-        @Nullable Input<String> publisherId,
-        @Nullable Input<String> termUnit) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> planId,
+        @Nullable Output<String> planName,
+        @Nullable Output<String> publisherId,
+        @Nullable Output<String> termUnit) {
         this.id = id;
         this.planId = planId;
         this.planName = planName;
@@ -87,11 +87,11 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
     }
 
     private OrganizationResourcePropertiesOfferDetailArgs() {
-        this.id = Input.empty();
-        this.planId = Input.empty();
-        this.planName = Input.empty();
-        this.publisherId = Input.empty();
-        this.termUnit = Input.empty();
+        this.id = Output.empty();
+        this.planId = Output.empty();
+        this.planName = Output.empty();
+        this.publisherId = Output.empty();
+        this.termUnit = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> planId;
-        private @Nullable Input<String> planName;
-        private @Nullable Input<String> publisherId;
-        private @Nullable Input<String> termUnit;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> planId;
+        private @Nullable Output<String> planName;
+        private @Nullable Output<String> publisherId;
+        private @Nullable Output<String> termUnit;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
     	      this.termUnit = defaults.termUnit;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder planId(@Nullable Input<String> planId) {
+        public Builder planId(@Nullable Output<String> planId) {
             this.planId = planId;
             return this;
         }
 
         public Builder planId(@Nullable String planId) {
-            this.planId = Input.ofNullable(planId);
+            this.planId = Output.ofNullable(planId);
             return this;
         }
 
-        public Builder planName(@Nullable Input<String> planName) {
+        public Builder planName(@Nullable Output<String> planName) {
             this.planName = planName;
             return this;
         }
 
         public Builder planName(@Nullable String planName) {
-            this.planName = Input.ofNullable(planName);
+            this.planName = Output.ofNullable(planName);
             return this;
         }
 
-        public Builder publisherId(@Nullable Input<String> publisherId) {
+        public Builder publisherId(@Nullable Output<String> publisherId) {
             this.publisherId = publisherId;
             return this;
         }
 
         public Builder publisherId(@Nullable String publisherId) {
-            this.publisherId = Input.ofNullable(publisherId);
+            this.publisherId = Output.ofNullable(publisherId);
             return this;
         }
 
-        public Builder termUnit(@Nullable Input<String> termUnit) {
+        public Builder termUnit(@Nullable Output<String> termUnit) {
             this.termUnit = termUnit;
             return this;
         }
 
         public Builder termUnit(@Nullable String termUnit) {
-            this.termUnit = Input.ofNullable(termUnit);
+            this.termUnit = Output.ofNullable(termUnit);
             return this;
         }
         public OrganizationResourcePropertiesOfferDetailArgs build() {

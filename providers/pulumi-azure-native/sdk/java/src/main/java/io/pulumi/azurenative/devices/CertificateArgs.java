@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.devices.inputs.CertificatePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateName")
-      private final @Nullable Input<String> certificateName;
+      private final @Nullable Output<String> certificateName;
 
-    public Input<String> getCertificateName() {
-        return this.certificateName == null ? Input.empty() : this.certificateName;
+    public Output<String> getCertificateName() {
+        return this.certificateName == null ? Output.empty() : this.certificateName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<CertificatePropertiesArgs> properties;
+      private final @Nullable Output<CertificatePropertiesArgs> properties;
 
-    public Input<CertificatePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<CertificatePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
     public CertificateArgs(
-        @Nullable Input<String> certificateName,
-        @Nullable Input<CertificatePropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> resourceName) {
+        @Nullable Output<String> certificateName,
+        @Nullable Output<CertificatePropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> resourceName) {
         this.certificateName = certificateName;
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.certificateName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
+        this.certificateName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateName;
-        private @Nullable Input<CertificatePropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
+        private @Nullable Output<String> certificateName;
+        private @Nullable Output<CertificatePropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder certificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Input.ofNullable(certificateName);
+            this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<CertificatePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<CertificatePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable CertificatePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
         public CertificateArgs build() {

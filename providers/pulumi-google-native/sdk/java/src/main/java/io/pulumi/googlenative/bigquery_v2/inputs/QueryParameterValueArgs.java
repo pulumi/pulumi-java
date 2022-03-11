@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arrayValues")
-      private final @Nullable Input<List<QueryParameterValueArgs>> arrayValues;
+      private final @Nullable Output<List<QueryParameterValueArgs>> arrayValues;
 
-    public Input<List<QueryParameterValueArgs>> getArrayValues() {
-        return this.arrayValues == null ? Input.empty() : this.arrayValues;
+    public Output<List<QueryParameterValueArgs>> getArrayValues() {
+        return this.arrayValues == null ? Output.empty() : this.arrayValues;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="structValues")
-      private final @Nullable Input<Map<String,String>> structValues;
+      private final @Nullable Output<Map<String,String>> structValues;
 
-    public Input<Map<String,String>> getStructValues() {
-        return this.structValues == null ? Input.empty() : this.structValues;
+    public Output<Map<String,String>> getStructValues() {
+        return this.structValues == null ? Output.empty() : this.structValues;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public QueryParameterValueArgs(
-        @Nullable Input<List<QueryParameterValueArgs>> arrayValues,
-        @Nullable Input<Map<String,String>> structValues,
-        @Nullable Input<String> value) {
+        @Nullable Output<List<QueryParameterValueArgs>> arrayValues,
+        @Nullable Output<Map<String,String>> structValues,
+        @Nullable Output<String> value) {
         this.arrayValues = arrayValues;
         this.structValues = structValues;
         this.value = value;
     }
 
     private QueryParameterValueArgs() {
-        this.arrayValues = Input.empty();
-        this.structValues = Input.empty();
-        this.value = Input.empty();
+        this.arrayValues = Output.empty();
+        this.structValues = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<QueryParameterValueArgs>> arrayValues;
-        private @Nullable Input<Map<String,String>> structValues;
-        private @Nullable Input<String> value;
+        private @Nullable Output<List<QueryParameterValueArgs>> arrayValues;
+        private @Nullable Output<Map<String,String>> structValues;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
     	      this.value = defaults.value;
         }
 
-        public Builder arrayValues(@Nullable Input<List<QueryParameterValueArgs>> arrayValues) {
+        public Builder arrayValues(@Nullable Output<List<QueryParameterValueArgs>> arrayValues) {
             this.arrayValues = arrayValues;
             return this;
         }
 
         public Builder arrayValues(@Nullable List<QueryParameterValueArgs> arrayValues) {
-            this.arrayValues = Input.ofNullable(arrayValues);
+            this.arrayValues = Output.ofNullable(arrayValues);
             return this;
         }
 
-        public Builder structValues(@Nullable Input<Map<String,String>> structValues) {
+        public Builder structValues(@Nullable Output<Map<String,String>> structValues) {
             this.structValues = structValues;
             return this;
         }
 
         public Builder structValues(@Nullable Map<String,String> structValues) {
-            this.structValues = Input.ofNullable(structValues);
+            this.structValues = Output.ofNullable(structValues);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public QueryParameterValueArgs build() {

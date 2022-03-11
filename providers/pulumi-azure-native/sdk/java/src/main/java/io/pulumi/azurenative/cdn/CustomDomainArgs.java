@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDomainName")
-      private final @Nullable Input<String> customDomainName;
+      private final @Nullable Output<String> customDomainName;
 
-    public Input<String> getCustomDomainName() {
-        return this.customDomainName == null ? Input.empty() : this.customDomainName;
+    public Output<String> getCustomDomainName() {
+        return this.customDomainName == null ? Output.empty() : this.customDomainName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-      private final Input<String> endpointName;
+      private final Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
+    public Output<String> getEndpointName() {
         return this.endpointName;
     }
 
@@ -41,9 +41,9 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostName", required=true)
-      private final Input<String> hostName;
+      private final Output<String> hostName;
 
-    public Input<String> getHostName() {
+    public Output<String> getHostName() {
         return this.hostName;
     }
 
@@ -52,9 +52,9 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -63,18 +63,18 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public CustomDomainArgs(
-        @Nullable Input<String> customDomainName,
-        Input<String> endpointName,
-        Input<String> hostName,
-        Input<String> profileName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> customDomainName,
+        Output<String> endpointName,
+        Output<String> hostName,
+        Output<String> profileName,
+        Output<String> resourceGroupName) {
         this.customDomainName = customDomainName;
         this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
@@ -83,11 +83,11 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomDomainArgs() {
-        this.customDomainName = Input.empty();
-        this.endpointName = Input.empty();
-        this.hostName = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.customDomainName = Output.empty();
+        this.endpointName = Output.empty();
+        this.hostName = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customDomainName;
-        private Input<String> endpointName;
-        private Input<String> hostName;
-        private Input<String> profileName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> customDomainName;
+        private Output<String> endpointName;
+        private Output<String> hostName;
+        private Output<String> profileName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder customDomainName(@Nullable Input<String> customDomainName) {
+        public Builder customDomainName(@Nullable Output<String> customDomainName) {
             this.customDomainName = customDomainName;
             return this;
         }
 
         public Builder customDomainName(@Nullable String customDomainName) {
-            this.customDomainName = Input.ofNullable(customDomainName);
+            this.customDomainName = Output.ofNullable(customDomainName);
             return this;
         }
 
-        public Builder endpointName(Input<String> endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Input.of(Objects.requireNonNull(endpointName));
+            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder hostName(Input<String> hostName) {
+        public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Input.of(Objects.requireNonNull(hostName));
+            this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public CustomDomainArgs build() {

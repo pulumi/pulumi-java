@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     public SqlServerAuditConfigArgs(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> kind) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> kind) {
         this.bucket = bucket;
         this.kind = kind;
     }
 
     private SqlServerAuditConfigArgs() {
-        this.bucket = Input.empty();
-        this.kind = Input.empty();
+        this.bucket = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> kind;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
     	      this.kind = defaults.kind;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public SqlServerAuditConfigArgs build() {

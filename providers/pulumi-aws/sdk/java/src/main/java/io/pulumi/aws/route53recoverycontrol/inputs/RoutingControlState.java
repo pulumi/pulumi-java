@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterArn")
-      private final @Nullable Input<String> clusterArn;
+      private final @Nullable Output<String> clusterArn;
 
-    public Input<String> getClusterArn() {
-        return this.clusterArn == null ? Input.empty() : this.clusterArn;
+    public Output<String> getClusterArn() {
+        return this.clusterArn == null ? Output.empty() : this.clusterArn;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="controlPanelArn")
-      private final @Nullable Input<String> controlPanelArn;
+      private final @Nullable Output<String> controlPanelArn;
 
-    public Input<String> getControlPanelArn() {
-        return this.controlPanelArn == null ? Input.empty() : this.controlPanelArn;
+    public Output<String> getControlPanelArn() {
+        return this.controlPanelArn == null ? Output.empty() : this.controlPanelArn;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public RoutingControlState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> clusterArn,
-        @Nullable Input<String> controlPanelArn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> clusterArn,
+        @Nullable Output<String> controlPanelArn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> status) {
         this.arn = arn;
         this.clusterArn = clusterArn;
         this.controlPanelArn = controlPanelArn;
@@ -83,11 +83,11 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
     }
 
     private RoutingControlState() {
-        this.arn = Input.empty();
-        this.clusterArn = Input.empty();
-        this.controlPanelArn = Input.empty();
-        this.name = Input.empty();
-        this.status = Input.empty();
+        this.arn = Output.empty();
+        this.clusterArn = Output.empty();
+        this.controlPanelArn = Output.empty();
+        this.name = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> clusterArn;
-        private @Nullable Input<String> controlPanelArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> clusterArn;
+        private @Nullable Output<String> controlPanelArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
     	      this.status = defaults.status;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder clusterArn(@Nullable Input<String> clusterArn) {
+        public Builder clusterArn(@Nullable Output<String> clusterArn) {
             this.clusterArn = clusterArn;
             return this;
         }
 
         public Builder clusterArn(@Nullable String clusterArn) {
-            this.clusterArn = Input.ofNullable(clusterArn);
+            this.clusterArn = Output.ofNullable(clusterArn);
             return this;
         }
 
-        public Builder controlPanelArn(@Nullable Input<String> controlPanelArn) {
+        public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
             this.controlPanelArn = controlPanelArn;
             return this;
         }
 
         public Builder controlPanelArn(@Nullable String controlPanelArn) {
-            this.controlPanelArn = Input.ofNullable(controlPanelArn);
+            this.controlPanelArn = Output.ofNullable(controlPanelArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public RoutingControlState build() {

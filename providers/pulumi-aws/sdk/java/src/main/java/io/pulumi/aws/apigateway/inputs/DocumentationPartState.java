@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.DocumentationPartLocationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<DocumentationPartLocationGetArgs> location;
+      private final @Nullable Output<DocumentationPartLocationGetArgs> location;
 
-    public Input<DocumentationPartLocationGetArgs> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<DocumentationPartLocationGetArgs> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<String> properties;
+      private final @Nullable Output<String> properties;
 
-    public Input<String> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<String> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="restApiId")
-      private final @Nullable Input<String> restApiId;
+      private final @Nullable Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
-        return this.restApiId == null ? Input.empty() : this.restApiId;
+    public Output<String> getRestApiId() {
+        return this.restApiId == null ? Output.empty() : this.restApiId;
     }
 
     public DocumentationPartState(
-        @Nullable Input<DocumentationPartLocationGetArgs> location,
-        @Nullable Input<String> properties,
-        @Nullable Input<String> restApiId) {
+        @Nullable Output<DocumentationPartLocationGetArgs> location,
+        @Nullable Output<String> properties,
+        @Nullable Output<String> restApiId) {
         this.location = location;
         this.properties = properties;
         this.restApiId = restApiId;
     }
 
     private DocumentationPartState() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.restApiId = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.restApiId = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<DocumentationPartLocationGetArgs> location;
-        private @Nullable Input<String> properties;
-        private @Nullable Input<String> restApiId;
+        private @Nullable Output<DocumentationPartLocationGetArgs> location;
+        private @Nullable Output<String> properties;
+        private @Nullable Output<String> restApiId;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder location(@Nullable Input<DocumentationPartLocationGetArgs> location) {
+        public Builder location(@Nullable Output<DocumentationPartLocationGetArgs> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable DocumentationPartLocationGetArgs location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<String> properties) {
+        public Builder properties(@Nullable Output<String> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable String properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder restApiId(@Nullable Input<String> restApiId) {
+        public Builder restApiId(@Nullable Output<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
 
         public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Input.ofNullable(restApiId);
+            this.restApiId = Output.ofNullable(restApiId);
             return this;
         }
         public DocumentationPartState build() {

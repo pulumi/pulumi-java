@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="healthCheck")
-      private final @Nullable Input<String> healthCheck;
+      private final @Nullable Output<String> healthCheck;
 
-    public Input<String> getHealthCheck() {
-        return this.healthCheck == null ? Input.empty() : this.healthCheck;
+    public Output<String> getHealthCheck() {
+        return this.healthCheck == null ? Output.empty() : this.healthCheck;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="initialDelaySec")
-      private final @Nullable Input<Integer> initialDelaySec;
+      private final @Nullable Output<Integer> initialDelaySec;
 
-    public Input<Integer> getInitialDelaySec() {
-        return this.initialDelaySec == null ? Input.empty() : this.initialDelaySec;
+    public Output<Integer> getInitialDelaySec() {
+        return this.initialDelaySec == null ? Output.empty() : this.initialDelaySec;
     }
 
     public InstanceGroupManagerAutoHealingPolicyArgs(
-        @Nullable Input<String> healthCheck,
-        @Nullable Input<Integer> initialDelaySec) {
+        @Nullable Output<String> healthCheck,
+        @Nullable Output<Integer> initialDelaySec) {
         this.healthCheck = healthCheck;
         this.initialDelaySec = initialDelaySec;
     }
 
     private InstanceGroupManagerAutoHealingPolicyArgs() {
-        this.healthCheck = Input.empty();
-        this.initialDelaySec = Input.empty();
+        this.healthCheck = Output.empty();
+        this.initialDelaySec = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> healthCheck;
-        private @Nullable Input<Integer> initialDelaySec;
+        private @Nullable Output<String> healthCheck;
+        private @Nullable Output<Integer> initialDelaySec;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     	      this.initialDelaySec = defaults.initialDelaySec;
         }
 
-        public Builder healthCheck(@Nullable Input<String> healthCheck) {
+        public Builder healthCheck(@Nullable Output<String> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
         public Builder healthCheck(@Nullable String healthCheck) {
-            this.healthCheck = Input.ofNullable(healthCheck);
+            this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder initialDelaySec(@Nullable Input<Integer> initialDelaySec) {
+        public Builder initialDelaySec(@Nullable Output<Integer> initialDelaySec) {
             this.initialDelaySec = initialDelaySec;
             return this;
         }
 
         public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
-            this.initialDelaySec = Input.ofNullable(initialDelaySec);
+            this.initialDelaySec = Output.ofNullable(initialDelaySec);
             return this;
         }
         public InstanceGroupManagerAutoHealingPolicyArgs build() {

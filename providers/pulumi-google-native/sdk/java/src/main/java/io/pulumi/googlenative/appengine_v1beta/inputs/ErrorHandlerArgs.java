@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1beta.enums.ErrorHandlerErrorCode;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorCode")
-      private final @Nullable Input<ErrorHandlerErrorCode> errorCode;
+      private final @Nullable Output<ErrorHandlerErrorCode> errorCode;
 
-    public Input<ErrorHandlerErrorCode> getErrorCode() {
-        return this.errorCode == null ? Input.empty() : this.errorCode;
+    public Output<ErrorHandlerErrorCode> getErrorCode() {
+        return this.errorCode == null ? Output.empty() : this.errorCode;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mimeType")
-      private final @Nullable Input<String> mimeType;
+      private final @Nullable Output<String> mimeType;
 
-    public Input<String> getMimeType() {
-        return this.mimeType == null ? Input.empty() : this.mimeType;
+    public Output<String> getMimeType() {
+        return this.mimeType == null ? Output.empty() : this.mimeType;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticFile")
-      private final @Nullable Input<String> staticFile;
+      private final @Nullable Output<String> staticFile;
 
-    public Input<String> getStaticFile() {
-        return this.staticFile == null ? Input.empty() : this.staticFile;
+    public Output<String> getStaticFile() {
+        return this.staticFile == null ? Output.empty() : this.staticFile;
     }
 
     public ErrorHandlerArgs(
-        @Nullable Input<ErrorHandlerErrorCode> errorCode,
-        @Nullable Input<String> mimeType,
-        @Nullable Input<String> staticFile) {
+        @Nullable Output<ErrorHandlerErrorCode> errorCode,
+        @Nullable Output<String> mimeType,
+        @Nullable Output<String> staticFile) {
         this.errorCode = errorCode;
         this.mimeType = mimeType;
         this.staticFile = staticFile;
     }
 
     private ErrorHandlerArgs() {
-        this.errorCode = Input.empty();
-        this.mimeType = Input.empty();
-        this.staticFile = Input.empty();
+        this.errorCode = Output.empty();
+        this.mimeType = Output.empty();
+        this.staticFile = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ErrorHandlerErrorCode> errorCode;
-        private @Nullable Input<String> mimeType;
-        private @Nullable Input<String> staticFile;
+        private @Nullable Output<ErrorHandlerErrorCode> errorCode;
+        private @Nullable Output<String> mimeType;
+        private @Nullable Output<String> staticFile;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.staticFile = defaults.staticFile;
         }
 
-        public Builder errorCode(@Nullable Input<ErrorHandlerErrorCode> errorCode) {
+        public Builder errorCode(@Nullable Output<ErrorHandlerErrorCode> errorCode) {
             this.errorCode = errorCode;
             return this;
         }
 
         public Builder errorCode(@Nullable ErrorHandlerErrorCode errorCode) {
-            this.errorCode = Input.ofNullable(errorCode);
+            this.errorCode = Output.ofNullable(errorCode);
             return this;
         }
 
-        public Builder mimeType(@Nullable Input<String> mimeType) {
+        public Builder mimeType(@Nullable Output<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
 
         public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Input.ofNullable(mimeType);
+            this.mimeType = Output.ofNullable(mimeType);
             return this;
         }
 
-        public Builder staticFile(@Nullable Input<String> staticFile) {
+        public Builder staticFile(@Nullable Output<String> staticFile) {
             this.staticFile = staticFile;
             return this;
         }
 
         public Builder staticFile(@Nullable String staticFile) {
-            this.staticFile = Input.ofNullable(staticFile);
+            this.staticFile = Output.ofNullable(staticFile);
             return this;
         }
         public ErrorHandlerArgs build() {

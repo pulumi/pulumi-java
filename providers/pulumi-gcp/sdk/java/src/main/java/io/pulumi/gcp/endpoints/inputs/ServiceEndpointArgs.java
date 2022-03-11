@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.endpoints.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ServiceEndpointArgs extends io.pulumi.resources.ResourceArgs 
     public static final ServiceEndpointArgs Empty = new ServiceEndpointArgs();
 
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ServiceEndpointArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> address,
+        @Nullable Output<String> name) {
         this.address = address;
         this.name = name;
     }
 
     private ServiceEndpointArgs() {
-        this.address = Input.empty();
-        this.name = Input.empty();
+        this.address = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ServiceEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> address;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ServiceEndpointArgs extends io.pulumi.resources.ResourceArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ServiceEndpointArgs build() {

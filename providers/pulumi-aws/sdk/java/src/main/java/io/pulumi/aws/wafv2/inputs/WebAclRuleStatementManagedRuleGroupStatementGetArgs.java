@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * 
      */
     @InputImport(name="excludedRules")
-      private final @Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules;
+      private final @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules;
 
-    public Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> getExcludedRules() {
-        return this.excludedRules == null ? Input.empty() : this.excludedRules;
+    public Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> getExcludedRules() {
+        return this.excludedRules == null ? Output.empty() : this.excludedRules;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -44,10 +44,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * 
      */
     @InputImport(name="scopeDownStatement")
-      private final @Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement;
+      private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement;
 
-    public Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> getScopeDownStatement() {
-        return this.scopeDownStatement == null ? Input.empty() : this.scopeDownStatement;
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> getScopeDownStatement() {
+        return this.scopeDownStatement == null ? Output.empty() : this.scopeDownStatement;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * 
      */
     @InputImport(name="vendorName", required=true)
-      private final Input<String> vendorName;
+      private final Output<String> vendorName;
 
-    public Input<String> getVendorName() {
+    public Output<String> getVendorName() {
         return this.vendorName;
     }
 
     public WebAclRuleStatementManagedRuleGroupStatementGetArgs(
-        @Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules,
-        Input<String> name,
-        @Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement,
-        Input<String> vendorName) {
+        @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules,
+        Output<String> name,
+        @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement,
+        Output<String> vendorName) {
         this.excludedRules = excludedRules;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.scopeDownStatement = scopeDownStatement;
@@ -73,10 +73,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
     }
 
     private WebAclRuleStatementManagedRuleGroupStatementGetArgs() {
-        this.excludedRules = Input.empty();
-        this.name = Input.empty();
-        this.scopeDownStatement = Input.empty();
-        this.vendorName = Input.empty();
+        this.excludedRules = Output.empty();
+        this.name = Output.empty();
+        this.scopeDownStatement = Output.empty();
+        this.vendorName = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules;
-        private Input<String> name;
-        private @Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement;
-        private Input<String> vendorName;
+        private @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules;
+        private Output<String> name;
+        private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement;
+        private Output<String> vendorName;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder excludedRules(@Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules) {
+        public Builder excludedRules(@Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
 
         public Builder excludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs> excludedRules) {
-            this.excludedRules = Input.ofNullable(excludedRules);
+            this.excludedRules = Output.ofNullable(excludedRules);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder scopeDownStatement(@Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
         public Builder scopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs scopeDownStatement) {
-            this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
+            this.scopeDownStatement = Output.ofNullable(scopeDownStatement);
             return this;
         }
 
-        public Builder vendorName(Input<String> vendorName) {
+        public Builder vendorName(Output<String> vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
 
         public Builder vendorName(String vendorName) {
-            this.vendorName = Input.of(Objects.requireNonNull(vendorName));
+            this.vendorName = Output.of(Objects.requireNonNull(vendorName));
             return this;
         }
         public WebAclRuleStatementManagedRuleGroupStatementGetArgs build() {

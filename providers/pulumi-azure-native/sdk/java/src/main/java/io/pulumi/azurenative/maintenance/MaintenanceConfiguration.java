@@ -6,7 +6,6 @@ package io.pulumi.azurenative.maintenance;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.maintenance.MaintenanceConfigurationArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -169,23 +168,23 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public MaintenanceConfiguration(String name, MaintenanceConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:maintenance:MaintenanceConfiguration", name, args == null ? MaintenanceConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:maintenance:MaintenanceConfiguration", name, args == null ? MaintenanceConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MaintenanceConfiguration(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MaintenanceConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:maintenance:MaintenanceConfiguration", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:maintenance/v20180601preview:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:maintenance/v20200401:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:maintenance/v20200701preview:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:maintenance/v20210401preview:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:maintenance/v20210501:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:maintenance/v20210901preview:MaintenanceConfiguration").build())
+                Output.of(Alias.builder().setType("azure-native:maintenance/v20180601preview:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:maintenance/v20200401:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:maintenance/v20200701preview:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:maintenance/v20210401preview:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:maintenance/v20210501:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:maintenance/v20210901preview:MaintenanceConfiguration").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -199,7 +198,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MaintenanceConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MaintenanceConfiguration get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MaintenanceConfiguration(name, id, options);
     }
 }

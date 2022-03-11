@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class DistributionOriginOriginShieldGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -30,22 +30,22 @@ public final class DistributionOriginOriginShieldGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="originShieldRegion", required=true)
-      private final Input<String> originShieldRegion;
+      private final Output<String> originShieldRegion;
 
-    public Input<String> getOriginShieldRegion() {
+    public Output<String> getOriginShieldRegion() {
         return this.originShieldRegion;
     }
 
     public DistributionOriginOriginShieldGetArgs(
-        Input<Boolean> enabled,
-        Input<String> originShieldRegion) {
+        Output<Boolean> enabled,
+        Output<String> originShieldRegion) {
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.originShieldRegion = Objects.requireNonNull(originShieldRegion, "expected parameter 'originShieldRegion' to be non-null");
     }
 
     private DistributionOriginOriginShieldGetArgs() {
-        this.enabled = Input.empty();
-        this.originShieldRegion = Input.empty();
+        this.enabled = Output.empty();
+        this.originShieldRegion = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DistributionOriginOriginShieldGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<Boolean> enabled;
-        private Input<String> originShieldRegion;
+        private Output<Boolean> enabled;
+        private Output<String> originShieldRegion;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DistributionOriginOriginShieldGetArgs extends io.pulumi.resou
     	      this.originShieldRegion = defaults.originShieldRegion;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder originShieldRegion(Input<String> originShieldRegion) {
+        public Builder originShieldRegion(Output<String> originShieldRegion) {
             this.originShieldRegion = Objects.requireNonNull(originShieldRegion);
             return this;
         }
 
         public Builder originShieldRegion(String originShieldRegion) {
-            this.originShieldRegion = Input.of(Objects.requireNonNull(originShieldRegion));
+            this.originShieldRegion = Output.of(Objects.requireNonNull(originShieldRegion));
             return this;
         }
         public DistributionOriginOriginShieldGetArgs build() {

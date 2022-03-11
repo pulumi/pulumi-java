@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1.inputs.CustomAccountArgs;
 import io.pulumi.googlenative.websecurityscanner_v1.inputs.GoogleAccountArgs;
@@ -25,10 +25,10 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAccount")
-      private final @Nullable Input<CustomAccountArgs> customAccount;
+      private final @Nullable Output<CustomAccountArgs> customAccount;
 
-    public Input<CustomAccountArgs> getCustomAccount() {
-        return this.customAccount == null ? Input.empty() : this.customAccount;
+    public Output<CustomAccountArgs> getCustomAccount() {
+        return this.customAccount == null ? Output.empty() : this.customAccount;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleAccount")
-      private final @Nullable Input<GoogleAccountArgs> googleAccount;
+      private final @Nullable Output<GoogleAccountArgs> googleAccount;
 
-    public Input<GoogleAccountArgs> getGoogleAccount() {
-        return this.googleAccount == null ? Input.empty() : this.googleAccount;
+    public Output<GoogleAccountArgs> getGoogleAccount() {
+        return this.googleAccount == null ? Output.empty() : this.googleAccount;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iapCredential")
-      private final @Nullable Input<IapCredentialArgs> iapCredential;
+      private final @Nullable Output<IapCredentialArgs> iapCredential;
 
-    public Input<IapCredentialArgs> getIapCredential() {
-        return this.iapCredential == null ? Input.empty() : this.iapCredential;
+    public Output<IapCredentialArgs> getIapCredential() {
+        return this.iapCredential == null ? Output.empty() : this.iapCredential;
     }
 
     public AuthenticationArgs(
-        @Nullable Input<CustomAccountArgs> customAccount,
-        @Nullable Input<GoogleAccountArgs> googleAccount,
-        @Nullable Input<IapCredentialArgs> iapCredential) {
+        @Nullable Output<CustomAccountArgs> customAccount,
+        @Nullable Output<GoogleAccountArgs> googleAccount,
+        @Nullable Output<IapCredentialArgs> iapCredential) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
         this.iapCredential = iapCredential;
     }
 
     private AuthenticationArgs() {
-        this.customAccount = Input.empty();
-        this.googleAccount = Input.empty();
-        this.iapCredential = Input.empty();
+        this.customAccount = Output.empty();
+        this.googleAccount = Output.empty();
+        this.iapCredential = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomAccountArgs> customAccount;
-        private @Nullable Input<GoogleAccountArgs> googleAccount;
-        private @Nullable Input<IapCredentialArgs> iapCredential;
+        private @Nullable Output<CustomAccountArgs> customAccount;
+        private @Nullable Output<GoogleAccountArgs> googleAccount;
+        private @Nullable Output<IapCredentialArgs> iapCredential;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iapCredential = defaults.iapCredential;
         }
 
-        public Builder customAccount(@Nullable Input<CustomAccountArgs> customAccount) {
+        public Builder customAccount(@Nullable Output<CustomAccountArgs> customAccount) {
             this.customAccount = customAccount;
             return this;
         }
 
         public Builder customAccount(@Nullable CustomAccountArgs customAccount) {
-            this.customAccount = Input.ofNullable(customAccount);
+            this.customAccount = Output.ofNullable(customAccount);
             return this;
         }
 
-        public Builder googleAccount(@Nullable Input<GoogleAccountArgs> googleAccount) {
+        public Builder googleAccount(@Nullable Output<GoogleAccountArgs> googleAccount) {
             this.googleAccount = googleAccount;
             return this;
         }
 
         public Builder googleAccount(@Nullable GoogleAccountArgs googleAccount) {
-            this.googleAccount = Input.ofNullable(googleAccount);
+            this.googleAccount = Output.ofNullable(googleAccount);
             return this;
         }
 
-        public Builder iapCredential(@Nullable Input<IapCredentialArgs> iapCredential) {
+        public Builder iapCredential(@Nullable Output<IapCredentialArgs> iapCredential) {
             this.iapCredential = iapCredential;
             return this;
         }
 
         public Builder iapCredential(@Nullable IapCredentialArgs iapCredential) {
-            this.iapCredential = Input.ofNullable(iapCredential);
+            this.iapCredential = Output.ofNullable(iapCredential);
             return this;
         }
         public AuthenticationArgs build() {

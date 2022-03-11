@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbProxyEndpointName", required=true)
-      private final Input<String> dbProxyEndpointName;
+      private final Output<String> dbProxyEndpointName;
 
-    public Input<String> getDbProxyEndpointName() {
+    public Output<String> getDbProxyEndpointName() {
         return this.dbProxyEndpointName;
     }
 
@@ -32,9 +32,9 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbProxyName", required=true)
-      private final Input<String> dbProxyName;
+      private final Output<String> dbProxyName;
 
-    public Input<String> getDbProxyName() {
+    public Output<String> getDbProxyName() {
         return this.dbProxyName;
     }
 
@@ -43,10 +43,10 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetRole")
-      private final @Nullable Input<String> targetRole;
+      private final @Nullable Output<String> targetRole;
 
-    public Input<String> getTargetRole() {
-        return this.targetRole == null ? Input.empty() : this.targetRole;
+    public Output<String> getTargetRole() {
+        return this.targetRole == null ? Output.empty() : this.targetRole;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Input<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
+    public Output<List<String>> getVpcSecurityGroupIds() {
+        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSubnetIds", required=true)
-      private final Input<List<String>> vpcSubnetIds;
+      private final Output<List<String>> vpcSubnetIds;
 
-    public Input<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
     public ProxyEndpointArgs(
-        Input<String> dbProxyEndpointName,
-        Input<String> dbProxyName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> targetRole,
-        @Nullable Input<List<String>> vpcSecurityGroupIds,
-        Input<List<String>> vpcSubnetIds) {
+        Output<String> dbProxyEndpointName,
+        Output<String> dbProxyName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> targetRole,
+        @Nullable Output<List<String>> vpcSecurityGroupIds,
+        Output<List<String>> vpcSubnetIds) {
         this.dbProxyEndpointName = Objects.requireNonNull(dbProxyEndpointName, "expected parameter 'dbProxyEndpointName' to be non-null");
         this.dbProxyName = Objects.requireNonNull(dbProxyName, "expected parameter 'dbProxyName' to be non-null");
         this.tags = tags;
@@ -98,12 +98,12 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProxyEndpointArgs() {
-        this.dbProxyEndpointName = Input.empty();
-        this.dbProxyName = Input.empty();
-        this.tags = Input.empty();
-        this.targetRole = Input.empty();
-        this.vpcSecurityGroupIds = Input.empty();
-        this.vpcSubnetIds = Input.empty();
+        this.dbProxyEndpointName = Output.empty();
+        this.dbProxyName = Output.empty();
+        this.tags = Output.empty();
+        this.targetRole = Output.empty();
+        this.vpcSecurityGroupIds = Output.empty();
+        this.vpcSubnetIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> dbProxyEndpointName;
-        private Input<String> dbProxyName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> targetRole;
-        private @Nullable Input<List<String>> vpcSecurityGroupIds;
-        private Input<List<String>> vpcSubnetIds;
+        private Output<String> dbProxyEndpointName;
+        private Output<String> dbProxyName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> targetRole;
+        private @Nullable Output<List<String>> vpcSecurityGroupIds;
+        private Output<List<String>> vpcSubnetIds;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSubnetIds = defaults.vpcSubnetIds;
         }
 
-        public Builder dbProxyEndpointName(Input<String> dbProxyEndpointName) {
+        public Builder dbProxyEndpointName(Output<String> dbProxyEndpointName) {
             this.dbProxyEndpointName = Objects.requireNonNull(dbProxyEndpointName);
             return this;
         }
 
         public Builder dbProxyEndpointName(String dbProxyEndpointName) {
-            this.dbProxyEndpointName = Input.of(Objects.requireNonNull(dbProxyEndpointName));
+            this.dbProxyEndpointName = Output.of(Objects.requireNonNull(dbProxyEndpointName));
             return this;
         }
 
-        public Builder dbProxyName(Input<String> dbProxyName) {
+        public Builder dbProxyName(Output<String> dbProxyName) {
             this.dbProxyName = Objects.requireNonNull(dbProxyName);
             return this;
         }
 
         public Builder dbProxyName(String dbProxyName) {
-            this.dbProxyName = Input.of(Objects.requireNonNull(dbProxyName));
+            this.dbProxyName = Output.of(Objects.requireNonNull(dbProxyName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetRole(@Nullable Input<String> targetRole) {
+        public Builder targetRole(@Nullable Output<String> targetRole) {
             this.targetRole = targetRole;
             return this;
         }
 
         public Builder targetRole(@Nullable String targetRole) {
-            this.targetRole = Input.ofNullable(targetRole);
+            this.targetRole = Output.ofNullable(targetRole);
             return this;
         }
 
-        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
 
-        public Builder vpcSubnetIds(Input<List<String>> vpcSubnetIds) {
+        public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
 
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
-            this.vpcSubnetIds = Input.of(Objects.requireNonNull(vpcSubnetIds));
+            this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }
         public ProxyEndpointArgs build() {

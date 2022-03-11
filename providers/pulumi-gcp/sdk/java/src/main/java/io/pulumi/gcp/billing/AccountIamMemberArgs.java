@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.billing.inputs.AccountIamMemberConditionArgs;
 import java.lang.String;
@@ -16,38 +16,38 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
     public static final AccountIamMemberArgs Empty = new AccountIamMemberArgs();
 
     @InputImport(name="billingAccountId", required=true)
-      private final Input<String> billingAccountId;
+      private final Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
+    public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
     @InputImport(name="condition")
-      private final @Nullable Input<AccountIamMemberConditionArgs> condition;
+      private final @Nullable Output<AccountIamMemberConditionArgs> condition;
 
-    public Input<AccountIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<AccountIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public AccountIamMemberArgs(
-        Input<String> billingAccountId,
-        @Nullable Input<AccountIamMemberConditionArgs> condition,
-        Input<String> member,
-        Input<String> role) {
+        Output<String> billingAccountId,
+        @Nullable Output<AccountIamMemberConditionArgs> condition,
+        Output<String> member,
+        Output<String> role) {
         this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
         this.condition = condition;
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -55,10 +55,10 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AccountIamMemberArgs() {
-        this.billingAccountId = Input.empty();
-        this.condition = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.billingAccountId = Output.empty();
+        this.condition = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> billingAccountId;
-        private @Nullable Input<AccountIamMemberConditionArgs> condition;
-        private Input<String> member;
-        private Input<String> role;
+        private Output<String> billingAccountId;
+        private @Nullable Output<AccountIamMemberConditionArgs> condition;
+        private Output<String> member;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
     	      this.role = defaults.role;
         }
 
-        public Builder billingAccountId(Input<String> billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Input.of(Objects.requireNonNull(billingAccountId));
+            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
 
-        public Builder condition(@Nullable Input<AccountIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<AccountIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable AccountIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public AccountIamMemberArgs build() {

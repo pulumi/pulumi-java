@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class SloBasicSliLatencyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="threshold", required=true)
-      private final Input<String> threshold;
+      private final Output<String> threshold;
 
-    public Input<String> getThreshold() {
+    public Output<String> getThreshold() {
         return this.threshold;
     }
 
-    public SloBasicSliLatencyArgs(Input<String> threshold) {
+    public SloBasicSliLatencyArgs(Output<String> threshold) {
         this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
     }
 
     private SloBasicSliLatencyArgs() {
-        this.threshold = Input.empty();
+        this.threshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class SloBasicSliLatencyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> threshold;
+        private Output<String> threshold;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class SloBasicSliLatencyArgs extends io.pulumi.resources.ResourceAr
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder threshold(Input<String> threshold) {
+        public Builder threshold(Output<String> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
         public Builder threshold(String threshold) {
-            this.threshold = Input.of(Objects.requireNonNull(threshold));
+            this.threshold = Output.of(Objects.requireNonNull(threshold));
             return this;
         }
         public SloBasicSliLatencyArgs build() {

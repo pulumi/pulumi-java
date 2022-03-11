@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * 
      */
     @InputImport(name="ruleVisibility")
-      private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility;
+      private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility;
 
-    public Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> getRuleVisibility() {
-        return this.ruleVisibility == null ? Input.empty() : this.ruleVisibility;
+    public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> getRuleVisibility() {
+        return this.ruleVisibility == null ? Output.empty() : this.ruleVisibility;
     }
 
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs(
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility) {
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility) {
         this.enable = enable;
         this.ruleVisibility = ruleVisibility;
     }
 
     private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs() {
-        this.enable = Input.empty();
-        this.ruleVisibility = Input.empty();
+        this.enable = Output.empty();
+        this.ruleVisibility = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     	      this.ruleVisibility = defaults.ruleVisibility;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder ruleVisibility(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility) {
+        public Builder ruleVisibility(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility) {
             this.ruleVisibility = ruleVisibility;
             return this;
         }
 
         public Builder ruleVisibility(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility ruleVisibility) {
-            this.ruleVisibility = Input.ofNullable(ruleVisibility);
+            this.ruleVisibility = Output.ofNullable(ruleVisibility);
             return this;
         }
         public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs build() {

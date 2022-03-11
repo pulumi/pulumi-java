@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.ClusteringArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.EncryptionConfigurationArgs;
@@ -31,16 +31,16 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clustering")
-      private final @Nullable Input<ClusteringArgs> clustering;
+      private final @Nullable Output<ClusteringArgs> clustering;
 
-    public Input<ClusteringArgs> getClustering() {
-        return this.clustering == null ? Input.empty() : this.clustering;
+    public Output<ClusteringArgs> getClustering() {
+        return this.clustering == null ? Output.empty() : this.clustering;
     }
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -49,10 +49,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfiguration")
-      private final @Nullable Input<EncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Input<EncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
+    public Output<EncryptionConfigurationArgs> getEncryptionConfiguration() {
+        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-      private final @Nullable Input<String> expirationTime;
+      private final @Nullable Output<String> expirationTime;
 
-    public Input<String> getExpirationTime() {
-        return this.expirationTime == null ? Input.empty() : this.expirationTime;
+    public Output<String> getExpirationTime() {
+        return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalDataConfiguration")
-      private final @Nullable Input<ExternalDataConfigurationArgs> externalDataConfiguration;
+      private final @Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration;
 
-    public Input<ExternalDataConfigurationArgs> getExternalDataConfiguration() {
-        return this.externalDataConfiguration == null ? Input.empty() : this.externalDataConfiguration;
+    public Output<ExternalDataConfigurationArgs> getExternalDataConfiguration() {
+        return this.externalDataConfiguration == null ? Output.empty() : this.externalDataConfiguration;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="materializedView")
-      private final @Nullable Input<MaterializedViewDefinitionArgs> materializedView;
+      private final @Nullable Output<MaterializedViewDefinitionArgs> materializedView;
 
-    public Input<MaterializedViewDefinitionArgs> getMaterializedView() {
-        return this.materializedView == null ? Input.empty() : this.materializedView;
+    public Output<MaterializedViewDefinitionArgs> getMaterializedView() {
+        return this.materializedView == null ? Output.empty() : this.materializedView;
     }
 
     /**
@@ -126,17 +126,17 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="model")
-      private final @Nullable Input<ModelDefinitionArgs> model;
+      private final @Nullable Output<ModelDefinitionArgs> model;
 
-    public Input<ModelDefinitionArgs> getModel() {
-        return this.model == null ? Input.empty() : this.model;
+    public Output<ModelDefinitionArgs> getModel() {
+        return this.model == null ? Output.empty() : this.model;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rangePartitioning")
-      private final @Nullable Input<RangePartitioningArgs> rangePartitioning;
+      private final @Nullable Output<RangePartitioningArgs> rangePartitioning;
 
-    public Input<RangePartitioningArgs> getRangePartitioning() {
-        return this.rangePartitioning == null ? Input.empty() : this.rangePartitioning;
+    public Output<RangePartitioningArgs> getRangePartitioning() {
+        return this.rangePartitioning == null ? Output.empty() : this.rangePartitioning;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requirePartitionFilter")
-      private final @Nullable Input<Boolean> requirePartitionFilter;
+      private final @Nullable Output<Boolean> requirePartitionFilter;
 
-    public Input<Boolean> getRequirePartitionFilter() {
-        return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
+    public Output<Boolean> getRequirePartitionFilter() {
+        return this.requirePartitionFilter == null ? Output.empty() : this.requirePartitionFilter;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<TableSchemaArgs> schema;
+      private final @Nullable Output<TableSchemaArgs> schema;
 
-    public Input<TableSchemaArgs> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<TableSchemaArgs> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableReference")
-      private final @Nullable Input<TableReferenceArgs> tableReference;
+      private final @Nullable Output<TableReferenceArgs> tableReference;
 
-    public Input<TableReferenceArgs> getTableReference() {
-        return this.tableReference == null ? Input.empty() : this.tableReference;
+    public Output<TableReferenceArgs> getTableReference() {
+        return this.tableReference == null ? Output.empty() : this.tableReference;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timePartitioning")
-      private final @Nullable Input<TimePartitioningArgs> timePartitioning;
+      private final @Nullable Output<TimePartitioningArgs> timePartitioning;
 
-    public Input<TimePartitioningArgs> getTimePartitioning() {
-        return this.timePartitioning == null ? Input.empty() : this.timePartitioning;
+    public Output<TimePartitioningArgs> getTimePartitioning() {
+        return this.timePartitioning == null ? Output.empty() : this.timePartitioning;
     }
 
     /**
@@ -199,30 +199,30 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="view")
-      private final @Nullable Input<ViewDefinitionArgs> view;
+      private final @Nullable Output<ViewDefinitionArgs> view;
 
-    public Input<ViewDefinitionArgs> getView() {
-        return this.view == null ? Input.empty() : this.view;
+    public Output<ViewDefinitionArgs> getView() {
+        return this.view == null ? Output.empty() : this.view;
     }
 
     public TableArgs(
-        @Nullable Input<ClusteringArgs> clustering,
-        Input<String> datasetId,
-        @Nullable Input<String> description,
-        @Nullable Input<EncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Input<String> expirationTime,
-        @Nullable Input<ExternalDataConfigurationArgs> externalDataConfiguration,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<MaterializedViewDefinitionArgs> materializedView,
-        @Nullable Input<ModelDefinitionArgs> model,
-        @Nullable Input<String> project,
-        @Nullable Input<RangePartitioningArgs> rangePartitioning,
-        @Nullable Input<Boolean> requirePartitionFilter,
-        @Nullable Input<TableSchemaArgs> schema,
-        @Nullable Input<TableReferenceArgs> tableReference,
-        @Nullable Input<TimePartitioningArgs> timePartitioning,
-        @Nullable Input<ViewDefinitionArgs> view) {
+        @Nullable Output<ClusteringArgs> clustering,
+        Output<String> datasetId,
+        @Nullable Output<String> description,
+        @Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration,
+        @Nullable Output<String> expirationTime,
+        @Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<MaterializedViewDefinitionArgs> materializedView,
+        @Nullable Output<ModelDefinitionArgs> model,
+        @Nullable Output<String> project,
+        @Nullable Output<RangePartitioningArgs> rangePartitioning,
+        @Nullable Output<Boolean> requirePartitionFilter,
+        @Nullable Output<TableSchemaArgs> schema,
+        @Nullable Output<TableReferenceArgs> tableReference,
+        @Nullable Output<TimePartitioningArgs> timePartitioning,
+        @Nullable Output<ViewDefinitionArgs> view) {
         this.clustering = clustering;
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.description = description;
@@ -243,23 +243,23 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableArgs() {
-        this.clustering = Input.empty();
-        this.datasetId = Input.empty();
-        this.description = Input.empty();
-        this.encryptionConfiguration = Input.empty();
-        this.expirationTime = Input.empty();
-        this.externalDataConfiguration = Input.empty();
-        this.friendlyName = Input.empty();
-        this.labels = Input.empty();
-        this.materializedView = Input.empty();
-        this.model = Input.empty();
-        this.project = Input.empty();
-        this.rangePartitioning = Input.empty();
-        this.requirePartitionFilter = Input.empty();
-        this.schema = Input.empty();
-        this.tableReference = Input.empty();
-        this.timePartitioning = Input.empty();
-        this.view = Input.empty();
+        this.clustering = Output.empty();
+        this.datasetId = Output.empty();
+        this.description = Output.empty();
+        this.encryptionConfiguration = Output.empty();
+        this.expirationTime = Output.empty();
+        this.externalDataConfiguration = Output.empty();
+        this.friendlyName = Output.empty();
+        this.labels = Output.empty();
+        this.materializedView = Output.empty();
+        this.model = Output.empty();
+        this.project = Output.empty();
+        this.rangePartitioning = Output.empty();
+        this.requirePartitionFilter = Output.empty();
+        this.schema = Output.empty();
+        this.tableReference = Output.empty();
+        this.timePartitioning = Output.empty();
+        this.view = Output.empty();
     }
 
     public static Builder builder() {
@@ -271,23 +271,23 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusteringArgs> clustering;
-        private Input<String> datasetId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<EncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Input<String> expirationTime;
-        private @Nullable Input<ExternalDataConfigurationArgs> externalDataConfiguration;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<MaterializedViewDefinitionArgs> materializedView;
-        private @Nullable Input<ModelDefinitionArgs> model;
-        private @Nullable Input<String> project;
-        private @Nullable Input<RangePartitioningArgs> rangePartitioning;
-        private @Nullable Input<Boolean> requirePartitionFilter;
-        private @Nullable Input<TableSchemaArgs> schema;
-        private @Nullable Input<TableReferenceArgs> tableReference;
-        private @Nullable Input<TimePartitioningArgs> timePartitioning;
-        private @Nullable Input<ViewDefinitionArgs> view;
+        private @Nullable Output<ClusteringArgs> clustering;
+        private Output<String> datasetId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration;
+        private @Nullable Output<String> expirationTime;
+        private @Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<MaterializedViewDefinitionArgs> materializedView;
+        private @Nullable Output<ModelDefinitionArgs> model;
+        private @Nullable Output<String> project;
+        private @Nullable Output<RangePartitioningArgs> rangePartitioning;
+        private @Nullable Output<Boolean> requirePartitionFilter;
+        private @Nullable Output<TableSchemaArgs> schema;
+        private @Nullable Output<TableReferenceArgs> tableReference;
+        private @Nullable Output<TimePartitioningArgs> timePartitioning;
+        private @Nullable Output<ViewDefinitionArgs> view;
 
         public Builder() {
     	      // Empty
@@ -314,173 +314,173 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.view = defaults.view;
         }
 
-        public Builder clustering(@Nullable Input<ClusteringArgs> clustering) {
+        public Builder clustering(@Nullable Output<ClusteringArgs> clustering) {
             this.clustering = clustering;
             return this;
         }
 
         public Builder clustering(@Nullable ClusteringArgs clustering) {
-            this.clustering = Input.ofNullable(clustering);
+            this.clustering = Output.ofNullable(clustering);
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptionConfiguration(@Nullable Input<EncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
         public Builder encryptionConfiguration(@Nullable EncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder expirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Input.ofNullable(expirationTime);
+            this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder externalDataConfiguration(@Nullable Input<ExternalDataConfigurationArgs> externalDataConfiguration) {
+        public Builder externalDataConfiguration(@Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration) {
             this.externalDataConfiguration = externalDataConfiguration;
             return this;
         }
 
         public Builder externalDataConfiguration(@Nullable ExternalDataConfigurationArgs externalDataConfiguration) {
-            this.externalDataConfiguration = Input.ofNullable(externalDataConfiguration);
+            this.externalDataConfiguration = Output.ofNullable(externalDataConfiguration);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder materializedView(@Nullable Input<MaterializedViewDefinitionArgs> materializedView) {
+        public Builder materializedView(@Nullable Output<MaterializedViewDefinitionArgs> materializedView) {
             this.materializedView = materializedView;
             return this;
         }
 
         public Builder materializedView(@Nullable MaterializedViewDefinitionArgs materializedView) {
-            this.materializedView = Input.ofNullable(materializedView);
+            this.materializedView = Output.ofNullable(materializedView);
             return this;
         }
 
-        public Builder model(@Nullable Input<ModelDefinitionArgs> model) {
+        public Builder model(@Nullable Output<ModelDefinitionArgs> model) {
             this.model = model;
             return this;
         }
 
         public Builder model(@Nullable ModelDefinitionArgs model) {
-            this.model = Input.ofNullable(model);
+            this.model = Output.ofNullable(model);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rangePartitioning(@Nullable Input<RangePartitioningArgs> rangePartitioning) {
+        public Builder rangePartitioning(@Nullable Output<RangePartitioningArgs> rangePartitioning) {
             this.rangePartitioning = rangePartitioning;
             return this;
         }
 
         public Builder rangePartitioning(@Nullable RangePartitioningArgs rangePartitioning) {
-            this.rangePartitioning = Input.ofNullable(rangePartitioning);
+            this.rangePartitioning = Output.ofNullable(rangePartitioning);
             return this;
         }
 
-        public Builder requirePartitionFilter(@Nullable Input<Boolean> requirePartitionFilter) {
+        public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
 
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
-            this.requirePartitionFilter = Input.ofNullable(requirePartitionFilter);
+            this.requirePartitionFilter = Output.ofNullable(requirePartitionFilter);
             return this;
         }
 
-        public Builder schema(@Nullable Input<TableSchemaArgs> schema) {
+        public Builder schema(@Nullable Output<TableSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable TableSchemaArgs schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder tableReference(@Nullable Input<TableReferenceArgs> tableReference) {
+        public Builder tableReference(@Nullable Output<TableReferenceArgs> tableReference) {
             this.tableReference = tableReference;
             return this;
         }
 
         public Builder tableReference(@Nullable TableReferenceArgs tableReference) {
-            this.tableReference = Input.ofNullable(tableReference);
+            this.tableReference = Output.ofNullable(tableReference);
             return this;
         }
 
-        public Builder timePartitioning(@Nullable Input<TimePartitioningArgs> timePartitioning) {
+        public Builder timePartitioning(@Nullable Output<TimePartitioningArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
 
         public Builder timePartitioning(@Nullable TimePartitioningArgs timePartitioning) {
-            this.timePartitioning = Input.ofNullable(timePartitioning);
+            this.timePartitioning = Output.ofNullable(timePartitioning);
             return this;
         }
 
-        public Builder view(@Nullable Input<ViewDefinitionArgs> view) {
+        public Builder view(@Nullable Output<ViewDefinitionArgs> view) {
             this.view = view;
             return this;
         }
 
         public Builder view(@Nullable ViewDefinitionArgs view) {
-            this.view = Input.ofNullable(view);
+            this.view = Output.ofNullable(view);
             return this;
         }
         public TableArgs build() {

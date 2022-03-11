@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.GcfsConfigArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gcfsConfig")
-      private final @Nullable Input<GcfsConfigArgs> gcfsConfig;
+      private final @Nullable Output<GcfsConfigArgs> gcfsConfig;
 
-    public Input<GcfsConfigArgs> getGcfsConfig() {
-        return this.gcfsConfig == null ? Input.empty() : this.gcfsConfig;
+    public Output<GcfsConfigArgs> getGcfsConfig() {
+        return this.gcfsConfig == null ? Output.empty() : this.gcfsConfig;
     }
 
-    public NodeConfigDefaultsArgs(@Nullable Input<GcfsConfigArgs> gcfsConfig) {
+    public NodeConfigDefaultsArgs(@Nullable Output<GcfsConfigArgs> gcfsConfig) {
         this.gcfsConfig = gcfsConfig;
     }
 
     private NodeConfigDefaultsArgs() {
-        this.gcfsConfig = Input.empty();
+        this.gcfsConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<GcfsConfigArgs> gcfsConfig;
+        private @Nullable Output<GcfsConfigArgs> gcfsConfig;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
     	      this.gcfsConfig = defaults.gcfsConfig;
         }
 
-        public Builder gcfsConfig(@Nullable Input<GcfsConfigArgs> gcfsConfig) {
+        public Builder gcfsConfig(@Nullable Output<GcfsConfigArgs> gcfsConfig) {
             this.gcfsConfig = gcfsConfig;
             return this;
         }
 
         public Builder gcfsConfig(@Nullable GcfsConfigArgs gcfsConfig) {
-            this.gcfsConfig = Input.ofNullable(gcfsConfig);
+            this.gcfsConfig = Output.ofNullable(gcfsConfig);
             return this;
         }
         public NodeConfigDefaultsArgs build() {

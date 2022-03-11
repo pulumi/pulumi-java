@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.account.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="alternateContactType")
-      private final @Nullable Input<String> alternateContactType;
+      private final @Nullable Output<String> alternateContactType;
 
-    public Input<String> getAlternateContactType() {
-        return this.alternateContactType == null ? Input.empty() : this.alternateContactType;
+    public Output<String> getAlternateContactType() {
+        return this.alternateContactType == null ? Output.empty() : this.alternateContactType;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="emailAddress")
-      private final @Nullable Input<String> emailAddress;
+      private final @Nullable Output<String> emailAddress;
 
-    public Input<String> getEmailAddress() {
-        return this.emailAddress == null ? Input.empty() : this.emailAddress;
+    public Output<String> getEmailAddress() {
+        return this.emailAddress == null ? Output.empty() : this.emailAddress;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="phoneNumber")
-      private final @Nullable Input<String> phoneNumber;
+      private final @Nullable Output<String> phoneNumber;
 
-    public Input<String> getPhoneNumber() {
-        return this.phoneNumber == null ? Input.empty() : this.phoneNumber;
+    public Output<String> getPhoneNumber() {
+        return this.phoneNumber == null ? Output.empty() : this.phoneNumber;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public AlternativeContactState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> alternateContactType,
-        @Nullable Input<String> emailAddress,
-        @Nullable Input<String> name,
-        @Nullable Input<String> phoneNumber,
-        @Nullable Input<String> title) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> alternateContactType,
+        @Nullable Output<String> emailAddress,
+        @Nullable Output<String> name,
+        @Nullable Output<String> phoneNumber,
+        @Nullable Output<String> title) {
         this.accountId = accountId;
         this.alternateContactType = alternateContactType;
         this.emailAddress = emailAddress;
@@ -96,12 +96,12 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
     }
 
     private AlternativeContactState() {
-        this.accountId = Input.empty();
-        this.alternateContactType = Input.empty();
-        this.emailAddress = Input.empty();
-        this.name = Input.empty();
-        this.phoneNumber = Input.empty();
-        this.title = Input.empty();
+        this.accountId = Output.empty();
+        this.alternateContactType = Output.empty();
+        this.emailAddress = Output.empty();
+        this.name = Output.empty();
+        this.phoneNumber = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> alternateContactType;
-        private @Nullable Input<String> emailAddress;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> phoneNumber;
-        private @Nullable Input<String> title;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> alternateContactType;
+        private @Nullable Output<String> emailAddress;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> phoneNumber;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
     	      this.title = defaults.title;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder alternateContactType(@Nullable Input<String> alternateContactType) {
+        public Builder alternateContactType(@Nullable Output<String> alternateContactType) {
             this.alternateContactType = alternateContactType;
             return this;
         }
 
         public Builder alternateContactType(@Nullable String alternateContactType) {
-            this.alternateContactType = Input.ofNullable(alternateContactType);
+            this.alternateContactType = Output.ofNullable(alternateContactType);
             return this;
         }
 
-        public Builder emailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Output<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Input.ofNullable(emailAddress);
+            this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder phoneNumber(@Nullable Input<String> phoneNumber) {
+        public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
 
         public Builder phoneNumber(@Nullable String phoneNumber) {
-            this.phoneNumber = Input.ofNullable(phoneNumber);
+            this.phoneNumber = Output.ofNullable(phoneNumber);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public AlternativeContactState build() {

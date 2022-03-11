@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.CustomerEncryptionKeyArgs;
 import io.pulumi.googlenative.compute_beta.inputs.GuestOsFeatureArgs;
@@ -24,10 +24,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKey")
-      private final @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey;
+      private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
-    public Input<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eraseWindowsVssSignature")
-      private final @Nullable Input<Boolean> eraseWindowsVssSignature;
+      private final @Nullable Output<Boolean> eraseWindowsVssSignature;
 
-    public Input<Boolean> getEraseWindowsVssSignature() {
-        return this.eraseWindowsVssSignature == null ? Input.empty() : this.eraseWindowsVssSignature;
+    public Output<Boolean> getEraseWindowsVssSignature() {
+        return this.eraseWindowsVssSignature == null ? Output.empty() : this.eraseWindowsVssSignature;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guestOsFeatures")
-      private final @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
+      private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
-    public Input<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
-        return this.guestOsFeatures == null ? Input.empty() : this.guestOsFeatures;
+    public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
+        return this.guestOsFeatures == null ? Output.empty() : this.guestOsFeatures;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseCodes")
-      private final @Nullable Input<List<String>> licenseCodes;
+      private final @Nullable Output<List<String>> licenseCodes;
 
-    public Input<List<String>> getLicenseCodes() {
-        return this.licenseCodes == null ? Input.empty() : this.licenseCodes;
+    public Output<List<String>> getLicenseCodes() {
+        return this.licenseCodes == null ? Output.empty() : this.licenseCodes;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenses")
-      private final @Nullable Input<List<String>> licenses;
+      private final @Nullable Output<List<String>> licenses;
 
-    public Input<List<String>> getLicenses() {
-        return this.licenses == null ? Input.empty() : this.licenses;
+    public Output<List<String>> getLicenses() {
+        return this.licenses == null ? Output.empty() : this.licenses;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationHint")
-      private final @Nullable Input<String> locationHint;
+      private final @Nullable Output<String> locationHint;
 
-    public Input<String> getLocationHint() {
-        return this.locationHint == null ? Input.empty() : this.locationHint;
+    public Output<String> getLocationHint() {
+        return this.locationHint == null ? Output.empty() : this.locationHint;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiWriter")
-      private final @Nullable Input<Boolean> multiWriter;
+      private final @Nullable Output<Boolean> multiWriter;
 
-    public Input<Boolean> getMultiWriter() {
-        return this.multiWriter == null ? Input.empty() : this.multiWriter;
+    public Output<Boolean> getMultiWriter() {
+        return this.multiWriter == null ? Output.empty() : this.multiWriter;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<String> options;
+      private final @Nullable Output<String> options;
 
-    public Input<String> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<String> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -145,17 +145,17 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="physicalBlockSizeBytes")
-      private final @Nullable Input<String> physicalBlockSizeBytes;
+      private final @Nullable Output<String> physicalBlockSizeBytes;
 
-    public Input<String> getPhysicalBlockSizeBytes() {
-        return this.physicalBlockSizeBytes == null ? Input.empty() : this.physicalBlockSizeBytes;
+    public Output<String> getPhysicalBlockSizeBytes() {
+        return this.physicalBlockSizeBytes == null ? Output.empty() : this.physicalBlockSizeBytes;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionedIops")
-      private final @Nullable Input<String> provisionedIops;
+      private final @Nullable Output<String> provisionedIops;
 
-    public Input<String> getProvisionedIops() {
-        return this.provisionedIops == null ? Input.empty() : this.provisionedIops;
+    public Output<String> getProvisionedIops() {
+        return this.provisionedIops == null ? Output.empty() : this.provisionedIops;
     }
 
     /**
@@ -174,17 +174,17 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaZones")
-      private final @Nullable Input<List<String>> replicaZones;
+      private final @Nullable Output<List<String>> replicaZones;
 
-    public Input<List<String>> getReplicaZones() {
-        return this.replicaZones == null ? Input.empty() : this.replicaZones;
+    public Output<List<String>> getReplicaZones() {
+        return this.replicaZones == null ? Output.empty() : this.replicaZones;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePolicies")
-      private final @Nullable Input<List<String>> resourcePolicies;
+      private final @Nullable Output<List<String>> resourcePolicies;
 
-    public Input<List<String>> getResourcePolicies() {
-        return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
+    public Output<List<String>> getResourcePolicies() {
+        return this.resourcePolicies == null ? Output.empty() : this.resourcePolicies;
     }
 
     /**
@@ -203,10 +203,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeGb")
-      private final @Nullable Input<String> sizeGb;
+      private final @Nullable Output<String> sizeGb;
 
-    public Input<String> getSizeGb() {
-        return this.sizeGb == null ? Input.empty() : this.sizeGb;
+    public Output<String> getSizeGb() {
+        return this.sizeGb == null ? Output.empty() : this.sizeGb;
     }
 
     /**
@@ -214,10 +214,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk")
-      private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Output<String> sourceDisk;
 
-    public Input<String> getSourceDisk() {
-        return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
+    public Output<String> getSourceDisk() {
+        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
     }
 
     /**
@@ -225,10 +225,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImage")
-      private final @Nullable Input<String> sourceImage;
+      private final @Nullable Output<String> sourceImage;
 
-    public Input<String> getSourceImage() {
-        return this.sourceImage == null ? Input.empty() : this.sourceImage;
+    public Output<String> getSourceImage() {
+        return this.sourceImage == null ? Output.empty() : this.sourceImage;
     }
 
     /**
@@ -236,10 +236,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImageEncryptionKey")
-      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
+      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
-    public Input<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
-        return this.sourceImageEncryptionKey == null ? Input.empty() : this.sourceImageEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
+        return this.sourceImageEncryptionKey == null ? Output.empty() : this.sourceImageEncryptionKey;
     }
 
     /**
@@ -247,10 +247,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshot")
-      private final @Nullable Input<String> sourceSnapshot;
+      private final @Nullable Output<String> sourceSnapshot;
 
-    public Input<String> getSourceSnapshot() {
-        return this.sourceSnapshot == null ? Input.empty() : this.sourceSnapshot;
+    public Output<String> getSourceSnapshot() {
+        return this.sourceSnapshot == null ? Output.empty() : this.sourceSnapshot;
     }
 
     /**
@@ -258,10 +258,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshotEncryptionKey")
-      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Input<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Input.empty() : this.sourceSnapshotEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
+        return this.sourceSnapshotEncryptionKey == null ? Output.empty() : this.sourceSnapshotEncryptionKey;
     }
 
     /**
@@ -269,10 +269,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceStorageObject")
-      private final @Nullable Input<String> sourceStorageObject;
+      private final @Nullable Output<String> sourceStorageObject;
 
-    public Input<String> getSourceStorageObject() {
-        return this.sourceStorageObject == null ? Input.empty() : this.sourceStorageObject;
+    public Output<String> getSourceStorageObject() {
+        return this.sourceStorageObject == null ? Output.empty() : this.sourceStorageObject;
     }
 
     /**
@@ -280,10 +280,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -291,47 +291,47 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userLicenses")
-      private final @Nullable Input<List<String>> userLicenses;
+      private final @Nullable Output<List<String>> userLicenses;
 
-    public Input<List<String>> getUserLicenses() {
-        return this.userLicenses == null ? Input.empty() : this.userLicenses;
+    public Output<List<String>> getUserLicenses() {
+        return this.userLicenses == null ? Output.empty() : this.userLicenses;
     }
 
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public DiskArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey,
-        @Nullable Input<Boolean> eraseWindowsVssSignature,
-        @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<List<String>> licenseCodes,
-        @Nullable Input<List<String>> licenses,
-        @Nullable Input<String> locationHint,
-        @Nullable Input<Boolean> multiWriter,
-        @Nullable Input<String> name,
-        @Nullable Input<String> options,
-        @Nullable Input<String> physicalBlockSizeBytes,
-        @Nullable Input<String> project,
-        @Nullable Input<String> provisionedIops,
-        @Nullable Input<List<String>> replicaZones,
-        @Nullable Input<String> requestId,
-        @Nullable Input<List<String>> resourcePolicies,
-        @Nullable Input<String> sizeGb,
-        @Nullable Input<String> sourceDisk,
-        @Nullable Input<String> sourceImage,
-        @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey,
-        @Nullable Input<String> sourceSnapshot,
-        @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey,
-        @Nullable Input<String> sourceStorageObject,
-        @Nullable Input<String> type,
-        @Nullable Input<List<String>> userLicenses,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> description,
+        @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey,
+        @Nullable Output<Boolean> eraseWindowsVssSignature,
+        @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<List<String>> licenseCodes,
+        @Nullable Output<List<String>> licenses,
+        @Nullable Output<String> locationHint,
+        @Nullable Output<Boolean> multiWriter,
+        @Nullable Output<String> name,
+        @Nullable Output<String> options,
+        @Nullable Output<String> physicalBlockSizeBytes,
+        @Nullable Output<String> project,
+        @Nullable Output<String> provisionedIops,
+        @Nullable Output<List<String>> replicaZones,
+        @Nullable Output<String> requestId,
+        @Nullable Output<List<String>> resourcePolicies,
+        @Nullable Output<String> sizeGb,
+        @Nullable Output<String> sourceDisk,
+        @Nullable Output<String> sourceImage,
+        @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey,
+        @Nullable Output<String> sourceSnapshot,
+        @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey,
+        @Nullable Output<String> sourceStorageObject,
+        @Nullable Output<String> type,
+        @Nullable Output<List<String>> userLicenses,
+        @Nullable Output<String> zone) {
         this.description = description;
         this.diskEncryptionKey = diskEncryptionKey;
         this.eraseWindowsVssSignature = eraseWindowsVssSignature;
@@ -362,33 +362,33 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.description = Input.empty();
-        this.diskEncryptionKey = Input.empty();
-        this.eraseWindowsVssSignature = Input.empty();
-        this.guestOsFeatures = Input.empty();
-        this.labels = Input.empty();
-        this.licenseCodes = Input.empty();
-        this.licenses = Input.empty();
-        this.locationHint = Input.empty();
-        this.multiWriter = Input.empty();
-        this.name = Input.empty();
-        this.options = Input.empty();
-        this.physicalBlockSizeBytes = Input.empty();
-        this.project = Input.empty();
-        this.provisionedIops = Input.empty();
-        this.replicaZones = Input.empty();
-        this.requestId = Input.empty();
-        this.resourcePolicies = Input.empty();
-        this.sizeGb = Input.empty();
-        this.sourceDisk = Input.empty();
-        this.sourceImage = Input.empty();
-        this.sourceImageEncryptionKey = Input.empty();
-        this.sourceSnapshot = Input.empty();
-        this.sourceSnapshotEncryptionKey = Input.empty();
-        this.sourceStorageObject = Input.empty();
-        this.type = Input.empty();
-        this.userLicenses = Input.empty();
-        this.zone = Input.empty();
+        this.description = Output.empty();
+        this.diskEncryptionKey = Output.empty();
+        this.eraseWindowsVssSignature = Output.empty();
+        this.guestOsFeatures = Output.empty();
+        this.labels = Output.empty();
+        this.licenseCodes = Output.empty();
+        this.licenses = Output.empty();
+        this.locationHint = Output.empty();
+        this.multiWriter = Output.empty();
+        this.name = Output.empty();
+        this.options = Output.empty();
+        this.physicalBlockSizeBytes = Output.empty();
+        this.project = Output.empty();
+        this.provisionedIops = Output.empty();
+        this.replicaZones = Output.empty();
+        this.requestId = Output.empty();
+        this.resourcePolicies = Output.empty();
+        this.sizeGb = Output.empty();
+        this.sourceDisk = Output.empty();
+        this.sourceImage = Output.empty();
+        this.sourceImageEncryptionKey = Output.empty();
+        this.sourceSnapshot = Output.empty();
+        this.sourceSnapshotEncryptionKey = Output.empty();
+        this.sourceStorageObject = Output.empty();
+        this.type = Output.empty();
+        this.userLicenses = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -400,33 +400,33 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey;
-        private @Nullable Input<Boolean> eraseWindowsVssSignature;
-        private @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<List<String>> licenseCodes;
-        private @Nullable Input<List<String>> licenses;
-        private @Nullable Input<String> locationHint;
-        private @Nullable Input<Boolean> multiWriter;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> options;
-        private @Nullable Input<String> physicalBlockSizeBytes;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> provisionedIops;
-        private @Nullable Input<List<String>> replicaZones;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<List<String>> resourcePolicies;
-        private @Nullable Input<String> sizeGb;
-        private @Nullable Input<String> sourceDisk;
-        private @Nullable Input<String> sourceImage;
-        private @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
-        private @Nullable Input<String> sourceSnapshot;
-        private @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
-        private @Nullable Input<String> sourceStorageObject;
-        private @Nullable Input<String> type;
-        private @Nullable Input<List<String>> userLicenses;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> description;
+        private @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
+        private @Nullable Output<Boolean> eraseWindowsVssSignature;
+        private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<List<String>> licenseCodes;
+        private @Nullable Output<List<String>> licenses;
+        private @Nullable Output<String> locationHint;
+        private @Nullable Output<Boolean> multiWriter;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> options;
+        private @Nullable Output<String> physicalBlockSizeBytes;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> provisionedIops;
+        private @Nullable Output<List<String>> replicaZones;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<List<String>> resourcePolicies;
+        private @Nullable Output<String> sizeGb;
+        private @Nullable Output<String> sourceDisk;
+        private @Nullable Output<String> sourceImage;
+        private @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
+        private @Nullable Output<String> sourceSnapshot;
+        private @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+        private @Nullable Output<String> sourceStorageObject;
+        private @Nullable Output<String> type;
+        private @Nullable Output<List<String>> userLicenses;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -463,273 +463,273 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
         public Builder diskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder eraseWindowsVssSignature(@Nullable Input<Boolean> eraseWindowsVssSignature) {
+        public Builder eraseWindowsVssSignature(@Nullable Output<Boolean> eraseWindowsVssSignature) {
             this.eraseWindowsVssSignature = eraseWindowsVssSignature;
             return this;
         }
 
         public Builder eraseWindowsVssSignature(@Nullable Boolean eraseWindowsVssSignature) {
-            this.eraseWindowsVssSignature = Input.ofNullable(eraseWindowsVssSignature);
+            this.eraseWindowsVssSignature = Output.ofNullable(eraseWindowsVssSignature);
             return this;
         }
 
-        public Builder guestOsFeatures(@Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
         public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
-            this.guestOsFeatures = Input.ofNullable(guestOsFeatures);
+            this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder licenseCodes(@Nullable Input<List<String>> licenseCodes) {
+        public Builder licenseCodes(@Nullable Output<List<String>> licenseCodes) {
             this.licenseCodes = licenseCodes;
             return this;
         }
 
         public Builder licenseCodes(@Nullable List<String> licenseCodes) {
-            this.licenseCodes = Input.ofNullable(licenseCodes);
+            this.licenseCodes = Output.ofNullable(licenseCodes);
             return this;
         }
 
-        public Builder licenses(@Nullable Input<List<String>> licenses) {
+        public Builder licenses(@Nullable Output<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
 
         public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Input.ofNullable(licenses);
+            this.licenses = Output.ofNullable(licenses);
             return this;
         }
 
-        public Builder locationHint(@Nullable Input<String> locationHint) {
+        public Builder locationHint(@Nullable Output<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
 
         public Builder locationHint(@Nullable String locationHint) {
-            this.locationHint = Input.ofNullable(locationHint);
+            this.locationHint = Output.ofNullable(locationHint);
             return this;
         }
 
-        public Builder multiWriter(@Nullable Input<Boolean> multiWriter) {
+        public Builder multiWriter(@Nullable Output<Boolean> multiWriter) {
             this.multiWriter = multiWriter;
             return this;
         }
 
         public Builder multiWriter(@Nullable Boolean multiWriter) {
-            this.multiWriter = Input.ofNullable(multiWriter);
+            this.multiWriter = Output.ofNullable(multiWriter);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder options(@Nullable Input<String> options) {
+        public Builder options(@Nullable Output<String> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable String options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder physicalBlockSizeBytes(@Nullable Input<String> physicalBlockSizeBytes) {
+        public Builder physicalBlockSizeBytes(@Nullable Output<String> physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
 
         public Builder physicalBlockSizeBytes(@Nullable String physicalBlockSizeBytes) {
-            this.physicalBlockSizeBytes = Input.ofNullable(physicalBlockSizeBytes);
+            this.physicalBlockSizeBytes = Output.ofNullable(physicalBlockSizeBytes);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder provisionedIops(@Nullable Input<String> provisionedIops) {
+        public Builder provisionedIops(@Nullable Output<String> provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
 
         public Builder provisionedIops(@Nullable String provisionedIops) {
-            this.provisionedIops = Input.ofNullable(provisionedIops);
+            this.provisionedIops = Output.ofNullable(provisionedIops);
             return this;
         }
 
-        public Builder replicaZones(@Nullable Input<List<String>> replicaZones) {
+        public Builder replicaZones(@Nullable Output<List<String>> replicaZones) {
             this.replicaZones = replicaZones;
             return this;
         }
 
         public Builder replicaZones(@Nullable List<String> replicaZones) {
-            this.replicaZones = Input.ofNullable(replicaZones);
+            this.replicaZones = Output.ofNullable(replicaZones);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder resourcePolicies(@Nullable Input<List<String>> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
-            this.resourcePolicies = Input.ofNullable(resourcePolicies);
+            this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder sizeGb(@Nullable Input<String> sizeGb) {
+        public Builder sizeGb(@Nullable Output<String> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
 
         public Builder sizeGb(@Nullable String sizeGb) {
-            this.sizeGb = Input.ofNullable(sizeGb);
+            this.sizeGb = Output.ofNullable(sizeGb);
             return this;
         }
 
-        public Builder sourceDisk(@Nullable Input<String> sourceDisk) {
+        public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
 
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Input.ofNullable(sourceDisk);
+            this.sourceDisk = Output.ofNullable(sourceDisk);
             return this;
         }
 
-        public Builder sourceImage(@Nullable Input<String> sourceImage) {
+        public Builder sourceImage(@Nullable Output<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
 
         public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Input.ofNullable(sourceImage);
+            this.sourceImage = Output.ofNullable(sourceImage);
             return this;
         }
 
-        public Builder sourceImageEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
         public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = Input.ofNullable(sourceImageEncryptionKey);
+            this.sourceImageEncryptionKey = Output.ofNullable(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder sourceSnapshot(@Nullable Input<String> sourceSnapshot) {
+        public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
             this.sourceSnapshot = sourceSnapshot;
             return this;
         }
 
         public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
-            this.sourceSnapshot = Input.ofNullable(sourceSnapshot);
+            this.sourceSnapshot = Output.ofNullable(sourceSnapshot);
             return this;
         }
 
-        public Builder sourceSnapshotEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
         public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Input.ofNullable(sourceSnapshotEncryptionKey);
+            this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
 
-        public Builder sourceStorageObject(@Nullable Input<String> sourceStorageObject) {
+        public Builder sourceStorageObject(@Nullable Output<String> sourceStorageObject) {
             this.sourceStorageObject = sourceStorageObject;
             return this;
         }
 
         public Builder sourceStorageObject(@Nullable String sourceStorageObject) {
-            this.sourceStorageObject = Input.ofNullable(sourceStorageObject);
+            this.sourceStorageObject = Output.ofNullable(sourceStorageObject);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder userLicenses(@Nullable Input<List<String>> userLicenses) {
+        public Builder userLicenses(@Nullable Output<List<String>> userLicenses) {
             this.userLicenses = userLicenses;
             return this;
         }
 
         public Builder userLicenses(@Nullable List<String> userLicenses) {
-            this.userLicenses = Input.ofNullable(userLicenses);
+            this.userLicenses = Output.ofNullable(userLicenses);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public DiskArgs build() {

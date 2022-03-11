@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.inspectorv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class FilterDateFilterArgs extends io.pulumi.resources.ResourceArgs
     public static final FilterDateFilterArgs Empty = new FilterDateFilterArgs();
 
     @InputImport(name="endInclusive")
-      private final @Nullable Input<Integer> endInclusive;
+      private final @Nullable Output<Integer> endInclusive;
 
-    public Input<Integer> getEndInclusive() {
-        return this.endInclusive == null ? Input.empty() : this.endInclusive;
+    public Output<Integer> getEndInclusive() {
+        return this.endInclusive == null ? Output.empty() : this.endInclusive;
     }
 
     @InputImport(name="startInclusive")
-      private final @Nullable Input<Integer> startInclusive;
+      private final @Nullable Output<Integer> startInclusive;
 
-    public Input<Integer> getStartInclusive() {
-        return this.startInclusive == null ? Input.empty() : this.startInclusive;
+    public Output<Integer> getStartInclusive() {
+        return this.startInclusive == null ? Output.empty() : this.startInclusive;
     }
 
     public FilterDateFilterArgs(
-        @Nullable Input<Integer> endInclusive,
-        @Nullable Input<Integer> startInclusive) {
+        @Nullable Output<Integer> endInclusive,
+        @Nullable Output<Integer> startInclusive) {
         this.endInclusive = endInclusive;
         this.startInclusive = startInclusive;
     }
 
     private FilterDateFilterArgs() {
-        this.endInclusive = Input.empty();
-        this.startInclusive = Input.empty();
+        this.endInclusive = Output.empty();
+        this.startInclusive = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class FilterDateFilterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> endInclusive;
-        private @Nullable Input<Integer> startInclusive;
+        private @Nullable Output<Integer> endInclusive;
+        private @Nullable Output<Integer> startInclusive;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class FilterDateFilterArgs extends io.pulumi.resources.ResourceArgs
     	      this.startInclusive = defaults.startInclusive;
         }
 
-        public Builder endInclusive(@Nullable Input<Integer> endInclusive) {
+        public Builder endInclusive(@Nullable Output<Integer> endInclusive) {
             this.endInclusive = endInclusive;
             return this;
         }
 
         public Builder endInclusive(@Nullable Integer endInclusive) {
-            this.endInclusive = Input.ofNullable(endInclusive);
+            this.endInclusive = Output.ofNullable(endInclusive);
             return this;
         }
 
-        public Builder startInclusive(@Nullable Input<Integer> startInclusive) {
+        public Builder startInclusive(@Nullable Output<Integer> startInclusive) {
             this.startInclusive = startInclusive;
             return this;
         }
 
         public Builder startInclusive(@Nullable Integer startInclusive) {
-            this.startInclusive = Input.ofNullable(startInclusive);
+            this.startInclusive = Output.ofNullable(startInclusive);
             return this;
         }
         public FilterDateFilterArgs build() {

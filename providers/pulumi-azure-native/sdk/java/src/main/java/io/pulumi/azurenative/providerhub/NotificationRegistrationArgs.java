@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.NotificationRegistrationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,17 +20,17 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="notificationRegistrationName")
-      private final @Nullable Input<String> notificationRegistrationName;
+      private final @Nullable Output<String> notificationRegistrationName;
 
-    public Input<String> getNotificationRegistrationName() {
-        return this.notificationRegistrationName == null ? Input.empty() : this.notificationRegistrationName;
+    public Output<String> getNotificationRegistrationName() {
+        return this.notificationRegistrationName == null ? Output.empty() : this.notificationRegistrationName;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<NotificationRegistrationPropertiesArgs> properties;
+      private final @Nullable Output<NotificationRegistrationPropertiesArgs> properties;
 
-    public Input<NotificationRegistrationPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<NotificationRegistrationPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -38,25 +38,25 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-      private final Input<String> providerNamespace;
+      private final Output<String> providerNamespace;
 
-    public Input<String> getProviderNamespace() {
+    public Output<String> getProviderNamespace() {
         return this.providerNamespace;
     }
 
     public NotificationRegistrationArgs(
-        @Nullable Input<String> notificationRegistrationName,
-        @Nullable Input<NotificationRegistrationPropertiesArgs> properties,
-        Input<String> providerNamespace) {
+        @Nullable Output<String> notificationRegistrationName,
+        @Nullable Output<NotificationRegistrationPropertiesArgs> properties,
+        Output<String> providerNamespace) {
         this.notificationRegistrationName = notificationRegistrationName;
         this.properties = properties;
         this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
     }
 
     private NotificationRegistrationArgs() {
-        this.notificationRegistrationName = Input.empty();
-        this.properties = Input.empty();
-        this.providerNamespace = Input.empty();
+        this.notificationRegistrationName = Output.empty();
+        this.properties = Output.empty();
+        this.providerNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> notificationRegistrationName;
-        private @Nullable Input<NotificationRegistrationPropertiesArgs> properties;
-        private Input<String> providerNamespace;
+        private @Nullable Output<String> notificationRegistrationName;
+        private @Nullable Output<NotificationRegistrationPropertiesArgs> properties;
+        private Output<String> providerNamespace;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
     	      this.providerNamespace = defaults.providerNamespace;
         }
 
-        public Builder notificationRegistrationName(@Nullable Input<String> notificationRegistrationName) {
+        public Builder notificationRegistrationName(@Nullable Output<String> notificationRegistrationName) {
             this.notificationRegistrationName = notificationRegistrationName;
             return this;
         }
 
         public Builder notificationRegistrationName(@Nullable String notificationRegistrationName) {
-            this.notificationRegistrationName = Input.ofNullable(notificationRegistrationName);
+            this.notificationRegistrationName = Output.ofNullable(notificationRegistrationName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<NotificationRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<NotificationRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable NotificationRegistrationPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder providerNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Output<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
+            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
         public NotificationRegistrationArgs build() {

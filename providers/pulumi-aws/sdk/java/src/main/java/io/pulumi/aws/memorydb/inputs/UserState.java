@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.UserAuthenticationModeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessString")
-      private final @Nullable Input<String> accessString;
+      private final @Nullable Output<String> accessString;
 
-    public Input<String> getAccessString() {
-        return this.accessString == null ? Input.empty() : this.accessString;
+    public Output<String> getAccessString() {
+        return this.accessString == null ? Output.empty() : this.accessString;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationMode")
-      private final @Nullable Input<UserAuthenticationModeGetArgs> authenticationMode;
+      private final @Nullable Output<UserAuthenticationModeGetArgs> authenticationMode;
 
-    public Input<UserAuthenticationModeGetArgs> getAuthenticationMode() {
-        return this.authenticationMode == null ? Input.empty() : this.authenticationMode;
+    public Output<UserAuthenticationModeGetArgs> getAuthenticationMode() {
+        return this.authenticationMode == null ? Output.empty() : this.authenticationMode;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumEngineVersion")
-      private final @Nullable Input<String> minimumEngineVersion;
+      private final @Nullable Output<String> minimumEngineVersion;
 
-    public Input<String> getMinimumEngineVersion() {
-        return this.minimumEngineVersion == null ? Input.empty() : this.minimumEngineVersion;
+    public Output<String> getMinimumEngineVersion() {
+        return this.minimumEngineVersion == null ? Output.empty() : this.minimumEngineVersion;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public UserState(
-        @Nullable Input<String> accessString,
-        @Nullable Input<String> arn,
-        @Nullable Input<UserAuthenticationModeGetArgs> authenticationMode,
-        @Nullable Input<String> minimumEngineVersion,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> userName) {
+        @Nullable Output<String> accessString,
+        @Nullable Output<String> arn,
+        @Nullable Output<UserAuthenticationModeGetArgs> authenticationMode,
+        @Nullable Output<String> minimumEngineVersion,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> userName) {
         this.accessString = accessString;
         this.arn = arn;
         this.authenticationMode = authenticationMode;
@@ -112,13 +112,13 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserState() {
-        this.accessString = Input.empty();
-        this.arn = Input.empty();
-        this.authenticationMode = Input.empty();
-        this.minimumEngineVersion = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.userName = Input.empty();
+        this.accessString = Output.empty();
+        this.arn = Output.empty();
+        this.authenticationMode = Output.empty();
+        this.minimumEngineVersion = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessString;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<UserAuthenticationModeGetArgs> authenticationMode;
-        private @Nullable Input<String> minimumEngineVersion;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<String> accessString;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<UserAuthenticationModeGetArgs> authenticationMode;
+        private @Nullable Output<String> minimumEngineVersion;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder accessString(@Nullable Input<String> accessString) {
+        public Builder accessString(@Nullable Output<String> accessString) {
             this.accessString = accessString;
             return this;
         }
 
         public Builder accessString(@Nullable String accessString) {
-            this.accessString = Input.ofNullable(accessString);
+            this.accessString = Output.ofNullable(accessString);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder authenticationMode(@Nullable Input<UserAuthenticationModeGetArgs> authenticationMode) {
+        public Builder authenticationMode(@Nullable Output<UserAuthenticationModeGetArgs> authenticationMode) {
             this.authenticationMode = authenticationMode;
             return this;
         }
 
         public Builder authenticationMode(@Nullable UserAuthenticationModeGetArgs authenticationMode) {
-            this.authenticationMode = Input.ofNullable(authenticationMode);
+            this.authenticationMode = Output.ofNullable(authenticationMode);
             return this;
         }
 
-        public Builder minimumEngineVersion(@Nullable Input<String> minimumEngineVersion) {
+        public Builder minimumEngineVersion(@Nullable Output<String> minimumEngineVersion) {
             this.minimumEngineVersion = minimumEngineVersion;
             return this;
         }
 
         public Builder minimumEngineVersion(@Nullable String minimumEngineVersion) {
-            this.minimumEngineVersion = Input.ofNullable(minimumEngineVersion);
+            this.minimumEngineVersion = Output.ofNullable(minimumEngineVersion);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public UserState build() {

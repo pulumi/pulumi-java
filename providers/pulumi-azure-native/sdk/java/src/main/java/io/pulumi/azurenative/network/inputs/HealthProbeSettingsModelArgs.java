@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.FrontDoorHealthProbeMethod;
 import io.pulumi.azurenative.network.enums.FrontDoorProtocol;
 import io.pulumi.azurenative.network.enums.HealthProbeEnabled;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enabledState")
-      private final @Nullable Input<Either<String,HealthProbeEnabled>> enabledState;
+      private final @Nullable Output<Either<String,HealthProbeEnabled>> enabledState;
 
-    public Input<Either<String,HealthProbeEnabled>> getEnabledState() {
-        return this.enabledState == null ? Input.empty() : this.enabledState;
+    public Output<Either<String,HealthProbeEnabled>> getEnabledState() {
+        return this.enabledState == null ? Output.empty() : this.enabledState;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="healthProbeMethod")
-      private final @Nullable Input<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
+      private final @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
 
-    public Input<Either<String,FrontDoorHealthProbeMethod>> getHealthProbeMethod() {
-        return this.healthProbeMethod == null ? Input.empty() : this.healthProbeMethod;
+    public Output<Either<String,FrontDoorHealthProbeMethod>> getHealthProbeMethod() {
+        return this.healthProbeMethod == null ? Output.empty() : this.healthProbeMethod;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="intervalInSeconds")
-      private final @Nullable Input<Integer> intervalInSeconds;
+      private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Input<Integer> getIntervalInSeconds() {
-        return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
+    public Output<Integer> getIntervalInSeconds() {
+        return this.intervalInSeconds == null ? Output.empty() : this.intervalInSeconds;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -94,22 +94,22 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<Either<String,FrontDoorProtocol>> protocol;
+      private final @Nullable Output<Either<String,FrontDoorProtocol>> protocol;
 
-    public Input<Either<String,FrontDoorProtocol>> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<Either<String,FrontDoorProtocol>> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     public HealthProbeSettingsModelArgs(
-        @Nullable Input<Either<String,HealthProbeEnabled>> enabledState,
-        @Nullable Input<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod,
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> intervalInSeconds,
-        @Nullable Input<String> name,
-        @Nullable Input<String> path,
-        @Nullable Input<Either<String,FrontDoorProtocol>> protocol) {
+        @Nullable Output<Either<String,HealthProbeEnabled>> enabledState,
+        @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod,
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> intervalInSeconds,
+        @Nullable Output<String> name,
+        @Nullable Output<String> path,
+        @Nullable Output<Either<String,FrontDoorProtocol>> protocol) {
         this.enabledState = enabledState;
-        this.healthProbeMethod = healthProbeMethod == null ? Input.ofLeft("HEAD") : healthProbeMethod;
+        this.healthProbeMethod = healthProbeMethod == null ? Output.ofLeft("HEAD") : healthProbeMethod;
         this.id = id;
         this.intervalInSeconds = intervalInSeconds;
         this.name = name;
@@ -118,13 +118,13 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     }
 
     private HealthProbeSettingsModelArgs() {
-        this.enabledState = Input.empty();
-        this.healthProbeMethod = Input.empty();
-        this.id = Input.empty();
-        this.intervalInSeconds = Input.empty();
-        this.name = Input.empty();
-        this.path = Input.empty();
-        this.protocol = Input.empty();
+        this.enabledState = Output.empty();
+        this.healthProbeMethod = Output.empty();
+        this.id = Output.empty();
+        this.intervalInSeconds = Output.empty();
+        this.name = Output.empty();
+        this.path = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,HealthProbeEnabled>> enabledState;
-        private @Nullable Input<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> intervalInSeconds;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> path;
-        private @Nullable Input<Either<String,FrontDoorProtocol>> protocol;
+        private @Nullable Output<Either<String,HealthProbeEnabled>> enabledState;
+        private @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> intervalInSeconds;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> path;
+        private @Nullable Output<Either<String,FrontDoorProtocol>> protocol;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder enabledState(@Nullable Input<Either<String,HealthProbeEnabled>> enabledState) {
+        public Builder enabledState(@Nullable Output<Either<String,HealthProbeEnabled>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
         public Builder enabledState(@Nullable Either<String,HealthProbeEnabled> enabledState) {
-            this.enabledState = Input.ofNullable(enabledState);
+            this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
 
-        public Builder healthProbeMethod(@Nullable Input<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod) {
+        public Builder healthProbeMethod(@Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod) {
             this.healthProbeMethod = healthProbeMethod;
             return this;
         }
 
         public Builder healthProbeMethod(@Nullable Either<String,FrontDoorHealthProbeMethod> healthProbeMethod) {
-            this.healthProbeMethod = Input.ofNullable(healthProbeMethod);
+            this.healthProbeMethod = Output.ofNullable(healthProbeMethod);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder intervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Input.ofNullable(intervalInSeconds);
+            this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<Either<String,FrontDoorProtocol>> protocol) {
+        public Builder protocol(@Nullable Output<Either<String,FrontDoorProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable Either<String,FrontDoorProtocol> protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
         public HealthProbeSettingsModelArgs build() {

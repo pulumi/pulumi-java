@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
      * 
      */
     @InputImport(name="vpcEndpointId")
-      private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Output<String> vpcEndpointId;
 
-    public Input<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
+    public Output<String> getVpcEndpointId() {
+        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
      * 
      */
     @InputImport(name="vpcEndpointServiceId")
-      private final @Nullable Input<String> vpcEndpointServiceId;
+      private final @Nullable Output<String> vpcEndpointServiceId;
 
-    public Input<String> getVpcEndpointServiceId() {
-        return this.vpcEndpointServiceId == null ? Input.empty() : this.vpcEndpointServiceId;
+    public Output<String> getVpcEndpointServiceId() {
+        return this.vpcEndpointServiceId == null ? Output.empty() : this.vpcEndpointServiceId;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
      * 
      */
     @InputImport(name="vpcEndpointState")
-      private final @Nullable Input<String> vpcEndpointState;
+      private final @Nullable Output<String> vpcEndpointState;
 
-    public Input<String> getVpcEndpointState() {
-        return this.vpcEndpointState == null ? Input.empty() : this.vpcEndpointState;
+    public Output<String> getVpcEndpointState() {
+        return this.vpcEndpointState == null ? Output.empty() : this.vpcEndpointState;
     }
 
     public VpcEndpointConnectionAccepterState(
-        @Nullable Input<String> vpcEndpointId,
-        @Nullable Input<String> vpcEndpointServiceId,
-        @Nullable Input<String> vpcEndpointState) {
+        @Nullable Output<String> vpcEndpointId,
+        @Nullable Output<String> vpcEndpointServiceId,
+        @Nullable Output<String> vpcEndpointState) {
         this.vpcEndpointId = vpcEndpointId;
         this.vpcEndpointServiceId = vpcEndpointServiceId;
         this.vpcEndpointState = vpcEndpointState;
     }
 
     private VpcEndpointConnectionAccepterState() {
-        this.vpcEndpointId = Input.empty();
-        this.vpcEndpointServiceId = Input.empty();
-        this.vpcEndpointState = Input.empty();
+        this.vpcEndpointId = Output.empty();
+        this.vpcEndpointServiceId = Output.empty();
+        this.vpcEndpointState = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> vpcEndpointId;
-        private @Nullable Input<String> vpcEndpointServiceId;
-        private @Nullable Input<String> vpcEndpointState;
+        private @Nullable Output<String> vpcEndpointId;
+        private @Nullable Output<String> vpcEndpointServiceId;
+        private @Nullable Output<String> vpcEndpointState;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
     	      this.vpcEndpointState = defaults.vpcEndpointState;
         }
 
-        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
 
-        public Builder vpcEndpointServiceId(@Nullable Input<String> vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
 
         public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Input.ofNullable(vpcEndpointServiceId);
+            this.vpcEndpointServiceId = Output.ofNullable(vpcEndpointServiceId);
             return this;
         }
 
-        public Builder vpcEndpointState(@Nullable Input<String> vpcEndpointState) {
+        public Builder vpcEndpointState(@Nullable Output<String> vpcEndpointState) {
             this.vpcEndpointState = vpcEndpointState;
             return this;
         }
 
         public Builder vpcEndpointState(@Nullable String vpcEndpointState) {
-            this.vpcEndpointState = Input.ofNullable(vpcEndpointState);
+            this.vpcEndpointState = Output.ofNullable(vpcEndpointState);
             return this;
         }
         public VpcEndpointConnectionAccepterState build() {

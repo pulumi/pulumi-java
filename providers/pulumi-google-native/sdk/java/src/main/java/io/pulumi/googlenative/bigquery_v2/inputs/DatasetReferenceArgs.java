@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datasetId")
-      private final @Nullable Input<String> datasetId;
+      private final @Nullable Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
-        return this.datasetId == null ? Input.empty() : this.datasetId;
+    public Output<String> getDatasetId() {
+        return this.datasetId == null ? Output.empty() : this.datasetId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public DatasetReferenceArgs(
-        @Nullable Input<String> datasetId,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> datasetId,
+        @Nullable Output<String> project) {
         this.datasetId = datasetId;
         this.project = project;
     }
 
     private DatasetReferenceArgs() {
-        this.datasetId = Input.empty();
-        this.project = Input.empty();
+        this.datasetId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datasetId;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> datasetId;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
     	      this.project = defaults.project;
         }
 
-        public Builder datasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Input.ofNullable(datasetId);
+            this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public DatasetReferenceArgs build() {

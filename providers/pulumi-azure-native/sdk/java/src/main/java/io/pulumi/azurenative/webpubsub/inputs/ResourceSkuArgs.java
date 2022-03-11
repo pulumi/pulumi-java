@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.enums.WebPubSubSkuTier;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Integer> capacity;
+      private final @Nullable Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Integer> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -56,25 +56,25 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<Either<String,WebPubSubSkuTier>> tier;
+      private final @Nullable Output<Either<String,WebPubSubSkuTier>> tier;
 
-    public Input<Either<String,WebPubSubSkuTier>> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<Either<String,WebPubSubSkuTier>> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public ResourceSkuArgs(
-        @Nullable Input<Integer> capacity,
-        Input<String> name,
-        @Nullable Input<Either<String,WebPubSubSkuTier>> tier) {
+        @Nullable Output<Integer> capacity,
+        Output<String> name,
+        @Nullable Output<Either<String,WebPubSubSkuTier>> tier) {
         this.capacity = capacity;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.tier = tier;
     }
 
     private ResourceSkuArgs() {
-        this.capacity = Input.empty();
-        this.name = Input.empty();
-        this.tier = Input.empty();
+        this.capacity = Output.empty();
+        this.name = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,9 +86,9 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> capacity;
-        private Input<String> name;
-        private @Nullable Input<Either<String,WebPubSubSkuTier>> tier;
+        private @Nullable Output<Integer> capacity;
+        private Output<String> name;
+        private @Nullable Output<Either<String,WebPubSubSkuTier>> tier;
 
         public Builder() {
     	      // Empty
@@ -101,33 +101,33 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder capacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder tier(@Nullable Input<Either<String,WebPubSubSkuTier>> tier) {
+        public Builder tier(@Nullable Output<Either<String,WebPubSubSkuTier>> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable Either<String,WebPubSubSkuTier> tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public ResourceSkuArgs build() {

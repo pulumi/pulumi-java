@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigTargetNetworkGetArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ManagedZonePeeringConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetNetwork", required=true)
-      private final Input<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork;
+      private final Output<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork;
 
-    public Input<ManagedZonePeeringConfigTargetNetworkGetArgs> getTargetNetwork() {
+    public Output<ManagedZonePeeringConfigTargetNetworkGetArgs> getTargetNetwork() {
         return this.targetNetwork;
     }
 
-    public ManagedZonePeeringConfigGetArgs(Input<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork) {
+    public ManagedZonePeeringConfigGetArgs(Output<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork) {
         this.targetNetwork = Objects.requireNonNull(targetNetwork, "expected parameter 'targetNetwork' to be non-null");
     }
 
     private ManagedZonePeeringConfigGetArgs() {
-        this.targetNetwork = Input.empty();
+        this.targetNetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ManagedZonePeeringConfigGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork;
+        private Output<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ManagedZonePeeringConfigGetArgs extends io.pulumi.resources.R
     	      this.targetNetwork = defaults.targetNetwork;
         }
 
-        public Builder targetNetwork(Input<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork) {
+        public Builder targetNetwork(Output<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork) {
             this.targetNetwork = Objects.requireNonNull(targetNetwork);
             return this;
         }
 
         public Builder targetNetwork(ManagedZonePeeringConfigTargetNetworkGetArgs targetNetwork) {
-            this.targetNetwork = Input.of(Objects.requireNonNull(targetNetwork));
+            this.targetNetwork = Output.of(Objects.requireNonNull(targetNetwork));
             return this;
         }
         public ManagedZonePeeringConfigGetArgs build() {

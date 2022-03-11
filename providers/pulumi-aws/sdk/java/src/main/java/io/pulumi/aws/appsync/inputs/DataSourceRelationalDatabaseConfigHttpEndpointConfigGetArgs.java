@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * 
      */
     @InputImport(name="awsSecretStoreArn", required=true)
-      private final Input<String> awsSecretStoreArn;
+      private final Output<String> awsSecretStoreArn;
 
-    public Input<String> getAwsSecretStoreArn() {
+    public Output<String> getAwsSecretStoreArn() {
         return this.awsSecretStoreArn;
     }
 
@@ -30,10 +30,10 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * 
      */
     @InputImport(name="dbClusterIdentifier", required=true)
-      private final Input<String> dbClusterIdentifier;
+      private final Output<String> dbClusterIdentifier;
 
-    public Input<String> getDbClusterIdentifier() {
+    public Output<String> getDbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
 
@@ -52,10 +52,10 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<String> schema;
+      private final @Nullable Output<String> schema;
 
-    public Input<String> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<String> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     public DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs(
-        Input<String> awsSecretStoreArn,
-        @Nullable Input<String> databaseName,
-        Input<String> dbClusterIdentifier,
-        @Nullable Input<String> region,
-        @Nullable Input<String> schema) {
+        Output<String> awsSecretStoreArn,
+        @Nullable Output<String> databaseName,
+        Output<String> dbClusterIdentifier,
+        @Nullable Output<String> region,
+        @Nullable Output<String> schema) {
         this.awsSecretStoreArn = Objects.requireNonNull(awsSecretStoreArn, "expected parameter 'awsSecretStoreArn' to be non-null");
         this.databaseName = databaseName;
         this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier, "expected parameter 'dbClusterIdentifier' to be non-null");
@@ -83,11 +83,11 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     }
 
     private DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs() {
-        this.awsSecretStoreArn = Input.empty();
-        this.databaseName = Input.empty();
-        this.dbClusterIdentifier = Input.empty();
-        this.region = Input.empty();
-        this.schema = Input.empty();
+        this.awsSecretStoreArn = Output.empty();
+        this.databaseName = Output.empty();
+        this.dbClusterIdentifier = Output.empty();
+        this.region = Output.empty();
+        this.schema = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     }
 
     public static final class Builder {
-        private Input<String> awsSecretStoreArn;
-        private @Nullable Input<String> databaseName;
-        private Input<String> dbClusterIdentifier;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> schema;
+        private Output<String> awsSecretStoreArn;
+        private @Nullable Output<String> databaseName;
+        private Output<String> dbClusterIdentifier;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> schema;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     	      this.schema = defaults.schema;
         }
 
-        public Builder awsSecretStoreArn(Input<String> awsSecretStoreArn) {
+        public Builder awsSecretStoreArn(Output<String> awsSecretStoreArn) {
             this.awsSecretStoreArn = Objects.requireNonNull(awsSecretStoreArn);
             return this;
         }
 
         public Builder awsSecretStoreArn(String awsSecretStoreArn) {
-            this.awsSecretStoreArn = Input.of(Objects.requireNonNull(awsSecretStoreArn));
+            this.awsSecretStoreArn = Output.of(Objects.requireNonNull(awsSecretStoreArn));
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder dbClusterIdentifier(Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(Output<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
 
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Input.of(Objects.requireNonNull(dbClusterIdentifier));
+            this.dbClusterIdentifier = Output.of(Objects.requireNonNull(dbClusterIdentifier));
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder schema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable String schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
         public DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs build() {

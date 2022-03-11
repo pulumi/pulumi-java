@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketRedirectAllRequestsToProtocol;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="hostName", required=true)
-      private final Input<String> hostName;
+      private final Output<String> hostName;
 
-    public Input<String> getHostName() {
+    public Output<String> getHostName() {
         return this.hostName;
     }
 
@@ -35,22 +35,22 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<BucketRedirectAllRequestsToProtocol> protocol;
+      private final @Nullable Output<BucketRedirectAllRequestsToProtocol> protocol;
 
-    public Input<BucketRedirectAllRequestsToProtocol> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<BucketRedirectAllRequestsToProtocol> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     public BucketRedirectAllRequestsToArgs(
-        Input<String> hostName,
-        @Nullable Input<BucketRedirectAllRequestsToProtocol> protocol) {
+        Output<String> hostName,
+        @Nullable Output<BucketRedirectAllRequestsToProtocol> protocol) {
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
         this.protocol = protocol;
     }
 
     private BucketRedirectAllRequestsToArgs() {
-        this.hostName = Input.empty();
-        this.protocol = Input.empty();
+        this.hostName = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> hostName;
-        private @Nullable Input<BucketRedirectAllRequestsToProtocol> protocol;
+        private Output<String> hostName;
+        private @Nullable Output<BucketRedirectAllRequestsToProtocol> protocol;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder hostName(Input<String> hostName) {
+        public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Input.of(Objects.requireNonNull(hostName));
+            this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder protocol(@Nullable Input<BucketRedirectAllRequestsToProtocol> protocol) {
+        public Builder protocol(@Nullable Output<BucketRedirectAllRequestsToProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable BucketRedirectAllRequestsToProtocol protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
         public BucketRedirectAllRequestsToArgs build() {

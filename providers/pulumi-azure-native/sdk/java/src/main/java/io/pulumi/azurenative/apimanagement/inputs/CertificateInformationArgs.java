@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="expiry", required=true)
-      private final Input<String> expiry;
+      private final Output<String> expiry;
 
-    public Input<String> getExpiry() {
+    public Output<String> getExpiry() {
         return this.expiry;
     }
 
@@ -33,9 +33,9 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subject", required=true)
-      private final Input<String> subject;
+      private final Output<String> subject;
 
-    public Input<String> getSubject() {
+    public Output<String> getSubject() {
         return this.subject;
     }
 
@@ -44,25 +44,25 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="thumbprint", required=true)
-      private final Input<String> thumbprint;
+      private final Output<String> thumbprint;
 
-    public Input<String> getThumbprint() {
+    public Output<String> getThumbprint() {
         return this.thumbprint;
     }
 
     public CertificateInformationArgs(
-        Input<String> expiry,
-        Input<String> subject,
-        Input<String> thumbprint) {
+        Output<String> expiry,
+        Output<String> subject,
+        Output<String> thumbprint) {
         this.expiry = Objects.requireNonNull(expiry, "expected parameter 'expiry' to be non-null");
         this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
         this.thumbprint = Objects.requireNonNull(thumbprint, "expected parameter 'thumbprint' to be non-null");
     }
 
     private CertificateInformationArgs() {
-        this.expiry = Input.empty();
-        this.subject = Input.empty();
-        this.thumbprint = Input.empty();
+        this.expiry = Output.empty();
+        this.subject = Output.empty();
+        this.thumbprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> expiry;
-        private Input<String> subject;
-        private Input<String> thumbprint;
+        private Output<String> expiry;
+        private Output<String> subject;
+        private Output<String> thumbprint;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder expiry(Input<String> expiry) {
+        public Builder expiry(Output<String> expiry) {
             this.expiry = Objects.requireNonNull(expiry);
             return this;
         }
 
         public Builder expiry(String expiry) {
-            this.expiry = Input.of(Objects.requireNonNull(expiry));
+            this.expiry = Output.of(Objects.requireNonNull(expiry));
             return this;
         }
 
-        public Builder subject(Input<String> subject) {
+        public Builder subject(Output<String> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
         public Builder subject(String subject) {
-            this.subject = Input.of(Objects.requireNonNull(subject));
+            this.subject = Output.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder thumbprint(Input<String> thumbprint) {
+        public Builder thumbprint(Output<String> thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
         public Builder thumbprint(String thumbprint) {
-            this.thumbprint = Input.of(Objects.requireNonNull(thumbprint));
+            this.thumbprint = Output.of(Objects.requireNonNull(thumbprint));
             return this;
         }
         public CertificateInformationArgs build() {

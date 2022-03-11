@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.azurenative.avs.enums.SslEnum;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseGroupDN")
-      private final @Nullable Input<String> baseGroupDN;
+      private final @Nullable Output<String> baseGroupDN;
 
-    public Input<String> getBaseGroupDN() {
-        return this.baseGroupDN == null ? Input.empty() : this.baseGroupDN;
+    public Output<String> getBaseGroupDN() {
+        return this.baseGroupDN == null ? Output.empty() : this.baseGroupDN;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseUserDN")
-      private final @Nullable Input<String> baseUserDN;
+      private final @Nullable Output<String> baseUserDN;
 
-    public Input<String> getBaseUserDN() {
-        return this.baseUserDN == null ? Input.empty() : this.baseUserDN;
+    public Output<String> getBaseUserDN() {
+        return this.baseUserDN == null ? Output.empty() : this.baseUserDN;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryServer")
-      private final @Nullable Input<String> primaryServer;
+      private final @Nullable Output<String> primaryServer;
 
-    public Input<String> getPrimaryServer() {
-        return this.primaryServer == null ? Input.empty() : this.primaryServer;
+    public Output<String> getPrimaryServer() {
+        return this.primaryServer == null ? Output.empty() : this.primaryServer;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryServer")
-      private final @Nullable Input<String> secondaryServer;
+      private final @Nullable Output<String> secondaryServer;
 
-    public Input<String> getSecondaryServer() {
-        return this.secondaryServer == null ? Input.empty() : this.secondaryServer;
+    public Output<String> getSecondaryServer() {
+        return this.secondaryServer == null ? Output.empty() : this.secondaryServer;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ssl")
-      private final @Nullable Input<Either<String,SslEnum>> ssl;
+      private final @Nullable Output<Either<String,SslEnum>> ssl;
 
-    public Input<Either<String,SslEnum>> getSsl() {
-        return this.ssl == null ? Input.empty() : this.ssl;
+    public Output<Either<String,SslEnum>> getSsl() {
+        return this.ssl == null ? Output.empty() : this.ssl;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public IdentitySourceArgs(
-        @Nullable Input<String> alias,
-        @Nullable Input<String> baseGroupDN,
-        @Nullable Input<String> baseUserDN,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> name,
-        @Nullable Input<String> password,
-        @Nullable Input<String> primaryServer,
-        @Nullable Input<String> secondaryServer,
-        @Nullable Input<Either<String,SslEnum>> ssl,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> alias,
+        @Nullable Output<String> baseGroupDN,
+        @Nullable Output<String> baseUserDN,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> name,
+        @Nullable Output<String> password,
+        @Nullable Output<String> primaryServer,
+        @Nullable Output<String> secondaryServer,
+        @Nullable Output<Either<String,SslEnum>> ssl,
+        @Nullable Output<String> username) {
         this.alias = alias;
         this.baseGroupDN = baseGroupDN;
         this.baseUserDN = baseUserDN;
@@ -154,16 +154,16 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IdentitySourceArgs() {
-        this.alias = Input.empty();
-        this.baseGroupDN = Input.empty();
-        this.baseUserDN = Input.empty();
-        this.domain = Input.empty();
-        this.name = Input.empty();
-        this.password = Input.empty();
-        this.primaryServer = Input.empty();
-        this.secondaryServer = Input.empty();
-        this.ssl = Input.empty();
-        this.username = Input.empty();
+        this.alias = Output.empty();
+        this.baseGroupDN = Output.empty();
+        this.baseUserDN = Output.empty();
+        this.domain = Output.empty();
+        this.name = Output.empty();
+        this.password = Output.empty();
+        this.primaryServer = Output.empty();
+        this.secondaryServer = Output.empty();
+        this.ssl = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alias;
-        private @Nullable Input<String> baseGroupDN;
-        private @Nullable Input<String> baseUserDN;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> primaryServer;
-        private @Nullable Input<String> secondaryServer;
-        private @Nullable Input<Either<String,SslEnum>> ssl;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<String> baseGroupDN;
+        private @Nullable Output<String> baseUserDN;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> primaryServer;
+        private @Nullable Output<String> secondaryServer;
+        private @Nullable Output<Either<String,SslEnum>> ssl;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder baseGroupDN(@Nullable Input<String> baseGroupDN) {
+        public Builder baseGroupDN(@Nullable Output<String> baseGroupDN) {
             this.baseGroupDN = baseGroupDN;
             return this;
         }
 
         public Builder baseGroupDN(@Nullable String baseGroupDN) {
-            this.baseGroupDN = Input.ofNullable(baseGroupDN);
+            this.baseGroupDN = Output.ofNullable(baseGroupDN);
             return this;
         }
 
-        public Builder baseUserDN(@Nullable Input<String> baseUserDN) {
+        public Builder baseUserDN(@Nullable Output<String> baseUserDN) {
             this.baseUserDN = baseUserDN;
             return this;
         }
 
         public Builder baseUserDN(@Nullable String baseUserDN) {
-            this.baseUserDN = Input.ofNullable(baseUserDN);
+            this.baseUserDN = Output.ofNullable(baseUserDN);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder primaryServer(@Nullable Input<String> primaryServer) {
+        public Builder primaryServer(@Nullable Output<String> primaryServer) {
             this.primaryServer = primaryServer;
             return this;
         }
 
         public Builder primaryServer(@Nullable String primaryServer) {
-            this.primaryServer = Input.ofNullable(primaryServer);
+            this.primaryServer = Output.ofNullable(primaryServer);
             return this;
         }
 
-        public Builder secondaryServer(@Nullable Input<String> secondaryServer) {
+        public Builder secondaryServer(@Nullable Output<String> secondaryServer) {
             this.secondaryServer = secondaryServer;
             return this;
         }
 
         public Builder secondaryServer(@Nullable String secondaryServer) {
-            this.secondaryServer = Input.ofNullable(secondaryServer);
+            this.secondaryServer = Output.ofNullable(secondaryServer);
             return this;
         }
 
-        public Builder ssl(@Nullable Input<Either<String,SslEnum>> ssl) {
+        public Builder ssl(@Nullable Output<Either<String,SslEnum>> ssl) {
             this.ssl = ssl;
             return this;
         }
 
         public Builder ssl(@Nullable Either<String,SslEnum> ssl) {
-            this.ssl = Input.ofNullable(ssl);
+            this.ssl = Output.ofNullable(ssl);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public IdentitySourceArgs build() {

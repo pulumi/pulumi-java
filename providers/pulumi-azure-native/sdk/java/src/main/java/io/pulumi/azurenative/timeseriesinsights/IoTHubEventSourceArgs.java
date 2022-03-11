@@ -6,7 +6,7 @@ package io.pulumi.azurenative.timeseriesinsights;
 import io.pulumi.azurenative.timeseriesinsights.enums.IngressStartAtType;
 import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,9 +23,9 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="consumerGroupName", required=true)
-      private final Input<String> consumerGroupName;
+      private final Output<String> consumerGroupName;
 
-    public Input<String> getConsumerGroupName() {
+    public Output<String> getConsumerGroupName() {
         return this.consumerGroupName;
     }
 
@@ -34,9 +34,9 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="environmentName", required=true)
-      private final Input<String> environmentName;
+      private final Output<String> environmentName;
 
-    public Input<String> getEnvironmentName() {
+    public Output<String> getEnvironmentName() {
         return this.environmentName;
     }
 
@@ -45,10 +45,10 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventSourceName")
-      private final @Nullable Input<String> eventSourceName;
+      private final @Nullable Output<String> eventSourceName;
 
-    public Input<String> getEventSourceName() {
-        return this.eventSourceName == null ? Input.empty() : this.eventSourceName;
+    public Output<String> getEventSourceName() {
+        return this.eventSourceName == null ? Output.empty() : this.eventSourceName;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventSourceResourceId", required=true)
-      private final Input<String> eventSourceResourceId;
+      private final Output<String> eventSourceResourceId;
 
-    public Input<String> getEventSourceResourceId() {
+    public Output<String> getEventSourceResourceId() {
         return this.eventSourceResourceId;
     }
 
@@ -67,9 +67,9 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iotHubName", required=true)
-      private final Input<String> iotHubName;
+      private final Output<String> iotHubName;
 
-    public Input<String> getIotHubName() {
+    public Output<String> getIotHubName() {
         return this.iotHubName;
     }
 
@@ -78,9 +78,9 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyName", required=true)
-      private final Input<String> keyName;
+      private final Output<String> keyName;
 
-    public Input<String> getKeyName() {
+    public Output<String> getKeyName() {
         return this.keyName;
     }
 
@@ -90,9 +90,9 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -101,10 +101,10 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="localTimestamp")
-      private final @Nullable Input<LocalTimestampArgs> localTimestamp;
+      private final @Nullable Output<LocalTimestampArgs> localTimestamp;
 
-    public Input<LocalTimestampArgs> getLocalTimestamp() {
-        return this.localTimestamp == null ? Input.empty() : this.localTimestamp;
+    public Output<LocalTimestampArgs> getLocalTimestamp() {
+        return this.localTimestamp == null ? Output.empty() : this.localTimestamp;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -134,9 +134,9 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sharedAccessKey", required=true)
-      private final Input<String> sharedAccessKey;
+      private final Output<String> sharedAccessKey;
 
-    public Input<String> getSharedAccessKey() {
+    public Output<String> getSharedAccessKey() {
         return this.sharedAccessKey;
     }
 
@@ -145,10 +145,10 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="time")
-      private final @Nullable Input<String> time;
+      private final @Nullable Output<String> time;
 
-    public Input<String> getTime() {
-        return this.time == null ? Input.empty() : this.time;
+    public Output<String> getTime() {
+        return this.time == null ? Output.empty() : this.time;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timestampPropertyName")
-      private final @Nullable Input<String> timestampPropertyName;
+      private final @Nullable Output<String> timestampPropertyName;
 
-    public Input<String> getTimestampPropertyName() {
-        return this.timestampPropertyName == null ? Input.empty() : this.timestampPropertyName;
+    public Output<String> getTimestampPropertyName() {
+        return this.timestampPropertyName == null ? Output.empty() : this.timestampPropertyName;
     }
 
     /**
@@ -178,28 +178,28 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,IngressStartAtType>> type;
+      private final @Nullable Output<Either<String,IngressStartAtType>> type;
 
-    public Input<Either<String,IngressStartAtType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,IngressStartAtType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public IoTHubEventSourceArgs(
-        Input<String> consumerGroupName,
-        Input<String> environmentName,
-        @Nullable Input<String> eventSourceName,
-        Input<String> eventSourceResourceId,
-        Input<String> iotHubName,
-        Input<String> keyName,
-        Input<String> kind,
-        @Nullable Input<LocalTimestampArgs> localTimestamp,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<String> sharedAccessKey,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> time,
-        @Nullable Input<String> timestampPropertyName,
-        @Nullable Input<Either<String,IngressStartAtType>> type) {
+        Output<String> consumerGroupName,
+        Output<String> environmentName,
+        @Nullable Output<String> eventSourceName,
+        Output<String> eventSourceResourceId,
+        Output<String> iotHubName,
+        Output<String> keyName,
+        Output<String> kind,
+        @Nullable Output<LocalTimestampArgs> localTimestamp,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<String> sharedAccessKey,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> time,
+        @Nullable Output<String> timestampPropertyName,
+        @Nullable Output<Either<String,IngressStartAtType>> type) {
         this.consumerGroupName = Objects.requireNonNull(consumerGroupName, "expected parameter 'consumerGroupName' to be non-null");
         this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
         this.eventSourceName = eventSourceName;
@@ -218,21 +218,21 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private IoTHubEventSourceArgs() {
-        this.consumerGroupName = Input.empty();
-        this.environmentName = Input.empty();
-        this.eventSourceName = Input.empty();
-        this.eventSourceResourceId = Input.empty();
-        this.iotHubName = Input.empty();
-        this.keyName = Input.empty();
-        this.kind = Input.empty();
-        this.localTimestamp = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sharedAccessKey = Input.empty();
-        this.tags = Input.empty();
-        this.time = Input.empty();
-        this.timestampPropertyName = Input.empty();
-        this.type = Input.empty();
+        this.consumerGroupName = Output.empty();
+        this.environmentName = Output.empty();
+        this.eventSourceName = Output.empty();
+        this.eventSourceResourceId = Output.empty();
+        this.iotHubName = Output.empty();
+        this.keyName = Output.empty();
+        this.kind = Output.empty();
+        this.localTimestamp = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sharedAccessKey = Output.empty();
+        this.tags = Output.empty();
+        this.time = Output.empty();
+        this.timestampPropertyName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -244,21 +244,21 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> consumerGroupName;
-        private Input<String> environmentName;
-        private @Nullable Input<String> eventSourceName;
-        private Input<String> eventSourceResourceId;
-        private Input<String> iotHubName;
-        private Input<String> keyName;
-        private Input<String> kind;
-        private @Nullable Input<LocalTimestampArgs> localTimestamp;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<String> sharedAccessKey;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> time;
-        private @Nullable Input<String> timestampPropertyName;
-        private @Nullable Input<Either<String,IngressStartAtType>> type;
+        private Output<String> consumerGroupName;
+        private Output<String> environmentName;
+        private @Nullable Output<String> eventSourceName;
+        private Output<String> eventSourceResourceId;
+        private Output<String> iotHubName;
+        private Output<String> keyName;
+        private Output<String> kind;
+        private @Nullable Output<LocalTimestampArgs> localTimestamp;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<String> sharedAccessKey;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> time;
+        private @Nullable Output<String> timestampPropertyName;
+        private @Nullable Output<Either<String,IngressStartAtType>> type;
 
         public Builder() {
     	      // Empty
@@ -283,153 +283,153 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder consumerGroupName(Input<String> consumerGroupName) {
+        public Builder consumerGroupName(Output<String> consumerGroupName) {
             this.consumerGroupName = Objects.requireNonNull(consumerGroupName);
             return this;
         }
 
         public Builder consumerGroupName(String consumerGroupName) {
-            this.consumerGroupName = Input.of(Objects.requireNonNull(consumerGroupName));
+            this.consumerGroupName = Output.of(Objects.requireNonNull(consumerGroupName));
             return this;
         }
 
-        public Builder environmentName(Input<String> environmentName) {
+        public Builder environmentName(Output<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
 
         public Builder environmentName(String environmentName) {
-            this.environmentName = Input.of(Objects.requireNonNull(environmentName));
+            this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
 
-        public Builder eventSourceName(@Nullable Input<String> eventSourceName) {
+        public Builder eventSourceName(@Nullable Output<String> eventSourceName) {
             this.eventSourceName = eventSourceName;
             return this;
         }
 
         public Builder eventSourceName(@Nullable String eventSourceName) {
-            this.eventSourceName = Input.ofNullable(eventSourceName);
+            this.eventSourceName = Output.ofNullable(eventSourceName);
             return this;
         }
 
-        public Builder eventSourceResourceId(Input<String> eventSourceResourceId) {
+        public Builder eventSourceResourceId(Output<String> eventSourceResourceId) {
             this.eventSourceResourceId = Objects.requireNonNull(eventSourceResourceId);
             return this;
         }
 
         public Builder eventSourceResourceId(String eventSourceResourceId) {
-            this.eventSourceResourceId = Input.of(Objects.requireNonNull(eventSourceResourceId));
+            this.eventSourceResourceId = Output.of(Objects.requireNonNull(eventSourceResourceId));
             return this;
         }
 
-        public Builder iotHubName(Input<String> iotHubName) {
+        public Builder iotHubName(Output<String> iotHubName) {
             this.iotHubName = Objects.requireNonNull(iotHubName);
             return this;
         }
 
         public Builder iotHubName(String iotHubName) {
-            this.iotHubName = Input.of(Objects.requireNonNull(iotHubName));
+            this.iotHubName = Output.of(Objects.requireNonNull(iotHubName));
             return this;
         }
 
-        public Builder keyName(Input<String> keyName) {
+        public Builder keyName(Output<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Input.of(Objects.requireNonNull(keyName));
+            this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder localTimestamp(@Nullable Input<LocalTimestampArgs> localTimestamp) {
+        public Builder localTimestamp(@Nullable Output<LocalTimestampArgs> localTimestamp) {
             this.localTimestamp = localTimestamp;
             return this;
         }
 
         public Builder localTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
-            this.localTimestamp = Input.ofNullable(localTimestamp);
+            this.localTimestamp = Output.ofNullable(localTimestamp);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sharedAccessKey(Input<String> sharedAccessKey) {
+        public Builder sharedAccessKey(Output<String> sharedAccessKey) {
             this.sharedAccessKey = Objects.requireNonNull(sharedAccessKey);
             return this;
         }
 
         public Builder sharedAccessKey(String sharedAccessKey) {
-            this.sharedAccessKey = Input.of(Objects.requireNonNull(sharedAccessKey));
+            this.sharedAccessKey = Output.of(Objects.requireNonNull(sharedAccessKey));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder time(@Nullable Input<String> time) {
+        public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
 
         public Builder time(@Nullable String time) {
-            this.time = Input.ofNullable(time);
+            this.time = Output.ofNullable(time);
             return this;
         }
 
-        public Builder timestampPropertyName(@Nullable Input<String> timestampPropertyName) {
+        public Builder timestampPropertyName(@Nullable Output<String> timestampPropertyName) {
             this.timestampPropertyName = timestampPropertyName;
             return this;
         }
 
         public Builder timestampPropertyName(@Nullable String timestampPropertyName) {
-            this.timestampPropertyName = Input.ofNullable(timestampPropertyName);
+            this.timestampPropertyName = Output.ofNullable(timestampPropertyName);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,IngressStartAtType>> type) {
+        public Builder type(@Nullable Output<Either<String,IngressStartAtType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,IngressStartAtType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public IoTHubEventSourceArgs build() {

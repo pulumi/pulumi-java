@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs;
@@ -24,9 +24,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
      * 
      */
     @InputImport(name="cardContents", required=true)
-      private final Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents;
+      private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents;
 
-    public Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> getCardContents() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> getCardContents() {
         return this.cardContents;
     }
 
@@ -35,22 +35,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
      * 
      */
     @InputImport(name="cardWidth", required=true)
-      private final Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth;
+      private final Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth;
 
-    public Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> getCardWidth() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> getCardWidth() {
         return this.cardWidth;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs(
-        Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents,
-        Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth) {
+        Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents,
+        Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth) {
         this.cardContents = Objects.requireNonNull(cardContents, "expected parameter 'cardContents' to be non-null");
         this.cardWidth = Objects.requireNonNull(cardWidth, "expected parameter 'cardWidth' to be non-null");
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs() {
-        this.cardContents = Input.empty();
-        this.cardWidth = Input.empty();
+        this.cardContents = Output.empty();
+        this.cardWidth = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
     }
 
     public static final class Builder {
-        private Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents;
-        private Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth;
+        private Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents;
+        private Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
     	      this.cardWidth = defaults.cardWidth;
         }
 
-        public Builder cardContents(Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents) {
+        public Builder cardContents(Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents) {
             this.cardContents = Objects.requireNonNull(cardContents);
             return this;
         }
 
         public Builder cardContents(List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContents) {
-            this.cardContents = Input.of(Objects.requireNonNull(cardContents));
+            this.cardContents = Output.of(Objects.requireNonNull(cardContents));
             return this;
         }
 
-        public Builder cardWidth(Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth) {
+        public Builder cardWidth(Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth) {
             this.cardWidth = Objects.requireNonNull(cardWidth);
             return this;
         }
 
         public Builder cardWidth(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth cardWidth) {
-            this.cardWidth = Input.of(Objects.requireNonNull(cardWidth));
+            this.cardWidth = Output.of(Objects.requireNonNull(cardWidth));
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs build() {

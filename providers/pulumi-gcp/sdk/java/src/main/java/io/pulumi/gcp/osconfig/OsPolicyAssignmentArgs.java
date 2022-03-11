@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyArgs;
@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceFilter", required=true)
-      private final Input<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
+      private final Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
-    public Input<OsPolicyAssignmentInstanceFilterArgs> getInstanceFilter() {
+    public Output<OsPolicyAssignmentInstanceFilterArgs> getInstanceFilter() {
         return this.instanceFilter;
     }
 
@@ -45,9 +45,9 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -56,10 +56,10 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="osPolicies", required=true)
-      private final Input<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
+      private final Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
 
-    public Input<List<OsPolicyAssignmentOsPolicyArgs>> getOsPolicies() {
+    public Output<List<OsPolicyAssignmentOsPolicyArgs>> getOsPolicies() {
         return this.osPolicies;
     }
 
@@ -78,10 +78,10 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rollout", required=true)
-      private final Input<OsPolicyAssignmentRolloutArgs> rollout;
+      private final Output<OsPolicyAssignmentRolloutArgs> rollout;
 
-    public Input<OsPolicyAssignmentRolloutArgs> getRollout() {
+    public Output<OsPolicyAssignmentRolloutArgs> getRollout() {
         return this.rollout;
     }
 
     public OsPolicyAssignmentArgs(
-        @Nullable Input<String> description,
-        Input<OsPolicyAssignmentInstanceFilterArgs> instanceFilter,
-        Input<String> location,
-        @Nullable Input<String> name,
-        Input<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies,
-        @Nullable Input<String> project,
-        Input<OsPolicyAssignmentRolloutArgs> rollout) {
+        @Nullable Output<String> description,
+        Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter,
+        Output<String> location,
+        @Nullable Output<String> name,
+        Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies,
+        @Nullable Output<String> project,
+        Output<OsPolicyAssignmentRolloutArgs> rollout) {
         this.description = description;
         this.instanceFilter = Objects.requireNonNull(instanceFilter, "expected parameter 'instanceFilter' to be non-null");
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
@@ -113,13 +113,13 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private OsPolicyAssignmentArgs() {
-        this.description = Input.empty();
-        this.instanceFilter = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.osPolicies = Input.empty();
-        this.project = Input.empty();
-        this.rollout = Input.empty();
+        this.description = Output.empty();
+        this.instanceFilter = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.osPolicies = Output.empty();
+        this.project = Output.empty();
+        this.rollout = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
-        private Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
-        private @Nullable Input<String> project;
-        private Input<OsPolicyAssignmentRolloutArgs> rollout;
+        private @Nullable Output<String> description;
+        private Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
+        private Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
+        private @Nullable Output<String> project;
+        private Output<OsPolicyAssignmentRolloutArgs> rollout;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
     	      this.rollout = defaults.rollout;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder instanceFilter(Input<OsPolicyAssignmentInstanceFilterArgs> instanceFilter) {
+        public Builder instanceFilter(Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
 
         public Builder instanceFilter(OsPolicyAssignmentInstanceFilterArgs instanceFilter) {
-            this.instanceFilter = Input.of(Objects.requireNonNull(instanceFilter));
+            this.instanceFilter = Output.of(Objects.requireNonNull(instanceFilter));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder osPolicies(Input<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies) {
+        public Builder osPolicies(Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies) {
             this.osPolicies = Objects.requireNonNull(osPolicies);
             return this;
         }
 
         public Builder osPolicies(List<OsPolicyAssignmentOsPolicyArgs> osPolicies) {
-            this.osPolicies = Input.of(Objects.requireNonNull(osPolicies));
+            this.osPolicies = Output.of(Objects.requireNonNull(osPolicies));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rollout(Input<OsPolicyAssignmentRolloutArgs> rollout) {
+        public Builder rollout(Output<OsPolicyAssignmentRolloutArgs> rollout) {
             this.rollout = Objects.requireNonNull(rollout);
             return this;
         }
 
         public Builder rollout(OsPolicyAssignmentRolloutArgs rollout) {
-            this.rollout = Input.of(Objects.requireNonNull(rollout));
+            this.rollout = Output.of(Objects.requireNonNull(rollout));
             return this;
         }
         public OsPolicyAssignmentArgs build() {

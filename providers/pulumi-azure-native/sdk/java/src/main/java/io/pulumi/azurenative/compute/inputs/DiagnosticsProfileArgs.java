@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.BootDiagnosticsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class DiagnosticsProfileArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bootDiagnostics")
-      private final @Nullable Input<BootDiagnosticsArgs> bootDiagnostics;
+      private final @Nullable Output<BootDiagnosticsArgs> bootDiagnostics;
 
-    public Input<BootDiagnosticsArgs> getBootDiagnostics() {
-        return this.bootDiagnostics == null ? Input.empty() : this.bootDiagnostics;
+    public Output<BootDiagnosticsArgs> getBootDiagnostics() {
+        return this.bootDiagnostics == null ? Output.empty() : this.bootDiagnostics;
     }
 
-    public DiagnosticsProfileArgs(@Nullable Input<BootDiagnosticsArgs> bootDiagnostics) {
+    public DiagnosticsProfileArgs(@Nullable Output<BootDiagnosticsArgs> bootDiagnostics) {
         this.bootDiagnostics = bootDiagnostics;
     }
 
     private DiagnosticsProfileArgs() {
-        this.bootDiagnostics = Input.empty();
+        this.bootDiagnostics = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DiagnosticsProfileArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<BootDiagnosticsArgs> bootDiagnostics;
+        private @Nullable Output<BootDiagnosticsArgs> bootDiagnostics;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DiagnosticsProfileArgs extends io.pulumi.resources.ResourceAr
     	      this.bootDiagnostics = defaults.bootDiagnostics;
         }
 
-        public Builder bootDiagnostics(@Nullable Input<BootDiagnosticsArgs> bootDiagnostics) {
+        public Builder bootDiagnostics(@Nullable Output<BootDiagnosticsArgs> bootDiagnostics) {
             this.bootDiagnostics = bootDiagnostics;
             return this;
         }
 
         public Builder bootDiagnostics(@Nullable BootDiagnosticsArgs bootDiagnostics) {
-            this.bootDiagnostics = Input.ofNullable(bootDiagnostics);
+            this.bootDiagnostics = Output.ofNullable(bootDiagnostics);
             return this;
         }
         public DiagnosticsProfileArgs build() {

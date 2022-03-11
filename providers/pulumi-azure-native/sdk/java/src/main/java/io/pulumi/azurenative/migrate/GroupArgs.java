@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.GroupPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-      private final Input<String> projectName;
+      private final Output<String> projectName;
 
-    public Input<String> getProjectName() {
+    public Output<String> getProjectName() {
         return this.projectName;
     }
 
@@ -53,9 +53,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<GroupPropertiesArgs> properties;
+      private final Output<GroupPropertiesArgs> properties;
 
-    public Input<GroupPropertiesArgs> getProperties() {
+    public Output<GroupPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -64,18 +64,18 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public GroupArgs(
-        @Nullable Input<String> eTag,
-        @Nullable Input<String> groupName,
-        Input<String> projectName,
-        Input<GroupPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> eTag,
+        @Nullable Output<String> groupName,
+        Output<String> projectName,
+        Output<GroupPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.eTag = eTag;
         this.groupName = groupName;
         this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
@@ -84,11 +84,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.eTag = Input.empty();
-        this.groupName = Input.empty();
-        this.projectName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.eTag = Output.empty();
+        this.groupName = Output.empty();
+        this.projectName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eTag;
-        private @Nullable Input<String> groupName;
-        private Input<String> projectName;
-        private Input<GroupPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> eTag;
+        private @Nullable Output<String> groupName;
+        private Output<String> projectName;
+        private Output<GroupPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
 
-        public Builder projectName(Input<String> projectName) {
+        public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Input.of(Objects.requireNonNull(projectName));
+            this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder properties(Input<GroupPropertiesArgs> properties) {
+        public Builder properties(Output<GroupPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(GroupPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public GroupArgs build() {

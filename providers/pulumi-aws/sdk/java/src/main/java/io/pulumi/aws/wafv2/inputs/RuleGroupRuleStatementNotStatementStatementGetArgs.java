@@ -14,7 +14,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementReg
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,10 +29,10 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="andStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> andStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> andStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> getAndStatement() {
-        return this.andStatement == null ? Input.empty() : this.andStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> getAndStatement() {
+        return this.andStatement == null ? Output.empty() : this.andStatement;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="byteMatchStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> getByteMatchStatement() {
-        return this.byteMatchStatement == null ? Input.empty() : this.byteMatchStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> getByteMatchStatement() {
+        return this.byteMatchStatement == null ? Output.empty() : this.byteMatchStatement;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="geoMatchStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> getGeoMatchStatement() {
-        return this.geoMatchStatement == null ? Input.empty() : this.geoMatchStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> getGeoMatchStatement() {
+        return this.geoMatchStatement == null ? Output.empty() : this.geoMatchStatement;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="ipSetReferenceStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> getIpSetReferenceStatement() {
-        return this.ipSetReferenceStatement == null ? Input.empty() : this.ipSetReferenceStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> getIpSetReferenceStatement() {
+        return this.ipSetReferenceStatement == null ? Output.empty() : this.ipSetReferenceStatement;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="labelMatchStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> getLabelMatchStatement() {
-        return this.labelMatchStatement == null ? Input.empty() : this.labelMatchStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> getLabelMatchStatement() {
+        return this.labelMatchStatement == null ? Output.empty() : this.labelMatchStatement;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="notStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> notStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> notStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> getNotStatement() {
-        return this.notStatement == null ? Input.empty() : this.notStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> getNotStatement() {
+        return this.notStatement == null ? Output.empty() : this.notStatement;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="orStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> orStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> orStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> getOrStatement() {
-        return this.orStatement == null ? Input.empty() : this.orStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> getOrStatement() {
+        return this.orStatement == null ? Output.empty() : this.orStatement;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="regexPatternSetReferenceStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> getRegexPatternSetReferenceStatement() {
-        return this.regexPatternSetReferenceStatement == null ? Input.empty() : this.regexPatternSetReferenceStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> getRegexPatternSetReferenceStatement() {
+        return this.regexPatternSetReferenceStatement == null ? Output.empty() : this.regexPatternSetReferenceStatement;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="sizeConstraintStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> getSizeConstraintStatement() {
-        return this.sizeConstraintStatement == null ? Input.empty() : this.sizeConstraintStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> getSizeConstraintStatement() {
+        return this.sizeConstraintStatement == null ? Output.empty() : this.sizeConstraintStatement;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="sqliMatchStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> getSqliMatchStatement() {
-        return this.sqliMatchStatement == null ? Input.empty() : this.sqliMatchStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> getSqliMatchStatement() {
+        return this.sqliMatchStatement == null ? Output.empty() : this.sqliMatchStatement;
     }
 
     /**
@@ -139,24 +139,24 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="xssMatchStatement")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> getXssMatchStatement() {
-        return this.xssMatchStatement == null ? Input.empty() : this.xssMatchStatement;
+    public Output<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> getXssMatchStatement() {
+        return this.xssMatchStatement == null ? Output.empty() : this.xssMatchStatement;
     }
 
     public RuleGroupRuleStatementNotStatementStatementGetArgs(
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> andStatement,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> byteMatchStatement,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> geoMatchStatement,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> labelMatchStatement,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> notStatement,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> orStatement,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement,
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> xssMatchStatement) {
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> andStatement,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> byteMatchStatement,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> geoMatchStatement,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> labelMatchStatement,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> notStatement,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> orStatement,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement,
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> xssMatchStatement) {
         this.andStatement = andStatement;
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;
@@ -171,17 +171,17 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
     }
 
     private RuleGroupRuleStatementNotStatementStatementGetArgs() {
-        this.andStatement = Input.empty();
-        this.byteMatchStatement = Input.empty();
-        this.geoMatchStatement = Input.empty();
-        this.ipSetReferenceStatement = Input.empty();
-        this.labelMatchStatement = Input.empty();
-        this.notStatement = Input.empty();
-        this.orStatement = Input.empty();
-        this.regexPatternSetReferenceStatement = Input.empty();
-        this.sizeConstraintStatement = Input.empty();
-        this.sqliMatchStatement = Input.empty();
-        this.xssMatchStatement = Input.empty();
+        this.andStatement = Output.empty();
+        this.byteMatchStatement = Output.empty();
+        this.geoMatchStatement = Output.empty();
+        this.ipSetReferenceStatement = Output.empty();
+        this.labelMatchStatement = Output.empty();
+        this.notStatement = Output.empty();
+        this.orStatement = Output.empty();
+        this.regexPatternSetReferenceStatement = Output.empty();
+        this.sizeConstraintStatement = Output.empty();
+        this.sqliMatchStatement = Output.empty();
+        this.xssMatchStatement = Output.empty();
     }
 
     public static Builder builder() {
@@ -193,17 +193,17 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> andStatement;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> notStatement;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> orStatement;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> andStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> notStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> orStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
 
         public Builder() {
     	      // Empty
@@ -224,113 +224,113 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
     	      this.xssMatchStatement = defaults.xssMatchStatement;
         }
 
-        public Builder andStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> andStatement) {
+        public Builder andStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> andStatement) {
             this.andStatement = andStatement;
             return this;
         }
 
         public Builder andStatement(@Nullable RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs andStatement) {
-            this.andStatement = Input.ofNullable(andStatement);
+            this.andStatement = Output.ofNullable(andStatement);
             return this;
         }
 
-        public Builder byteMatchStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> byteMatchStatement) {
+        public Builder byteMatchStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> byteMatchStatement) {
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
 
         public Builder byteMatchStatement(@Nullable RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs byteMatchStatement) {
-            this.byteMatchStatement = Input.ofNullable(byteMatchStatement);
+            this.byteMatchStatement = Output.ofNullable(byteMatchStatement);
             return this;
         }
 
-        public Builder geoMatchStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> geoMatchStatement) {
+        public Builder geoMatchStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
 
         public Builder geoMatchStatement(@Nullable RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs geoMatchStatement) {
-            this.geoMatchStatement = Input.ofNullable(geoMatchStatement);
+            this.geoMatchStatement = Output.ofNullable(geoMatchStatement);
             return this;
         }
 
-        public Builder ipSetReferenceStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement) {
+        public Builder ipSetReferenceStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement) {
             this.ipSetReferenceStatement = ipSetReferenceStatement;
             return this;
         }
 
         public Builder ipSetReferenceStatement(@Nullable RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs ipSetReferenceStatement) {
-            this.ipSetReferenceStatement = Input.ofNullable(ipSetReferenceStatement);
+            this.ipSetReferenceStatement = Output.ofNullable(ipSetReferenceStatement);
             return this;
         }
 
-        public Builder labelMatchStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> labelMatchStatement) {
+        public Builder labelMatchStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
 
         public Builder labelMatchStatement(@Nullable RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs labelMatchStatement) {
-            this.labelMatchStatement = Input.ofNullable(labelMatchStatement);
+            this.labelMatchStatement = Output.ofNullable(labelMatchStatement);
             return this;
         }
 
-        public Builder notStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> notStatement) {
+        public Builder notStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> notStatement) {
             this.notStatement = notStatement;
             return this;
         }
 
         public Builder notStatement(@Nullable RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs notStatement) {
-            this.notStatement = Input.ofNullable(notStatement);
+            this.notStatement = Output.ofNullable(notStatement);
             return this;
         }
 
-        public Builder orStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> orStatement) {
+        public Builder orStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> orStatement) {
             this.orStatement = orStatement;
             return this;
         }
 
         public Builder orStatement(@Nullable RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs orStatement) {
-            this.orStatement = Input.ofNullable(orStatement);
+            this.orStatement = Output.ofNullable(orStatement);
             return this;
         }
 
-        public Builder regexPatternSetReferenceStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement) {
+        public Builder regexPatternSetReferenceStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
 
         public Builder regexPatternSetReferenceStatement(@Nullable RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs regexPatternSetReferenceStatement) {
-            this.regexPatternSetReferenceStatement = Input.ofNullable(regexPatternSetReferenceStatement);
+            this.regexPatternSetReferenceStatement = Output.ofNullable(regexPatternSetReferenceStatement);
             return this;
         }
 
-        public Builder sizeConstraintStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement) {
+        public Builder sizeConstraintStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
 
         public Builder sizeConstraintStatement(@Nullable RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs sizeConstraintStatement) {
-            this.sizeConstraintStatement = Input.ofNullable(sizeConstraintStatement);
+            this.sizeConstraintStatement = Output.ofNullable(sizeConstraintStatement);
             return this;
         }
 
-        public Builder sqliMatchStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement) {
+        public Builder sqliMatchStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
 
         public Builder sqliMatchStatement(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs sqliMatchStatement) {
-            this.sqliMatchStatement = Input.ofNullable(sqliMatchStatement);
+            this.sqliMatchStatement = Output.ofNullable(sqliMatchStatement);
             return this;
         }
 
-        public Builder xssMatchStatement(@Nullable Input<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> xssMatchStatement) {
+        public Builder xssMatchStatement(@Nullable Output<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
         }
 
         public Builder xssMatchStatement(@Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs xssMatchStatement) {
-            this.xssMatchStatement = Input.ofNullable(xssMatchStatement);
+            this.xssMatchStatement = Output.ofNullable(xssMatchStatement);
             return this;
         }
         public RuleGroupRuleStatementNotStatementStatementGetArgs build() {

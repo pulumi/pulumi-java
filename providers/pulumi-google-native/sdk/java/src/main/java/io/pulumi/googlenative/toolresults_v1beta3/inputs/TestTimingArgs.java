@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testProcessDuration")
-      private final @Nullable Input<DurationArgs> testProcessDuration;
+      private final @Nullable Output<DurationArgs> testProcessDuration;
 
-    public Input<DurationArgs> getTestProcessDuration() {
-        return this.testProcessDuration == null ? Input.empty() : this.testProcessDuration;
+    public Output<DurationArgs> getTestProcessDuration() {
+        return this.testProcessDuration == null ? Output.empty() : this.testProcessDuration;
     }
 
-    public TestTimingArgs(@Nullable Input<DurationArgs> testProcessDuration) {
+    public TestTimingArgs(@Nullable Output<DurationArgs> testProcessDuration) {
         this.testProcessDuration = testProcessDuration;
     }
 
     private TestTimingArgs() {
-        this.testProcessDuration = Input.empty();
+        this.testProcessDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DurationArgs> testProcessDuration;
+        private @Nullable Output<DurationArgs> testProcessDuration;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testProcessDuration = defaults.testProcessDuration;
         }
 
-        public Builder testProcessDuration(@Nullable Input<DurationArgs> testProcessDuration) {
+        public Builder testProcessDuration(@Nullable Output<DurationArgs> testProcessDuration) {
             this.testProcessDuration = testProcessDuration;
             return this;
         }
 
         public Builder testProcessDuration(@Nullable DurationArgs testProcessDuration) {
-            this.testProcessDuration = Input.ofNullable(testProcessDuration);
+            this.testProcessDuration = Output.ofNullable(testProcessDuration);
             return this;
         }
         public TestTimingArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DistributionOriginS3OriginConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="originAccessIdentity", required=true)
-      private final Input<String> originAccessIdentity;
+      private final Output<String> originAccessIdentity;
 
-    public Input<String> getOriginAccessIdentity() {
+    public Output<String> getOriginAccessIdentity() {
         return this.originAccessIdentity;
     }
 
-    public DistributionOriginS3OriginConfigArgs(Input<String> originAccessIdentity) {
+    public DistributionOriginS3OriginConfigArgs(Output<String> originAccessIdentity) {
         this.originAccessIdentity = Objects.requireNonNull(originAccessIdentity, "expected parameter 'originAccessIdentity' to be non-null");
     }
 
     private DistributionOriginS3OriginConfigArgs() {
-        this.originAccessIdentity = Input.empty();
+        this.originAccessIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DistributionOriginS3OriginConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> originAccessIdentity;
+        private Output<String> originAccessIdentity;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DistributionOriginS3OriginConfigArgs extends io.pulumi.resour
     	      this.originAccessIdentity = defaults.originAccessIdentity;
         }
 
-        public Builder originAccessIdentity(Input<String> originAccessIdentity) {
+        public Builder originAccessIdentity(Output<String> originAccessIdentity) {
             this.originAccessIdentity = Objects.requireNonNull(originAccessIdentity);
             return this;
         }
 
         public Builder originAccessIdentity(String originAccessIdentity) {
-            this.originAccessIdentity = Input.of(Objects.requireNonNull(originAccessIdentity));
+            this.originAccessIdentity = Output.of(Objects.requireNonNull(originAccessIdentity));
             return this;
         }
         public DistributionOriginS3OriginConfigArgs build() {

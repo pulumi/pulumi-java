@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.DatasourceArgs;
 import io.pulumi.azurenative.dataprotection.inputs.DatasourceSetArgs;
 import io.pulumi.azurenative.dataprotection.inputs.PolicyInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceInfo", required=true)
-      private final Input<DatasourceArgs> dataSourceInfo;
+      private final Output<DatasourceArgs> dataSourceInfo;
 
-    public Input<DatasourceArgs> getDataSourceInfo() {
+    public Output<DatasourceArgs> getDataSourceInfo() {
         return this.dataSourceInfo;
     }
 
@@ -37,10 +37,10 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceSetInfo")
-      private final @Nullable Input<DatasourceSetArgs> dataSourceSetInfo;
+      private final @Nullable Output<DatasourceSetArgs> dataSourceSetInfo;
 
-    public Input<DatasourceSetArgs> getDataSourceSetInfo() {
-        return this.dataSourceSetInfo == null ? Input.empty() : this.dataSourceSetInfo;
+    public Output<DatasourceSetArgs> getDataSourceSetInfo() {
+        return this.dataSourceSetInfo == null ? Output.empty() : this.dataSourceSetInfo;
     }
 
     /**
@@ -48,16 +48,16 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
@@ -66,18 +66,18 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyInfo", required=true)
-      private final Input<PolicyInfoArgs> policyInfo;
+      private final Output<PolicyInfoArgs> policyInfo;
 
-    public Input<PolicyInfoArgs> getPolicyInfo() {
+    public Output<PolicyInfoArgs> getPolicyInfo() {
         return this.policyInfo;
     }
 
     public BackupInstanceArgs(
-        Input<DatasourceArgs> dataSourceInfo,
-        @Nullable Input<DatasourceSetArgs> dataSourceSetInfo,
-        @Nullable Input<String> friendlyName,
-        Input<String> objectType,
-        Input<PolicyInfoArgs> policyInfo) {
+        Output<DatasourceArgs> dataSourceInfo,
+        @Nullable Output<DatasourceSetArgs> dataSourceSetInfo,
+        @Nullable Output<String> friendlyName,
+        Output<String> objectType,
+        Output<PolicyInfoArgs> policyInfo) {
         this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo, "expected parameter 'dataSourceInfo' to be non-null");
         this.dataSourceSetInfo = dataSourceSetInfo;
         this.friendlyName = friendlyName;
@@ -86,11 +86,11 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupInstanceArgs() {
-        this.dataSourceInfo = Input.empty();
-        this.dataSourceSetInfo = Input.empty();
-        this.friendlyName = Input.empty();
-        this.objectType = Input.empty();
-        this.policyInfo = Input.empty();
+        this.dataSourceInfo = Output.empty();
+        this.dataSourceSetInfo = Output.empty();
+        this.friendlyName = Output.empty();
+        this.objectType = Output.empty();
+        this.policyInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<DatasourceArgs> dataSourceInfo;
-        private @Nullable Input<DatasourceSetArgs> dataSourceSetInfo;
-        private @Nullable Input<String> friendlyName;
-        private Input<String> objectType;
-        private Input<PolicyInfoArgs> policyInfo;
+        private Output<DatasourceArgs> dataSourceInfo;
+        private @Nullable Output<DatasourceSetArgs> dataSourceSetInfo;
+        private @Nullable Output<String> friendlyName;
+        private Output<String> objectType;
+        private Output<PolicyInfoArgs> policyInfo;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyInfo = defaults.policyInfo;
         }
 
-        public Builder dataSourceInfo(Input<DatasourceArgs> dataSourceInfo) {
+        public Builder dataSourceInfo(Output<DatasourceArgs> dataSourceInfo) {
             this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo);
             return this;
         }
 
         public Builder dataSourceInfo(DatasourceArgs dataSourceInfo) {
-            this.dataSourceInfo = Input.of(Objects.requireNonNull(dataSourceInfo));
+            this.dataSourceInfo = Output.of(Objects.requireNonNull(dataSourceInfo));
             return this;
         }
 
-        public Builder dataSourceSetInfo(@Nullable Input<DatasourceSetArgs> dataSourceSetInfo) {
+        public Builder dataSourceSetInfo(@Nullable Output<DatasourceSetArgs> dataSourceSetInfo) {
             this.dataSourceSetInfo = dataSourceSetInfo;
             return this;
         }
 
         public Builder dataSourceSetInfo(@Nullable DatasourceSetArgs dataSourceSetInfo) {
-            this.dataSourceSetInfo = Input.ofNullable(dataSourceSetInfo);
+            this.dataSourceSetInfo = Output.ofNullable(dataSourceSetInfo);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder policyInfo(Input<PolicyInfoArgs> policyInfo) {
+        public Builder policyInfo(Output<PolicyInfoArgs> policyInfo) {
             this.policyInfo = Objects.requireNonNull(policyInfo);
             return this;
         }
 
         public Builder policyInfo(PolicyInfoArgs policyInfo) {
-            this.policyInfo = Input.of(Objects.requireNonNull(policyInfo));
+            this.policyInfo = Output.of(Objects.requireNonNull(policyInfo));
             return this;
         }
         public BackupInstanceArgs build() {

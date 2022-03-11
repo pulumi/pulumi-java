@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift;
 
 import io.pulumi.awsnative.gamelift.inputs.AliasRoutingStrategyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingStrategy", required=true)
-      private final Input<AliasRoutingStrategyArgs> routingStrategy;
+      private final Output<AliasRoutingStrategyArgs> routingStrategy;
 
-    public Input<AliasRoutingStrategyArgs> getRoutingStrategy() {
+    public Output<AliasRoutingStrategyArgs> getRoutingStrategy() {
         return this.routingStrategy;
     }
 
     public AliasArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<AliasRoutingStrategyArgs> routingStrategy) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<AliasRoutingStrategyArgs> routingStrategy) {
         this.description = description;
         this.name = name;
         this.routingStrategy = Objects.requireNonNull(routingStrategy, "expected parameter 'routingStrategy' to be non-null");
     }
 
     private AliasArgs() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.routingStrategy = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.routingStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<AliasRoutingStrategyArgs> routingStrategy;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<AliasRoutingStrategyArgs> routingStrategy;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routingStrategy = defaults.routingStrategy;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder routingStrategy(Input<AliasRoutingStrategyArgs> routingStrategy) {
+        public Builder routingStrategy(Output<AliasRoutingStrategyArgs> routingStrategy) {
             this.routingStrategy = Objects.requireNonNull(routingStrategy);
             return this;
         }
 
         public Builder routingStrategy(AliasRoutingStrategyArgs routingStrategy) {
-            this.routingStrategy = Input.of(Objects.requireNonNull(routingStrategy));
+            this.routingStrategy = Output.of(Objects.requireNonNull(routingStrategy));
             return this;
         }
         public AliasArgs build() {

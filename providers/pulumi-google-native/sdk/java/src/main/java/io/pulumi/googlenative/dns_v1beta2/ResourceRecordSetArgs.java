@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyArgs;
 import java.lang.Integer;
@@ -18,23 +18,23 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     public static final ResourceRecordSetArgs Empty = new ResourceRecordSetArgs();
 
     @InputImport(name="clientOperationId")
-      private final @Nullable Input<String> clientOperationId;
+      private final @Nullable Output<String> clientOperationId;
 
-    public Input<String> getClientOperationId() {
-        return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
+    public Output<String> getClientOperationId() {
+        return this.clientOperationId == null ? Output.empty() : this.clientOperationId;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     @InputImport(name="managedZone", required=true)
-      private final Input<String> managedZone;
+      private final Output<String> managedZone;
 
-    public Input<String> getManagedZone() {
+    public Output<String> getManagedZone() {
         return this.managedZone;
     }
 
@@ -43,17 +43,17 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routingPolicy")
-      private final @Nullable Input<RRSetRoutingPolicyArgs> routingPolicy;
+      private final @Nullable Output<RRSetRoutingPolicyArgs> routingPolicy;
 
-    public Input<RRSetRoutingPolicyArgs> getRoutingPolicy() {
-        return this.routingPolicy == null ? Input.empty() : this.routingPolicy;
+    public Output<RRSetRoutingPolicyArgs> getRoutingPolicy() {
+        return this.routingPolicy == null ? Output.empty() : this.routingPolicy;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rrdatas")
-      private final @Nullable Input<List<String>> rrdatas;
+      private final @Nullable Output<List<String>> rrdatas;
 
-    public Input<List<String>> getRrdatas() {
-        return this.rrdatas == null ? Input.empty() : this.rrdatas;
+    public Output<List<String>> getRrdatas() {
+        return this.rrdatas == null ? Output.empty() : this.rrdatas;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="signatureRrdatas")
-      private final @Nullable Input<List<String>> signatureRrdatas;
+      private final @Nullable Output<List<String>> signatureRrdatas;
 
-    public Input<List<String>> getSignatureRrdatas() {
-        return this.signatureRrdatas == null ? Input.empty() : this.signatureRrdatas;
+    public Output<List<String>> getSignatureRrdatas() {
+        return this.signatureRrdatas == null ? Output.empty() : this.signatureRrdatas;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<Integer> ttl;
+      private final @Nullable Output<Integer> ttl;
 
-    public Input<Integer> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<Integer> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     /**
@@ -105,23 +105,23 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ResourceRecordSetArgs(
-        @Nullable Input<String> clientOperationId,
-        @Nullable Input<String> kind,
-        Input<String> managedZone,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<RRSetRoutingPolicyArgs> routingPolicy,
-        @Nullable Input<List<String>> rrdatas,
-        @Nullable Input<List<String>> signatureRrdatas,
-        @Nullable Input<Integer> ttl,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> clientOperationId,
+        @Nullable Output<String> kind,
+        Output<String> managedZone,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<RRSetRoutingPolicyArgs> routingPolicy,
+        @Nullable Output<List<String>> rrdatas,
+        @Nullable Output<List<String>> signatureRrdatas,
+        @Nullable Output<Integer> ttl,
+        @Nullable Output<String> type) {
         this.clientOperationId = clientOperationId;
         this.kind = kind;
         this.managedZone = Objects.requireNonNull(managedZone, "expected parameter 'managedZone' to be non-null");
@@ -135,16 +135,16 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ResourceRecordSetArgs() {
-        this.clientOperationId = Input.empty();
-        this.kind = Input.empty();
-        this.managedZone = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.routingPolicy = Input.empty();
-        this.rrdatas = Input.empty();
-        this.signatureRrdatas = Input.empty();
-        this.ttl = Input.empty();
-        this.type = Input.empty();
+        this.clientOperationId = Output.empty();
+        this.kind = Output.empty();
+        this.managedZone = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.routingPolicy = Output.empty();
+        this.rrdatas = Output.empty();
+        this.signatureRrdatas = Output.empty();
+        this.ttl = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,16 +156,16 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientOperationId;
-        private @Nullable Input<String> kind;
-        private Input<String> managedZone;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<RRSetRoutingPolicyArgs> routingPolicy;
-        private @Nullable Input<List<String>> rrdatas;
-        private @Nullable Input<List<String>> signatureRrdatas;
-        private @Nullable Input<Integer> ttl;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> clientOperationId;
+        private @Nullable Output<String> kind;
+        private Output<String> managedZone;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<RRSetRoutingPolicyArgs> routingPolicy;
+        private @Nullable Output<List<String>> rrdatas;
+        private @Nullable Output<List<String>> signatureRrdatas;
+        private @Nullable Output<Integer> ttl;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -185,103 +185,103 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder clientOperationId(@Nullable Input<String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Input.ofNullable(clientOperationId);
+            this.clientOperationId = Output.ofNullable(clientOperationId);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder managedZone(Input<String> managedZone) {
+        public Builder managedZone(Output<String> managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
 
         public Builder managedZone(String managedZone) {
-            this.managedZone = Input.of(Objects.requireNonNull(managedZone));
+            this.managedZone = Output.of(Objects.requireNonNull(managedZone));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder routingPolicy(@Nullable Input<RRSetRoutingPolicyArgs> routingPolicy) {
+        public Builder routingPolicy(@Nullable Output<RRSetRoutingPolicyArgs> routingPolicy) {
             this.routingPolicy = routingPolicy;
             return this;
         }
 
         public Builder routingPolicy(@Nullable RRSetRoutingPolicyArgs routingPolicy) {
-            this.routingPolicy = Input.ofNullable(routingPolicy);
+            this.routingPolicy = Output.ofNullable(routingPolicy);
             return this;
         }
 
-        public Builder rrdatas(@Nullable Input<List<String>> rrdatas) {
+        public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
             this.rrdatas = rrdatas;
             return this;
         }
 
         public Builder rrdatas(@Nullable List<String> rrdatas) {
-            this.rrdatas = Input.ofNullable(rrdatas);
+            this.rrdatas = Output.ofNullable(rrdatas);
             return this;
         }
 
-        public Builder signatureRrdatas(@Nullable Input<List<String>> signatureRrdatas) {
+        public Builder signatureRrdatas(@Nullable Output<List<String>> signatureRrdatas) {
             this.signatureRrdatas = signatureRrdatas;
             return this;
         }
 
         public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
-            this.signatureRrdatas = Input.ofNullable(signatureRrdatas);
+            this.signatureRrdatas = Output.ofNullable(signatureRrdatas);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ResourceRecordSetArgs build() {

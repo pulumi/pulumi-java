@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tpu.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.tpu.inputs.NodeNetworkEndpointGetArgs;
 import io.pulumi.gcp.tpu.inputs.NodeSchedulingConfigGetArgs;
@@ -24,10 +24,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorType")
-      private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Output<String> acceleratorType;
 
-    public Input<String> getAcceleratorType() {
-        return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
+    public Output<String> getAcceleratorType() {
+        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-      private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Output<String> cidrBlock;
 
-    public Input<String> getCidrBlock() {
-        return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
+    public Output<String> getCidrBlock() {
+        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkEndpoints")
-      private final @Nullable Input<List<NodeNetworkEndpointGetArgs>> networkEndpoints;
+      private final @Nullable Output<List<NodeNetworkEndpointGetArgs>> networkEndpoints;
 
-    public Input<List<NodeNetworkEndpointGetArgs>> getNetworkEndpoints() {
-        return this.networkEndpoints == null ? Input.empty() : this.networkEndpoints;
+    public Output<List<NodeNetworkEndpointGetArgs>> getNetworkEndpoints() {
+        return this.networkEndpoints == null ? Output.empty() : this.networkEndpoints;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulingConfig")
-      private final @Nullable Input<NodeSchedulingConfigGetArgs> schedulingConfig;
+      private final @Nullable Output<NodeSchedulingConfigGetArgs> schedulingConfig;
 
-    public Input<NodeSchedulingConfigGetArgs> getSchedulingConfig() {
-        return this.schedulingConfig == null ? Input.empty() : this.schedulingConfig;
+    public Output<NodeSchedulingConfigGetArgs> getSchedulingConfig() {
+        return this.schedulingConfig == null ? Output.empty() : this.schedulingConfig;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tensorflowVersion")
-      private final @Nullable Input<String> tensorflowVersion;
+      private final @Nullable Output<String> tensorflowVersion;
 
-    public Input<String> getTensorflowVersion() {
-        return this.tensorflowVersion == null ? Input.empty() : this.tensorflowVersion;
+    public Output<String> getTensorflowVersion() {
+        return this.tensorflowVersion == null ? Output.empty() : this.tensorflowVersion;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useServiceNetworking")
-      private final @Nullable Input<Boolean> useServiceNetworking;
+      private final @Nullable Output<Boolean> useServiceNetworking;
 
-    public Input<Boolean> getUseServiceNetworking() {
-        return this.useServiceNetworking == null ? Input.empty() : this.useServiceNetworking;
+    public Output<Boolean> getUseServiceNetworking() {
+        return this.useServiceNetworking == null ? Output.empty() : this.useServiceNetworking;
     }
 
     /**
@@ -173,26 +173,26 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public NodeState(
-        @Nullable Input<String> acceleratorType,
-        @Nullable Input<String> cidrBlock,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<List<NodeNetworkEndpointGetArgs>> networkEndpoints,
-        @Nullable Input<String> project,
-        @Nullable Input<NodeSchedulingConfigGetArgs> schedulingConfig,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<String> tensorflowVersion,
-        @Nullable Input<Boolean> useServiceNetworking,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> acceleratorType,
+        @Nullable Output<String> cidrBlock,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<List<NodeNetworkEndpointGetArgs>> networkEndpoints,
+        @Nullable Output<String> project,
+        @Nullable Output<NodeSchedulingConfigGetArgs> schedulingConfig,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<String> tensorflowVersion,
+        @Nullable Output<Boolean> useServiceNetworking,
+        @Nullable Output<String> zone) {
         this.acceleratorType = acceleratorType;
         this.cidrBlock = cidrBlock;
         this.description = description;
@@ -209,19 +209,19 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeState() {
-        this.acceleratorType = Input.empty();
-        this.cidrBlock = Input.empty();
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.networkEndpoints = Input.empty();
-        this.project = Input.empty();
-        this.schedulingConfig = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.tensorflowVersion = Input.empty();
-        this.useServiceNetworking = Input.empty();
-        this.zone = Input.empty();
+        this.acceleratorType = Output.empty();
+        this.cidrBlock = Output.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.networkEndpoints = Output.empty();
+        this.project = Output.empty();
+        this.schedulingConfig = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.tensorflowVersion = Output.empty();
+        this.useServiceNetworking = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -233,19 +233,19 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceleratorType;
-        private @Nullable Input<String> cidrBlock;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<List<NodeNetworkEndpointGetArgs>> networkEndpoints;
-        private @Nullable Input<String> project;
-        private @Nullable Input<NodeSchedulingConfigGetArgs> schedulingConfig;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<String> tensorflowVersion;
-        private @Nullable Input<Boolean> useServiceNetworking;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> acceleratorType;
+        private @Nullable Output<String> cidrBlock;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<List<NodeNetworkEndpointGetArgs>> networkEndpoints;
+        private @Nullable Output<String> project;
+        private @Nullable Output<NodeSchedulingConfigGetArgs> schedulingConfig;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<String> tensorflowVersion;
+        private @Nullable Output<Boolean> useServiceNetworking;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -268,133 +268,133 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder acceleratorType(@Nullable Input<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
         public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Input.ofNullable(acceleratorType);
+            this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
 
-        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Input.ofNullable(cidrBlock);
+            this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder networkEndpoints(@Nullable Input<List<NodeNetworkEndpointGetArgs>> networkEndpoints) {
+        public Builder networkEndpoints(@Nullable Output<List<NodeNetworkEndpointGetArgs>> networkEndpoints) {
             this.networkEndpoints = networkEndpoints;
             return this;
         }
 
         public Builder networkEndpoints(@Nullable List<NodeNetworkEndpointGetArgs> networkEndpoints) {
-            this.networkEndpoints = Input.ofNullable(networkEndpoints);
+            this.networkEndpoints = Output.ofNullable(networkEndpoints);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder schedulingConfig(@Nullable Input<NodeSchedulingConfigGetArgs> schedulingConfig) {
+        public Builder schedulingConfig(@Nullable Output<NodeSchedulingConfigGetArgs> schedulingConfig) {
             this.schedulingConfig = schedulingConfig;
             return this;
         }
 
         public Builder schedulingConfig(@Nullable NodeSchedulingConfigGetArgs schedulingConfig) {
-            this.schedulingConfig = Input.ofNullable(schedulingConfig);
+            this.schedulingConfig = Output.ofNullable(schedulingConfig);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder tensorflowVersion(@Nullable Input<String> tensorflowVersion) {
+        public Builder tensorflowVersion(@Nullable Output<String> tensorflowVersion) {
             this.tensorflowVersion = tensorflowVersion;
             return this;
         }
 
         public Builder tensorflowVersion(@Nullable String tensorflowVersion) {
-            this.tensorflowVersion = Input.ofNullable(tensorflowVersion);
+            this.tensorflowVersion = Output.ofNullable(tensorflowVersion);
             return this;
         }
 
-        public Builder useServiceNetworking(@Nullable Input<Boolean> useServiceNetworking) {
+        public Builder useServiceNetworking(@Nullable Output<Boolean> useServiceNetworking) {
             this.useServiceNetworking = useServiceNetworking;
             return this;
         }
 
         public Builder useServiceNetworking(@Nullable Boolean useServiceNetworking) {
-            this.useServiceNetworking = Input.ofNullable(useServiceNetworking);
+            this.useServiceNetworking = Output.ofNullable(useServiceNetworking);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public NodeState build() {

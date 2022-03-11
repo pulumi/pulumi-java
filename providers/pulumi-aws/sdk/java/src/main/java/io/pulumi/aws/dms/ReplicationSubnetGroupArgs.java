@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="replicationSubnetGroupDescription", required=true)
-      private final Input<String> replicationSubnetGroupDescription;
+      private final Output<String> replicationSubnetGroupDescription;
 
-    public Input<String> getReplicationSubnetGroupDescription() {
+    public Output<String> getReplicationSubnetGroupDescription() {
         return this.replicationSubnetGroupDescription;
     }
 
@@ -32,9 +32,9 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="replicationSubnetGroupId", required=true)
-      private final Input<String> replicationSubnetGroupId;
+      private final Output<String> replicationSubnetGroupId;
 
-    public Input<String> getReplicationSubnetGroupId() {
+    public Output<String> getReplicationSubnetGroupId() {
         return this.replicationSubnetGroupId;
     }
 
@@ -43,9 +43,9 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
@@ -54,17 +54,17 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ReplicationSubnetGroupArgs(
-        Input<String> replicationSubnetGroupDescription,
-        Input<String> replicationSubnetGroupId,
-        Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> replicationSubnetGroupDescription,
+        Output<String> replicationSubnetGroupId,
+        Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags) {
         this.replicationSubnetGroupDescription = Objects.requireNonNull(replicationSubnetGroupDescription, "expected parameter 'replicationSubnetGroupDescription' to be non-null");
         this.replicationSubnetGroupId = Objects.requireNonNull(replicationSubnetGroupId, "expected parameter 'replicationSubnetGroupId' to be non-null");
         this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
@@ -72,10 +72,10 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
     }
 
     private ReplicationSubnetGroupArgs() {
-        this.replicationSubnetGroupDescription = Input.empty();
-        this.replicationSubnetGroupId = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
+        this.replicationSubnetGroupDescription = Output.empty();
+        this.replicationSubnetGroupId = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> replicationSubnetGroupDescription;
-        private Input<String> replicationSubnetGroupId;
-        private Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> replicationSubnetGroupDescription;
+        private Output<String> replicationSubnetGroupId;
+        private Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder replicationSubnetGroupDescription(Input<String> replicationSubnetGroupDescription) {
+        public Builder replicationSubnetGroupDescription(Output<String> replicationSubnetGroupDescription) {
             this.replicationSubnetGroupDescription = Objects.requireNonNull(replicationSubnetGroupDescription);
             return this;
         }
 
         public Builder replicationSubnetGroupDescription(String replicationSubnetGroupDescription) {
-            this.replicationSubnetGroupDescription = Input.of(Objects.requireNonNull(replicationSubnetGroupDescription));
+            this.replicationSubnetGroupDescription = Output.of(Objects.requireNonNull(replicationSubnetGroupDescription));
             return this;
         }
 
-        public Builder replicationSubnetGroupId(Input<String> replicationSubnetGroupId) {
+        public Builder replicationSubnetGroupId(Output<String> replicationSubnetGroupId) {
             this.replicationSubnetGroupId = Objects.requireNonNull(replicationSubnetGroupId);
             return this;
         }
 
         public Builder replicationSubnetGroupId(String replicationSubnetGroupId) {
-            this.replicationSubnetGroupId = Input.of(Objects.requireNonNull(replicationSubnetGroupId));
+            this.replicationSubnetGroupId = Output.of(Objects.requireNonNull(replicationSubnetGroupId));
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ReplicationSubnetGroupArgs build() {

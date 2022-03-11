@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class ListenerRuleTargetGroupTupleArgs extends io.pulumi.resources.
     public static final ListenerRuleTargetGroupTupleArgs Empty = new ListenerRuleTargetGroupTupleArgs();
 
     @InputImport(name="targetGroupArn")
-      private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Output<String> targetGroupArn;
 
-    public Input<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;
+    public Output<String> getTargetGroupArn() {
+        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
     }
 
     @InputImport(name="weight")
-      private final @Nullable Input<Integer> weight;
+      private final @Nullable Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Integer> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public ListenerRuleTargetGroupTupleArgs(
-        @Nullable Input<String> targetGroupArn,
-        @Nullable Input<Integer> weight) {
+        @Nullable Output<String> targetGroupArn,
+        @Nullable Output<Integer> weight) {
         this.targetGroupArn = targetGroupArn;
         this.weight = weight;
     }
 
     private ListenerRuleTargetGroupTupleArgs() {
-        this.targetGroupArn = Input.empty();
-        this.weight = Input.empty();
+        this.targetGroupArn = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ListenerRuleTargetGroupTupleArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> targetGroupArn;
-        private @Nullable Input<Integer> weight;
+        private @Nullable Output<String> targetGroupArn;
+        private @Nullable Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ListenerRuleTargetGroupTupleArgs extends io.pulumi.resources.
     	      this.weight = defaults.weight;
         }
 
-        public Builder targetGroupArn(@Nullable Input<String> targetGroupArn) {
+        public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Input.ofNullable(targetGroupArn);
+            this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public ListenerRuleTargetGroupTupleArgs build() {

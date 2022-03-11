@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="numFiniteBuckets")
-      private final @Nullable Input<Integer> numFiniteBuckets;
+      private final @Nullable Output<Integer> numFiniteBuckets;
 
-    public Input<Integer> getNumFiniteBuckets() {
-        return this.numFiniteBuckets == null ? Input.empty() : this.numFiniteBuckets;
+    public Output<Integer> getNumFiniteBuckets() {
+        return this.numFiniteBuckets == null ? Output.empty() : this.numFiniteBuckets;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="offset")
-      private final @Nullable Input<Double> offset;
+      private final @Nullable Output<Double> offset;
 
-    public Input<Double> getOffset() {
-        return this.offset == null ? Input.empty() : this.offset;
+    public Output<Double> getOffset() {
+        return this.offset == null ? Output.empty() : this.offset;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="width")
-      private final @Nullable Input<Double> width;
+      private final @Nullable Output<Double> width;
 
-    public Input<Double> getWidth() {
-        return this.width == null ? Input.empty() : this.width;
+    public Output<Double> getWidth() {
+        return this.width == null ? Output.empty() : this.width;
     }
 
     public MetricBucketOptionsLinearBucketsGetArgs(
-        @Nullable Input<Integer> numFiniteBuckets,
-        @Nullable Input<Double> offset,
-        @Nullable Input<Double> width) {
+        @Nullable Output<Integer> numFiniteBuckets,
+        @Nullable Output<Double> offset,
+        @Nullable Output<Double> width) {
         this.numFiniteBuckets = numFiniteBuckets;
         this.offset = offset;
         this.width = width;
     }
 
     private MetricBucketOptionsLinearBucketsGetArgs() {
-        this.numFiniteBuckets = Input.empty();
-        this.offset = Input.empty();
-        this.width = Input.empty();
+        this.numFiniteBuckets = Output.empty();
+        this.offset = Output.empty();
+        this.width = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> numFiniteBuckets;
-        private @Nullable Input<Double> offset;
-        private @Nullable Input<Double> width;
+        private @Nullable Output<Integer> numFiniteBuckets;
+        private @Nullable Output<Double> offset;
+        private @Nullable Output<Double> width;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
     	      this.width = defaults.width;
         }
 
-        public Builder numFiniteBuckets(@Nullable Input<Integer> numFiniteBuckets) {
+        public Builder numFiniteBuckets(@Nullable Output<Integer> numFiniteBuckets) {
             this.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
 
         public Builder numFiniteBuckets(@Nullable Integer numFiniteBuckets) {
-            this.numFiniteBuckets = Input.ofNullable(numFiniteBuckets);
+            this.numFiniteBuckets = Output.ofNullable(numFiniteBuckets);
             return this;
         }
 
-        public Builder offset(@Nullable Input<Double> offset) {
+        public Builder offset(@Nullable Output<Double> offset) {
             this.offset = offset;
             return this;
         }
 
         public Builder offset(@Nullable Double offset) {
-            this.offset = Input.ofNullable(offset);
+            this.offset = Output.ofNullable(offset);
             return this;
         }
 
-        public Builder width(@Nullable Input<Double> width) {
+        public Builder width(@Nullable Output<Double> width) {
             this.width = width;
             return this;
         }
 
         public Builder width(@Nullable Double width) {
-            this.width = Input.ofNullable(width);
+            this.width = Output.ofNullable(width);
             return this;
         }
         public MetricBucketOptionsLinearBucketsGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="floatValue")
-      private final @Nullable Input<Double> floatValue;
+      private final @Nullable Output<Double> floatValue;
 
-    public Input<Double> getFloatValue() {
-        return this.floatValue == null ? Input.empty() : this.floatValue;
+    public Output<Double> getFloatValue() {
+        return this.floatValue == null ? Output.empty() : this.floatValue;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="intValue")
-      private final @Nullable Input<String> intValue;
+      private final @Nullable Output<String> intValue;
 
-    public Input<String> getIntValue() {
-        return this.intValue == null ? Input.empty() : this.intValue;
+    public Output<String> getIntValue() {
+        return this.intValue == null ? Output.empty() : this.intValue;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameter")
-      private final @Nullable Input<String> parameter;
+      private final @Nullable Output<String> parameter;
 
-    public Input<String> getParameter() {
-        return this.parameter == null ? Input.empty() : this.parameter;
+    public Output<String> getParameter() {
+        return this.parameter == null ? Output.empty() : this.parameter;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="stringValue")
-      private final @Nullable Input<String> stringValue;
+      private final @Nullable Output<String> stringValue;
 
-    public Input<String> getStringValue() {
-        return this.stringValue == null ? Input.empty() : this.stringValue;
+    public Output<String> getStringValue() {
+        return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
     public GoogleCloudMlV1_Trial_ParameterArgs(
-        @Nullable Input<Double> floatValue,
-        @Nullable Input<String> intValue,
-        @Nullable Input<String> parameter,
-        @Nullable Input<String> stringValue) {
+        @Nullable Output<Double> floatValue,
+        @Nullable Output<String> intValue,
+        @Nullable Output<String> parameter,
+        @Nullable Output<String> stringValue) {
         this.floatValue = floatValue;
         this.intValue = intValue;
         this.parameter = parameter;
@@ -75,10 +75,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudMlV1_Trial_ParameterArgs() {
-        this.floatValue = Input.empty();
-        this.intValue = Input.empty();
-        this.parameter = Input.empty();
-        this.stringValue = Input.empty();
+        this.floatValue = Output.empty();
+        this.intValue = Output.empty();
+        this.parameter = Output.empty();
+        this.stringValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> floatValue;
-        private @Nullable Input<String> intValue;
-        private @Nullable Input<String> parameter;
-        private @Nullable Input<String> stringValue;
+        private @Nullable Output<Double> floatValue;
+        private @Nullable Output<String> intValue;
+        private @Nullable Output<String> parameter;
+        private @Nullable Output<String> stringValue;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder floatValue(@Nullable Input<Double> floatValue) {
+        public Builder floatValue(@Nullable Output<Double> floatValue) {
             this.floatValue = floatValue;
             return this;
         }
 
         public Builder floatValue(@Nullable Double floatValue) {
-            this.floatValue = Input.ofNullable(floatValue);
+            this.floatValue = Output.ofNullable(floatValue);
             return this;
         }
 
-        public Builder intValue(@Nullable Input<String> intValue) {
+        public Builder intValue(@Nullable Output<String> intValue) {
             this.intValue = intValue;
             return this;
         }
 
         public Builder intValue(@Nullable String intValue) {
-            this.intValue = Input.ofNullable(intValue);
+            this.intValue = Output.ofNullable(intValue);
             return this;
         }
 
-        public Builder parameter(@Nullable Input<String> parameter) {
+        public Builder parameter(@Nullable Output<String> parameter) {
             this.parameter = parameter;
             return this;
         }
 
         public Builder parameter(@Nullable String parameter) {
-            this.parameter = Input.ofNullable(parameter);
+            this.parameter = Output.ofNullable(parameter);
             return this;
         }
 
-        public Builder stringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Input.ofNullable(stringValue);
+            this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
         public GoogleCloudMlV1_Trial_ParameterArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.ServicePlacementConstraintType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class ServicePlacementConstraintArgs extends io.pulumi.resources.Re
     public static final ServicePlacementConstraintArgs Empty = new ServicePlacementConstraintArgs();
 
     @InputImport(name="expression")
-      private final @Nullable Input<String> expression;
+      private final @Nullable Output<String> expression;
 
-    public Input<String> getExpression() {
-        return this.expression == null ? Input.empty() : this.expression;
+    public Output<String> getExpression() {
+        return this.expression == null ? Output.empty() : this.expression;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<ServicePlacementConstraintType> type;
+      private final Output<ServicePlacementConstraintType> type;
 
-    public Input<ServicePlacementConstraintType> getType() {
+    public Output<ServicePlacementConstraintType> getType() {
         return this.type;
     }
 
     public ServicePlacementConstraintArgs(
-        @Nullable Input<String> expression,
-        Input<ServicePlacementConstraintType> type) {
+        @Nullable Output<String> expression,
+        Output<ServicePlacementConstraintType> type) {
         this.expression = expression;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ServicePlacementConstraintArgs() {
-        this.expression = Input.empty();
-        this.type = Input.empty();
+        this.expression = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ServicePlacementConstraintArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expression;
-        private Input<ServicePlacementConstraintType> type;
+        private @Nullable Output<String> expression;
+        private Output<ServicePlacementConstraintType> type;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ServicePlacementConstraintArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder expression(@Nullable Input<String> expression) {
+        public Builder expression(@Nullable Output<String> expression) {
             this.expression = expression;
             return this;
         }
 
         public Builder expression(@Nullable String expression) {
-            this.expression = Input.ofNullable(expression);
+            this.expression = Output.ofNullable(expression);
             return this;
         }
 
-        public Builder type(Input<ServicePlacementConstraintType> type) {
+        public Builder type(Output<ServicePlacementConstraintType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ServicePlacementConstraintType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ServicePlacementConstraintArgs build() {

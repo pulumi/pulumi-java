@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.enums.DataPolicy;
 import io.pulumi.azurenative.databoxedge.enums.StorageAccountStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataPolicy", required=true)
-      private final Input<Either<String,DataPolicy>> dataPolicy;
+      private final Output<Either<String,DataPolicy>> dataPolicy;
 
-    public Input<Either<String,DataPolicy>> getDataPolicy() {
+    public Output<Either<String,DataPolicy>> getDataPolicy() {
         return this.dataPolicy;
     }
 
@@ -33,10 +33,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -55,9 +55,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,10 +66,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountCredentialId")
-      private final @Nullable Input<String> storageAccountCredentialId;
+      private final @Nullable Output<String> storageAccountCredentialId;
 
-    public Input<String> getStorageAccountCredentialId() {
-        return this.storageAccountCredentialId == null ? Input.empty() : this.storageAccountCredentialId;
+    public Output<String> getStorageAccountCredentialId() {
+        return this.storageAccountCredentialId == null ? Output.empty() : this.storageAccountCredentialId;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountName")
-      private final @Nullable Input<String> storageAccountName;
+      private final @Nullable Output<String> storageAccountName;
 
-    public Input<String> getStorageAccountName() {
-        return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
+    public Output<String> getStorageAccountName() {
+        return this.storageAccountName == null ? Output.empty() : this.storageAccountName;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountStatus")
-      private final @Nullable Input<Either<String,StorageAccountStatus>> storageAccountStatus;
+      private final @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus;
 
-    public Input<Either<String,StorageAccountStatus>> getStorageAccountStatus() {
-        return this.storageAccountStatus == null ? Input.empty() : this.storageAccountStatus;
+    public Output<Either<String,StorageAccountStatus>> getStorageAccountStatus() {
+        return this.storageAccountStatus == null ? Output.empty() : this.storageAccountStatus;
     }
 
     public StorageAccountArgs(
-        Input<Either<String,DataPolicy>> dataPolicy,
-        @Nullable Input<String> description,
-        Input<String> deviceName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> storageAccountCredentialId,
-        @Nullable Input<String> storageAccountName,
-        @Nullable Input<Either<String,StorageAccountStatus>> storageAccountStatus) {
+        Output<Either<String,DataPolicy>> dataPolicy,
+        @Nullable Output<String> description,
+        Output<String> deviceName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> storageAccountCredentialId,
+        @Nullable Output<String> storageAccountName,
+        @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus) {
         this.dataPolicy = Objects.requireNonNull(dataPolicy, "expected parameter 'dataPolicy' to be non-null");
         this.description = description;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
@@ -112,13 +112,13 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageAccountArgs() {
-        this.dataPolicy = Input.empty();
-        this.description = Input.empty();
-        this.deviceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccountCredentialId = Input.empty();
-        this.storageAccountName = Input.empty();
-        this.storageAccountStatus = Input.empty();
+        this.dataPolicy = Output.empty();
+        this.description = Output.empty();
+        this.deviceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccountCredentialId = Output.empty();
+        this.storageAccountName = Output.empty();
+        this.storageAccountStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,DataPolicy>> dataPolicy;
-        private @Nullable Input<String> description;
-        private Input<String> deviceName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> storageAccountCredentialId;
-        private @Nullable Input<String> storageAccountName;
-        private @Nullable Input<Either<String,StorageAccountStatus>> storageAccountStatus;
+        private Output<Either<String,DataPolicy>> dataPolicy;
+        private @Nullable Output<String> description;
+        private Output<String> deviceName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> storageAccountCredentialId;
+        private @Nullable Output<String> storageAccountName;
+        private @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountStatus = defaults.storageAccountStatus;
         }
 
-        public Builder dataPolicy(Input<Either<String,DataPolicy>> dataPolicy) {
+        public Builder dataPolicy(Output<Either<String,DataPolicy>> dataPolicy) {
             this.dataPolicy = Objects.requireNonNull(dataPolicy);
             return this;
         }
 
         public Builder dataPolicy(Either<String,DataPolicy> dataPolicy) {
-            this.dataPolicy = Input.of(Objects.requireNonNull(dataPolicy));
+            this.dataPolicy = Output.of(Objects.requireNonNull(dataPolicy));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccountCredentialId(@Nullable Input<String> storageAccountCredentialId) {
+        public Builder storageAccountCredentialId(@Nullable Output<String> storageAccountCredentialId) {
             this.storageAccountCredentialId = storageAccountCredentialId;
             return this;
         }
 
         public Builder storageAccountCredentialId(@Nullable String storageAccountCredentialId) {
-            this.storageAccountCredentialId = Input.ofNullable(storageAccountCredentialId);
+            this.storageAccountCredentialId = Output.ofNullable(storageAccountCredentialId);
             return this;
         }
 
-        public Builder storageAccountName(@Nullable Input<String> storageAccountName) {
+        public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Input.ofNullable(storageAccountName);
+            this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
         }
 
-        public Builder storageAccountStatus(@Nullable Input<Either<String,StorageAccountStatus>> storageAccountStatus) {
+        public Builder storageAccountStatus(@Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus) {
             this.storageAccountStatus = storageAccountStatus;
             return this;
         }
 
         public Builder storageAccountStatus(@Nullable Either<String,StorageAccountStatus> storageAccountStatus) {
-            this.storageAccountStatus = Input.ofNullable(storageAccountStatus);
+            this.storageAccountStatus = Output.ofNullable(storageAccountStatus);
             return this;
         }
         public StorageAccountArgs build() {

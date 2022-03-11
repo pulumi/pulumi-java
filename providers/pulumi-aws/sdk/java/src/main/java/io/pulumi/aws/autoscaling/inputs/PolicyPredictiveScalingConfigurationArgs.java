@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="maxCapacityBreachBehavior")
-      private final @Nullable Input<String> maxCapacityBreachBehavior;
+      private final @Nullable Output<String> maxCapacityBreachBehavior;
 
-    public Input<String> getMaxCapacityBreachBehavior() {
-        return this.maxCapacityBreachBehavior == null ? Input.empty() : this.maxCapacityBreachBehavior;
+    public Output<String> getMaxCapacityBreachBehavior() {
+        return this.maxCapacityBreachBehavior == null ? Output.empty() : this.maxCapacityBreachBehavior;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="maxCapacityBuffer")
-      private final @Nullable Input<String> maxCapacityBuffer;
+      private final @Nullable Output<String> maxCapacityBuffer;
 
-    public Input<String> getMaxCapacityBuffer() {
-        return this.maxCapacityBuffer == null ? Input.empty() : this.maxCapacityBuffer;
+    public Output<String> getMaxCapacityBuffer() {
+        return this.maxCapacityBuffer == null ? Output.empty() : this.maxCapacityBuffer;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="metricSpecification", required=true)
-      private final Input<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification;
+      private final Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification;
 
-    public Input<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> getMetricSpecification() {
+    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> getMetricSpecification() {
         return this.metricSpecification;
     }
 
@@ -53,10 +53,10 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="schedulingBufferTime")
-      private final @Nullable Input<String> schedulingBufferTime;
+      private final @Nullable Output<String> schedulingBufferTime;
 
-    public Input<String> getSchedulingBufferTime() {
-        return this.schedulingBufferTime == null ? Input.empty() : this.schedulingBufferTime;
+    public Output<String> getSchedulingBufferTime() {
+        return this.schedulingBufferTime == null ? Output.empty() : this.schedulingBufferTime;
     }
 
     public PolicyPredictiveScalingConfigurationArgs(
-        @Nullable Input<String> maxCapacityBreachBehavior,
-        @Nullable Input<String> maxCapacityBuffer,
-        Input<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification,
-        @Nullable Input<String> mode,
-        @Nullable Input<String> schedulingBufferTime) {
+        @Nullable Output<String> maxCapacityBreachBehavior,
+        @Nullable Output<String> maxCapacityBuffer,
+        Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification,
+        @Nullable Output<String> mode,
+        @Nullable Output<String> schedulingBufferTime) {
         this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
         this.maxCapacityBuffer = maxCapacityBuffer;
         this.metricSpecification = Objects.requireNonNull(metricSpecification, "expected parameter 'metricSpecification' to be non-null");
@@ -84,11 +84,11 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
     }
 
     private PolicyPredictiveScalingConfigurationArgs() {
-        this.maxCapacityBreachBehavior = Input.empty();
-        this.maxCapacityBuffer = Input.empty();
-        this.metricSpecification = Input.empty();
-        this.mode = Input.empty();
-        this.schedulingBufferTime = Input.empty();
+        this.maxCapacityBreachBehavior = Output.empty();
+        this.maxCapacityBuffer = Output.empty();
+        this.metricSpecification = Output.empty();
+        this.mode = Output.empty();
+        this.schedulingBufferTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> maxCapacityBreachBehavior;
-        private @Nullable Input<String> maxCapacityBuffer;
-        private Input<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<String> schedulingBufferTime;
+        private @Nullable Output<String> maxCapacityBreachBehavior;
+        private @Nullable Output<String> maxCapacityBuffer;
+        private Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<String> schedulingBufferTime;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
     	      this.schedulingBufferTime = defaults.schedulingBufferTime;
         }
 
-        public Builder maxCapacityBreachBehavior(@Nullable Input<String> maxCapacityBreachBehavior) {
+        public Builder maxCapacityBreachBehavior(@Nullable Output<String> maxCapacityBreachBehavior) {
             this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
             return this;
         }
 
         public Builder maxCapacityBreachBehavior(@Nullable String maxCapacityBreachBehavior) {
-            this.maxCapacityBreachBehavior = Input.ofNullable(maxCapacityBreachBehavior);
+            this.maxCapacityBreachBehavior = Output.ofNullable(maxCapacityBreachBehavior);
             return this;
         }
 
-        public Builder maxCapacityBuffer(@Nullable Input<String> maxCapacityBuffer) {
+        public Builder maxCapacityBuffer(@Nullable Output<String> maxCapacityBuffer) {
             this.maxCapacityBuffer = maxCapacityBuffer;
             return this;
         }
 
         public Builder maxCapacityBuffer(@Nullable String maxCapacityBuffer) {
-            this.maxCapacityBuffer = Input.ofNullable(maxCapacityBuffer);
+            this.maxCapacityBuffer = Output.ofNullable(maxCapacityBuffer);
             return this;
         }
 
-        public Builder metricSpecification(Input<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification) {
+        public Builder metricSpecification(Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification) {
             this.metricSpecification = Objects.requireNonNull(metricSpecification);
             return this;
         }
 
         public Builder metricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationArgs metricSpecification) {
-            this.metricSpecification = Input.of(Objects.requireNonNull(metricSpecification));
+            this.metricSpecification = Output.of(Objects.requireNonNull(metricSpecification));
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder schedulingBufferTime(@Nullable Input<String> schedulingBufferTime) {
+        public Builder schedulingBufferTime(@Nullable Output<String> schedulingBufferTime) {
             this.schedulingBufferTime = schedulingBufferTime;
             return this;
         }
 
         public Builder schedulingBufferTime(@Nullable String schedulingBufferTime) {
-            this.schedulingBufferTime = Input.ofNullable(schedulingBufferTime);
+            this.schedulingBufferTime = Output.ofNullable(schedulingBufferTime);
             return this;
         }
         public PolicyPredictiveScalingConfigurationArgs build() {

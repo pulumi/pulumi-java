@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,10 +30,10 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialName")
-      private final @Nullable Input<String> credentialName;
+      private final @Nullable Output<String> credentialName;
 
-    public Input<String> getCredentialName() {
-        return this.credentialName == null ? Input.empty() : this.credentialName;
+    public Output<String> getCredentialName() {
+        return this.credentialName == null ? Output.empty() : this.credentialName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -63,9 +63,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -74,9 +74,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -85,20 +85,20 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public CredentialArgs(
-        Input<String> automationAccountName,
-        @Nullable Input<String> credentialName,
-        @Nullable Input<String> description,
-        Input<String> name,
-        Input<String> password,
-        Input<String> resourceGroupName,
-        Input<String> userName) {
+        Output<String> automationAccountName,
+        @Nullable Output<String> credentialName,
+        @Nullable Output<String> description,
+        Output<String> name,
+        Output<String> password,
+        Output<String> resourceGroupName,
+        Output<String> userName) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.credentialName = credentialName;
         this.description = description;
@@ -109,13 +109,13 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CredentialArgs() {
-        this.automationAccountName = Input.empty();
-        this.credentialName = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.password = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.userName = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.credentialName = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.password = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,13 +127,13 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private @Nullable Input<String> credentialName;
-        private @Nullable Input<String> description;
-        private Input<String> name;
-        private Input<String> password;
-        private Input<String> resourceGroupName;
-        private Input<String> userName;
+        private Output<String> automationAccountName;
+        private @Nullable Output<String> credentialName;
+        private @Nullable Output<String> description;
+        private Output<String> name;
+        private Output<String> password;
+        private Output<String> resourceGroupName;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -150,73 +150,73 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder credentialName(@Nullable Input<String> credentialName) {
+        public Builder credentialName(@Nullable Output<String> credentialName) {
             this.credentialName = credentialName;
             return this;
         }
 
         public Builder credentialName(@Nullable String credentialName) {
-            this.credentialName = Input.ofNullable(credentialName);
+            this.credentialName = Output.ofNullable(credentialName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public CredentialArgs build() {

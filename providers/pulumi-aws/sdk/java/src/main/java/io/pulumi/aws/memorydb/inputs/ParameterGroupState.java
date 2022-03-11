@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.ParameterGroupParameterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,17 +22,17 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="family")
-      private final @Nullable Input<String> family;
+      private final @Nullable Output<String> family;
 
-    public Input<String> getFamily() {
-        return this.family == null ? Input.empty() : this.family;
+    public Output<String> getFamily() {
+        return this.family == null ? Output.empty() : this.family;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<ParameterGroupParameterGetArgs>> parameters;
+      private final @Nullable Output<List<ParameterGroupParameterGetArgs>> parameters;
 
-    public Input<List<ParameterGroupParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<ParameterGroupParameterGetArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -95,21 +95,21 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ParameterGroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> family,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<List<ParameterGroupParameterGetArgs>> parameters,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> family,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<List<ParameterGroupParameterGetArgs>> parameters,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.description = description;
         this.family = family;
@@ -121,14 +121,14 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
     }
 
     private ParameterGroupState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.family = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.parameters = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.family = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.parameters = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,14 +140,14 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> family;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<List<ParameterGroupParameterGetArgs>> parameters;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> family;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<List<ParameterGroupParameterGetArgs>> parameters;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -165,83 +165,83 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder family(@Nullable Input<String> family) {
+        public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
 
         public Builder family(@Nullable String family) {
-            this.family = Input.ofNullable(family);
+            this.family = Output.ofNullable(family);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<ParameterGroupParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ParameterGroupParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<ParameterGroupParameterGetArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ParameterGroupState build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lambda;
 
 import io.pulumi.awsnative.lambda.inputs.CodeSigningConfigAllowedPublishersArgs;
 import io.pulumi.awsnative.lambda.inputs.CodeSigningConfigCodeSigningPoliciesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowedPublishers", required=true)
-      private final Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
+      private final Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
-    public Input<CodeSigningConfigAllowedPublishersArgs> getAllowedPublishers() {
+    public Output<CodeSigningConfigAllowedPublishersArgs> getAllowedPublishers() {
         return this.allowedPublishers;
     }
 
@@ -32,10 +32,10 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="codeSigningPolicies")
-      private final @Nullable Input<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
+      private final @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
 
-    public Input<CodeSigningConfigCodeSigningPoliciesArgs> getCodeSigningPolicies() {
-        return this.codeSigningPolicies == null ? Input.empty() : this.codeSigningPolicies;
+    public Output<CodeSigningConfigCodeSigningPoliciesArgs> getCodeSigningPolicies() {
+        return this.codeSigningPolicies == null ? Output.empty() : this.codeSigningPolicies;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     public CodeSigningConfigArgs(
-        Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers,
-        @Nullable Input<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies,
-        @Nullable Input<String> description) {
+        Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers,
+        @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies,
+        @Nullable Output<String> description) {
         this.allowedPublishers = Objects.requireNonNull(allowedPublishers, "expected parameter 'allowedPublishers' to be non-null");
         this.codeSigningPolicies = codeSigningPolicies;
         this.description = description;
     }
 
     private CodeSigningConfigArgs() {
-        this.allowedPublishers = Input.empty();
-        this.codeSigningPolicies = Input.empty();
-        this.description = Input.empty();
+        this.allowedPublishers = Output.empty();
+        this.codeSigningPolicies = Output.empty();
+        this.description = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
-        private @Nullable Input<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
-        private @Nullable Input<String> description;
+        private Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
+        private @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
+        private @Nullable Output<String> description;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.description = defaults.description;
         }
 
-        public Builder allowedPublishers(Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers) {
+        public Builder allowedPublishers(Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers) {
             this.allowedPublishers = Objects.requireNonNull(allowedPublishers);
             return this;
         }
 
         public Builder allowedPublishers(CodeSigningConfigAllowedPublishersArgs allowedPublishers) {
-            this.allowedPublishers = Input.of(Objects.requireNonNull(allowedPublishers));
+            this.allowedPublishers = Output.of(Objects.requireNonNull(allowedPublishers));
             return this;
         }
 
-        public Builder codeSigningPolicies(@Nullable Input<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies) {
+        public Builder codeSigningPolicies(@Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies) {
             this.codeSigningPolicies = codeSigningPolicies;
             return this;
         }
 
         public Builder codeSigningPolicies(@Nullable CodeSigningConfigCodeSigningPoliciesArgs codeSigningPolicies) {
-            this.codeSigningPolicies = Input.ofNullable(codeSigningPolicies);
+            this.codeSigningPolicies = Output.ofNullable(codeSigningPolicies);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
         public CodeSigningConfigArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationLaunchTemplateConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="amiDistributionConfiguration")
-      private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
+      private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
 
-    public Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> getAmiDistributionConfiguration() {
-        return this.amiDistributionConfiguration == null ? Input.empty() : this.amiDistributionConfiguration;
+    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> getAmiDistributionConfiguration() {
+        return this.amiDistributionConfiguration == null ? Output.empty() : this.amiDistributionConfiguration;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="containerDistributionConfiguration")
-      private final @Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
+      private final @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
 
-    public Input<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> getContainerDistributionConfiguration() {
-        return this.containerDistributionConfiguration == null ? Input.empty() : this.containerDistributionConfiguration;
+    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> getContainerDistributionConfiguration() {
+        return this.containerDistributionConfiguration == null ? Output.empty() : this.containerDistributionConfiguration;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="launchTemplateConfigurations")
-      private final @Nullable Input<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
+      private final @Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
 
-    public Input<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> getLaunchTemplateConfigurations() {
-        return this.launchTemplateConfigurations == null ? Input.empty() : this.launchTemplateConfigurations;
+    public Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> getLaunchTemplateConfigurations() {
+        return this.launchTemplateConfigurations == null ? Output.empty() : this.launchTemplateConfigurations;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="licenseConfigurationArns")
-      private final @Nullable Input<List<String>> licenseConfigurationArns;
+      private final @Nullable Output<List<String>> licenseConfigurationArns;
 
-    public Input<List<String>> getLicenseConfigurationArns() {
-        return this.licenseConfigurationArns == null ? Input.empty() : this.licenseConfigurationArns;
+    public Output<List<String>> getLicenseConfigurationArns() {
+        return this.licenseConfigurationArns == null ? Output.empty() : this.licenseConfigurationArns;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     public DistributionConfigurationDistributionArgs(
-        @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration,
-        @Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration,
-        @Nullable Input<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations,
-        @Nullable Input<List<String>> licenseConfigurationArns,
-        Input<String> region) {
+        @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration,
+        @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration,
+        @Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations,
+        @Nullable Output<List<String>> licenseConfigurationArns,
+        Output<String> region) {
         this.amiDistributionConfiguration = amiDistributionConfiguration;
         this.containerDistributionConfiguration = containerDistributionConfiguration;
         this.launchTemplateConfigurations = launchTemplateConfigurations;
@@ -91,11 +91,11 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
     }
 
     private DistributionConfigurationDistributionArgs() {
-        this.amiDistributionConfiguration = Input.empty();
-        this.containerDistributionConfiguration = Input.empty();
-        this.launchTemplateConfigurations = Input.empty();
-        this.licenseConfigurationArns = Input.empty();
-        this.region = Input.empty();
+        this.amiDistributionConfiguration = Output.empty();
+        this.containerDistributionConfiguration = Output.empty();
+        this.launchTemplateConfigurations = Output.empty();
+        this.licenseConfigurationArns = Output.empty();
+        this.region = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
-        private @Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
-        private @Nullable Input<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
-        private @Nullable Input<List<String>> licenseConfigurationArns;
-        private Input<String> region;
+        private @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
+        private @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
+        private @Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
+        private @Nullable Output<List<String>> licenseConfigurationArns;
+        private Output<String> region;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
     	      this.region = defaults.region;
         }
 
-        public Builder amiDistributionConfiguration(@Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration) {
+        public Builder amiDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration) {
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
 
         public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs amiDistributionConfiguration) {
-            this.amiDistributionConfiguration = Input.ofNullable(amiDistributionConfiguration);
+            this.amiDistributionConfiguration = Output.ofNullable(amiDistributionConfiguration);
             return this;
         }
 
-        public Builder containerDistributionConfiguration(@Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration) {
+        public Builder containerDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
 
         public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs containerDistributionConfiguration) {
-            this.containerDistributionConfiguration = Input.ofNullable(containerDistributionConfiguration);
+            this.containerDistributionConfiguration = Output.ofNullable(containerDistributionConfiguration);
             return this;
         }
 
-        public Builder launchTemplateConfigurations(@Nullable Input<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations) {
+        public Builder launchTemplateConfigurations(@Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations) {
             this.launchTemplateConfigurations = launchTemplateConfigurations;
             return this;
         }
 
         public Builder launchTemplateConfigurations(@Nullable List<DistributionConfigurationLaunchTemplateConfigurationArgs> launchTemplateConfigurations) {
-            this.launchTemplateConfigurations = Input.ofNullable(launchTemplateConfigurations);
+            this.launchTemplateConfigurations = Output.ofNullable(launchTemplateConfigurations);
             return this;
         }
 
-        public Builder licenseConfigurationArns(@Nullable Input<List<String>> licenseConfigurationArns) {
+        public Builder licenseConfigurationArns(@Nullable Output<List<String>> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
 
         public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
-            this.licenseConfigurationArns = Input.ofNullable(licenseConfigurationArns);
+            this.licenseConfigurationArns = Output.ofNullable(licenseConfigurationArns);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
         public DistributionConfigurationDistributionArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.customerinsights.enums.RoleTypes;
 import io.pulumi.azurenative.customerinsights.inputs.AssignmentPrincipalArgs;
 import io.pulumi.azurenative.customerinsights.inputs.ResourceSetDescriptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignmentName")
-      private final @Nullable Input<String> assignmentName;
+      private final @Nullable Output<String> assignmentName;
 
-    public Input<String> getAssignmentName() {
-        return this.assignmentName == null ? Input.empty() : this.assignmentName;
+    public Output<String> getAssignmentName() {
+        return this.assignmentName == null ? Output.empty() : this.assignmentName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conflationPolicies")
-      private final @Nullable Input<ResourceSetDescriptionArgs> conflationPolicies;
+      private final @Nullable Output<ResourceSetDescriptionArgs> conflationPolicies;
 
-    public Input<ResourceSetDescriptionArgs> getConflationPolicies() {
-        return this.conflationPolicies == null ? Input.empty() : this.conflationPolicies;
+    public Output<ResourceSetDescriptionArgs> getConflationPolicies() {
+        return this.conflationPolicies == null ? Output.empty() : this.conflationPolicies;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectors")
-      private final @Nullable Input<ResourceSetDescriptionArgs> connectors;
+      private final @Nullable Output<ResourceSetDescriptionArgs> connectors;
 
-    public Input<ResourceSetDescriptionArgs> getConnectors() {
-        return this.connectors == null ? Input.empty() : this.connectors;
+    public Output<ResourceSetDescriptionArgs> getConnectors() {
+        return this.connectors == null ? Output.empty() : this.connectors;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<Map<String,String>> description;
+      private final @Nullable Output<Map<String,String>> description;
 
-    public Input<Map<String,String>> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<Map<String,String>> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<Map<String,String>> displayName;
+      private final @Nullable Output<Map<String,String>> displayName;
 
-    public Input<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<Map<String,String>> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-      private final Input<String> hubName;
+      private final Output<String> hubName;
 
-    public Input<String> getHubName() {
+    public Output<String> getHubName() {
         return this.hubName;
     }
 
@@ -90,10 +90,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interactions")
-      private final @Nullable Input<ResourceSetDescriptionArgs> interactions;
+      private final @Nullable Output<ResourceSetDescriptionArgs> interactions;
 
-    public Input<ResourceSetDescriptionArgs> getInteractions() {
-        return this.interactions == null ? Input.empty() : this.interactions;
+    public Output<ResourceSetDescriptionArgs> getInteractions() {
+        return this.interactions == null ? Output.empty() : this.interactions;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kpis")
-      private final @Nullable Input<ResourceSetDescriptionArgs> kpis;
+      private final @Nullable Output<ResourceSetDescriptionArgs> kpis;
 
-    public Input<ResourceSetDescriptionArgs> getKpis() {
-        return this.kpis == null ? Input.empty() : this.kpis;
+    public Output<ResourceSetDescriptionArgs> getKpis() {
+        return this.kpis == null ? Output.empty() : this.kpis;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="links")
-      private final @Nullable Input<ResourceSetDescriptionArgs> links;
+      private final @Nullable Output<ResourceSetDescriptionArgs> links;
 
-    public Input<ResourceSetDescriptionArgs> getLinks() {
-        return this.links == null ? Input.empty() : this.links;
+    public Output<ResourceSetDescriptionArgs> getLinks() {
+        return this.links == null ? Output.empty() : this.links;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principals", required=true)
-      private final Input<List<AssignmentPrincipalArgs>> principals;
+      private final Output<List<AssignmentPrincipalArgs>> principals;
 
-    public Input<List<AssignmentPrincipalArgs>> getPrincipals() {
+    public Output<List<AssignmentPrincipalArgs>> getPrincipals() {
         return this.principals;
     }
 
@@ -134,10 +134,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profiles")
-      private final @Nullable Input<ResourceSetDescriptionArgs> profiles;
+      private final @Nullable Output<ResourceSetDescriptionArgs> profiles;
 
-    public Input<ResourceSetDescriptionArgs> getProfiles() {
-        return this.profiles == null ? Input.empty() : this.profiles;
+    public Output<ResourceSetDescriptionArgs> getProfiles() {
+        return this.profiles == null ? Output.empty() : this.profiles;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationshipLinks")
-      private final @Nullable Input<ResourceSetDescriptionArgs> relationshipLinks;
+      private final @Nullable Output<ResourceSetDescriptionArgs> relationshipLinks;
 
-    public Input<ResourceSetDescriptionArgs> getRelationshipLinks() {
-        return this.relationshipLinks == null ? Input.empty() : this.relationshipLinks;
+    public Output<ResourceSetDescriptionArgs> getRelationshipLinks() {
+        return this.relationshipLinks == null ? Output.empty() : this.relationshipLinks;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationships")
-      private final @Nullable Input<ResourceSetDescriptionArgs> relationships;
+      private final @Nullable Output<ResourceSetDescriptionArgs> relationships;
 
-    public Input<ResourceSetDescriptionArgs> getRelationships() {
-        return this.relationships == null ? Input.empty() : this.relationships;
+    public Output<ResourceSetDescriptionArgs> getRelationships() {
+        return this.relationships == null ? Output.empty() : this.relationships;
     }
 
     /**
@@ -167,9 +167,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -178,9 +178,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<RoleTypes> role;
+      private final Output<RoleTypes> role;
 
-    public Input<RoleTypes> getRole() {
+    public Output<RoleTypes> getRole() {
         return this.role;
     }
 
@@ -189,10 +189,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleAssignments")
-      private final @Nullable Input<ResourceSetDescriptionArgs> roleAssignments;
+      private final @Nullable Output<ResourceSetDescriptionArgs> roleAssignments;
 
-    public Input<ResourceSetDescriptionArgs> getRoleAssignments() {
-        return this.roleAssignments == null ? Input.empty() : this.roleAssignments;
+    public Output<ResourceSetDescriptionArgs> getRoleAssignments() {
+        return this.roleAssignments == null ? Output.empty() : this.roleAssignments;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sasPolicies")
-      private final @Nullable Input<ResourceSetDescriptionArgs> sasPolicies;
+      private final @Nullable Output<ResourceSetDescriptionArgs> sasPolicies;
 
-    public Input<ResourceSetDescriptionArgs> getSasPolicies() {
-        return this.sasPolicies == null ? Input.empty() : this.sasPolicies;
+    public Output<ResourceSetDescriptionArgs> getSasPolicies() {
+        return this.sasPolicies == null ? Output.empty() : this.sasPolicies;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="segments")
-      private final @Nullable Input<ResourceSetDescriptionArgs> segments;
+      private final @Nullable Output<ResourceSetDescriptionArgs> segments;
 
-    public Input<ResourceSetDescriptionArgs> getSegments() {
-        return this.segments == null ? Input.empty() : this.segments;
+    public Output<ResourceSetDescriptionArgs> getSegments() {
+        return this.segments == null ? Output.empty() : this.segments;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="views")
-      private final @Nullable Input<ResourceSetDescriptionArgs> views;
+      private final @Nullable Output<ResourceSetDescriptionArgs> views;
 
-    public Input<ResourceSetDescriptionArgs> getViews() {
-        return this.views == null ? Input.empty() : this.views;
+    public Output<ResourceSetDescriptionArgs> getViews() {
+        return this.views == null ? Output.empty() : this.views;
     }
 
     /**
@@ -233,33 +233,33 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="widgetTypes")
-      private final @Nullable Input<ResourceSetDescriptionArgs> widgetTypes;
+      private final @Nullable Output<ResourceSetDescriptionArgs> widgetTypes;
 
-    public Input<ResourceSetDescriptionArgs> getWidgetTypes() {
-        return this.widgetTypes == null ? Input.empty() : this.widgetTypes;
+    public Output<ResourceSetDescriptionArgs> getWidgetTypes() {
+        return this.widgetTypes == null ? Output.empty() : this.widgetTypes;
     }
 
     public RoleAssignmentArgs(
-        @Nullable Input<String> assignmentName,
-        @Nullable Input<ResourceSetDescriptionArgs> conflationPolicies,
-        @Nullable Input<ResourceSetDescriptionArgs> connectors,
-        @Nullable Input<Map<String,String>> description,
-        @Nullable Input<Map<String,String>> displayName,
-        Input<String> hubName,
-        @Nullable Input<ResourceSetDescriptionArgs> interactions,
-        @Nullable Input<ResourceSetDescriptionArgs> kpis,
-        @Nullable Input<ResourceSetDescriptionArgs> links,
-        Input<List<AssignmentPrincipalArgs>> principals,
-        @Nullable Input<ResourceSetDescriptionArgs> profiles,
-        @Nullable Input<ResourceSetDescriptionArgs> relationshipLinks,
-        @Nullable Input<ResourceSetDescriptionArgs> relationships,
-        Input<String> resourceGroupName,
-        Input<RoleTypes> role,
-        @Nullable Input<ResourceSetDescriptionArgs> roleAssignments,
-        @Nullable Input<ResourceSetDescriptionArgs> sasPolicies,
-        @Nullable Input<ResourceSetDescriptionArgs> segments,
-        @Nullable Input<ResourceSetDescriptionArgs> views,
-        @Nullable Input<ResourceSetDescriptionArgs> widgetTypes) {
+        @Nullable Output<String> assignmentName,
+        @Nullable Output<ResourceSetDescriptionArgs> conflationPolicies,
+        @Nullable Output<ResourceSetDescriptionArgs> connectors,
+        @Nullable Output<Map<String,String>> description,
+        @Nullable Output<Map<String,String>> displayName,
+        Output<String> hubName,
+        @Nullable Output<ResourceSetDescriptionArgs> interactions,
+        @Nullable Output<ResourceSetDescriptionArgs> kpis,
+        @Nullable Output<ResourceSetDescriptionArgs> links,
+        Output<List<AssignmentPrincipalArgs>> principals,
+        @Nullable Output<ResourceSetDescriptionArgs> profiles,
+        @Nullable Output<ResourceSetDescriptionArgs> relationshipLinks,
+        @Nullable Output<ResourceSetDescriptionArgs> relationships,
+        Output<String> resourceGroupName,
+        Output<RoleTypes> role,
+        @Nullable Output<ResourceSetDescriptionArgs> roleAssignments,
+        @Nullable Output<ResourceSetDescriptionArgs> sasPolicies,
+        @Nullable Output<ResourceSetDescriptionArgs> segments,
+        @Nullable Output<ResourceSetDescriptionArgs> views,
+        @Nullable Output<ResourceSetDescriptionArgs> widgetTypes) {
         this.assignmentName = assignmentName;
         this.conflationPolicies = conflationPolicies;
         this.connectors = connectors;
@@ -283,26 +283,26 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleAssignmentArgs() {
-        this.assignmentName = Input.empty();
-        this.conflationPolicies = Input.empty();
-        this.connectors = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.hubName = Input.empty();
-        this.interactions = Input.empty();
-        this.kpis = Input.empty();
-        this.links = Input.empty();
-        this.principals = Input.empty();
-        this.profiles = Input.empty();
-        this.relationshipLinks = Input.empty();
-        this.relationships = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.role = Input.empty();
-        this.roleAssignments = Input.empty();
-        this.sasPolicies = Input.empty();
-        this.segments = Input.empty();
-        this.views = Input.empty();
-        this.widgetTypes = Input.empty();
+        this.assignmentName = Output.empty();
+        this.conflationPolicies = Output.empty();
+        this.connectors = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.hubName = Output.empty();
+        this.interactions = Output.empty();
+        this.kpis = Output.empty();
+        this.links = Output.empty();
+        this.principals = Output.empty();
+        this.profiles = Output.empty();
+        this.relationshipLinks = Output.empty();
+        this.relationships = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.role = Output.empty();
+        this.roleAssignments = Output.empty();
+        this.sasPolicies = Output.empty();
+        this.segments = Output.empty();
+        this.views = Output.empty();
+        this.widgetTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -314,26 +314,26 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assignmentName;
-        private @Nullable Input<ResourceSetDescriptionArgs> conflationPolicies;
-        private @Nullable Input<ResourceSetDescriptionArgs> connectors;
-        private @Nullable Input<Map<String,String>> description;
-        private @Nullable Input<Map<String,String>> displayName;
-        private Input<String> hubName;
-        private @Nullable Input<ResourceSetDescriptionArgs> interactions;
-        private @Nullable Input<ResourceSetDescriptionArgs> kpis;
-        private @Nullable Input<ResourceSetDescriptionArgs> links;
-        private Input<List<AssignmentPrincipalArgs>> principals;
-        private @Nullable Input<ResourceSetDescriptionArgs> profiles;
-        private @Nullable Input<ResourceSetDescriptionArgs> relationshipLinks;
-        private @Nullable Input<ResourceSetDescriptionArgs> relationships;
-        private Input<String> resourceGroupName;
-        private Input<RoleTypes> role;
-        private @Nullable Input<ResourceSetDescriptionArgs> roleAssignments;
-        private @Nullable Input<ResourceSetDescriptionArgs> sasPolicies;
-        private @Nullable Input<ResourceSetDescriptionArgs> segments;
-        private @Nullable Input<ResourceSetDescriptionArgs> views;
-        private @Nullable Input<ResourceSetDescriptionArgs> widgetTypes;
+        private @Nullable Output<String> assignmentName;
+        private @Nullable Output<ResourceSetDescriptionArgs> conflationPolicies;
+        private @Nullable Output<ResourceSetDescriptionArgs> connectors;
+        private @Nullable Output<Map<String,String>> description;
+        private @Nullable Output<Map<String,String>> displayName;
+        private Output<String> hubName;
+        private @Nullable Output<ResourceSetDescriptionArgs> interactions;
+        private @Nullable Output<ResourceSetDescriptionArgs> kpis;
+        private @Nullable Output<ResourceSetDescriptionArgs> links;
+        private Output<List<AssignmentPrincipalArgs>> principals;
+        private @Nullable Output<ResourceSetDescriptionArgs> profiles;
+        private @Nullable Output<ResourceSetDescriptionArgs> relationshipLinks;
+        private @Nullable Output<ResourceSetDescriptionArgs> relationships;
+        private Output<String> resourceGroupName;
+        private Output<RoleTypes> role;
+        private @Nullable Output<ResourceSetDescriptionArgs> roleAssignments;
+        private @Nullable Output<ResourceSetDescriptionArgs> sasPolicies;
+        private @Nullable Output<ResourceSetDescriptionArgs> segments;
+        private @Nullable Output<ResourceSetDescriptionArgs> views;
+        private @Nullable Output<ResourceSetDescriptionArgs> widgetTypes;
 
         public Builder() {
     	      // Empty
@@ -363,203 +363,203 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.widgetTypes = defaults.widgetTypes;
         }
 
-        public Builder assignmentName(@Nullable Input<String> assignmentName) {
+        public Builder assignmentName(@Nullable Output<String> assignmentName) {
             this.assignmentName = assignmentName;
             return this;
         }
 
         public Builder assignmentName(@Nullable String assignmentName) {
-            this.assignmentName = Input.ofNullable(assignmentName);
+            this.assignmentName = Output.ofNullable(assignmentName);
             return this;
         }
 
-        public Builder conflationPolicies(@Nullable Input<ResourceSetDescriptionArgs> conflationPolicies) {
+        public Builder conflationPolicies(@Nullable Output<ResourceSetDescriptionArgs> conflationPolicies) {
             this.conflationPolicies = conflationPolicies;
             return this;
         }
 
         public Builder conflationPolicies(@Nullable ResourceSetDescriptionArgs conflationPolicies) {
-            this.conflationPolicies = Input.ofNullable(conflationPolicies);
+            this.conflationPolicies = Output.ofNullable(conflationPolicies);
             return this;
         }
 
-        public Builder connectors(@Nullable Input<ResourceSetDescriptionArgs> connectors) {
+        public Builder connectors(@Nullable Output<ResourceSetDescriptionArgs> connectors) {
             this.connectors = connectors;
             return this;
         }
 
         public Builder connectors(@Nullable ResourceSetDescriptionArgs connectors) {
-            this.connectors = Input.ofNullable(connectors);
+            this.connectors = Output.ofNullable(connectors);
             return this;
         }
 
-        public Builder description(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder hubName(Input<String> hubName) {
+        public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Input.of(Objects.requireNonNull(hubName));
+            this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder interactions(@Nullable Input<ResourceSetDescriptionArgs> interactions) {
+        public Builder interactions(@Nullable Output<ResourceSetDescriptionArgs> interactions) {
             this.interactions = interactions;
             return this;
         }
 
         public Builder interactions(@Nullable ResourceSetDescriptionArgs interactions) {
-            this.interactions = Input.ofNullable(interactions);
+            this.interactions = Output.ofNullable(interactions);
             return this;
         }
 
-        public Builder kpis(@Nullable Input<ResourceSetDescriptionArgs> kpis) {
+        public Builder kpis(@Nullable Output<ResourceSetDescriptionArgs> kpis) {
             this.kpis = kpis;
             return this;
         }
 
         public Builder kpis(@Nullable ResourceSetDescriptionArgs kpis) {
-            this.kpis = Input.ofNullable(kpis);
+            this.kpis = Output.ofNullable(kpis);
             return this;
         }
 
-        public Builder links(@Nullable Input<ResourceSetDescriptionArgs> links) {
+        public Builder links(@Nullable Output<ResourceSetDescriptionArgs> links) {
             this.links = links;
             return this;
         }
 
         public Builder links(@Nullable ResourceSetDescriptionArgs links) {
-            this.links = Input.ofNullable(links);
+            this.links = Output.ofNullable(links);
             return this;
         }
 
-        public Builder principals(Input<List<AssignmentPrincipalArgs>> principals) {
+        public Builder principals(Output<List<AssignmentPrincipalArgs>> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
 
         public Builder principals(List<AssignmentPrincipalArgs> principals) {
-            this.principals = Input.of(Objects.requireNonNull(principals));
+            this.principals = Output.of(Objects.requireNonNull(principals));
             return this;
         }
 
-        public Builder profiles(@Nullable Input<ResourceSetDescriptionArgs> profiles) {
+        public Builder profiles(@Nullable Output<ResourceSetDescriptionArgs> profiles) {
             this.profiles = profiles;
             return this;
         }
 
         public Builder profiles(@Nullable ResourceSetDescriptionArgs profiles) {
-            this.profiles = Input.ofNullable(profiles);
+            this.profiles = Output.ofNullable(profiles);
             return this;
         }
 
-        public Builder relationshipLinks(@Nullable Input<ResourceSetDescriptionArgs> relationshipLinks) {
+        public Builder relationshipLinks(@Nullable Output<ResourceSetDescriptionArgs> relationshipLinks) {
             this.relationshipLinks = relationshipLinks;
             return this;
         }
 
         public Builder relationshipLinks(@Nullable ResourceSetDescriptionArgs relationshipLinks) {
-            this.relationshipLinks = Input.ofNullable(relationshipLinks);
+            this.relationshipLinks = Output.ofNullable(relationshipLinks);
             return this;
         }
 
-        public Builder relationships(@Nullable Input<ResourceSetDescriptionArgs> relationships) {
+        public Builder relationships(@Nullable Output<ResourceSetDescriptionArgs> relationships) {
             this.relationships = relationships;
             return this;
         }
 
         public Builder relationships(@Nullable ResourceSetDescriptionArgs relationships) {
-            this.relationships = Input.ofNullable(relationships);
+            this.relationships = Output.ofNullable(relationships);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder role(Input<RoleTypes> role) {
+        public Builder role(Output<RoleTypes> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(RoleTypes role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder roleAssignments(@Nullable Input<ResourceSetDescriptionArgs> roleAssignments) {
+        public Builder roleAssignments(@Nullable Output<ResourceSetDescriptionArgs> roleAssignments) {
             this.roleAssignments = roleAssignments;
             return this;
         }
 
         public Builder roleAssignments(@Nullable ResourceSetDescriptionArgs roleAssignments) {
-            this.roleAssignments = Input.ofNullable(roleAssignments);
+            this.roleAssignments = Output.ofNullable(roleAssignments);
             return this;
         }
 
-        public Builder sasPolicies(@Nullable Input<ResourceSetDescriptionArgs> sasPolicies) {
+        public Builder sasPolicies(@Nullable Output<ResourceSetDescriptionArgs> sasPolicies) {
             this.sasPolicies = sasPolicies;
             return this;
         }
 
         public Builder sasPolicies(@Nullable ResourceSetDescriptionArgs sasPolicies) {
-            this.sasPolicies = Input.ofNullable(sasPolicies);
+            this.sasPolicies = Output.ofNullable(sasPolicies);
             return this;
         }
 
-        public Builder segments(@Nullable Input<ResourceSetDescriptionArgs> segments) {
+        public Builder segments(@Nullable Output<ResourceSetDescriptionArgs> segments) {
             this.segments = segments;
             return this;
         }
 
         public Builder segments(@Nullable ResourceSetDescriptionArgs segments) {
-            this.segments = Input.ofNullable(segments);
+            this.segments = Output.ofNullable(segments);
             return this;
         }
 
-        public Builder views(@Nullable Input<ResourceSetDescriptionArgs> views) {
+        public Builder views(@Nullable Output<ResourceSetDescriptionArgs> views) {
             this.views = views;
             return this;
         }
 
         public Builder views(@Nullable ResourceSetDescriptionArgs views) {
-            this.views = Input.ofNullable(views);
+            this.views = Output.ofNullable(views);
             return this;
         }
 
-        public Builder widgetTypes(@Nullable Input<ResourceSetDescriptionArgs> widgetTypes) {
+        public Builder widgetTypes(@Nullable Output<ResourceSetDescriptionArgs> widgetTypes) {
             this.widgetTypes = widgetTypes;
             return this;
         }
 
         public Builder widgetTypes(@Nullable ResourceSetDescriptionArgs widgetTypes) {
-            this.widgetTypes = Input.ofNullable(widgetTypes);
+            this.widgetTypes = Output.ofNullable(widgetTypes);
             return this;
         }
         public RoleAssignmentArgs build() {

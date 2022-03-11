@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyCookiesConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyHeadersConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,46 +18,46 @@ public final class OriginRequestPolicyConfigArgs extends io.pulumi.resources.Res
     public static final OriginRequestPolicyConfigArgs Empty = new OriginRequestPolicyConfigArgs();
 
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     @InputImport(name="cookiesConfig", required=true)
-      private final Input<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
+      private final Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
 
-    public Input<OriginRequestPolicyCookiesConfigArgs> getCookiesConfig() {
+    public Output<OriginRequestPolicyCookiesConfigArgs> getCookiesConfig() {
         return this.cookiesConfig;
     }
 
     @InputImport(name="headersConfig", required=true)
-      private final Input<OriginRequestPolicyHeadersConfigArgs> headersConfig;
+      private final Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
 
-    public Input<OriginRequestPolicyHeadersConfigArgs> getHeadersConfig() {
+    public Output<OriginRequestPolicyHeadersConfigArgs> getHeadersConfig() {
         return this.headersConfig;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="queryStringsConfig", required=true)
-      private final Input<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
+      private final Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
 
-    public Input<OriginRequestPolicyQueryStringsConfigArgs> getQueryStringsConfig() {
+    public Output<OriginRequestPolicyQueryStringsConfigArgs> getQueryStringsConfig() {
         return this.queryStringsConfig;
     }
 
     public OriginRequestPolicyConfigArgs(
-        @Nullable Input<String> comment,
-        Input<OriginRequestPolicyCookiesConfigArgs> cookiesConfig,
-        Input<OriginRequestPolicyHeadersConfigArgs> headersConfig,
-        Input<String> name,
-        Input<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {
+        @Nullable Output<String> comment,
+        Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig,
+        Output<OriginRequestPolicyHeadersConfigArgs> headersConfig,
+        Output<String> name,
+        Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {
         this.comment = comment;
         this.cookiesConfig = Objects.requireNonNull(cookiesConfig, "expected parameter 'cookiesConfig' to be non-null");
         this.headersConfig = Objects.requireNonNull(headersConfig, "expected parameter 'headersConfig' to be non-null");
@@ -66,11 +66,11 @@ public final class OriginRequestPolicyConfigArgs extends io.pulumi.resources.Res
     }
 
     private OriginRequestPolicyConfigArgs() {
-        this.comment = Input.empty();
-        this.cookiesConfig = Input.empty();
-        this.headersConfig = Input.empty();
-        this.name = Input.empty();
-        this.queryStringsConfig = Input.empty();
+        this.comment = Output.empty();
+        this.cookiesConfig = Output.empty();
+        this.headersConfig = Output.empty();
+        this.name = Output.empty();
+        this.queryStringsConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,11 +82,11 @@ public final class OriginRequestPolicyConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private Input<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
-        private Input<OriginRequestPolicyHeadersConfigArgs> headersConfig;
-        private Input<String> name;
-        private Input<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
+        private @Nullable Output<String> comment;
+        private Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
+        private Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
+        private Output<String> name;
+        private Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
 
         public Builder() {
     	      // Empty
@@ -101,53 +101,53 @@ public final class OriginRequestPolicyConfigArgs extends io.pulumi.resources.Res
     	      this.queryStringsConfig = defaults.queryStringsConfig;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder cookiesConfig(Input<OriginRequestPolicyCookiesConfigArgs> cookiesConfig) {
+        public Builder cookiesConfig(Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig) {
             this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
             return this;
         }
 
         public Builder cookiesConfig(OriginRequestPolicyCookiesConfigArgs cookiesConfig) {
-            this.cookiesConfig = Input.of(Objects.requireNonNull(cookiesConfig));
+            this.cookiesConfig = Output.of(Objects.requireNonNull(cookiesConfig));
             return this;
         }
 
-        public Builder headersConfig(Input<OriginRequestPolicyHeadersConfigArgs> headersConfig) {
+        public Builder headersConfig(Output<OriginRequestPolicyHeadersConfigArgs> headersConfig) {
             this.headersConfig = Objects.requireNonNull(headersConfig);
             return this;
         }
 
         public Builder headersConfig(OriginRequestPolicyHeadersConfigArgs headersConfig) {
-            this.headersConfig = Input.of(Objects.requireNonNull(headersConfig));
+            this.headersConfig = Output.of(Objects.requireNonNull(headersConfig));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder queryStringsConfig(Input<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {
+        public Builder queryStringsConfig(Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
         }
 
         public Builder queryStringsConfig(OriginRequestPolicyQueryStringsConfigArgs queryStringsConfig) {
-            this.queryStringsConfig = Input.of(Objects.requireNonNull(queryStringsConfig));
+            this.queryStringsConfig = Output.of(Objects.requireNonNull(queryStringsConfig));
             return this;
         }
         public OriginRequestPolicyConfigArgs build() {

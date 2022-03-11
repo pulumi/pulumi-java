@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enable", required=true)
-      private final Input<Boolean> enable;
+      private final Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
+    public Output<Boolean> getEnable() {
         return this.enable;
     }
 
@@ -31,22 +31,22 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filter", required=true)
-      private final Input<String> filter;
+      private final Output<String> filter;
 
-    public Input<String> getFilter() {
+    public Output<String> getFilter() {
         return this.filter;
     }
 
     public RouterNatLogConfigGetArgs(
-        Input<Boolean> enable,
-        Input<String> filter) {
+        Output<Boolean> enable,
+        Output<String> filter) {
         this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
     }
 
     private RouterNatLogConfigGetArgs() {
-        this.enable = Input.empty();
-        this.filter = Input.empty();
+        this.enable = Output.empty();
+        this.filter = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Boolean> enable;
-        private Input<String> filter;
+        private Output<Boolean> enable;
+        private Output<String> filter;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
     	      this.filter = defaults.filter;
         }
 
-        public Builder enable(Input<Boolean> enable) {
+        public Builder enable(Output<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Input.of(Objects.requireNonNull(enable));
+            this.enable = Output.of(Objects.requireNonNull(enable));
             return this;
         }
 
-        public Builder filter(Input<String> filter) {
+        public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(String filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
         public RouterNatLogConfigGetArgs build() {

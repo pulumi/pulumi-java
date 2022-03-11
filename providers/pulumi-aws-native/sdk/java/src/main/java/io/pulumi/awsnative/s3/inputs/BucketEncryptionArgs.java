@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketServerSideEncryptionRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverSideEncryptionConfiguration", required=true)
-      private final Input<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
+      private final Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
 
-    public Input<List<BucketServerSideEncryptionRuleArgs>> getServerSideEncryptionConfiguration() {
+    public Output<List<BucketServerSideEncryptionRuleArgs>> getServerSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
 
-    public BucketEncryptionArgs(Input<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration) {
+    public BucketEncryptionArgs(Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration, "expected parameter 'serverSideEncryptionConfiguration' to be non-null");
     }
 
     private BucketEncryptionArgs() {
-        this.serverSideEncryptionConfiguration = Input.empty();
+        this.serverSideEncryptionConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
+        private Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     	      this.serverSideEncryptionConfiguration = defaults.serverSideEncryptionConfiguration;
         }
 
-        public Builder serverSideEncryptionConfiguration(Input<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration);
             return this;
         }
 
         public Builder serverSideEncryptionConfiguration(List<BucketServerSideEncryptionRuleArgs> serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Input.of(Objects.requireNonNull(serverSideEncryptionConfiguration));
+            this.serverSideEncryptionConfiguration = Output.of(Objects.requireNonNull(serverSideEncryptionConfiguration));
             return this;
         }
         public BucketEncryptionArgs build() {

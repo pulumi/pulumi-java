@@ -9,7 +9,6 @@ import io.pulumi.aws.wafregional.inputs.WebAclState;
 import io.pulumi.aws.wafregional.outputs.WebAclDefaultAction;
 import io.pulumi.aws.wafregional.outputs.WebAclLoggingConfiguration;
 import io.pulumi.aws.wafregional.outputs.WebAclRule;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,14 +184,14 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAcl(String name, WebAclArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/webAcl:WebAcl", name, args == null ? WebAclArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:wafregional/webAcl:WebAcl", name, args == null ? WebAclArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAcl(String name, Input<String> id, @Nullable WebAclState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAcl(String name, Output<String> id, @Nullable WebAclState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:wafregional/webAcl:WebAcl", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -208,7 +207,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAcl get(String name, Input<String> id, @Nullable WebAclState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAcl get(String name, Output<String> id, @Nullable WebAclState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAcl(name, id, state, options);
     }
 }

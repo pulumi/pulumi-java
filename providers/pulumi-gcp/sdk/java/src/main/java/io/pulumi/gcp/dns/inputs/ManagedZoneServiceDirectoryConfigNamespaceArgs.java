@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
      * 
      */
     @InputImport(name="namespaceUrl", required=true)
-      private final Input<String> namespaceUrl;
+      private final Output<String> namespaceUrl;
 
-    public Input<String> getNamespaceUrl() {
+    public Output<String> getNamespaceUrl() {
         return this.namespaceUrl;
     }
 
-    public ManagedZoneServiceDirectoryConfigNamespaceArgs(Input<String> namespaceUrl) {
+    public ManagedZoneServiceDirectoryConfigNamespaceArgs(Output<String> namespaceUrl) {
         this.namespaceUrl = Objects.requireNonNull(namespaceUrl, "expected parameter 'namespaceUrl' to be non-null");
     }
 
     private ManagedZoneServiceDirectoryConfigNamespaceArgs() {
-        this.namespaceUrl = Input.empty();
+        this.namespaceUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<String> namespaceUrl;
+        private Output<String> namespaceUrl;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     	      this.namespaceUrl = defaults.namespaceUrl;
         }
 
-        public Builder namespaceUrl(Input<String> namespaceUrl) {
+        public Builder namespaceUrl(Output<String> namespaceUrl) {
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
         }
 
         public Builder namespaceUrl(String namespaceUrl) {
-            this.namespaceUrl = Input.of(Objects.requireNonNull(namespaceUrl));
+            this.namespaceUrl = Output.of(Objects.requireNonNull(namespaceUrl));
             return this;
         }
         public ManagedZoneServiceDirectoryConfigNamespaceArgs build() {

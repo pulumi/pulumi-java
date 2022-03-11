@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionClusterConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class DataQualityJobDefinitionMonitoringResourcesArgs extends io.pu
     public static final DataQualityJobDefinitionMonitoringResourcesArgs Empty = new DataQualityJobDefinitionMonitoringResourcesArgs();
 
     @InputImport(name="clusterConfig", required=true)
-      private final Input<DataQualityJobDefinitionClusterConfigArgs> clusterConfig;
+      private final Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig;
 
-    public Input<DataQualityJobDefinitionClusterConfigArgs> getClusterConfig() {
+    public Output<DataQualityJobDefinitionClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig;
     }
 
-    public DataQualityJobDefinitionMonitoringResourcesArgs(Input<DataQualityJobDefinitionClusterConfigArgs> clusterConfig) {
+    public DataQualityJobDefinitionMonitoringResourcesArgs(Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig) {
         this.clusterConfig = Objects.requireNonNull(clusterConfig, "expected parameter 'clusterConfig' to be non-null");
     }
 
     private DataQualityJobDefinitionMonitoringResourcesArgs() {
-        this.clusterConfig = Input.empty();
+        this.clusterConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DataQualityJobDefinitionMonitoringResourcesArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<DataQualityJobDefinitionClusterConfigArgs> clusterConfig;
+        private Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DataQualityJobDefinitionMonitoringResourcesArgs extends io.pu
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder clusterConfig(Input<DataQualityJobDefinitionClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
 
         public Builder clusterConfig(DataQualityJobDefinitionClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
+            this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
             return this;
         }
         public DataQualityJobDefinitionMonitoringResourcesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.CorsPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
@@ -26,10 +26,10 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="corsPolicy")
-      private final @Nullable Input<CorsPolicyArgs> corsPolicy;
+      private final @Nullable Output<CorsPolicyArgs> corsPolicy;
 
-    public Input<CorsPolicyArgs> getCorsPolicy() {
-        return this.corsPolicy == null ? Input.empty() : this.corsPolicy;
+    public Output<CorsPolicyArgs> getCorsPolicy() {
+        return this.corsPolicy == null ? Output.empty() : this.corsPolicy;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="faultInjectionPolicy")
-      private final @Nullable Input<HttpFaultInjectionArgs> faultInjectionPolicy;
+      private final @Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy;
 
-    public Input<HttpFaultInjectionArgs> getFaultInjectionPolicy() {
-        return this.faultInjectionPolicy == null ? Input.empty() : this.faultInjectionPolicy;
+    public Output<HttpFaultInjectionArgs> getFaultInjectionPolicy() {
+        return this.faultInjectionPolicy == null ? Output.empty() : this.faultInjectionPolicy;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxStreamDuration")
-      private final @Nullable Input<DurationArgs> maxStreamDuration;
+      private final @Nullable Output<DurationArgs> maxStreamDuration;
 
-    public Input<DurationArgs> getMaxStreamDuration() {
-        return this.maxStreamDuration == null ? Input.empty() : this.maxStreamDuration;
+    public Output<DurationArgs> getMaxStreamDuration() {
+        return this.maxStreamDuration == null ? Output.empty() : this.maxStreamDuration;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="requestMirrorPolicy")
-      private final @Nullable Input<RequestMirrorPolicyArgs> requestMirrorPolicy;
+      private final @Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy;
 
-    public Input<RequestMirrorPolicyArgs> getRequestMirrorPolicy() {
-        return this.requestMirrorPolicy == null ? Input.empty() : this.requestMirrorPolicy;
+    public Output<RequestMirrorPolicyArgs> getRequestMirrorPolicy() {
+        return this.requestMirrorPolicy == null ? Output.empty() : this.requestMirrorPolicy;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="retryPolicy")
-      private final @Nullable Input<HttpRetryPolicyArgs> retryPolicy;
+      private final @Nullable Output<HttpRetryPolicyArgs> retryPolicy;
 
-    public Input<HttpRetryPolicyArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
+    public Output<HttpRetryPolicyArgs> getRetryPolicy() {
+        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<DurationArgs> timeout;
+      private final @Nullable Output<DurationArgs> timeout;
 
-    public Input<DurationArgs> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<DurationArgs> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="urlRewrite")
-      private final @Nullable Input<UrlRewriteArgs> urlRewrite;
+      private final @Nullable Output<UrlRewriteArgs> urlRewrite;
 
-    public Input<UrlRewriteArgs> getUrlRewrite() {
-        return this.urlRewrite == null ? Input.empty() : this.urlRewrite;
+    public Output<UrlRewriteArgs> getUrlRewrite() {
+        return this.urlRewrite == null ? Output.empty() : this.urlRewrite;
     }
 
     /**
@@ -103,21 +103,21 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="weightedBackendServices")
-      private final @Nullable Input<List<WeightedBackendServiceArgs>> weightedBackendServices;
+      private final @Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices;
 
-    public Input<List<WeightedBackendServiceArgs>> getWeightedBackendServices() {
-        return this.weightedBackendServices == null ? Input.empty() : this.weightedBackendServices;
+    public Output<List<WeightedBackendServiceArgs>> getWeightedBackendServices() {
+        return this.weightedBackendServices == null ? Output.empty() : this.weightedBackendServices;
     }
 
     public HttpRouteActionArgs(
-        @Nullable Input<CorsPolicyArgs> corsPolicy,
-        @Nullable Input<HttpFaultInjectionArgs> faultInjectionPolicy,
-        @Nullable Input<DurationArgs> maxStreamDuration,
-        @Nullable Input<RequestMirrorPolicyArgs> requestMirrorPolicy,
-        @Nullable Input<HttpRetryPolicyArgs> retryPolicy,
-        @Nullable Input<DurationArgs> timeout,
-        @Nullable Input<UrlRewriteArgs> urlRewrite,
-        @Nullable Input<List<WeightedBackendServiceArgs>> weightedBackendServices) {
+        @Nullable Output<CorsPolicyArgs> corsPolicy,
+        @Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy,
+        @Nullable Output<DurationArgs> maxStreamDuration,
+        @Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy,
+        @Nullable Output<HttpRetryPolicyArgs> retryPolicy,
+        @Nullable Output<DurationArgs> timeout,
+        @Nullable Output<UrlRewriteArgs> urlRewrite,
+        @Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices) {
         this.corsPolicy = corsPolicy;
         this.faultInjectionPolicy = faultInjectionPolicy;
         this.maxStreamDuration = maxStreamDuration;
@@ -129,14 +129,14 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private HttpRouteActionArgs() {
-        this.corsPolicy = Input.empty();
-        this.faultInjectionPolicy = Input.empty();
-        this.maxStreamDuration = Input.empty();
-        this.requestMirrorPolicy = Input.empty();
-        this.retryPolicy = Input.empty();
-        this.timeout = Input.empty();
-        this.urlRewrite = Input.empty();
-        this.weightedBackendServices = Input.empty();
+        this.corsPolicy = Output.empty();
+        this.faultInjectionPolicy = Output.empty();
+        this.maxStreamDuration = Output.empty();
+        this.requestMirrorPolicy = Output.empty();
+        this.retryPolicy = Output.empty();
+        this.timeout = Output.empty();
+        this.urlRewrite = Output.empty();
+        this.weightedBackendServices = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,14 +148,14 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<CorsPolicyArgs> corsPolicy;
-        private @Nullable Input<HttpFaultInjectionArgs> faultInjectionPolicy;
-        private @Nullable Input<DurationArgs> maxStreamDuration;
-        private @Nullable Input<RequestMirrorPolicyArgs> requestMirrorPolicy;
-        private @Nullable Input<HttpRetryPolicyArgs> retryPolicy;
-        private @Nullable Input<DurationArgs> timeout;
-        private @Nullable Input<UrlRewriteArgs> urlRewrite;
-        private @Nullable Input<List<WeightedBackendServiceArgs>> weightedBackendServices;
+        private @Nullable Output<CorsPolicyArgs> corsPolicy;
+        private @Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy;
+        private @Nullable Output<DurationArgs> maxStreamDuration;
+        private @Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy;
+        private @Nullable Output<HttpRetryPolicyArgs> retryPolicy;
+        private @Nullable Output<DurationArgs> timeout;
+        private @Nullable Output<UrlRewriteArgs> urlRewrite;
+        private @Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices;
 
         public Builder() {
     	      // Empty
@@ -173,83 +173,83 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.weightedBackendServices = defaults.weightedBackendServices;
         }
 
-        public Builder corsPolicy(@Nullable Input<CorsPolicyArgs> corsPolicy) {
+        public Builder corsPolicy(@Nullable Output<CorsPolicyArgs> corsPolicy) {
             this.corsPolicy = corsPolicy;
             return this;
         }
 
         public Builder corsPolicy(@Nullable CorsPolicyArgs corsPolicy) {
-            this.corsPolicy = Input.ofNullable(corsPolicy);
+            this.corsPolicy = Output.ofNullable(corsPolicy);
             return this;
         }
 
-        public Builder faultInjectionPolicy(@Nullable Input<HttpFaultInjectionArgs> faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(@Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy) {
             this.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
 
         public Builder faultInjectionPolicy(@Nullable HttpFaultInjectionArgs faultInjectionPolicy) {
-            this.faultInjectionPolicy = Input.ofNullable(faultInjectionPolicy);
+            this.faultInjectionPolicy = Output.ofNullable(faultInjectionPolicy);
             return this;
         }
 
-        public Builder maxStreamDuration(@Nullable Input<DurationArgs> maxStreamDuration) {
+        public Builder maxStreamDuration(@Nullable Output<DurationArgs> maxStreamDuration) {
             this.maxStreamDuration = maxStreamDuration;
             return this;
         }
 
         public Builder maxStreamDuration(@Nullable DurationArgs maxStreamDuration) {
-            this.maxStreamDuration = Input.ofNullable(maxStreamDuration);
+            this.maxStreamDuration = Output.ofNullable(maxStreamDuration);
             return this;
         }
 
-        public Builder requestMirrorPolicy(@Nullable Input<RequestMirrorPolicyArgs> requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(@Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy) {
             this.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
 
         public Builder requestMirrorPolicy(@Nullable RequestMirrorPolicyArgs requestMirrorPolicy) {
-            this.requestMirrorPolicy = Input.ofNullable(requestMirrorPolicy);
+            this.requestMirrorPolicy = Output.ofNullable(requestMirrorPolicy);
             return this;
         }
 
-        public Builder retryPolicy(@Nullable Input<HttpRetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Output<HttpRetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
         public Builder retryPolicy(@Nullable HttpRetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Input.ofNullable(retryPolicy);
+            this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<DurationArgs> timeout) {
+        public Builder timeout(@Nullable Output<DurationArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable DurationArgs timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder urlRewrite(@Nullable Input<UrlRewriteArgs> urlRewrite) {
+        public Builder urlRewrite(@Nullable Output<UrlRewriteArgs> urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
 
         public Builder urlRewrite(@Nullable UrlRewriteArgs urlRewrite) {
-            this.urlRewrite = Input.ofNullable(urlRewrite);
+            this.urlRewrite = Output.ofNullable(urlRewrite);
             return this;
         }
 
-        public Builder weightedBackendServices(@Nullable Input<List<WeightedBackendServiceArgs>> weightedBackendServices) {
+        public Builder weightedBackendServices(@Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices) {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
 
         public Builder weightedBackendServices(@Nullable List<WeightedBackendServiceArgs> weightedBackendServices) {
-            this.weightedBackendServices = Input.ofNullable(weightedBackendServices);
+            this.weightedBackendServices = Output.ofNullable(weightedBackendServices);
             return this;
         }
         public HttpRouteActionArgs build() {

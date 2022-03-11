@@ -6,7 +6,6 @@ package io.pulumi.aws.transfer;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.transfer.SshKeyArgs;
 import io.pulumi.aws.transfer.inputs.SshKeyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -110,14 +109,14 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SshKey(String name, SshKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:transfer/sshKey:SshKey", name, args == null ? SshKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:transfer/sshKey:SshKey", name, args == null ? SshKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SshKey(String name, Input<String> id, @Nullable SshKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SshKey(String name, Output<String> id, @Nullable SshKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:transfer/sshKey:SshKey", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -133,7 +132,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SshKey get(String name, Input<String> id, @Nullable SshKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SshKey get(String name, Output<String> id, @Nullable SshKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SshKey(name, id, state, options);
     }
 }

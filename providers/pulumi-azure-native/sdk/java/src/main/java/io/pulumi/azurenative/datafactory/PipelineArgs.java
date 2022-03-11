@@ -45,7 +45,7 @@ import io.pulumi.azurenative.datafactory.inputs.VariableSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -65,10 +65,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activities")
-      private final @Nullable Input<List<Object>> activities;
+      private final @Nullable Output<List<Object>> activities;
 
-    public Input<List<Object>> getActivities() {
-        return this.activities == null ? Input.empty() : this.activities;
+    public Output<List<Object>> getActivities() {
+        return this.activities == null ? Output.empty() : this.activities;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="concurrency")
-      private final @Nullable Input<Integer> concurrency;
+      private final @Nullable Output<Integer> concurrency;
 
-    public Input<Integer> getConcurrency() {
-        return this.concurrency == null ? Input.empty() : this.concurrency;
+    public Output<Integer> getConcurrency() {
+        return this.concurrency == null ? Output.empty() : this.concurrency;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -109,9 +109,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-      private final Input<String> factoryName;
+      private final Output<String> factoryName;
 
-    public Input<String> getFactoryName() {
+    public Output<String> getFactoryName() {
         return this.factoryName;
     }
 
@@ -120,10 +120,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folder")
-      private final @Nullable Input<PipelineFolderArgs> folder;
+      private final @Nullable Output<PipelineFolderArgs> folder;
 
-    public Input<PipelineFolderArgs> getFolder() {
-        return this.folder == null ? Input.empty() : this.folder;
+    public Output<PipelineFolderArgs> getFolder() {
+        return this.folder == null ? Output.empty() : this.folder;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineName")
-      private final @Nullable Input<String> pipelineName;
+      private final @Nullable Output<String> pipelineName;
 
-    public Input<String> getPipelineName() {
-        return this.pipelineName == null ? Input.empty() : this.pipelineName;
+    public Output<String> getPipelineName() {
+        return this.pipelineName == null ? Output.empty() : this.pipelineName;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<PipelinePolicyArgs> policy;
+      private final @Nullable Output<PipelinePolicyArgs> policy;
 
-    public Input<PipelinePolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<PipelinePolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -164,9 +164,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -175,10 +175,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runDimensions")
-      private final @Nullable Input<Map<String,Object>> runDimensions;
+      private final @Nullable Output<Map<String,Object>> runDimensions;
 
-    public Input<Map<String,Object>> getRunDimensions() {
-        return this.runDimensions == null ? Input.empty() : this.runDimensions;
+    public Output<Map<String,Object>> getRunDimensions() {
+        return this.runDimensions == null ? Output.empty() : this.runDimensions;
     }
 
     /**
@@ -186,25 +186,25 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variables")
-      private final @Nullable Input<Map<String,VariableSpecificationArgs>> variables;
+      private final @Nullable Output<Map<String,VariableSpecificationArgs>> variables;
 
-    public Input<Map<String,VariableSpecificationArgs>> getVariables() {
-        return this.variables == null ? Input.empty() : this.variables;
+    public Output<Map<String,VariableSpecificationArgs>> getVariables() {
+        return this.variables == null ? Output.empty() : this.variables;
     }
 
     public PipelineArgs(
-        @Nullable Input<List<Object>> activities,
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<Integer> concurrency,
-        @Nullable Input<String> description,
-        Input<String> factoryName,
-        @Nullable Input<PipelineFolderArgs> folder,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<String> pipelineName,
-        @Nullable Input<PipelinePolicyArgs> policy,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,Object>> runDimensions,
-        @Nullable Input<Map<String,VariableSpecificationArgs>> variables) {
+        @Nullable Output<List<Object>> activities,
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<Integer> concurrency,
+        @Nullable Output<String> description,
+        Output<String> factoryName,
+        @Nullable Output<PipelineFolderArgs> folder,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<String> pipelineName,
+        @Nullable Output<PipelinePolicyArgs> policy,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,Object>> runDimensions,
+        @Nullable Output<Map<String,VariableSpecificationArgs>> variables) {
         this.activities = activities;
         this.annotations = annotations;
         this.concurrency = concurrency;
@@ -220,18 +220,18 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.activities = Input.empty();
-        this.annotations = Input.empty();
-        this.concurrency = Input.empty();
-        this.description = Input.empty();
-        this.factoryName = Input.empty();
-        this.folder = Input.empty();
-        this.parameters = Input.empty();
-        this.pipelineName = Input.empty();
-        this.policy = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.runDimensions = Input.empty();
-        this.variables = Input.empty();
+        this.activities = Output.empty();
+        this.annotations = Output.empty();
+        this.concurrency = Output.empty();
+        this.description = Output.empty();
+        this.factoryName = Output.empty();
+        this.folder = Output.empty();
+        this.parameters = Output.empty();
+        this.pipelineName = Output.empty();
+        this.policy = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.runDimensions = Output.empty();
+        this.variables = Output.empty();
     }
 
     public static Builder builder() {
@@ -243,18 +243,18 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> activities;
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<Integer> concurrency;
-        private @Nullable Input<String> description;
-        private Input<String> factoryName;
-        private @Nullable Input<PipelineFolderArgs> folder;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<String> pipelineName;
-        private @Nullable Input<PipelinePolicyArgs> policy;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,Object>> runDimensions;
-        private @Nullable Input<Map<String,VariableSpecificationArgs>> variables;
+        private @Nullable Output<List<Object>> activities;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<Integer> concurrency;
+        private @Nullable Output<String> description;
+        private Output<String> factoryName;
+        private @Nullable Output<PipelineFolderArgs> folder;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<String> pipelineName;
+        private @Nullable Output<PipelinePolicyArgs> policy;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,Object>> runDimensions;
+        private @Nullable Output<Map<String,VariableSpecificationArgs>> variables;
 
         public Builder() {
     	      // Empty
@@ -276,123 +276,123 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variables = defaults.variables;
         }
 
-        public Builder activities(@Nullable Input<List<Object>> activities) {
+        public Builder activities(@Nullable Output<List<Object>> activities) {
             this.activities = activities;
             return this;
         }
 
         public Builder activities(@Nullable List<Object> activities) {
-            this.activities = Input.ofNullable(activities);
+            this.activities = Output.ofNullable(activities);
             return this;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder concurrency(@Nullable Input<Integer> concurrency) {
+        public Builder concurrency(@Nullable Output<Integer> concurrency) {
             this.concurrency = concurrency;
             return this;
         }
 
         public Builder concurrency(@Nullable Integer concurrency) {
-            this.concurrency = Input.ofNullable(concurrency);
+            this.concurrency = Output.ofNullable(concurrency);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder factoryName(Input<String> factoryName) {
+        public Builder factoryName(Output<String> factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Input.of(Objects.requireNonNull(factoryName));
+            this.factoryName = Output.of(Objects.requireNonNull(factoryName));
             return this;
         }
 
-        public Builder folder(@Nullable Input<PipelineFolderArgs> folder) {
+        public Builder folder(@Nullable Output<PipelineFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
 
         public Builder folder(@Nullable PipelineFolderArgs folder) {
-            this.folder = Input.ofNullable(folder);
+            this.folder = Output.ofNullable(folder);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder pipelineName(@Nullable Input<String> pipelineName) {
+        public Builder pipelineName(@Nullable Output<String> pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }
 
         public Builder pipelineName(@Nullable String pipelineName) {
-            this.pipelineName = Input.ofNullable(pipelineName);
+            this.pipelineName = Output.ofNullable(pipelineName);
             return this;
         }
 
-        public Builder policy(@Nullable Input<PipelinePolicyArgs> policy) {
+        public Builder policy(@Nullable Output<PipelinePolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable PipelinePolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder runDimensions(@Nullable Input<Map<String,Object>> runDimensions) {
+        public Builder runDimensions(@Nullable Output<Map<String,Object>> runDimensions) {
             this.runDimensions = runDimensions;
             return this;
         }
 
         public Builder runDimensions(@Nullable Map<String,Object> runDimensions) {
-            this.runDimensions = Input.ofNullable(runDimensions);
+            this.runDimensions = Output.ofNullable(runDimensions);
             return this;
         }
 
-        public Builder variables(@Nullable Input<Map<String,VariableSpecificationArgs>> variables) {
+        public Builder variables(@Nullable Output<Map<String,VariableSpecificationArgs>> variables) {
             this.variables = variables;
             return this;
         }
 
         public Builder variables(@Nullable Map<String,VariableSpecificationArgs> variables) {
-            this.variables = Input.ofNullable(variables);
+            this.variables = Output.ofNullable(variables);
             return this;
         }
         public PipelineArgs build() {

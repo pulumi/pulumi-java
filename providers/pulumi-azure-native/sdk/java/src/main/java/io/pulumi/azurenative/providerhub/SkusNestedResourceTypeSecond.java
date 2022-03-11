@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.providerhub.SkusNestedResourceTypeSecondArgs;
 import io.pulumi.azurenative.providerhub.outputs.SkuResourceResponseProperties;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -104,21 +103,21 @@ public class SkusNestedResourceTypeSecond extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public SkusNestedResourceTypeSecond(String name, SkusNestedResourceTypeSecondArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:providerhub:SkusNestedResourceTypeSecond", name, args == null ? SkusNestedResourceTypeSecondArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:providerhub:SkusNestedResourceTypeSecond", name, args == null ? SkusNestedResourceTypeSecondArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SkusNestedResourceTypeSecond(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SkusNestedResourceTypeSecond(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:providerhub:SkusNestedResourceTypeSecond", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20201120:SkusNestedResourceTypeSecond").build()),
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20210501preview:SkusNestedResourceTypeSecond").build()),
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20210601preview:SkusNestedResourceTypeSecond").build()),
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20210901preview:SkusNestedResourceTypeSecond").build())
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20201120:SkusNestedResourceTypeSecond").build()),
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20210501preview:SkusNestedResourceTypeSecond").build()),
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20210601preview:SkusNestedResourceTypeSecond").build()),
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20210901preview:SkusNestedResourceTypeSecond").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -132,7 +131,7 @@ public class SkusNestedResourceTypeSecond extends io.pulumi.resources.CustomReso
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SkusNestedResourceTypeSecond get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SkusNestedResourceTypeSecond get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SkusNestedResourceTypeSecond(name, id, options);
     }
 }

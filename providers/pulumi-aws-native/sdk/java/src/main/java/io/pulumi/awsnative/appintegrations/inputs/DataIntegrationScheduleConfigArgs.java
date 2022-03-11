@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appintegrations.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="firstExecutionFrom", required=true)
-      private final Input<String> firstExecutionFrom;
+      private final Output<String> firstExecutionFrom;
 
-    public Input<String> getFirstExecutionFrom() {
+    public Output<String> getFirstExecutionFrom() {
         return this.firstExecutionFrom;
     }
 
@@ -29,9 +29,9 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="object", required=true)
-      private final Input<String> object;
+      private final Output<String> object;
 
-    public Input<String> getObject() {
+    public Output<String> getObject() {
         return this.object;
     }
 
@@ -40,25 +40,25 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scheduleExpression", required=true)
-      private final Input<String> scheduleExpression;
+      private final Output<String> scheduleExpression;
 
-    public Input<String> getScheduleExpression() {
+    public Output<String> getScheduleExpression() {
         return this.scheduleExpression;
     }
 
     public DataIntegrationScheduleConfigArgs(
-        Input<String> firstExecutionFrom,
-        Input<String> object,
-        Input<String> scheduleExpression) {
+        Output<String> firstExecutionFrom,
+        Output<String> object,
+        Output<String> scheduleExpression) {
         this.firstExecutionFrom = Objects.requireNonNull(firstExecutionFrom, "expected parameter 'firstExecutionFrom' to be non-null");
         this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
         this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
     }
 
     private DataIntegrationScheduleConfigArgs() {
-        this.firstExecutionFrom = Input.empty();
-        this.object = Input.empty();
-        this.scheduleExpression = Input.empty();
+        this.firstExecutionFrom = Output.empty();
+        this.object = Output.empty();
+        this.scheduleExpression = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> firstExecutionFrom;
-        private Input<String> object;
-        private Input<String> scheduleExpression;
+        private Output<String> firstExecutionFrom;
+        private Output<String> object;
+        private Output<String> scheduleExpression;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder firstExecutionFrom(Input<String> firstExecutionFrom) {
+        public Builder firstExecutionFrom(Output<String> firstExecutionFrom) {
             this.firstExecutionFrom = Objects.requireNonNull(firstExecutionFrom);
             return this;
         }
 
         public Builder firstExecutionFrom(String firstExecutionFrom) {
-            this.firstExecutionFrom = Input.of(Objects.requireNonNull(firstExecutionFrom));
+            this.firstExecutionFrom = Output.of(Objects.requireNonNull(firstExecutionFrom));
             return this;
         }
 
-        public Builder object(Input<String> object) {
+        public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
         public Builder object(String object) {
-            this.object = Input.of(Objects.requireNonNull(object));
+            this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
 
-        public Builder scheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Output<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
+            this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }
         public DataIntegrationScheduleConfigArgs build() {

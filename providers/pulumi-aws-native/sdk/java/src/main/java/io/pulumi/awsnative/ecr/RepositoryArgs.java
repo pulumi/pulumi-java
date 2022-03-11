@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ecr.inputs.RepositoryEncryptionConfigurationArgs;
 import io.pulumi.awsnative.ecr.inputs.RepositoryImageScanningConfigurationArgs;
 import io.pulumi.awsnative.ecr.inputs.RepositoryLifecyclePolicyArgs;
 import io.pulumi.awsnative.ecr.inputs.RepositoryTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -22,17 +22,17 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     public static final RepositoryArgs Empty = new RepositoryArgs();
 
     @InputImport(name="encryptionConfiguration")
-      private final @Nullable Input<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Input<RepositoryEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
+    public Output<RepositoryEncryptionConfigurationArgs> getEncryptionConfiguration() {
+        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
     }
 
     @InputImport(name="imageScanningConfiguration")
-      private final @Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
+      private final @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
-    public Input<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
-        return this.imageScanningConfiguration == null ? Input.empty() : this.imageScanningConfiguration;
+    public Output<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
+        return this.imageScanningConfiguration == null ? Output.empty() : this.imageScanningConfiguration;
     }
 
     /**
@@ -40,17 +40,17 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageTagMutability")
-      private final @Nullable Input<RepositoryImageTagMutability> imageTagMutability;
+      private final @Nullable Output<RepositoryImageTagMutability> imageTagMutability;
 
-    public Input<RepositoryImageTagMutability> getImageTagMutability() {
-        return this.imageTagMutability == null ? Input.empty() : this.imageTagMutability;
+    public Output<RepositoryImageTagMutability> getImageTagMutability() {
+        return this.imageTagMutability == null ? Output.empty() : this.imageTagMutability;
     }
 
     @InputImport(name="lifecyclePolicy")
-      private final @Nullable Input<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
+      private final @Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
 
-    public Input<RepositoryLifecyclePolicyArgs> getLifecyclePolicy() {
-        return this.lifecyclePolicy == null ? Input.empty() : this.lifecyclePolicy;
+    public Output<RepositoryLifecyclePolicyArgs> getLifecyclePolicy() {
+        return this.lifecyclePolicy == null ? Output.empty() : this.lifecyclePolicy;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName")
-      private final @Nullable Input<String> repositoryName;
+      private final @Nullable Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
-        return this.repositoryName == null ? Input.empty() : this.repositoryName;
+    public Output<String> getRepositoryName() {
+        return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryPolicyText")
-      private final @Nullable Input<Object> repositoryPolicyText;
+      private final @Nullable Output<Object> repositoryPolicyText;
 
-    public Input<Object> getRepositoryPolicyText() {
-        return this.repositoryPolicyText == null ? Input.empty() : this.repositoryPolicyText;
+    public Output<Object> getRepositoryPolicyText() {
+        return this.repositoryPolicyText == null ? Output.empty() : this.repositoryPolicyText;
     }
 
     /**
@@ -80,20 +80,20 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<RepositoryTagArgs>> tags;
+      private final @Nullable Output<List<RepositoryTagArgs>> tags;
 
-    public Input<List<RepositoryTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RepositoryTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RepositoryArgs(
-        @Nullable Input<RepositoryEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration,
-        @Nullable Input<RepositoryImageTagMutability> imageTagMutability,
-        @Nullable Input<RepositoryLifecyclePolicyArgs> lifecyclePolicy,
-        @Nullable Input<String> repositoryName,
-        @Nullable Input<Object> repositoryPolicyText,
-        @Nullable Input<List<RepositoryTagArgs>> tags) {
+        @Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration,
+        @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration,
+        @Nullable Output<RepositoryImageTagMutability> imageTagMutability,
+        @Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy,
+        @Nullable Output<String> repositoryName,
+        @Nullable Output<Object> repositoryPolicyText,
+        @Nullable Output<List<RepositoryTagArgs>> tags) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.imageScanningConfiguration = imageScanningConfiguration;
         this.imageTagMutability = imageTagMutability;
@@ -104,13 +104,13 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.encryptionConfiguration = Input.empty();
-        this.imageScanningConfiguration = Input.empty();
-        this.imageTagMutability = Input.empty();
-        this.lifecyclePolicy = Input.empty();
-        this.repositoryName = Input.empty();
-        this.repositoryPolicyText = Input.empty();
-        this.tags = Input.empty();
+        this.encryptionConfiguration = Output.empty();
+        this.imageScanningConfiguration = Output.empty();
+        this.imageTagMutability = Output.empty();
+        this.lifecyclePolicy = Output.empty();
+        this.repositoryName = Output.empty();
+        this.repositoryPolicyText = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,13 +122,13 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
-        private @Nullable Input<RepositoryImageTagMutability> imageTagMutability;
-        private @Nullable Input<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
-        private @Nullable Input<String> repositoryName;
-        private @Nullable Input<Object> repositoryPolicyText;
-        private @Nullable Input<List<RepositoryTagArgs>> tags;
+        private @Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
+        private @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
+        private @Nullable Output<RepositoryImageTagMutability> imageTagMutability;
+        private @Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
+        private @Nullable Output<String> repositoryName;
+        private @Nullable Output<Object> repositoryPolicyText;
+        private @Nullable Output<List<RepositoryTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -145,73 +145,73 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder encryptionConfiguration(@Nullable Input<RepositoryEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
         public Builder encryptionConfiguration(@Nullable RepositoryEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder imageScanningConfiguration(@Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
             this.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
 
         public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
-            this.imageScanningConfiguration = Input.ofNullable(imageScanningConfiguration);
+            this.imageScanningConfiguration = Output.ofNullable(imageScanningConfiguration);
             return this;
         }
 
-        public Builder imageTagMutability(@Nullable Input<RepositoryImageTagMutability> imageTagMutability) {
+        public Builder imageTagMutability(@Nullable Output<RepositoryImageTagMutability> imageTagMutability) {
             this.imageTagMutability = imageTagMutability;
             return this;
         }
 
         public Builder imageTagMutability(@Nullable RepositoryImageTagMutability imageTagMutability) {
-            this.imageTagMutability = Input.ofNullable(imageTagMutability);
+            this.imageTagMutability = Output.ofNullable(imageTagMutability);
             return this;
         }
 
-        public Builder lifecyclePolicy(@Nullable Input<RepositoryLifecyclePolicyArgs> lifecyclePolicy) {
+        public Builder lifecyclePolicy(@Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy) {
             this.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
 
         public Builder lifecyclePolicy(@Nullable RepositoryLifecyclePolicyArgs lifecyclePolicy) {
-            this.lifecyclePolicy = Input.ofNullable(lifecyclePolicy);
+            this.lifecyclePolicy = Output.ofNullable(lifecyclePolicy);
             return this;
         }
 
-        public Builder repositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Input.ofNullable(repositoryName);
+            this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder repositoryPolicyText(@Nullable Input<Object> repositoryPolicyText) {
+        public Builder repositoryPolicyText(@Nullable Output<Object> repositoryPolicyText) {
             this.repositoryPolicyText = repositoryPolicyText;
             return this;
         }
 
         public Builder repositoryPolicyText(@Nullable Object repositoryPolicyText) {
-            this.repositoryPolicyText = Input.ofNullable(repositoryPolicyText);
+            this.repositoryPolicyText = Output.ofNullable(repositoryPolicyText);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RepositoryTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RepositoryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RepositoryTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RepositoryArgs build() {

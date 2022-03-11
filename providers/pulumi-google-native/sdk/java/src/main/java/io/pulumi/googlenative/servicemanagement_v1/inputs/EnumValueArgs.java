@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="number")
-      private final @Nullable Input<Integer> number;
+      private final @Nullable Output<Integer> number;
 
-    public Input<Integer> getNumber() {
-        return this.number == null ? Input.empty() : this.number;
+    public Output<Integer> getNumber() {
+        return this.number == null ? Output.empty() : this.number;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Output<List<OptionArgs>> options;
 
-    public Input<List<OptionArgs>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<OptionArgs>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     public EnumValueArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> number,
-        @Nullable Input<List<OptionArgs>> options) {
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> number,
+        @Nullable Output<List<OptionArgs>> options) {
         this.name = name;
         this.number = number;
         this.options = options;
     }
 
     private EnumValueArgs() {
-        this.name = Input.empty();
-        this.number = Input.empty();
-        this.options = Input.empty();
+        this.name = Output.empty();
+        this.number = Output.empty();
+        this.options = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> number;
-        private @Nullable Input<List<OptionArgs>> options;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> number;
+        private @Nullable Output<List<OptionArgs>> options;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.options = defaults.options;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder number(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Output<Integer> number) {
             this.number = number;
             return this;
         }
 
         public Builder number(@Nullable Integer number) {
-            this.number = Input.ofNullable(number);
+            this.number = Output.ofNullable(number);
             return this;
         }
 
-        public Builder options(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
         public EnumValueArgs build() {

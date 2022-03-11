@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -28,10 +28,10 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="categoryPattern")
-      private final @Nullable Input<String> categoryPattern;
+      private final @Nullable Output<String> categoryPattern;
 
-    public Input<String> getCategoryPattern() {
-        return this.categoryPattern == null ? Input.empty() : this.categoryPattern;
+    public Output<String> getCategoryPattern() {
+        return this.categoryPattern == null ? Output.empty() : this.categoryPattern;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventPattern")
-      private final @Nullable Input<String> eventPattern;
+      private final @Nullable Output<String> eventPattern;
 
-    public Input<String> getEventPattern() {
-        return this.eventPattern == null ? Input.empty() : this.eventPattern;
+    public Output<String> getEventPattern() {
+        return this.eventPattern == null ? Output.empty() : this.eventPattern;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hubPattern")
-      private final @Nullable Input<String> hubPattern;
+      private final @Nullable Output<String> hubPattern;
 
-    public Input<String> getHubPattern() {
-        return this.hubPattern == null ? Input.empty() : this.hubPattern;
+    public Output<String> getHubPattern() {
+        return this.hubPattern == null ? Output.empty() : this.hubPattern;
     }
 
     /**
@@ -70,17 +70,17 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="urlTemplate", required=true)
-      private final Input<String> urlTemplate;
+      private final Output<String> urlTemplate;
 
-    public Input<String> getUrlTemplate() {
+    public Output<String> getUrlTemplate() {
         return this.urlTemplate;
     }
 
     public UpstreamTemplateArgs(
-        @Nullable Input<String> categoryPattern,
-        @Nullable Input<String> eventPattern,
-        @Nullable Input<String> hubPattern,
-        Input<String> urlTemplate) {
+        @Nullable Output<String> categoryPattern,
+        @Nullable Output<String> eventPattern,
+        @Nullable Output<String> hubPattern,
+        Output<String> urlTemplate) {
         this.categoryPattern = categoryPattern;
         this.eventPattern = eventPattern;
         this.hubPattern = hubPattern;
@@ -88,10 +88,10 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private UpstreamTemplateArgs() {
-        this.categoryPattern = Input.empty();
-        this.eventPattern = Input.empty();
-        this.hubPattern = Input.empty();
-        this.urlTemplate = Input.empty();
+        this.categoryPattern = Output.empty();
+        this.eventPattern = Output.empty();
+        this.hubPattern = Output.empty();
+        this.urlTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,10 +103,10 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> categoryPattern;
-        private @Nullable Input<String> eventPattern;
-        private @Nullable Input<String> hubPattern;
-        private Input<String> urlTemplate;
+        private @Nullable Output<String> categoryPattern;
+        private @Nullable Output<String> eventPattern;
+        private @Nullable Output<String> hubPattern;
+        private Output<String> urlTemplate;
 
         public Builder() {
     	      // Empty
@@ -120,43 +120,43 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     	      this.urlTemplate = defaults.urlTemplate;
         }
 
-        public Builder categoryPattern(@Nullable Input<String> categoryPattern) {
+        public Builder categoryPattern(@Nullable Output<String> categoryPattern) {
             this.categoryPattern = categoryPattern;
             return this;
         }
 
         public Builder categoryPattern(@Nullable String categoryPattern) {
-            this.categoryPattern = Input.ofNullable(categoryPattern);
+            this.categoryPattern = Output.ofNullable(categoryPattern);
             return this;
         }
 
-        public Builder eventPattern(@Nullable Input<String> eventPattern) {
+        public Builder eventPattern(@Nullable Output<String> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
 
         public Builder eventPattern(@Nullable String eventPattern) {
-            this.eventPattern = Input.ofNullable(eventPattern);
+            this.eventPattern = Output.ofNullable(eventPattern);
             return this;
         }
 
-        public Builder hubPattern(@Nullable Input<String> hubPattern) {
+        public Builder hubPattern(@Nullable Output<String> hubPattern) {
             this.hubPattern = hubPattern;
             return this;
         }
 
         public Builder hubPattern(@Nullable String hubPattern) {
-            this.hubPattern = Input.ofNullable(hubPattern);
+            this.hubPattern = Output.ofNullable(hubPattern);
             return this;
         }
 
-        public Builder urlTemplate(Input<String> urlTemplate) {
+        public Builder urlTemplate(Output<String> urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
 
         public Builder urlTemplate(String urlTemplate) {
-            this.urlTemplate = Input.of(Objects.requireNonNull(urlTemplate));
+            this.urlTemplate = Output.of(Objects.requireNonNull(urlTemplate));
             return this;
         }
         public UpstreamTemplateArgs build() {

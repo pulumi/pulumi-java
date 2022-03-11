@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CharsToIgnoreArgs;
 import java.lang.Boolean;
@@ -27,10 +27,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="charactersToIgnore")
-      private final @Nullable Input<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore;
+      private final @Nullable Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore;
 
-    public Input<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> getCharactersToIgnore() {
-        return this.charactersToIgnore == null ? Input.empty() : this.charactersToIgnore;
+    public Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> getCharactersToIgnore() {
+        return this.charactersToIgnore == null ? Output.empty() : this.charactersToIgnore;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maskingCharacter")
-      private final @Nullable Input<String> maskingCharacter;
+      private final @Nullable Output<String> maskingCharacter;
 
-    public Input<String> getMaskingCharacter() {
-        return this.maskingCharacter == null ? Input.empty() : this.maskingCharacter;
+    public Output<String> getMaskingCharacter() {
+        return this.maskingCharacter == null ? Output.empty() : this.maskingCharacter;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="numberToMask")
-      private final @Nullable Input<Integer> numberToMask;
+      private final @Nullable Output<Integer> numberToMask;
 
-    public Input<Integer> getNumberToMask() {
-        return this.numberToMask == null ? Input.empty() : this.numberToMask;
+    public Output<Integer> getNumberToMask() {
+        return this.numberToMask == null ? Output.empty() : this.numberToMask;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="reverseOrder")
-      private final @Nullable Input<Boolean> reverseOrder;
+      private final @Nullable Output<Boolean> reverseOrder;
 
-    public Input<Boolean> getReverseOrder() {
-        return this.reverseOrder == null ? Input.empty() : this.reverseOrder;
+    public Output<Boolean> getReverseOrder() {
+        return this.reverseOrder == null ? Output.empty() : this.reverseOrder;
     }
 
     public GooglePrivacyDlpV2CharacterMaskConfigArgs(
-        @Nullable Input<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore,
-        @Nullable Input<String> maskingCharacter,
-        @Nullable Input<Integer> numberToMask,
-        @Nullable Input<Boolean> reverseOrder) {
+        @Nullable Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore,
+        @Nullable Output<String> maskingCharacter,
+        @Nullable Output<Integer> numberToMask,
+        @Nullable Output<Boolean> reverseOrder) {
         this.charactersToIgnore = charactersToIgnore;
         this.maskingCharacter = maskingCharacter;
         this.numberToMask = numberToMask;
@@ -78,10 +78,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends io.pulumi.r
     }
 
     private GooglePrivacyDlpV2CharacterMaskConfigArgs() {
-        this.charactersToIgnore = Input.empty();
-        this.maskingCharacter = Input.empty();
-        this.numberToMask = Input.empty();
-        this.reverseOrder = Input.empty();
+        this.charactersToIgnore = Output.empty();
+        this.maskingCharacter = Output.empty();
+        this.numberToMask = Output.empty();
+        this.reverseOrder = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore;
-        private @Nullable Input<String> maskingCharacter;
-        private @Nullable Input<Integer> numberToMask;
-        private @Nullable Input<Boolean> reverseOrder;
+        private @Nullable Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore;
+        private @Nullable Output<String> maskingCharacter;
+        private @Nullable Output<Integer> numberToMask;
+        private @Nullable Output<Boolean> reverseOrder;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends io.pulumi.r
     	      this.reverseOrder = defaults.reverseOrder;
         }
 
-        public Builder charactersToIgnore(@Nullable Input<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore) {
+        public Builder charactersToIgnore(@Nullable Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore) {
             this.charactersToIgnore = charactersToIgnore;
             return this;
         }
 
         public Builder charactersToIgnore(@Nullable List<GooglePrivacyDlpV2CharsToIgnoreArgs> charactersToIgnore) {
-            this.charactersToIgnore = Input.ofNullable(charactersToIgnore);
+            this.charactersToIgnore = Output.ofNullable(charactersToIgnore);
             return this;
         }
 
-        public Builder maskingCharacter(@Nullable Input<String> maskingCharacter) {
+        public Builder maskingCharacter(@Nullable Output<String> maskingCharacter) {
             this.maskingCharacter = maskingCharacter;
             return this;
         }
 
         public Builder maskingCharacter(@Nullable String maskingCharacter) {
-            this.maskingCharacter = Input.ofNullable(maskingCharacter);
+            this.maskingCharacter = Output.ofNullable(maskingCharacter);
             return this;
         }
 
-        public Builder numberToMask(@Nullable Input<Integer> numberToMask) {
+        public Builder numberToMask(@Nullable Output<Integer> numberToMask) {
             this.numberToMask = numberToMask;
             return this;
         }
 
         public Builder numberToMask(@Nullable Integer numberToMask) {
-            this.numberToMask = Input.ofNullable(numberToMask);
+            this.numberToMask = Output.ofNullable(numberToMask);
             return this;
         }
 
-        public Builder reverseOrder(@Nullable Input<Boolean> reverseOrder) {
+        public Builder reverseOrder(@Nullable Output<Boolean> reverseOrder) {
             this.reverseOrder = reverseOrder;
             return this;
         }
 
         public Builder reverseOrder(@Nullable Boolean reverseOrder) {
-            this.reverseOrder = Input.ofNullable(reverseOrder);
+            this.reverseOrder = Output.ofNullable(reverseOrder);
             return this;
         }
         public GooglePrivacyDlpV2CharacterMaskConfigArgs build() {

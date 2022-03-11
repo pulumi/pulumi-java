@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.RuleGroupTextTransformationType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class RuleGroupTextTransformationArgs extends io.pulumi.resources.R
     public static final RuleGroupTextTransformationArgs Empty = new RuleGroupTextTransformationArgs();
 
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<RuleGroupTextTransformationType> type;
+      private final Output<RuleGroupTextTransformationType> type;
 
-    public Input<RuleGroupTextTransformationType> getType() {
+    public Output<RuleGroupTextTransformationType> getType() {
         return this.type;
     }
 
     public RuleGroupTextTransformationArgs(
-        Input<Integer> priority,
-        Input<RuleGroupTextTransformationType> type) {
+        Output<Integer> priority,
+        Output<RuleGroupTextTransformationType> type) {
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private RuleGroupTextTransformationArgs() {
-        this.priority = Input.empty();
-        this.type = Input.empty();
+        this.priority = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class RuleGroupTextTransformationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<Integer> priority;
-        private Input<RuleGroupTextTransformationType> type;
+        private Output<Integer> priority;
+        private Output<RuleGroupTextTransformationType> type;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class RuleGroupTextTransformationArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder type(Input<RuleGroupTextTransformationType> type) {
+        public Builder type(Output<RuleGroupTextTransformationType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(RuleGroupTextTransformationType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RuleGroupTextTransformationArgs build() {

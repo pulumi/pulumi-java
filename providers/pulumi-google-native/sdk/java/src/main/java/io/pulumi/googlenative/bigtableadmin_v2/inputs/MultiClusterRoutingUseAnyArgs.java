@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class MultiClusterRoutingUseAnyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clusterIds")
-      private final @Nullable Input<List<String>> clusterIds;
+      private final @Nullable Output<List<String>> clusterIds;
 
-    public Input<List<String>> getClusterIds() {
-        return this.clusterIds == null ? Input.empty() : this.clusterIds;
+    public Output<List<String>> getClusterIds() {
+        return this.clusterIds == null ? Output.empty() : this.clusterIds;
     }
 
-    public MultiClusterRoutingUseAnyArgs(@Nullable Input<List<String>> clusterIds) {
+    public MultiClusterRoutingUseAnyArgs(@Nullable Output<List<String>> clusterIds) {
         this.clusterIds = clusterIds;
     }
 
     private MultiClusterRoutingUseAnyArgs() {
-        this.clusterIds = Input.empty();
+        this.clusterIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class MultiClusterRoutingUseAnyArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> clusterIds;
+        private @Nullable Output<List<String>> clusterIds;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class MultiClusterRoutingUseAnyArgs extends io.pulumi.resources.Res
     	      this.clusterIds = defaults.clusterIds;
         }
 
-        public Builder clusterIds(@Nullable Input<List<String>> clusterIds) {
+        public Builder clusterIds(@Nullable Output<List<String>> clusterIds) {
             this.clusterIds = clusterIds;
             return this;
         }
 
         public Builder clusterIds(@Nullable List<String> clusterIds) {
-            this.clusterIds = Input.ofNullable(clusterIds);
+            this.clusterIds = Output.ofNullable(clusterIds);
             return this;
         }
         public MultiClusterRoutingUseAnyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ServiceTaskSpecPlacementPlatformGetArgs;
 import java.lang.Integer;
@@ -18,38 +18,38 @@ public final class ServiceTaskSpecPlacementGetArgs extends io.pulumi.resources.R
     public static final ServiceTaskSpecPlacementGetArgs Empty = new ServiceTaskSpecPlacementGetArgs();
 
     @InputImport(name="constraints")
-      private final @Nullable Input<List<String>> constraints;
+      private final @Nullable Output<List<String>> constraints;
 
-    public Input<List<String>> getConstraints() {
-        return this.constraints == null ? Input.empty() : this.constraints;
+    public Output<List<String>> getConstraints() {
+        return this.constraints == null ? Output.empty() : this.constraints;
     }
 
     @InputImport(name="maxReplicas")
-      private final @Nullable Input<Integer> maxReplicas;
+      private final @Nullable Output<Integer> maxReplicas;
 
-    public Input<Integer> getMaxReplicas() {
-        return this.maxReplicas == null ? Input.empty() : this.maxReplicas;
+    public Output<Integer> getMaxReplicas() {
+        return this.maxReplicas == null ? Output.empty() : this.maxReplicas;
     }
 
     @InputImport(name="platforms")
-      private final @Nullable Input<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms;
+      private final @Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms;
 
-    public Input<List<ServiceTaskSpecPlacementPlatformGetArgs>> getPlatforms() {
-        return this.platforms == null ? Input.empty() : this.platforms;
+    public Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> getPlatforms() {
+        return this.platforms == null ? Output.empty() : this.platforms;
     }
 
     @InputImport(name="prefs")
-      private final @Nullable Input<List<String>> prefs;
+      private final @Nullable Output<List<String>> prefs;
 
-    public Input<List<String>> getPrefs() {
-        return this.prefs == null ? Input.empty() : this.prefs;
+    public Output<List<String>> getPrefs() {
+        return this.prefs == null ? Output.empty() : this.prefs;
     }
 
     public ServiceTaskSpecPlacementGetArgs(
-        @Nullable Input<List<String>> constraints,
-        @Nullable Input<Integer> maxReplicas,
-        @Nullable Input<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms,
-        @Nullable Input<List<String>> prefs) {
+        @Nullable Output<List<String>> constraints,
+        @Nullable Output<Integer> maxReplicas,
+        @Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms,
+        @Nullable Output<List<String>> prefs) {
         this.constraints = constraints;
         this.maxReplicas = maxReplicas;
         this.platforms = platforms;
@@ -57,10 +57,10 @@ public final class ServiceTaskSpecPlacementGetArgs extends io.pulumi.resources.R
     }
 
     private ServiceTaskSpecPlacementGetArgs() {
-        this.constraints = Input.empty();
-        this.maxReplicas = Input.empty();
-        this.platforms = Input.empty();
-        this.prefs = Input.empty();
+        this.constraints = Output.empty();
+        this.maxReplicas = Output.empty();
+        this.platforms = Output.empty();
+        this.prefs = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class ServiceTaskSpecPlacementGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> constraints;
-        private @Nullable Input<Integer> maxReplicas;
-        private @Nullable Input<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms;
-        private @Nullable Input<List<String>> prefs;
+        private @Nullable Output<List<String>> constraints;
+        private @Nullable Output<Integer> maxReplicas;
+        private @Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms;
+        private @Nullable Output<List<String>> prefs;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class ServiceTaskSpecPlacementGetArgs extends io.pulumi.resources.R
     	      this.prefs = defaults.prefs;
         }
 
-        public Builder constraints(@Nullable Input<List<String>> constraints) {
+        public Builder constraints(@Nullable Output<List<String>> constraints) {
             this.constraints = constraints;
             return this;
         }
 
         public Builder constraints(@Nullable List<String> constraints) {
-            this.constraints = Input.ofNullable(constraints);
+            this.constraints = Output.ofNullable(constraints);
             return this;
         }
 
-        public Builder maxReplicas(@Nullable Input<Integer> maxReplicas) {
+        public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = Input.ofNullable(maxReplicas);
+            this.maxReplicas = Output.ofNullable(maxReplicas);
             return this;
         }
 
-        public Builder platforms(@Nullable Input<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms) {
+        public Builder platforms(@Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms) {
             this.platforms = platforms;
             return this;
         }
 
         public Builder platforms(@Nullable List<ServiceTaskSpecPlacementPlatformGetArgs> platforms) {
-            this.platforms = Input.ofNullable(platforms);
+            this.platforms = Output.ofNullable(platforms);
             return this;
         }
 
-        public Builder prefs(@Nullable Input<List<String>> prefs) {
+        public Builder prefs(@Nullable Output<List<String>> prefs) {
             this.prefs = prefs;
             return this;
         }
 
         public Builder prefs(@Nullable List<String> prefs) {
-            this.prefs = Input.ofNullable(prefs);
+            this.prefs = Output.ofNullable(prefs);
             return this;
         }
         public ServiceTaskSpecPlacementGetArgs build() {

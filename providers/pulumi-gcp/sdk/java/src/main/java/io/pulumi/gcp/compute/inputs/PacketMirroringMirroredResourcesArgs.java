@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesInstanceArgs;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesSubnetworkArgs;
@@ -23,10 +23,10 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instances")
-      private final @Nullable Input<List<PacketMirroringMirroredResourcesInstanceArgs>> instances;
+      private final @Nullable Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances;
 
-    public Input<List<PacketMirroringMirroredResourcesInstanceArgs>> getInstances() {
-        return this.instances == null ? Input.empty() : this.instances;
+    public Output<List<PacketMirroringMirroredResourcesInstanceArgs>> getInstances() {
+        return this.instances == null ? Output.empty() : this.instances;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="subnetworks")
-      private final @Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks;
+      private final @Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks;
 
-    public Input<List<PacketMirroringMirroredResourcesSubnetworkArgs>> getSubnetworks() {
-        return this.subnetworks == null ? Input.empty() : this.subnetworks;
+    public Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> getSubnetworks() {
+        return this.subnetworks == null ? Output.empty() : this.subnetworks;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PacketMirroringMirroredResourcesArgs(
-        @Nullable Input<List<PacketMirroringMirroredResourcesInstanceArgs>> instances,
-        @Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks,
-        @Nullable Input<List<String>> tags) {
+        @Nullable Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances,
+        @Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks,
+        @Nullable Output<List<String>> tags) {
         this.instances = instances;
         this.subnetworks = subnetworks;
         this.tags = tags;
     }
 
     private PacketMirroringMirroredResourcesArgs() {
-        this.instances = Input.empty();
-        this.subnetworks = Input.empty();
-        this.tags = Input.empty();
+        this.instances = Output.empty();
+        this.subnetworks = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PacketMirroringMirroredResourcesInstanceArgs>> instances;
-        private @Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks;
-        private @Nullable Input<List<String>> tags;
+        private @Nullable Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances;
+        private @Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks;
+        private @Nullable Output<List<String>> tags;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder instances(@Nullable Input<List<PacketMirroringMirroredResourcesInstanceArgs>> instances) {
+        public Builder instances(@Nullable Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances) {
             this.instances = instances;
             return this;
         }
 
         public Builder instances(@Nullable List<PacketMirroringMirroredResourcesInstanceArgs> instances) {
-            this.instances = Input.ofNullable(instances);
+            this.instances = Output.ofNullable(instances);
             return this;
         }
 
-        public Builder subnetworks(@Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks) {
+        public Builder subnetworks(@Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks) {
             this.subnetworks = subnetworks;
             return this;
         }
 
         public Builder subnetworks(@Nullable List<PacketMirroringMirroredResourcesSubnetworkArgs> subnetworks) {
-            this.subnetworks = Input.ofNullable(subnetworks);
+            this.subnetworks = Output.ofNullable(subnetworks);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PacketMirroringMirroredResourcesArgs build() {

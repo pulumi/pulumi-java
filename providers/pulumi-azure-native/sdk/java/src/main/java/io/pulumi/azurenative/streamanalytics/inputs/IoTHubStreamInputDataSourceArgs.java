@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="consumerGroupName")
-      private final @Nullable Input<String> consumerGroupName;
+      private final @Nullable Output<String> consumerGroupName;
 
-    public Input<String> getConsumerGroupName() {
-        return this.consumerGroupName == null ? Input.empty() : this.consumerGroupName;
+    public Output<String> getConsumerGroupName() {
+        return this.consumerGroupName == null ? Output.empty() : this.consumerGroupName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="iotHubNamespace")
-      private final @Nullable Input<String> iotHubNamespace;
+      private final @Nullable Output<String> iotHubNamespace;
 
-    public Input<String> getIotHubNamespace() {
-        return this.iotHubNamespace == null ? Input.empty() : this.iotHubNamespace;
+    public Output<String> getIotHubNamespace() {
+        return this.iotHubNamespace == null ? Output.empty() : this.iotHubNamespace;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-      private final @Nullable Input<String> sharedAccessPolicyKey;
+      private final @Nullable Output<String> sharedAccessPolicyKey;
 
-    public Input<String> getSharedAccessPolicyKey() {
-        return this.sharedAccessPolicyKey == null ? Input.empty() : this.sharedAccessPolicyKey;
+    public Output<String> getSharedAccessPolicyKey() {
+        return this.sharedAccessPolicyKey == null ? Output.empty() : this.sharedAccessPolicyKey;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-      private final @Nullable Input<String> sharedAccessPolicyName;
+      private final @Nullable Output<String> sharedAccessPolicyName;
 
-    public Input<String> getSharedAccessPolicyName() {
-        return this.sharedAccessPolicyName == null ? Input.empty() : this.sharedAccessPolicyName;
+    public Output<String> getSharedAccessPolicyName() {
+        return this.sharedAccessPolicyName == null ? Output.empty() : this.sharedAccessPolicyName;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public IoTHubStreamInputDataSourceArgs(
-        @Nullable Input<String> consumerGroupName,
-        @Nullable Input<String> endpoint,
-        @Nullable Input<String> iotHubNamespace,
-        @Nullable Input<String> sharedAccessPolicyKey,
-        @Nullable Input<String> sharedAccessPolicyName,
-        Input<String> type) {
+        @Nullable Output<String> consumerGroupName,
+        @Nullable Output<String> endpoint,
+        @Nullable Output<String> iotHubNamespace,
+        @Nullable Output<String> sharedAccessPolicyKey,
+        @Nullable Output<String> sharedAccessPolicyName,
+        Output<String> type) {
         this.consumerGroupName = consumerGroupName;
         this.endpoint = endpoint;
         this.iotHubNamespace = iotHubNamespace;
@@ -101,12 +101,12 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     }
 
     private IoTHubStreamInputDataSourceArgs() {
-        this.consumerGroupName = Input.empty();
-        this.endpoint = Input.empty();
-        this.iotHubNamespace = Input.empty();
-        this.sharedAccessPolicyKey = Input.empty();
-        this.sharedAccessPolicyName = Input.empty();
-        this.type = Input.empty();
+        this.consumerGroupName = Output.empty();
+        this.endpoint = Output.empty();
+        this.iotHubNamespace = Output.empty();
+        this.sharedAccessPolicyKey = Output.empty();
+        this.sharedAccessPolicyName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> consumerGroupName;
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<String> iotHubNamespace;
-        private @Nullable Input<String> sharedAccessPolicyKey;
-        private @Nullable Input<String> sharedAccessPolicyName;
-        private Input<String> type;
+        private @Nullable Output<String> consumerGroupName;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<String> iotHubNamespace;
+        private @Nullable Output<String> sharedAccessPolicyKey;
+        private @Nullable Output<String> sharedAccessPolicyName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder consumerGroupName(@Nullable Input<String> consumerGroupName) {
+        public Builder consumerGroupName(@Nullable Output<String> consumerGroupName) {
             this.consumerGroupName = consumerGroupName;
             return this;
         }
 
         public Builder consumerGroupName(@Nullable String consumerGroupName) {
-            this.consumerGroupName = Input.ofNullable(consumerGroupName);
+            this.consumerGroupName = Output.ofNullable(consumerGroupName);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder iotHubNamespace(@Nullable Input<String> iotHubNamespace) {
+        public Builder iotHubNamespace(@Nullable Output<String> iotHubNamespace) {
             this.iotHubNamespace = iotHubNamespace;
             return this;
         }
 
         public Builder iotHubNamespace(@Nullable String iotHubNamespace) {
-            this.iotHubNamespace = Input.ofNullable(iotHubNamespace);
+            this.iotHubNamespace = Output.ofNullable(iotHubNamespace);
             return this;
         }
 
-        public Builder sharedAccessPolicyKey(@Nullable Input<String> sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = Input.ofNullable(sharedAccessPolicyKey);
+            this.sharedAccessPolicyKey = Output.ofNullable(sharedAccessPolicyKey);
             return this;
         }
 
-        public Builder sharedAccessPolicyName(@Nullable Input<String> sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = Input.ofNullable(sharedAccessPolicyName);
+            this.sharedAccessPolicyName = Output.ofNullable(sharedAccessPolicyName);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public IoTHubStreamInputDataSourceArgs build() {

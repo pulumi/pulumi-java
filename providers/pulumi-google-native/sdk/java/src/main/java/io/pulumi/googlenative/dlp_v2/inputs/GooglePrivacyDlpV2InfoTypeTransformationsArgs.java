@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulu
      * 
      */
     @InputImport(name="transformations", required=true)
-      private final Input<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
+      private final Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
 
-    public Input<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> getTransformations() {
+    public Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> getTransformations() {
         return this.transformations;
     }
 
-    public GooglePrivacyDlpV2InfoTypeTransformationsArgs(Input<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations) {
+    public GooglePrivacyDlpV2InfoTypeTransformationsArgs(Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations) {
         this.transformations = Objects.requireNonNull(transformations, "expected parameter 'transformations' to be non-null");
     }
 
     private GooglePrivacyDlpV2InfoTypeTransformationsArgs() {
-        this.transformations = Input.empty();
+        this.transformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
+        private Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulu
     	      this.transformations = defaults.transformations;
         }
 
-        public Builder transformations(Input<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations) {
+        public Builder transformations(Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations) {
             this.transformations = Objects.requireNonNull(transformations);
             return this;
         }
 
         public Builder transformations(List<GooglePrivacyDlpV2InfoTypeTransformationArgs> transformations) {
-            this.transformations = Input.of(Objects.requireNonNull(transformations));
+            this.transformations = Output.of(Objects.requireNonNull(transformations));
             return this;
         }
         public GooglePrivacyDlpV2InfoTypeTransformationsArgs build() {

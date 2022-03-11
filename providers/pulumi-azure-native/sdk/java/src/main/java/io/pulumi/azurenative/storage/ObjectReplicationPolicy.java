@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.ObjectReplicationPolicyArgs;
 import io.pulumi.azurenative.storage.outputs.ObjectReplicationPolicyRuleResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -169,24 +168,24 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectReplicationPolicy(String name, ObjectReplicationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:ObjectReplicationPolicy", name, args == null ? ObjectReplicationPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storage:ObjectReplicationPolicy", name, args == null ? ObjectReplicationPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ObjectReplicationPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ObjectReplicationPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:ObjectReplicationPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storage/v20190601:ObjectReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20200801preview:ObjectReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210101:ObjectReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210201:ObjectReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210401:ObjectReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210601:ObjectReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210801:ObjectReplicationPolicy").build())
+                Output.of(Alias.builder().setType("azure-native:storage/v20190601:ObjectReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20200801preview:ObjectReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210101:ObjectReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210201:ObjectReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210401:ObjectReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210601:ObjectReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210801:ObjectReplicationPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -200,7 +199,7 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ObjectReplicationPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ObjectReplicationPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ObjectReplicationPolicy(name, id, options);
     }
 }

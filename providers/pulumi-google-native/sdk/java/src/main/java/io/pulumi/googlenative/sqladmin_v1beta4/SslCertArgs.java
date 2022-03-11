@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,39 +19,39 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commonName")
-      private final @Nullable Input<String> commonName;
+      private final @Nullable Output<String> commonName;
 
-    public Input<String> getCommonName() {
-        return this.commonName == null ? Input.empty() : this.commonName;
+    public Output<String> getCommonName() {
+        return this.commonName == null ? Output.empty() : this.commonName;
     }
 
     @InputImport(name="instance", required=true)
-      private final Input<String> instance;
+      private final Output<String> instance;
 
-    public Input<String> getInstance() {
+    public Output<String> getInstance() {
         return this.instance;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public SslCertArgs(
-        @Nullable Input<String> commonName,
-        Input<String> instance,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> commonName,
+        Output<String> instance,
+        @Nullable Output<String> project) {
         this.commonName = commonName;
         this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
         this.project = project;
     }
 
     private SslCertArgs() {
-        this.commonName = Input.empty();
-        this.instance = Input.empty();
-        this.project = Input.empty();
+        this.commonName = Output.empty();
+        this.instance = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> commonName;
-        private Input<String> instance;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> commonName;
+        private Output<String> instance;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder commonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Output<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Input.ofNullable(commonName);
+            this.commonName = Output.ofNullable(commonName);
             return this;
         }
 
-        public Builder instance(Input<String> instance) {
+        public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
         public Builder instance(String instance) {
-            this.instance = Input.of(Objects.requireNonNull(instance));
+            this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public SslCertArgs build() {

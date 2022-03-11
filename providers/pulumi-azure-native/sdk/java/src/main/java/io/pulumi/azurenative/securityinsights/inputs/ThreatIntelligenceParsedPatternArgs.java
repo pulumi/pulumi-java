@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.ThreatIntelligenceParsedPatternTypeValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="patternTypeKey")
-      private final @Nullable Input<String> patternTypeKey;
+      private final @Nullable Output<String> patternTypeKey;
 
-    public Input<String> getPatternTypeKey() {
-        return this.patternTypeKey == null ? Input.empty() : this.patternTypeKey;
+    public Output<String> getPatternTypeKey() {
+        return this.patternTypeKey == null ? Output.empty() : this.patternTypeKey;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="patternTypeValues")
-      private final @Nullable Input<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
+      private final @Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
 
-    public Input<List<ThreatIntelligenceParsedPatternTypeValueArgs>> getPatternTypeValues() {
-        return this.patternTypeValues == null ? Input.empty() : this.patternTypeValues;
+    public Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> getPatternTypeValues() {
+        return this.patternTypeValues == null ? Output.empty() : this.patternTypeValues;
     }
 
     public ThreatIntelligenceParsedPatternArgs(
-        @Nullable Input<String> patternTypeKey,
-        @Nullable Input<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues) {
+        @Nullable Output<String> patternTypeKey,
+        @Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues) {
         this.patternTypeKey = patternTypeKey;
         this.patternTypeValues = patternTypeValues;
     }
 
     private ThreatIntelligenceParsedPatternArgs() {
-        this.patternTypeKey = Input.empty();
-        this.patternTypeValues = Input.empty();
+        this.patternTypeKey = Output.empty();
+        this.patternTypeValues = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> patternTypeKey;
-        private @Nullable Input<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
+        private @Nullable Output<String> patternTypeKey;
+        private @Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
     	      this.patternTypeValues = defaults.patternTypeValues;
         }
 
-        public Builder patternTypeKey(@Nullable Input<String> patternTypeKey) {
+        public Builder patternTypeKey(@Nullable Output<String> patternTypeKey) {
             this.patternTypeKey = patternTypeKey;
             return this;
         }
 
         public Builder patternTypeKey(@Nullable String patternTypeKey) {
-            this.patternTypeKey = Input.ofNullable(patternTypeKey);
+            this.patternTypeKey = Output.ofNullable(patternTypeKey);
             return this;
         }
 
-        public Builder patternTypeValues(@Nullable Input<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues) {
+        public Builder patternTypeValues(@Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues) {
             this.patternTypeValues = patternTypeValues;
             return this;
         }
 
         public Builder patternTypeValues(@Nullable List<ThreatIntelligenceParsedPatternTypeValueArgs> patternTypeValues) {
-            this.patternTypeValues = Input.ofNullable(patternTypeValues);
+            this.patternTypeValues = Output.ofNullable(patternTypeValues);
             return this;
         }
         public ThreatIntelligenceParsedPatternArgs build() {

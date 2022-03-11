@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricTargetArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,22 +34,22 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<MetricTargetArgs> target;
+      private final Output<MetricTargetArgs> target;
 
-    public Input<MetricTargetArgs> getTarget() {
+    public Output<MetricTargetArgs> getTarget() {
         return this.target;
     }
 
     public ResourceMetricSourceArgs(
-        Input<String> name,
-        Input<MetricTargetArgs> target) {
+        Output<String> name,
+        Output<MetricTargetArgs> target) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
     }
 
     private ResourceMetricSourceArgs() {
-        this.name = Input.empty();
-        this.target = Input.empty();
+        this.name = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<MetricTargetArgs> target;
+        private Output<String> name;
+        private Output<MetricTargetArgs> target;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     	      this.target = defaults.target;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder target(Input<MetricTargetArgs> target) {
+        public Builder target(Output<MetricTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(MetricTargetArgs target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public ResourceMetricSourceArgs build() {

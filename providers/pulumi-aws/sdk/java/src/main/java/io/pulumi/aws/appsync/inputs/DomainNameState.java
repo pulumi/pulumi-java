@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appsyncDomainName")
-      private final @Nullable Input<String> appsyncDomainName;
+      private final @Nullable Output<String> appsyncDomainName;
 
-    public Input<String> getAppsyncDomainName() {
-        return this.appsyncDomainName == null ? Input.empty() : this.appsyncDomainName;
+    public Output<String> getAppsyncDomainName() {
+        return this.appsyncDomainName == null ? Output.empty() : this.appsyncDomainName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneId")
-      private final @Nullable Input<String> hostedZoneId;
+      private final @Nullable Output<String> hostedZoneId;
 
-    public Input<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Input.empty() : this.hostedZoneId;
+    public Output<String> getHostedZoneId() {
+        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
     }
 
     public DomainNameState(
-        @Nullable Input<String> appsyncDomainName,
-        @Nullable Input<String> certificateArn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> domainName,
-        @Nullable Input<String> hostedZoneId) {
+        @Nullable Output<String> appsyncDomainName,
+        @Nullable Output<String> certificateArn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> domainName,
+        @Nullable Output<String> hostedZoneId) {
         this.appsyncDomainName = appsyncDomainName;
         this.certificateArn = certificateArn;
         this.description = description;
@@ -83,11 +83,11 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainNameState() {
-        this.appsyncDomainName = Input.empty();
-        this.certificateArn = Input.empty();
-        this.description = Input.empty();
-        this.domainName = Input.empty();
-        this.hostedZoneId = Input.empty();
+        this.appsyncDomainName = Output.empty();
+        this.certificateArn = Output.empty();
+        this.description = Output.empty();
+        this.domainName = Output.empty();
+        this.hostedZoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appsyncDomainName;
-        private @Nullable Input<String> certificateArn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<String> hostedZoneId;
+        private @Nullable Output<String> appsyncDomainName;
+        private @Nullable Output<String> certificateArn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<String> hostedZoneId;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     	      this.hostedZoneId = defaults.hostedZoneId;
         }
 
-        public Builder appsyncDomainName(@Nullable Input<String> appsyncDomainName) {
+        public Builder appsyncDomainName(@Nullable Output<String> appsyncDomainName) {
             this.appsyncDomainName = appsyncDomainName;
             return this;
         }
 
         public Builder appsyncDomainName(@Nullable String appsyncDomainName) {
-            this.appsyncDomainName = Input.ofNullable(appsyncDomainName);
+            this.appsyncDomainName = Output.ofNullable(appsyncDomainName);
             return this;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Input.ofNullable(hostedZoneId);
+            this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
         public DomainNameState build() {

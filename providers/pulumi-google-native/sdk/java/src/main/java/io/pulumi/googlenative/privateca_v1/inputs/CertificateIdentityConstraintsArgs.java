@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.ExprArgs;
 import java.lang.Boolean;
@@ -24,9 +24,9 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
-      private final Input<Boolean> allowSubjectAltNamesPassthrough;
+      private final Output<Boolean> allowSubjectAltNamesPassthrough;
 
-    public Input<Boolean> getAllowSubjectAltNamesPassthrough() {
+    public Output<Boolean> getAllowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
     }
 
@@ -35,9 +35,9 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowSubjectPassthrough", required=true)
-      private final Input<Boolean> allowSubjectPassthrough;
+      private final Output<Boolean> allowSubjectPassthrough;
 
-    public Input<Boolean> getAllowSubjectPassthrough() {
+    public Output<Boolean> getAllowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
     }
 
@@ -46,25 +46,25 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="celExpression")
-      private final @Nullable Input<ExprArgs> celExpression;
+      private final @Nullable Output<ExprArgs> celExpression;
 
-    public Input<ExprArgs> getCelExpression() {
-        return this.celExpression == null ? Input.empty() : this.celExpression;
+    public Output<ExprArgs> getCelExpression() {
+        return this.celExpression == null ? Output.empty() : this.celExpression;
     }
 
     public CertificateIdentityConstraintsArgs(
-        Input<Boolean> allowSubjectAltNamesPassthrough,
-        Input<Boolean> allowSubjectPassthrough,
-        @Nullable Input<ExprArgs> celExpression) {
+        Output<Boolean> allowSubjectAltNamesPassthrough,
+        Output<Boolean> allowSubjectPassthrough,
+        @Nullable Output<ExprArgs> celExpression) {
         this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough, "expected parameter 'allowSubjectAltNamesPassthrough' to be non-null");
         this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough, "expected parameter 'allowSubjectPassthrough' to be non-null");
         this.celExpression = celExpression;
     }
 
     private CertificateIdentityConstraintsArgs() {
-        this.allowSubjectAltNamesPassthrough = Input.empty();
-        this.allowSubjectPassthrough = Input.empty();
-        this.celExpression = Input.empty();
+        this.allowSubjectAltNamesPassthrough = Output.empty();
+        this.allowSubjectPassthrough = Output.empty();
+        this.celExpression = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<Boolean> allowSubjectAltNamesPassthrough;
-        private Input<Boolean> allowSubjectPassthrough;
-        private @Nullable Input<ExprArgs> celExpression;
+        private Output<Boolean> allowSubjectAltNamesPassthrough;
+        private Output<Boolean> allowSubjectPassthrough;
+        private @Nullable Output<ExprArgs> celExpression;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
     	      this.celExpression = defaults.celExpression;
         }
 
-        public Builder allowSubjectAltNamesPassthrough(Input<Boolean> allowSubjectAltNamesPassthrough) {
+        public Builder allowSubjectAltNamesPassthrough(Output<Boolean> allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
 
         public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
-            this.allowSubjectAltNamesPassthrough = Input.of(Objects.requireNonNull(allowSubjectAltNamesPassthrough));
+            this.allowSubjectAltNamesPassthrough = Output.of(Objects.requireNonNull(allowSubjectAltNamesPassthrough));
             return this;
         }
 
-        public Builder allowSubjectPassthrough(Input<Boolean> allowSubjectPassthrough) {
+        public Builder allowSubjectPassthrough(Output<Boolean> allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
 
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
-            this.allowSubjectPassthrough = Input.of(Objects.requireNonNull(allowSubjectPassthrough));
+            this.allowSubjectPassthrough = Output.of(Objects.requireNonNull(allowSubjectPassthrough));
             return this;
         }
 
-        public Builder celExpression(@Nullable Input<ExprArgs> celExpression) {
+        public Builder celExpression(@Nullable Output<ExprArgs> celExpression) {
             this.celExpression = celExpression;
             return this;
         }
 
         public Builder celExpression(@Nullable ExprArgs celExpression) {
-            this.celExpression = Input.ofNullable(celExpression);
+            this.celExpression = Output.ofNullable(celExpression);
             return this;
         }
         public CertificateIdentityConstraintsArgs build() {

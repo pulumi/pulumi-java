@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerName")
-      private final @Nullable Input<String> containerName;
+      private final @Nullable Output<String> containerName;
 
-    public Input<String> getContainerName() {
-        return this.containerName == null ? Input.empty() : this.containerName;
+    public Output<String> getContainerName() {
+        return this.containerName == null ? Output.empty() : this.containerName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerPort")
-      private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Output<Integer> containerPort;
 
-    public Input<Integer> getContainerPort() {
-        return this.containerPort == null ? Input.empty() : this.containerPort;
+    public Output<Integer> getContainerPort() {
+        return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="registryArn")
-      private final @Nullable Input<String> registryArn;
+      private final @Nullable Output<String> registryArn;
 
-    public Input<String> getRegistryArn() {
-        return this.registryArn == null ? Input.empty() : this.registryArn;
+    public Output<String> getRegistryArn() {
+        return this.registryArn == null ? Output.empty() : this.registryArn;
     }
 
     public TaskSetServiceRegistryArgs(
-        @Nullable Input<String> containerName,
-        @Nullable Input<Integer> containerPort,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> registryArn) {
+        @Nullable Output<String> containerName,
+        @Nullable Output<Integer> containerPort,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> registryArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.port = port;
@@ -71,10 +71,10 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
     }
 
     private TaskSetServiceRegistryArgs() {
-        this.containerName = Input.empty();
-        this.containerPort = Input.empty();
-        this.port = Input.empty();
-        this.registryArn = Input.empty();
+        this.containerName = Output.empty();
+        this.containerPort = Output.empty();
+        this.port = Output.empty();
+        this.registryArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerName;
-        private @Nullable Input<Integer> containerPort;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> registryArn;
+        private @Nullable Output<String> containerName;
+        private @Nullable Output<Integer> containerPort;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> registryArn;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class TaskSetServiceRegistryArgs extends io.pulumi.resources.Resour
     	      this.registryArn = defaults.registryArn;
         }
 
-        public Builder containerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Input.ofNullable(containerName);
+            this.containerName = Output.ofNullable(containerName);
             return this;
         }
 
-        public Builder containerPort(@Nullable Input<Integer> containerPort) {
+        public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Input.ofNullable(containerPort);
+            this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder registryArn(@Nullable Input<String> registryArn) {
+        public Builder registryArn(@Nullable Output<String> registryArn) {
             this.registryArn = registryArn;
             return this;
         }
 
         public Builder registryArn(@Nullable String registryArn) {
-            this.registryArn = Input.ofNullable(registryArn);
+            this.registryArn = Output.ofNullable(registryArn);
             return this;
         }
         public TaskSetServiceRegistryArgs build() {

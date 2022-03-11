@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datafactory.inputs.SSISLogLocationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SSISPackageLocationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SSISPropertyOverrideArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -36,9 +36,9 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connectVia", required=true)
-      private final Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia;
     }
 
@@ -47,10 +47,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="environmentPath")
-      private final @Nullable Input<Object> environmentPath;
+      private final @Nullable Output<Object> environmentPath;
 
-    public Input<Object> getEnvironmentPath() {
-        return this.environmentPath == null ? Input.empty() : this.environmentPath;
+    public Output<Object> getEnvironmentPath() {
+        return this.environmentPath == null ? Output.empty() : this.environmentPath;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="executionCredential")
-      private final @Nullable Input<SSISExecutionCredentialArgs> executionCredential;
+      private final @Nullable Output<SSISExecutionCredentialArgs> executionCredential;
 
-    public Input<SSISExecutionCredentialArgs> getExecutionCredential() {
-        return this.executionCredential == null ? Input.empty() : this.executionCredential;
+    public Output<SSISExecutionCredentialArgs> getExecutionCredential() {
+        return this.executionCredential == null ? Output.empty() : this.executionCredential;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="logLocation")
-      private final @Nullable Input<SSISLogLocationArgs> logLocation;
+      private final @Nullable Output<SSISLogLocationArgs> logLocation;
 
-    public Input<SSISLogLocationArgs> getLogLocation() {
-        return this.logLocation == null ? Input.empty() : this.logLocation;
+    public Output<SSISLogLocationArgs> getLogLocation() {
+        return this.logLocation == null ? Output.empty() : this.logLocation;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="loggingLevel")
-      private final @Nullable Input<Object> loggingLevel;
+      private final @Nullable Output<Object> loggingLevel;
 
-    public Input<Object> getLoggingLevel() {
-        return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
+    public Output<Object> getLoggingLevel() {
+        return this.loggingLevel == null ? Output.empty() : this.loggingLevel;
     }
 
     /**
@@ -124,9 +124,9 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -135,10 +135,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="packageConnectionManagers")
-      private final @Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers;
+      private final @Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers;
 
-    public Input<Map<String,Map<String,SSISExecutionParameterArgs>>> getPackageConnectionManagers() {
-        return this.packageConnectionManagers == null ? Input.empty() : this.packageConnectionManagers;
+    public Output<Map<String,Map<String,SSISExecutionParameterArgs>>> getPackageConnectionManagers() {
+        return this.packageConnectionManagers == null ? Output.empty() : this.packageConnectionManagers;
     }
 
     /**
@@ -146,9 +146,9 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="packageLocation", required=true)
-      private final Input<SSISPackageLocationArgs> packageLocation;
+      private final Output<SSISPackageLocationArgs> packageLocation;
 
-    public Input<SSISPackageLocationArgs> getPackageLocation() {
+    public Output<SSISPackageLocationArgs> getPackageLocation() {
         return this.packageLocation;
     }
 
@@ -157,10 +157,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="packageParameters")
-      private final @Nullable Input<Map<String,SSISExecutionParameterArgs>> packageParameters;
+      private final @Nullable Output<Map<String,SSISExecutionParameterArgs>> packageParameters;
 
-    public Input<Map<String,SSISExecutionParameterArgs>> getPackageParameters() {
-        return this.packageParameters == null ? Input.empty() : this.packageParameters;
+    public Output<Map<String,SSISExecutionParameterArgs>> getPackageParameters() {
+        return this.packageParameters == null ? Output.empty() : this.packageParameters;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="projectConnectionManagers")
-      private final @Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers;
+      private final @Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers;
 
-    public Input<Map<String,Map<String,SSISExecutionParameterArgs>>> getProjectConnectionManagers() {
-        return this.projectConnectionManagers == null ? Input.empty() : this.projectConnectionManagers;
+    public Output<Map<String,Map<String,SSISExecutionParameterArgs>>> getProjectConnectionManagers() {
+        return this.projectConnectionManagers == null ? Output.empty() : this.projectConnectionManagers;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="projectParameters")
-      private final @Nullable Input<Map<String,SSISExecutionParameterArgs>> projectParameters;
+      private final @Nullable Output<Map<String,SSISExecutionParameterArgs>> projectParameters;
 
-    public Input<Map<String,SSISExecutionParameterArgs>> getProjectParameters() {
-        return this.projectParameters == null ? Input.empty() : this.projectParameters;
+    public Output<Map<String,SSISExecutionParameterArgs>> getProjectParameters() {
+        return this.projectParameters == null ? Output.empty() : this.projectParameters;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="propertyOverrides")
-      private final @Nullable Input<Map<String,SSISPropertyOverrideArgs>> propertyOverrides;
+      private final @Nullable Output<Map<String,SSISPropertyOverrideArgs>> propertyOverrides;
 
-    public Input<Map<String,SSISPropertyOverrideArgs>> getPropertyOverrides() {
-        return this.propertyOverrides == null ? Input.empty() : this.propertyOverrides;
+    public Output<Map<String,SSISPropertyOverrideArgs>> getPropertyOverrides() {
+        return this.propertyOverrides == null ? Output.empty() : this.propertyOverrides;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="runtime")
-      private final @Nullable Input<Object> runtime;
+      private final @Nullable Output<Object> runtime;
 
-    public Input<Object> getRuntime() {
-        return this.runtime == null ? Input.empty() : this.runtime;
+    public Output<Object> getRuntime() {
+        return this.runtime == null ? Output.empty() : this.runtime;
     }
 
     /**
@@ -224,9 +224,9 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -235,32 +235,32 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public ExecuteSSISPackageActivityArgs(
-        Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> environmentPath,
-        @Nullable Input<SSISExecutionCredentialArgs> executionCredential,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Input<SSISLogLocationArgs> logLocation,
-        @Nullable Input<Object> loggingLevel,
-        Input<String> name,
-        @Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers,
-        Input<SSISPackageLocationArgs> packageLocation,
-        @Nullable Input<Map<String,SSISExecutionParameterArgs>> packageParameters,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        @Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers,
-        @Nullable Input<Map<String,SSISExecutionParameterArgs>> projectParameters,
-        @Nullable Input<Map<String,SSISPropertyOverrideArgs>> propertyOverrides,
-        @Nullable Input<Object> runtime,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> environmentPath,
+        @Nullable Output<SSISExecutionCredentialArgs> executionCredential,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        @Nullable Output<SSISLogLocationArgs> logLocation,
+        @Nullable Output<Object> loggingLevel,
+        Output<String> name,
+        @Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers,
+        Output<SSISPackageLocationArgs> packageLocation,
+        @Nullable Output<Map<String,SSISExecutionParameterArgs>> packageParameters,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        @Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers,
+        @Nullable Output<Map<String,SSISExecutionParameterArgs>> projectParameters,
+        @Nullable Output<Map<String,SSISPropertyOverrideArgs>> propertyOverrides,
+        @Nullable Output<Object> runtime,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.connectVia = Objects.requireNonNull(connectVia, "expected parameter 'connectVia' to be non-null");
         this.dependsOn = dependsOn;
         this.description = description;
@@ -283,25 +283,25 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
     }
 
     private ExecuteSSISPackageActivityArgs() {
-        this.connectVia = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.environmentPath = Input.empty();
-        this.executionCredential = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.logLocation = Input.empty();
-        this.loggingLevel = Input.empty();
-        this.name = Input.empty();
-        this.packageConnectionManagers = Input.empty();
-        this.packageLocation = Input.empty();
-        this.packageParameters = Input.empty();
-        this.policy = Input.empty();
-        this.projectConnectionManagers = Input.empty();
-        this.projectParameters = Input.empty();
-        this.propertyOverrides = Input.empty();
-        this.runtime = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.connectVia = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.environmentPath = Output.empty();
+        this.executionCredential = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.logLocation = Output.empty();
+        this.loggingLevel = Output.empty();
+        this.name = Output.empty();
+        this.packageConnectionManagers = Output.empty();
+        this.packageLocation = Output.empty();
+        this.packageParameters = Output.empty();
+        this.policy = Output.empty();
+        this.projectConnectionManagers = Output.empty();
+        this.projectParameters = Output.empty();
+        this.propertyOverrides = Output.empty();
+        this.runtime = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -313,25 +313,25 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> environmentPath;
-        private @Nullable Input<SSISExecutionCredentialArgs> executionCredential;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Input<SSISLogLocationArgs> logLocation;
-        private @Nullable Input<Object> loggingLevel;
-        private Input<String> name;
-        private @Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers;
-        private Input<SSISPackageLocationArgs> packageLocation;
-        private @Nullable Input<Map<String,SSISExecutionParameterArgs>> packageParameters;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private @Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers;
-        private @Nullable Input<Map<String,SSISExecutionParameterArgs>> projectParameters;
-        private @Nullable Input<Map<String,SSISPropertyOverrideArgs>> propertyOverrides;
-        private @Nullable Input<Object> runtime;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> environmentPath;
+        private @Nullable Output<SSISExecutionCredentialArgs> executionCredential;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private @Nullable Output<SSISLogLocationArgs> logLocation;
+        private @Nullable Output<Object> loggingLevel;
+        private Output<String> name;
+        private @Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers;
+        private Output<SSISPackageLocationArgs> packageLocation;
+        private @Nullable Output<Map<String,SSISExecutionParameterArgs>> packageParameters;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private @Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers;
+        private @Nullable Output<Map<String,SSISExecutionParameterArgs>> projectParameters;
+        private @Nullable Output<Map<String,SSISPropertyOverrideArgs>> propertyOverrides;
+        private @Nullable Output<Object> runtime;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -360,193 +360,193 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder connectVia(Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = Objects.requireNonNull(connectVia);
             return this;
         }
 
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.of(Objects.requireNonNull(connectVia));
+            this.connectVia = Output.of(Objects.requireNonNull(connectVia));
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environmentPath(@Nullable Input<Object> environmentPath) {
+        public Builder environmentPath(@Nullable Output<Object> environmentPath) {
             this.environmentPath = environmentPath;
             return this;
         }
 
         public Builder environmentPath(@Nullable Object environmentPath) {
-            this.environmentPath = Input.ofNullable(environmentPath);
+            this.environmentPath = Output.ofNullable(environmentPath);
             return this;
         }
 
-        public Builder executionCredential(@Nullable Input<SSISExecutionCredentialArgs> executionCredential) {
+        public Builder executionCredential(@Nullable Output<SSISExecutionCredentialArgs> executionCredential) {
             this.executionCredential = executionCredential;
             return this;
         }
 
         public Builder executionCredential(@Nullable SSISExecutionCredentialArgs executionCredential) {
-            this.executionCredential = Input.ofNullable(executionCredential);
+            this.executionCredential = Output.ofNullable(executionCredential);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder logLocation(@Nullable Input<SSISLogLocationArgs> logLocation) {
+        public Builder logLocation(@Nullable Output<SSISLogLocationArgs> logLocation) {
             this.logLocation = logLocation;
             return this;
         }
 
         public Builder logLocation(@Nullable SSISLogLocationArgs logLocation) {
-            this.logLocation = Input.ofNullable(logLocation);
+            this.logLocation = Output.ofNullable(logLocation);
             return this;
         }
 
-        public Builder loggingLevel(@Nullable Input<Object> loggingLevel) {
+        public Builder loggingLevel(@Nullable Output<Object> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
         public Builder loggingLevel(@Nullable Object loggingLevel) {
-            this.loggingLevel = Input.ofNullable(loggingLevel);
+            this.loggingLevel = Output.ofNullable(loggingLevel);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder packageConnectionManagers(@Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers) {
+        public Builder packageConnectionManagers(@Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers) {
             this.packageConnectionManagers = packageConnectionManagers;
             return this;
         }
 
         public Builder packageConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterArgs>> packageConnectionManagers) {
-            this.packageConnectionManagers = Input.ofNullable(packageConnectionManagers);
+            this.packageConnectionManagers = Output.ofNullable(packageConnectionManagers);
             return this;
         }
 
-        public Builder packageLocation(Input<SSISPackageLocationArgs> packageLocation) {
+        public Builder packageLocation(Output<SSISPackageLocationArgs> packageLocation) {
             this.packageLocation = Objects.requireNonNull(packageLocation);
             return this;
         }
 
         public Builder packageLocation(SSISPackageLocationArgs packageLocation) {
-            this.packageLocation = Input.of(Objects.requireNonNull(packageLocation));
+            this.packageLocation = Output.of(Objects.requireNonNull(packageLocation));
             return this;
         }
 
-        public Builder packageParameters(@Nullable Input<Map<String,SSISExecutionParameterArgs>> packageParameters) {
+        public Builder packageParameters(@Nullable Output<Map<String,SSISExecutionParameterArgs>> packageParameters) {
             this.packageParameters = packageParameters;
             return this;
         }
 
         public Builder packageParameters(@Nullable Map<String,SSISExecutionParameterArgs> packageParameters) {
-            this.packageParameters = Input.ofNullable(packageParameters);
+            this.packageParameters = Output.ofNullable(packageParameters);
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder projectConnectionManagers(@Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers) {
+        public Builder projectConnectionManagers(@Nullable Output<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers) {
             this.projectConnectionManagers = projectConnectionManagers;
             return this;
         }
 
         public Builder projectConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterArgs>> projectConnectionManagers) {
-            this.projectConnectionManagers = Input.ofNullable(projectConnectionManagers);
+            this.projectConnectionManagers = Output.ofNullable(projectConnectionManagers);
             return this;
         }
 
-        public Builder projectParameters(@Nullable Input<Map<String,SSISExecutionParameterArgs>> projectParameters) {
+        public Builder projectParameters(@Nullable Output<Map<String,SSISExecutionParameterArgs>> projectParameters) {
             this.projectParameters = projectParameters;
             return this;
         }
 
         public Builder projectParameters(@Nullable Map<String,SSISExecutionParameterArgs> projectParameters) {
-            this.projectParameters = Input.ofNullable(projectParameters);
+            this.projectParameters = Output.ofNullable(projectParameters);
             return this;
         }
 
-        public Builder propertyOverrides(@Nullable Input<Map<String,SSISPropertyOverrideArgs>> propertyOverrides) {
+        public Builder propertyOverrides(@Nullable Output<Map<String,SSISPropertyOverrideArgs>> propertyOverrides) {
             this.propertyOverrides = propertyOverrides;
             return this;
         }
 
         public Builder propertyOverrides(@Nullable Map<String,SSISPropertyOverrideArgs> propertyOverrides) {
-            this.propertyOverrides = Input.ofNullable(propertyOverrides);
+            this.propertyOverrides = Output.ofNullable(propertyOverrides);
             return this;
         }
 
-        public Builder runtime(@Nullable Input<Object> runtime) {
+        public Builder runtime(@Nullable Output<Object> runtime) {
             this.runtime = runtime;
             return this;
         }
 
         public Builder runtime(@Nullable Object runtime) {
-            this.runtime = Input.ofNullable(runtime);
+            this.runtime = Output.ofNullable(runtime);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public ExecuteSSISPackageActivityArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SshPublicKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publicKeys")
-      private final @Nullable Input<List<SshPublicKeyArgs>> publicKeys;
+      private final @Nullable Output<List<SshPublicKeyArgs>> publicKeys;
 
-    public Input<List<SshPublicKeyArgs>> getPublicKeys() {
-        return this.publicKeys == null ? Input.empty() : this.publicKeys;
+    public Output<List<SshPublicKeyArgs>> getPublicKeys() {
+        return this.publicKeys == null ? Output.empty() : this.publicKeys;
     }
 
-    public SshConfigurationArgs(@Nullable Input<List<SshPublicKeyArgs>> publicKeys) {
+    public SshConfigurationArgs(@Nullable Output<List<SshPublicKeyArgs>> publicKeys) {
         this.publicKeys = publicKeys;
     }
 
     private SshConfigurationArgs() {
-        this.publicKeys = Input.empty();
+        this.publicKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SshPublicKeyArgs>> publicKeys;
+        private @Nullable Output<List<SshPublicKeyArgs>> publicKeys;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder publicKeys(@Nullable Input<List<SshPublicKeyArgs>> publicKeys) {
+        public Builder publicKeys(@Nullable Output<List<SshPublicKeyArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
         public Builder publicKeys(@Nullable List<SshPublicKeyArgs> publicKeys) {
-            this.publicKeys = Input.ofNullable(publicKeys);
+            this.publicKeys = Output.ofNullable(publicKeys);
             return this;
         }
         public SshConfigurationArgs build() {

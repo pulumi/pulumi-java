@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.aws.organizations.inputs.OrganizationalUnitAccountGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accounts")
-      private final @Nullable Input<List<OrganizationalUnitAccountGetArgs>> accounts;
+      private final @Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts;
 
-    public Input<List<OrganizationalUnitAccountGetArgs>> getAccounts() {
-        return this.accounts == null ? Input.empty() : this.accounts;
+    public Output<List<OrganizationalUnitAccountGetArgs>> getAccounts() {
+        return this.accounts == null ? Output.empty() : this.accounts;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parentId")
-      private final @Nullable Input<String> parentId;
+      private final @Nullable Output<String> parentId;
 
-    public Input<String> getParentId() {
-        return this.parentId == null ? Input.empty() : this.parentId;
+    public Output<String> getParentId() {
+        return this.parentId == null ? Output.empty() : this.parentId;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public OrganizationalUnitState(
-        @Nullable Input<List<OrganizationalUnitAccountGetArgs>> accounts,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parentId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parentId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.accounts = accounts;
         this.arn = arn;
         this.name = name;
@@ -99,12 +99,12 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
     }
 
     private OrganizationalUnitState() {
-        this.accounts = Input.empty();
-        this.arn = Input.empty();
-        this.name = Input.empty();
-        this.parentId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.accounts = Output.empty();
+        this.arn = Output.empty();
+        this.name = Output.empty();
+        this.parentId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OrganizationalUnitAccountGetArgs>> accounts;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parentId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parentId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder accounts(@Nullable Input<List<OrganizationalUnitAccountGetArgs>> accounts) {
+        public Builder accounts(@Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts) {
             this.accounts = accounts;
             return this;
         }
 
         public Builder accounts(@Nullable List<OrganizationalUnitAccountGetArgs> accounts) {
-            this.accounts = Input.ofNullable(accounts);
+            this.accounts = Output.ofNullable(accounts);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentId(@Nullable Input<String> parentId) {
+        public Builder parentId(@Nullable Output<String> parentId) {
             this.parentId = parentId;
             return this;
         }
 
         public Builder parentId(@Nullable String parentId) {
-            this.parentId = Input.ofNullable(parentId);
+            this.parentId = Output.ofNullable(parentId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public OrganizationalUnitState build() {

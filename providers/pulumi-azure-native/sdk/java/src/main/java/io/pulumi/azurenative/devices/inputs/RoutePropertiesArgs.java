@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.enums.RoutingSource;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<String> condition;
+      private final @Nullable Output<String> condition;
 
-    public Input<String> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<String> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endpointNames", required=true)
-      private final Input<List<String>> endpointNames;
+      private final Output<List<String>> endpointNames;
 
-    public Input<List<String>> getEndpointNames() {
+    public Output<List<String>> getEndpointNames() {
         return this.endpointNames;
     }
 
@@ -49,9 +49,9 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -60,9 +60,9 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -71,18 +71,18 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<Either<String,RoutingSource>> source;
+      private final Output<Either<String,RoutingSource>> source;
 
-    public Input<Either<String,RoutingSource>> getSource() {
+    public Output<Either<String,RoutingSource>> getSource() {
         return this.source;
     }
 
     public RoutePropertiesArgs(
-        @Nullable Input<String> condition,
-        Input<List<String>> endpointNames,
-        Input<Boolean> isEnabled,
-        Input<String> name,
-        Input<Either<String,RoutingSource>> source) {
+        @Nullable Output<String> condition,
+        Output<List<String>> endpointNames,
+        Output<Boolean> isEnabled,
+        Output<String> name,
+        Output<Either<String,RoutingSource>> source) {
         this.condition = condition;
         this.endpointNames = Objects.requireNonNull(endpointNames, "expected parameter 'endpointNames' to be non-null");
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
@@ -91,11 +91,11 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RoutePropertiesArgs() {
-        this.condition = Input.empty();
-        this.endpointNames = Input.empty();
-        this.isEnabled = Input.empty();
-        this.name = Input.empty();
-        this.source = Input.empty();
+        this.condition = Output.empty();
+        this.endpointNames = Output.empty();
+        this.isEnabled = Output.empty();
+        this.name = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> condition;
-        private Input<List<String>> endpointNames;
-        private Input<Boolean> isEnabled;
-        private Input<String> name;
-        private Input<Either<String,RoutingSource>> source;
+        private @Nullable Output<String> condition;
+        private Output<List<String>> endpointNames;
+        private Output<Boolean> isEnabled;
+        private Output<String> name;
+        private Output<Either<String,RoutingSource>> source;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.source = defaults.source;
         }
 
-        public Builder condition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Output<String> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable String condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder endpointNames(Input<List<String>> endpointNames) {
+        public Builder endpointNames(Output<List<String>> endpointNames) {
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
 
         public Builder endpointNames(List<String> endpointNames) {
-            this.endpointNames = Input.of(Objects.requireNonNull(endpointNames));
+            this.endpointNames = Output.of(Objects.requireNonNull(endpointNames));
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder source(Input<Either<String,RoutingSource>> source) {
+        public Builder source(Output<Either<String,RoutingSource>> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(Either<String,RoutingSource> source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
         public RoutePropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.ForwardSshTunnelConnectivityArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.GcsProfileArgs;
@@ -23,9 +23,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     public static final ConnectionProfileArgs Empty = new ConnectionProfileArgs();
 
     @InputImport(name="connectionProfileId", required=true)
-      private final Input<String> connectionProfileId;
+      private final Output<String> connectionProfileId;
 
-    public Input<String> getConnectionProfileId() {
+    public Output<String> getConnectionProfileId() {
         return this.connectionProfileId;
     }
 
@@ -34,9 +34,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -45,10 +45,10 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="forwardSshConnectivity")
-      private final @Nullable Input<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity;
+      private final @Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity;
 
-    public Input<ForwardSshTunnelConnectivityArgs> getForwardSshConnectivity() {
-        return this.forwardSshConnectivity == null ? Input.empty() : this.forwardSshConnectivity;
+    public Output<ForwardSshTunnelConnectivityArgs> getForwardSshConnectivity() {
+        return this.forwardSshConnectivity == null ? Output.empty() : this.forwardSshConnectivity;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gcsProfile")
-      private final @Nullable Input<GcsProfileArgs> gcsProfile;
+      private final @Nullable Output<GcsProfileArgs> gcsProfile;
 
-    public Input<GcsProfileArgs> getGcsProfile() {
-        return this.gcsProfile == null ? Input.empty() : this.gcsProfile;
+    public Output<GcsProfileArgs> getGcsProfile() {
+        return this.gcsProfile == null ? Output.empty() : this.gcsProfile;
     }
 
     /**
@@ -67,17 +67,17 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mysqlProfile")
-      private final @Nullable Input<MysqlProfileArgs> mysqlProfile;
+      private final @Nullable Output<MysqlProfileArgs> mysqlProfile;
 
-    public Input<MysqlProfileArgs> getMysqlProfile() {
-        return this.mysqlProfile == null ? Input.empty() : this.mysqlProfile;
+    public Output<MysqlProfileArgs> getMysqlProfile() {
+        return this.mysqlProfile == null ? Output.empty() : this.mysqlProfile;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="noConnectivity")
-      private final @Nullable Input<NoConnectivitySettingsArgs> noConnectivity;
+      private final @Nullable Output<NoConnectivitySettingsArgs> noConnectivity;
 
-    public Input<NoConnectivitySettingsArgs> getNoConnectivity() {
-        return this.noConnectivity == null ? Input.empty() : this.noConnectivity;
+    public Output<NoConnectivitySettingsArgs> getNoConnectivity() {
+        return this.noConnectivity == null ? Output.empty() : this.noConnectivity;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="oracleProfile")
-      private final @Nullable Input<OracleProfileArgs> oracleProfile;
+      private final @Nullable Output<OracleProfileArgs> oracleProfile;
 
-    public Input<OracleProfileArgs> getOracleProfile() {
-        return this.oracleProfile == null ? Input.empty() : this.oracleProfile;
+    public Output<OracleProfileArgs> getOracleProfile() {
+        return this.oracleProfile == null ? Output.empty() : this.oracleProfile;
     }
 
     /**
@@ -118,24 +118,24 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateConnectivity")
-      private final @Nullable Input<PrivateConnectivityArgs> privateConnectivity;
+      private final @Nullable Output<PrivateConnectivityArgs> privateConnectivity;
 
-    public Input<PrivateConnectivityArgs> getPrivateConnectivity() {
-        return this.privateConnectivity == null ? Input.empty() : this.privateConnectivity;
+    public Output<PrivateConnectivityArgs> getPrivateConnectivity() {
+        return this.privateConnectivity == null ? Output.empty() : this.privateConnectivity;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -143,26 +143,26 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="staticServiceIpConnectivity")
-      private final @Nullable Input<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity;
+      private final @Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity;
 
-    public Input<StaticServiceIpConnectivityArgs> getStaticServiceIpConnectivity() {
-        return this.staticServiceIpConnectivity == null ? Input.empty() : this.staticServiceIpConnectivity;
+    public Output<StaticServiceIpConnectivityArgs> getStaticServiceIpConnectivity() {
+        return this.staticServiceIpConnectivity == null ? Output.empty() : this.staticServiceIpConnectivity;
     }
 
     public ConnectionProfileArgs(
-        Input<String> connectionProfileId,
-        Input<String> displayName,
-        @Nullable Input<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity,
-        @Nullable Input<GcsProfileArgs> gcsProfile,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<MysqlProfileArgs> mysqlProfile,
-        @Nullable Input<NoConnectivitySettingsArgs> noConnectivity,
-        @Nullable Input<OracleProfileArgs> oracleProfile,
-        @Nullable Input<PrivateConnectivityArgs> privateConnectivity,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity) {
+        Output<String> connectionProfileId,
+        Output<String> displayName,
+        @Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity,
+        @Nullable Output<GcsProfileArgs> gcsProfile,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<MysqlProfileArgs> mysqlProfile,
+        @Nullable Output<NoConnectivitySettingsArgs> noConnectivity,
+        @Nullable Output<OracleProfileArgs> oracleProfile,
+        @Nullable Output<PrivateConnectivityArgs> privateConnectivity,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity) {
         this.connectionProfileId = Objects.requireNonNull(connectionProfileId, "expected parameter 'connectionProfileId' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.forwardSshConnectivity = forwardSshConnectivity;
@@ -179,19 +179,19 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ConnectionProfileArgs() {
-        this.connectionProfileId = Input.empty();
-        this.displayName = Input.empty();
-        this.forwardSshConnectivity = Input.empty();
-        this.gcsProfile = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.mysqlProfile = Input.empty();
-        this.noConnectivity = Input.empty();
-        this.oracleProfile = Input.empty();
-        this.privateConnectivity = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.staticServiceIpConnectivity = Input.empty();
+        this.connectionProfileId = Output.empty();
+        this.displayName = Output.empty();
+        this.forwardSshConnectivity = Output.empty();
+        this.gcsProfile = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.mysqlProfile = Output.empty();
+        this.noConnectivity = Output.empty();
+        this.oracleProfile = Output.empty();
+        this.privateConnectivity = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.staticServiceIpConnectivity = Output.empty();
     }
 
     public static Builder builder() {
@@ -203,19 +203,19 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> connectionProfileId;
-        private Input<String> displayName;
-        private @Nullable Input<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity;
-        private @Nullable Input<GcsProfileArgs> gcsProfile;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<MysqlProfileArgs> mysqlProfile;
-        private @Nullable Input<NoConnectivitySettingsArgs> noConnectivity;
-        private @Nullable Input<OracleProfileArgs> oracleProfile;
-        private @Nullable Input<PrivateConnectivityArgs> privateConnectivity;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity;
+        private Output<String> connectionProfileId;
+        private Output<String> displayName;
+        private @Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity;
+        private @Nullable Output<GcsProfileArgs> gcsProfile;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<MysqlProfileArgs> mysqlProfile;
+        private @Nullable Output<NoConnectivitySettingsArgs> noConnectivity;
+        private @Nullable Output<OracleProfileArgs> oracleProfile;
+        private @Nullable Output<PrivateConnectivityArgs> privateConnectivity;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity;
 
         public Builder() {
     	      // Empty
@@ -238,133 +238,133 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     	      this.staticServiceIpConnectivity = defaults.staticServiceIpConnectivity;
         }
 
-        public Builder connectionProfileId(Input<String> connectionProfileId) {
+        public Builder connectionProfileId(Output<String> connectionProfileId) {
             this.connectionProfileId = Objects.requireNonNull(connectionProfileId);
             return this;
         }
 
         public Builder connectionProfileId(String connectionProfileId) {
-            this.connectionProfileId = Input.of(Objects.requireNonNull(connectionProfileId));
+            this.connectionProfileId = Output.of(Objects.requireNonNull(connectionProfileId));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder forwardSshConnectivity(@Nullable Input<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity) {
+        public Builder forwardSshConnectivity(@Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity) {
             this.forwardSshConnectivity = forwardSshConnectivity;
             return this;
         }
 
         public Builder forwardSshConnectivity(@Nullable ForwardSshTunnelConnectivityArgs forwardSshConnectivity) {
-            this.forwardSshConnectivity = Input.ofNullable(forwardSshConnectivity);
+            this.forwardSshConnectivity = Output.ofNullable(forwardSshConnectivity);
             return this;
         }
 
-        public Builder gcsProfile(@Nullable Input<GcsProfileArgs> gcsProfile) {
+        public Builder gcsProfile(@Nullable Output<GcsProfileArgs> gcsProfile) {
             this.gcsProfile = gcsProfile;
             return this;
         }
 
         public Builder gcsProfile(@Nullable GcsProfileArgs gcsProfile) {
-            this.gcsProfile = Input.ofNullable(gcsProfile);
+            this.gcsProfile = Output.ofNullable(gcsProfile);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mysqlProfile(@Nullable Input<MysqlProfileArgs> mysqlProfile) {
+        public Builder mysqlProfile(@Nullable Output<MysqlProfileArgs> mysqlProfile) {
             this.mysqlProfile = mysqlProfile;
             return this;
         }
 
         public Builder mysqlProfile(@Nullable MysqlProfileArgs mysqlProfile) {
-            this.mysqlProfile = Input.ofNullable(mysqlProfile);
+            this.mysqlProfile = Output.ofNullable(mysqlProfile);
             return this;
         }
 
-        public Builder noConnectivity(@Nullable Input<NoConnectivitySettingsArgs> noConnectivity) {
+        public Builder noConnectivity(@Nullable Output<NoConnectivitySettingsArgs> noConnectivity) {
             this.noConnectivity = noConnectivity;
             return this;
         }
 
         public Builder noConnectivity(@Nullable NoConnectivitySettingsArgs noConnectivity) {
-            this.noConnectivity = Input.ofNullable(noConnectivity);
+            this.noConnectivity = Output.ofNullable(noConnectivity);
             return this;
         }
 
-        public Builder oracleProfile(@Nullable Input<OracleProfileArgs> oracleProfile) {
+        public Builder oracleProfile(@Nullable Output<OracleProfileArgs> oracleProfile) {
             this.oracleProfile = oracleProfile;
             return this;
         }
 
         public Builder oracleProfile(@Nullable OracleProfileArgs oracleProfile) {
-            this.oracleProfile = Input.ofNullable(oracleProfile);
+            this.oracleProfile = Output.ofNullable(oracleProfile);
             return this;
         }
 
-        public Builder privateConnectivity(@Nullable Input<PrivateConnectivityArgs> privateConnectivity) {
+        public Builder privateConnectivity(@Nullable Output<PrivateConnectivityArgs> privateConnectivity) {
             this.privateConnectivity = privateConnectivity;
             return this;
         }
 
         public Builder privateConnectivity(@Nullable PrivateConnectivityArgs privateConnectivity) {
-            this.privateConnectivity = Input.ofNullable(privateConnectivity);
+            this.privateConnectivity = Output.ofNullable(privateConnectivity);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder staticServiceIpConnectivity(@Nullable Input<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity) {
+        public Builder staticServiceIpConnectivity(@Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity) {
             this.staticServiceIpConnectivity = staticServiceIpConnectivity;
             return this;
         }
 
         public Builder staticServiceIpConnectivity(@Nullable StaticServiceIpConnectivityArgs staticServiceIpConnectivity) {
-            this.staticServiceIpConnectivity = Input.ofNullable(staticServiceIpConnectivity);
+            this.staticServiceIpConnectivity = Output.ofNullable(staticServiceIpConnectivity);
             return this;
         }
         public ConnectionProfileArgs build() {

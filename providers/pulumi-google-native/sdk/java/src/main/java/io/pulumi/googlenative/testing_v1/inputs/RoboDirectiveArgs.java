@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.enums.RoboDirectiveActionType;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionType", required=true)
-      private final Input<RoboDirectiveActionType> actionType;
+      private final Output<RoboDirectiveActionType> actionType;
 
-    public Input<RoboDirectiveActionType> getActionType() {
+    public Output<RoboDirectiveActionType> getActionType() {
         return this.actionType;
     }
 
@@ -35,10 +35,10 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputText")
-      private final @Nullable Input<String> inputText;
+      private final @Nullable Output<String> inputText;
 
-    public Input<String> getInputText() {
-        return this.inputText == null ? Input.empty() : this.inputText;
+    public Output<String> getInputText() {
+        return this.inputText == null ? Output.empty() : this.inputText;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
     public RoboDirectiveArgs(
-        Input<RoboDirectiveActionType> actionType,
-        @Nullable Input<String> inputText,
-        Input<String> resourceName) {
+        Output<RoboDirectiveActionType> actionType,
+        @Nullable Output<String> inputText,
+        Output<String> resourceName) {
         this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
         this.inputText = inputText;
         this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
     }
 
     private RoboDirectiveArgs() {
-        this.actionType = Input.empty();
-        this.inputText = Input.empty();
-        this.resourceName = Input.empty();
+        this.actionType = Output.empty();
+        this.inputText = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<RoboDirectiveActionType> actionType;
-        private @Nullable Input<String> inputText;
-        private Input<String> resourceName;
+        private Output<RoboDirectiveActionType> actionType;
+        private @Nullable Output<String> inputText;
+        private Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder actionType(Input<RoboDirectiveActionType> actionType) {
+        public Builder actionType(Output<RoboDirectiveActionType> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
         public Builder actionType(RoboDirectiveActionType actionType) {
-            this.actionType = Input.of(Objects.requireNonNull(actionType));
+            this.actionType = Output.of(Objects.requireNonNull(actionType));
             return this;
         }
 
-        public Builder inputText(@Nullable Input<String> inputText) {
+        public Builder inputText(@Nullable Output<String> inputText) {
             this.inputText = inputText;
             return this;
         }
 
         public Builder inputText(@Nullable String inputText) {
-            this.inputText = Input.ofNullable(inputText);
+            this.inputText = Output.ofNullable(inputText);
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
         public RoboDirectiveArgs build() {

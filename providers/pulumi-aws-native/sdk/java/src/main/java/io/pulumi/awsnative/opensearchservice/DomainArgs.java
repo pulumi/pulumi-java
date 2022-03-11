@@ -13,7 +13,7 @@ import io.pulumi.awsnative.opensearchservice.inputs.DomainNodeToNodeEncryptionOp
 import io.pulumi.awsnative.opensearchservice.inputs.DomainSnapshotOptionsArgs;
 import io.pulumi.awsnative.opensearchservice.inputs.DomainTagArgs;
 import io.pulumi.awsnative.opensearchservice.inputs.DomainVPCOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,94 +27,94 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     public static final DomainArgs Empty = new DomainArgs();
 
     @InputImport(name="accessPolicies")
-      private final @Nullable Input<Object> accessPolicies;
+      private final @Nullable Output<Object> accessPolicies;
 
-    public Input<Object> getAccessPolicies() {
-        return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
+    public Output<Object> getAccessPolicies() {
+        return this.accessPolicies == null ? Output.empty() : this.accessPolicies;
     }
 
     @InputImport(name="advancedOptions")
-      private final @Nullable Input<Object> advancedOptions;
+      private final @Nullable Output<Object> advancedOptions;
 
-    public Input<Object> getAdvancedOptions() {
-        return this.advancedOptions == null ? Input.empty() : this.advancedOptions;
+    public Output<Object> getAdvancedOptions() {
+        return this.advancedOptions == null ? Output.empty() : this.advancedOptions;
     }
 
     @InputImport(name="advancedSecurityOptions")
-      private final @Nullable Input<DomainAdvancedSecurityOptionsInputArgs> advancedSecurityOptions;
+      private final @Nullable Output<DomainAdvancedSecurityOptionsInputArgs> advancedSecurityOptions;
 
-    public Input<DomainAdvancedSecurityOptionsInputArgs> getAdvancedSecurityOptions() {
-        return this.advancedSecurityOptions == null ? Input.empty() : this.advancedSecurityOptions;
+    public Output<DomainAdvancedSecurityOptionsInputArgs> getAdvancedSecurityOptions() {
+        return this.advancedSecurityOptions == null ? Output.empty() : this.advancedSecurityOptions;
     }
 
     @InputImport(name="clusterConfig")
-      private final @Nullable Input<DomainClusterConfigArgs> clusterConfig;
+      private final @Nullable Output<DomainClusterConfigArgs> clusterConfig;
 
-    public Input<DomainClusterConfigArgs> getClusterConfig() {
-        return this.clusterConfig == null ? Input.empty() : this.clusterConfig;
+    public Output<DomainClusterConfigArgs> getClusterConfig() {
+        return this.clusterConfig == null ? Output.empty() : this.clusterConfig;
     }
 
     @InputImport(name="cognitoOptions")
-      private final @Nullable Input<DomainCognitoOptionsArgs> cognitoOptions;
+      private final @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions;
 
-    public Input<DomainCognitoOptionsArgs> getCognitoOptions() {
-        return this.cognitoOptions == null ? Input.empty() : this.cognitoOptions;
+    public Output<DomainCognitoOptionsArgs> getCognitoOptions() {
+        return this.cognitoOptions == null ? Output.empty() : this.cognitoOptions;
     }
 
     @InputImport(name="domainEndpointOptions")
-      private final @Nullable Input<DomainEndpointOptionsArgs> domainEndpointOptions;
+      private final @Nullable Output<DomainEndpointOptionsArgs> domainEndpointOptions;
 
-    public Input<DomainEndpointOptionsArgs> getDomainEndpointOptions() {
-        return this.domainEndpointOptions == null ? Input.empty() : this.domainEndpointOptions;
+    public Output<DomainEndpointOptionsArgs> getDomainEndpointOptions() {
+        return this.domainEndpointOptions == null ? Output.empty() : this.domainEndpointOptions;
     }
 
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     @InputImport(name="eBSOptions")
-      private final @Nullable Input<DomainEBSOptionsArgs> eBSOptions;
+      private final @Nullable Output<DomainEBSOptionsArgs> eBSOptions;
 
-    public Input<DomainEBSOptionsArgs> getEBSOptions() {
-        return this.eBSOptions == null ? Input.empty() : this.eBSOptions;
+    public Output<DomainEBSOptionsArgs> getEBSOptions() {
+        return this.eBSOptions == null ? Output.empty() : this.eBSOptions;
     }
 
     @InputImport(name="encryptionAtRestOptions")
-      private final @Nullable Input<DomainEncryptionAtRestOptionsArgs> encryptionAtRestOptions;
+      private final @Nullable Output<DomainEncryptionAtRestOptionsArgs> encryptionAtRestOptions;
 
-    public Input<DomainEncryptionAtRestOptionsArgs> getEncryptionAtRestOptions() {
-        return this.encryptionAtRestOptions == null ? Input.empty() : this.encryptionAtRestOptions;
+    public Output<DomainEncryptionAtRestOptionsArgs> getEncryptionAtRestOptions() {
+        return this.encryptionAtRestOptions == null ? Output.empty() : this.encryptionAtRestOptions;
     }
 
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     @InputImport(name="logPublishingOptions")
-      private final @Nullable Input<Object> logPublishingOptions;
+      private final @Nullable Output<Object> logPublishingOptions;
 
-    public Input<Object> getLogPublishingOptions() {
-        return this.logPublishingOptions == null ? Input.empty() : this.logPublishingOptions;
+    public Output<Object> getLogPublishingOptions() {
+        return this.logPublishingOptions == null ? Output.empty() : this.logPublishingOptions;
     }
 
     @InputImport(name="nodeToNodeEncryptionOptions")
-      private final @Nullable Input<DomainNodeToNodeEncryptionOptionsArgs> nodeToNodeEncryptionOptions;
+      private final @Nullable Output<DomainNodeToNodeEncryptionOptionsArgs> nodeToNodeEncryptionOptions;
 
-    public Input<DomainNodeToNodeEncryptionOptionsArgs> getNodeToNodeEncryptionOptions() {
-        return this.nodeToNodeEncryptionOptions == null ? Input.empty() : this.nodeToNodeEncryptionOptions;
+    public Output<DomainNodeToNodeEncryptionOptionsArgs> getNodeToNodeEncryptionOptions() {
+        return this.nodeToNodeEncryptionOptions == null ? Output.empty() : this.nodeToNodeEncryptionOptions;
     }
 
     @InputImport(name="snapshotOptions")
-      private final @Nullable Input<DomainSnapshotOptionsArgs> snapshotOptions;
+      private final @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions;
 
-    public Input<DomainSnapshotOptionsArgs> getSnapshotOptions() {
-        return this.snapshotOptions == null ? Input.empty() : this.snapshotOptions;
+    public Output<DomainSnapshotOptionsArgs> getSnapshotOptions() {
+        return this.snapshotOptions == null ? Output.empty() : this.snapshotOptions;
     }
 
     /**
@@ -122,35 +122,35 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DomainTagArgs>> tags;
+      private final @Nullable Output<List<DomainTagArgs>> tags;
 
-    public Input<List<DomainTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DomainTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="vPCOptions")
-      private final @Nullable Input<DomainVPCOptionsArgs> vPCOptions;
+      private final @Nullable Output<DomainVPCOptionsArgs> vPCOptions;
 
-    public Input<DomainVPCOptionsArgs> getVPCOptions() {
-        return this.vPCOptions == null ? Input.empty() : this.vPCOptions;
+    public Output<DomainVPCOptionsArgs> getVPCOptions() {
+        return this.vPCOptions == null ? Output.empty() : this.vPCOptions;
     }
 
     public DomainArgs(
-        @Nullable Input<Object> accessPolicies,
-        @Nullable Input<Object> advancedOptions,
-        @Nullable Input<DomainAdvancedSecurityOptionsInputArgs> advancedSecurityOptions,
-        @Nullable Input<DomainClusterConfigArgs> clusterConfig,
-        @Nullable Input<DomainCognitoOptionsArgs> cognitoOptions,
-        @Nullable Input<DomainEndpointOptionsArgs> domainEndpointOptions,
-        @Nullable Input<String> domainName,
-        @Nullable Input<DomainEBSOptionsArgs> eBSOptions,
-        @Nullable Input<DomainEncryptionAtRestOptionsArgs> encryptionAtRestOptions,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<Object> logPublishingOptions,
-        @Nullable Input<DomainNodeToNodeEncryptionOptionsArgs> nodeToNodeEncryptionOptions,
-        @Nullable Input<DomainSnapshotOptionsArgs> snapshotOptions,
-        @Nullable Input<List<DomainTagArgs>> tags,
-        @Nullable Input<DomainVPCOptionsArgs> vPCOptions) {
+        @Nullable Output<Object> accessPolicies,
+        @Nullable Output<Object> advancedOptions,
+        @Nullable Output<DomainAdvancedSecurityOptionsInputArgs> advancedSecurityOptions,
+        @Nullable Output<DomainClusterConfigArgs> clusterConfig,
+        @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions,
+        @Nullable Output<DomainEndpointOptionsArgs> domainEndpointOptions,
+        @Nullable Output<String> domainName,
+        @Nullable Output<DomainEBSOptionsArgs> eBSOptions,
+        @Nullable Output<DomainEncryptionAtRestOptionsArgs> encryptionAtRestOptions,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<Object> logPublishingOptions,
+        @Nullable Output<DomainNodeToNodeEncryptionOptionsArgs> nodeToNodeEncryptionOptions,
+        @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions,
+        @Nullable Output<List<DomainTagArgs>> tags,
+        @Nullable Output<DomainVPCOptionsArgs> vPCOptions) {
         this.accessPolicies = accessPolicies;
         this.advancedOptions = advancedOptions;
         this.advancedSecurityOptions = advancedSecurityOptions;
@@ -169,21 +169,21 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.accessPolicies = Input.empty();
-        this.advancedOptions = Input.empty();
-        this.advancedSecurityOptions = Input.empty();
-        this.clusterConfig = Input.empty();
-        this.cognitoOptions = Input.empty();
-        this.domainEndpointOptions = Input.empty();
-        this.domainName = Input.empty();
-        this.eBSOptions = Input.empty();
-        this.encryptionAtRestOptions = Input.empty();
-        this.engineVersion = Input.empty();
-        this.logPublishingOptions = Input.empty();
-        this.nodeToNodeEncryptionOptions = Input.empty();
-        this.snapshotOptions = Input.empty();
-        this.tags = Input.empty();
-        this.vPCOptions = Input.empty();
+        this.accessPolicies = Output.empty();
+        this.advancedOptions = Output.empty();
+        this.advancedSecurityOptions = Output.empty();
+        this.clusterConfig = Output.empty();
+        this.cognitoOptions = Output.empty();
+        this.domainEndpointOptions = Output.empty();
+        this.domainName = Output.empty();
+        this.eBSOptions = Output.empty();
+        this.encryptionAtRestOptions = Output.empty();
+        this.engineVersion = Output.empty();
+        this.logPublishingOptions = Output.empty();
+        this.nodeToNodeEncryptionOptions = Output.empty();
+        this.snapshotOptions = Output.empty();
+        this.tags = Output.empty();
+        this.vPCOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -195,21 +195,21 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> accessPolicies;
-        private @Nullable Input<Object> advancedOptions;
-        private @Nullable Input<DomainAdvancedSecurityOptionsInputArgs> advancedSecurityOptions;
-        private @Nullable Input<DomainClusterConfigArgs> clusterConfig;
-        private @Nullable Input<DomainCognitoOptionsArgs> cognitoOptions;
-        private @Nullable Input<DomainEndpointOptionsArgs> domainEndpointOptions;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<DomainEBSOptionsArgs> eBSOptions;
-        private @Nullable Input<DomainEncryptionAtRestOptionsArgs> encryptionAtRestOptions;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<Object> logPublishingOptions;
-        private @Nullable Input<DomainNodeToNodeEncryptionOptionsArgs> nodeToNodeEncryptionOptions;
-        private @Nullable Input<DomainSnapshotOptionsArgs> snapshotOptions;
-        private @Nullable Input<List<DomainTagArgs>> tags;
-        private @Nullable Input<DomainVPCOptionsArgs> vPCOptions;
+        private @Nullable Output<Object> accessPolicies;
+        private @Nullable Output<Object> advancedOptions;
+        private @Nullable Output<DomainAdvancedSecurityOptionsInputArgs> advancedSecurityOptions;
+        private @Nullable Output<DomainClusterConfigArgs> clusterConfig;
+        private @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions;
+        private @Nullable Output<DomainEndpointOptionsArgs> domainEndpointOptions;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<DomainEBSOptionsArgs> eBSOptions;
+        private @Nullable Output<DomainEncryptionAtRestOptionsArgs> encryptionAtRestOptions;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<Object> logPublishingOptions;
+        private @Nullable Output<DomainNodeToNodeEncryptionOptionsArgs> nodeToNodeEncryptionOptions;
+        private @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions;
+        private @Nullable Output<List<DomainTagArgs>> tags;
+        private @Nullable Output<DomainVPCOptionsArgs> vPCOptions;
 
         public Builder() {
     	      // Empty
@@ -234,153 +234,153 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vPCOptions = defaults.vPCOptions;
         }
 
-        public Builder accessPolicies(@Nullable Input<Object> accessPolicies) {
+        public Builder accessPolicies(@Nullable Output<Object> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
         public Builder accessPolicies(@Nullable Object accessPolicies) {
-            this.accessPolicies = Input.ofNullable(accessPolicies);
+            this.accessPolicies = Output.ofNullable(accessPolicies);
             return this;
         }
 
-        public Builder advancedOptions(@Nullable Input<Object> advancedOptions) {
+        public Builder advancedOptions(@Nullable Output<Object> advancedOptions) {
             this.advancedOptions = advancedOptions;
             return this;
         }
 
         public Builder advancedOptions(@Nullable Object advancedOptions) {
-            this.advancedOptions = Input.ofNullable(advancedOptions);
+            this.advancedOptions = Output.ofNullable(advancedOptions);
             return this;
         }
 
-        public Builder advancedSecurityOptions(@Nullable Input<DomainAdvancedSecurityOptionsInputArgs> advancedSecurityOptions) {
+        public Builder advancedSecurityOptions(@Nullable Output<DomainAdvancedSecurityOptionsInputArgs> advancedSecurityOptions) {
             this.advancedSecurityOptions = advancedSecurityOptions;
             return this;
         }
 
         public Builder advancedSecurityOptions(@Nullable DomainAdvancedSecurityOptionsInputArgs advancedSecurityOptions) {
-            this.advancedSecurityOptions = Input.ofNullable(advancedSecurityOptions);
+            this.advancedSecurityOptions = Output.ofNullable(advancedSecurityOptions);
             return this;
         }
 
-        public Builder clusterConfig(@Nullable Input<DomainClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(@Nullable Output<DomainClusterConfigArgs> clusterConfig) {
             this.clusterConfig = clusterConfig;
             return this;
         }
 
         public Builder clusterConfig(@Nullable DomainClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Input.ofNullable(clusterConfig);
+            this.clusterConfig = Output.ofNullable(clusterConfig);
             return this;
         }
 
-        public Builder cognitoOptions(@Nullable Input<DomainCognitoOptionsArgs> cognitoOptions) {
+        public Builder cognitoOptions(@Nullable Output<DomainCognitoOptionsArgs> cognitoOptions) {
             this.cognitoOptions = cognitoOptions;
             return this;
         }
 
         public Builder cognitoOptions(@Nullable DomainCognitoOptionsArgs cognitoOptions) {
-            this.cognitoOptions = Input.ofNullable(cognitoOptions);
+            this.cognitoOptions = Output.ofNullable(cognitoOptions);
             return this;
         }
 
-        public Builder domainEndpointOptions(@Nullable Input<DomainEndpointOptionsArgs> domainEndpointOptions) {
+        public Builder domainEndpointOptions(@Nullable Output<DomainEndpointOptionsArgs> domainEndpointOptions) {
             this.domainEndpointOptions = domainEndpointOptions;
             return this;
         }
 
         public Builder domainEndpointOptions(@Nullable DomainEndpointOptionsArgs domainEndpointOptions) {
-            this.domainEndpointOptions = Input.ofNullable(domainEndpointOptions);
+            this.domainEndpointOptions = Output.ofNullable(domainEndpointOptions);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder eBSOptions(@Nullable Input<DomainEBSOptionsArgs> eBSOptions) {
+        public Builder eBSOptions(@Nullable Output<DomainEBSOptionsArgs> eBSOptions) {
             this.eBSOptions = eBSOptions;
             return this;
         }
 
         public Builder eBSOptions(@Nullable DomainEBSOptionsArgs eBSOptions) {
-            this.eBSOptions = Input.ofNullable(eBSOptions);
+            this.eBSOptions = Output.ofNullable(eBSOptions);
             return this;
         }
 
-        public Builder encryptionAtRestOptions(@Nullable Input<DomainEncryptionAtRestOptionsArgs> encryptionAtRestOptions) {
+        public Builder encryptionAtRestOptions(@Nullable Output<DomainEncryptionAtRestOptionsArgs> encryptionAtRestOptions) {
             this.encryptionAtRestOptions = encryptionAtRestOptions;
             return this;
         }
 
         public Builder encryptionAtRestOptions(@Nullable DomainEncryptionAtRestOptionsArgs encryptionAtRestOptions) {
-            this.encryptionAtRestOptions = Input.ofNullable(encryptionAtRestOptions);
+            this.encryptionAtRestOptions = Output.ofNullable(encryptionAtRestOptions);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder logPublishingOptions(@Nullable Input<Object> logPublishingOptions) {
+        public Builder logPublishingOptions(@Nullable Output<Object> logPublishingOptions) {
             this.logPublishingOptions = logPublishingOptions;
             return this;
         }
 
         public Builder logPublishingOptions(@Nullable Object logPublishingOptions) {
-            this.logPublishingOptions = Input.ofNullable(logPublishingOptions);
+            this.logPublishingOptions = Output.ofNullable(logPublishingOptions);
             return this;
         }
 
-        public Builder nodeToNodeEncryptionOptions(@Nullable Input<DomainNodeToNodeEncryptionOptionsArgs> nodeToNodeEncryptionOptions) {
+        public Builder nodeToNodeEncryptionOptions(@Nullable Output<DomainNodeToNodeEncryptionOptionsArgs> nodeToNodeEncryptionOptions) {
             this.nodeToNodeEncryptionOptions = nodeToNodeEncryptionOptions;
             return this;
         }
 
         public Builder nodeToNodeEncryptionOptions(@Nullable DomainNodeToNodeEncryptionOptionsArgs nodeToNodeEncryptionOptions) {
-            this.nodeToNodeEncryptionOptions = Input.ofNullable(nodeToNodeEncryptionOptions);
+            this.nodeToNodeEncryptionOptions = Output.ofNullable(nodeToNodeEncryptionOptions);
             return this;
         }
 
-        public Builder snapshotOptions(@Nullable Input<DomainSnapshotOptionsArgs> snapshotOptions) {
+        public Builder snapshotOptions(@Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions) {
             this.snapshotOptions = snapshotOptions;
             return this;
         }
 
         public Builder snapshotOptions(@Nullable DomainSnapshotOptionsArgs snapshotOptions) {
-            this.snapshotOptions = Input.ofNullable(snapshotOptions);
+            this.snapshotOptions = Output.ofNullable(snapshotOptions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DomainTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DomainTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vPCOptions(@Nullable Input<DomainVPCOptionsArgs> vPCOptions) {
+        public Builder vPCOptions(@Nullable Output<DomainVPCOptionsArgs> vPCOptions) {
             this.vPCOptions = vPCOptions;
             return this;
         }
 
         public Builder vPCOptions(@Nullable DomainVPCOptionsArgs vPCOptions) {
-            this.vPCOptions = Input.ofNullable(vPCOptions);
+            this.vPCOptions = Output.ofNullable(vPCOptions);
             return this;
         }
         public DomainArgs build() {

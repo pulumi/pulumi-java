@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
      * 
      */
     @InputImport(name="designation")
-      private final @Nullable Input<String> designation;
+      private final @Nullable Output<String> designation;
 
-    public Input<String> getDesignation() {
-        return this.designation == null ? Input.empty() : this.designation;
+    public Output<String> getDesignation() {
+        return this.designation == null ? Output.empty() : this.designation;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     public GoogleCloudDatacatalogV1ContactsPersonArgs(
-        @Nullable Input<String> designation,
-        @Nullable Input<String> email) {
+        @Nullable Output<String> designation,
+        @Nullable Output<String> email) {
         this.designation = designation;
         this.email = email;
     }
 
     private GoogleCloudDatacatalogV1ContactsPersonArgs() {
-        this.designation = Input.empty();
-        this.email = Input.empty();
+        this.designation = Output.empty();
+        this.email = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> designation;
-        private @Nullable Input<String> email;
+        private @Nullable Output<String> designation;
+        private @Nullable Output<String> email;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
     	      this.email = defaults.email;
         }
 
-        public Builder designation(@Nullable Input<String> designation) {
+        public Builder designation(@Nullable Output<String> designation) {
             this.designation = designation;
             return this;
         }
 
         public Builder designation(@Nullable String designation) {
-            this.designation = Input.ofNullable(designation);
+            this.designation = Output.ofNullable(designation);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
         public GoogleCloudDatacatalogV1ContactsPersonArgs build() {

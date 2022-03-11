@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.enums.FlowType;
 import io.pulumi.azurenative.insights.enums.IngestionMode;
 import io.pulumi.azurenative.insights.enums.RequestSource;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -28,9 +28,9 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationType", required=true)
-      private final Input<Either<String,ApplicationType>> applicationType;
+      private final Output<Either<String,ApplicationType>> applicationType;
 
-    public Input<Either<String,ApplicationType>> getApplicationType() {
+    public Output<Either<String,ApplicationType>> getApplicationType() {
         return this.applicationType;
     }
 
@@ -39,10 +39,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableIpMasking")
-      private final @Nullable Input<Boolean> disableIpMasking;
+      private final @Nullable Output<Boolean> disableIpMasking;
 
-    public Input<Boolean> getDisableIpMasking() {
-        return this.disableIpMasking == null ? Input.empty() : this.disableIpMasking;
+    public Output<Boolean> getDisableIpMasking() {
+        return this.disableIpMasking == null ? Output.empty() : this.disableIpMasking;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowType")
-      private final @Nullable Input<Either<String,FlowType>> flowType;
+      private final @Nullable Output<Either<String,FlowType>> flowType;
 
-    public Input<Either<String,FlowType>> getFlowType() {
-        return this.flowType == null ? Input.empty() : this.flowType;
+    public Output<Either<String,FlowType>> getFlowType() {
+        return this.flowType == null ? Output.empty() : this.flowType;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hockeyAppId")
-      private final @Nullable Input<String> hockeyAppId;
+      private final @Nullable Output<String> hockeyAppId;
 
-    public Input<String> getHockeyAppId() {
-        return this.hockeyAppId == null ? Input.empty() : this.hockeyAppId;
+    public Output<String> getHockeyAppId() {
+        return this.hockeyAppId == null ? Output.empty() : this.hockeyAppId;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="immediatePurgeDataOn30Days")
-      private final @Nullable Input<Boolean> immediatePurgeDataOn30Days;
+      private final @Nullable Output<Boolean> immediatePurgeDataOn30Days;
 
-    public Input<Boolean> getImmediatePurgeDataOn30Days() {
-        return this.immediatePurgeDataOn30Days == null ? Input.empty() : this.immediatePurgeDataOn30Days;
+    public Output<Boolean> getImmediatePurgeDataOn30Days() {
+        return this.immediatePurgeDataOn30Days == null ? Output.empty() : this.immediatePurgeDataOn30Days;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingestionMode")
-      private final @Nullable Input<Either<String,IngestionMode>> ingestionMode;
+      private final @Nullable Output<Either<String,IngestionMode>> ingestionMode;
 
-    public Input<Either<String,IngestionMode>> getIngestionMode() {
-        return this.ingestionMode == null ? Input.empty() : this.ingestionMode;
+    public Output<Either<String,IngestionMode>> getIngestionMode() {
+        return this.ingestionMode == null ? Output.empty() : this.ingestionMode;
     }
 
     /**
@@ -94,9 +94,9 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -105,10 +105,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestSource")
-      private final @Nullable Input<Either<String,RequestSource>> requestSource;
+      private final @Nullable Output<Either<String,RequestSource>> requestSource;
 
-    public Input<Either<String,RequestSource>> getRequestSource() {
-        return this.requestSource == null ? Input.empty() : this.requestSource;
+    public Output<Either<String,RequestSource>> getRequestSource() {
+        return this.requestSource == null ? Output.empty() : this.requestSource;
     }
 
     /**
@@ -127,9 +127,9 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -138,10 +138,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionInDays")
-      private final @Nullable Input<Integer> retentionInDays;
+      private final @Nullable Output<Integer> retentionInDays;
 
-    public Input<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
+    public Output<Integer> getRetentionInDays() {
+        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="samplingPercentage")
-      private final @Nullable Input<Double> samplingPercentage;
+      private final @Nullable Output<Double> samplingPercentage;
 
-    public Input<Double> getSamplingPercentage() {
-        return this.samplingPercentage == null ? Input.empty() : this.samplingPercentage;
+    public Output<Double> getSamplingPercentage() {
+        return this.samplingPercentage == null ? Output.empty() : this.samplingPercentage;
     }
 
     /**
@@ -171,58 +171,58 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ComponentArgs(
-        Input<Either<String,ApplicationType>> applicationType,
-        @Nullable Input<Boolean> disableIpMasking,
-        @Nullable Input<Either<String,FlowType>> flowType,
-        @Nullable Input<String> hockeyAppId,
-        @Nullable Input<Boolean> immediatePurgeDataOn30Days,
-        @Nullable Input<Either<String,IngestionMode>> ingestionMode,
-        Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,RequestSource>> requestSource,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<Integer> retentionInDays,
-        @Nullable Input<Double> samplingPercentage,
-        @Nullable Input<Map<String,String>> tags) {
-        this.applicationType = applicationType == null ? Input.ofLeft("web") : Objects.requireNonNull(applicationType, "expected parameter 'applicationType' to be non-null");
+        Output<Either<String,ApplicationType>> applicationType,
+        @Nullable Output<Boolean> disableIpMasking,
+        @Nullable Output<Either<String,FlowType>> flowType,
+        @Nullable Output<String> hockeyAppId,
+        @Nullable Output<Boolean> immediatePurgeDataOn30Days,
+        @Nullable Output<Either<String,IngestionMode>> ingestionMode,
+        Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,RequestSource>> requestSource,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<Integer> retentionInDays,
+        @Nullable Output<Double> samplingPercentage,
+        @Nullable Output<Map<String,String>> tags) {
+        this.applicationType = applicationType == null ? Output.ofLeft("web") : Objects.requireNonNull(applicationType, "expected parameter 'applicationType' to be non-null");
         this.disableIpMasking = disableIpMasking;
-        this.flowType = flowType == null ? Input.ofLeft("Bluefield") : flowType;
+        this.flowType = flowType == null ? Output.ofLeft("Bluefield") : flowType;
         this.hockeyAppId = hockeyAppId;
         this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
-        this.ingestionMode = ingestionMode == null ? Input.ofLeft("ApplicationInsights") : ingestionMode;
+        this.ingestionMode = ingestionMode == null ? Output.ofLeft("ApplicationInsights") : ingestionMode;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.location = location;
-        this.requestSource = requestSource == null ? Input.ofLeft("rest") : requestSource;
+        this.requestSource = requestSource == null ? Output.ofLeft("rest") : requestSource;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.resourceName = resourceName;
-        this.retentionInDays = retentionInDays == null ? Input.ofNullable(90) : retentionInDays;
+        this.retentionInDays = retentionInDays == null ? Output.ofNullable(90) : retentionInDays;
         this.samplingPercentage = samplingPercentage;
         this.tags = tags;
     }
 
     private ComponentArgs() {
-        this.applicationType = Input.empty();
-        this.disableIpMasking = Input.empty();
-        this.flowType = Input.empty();
-        this.hockeyAppId = Input.empty();
-        this.immediatePurgeDataOn30Days = Input.empty();
-        this.ingestionMode = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.requestSource = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.retentionInDays = Input.empty();
-        this.samplingPercentage = Input.empty();
-        this.tags = Input.empty();
+        this.applicationType = Output.empty();
+        this.disableIpMasking = Output.empty();
+        this.flowType = Output.empty();
+        this.hockeyAppId = Output.empty();
+        this.immediatePurgeDataOn30Days = Output.empty();
+        this.ingestionMode = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.requestSource = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.retentionInDays = Output.empty();
+        this.samplingPercentage = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -234,20 +234,20 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,ApplicationType>> applicationType;
-        private @Nullable Input<Boolean> disableIpMasking;
-        private @Nullable Input<Either<String,FlowType>> flowType;
-        private @Nullable Input<String> hockeyAppId;
-        private @Nullable Input<Boolean> immediatePurgeDataOn30Days;
-        private @Nullable Input<Either<String,IngestionMode>> ingestionMode;
-        private Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,RequestSource>> requestSource;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<Integer> retentionInDays;
-        private @Nullable Input<Double> samplingPercentage;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<Either<String,ApplicationType>> applicationType;
+        private @Nullable Output<Boolean> disableIpMasking;
+        private @Nullable Output<Either<String,FlowType>> flowType;
+        private @Nullable Output<String> hockeyAppId;
+        private @Nullable Output<Boolean> immediatePurgeDataOn30Days;
+        private @Nullable Output<Either<String,IngestionMode>> ingestionMode;
+        private Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,RequestSource>> requestSource;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<Integer> retentionInDays;
+        private @Nullable Output<Double> samplingPercentage;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -271,143 +271,143 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder applicationType(Input<Either<String,ApplicationType>> applicationType) {
+        public Builder applicationType(Output<Either<String,ApplicationType>> applicationType) {
             this.applicationType = Objects.requireNonNull(applicationType);
             return this;
         }
 
         public Builder applicationType(Either<String,ApplicationType> applicationType) {
-            this.applicationType = Input.of(Objects.requireNonNull(applicationType));
+            this.applicationType = Output.of(Objects.requireNonNull(applicationType));
             return this;
         }
 
-        public Builder disableIpMasking(@Nullable Input<Boolean> disableIpMasking) {
+        public Builder disableIpMasking(@Nullable Output<Boolean> disableIpMasking) {
             this.disableIpMasking = disableIpMasking;
             return this;
         }
 
         public Builder disableIpMasking(@Nullable Boolean disableIpMasking) {
-            this.disableIpMasking = Input.ofNullable(disableIpMasking);
+            this.disableIpMasking = Output.ofNullable(disableIpMasking);
             return this;
         }
 
-        public Builder flowType(@Nullable Input<Either<String,FlowType>> flowType) {
+        public Builder flowType(@Nullable Output<Either<String,FlowType>> flowType) {
             this.flowType = flowType;
             return this;
         }
 
         public Builder flowType(@Nullable Either<String,FlowType> flowType) {
-            this.flowType = Input.ofNullable(flowType);
+            this.flowType = Output.ofNullable(flowType);
             return this;
         }
 
-        public Builder hockeyAppId(@Nullable Input<String> hockeyAppId) {
+        public Builder hockeyAppId(@Nullable Output<String> hockeyAppId) {
             this.hockeyAppId = hockeyAppId;
             return this;
         }
 
         public Builder hockeyAppId(@Nullable String hockeyAppId) {
-            this.hockeyAppId = Input.ofNullable(hockeyAppId);
+            this.hockeyAppId = Output.ofNullable(hockeyAppId);
             return this;
         }
 
-        public Builder immediatePurgeDataOn30Days(@Nullable Input<Boolean> immediatePurgeDataOn30Days) {
+        public Builder immediatePurgeDataOn30Days(@Nullable Output<Boolean> immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
 
         public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
-            this.immediatePurgeDataOn30Days = Input.ofNullable(immediatePurgeDataOn30Days);
+            this.immediatePurgeDataOn30Days = Output.ofNullable(immediatePurgeDataOn30Days);
             return this;
         }
 
-        public Builder ingestionMode(@Nullable Input<Either<String,IngestionMode>> ingestionMode) {
+        public Builder ingestionMode(@Nullable Output<Either<String,IngestionMode>> ingestionMode) {
             this.ingestionMode = ingestionMode;
             return this;
         }
 
         public Builder ingestionMode(@Nullable Either<String,IngestionMode> ingestionMode) {
-            this.ingestionMode = Input.ofNullable(ingestionMode);
+            this.ingestionMode = Output.ofNullable(ingestionMode);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder requestSource(@Nullable Input<Either<String,RequestSource>> requestSource) {
+        public Builder requestSource(@Nullable Output<Either<String,RequestSource>> requestSource) {
             this.requestSource = requestSource;
             return this;
         }
 
         public Builder requestSource(@Nullable Either<String,RequestSource> requestSource) {
-            this.requestSource = Input.ofNullable(requestSource);
+            this.requestSource = Output.ofNullable(requestSource);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Input.ofNullable(retentionInDays);
+            this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder samplingPercentage(@Nullable Input<Double> samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Output<Double> samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
 
         public Builder samplingPercentage(@Nullable Double samplingPercentage) {
-            this.samplingPercentage = Input.ofNullable(samplingPercentage);
+            this.samplingPercentage = Output.ofNullable(samplingPercentage);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ComponentArgs build() {

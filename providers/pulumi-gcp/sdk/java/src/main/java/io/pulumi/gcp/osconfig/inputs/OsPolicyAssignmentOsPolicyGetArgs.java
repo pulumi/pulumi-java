@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupGetArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="allowNoResourceGroupMatch")
-      private final @Nullable Input<Boolean> allowNoResourceGroupMatch;
+      private final @Nullable Output<Boolean> allowNoResourceGroupMatch;
 
-    public Input<Boolean> getAllowNoResourceGroupMatch() {
-        return this.allowNoResourceGroupMatch == null ? Input.empty() : this.allowNoResourceGroupMatch;
+    public Output<Boolean> getAllowNoResourceGroupMatch() {
+        return this.allowNoResourceGroupMatch == null ? Output.empty() : this.allowNoResourceGroupMatch;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -55,9 +55,9 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="mode", required=true)
-      private final Input<String> mode;
+      private final Output<String> mode;
 
-    public Input<String> getMode() {
+    public Output<String> getMode() {
         return this.mode;
     }
 
@@ -66,18 +66,18 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroups", required=true)
-      private final Input<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups;
+      private final Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups;
 
-    public Input<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> getResourceGroups() {
+    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> getResourceGroups() {
         return this.resourceGroups;
     }
 
     public OsPolicyAssignmentOsPolicyGetArgs(
-        @Nullable Input<Boolean> allowNoResourceGroupMatch,
-        @Nullable Input<String> description,
-        Input<String> id,
-        Input<String> mode,
-        Input<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups) {
+        @Nullable Output<Boolean> allowNoResourceGroupMatch,
+        @Nullable Output<String> description,
+        Output<String> id,
+        Output<String> mode,
+        Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups) {
         this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
         this.description = description;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
@@ -86,11 +86,11 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     }
 
     private OsPolicyAssignmentOsPolicyGetArgs() {
-        this.allowNoResourceGroupMatch = Input.empty();
-        this.description = Input.empty();
-        this.id = Input.empty();
-        this.mode = Input.empty();
-        this.resourceGroups = Input.empty();
+        this.allowNoResourceGroupMatch = Output.empty();
+        this.description = Output.empty();
+        this.id = Output.empty();
+        this.mode = Output.empty();
+        this.resourceGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowNoResourceGroupMatch;
-        private @Nullable Input<String> description;
-        private Input<String> id;
-        private Input<String> mode;
-        private Input<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups;
+        private @Nullable Output<Boolean> allowNoResourceGroupMatch;
+        private @Nullable Output<String> description;
+        private Output<String> id;
+        private Output<String> mode;
+        private Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class OsPolicyAssignmentOsPolicyGetArgs extends io.pulumi.resources
     	      this.resourceGroups = defaults.resourceGroups;
         }
 
-        public Builder allowNoResourceGroupMatch(@Nullable Input<Boolean> allowNoResourceGroupMatch) {
+        public Builder allowNoResourceGroupMatch(@Nullable Output<Boolean> allowNoResourceGroupMatch) {
             this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
 
         public Builder allowNoResourceGroupMatch(@Nullable Boolean allowNoResourceGroupMatch) {
-            this.allowNoResourceGroupMatch = Input.ofNullable(allowNoResourceGroupMatch);
+            this.allowNoResourceGroupMatch = Output.ofNullable(allowNoResourceGroupMatch);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder mode(Input<String> mode) {
+        public Builder mode(Output<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
         public Builder mode(String mode) {
-            this.mode = Input.of(Objects.requireNonNull(mode));
+            this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder resourceGroups(Input<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups) {
+        public Builder resourceGroups(Output<List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs>> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
 
         public Builder resourceGroups(List<OsPolicyAssignmentOsPolicyResourceGroupGetArgs> resourceGroups) {
-            this.resourceGroups = Input.of(Objects.requireNonNull(resourceGroups));
+            this.resourceGroups = Output.of(Objects.requireNonNull(resourceGroups));
             return this;
         }
         public OsPolicyAssignmentOsPolicyGetArgs build() {

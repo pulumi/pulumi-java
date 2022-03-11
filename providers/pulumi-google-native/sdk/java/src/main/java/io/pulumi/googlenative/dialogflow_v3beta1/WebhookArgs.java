@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs;
@@ -18,9 +18,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     public static final WebhookArgs Empty = new WebhookArgs();
 
     @InputImport(name="agentId", required=true)
-      private final Input<String> agentId;
+      private final Output<String> agentId;
 
-    public Input<String> getAgentId() {
+    public Output<String> getAgentId() {
         return this.agentId;
     }
 
@@ -29,10 +29,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -40,9 +40,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -51,17 +51,17 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="genericWebService")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService;
 
-    public Input<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> getGenericWebService() {
-        return this.genericWebService == null ? Input.empty() : this.genericWebService;
+    public Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> getGenericWebService() {
+        return this.genericWebService == null ? Output.empty() : this.genericWebService;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,17 +69,17 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceDirectory")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory;
 
-    public Input<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> getServiceDirectory() {
-        return this.serviceDirectory == null ? Input.empty() : this.serviceDirectory;
+    public Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> getServiceDirectory() {
+        return this.serviceDirectory == null ? Output.empty() : this.serviceDirectory;
     }
 
     /**
@@ -98,22 +98,22 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public WebhookArgs(
-        Input<String> agentId,
-        @Nullable Input<Boolean> disabled,
-        Input<String> displayName,
-        @Nullable Input<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory,
-        @Nullable Input<String> timeout) {
+        Output<String> agentId,
+        @Nullable Output<Boolean> disabled,
+        Output<String> displayName,
+        @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory,
+        @Nullable Output<String> timeout) {
         this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
         this.disabled = disabled;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -126,15 +126,15 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookArgs() {
-        this.agentId = Input.empty();
-        this.disabled = Input.empty();
-        this.displayName = Input.empty();
-        this.genericWebService = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.serviceDirectory = Input.empty();
-        this.timeout = Input.empty();
+        this.agentId = Output.empty();
+        this.disabled = Output.empty();
+        this.displayName = Output.empty();
+        this.genericWebService = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.serviceDirectory = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,15 +146,15 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> agentId;
-        private @Nullable Input<Boolean> disabled;
-        private Input<String> displayName;
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory;
-        private @Nullable Input<String> timeout;
+        private Output<String> agentId;
+        private @Nullable Output<Boolean> disabled;
+        private Output<String> displayName;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -173,93 +173,93 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder agentId(Input<String> agentId) {
+        public Builder agentId(Output<String> agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
         public Builder agentId(String agentId) {
-            this.agentId = Input.of(Objects.requireNonNull(agentId));
+            this.agentId = Output.of(Objects.requireNonNull(agentId));
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder genericWebService(@Nullable Input<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService) {
+        public Builder genericWebService(@Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService) {
             this.genericWebService = genericWebService;
             return this;
         }
 
         public Builder genericWebService(@Nullable GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs genericWebService) {
-            this.genericWebService = Input.ofNullable(genericWebService);
+            this.genericWebService = Output.ofNullable(genericWebService);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceDirectory(@Nullable Input<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory) {
+        public Builder serviceDirectory(@Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory) {
             this.serviceDirectory = serviceDirectory;
             return this;
         }
 
         public Builder serviceDirectory(@Nullable GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs serviceDirectory) {
-            this.serviceDirectory = Input.ofNullable(serviceDirectory);
+            this.serviceDirectory = Output.ofNullable(serviceDirectory);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public WebhookArgs build() {

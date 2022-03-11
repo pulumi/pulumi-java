@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="devicePath", required=true)
-      private final Input<String> devicePath;
+      private final Output<String> devicePath;
 
-    public Input<String> getDevicePath() {
+    public Output<String> getDevicePath() {
         return this.devicePath;
     }
 
@@ -33,22 +33,22 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public AttachedVolumeArgs(
-        Input<String> devicePath,
-        Input<String> name) {
+        Output<String> devicePath,
+        Output<String> name) {
         this.devicePath = Objects.requireNonNull(devicePath, "expected parameter 'devicePath' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private AttachedVolumeArgs() {
-        this.devicePath = Input.empty();
-        this.name = Input.empty();
+        this.devicePath = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> devicePath;
-        private Input<String> name;
+        private Output<String> devicePath;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder devicePath(Input<String> devicePath) {
+        public Builder devicePath(Output<String> devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
 
         public Builder devicePath(String devicePath) {
-            this.devicePath = Input.of(Objects.requireNonNull(devicePath));
+            this.devicePath = Output.of(Objects.requireNonNull(devicePath));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public AttachedVolumeArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
      * 
      */
     @InputImport(name="fieldToMatch")
-      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch;
+      private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Input<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
+    public Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> getFieldToMatch() {
+        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
      * 
      */
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations;
+      private final Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations;
 
-    public Input<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementArgs(
-        @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch,
-        Input<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations) {
+        @Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch,
+        Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
     }
 
     private RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementArgs() {
-        this.fieldToMatch = Input.empty();
-        this.textTransformations = Input.empty();
+        this.fieldToMatch = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch;
-        private Input<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations;
+        private @Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch;
+        private Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder fieldToMatch(@Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(@Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
 
         public Builder fieldToMatch(@Nullable RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Input.ofNullable(fieldToMatch);
+            this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
 
-        public Builder textTransformations(Input<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementArgs build() {

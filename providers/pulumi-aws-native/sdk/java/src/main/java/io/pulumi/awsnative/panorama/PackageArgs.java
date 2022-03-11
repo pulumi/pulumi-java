@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.panorama;
 
 import io.pulumi.awsnative.panorama.inputs.PackageTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     public static final PackageArgs Empty = new PackageArgs();
 
     @InputImport(name="packageName")
-      private final @Nullable Input<String> packageName;
+      private final @Nullable Output<String> packageName;
 
-    public Input<String> getPackageName() {
-        return this.packageName == null ? Input.empty() : this.packageName;
+    public Output<String> getPackageName() {
+        return this.packageName == null ? Output.empty() : this.packageName;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<PackageTagArgs>> tags;
+      private final @Nullable Output<List<PackageTagArgs>> tags;
 
-    public Input<List<PackageTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<PackageTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PackageArgs(
-        @Nullable Input<String> packageName,
-        @Nullable Input<List<PackageTagArgs>> tags) {
+        @Nullable Output<String> packageName,
+        @Nullable Output<List<PackageTagArgs>> tags) {
         this.packageName = packageName;
         this.tags = tags;
     }
 
     private PackageArgs() {
-        this.packageName = Input.empty();
-        this.tags = Input.empty();
+        this.packageName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> packageName;
-        private @Nullable Input<List<PackageTagArgs>> tags;
+        private @Nullable Output<String> packageName;
+        private @Nullable Output<List<PackageTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder packageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Input.ofNullable(packageName);
+            this.packageName = Output.ofNullable(packageName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<PackageTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<PackageTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<PackageTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PackageArgs build() {

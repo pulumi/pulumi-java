@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tags;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.tags.inputs.TagValueIamBindingConditionArgs;
 import java.lang.String;
@@ -17,16 +17,16 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
     public static final TagValueIamBindingArgs Empty = new TagValueIamBindingArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<TagValueIamBindingConditionArgs> condition;
+      private final @Nullable Output<TagValueIamBindingConditionArgs> condition;
 
-    public Input<TagValueIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<TagValueIamBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -37,9 +37,9 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -48,17 +48,17 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagValue", required=true)
-      private final Input<String> tagValue;
+      private final Output<String> tagValue;
 
-    public Input<String> getTagValue() {
+    public Output<String> getTagValue() {
         return this.tagValue;
     }
 
     public TagValueIamBindingArgs(
-        @Nullable Input<TagValueIamBindingConditionArgs> condition,
-        Input<List<String>> members,
-        Input<String> role,
-        Input<String> tagValue) {
+        @Nullable Output<TagValueIamBindingConditionArgs> condition,
+        Output<List<String>> members,
+        Output<String> role,
+        Output<String> tagValue) {
         this.condition = condition;
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
         this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
@@ -66,10 +66,10 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TagValueIamBindingArgs() {
-        this.condition = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
-        this.tagValue = Input.empty();
+        this.condition = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
+        this.tagValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,10 +81,10 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<TagValueIamBindingConditionArgs> condition;
-        private Input<List<String>> members;
-        private Input<String> role;
-        private Input<String> tagValue;
+        private @Nullable Output<TagValueIamBindingConditionArgs> condition;
+        private Output<List<String>> members;
+        private Output<String> role;
+        private Output<String> tagValue;
 
         public Builder() {
     	      // Empty
@@ -98,43 +98,43 @@ public final class TagValueIamBindingArgs extends io.pulumi.resources.ResourceAr
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder condition(@Nullable Input<TagValueIamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<TagValueIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable TagValueIamBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder tagValue(Input<String> tagValue) {
+        public Builder tagValue(Output<String> tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
 
         public Builder tagValue(String tagValue) {
-            this.tagValue = Input.of(Objects.requireNonNull(tagValue));
+            this.tagValue = Output.of(Objects.requireNonNull(tagValue));
             return this;
         }
         public TagValueIamBindingArgs build() {

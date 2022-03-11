@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="extra")
-      private final @Nullable Input<Map<String,List<String>>> extra;
+      private final @Nullable Output<Map<String,List<String>>> extra;
 
-    public Input<Map<String,List<String>>> getExtra() {
-        return this.extra == null ? Input.empty() : this.extra;
+    public Output<Map<String,List<String>>> getExtra() {
+        return this.extra == null ? Output.empty() : this.extra;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="groups")
-      private final @Nullable Input<List<String>> groups;
+      private final @Nullable Output<List<String>> groups;
 
-    public Input<List<String>> getGroups() {
-        return this.groups == null ? Input.empty() : this.groups;
+    public Output<List<String>> getGroups() {
+        return this.groups == null ? Output.empty() : this.groups;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="request", required=true)
-      private final Input<String> request;
+      private final Output<String> request;
 
-    public Input<String> getRequest() {
+    public Output<String> getRequest() {
         return this.request;
     }
 
@@ -64,10 +64,10 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="signerName")
-      private final @Nullable Input<String> signerName;
+      private final @Nullable Output<String> signerName;
 
-    public Input<String> getSignerName() {
-        return this.signerName == null ? Input.empty() : this.signerName;
+    public Output<String> getSignerName() {
+        return this.signerName == null ? Output.empty() : this.signerName;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="usages")
-      private final @Nullable Input<List<String>> usages;
+      private final @Nullable Output<List<String>> usages;
 
-    public Input<List<String>> getUsages() {
-        return this.usages == null ? Input.empty() : this.usages;
+    public Output<List<String>> getUsages() {
+        return this.usages == null ? Output.empty() : this.usages;
     }
 
     /**
@@ -98,20 +98,20 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public CertificateSigningRequestSpecArgs(
-        @Nullable Input<Map<String,List<String>>> extra,
-        @Nullable Input<List<String>> groups,
-        Input<String> request,
-        @Nullable Input<String> signerName,
-        @Nullable Input<String> uid,
-        @Nullable Input<List<String>> usages,
-        @Nullable Input<String> username) {
+        @Nullable Output<Map<String,List<String>>> extra,
+        @Nullable Output<List<String>> groups,
+        Output<String> request,
+        @Nullable Output<String> signerName,
+        @Nullable Output<String> uid,
+        @Nullable Output<List<String>> usages,
+        @Nullable Output<String> username) {
         this.extra = extra;
         this.groups = groups;
         this.request = Objects.requireNonNull(request, "expected parameter 'request' to be non-null");
@@ -122,13 +122,13 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     }
 
     private CertificateSigningRequestSpecArgs() {
-        this.extra = Input.empty();
-        this.groups = Input.empty();
-        this.request = Input.empty();
-        this.signerName = Input.empty();
-        this.uid = Input.empty();
-        this.usages = Input.empty();
-        this.username = Input.empty();
+        this.extra = Output.empty();
+        this.groups = Output.empty();
+        this.request = Output.empty();
+        this.signerName = Output.empty();
+        this.uid = Output.empty();
+        this.usages = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,13 +140,13 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,List<String>>> extra;
-        private @Nullable Input<List<String>> groups;
-        private Input<String> request;
-        private @Nullable Input<String> signerName;
-        private @Nullable Input<String> uid;
-        private @Nullable Input<List<String>> usages;
-        private @Nullable Input<String> username;
+        private @Nullable Output<Map<String,List<String>>> extra;
+        private @Nullable Output<List<String>> groups;
+        private Output<String> request;
+        private @Nullable Output<String> signerName;
+        private @Nullable Output<String> uid;
+        private @Nullable Output<List<String>> usages;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -163,73 +163,73 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     	      this.username = defaults.username;
         }
 
-        public Builder extra(@Nullable Input<Map<String,List<String>>> extra) {
+        public Builder extra(@Nullable Output<Map<String,List<String>>> extra) {
             this.extra = extra;
             return this;
         }
 
         public Builder extra(@Nullable Map<String,List<String>> extra) {
-            this.extra = Input.ofNullable(extra);
+            this.extra = Output.ofNullable(extra);
             return this;
         }
 
-        public Builder groups(@Nullable Input<List<String>> groups) {
+        public Builder groups(@Nullable Output<List<String>> groups) {
             this.groups = groups;
             return this;
         }
 
         public Builder groups(@Nullable List<String> groups) {
-            this.groups = Input.ofNullable(groups);
+            this.groups = Output.ofNullable(groups);
             return this;
         }
 
-        public Builder request(Input<String> request) {
+        public Builder request(Output<String> request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
 
         public Builder request(String request) {
-            this.request = Input.of(Objects.requireNonNull(request));
+            this.request = Output.of(Objects.requireNonNull(request));
             return this;
         }
 
-        public Builder signerName(@Nullable Input<String> signerName) {
+        public Builder signerName(@Nullable Output<String> signerName) {
             this.signerName = signerName;
             return this;
         }
 
         public Builder signerName(@Nullable String signerName) {
-            this.signerName = Input.ofNullable(signerName);
+            this.signerName = Output.ofNullable(signerName);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
 
-        public Builder usages(@Nullable Input<List<String>> usages) {
+        public Builder usages(@Nullable Output<List<String>> usages) {
             this.usages = usages;
             return this;
         }
 
         public Builder usages(@Nullable List<String> usages) {
-            this.usages = Input.ofNullable(usages);
+            this.usages = Output.ofNullable(usages);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public CertificateSigningRequestSpecArgs build() {

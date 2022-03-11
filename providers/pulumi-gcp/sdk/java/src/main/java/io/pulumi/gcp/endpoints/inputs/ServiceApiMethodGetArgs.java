@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.endpoints.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,38 +15,38 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
     public static final ServiceApiMethodGetArgs Empty = new ServiceApiMethodGetArgs();
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="requestType")
-      private final @Nullable Input<String> requestType;
+      private final @Nullable Output<String> requestType;
 
-    public Input<String> getRequestType() {
-        return this.requestType == null ? Input.empty() : this.requestType;
+    public Output<String> getRequestType() {
+        return this.requestType == null ? Output.empty() : this.requestType;
     }
 
     @InputImport(name="responseType")
-      private final @Nullable Input<String> responseType;
+      private final @Nullable Output<String> responseType;
 
-    public Input<String> getResponseType() {
-        return this.responseType == null ? Input.empty() : this.responseType;
+    public Output<String> getResponseType() {
+        return this.responseType == null ? Output.empty() : this.responseType;
     }
 
     @InputImport(name="syntax")
-      private final @Nullable Input<String> syntax;
+      private final @Nullable Output<String> syntax;
 
-    public Input<String> getSyntax() {
-        return this.syntax == null ? Input.empty() : this.syntax;
+    public Output<String> getSyntax() {
+        return this.syntax == null ? Output.empty() : this.syntax;
     }
 
     public ServiceApiMethodGetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> requestType,
-        @Nullable Input<String> responseType,
-        @Nullable Input<String> syntax) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> requestType,
+        @Nullable Output<String> responseType,
+        @Nullable Output<String> syntax) {
         this.name = name;
         this.requestType = requestType;
         this.responseType = responseType;
@@ -54,10 +54,10 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ServiceApiMethodGetArgs() {
-        this.name = Input.empty();
-        this.requestType = Input.empty();
-        this.responseType = Input.empty();
-        this.syntax = Input.empty();
+        this.name = Output.empty();
+        this.requestType = Output.empty();
+        this.responseType = Output.empty();
+        this.syntax = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,10 +69,10 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> requestType;
-        private @Nullable Input<String> responseType;
-        private @Nullable Input<String> syntax;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> requestType;
+        private @Nullable Output<String> responseType;
+        private @Nullable Output<String> syntax;
 
         public Builder() {
     	      // Empty
@@ -86,43 +86,43 @@ public final class ServiceApiMethodGetArgs extends io.pulumi.resources.ResourceA
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder requestType(@Nullable Input<String> requestType) {
+        public Builder requestType(@Nullable Output<String> requestType) {
             this.requestType = requestType;
             return this;
         }
 
         public Builder requestType(@Nullable String requestType) {
-            this.requestType = Input.ofNullable(requestType);
+            this.requestType = Output.ofNullable(requestType);
             return this;
         }
 
-        public Builder responseType(@Nullable Input<String> responseType) {
+        public Builder responseType(@Nullable Output<String> responseType) {
             this.responseType = responseType;
             return this;
         }
 
         public Builder responseType(@Nullable String responseType) {
-            this.responseType = Input.ofNullable(responseType);
+            this.responseType = Output.ofNullable(responseType);
             return this;
         }
 
-        public Builder syntax(@Nullable Input<String> syntax) {
+        public Builder syntax(@Nullable Output<String> syntax) {
             this.syntax = syntax;
             return this;
         }
 
         public Builder syntax(@Nullable String syntax) {
-            this.syntax = Input.ofNullable(syntax);
+            this.syntax = Output.ofNullable(syntax);
             return this;
         }
         public ServiceApiMethodGetArgs build() {

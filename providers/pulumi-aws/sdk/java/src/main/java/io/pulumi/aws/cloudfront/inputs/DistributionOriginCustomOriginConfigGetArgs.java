@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class DistributionOriginCustomOriginConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="httpPort", required=true)
-      private final Input<Integer> httpPort;
+      private final Output<Integer> httpPort;
 
-    public Input<Integer> getHttpPort() {
+    public Output<Integer> getHttpPort() {
         return this.httpPort;
     }
 
@@ -32,9 +32,9 @@ public final class DistributionOriginCustomOriginConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="httpsPort", required=true)
-      private final Input<Integer> httpsPort;
+      private final Output<Integer> httpsPort;
 
-    public Input<Integer> getHttpsPort() {
+    public Output<Integer> getHttpsPort() {
         return this.httpsPort;
     }
 
@@ -43,10 +43,10 @@ public final class DistributionOriginCustomOriginConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="originKeepaliveTimeout")
-      private final @Nullable Input<Integer> originKeepaliveTimeout;
+      private final @Nullable Output<Integer> originKeepaliveTimeout;
 
-    public Input<Integer> getOriginKeepaliveTimeout() {
-        return this.originKeepaliveTimeout == null ? Input.empty() : this.originKeepaliveTimeout;
+    public Output<Integer> getOriginKeepaliveTimeout() {
+        return this.originKeepaliveTimeout == null ? Output.empty() : this.originKeepaliveTimeout;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class DistributionOriginCustomOriginConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="originProtocolPolicy", required=true)
-      private final Input<String> originProtocolPolicy;
+      private final Output<String> originProtocolPolicy;
 
-    public Input<String> getOriginProtocolPolicy() {
+    public Output<String> getOriginProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
@@ -66,10 +66,10 @@ public final class DistributionOriginCustomOriginConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="originReadTimeout")
-      private final @Nullable Input<Integer> originReadTimeout;
+      private final @Nullable Output<Integer> originReadTimeout;
 
-    public Input<Integer> getOriginReadTimeout() {
-        return this.originReadTimeout == null ? Input.empty() : this.originReadTimeout;
+    public Output<Integer> getOriginReadTimeout() {
+        return this.originReadTimeout == null ? Output.empty() : this.originReadTimeout;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class DistributionOriginCustomOriginConfigGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="originSslProtocols", required=true)
-      private final Input<List<String>> originSslProtocols;
+      private final Output<List<String>> originSslProtocols;
 
-    public Input<List<String>> getOriginSslProtocols() {
+    public Output<List<String>> getOriginSslProtocols() {
         return this.originSslProtocols;
     }
 
     public DistributionOriginCustomOriginConfigGetArgs(
-        Input<Integer> httpPort,
-        Input<Integer> httpsPort,
-        @Nullable Input<Integer> originKeepaliveTimeout,
-        Input<String> originProtocolPolicy,
-        @Nullable Input<Integer> originReadTimeout,
-        Input<List<String>> originSslProtocols) {
+        Output<Integer> httpPort,
+        Output<Integer> httpsPort,
+        @Nullable Output<Integer> originKeepaliveTimeout,
+        Output<String> originProtocolPolicy,
+        @Nullable Output<Integer> originReadTimeout,
+        Output<List<String>> originSslProtocols) {
         this.httpPort = Objects.requireNonNull(httpPort, "expected parameter 'httpPort' to be non-null");
         this.httpsPort = Objects.requireNonNull(httpsPort, "expected parameter 'httpsPort' to be non-null");
         this.originKeepaliveTimeout = originKeepaliveTimeout;
@@ -101,12 +101,12 @@ public final class DistributionOriginCustomOriginConfigGetArgs extends io.pulumi
     }
 
     private DistributionOriginCustomOriginConfigGetArgs() {
-        this.httpPort = Input.empty();
-        this.httpsPort = Input.empty();
-        this.originKeepaliveTimeout = Input.empty();
-        this.originProtocolPolicy = Input.empty();
-        this.originReadTimeout = Input.empty();
-        this.originSslProtocols = Input.empty();
+        this.httpPort = Output.empty();
+        this.httpsPort = Output.empty();
+        this.originKeepaliveTimeout = Output.empty();
+        this.originProtocolPolicy = Output.empty();
+        this.originReadTimeout = Output.empty();
+        this.originSslProtocols = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class DistributionOriginCustomOriginConfigGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<Integer> httpPort;
-        private Input<Integer> httpsPort;
-        private @Nullable Input<Integer> originKeepaliveTimeout;
-        private Input<String> originProtocolPolicy;
-        private @Nullable Input<Integer> originReadTimeout;
-        private Input<List<String>> originSslProtocols;
+        private Output<Integer> httpPort;
+        private Output<Integer> httpsPort;
+        private @Nullable Output<Integer> originKeepaliveTimeout;
+        private Output<String> originProtocolPolicy;
+        private @Nullable Output<Integer> originReadTimeout;
+        private Output<List<String>> originSslProtocols;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class DistributionOriginCustomOriginConfigGetArgs extends io.pulumi
     	      this.originSslProtocols = defaults.originSslProtocols;
         }
 
-        public Builder httpPort(Input<Integer> httpPort) {
+        public Builder httpPort(Output<Integer> httpPort) {
             this.httpPort = Objects.requireNonNull(httpPort);
             return this;
         }
 
         public Builder httpPort(Integer httpPort) {
-            this.httpPort = Input.of(Objects.requireNonNull(httpPort));
+            this.httpPort = Output.of(Objects.requireNonNull(httpPort));
             return this;
         }
 
-        public Builder httpsPort(Input<Integer> httpsPort) {
+        public Builder httpsPort(Output<Integer> httpsPort) {
             this.httpsPort = Objects.requireNonNull(httpsPort);
             return this;
         }
 
         public Builder httpsPort(Integer httpsPort) {
-            this.httpsPort = Input.of(Objects.requireNonNull(httpsPort));
+            this.httpsPort = Output.of(Objects.requireNonNull(httpsPort));
             return this;
         }
 
-        public Builder originKeepaliveTimeout(@Nullable Input<Integer> originKeepaliveTimeout) {
+        public Builder originKeepaliveTimeout(@Nullable Output<Integer> originKeepaliveTimeout) {
             this.originKeepaliveTimeout = originKeepaliveTimeout;
             return this;
         }
 
         public Builder originKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
-            this.originKeepaliveTimeout = Input.ofNullable(originKeepaliveTimeout);
+            this.originKeepaliveTimeout = Output.ofNullable(originKeepaliveTimeout);
             return this;
         }
 
-        public Builder originProtocolPolicy(Input<String> originProtocolPolicy) {
+        public Builder originProtocolPolicy(Output<String> originProtocolPolicy) {
             this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
             return this;
         }
 
         public Builder originProtocolPolicy(String originProtocolPolicy) {
-            this.originProtocolPolicy = Input.of(Objects.requireNonNull(originProtocolPolicy));
+            this.originProtocolPolicy = Output.of(Objects.requireNonNull(originProtocolPolicy));
             return this;
         }
 
-        public Builder originReadTimeout(@Nullable Input<Integer> originReadTimeout) {
+        public Builder originReadTimeout(@Nullable Output<Integer> originReadTimeout) {
             this.originReadTimeout = originReadTimeout;
             return this;
         }
 
         public Builder originReadTimeout(@Nullable Integer originReadTimeout) {
-            this.originReadTimeout = Input.ofNullable(originReadTimeout);
+            this.originReadTimeout = Output.ofNullable(originReadTimeout);
             return this;
         }
 
-        public Builder originSslProtocols(Input<List<String>> originSslProtocols) {
+        public Builder originSslProtocols(Output<List<String>> originSslProtocols) {
             this.originSslProtocols = Objects.requireNonNull(originSslProtocols);
             return this;
         }
 
         public Builder originSslProtocols(List<String> originSslProtocols) {
-            this.originSslProtocols = Input.of(Objects.requireNonNull(originSslProtocols));
+            this.originSslProtocols = Output.of(Objects.requireNonNull(originSslProtocols));
             return this;
         }
         public DistributionOriginCustomOriginConfigGetArgs build() {

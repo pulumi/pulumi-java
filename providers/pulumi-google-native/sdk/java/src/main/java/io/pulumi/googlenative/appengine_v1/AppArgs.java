@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1.enums.AppDatabaseType;
 import io.pulumi.googlenative.appengine_v1.enums.AppServingStatus;
@@ -25,10 +25,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authDomain")
-      private final @Nullable Input<String> authDomain;
+      private final @Nullable Output<String> authDomain;
 
-    public Input<String> getAuthDomain() {
-        return this.authDomain == null ? Input.empty() : this.authDomain;
+    public Output<String> getAuthDomain() {
+        return this.authDomain == null ? Output.empty() : this.authDomain;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseType")
-      private final @Nullable Input<AppDatabaseType> databaseType;
+      private final @Nullable Output<AppDatabaseType> databaseType;
 
-    public Input<AppDatabaseType> getDatabaseType() {
-        return this.databaseType == null ? Input.empty() : this.databaseType;
+    public Output<AppDatabaseType> getDatabaseType() {
+        return this.databaseType == null ? Output.empty() : this.databaseType;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCookieExpiration")
-      private final @Nullable Input<String> defaultCookieExpiration;
+      private final @Nullable Output<String> defaultCookieExpiration;
 
-    public Input<String> getDefaultCookieExpiration() {
-        return this.defaultCookieExpiration == null ? Input.empty() : this.defaultCookieExpiration;
+    public Output<String> getDefaultCookieExpiration() {
+        return this.defaultCookieExpiration == null ? Output.empty() : this.defaultCookieExpiration;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dispatchRules")
-      private final @Nullable Input<List<UrlDispatchRuleArgs>> dispatchRules;
+      private final @Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules;
 
-    public Input<List<UrlDispatchRuleArgs>> getDispatchRules() {
-        return this.dispatchRules == null ? Input.empty() : this.dispatchRules;
+    public Output<List<UrlDispatchRuleArgs>> getDispatchRules() {
+        return this.dispatchRules == null ? Output.empty() : this.dispatchRules;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureSettings")
-      private final @Nullable Input<FeatureSettingsArgs> featureSettings;
+      private final @Nullable Output<FeatureSettingsArgs> featureSettings;
 
-    public Input<FeatureSettingsArgs> getFeatureSettings() {
-        return this.featureSettings == null ? Input.empty() : this.featureSettings;
+    public Output<FeatureSettingsArgs> getFeatureSettings() {
+        return this.featureSettings == null ? Output.empty() : this.featureSettings;
     }
 
     /**
@@ -80,17 +80,17 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcrDomain")
-      private final @Nullable Input<String> gcrDomain;
+      private final @Nullable Output<String> gcrDomain;
 
-    public Input<String> getGcrDomain() {
-        return this.gcrDomain == null ? Input.empty() : this.gcrDomain;
+    public Output<String> getGcrDomain() {
+        return this.gcrDomain == null ? Output.empty() : this.gcrDomain;
     }
 
     @InputImport(name="iap")
-      private final @Nullable Input<IdentityAwareProxyArgs> iap;
+      private final @Nullable Output<IdentityAwareProxyArgs> iap;
 
-    public Input<IdentityAwareProxyArgs> getIap() {
-        return this.iap == null ? Input.empty() : this.iap;
+    public Output<IdentityAwareProxyArgs> getIap() {
+        return this.iap == null ? Output.empty() : this.iap;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -131,24 +131,24 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servingStatus")
-      private final @Nullable Input<AppServingStatus> servingStatus;
+      private final @Nullable Output<AppServingStatus> servingStatus;
 
-    public Input<AppServingStatus> getServingStatus() {
-        return this.servingStatus == null ? Input.empty() : this.servingStatus;
+    public Output<AppServingStatus> getServingStatus() {
+        return this.servingStatus == null ? Output.empty() : this.servingStatus;
     }
 
     public AppArgs(
-        @Nullable Input<String> authDomain,
-        @Nullable Input<AppDatabaseType> databaseType,
-        @Nullable Input<String> defaultCookieExpiration,
-        @Nullable Input<List<UrlDispatchRuleArgs>> dispatchRules,
-        @Nullable Input<FeatureSettingsArgs> featureSettings,
-        @Nullable Input<String> gcrDomain,
-        @Nullable Input<IdentityAwareProxyArgs> iap,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<AppServingStatus> servingStatus) {
+        @Nullable Output<String> authDomain,
+        @Nullable Output<AppDatabaseType> databaseType,
+        @Nullable Output<String> defaultCookieExpiration,
+        @Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules,
+        @Nullable Output<FeatureSettingsArgs> featureSettings,
+        @Nullable Output<String> gcrDomain,
+        @Nullable Output<IdentityAwareProxyArgs> iap,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<AppServingStatus> servingStatus) {
         this.authDomain = authDomain;
         this.databaseType = databaseType;
         this.defaultCookieExpiration = defaultCookieExpiration;
@@ -163,17 +163,17 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.authDomain = Input.empty();
-        this.databaseType = Input.empty();
-        this.defaultCookieExpiration = Input.empty();
-        this.dispatchRules = Input.empty();
-        this.featureSettings = Input.empty();
-        this.gcrDomain = Input.empty();
-        this.iap = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.servingStatus = Input.empty();
+        this.authDomain = Output.empty();
+        this.databaseType = Output.empty();
+        this.defaultCookieExpiration = Output.empty();
+        this.dispatchRules = Output.empty();
+        this.featureSettings = Output.empty();
+        this.gcrDomain = Output.empty();
+        this.iap = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.servingStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,17 +185,17 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authDomain;
-        private @Nullable Input<AppDatabaseType> databaseType;
-        private @Nullable Input<String> defaultCookieExpiration;
-        private @Nullable Input<List<UrlDispatchRuleArgs>> dispatchRules;
-        private @Nullable Input<FeatureSettingsArgs> featureSettings;
-        private @Nullable Input<String> gcrDomain;
-        private @Nullable Input<IdentityAwareProxyArgs> iap;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<AppServingStatus> servingStatus;
+        private @Nullable Output<String> authDomain;
+        private @Nullable Output<AppDatabaseType> databaseType;
+        private @Nullable Output<String> defaultCookieExpiration;
+        private @Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules;
+        private @Nullable Output<FeatureSettingsArgs> featureSettings;
+        private @Nullable Output<String> gcrDomain;
+        private @Nullable Output<IdentityAwareProxyArgs> iap;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<AppServingStatus> servingStatus;
 
         public Builder() {
     	      // Empty
@@ -216,113 +216,113 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.servingStatus = defaults.servingStatus;
         }
 
-        public Builder authDomain(@Nullable Input<String> authDomain) {
+        public Builder authDomain(@Nullable Output<String> authDomain) {
             this.authDomain = authDomain;
             return this;
         }
 
         public Builder authDomain(@Nullable String authDomain) {
-            this.authDomain = Input.ofNullable(authDomain);
+            this.authDomain = Output.ofNullable(authDomain);
             return this;
         }
 
-        public Builder databaseType(@Nullable Input<AppDatabaseType> databaseType) {
+        public Builder databaseType(@Nullable Output<AppDatabaseType> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
         public Builder databaseType(@Nullable AppDatabaseType databaseType) {
-            this.databaseType = Input.ofNullable(databaseType);
+            this.databaseType = Output.ofNullable(databaseType);
             return this;
         }
 
-        public Builder defaultCookieExpiration(@Nullable Input<String> defaultCookieExpiration) {
+        public Builder defaultCookieExpiration(@Nullable Output<String> defaultCookieExpiration) {
             this.defaultCookieExpiration = defaultCookieExpiration;
             return this;
         }
 
         public Builder defaultCookieExpiration(@Nullable String defaultCookieExpiration) {
-            this.defaultCookieExpiration = Input.ofNullable(defaultCookieExpiration);
+            this.defaultCookieExpiration = Output.ofNullable(defaultCookieExpiration);
             return this;
         }
 
-        public Builder dispatchRules(@Nullable Input<List<UrlDispatchRuleArgs>> dispatchRules) {
+        public Builder dispatchRules(@Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules) {
             this.dispatchRules = dispatchRules;
             return this;
         }
 
         public Builder dispatchRules(@Nullable List<UrlDispatchRuleArgs> dispatchRules) {
-            this.dispatchRules = Input.ofNullable(dispatchRules);
+            this.dispatchRules = Output.ofNullable(dispatchRules);
             return this;
         }
 
-        public Builder featureSettings(@Nullable Input<FeatureSettingsArgs> featureSettings) {
+        public Builder featureSettings(@Nullable Output<FeatureSettingsArgs> featureSettings) {
             this.featureSettings = featureSettings;
             return this;
         }
 
         public Builder featureSettings(@Nullable FeatureSettingsArgs featureSettings) {
-            this.featureSettings = Input.ofNullable(featureSettings);
+            this.featureSettings = Output.ofNullable(featureSettings);
             return this;
         }
 
-        public Builder gcrDomain(@Nullable Input<String> gcrDomain) {
+        public Builder gcrDomain(@Nullable Output<String> gcrDomain) {
             this.gcrDomain = gcrDomain;
             return this;
         }
 
         public Builder gcrDomain(@Nullable String gcrDomain) {
-            this.gcrDomain = Input.ofNullable(gcrDomain);
+            this.gcrDomain = Output.ofNullable(gcrDomain);
             return this;
         }
 
-        public Builder iap(@Nullable Input<IdentityAwareProxyArgs> iap) {
+        public Builder iap(@Nullable Output<IdentityAwareProxyArgs> iap) {
             this.iap = iap;
             return this;
         }
 
         public Builder iap(@Nullable IdentityAwareProxyArgs iap) {
-            this.iap = Input.ofNullable(iap);
+            this.iap = Output.ofNullable(iap);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder servingStatus(@Nullable Input<AppServingStatus> servingStatus) {
+        public Builder servingStatus(@Nullable Output<AppServingStatus> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
 
         public Builder servingStatus(@Nullable AppServingStatus servingStatus) {
-            this.servingStatus = Input.ofNullable(servingStatus);
+            this.servingStatus = Output.ofNullable(servingStatus);
             return this;
         }
         public AppArgs build() {

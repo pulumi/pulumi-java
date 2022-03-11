@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
     public static final BucketDataExportArgs Empty = new BucketDataExportArgs();
 
     @InputImport(name="destination", required=true)
-      private final Input<BucketDestinationArgs> destination;
+      private final Output<BucketDestinationArgs> destination;
 
-    public Input<BucketDestinationArgs> getDestination() {
+    public Output<BucketDestinationArgs> getDestination() {
         return this.destination;
     }
 
@@ -30,22 +30,22 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="outputSchemaVersion", required=true)
-      private final Input<String> outputSchemaVersion;
+      private final Output<String> outputSchemaVersion;
 
-    public Input<String> getOutputSchemaVersion() {
+    public Output<String> getOutputSchemaVersion() {
         return this.outputSchemaVersion;
     }
 
     public BucketDataExportArgs(
-        Input<BucketDestinationArgs> destination,
-        Input<String> outputSchemaVersion) {
+        Output<BucketDestinationArgs> destination,
+        Output<String> outputSchemaVersion) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion, "expected parameter 'outputSchemaVersion' to be non-null");
     }
 
     private BucketDataExportArgs() {
-        this.destination = Input.empty();
-        this.outputSchemaVersion = Input.empty();
+        this.destination = Output.empty();
+        this.outputSchemaVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<BucketDestinationArgs> destination;
-        private Input<String> outputSchemaVersion;
+        private Output<BucketDestinationArgs> destination;
+        private Output<String> outputSchemaVersion;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
     	      this.outputSchemaVersion = defaults.outputSchemaVersion;
         }
 
-        public Builder destination(Input<BucketDestinationArgs> destination) {
+        public Builder destination(Output<BucketDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(BucketDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder outputSchemaVersion(Input<String> outputSchemaVersion) {
+        public Builder outputSchemaVersion(Output<String> outputSchemaVersion) {
             this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
             return this;
         }
 
         public Builder outputSchemaVersion(String outputSchemaVersion) {
-            this.outputSchemaVersion = Input.of(Objects.requireNonNull(outputSchemaVersion));
+            this.outputSchemaVersion = Output.of(Objects.requireNonNull(outputSchemaVersion));
             return this;
         }
         public BucketDataExportArgs build() {

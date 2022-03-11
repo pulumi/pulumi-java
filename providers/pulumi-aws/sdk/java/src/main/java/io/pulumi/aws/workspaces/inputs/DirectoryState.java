@@ -6,7 +6,7 @@ package io.pulumi.aws.workspaces.inputs;
 import io.pulumi.aws.workspaces.inputs.DirectorySelfServicePermissionsGetArgs;
 import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceAccessPropertiesGetArgs;
 import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceCreationPropertiesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerUserName")
-      private final @Nullable Input<String> customerUserName;
+      private final @Nullable Output<String> customerUserName;
 
-    public Input<String> getCustomerUserName() {
-        return this.customerUserName == null ? Input.empty() : this.customerUserName;
+    public Output<String> getCustomerUserName() {
+        return this.customerUserName == null ? Output.empty() : this.customerUserName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId")
-      private final @Nullable Input<String> directoryId;
+      private final @Nullable Output<String> directoryId;
 
-    public Input<String> getDirectoryId() {
-        return this.directoryId == null ? Input.empty() : this.directoryId;
+    public Output<String> getDirectoryId() {
+        return this.directoryId == null ? Output.empty() : this.directoryId;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryName")
-      private final @Nullable Input<String> directoryName;
+      private final @Nullable Output<String> directoryName;
 
-    public Input<String> getDirectoryName() {
-        return this.directoryName == null ? Input.empty() : this.directoryName;
+    public Output<String> getDirectoryName() {
+        return this.directoryName == null ? Output.empty() : this.directoryName;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryType")
-      private final @Nullable Input<String> directoryType;
+      private final @Nullable Output<String> directoryType;
 
-    public Input<String> getDirectoryType() {
-        return this.directoryType == null ? Input.empty() : this.directoryType;
+    public Output<String> getDirectoryType() {
+        return this.directoryType == null ? Output.empty() : this.directoryType;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsIpAddresses")
-      private final @Nullable Input<List<String>> dnsIpAddresses;
+      private final @Nullable Output<List<String>> dnsIpAddresses;
 
-    public Input<List<String>> getDnsIpAddresses() {
-        return this.dnsIpAddresses == null ? Input.empty() : this.dnsIpAddresses;
+    public Output<List<String>> getDnsIpAddresses() {
+        return this.dnsIpAddresses == null ? Output.empty() : this.dnsIpAddresses;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleId")
-      private final @Nullable Input<String> iamRoleId;
+      private final @Nullable Output<String> iamRoleId;
 
-    public Input<String> getIamRoleId() {
-        return this.iamRoleId == null ? Input.empty() : this.iamRoleId;
+    public Output<String> getIamRoleId() {
+        return this.iamRoleId == null ? Output.empty() : this.iamRoleId;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipGroupIds")
-      private final @Nullable Input<List<String>> ipGroupIds;
+      private final @Nullable Output<List<String>> ipGroupIds;
 
-    public Input<List<String>> getIpGroupIds() {
-        return this.ipGroupIds == null ? Input.empty() : this.ipGroupIds;
+    public Output<List<String>> getIpGroupIds() {
+        return this.ipGroupIds == null ? Output.empty() : this.ipGroupIds;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationCode")
-      private final @Nullable Input<String> registrationCode;
+      private final @Nullable Output<String> registrationCode;
 
-    public Input<String> getRegistrationCode() {
-        return this.registrationCode == null ? Input.empty() : this.registrationCode;
+    public Output<String> getRegistrationCode() {
+        return this.registrationCode == null ? Output.empty() : this.registrationCode;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfServicePermissions")
-      private final @Nullable Input<DirectorySelfServicePermissionsGetArgs> selfServicePermissions;
+      private final @Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions;
 
-    public Input<DirectorySelfServicePermissionsGetArgs> getSelfServicePermissions() {
-        return this.selfServicePermissions == null ? Input.empty() : this.selfServicePermissions;
+    public Output<DirectorySelfServicePermissionsGetArgs> getSelfServicePermissions() {
+        return this.selfServicePermissions == null ? Output.empty() : this.selfServicePermissions;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceAccessProperties")
-      private final @Nullable Input<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties;
+      private final @Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties;
 
-    public Input<DirectoryWorkspaceAccessPropertiesGetArgs> getWorkspaceAccessProperties() {
-        return this.workspaceAccessProperties == null ? Input.empty() : this.workspaceAccessProperties;
+    public Output<DirectoryWorkspaceAccessPropertiesGetArgs> getWorkspaceAccessProperties() {
+        return this.workspaceAccessProperties == null ? Output.empty() : this.workspaceAccessProperties;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceCreationProperties")
-      private final @Nullable Input<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties;
+      private final @Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties;
 
-    public Input<DirectoryWorkspaceCreationPropertiesGetArgs> getWorkspaceCreationProperties() {
-        return this.workspaceCreationProperties == null ? Input.empty() : this.workspaceCreationProperties;
+    public Output<DirectoryWorkspaceCreationPropertiesGetArgs> getWorkspaceCreationProperties() {
+        return this.workspaceCreationProperties == null ? Output.empty() : this.workspaceCreationProperties;
     }
 
     /**
@@ -189,29 +189,29 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceSecurityGroupId")
-      private final @Nullable Input<String> workspaceSecurityGroupId;
+      private final @Nullable Output<String> workspaceSecurityGroupId;
 
-    public Input<String> getWorkspaceSecurityGroupId() {
-        return this.workspaceSecurityGroupId == null ? Input.empty() : this.workspaceSecurityGroupId;
+    public Output<String> getWorkspaceSecurityGroupId() {
+        return this.workspaceSecurityGroupId == null ? Output.empty() : this.workspaceSecurityGroupId;
     }
 
     public DirectoryState(
-        @Nullable Input<String> alias,
-        @Nullable Input<String> customerUserName,
-        @Nullable Input<String> directoryId,
-        @Nullable Input<String> directoryName,
-        @Nullable Input<String> directoryType,
-        @Nullable Input<List<String>> dnsIpAddresses,
-        @Nullable Input<String> iamRoleId,
-        @Nullable Input<List<String>> ipGroupIds,
-        @Nullable Input<String> registrationCode,
-        @Nullable Input<DirectorySelfServicePermissionsGetArgs> selfServicePermissions,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties,
-        @Nullable Input<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties,
-        @Nullable Input<String> workspaceSecurityGroupId) {
+        @Nullable Output<String> alias,
+        @Nullable Output<String> customerUserName,
+        @Nullable Output<String> directoryId,
+        @Nullable Output<String> directoryName,
+        @Nullable Output<String> directoryType,
+        @Nullable Output<List<String>> dnsIpAddresses,
+        @Nullable Output<String> iamRoleId,
+        @Nullable Output<List<String>> ipGroupIds,
+        @Nullable Output<String> registrationCode,
+        @Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties,
+        @Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties,
+        @Nullable Output<String> workspaceSecurityGroupId) {
         this.alias = alias;
         this.customerUserName = customerUserName;
         this.directoryId = directoryId;
@@ -231,22 +231,22 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DirectoryState() {
-        this.alias = Input.empty();
-        this.customerUserName = Input.empty();
-        this.directoryId = Input.empty();
-        this.directoryName = Input.empty();
-        this.directoryType = Input.empty();
-        this.dnsIpAddresses = Input.empty();
-        this.iamRoleId = Input.empty();
-        this.ipGroupIds = Input.empty();
-        this.registrationCode = Input.empty();
-        this.selfServicePermissions = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.workspaceAccessProperties = Input.empty();
-        this.workspaceCreationProperties = Input.empty();
-        this.workspaceSecurityGroupId = Input.empty();
+        this.alias = Output.empty();
+        this.customerUserName = Output.empty();
+        this.directoryId = Output.empty();
+        this.directoryName = Output.empty();
+        this.directoryType = Output.empty();
+        this.dnsIpAddresses = Output.empty();
+        this.iamRoleId = Output.empty();
+        this.ipGroupIds = Output.empty();
+        this.registrationCode = Output.empty();
+        this.selfServicePermissions = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.workspaceAccessProperties = Output.empty();
+        this.workspaceCreationProperties = Output.empty();
+        this.workspaceSecurityGroupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -258,22 +258,22 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alias;
-        private @Nullable Input<String> customerUserName;
-        private @Nullable Input<String> directoryId;
-        private @Nullable Input<String> directoryName;
-        private @Nullable Input<String> directoryType;
-        private @Nullable Input<List<String>> dnsIpAddresses;
-        private @Nullable Input<String> iamRoleId;
-        private @Nullable Input<List<String>> ipGroupIds;
-        private @Nullable Input<String> registrationCode;
-        private @Nullable Input<DirectorySelfServicePermissionsGetArgs> selfServicePermissions;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties;
-        private @Nullable Input<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties;
-        private @Nullable Input<String> workspaceSecurityGroupId;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<String> customerUserName;
+        private @Nullable Output<String> directoryId;
+        private @Nullable Output<String> directoryName;
+        private @Nullable Output<String> directoryType;
+        private @Nullable Output<List<String>> dnsIpAddresses;
+        private @Nullable Output<String> iamRoleId;
+        private @Nullable Output<List<String>> ipGroupIds;
+        private @Nullable Output<String> registrationCode;
+        private @Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties;
+        private @Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties;
+        private @Nullable Output<String> workspaceSecurityGroupId;
 
         public Builder() {
     	      // Empty
@@ -299,163 +299,163 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceSecurityGroupId = defaults.workspaceSecurityGroupId;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder customerUserName(@Nullable Input<String> customerUserName) {
+        public Builder customerUserName(@Nullable Output<String> customerUserName) {
             this.customerUserName = customerUserName;
             return this;
         }
 
         public Builder customerUserName(@Nullable String customerUserName) {
-            this.customerUserName = Input.ofNullable(customerUserName);
+            this.customerUserName = Output.ofNullable(customerUserName);
             return this;
         }
 
-        public Builder directoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Output<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Input.ofNullable(directoryId);
+            this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
 
-        public Builder directoryName(@Nullable Input<String> directoryName) {
+        public Builder directoryName(@Nullable Output<String> directoryName) {
             this.directoryName = directoryName;
             return this;
         }
 
         public Builder directoryName(@Nullable String directoryName) {
-            this.directoryName = Input.ofNullable(directoryName);
+            this.directoryName = Output.ofNullable(directoryName);
             return this;
         }
 
-        public Builder directoryType(@Nullable Input<String> directoryType) {
+        public Builder directoryType(@Nullable Output<String> directoryType) {
             this.directoryType = directoryType;
             return this;
         }
 
         public Builder directoryType(@Nullable String directoryType) {
-            this.directoryType = Input.ofNullable(directoryType);
+            this.directoryType = Output.ofNullable(directoryType);
             return this;
         }
 
-        public Builder dnsIpAddresses(@Nullable Input<List<String>> dnsIpAddresses) {
+        public Builder dnsIpAddresses(@Nullable Output<List<String>> dnsIpAddresses) {
             this.dnsIpAddresses = dnsIpAddresses;
             return this;
         }
 
         public Builder dnsIpAddresses(@Nullable List<String> dnsIpAddresses) {
-            this.dnsIpAddresses = Input.ofNullable(dnsIpAddresses);
+            this.dnsIpAddresses = Output.ofNullable(dnsIpAddresses);
             return this;
         }
 
-        public Builder iamRoleId(@Nullable Input<String> iamRoleId) {
+        public Builder iamRoleId(@Nullable Output<String> iamRoleId) {
             this.iamRoleId = iamRoleId;
             return this;
         }
 
         public Builder iamRoleId(@Nullable String iamRoleId) {
-            this.iamRoleId = Input.ofNullable(iamRoleId);
+            this.iamRoleId = Output.ofNullable(iamRoleId);
             return this;
         }
 
-        public Builder ipGroupIds(@Nullable Input<List<String>> ipGroupIds) {
+        public Builder ipGroupIds(@Nullable Output<List<String>> ipGroupIds) {
             this.ipGroupIds = ipGroupIds;
             return this;
         }
 
         public Builder ipGroupIds(@Nullable List<String> ipGroupIds) {
-            this.ipGroupIds = Input.ofNullable(ipGroupIds);
+            this.ipGroupIds = Output.ofNullable(ipGroupIds);
             return this;
         }
 
-        public Builder registrationCode(@Nullable Input<String> registrationCode) {
+        public Builder registrationCode(@Nullable Output<String> registrationCode) {
             this.registrationCode = registrationCode;
             return this;
         }
 
         public Builder registrationCode(@Nullable String registrationCode) {
-            this.registrationCode = Input.ofNullable(registrationCode);
+            this.registrationCode = Output.ofNullable(registrationCode);
             return this;
         }
 
-        public Builder selfServicePermissions(@Nullable Input<DirectorySelfServicePermissionsGetArgs> selfServicePermissions) {
+        public Builder selfServicePermissions(@Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions) {
             this.selfServicePermissions = selfServicePermissions;
             return this;
         }
 
         public Builder selfServicePermissions(@Nullable DirectorySelfServicePermissionsGetArgs selfServicePermissions) {
-            this.selfServicePermissions = Input.ofNullable(selfServicePermissions);
+            this.selfServicePermissions = Output.ofNullable(selfServicePermissions);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder workspaceAccessProperties(@Nullable Input<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties) {
+        public Builder workspaceAccessProperties(@Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties) {
             this.workspaceAccessProperties = workspaceAccessProperties;
             return this;
         }
 
         public Builder workspaceAccessProperties(@Nullable DirectoryWorkspaceAccessPropertiesGetArgs workspaceAccessProperties) {
-            this.workspaceAccessProperties = Input.ofNullable(workspaceAccessProperties);
+            this.workspaceAccessProperties = Output.ofNullable(workspaceAccessProperties);
             return this;
         }
 
-        public Builder workspaceCreationProperties(@Nullable Input<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties) {
+        public Builder workspaceCreationProperties(@Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties) {
             this.workspaceCreationProperties = workspaceCreationProperties;
             return this;
         }
 
         public Builder workspaceCreationProperties(@Nullable DirectoryWorkspaceCreationPropertiesGetArgs workspaceCreationProperties) {
-            this.workspaceCreationProperties = Input.ofNullable(workspaceCreationProperties);
+            this.workspaceCreationProperties = Output.ofNullable(workspaceCreationProperties);
             return this;
         }
 
-        public Builder workspaceSecurityGroupId(@Nullable Input<String> workspaceSecurityGroupId) {
+        public Builder workspaceSecurityGroupId(@Nullable Output<String> workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = workspaceSecurityGroupId;
             return this;
         }
 
         public Builder workspaceSecurityGroupId(@Nullable String workspaceSecurityGroupId) {
-            this.workspaceSecurityGroupId = Input.ofNullable(workspaceSecurityGroupId);
+            this.workspaceSecurityGroupId = Output.ofNullable(workspaceSecurityGroupId);
             return this;
         }
         public DirectoryState build() {

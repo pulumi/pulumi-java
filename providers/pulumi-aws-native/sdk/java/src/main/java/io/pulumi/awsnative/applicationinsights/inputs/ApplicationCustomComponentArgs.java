@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="componentName", required=true)
-      private final Input<String> componentName;
+      private final Output<String> componentName;
 
-    public Input<String> getComponentName() {
+    public Output<String> getComponentName() {
         return this.componentName;
     }
 
@@ -34,22 +34,22 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceList", required=true)
-      private final Input<List<String>> resourceList;
+      private final Output<List<String>> resourceList;
 
-    public Input<List<String>> getResourceList() {
+    public Output<List<String>> getResourceList() {
         return this.resourceList;
     }
 
     public ApplicationCustomComponentArgs(
-        Input<String> componentName,
-        Input<List<String>> resourceList) {
+        Output<String> componentName,
+        Output<List<String>> resourceList) {
         this.componentName = Objects.requireNonNull(componentName, "expected parameter 'componentName' to be non-null");
         this.resourceList = Objects.requireNonNull(resourceList, "expected parameter 'resourceList' to be non-null");
     }
 
     private ApplicationCustomComponentArgs() {
-        this.componentName = Input.empty();
-        this.resourceList = Input.empty();
+        this.componentName = Output.empty();
+        this.resourceList = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> componentName;
-        private Input<List<String>> resourceList;
+        private Output<String> componentName;
+        private Output<List<String>> resourceList;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
     	      this.resourceList = defaults.resourceList;
         }
 
-        public Builder componentName(Input<String> componentName) {
+        public Builder componentName(Output<String> componentName) {
             this.componentName = Objects.requireNonNull(componentName);
             return this;
         }
 
         public Builder componentName(String componentName) {
-            this.componentName = Input.of(Objects.requireNonNull(componentName));
+            this.componentName = Output.of(Objects.requireNonNull(componentName));
             return this;
         }
 
-        public Builder resourceList(Input<List<String>> resourceList) {
+        public Builder resourceList(Output<List<String>> resourceList) {
             this.resourceList = Objects.requireNonNull(resourceList);
             return this;
         }
 
         public Builder resourceList(List<String> resourceList) {
-            this.resourceList = Input.of(Objects.requireNonNull(resourceList));
+            this.resourceList = Output.of(Objects.requireNonNull(resourceList));
             return this;
         }
         public ApplicationCustomComponentArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.JobTemplateExponentialRolloutRateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="exponentialRolloutRate")
-      private final @Nullable Input<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
+      private final @Nullable Output<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
 
-    public Input<JobTemplateExponentialRolloutRateArgs> getExponentialRolloutRate() {
-        return this.exponentialRolloutRate == null ? Input.empty() : this.exponentialRolloutRate;
+    public Output<JobTemplateExponentialRolloutRateArgs> getExponentialRolloutRate() {
+        return this.exponentialRolloutRate == null ? Output.empty() : this.exponentialRolloutRate;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="maximumPerMinute")
-      private final @Nullable Input<Integer> maximumPerMinute;
+      private final @Nullable Output<Integer> maximumPerMinute;
 
-    public Input<Integer> getMaximumPerMinute() {
-        return this.maximumPerMinute == null ? Input.empty() : this.maximumPerMinute;
+    public Output<Integer> getMaximumPerMinute() {
+        return this.maximumPerMinute == null ? Output.empty() : this.maximumPerMinute;
     }
 
     public JobExecutionsRolloutConfigPropertiesArgs(
-        @Nullable Input<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate,
-        @Nullable Input<Integer> maximumPerMinute) {
+        @Nullable Output<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate,
+        @Nullable Output<Integer> maximumPerMinute) {
         this.exponentialRolloutRate = exponentialRolloutRate;
         this.maximumPerMinute = maximumPerMinute;
     }
 
     private JobExecutionsRolloutConfigPropertiesArgs() {
-        this.exponentialRolloutRate = Input.empty();
-        this.maximumPerMinute = Input.empty();
+        this.exponentialRolloutRate = Output.empty();
+        this.maximumPerMinute = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
-        private @Nullable Input<Integer> maximumPerMinute;
+        private @Nullable Output<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
+        private @Nullable Output<Integer> maximumPerMinute;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
     	      this.maximumPerMinute = defaults.maximumPerMinute;
         }
 
-        public Builder exponentialRolloutRate(@Nullable Input<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate) {
+        public Builder exponentialRolloutRate(@Nullable Output<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate) {
             this.exponentialRolloutRate = exponentialRolloutRate;
             return this;
         }
 
         public Builder exponentialRolloutRate(@Nullable JobTemplateExponentialRolloutRateArgs exponentialRolloutRate) {
-            this.exponentialRolloutRate = Input.ofNullable(exponentialRolloutRate);
+            this.exponentialRolloutRate = Output.ofNullable(exponentialRolloutRate);
             return this;
         }
 
-        public Builder maximumPerMinute(@Nullable Input<Integer> maximumPerMinute) {
+        public Builder maximumPerMinute(@Nullable Output<Integer> maximumPerMinute) {
             this.maximumPerMinute = maximumPerMinute;
             return this;
         }
 
         public Builder maximumPerMinute(@Nullable Integer maximumPerMinute) {
-            this.maximumPerMinute = Input.ofNullable(maximumPerMinute);
+            this.maximumPerMinute = Output.ofNullable(maximumPerMinute);
             return this;
         }
         public JobExecutionsRolloutConfigPropertiesArgs build() {

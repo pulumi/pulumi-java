@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -35,10 +35,10 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="optional")
-      private final @Nullable Input<Boolean> optional;
+      private final @Nullable Output<Boolean> optional;
 
-    public Input<Boolean> getOptional() {
-        return this.optional == null ? Input.empty() : this.optional;
+    public Output<Boolean> getOptional() {
+        return this.optional == null ? Output.empty() : this.optional;
     }
 
     public SecretKeySelectorArgs(
-        Input<String> key,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> optional) {
+        Output<String> key,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> optional) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.name = name;
         this.optional = optional;
     }
 
     private SecretKeySelectorArgs() {
-        this.key = Input.empty();
-        this.name = Input.empty();
-        this.optional = Input.empty();
+        this.key = Output.empty();
+        this.name = Output.empty();
+        this.optional = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> optional;
+        private Output<String> key;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> optional;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     	      this.optional = defaults.optional;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder optional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
         public Builder optional(@Nullable Boolean optional) {
-            this.optional = Input.ofNullable(optional);
+            this.optional = Output.ofNullable(optional);
             return this;
         }
         public SecretKeySelectorArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.servicecatalogappregistry;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="application", required=true)
-      private final Input<String> application;
+      private final Output<String> application;
 
-    public Input<String> getApplication() {
+    public Output<String> getApplication() {
         return this.application;
     }
 
@@ -29,22 +29,22 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attributeGroup", required=true)
-      private final Input<String> attributeGroup;
+      private final Output<String> attributeGroup;
 
-    public Input<String> getAttributeGroup() {
+    public Output<String> getAttributeGroup() {
         return this.attributeGroup;
     }
 
     public AttributeGroupAssociationArgs(
-        Input<String> application,
-        Input<String> attributeGroup) {
+        Output<String> application,
+        Output<String> attributeGroup) {
         this.application = Objects.requireNonNull(application, "expected parameter 'application' to be non-null");
         this.attributeGroup = Objects.requireNonNull(attributeGroup, "expected parameter 'attributeGroup' to be non-null");
     }
 
     private AttributeGroupAssociationArgs() {
-        this.application = Input.empty();
-        this.attributeGroup = Input.empty();
+        this.application = Output.empty();
+        this.attributeGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> application;
-        private Input<String> attributeGroup;
+        private Output<String> application;
+        private Output<String> attributeGroup;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
     	      this.attributeGroup = defaults.attributeGroup;
         }
 
-        public Builder application(Input<String> application) {
+        public Builder application(Output<String> application) {
             this.application = Objects.requireNonNull(application);
             return this;
         }
 
         public Builder application(String application) {
-            this.application = Input.of(Objects.requireNonNull(application));
+            this.application = Output.of(Objects.requireNonNull(application));
             return this;
         }
 
-        public Builder attributeGroup(Input<String> attributeGroup) {
+        public Builder attributeGroup(Output<String> attributeGroup) {
             this.attributeGroup = Objects.requireNonNull(attributeGroup);
             return this;
         }
 
         public Builder attributeGroup(String attributeGroup) {
-            this.attributeGroup = Input.of(Objects.requireNonNull(attributeGroup));
+            this.attributeGroup = Output.of(Objects.requireNonNull(attributeGroup));
             return this;
         }
         public AttributeGroupAssociationArgs build() {

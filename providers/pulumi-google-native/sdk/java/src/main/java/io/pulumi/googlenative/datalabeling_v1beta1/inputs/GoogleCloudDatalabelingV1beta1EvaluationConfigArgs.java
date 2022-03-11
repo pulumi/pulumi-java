@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
      * 
      */
     @InputImport(name="boundingBoxEvaluationOptions")
-      private final @Nullable Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
+      private final @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
 
-    public Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> getBoundingBoxEvaluationOptions() {
-        return this.boundingBoxEvaluationOptions == null ? Input.empty() : this.boundingBoxEvaluationOptions;
+    public Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> getBoundingBoxEvaluationOptions() {
+        return this.boundingBoxEvaluationOptions == null ? Output.empty() : this.boundingBoxEvaluationOptions;
     }
 
-    public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(@Nullable Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions) {
+    public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(@Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions) {
         this.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
     }
 
     private GoogleCloudDatalabelingV1beta1EvaluationConfigArgs() {
-        this.boundingBoxEvaluationOptions = Input.empty();
+        this.boundingBoxEvaluationOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
+        private @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
     	      this.boundingBoxEvaluationOptions = defaults.boundingBoxEvaluationOptions;
         }
 
-        public Builder boundingBoxEvaluationOptions(@Nullable Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions) {
+        public Builder boundingBoxEvaluationOptions(@Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions) {
             this.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
             return this;
         }
 
         public Builder boundingBoxEvaluationOptions(@Nullable GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs boundingBoxEvaluationOptions) {
-            this.boundingBoxEvaluationOptions = Input.ofNullable(boundingBoxEvaluationOptions);
+            this.boundingBoxEvaluationOptions = Output.ofNullable(boundingBoxEvaluationOptions);
             return this;
         }
         public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs build() {

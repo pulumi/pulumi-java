@@ -8,7 +8,6 @@ import io.pulumi.awsnative.ivs.ChannelArgs;
 import io.pulumi.awsnative.ivs.enums.ChannelLatencyMode;
 import io.pulumi.awsnative.ivs.enums.ChannelType;
 import io.pulumi.awsnative.ivs.outputs.ChannelTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -190,14 +189,14 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Channel(String name, @Nullable ChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ivs:Channel", name, args == null ? ChannelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:ivs:Channel", name, args == null ? ChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Channel(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Channel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ivs:Channel", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -212,7 +211,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Channel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Channel get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Channel(name, id, options);
     }
 }

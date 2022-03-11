@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.AzureActiveDirectoryAppArgs;
 import io.pulumi.azurenative.datamigration.inputs.MiSqlConnectionInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -23,9 +23,9 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="azureApp", required=true)
-      private final Input<AzureActiveDirectoryAppArgs> azureApp;
+      private final Output<AzureActiveDirectoryAppArgs> azureApp;
 
-    public Input<AzureActiveDirectoryAppArgs> getAzureApp() {
+    public Output<AzureActiveDirectoryAppArgs> getAzureApp() {
         return this.azureApp;
     }
 
@@ -34,22 +34,22 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-      private final Input<MiSqlConnectionInfoArgs> targetConnectionInfo;
+      private final Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Input<MiSqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<MiSqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
     public ConnectToTargetSqlMISyncTaskInputArgs(
-        Input<AzureActiveDirectoryAppArgs> azureApp,
-        Input<MiSqlConnectionInfoArgs> targetConnectionInfo) {
+        Output<AzureActiveDirectoryAppArgs> azureApp,
+        Output<MiSqlConnectionInfoArgs> targetConnectionInfo) {
         this.azureApp = Objects.requireNonNull(azureApp, "expected parameter 'azureApp' to be non-null");
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
     }
 
     private ConnectToTargetSqlMISyncTaskInputArgs() {
-        this.azureApp = Input.empty();
-        this.targetConnectionInfo = Input.empty();
+        this.azureApp = Output.empty();
+        this.targetConnectionInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<AzureActiveDirectoryAppArgs> azureApp;
-        private Input<MiSqlConnectionInfoArgs> targetConnectionInfo;
+        private Output<AzureActiveDirectoryAppArgs> azureApp;
+        private Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resou
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder azureApp(Input<AzureActiveDirectoryAppArgs> azureApp) {
+        public Builder azureApp(Output<AzureActiveDirectoryAppArgs> azureApp) {
             this.azureApp = Objects.requireNonNull(azureApp);
             return this;
         }
 
         public Builder azureApp(AzureActiveDirectoryAppArgs azureApp) {
-            this.azureApp = Input.of(Objects.requireNonNull(azureApp));
+            this.azureApp = Output.of(Objects.requireNonNull(azureApp));
             return this;
         }
 
-        public Builder targetConnectionInfo(Input<MiSqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Output<MiSqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
         public Builder targetConnectionInfo(MiSqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
+            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
         public ConnectToTargetSqlMISyncTaskInputArgs build() {

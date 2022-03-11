@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.AzureStaticWebAppsRegistrationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="registration")
-      private final @Nullable Input<AzureStaticWebAppsRegistrationArgs> registration;
+      private final @Nullable Output<AzureStaticWebAppsRegistrationArgs> registration;
 
-    public Input<AzureStaticWebAppsRegistrationArgs> getRegistration() {
-        return this.registration == null ? Input.empty() : this.registration;
+    public Output<AzureStaticWebAppsRegistrationArgs> getRegistration() {
+        return this.registration == null ? Output.empty() : this.registration;
     }
 
     public AzureStaticWebAppsArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<AzureStaticWebAppsRegistrationArgs> registration) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<AzureStaticWebAppsRegistrationArgs> registration) {
         this.enabled = enabled;
         this.registration = registration;
     }
 
     private AzureStaticWebAppsArgs() {
-        this.enabled = Input.empty();
-        this.registration = Input.empty();
+        this.enabled = Output.empty();
+        this.registration = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<AzureStaticWebAppsRegistrationArgs> registration;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<AzureStaticWebAppsRegistrationArgs> registration;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
     	      this.registration = defaults.registration;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder registration(@Nullable Input<AzureStaticWebAppsRegistrationArgs> registration) {
+        public Builder registration(@Nullable Output<AzureStaticWebAppsRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
         public Builder registration(@Nullable AzureStaticWebAppsRegistrationArgs registration) {
-            this.registration = Input.ofNullable(registration);
+            this.registration = Output.ofNullable(registration);
             return this;
         }
         public AzureStaticWebAppsArgs build() {

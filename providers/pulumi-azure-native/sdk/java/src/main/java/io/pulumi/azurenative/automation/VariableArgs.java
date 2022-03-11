@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -31,10 +31,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEncrypted")
-      private final @Nullable Input<Boolean> isEncrypted;
+      private final @Nullable Output<Boolean> isEncrypted;
 
-    public Input<Boolean> getIsEncrypted() {
-        return this.isEncrypted == null ? Input.empty() : this.isEncrypted;
+    public Output<Boolean> getIsEncrypted() {
+        return this.isEncrypted == null ? Output.empty() : this.isEncrypted;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -64,9 +64,9 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,10 +75,10 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variableName")
-      private final @Nullable Input<String> variableName;
+      private final @Nullable Output<String> variableName;
 
-    public Input<String> getVariableName() {
-        return this.variableName == null ? Input.empty() : this.variableName;
+    public Output<String> getVariableName() {
+        return this.variableName == null ? Output.empty() : this.variableName;
     }
 
     public VariableArgs(
-        Input<String> automationAccountName,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> isEncrypted,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> value,
-        @Nullable Input<String> variableName) {
+        Output<String> automationAccountName,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> isEncrypted,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> value,
+        @Nullable Output<String> variableName) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.description = description;
         this.isEncrypted = isEncrypted;
@@ -110,13 +110,13 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VariableArgs() {
-        this.automationAccountName = Input.empty();
-        this.description = Input.empty();
-        this.isEncrypted = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.value = Input.empty();
-        this.variableName = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.description = Output.empty();
+        this.isEncrypted = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.value = Output.empty();
+        this.variableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> isEncrypted;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> value;
-        private @Nullable Input<String> variableName;
+        private Output<String> automationAccountName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> isEncrypted;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> value;
+        private @Nullable Output<String> variableName;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder isEncrypted(@Nullable Input<Boolean> isEncrypted) {
+        public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
 
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = Input.ofNullable(isEncrypted);
+            this.isEncrypted = Output.ofNullable(isEncrypted);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
 
-        public Builder variableName(@Nullable Input<String> variableName) {
+        public Builder variableName(@Nullable Output<String> variableName) {
             this.variableName = variableName;
             return this;
         }
 
         public Builder variableName(@Nullable String variableName) {
-            this.variableName = Input.ofNullable(variableName);
+            this.variableName = Output.ofNullable(variableName);
             return this;
         }
         public VariableArgs build() {

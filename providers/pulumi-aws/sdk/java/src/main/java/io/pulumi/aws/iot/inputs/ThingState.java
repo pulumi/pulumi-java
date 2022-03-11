@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Output<Map<String,String>> attributes;
 
-    public Input<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Map<String,String>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultClientId")
-      private final @Nullable Input<String> defaultClientId;
+      private final @Nullable Output<String> defaultClientId;
 
-    public Input<String> getDefaultClientId() {
-        return this.defaultClientId == null ? Input.empty() : this.defaultClientId;
+    public Output<String> getDefaultClientId() {
+        return this.defaultClientId == null ? Output.empty() : this.defaultClientId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thingTypeName")
-      private final @Nullable Input<String> thingTypeName;
+      private final @Nullable Output<String> thingTypeName;
 
-    public Input<String> getThingTypeName() {
-        return this.thingTypeName == null ? Input.empty() : this.thingTypeName;
+    public Output<String> getThingTypeName() {
+        return this.thingTypeName == null ? Output.empty() : this.thingTypeName;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ThingState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Map<String,String>> attributes,
-        @Nullable Input<String> defaultClientId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> thingTypeName,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Map<String,String>> attributes,
+        @Nullable Output<String> defaultClientId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> thingTypeName,
+        @Nullable Output<Integer> version) {
         this.arn = arn;
         this.attributes = attributes;
         this.defaultClientId = defaultClientId;
@@ -98,12 +98,12 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThingState() {
-        this.arn = Input.empty();
-        this.attributes = Input.empty();
-        this.defaultClientId = Input.empty();
-        this.name = Input.empty();
-        this.thingTypeName = Input.empty();
-        this.version = Input.empty();
+        this.arn = Output.empty();
+        this.attributes = Output.empty();
+        this.defaultClientId = Output.empty();
+        this.name = Output.empty();
+        this.thingTypeName = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Map<String,String>> attributes;
-        private @Nullable Input<String> defaultClientId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> thingTypeName;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Map<String,String>> attributes;
+        private @Nullable Output<String> defaultClientId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> thingTypeName;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder defaultClientId(@Nullable Input<String> defaultClientId) {
+        public Builder defaultClientId(@Nullable Output<String> defaultClientId) {
             this.defaultClientId = defaultClientId;
             return this;
         }
 
         public Builder defaultClientId(@Nullable String defaultClientId) {
-            this.defaultClientId = Input.ofNullable(defaultClientId);
+            this.defaultClientId = Output.ofNullable(defaultClientId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder thingTypeName(@Nullable Input<String> thingTypeName) {
+        public Builder thingTypeName(@Nullable Output<String> thingTypeName) {
             this.thingTypeName = thingTypeName;
             return this;
         }
 
         public Builder thingTypeName(@Nullable String thingTypeName) {
-            this.thingTypeName = Input.ofNullable(thingTypeName);
+            this.thingTypeName = Output.ofNullable(thingTypeName);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ThingState build() {

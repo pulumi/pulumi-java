@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.VersionKind;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="epoch")
-      private final @Nullable Input<Integer> epoch;
+      private final @Nullable Output<Integer> epoch;
 
-    public Input<Integer> getEpoch() {
-        return this.epoch == null ? Input.empty() : this.epoch;
+    public Output<Integer> getEpoch() {
+        return this.epoch == null ? Output.empty() : this.epoch;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inclusive")
-      private final @Nullable Input<Boolean> inclusive;
+      private final @Nullable Output<Boolean> inclusive;
 
-    public Input<Boolean> getInclusive() {
-        return this.inclusive == null ? Input.empty() : this.inclusive;
+    public Output<Boolean> getInclusive() {
+        return this.inclusive == null ? Output.empty() : this.inclusive;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<VersionKind> kind;
+      private final Output<VersionKind> kind;
 
-    public Input<VersionKind> getKind() {
+    public Output<VersionKind> getKind() {
         return this.kind;
     }
 
@@ -59,10 +59,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<String> revision;
+      private final @Nullable Output<String> revision;
 
-    public Input<String> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<String> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     public VersionArgs(
-        @Nullable Input<Integer> epoch,
-        @Nullable Input<Boolean> inclusive,
-        Input<VersionKind> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<String> revision) {
+        @Nullable Output<Integer> epoch,
+        @Nullable Output<Boolean> inclusive,
+        Output<VersionKind> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<String> revision) {
         this.epoch = epoch;
         this.inclusive = inclusive;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -90,11 +90,11 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VersionArgs() {
-        this.epoch = Input.empty();
-        this.inclusive = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.revision = Input.empty();
+        this.epoch = Output.empty();
+        this.inclusive = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.revision = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> epoch;
-        private @Nullable Input<Boolean> inclusive;
-        private Input<VersionKind> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> revision;
+        private @Nullable Output<Integer> epoch;
+        private @Nullable Output<Boolean> inclusive;
+        private Output<VersionKind> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> revision;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.revision = defaults.revision;
         }
 
-        public Builder epoch(@Nullable Input<Integer> epoch) {
+        public Builder epoch(@Nullable Output<Integer> epoch) {
             this.epoch = epoch;
             return this;
         }
 
         public Builder epoch(@Nullable Integer epoch) {
-            this.epoch = Input.ofNullable(epoch);
+            this.epoch = Output.ofNullable(epoch);
             return this;
         }
 
-        public Builder inclusive(@Nullable Input<Boolean> inclusive) {
+        public Builder inclusive(@Nullable Output<Boolean> inclusive) {
             this.inclusive = inclusive;
             return this;
         }
 
         public Builder inclusive(@Nullable Boolean inclusive) {
-            this.inclusive = Input.ofNullable(inclusive);
+            this.inclusive = Output.ofNullable(inclusive);
             return this;
         }
 
-        public Builder kind(Input<VersionKind> kind) {
+        public Builder kind(Output<VersionKind> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(VersionKind kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder revision(@Nullable Input<String> revision) {
+        public Builder revision(@Nullable Output<String> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable String revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
         public VersionArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.CatalogCollationType;
 import io.pulumi.azurenative.sql.enums.ManagedDatabaseCreateMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoCompleteRestore")
-      private final @Nullable Input<Boolean> autoCompleteRestore;
+      private final @Nullable Output<Boolean> autoCompleteRestore;
 
-    public Input<Boolean> getAutoCompleteRestore() {
-        return this.autoCompleteRestore == null ? Input.empty() : this.autoCompleteRestore;
+    public Output<Boolean> getAutoCompleteRestore() {
+        return this.autoCompleteRestore == null ? Output.empty() : this.autoCompleteRestore;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="catalogCollation")
-      private final @Nullable Input<Either<String,CatalogCollationType>> catalogCollation;
+      private final @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
 
-    public Input<Either<String,CatalogCollationType>> getCatalogCollation() {
-        return this.catalogCollation == null ? Input.empty() : this.catalogCollation;
+    public Output<Either<String,CatalogCollationType>> getCatalogCollation() {
+        return this.catalogCollation == null ? Output.empty() : this.catalogCollation;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="collation")
-      private final @Nullable Input<String> collation;
+      private final @Nullable Output<String> collation;
 
-    public Input<String> getCollation() {
-        return this.collation == null ? Input.empty() : this.collation;
+    public Output<String> getCollation() {
+        return this.collation == null ? Output.empty() : this.collation;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createMode")
-      private final @Nullable Input<Either<String,ManagedDatabaseCreateMode>> createMode;
+      private final @Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode;
 
-    public Input<Either<String,ManagedDatabaseCreateMode>> getCreateMode() {
-        return this.createMode == null ? Input.empty() : this.createMode;
+    public Output<Either<String,ManagedDatabaseCreateMode>> getCreateMode() {
+        return this.createMode == null ? Output.empty() : this.createMode;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="lastBackupName")
-      private final @Nullable Input<String> lastBackupName;
+      private final @Nullable Output<String> lastBackupName;
 
-    public Input<String> getLastBackupName() {
-        return this.lastBackupName == null ? Input.empty() : this.lastBackupName;
+    public Output<String> getLastBackupName() {
+        return this.lastBackupName == null ? Output.empty() : this.lastBackupName;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="longTermRetentionBackupResourceId")
-      private final @Nullable Input<String> longTermRetentionBackupResourceId;
+      private final @Nullable Output<String> longTermRetentionBackupResourceId;
 
-    public Input<String> getLongTermRetentionBackupResourceId() {
-        return this.longTermRetentionBackupResourceId == null ? Input.empty() : this.longTermRetentionBackupResourceId;
+    public Output<String> getLongTermRetentionBackupResourceId() {
+        return this.longTermRetentionBackupResourceId == null ? Output.empty() : this.longTermRetentionBackupResourceId;
     }
 
     /**
@@ -112,9 +112,9 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-      private final Input<String> managedInstanceName;
+      private final Output<String> managedInstanceName;
 
-    public Input<String> getManagedInstanceName() {
+    public Output<String> getManagedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -123,10 +123,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="recoverableDatabaseId")
-      private final @Nullable Input<String> recoverableDatabaseId;
+      private final @Nullable Output<String> recoverableDatabaseId;
 
-    public Input<String> getRecoverableDatabaseId() {
-        return this.recoverableDatabaseId == null ? Input.empty() : this.recoverableDatabaseId;
+    public Output<String> getRecoverableDatabaseId() {
+        return this.recoverableDatabaseId == null ? Output.empty() : this.recoverableDatabaseId;
     }
 
     /**
@@ -134,9 +134,9 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -145,10 +145,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restorableDroppedDatabaseId")
-      private final @Nullable Input<String> restorableDroppedDatabaseId;
+      private final @Nullable Output<String> restorableDroppedDatabaseId;
 
-    public Input<String> getRestorableDroppedDatabaseId() {
-        return this.restorableDroppedDatabaseId == null ? Input.empty() : this.restorableDroppedDatabaseId;
+    public Output<String> getRestorableDroppedDatabaseId() {
+        return this.restorableDroppedDatabaseId == null ? Output.empty() : this.restorableDroppedDatabaseId;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restorePointInTime")
-      private final @Nullable Input<String> restorePointInTime;
+      private final @Nullable Output<String> restorePointInTime;
 
-    public Input<String> getRestorePointInTime() {
-        return this.restorePointInTime == null ? Input.empty() : this.restorePointInTime;
+    public Output<String> getRestorePointInTime() {
+        return this.restorePointInTime == null ? Output.empty() : this.restorePointInTime;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceDatabaseId")
-      private final @Nullable Input<String> sourceDatabaseId;
+      private final @Nullable Output<String> sourceDatabaseId;
 
-    public Input<String> getSourceDatabaseId() {
-        return this.sourceDatabaseId == null ? Input.empty() : this.sourceDatabaseId;
+    public Output<String> getSourceDatabaseId() {
+        return this.sourceDatabaseId == null ? Output.empty() : this.sourceDatabaseId;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageContainerSasToken")
-      private final @Nullable Input<String> storageContainerSasToken;
+      private final @Nullable Output<String> storageContainerSasToken;
 
-    public Input<String> getStorageContainerSasToken() {
-        return this.storageContainerSasToken == null ? Input.empty() : this.storageContainerSasToken;
+    public Output<String> getStorageContainerSasToken() {
+        return this.storageContainerSasToken == null ? Output.empty() : this.storageContainerSasToken;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageContainerUri")
-      private final @Nullable Input<String> storageContainerUri;
+      private final @Nullable Output<String> storageContainerUri;
 
-    public Input<String> getStorageContainerUri() {
-        return this.storageContainerUri == null ? Input.empty() : this.storageContainerUri;
+    public Output<String> getStorageContainerUri() {
+        return this.storageContainerUri == null ? Output.empty() : this.storageContainerUri;
     }
 
     /**
@@ -200,30 +200,30 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ManagedDatabaseArgs(
-        @Nullable Input<Boolean> autoCompleteRestore,
-        @Nullable Input<Either<String,CatalogCollationType>> catalogCollation,
-        @Nullable Input<String> collation,
-        @Nullable Input<Either<String,ManagedDatabaseCreateMode>> createMode,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<String> lastBackupName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> longTermRetentionBackupResourceId,
-        Input<String> managedInstanceName,
-        @Nullable Input<String> recoverableDatabaseId,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> restorableDroppedDatabaseId,
-        @Nullable Input<String> restorePointInTime,
-        @Nullable Input<String> sourceDatabaseId,
-        @Nullable Input<String> storageContainerSasToken,
-        @Nullable Input<String> storageContainerUri,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> autoCompleteRestore,
+        @Nullable Output<Either<String,CatalogCollationType>> catalogCollation,
+        @Nullable Output<String> collation,
+        @Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<String> lastBackupName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> longTermRetentionBackupResourceId,
+        Output<String> managedInstanceName,
+        @Nullable Output<String> recoverableDatabaseId,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> restorableDroppedDatabaseId,
+        @Nullable Output<String> restorePointInTime,
+        @Nullable Output<String> sourceDatabaseId,
+        @Nullable Output<String> storageContainerSasToken,
+        @Nullable Output<String> storageContainerUri,
+        @Nullable Output<Map<String,String>> tags) {
         this.autoCompleteRestore = autoCompleteRestore;
         this.catalogCollation = catalogCollation;
         this.collation = collation;
@@ -244,23 +244,23 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ManagedDatabaseArgs() {
-        this.autoCompleteRestore = Input.empty();
-        this.catalogCollation = Input.empty();
-        this.collation = Input.empty();
-        this.createMode = Input.empty();
-        this.databaseName = Input.empty();
-        this.lastBackupName = Input.empty();
-        this.location = Input.empty();
-        this.longTermRetentionBackupResourceId = Input.empty();
-        this.managedInstanceName = Input.empty();
-        this.recoverableDatabaseId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.restorableDroppedDatabaseId = Input.empty();
-        this.restorePointInTime = Input.empty();
-        this.sourceDatabaseId = Input.empty();
-        this.storageContainerSasToken = Input.empty();
-        this.storageContainerUri = Input.empty();
-        this.tags = Input.empty();
+        this.autoCompleteRestore = Output.empty();
+        this.catalogCollation = Output.empty();
+        this.collation = Output.empty();
+        this.createMode = Output.empty();
+        this.databaseName = Output.empty();
+        this.lastBackupName = Output.empty();
+        this.location = Output.empty();
+        this.longTermRetentionBackupResourceId = Output.empty();
+        this.managedInstanceName = Output.empty();
+        this.recoverableDatabaseId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.restorableDroppedDatabaseId = Output.empty();
+        this.restorePointInTime = Output.empty();
+        this.sourceDatabaseId = Output.empty();
+        this.storageContainerSasToken = Output.empty();
+        this.storageContainerUri = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -272,23 +272,23 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoCompleteRestore;
-        private @Nullable Input<Either<String,CatalogCollationType>> catalogCollation;
-        private @Nullable Input<String> collation;
-        private @Nullable Input<Either<String,ManagedDatabaseCreateMode>> createMode;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<String> lastBackupName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> longTermRetentionBackupResourceId;
-        private Input<String> managedInstanceName;
-        private @Nullable Input<String> recoverableDatabaseId;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> restorableDroppedDatabaseId;
-        private @Nullable Input<String> restorePointInTime;
-        private @Nullable Input<String> sourceDatabaseId;
-        private @Nullable Input<String> storageContainerSasToken;
-        private @Nullable Input<String> storageContainerUri;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> autoCompleteRestore;
+        private @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
+        private @Nullable Output<String> collation;
+        private @Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<String> lastBackupName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> longTermRetentionBackupResourceId;
+        private Output<String> managedInstanceName;
+        private @Nullable Output<String> recoverableDatabaseId;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> restorableDroppedDatabaseId;
+        private @Nullable Output<String> restorePointInTime;
+        private @Nullable Output<String> sourceDatabaseId;
+        private @Nullable Output<String> storageContainerSasToken;
+        private @Nullable Output<String> storageContainerUri;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -315,173 +315,173 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder autoCompleteRestore(@Nullable Input<Boolean> autoCompleteRestore) {
+        public Builder autoCompleteRestore(@Nullable Output<Boolean> autoCompleteRestore) {
             this.autoCompleteRestore = autoCompleteRestore;
             return this;
         }
 
         public Builder autoCompleteRestore(@Nullable Boolean autoCompleteRestore) {
-            this.autoCompleteRestore = Input.ofNullable(autoCompleteRestore);
+            this.autoCompleteRestore = Output.ofNullable(autoCompleteRestore);
             return this;
         }
 
-        public Builder catalogCollation(@Nullable Input<Either<String,CatalogCollationType>> catalogCollation) {
+        public Builder catalogCollation(@Nullable Output<Either<String,CatalogCollationType>> catalogCollation) {
             this.catalogCollation = catalogCollation;
             return this;
         }
 
         public Builder catalogCollation(@Nullable Either<String,CatalogCollationType> catalogCollation) {
-            this.catalogCollation = Input.ofNullable(catalogCollation);
+            this.catalogCollation = Output.ofNullable(catalogCollation);
             return this;
         }
 
-        public Builder collation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
 
         public Builder collation(@Nullable String collation) {
-            this.collation = Input.ofNullable(collation);
+            this.collation = Output.ofNullable(collation);
             return this;
         }
 
-        public Builder createMode(@Nullable Input<Either<String,ManagedDatabaseCreateMode>> createMode) {
+        public Builder createMode(@Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
 
         public Builder createMode(@Nullable Either<String,ManagedDatabaseCreateMode> createMode) {
-            this.createMode = Input.ofNullable(createMode);
+            this.createMode = Output.ofNullable(createMode);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder lastBackupName(@Nullable Input<String> lastBackupName) {
+        public Builder lastBackupName(@Nullable Output<String> lastBackupName) {
             this.lastBackupName = lastBackupName;
             return this;
         }
 
         public Builder lastBackupName(@Nullable String lastBackupName) {
-            this.lastBackupName = Input.ofNullable(lastBackupName);
+            this.lastBackupName = Output.ofNullable(lastBackupName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder longTermRetentionBackupResourceId(@Nullable Input<String> longTermRetentionBackupResourceId) {
+        public Builder longTermRetentionBackupResourceId(@Nullable Output<String> longTermRetentionBackupResourceId) {
             this.longTermRetentionBackupResourceId = longTermRetentionBackupResourceId;
             return this;
         }
 
         public Builder longTermRetentionBackupResourceId(@Nullable String longTermRetentionBackupResourceId) {
-            this.longTermRetentionBackupResourceId = Input.ofNullable(longTermRetentionBackupResourceId);
+            this.longTermRetentionBackupResourceId = Output.ofNullable(longTermRetentionBackupResourceId);
             return this;
         }
 
-        public Builder managedInstanceName(Input<String> managedInstanceName) {
+        public Builder managedInstanceName(Output<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
 
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Input.of(Objects.requireNonNull(managedInstanceName));
+            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
 
-        public Builder recoverableDatabaseId(@Nullable Input<String> recoverableDatabaseId) {
+        public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
             this.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
 
         public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
-            this.recoverableDatabaseId = Input.ofNullable(recoverableDatabaseId);
+            this.recoverableDatabaseId = Output.ofNullable(recoverableDatabaseId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder restorableDroppedDatabaseId(@Nullable Input<String> restorableDroppedDatabaseId) {
+        public Builder restorableDroppedDatabaseId(@Nullable Output<String> restorableDroppedDatabaseId) {
             this.restorableDroppedDatabaseId = restorableDroppedDatabaseId;
             return this;
         }
 
         public Builder restorableDroppedDatabaseId(@Nullable String restorableDroppedDatabaseId) {
-            this.restorableDroppedDatabaseId = Input.ofNullable(restorableDroppedDatabaseId);
+            this.restorableDroppedDatabaseId = Output.ofNullable(restorableDroppedDatabaseId);
             return this;
         }
 
-        public Builder restorePointInTime(@Nullable Input<String> restorePointInTime) {
+        public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
 
         public Builder restorePointInTime(@Nullable String restorePointInTime) {
-            this.restorePointInTime = Input.ofNullable(restorePointInTime);
+            this.restorePointInTime = Output.ofNullable(restorePointInTime);
             return this;
         }
 
-        public Builder sourceDatabaseId(@Nullable Input<String> sourceDatabaseId) {
+        public Builder sourceDatabaseId(@Nullable Output<String> sourceDatabaseId) {
             this.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
 
         public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
-            this.sourceDatabaseId = Input.ofNullable(sourceDatabaseId);
+            this.sourceDatabaseId = Output.ofNullable(sourceDatabaseId);
             return this;
         }
 
-        public Builder storageContainerSasToken(@Nullable Input<String> storageContainerSasToken) {
+        public Builder storageContainerSasToken(@Nullable Output<String> storageContainerSasToken) {
             this.storageContainerSasToken = storageContainerSasToken;
             return this;
         }
 
         public Builder storageContainerSasToken(@Nullable String storageContainerSasToken) {
-            this.storageContainerSasToken = Input.ofNullable(storageContainerSasToken);
+            this.storageContainerSasToken = Output.ofNullable(storageContainerSasToken);
             return this;
         }
 
-        public Builder storageContainerUri(@Nullable Input<String> storageContainerUri) {
+        public Builder storageContainerUri(@Nullable Output<String> storageContainerUri) {
             this.storageContainerUri = storageContainerUri;
             return this;
         }
 
         public Builder storageContainerUri(@Nullable String storageContainerUri) {
-            this.storageContainerUri = Input.ofNullable(storageContainerUri);
+            this.storageContainerUri = Output.ofNullable(storageContainerUri);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ManagedDatabaseArgs build() {

@@ -9,7 +9,6 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupState;
 import io.pulumi.aws.wafv2.outputs.RuleGroupCustomResponseBody;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRule;
 import io.pulumi.aws.wafv2.outputs.RuleGroupVisibilityConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -220,14 +219,14 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RuleGroup(String name, RuleGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafv2/ruleGroup:RuleGroup", name, args == null ? RuleGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:wafv2/ruleGroup:RuleGroup", name, args == null ? RuleGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RuleGroup(String name, Input<String> id, @Nullable RuleGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RuleGroup(String name, Output<String> id, @Nullable RuleGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:wafv2/ruleGroup:RuleGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -243,7 +242,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RuleGroup get(String name, Input<String> id, @Nullable RuleGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RuleGroup get(String name, Output<String> id, @Nullable RuleGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RuleGroup(name, id, state, options);
     }
 }

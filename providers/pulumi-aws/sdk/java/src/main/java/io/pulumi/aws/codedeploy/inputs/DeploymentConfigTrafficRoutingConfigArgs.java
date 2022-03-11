@@ -5,7 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="timeBasedCanary")
-      private final @Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary;
+      private final @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary;
 
-    public Input<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> getTimeBasedCanary() {
-        return this.timeBasedCanary == null ? Input.empty() : this.timeBasedCanary;
+    public Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> getTimeBasedCanary() {
+        return this.timeBasedCanary == null ? Output.empty() : this.timeBasedCanary;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="timeBasedLinear")
-      private final @Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear;
+      private final @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear;
 
-    public Input<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> getTimeBasedLinear() {
-        return this.timeBasedLinear == null ? Input.empty() : this.timeBasedLinear;
+    public Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> getTimeBasedLinear() {
+        return this.timeBasedLinear == null ? Output.empty() : this.timeBasedLinear;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public DeploymentConfigTrafficRoutingConfigArgs(
-        @Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary,
-        @Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear,
-        @Nullable Input<String> type) {
+        @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary,
+        @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear,
+        @Nullable Output<String> type) {
         this.timeBasedCanary = timeBasedCanary;
         this.timeBasedLinear = timeBasedLinear;
         this.type = type;
     }
 
     private DeploymentConfigTrafficRoutingConfigArgs() {
-        this.timeBasedCanary = Input.empty();
-        this.timeBasedLinear = Input.empty();
-        this.type = Input.empty();
+        this.timeBasedCanary = Output.empty();
+        this.timeBasedLinear = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary;
-        private @Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear;
-        private @Nullable Input<String> type;
+        private @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary;
+        private @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends io.pulumi.re
     	      this.type = defaults.type;
         }
 
-        public Builder timeBasedCanary(@Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary) {
+        public Builder timeBasedCanary(@Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary) {
             this.timeBasedCanary = timeBasedCanary;
             return this;
         }
 
         public Builder timeBasedCanary(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs timeBasedCanary) {
-            this.timeBasedCanary = Input.ofNullable(timeBasedCanary);
+            this.timeBasedCanary = Output.ofNullable(timeBasedCanary);
             return this;
         }
 
-        public Builder timeBasedLinear(@Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear) {
+        public Builder timeBasedLinear(@Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear) {
             this.timeBasedLinear = timeBasedLinear;
             return this;
         }
 
         public Builder timeBasedLinear(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs timeBasedLinear) {
-            this.timeBasedLinear = Input.ofNullable(timeBasedLinear);
+            this.timeBasedLinear = Output.ofNullable(timeBasedLinear);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public DeploymentConfigTrafficRoutingConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="height")
-      private final @Nullable Input<String> height;
+      private final @Nullable Output<String> height;
 
-    public Input<String> getHeight() {
-        return this.height == null ? Input.empty() : this.height;
+    public Output<String> getHeight() {
+        return this.height == null ? Output.empty() : this.height;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -57,17 +57,17 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="width")
-      private final @Nullable Input<String> width;
+      private final @Nullable Output<String> width;
 
-    public Input<String> getWidth() {
-        return this.width == null ? Input.empty() : this.width;
+    public Output<String> getWidth() {
+        return this.width == null ? Output.empty() : this.width;
     }
 
     public PngLayerArgs(
-        @Nullable Input<String> height,
-        @Nullable Input<String> label,
-        Input<String> odataType,
-        @Nullable Input<String> width) {
+        @Nullable Output<String> height,
+        @Nullable Output<String> label,
+        Output<String> odataType,
+        @Nullable Output<String> width) {
         this.height = height;
         this.label = label;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
@@ -75,10 +75,10 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PngLayerArgs() {
-        this.height = Input.empty();
-        this.label = Input.empty();
-        this.odataType = Input.empty();
-        this.width = Input.empty();
+        this.height = Output.empty();
+        this.label = Output.empty();
+        this.odataType = Output.empty();
+        this.width = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> height;
-        private @Nullable Input<String> label;
-        private Input<String> odataType;
-        private @Nullable Input<String> width;
+        private @Nullable Output<String> height;
+        private @Nullable Output<String> label;
+        private Output<String> odataType;
+        private @Nullable Output<String> width;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.width = defaults.width;
         }
 
-        public Builder height(@Nullable Input<String> height) {
+        public Builder height(@Nullable Output<String> height) {
             this.height = height;
             return this;
         }
 
         public Builder height(@Nullable String height) {
-            this.height = Input.ofNullable(height);
+            this.height = Output.ofNullable(height);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder width(@Nullable Input<String> width) {
+        public Builder width(@Nullable Output<String> width) {
             this.width = width;
             return this;
         }
 
         public Builder width(@Nullable String width) {
-            this.width = Input.ofNullable(width);
+            this.width = Output.ofNullable(width);
             return this;
         }
         public PngLayerArgs build() {

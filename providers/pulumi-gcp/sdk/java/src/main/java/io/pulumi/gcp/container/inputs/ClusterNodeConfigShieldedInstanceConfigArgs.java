@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ClusterNodeConfigShieldedInstanceConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="enableIntegrityMonitoring")
-      private final @Nullable Input<Boolean> enableIntegrityMonitoring;
+      private final @Nullable Output<Boolean> enableIntegrityMonitoring;
 
-    public Input<Boolean> getEnableIntegrityMonitoring() {
-        return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
+    public Output<Boolean> getEnableIntegrityMonitoring() {
+        return this.enableIntegrityMonitoring == null ? Output.empty() : this.enableIntegrityMonitoring;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ClusterNodeConfigShieldedInstanceConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="enableSecureBoot")
-      private final @Nullable Input<Boolean> enableSecureBoot;
+      private final @Nullable Output<Boolean> enableSecureBoot;
 
-    public Input<Boolean> getEnableSecureBoot() {
-        return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
+    public Output<Boolean> getEnableSecureBoot() {
+        return this.enableSecureBoot == null ? Output.empty() : this.enableSecureBoot;
     }
 
     public ClusterNodeConfigShieldedInstanceConfigArgs(
-        @Nullable Input<Boolean> enableIntegrityMonitoring,
-        @Nullable Input<Boolean> enableSecureBoot) {
+        @Nullable Output<Boolean> enableIntegrityMonitoring,
+        @Nullable Output<Boolean> enableSecureBoot) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
     }
 
     private ClusterNodeConfigShieldedInstanceConfigArgs() {
-        this.enableIntegrityMonitoring = Input.empty();
-        this.enableSecureBoot = Input.empty();
+        this.enableIntegrityMonitoring = Output.empty();
+        this.enableSecureBoot = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ClusterNodeConfigShieldedInstanceConfigArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableIntegrityMonitoring;
-        private @Nullable Input<Boolean> enableSecureBoot;
+        private @Nullable Output<Boolean> enableIntegrityMonitoring;
+        private @Nullable Output<Boolean> enableSecureBoot;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ClusterNodeConfigShieldedInstanceConfigArgs extends io.pulumi
     	      this.enableSecureBoot = defaults.enableSecureBoot;
         }
 
-        public Builder enableIntegrityMonitoring(@Nullable Input<Boolean> enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(@Nullable Output<Boolean> enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
         public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
-            this.enableIntegrityMonitoring = Input.ofNullable(enableIntegrityMonitoring);
+            this.enableIntegrityMonitoring = Output.ofNullable(enableIntegrityMonitoring);
             return this;
         }
 
-        public Builder enableSecureBoot(@Nullable Input<Boolean> enableSecureBoot) {
+        public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
-            this.enableSecureBoot = Input.ofNullable(enableSecureBoot);
+            this.enableSecureBoot = Output.ofNullable(enableSecureBoot);
             return this;
         }
         public ClusterNodeConfigShieldedInstanceConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.memcache_v1.enums.InstanceMessageCode;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<InstanceMessageCode> code;
+      private final @Nullable Output<InstanceMessageCode> code;
 
-    public Input<InstanceMessageCode> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<InstanceMessageCode> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     public InstanceMessageArgs(
-        @Nullable Input<InstanceMessageCode> code,
-        @Nullable Input<String> message) {
+        @Nullable Output<InstanceMessageCode> code,
+        @Nullable Output<String> message) {
         this.code = code;
         this.message = message;
     }
 
     private InstanceMessageArgs() {
-        this.code = Input.empty();
-        this.message = Input.empty();
+        this.code = Output.empty();
+        this.message = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceMessageCode> code;
-        private @Nullable Input<String> message;
+        private @Nullable Output<InstanceMessageCode> code;
+        private @Nullable Output<String> message;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
     	      this.message = defaults.message;
         }
 
-        public Builder code(@Nullable Input<InstanceMessageCode> code) {
+        public Builder code(@Nullable Output<InstanceMessageCode> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable InstanceMessageCode code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
         public InstanceMessageArgs build() {

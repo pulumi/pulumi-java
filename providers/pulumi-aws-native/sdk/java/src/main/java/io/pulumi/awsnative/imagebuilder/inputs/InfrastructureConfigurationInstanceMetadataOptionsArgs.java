@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.InfrastructureConfigurationInstanceMetadataOptionsHttpTokens;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
      * 
      */
     @InputImport(name="httpPutResponseHopLimit")
-      private final @Nullable Input<Integer> httpPutResponseHopLimit;
+      private final @Nullable Output<Integer> httpPutResponseHopLimit;
 
-    public Input<Integer> getHttpPutResponseHopLimit() {
-        return this.httpPutResponseHopLimit == null ? Input.empty() : this.httpPutResponseHopLimit;
+    public Output<Integer> getHttpPutResponseHopLimit() {
+        return this.httpPutResponseHopLimit == null ? Output.empty() : this.httpPutResponseHopLimit;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
      * 
      */
     @InputImport(name="httpTokens")
-      private final @Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
+      private final @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
 
-    public Input<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> getHttpTokens() {
-        return this.httpTokens == null ? Input.empty() : this.httpTokens;
+    public Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> getHttpTokens() {
+        return this.httpTokens == null ? Output.empty() : this.httpTokens;
     }
 
     public InfrastructureConfigurationInstanceMetadataOptionsArgs(
-        @Nullable Input<Integer> httpPutResponseHopLimit,
-        @Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens) {
+        @Nullable Output<Integer> httpPutResponseHopLimit,
+        @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         this.httpTokens = httpTokens;
     }
 
     private InfrastructureConfigurationInstanceMetadataOptionsArgs() {
-        this.httpPutResponseHopLimit = Input.empty();
-        this.httpTokens = Input.empty();
+        this.httpPutResponseHopLimit = Output.empty();
+        this.httpTokens = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> httpPutResponseHopLimit;
-        private @Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
+        private @Nullable Output<Integer> httpPutResponseHopLimit;
+        private @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
     	      this.httpTokens = defaults.httpTokens;
         }
 
-        public Builder httpPutResponseHopLimit(@Nullable Input<Integer> httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(@Nullable Output<Integer> httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
 
         public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = Input.ofNullable(httpPutResponseHopLimit);
+            this.httpPutResponseHopLimit = Output.ofNullable(httpPutResponseHopLimit);
             return this;
         }
 
-        public Builder httpTokens(@Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens) {
+        public Builder httpTokens(@Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }
 
         public Builder httpTokens(@Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
-            this.httpTokens = Input.ofNullable(httpTokens);
+            this.httpTokens = Output.ofNullable(httpTokens);
             return this;
         }
         public InfrastructureConfigurationInstanceMetadataOptionsArgs build() {

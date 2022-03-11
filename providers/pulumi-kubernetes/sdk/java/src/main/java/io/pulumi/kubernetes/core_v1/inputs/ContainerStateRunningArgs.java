@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startedAt")
-      private final @Nullable Input<String> startedAt;
+      private final @Nullable Output<String> startedAt;
 
-    public Input<String> getStartedAt() {
-        return this.startedAt == null ? Input.empty() : this.startedAt;
+    public Output<String> getStartedAt() {
+        return this.startedAt == null ? Output.empty() : this.startedAt;
     }
 
-    public ContainerStateRunningArgs(@Nullable Input<String> startedAt) {
+    public ContainerStateRunningArgs(@Nullable Output<String> startedAt) {
         this.startedAt = startedAt;
     }
 
     private ContainerStateRunningArgs() {
-        this.startedAt = Input.empty();
+        this.startedAt = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> startedAt;
+        private @Nullable Output<String> startedAt;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
     	      this.startedAt = defaults.startedAt;
         }
 
-        public Builder startedAt(@Nullable Input<String> startedAt) {
+        public Builder startedAt(@Nullable Output<String> startedAt) {
             this.startedAt = startedAt;
             return this;
         }
 
         public Builder startedAt(@Nullable String startedAt) {
-            this.startedAt = Input.ofNullable(startedAt);
+            this.startedAt = Output.ofNullable(startedAt);
             return this;
         }
         public ContainerStateRunningArgs build() {

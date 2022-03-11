@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.enums.CostAllocationResourceType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -36,9 +36,9 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<Either<String,CostAllocationResourceType>> resourceType;
+      private final Output<Either<String,CostAllocationResourceType>> resourceType;
 
-    public Input<Either<String,CostAllocationResourceType>> getPropResourceType() {
+    public Output<Either<String,CostAllocationResourceType>> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -47,25 +47,25 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<String>> values;
+      private final Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
+    public Output<List<String>> getValues() {
         return this.values;
     }
 
     public SourceCostAllocationResourceArgs(
-        Input<String> name,
-        Input<Either<String,CostAllocationResourceType>> resourceType,
-        Input<List<String>> values) {
+        Output<String> name,
+        Output<Either<String,CostAllocationResourceType>> resourceType,
+        Output<List<String>> values) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private SourceCostAllocationResourceArgs() {
-        this.name = Input.empty();
-        this.resourceType = Input.empty();
-        this.values = Input.empty();
+        this.name = Output.empty();
+        this.resourceType = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<Either<String,CostAllocationResourceType>> resourceType;
-        private Input<List<String>> values;
+        private Output<String> name;
+        private Output<Either<String,CostAllocationResourceType>> resourceType;
+        private Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
     	      this.values = defaults.values;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceType(Input<Either<String,CostAllocationResourceType>> resourceType) {
+        public Builder resourceType(Output<Either<String,CostAllocationResourceType>> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(Either<String,CostAllocationResourceType> resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder values(Input<List<String>> values) {
+        public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<String> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public SourceCostAllocationResourceArgs build() {

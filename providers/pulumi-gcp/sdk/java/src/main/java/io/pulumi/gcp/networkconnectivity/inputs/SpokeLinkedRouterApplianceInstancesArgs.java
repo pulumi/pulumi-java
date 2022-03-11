@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkconnectivity.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesInstanceArgs;
 import java.lang.Boolean;
@@ -20,9 +20,9 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="instances", required=true)
-      private final Input<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances;
+      private final Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances;
 
-    public Input<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> getInstances() {
+    public Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> getInstances() {
         return this.instances;
     }
 
@@ -31,22 +31,22 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="siteToSiteDataTransfer", required=true)
-      private final Input<Boolean> siteToSiteDataTransfer;
+      private final Output<Boolean> siteToSiteDataTransfer;
 
-    public Input<Boolean> getSiteToSiteDataTransfer() {
+    public Output<Boolean> getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
 
     public SpokeLinkedRouterApplianceInstancesArgs(
-        Input<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances,
-        Input<Boolean> siteToSiteDataTransfer) {
+        Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances,
+        Output<Boolean> siteToSiteDataTransfer) {
         this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
         this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
     }
 
     private SpokeLinkedRouterApplianceInstancesArgs() {
-        this.instances = Input.empty();
-        this.siteToSiteDataTransfer = Input.empty();
+        this.instances = Output.empty();
+        this.siteToSiteDataTransfer = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances;
-        private Input<Boolean> siteToSiteDataTransfer;
+        private Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances;
+        private Output<Boolean> siteToSiteDataTransfer;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends io.pulumi.res
     	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
         }
 
-        public Builder instances(Input<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances) {
+        public Builder instances(Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
         public Builder instances(List<SpokeLinkedRouterApplianceInstancesInstanceArgs> instances) {
-            this.instances = Input.of(Objects.requireNonNull(instances));
+            this.instances = Output.of(Objects.requireNonNull(instances));
             return this;
         }
 
-        public Builder siteToSiteDataTransfer(Input<Boolean> siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(Output<Boolean> siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
 
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Input.of(Objects.requireNonNull(siteToSiteDataTransfer));
+            this.siteToSiteDataTransfer = Output.of(Objects.requireNonNull(siteToSiteDataTransfer));
             return this;
         }
         public SpokeLinkedRouterApplianceInstancesArgs build() {

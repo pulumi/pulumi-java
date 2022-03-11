@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.InstanceSpecArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<InstanceSpecArgs> spec;
+      private final @Nullable Output<InstanceSpecArgs> spec;
 
-    public Input<InstanceSpecArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<InstanceSpecArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
-    public InstanceTemplateSpecArgs(@Nullable Input<InstanceSpecArgs> spec) {
+    public InstanceTemplateSpecArgs(@Nullable Output<InstanceSpecArgs> spec) {
         this.spec = spec;
     }
 
     private InstanceTemplateSpecArgs() {
-        this.spec = Input.empty();
+        this.spec = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceSpecArgs> spec;
+        private @Nullable Output<InstanceSpecArgs> spec;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
     	      this.spec = defaults.spec;
         }
 
-        public Builder spec(@Nullable Input<InstanceSpecArgs> spec) {
+        public Builder spec(@Nullable Output<InstanceSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable InstanceSpecArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
         public InstanceTemplateSpecArgs build() {

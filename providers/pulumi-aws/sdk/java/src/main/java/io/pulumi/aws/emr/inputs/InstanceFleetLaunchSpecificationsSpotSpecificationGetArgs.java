@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
      * 
      */
     @InputImport(name="allocationStrategy", required=true)
-      private final Input<String> allocationStrategy;
+      private final Output<String> allocationStrategy;
 
-    public Input<String> getAllocationStrategy() {
+    public Output<String> getAllocationStrategy() {
         return this.allocationStrategy;
     }
 
@@ -31,10 +31,10 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
      * 
      */
     @InputImport(name="blockDurationMinutes")
-      private final @Nullable Input<Integer> blockDurationMinutes;
+      private final @Nullable Output<Integer> blockDurationMinutes;
 
-    public Input<Integer> getBlockDurationMinutes() {
-        return this.blockDurationMinutes == null ? Input.empty() : this.blockDurationMinutes;
+    public Output<Integer> getBlockDurationMinutes() {
+        return this.blockDurationMinutes == null ? Output.empty() : this.blockDurationMinutes;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
      * 
      */
     @InputImport(name="timeoutAction", required=true)
-      private final Input<String> timeoutAction;
+      private final Output<String> timeoutAction;
 
-    public Input<String> getTimeoutAction() {
+    public Output<String> getTimeoutAction() {
         return this.timeoutAction;
     }
 
@@ -53,17 +53,17 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
      * 
      */
     @InputImport(name="timeoutDurationMinutes", required=true)
-      private final Input<Integer> timeoutDurationMinutes;
+      private final Output<Integer> timeoutDurationMinutes;
 
-    public Input<Integer> getTimeoutDurationMinutes() {
+    public Output<Integer> getTimeoutDurationMinutes() {
         return this.timeoutDurationMinutes;
     }
 
     public InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs(
-        Input<String> allocationStrategy,
-        @Nullable Input<Integer> blockDurationMinutes,
-        Input<String> timeoutAction,
-        Input<Integer> timeoutDurationMinutes) {
+        Output<String> allocationStrategy,
+        @Nullable Output<Integer> blockDurationMinutes,
+        Output<String> timeoutAction,
+        Output<Integer> timeoutDurationMinutes) {
         this.allocationStrategy = Objects.requireNonNull(allocationStrategy, "expected parameter 'allocationStrategy' to be non-null");
         this.blockDurationMinutes = blockDurationMinutes;
         this.timeoutAction = Objects.requireNonNull(timeoutAction, "expected parameter 'timeoutAction' to be non-null");
@@ -71,10 +71,10 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
     }
 
     private InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs() {
-        this.allocationStrategy = Input.empty();
-        this.blockDurationMinutes = Input.empty();
-        this.timeoutAction = Input.empty();
-        this.timeoutDurationMinutes = Input.empty();
+        this.allocationStrategy = Output.empty();
+        this.blockDurationMinutes = Output.empty();
+        this.timeoutAction = Output.empty();
+        this.timeoutDurationMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
     }
 
     public static final class Builder {
-        private Input<String> allocationStrategy;
-        private @Nullable Input<Integer> blockDurationMinutes;
-        private Input<String> timeoutAction;
-        private Input<Integer> timeoutDurationMinutes;
+        private Output<String> allocationStrategy;
+        private @Nullable Output<Integer> blockDurationMinutes;
+        private Output<String> timeoutAction;
+        private Output<Integer> timeoutDurationMinutes;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
     	      this.timeoutDurationMinutes = defaults.timeoutDurationMinutes;
         }
 
-        public Builder allocationStrategy(Input<String> allocationStrategy) {
+        public Builder allocationStrategy(Output<String> allocationStrategy) {
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }
 
         public Builder allocationStrategy(String allocationStrategy) {
-            this.allocationStrategy = Input.of(Objects.requireNonNull(allocationStrategy));
+            this.allocationStrategy = Output.of(Objects.requireNonNull(allocationStrategy));
             return this;
         }
 
-        public Builder blockDurationMinutes(@Nullable Input<Integer> blockDurationMinutes) {
+        public Builder blockDurationMinutes(@Nullable Output<Integer> blockDurationMinutes) {
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
 
         public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
-            this.blockDurationMinutes = Input.ofNullable(blockDurationMinutes);
+            this.blockDurationMinutes = Output.ofNullable(blockDurationMinutes);
             return this;
         }
 
-        public Builder timeoutAction(Input<String> timeoutAction) {
+        public Builder timeoutAction(Output<String> timeoutAction) {
             this.timeoutAction = Objects.requireNonNull(timeoutAction);
             return this;
         }
 
         public Builder timeoutAction(String timeoutAction) {
-            this.timeoutAction = Input.of(Objects.requireNonNull(timeoutAction));
+            this.timeoutAction = Output.of(Objects.requireNonNull(timeoutAction));
             return this;
         }
 
-        public Builder timeoutDurationMinutes(Input<Integer> timeoutDurationMinutes) {
+        public Builder timeoutDurationMinutes(Output<Integer> timeoutDurationMinutes) {
             this.timeoutDurationMinutes = Objects.requireNonNull(timeoutDurationMinutes);
             return this;
         }
 
         public Builder timeoutDurationMinutes(Integer timeoutDurationMinutes) {
-            this.timeoutDurationMinutes = Input.of(Objects.requireNonNull(timeoutDurationMinutes));
+            this.timeoutDurationMinutes = Output.of(Objects.requireNonNull(timeoutDurationMinutes));
             return this;
         }
         public InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowPublicOverrides")
-      private final @Nullable Input<Boolean> allowPublicOverrides;
+      private final @Nullable Output<Boolean> allowPublicOverrides;
 
-    public Input<Boolean> getAllowPublicOverrides() {
-        return this.allowPublicOverrides == null ? Input.empty() : this.allowPublicOverrides;
+    public Output<Boolean> getAllowPublicOverrides() {
+        return this.allowPublicOverrides == null ? Output.empty() : this.allowPublicOverrides;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="getObject")
-      private final @Nullable Input<String> getObject;
+      private final @Nullable Output<String> getObject;
 
-    public Input<String> getGetObject() {
-        return this.getObject == null ? Input.empty() : this.getObject;
+    public Output<String> getGetObject() {
+        return this.getObject == null ? Output.empty() : this.getObject;
     }
 
     public BucketAccessRulesArgs(
-        @Nullable Input<Boolean> allowPublicOverrides,
-        @Nullable Input<String> getObject) {
+        @Nullable Output<Boolean> allowPublicOverrides,
+        @Nullable Output<String> getObject) {
         this.allowPublicOverrides = allowPublicOverrides;
         this.getObject = getObject;
     }
 
     private BucketAccessRulesArgs() {
-        this.allowPublicOverrides = Input.empty();
-        this.getObject = Input.empty();
+        this.allowPublicOverrides = Output.empty();
+        this.getObject = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowPublicOverrides;
-        private @Nullable Input<String> getObject;
+        private @Nullable Output<Boolean> allowPublicOverrides;
+        private @Nullable Output<String> getObject;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
     	      this.getObject = defaults.getObject;
         }
 
-        public Builder allowPublicOverrides(@Nullable Input<Boolean> allowPublicOverrides) {
+        public Builder allowPublicOverrides(@Nullable Output<Boolean> allowPublicOverrides) {
             this.allowPublicOverrides = allowPublicOverrides;
             return this;
         }
 
         public Builder allowPublicOverrides(@Nullable Boolean allowPublicOverrides) {
-            this.allowPublicOverrides = Input.ofNullable(allowPublicOverrides);
+            this.allowPublicOverrides = Output.ofNullable(allowPublicOverrides);
             return this;
         }
 
-        public Builder getObject(@Nullable Input<String> getObject) {
+        public Builder getObject(@Nullable Output<String> getObject) {
             this.getObject = getObject;
             return this;
         }
 
         public Builder getObject(@Nullable String getObject) {
-            this.getObject = Input.ofNullable(getObject);
+            this.getObject = Output.ofNullable(getObject);
             return this;
         }
         public BucketAccessRulesArgs build() {

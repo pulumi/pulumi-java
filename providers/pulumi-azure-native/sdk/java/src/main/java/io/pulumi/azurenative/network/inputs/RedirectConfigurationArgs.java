@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.FrontDoorRedirectProtocol;
 import io.pulumi.azurenative.network.enums.FrontDoorRedirectType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="customFragment")
-      private final @Nullable Input<String> customFragment;
+      private final @Nullable Output<String> customFragment;
 
-    public Input<String> getCustomFragment() {
-        return this.customFragment == null ? Input.empty() : this.customFragment;
+    public Output<String> getCustomFragment() {
+        return this.customFragment == null ? Output.empty() : this.customFragment;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="customHost")
-      private final @Nullable Input<String> customHost;
+      private final @Nullable Output<String> customHost;
 
-    public Input<String> getCustomHost() {
-        return this.customHost == null ? Input.empty() : this.customHost;
+    public Output<String> getCustomHost() {
+        return this.customHost == null ? Output.empty() : this.customHost;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="customPath")
-      private final @Nullable Input<String> customPath;
+      private final @Nullable Output<String> customPath;
 
-    public Input<String> getCustomPath() {
-        return this.customPath == null ? Input.empty() : this.customPath;
+    public Output<String> getCustomPath() {
+        return this.customPath == null ? Output.empty() : this.customPath;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="customQueryString")
-      private final @Nullable Input<String> customQueryString;
+      private final @Nullable Output<String> customQueryString;
 
-    public Input<String> getCustomQueryString() {
-        return this.customQueryString == null ? Input.empty() : this.customQueryString;
+    public Output<String> getCustomQueryString() {
+        return this.customQueryString == null ? Output.empty() : this.customQueryString;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -81,10 +81,10 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="redirectProtocol")
-      private final @Nullable Input<Either<String,FrontDoorRedirectProtocol>> redirectProtocol;
+      private final @Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol;
 
-    public Input<Either<String,FrontDoorRedirectProtocol>> getRedirectProtocol() {
-        return this.redirectProtocol == null ? Input.empty() : this.redirectProtocol;
+    public Output<Either<String,FrontDoorRedirectProtocol>> getRedirectProtocol() {
+        return this.redirectProtocol == null ? Output.empty() : this.redirectProtocol;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="redirectType")
-      private final @Nullable Input<Either<String,FrontDoorRedirectType>> redirectType;
+      private final @Nullable Output<Either<String,FrontDoorRedirectType>> redirectType;
 
-    public Input<Either<String,FrontDoorRedirectType>> getRedirectType() {
-        return this.redirectType == null ? Input.empty() : this.redirectType;
+    public Output<Either<String,FrontDoorRedirectType>> getRedirectType() {
+        return this.redirectType == null ? Output.empty() : this.redirectType;
     }
 
     public RedirectConfigurationArgs(
-        @Nullable Input<String> customFragment,
-        @Nullable Input<String> customHost,
-        @Nullable Input<String> customPath,
-        @Nullable Input<String> customQueryString,
-        Input<String> odataType,
-        @Nullable Input<Either<String,FrontDoorRedirectProtocol>> redirectProtocol,
-        @Nullable Input<Either<String,FrontDoorRedirectType>> redirectType) {
+        @Nullable Output<String> customFragment,
+        @Nullable Output<String> customHost,
+        @Nullable Output<String> customPath,
+        @Nullable Output<String> customQueryString,
+        Output<String> odataType,
+        @Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol,
+        @Nullable Output<Either<String,FrontDoorRedirectType>> redirectType) {
         this.customFragment = customFragment;
         this.customHost = customHost;
         this.customPath = customPath;
@@ -116,13 +116,13 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private RedirectConfigurationArgs() {
-        this.customFragment = Input.empty();
-        this.customHost = Input.empty();
-        this.customPath = Input.empty();
-        this.customQueryString = Input.empty();
-        this.odataType = Input.empty();
-        this.redirectProtocol = Input.empty();
-        this.redirectType = Input.empty();
+        this.customFragment = Output.empty();
+        this.customHost = Output.empty();
+        this.customPath = Output.empty();
+        this.customQueryString = Output.empty();
+        this.odataType = Output.empty();
+        this.redirectProtocol = Output.empty();
+        this.redirectType = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customFragment;
-        private @Nullable Input<String> customHost;
-        private @Nullable Input<String> customPath;
-        private @Nullable Input<String> customQueryString;
-        private Input<String> odataType;
-        private @Nullable Input<Either<String,FrontDoorRedirectProtocol>> redirectProtocol;
-        private @Nullable Input<Either<String,FrontDoorRedirectType>> redirectType;
+        private @Nullable Output<String> customFragment;
+        private @Nullable Output<String> customHost;
+        private @Nullable Output<String> customPath;
+        private @Nullable Output<String> customQueryString;
+        private Output<String> odataType;
+        private @Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol;
+        private @Nullable Output<Either<String,FrontDoorRedirectType>> redirectType;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.redirectType = defaults.redirectType;
         }
 
-        public Builder customFragment(@Nullable Input<String> customFragment) {
+        public Builder customFragment(@Nullable Output<String> customFragment) {
             this.customFragment = customFragment;
             return this;
         }
 
         public Builder customFragment(@Nullable String customFragment) {
-            this.customFragment = Input.ofNullable(customFragment);
+            this.customFragment = Output.ofNullable(customFragment);
             return this;
         }
 
-        public Builder customHost(@Nullable Input<String> customHost) {
+        public Builder customHost(@Nullable Output<String> customHost) {
             this.customHost = customHost;
             return this;
         }
 
         public Builder customHost(@Nullable String customHost) {
-            this.customHost = Input.ofNullable(customHost);
+            this.customHost = Output.ofNullable(customHost);
             return this;
         }
 
-        public Builder customPath(@Nullable Input<String> customPath) {
+        public Builder customPath(@Nullable Output<String> customPath) {
             this.customPath = customPath;
             return this;
         }
 
         public Builder customPath(@Nullable String customPath) {
-            this.customPath = Input.ofNullable(customPath);
+            this.customPath = Output.ofNullable(customPath);
             return this;
         }
 
-        public Builder customQueryString(@Nullable Input<String> customQueryString) {
+        public Builder customQueryString(@Nullable Output<String> customQueryString) {
             this.customQueryString = customQueryString;
             return this;
         }
 
         public Builder customQueryString(@Nullable String customQueryString) {
-            this.customQueryString = Input.ofNullable(customQueryString);
+            this.customQueryString = Output.ofNullable(customQueryString);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder redirectProtocol(@Nullable Input<Either<String,FrontDoorRedirectProtocol>> redirectProtocol) {
+        public Builder redirectProtocol(@Nullable Output<Either<String,FrontDoorRedirectProtocol>> redirectProtocol) {
             this.redirectProtocol = redirectProtocol;
             return this;
         }
 
         public Builder redirectProtocol(@Nullable Either<String,FrontDoorRedirectProtocol> redirectProtocol) {
-            this.redirectProtocol = Input.ofNullable(redirectProtocol);
+            this.redirectProtocol = Output.ofNullable(redirectProtocol);
             return this;
         }
 
-        public Builder redirectType(@Nullable Input<Either<String,FrontDoorRedirectType>> redirectType) {
+        public Builder redirectType(@Nullable Output<Either<String,FrontDoorRedirectType>> redirectType) {
             this.redirectType = redirectType;
             return this;
         }
 
         public Builder redirectType(@Nullable Either<String,FrontDoorRedirectType> redirectType) {
-            this.redirectType = Input.ofNullable(redirectType);
+            this.redirectType = Output.ofNullable(redirectType);
             return this;
         }
         public RedirectConfigurationArgs build() {

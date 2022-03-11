@@ -8,7 +8,6 @@ import io.pulumi.azurenative.compute.DiskEncryptionSetArgs;
 import io.pulumi.azurenative.compute.outputs.EncryptionSetIdentityResponse;
 import io.pulumi.azurenative.compute.outputs.KeyForDiskEncryptionSetResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -228,25 +227,25 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DiskEncryptionSet(String name, DiskEncryptionSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:DiskEncryptionSet", name, args == null ? DiskEncryptionSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:DiskEncryptionSet", name, args == null ? DiskEncryptionSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DiskEncryptionSet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DiskEncryptionSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:DiskEncryptionSet", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20190701:DiskEncryptionSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20191101:DiskEncryptionSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200501:DiskEncryptionSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200630:DiskEncryptionSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200930:DiskEncryptionSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20201201:DiskEncryptionSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210401:DiskEncryptionSet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210801:DiskEncryptionSet").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20190701:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20191101:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200501:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200630:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200930:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20201201:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210401:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210801:DiskEncryptionSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -260,7 +259,7 @@ public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DiskEncryptionSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DiskEncryptionSet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DiskEncryptionSet(name, id, options);
     }
 }

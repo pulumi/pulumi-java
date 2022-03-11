@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.BigQueryIODetailsArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.BigTableIODetailsArgs;
@@ -30,10 +30,10 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigTableDetails")
-      private final @Nullable Input<List<BigTableIODetailsArgs>> bigTableDetails;
+      private final @Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails;
 
-    public Input<List<BigTableIODetailsArgs>> getBigTableDetails() {
-        return this.bigTableDetails == null ? Input.empty() : this.bigTableDetails;
+    public Output<List<BigTableIODetailsArgs>> getBigTableDetails() {
+        return this.bigTableDetails == null ? Output.empty() : this.bigTableDetails;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigqueryDetails")
-      private final @Nullable Input<List<BigQueryIODetailsArgs>> bigqueryDetails;
+      private final @Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails;
 
-    public Input<List<BigQueryIODetailsArgs>> getBigqueryDetails() {
-        return this.bigqueryDetails == null ? Input.empty() : this.bigqueryDetails;
+    public Output<List<BigQueryIODetailsArgs>> getBigqueryDetails() {
+        return this.bigqueryDetails == null ? Output.empty() : this.bigqueryDetails;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreDetails")
-      private final @Nullable Input<List<DatastoreIODetailsArgs>> datastoreDetails;
+      private final @Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails;
 
-    public Input<List<DatastoreIODetailsArgs>> getDatastoreDetails() {
-        return this.datastoreDetails == null ? Input.empty() : this.datastoreDetails;
+    public Output<List<DatastoreIODetailsArgs>> getDatastoreDetails() {
+        return this.datastoreDetails == null ? Output.empty() : this.datastoreDetails;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileDetails")
-      private final @Nullable Input<List<FileIODetailsArgs>> fileDetails;
+      private final @Nullable Output<List<FileIODetailsArgs>> fileDetails;
 
-    public Input<List<FileIODetailsArgs>> getFileDetails() {
-        return this.fileDetails == null ? Input.empty() : this.fileDetails;
+    public Output<List<FileIODetailsArgs>> getFileDetails() {
+        return this.fileDetails == null ? Output.empty() : this.fileDetails;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubDetails")
-      private final @Nullable Input<List<PubSubIODetailsArgs>> pubsubDetails;
+      private final @Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails;
 
-    public Input<List<PubSubIODetailsArgs>> getPubsubDetails() {
-        return this.pubsubDetails == null ? Input.empty() : this.pubsubDetails;
+    public Output<List<PubSubIODetailsArgs>> getPubsubDetails() {
+        return this.pubsubDetails == null ? Output.empty() : this.pubsubDetails;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sdkVersion")
-      private final @Nullable Input<SdkVersionArgs> sdkVersion;
+      private final @Nullable Output<SdkVersionArgs> sdkVersion;
 
-    public Input<SdkVersionArgs> getSdkVersion() {
-        return this.sdkVersion == null ? Input.empty() : this.sdkVersion;
+    public Output<SdkVersionArgs> getSdkVersion() {
+        return this.sdkVersion == null ? Output.empty() : this.sdkVersion;
     }
 
     /**
@@ -96,20 +96,20 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spannerDetails")
-      private final @Nullable Input<List<SpannerIODetailsArgs>> spannerDetails;
+      private final @Nullable Output<List<SpannerIODetailsArgs>> spannerDetails;
 
-    public Input<List<SpannerIODetailsArgs>> getSpannerDetails() {
-        return this.spannerDetails == null ? Input.empty() : this.spannerDetails;
+    public Output<List<SpannerIODetailsArgs>> getSpannerDetails() {
+        return this.spannerDetails == null ? Output.empty() : this.spannerDetails;
     }
 
     public JobMetadataArgs(
-        @Nullable Input<List<BigTableIODetailsArgs>> bigTableDetails,
-        @Nullable Input<List<BigQueryIODetailsArgs>> bigqueryDetails,
-        @Nullable Input<List<DatastoreIODetailsArgs>> datastoreDetails,
-        @Nullable Input<List<FileIODetailsArgs>> fileDetails,
-        @Nullable Input<List<PubSubIODetailsArgs>> pubsubDetails,
-        @Nullable Input<SdkVersionArgs> sdkVersion,
-        @Nullable Input<List<SpannerIODetailsArgs>> spannerDetails) {
+        @Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails,
+        @Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails,
+        @Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails,
+        @Nullable Output<List<FileIODetailsArgs>> fileDetails,
+        @Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails,
+        @Nullable Output<SdkVersionArgs> sdkVersion,
+        @Nullable Output<List<SpannerIODetailsArgs>> spannerDetails) {
         this.bigTableDetails = bigTableDetails;
         this.bigqueryDetails = bigqueryDetails;
         this.datastoreDetails = datastoreDetails;
@@ -120,13 +120,13 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobMetadataArgs() {
-        this.bigTableDetails = Input.empty();
-        this.bigqueryDetails = Input.empty();
-        this.datastoreDetails = Input.empty();
-        this.fileDetails = Input.empty();
-        this.pubsubDetails = Input.empty();
-        this.sdkVersion = Input.empty();
-        this.spannerDetails = Input.empty();
+        this.bigTableDetails = Output.empty();
+        this.bigqueryDetails = Output.empty();
+        this.datastoreDetails = Output.empty();
+        this.fileDetails = Output.empty();
+        this.pubsubDetails = Output.empty();
+        this.sdkVersion = Output.empty();
+        this.spannerDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -138,13 +138,13 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BigTableIODetailsArgs>> bigTableDetails;
-        private @Nullable Input<List<BigQueryIODetailsArgs>> bigqueryDetails;
-        private @Nullable Input<List<DatastoreIODetailsArgs>> datastoreDetails;
-        private @Nullable Input<List<FileIODetailsArgs>> fileDetails;
-        private @Nullable Input<List<PubSubIODetailsArgs>> pubsubDetails;
-        private @Nullable Input<SdkVersionArgs> sdkVersion;
-        private @Nullable Input<List<SpannerIODetailsArgs>> spannerDetails;
+        private @Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails;
+        private @Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails;
+        private @Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails;
+        private @Nullable Output<List<FileIODetailsArgs>> fileDetails;
+        private @Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails;
+        private @Nullable Output<SdkVersionArgs> sdkVersion;
+        private @Nullable Output<List<SpannerIODetailsArgs>> spannerDetails;
 
         public Builder() {
     	      // Empty
@@ -161,73 +161,73 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spannerDetails = defaults.spannerDetails;
         }
 
-        public Builder bigTableDetails(@Nullable Input<List<BigTableIODetailsArgs>> bigTableDetails) {
+        public Builder bigTableDetails(@Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails) {
             this.bigTableDetails = bigTableDetails;
             return this;
         }
 
         public Builder bigTableDetails(@Nullable List<BigTableIODetailsArgs> bigTableDetails) {
-            this.bigTableDetails = Input.ofNullable(bigTableDetails);
+            this.bigTableDetails = Output.ofNullable(bigTableDetails);
             return this;
         }
 
-        public Builder bigqueryDetails(@Nullable Input<List<BigQueryIODetailsArgs>> bigqueryDetails) {
+        public Builder bigqueryDetails(@Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails) {
             this.bigqueryDetails = bigqueryDetails;
             return this;
         }
 
         public Builder bigqueryDetails(@Nullable List<BigQueryIODetailsArgs> bigqueryDetails) {
-            this.bigqueryDetails = Input.ofNullable(bigqueryDetails);
+            this.bigqueryDetails = Output.ofNullable(bigqueryDetails);
             return this;
         }
 
-        public Builder datastoreDetails(@Nullable Input<List<DatastoreIODetailsArgs>> datastoreDetails) {
+        public Builder datastoreDetails(@Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails) {
             this.datastoreDetails = datastoreDetails;
             return this;
         }
 
         public Builder datastoreDetails(@Nullable List<DatastoreIODetailsArgs> datastoreDetails) {
-            this.datastoreDetails = Input.ofNullable(datastoreDetails);
+            this.datastoreDetails = Output.ofNullable(datastoreDetails);
             return this;
         }
 
-        public Builder fileDetails(@Nullable Input<List<FileIODetailsArgs>> fileDetails) {
+        public Builder fileDetails(@Nullable Output<List<FileIODetailsArgs>> fileDetails) {
             this.fileDetails = fileDetails;
             return this;
         }
 
         public Builder fileDetails(@Nullable List<FileIODetailsArgs> fileDetails) {
-            this.fileDetails = Input.ofNullable(fileDetails);
+            this.fileDetails = Output.ofNullable(fileDetails);
             return this;
         }
 
-        public Builder pubsubDetails(@Nullable Input<List<PubSubIODetailsArgs>> pubsubDetails) {
+        public Builder pubsubDetails(@Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails) {
             this.pubsubDetails = pubsubDetails;
             return this;
         }
 
         public Builder pubsubDetails(@Nullable List<PubSubIODetailsArgs> pubsubDetails) {
-            this.pubsubDetails = Input.ofNullable(pubsubDetails);
+            this.pubsubDetails = Output.ofNullable(pubsubDetails);
             return this;
         }
 
-        public Builder sdkVersion(@Nullable Input<SdkVersionArgs> sdkVersion) {
+        public Builder sdkVersion(@Nullable Output<SdkVersionArgs> sdkVersion) {
             this.sdkVersion = sdkVersion;
             return this;
         }
 
         public Builder sdkVersion(@Nullable SdkVersionArgs sdkVersion) {
-            this.sdkVersion = Input.ofNullable(sdkVersion);
+            this.sdkVersion = Output.ofNullable(sdkVersion);
             return this;
         }
 
-        public Builder spannerDetails(@Nullable Input<List<SpannerIODetailsArgs>> spannerDetails) {
+        public Builder spannerDetails(@Nullable Output<List<SpannerIODetailsArgs>> spannerDetails) {
             this.spannerDetails = spannerDetails;
             return this;
         }
 
         public Builder spannerDetails(@Nullable List<SpannerIODetailsArgs> spannerDetails) {
-            this.spannerDetails = Input.ofNullable(spannerDetails);
+            this.spannerDetails = Output.ofNullable(spannerDetails);
             return this;
         }
         public JobMetadataArgs build() {

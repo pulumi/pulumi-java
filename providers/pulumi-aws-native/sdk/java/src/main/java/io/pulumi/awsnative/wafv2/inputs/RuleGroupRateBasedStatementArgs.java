@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupRateBasedStatementAggregateKeyType;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupForwardedIPConfigurationArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupStatementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,38 +18,38 @@ public final class RuleGroupRateBasedStatementArgs extends io.pulumi.resources.R
     public static final RuleGroupRateBasedStatementArgs Empty = new RuleGroupRateBasedStatementArgs();
 
     @InputImport(name="aggregateKeyType", required=true)
-      private final Input<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType;
+      private final Output<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType;
 
-    public Input<RuleGroupRateBasedStatementAggregateKeyType> getAggregateKeyType() {
+    public Output<RuleGroupRateBasedStatementAggregateKeyType> getAggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @InputImport(name="forwardedIPConfig")
-      private final @Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
+      private final @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Input<RuleGroupForwardedIPConfigurationArgs> getForwardedIPConfig() {
-        return this.forwardedIPConfig == null ? Input.empty() : this.forwardedIPConfig;
+    public Output<RuleGroupForwardedIPConfigurationArgs> getForwardedIPConfig() {
+        return this.forwardedIPConfig == null ? Output.empty() : this.forwardedIPConfig;
     }
 
     @InputImport(name="limit", required=true)
-      private final Input<Integer> limit;
+      private final Output<Integer> limit;
 
-    public Input<Integer> getLimit() {
+    public Output<Integer> getLimit() {
         return this.limit;
     }
 
     @InputImport(name="scopeDownStatement")
-      private final @Nullable Input<RuleGroupStatementArgs> scopeDownStatement;
+      private final @Nullable Output<RuleGroupStatementArgs> scopeDownStatement;
 
-    public Input<RuleGroupStatementArgs> getScopeDownStatement() {
-        return this.scopeDownStatement == null ? Input.empty() : this.scopeDownStatement;
+    public Output<RuleGroupStatementArgs> getScopeDownStatement() {
+        return this.scopeDownStatement == null ? Output.empty() : this.scopeDownStatement;
     }
 
     public RuleGroupRateBasedStatementArgs(
-        Input<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType,
-        @Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig,
-        Input<Integer> limit,
-        @Nullable Input<RuleGroupStatementArgs> scopeDownStatement) {
+        Output<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType,
+        @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig,
+        Output<Integer> limit,
+        @Nullable Output<RuleGroupStatementArgs> scopeDownStatement) {
         this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType, "expected parameter 'aggregateKeyType' to be non-null");
         this.forwardedIPConfig = forwardedIPConfig;
         this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
@@ -57,10 +57,10 @@ public final class RuleGroupRateBasedStatementArgs extends io.pulumi.resources.R
     }
 
     private RuleGroupRateBasedStatementArgs() {
-        this.aggregateKeyType = Input.empty();
-        this.forwardedIPConfig = Input.empty();
-        this.limit = Input.empty();
-        this.scopeDownStatement = Input.empty();
+        this.aggregateKeyType = Output.empty();
+        this.forwardedIPConfig = Output.empty();
+        this.limit = Output.empty();
+        this.scopeDownStatement = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class RuleGroupRateBasedStatementArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType;
-        private @Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
-        private Input<Integer> limit;
-        private @Nullable Input<RuleGroupStatementArgs> scopeDownStatement;
+        private Output<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType;
+        private @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
+        private Output<Integer> limit;
+        private @Nullable Output<RuleGroupStatementArgs> scopeDownStatement;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class RuleGroupRateBasedStatementArgs extends io.pulumi.resources.R
     	      this.scopeDownStatement = defaults.scopeDownStatement;
         }
 
-        public Builder aggregateKeyType(Input<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType) {
+        public Builder aggregateKeyType(Output<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType) {
             this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
             return this;
         }
 
         public Builder aggregateKeyType(RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType) {
-            this.aggregateKeyType = Input.of(Objects.requireNonNull(aggregateKeyType));
+            this.aggregateKeyType = Output.of(Objects.requireNonNull(aggregateKeyType));
             return this;
         }
 
-        public Builder forwardedIPConfig(@Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
         public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
-            this.forwardedIPConfig = Input.ofNullable(forwardedIPConfig);
+            this.forwardedIPConfig = Output.ofNullable(forwardedIPConfig);
             return this;
         }
 
-        public Builder limit(Input<Integer> limit) {
+        public Builder limit(Output<Integer> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
         public Builder limit(Integer limit) {
-            this.limit = Input.of(Objects.requireNonNull(limit));
+            this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
 
-        public Builder scopeDownStatement(@Nullable Input<RuleGroupStatementArgs> scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable Output<RuleGroupStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
         public Builder scopeDownStatement(@Nullable RuleGroupStatementArgs scopeDownStatement) {
-            this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
+            this.scopeDownStatement = Output.ofNullable(scopeDownStatement);
             return this;
         }
         public RuleGroupRateBasedStatementArgs build() {

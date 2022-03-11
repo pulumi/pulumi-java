@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lightsail;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
-    public DomainArgs(Input<String> domainName) {
+    public DomainArgs(Output<String> domainName) {
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
     }
 
     private DomainArgs() {
-        this.domainName = Input.empty();
+        this.domainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> domainName;
+        private Output<String> domainName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
         public DomainArgs build() {

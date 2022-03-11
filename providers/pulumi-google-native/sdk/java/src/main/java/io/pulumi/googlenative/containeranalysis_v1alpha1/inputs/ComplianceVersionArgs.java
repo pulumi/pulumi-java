@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cpeUri")
-      private final @Nullable Input<String> cpeUri;
+      private final @Nullable Output<String> cpeUri;
 
-    public Input<String> getCpeUri() {
-        return this.cpeUri == null ? Input.empty() : this.cpeUri;
+    public Output<String> getCpeUri() {
+        return this.cpeUri == null ? Output.empty() : this.cpeUri;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ComplianceVersionArgs(
-        @Nullable Input<String> cpeUri,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> cpeUri,
+        @Nullable Output<String> version) {
         this.cpeUri = cpeUri;
         this.version = version;
     }
 
     private ComplianceVersionArgs() {
-        this.cpeUri = Input.empty();
-        this.version = Input.empty();
+        this.cpeUri = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cpeUri;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> cpeUri;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
     	      this.version = defaults.version;
         }
 
-        public Builder cpeUri(@Nullable Input<String> cpeUri) {
+        public Builder cpeUri(@Nullable Output<String> cpeUri) {
             this.cpeUri = cpeUri;
             return this;
         }
 
         public Builder cpeUri(@Nullable String cpeUri) {
-            this.cpeUri = Input.ofNullable(cpeUri);
+            this.cpeUri = Output.ofNullable(cpeUri);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ComplianceVersionArgs build() {

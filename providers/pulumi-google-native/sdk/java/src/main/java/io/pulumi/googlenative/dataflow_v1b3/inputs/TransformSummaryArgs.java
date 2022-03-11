@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.TransformSummaryKind;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
@@ -26,10 +26,10 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayData")
-      private final @Nullable Input<List<DisplayDataArgs>> displayData;
+      private final @Nullable Output<List<DisplayDataArgs>> displayData;
 
-    public Input<List<DisplayDataArgs>> getDisplayData() {
-        return this.displayData == null ? Input.empty() : this.displayData;
+    public Output<List<DisplayDataArgs>> getDisplayData() {
+        return this.displayData == null ? Output.empty() : this.displayData;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="inputCollectionName")
-      private final @Nullable Input<List<String>> inputCollectionName;
+      private final @Nullable Output<List<String>> inputCollectionName;
 
-    public Input<List<String>> getInputCollectionName() {
-        return this.inputCollectionName == null ? Input.empty() : this.inputCollectionName;
+    public Output<List<String>> getInputCollectionName() {
+        return this.inputCollectionName == null ? Output.empty() : this.inputCollectionName;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<TransformSummaryKind> kind;
+      private final @Nullable Output<TransformSummaryKind> kind;
 
-    public Input<TransformSummaryKind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<TransformSummaryKind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="outputCollectionName")
-      private final @Nullable Input<List<String>> outputCollectionName;
+      private final @Nullable Output<List<String>> outputCollectionName;
 
-    public Input<List<String>> getOutputCollectionName() {
-        return this.outputCollectionName == null ? Input.empty() : this.outputCollectionName;
+    public Output<List<String>> getOutputCollectionName() {
+        return this.outputCollectionName == null ? Output.empty() : this.outputCollectionName;
     }
 
     public TransformSummaryArgs(
-        @Nullable Input<List<DisplayDataArgs>> displayData,
-        @Nullable Input<String> id,
-        @Nullable Input<List<String>> inputCollectionName,
-        @Nullable Input<TransformSummaryKind> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> outputCollectionName) {
+        @Nullable Output<List<DisplayDataArgs>> displayData,
+        @Nullable Output<String> id,
+        @Nullable Output<List<String>> inputCollectionName,
+        @Nullable Output<TransformSummaryKind> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> outputCollectionName) {
         this.displayData = displayData;
         this.id = id;
         this.inputCollectionName = inputCollectionName;
@@ -103,12 +103,12 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TransformSummaryArgs() {
-        this.displayData = Input.empty();
-        this.id = Input.empty();
-        this.inputCollectionName = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.outputCollectionName = Input.empty();
+        this.displayData = Output.empty();
+        this.id = Output.empty();
+        this.inputCollectionName = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.outputCollectionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DisplayDataArgs>> displayData;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<String>> inputCollectionName;
-        private @Nullable Input<TransformSummaryKind> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> outputCollectionName;
+        private @Nullable Output<List<DisplayDataArgs>> displayData;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<String>> inputCollectionName;
+        private @Nullable Output<TransformSummaryKind> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> outputCollectionName;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     	      this.outputCollectionName = defaults.outputCollectionName;
         }
 
-        public Builder displayData(@Nullable Input<List<DisplayDataArgs>> displayData) {
+        public Builder displayData(@Nullable Output<List<DisplayDataArgs>> displayData) {
             this.displayData = displayData;
             return this;
         }
 
         public Builder displayData(@Nullable List<DisplayDataArgs> displayData) {
-            this.displayData = Input.ofNullable(displayData);
+            this.displayData = Output.ofNullable(displayData);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder inputCollectionName(@Nullable Input<List<String>> inputCollectionName) {
+        public Builder inputCollectionName(@Nullable Output<List<String>> inputCollectionName) {
             this.inputCollectionName = inputCollectionName;
             return this;
         }
 
         public Builder inputCollectionName(@Nullable List<String> inputCollectionName) {
-            this.inputCollectionName = Input.ofNullable(inputCollectionName);
+            this.inputCollectionName = Output.ofNullable(inputCollectionName);
             return this;
         }
 
-        public Builder kind(@Nullable Input<TransformSummaryKind> kind) {
+        public Builder kind(@Nullable Output<TransformSummaryKind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable TransformSummaryKind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outputCollectionName(@Nullable Input<List<String>> outputCollectionName) {
+        public Builder outputCollectionName(@Nullable Output<List<String>> outputCollectionName) {
             this.outputCollectionName = outputCollectionName;
             return this;
         }
 
         public Builder outputCollectionName(@Nullable List<String> outputCollectionName) {
-            this.outputCollectionName = Input.ofNullable(outputCollectionName);
+            this.outputCollectionName = Output.ofNullable(outputCollectionName);
             return this;
         }
         public TransformSummaryArgs build() {

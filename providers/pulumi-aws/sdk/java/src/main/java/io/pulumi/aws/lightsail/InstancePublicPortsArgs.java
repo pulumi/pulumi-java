@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail;
 
 import io.pulumi.aws.lightsail.inputs.InstancePublicPortsPortInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class InstancePublicPortsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceName", required=true)
-      private final Input<String> instanceName;
+      private final Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
+    public Output<String> getInstanceName() {
         return this.instanceName;
     }
 
@@ -31,22 +31,22 @@ public final class InstancePublicPortsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="portInfos", required=true)
-      private final Input<List<InstancePublicPortsPortInfoArgs>> portInfos;
+      private final Output<List<InstancePublicPortsPortInfoArgs>> portInfos;
 
-    public Input<List<InstancePublicPortsPortInfoArgs>> getPortInfos() {
+    public Output<List<InstancePublicPortsPortInfoArgs>> getPortInfos() {
         return this.portInfos;
     }
 
     public InstancePublicPortsArgs(
-        Input<String> instanceName,
-        Input<List<InstancePublicPortsPortInfoArgs>> portInfos) {
+        Output<String> instanceName,
+        Output<List<InstancePublicPortsPortInfoArgs>> portInfos) {
         this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
         this.portInfos = Objects.requireNonNull(portInfos, "expected parameter 'portInfos' to be non-null");
     }
 
     private InstancePublicPortsArgs() {
-        this.instanceName = Input.empty();
-        this.portInfos = Input.empty();
+        this.instanceName = Output.empty();
+        this.portInfos = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class InstancePublicPortsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> instanceName;
-        private Input<List<InstancePublicPortsPortInfoArgs>> portInfos;
+        private Output<String> instanceName;
+        private Output<List<InstancePublicPortsPortInfoArgs>> portInfos;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class InstancePublicPortsArgs extends io.pulumi.resources.ResourceA
     	      this.portInfos = defaults.portInfos;
         }
 
-        public Builder instanceName(Input<String> instanceName) {
+        public Builder instanceName(Output<String> instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
         public Builder instanceName(String instanceName) {
-            this.instanceName = Input.of(Objects.requireNonNull(instanceName));
+            this.instanceName = Output.of(Objects.requireNonNull(instanceName));
             return this;
         }
 
-        public Builder portInfos(Input<List<InstancePublicPortsPortInfoArgs>> portInfos) {
+        public Builder portInfos(Output<List<InstancePublicPortsPortInfoArgs>> portInfos) {
             this.portInfos = Objects.requireNonNull(portInfos);
             return this;
         }
 
         public Builder portInfos(List<InstancePublicPortsPortInfoArgs> portInfos) {
-            this.portInfos = Input.of(Objects.requireNonNull(portInfos));
+            this.portInfos = Output.of(Objects.requireNonNull(portInfos));
             return this;
         }
         public InstancePublicPortsArgs build() {

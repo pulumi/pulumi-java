@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
      * 
      */
     @InputImport(name="statements", required=true)
-      private final Input<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs>> statements;
+      private final Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs>> statements;
 
-    public Input<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs>> getStatements() {
+    public Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs>> getStatements() {
         return this.statements;
     }
 
-    public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementGetArgs(Input<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs>> statements) {
+    public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementGetArgs(Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs>> statements) {
         this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
     }
 
     private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementGetArgs() {
-        this.statements = Input.empty();
+        this.statements = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     }
 
     public static final class Builder {
-        private Input<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs>> statements;
+        private Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs>> statements;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     	      this.statements = defaults.statements;
         }
 
-        public Builder statements(Input<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs>> statements) {
+        public Builder statements(Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
         public Builder statements(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGetArgs> statements) {
-            this.statements = Input.of(Objects.requireNonNull(statements));
+            this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
         public WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementGetArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotLocaleArgs;
 import io.pulumi.awsnative.lex.inputs.BotS3LocationArgs;
 import io.pulumi.awsnative.lex.inputs.BotTagArgs;
 import io.pulumi.awsnative.lex.inputs.DataPrivacyPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,17 +26,17 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoBuildBotLocales")
-      private final @Nullable Input<Boolean> autoBuildBotLocales;
+      private final @Nullable Output<Boolean> autoBuildBotLocales;
 
-    public Input<Boolean> getAutoBuildBotLocales() {
-        return this.autoBuildBotLocales == null ? Input.empty() : this.autoBuildBotLocales;
+    public Output<Boolean> getAutoBuildBotLocales() {
+        return this.autoBuildBotLocales == null ? Output.empty() : this.autoBuildBotLocales;
     }
 
     @InputImport(name="botFileS3Location")
-      private final @Nullable Input<BotS3LocationArgs> botFileS3Location;
+      private final @Nullable Output<BotS3LocationArgs> botFileS3Location;
 
-    public Input<BotS3LocationArgs> getBotFileS3Location() {
-        return this.botFileS3Location == null ? Input.empty() : this.botFileS3Location;
+    public Output<BotS3LocationArgs> getBotFileS3Location() {
+        return this.botFileS3Location == null ? Output.empty() : this.botFileS3Location;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botLocales")
-      private final @Nullable Input<List<BotLocaleArgs>> botLocales;
+      private final @Nullable Output<List<BotLocaleArgs>> botLocales;
 
-    public Input<List<BotLocaleArgs>> getBotLocales() {
-        return this.botLocales == null ? Input.empty() : this.botLocales;
+    public Output<List<BotLocaleArgs>> getBotLocales() {
+        return this.botLocales == null ? Output.empty() : this.botLocales;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botTags")
-      private final @Nullable Input<List<BotTagArgs>> botTags;
+      private final @Nullable Output<List<BotTagArgs>> botTags;
 
-    public Input<List<BotTagArgs>> getBotTags() {
-        return this.botTags == null ? Input.empty() : this.botTags;
+    public Output<List<BotTagArgs>> getBotTags() {
+        return this.botTags == null ? Output.empty() : this.botTags;
     }
 
     /**
@@ -66,17 +66,17 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataPrivacy", required=true)
-      private final Input<DataPrivacyPropertiesArgs> dataPrivacy;
+      private final Output<DataPrivacyPropertiesArgs> dataPrivacy;
 
-    public Input<DataPrivacyPropertiesArgs> getDataPrivacy() {
+    public Output<DataPrivacyPropertiesArgs> getDataPrivacy() {
         return this.dataPrivacy;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -84,23 +84,23 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleSessionTTLInSeconds", required=true)
-      private final Input<Integer> idleSessionTTLInSeconds;
+      private final Output<Integer> idleSessionTTLInSeconds;
 
-    public Input<Integer> getIdleSessionTTLInSeconds() {
+    public Output<Integer> getIdleSessionTTLInSeconds() {
         return this.idleSessionTTLInSeconds;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -109,23 +109,23 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testBotAliasTags")
-      private final @Nullable Input<List<BotTagArgs>> testBotAliasTags;
+      private final @Nullable Output<List<BotTagArgs>> testBotAliasTags;
 
-    public Input<List<BotTagArgs>> getTestBotAliasTags() {
-        return this.testBotAliasTags == null ? Input.empty() : this.testBotAliasTags;
+    public Output<List<BotTagArgs>> getTestBotAliasTags() {
+        return this.testBotAliasTags == null ? Output.empty() : this.testBotAliasTags;
     }
 
     public BotArgs(
-        @Nullable Input<Boolean> autoBuildBotLocales,
-        @Nullable Input<BotS3LocationArgs> botFileS3Location,
-        @Nullable Input<List<BotLocaleArgs>> botLocales,
-        @Nullable Input<List<BotTagArgs>> botTags,
-        Input<DataPrivacyPropertiesArgs> dataPrivacy,
-        @Nullable Input<String> description,
-        Input<Integer> idleSessionTTLInSeconds,
-        @Nullable Input<String> name,
-        Input<String> roleArn,
-        @Nullable Input<List<BotTagArgs>> testBotAliasTags) {
+        @Nullable Output<Boolean> autoBuildBotLocales,
+        @Nullable Output<BotS3LocationArgs> botFileS3Location,
+        @Nullable Output<List<BotLocaleArgs>> botLocales,
+        @Nullable Output<List<BotTagArgs>> botTags,
+        Output<DataPrivacyPropertiesArgs> dataPrivacy,
+        @Nullable Output<String> description,
+        Output<Integer> idleSessionTTLInSeconds,
+        @Nullable Output<String> name,
+        Output<String> roleArn,
+        @Nullable Output<List<BotTagArgs>> testBotAliasTags) {
         this.autoBuildBotLocales = autoBuildBotLocales;
         this.botFileS3Location = botFileS3Location;
         this.botLocales = botLocales;
@@ -139,16 +139,16 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotArgs() {
-        this.autoBuildBotLocales = Input.empty();
-        this.botFileS3Location = Input.empty();
-        this.botLocales = Input.empty();
-        this.botTags = Input.empty();
-        this.dataPrivacy = Input.empty();
-        this.description = Input.empty();
-        this.idleSessionTTLInSeconds = Input.empty();
-        this.name = Input.empty();
-        this.roleArn = Input.empty();
-        this.testBotAliasTags = Input.empty();
+        this.autoBuildBotLocales = Output.empty();
+        this.botFileS3Location = Output.empty();
+        this.botLocales = Output.empty();
+        this.botTags = Output.empty();
+        this.dataPrivacy = Output.empty();
+        this.description = Output.empty();
+        this.idleSessionTTLInSeconds = Output.empty();
+        this.name = Output.empty();
+        this.roleArn = Output.empty();
+        this.testBotAliasTags = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,16 +160,16 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoBuildBotLocales;
-        private @Nullable Input<BotS3LocationArgs> botFileS3Location;
-        private @Nullable Input<List<BotLocaleArgs>> botLocales;
-        private @Nullable Input<List<BotTagArgs>> botTags;
-        private Input<DataPrivacyPropertiesArgs> dataPrivacy;
-        private @Nullable Input<String> description;
-        private Input<Integer> idleSessionTTLInSeconds;
-        private @Nullable Input<String> name;
-        private Input<String> roleArn;
-        private @Nullable Input<List<BotTagArgs>> testBotAliasTags;
+        private @Nullable Output<Boolean> autoBuildBotLocales;
+        private @Nullable Output<BotS3LocationArgs> botFileS3Location;
+        private @Nullable Output<List<BotLocaleArgs>> botLocales;
+        private @Nullable Output<List<BotTagArgs>> botTags;
+        private Output<DataPrivacyPropertiesArgs> dataPrivacy;
+        private @Nullable Output<String> description;
+        private Output<Integer> idleSessionTTLInSeconds;
+        private @Nullable Output<String> name;
+        private Output<String> roleArn;
+        private @Nullable Output<List<BotTagArgs>> testBotAliasTags;
 
         public Builder() {
     	      // Empty
@@ -189,103 +189,103 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testBotAliasTags = defaults.testBotAliasTags;
         }
 
-        public Builder autoBuildBotLocales(@Nullable Input<Boolean> autoBuildBotLocales) {
+        public Builder autoBuildBotLocales(@Nullable Output<Boolean> autoBuildBotLocales) {
             this.autoBuildBotLocales = autoBuildBotLocales;
             return this;
         }
 
         public Builder autoBuildBotLocales(@Nullable Boolean autoBuildBotLocales) {
-            this.autoBuildBotLocales = Input.ofNullable(autoBuildBotLocales);
+            this.autoBuildBotLocales = Output.ofNullable(autoBuildBotLocales);
             return this;
         }
 
-        public Builder botFileS3Location(@Nullable Input<BotS3LocationArgs> botFileS3Location) {
+        public Builder botFileS3Location(@Nullable Output<BotS3LocationArgs> botFileS3Location) {
             this.botFileS3Location = botFileS3Location;
             return this;
         }
 
         public Builder botFileS3Location(@Nullable BotS3LocationArgs botFileS3Location) {
-            this.botFileS3Location = Input.ofNullable(botFileS3Location);
+            this.botFileS3Location = Output.ofNullable(botFileS3Location);
             return this;
         }
 
-        public Builder botLocales(@Nullable Input<List<BotLocaleArgs>> botLocales) {
+        public Builder botLocales(@Nullable Output<List<BotLocaleArgs>> botLocales) {
             this.botLocales = botLocales;
             return this;
         }
 
         public Builder botLocales(@Nullable List<BotLocaleArgs> botLocales) {
-            this.botLocales = Input.ofNullable(botLocales);
+            this.botLocales = Output.ofNullable(botLocales);
             return this;
         }
 
-        public Builder botTags(@Nullable Input<List<BotTagArgs>> botTags) {
+        public Builder botTags(@Nullable Output<List<BotTagArgs>> botTags) {
             this.botTags = botTags;
             return this;
         }
 
         public Builder botTags(@Nullable List<BotTagArgs> botTags) {
-            this.botTags = Input.ofNullable(botTags);
+            this.botTags = Output.ofNullable(botTags);
             return this;
         }
 
-        public Builder dataPrivacy(Input<DataPrivacyPropertiesArgs> dataPrivacy) {
+        public Builder dataPrivacy(Output<DataPrivacyPropertiesArgs> dataPrivacy) {
             this.dataPrivacy = Objects.requireNonNull(dataPrivacy);
             return this;
         }
 
         public Builder dataPrivacy(DataPrivacyPropertiesArgs dataPrivacy) {
-            this.dataPrivacy = Input.of(Objects.requireNonNull(dataPrivacy));
+            this.dataPrivacy = Output.of(Objects.requireNonNull(dataPrivacy));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder idleSessionTTLInSeconds(Input<Integer> idleSessionTTLInSeconds) {
+        public Builder idleSessionTTLInSeconds(Output<Integer> idleSessionTTLInSeconds) {
             this.idleSessionTTLInSeconds = Objects.requireNonNull(idleSessionTTLInSeconds);
             return this;
         }
 
         public Builder idleSessionTTLInSeconds(Integer idleSessionTTLInSeconds) {
-            this.idleSessionTTLInSeconds = Input.of(Objects.requireNonNull(idleSessionTTLInSeconds));
+            this.idleSessionTTLInSeconds = Output.of(Objects.requireNonNull(idleSessionTTLInSeconds));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder testBotAliasTags(@Nullable Input<List<BotTagArgs>> testBotAliasTags) {
+        public Builder testBotAliasTags(@Nullable Output<List<BotTagArgs>> testBotAliasTags) {
             this.testBotAliasTags = testBotAliasTags;
             return this;
         }
 
         public Builder testBotAliasTags(@Nullable List<BotTagArgs> testBotAliasTags) {
-            this.testBotAliasTags = Input.ofNullable(testBotAliasTags);
+            this.testBotAliasTags = Output.ofNullable(testBotAliasTags);
             return this;
         }
         public BotArgs build() {

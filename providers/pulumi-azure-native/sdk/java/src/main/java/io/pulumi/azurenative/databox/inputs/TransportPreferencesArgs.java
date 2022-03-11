@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.enums.TransportShipmentTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="preferredShipmentType", required=true)
-      private final Input<Either<String,TransportShipmentTypes>> preferredShipmentType;
+      private final Output<Either<String,TransportShipmentTypes>> preferredShipmentType;
 
-    public Input<Either<String,TransportShipmentTypes>> getPreferredShipmentType() {
+    public Output<Either<String,TransportShipmentTypes>> getPreferredShipmentType() {
         return this.preferredShipmentType;
     }
 
-    public TransportPreferencesArgs(Input<Either<String,TransportShipmentTypes>> preferredShipmentType) {
+    public TransportPreferencesArgs(Output<Either<String,TransportShipmentTypes>> preferredShipmentType) {
         this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType, "expected parameter 'preferredShipmentType' to be non-null");
     }
 
     private TransportPreferencesArgs() {
-        this.preferredShipmentType = Input.empty();
+        this.preferredShipmentType = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<Either<String,TransportShipmentTypes>> preferredShipmentType;
+        private Output<Either<String,TransportShipmentTypes>> preferredShipmentType;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
     	      this.preferredShipmentType = defaults.preferredShipmentType;
         }
 
-        public Builder preferredShipmentType(Input<Either<String,TransportShipmentTypes>> preferredShipmentType) {
+        public Builder preferredShipmentType(Output<Either<String,TransportShipmentTypes>> preferredShipmentType) {
             this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType);
             return this;
         }
 
         public Builder preferredShipmentType(Either<String,TransportShipmentTypes> preferredShipmentType) {
-            this.preferredShipmentType = Input.of(Objects.requireNonNull(preferredShipmentType));
+            this.preferredShipmentType = Output.of(Objects.requireNonNull(preferredShipmentType));
             return this;
         }
         public TransportPreferencesArgs build() {

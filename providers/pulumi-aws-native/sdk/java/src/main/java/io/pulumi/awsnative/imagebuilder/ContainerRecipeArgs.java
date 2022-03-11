@@ -8,7 +8,7 @@ import io.pulumi.awsnative.imagebuilder.enums.ContainerRecipePlatformOverride;
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeComponentConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeTargetContainerRepositoryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="components")
-      private final @Nullable Input<List<ContainerRecipeComponentConfigurationArgs>> components;
+      private final @Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components;
 
-    public Input<List<ContainerRecipeComponentConfigurationArgs>> getComponents() {
-        return this.components == null ? Input.empty() : this.components;
+    public Output<List<ContainerRecipeComponentConfigurationArgs>> getComponents() {
+        return this.components == null ? Output.empty() : this.components;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="containerType")
-      private final @Nullable Input<ContainerRecipeContainerType> containerType;
+      private final @Nullable Output<ContainerRecipeContainerType> containerType;
 
-    public Input<ContainerRecipeContainerType> getContainerType() {
-        return this.containerType == null ? Input.empty() : this.containerType;
+    public Output<ContainerRecipeContainerType> getContainerType() {
+        return this.containerType == null ? Output.empty() : this.containerType;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dockerfileTemplateData")
-      private final @Nullable Input<String> dockerfileTemplateData;
+      private final @Nullable Output<String> dockerfileTemplateData;
 
-    public Input<String> getDockerfileTemplateData() {
-        return this.dockerfileTemplateData == null ? Input.empty() : this.dockerfileTemplateData;
+    public Output<String> getDockerfileTemplateData() {
+        return this.dockerfileTemplateData == null ? Output.empty() : this.dockerfileTemplateData;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dockerfileTemplateUri")
-      private final @Nullable Input<String> dockerfileTemplateUri;
+      private final @Nullable Output<String> dockerfileTemplateUri;
 
-    public Input<String> getDockerfileTemplateUri() {
-        return this.dockerfileTemplateUri == null ? Input.empty() : this.dockerfileTemplateUri;
+    public Output<String> getDockerfileTemplateUri() {
+        return this.dockerfileTemplateUri == null ? Output.empty() : this.dockerfileTemplateUri;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="imageOsVersionOverride")
-      private final @Nullable Input<String> imageOsVersionOverride;
+      private final @Nullable Output<String> imageOsVersionOverride;
 
-    public Input<String> getImageOsVersionOverride() {
-        return this.imageOsVersionOverride == null ? Input.empty() : this.imageOsVersionOverride;
+    public Output<String> getImageOsVersionOverride() {
+        return this.imageOsVersionOverride == null ? Output.empty() : this.imageOsVersionOverride;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceConfiguration")
-      private final @Nullable Input<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
+      private final @Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
 
-    public Input<ContainerRecipeInstanceConfigurationArgs> getInstanceConfiguration() {
-        return this.instanceConfiguration == null ? Input.empty() : this.instanceConfiguration;
+    public Output<ContainerRecipeInstanceConfigurationArgs> getInstanceConfiguration() {
+        return this.instanceConfiguration == null ? Output.empty() : this.instanceConfiguration;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parentImage")
-      private final @Nullable Input<String> parentImage;
+      private final @Nullable Output<String> parentImage;
 
-    public Input<String> getParentImage() {
-        return this.parentImage == null ? Input.empty() : this.parentImage;
+    public Output<String> getParentImage() {
+        return this.parentImage == null ? Output.empty() : this.parentImage;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="platformOverride")
-      private final @Nullable Input<ContainerRecipePlatformOverride> platformOverride;
+      private final @Nullable Output<ContainerRecipePlatformOverride> platformOverride;
 
-    public Input<ContainerRecipePlatformOverride> getPlatformOverride() {
-        return this.platformOverride == null ? Input.empty() : this.platformOverride;
+    public Output<ContainerRecipePlatformOverride> getPlatformOverride() {
+        return this.platformOverride == null ? Output.empty() : this.platformOverride;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Object> tags;
+      private final @Nullable Output<Object> tags;
 
-    public Input<Object> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Object> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetRepository")
-      private final @Nullable Input<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
+      private final @Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
 
-    public Input<ContainerRecipeTargetContainerRepositoryArgs> getTargetRepository() {
-        return this.targetRepository == null ? Input.empty() : this.targetRepository;
+    public Output<ContainerRecipeTargetContainerRepositoryArgs> getTargetRepository() {
+        return this.targetRepository == null ? Output.empty() : this.targetRepository;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -180,28 +180,28 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workingDirectory")
-      private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Output<String> workingDirectory;
 
-    public Input<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Input.empty() : this.workingDirectory;
+    public Output<String> getWorkingDirectory() {
+        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
     }
 
     public ContainerRecipeArgs(
-        @Nullable Input<List<ContainerRecipeComponentConfigurationArgs>> components,
-        @Nullable Input<ContainerRecipeContainerType> containerType,
-        @Nullable Input<String> description,
-        @Nullable Input<String> dockerfileTemplateData,
-        @Nullable Input<String> dockerfileTemplateUri,
-        @Nullable Input<String> imageOsVersionOverride,
-        @Nullable Input<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parentImage,
-        @Nullable Input<ContainerRecipePlatformOverride> platformOverride,
-        @Nullable Input<Object> tags,
-        @Nullable Input<ContainerRecipeTargetContainerRepositoryArgs> targetRepository,
-        @Nullable Input<String> version,
-        @Nullable Input<String> workingDirectory) {
+        @Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components,
+        @Nullable Output<ContainerRecipeContainerType> containerType,
+        @Nullable Output<String> description,
+        @Nullable Output<String> dockerfileTemplateData,
+        @Nullable Output<String> dockerfileTemplateUri,
+        @Nullable Output<String> imageOsVersionOverride,
+        @Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parentImage,
+        @Nullable Output<ContainerRecipePlatformOverride> platformOverride,
+        @Nullable Output<Object> tags,
+        @Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository,
+        @Nullable Output<String> version,
+        @Nullable Output<String> workingDirectory) {
         this.components = components;
         this.containerType = containerType;
         this.description = description;
@@ -220,21 +220,21 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ContainerRecipeArgs() {
-        this.components = Input.empty();
-        this.containerType = Input.empty();
-        this.description = Input.empty();
-        this.dockerfileTemplateData = Input.empty();
-        this.dockerfileTemplateUri = Input.empty();
-        this.imageOsVersionOverride = Input.empty();
-        this.instanceConfiguration = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.name = Input.empty();
-        this.parentImage = Input.empty();
-        this.platformOverride = Input.empty();
-        this.tags = Input.empty();
-        this.targetRepository = Input.empty();
-        this.version = Input.empty();
-        this.workingDirectory = Input.empty();
+        this.components = Output.empty();
+        this.containerType = Output.empty();
+        this.description = Output.empty();
+        this.dockerfileTemplateData = Output.empty();
+        this.dockerfileTemplateUri = Output.empty();
+        this.imageOsVersionOverride = Output.empty();
+        this.instanceConfiguration = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.name = Output.empty();
+        this.parentImage = Output.empty();
+        this.platformOverride = Output.empty();
+        this.tags = Output.empty();
+        this.targetRepository = Output.empty();
+        this.version = Output.empty();
+        this.workingDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -246,21 +246,21 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ContainerRecipeComponentConfigurationArgs>> components;
-        private @Nullable Input<ContainerRecipeContainerType> containerType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> dockerfileTemplateData;
-        private @Nullable Input<String> dockerfileTemplateUri;
-        private @Nullable Input<String> imageOsVersionOverride;
-        private @Nullable Input<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parentImage;
-        private @Nullable Input<ContainerRecipePlatformOverride> platformOverride;
-        private @Nullable Input<Object> tags;
-        private @Nullable Input<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
-        private @Nullable Input<String> version;
-        private @Nullable Input<String> workingDirectory;
+        private @Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components;
+        private @Nullable Output<ContainerRecipeContainerType> containerType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> dockerfileTemplateData;
+        private @Nullable Output<String> dockerfileTemplateUri;
+        private @Nullable Output<String> imageOsVersionOverride;
+        private @Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parentImage;
+        private @Nullable Output<ContainerRecipePlatformOverride> platformOverride;
+        private @Nullable Output<Object> tags;
+        private @Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
+        private @Nullable Output<String> version;
+        private @Nullable Output<String> workingDirectory;
 
         public Builder() {
     	      // Empty
@@ -285,153 +285,153 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder components(@Nullable Input<List<ContainerRecipeComponentConfigurationArgs>> components) {
+        public Builder components(@Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components) {
             this.components = components;
             return this;
         }
 
         public Builder components(@Nullable List<ContainerRecipeComponentConfigurationArgs> components) {
-            this.components = Input.ofNullable(components);
+            this.components = Output.ofNullable(components);
             return this;
         }
 
-        public Builder containerType(@Nullable Input<ContainerRecipeContainerType> containerType) {
+        public Builder containerType(@Nullable Output<ContainerRecipeContainerType> containerType) {
             this.containerType = containerType;
             return this;
         }
 
         public Builder containerType(@Nullable ContainerRecipeContainerType containerType) {
-            this.containerType = Input.ofNullable(containerType);
+            this.containerType = Output.ofNullable(containerType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dockerfileTemplateData(@Nullable Input<String> dockerfileTemplateData) {
+        public Builder dockerfileTemplateData(@Nullable Output<String> dockerfileTemplateData) {
             this.dockerfileTemplateData = dockerfileTemplateData;
             return this;
         }
 
         public Builder dockerfileTemplateData(@Nullable String dockerfileTemplateData) {
-            this.dockerfileTemplateData = Input.ofNullable(dockerfileTemplateData);
+            this.dockerfileTemplateData = Output.ofNullable(dockerfileTemplateData);
             return this;
         }
 
-        public Builder dockerfileTemplateUri(@Nullable Input<String> dockerfileTemplateUri) {
+        public Builder dockerfileTemplateUri(@Nullable Output<String> dockerfileTemplateUri) {
             this.dockerfileTemplateUri = dockerfileTemplateUri;
             return this;
         }
 
         public Builder dockerfileTemplateUri(@Nullable String dockerfileTemplateUri) {
-            this.dockerfileTemplateUri = Input.ofNullable(dockerfileTemplateUri);
+            this.dockerfileTemplateUri = Output.ofNullable(dockerfileTemplateUri);
             return this;
         }
 
-        public Builder imageOsVersionOverride(@Nullable Input<String> imageOsVersionOverride) {
+        public Builder imageOsVersionOverride(@Nullable Output<String> imageOsVersionOverride) {
             this.imageOsVersionOverride = imageOsVersionOverride;
             return this;
         }
 
         public Builder imageOsVersionOverride(@Nullable String imageOsVersionOverride) {
-            this.imageOsVersionOverride = Input.ofNullable(imageOsVersionOverride);
+            this.imageOsVersionOverride = Output.ofNullable(imageOsVersionOverride);
             return this;
         }
 
-        public Builder instanceConfiguration(@Nullable Input<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration) {
+        public Builder instanceConfiguration(@Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration) {
             this.instanceConfiguration = instanceConfiguration;
             return this;
         }
 
         public Builder instanceConfiguration(@Nullable ContainerRecipeInstanceConfigurationArgs instanceConfiguration) {
-            this.instanceConfiguration = Input.ofNullable(instanceConfiguration);
+            this.instanceConfiguration = Output.ofNullable(instanceConfiguration);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentImage(@Nullable Input<String> parentImage) {
+        public Builder parentImage(@Nullable Output<String> parentImage) {
             this.parentImage = parentImage;
             return this;
         }
 
         public Builder parentImage(@Nullable String parentImage) {
-            this.parentImage = Input.ofNullable(parentImage);
+            this.parentImage = Output.ofNullable(parentImage);
             return this;
         }
 
-        public Builder platformOverride(@Nullable Input<ContainerRecipePlatformOverride> platformOverride) {
+        public Builder platformOverride(@Nullable Output<ContainerRecipePlatformOverride> platformOverride) {
             this.platformOverride = platformOverride;
             return this;
         }
 
         public Builder platformOverride(@Nullable ContainerRecipePlatformOverride platformOverride) {
-            this.platformOverride = Input.ofNullable(platformOverride);
+            this.platformOverride = Output.ofNullable(platformOverride);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Object tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetRepository(@Nullable Input<ContainerRecipeTargetContainerRepositoryArgs> targetRepository) {
+        public Builder targetRepository(@Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository) {
             this.targetRepository = targetRepository;
             return this;
         }
 
         public Builder targetRepository(@Nullable ContainerRecipeTargetContainerRepositoryArgs targetRepository) {
-            this.targetRepository = Input.ofNullable(targetRepository);
+            this.targetRepository = Output.ofNullable(targetRepository);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Input.ofNullable(workingDirectory);
+            this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
         }
         public ContainerRecipeArgs build() {

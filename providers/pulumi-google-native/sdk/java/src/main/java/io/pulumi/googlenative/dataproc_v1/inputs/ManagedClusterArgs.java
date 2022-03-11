@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.ClusterConfigArgs;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -36,9 +36,9 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<ClusterConfigArgs> config;
+      private final Output<ClusterConfigArgs> config;
 
-    public Input<ClusterConfigArgs> getConfig() {
+    public Output<ClusterConfigArgs> getConfig() {
         return this.config;
     }
 
@@ -47,25 +47,25 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     public ManagedClusterArgs(
-        Input<String> clusterName,
-        Input<ClusterConfigArgs> config,
-        @Nullable Input<Map<String,String>> labels) {
+        Output<String> clusterName,
+        Output<ClusterConfigArgs> config,
+        @Nullable Output<Map<String,String>> labels) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
         this.labels = labels;
     }
 
     private ManagedClusterArgs() {
-        this.clusterName = Input.empty();
-        this.config = Input.empty();
-        this.labels = Input.empty();
+        this.clusterName = Output.empty();
+        this.config = Output.empty();
+        this.labels = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private Input<ClusterConfigArgs> config;
-        private @Nullable Input<Map<String,String>> labels;
+        private Output<String> clusterName;
+        private Output<ClusterConfigArgs> config;
+        private @Nullable Output<Map<String,String>> labels;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.labels = defaults.labels;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder config(Input<ClusterConfigArgs> config) {
+        public Builder config(Output<ClusterConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(ClusterConfigArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
         public ManagedClusterArgs build() {

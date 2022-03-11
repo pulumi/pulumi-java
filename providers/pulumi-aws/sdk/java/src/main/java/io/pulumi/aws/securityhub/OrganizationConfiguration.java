@@ -6,7 +6,6 @@ package io.pulumi.aws.securityhub;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.OrganizationConfigurationArgs;
 import io.pulumi.aws.securityhub.inputs.OrganizationConfigurationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -86,14 +85,14 @@ public class OrganizationConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationConfiguration(String name, OrganizationConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:securityhub/organizationConfiguration:OrganizationConfiguration", name, args == null ? OrganizationConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:securityhub/organizationConfiguration:OrganizationConfiguration", name, args == null ? OrganizationConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OrganizationConfiguration(String name, Input<String> id, @Nullable OrganizationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationConfiguration(String name, Output<String> id, @Nullable OrganizationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:securityhub/organizationConfiguration:OrganizationConfiguration", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -109,7 +108,7 @@ public class OrganizationConfiguration extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationConfiguration get(String name, Input<String> id, @Nullable OrganizationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationConfiguration get(String name, Output<String> id, @Nullable OrganizationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrganizationConfiguration(name, id, state, options);
     }
 }

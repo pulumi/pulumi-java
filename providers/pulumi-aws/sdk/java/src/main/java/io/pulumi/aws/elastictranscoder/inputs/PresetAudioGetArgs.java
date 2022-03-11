@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elastictranscoder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audioPackingMode")
-      private final @Nullable Input<String> audioPackingMode;
+      private final @Nullable Output<String> audioPackingMode;
 
-    public Input<String> getAudioPackingMode() {
-        return this.audioPackingMode == null ? Input.empty() : this.audioPackingMode;
+    public Output<String> getAudioPackingMode() {
+        return this.audioPackingMode == null ? Output.empty() : this.audioPackingMode;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitRate")
-      private final @Nullable Input<String> bitRate;
+      private final @Nullable Output<String> bitRate;
 
-    public Input<String> getBitRate() {
-        return this.bitRate == null ? Input.empty() : this.bitRate;
+    public Output<String> getBitRate() {
+        return this.bitRate == null ? Output.empty() : this.bitRate;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channels")
-      private final @Nullable Input<String> channels;
+      private final @Nullable Output<String> channels;
 
-    public Input<String> getChannels() {
-        return this.channels == null ? Input.empty() : this.channels;
+    public Output<String> getChannels() {
+        return this.channels == null ? Output.empty() : this.channels;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codec")
-      private final @Nullable Input<String> codec;
+      private final @Nullable Output<String> codec;
 
-    public Input<String> getCodec() {
-        return this.codec == null ? Input.empty() : this.codec;
+    public Output<String> getCodec() {
+        return this.codec == null ? Output.empty() : this.codec;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampleRate")
-      private final @Nullable Input<String> sampleRate;
+      private final @Nullable Output<String> sampleRate;
 
-    public Input<String> getSampleRate() {
-        return this.sampleRate == null ? Input.empty() : this.sampleRate;
+    public Output<String> getSampleRate() {
+        return this.sampleRate == null ? Output.empty() : this.sampleRate;
     }
 
     public PresetAudioGetArgs(
-        @Nullable Input<String> audioPackingMode,
-        @Nullable Input<String> bitRate,
-        @Nullable Input<String> channels,
-        @Nullable Input<String> codec,
-        @Nullable Input<String> sampleRate) {
+        @Nullable Output<String> audioPackingMode,
+        @Nullable Output<String> bitRate,
+        @Nullable Output<String> channels,
+        @Nullable Output<String> codec,
+        @Nullable Output<String> sampleRate) {
         this.audioPackingMode = audioPackingMode;
         this.bitRate = bitRate;
         this.channels = channels;
@@ -83,11 +83,11 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PresetAudioGetArgs() {
-        this.audioPackingMode = Input.empty();
-        this.bitRate = Input.empty();
-        this.channels = Input.empty();
-        this.codec = Input.empty();
-        this.sampleRate = Input.empty();
+        this.audioPackingMode = Output.empty();
+        this.bitRate = Output.empty();
+        this.channels = Output.empty();
+        this.codec = Output.empty();
+        this.sampleRate = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audioPackingMode;
-        private @Nullable Input<String> bitRate;
-        private @Nullable Input<String> channels;
-        private @Nullable Input<String> codec;
-        private @Nullable Input<String> sampleRate;
+        private @Nullable Output<String> audioPackingMode;
+        private @Nullable Output<String> bitRate;
+        private @Nullable Output<String> channels;
+        private @Nullable Output<String> codec;
+        private @Nullable Output<String> sampleRate;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sampleRate = defaults.sampleRate;
         }
 
-        public Builder audioPackingMode(@Nullable Input<String> audioPackingMode) {
+        public Builder audioPackingMode(@Nullable Output<String> audioPackingMode) {
             this.audioPackingMode = audioPackingMode;
             return this;
         }
 
         public Builder audioPackingMode(@Nullable String audioPackingMode) {
-            this.audioPackingMode = Input.ofNullable(audioPackingMode);
+            this.audioPackingMode = Output.ofNullable(audioPackingMode);
             return this;
         }
 
-        public Builder bitRate(@Nullable Input<String> bitRate) {
+        public Builder bitRate(@Nullable Output<String> bitRate) {
             this.bitRate = bitRate;
             return this;
         }
 
         public Builder bitRate(@Nullable String bitRate) {
-            this.bitRate = Input.ofNullable(bitRate);
+            this.bitRate = Output.ofNullable(bitRate);
             return this;
         }
 
-        public Builder channels(@Nullable Input<String> channels) {
+        public Builder channels(@Nullable Output<String> channels) {
             this.channels = channels;
             return this;
         }
 
         public Builder channels(@Nullable String channels) {
-            this.channels = Input.ofNullable(channels);
+            this.channels = Output.ofNullable(channels);
             return this;
         }
 
-        public Builder codec(@Nullable Input<String> codec) {
+        public Builder codec(@Nullable Output<String> codec) {
             this.codec = codec;
             return this;
         }
 
         public Builder codec(@Nullable String codec) {
-            this.codec = Input.ofNullable(codec);
+            this.codec = Output.ofNullable(codec);
             return this;
         }
 
-        public Builder sampleRate(@Nullable Input<String> sampleRate) {
+        public Builder sampleRate(@Nullable Output<String> sampleRate) {
             this.sampleRate = sampleRate;
             return this;
         }
 
         public Builder sampleRate(@Nullable String sampleRate) {
-            this.sampleRate = Input.ofNullable(sampleRate);
+            this.sampleRate = Output.ofNullable(sampleRate);
             return this;
         }
         public PresetAudioGetArgs build() {

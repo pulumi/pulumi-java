@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="containerTags")
-      private final @Nullable Input<List<String>> containerTags;
+      private final @Nullable Output<List<String>> containerTags;
 
-    public Input<List<String>> getContainerTags() {
-        return this.containerTags == null ? Input.empty() : this.containerTags;
+    public Output<List<String>> getContainerTags() {
+        return this.containerTags == null ? Output.empty() : this.containerTags;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="targetRepository", required=true)
-      private final Input<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository;
+      private final Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository;
 
-    public Input<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> getTargetRepository() {
+    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> getTargetRepository() {
         return this.targetRepository;
     }
 
     public DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs(
-        @Nullable Input<List<String>> containerTags,
-        @Nullable Input<String> description,
-        Input<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository) {
+        @Nullable Output<List<String>> containerTags,
+        @Nullable Output<String> description,
+        Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository) {
         this.containerTags = containerTags;
         this.description = description;
         this.targetRepository = Objects.requireNonNull(targetRepository, "expected parameter 'targetRepository' to be non-null");
     }
 
     private DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs() {
-        this.containerTags = Input.empty();
-        this.description = Input.empty();
-        this.targetRepository = Input.empty();
+        this.containerTags = Output.empty();
+        this.description = Output.empty();
+        this.targetRepository = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> containerTags;
-        private @Nullable Input<String> description;
-        private Input<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository;
+        private @Nullable Output<List<String>> containerTags;
+        private @Nullable Output<String> description;
+        private Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     	      this.targetRepository = defaults.targetRepository;
         }
 
-        public Builder containerTags(@Nullable Input<List<String>> containerTags) {
+        public Builder containerTags(@Nullable Output<List<String>> containerTags) {
             this.containerTags = containerTags;
             return this;
         }
 
         public Builder containerTags(@Nullable List<String> containerTags) {
-            this.containerTags = Input.ofNullable(containerTags);
+            this.containerTags = Output.ofNullable(containerTags);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder targetRepository(Input<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository) {
+        public Builder targetRepository(Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository) {
             this.targetRepository = Objects.requireNonNull(targetRepository);
             return this;
         }
 
         public Builder targetRepository(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs targetRepository) {
-            this.targetRepository = Input.of(Objects.requireNonNull(targetRepository));
+            this.targetRepository = Output.of(Objects.requireNonNull(targetRepository));
             return this;
         }
         public DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs build() {

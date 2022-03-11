@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="correlationId")
-      private final @Nullable Input<String> correlationId;
+      private final @Nullable Output<String> correlationId;
 
-    public Input<String> getCorrelationId() {
-        return this.correlationId == null ? Input.empty() : this.correlationId;
+    public Output<String> getCorrelationId() {
+        return this.correlationId == null ? Output.empty() : this.correlationId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="forcePersistence")
-      private final @Nullable Input<Boolean> forcePersistence;
+      private final @Nullable Output<Boolean> forcePersistence;
 
-    public Input<Boolean> getForcePersistence() {
-        return this.forcePersistence == null ? Input.empty() : this.forcePersistence;
+    public Output<Boolean> getForcePersistence() {
+        return this.forcePersistence == null ? Output.empty() : this.forcePersistence;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="messageId")
-      private final @Nullable Input<String> messageId;
+      private final @Nullable Output<String> messageId;
 
-    public Input<String> getMessageId() {
-        return this.messageId == null ? Input.empty() : this.messageId;
+    public Output<String> getMessageId() {
+        return this.messageId == null ? Output.empty() : this.messageId;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionKey")
-      private final @Nullable Input<String> partitionKey;
+      private final @Nullable Output<String> partitionKey;
 
-    public Input<String> getPartitionKey() {
-        return this.partitionKey == null ? Input.empty() : this.partitionKey;
+    public Output<String> getPartitionKey() {
+        return this.partitionKey == null ? Output.empty() : this.partitionKey;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="replyTo")
-      private final @Nullable Input<String> replyTo;
+      private final @Nullable Output<String> replyTo;
 
-    public Input<String> getReplyTo() {
-        return this.replyTo == null ? Input.empty() : this.replyTo;
+    public Output<String> getReplyTo() {
+        return this.replyTo == null ? Output.empty() : this.replyTo;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="replyToSessionId")
-      private final @Nullable Input<String> replyToSessionId;
+      private final @Nullable Output<String> replyToSessionId;
 
-    public Input<String> getReplyToSessionId() {
-        return this.replyToSessionId == null ? Input.empty() : this.replyToSessionId;
+    public Output<String> getReplyToSessionId() {
+        return this.replyToSessionId == null ? Output.empty() : this.replyToSessionId;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="scheduledEnqueueTimeUtc")
-      private final @Nullable Input<String> scheduledEnqueueTimeUtc;
+      private final @Nullable Output<String> scheduledEnqueueTimeUtc;
 
-    public Input<String> getScheduledEnqueueTimeUtc() {
-        return this.scheduledEnqueueTimeUtc == null ? Input.empty() : this.scheduledEnqueueTimeUtc;
+    public Output<String> getScheduledEnqueueTimeUtc() {
+        return this.scheduledEnqueueTimeUtc == null ? Output.empty() : this.scheduledEnqueueTimeUtc;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="sessionId")
-      private final @Nullable Input<String> sessionId;
+      private final @Nullable Output<String> sessionId;
 
-    public Input<String> getSessionId() {
-        return this.sessionId == null ? Input.empty() : this.sessionId;
+    public Output<String> getSessionId() {
+        return this.sessionId == null ? Output.empty() : this.sessionId;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="timeToLive")
-      private final @Nullable Input<String> timeToLive;
+      private final @Nullable Output<String> timeToLive;
 
-    public Input<String> getTimeToLive() {
-        return this.timeToLive == null ? Input.empty() : this.timeToLive;
+    public Output<String> getTimeToLive() {
+        return this.timeToLive == null ? Output.empty() : this.timeToLive;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="to")
-      private final @Nullable Input<String> to;
+      private final @Nullable Output<String> to;
 
-    public Input<String> getTo() {
-        return this.to == null ? Input.empty() : this.to;
+    public Output<String> getTo() {
+        return this.to == null ? Output.empty() : this.to;
     }
 
     /**
@@ -152,26 +152,26 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="viaPartitionKey")
-      private final @Nullable Input<String> viaPartitionKey;
+      private final @Nullable Output<String> viaPartitionKey;
 
-    public Input<String> getViaPartitionKey() {
-        return this.viaPartitionKey == null ? Input.empty() : this.viaPartitionKey;
+    public Output<String> getViaPartitionKey() {
+        return this.viaPartitionKey == null ? Output.empty() : this.viaPartitionKey;
     }
 
     public ServiceBusBrokeredMessagePropertiesArgs(
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> correlationId,
-        @Nullable Input<Boolean> forcePersistence,
-        @Nullable Input<String> label,
-        @Nullable Input<String> messageId,
-        @Nullable Input<String> partitionKey,
-        @Nullable Input<String> replyTo,
-        @Nullable Input<String> replyToSessionId,
-        @Nullable Input<String> scheduledEnqueueTimeUtc,
-        @Nullable Input<String> sessionId,
-        @Nullable Input<String> timeToLive,
-        @Nullable Input<String> to,
-        @Nullable Input<String> viaPartitionKey) {
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> correlationId,
+        @Nullable Output<Boolean> forcePersistence,
+        @Nullable Output<String> label,
+        @Nullable Output<String> messageId,
+        @Nullable Output<String> partitionKey,
+        @Nullable Output<String> replyTo,
+        @Nullable Output<String> replyToSessionId,
+        @Nullable Output<String> scheduledEnqueueTimeUtc,
+        @Nullable Output<String> sessionId,
+        @Nullable Output<String> timeToLive,
+        @Nullable Output<String> to,
+        @Nullable Output<String> viaPartitionKey) {
         this.contentType = contentType;
         this.correlationId = correlationId;
         this.forcePersistence = forcePersistence;
@@ -188,19 +188,19 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
     }
 
     private ServiceBusBrokeredMessagePropertiesArgs() {
-        this.contentType = Input.empty();
-        this.correlationId = Input.empty();
-        this.forcePersistence = Input.empty();
-        this.label = Input.empty();
-        this.messageId = Input.empty();
-        this.partitionKey = Input.empty();
-        this.replyTo = Input.empty();
-        this.replyToSessionId = Input.empty();
-        this.scheduledEnqueueTimeUtc = Input.empty();
-        this.sessionId = Input.empty();
-        this.timeToLive = Input.empty();
-        this.to = Input.empty();
-        this.viaPartitionKey = Input.empty();
+        this.contentType = Output.empty();
+        this.correlationId = Output.empty();
+        this.forcePersistence = Output.empty();
+        this.label = Output.empty();
+        this.messageId = Output.empty();
+        this.partitionKey = Output.empty();
+        this.replyTo = Output.empty();
+        this.replyToSessionId = Output.empty();
+        this.scheduledEnqueueTimeUtc = Output.empty();
+        this.sessionId = Output.empty();
+        this.timeToLive = Output.empty();
+        this.to = Output.empty();
+        this.viaPartitionKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -212,19 +212,19 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> correlationId;
-        private @Nullable Input<Boolean> forcePersistence;
-        private @Nullable Input<String> label;
-        private @Nullable Input<String> messageId;
-        private @Nullable Input<String> partitionKey;
-        private @Nullable Input<String> replyTo;
-        private @Nullable Input<String> replyToSessionId;
-        private @Nullable Input<String> scheduledEnqueueTimeUtc;
-        private @Nullable Input<String> sessionId;
-        private @Nullable Input<String> timeToLive;
-        private @Nullable Input<String> to;
-        private @Nullable Input<String> viaPartitionKey;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> correlationId;
+        private @Nullable Output<Boolean> forcePersistence;
+        private @Nullable Output<String> label;
+        private @Nullable Output<String> messageId;
+        private @Nullable Output<String> partitionKey;
+        private @Nullable Output<String> replyTo;
+        private @Nullable Output<String> replyToSessionId;
+        private @Nullable Output<String> scheduledEnqueueTimeUtc;
+        private @Nullable Output<String> sessionId;
+        private @Nullable Output<String> timeToLive;
+        private @Nullable Output<String> to;
+        private @Nullable Output<String> viaPartitionKey;
 
         public Builder() {
     	      // Empty
@@ -247,133 +247,133 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
     	      this.viaPartitionKey = defaults.viaPartitionKey;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder correlationId(@Nullable Input<String> correlationId) {
+        public Builder correlationId(@Nullable Output<String> correlationId) {
             this.correlationId = correlationId;
             return this;
         }
 
         public Builder correlationId(@Nullable String correlationId) {
-            this.correlationId = Input.ofNullable(correlationId);
+            this.correlationId = Output.ofNullable(correlationId);
             return this;
         }
 
-        public Builder forcePersistence(@Nullable Input<Boolean> forcePersistence) {
+        public Builder forcePersistence(@Nullable Output<Boolean> forcePersistence) {
             this.forcePersistence = forcePersistence;
             return this;
         }
 
         public Builder forcePersistence(@Nullable Boolean forcePersistence) {
-            this.forcePersistence = Input.ofNullable(forcePersistence);
+            this.forcePersistence = Output.ofNullable(forcePersistence);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder messageId(@Nullable Input<String> messageId) {
+        public Builder messageId(@Nullable Output<String> messageId) {
             this.messageId = messageId;
             return this;
         }
 
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = Input.ofNullable(messageId);
+            this.messageId = Output.ofNullable(messageId);
             return this;
         }
 
-        public Builder partitionKey(@Nullable Input<String> partitionKey) {
+        public Builder partitionKey(@Nullable Output<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Input.ofNullable(partitionKey);
+            this.partitionKey = Output.ofNullable(partitionKey);
             return this;
         }
 
-        public Builder replyTo(@Nullable Input<String> replyTo) {
+        public Builder replyTo(@Nullable Output<String> replyTo) {
             this.replyTo = replyTo;
             return this;
         }
 
         public Builder replyTo(@Nullable String replyTo) {
-            this.replyTo = Input.ofNullable(replyTo);
+            this.replyTo = Output.ofNullable(replyTo);
             return this;
         }
 
-        public Builder replyToSessionId(@Nullable Input<String> replyToSessionId) {
+        public Builder replyToSessionId(@Nullable Output<String> replyToSessionId) {
             this.replyToSessionId = replyToSessionId;
             return this;
         }
 
         public Builder replyToSessionId(@Nullable String replyToSessionId) {
-            this.replyToSessionId = Input.ofNullable(replyToSessionId);
+            this.replyToSessionId = Output.ofNullable(replyToSessionId);
             return this;
         }
 
-        public Builder scheduledEnqueueTimeUtc(@Nullable Input<String> scheduledEnqueueTimeUtc) {
+        public Builder scheduledEnqueueTimeUtc(@Nullable Output<String> scheduledEnqueueTimeUtc) {
             this.scheduledEnqueueTimeUtc = scheduledEnqueueTimeUtc;
             return this;
         }
 
         public Builder scheduledEnqueueTimeUtc(@Nullable String scheduledEnqueueTimeUtc) {
-            this.scheduledEnqueueTimeUtc = Input.ofNullable(scheduledEnqueueTimeUtc);
+            this.scheduledEnqueueTimeUtc = Output.ofNullable(scheduledEnqueueTimeUtc);
             return this;
         }
 
-        public Builder sessionId(@Nullable Input<String> sessionId) {
+        public Builder sessionId(@Nullable Output<String> sessionId) {
             this.sessionId = sessionId;
             return this;
         }
 
         public Builder sessionId(@Nullable String sessionId) {
-            this.sessionId = Input.ofNullable(sessionId);
+            this.sessionId = Output.ofNullable(sessionId);
             return this;
         }
 
-        public Builder timeToLive(@Nullable Input<String> timeToLive) {
+        public Builder timeToLive(@Nullable Output<String> timeToLive) {
             this.timeToLive = timeToLive;
             return this;
         }
 
         public Builder timeToLive(@Nullable String timeToLive) {
-            this.timeToLive = Input.ofNullable(timeToLive);
+            this.timeToLive = Output.ofNullable(timeToLive);
             return this;
         }
 
-        public Builder to(@Nullable Input<String> to) {
+        public Builder to(@Nullable Output<String> to) {
             this.to = to;
             return this;
         }
 
         public Builder to(@Nullable String to) {
-            this.to = Input.ofNullable(to);
+            this.to = Output.ofNullable(to);
             return this;
         }
 
-        public Builder viaPartitionKey(@Nullable Input<String> viaPartitionKey) {
+        public Builder viaPartitionKey(@Nullable Output<String> viaPartitionKey) {
             this.viaPartitionKey = viaPartitionKey;
             return this;
         }
 
         public Builder viaPartitionKey(@Nullable String viaPartitionKey) {
-            this.viaPartitionKey = Input.ofNullable(viaPartitionKey);
+            this.viaPartitionKey = Output.ofNullable(viaPartitionKey);
             return this;
         }
         public ServiceBusBrokeredMessagePropertiesArgs build() {

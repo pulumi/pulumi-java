@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion", required=true)
-      private final Input<String> apiVersion;
+      private final Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
+    public Output<String> getApiVersion() {
         return this.apiVersion;
     }
 
@@ -35,10 +35,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockOwnerDeletion")
-      private final @Nullable Input<Boolean> blockOwnerDeletion;
+      private final @Nullable Output<Boolean> blockOwnerDeletion;
 
-    public Input<Boolean> getBlockOwnerDeletion() {
-        return this.blockOwnerDeletion == null ? Input.empty() : this.blockOwnerDeletion;
+    public Output<Boolean> getBlockOwnerDeletion() {
+        return this.blockOwnerDeletion == null ? Output.empty() : this.blockOwnerDeletion;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controller")
-      private final @Nullable Input<Boolean> controller;
+      private final @Nullable Output<Boolean> controller;
 
-    public Input<Boolean> getController() {
-        return this.controller == null ? Input.empty() : this.controller;
+    public Output<Boolean> getController() {
+        return this.controller == null ? Output.empty() : this.controller;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -68,9 +68,9 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -79,19 +79,19 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid", required=true)
-      private final Input<String> uid;
+      private final Output<String> uid;
 
-    public Input<String> getUid() {
+    public Output<String> getUid() {
         return this.uid;
     }
 
     public OwnerReferenceArgs(
-        Input<String> apiVersion,
-        @Nullable Input<Boolean> blockOwnerDeletion,
-        @Nullable Input<Boolean> controller,
-        Input<String> kind,
-        Input<String> name,
-        Input<String> uid) {
+        Output<String> apiVersion,
+        @Nullable Output<Boolean> blockOwnerDeletion,
+        @Nullable Output<Boolean> controller,
+        Output<String> kind,
+        Output<String> name,
+        Output<String> uid) {
         this.apiVersion = Objects.requireNonNull(apiVersion, "expected parameter 'apiVersion' to be non-null");
         this.blockOwnerDeletion = blockOwnerDeletion;
         this.controller = controller;
@@ -101,12 +101,12 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OwnerReferenceArgs() {
-        this.apiVersion = Input.empty();
-        this.blockOwnerDeletion = Input.empty();
-        this.controller = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.uid = Input.empty();
+        this.apiVersion = Output.empty();
+        this.blockOwnerDeletion = Output.empty();
+        this.controller = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> apiVersion;
-        private @Nullable Input<Boolean> blockOwnerDeletion;
-        private @Nullable Input<Boolean> controller;
-        private Input<String> kind;
-        private Input<String> name;
-        private Input<String> uid;
+        private Output<String> apiVersion;
+        private @Nullable Output<Boolean> blockOwnerDeletion;
+        private @Nullable Output<Boolean> controller;
+        private Output<String> kind;
+        private Output<String> name;
+        private Output<String> uid;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uid = defaults.uid;
         }
 
-        public Builder apiVersion(Input<String> apiVersion) {
+        public Builder apiVersion(Output<String> apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
         public Builder apiVersion(String apiVersion) {
-            this.apiVersion = Input.of(Objects.requireNonNull(apiVersion));
+            this.apiVersion = Output.of(Objects.requireNonNull(apiVersion));
             return this;
         }
 
-        public Builder blockOwnerDeletion(@Nullable Input<Boolean> blockOwnerDeletion) {
+        public Builder blockOwnerDeletion(@Nullable Output<Boolean> blockOwnerDeletion) {
             this.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
 
         public Builder blockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
-            this.blockOwnerDeletion = Input.ofNullable(blockOwnerDeletion);
+            this.blockOwnerDeletion = Output.ofNullable(blockOwnerDeletion);
             return this;
         }
 
-        public Builder controller(@Nullable Input<Boolean> controller) {
+        public Builder controller(@Nullable Output<Boolean> controller) {
             this.controller = controller;
             return this;
         }
 
         public Builder controller(@Nullable Boolean controller) {
-            this.controller = Input.ofNullable(controller);
+            this.controller = Output.ofNullable(controller);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder uid(Input<String> uid) {
+        public Builder uid(Output<String> uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
 
         public Builder uid(String uid) {
-            this.uid = Input.of(Objects.requireNonNull(uid));
+            this.uid = Output.of(Objects.requireNonNull(uid));
             return this;
         }
         public OwnerReferenceArgs build() {

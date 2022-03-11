@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-      private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Output<String> cidrBlock;
 
-    public Input<String> getCidrBlock() {
-        return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
+    public Output<String> getCidrBlock() {
+        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     public CidrBlockArgs(
-        @Nullable Input<String> cidrBlock,
-        @Nullable Input<String> displayName) {
+        @Nullable Output<String> cidrBlock,
+        @Nullable Output<String> displayName) {
         this.cidrBlock = cidrBlock;
         this.displayName = displayName;
     }
 
     private CidrBlockArgs() {
-        this.cidrBlock = Input.empty();
-        this.displayName = Input.empty();
+        this.cidrBlock = Output.empty();
+        this.displayName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cidrBlock;
-        private @Nullable Input<String> displayName;
+        private @Nullable Output<String> cidrBlock;
+        private @Nullable Output<String> displayName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Input.ofNullable(cidrBlock);
+            this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
         public CidrBlockArgs build() {

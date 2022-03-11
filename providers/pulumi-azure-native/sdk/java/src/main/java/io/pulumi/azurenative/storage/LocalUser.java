@@ -9,7 +9,6 @@ import io.pulumi.azurenative.storage.outputs.PermissionScopeResponse;
 import io.pulumi.azurenative.storage.outputs.SshPublicKeyResponse;
 import io.pulumi.azurenative.storage.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -214,18 +213,18 @@ public class LocalUser extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocalUser(String name, LocalUserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:LocalUser", name, args == null ? LocalUserArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storage:LocalUser", name, args == null ? LocalUserArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LocalUser(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LocalUser(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:LocalUser", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storage/v20210801:LocalUser").build())
+                Output.of(Alias.builder().setType("azure-native:storage/v20210801:LocalUser").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -239,7 +238,7 @@ public class LocalUser extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocalUser get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LocalUser get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LocalUser(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudtrail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class TrailDataResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -35,22 +35,22 @@ public final class TrailDataResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public TrailDataResourceArgs(
-        Input<String> type,
-        @Nullable Input<List<String>> values) {
+        Output<String> type,
+        @Nullable Output<List<String>> values) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.values = values;
     }
 
     private TrailDataResourceArgs() {
-        this.type = Input.empty();
-        this.values = Input.empty();
+        this.type = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TrailDataResourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> type;
-        private @Nullable Input<List<String>> values;
+        private Output<String> type;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TrailDataResourceArgs extends io.pulumi.resources.ResourceArg
     	      this.values = defaults.values;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public TrailDataResourceArgs build() {

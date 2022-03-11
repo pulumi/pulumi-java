@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudtrail;
 import io.pulumi.awsnative.cloudtrail.inputs.TrailEventSelectorArgs;
 import io.pulumi.awsnative.cloudtrail.inputs.TrailInsightSelectorArgs;
 import io.pulumi.awsnative.cloudtrail.inputs.TrailTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudWatchLogsLogGroupArn")
-      private final @Nullable Input<String> cloudWatchLogsLogGroupArn;
+      private final @Nullable Output<String> cloudWatchLogsLogGroupArn;
 
-    public Input<String> getCloudWatchLogsLogGroupArn() {
-        return this.cloudWatchLogsLogGroupArn == null ? Input.empty() : this.cloudWatchLogsLogGroupArn;
+    public Output<String> getCloudWatchLogsLogGroupArn() {
+        return this.cloudWatchLogsLogGroupArn == null ? Output.empty() : this.cloudWatchLogsLogGroupArn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudWatchLogsRoleArn")
-      private final @Nullable Input<String> cloudWatchLogsRoleArn;
+      private final @Nullable Output<String> cloudWatchLogsRoleArn;
 
-    public Input<String> getCloudWatchLogsRoleArn() {
-        return this.cloudWatchLogsRoleArn == null ? Input.empty() : this.cloudWatchLogsRoleArn;
+    public Output<String> getCloudWatchLogsRoleArn() {
+        return this.cloudWatchLogsRoleArn == null ? Output.empty() : this.cloudWatchLogsRoleArn;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableLogFileValidation")
-      private final @Nullable Input<Boolean> enableLogFileValidation;
+      private final @Nullable Output<Boolean> enableLogFileValidation;
 
-    public Input<Boolean> getEnableLogFileValidation() {
-        return this.enableLogFileValidation == null ? Input.empty() : this.enableLogFileValidation;
+    public Output<Boolean> getEnableLogFileValidation() {
+        return this.enableLogFileValidation == null ? Output.empty() : this.enableLogFileValidation;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventSelectors")
-      private final @Nullable Input<List<TrailEventSelectorArgs>> eventSelectors;
+      private final @Nullable Output<List<TrailEventSelectorArgs>> eventSelectors;
 
-    public Input<List<TrailEventSelectorArgs>> getEventSelectors() {
-        return this.eventSelectors == null ? Input.empty() : this.eventSelectors;
+    public Output<List<TrailEventSelectorArgs>> getEventSelectors() {
+        return this.eventSelectors == null ? Output.empty() : this.eventSelectors;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeGlobalServiceEvents")
-      private final @Nullable Input<Boolean> includeGlobalServiceEvents;
+      private final @Nullable Output<Boolean> includeGlobalServiceEvents;
 
-    public Input<Boolean> getIncludeGlobalServiceEvents() {
-        return this.includeGlobalServiceEvents == null ? Input.empty() : this.includeGlobalServiceEvents;
+    public Output<Boolean> getIncludeGlobalServiceEvents() {
+        return this.includeGlobalServiceEvents == null ? Output.empty() : this.includeGlobalServiceEvents;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insightSelectors")
-      private final @Nullable Input<List<TrailInsightSelectorArgs>> insightSelectors;
+      private final @Nullable Output<List<TrailInsightSelectorArgs>> insightSelectors;
 
-    public Input<List<TrailInsightSelectorArgs>> getInsightSelectors() {
-        return this.insightSelectors == null ? Input.empty() : this.insightSelectors;
+    public Output<List<TrailInsightSelectorArgs>> getInsightSelectors() {
+        return this.insightSelectors == null ? Output.empty() : this.insightSelectors;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isLogging", required=true)
-      private final Input<Boolean> isLogging;
+      private final Output<Boolean> isLogging;
 
-    public Input<Boolean> getIsLogging() {
+    public Output<Boolean> getIsLogging() {
         return this.isLogging;
     }
 
@@ -101,10 +101,10 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isMultiRegionTrail")
-      private final @Nullable Input<Boolean> isMultiRegionTrail;
+      private final @Nullable Output<Boolean> isMultiRegionTrail;
 
-    public Input<Boolean> getIsMultiRegionTrail() {
-        return this.isMultiRegionTrail == null ? Input.empty() : this.isMultiRegionTrail;
+    public Output<Boolean> getIsMultiRegionTrail() {
+        return this.isMultiRegionTrail == null ? Output.empty() : this.isMultiRegionTrail;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isOrganizationTrail")
-      private final @Nullable Input<Boolean> isOrganizationTrail;
+      private final @Nullable Output<Boolean> isOrganizationTrail;
 
-    public Input<Boolean> getIsOrganizationTrail() {
-        return this.isOrganizationTrail == null ? Input.empty() : this.isOrganizationTrail;
+    public Output<Boolean> getIsOrganizationTrail() {
+        return this.isOrganizationTrail == null ? Output.empty() : this.isOrganizationTrail;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kMSKeyId")
-      private final @Nullable Input<String> kMSKeyId;
+      private final @Nullable Output<String> kMSKeyId;
 
-    public Input<String> getKMSKeyId() {
-        return this.kMSKeyId == null ? Input.empty() : this.kMSKeyId;
+    public Output<String> getKMSKeyId() {
+        return this.kMSKeyId == null ? Output.empty() : this.kMSKeyId;
     }
 
     /**
@@ -134,9 +134,9 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3BucketName", required=true)
-      private final Input<String> s3BucketName;
+      private final Output<String> s3BucketName;
 
-    public Input<String> getS3BucketName() {
+    public Output<String> getS3BucketName() {
         return this.s3BucketName;
     }
 
@@ -145,10 +145,10 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3KeyPrefix")
-      private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Output<String> s3KeyPrefix;
 
-    public Input<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
+    public Output<String> getS3KeyPrefix() {
+        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
     }
 
     /**
@@ -156,42 +156,42 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snsTopicName")
-      private final @Nullable Input<String> snsTopicName;
+      private final @Nullable Output<String> snsTopicName;
 
-    public Input<String> getSnsTopicName() {
-        return this.snsTopicName == null ? Input.empty() : this.snsTopicName;
+    public Output<String> getSnsTopicName() {
+        return this.snsTopicName == null ? Output.empty() : this.snsTopicName;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<TrailTagArgs>> tags;
+      private final @Nullable Output<List<TrailTagArgs>> tags;
 
-    public Input<List<TrailTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<TrailTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="trailName")
-      private final @Nullable Input<String> trailName;
+      private final @Nullable Output<String> trailName;
 
-    public Input<String> getTrailName() {
-        return this.trailName == null ? Input.empty() : this.trailName;
+    public Output<String> getTrailName() {
+        return this.trailName == null ? Output.empty() : this.trailName;
     }
 
     public TrailArgs(
-        @Nullable Input<String> cloudWatchLogsLogGroupArn,
-        @Nullable Input<String> cloudWatchLogsRoleArn,
-        @Nullable Input<Boolean> enableLogFileValidation,
-        @Nullable Input<List<TrailEventSelectorArgs>> eventSelectors,
-        @Nullable Input<Boolean> includeGlobalServiceEvents,
-        @Nullable Input<List<TrailInsightSelectorArgs>> insightSelectors,
-        Input<Boolean> isLogging,
-        @Nullable Input<Boolean> isMultiRegionTrail,
-        @Nullable Input<Boolean> isOrganizationTrail,
-        @Nullable Input<String> kMSKeyId,
-        Input<String> s3BucketName,
-        @Nullable Input<String> s3KeyPrefix,
-        @Nullable Input<String> snsTopicName,
-        @Nullable Input<List<TrailTagArgs>> tags,
-        @Nullable Input<String> trailName) {
+        @Nullable Output<String> cloudWatchLogsLogGroupArn,
+        @Nullable Output<String> cloudWatchLogsRoleArn,
+        @Nullable Output<Boolean> enableLogFileValidation,
+        @Nullable Output<List<TrailEventSelectorArgs>> eventSelectors,
+        @Nullable Output<Boolean> includeGlobalServiceEvents,
+        @Nullable Output<List<TrailInsightSelectorArgs>> insightSelectors,
+        Output<Boolean> isLogging,
+        @Nullable Output<Boolean> isMultiRegionTrail,
+        @Nullable Output<Boolean> isOrganizationTrail,
+        @Nullable Output<String> kMSKeyId,
+        Output<String> s3BucketName,
+        @Nullable Output<String> s3KeyPrefix,
+        @Nullable Output<String> snsTopicName,
+        @Nullable Output<List<TrailTagArgs>> tags,
+        @Nullable Output<String> trailName) {
         this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
         this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
         this.enableLogFileValidation = enableLogFileValidation;
@@ -210,21 +210,21 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrailArgs() {
-        this.cloudWatchLogsLogGroupArn = Input.empty();
-        this.cloudWatchLogsRoleArn = Input.empty();
-        this.enableLogFileValidation = Input.empty();
-        this.eventSelectors = Input.empty();
-        this.includeGlobalServiceEvents = Input.empty();
-        this.insightSelectors = Input.empty();
-        this.isLogging = Input.empty();
-        this.isMultiRegionTrail = Input.empty();
-        this.isOrganizationTrail = Input.empty();
-        this.kMSKeyId = Input.empty();
-        this.s3BucketName = Input.empty();
-        this.s3KeyPrefix = Input.empty();
-        this.snsTopicName = Input.empty();
-        this.tags = Input.empty();
-        this.trailName = Input.empty();
+        this.cloudWatchLogsLogGroupArn = Output.empty();
+        this.cloudWatchLogsRoleArn = Output.empty();
+        this.enableLogFileValidation = Output.empty();
+        this.eventSelectors = Output.empty();
+        this.includeGlobalServiceEvents = Output.empty();
+        this.insightSelectors = Output.empty();
+        this.isLogging = Output.empty();
+        this.isMultiRegionTrail = Output.empty();
+        this.isOrganizationTrail = Output.empty();
+        this.kMSKeyId = Output.empty();
+        this.s3BucketName = Output.empty();
+        this.s3KeyPrefix = Output.empty();
+        this.snsTopicName = Output.empty();
+        this.tags = Output.empty();
+        this.trailName = Output.empty();
     }
 
     public static Builder builder() {
@@ -236,21 +236,21 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudWatchLogsLogGroupArn;
-        private @Nullable Input<String> cloudWatchLogsRoleArn;
-        private @Nullable Input<Boolean> enableLogFileValidation;
-        private @Nullable Input<List<TrailEventSelectorArgs>> eventSelectors;
-        private @Nullable Input<Boolean> includeGlobalServiceEvents;
-        private @Nullable Input<List<TrailInsightSelectorArgs>> insightSelectors;
-        private Input<Boolean> isLogging;
-        private @Nullable Input<Boolean> isMultiRegionTrail;
-        private @Nullable Input<Boolean> isOrganizationTrail;
-        private @Nullable Input<String> kMSKeyId;
-        private Input<String> s3BucketName;
-        private @Nullable Input<String> s3KeyPrefix;
-        private @Nullable Input<String> snsTopicName;
-        private @Nullable Input<List<TrailTagArgs>> tags;
-        private @Nullable Input<String> trailName;
+        private @Nullable Output<String> cloudWatchLogsLogGroupArn;
+        private @Nullable Output<String> cloudWatchLogsRoleArn;
+        private @Nullable Output<Boolean> enableLogFileValidation;
+        private @Nullable Output<List<TrailEventSelectorArgs>> eventSelectors;
+        private @Nullable Output<Boolean> includeGlobalServiceEvents;
+        private @Nullable Output<List<TrailInsightSelectorArgs>> insightSelectors;
+        private Output<Boolean> isLogging;
+        private @Nullable Output<Boolean> isMultiRegionTrail;
+        private @Nullable Output<Boolean> isOrganizationTrail;
+        private @Nullable Output<String> kMSKeyId;
+        private Output<String> s3BucketName;
+        private @Nullable Output<String> s3KeyPrefix;
+        private @Nullable Output<String> snsTopicName;
+        private @Nullable Output<List<TrailTagArgs>> tags;
+        private @Nullable Output<String> trailName;
 
         public Builder() {
     	      // Empty
@@ -275,153 +275,153 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trailName = defaults.trailName;
         }
 
-        public Builder cloudWatchLogsLogGroupArn(@Nullable Input<String> cloudWatchLogsLogGroupArn) {
+        public Builder cloudWatchLogsLogGroupArn(@Nullable Output<String> cloudWatchLogsLogGroupArn) {
             this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
             return this;
         }
 
         public Builder cloudWatchLogsLogGroupArn(@Nullable String cloudWatchLogsLogGroupArn) {
-            this.cloudWatchLogsLogGroupArn = Input.ofNullable(cloudWatchLogsLogGroupArn);
+            this.cloudWatchLogsLogGroupArn = Output.ofNullable(cloudWatchLogsLogGroupArn);
             return this;
         }
 
-        public Builder cloudWatchLogsRoleArn(@Nullable Input<String> cloudWatchLogsRoleArn) {
+        public Builder cloudWatchLogsRoleArn(@Nullable Output<String> cloudWatchLogsRoleArn) {
             this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
             return this;
         }
 
         public Builder cloudWatchLogsRoleArn(@Nullable String cloudWatchLogsRoleArn) {
-            this.cloudWatchLogsRoleArn = Input.ofNullable(cloudWatchLogsRoleArn);
+            this.cloudWatchLogsRoleArn = Output.ofNullable(cloudWatchLogsRoleArn);
             return this;
         }
 
-        public Builder enableLogFileValidation(@Nullable Input<Boolean> enableLogFileValidation) {
+        public Builder enableLogFileValidation(@Nullable Output<Boolean> enableLogFileValidation) {
             this.enableLogFileValidation = enableLogFileValidation;
             return this;
         }
 
         public Builder enableLogFileValidation(@Nullable Boolean enableLogFileValidation) {
-            this.enableLogFileValidation = Input.ofNullable(enableLogFileValidation);
+            this.enableLogFileValidation = Output.ofNullable(enableLogFileValidation);
             return this;
         }
 
-        public Builder eventSelectors(@Nullable Input<List<TrailEventSelectorArgs>> eventSelectors) {
+        public Builder eventSelectors(@Nullable Output<List<TrailEventSelectorArgs>> eventSelectors) {
             this.eventSelectors = eventSelectors;
             return this;
         }
 
         public Builder eventSelectors(@Nullable List<TrailEventSelectorArgs> eventSelectors) {
-            this.eventSelectors = Input.ofNullable(eventSelectors);
+            this.eventSelectors = Output.ofNullable(eventSelectors);
             return this;
         }
 
-        public Builder includeGlobalServiceEvents(@Nullable Input<Boolean> includeGlobalServiceEvents) {
+        public Builder includeGlobalServiceEvents(@Nullable Output<Boolean> includeGlobalServiceEvents) {
             this.includeGlobalServiceEvents = includeGlobalServiceEvents;
             return this;
         }
 
         public Builder includeGlobalServiceEvents(@Nullable Boolean includeGlobalServiceEvents) {
-            this.includeGlobalServiceEvents = Input.ofNullable(includeGlobalServiceEvents);
+            this.includeGlobalServiceEvents = Output.ofNullable(includeGlobalServiceEvents);
             return this;
         }
 
-        public Builder insightSelectors(@Nullable Input<List<TrailInsightSelectorArgs>> insightSelectors) {
+        public Builder insightSelectors(@Nullable Output<List<TrailInsightSelectorArgs>> insightSelectors) {
             this.insightSelectors = insightSelectors;
             return this;
         }
 
         public Builder insightSelectors(@Nullable List<TrailInsightSelectorArgs> insightSelectors) {
-            this.insightSelectors = Input.ofNullable(insightSelectors);
+            this.insightSelectors = Output.ofNullable(insightSelectors);
             return this;
         }
 
-        public Builder isLogging(Input<Boolean> isLogging) {
+        public Builder isLogging(Output<Boolean> isLogging) {
             this.isLogging = Objects.requireNonNull(isLogging);
             return this;
         }
 
         public Builder isLogging(Boolean isLogging) {
-            this.isLogging = Input.of(Objects.requireNonNull(isLogging));
+            this.isLogging = Output.of(Objects.requireNonNull(isLogging));
             return this;
         }
 
-        public Builder isMultiRegionTrail(@Nullable Input<Boolean> isMultiRegionTrail) {
+        public Builder isMultiRegionTrail(@Nullable Output<Boolean> isMultiRegionTrail) {
             this.isMultiRegionTrail = isMultiRegionTrail;
             return this;
         }
 
         public Builder isMultiRegionTrail(@Nullable Boolean isMultiRegionTrail) {
-            this.isMultiRegionTrail = Input.ofNullable(isMultiRegionTrail);
+            this.isMultiRegionTrail = Output.ofNullable(isMultiRegionTrail);
             return this;
         }
 
-        public Builder isOrganizationTrail(@Nullable Input<Boolean> isOrganizationTrail) {
+        public Builder isOrganizationTrail(@Nullable Output<Boolean> isOrganizationTrail) {
             this.isOrganizationTrail = isOrganizationTrail;
             return this;
         }
 
         public Builder isOrganizationTrail(@Nullable Boolean isOrganizationTrail) {
-            this.isOrganizationTrail = Input.ofNullable(isOrganizationTrail);
+            this.isOrganizationTrail = Output.ofNullable(isOrganizationTrail);
             return this;
         }
 
-        public Builder kMSKeyId(@Nullable Input<String> kMSKeyId) {
+        public Builder kMSKeyId(@Nullable Output<String> kMSKeyId) {
             this.kMSKeyId = kMSKeyId;
             return this;
         }
 
         public Builder kMSKeyId(@Nullable String kMSKeyId) {
-            this.kMSKeyId = Input.ofNullable(kMSKeyId);
+            this.kMSKeyId = Output.ofNullable(kMSKeyId);
             return this;
         }
 
-        public Builder s3BucketName(Input<String> s3BucketName) {
+        public Builder s3BucketName(Output<String> s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
         public Builder s3BucketName(String s3BucketName) {
-            this.s3BucketName = Input.of(Objects.requireNonNull(s3BucketName));
+            this.s3BucketName = Output.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
 
-        public Builder s3KeyPrefix(@Nullable Input<String> s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
 
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Input.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
         }
 
-        public Builder snsTopicName(@Nullable Input<String> snsTopicName) {
+        public Builder snsTopicName(@Nullable Output<String> snsTopicName) {
             this.snsTopicName = snsTopicName;
             return this;
         }
 
         public Builder snsTopicName(@Nullable String snsTopicName) {
-            this.snsTopicName = Input.ofNullable(snsTopicName);
+            this.snsTopicName = Output.ofNullable(snsTopicName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<TrailTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<TrailTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<TrailTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder trailName(@Nullable Input<String> trailName) {
+        public Builder trailName(@Nullable Output<String> trailName) {
             this.trailName = trailName;
             return this;
         }
 
         public Builder trailName(@Nullable String trailName) {
-            this.trailName = Input.ofNullable(trailName);
+            this.trailName = Output.ofNullable(trailName);
             return this;
         }
         public TrailArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.apigateway;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,14 +183,14 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GatewayIamBinding(String name, GatewayIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/gatewayIamBinding:GatewayIamBinding", name, args == null ? GatewayIamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:apigateway/gatewayIamBinding:GatewayIamBinding", name, args == null ? GatewayIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GatewayIamBinding(String name, Input<String> id, @Nullable GatewayIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GatewayIamBinding(String name, Output<String> id, @Nullable GatewayIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:apigateway/gatewayIamBinding:GatewayIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -207,7 +206,7 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GatewayIamBinding get(String name, Input<String> id, @Nullable GatewayIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GatewayIamBinding get(String name, Output<String> id, @Nullable GatewayIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GatewayIamBinding(name, id, state, options);
     }
 }

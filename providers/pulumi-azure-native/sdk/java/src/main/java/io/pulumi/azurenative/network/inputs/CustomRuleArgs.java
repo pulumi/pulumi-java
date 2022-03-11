@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.CustomRuleEnabledState;
 import io.pulumi.azurenative.network.enums.RuleType;
 import io.pulumi.azurenative.network.inputs.FrontDoorMatchConditionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,9 +30,9 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<Either<String,ActionType>> action;
+      private final Output<Either<String,ActionType>> action;
 
-    public Input<Either<String,ActionType>> getAction() {
+    public Output<Either<String,ActionType>> getAction() {
         return this.action;
     }
 
@@ -41,10 +41,10 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-      private final @Nullable Input<Either<String,CustomRuleEnabledState>> enabledState;
+      private final @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
 
-    public Input<Either<String,CustomRuleEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Input.empty() : this.enabledState;
+    public Output<Either<String,CustomRuleEnabledState>> getEnabledState() {
+        return this.enabledState == null ? Output.empty() : this.enabledState;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchConditions", required=true)
-      private final Input<List<FrontDoorMatchConditionArgs>> matchConditions;
+      private final Output<List<FrontDoorMatchConditionArgs>> matchConditions;
 
-    public Input<List<FrontDoorMatchConditionArgs>> getMatchConditions() {
+    public Output<List<FrontDoorMatchConditionArgs>> getMatchConditions() {
         return this.matchConditions;
     }
 
@@ -63,10 +63,10 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -85,10 +85,10 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimitDurationInMinutes")
-      private final @Nullable Input<Integer> rateLimitDurationInMinutes;
+      private final @Nullable Output<Integer> rateLimitDurationInMinutes;
 
-    public Input<Integer> getRateLimitDurationInMinutes() {
-        return this.rateLimitDurationInMinutes == null ? Input.empty() : this.rateLimitDurationInMinutes;
+    public Output<Integer> getRateLimitDurationInMinutes() {
+        return this.rateLimitDurationInMinutes == null ? Output.empty() : this.rateLimitDurationInMinutes;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimitThreshold")
-      private final @Nullable Input<Integer> rateLimitThreshold;
+      private final @Nullable Output<Integer> rateLimitThreshold;
 
-    public Input<Integer> getRateLimitThreshold() {
-        return this.rateLimitThreshold == null ? Input.empty() : this.rateLimitThreshold;
+    public Output<Integer> getRateLimitThreshold() {
+        return this.rateLimitThreshold == null ? Output.empty() : this.rateLimitThreshold;
     }
 
     /**
@@ -107,21 +107,21 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleType", required=true)
-      private final Input<Either<String,RuleType>> ruleType;
+      private final Output<Either<String,RuleType>> ruleType;
 
-    public Input<Either<String,RuleType>> getRuleType() {
+    public Output<Either<String,RuleType>> getRuleType() {
         return this.ruleType;
     }
 
     public CustomRuleArgs(
-        Input<Either<String,ActionType>> action,
-        @Nullable Input<Either<String,CustomRuleEnabledState>> enabledState,
-        Input<List<FrontDoorMatchConditionArgs>> matchConditions,
-        @Nullable Input<String> name,
-        Input<Integer> priority,
-        @Nullable Input<Integer> rateLimitDurationInMinutes,
-        @Nullable Input<Integer> rateLimitThreshold,
-        Input<Either<String,RuleType>> ruleType) {
+        Output<Either<String,ActionType>> action,
+        @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState,
+        Output<List<FrontDoorMatchConditionArgs>> matchConditions,
+        @Nullable Output<String> name,
+        Output<Integer> priority,
+        @Nullable Output<Integer> rateLimitDurationInMinutes,
+        @Nullable Output<Integer> rateLimitThreshold,
+        Output<Either<String,RuleType>> ruleType) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.enabledState = enabledState;
         this.matchConditions = Objects.requireNonNull(matchConditions, "expected parameter 'matchConditions' to be non-null");
@@ -133,14 +133,14 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomRuleArgs() {
-        this.action = Input.empty();
-        this.enabledState = Input.empty();
-        this.matchConditions = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.rateLimitDurationInMinutes = Input.empty();
-        this.rateLimitThreshold = Input.empty();
-        this.ruleType = Input.empty();
+        this.action = Output.empty();
+        this.enabledState = Output.empty();
+        this.matchConditions = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.rateLimitDurationInMinutes = Output.empty();
+        this.rateLimitThreshold = Output.empty();
+        this.ruleType = Output.empty();
     }
 
     public static Builder builder() {
@@ -152,14 +152,14 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,ActionType>> action;
-        private @Nullable Input<Either<String,CustomRuleEnabledState>> enabledState;
-        private Input<List<FrontDoorMatchConditionArgs>> matchConditions;
-        private @Nullable Input<String> name;
-        private Input<Integer> priority;
-        private @Nullable Input<Integer> rateLimitDurationInMinutes;
-        private @Nullable Input<Integer> rateLimitThreshold;
-        private Input<Either<String,RuleType>> ruleType;
+        private Output<Either<String,ActionType>> action;
+        private @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
+        private Output<List<FrontDoorMatchConditionArgs>> matchConditions;
+        private @Nullable Output<String> name;
+        private Output<Integer> priority;
+        private @Nullable Output<Integer> rateLimitDurationInMinutes;
+        private @Nullable Output<Integer> rateLimitThreshold;
+        private Output<Either<String,RuleType>> ruleType;
 
         public Builder() {
     	      // Empty
@@ -177,83 +177,83 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder action(Input<Either<String,ActionType>> action) {
+        public Builder action(Output<Either<String,ActionType>> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(Either<String,ActionType> action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder enabledState(@Nullable Input<Either<String,CustomRuleEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Output<Either<String,CustomRuleEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
         public Builder enabledState(@Nullable Either<String,CustomRuleEnabledState> enabledState) {
-            this.enabledState = Input.ofNullable(enabledState);
+            this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
 
-        public Builder matchConditions(Input<List<FrontDoorMatchConditionArgs>> matchConditions) {
+        public Builder matchConditions(Output<List<FrontDoorMatchConditionArgs>> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
 
         public Builder matchConditions(List<FrontDoorMatchConditionArgs> matchConditions) {
-            this.matchConditions = Input.of(Objects.requireNonNull(matchConditions));
+            this.matchConditions = Output.of(Objects.requireNonNull(matchConditions));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder rateLimitDurationInMinutes(@Nullable Input<Integer> rateLimitDurationInMinutes) {
+        public Builder rateLimitDurationInMinutes(@Nullable Output<Integer> rateLimitDurationInMinutes) {
             this.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
             return this;
         }
 
         public Builder rateLimitDurationInMinutes(@Nullable Integer rateLimitDurationInMinutes) {
-            this.rateLimitDurationInMinutes = Input.ofNullable(rateLimitDurationInMinutes);
+            this.rateLimitDurationInMinutes = Output.ofNullable(rateLimitDurationInMinutes);
             return this;
         }
 
-        public Builder rateLimitThreshold(@Nullable Input<Integer> rateLimitThreshold) {
+        public Builder rateLimitThreshold(@Nullable Output<Integer> rateLimitThreshold) {
             this.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
 
         public Builder rateLimitThreshold(@Nullable Integer rateLimitThreshold) {
-            this.rateLimitThreshold = Input.ofNullable(rateLimitThreshold);
+            this.rateLimitThreshold = Output.ofNullable(rateLimitThreshold);
             return this;
         }
 
-        public Builder ruleType(Input<Either<String,RuleType>> ruleType) {
+        public Builder ruleType(Output<Either<String,RuleType>> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
         public Builder ruleType(Either<String,RuleType> ruleType) {
-            this.ruleType = Input.of(Objects.requireNonNull(ruleType));
+            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
             return this;
         }
         public CustomRuleArgs build() {

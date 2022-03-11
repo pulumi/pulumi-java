@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.devopsguru.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
      * 
      */
     @InputImport(name="stackNames")
-      private final @Nullable Input<List<String>> stackNames;
+      private final @Nullable Output<List<String>> stackNames;
 
-    public Input<List<String>> getStackNames() {
-        return this.stackNames == null ? Input.empty() : this.stackNames;
+    public Output<List<String>> getStackNames() {
+        return this.stackNames == null ? Output.empty() : this.stackNames;
     }
 
-    public ResourceCollectionCloudFormationCollectionFilterArgs(@Nullable Input<List<String>> stackNames) {
+    public ResourceCollectionCloudFormationCollectionFilterArgs(@Nullable Output<List<String>> stackNames) {
         this.stackNames = stackNames;
     }
 
     private ResourceCollectionCloudFormationCollectionFilterArgs() {
-        this.stackNames = Input.empty();
+        this.stackNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> stackNames;
+        private @Nullable Output<List<String>> stackNames;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
     	      this.stackNames = defaults.stackNames;
         }
 
-        public Builder stackNames(@Nullable Input<List<String>> stackNames) {
+        public Builder stackNames(@Nullable Output<List<String>> stackNames) {
             this.stackNames = stackNames;
             return this;
         }
 
         public Builder stackNames(@Nullable List<String> stackNames) {
-            this.stackNames = Input.ofNullable(stackNames);
+            this.stackNames = Output.ofNullable(stackNames);
             return this;
         }
         public ResourceCollectionCloudFormationCollectionFilterArgs build() {

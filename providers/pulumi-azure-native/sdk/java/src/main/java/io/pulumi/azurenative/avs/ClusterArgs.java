@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterSize", required=true)
-      private final Input<Integer> clusterSize;
+      private final Output<Integer> clusterSize;
 
-    public Input<Integer> getClusterSize() {
+    public Output<Integer> getClusterSize() {
         return this.clusterSize;
     }
 
@@ -43,9 +43,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -54,9 +54,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
     public ClusterArgs(
-        @Nullable Input<String> clusterName,
-        Input<Integer> clusterSize,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName,
-        Input<SkuArgs> sku) {
+        @Nullable Output<String> clusterName,
+        Output<Integer> clusterSize,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName,
+        Output<SkuArgs> sku) {
         this.clusterName = clusterName;
         this.clusterSize = Objects.requireNonNull(clusterSize, "expected parameter 'clusterSize' to be non-null");
         this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
@@ -85,11 +85,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.clusterName = Input.empty();
-        this.clusterSize = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
+        this.clusterName = Output.empty();
+        this.clusterSize = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterName;
-        private Input<Integer> clusterSize;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
-        private Input<SkuArgs> sku;
+        private @Nullable Output<String> clusterName;
+        private Output<Integer> clusterSize;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
+        private Output<SkuArgs> sku;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sku = defaults.sku;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder clusterSize(Input<Integer> clusterSize) {
+        public Builder clusterSize(Output<Integer> clusterSize) {
             this.clusterSize = Objects.requireNonNull(clusterSize);
             return this;
         }
 
         public Builder clusterSize(Integer clusterSize) {
-            this.clusterSize = Input.of(Objects.requireNonNull(clusterSize));
+            this.clusterSize = Output.of(Objects.requireNonNull(clusterSize));
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
         public ClusterArgs build() {

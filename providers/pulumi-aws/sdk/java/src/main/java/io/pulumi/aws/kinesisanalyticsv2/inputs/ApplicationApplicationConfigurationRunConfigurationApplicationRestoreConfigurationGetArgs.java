@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
      * 
      */
     @InputImport(name="applicationRestoreType")
-      private final @Nullable Input<String> applicationRestoreType;
+      private final @Nullable Output<String> applicationRestoreType;
 
-    public Input<String> getApplicationRestoreType() {
-        return this.applicationRestoreType == null ? Input.empty() : this.applicationRestoreType;
+    public Output<String> getApplicationRestoreType() {
+        return this.applicationRestoreType == null ? Output.empty() : this.applicationRestoreType;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
      * 
      */
     @InputImport(name="snapshotName")
-      private final @Nullable Input<String> snapshotName;
+      private final @Nullable Output<String> snapshotName;
 
-    public Input<String> getSnapshotName() {
-        return this.snapshotName == null ? Input.empty() : this.snapshotName;
+    public Output<String> getSnapshotName() {
+        return this.snapshotName == null ? Output.empty() : this.snapshotName;
     }
 
     public ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs(
-        @Nullable Input<String> applicationRestoreType,
-        @Nullable Input<String> snapshotName) {
+        @Nullable Output<String> applicationRestoreType,
+        @Nullable Output<String> snapshotName) {
         this.applicationRestoreType = applicationRestoreType;
         this.snapshotName = snapshotName;
     }
 
     private ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs() {
-        this.applicationRestoreType = Input.empty();
-        this.snapshotName = Input.empty();
+        this.applicationRestoreType = Output.empty();
+        this.snapshotName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationRestoreType;
-        private @Nullable Input<String> snapshotName;
+        private @Nullable Output<String> applicationRestoreType;
+        private @Nullable Output<String> snapshotName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
     	      this.snapshotName = defaults.snapshotName;
         }
 
-        public Builder applicationRestoreType(@Nullable Input<String> applicationRestoreType) {
+        public Builder applicationRestoreType(@Nullable Output<String> applicationRestoreType) {
             this.applicationRestoreType = applicationRestoreType;
             return this;
         }
 
         public Builder applicationRestoreType(@Nullable String applicationRestoreType) {
-            this.applicationRestoreType = Input.ofNullable(applicationRestoreType);
+            this.applicationRestoreType = Output.ofNullable(applicationRestoreType);
             return this;
         }
 
-        public Builder snapshotName(@Nullable Input<String> snapshotName) {
+        public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
 
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Input.ofNullable(snapshotName);
+            this.snapshotName = Output.ofNullable(snapshotName);
             return this;
         }
         public ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs build() {

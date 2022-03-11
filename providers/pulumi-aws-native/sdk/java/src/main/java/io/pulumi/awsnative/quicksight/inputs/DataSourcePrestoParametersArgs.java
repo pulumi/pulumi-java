@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="catalog", required=true)
-      private final Input<String> catalog;
+      private final Output<String> catalog;
 
-    public Input<String> getCatalog() {
+    public Output<String> getCatalog() {
         return this.catalog;
     }
 
@@ -34,9 +34,9 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
@@ -45,25 +45,25 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Double> port;
+      private final Output<Double> port;
 
-    public Input<Double> getPort() {
+    public Output<Double> getPort() {
         return this.port;
     }
 
     public DataSourcePrestoParametersArgs(
-        Input<String> catalog,
-        Input<String> host,
-        Input<Double> port) {
+        Output<String> catalog,
+        Output<String> host,
+        Output<Double> port) {
         this.catalog = Objects.requireNonNull(catalog, "expected parameter 'catalog' to be non-null");
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private DataSourcePrestoParametersArgs() {
-        this.catalog = Input.empty();
-        this.host = Input.empty();
-        this.port = Input.empty();
+        this.catalog = Output.empty();
+        this.host = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> catalog;
-        private Input<String> host;
-        private Input<Double> port;
+        private Output<String> catalog;
+        private Output<String> host;
+        private Output<Double> port;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
     	      this.port = defaults.port;
         }
 
-        public Builder catalog(Input<String> catalog) {
+        public Builder catalog(Output<String> catalog) {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
 
         public Builder catalog(String catalog) {
-            this.catalog = Input.of(Objects.requireNonNull(catalog));
+            this.catalog = Output.of(Objects.requireNonNull(catalog));
             return this;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder port(Input<Double> port) {
+        public Builder port(Output<Double> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Double port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public DataSourcePrestoParametersArgs build() {

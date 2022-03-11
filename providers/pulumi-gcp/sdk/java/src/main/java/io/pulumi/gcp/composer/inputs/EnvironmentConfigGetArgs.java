@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigDatabaseConfigGetArgs;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigEncryptionConfigGetArgs;
@@ -26,126 +26,126 @@ public final class EnvironmentConfigGetArgs extends io.pulumi.resources.Resource
     public static final EnvironmentConfigGetArgs Empty = new EnvironmentConfigGetArgs();
 
     @InputImport(name="airflowUri")
-      private final @Nullable Input<String> airflowUri;
+      private final @Nullable Output<String> airflowUri;
 
-    public Input<String> getAirflowUri() {
-        return this.airflowUri == null ? Input.empty() : this.airflowUri;
+    public Output<String> getAirflowUri() {
+        return this.airflowUri == null ? Output.empty() : this.airflowUri;
     }
 
     @InputImport(name="dagGcsPrefix")
-      private final @Nullable Input<String> dagGcsPrefix;
+      private final @Nullable Output<String> dagGcsPrefix;
 
-    public Input<String> getDagGcsPrefix() {
-        return this.dagGcsPrefix == null ? Input.empty() : this.dagGcsPrefix;
+    public Output<String> getDagGcsPrefix() {
+        return this.dagGcsPrefix == null ? Output.empty() : this.dagGcsPrefix;
     }
 
     @InputImport(name="databaseConfig")
-      private final @Nullable Input<EnvironmentConfigDatabaseConfigGetArgs> databaseConfig;
+      private final @Nullable Output<EnvironmentConfigDatabaseConfigGetArgs> databaseConfig;
 
-    public Input<EnvironmentConfigDatabaseConfigGetArgs> getDatabaseConfig() {
-        return this.databaseConfig == null ? Input.empty() : this.databaseConfig;
+    public Output<EnvironmentConfigDatabaseConfigGetArgs> getDatabaseConfig() {
+        return this.databaseConfig == null ? Output.empty() : this.databaseConfig;
     }
 
     @InputImport(name="encryptionConfig")
-      private final @Nullable Input<EnvironmentConfigEncryptionConfigGetArgs> encryptionConfig;
+      private final @Nullable Output<EnvironmentConfigEncryptionConfigGetArgs> encryptionConfig;
 
-    public Input<EnvironmentConfigEncryptionConfigGetArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
+    public Output<EnvironmentConfigEncryptionConfigGetArgs> getEncryptionConfig() {
+        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
     @InputImport(name="environmentSize")
-      private final @Nullable Input<String> environmentSize;
+      private final @Nullable Output<String> environmentSize;
 
-    public Input<String> getEnvironmentSize() {
-        return this.environmentSize == null ? Input.empty() : this.environmentSize;
+    public Output<String> getEnvironmentSize() {
+        return this.environmentSize == null ? Output.empty() : this.environmentSize;
     }
 
     @InputImport(name="gkeCluster")
-      private final @Nullable Input<String> gkeCluster;
+      private final @Nullable Output<String> gkeCluster;
 
-    public Input<String> getGkeCluster() {
-        return this.gkeCluster == null ? Input.empty() : this.gkeCluster;
+    public Output<String> getGkeCluster() {
+        return this.gkeCluster == null ? Output.empty() : this.gkeCluster;
     }
 
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<EnvironmentConfigMaintenanceWindowGetArgs> maintenanceWindow;
+      private final @Nullable Output<EnvironmentConfigMaintenanceWindowGetArgs> maintenanceWindow;
 
-    public Input<EnvironmentConfigMaintenanceWindowGetArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<EnvironmentConfigMaintenanceWindowGetArgs> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     @InputImport(name="masterAuthorizedNetworksConfig")
-      private final @Nullable Input<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
+      private final @Nullable Output<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
 
-    public Input<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> getMasterAuthorizedNetworksConfig() {
-        return this.masterAuthorizedNetworksConfig == null ? Input.empty() : this.masterAuthorizedNetworksConfig;
+    public Output<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> getMasterAuthorizedNetworksConfig() {
+        return this.masterAuthorizedNetworksConfig == null ? Output.empty() : this.masterAuthorizedNetworksConfig;
     }
 
     @InputImport(name="nodeConfig")
-      private final @Nullable Input<EnvironmentConfigNodeConfigGetArgs> nodeConfig;
+      private final @Nullable Output<EnvironmentConfigNodeConfigGetArgs> nodeConfig;
 
-    public Input<EnvironmentConfigNodeConfigGetArgs> getNodeConfig() {
-        return this.nodeConfig == null ? Input.empty() : this.nodeConfig;
+    public Output<EnvironmentConfigNodeConfigGetArgs> getNodeConfig() {
+        return this.nodeConfig == null ? Output.empty() : this.nodeConfig;
     }
 
     @InputImport(name="nodeCount")
-      private final @Nullable Input<Integer> nodeCount;
+      private final @Nullable Output<Integer> nodeCount;
 
-    public Input<Integer> getNodeCount() {
-        return this.nodeCount == null ? Input.empty() : this.nodeCount;
+    public Output<Integer> getNodeCount() {
+        return this.nodeCount == null ? Output.empty() : this.nodeCount;
     }
 
     @InputImport(name="privateEnvironmentConfig")
-      private final @Nullable Input<EnvironmentConfigPrivateEnvironmentConfigGetArgs> privateEnvironmentConfig;
+      private final @Nullable Output<EnvironmentConfigPrivateEnvironmentConfigGetArgs> privateEnvironmentConfig;
 
-    public Input<EnvironmentConfigPrivateEnvironmentConfigGetArgs> getPrivateEnvironmentConfig() {
-        return this.privateEnvironmentConfig == null ? Input.empty() : this.privateEnvironmentConfig;
+    public Output<EnvironmentConfigPrivateEnvironmentConfigGetArgs> getPrivateEnvironmentConfig() {
+        return this.privateEnvironmentConfig == null ? Output.empty() : this.privateEnvironmentConfig;
     }
 
     @InputImport(name="softwareConfig")
-      private final @Nullable Input<EnvironmentConfigSoftwareConfigGetArgs> softwareConfig;
+      private final @Nullable Output<EnvironmentConfigSoftwareConfigGetArgs> softwareConfig;
 
-    public Input<EnvironmentConfigSoftwareConfigGetArgs> getSoftwareConfig() {
-        return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
+    public Output<EnvironmentConfigSoftwareConfigGetArgs> getSoftwareConfig() {
+        return this.softwareConfig == null ? Output.empty() : this.softwareConfig;
     }
 
     @InputImport(name="webServerConfig")
-      private final @Nullable Input<EnvironmentConfigWebServerConfigGetArgs> webServerConfig;
+      private final @Nullable Output<EnvironmentConfigWebServerConfigGetArgs> webServerConfig;
 
-    public Input<EnvironmentConfigWebServerConfigGetArgs> getWebServerConfig() {
-        return this.webServerConfig == null ? Input.empty() : this.webServerConfig;
+    public Output<EnvironmentConfigWebServerConfigGetArgs> getWebServerConfig() {
+        return this.webServerConfig == null ? Output.empty() : this.webServerConfig;
     }
 
     @InputImport(name="webServerNetworkAccessControl")
-      private final @Nullable Input<EnvironmentConfigWebServerNetworkAccessControlGetArgs> webServerNetworkAccessControl;
+      private final @Nullable Output<EnvironmentConfigWebServerNetworkAccessControlGetArgs> webServerNetworkAccessControl;
 
-    public Input<EnvironmentConfigWebServerNetworkAccessControlGetArgs> getWebServerNetworkAccessControl() {
-        return this.webServerNetworkAccessControl == null ? Input.empty() : this.webServerNetworkAccessControl;
+    public Output<EnvironmentConfigWebServerNetworkAccessControlGetArgs> getWebServerNetworkAccessControl() {
+        return this.webServerNetworkAccessControl == null ? Output.empty() : this.webServerNetworkAccessControl;
     }
 
     @InputImport(name="workloadsConfig")
-      private final @Nullable Input<EnvironmentConfigWorkloadsConfigGetArgs> workloadsConfig;
+      private final @Nullable Output<EnvironmentConfigWorkloadsConfigGetArgs> workloadsConfig;
 
-    public Input<EnvironmentConfigWorkloadsConfigGetArgs> getWorkloadsConfig() {
-        return this.workloadsConfig == null ? Input.empty() : this.workloadsConfig;
+    public Output<EnvironmentConfigWorkloadsConfigGetArgs> getWorkloadsConfig() {
+        return this.workloadsConfig == null ? Output.empty() : this.workloadsConfig;
     }
 
     public EnvironmentConfigGetArgs(
-        @Nullable Input<String> airflowUri,
-        @Nullable Input<String> dagGcsPrefix,
-        @Nullable Input<EnvironmentConfigDatabaseConfigGetArgs> databaseConfig,
-        @Nullable Input<EnvironmentConfigEncryptionConfigGetArgs> encryptionConfig,
-        @Nullable Input<String> environmentSize,
-        @Nullable Input<String> gkeCluster,
-        @Nullable Input<EnvironmentConfigMaintenanceWindowGetArgs> maintenanceWindow,
-        @Nullable Input<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig,
-        @Nullable Input<EnvironmentConfigNodeConfigGetArgs> nodeConfig,
-        @Nullable Input<Integer> nodeCount,
-        @Nullable Input<EnvironmentConfigPrivateEnvironmentConfigGetArgs> privateEnvironmentConfig,
-        @Nullable Input<EnvironmentConfigSoftwareConfigGetArgs> softwareConfig,
-        @Nullable Input<EnvironmentConfigWebServerConfigGetArgs> webServerConfig,
-        @Nullable Input<EnvironmentConfigWebServerNetworkAccessControlGetArgs> webServerNetworkAccessControl,
-        @Nullable Input<EnvironmentConfigWorkloadsConfigGetArgs> workloadsConfig) {
+        @Nullable Output<String> airflowUri,
+        @Nullable Output<String> dagGcsPrefix,
+        @Nullable Output<EnvironmentConfigDatabaseConfigGetArgs> databaseConfig,
+        @Nullable Output<EnvironmentConfigEncryptionConfigGetArgs> encryptionConfig,
+        @Nullable Output<String> environmentSize,
+        @Nullable Output<String> gkeCluster,
+        @Nullable Output<EnvironmentConfigMaintenanceWindowGetArgs> maintenanceWindow,
+        @Nullable Output<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig,
+        @Nullable Output<EnvironmentConfigNodeConfigGetArgs> nodeConfig,
+        @Nullable Output<Integer> nodeCount,
+        @Nullable Output<EnvironmentConfigPrivateEnvironmentConfigGetArgs> privateEnvironmentConfig,
+        @Nullable Output<EnvironmentConfigSoftwareConfigGetArgs> softwareConfig,
+        @Nullable Output<EnvironmentConfigWebServerConfigGetArgs> webServerConfig,
+        @Nullable Output<EnvironmentConfigWebServerNetworkAccessControlGetArgs> webServerNetworkAccessControl,
+        @Nullable Output<EnvironmentConfigWorkloadsConfigGetArgs> workloadsConfig) {
         this.airflowUri = airflowUri;
         this.dagGcsPrefix = dagGcsPrefix;
         this.databaseConfig = databaseConfig;
@@ -164,21 +164,21 @@ public final class EnvironmentConfigGetArgs extends io.pulumi.resources.Resource
     }
 
     private EnvironmentConfigGetArgs() {
-        this.airflowUri = Input.empty();
-        this.dagGcsPrefix = Input.empty();
-        this.databaseConfig = Input.empty();
-        this.encryptionConfig = Input.empty();
-        this.environmentSize = Input.empty();
-        this.gkeCluster = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.masterAuthorizedNetworksConfig = Input.empty();
-        this.nodeConfig = Input.empty();
-        this.nodeCount = Input.empty();
-        this.privateEnvironmentConfig = Input.empty();
-        this.softwareConfig = Input.empty();
-        this.webServerConfig = Input.empty();
-        this.webServerNetworkAccessControl = Input.empty();
-        this.workloadsConfig = Input.empty();
+        this.airflowUri = Output.empty();
+        this.dagGcsPrefix = Output.empty();
+        this.databaseConfig = Output.empty();
+        this.encryptionConfig = Output.empty();
+        this.environmentSize = Output.empty();
+        this.gkeCluster = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.masterAuthorizedNetworksConfig = Output.empty();
+        this.nodeConfig = Output.empty();
+        this.nodeCount = Output.empty();
+        this.privateEnvironmentConfig = Output.empty();
+        this.softwareConfig = Output.empty();
+        this.webServerConfig = Output.empty();
+        this.webServerNetworkAccessControl = Output.empty();
+        this.workloadsConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -190,21 +190,21 @@ public final class EnvironmentConfigGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> airflowUri;
-        private @Nullable Input<String> dagGcsPrefix;
-        private @Nullable Input<EnvironmentConfigDatabaseConfigGetArgs> databaseConfig;
-        private @Nullable Input<EnvironmentConfigEncryptionConfigGetArgs> encryptionConfig;
-        private @Nullable Input<String> environmentSize;
-        private @Nullable Input<String> gkeCluster;
-        private @Nullable Input<EnvironmentConfigMaintenanceWindowGetArgs> maintenanceWindow;
-        private @Nullable Input<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
-        private @Nullable Input<EnvironmentConfigNodeConfigGetArgs> nodeConfig;
-        private @Nullable Input<Integer> nodeCount;
-        private @Nullable Input<EnvironmentConfigPrivateEnvironmentConfigGetArgs> privateEnvironmentConfig;
-        private @Nullable Input<EnvironmentConfigSoftwareConfigGetArgs> softwareConfig;
-        private @Nullable Input<EnvironmentConfigWebServerConfigGetArgs> webServerConfig;
-        private @Nullable Input<EnvironmentConfigWebServerNetworkAccessControlGetArgs> webServerNetworkAccessControl;
-        private @Nullable Input<EnvironmentConfigWorkloadsConfigGetArgs> workloadsConfig;
+        private @Nullable Output<String> airflowUri;
+        private @Nullable Output<String> dagGcsPrefix;
+        private @Nullable Output<EnvironmentConfigDatabaseConfigGetArgs> databaseConfig;
+        private @Nullable Output<EnvironmentConfigEncryptionConfigGetArgs> encryptionConfig;
+        private @Nullable Output<String> environmentSize;
+        private @Nullable Output<String> gkeCluster;
+        private @Nullable Output<EnvironmentConfigMaintenanceWindowGetArgs> maintenanceWindow;
+        private @Nullable Output<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
+        private @Nullable Output<EnvironmentConfigNodeConfigGetArgs> nodeConfig;
+        private @Nullable Output<Integer> nodeCount;
+        private @Nullable Output<EnvironmentConfigPrivateEnvironmentConfigGetArgs> privateEnvironmentConfig;
+        private @Nullable Output<EnvironmentConfigSoftwareConfigGetArgs> softwareConfig;
+        private @Nullable Output<EnvironmentConfigWebServerConfigGetArgs> webServerConfig;
+        private @Nullable Output<EnvironmentConfigWebServerNetworkAccessControlGetArgs> webServerNetworkAccessControl;
+        private @Nullable Output<EnvironmentConfigWorkloadsConfigGetArgs> workloadsConfig;
 
         public Builder() {
     	      // Empty
@@ -229,153 +229,153 @@ public final class EnvironmentConfigGetArgs extends io.pulumi.resources.Resource
     	      this.workloadsConfig = defaults.workloadsConfig;
         }
 
-        public Builder airflowUri(@Nullable Input<String> airflowUri) {
+        public Builder airflowUri(@Nullable Output<String> airflowUri) {
             this.airflowUri = airflowUri;
             return this;
         }
 
         public Builder airflowUri(@Nullable String airflowUri) {
-            this.airflowUri = Input.ofNullable(airflowUri);
+            this.airflowUri = Output.ofNullable(airflowUri);
             return this;
         }
 
-        public Builder dagGcsPrefix(@Nullable Input<String> dagGcsPrefix) {
+        public Builder dagGcsPrefix(@Nullable Output<String> dagGcsPrefix) {
             this.dagGcsPrefix = dagGcsPrefix;
             return this;
         }
 
         public Builder dagGcsPrefix(@Nullable String dagGcsPrefix) {
-            this.dagGcsPrefix = Input.ofNullable(dagGcsPrefix);
+            this.dagGcsPrefix = Output.ofNullable(dagGcsPrefix);
             return this;
         }
 
-        public Builder databaseConfig(@Nullable Input<EnvironmentConfigDatabaseConfigGetArgs> databaseConfig) {
+        public Builder databaseConfig(@Nullable Output<EnvironmentConfigDatabaseConfigGetArgs> databaseConfig) {
             this.databaseConfig = databaseConfig;
             return this;
         }
 
         public Builder databaseConfig(@Nullable EnvironmentConfigDatabaseConfigGetArgs databaseConfig) {
-            this.databaseConfig = Input.ofNullable(databaseConfig);
+            this.databaseConfig = Output.ofNullable(databaseConfig);
             return this;
         }
 
-        public Builder encryptionConfig(@Nullable Input<EnvironmentConfigEncryptionConfigGetArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<EnvironmentConfigEncryptionConfigGetArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
         public Builder encryptionConfig(@Nullable EnvironmentConfigEncryptionConfigGetArgs encryptionConfig) {
-            this.encryptionConfig = Input.ofNullable(encryptionConfig);
+            this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder environmentSize(@Nullable Input<String> environmentSize) {
+        public Builder environmentSize(@Nullable Output<String> environmentSize) {
             this.environmentSize = environmentSize;
             return this;
         }
 
         public Builder environmentSize(@Nullable String environmentSize) {
-            this.environmentSize = Input.ofNullable(environmentSize);
+            this.environmentSize = Output.ofNullable(environmentSize);
             return this;
         }
 
-        public Builder gkeCluster(@Nullable Input<String> gkeCluster) {
+        public Builder gkeCluster(@Nullable Output<String> gkeCluster) {
             this.gkeCluster = gkeCluster;
             return this;
         }
 
         public Builder gkeCluster(@Nullable String gkeCluster) {
-            this.gkeCluster = Input.ofNullable(gkeCluster);
+            this.gkeCluster = Output.ofNullable(gkeCluster);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<EnvironmentConfigMaintenanceWindowGetArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<EnvironmentConfigMaintenanceWindowGetArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable EnvironmentConfigMaintenanceWindowGetArgs maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder masterAuthorizedNetworksConfig(@Nullable Input<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig) {
+        public Builder masterAuthorizedNetworksConfig(@Nullable Output<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig) {
             this.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
             return this;
         }
 
         public Builder masterAuthorizedNetworksConfig(@Nullable EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs masterAuthorizedNetworksConfig) {
-            this.masterAuthorizedNetworksConfig = Input.ofNullable(masterAuthorizedNetworksConfig);
+            this.masterAuthorizedNetworksConfig = Output.ofNullable(masterAuthorizedNetworksConfig);
             return this;
         }
 
-        public Builder nodeConfig(@Nullable Input<EnvironmentConfigNodeConfigGetArgs> nodeConfig) {
+        public Builder nodeConfig(@Nullable Output<EnvironmentConfigNodeConfigGetArgs> nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
 
         public Builder nodeConfig(@Nullable EnvironmentConfigNodeConfigGetArgs nodeConfig) {
-            this.nodeConfig = Input.ofNullable(nodeConfig);
+            this.nodeConfig = Output.ofNullable(nodeConfig);
             return this;
         }
 
-        public Builder nodeCount(@Nullable Input<Integer> nodeCount) {
+        public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
         public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Input.ofNullable(nodeCount);
+            this.nodeCount = Output.ofNullable(nodeCount);
             return this;
         }
 
-        public Builder privateEnvironmentConfig(@Nullable Input<EnvironmentConfigPrivateEnvironmentConfigGetArgs> privateEnvironmentConfig) {
+        public Builder privateEnvironmentConfig(@Nullable Output<EnvironmentConfigPrivateEnvironmentConfigGetArgs> privateEnvironmentConfig) {
             this.privateEnvironmentConfig = privateEnvironmentConfig;
             return this;
         }
 
         public Builder privateEnvironmentConfig(@Nullable EnvironmentConfigPrivateEnvironmentConfigGetArgs privateEnvironmentConfig) {
-            this.privateEnvironmentConfig = Input.ofNullable(privateEnvironmentConfig);
+            this.privateEnvironmentConfig = Output.ofNullable(privateEnvironmentConfig);
             return this;
         }
 
-        public Builder softwareConfig(@Nullable Input<EnvironmentConfigSoftwareConfigGetArgs> softwareConfig) {
+        public Builder softwareConfig(@Nullable Output<EnvironmentConfigSoftwareConfigGetArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
 
         public Builder softwareConfig(@Nullable EnvironmentConfigSoftwareConfigGetArgs softwareConfig) {
-            this.softwareConfig = Input.ofNullable(softwareConfig);
+            this.softwareConfig = Output.ofNullable(softwareConfig);
             return this;
         }
 
-        public Builder webServerConfig(@Nullable Input<EnvironmentConfigWebServerConfigGetArgs> webServerConfig) {
+        public Builder webServerConfig(@Nullable Output<EnvironmentConfigWebServerConfigGetArgs> webServerConfig) {
             this.webServerConfig = webServerConfig;
             return this;
         }
 
         public Builder webServerConfig(@Nullable EnvironmentConfigWebServerConfigGetArgs webServerConfig) {
-            this.webServerConfig = Input.ofNullable(webServerConfig);
+            this.webServerConfig = Output.ofNullable(webServerConfig);
             return this;
         }
 
-        public Builder webServerNetworkAccessControl(@Nullable Input<EnvironmentConfigWebServerNetworkAccessControlGetArgs> webServerNetworkAccessControl) {
+        public Builder webServerNetworkAccessControl(@Nullable Output<EnvironmentConfigWebServerNetworkAccessControlGetArgs> webServerNetworkAccessControl) {
             this.webServerNetworkAccessControl = webServerNetworkAccessControl;
             return this;
         }
 
         public Builder webServerNetworkAccessControl(@Nullable EnvironmentConfigWebServerNetworkAccessControlGetArgs webServerNetworkAccessControl) {
-            this.webServerNetworkAccessControl = Input.ofNullable(webServerNetworkAccessControl);
+            this.webServerNetworkAccessControl = Output.ofNullable(webServerNetworkAccessControl);
             return this;
         }
 
-        public Builder workloadsConfig(@Nullable Input<EnvironmentConfigWorkloadsConfigGetArgs> workloadsConfig) {
+        public Builder workloadsConfig(@Nullable Output<EnvironmentConfigWorkloadsConfigGetArgs> workloadsConfig) {
             this.workloadsConfig = workloadsConfig;
             return this;
         }
 
         public Builder workloadsConfig(@Nullable EnvironmentConfigWorkloadsConfigGetArgs workloadsConfig) {
-            this.workloadsConfig = Input.ofNullable(workloadsConfig);
+            this.workloadsConfig = Output.ofNullable(workloadsConfig);
             return this;
         }
         public EnvironmentConfigGetArgs build() {

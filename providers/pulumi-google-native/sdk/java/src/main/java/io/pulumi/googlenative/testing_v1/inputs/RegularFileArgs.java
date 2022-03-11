@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<FileReferenceArgs> content;
+      private final Output<FileReferenceArgs> content;
 
-    public Input<FileReferenceArgs> getContent() {
+    public Output<FileReferenceArgs> getContent() {
         return this.content;
     }
 
@@ -34,22 +34,22 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="devicePath", required=true)
-      private final Input<String> devicePath;
+      private final Output<String> devicePath;
 
-    public Input<String> getDevicePath() {
+    public Output<String> getDevicePath() {
         return this.devicePath;
     }
 
     public RegularFileArgs(
-        Input<FileReferenceArgs> content,
-        Input<String> devicePath) {
+        Output<FileReferenceArgs> content,
+        Output<String> devicePath) {
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
         this.devicePath = Objects.requireNonNull(devicePath, "expected parameter 'devicePath' to be non-null");
     }
 
     private RegularFileArgs() {
-        this.content = Input.empty();
-        this.devicePath = Input.empty();
+        this.content = Output.empty();
+        this.devicePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<FileReferenceArgs> content;
-        private Input<String> devicePath;
+        private Output<FileReferenceArgs> content;
+        private Output<String> devicePath;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.devicePath = defaults.devicePath;
         }
 
-        public Builder content(Input<FileReferenceArgs> content) {
+        public Builder content(Output<FileReferenceArgs> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(FileReferenceArgs content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder devicePath(Input<String> devicePath) {
+        public Builder devicePath(Output<String> devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
 
         public Builder devicePath(String devicePath) {
-            this.devicePath = Input.of(Objects.requireNonNull(devicePath));
+            this.devicePath = Output.of(Objects.requireNonNull(devicePath));
             return this;
         }
         public RegularFileArgs build() {

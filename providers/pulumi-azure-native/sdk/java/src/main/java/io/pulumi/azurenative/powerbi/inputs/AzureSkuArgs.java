@@ -6,7 +6,7 @@ package io.pulumi.azurenative.powerbi.inputs;
 import io.pulumi.azurenative.powerbi.enums.AzureSkuName;
 import io.pulumi.azurenative.powerbi.enums.AzureSkuTier;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,AzureSkuName>> name;
+      private final Output<Either<String,AzureSkuName>> name;
 
-    public Input<Either<String,AzureSkuName>> getName() {
+    public Output<Either<String,AzureSkuName>> getName() {
         return this.name;
     }
 
@@ -32,22 +32,22 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-      private final Input<Either<String,AzureSkuTier>> tier;
+      private final Output<Either<String,AzureSkuTier>> tier;
 
-    public Input<Either<String,AzureSkuTier>> getTier() {
+    public Output<Either<String,AzureSkuTier>> getTier() {
         return this.tier;
     }
 
     public AzureSkuArgs(
-        Input<Either<String,AzureSkuName>> name,
-        Input<Either<String,AzureSkuTier>> tier) {
+        Output<Either<String,AzureSkuName>> name,
+        Output<Either<String,AzureSkuTier>> tier) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
     }
 
     private AzureSkuArgs() {
-        this.name = Input.empty();
-        this.tier = Input.empty();
+        this.name = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,AzureSkuName>> name;
-        private Input<Either<String,AzureSkuTier>> tier;
+        private Output<Either<String,AzureSkuName>> name;
+        private Output<Either<String,AzureSkuTier>> tier;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder name(Input<Either<String,AzureSkuName>> name) {
+        public Builder name(Output<Either<String,AzureSkuName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,AzureSkuName> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder tier(Input<Either<String,AzureSkuTier>> tier) {
+        public Builder tier(Output<Either<String,AzureSkuTier>> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
         public Builder tier(Either<String,AzureSkuTier> tier) {
-            this.tier = Input.of(Objects.requireNonNull(tier));
+            this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
         public AzureSkuArgs build() {

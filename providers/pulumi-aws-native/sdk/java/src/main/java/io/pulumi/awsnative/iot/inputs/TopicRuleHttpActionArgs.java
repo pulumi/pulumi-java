@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRuleHttpActionHeaderArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleHttpAuthorizationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,38 +18,38 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
     public static final TopicRuleHttpActionArgs Empty = new TopicRuleHttpActionArgs();
 
     @InputImport(name="auth")
-      private final @Nullable Input<TopicRuleHttpAuthorizationArgs> auth;
+      private final @Nullable Output<TopicRuleHttpAuthorizationArgs> auth;
 
-    public Input<TopicRuleHttpAuthorizationArgs> getAuth() {
-        return this.auth == null ? Input.empty() : this.auth;
+    public Output<TopicRuleHttpAuthorizationArgs> getAuth() {
+        return this.auth == null ? Output.empty() : this.auth;
     }
 
     @InputImport(name="confirmationUrl")
-      private final @Nullable Input<String> confirmationUrl;
+      private final @Nullable Output<String> confirmationUrl;
 
-    public Input<String> getConfirmationUrl() {
-        return this.confirmationUrl == null ? Input.empty() : this.confirmationUrl;
+    public Output<String> getConfirmationUrl() {
+        return this.confirmationUrl == null ? Output.empty() : this.confirmationUrl;
     }
 
     @InputImport(name="headers")
-      private final @Nullable Input<List<TopicRuleHttpActionHeaderArgs>> headers;
+      private final @Nullable Output<List<TopicRuleHttpActionHeaderArgs>> headers;
 
-    public Input<List<TopicRuleHttpActionHeaderArgs>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<TopicRuleHttpActionHeaderArgs>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public TopicRuleHttpActionArgs(
-        @Nullable Input<TopicRuleHttpAuthorizationArgs> auth,
-        @Nullable Input<String> confirmationUrl,
-        @Nullable Input<List<TopicRuleHttpActionHeaderArgs>> headers,
-        Input<String> url) {
+        @Nullable Output<TopicRuleHttpAuthorizationArgs> auth,
+        @Nullable Output<String> confirmationUrl,
+        @Nullable Output<List<TopicRuleHttpActionHeaderArgs>> headers,
+        Output<String> url) {
         this.auth = auth;
         this.confirmationUrl = confirmationUrl;
         this.headers = headers;
@@ -57,10 +57,10 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
     }
 
     private TopicRuleHttpActionArgs() {
-        this.auth = Input.empty();
-        this.confirmationUrl = Input.empty();
-        this.headers = Input.empty();
-        this.url = Input.empty();
+        this.auth = Output.empty();
+        this.confirmationUrl = Output.empty();
+        this.headers = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<TopicRuleHttpAuthorizationArgs> auth;
-        private @Nullable Input<String> confirmationUrl;
-        private @Nullable Input<List<TopicRuleHttpActionHeaderArgs>> headers;
-        private Input<String> url;
+        private @Nullable Output<TopicRuleHttpAuthorizationArgs> auth;
+        private @Nullable Output<String> confirmationUrl;
+        private @Nullable Output<List<TopicRuleHttpActionHeaderArgs>> headers;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
     	      this.url = defaults.url;
         }
 
-        public Builder auth(@Nullable Input<TopicRuleHttpAuthorizationArgs> auth) {
+        public Builder auth(@Nullable Output<TopicRuleHttpAuthorizationArgs> auth) {
             this.auth = auth;
             return this;
         }
 
         public Builder auth(@Nullable TopicRuleHttpAuthorizationArgs auth) {
-            this.auth = Input.ofNullable(auth);
+            this.auth = Output.ofNullable(auth);
             return this;
         }
 
-        public Builder confirmationUrl(@Nullable Input<String> confirmationUrl) {
+        public Builder confirmationUrl(@Nullable Output<String> confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
         }
 
         public Builder confirmationUrl(@Nullable String confirmationUrl) {
-            this.confirmationUrl = Input.ofNullable(confirmationUrl);
+            this.confirmationUrl = Output.ofNullable(confirmationUrl);
             return this;
         }
 
-        public Builder headers(@Nullable Input<List<TopicRuleHttpActionHeaderArgs>> headers) {
+        public Builder headers(@Nullable Output<List<TopicRuleHttpActionHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<TopicRuleHttpActionHeaderArgs> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public TopicRuleHttpActionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EventSourceMappingFilterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pattern")
-      private final @Nullable Input<String> pattern;
+      private final @Nullable Output<String> pattern;
 
-    public Input<String> getPattern() {
-        return this.pattern == null ? Input.empty() : this.pattern;
+    public Output<String> getPattern() {
+        return this.pattern == null ? Output.empty() : this.pattern;
     }
 
-    public EventSourceMappingFilterArgs(@Nullable Input<String> pattern) {
+    public EventSourceMappingFilterArgs(@Nullable Output<String> pattern) {
         this.pattern = pattern;
     }
 
     private EventSourceMappingFilterArgs() {
-        this.pattern = Input.empty();
+        this.pattern = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EventSourceMappingFilterArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pattern;
+        private @Nullable Output<String> pattern;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EventSourceMappingFilterArgs extends io.pulumi.resources.Reso
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder pattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Output<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Input.ofNullable(pattern);
+            this.pattern = Output.ofNullable(pattern);
             return this;
         }
         public EventSourceMappingFilterArgs build() {

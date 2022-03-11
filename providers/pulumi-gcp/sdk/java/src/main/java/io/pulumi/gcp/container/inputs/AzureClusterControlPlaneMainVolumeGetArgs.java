@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AzureClusterControlPlaneMainVolumeGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="sizeGib")
-      private final @Nullable Input<Integer> sizeGib;
+      private final @Nullable Output<Integer> sizeGib;
 
-    public Input<Integer> getSizeGib() {
-        return this.sizeGib == null ? Input.empty() : this.sizeGib;
+    public Output<Integer> getSizeGib() {
+        return this.sizeGib == null ? Output.empty() : this.sizeGib;
     }
 
-    public AzureClusterControlPlaneMainVolumeGetArgs(@Nullable Input<Integer> sizeGib) {
+    public AzureClusterControlPlaneMainVolumeGetArgs(@Nullable Output<Integer> sizeGib) {
         this.sizeGib = sizeGib;
     }
 
     private AzureClusterControlPlaneMainVolumeGetArgs() {
-        this.sizeGib = Input.empty();
+        this.sizeGib = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AzureClusterControlPlaneMainVolumeGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> sizeGib;
+        private @Nullable Output<Integer> sizeGib;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AzureClusterControlPlaneMainVolumeGetArgs extends io.pulumi.r
     	      this.sizeGib = defaults.sizeGib;
         }
 
-        public Builder sizeGib(@Nullable Input<Integer> sizeGib) {
+        public Builder sizeGib(@Nullable Output<Integer> sizeGib) {
             this.sizeGib = sizeGib;
             return this;
         }
 
         public Builder sizeGib(@Nullable Integer sizeGib) {
-            this.sizeGib = Input.ofNullable(sizeGib);
+            this.sizeGib = Output.ofNullable(sizeGib);
             return this;
         }
         public AzureClusterControlPlaneMainVolumeGetArgs build() {

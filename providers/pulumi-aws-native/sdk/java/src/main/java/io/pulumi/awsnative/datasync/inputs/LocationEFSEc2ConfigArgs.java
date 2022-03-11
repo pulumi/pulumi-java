@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="securityGroupArns", required=true)
-      private final Input<List<String>> securityGroupArns;
+      private final Output<List<String>> securityGroupArns;
 
-    public Input<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> getSecurityGroupArns() {
         return this.securityGroupArns;
     }
 
@@ -34,22 +34,22 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnetArn", required=true)
-      private final Input<String> subnetArn;
+      private final Output<String> subnetArn;
 
-    public Input<String> getSubnetArn() {
+    public Output<String> getSubnetArn() {
         return this.subnetArn;
     }
 
     public LocationEFSEc2ConfigArgs(
-        Input<List<String>> securityGroupArns,
-        Input<String> subnetArn) {
+        Output<List<String>> securityGroupArns,
+        Output<String> subnetArn) {
         this.securityGroupArns = Objects.requireNonNull(securityGroupArns, "expected parameter 'securityGroupArns' to be non-null");
         this.subnetArn = Objects.requireNonNull(subnetArn, "expected parameter 'subnetArn' to be non-null");
     }
 
     private LocationEFSEc2ConfigArgs() {
-        this.securityGroupArns = Input.empty();
-        this.subnetArn = Input.empty();
+        this.securityGroupArns = Output.empty();
+        this.subnetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<List<String>> securityGroupArns;
-        private Input<String> subnetArn;
+        private Output<List<String>> securityGroupArns;
+        private Output<String> subnetArn;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
     	      this.subnetArn = defaults.subnetArn;
         }
 
-        public Builder securityGroupArns(Input<List<String>> securityGroupArns) {
+        public Builder securityGroupArns(Output<List<String>> securityGroupArns) {
             this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
             return this;
         }
 
         public Builder securityGroupArns(List<String> securityGroupArns) {
-            this.securityGroupArns = Input.of(Objects.requireNonNull(securityGroupArns));
+            this.securityGroupArns = Output.of(Objects.requireNonNull(securityGroupArns));
             return this;
         }
 
-        public Builder subnetArn(Input<String> subnetArn) {
+        public Builder subnetArn(Output<String> subnetArn) {
             this.subnetArn = Objects.requireNonNull(subnetArn);
             return this;
         }
 
         public Builder subnetArn(String subnetArn) {
-            this.subnetArn = Input.of(Objects.requireNonNull(subnetArn));
+            this.subnetArn = Output.of(Objects.requireNonNull(subnetArn));
             return this;
         }
         public LocationEFSEc2ConfigArgs build() {

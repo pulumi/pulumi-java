@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.FleetSpotOptionsMaintenanceStrategiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="allocationStrategy")
-      private final @Nullable Input<String> allocationStrategy;
+      private final @Nullable Output<String> allocationStrategy;
 
-    public Input<String> getAllocationStrategy() {
-        return this.allocationStrategy == null ? Input.empty() : this.allocationStrategy;
+    public Output<String> getAllocationStrategy() {
+        return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instanceInterruptionBehavior")
-      private final @Nullable Input<String> instanceInterruptionBehavior;
+      private final @Nullable Output<String> instanceInterruptionBehavior;
 
-    public Input<String> getInstanceInterruptionBehavior() {
-        return this.instanceInterruptionBehavior == null ? Input.empty() : this.instanceInterruptionBehavior;
+    public Output<String> getInstanceInterruptionBehavior() {
+        return this.instanceInterruptionBehavior == null ? Output.empty() : this.instanceInterruptionBehavior;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instancePoolsToUseCount")
-      private final @Nullable Input<Integer> instancePoolsToUseCount;
+      private final @Nullable Output<Integer> instancePoolsToUseCount;
 
-    public Input<Integer> getInstancePoolsToUseCount() {
-        return this.instancePoolsToUseCount == null ? Input.empty() : this.instancePoolsToUseCount;
+    public Output<Integer> getInstancePoolsToUseCount() {
+        return this.instancePoolsToUseCount == null ? Output.empty() : this.instancePoolsToUseCount;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maintenanceStrategies")
-      private final @Nullable Input<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies;
+      private final @Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies;
 
-    public Input<FleetSpotOptionsMaintenanceStrategiesArgs> getMaintenanceStrategies() {
-        return this.maintenanceStrategies == null ? Input.empty() : this.maintenanceStrategies;
+    public Output<FleetSpotOptionsMaintenanceStrategiesArgs> getMaintenanceStrategies() {
+        return this.maintenanceStrategies == null ? Output.empty() : this.maintenanceStrategies;
     }
 
     public FleetSpotOptionsArgs(
-        @Nullable Input<String> allocationStrategy,
-        @Nullable Input<String> instanceInterruptionBehavior,
-        @Nullable Input<Integer> instancePoolsToUseCount,
-        @Nullable Input<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
+        @Nullable Output<String> allocationStrategy,
+        @Nullable Output<String> instanceInterruptionBehavior,
+        @Nullable Output<Integer> instancePoolsToUseCount,
+        @Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
         this.allocationStrategy = allocationStrategy;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.instancePoolsToUseCount = instancePoolsToUseCount;
@@ -72,10 +72,10 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FleetSpotOptionsArgs() {
-        this.allocationStrategy = Input.empty();
-        this.instanceInterruptionBehavior = Input.empty();
-        this.instancePoolsToUseCount = Input.empty();
-        this.maintenanceStrategies = Input.empty();
+        this.allocationStrategy = Output.empty();
+        this.instanceInterruptionBehavior = Output.empty();
+        this.instancePoolsToUseCount = Output.empty();
+        this.maintenanceStrategies = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allocationStrategy;
-        private @Nullable Input<String> instanceInterruptionBehavior;
-        private @Nullable Input<Integer> instancePoolsToUseCount;
-        private @Nullable Input<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies;
+        private @Nullable Output<String> allocationStrategy;
+        private @Nullable Output<String> instanceInterruptionBehavior;
+        private @Nullable Output<Integer> instancePoolsToUseCount;
+        private @Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
     	      this.maintenanceStrategies = defaults.maintenanceStrategies;
         }
 
-        public Builder allocationStrategy(@Nullable Input<String> allocationStrategy) {
+        public Builder allocationStrategy(@Nullable Output<String> allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Input.ofNullable(allocationStrategy);
+            this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
         }
 
-        public Builder instanceInterruptionBehavior(@Nullable Input<String> instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable Output<String> instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
 
         public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = Input.ofNullable(instanceInterruptionBehavior);
+            this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
             return this;
         }
 
-        public Builder instancePoolsToUseCount(@Nullable Input<Integer> instancePoolsToUseCount) {
+        public Builder instancePoolsToUseCount(@Nullable Output<Integer> instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
 
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
-            this.instancePoolsToUseCount = Input.ofNullable(instancePoolsToUseCount);
+            this.instancePoolsToUseCount = Output.ofNullable(instancePoolsToUseCount);
             return this;
         }
 
-        public Builder maintenanceStrategies(@Nullable Input<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
+        public Builder maintenanceStrategies(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
             this.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
 
         public Builder maintenanceStrategies(@Nullable FleetSpotOptionsMaintenanceStrategiesArgs maintenanceStrategies) {
-            this.maintenanceStrategies = Input.ofNullable(maintenanceStrategies);
+            this.maintenanceStrategies = Output.ofNullable(maintenanceStrategies);
             return this;
         }
         public FleetSpotOptionsArgs build() {

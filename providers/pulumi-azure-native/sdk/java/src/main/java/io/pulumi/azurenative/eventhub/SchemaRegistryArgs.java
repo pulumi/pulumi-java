@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventhub;
 import io.pulumi.azurenative.eventhub.enums.SchemaCompatibility;
 import io.pulumi.azurenative.eventhub.enums.SchemaType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupProperties")
-      private final @Nullable Input<Map<String,String>> groupProperties;
+      private final @Nullable Output<Map<String,String>> groupProperties;
 
-    public Input<Map<String,String>> getGroupProperties() {
-        return this.groupProperties == null ? Input.empty() : this.groupProperties;
+    public Output<Map<String,String>> getGroupProperties() {
+        return this.groupProperties == null ? Output.empty() : this.groupProperties;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -45,17 +45,17 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="schemaCompatibility")
-      private final @Nullable Input<Either<String,SchemaCompatibility>> schemaCompatibility;
+      private final @Nullable Output<Either<String,SchemaCompatibility>> schemaCompatibility;
 
-    public Input<Either<String,SchemaCompatibility>> getSchemaCompatibility() {
-        return this.schemaCompatibility == null ? Input.empty() : this.schemaCompatibility;
+    public Output<Either<String,SchemaCompatibility>> getSchemaCompatibility() {
+        return this.schemaCompatibility == null ? Output.empty() : this.schemaCompatibility;
     }
 
     /**
@@ -63,26 +63,26 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaGroupName")
-      private final @Nullable Input<String> schemaGroupName;
+      private final @Nullable Output<String> schemaGroupName;
 
-    public Input<String> getSchemaGroupName() {
-        return this.schemaGroupName == null ? Input.empty() : this.schemaGroupName;
+    public Output<String> getSchemaGroupName() {
+        return this.schemaGroupName == null ? Output.empty() : this.schemaGroupName;
     }
 
     @InputImport(name="schemaType")
-      private final @Nullable Input<Either<String,SchemaType>> schemaType;
+      private final @Nullable Output<Either<String,SchemaType>> schemaType;
 
-    public Input<Either<String,SchemaType>> getSchemaType() {
-        return this.schemaType == null ? Input.empty() : this.schemaType;
+    public Output<Either<String,SchemaType>> getSchemaType() {
+        return this.schemaType == null ? Output.empty() : this.schemaType;
     }
 
     public SchemaRegistryArgs(
-        @Nullable Input<Map<String,String>> groupProperties,
-        Input<String> namespaceName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,SchemaCompatibility>> schemaCompatibility,
-        @Nullable Input<String> schemaGroupName,
-        @Nullable Input<Either<String,SchemaType>> schemaType) {
+        @Nullable Output<Map<String,String>> groupProperties,
+        Output<String> namespaceName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,SchemaCompatibility>> schemaCompatibility,
+        @Nullable Output<String> schemaGroupName,
+        @Nullable Output<Either<String,SchemaType>> schemaType) {
         this.groupProperties = groupProperties;
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -92,12 +92,12 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaRegistryArgs() {
-        this.groupProperties = Input.empty();
-        this.namespaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.schemaCompatibility = Input.empty();
-        this.schemaGroupName = Input.empty();
-        this.schemaType = Input.empty();
+        this.groupProperties = Output.empty();
+        this.namespaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.schemaCompatibility = Output.empty();
+        this.schemaGroupName = Output.empty();
+        this.schemaType = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,12 +109,12 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> groupProperties;
-        private Input<String> namespaceName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,SchemaCompatibility>> schemaCompatibility;
-        private @Nullable Input<String> schemaGroupName;
-        private @Nullable Input<Either<String,SchemaType>> schemaType;
+        private @Nullable Output<Map<String,String>> groupProperties;
+        private Output<String> namespaceName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,SchemaCompatibility>> schemaCompatibility;
+        private @Nullable Output<String> schemaGroupName;
+        private @Nullable Output<Either<String,SchemaType>> schemaType;
 
         public Builder() {
     	      // Empty
@@ -130,63 +130,63 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schemaType = defaults.schemaType;
         }
 
-        public Builder groupProperties(@Nullable Input<Map<String,String>> groupProperties) {
+        public Builder groupProperties(@Nullable Output<Map<String,String>> groupProperties) {
             this.groupProperties = groupProperties;
             return this;
         }
 
         public Builder groupProperties(@Nullable Map<String,String> groupProperties) {
-            this.groupProperties = Input.ofNullable(groupProperties);
+            this.groupProperties = Output.ofNullable(groupProperties);
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder schemaCompatibility(@Nullable Input<Either<String,SchemaCompatibility>> schemaCompatibility) {
+        public Builder schemaCompatibility(@Nullable Output<Either<String,SchemaCompatibility>> schemaCompatibility) {
             this.schemaCompatibility = schemaCompatibility;
             return this;
         }
 
         public Builder schemaCompatibility(@Nullable Either<String,SchemaCompatibility> schemaCompatibility) {
-            this.schemaCompatibility = Input.ofNullable(schemaCompatibility);
+            this.schemaCompatibility = Output.ofNullable(schemaCompatibility);
             return this;
         }
 
-        public Builder schemaGroupName(@Nullable Input<String> schemaGroupName) {
+        public Builder schemaGroupName(@Nullable Output<String> schemaGroupName) {
             this.schemaGroupName = schemaGroupName;
             return this;
         }
 
         public Builder schemaGroupName(@Nullable String schemaGroupName) {
-            this.schemaGroupName = Input.ofNullable(schemaGroupName);
+            this.schemaGroupName = Output.ofNullable(schemaGroupName);
             return this;
         }
 
-        public Builder schemaType(@Nullable Input<Either<String,SchemaType>> schemaType) {
+        public Builder schemaType(@Nullable Output<Either<String,SchemaType>> schemaType) {
             this.schemaType = schemaType;
             return this;
         }
 
         public Builder schemaType(@Nullable Either<String,SchemaType> schemaType) {
-            this.schemaType = Input.ofNullable(schemaType);
+            this.schemaType = Output.ofNullable(schemaType);
             return this;
         }
         public SchemaRegistryArgs build() {

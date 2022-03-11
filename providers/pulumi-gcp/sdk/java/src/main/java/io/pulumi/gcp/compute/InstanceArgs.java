@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceAdvancedMachineFeaturesArgs;
 import io.pulumi.gcp.compute.inputs.InstanceAttachedDiskArgs;
@@ -34,10 +34,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advancedMachineFeatures")
-      private final @Nullable Input<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
+      private final @Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
-    public Input<InstanceAdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
-        return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
+    public Output<InstanceAdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
+        return this.advancedMachineFeatures == null ? Output.empty() : this.advancedMachineFeatures;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowStoppingForUpdate")
-      private final @Nullable Input<Boolean> allowStoppingForUpdate;
+      private final @Nullable Output<Boolean> allowStoppingForUpdate;
 
-    public Input<Boolean> getAllowStoppingForUpdate() {
-        return this.allowStoppingForUpdate == null ? Input.empty() : this.allowStoppingForUpdate;
+    public Output<Boolean> getAllowStoppingForUpdate() {
+        return this.allowStoppingForUpdate == null ? Output.empty() : this.allowStoppingForUpdate;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachedDisks")
-      private final @Nullable Input<List<InstanceAttachedDiskArgs>> attachedDisks;
+      private final @Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks;
 
-    public Input<List<InstanceAttachedDiskArgs>> getAttachedDisks() {
-        return this.attachedDisks == null ? Input.empty() : this.attachedDisks;
+    public Output<List<InstanceAttachedDiskArgs>> getAttachedDisks() {
+        return this.attachedDisks == null ? Output.empty() : this.attachedDisks;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootDisk", required=true)
-      private final Input<InstanceBootDiskArgs> bootDisk;
+      private final Output<InstanceBootDiskArgs> bootDisk;
 
-    public Input<InstanceBootDiskArgs> getBootDisk() {
+    public Output<InstanceBootDiskArgs> getBootDisk() {
         return this.bootDisk;
     }
 
@@ -82,10 +82,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="canIpForward")
-      private final @Nullable Input<Boolean> canIpForward;
+      private final @Nullable Output<Boolean> canIpForward;
 
-    public Input<Boolean> getCanIpForward() {
-        return this.canIpForward == null ? Input.empty() : this.canIpForward;
+    public Output<Boolean> getCanIpForward() {
+        return this.canIpForward == null ? Output.empty() : this.canIpForward;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="confidentialInstanceConfig")
-      private final @Nullable Input<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+      private final @Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
-    public Input<InstanceConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
-        return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
+    public Output<InstanceConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
+        return this.confidentialInstanceConfig == null ? Output.empty() : this.confidentialInstanceConfig;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionProtection")
-      private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Output<Boolean> deletionProtection;
 
-    public Input<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
+    public Output<Boolean> getDeletionProtection() {
+        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredStatus")
-      private final @Nullable Input<String> desiredStatus;
+      private final @Nullable Output<String> desiredStatus;
 
-    public Input<String> getDesiredStatus() {
-        return this.desiredStatus == null ? Input.empty() : this.desiredStatus;
+    public Output<String> getDesiredStatus() {
+        return this.desiredStatus == null ? Output.empty() : this.desiredStatus;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDisplay")
-      private final @Nullable Input<Boolean> enableDisplay;
+      private final @Nullable Output<Boolean> enableDisplay;
 
-    public Input<Boolean> getEnableDisplay() {
-        return this.enableDisplay == null ? Input.empty() : this.enableDisplay;
+    public Output<Boolean> getEnableDisplay() {
+        return this.enableDisplay == null ? Output.empty() : this.enableDisplay;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guestAccelerators")
-      private final @Nullable Input<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
+      private final @Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
 
-    public Input<List<InstanceGuestAcceleratorArgs>> getGuestAccelerators() {
-        return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
+    public Output<List<InstanceGuestAcceleratorArgs>> getGuestAccelerators() {
+        return this.guestAccelerators == null ? Output.empty() : this.guestAccelerators;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostname")
-      private final @Nullable Input<String> hostname;
+      private final @Nullable Output<String> hostname;
 
-    public Input<String> getHostname() {
-        return this.hostname == null ? Input.empty() : this.hostname;
+    public Output<String> getHostname() {
+        return this.hostname == null ? Output.empty() : this.hostname;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -187,9 +187,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType", required=true)
-      private final Input<String> machineType;
+      private final Output<String> machineType;
 
-    public Input<String> getMachineType() {
+    public Output<String> getMachineType() {
         return this.machineType;
     }
 
@@ -200,10 +200,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -220,10 +220,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataStartupScript")
-      private final @Nullable Input<String> metadataStartupScript;
+      private final @Nullable Output<String> metadataStartupScript;
 
-    public Input<String> getMetadataStartupScript() {
-        return this.metadataStartupScript == null ? Input.empty() : this.metadataStartupScript;
+    public Output<String> getMetadataStartupScript() {
+        return this.metadataStartupScript == null ? Output.empty() : this.metadataStartupScript;
     }
 
     /**
@@ -233,10 +233,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minCpuPlatform")
-      private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Output<String> minCpuPlatform;
 
-    public Input<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
+    public Output<String> getMinCpuPlatform() {
+        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -245,10 +245,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -257,9 +257,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaces", required=true)
-      private final Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
+      private final Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
 
-    public Input<List<InstanceNetworkInterfaceArgs>> getNetworkInterfaces() {
+    public Output<List<InstanceNetworkInterfaceArgs>> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
 
@@ -272,10 +272,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkPerformanceConfig")
-      private final @Nullable Input<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
+      private final @Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
-    public Input<InstanceNetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
-        return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
+    public Output<InstanceNetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
+        return this.networkPerformanceConfig == null ? Output.empty() : this.networkPerformanceConfig;
     }
 
     /**
@@ -284,10 +284,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -296,10 +296,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservationAffinity")
-      private final @Nullable Input<InstanceReservationAffinityArgs> reservationAffinity;
+      private final @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
 
-    public Input<InstanceReservationAffinityArgs> getReservationAffinity() {
-        return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
+    public Output<InstanceReservationAffinityArgs> getReservationAffinity() {
+        return this.reservationAffinity == null ? Output.empty() : this.reservationAffinity;
     }
 
     /**
@@ -307,10 +307,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePolicies")
-      private final @Nullable Input<String> resourcePolicies;
+      private final @Nullable Output<String> resourcePolicies;
 
-    public Input<String> getResourcePolicies() {
-        return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
+    public Output<String> getResourcePolicies() {
+        return this.resourcePolicies == null ? Output.empty() : this.resourcePolicies;
     }
 
     /**
@@ -319,10 +319,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduling")
-      private final @Nullable Input<InstanceSchedulingArgs> scheduling;
+      private final @Nullable Output<InstanceSchedulingArgs> scheduling;
 
-    public Input<InstanceSchedulingArgs> getScheduling() {
-        return this.scheduling == null ? Input.empty() : this.scheduling;
+    public Output<InstanceSchedulingArgs> getScheduling() {
+        return this.scheduling == null ? Output.empty() : this.scheduling;
     }
 
     /**
@@ -331,10 +331,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scratchDisks")
-      private final @Nullable Input<List<InstanceScratchDiskArgs>> scratchDisks;
+      private final @Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks;
 
-    public Input<List<InstanceScratchDiskArgs>> getScratchDisks() {
-        return this.scratchDisks == null ? Input.empty() : this.scratchDisks;
+    public Output<List<InstanceScratchDiskArgs>> getScratchDisks() {
+        return this.scratchDisks == null ? Output.empty() : this.scratchDisks;
     }
 
     /**
@@ -344,10 +344,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<InstanceServiceAccountArgs> serviceAccount;
+      private final @Nullable Output<InstanceServiceAccountArgs> serviceAccount;
 
-    public Input<InstanceServiceAccountArgs> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<InstanceServiceAccountArgs> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -357,10 +357,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-      private final @Nullable Input<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Input<InstanceShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
+    public Output<InstanceShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -368,10 +368,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -379,42 +379,42 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public InstanceArgs(
-        @Nullable Input<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures,
-        @Nullable Input<Boolean> allowStoppingForUpdate,
-        @Nullable Input<List<InstanceAttachedDiskArgs>> attachedDisks,
-        Input<InstanceBootDiskArgs> bootDisk,
-        @Nullable Input<Boolean> canIpForward,
-        @Nullable Input<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig,
-        @Nullable Input<Boolean> deletionProtection,
-        @Nullable Input<String> description,
-        @Nullable Input<String> desiredStatus,
-        @Nullable Input<Boolean> enableDisplay,
-        @Nullable Input<List<InstanceGuestAcceleratorArgs>> guestAccelerators,
-        @Nullable Input<String> hostname,
-        @Nullable Input<Map<String,String>> labels,
-        Input<String> machineType,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> metadataStartupScript,
-        @Nullable Input<String> minCpuPlatform,
-        @Nullable Input<String> name,
-        Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Input<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<InstanceReservationAffinityArgs> reservationAffinity,
-        @Nullable Input<String> resourcePolicies,
-        @Nullable Input<InstanceSchedulingArgs> scheduling,
-        @Nullable Input<List<InstanceScratchDiskArgs>> scratchDisks,
-        @Nullable Input<InstanceServiceAccountArgs> serviceAccount,
-        @Nullable Input<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<String> zone) {
+        @Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures,
+        @Nullable Output<Boolean> allowStoppingForUpdate,
+        @Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks,
+        Output<InstanceBootDiskArgs> bootDisk,
+        @Nullable Output<Boolean> canIpForward,
+        @Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig,
+        @Nullable Output<Boolean> deletionProtection,
+        @Nullable Output<String> description,
+        @Nullable Output<String> desiredStatus,
+        @Nullable Output<Boolean> enableDisplay,
+        @Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators,
+        @Nullable Output<String> hostname,
+        @Nullable Output<Map<String,String>> labels,
+        Output<String> machineType,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> metadataStartupScript,
+        @Nullable Output<String> minCpuPlatform,
+        @Nullable Output<String> name,
+        Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces,
+        @Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity,
+        @Nullable Output<String> resourcePolicies,
+        @Nullable Output<InstanceSchedulingArgs> scheduling,
+        @Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks,
+        @Nullable Output<InstanceServiceAccountArgs> serviceAccount,
+        @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<String> zone) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.allowStoppingForUpdate = allowStoppingForUpdate;
         this.attachedDisks = attachedDisks;
@@ -447,35 +447,35 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.advancedMachineFeatures = Input.empty();
-        this.allowStoppingForUpdate = Input.empty();
-        this.attachedDisks = Input.empty();
-        this.bootDisk = Input.empty();
-        this.canIpForward = Input.empty();
-        this.confidentialInstanceConfig = Input.empty();
-        this.deletionProtection = Input.empty();
-        this.description = Input.empty();
-        this.desiredStatus = Input.empty();
-        this.enableDisplay = Input.empty();
-        this.guestAccelerators = Input.empty();
-        this.hostname = Input.empty();
-        this.labels = Input.empty();
-        this.machineType = Input.empty();
-        this.metadata = Input.empty();
-        this.metadataStartupScript = Input.empty();
-        this.minCpuPlatform = Input.empty();
-        this.name = Input.empty();
-        this.networkInterfaces = Input.empty();
-        this.networkPerformanceConfig = Input.empty();
-        this.project = Input.empty();
-        this.reservationAffinity = Input.empty();
-        this.resourcePolicies = Input.empty();
-        this.scheduling = Input.empty();
-        this.scratchDisks = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.shieldedInstanceConfig = Input.empty();
-        this.tags = Input.empty();
-        this.zone = Input.empty();
+        this.advancedMachineFeatures = Output.empty();
+        this.allowStoppingForUpdate = Output.empty();
+        this.attachedDisks = Output.empty();
+        this.bootDisk = Output.empty();
+        this.canIpForward = Output.empty();
+        this.confidentialInstanceConfig = Output.empty();
+        this.deletionProtection = Output.empty();
+        this.description = Output.empty();
+        this.desiredStatus = Output.empty();
+        this.enableDisplay = Output.empty();
+        this.guestAccelerators = Output.empty();
+        this.hostname = Output.empty();
+        this.labels = Output.empty();
+        this.machineType = Output.empty();
+        this.metadata = Output.empty();
+        this.metadataStartupScript = Output.empty();
+        this.minCpuPlatform = Output.empty();
+        this.name = Output.empty();
+        this.networkInterfaces = Output.empty();
+        this.networkPerformanceConfig = Output.empty();
+        this.project = Output.empty();
+        this.reservationAffinity = Output.empty();
+        this.resourcePolicies = Output.empty();
+        this.scheduling = Output.empty();
+        this.scratchDisks = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.shieldedInstanceConfig = Output.empty();
+        this.tags = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -487,35 +487,35 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
-        private @Nullable Input<Boolean> allowStoppingForUpdate;
-        private @Nullable Input<List<InstanceAttachedDiskArgs>> attachedDisks;
-        private Input<InstanceBootDiskArgs> bootDisk;
-        private @Nullable Input<Boolean> canIpForward;
-        private @Nullable Input<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
-        private @Nullable Input<Boolean> deletionProtection;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> desiredStatus;
-        private @Nullable Input<Boolean> enableDisplay;
-        private @Nullable Input<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
-        private @Nullable Input<String> hostname;
-        private @Nullable Input<Map<String,String>> labels;
-        private Input<String> machineType;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> metadataStartupScript;
-        private @Nullable Input<String> minCpuPlatform;
-        private @Nullable Input<String> name;
-        private Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Input<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<InstanceReservationAffinityArgs> reservationAffinity;
-        private @Nullable Input<String> resourcePolicies;
-        private @Nullable Input<InstanceSchedulingArgs> scheduling;
-        private @Nullable Input<List<InstanceScratchDiskArgs>> scratchDisks;
-        private @Nullable Input<InstanceServiceAccountArgs> serviceAccount;
-        private @Nullable Input<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
+        private @Nullable Output<Boolean> allowStoppingForUpdate;
+        private @Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks;
+        private Output<InstanceBootDiskArgs> bootDisk;
+        private @Nullable Output<Boolean> canIpForward;
+        private @Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+        private @Nullable Output<Boolean> deletionProtection;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> desiredStatus;
+        private @Nullable Output<Boolean> enableDisplay;
+        private @Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
+        private @Nullable Output<String> hostname;
+        private @Nullable Output<Map<String,String>> labels;
+        private Output<String> machineType;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> metadataStartupScript;
+        private @Nullable Output<String> minCpuPlatform;
+        private @Nullable Output<String> name;
+        private Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
+        private @Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
+        private @Nullable Output<String> resourcePolicies;
+        private @Nullable Output<InstanceSchedulingArgs> scheduling;
+        private @Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks;
+        private @Nullable Output<InstanceServiceAccountArgs> serviceAccount;
+        private @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -554,293 +554,293 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder advancedMachineFeatures(@Nullable Input<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(@Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             this.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
         public Builder advancedMachineFeatures(@Nullable InstanceAdvancedMachineFeaturesArgs advancedMachineFeatures) {
-            this.advancedMachineFeatures = Input.ofNullable(advancedMachineFeatures);
+            this.advancedMachineFeatures = Output.ofNullable(advancedMachineFeatures);
             return this;
         }
 
-        public Builder allowStoppingForUpdate(@Nullable Input<Boolean> allowStoppingForUpdate) {
+        public Builder allowStoppingForUpdate(@Nullable Output<Boolean> allowStoppingForUpdate) {
             this.allowStoppingForUpdate = allowStoppingForUpdate;
             return this;
         }
 
         public Builder allowStoppingForUpdate(@Nullable Boolean allowStoppingForUpdate) {
-            this.allowStoppingForUpdate = Input.ofNullable(allowStoppingForUpdate);
+            this.allowStoppingForUpdate = Output.ofNullable(allowStoppingForUpdate);
             return this;
         }
 
-        public Builder attachedDisks(@Nullable Input<List<InstanceAttachedDiskArgs>> attachedDisks) {
+        public Builder attachedDisks(@Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks) {
             this.attachedDisks = attachedDisks;
             return this;
         }
 
         public Builder attachedDisks(@Nullable List<InstanceAttachedDiskArgs> attachedDisks) {
-            this.attachedDisks = Input.ofNullable(attachedDisks);
+            this.attachedDisks = Output.ofNullable(attachedDisks);
             return this;
         }
 
-        public Builder bootDisk(Input<InstanceBootDiskArgs> bootDisk) {
+        public Builder bootDisk(Output<InstanceBootDiskArgs> bootDisk) {
             this.bootDisk = Objects.requireNonNull(bootDisk);
             return this;
         }
 
         public Builder bootDisk(InstanceBootDiskArgs bootDisk) {
-            this.bootDisk = Input.of(Objects.requireNonNull(bootDisk));
+            this.bootDisk = Output.of(Objects.requireNonNull(bootDisk));
             return this;
         }
 
-        public Builder canIpForward(@Nullable Input<Boolean> canIpForward) {
+        public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             this.canIpForward = canIpForward;
             return this;
         }
 
         public Builder canIpForward(@Nullable Boolean canIpForward) {
-            this.canIpForward = Input.ofNullable(canIpForward);
+            this.canIpForward = Output.ofNullable(canIpForward);
             return this;
         }
 
-        public Builder confidentialInstanceConfig(@Nullable Input<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(@Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             this.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
 
         public Builder confidentialInstanceConfig(@Nullable InstanceConfidentialInstanceConfigArgs confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = Input.ofNullable(confidentialInstanceConfig);
+            this.confidentialInstanceConfig = Output.ofNullable(confidentialInstanceConfig);
             return this;
         }
 
-        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Input.ofNullable(deletionProtection);
+            this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder desiredStatus(@Nullable Input<String> desiredStatus) {
+        public Builder desiredStatus(@Nullable Output<String> desiredStatus) {
             this.desiredStatus = desiredStatus;
             return this;
         }
 
         public Builder desiredStatus(@Nullable String desiredStatus) {
-            this.desiredStatus = Input.ofNullable(desiredStatus);
+            this.desiredStatus = Output.ofNullable(desiredStatus);
             return this;
         }
 
-        public Builder enableDisplay(@Nullable Input<Boolean> enableDisplay) {
+        public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
             this.enableDisplay = enableDisplay;
             return this;
         }
 
         public Builder enableDisplay(@Nullable Boolean enableDisplay) {
-            this.enableDisplay = Input.ofNullable(enableDisplay);
+            this.enableDisplay = Output.ofNullable(enableDisplay);
             return this;
         }
 
-        public Builder guestAccelerators(@Nullable Input<List<InstanceGuestAcceleratorArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
         public Builder guestAccelerators(@Nullable List<InstanceGuestAcceleratorArgs> guestAccelerators) {
-            this.guestAccelerators = Input.ofNullable(guestAccelerators);
+            this.guestAccelerators = Output.ofNullable(guestAccelerators);
             return this;
         }
 
-        public Builder hostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Input.ofNullable(hostname);
+            this.hostname = Output.ofNullable(hostname);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder machineType(Input<String> machineType) {
+        public Builder machineType(Output<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
         public Builder machineType(String machineType) {
-            this.machineType = Input.of(Objects.requireNonNull(machineType));
+            this.machineType = Output.of(Objects.requireNonNull(machineType));
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder metadataStartupScript(@Nullable Input<String> metadataStartupScript) {
+        public Builder metadataStartupScript(@Nullable Output<String> metadataStartupScript) {
             this.metadataStartupScript = metadataStartupScript;
             return this;
         }
 
         public Builder metadataStartupScript(@Nullable String metadataStartupScript) {
-            this.metadataStartupScript = Input.ofNullable(metadataStartupScript);
+            this.metadataStartupScript = Output.ofNullable(metadataStartupScript);
             return this;
         }
 
-        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkInterfaces(Input<List<InstanceNetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
 
         public Builder networkInterfaces(List<InstanceNetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Input.of(Objects.requireNonNull(networkInterfaces));
+            this.networkInterfaces = Output.of(Objects.requireNonNull(networkInterfaces));
             return this;
         }
 
-        public Builder networkPerformanceConfig(@Nullable Input<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(@Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig) {
             this.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
 
         public Builder networkPerformanceConfig(@Nullable InstanceNetworkPerformanceConfigArgs networkPerformanceConfig) {
-            this.networkPerformanceConfig = Input.ofNullable(networkPerformanceConfig);
+            this.networkPerformanceConfig = Output.ofNullable(networkPerformanceConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder reservationAffinity(@Nullable Input<InstanceReservationAffinityArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Output<InstanceReservationAffinityArgs> reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
 
         public Builder reservationAffinity(@Nullable InstanceReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Input.ofNullable(reservationAffinity);
+            this.reservationAffinity = Output.ofNullable(reservationAffinity);
             return this;
         }
 
-        public Builder resourcePolicies(@Nullable Input<String> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Output<String> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
         public Builder resourcePolicies(@Nullable String resourcePolicies) {
-            this.resourcePolicies = Input.ofNullable(resourcePolicies);
+            this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder scheduling(@Nullable Input<InstanceSchedulingArgs> scheduling) {
+        public Builder scheduling(@Nullable Output<InstanceSchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
         public Builder scheduling(@Nullable InstanceSchedulingArgs scheduling) {
-            this.scheduling = Input.ofNullable(scheduling);
+            this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
 
-        public Builder scratchDisks(@Nullable Input<List<InstanceScratchDiskArgs>> scratchDisks) {
+        public Builder scratchDisks(@Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks) {
             this.scratchDisks = scratchDisks;
             return this;
         }
 
         public Builder scratchDisks(@Nullable List<InstanceScratchDiskArgs> scratchDisks) {
-            this.scratchDisks = Input.ofNullable(scratchDisks);
+            this.scratchDisks = Output.ofNullable(scratchDisks);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<InstanceServiceAccountArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<InstanceServiceAccountArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable InstanceServiceAccountArgs serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder shieldedInstanceConfig(@Nullable Input<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
         public Builder shieldedInstanceConfig(@Nullable InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public InstanceArgs build() {

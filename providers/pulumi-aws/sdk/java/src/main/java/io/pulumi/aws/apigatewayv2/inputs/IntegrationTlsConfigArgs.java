@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class IntegrationTlsConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="serverNameToVerify")
-      private final @Nullable Input<String> serverNameToVerify;
+      private final @Nullable Output<String> serverNameToVerify;
 
-    public Input<String> getServerNameToVerify() {
-        return this.serverNameToVerify == null ? Input.empty() : this.serverNameToVerify;
+    public Output<String> getServerNameToVerify() {
+        return this.serverNameToVerify == null ? Output.empty() : this.serverNameToVerify;
     }
 
-    public IntegrationTlsConfigArgs(@Nullable Input<String> serverNameToVerify) {
+    public IntegrationTlsConfigArgs(@Nullable Output<String> serverNameToVerify) {
         this.serverNameToVerify = serverNameToVerify;
     }
 
     private IntegrationTlsConfigArgs() {
-        this.serverNameToVerify = Input.empty();
+        this.serverNameToVerify = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class IntegrationTlsConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> serverNameToVerify;
+        private @Nullable Output<String> serverNameToVerify;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class IntegrationTlsConfigArgs extends io.pulumi.resources.Resource
     	      this.serverNameToVerify = defaults.serverNameToVerify;
         }
 
-        public Builder serverNameToVerify(@Nullable Input<String> serverNameToVerify) {
+        public Builder serverNameToVerify(@Nullable Output<String> serverNameToVerify) {
             this.serverNameToVerify = serverNameToVerify;
             return this;
         }
 
         public Builder serverNameToVerify(@Nullable String serverNameToVerify) {
-            this.serverNameToVerify = Input.ofNullable(serverNameToVerify);
+            this.serverNameToVerify = Output.ofNullable(serverNameToVerify);
             return this;
         }
         public IntegrationTlsConfigArgs build() {

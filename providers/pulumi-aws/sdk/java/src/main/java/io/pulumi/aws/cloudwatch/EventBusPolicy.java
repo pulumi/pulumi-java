@@ -6,7 +6,6 @@ package io.pulumi.aws.cloudwatch;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.EventBusPolicyArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventBusPolicyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -92,14 +91,14 @@ public class EventBusPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventBusPolicy(String name, EventBusPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/eventBusPolicy:EventBusPolicy", name, args == null ? EventBusPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudwatch/eventBusPolicy:EventBusPolicy", name, args == null ? EventBusPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventBusPolicy(String name, Input<String> id, @Nullable EventBusPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventBusPolicy(String name, Output<String> id, @Nullable EventBusPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudwatch/eventBusPolicy:EventBusPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -115,7 +114,7 @@ public class EventBusPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventBusPolicy get(String name, Input<String> id, @Nullable EventBusPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventBusPolicy get(String name, Output<String> id, @Nullable EventBusPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventBusPolicy(name, id, state, options);
     }
 }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.authorization.enums.LockLevel;
 import io.pulumi.azurenative.authorization.inputs.ManagementLockOwnerArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="level", required=true)
-      private final Input<Either<String,LockLevel>> level;
+      private final Output<Either<String,LockLevel>> level;
 
-    public Input<Either<String,LockLevel>> getLevel() {
+    public Output<Either<String,LockLevel>> getLevel() {
         return this.level;
     }
 
@@ -34,10 +34,10 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lockName")
-      private final @Nullable Input<String> lockName;
+      private final @Nullable Output<String> lockName;
 
-    public Input<String> getLockName() {
-        return this.lockName == null ? Input.empty() : this.lockName;
+    public Output<String> getLockName() {
+        return this.lockName == null ? Output.empty() : this.lockName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="notes")
-      private final @Nullable Input<String> notes;
+      private final @Nullable Output<String> notes;
 
-    public Input<String> getNotes() {
-        return this.notes == null ? Input.empty() : this.notes;
+    public Output<String> getNotes() {
+        return this.notes == null ? Output.empty() : this.notes;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="owners")
-      private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
+      private final @Nullable Output<List<ManagementLockOwnerArgs>> owners;
 
-    public Input<List<ManagementLockOwnerArgs>> getOwners() {
-        return this.owners == null ? Input.empty() : this.owners;
+    public Output<List<ManagementLockOwnerArgs>> getOwners() {
+        return this.owners == null ? Output.empty() : this.owners;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public ManagementLockByScopeArgs(
-        Input<Either<String,LockLevel>> level,
-        @Nullable Input<String> lockName,
-        @Nullable Input<String> notes,
-        @Nullable Input<List<ManagementLockOwnerArgs>> owners,
-        Input<String> scope) {
+        Output<Either<String,LockLevel>> level,
+        @Nullable Output<String> lockName,
+        @Nullable Output<String> notes,
+        @Nullable Output<List<ManagementLockOwnerArgs>> owners,
+        Output<String> scope) {
         this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
         this.lockName = lockName;
         this.notes = notes;
@@ -87,11 +87,11 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
     }
 
     private ManagementLockByScopeArgs() {
-        this.level = Input.empty();
-        this.lockName = Input.empty();
-        this.notes = Input.empty();
-        this.owners = Input.empty();
-        this.scope = Input.empty();
+        this.level = Output.empty();
+        this.lockName = Output.empty();
+        this.notes = Output.empty();
+        this.owners = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Either<String,LockLevel>> level;
-        private @Nullable Input<String> lockName;
-        private @Nullable Input<String> notes;
-        private @Nullable Input<List<ManagementLockOwnerArgs>> owners;
-        private Input<String> scope;
+        private Output<Either<String,LockLevel>> level;
+        private @Nullable Output<String> lockName;
+        private @Nullable Output<String> notes;
+        private @Nullable Output<List<ManagementLockOwnerArgs>> owners;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
     	      this.scope = defaults.scope;
         }
 
-        public Builder level(Input<Either<String,LockLevel>> level) {
+        public Builder level(Output<Either<String,LockLevel>> level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
         public Builder level(Either<String,LockLevel> level) {
-            this.level = Input.of(Objects.requireNonNull(level));
+            this.level = Output.of(Objects.requireNonNull(level));
             return this;
         }
 
-        public Builder lockName(@Nullable Input<String> lockName) {
+        public Builder lockName(@Nullable Output<String> lockName) {
             this.lockName = lockName;
             return this;
         }
 
         public Builder lockName(@Nullable String lockName) {
-            this.lockName = Input.ofNullable(lockName);
+            this.lockName = Output.ofNullable(lockName);
             return this;
         }
 
-        public Builder notes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
 
         public Builder notes(@Nullable String notes) {
-            this.notes = Input.ofNullable(notes);
+            this.notes = Output.ofNullable(notes);
             return this;
         }
 
-        public Builder owners(@Nullable Input<List<ManagementLockOwnerArgs>> owners) {
+        public Builder owners(@Nullable Output<List<ManagementLockOwnerArgs>> owners) {
             this.owners = owners;
             return this;
         }
 
         public Builder owners(@Nullable List<ManagementLockOwnerArgs> owners) {
-            this.owners = Input.ofNullable(owners);
+            this.owners = Output.ofNullable(owners);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public ManagementLockByScopeArgs build() {

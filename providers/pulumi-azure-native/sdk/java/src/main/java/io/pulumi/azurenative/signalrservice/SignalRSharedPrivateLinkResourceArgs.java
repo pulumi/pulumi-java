@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="groupId", required=true)
-      private final Input<String> groupId;
+      private final Output<String> groupId;
 
-    public Input<String> getGroupId() {
+    public Output<String> getGroupId() {
         return this.groupId;
     }
 
@@ -30,9 +30,9 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="privateLinkResourceId", required=true)
-      private final Input<String> privateLinkResourceId;
+      private final Output<String> privateLinkResourceId;
 
-    public Input<String> getPrivateLinkResourceId() {
+    public Output<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId;
     }
 
@@ -41,10 +41,10 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="requestMessage")
-      private final @Nullable Input<String> requestMessage;
+      private final @Nullable Output<String> requestMessage;
 
-    public Input<String> getRequestMessage() {
-        return this.requestMessage == null ? Input.empty() : this.requestMessage;
+    public Output<String> getRequestMessage() {
+        return this.requestMessage == null ? Output.empty() : this.requestMessage;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,9 +63,9 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -74,19 +74,19 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sharedPrivateLinkResourceName")
-      private final @Nullable Input<String> sharedPrivateLinkResourceName;
+      private final @Nullable Output<String> sharedPrivateLinkResourceName;
 
-    public Input<String> getSharedPrivateLinkResourceName() {
-        return this.sharedPrivateLinkResourceName == null ? Input.empty() : this.sharedPrivateLinkResourceName;
+    public Output<String> getSharedPrivateLinkResourceName() {
+        return this.sharedPrivateLinkResourceName == null ? Output.empty() : this.sharedPrivateLinkResourceName;
     }
 
     public SignalRSharedPrivateLinkResourceArgs(
-        Input<String> groupId,
-        Input<String> privateLinkResourceId,
-        @Nullable Input<String> requestMessage,
-        Input<String> resourceGroupName,
-        Input<String> resourceName,
-        @Nullable Input<String> sharedPrivateLinkResourceName) {
+        Output<String> groupId,
+        Output<String> privateLinkResourceId,
+        @Nullable Output<String> requestMessage,
+        Output<String> resourceGroupName,
+        Output<String> resourceName,
+        @Nullable Output<String> sharedPrivateLinkResourceName) {
         this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
         this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId, "expected parameter 'privateLinkResourceId' to be non-null");
         this.requestMessage = requestMessage;
@@ -96,12 +96,12 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
     }
 
     private SignalRSharedPrivateLinkResourceArgs() {
-        this.groupId = Input.empty();
-        this.privateLinkResourceId = Input.empty();
-        this.requestMessage = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.sharedPrivateLinkResourceName = Input.empty();
+        this.groupId = Output.empty();
+        this.privateLinkResourceId = Output.empty();
+        this.requestMessage = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.sharedPrivateLinkResourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> groupId;
-        private Input<String> privateLinkResourceId;
-        private @Nullable Input<String> requestMessage;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
-        private @Nullable Input<String> sharedPrivateLinkResourceName;
+        private Output<String> groupId;
+        private Output<String> privateLinkResourceId;
+        private @Nullable Output<String> requestMessage;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
+        private @Nullable Output<String> sharedPrivateLinkResourceName;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
     	      this.sharedPrivateLinkResourceName = defaults.sharedPrivateLinkResourceName;
         }
 
-        public Builder groupId(Input<String> groupId) {
+        public Builder groupId(Output<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Input.of(Objects.requireNonNull(groupId));
+            this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
 
-        public Builder privateLinkResourceId(Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId);
             return this;
         }
 
         public Builder privateLinkResourceId(String privateLinkResourceId) {
-            this.privateLinkResourceId = Input.of(Objects.requireNonNull(privateLinkResourceId));
+            this.privateLinkResourceId = Output.of(Objects.requireNonNull(privateLinkResourceId));
             return this;
         }
 
-        public Builder requestMessage(@Nullable Input<String> requestMessage) {
+        public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Input.ofNullable(requestMessage);
+            this.requestMessage = Output.ofNullable(requestMessage);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder sharedPrivateLinkResourceName(@Nullable Input<String> sharedPrivateLinkResourceName) {
+        public Builder sharedPrivateLinkResourceName(@Nullable Output<String> sharedPrivateLinkResourceName) {
             this.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
             return this;
         }
 
         public Builder sharedPrivateLinkResourceName(@Nullable String sharedPrivateLinkResourceName) {
-            this.sharedPrivateLinkResourceName = Input.ofNullable(sharedPrivateLinkResourceName);
+            this.sharedPrivateLinkResourceName = Output.ofNullable(sharedPrivateLinkResourceName);
             return this;
         }
         public SignalRSharedPrivateLinkResourceArgs build() {

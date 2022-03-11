@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="duration", required=true)
-      private final Input<String> duration;
+      private final Output<String> duration;
 
-    public Input<String> getDuration() {
+    public Output<String> getDuration() {
         return this.duration;
     }
 
-    public WaitStepAttributesArgs(Input<String> duration) {
+    public WaitStepAttributesArgs(Output<String> duration) {
         this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
     }
 
     private WaitStepAttributesArgs() {
-        this.duration = Input.empty();
+        this.duration = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> duration;
+        private Output<String> duration;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
     	      this.duration = defaults.duration;
         }
 
-        public Builder duration(Input<String> duration) {
+        public Builder duration(Output<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
         public Builder duration(String duration) {
-            this.duration = Input.of(Objects.requireNonNull(duration));
+            this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
         public WaitStepAttributesArgs build() {

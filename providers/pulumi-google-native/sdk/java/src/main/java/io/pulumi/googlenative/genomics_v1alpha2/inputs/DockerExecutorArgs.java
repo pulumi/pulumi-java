@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cmd", required=true)
-      private final Input<String> cmd;
+      private final Output<String> cmd;
 
-    public Input<String> getCmd() {
+    public Output<String> getCmd() {
         return this.cmd;
     }
 
@@ -33,22 +33,22 @@ public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageName", required=true)
-      private final Input<String> imageName;
+      private final Output<String> imageName;
 
-    public Input<String> getImageName() {
+    public Output<String> getImageName() {
         return this.imageName;
     }
 
     public DockerExecutorArgs(
-        Input<String> cmd,
-        Input<String> imageName) {
+        Output<String> cmd,
+        Output<String> imageName) {
         this.cmd = Objects.requireNonNull(cmd, "expected parameter 'cmd' to be non-null");
         this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
     }
 
     private DockerExecutorArgs() {
-        this.cmd = Input.empty();
-        this.imageName = Input.empty();
+        this.cmd = Output.empty();
+        this.imageName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cmd;
-        private Input<String> imageName;
+        private Output<String> cmd;
+        private Output<String> imageName;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.imageName = defaults.imageName;
         }
 
-        public Builder cmd(Input<String> cmd) {
+        public Builder cmd(Output<String> cmd) {
             this.cmd = Objects.requireNonNull(cmd);
             return this;
         }
 
         public Builder cmd(String cmd) {
-            this.cmd = Input.of(Objects.requireNonNull(cmd));
+            this.cmd = Output.of(Objects.requireNonNull(cmd));
             return this;
         }
 
-        public Builder imageName(Input<String> imageName) {
+        public Builder imageName(Output<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
         public Builder imageName(String imageName) {
-            this.imageName = Input.of(Objects.requireNonNull(imageName));
+            this.imageName = Output.of(Objects.requireNonNull(imageName));
             return this;
         }
         public DockerExecutorArgs build() {

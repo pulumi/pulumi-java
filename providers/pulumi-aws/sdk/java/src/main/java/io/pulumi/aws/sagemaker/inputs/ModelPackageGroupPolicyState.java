@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class ModelPackageGroupPolicyState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="modelPackageGroupName")
-      private final @Nullable Input<String> modelPackageGroupName;
+      private final @Nullable Output<String> modelPackageGroupName;
 
-    public Input<String> getModelPackageGroupName() {
-        return this.modelPackageGroupName == null ? Input.empty() : this.modelPackageGroupName;
+    public Output<String> getModelPackageGroupName() {
+        return this.modelPackageGroupName == null ? Output.empty() : this.modelPackageGroupName;
     }
 
     @InputImport(name="resourcePolicy")
-      private final @Nullable Input<String> resourcePolicy;
+      private final @Nullable Output<String> resourcePolicy;
 
-    public Input<String> getResourcePolicy() {
-        return this.resourcePolicy == null ? Input.empty() : this.resourcePolicy;
+    public Output<String> getResourcePolicy() {
+        return this.resourcePolicy == null ? Output.empty() : this.resourcePolicy;
     }
 
     public ModelPackageGroupPolicyState(
-        @Nullable Input<String> modelPackageGroupName,
-        @Nullable Input<String> resourcePolicy) {
+        @Nullable Output<String> modelPackageGroupName,
+        @Nullable Output<String> resourcePolicy) {
         this.modelPackageGroupName = modelPackageGroupName;
         this.resourcePolicy = resourcePolicy;
     }
 
     private ModelPackageGroupPolicyState() {
-        this.modelPackageGroupName = Input.empty();
-        this.resourcePolicy = Input.empty();
+        this.modelPackageGroupName = Output.empty();
+        this.resourcePolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ModelPackageGroupPolicyState extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> modelPackageGroupName;
-        private @Nullable Input<String> resourcePolicy;
+        private @Nullable Output<String> modelPackageGroupName;
+        private @Nullable Output<String> resourcePolicy;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ModelPackageGroupPolicyState extends io.pulumi.resources.Reso
     	      this.resourcePolicy = defaults.resourcePolicy;
         }
 
-        public Builder modelPackageGroupName(@Nullable Input<String> modelPackageGroupName) {
+        public Builder modelPackageGroupName(@Nullable Output<String> modelPackageGroupName) {
             this.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
 
         public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
-            this.modelPackageGroupName = Input.ofNullable(modelPackageGroupName);
+            this.modelPackageGroupName = Output.ofNullable(modelPackageGroupName);
             return this;
         }
 
-        public Builder resourcePolicy(@Nullable Input<String> resourcePolicy) {
+        public Builder resourcePolicy(@Nullable Output<String> resourcePolicy) {
             this.resourcePolicy = resourcePolicy;
             return this;
         }
 
         public Builder resourcePolicy(@Nullable String resourcePolicy) {
-            this.resourcePolicy = Input.ofNullable(resourcePolicy);
+            this.resourcePolicy = Output.ofNullable(resourcePolicy);
             return this;
         }
         public ModelPackageGroupPolicyState build() {

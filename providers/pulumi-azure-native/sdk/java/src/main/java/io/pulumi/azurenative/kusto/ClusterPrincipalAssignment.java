@@ -6,7 +6,6 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.kusto.ClusterPrincipalAssignmentArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -196,23 +195,23 @@ public class ClusterPrincipalAssignment extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterPrincipalAssignment(String name, ClusterPrincipalAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:kusto:ClusterPrincipalAssignment", name, args == null ? ClusterPrincipalAssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:kusto:ClusterPrincipalAssignment", name, args == null ? ClusterPrincipalAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ClusterPrincipalAssignment(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ClusterPrincipalAssignment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:kusto:ClusterPrincipalAssignment", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:kusto/v20191109:ClusterPrincipalAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20200215:ClusterPrincipalAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20200614:ClusterPrincipalAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20200918:ClusterPrincipalAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20210101:ClusterPrincipalAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:kusto/v20210827:ClusterPrincipalAssignment").build())
+                Output.of(Alias.builder().setType("azure-native:kusto/v20191109:ClusterPrincipalAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200215:ClusterPrincipalAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200614:ClusterPrincipalAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20200918:ClusterPrincipalAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20210101:ClusterPrincipalAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:kusto/v20210827:ClusterPrincipalAssignment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -226,7 +225,7 @@ public class ClusterPrincipalAssignment extends io.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ClusterPrincipalAssignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ClusterPrincipalAssignment get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ClusterPrincipalAssignment(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class DatastoreTimestampPartitionArgs extends io.pulumi.resources.R
     public static final DatastoreTimestampPartitionArgs Empty = new DatastoreTimestampPartitionArgs();
 
     @InputImport(name="attributeName", required=true)
-      private final Input<String> attributeName;
+      private final Output<String> attributeName;
 
-    public Input<String> getAttributeName() {
+    public Output<String> getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="timestampFormat")
-      private final @Nullable Input<String> timestampFormat;
+      private final @Nullable Output<String> timestampFormat;
 
-    public Input<String> getTimestampFormat() {
-        return this.timestampFormat == null ? Input.empty() : this.timestampFormat;
+    public Output<String> getTimestampFormat() {
+        return this.timestampFormat == null ? Output.empty() : this.timestampFormat;
     }
 
     public DatastoreTimestampPartitionArgs(
-        Input<String> attributeName,
-        @Nullable Input<String> timestampFormat) {
+        Output<String> attributeName,
+        @Nullable Output<String> timestampFormat) {
         this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
         this.timestampFormat = timestampFormat;
     }
 
     private DatastoreTimestampPartitionArgs() {
-        this.attributeName = Input.empty();
-        this.timestampFormat = Input.empty();
+        this.attributeName = Output.empty();
+        this.timestampFormat = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class DatastoreTimestampPartitionArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> attributeName;
-        private @Nullable Input<String> timestampFormat;
+        private Output<String> attributeName;
+        private @Nullable Output<String> timestampFormat;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class DatastoreTimestampPartitionArgs extends io.pulumi.resources.R
     	      this.timestampFormat = defaults.timestampFormat;
         }
 
-        public Builder attributeName(Input<String> attributeName) {
+        public Builder attributeName(Output<String> attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
         public Builder attributeName(String attributeName) {
-            this.attributeName = Input.of(Objects.requireNonNull(attributeName));
+            this.attributeName = Output.of(Objects.requireNonNull(attributeName));
             return this;
         }
 
-        public Builder timestampFormat(@Nullable Input<String> timestampFormat) {
+        public Builder timestampFormat(@Nullable Output<String> timestampFormat) {
             this.timestampFormat = timestampFormat;
             return this;
         }
 
         public Builder timestampFormat(@Nullable String timestampFormat) {
-            this.timestampFormat = Input.ofNullable(timestampFormat);
+            this.timestampFormat = Output.ofNullable(timestampFormat);
             return this;
         }
         public DatastoreTimestampPartitionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.enums.WebTestKind;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequency")
-      private final @Nullable Input<Integer> frequency;
+      private final @Nullable Output<Integer> frequency;
 
-    public Input<Integer> getFrequency() {
-        return this.frequency == null ? Input.empty() : this.frequency;
+    public Output<Integer> getFrequency() {
+        return this.frequency == null ? Output.empty() : this.frequency;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<WebTestKind> kind;
+      private final @Nullable Output<WebTestKind> kind;
 
-    public Input<WebTestKind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<WebTestKind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,10 +89,10 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryEnabled")
-      private final @Nullable Input<Boolean> retryEnabled;
+      private final @Nullable Output<Boolean> retryEnabled;
 
-    public Input<Boolean> getRetryEnabled() {
-        return this.retryEnabled == null ? Input.empty() : this.retryEnabled;
+    public Output<Boolean> getRetryEnabled() {
+        return this.retryEnabled == null ? Output.empty() : this.retryEnabled;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syntheticMonitorId", required=true)
-      private final Input<String> syntheticMonitorId;
+      private final Output<String> syntheticMonitorId;
 
-    public Input<String> getSyntheticMonitorId() {
+    public Output<String> getSyntheticMonitorId() {
         return this.syntheticMonitorId;
     }
 
@@ -111,10 +111,10 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -133,9 +133,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webTestKind", required=true)
-      private final Input<WebTestKind> webTestKind;
+      private final Output<WebTestKind> webTestKind;
 
-    public Input<WebTestKind> getWebTestKind() {
+    public Output<WebTestKind> getWebTestKind() {
         return this.webTestKind;
     }
 
@@ -144,52 +144,52 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webTestName")
-      private final @Nullable Input<String> webTestName;
+      private final @Nullable Output<String> webTestName;
 
-    public Input<String> getWebTestName() {
-        return this.webTestName == null ? Input.empty() : this.webTestName;
+    public Output<String> getWebTestName() {
+        return this.webTestName == null ? Output.empty() : this.webTestName;
     }
 
     public WebTestArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Integer> frequency,
-        @Nullable Input<WebTestKind> kind,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Boolean> retryEnabled,
-        Input<String> syntheticMonitorId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> timeout,
-        Input<WebTestKind> webTestKind,
-        @Nullable Input<String> webTestName) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Integer> frequency,
+        @Nullable Output<WebTestKind> kind,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Boolean> retryEnabled,
+        Output<String> syntheticMonitorId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> timeout,
+        Output<WebTestKind> webTestKind,
+        @Nullable Output<String> webTestName) {
         this.description = description;
         this.enabled = enabled;
-        this.frequency = frequency == null ? Input.ofNullable(300) : frequency;
-        this.kind = kind == null ? Input.ofNullable(io.pulumi.azurenative.insights.enums.WebTestKind.Ping) : kind;
+        this.frequency = frequency == null ? Output.ofNullable(300) : frequency;
+        this.kind = kind == null ? Output.ofNullable(io.pulumi.azurenative.insights.enums.WebTestKind.Ping) : kind;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.retryEnabled = retryEnabled;
         this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId, "expected parameter 'syntheticMonitorId' to be non-null");
         this.tags = tags;
-        this.timeout = timeout == null ? Input.ofNullable(30) : timeout;
-        this.webTestKind = webTestKind == null ? Input.ofNullable(io.pulumi.azurenative.insights.enums.WebTestKind.Ping) : Objects.requireNonNull(webTestKind, "expected parameter 'webTestKind' to be non-null");
+        this.timeout = timeout == null ? Output.ofNullable(30) : timeout;
+        this.webTestKind = webTestKind == null ? Output.ofNullable(io.pulumi.azurenative.insights.enums.WebTestKind.Ping) : Objects.requireNonNull(webTestKind, "expected parameter 'webTestKind' to be non-null");
         this.webTestName = webTestName;
     }
 
     private WebTestArgs() {
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.frequency = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.retryEnabled = Input.empty();
-        this.syntheticMonitorId = Input.empty();
-        this.tags = Input.empty();
-        this.timeout = Input.empty();
-        this.webTestKind = Input.empty();
-        this.webTestName = Input.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.frequency = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.retryEnabled = Output.empty();
+        this.syntheticMonitorId = Output.empty();
+        this.tags = Output.empty();
+        this.timeout = Output.empty();
+        this.webTestKind = Output.empty();
+        this.webTestName = Output.empty();
     }
 
     public static Builder builder() {
@@ -201,18 +201,18 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Integer> frequency;
-        private @Nullable Input<WebTestKind> kind;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Boolean> retryEnabled;
-        private Input<String> syntheticMonitorId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> timeout;
-        private Input<WebTestKind> webTestKind;
-        private @Nullable Input<String> webTestName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Integer> frequency;
+        private @Nullable Output<WebTestKind> kind;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Boolean> retryEnabled;
+        private Output<String> syntheticMonitorId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> timeout;
+        private Output<WebTestKind> webTestKind;
+        private @Nullable Output<String> webTestName;
 
         public Builder() {
     	      // Empty
@@ -234,123 +234,123 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webTestName = defaults.webTestName;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder frequency(@Nullable Input<Integer> frequency) {
+        public Builder frequency(@Nullable Output<Integer> frequency) {
             this.frequency = frequency;
             return this;
         }
 
         public Builder frequency(@Nullable Integer frequency) {
-            this.frequency = Input.ofNullable(frequency);
+            this.frequency = Output.ofNullable(frequency);
             return this;
         }
 
-        public Builder kind(@Nullable Input<WebTestKind> kind) {
+        public Builder kind(@Nullable Output<WebTestKind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable WebTestKind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder retryEnabled(@Nullable Input<Boolean> retryEnabled) {
+        public Builder retryEnabled(@Nullable Output<Boolean> retryEnabled) {
             this.retryEnabled = retryEnabled;
             return this;
         }
 
         public Builder retryEnabled(@Nullable Boolean retryEnabled) {
-            this.retryEnabled = Input.ofNullable(retryEnabled);
+            this.retryEnabled = Output.ofNullable(retryEnabled);
             return this;
         }
 
-        public Builder syntheticMonitorId(Input<String> syntheticMonitorId) {
+        public Builder syntheticMonitorId(Output<String> syntheticMonitorId) {
             this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId);
             return this;
         }
 
         public Builder syntheticMonitorId(String syntheticMonitorId) {
-            this.syntheticMonitorId = Input.of(Objects.requireNonNull(syntheticMonitorId));
+            this.syntheticMonitorId = Output.of(Objects.requireNonNull(syntheticMonitorId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder webTestKind(Input<WebTestKind> webTestKind) {
+        public Builder webTestKind(Output<WebTestKind> webTestKind) {
             this.webTestKind = Objects.requireNonNull(webTestKind);
             return this;
         }
 
         public Builder webTestKind(WebTestKind webTestKind) {
-            this.webTestKind = Input.of(Objects.requireNonNull(webTestKind));
+            this.webTestKind = Output.of(Objects.requireNonNull(webTestKind));
             return this;
         }
 
-        public Builder webTestName(@Nullable Input<String> webTestName) {
+        public Builder webTestName(@Nullable Output<String> webTestName) {
             this.webTestName = webTestName;
             return this;
         }
 
         public Builder webTestName(@Nullable String webTestName) {
-            this.webTestName = Input.ofNullable(webTestName);
+            this.webTestName = Output.ofNullable(webTestName);
             return this;
         }
         public WebTestArgs build() {

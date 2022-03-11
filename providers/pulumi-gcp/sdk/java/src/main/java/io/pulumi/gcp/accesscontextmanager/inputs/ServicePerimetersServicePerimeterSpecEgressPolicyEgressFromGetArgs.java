@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
      * 
      */
     @InputImport(name="identities")
-      private final @Nullable Input<List<String>> identities;
+      private final @Nullable Output<List<String>> identities;
 
-    public Input<List<String>> getIdentities() {
-        return this.identities == null ? Input.empty() : this.identities;
+    public Output<List<String>> getIdentities() {
+        return this.identities == null ? Output.empty() : this.identities;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
      * 
      */
     @InputImport(name="identityType")
-      private final @Nullable Input<String> identityType;
+      private final @Nullable Output<String> identityType;
 
-    public Input<String> getIdentityType() {
-        return this.identityType == null ? Input.empty() : this.identityType;
+    public Output<String> getIdentityType() {
+        return this.identityType == null ? Output.empty() : this.identityType;
     }
 
     public ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs(
-        @Nullable Input<List<String>> identities,
-        @Nullable Input<String> identityType) {
+        @Nullable Output<List<String>> identities,
+        @Nullable Output<String> identityType) {
         this.identities = identities;
         this.identityType = identityType;
     }
 
     private ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs() {
-        this.identities = Input.empty();
-        this.identityType = Input.empty();
+        this.identities = Output.empty();
+        this.identityType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> identities;
-        private @Nullable Input<String> identityType;
+        private @Nullable Output<List<String>> identities;
+        private @Nullable Output<String> identityType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder identities(@Nullable Input<List<String>> identities) {
+        public Builder identities(@Nullable Output<List<String>> identities) {
             this.identities = identities;
             return this;
         }
 
         public Builder identities(@Nullable List<String> identities) {
-            this.identities = Input.ofNullable(identities);
+            this.identities = Output.ofNullable(identities);
             return this;
         }
 
-        public Builder identityType(@Nullable Input<String> identityType) {
+        public Builder identityType(@Nullable Output<String> identityType) {
             this.identityType = identityType;
             return this;
         }
 
         public Builder identityType(@Nullable String identityType) {
-            this.identityType = Input.ofNullable(identityType);
+            this.identityType = Output.ofNullable(identityType);
             return this;
         }
         public ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs build() {

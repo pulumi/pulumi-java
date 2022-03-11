@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.LicenseType;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmDiskInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmDisksDefaultInputArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="disksDefault")
-      private final @Nullable Input<InMageRcmDisksDefaultInputArgs> disksDefault;
+      private final @Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault;
 
-    public Input<InMageRcmDisksDefaultInputArgs> getDisksDefault() {
-        return this.disksDefault == null ? Input.empty() : this.disksDefault;
+    public Output<InMageRcmDisksDefaultInputArgs> getDisksDefault() {
+        return this.disksDefault == null ? Output.empty() : this.disksDefault;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="disksToInclude")
-      private final @Nullable Input<List<InMageRcmDiskInputArgs>> disksToInclude;
+      private final @Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude;
 
-    public Input<List<InMageRcmDiskInputArgs>> getDisksToInclude() {
-        return this.disksToInclude == null ? Input.empty() : this.disksToInclude;
+    public Output<List<InMageRcmDiskInputArgs>> getDisksToInclude() {
+        return this.disksToInclude == null ? Output.empty() : this.disksToInclude;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="fabricDiscoveryMachineId")
-      private final @Nullable Input<String> fabricDiscoveryMachineId;
+      private final @Nullable Output<String> fabricDiscoveryMachineId;
 
-    public Input<String> getFabricDiscoveryMachineId() {
-        return this.fabricDiscoveryMachineId == null ? Input.empty() : this.fabricDiscoveryMachineId;
+    public Output<String> getFabricDiscoveryMachineId() {
+        return this.fabricDiscoveryMachineId == null ? Output.empty() : this.fabricDiscoveryMachineId;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="licenseType")
-      private final @Nullable Input<Either<String,LicenseType>> licenseType;
+      private final @Nullable Output<Either<String,LicenseType>> licenseType;
 
-    public Input<Either<String,LicenseType>> getLicenseType() {
-        return this.licenseType == null ? Input.empty() : this.licenseType;
+    public Output<Either<String,LicenseType>> getLicenseType() {
+        return this.licenseType == null ? Output.empty() : this.licenseType;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="multiVmGroupName")
-      private final @Nullable Input<String> multiVmGroupName;
+      private final @Nullable Output<String> multiVmGroupName;
 
-    public Input<String> getMultiVmGroupName() {
-        return this.multiVmGroupName == null ? Input.empty() : this.multiVmGroupName;
+    public Output<String> getMultiVmGroupName() {
+        return this.multiVmGroupName == null ? Output.empty() : this.multiVmGroupName;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="processServerId")
-      private final @Nullable Input<String> processServerId;
+      private final @Nullable Output<String> processServerId;
 
-    public Input<String> getProcessServerId() {
-        return this.processServerId == null ? Input.empty() : this.processServerId;
+    public Output<String> getProcessServerId() {
+        return this.processServerId == null ? Output.empty() : this.processServerId;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="runAsAccountId")
-      private final @Nullable Input<String> runAsAccountId;
+      private final @Nullable Output<String> runAsAccountId;
 
-    public Input<String> getRunAsAccountId() {
-        return this.runAsAccountId == null ? Input.empty() : this.runAsAccountId;
+    public Output<String> getRunAsAccountId() {
+        return this.runAsAccountId == null ? Output.empty() : this.runAsAccountId;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetAvailabilitySetId")
-      private final @Nullable Input<String> targetAvailabilitySetId;
+      private final @Nullable Output<String> targetAvailabilitySetId;
 
-    public Input<String> getTargetAvailabilitySetId() {
-        return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
+    public Output<String> getTargetAvailabilitySetId() {
+        return this.targetAvailabilitySetId == null ? Output.empty() : this.targetAvailabilitySetId;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetAvailabilityZone")
-      private final @Nullable Input<String> targetAvailabilityZone;
+      private final @Nullable Output<String> targetAvailabilityZone;
 
-    public Input<String> getTargetAvailabilityZone() {
-        return this.targetAvailabilityZone == null ? Input.empty() : this.targetAvailabilityZone;
+    public Output<String> getTargetAvailabilityZone() {
+        return this.targetAvailabilityZone == null ? Output.empty() : this.targetAvailabilityZone;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetBootDiagnosticsStorageAccountId")
-      private final @Nullable Input<String> targetBootDiagnosticsStorageAccountId;
+      private final @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
 
-    public Input<String> getTargetBootDiagnosticsStorageAccountId() {
-        return this.targetBootDiagnosticsStorageAccountId == null ? Input.empty() : this.targetBootDiagnosticsStorageAccountId;
+    public Output<String> getTargetBootDiagnosticsStorageAccountId() {
+        return this.targetBootDiagnosticsStorageAccountId == null ? Output.empty() : this.targetBootDiagnosticsStorageAccountId;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetNetworkId")
-      private final @Nullable Input<String> targetNetworkId;
+      private final @Nullable Output<String> targetNetworkId;
 
-    public Input<String> getTargetNetworkId() {
-        return this.targetNetworkId == null ? Input.empty() : this.targetNetworkId;
+    public Output<String> getTargetNetworkId() {
+        return this.targetNetworkId == null ? Output.empty() : this.targetNetworkId;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetProximityPlacementGroupId")
-      private final @Nullable Input<String> targetProximityPlacementGroupId;
+      private final @Nullable Output<String> targetProximityPlacementGroupId;
 
-    public Input<String> getTargetProximityPlacementGroupId() {
-        return this.targetProximityPlacementGroupId == null ? Input.empty() : this.targetProximityPlacementGroupId;
+    public Output<String> getTargetProximityPlacementGroupId() {
+        return this.targetProximityPlacementGroupId == null ? Output.empty() : this.targetProximityPlacementGroupId;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetResourceGroupId")
-      private final @Nullable Input<String> targetResourceGroupId;
+      private final @Nullable Output<String> targetResourceGroupId;
 
-    public Input<String> getTargetResourceGroupId() {
-        return this.targetResourceGroupId == null ? Input.empty() : this.targetResourceGroupId;
+    public Output<String> getTargetResourceGroupId() {
+        return this.targetResourceGroupId == null ? Output.empty() : this.targetResourceGroupId;
     }
 
     /**
@@ -183,10 +183,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetSubnetName")
-      private final @Nullable Input<String> targetSubnetName;
+      private final @Nullable Output<String> targetSubnetName;
 
-    public Input<String> getTargetSubnetName() {
-        return this.targetSubnetName == null ? Input.empty() : this.targetSubnetName;
+    public Output<String> getTargetSubnetName() {
+        return this.targetSubnetName == null ? Output.empty() : this.targetSubnetName;
     }
 
     /**
@@ -194,10 +194,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetVmName")
-      private final @Nullable Input<String> targetVmName;
+      private final @Nullable Output<String> targetVmName;
 
-    public Input<String> getTargetVmName() {
-        return this.targetVmName == null ? Input.empty() : this.targetVmName;
+    public Output<String> getTargetVmName() {
+        return this.targetVmName == null ? Output.empty() : this.targetVmName;
     }
 
     /**
@@ -205,10 +205,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetVmSize")
-      private final @Nullable Input<String> targetVmSize;
+      private final @Nullable Output<String> targetVmSize;
 
-    public Input<String> getTargetVmSize() {
-        return this.targetVmSize == null ? Input.empty() : this.targetVmSize;
+    public Output<String> getTargetVmSize() {
+        return this.targetVmSize == null ? Output.empty() : this.targetVmSize;
     }
 
     /**
@@ -216,10 +216,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="testNetworkId")
-      private final @Nullable Input<String> testNetworkId;
+      private final @Nullable Output<String> testNetworkId;
 
-    public Input<String> getTestNetworkId() {
-        return this.testNetworkId == null ? Input.empty() : this.testNetworkId;
+    public Output<String> getTestNetworkId() {
+        return this.testNetworkId == null ? Output.empty() : this.testNetworkId;
     }
 
     /**
@@ -227,32 +227,32 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="testSubnetName")
-      private final @Nullable Input<String> testSubnetName;
+      private final @Nullable Output<String> testSubnetName;
 
-    public Input<String> getTestSubnetName() {
-        return this.testSubnetName == null ? Input.empty() : this.testSubnetName;
+    public Output<String> getTestSubnetName() {
+        return this.testSubnetName == null ? Output.empty() : this.testSubnetName;
     }
 
     public InMageRcmEnableProtectionInputArgs(
-        @Nullable Input<InMageRcmDisksDefaultInputArgs> disksDefault,
-        @Nullable Input<List<InMageRcmDiskInputArgs>> disksToInclude,
-        @Nullable Input<String> fabricDiscoveryMachineId,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<Either<String,LicenseType>> licenseType,
-        @Nullable Input<String> multiVmGroupName,
-        @Nullable Input<String> processServerId,
-        @Nullable Input<String> runAsAccountId,
-        @Nullable Input<String> targetAvailabilitySetId,
-        @Nullable Input<String> targetAvailabilityZone,
-        @Nullable Input<String> targetBootDiagnosticsStorageAccountId,
-        @Nullable Input<String> targetNetworkId,
-        @Nullable Input<String> targetProximityPlacementGroupId,
-        @Nullable Input<String> targetResourceGroupId,
-        @Nullable Input<String> targetSubnetName,
-        @Nullable Input<String> targetVmName,
-        @Nullable Input<String> targetVmSize,
-        @Nullable Input<String> testNetworkId,
-        @Nullable Input<String> testSubnetName) {
+        @Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault,
+        @Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude,
+        @Nullable Output<String> fabricDiscoveryMachineId,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<Either<String,LicenseType>> licenseType,
+        @Nullable Output<String> multiVmGroupName,
+        @Nullable Output<String> processServerId,
+        @Nullable Output<String> runAsAccountId,
+        @Nullable Output<String> targetAvailabilitySetId,
+        @Nullable Output<String> targetAvailabilityZone,
+        @Nullable Output<String> targetBootDiagnosticsStorageAccountId,
+        @Nullable Output<String> targetNetworkId,
+        @Nullable Output<String> targetProximityPlacementGroupId,
+        @Nullable Output<String> targetResourceGroupId,
+        @Nullable Output<String> targetSubnetName,
+        @Nullable Output<String> targetVmName,
+        @Nullable Output<String> targetVmSize,
+        @Nullable Output<String> testNetworkId,
+        @Nullable Output<String> testSubnetName) {
         this.disksDefault = disksDefault;
         this.disksToInclude = disksToInclude;
         this.fabricDiscoveryMachineId = fabricDiscoveryMachineId;
@@ -275,25 +275,25 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
     }
 
     private InMageRcmEnableProtectionInputArgs() {
-        this.disksDefault = Input.empty();
-        this.disksToInclude = Input.empty();
-        this.fabricDiscoveryMachineId = Input.empty();
-        this.instanceType = Input.empty();
-        this.licenseType = Input.empty();
-        this.multiVmGroupName = Input.empty();
-        this.processServerId = Input.empty();
-        this.runAsAccountId = Input.empty();
-        this.targetAvailabilitySetId = Input.empty();
-        this.targetAvailabilityZone = Input.empty();
-        this.targetBootDiagnosticsStorageAccountId = Input.empty();
-        this.targetNetworkId = Input.empty();
-        this.targetProximityPlacementGroupId = Input.empty();
-        this.targetResourceGroupId = Input.empty();
-        this.targetSubnetName = Input.empty();
-        this.targetVmName = Input.empty();
-        this.targetVmSize = Input.empty();
-        this.testNetworkId = Input.empty();
-        this.testSubnetName = Input.empty();
+        this.disksDefault = Output.empty();
+        this.disksToInclude = Output.empty();
+        this.fabricDiscoveryMachineId = Output.empty();
+        this.instanceType = Output.empty();
+        this.licenseType = Output.empty();
+        this.multiVmGroupName = Output.empty();
+        this.processServerId = Output.empty();
+        this.runAsAccountId = Output.empty();
+        this.targetAvailabilitySetId = Output.empty();
+        this.targetAvailabilityZone = Output.empty();
+        this.targetBootDiagnosticsStorageAccountId = Output.empty();
+        this.targetNetworkId = Output.empty();
+        this.targetProximityPlacementGroupId = Output.empty();
+        this.targetResourceGroupId = Output.empty();
+        this.targetSubnetName = Output.empty();
+        this.targetVmName = Output.empty();
+        this.targetVmSize = Output.empty();
+        this.testNetworkId = Output.empty();
+        this.testSubnetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -305,25 +305,25 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<InMageRcmDisksDefaultInputArgs> disksDefault;
-        private @Nullable Input<List<InMageRcmDiskInputArgs>> disksToInclude;
-        private @Nullable Input<String> fabricDiscoveryMachineId;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<Either<String,LicenseType>> licenseType;
-        private @Nullable Input<String> multiVmGroupName;
-        private @Nullable Input<String> processServerId;
-        private @Nullable Input<String> runAsAccountId;
-        private @Nullable Input<String> targetAvailabilitySetId;
-        private @Nullable Input<String> targetAvailabilityZone;
-        private @Nullable Input<String> targetBootDiagnosticsStorageAccountId;
-        private @Nullable Input<String> targetNetworkId;
-        private @Nullable Input<String> targetProximityPlacementGroupId;
-        private @Nullable Input<String> targetResourceGroupId;
-        private @Nullable Input<String> targetSubnetName;
-        private @Nullable Input<String> targetVmName;
-        private @Nullable Input<String> targetVmSize;
-        private @Nullable Input<String> testNetworkId;
-        private @Nullable Input<String> testSubnetName;
+        private @Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault;
+        private @Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude;
+        private @Nullable Output<String> fabricDiscoveryMachineId;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<Either<String,LicenseType>> licenseType;
+        private @Nullable Output<String> multiVmGroupName;
+        private @Nullable Output<String> processServerId;
+        private @Nullable Output<String> runAsAccountId;
+        private @Nullable Output<String> targetAvailabilitySetId;
+        private @Nullable Output<String> targetAvailabilityZone;
+        private @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
+        private @Nullable Output<String> targetNetworkId;
+        private @Nullable Output<String> targetProximityPlacementGroupId;
+        private @Nullable Output<String> targetResourceGroupId;
+        private @Nullable Output<String> targetSubnetName;
+        private @Nullable Output<String> targetVmName;
+        private @Nullable Output<String> targetVmSize;
+        private @Nullable Output<String> testNetworkId;
+        private @Nullable Output<String> testSubnetName;
 
         public Builder() {
     	      // Empty
@@ -352,193 +352,193 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
     	      this.testSubnetName = defaults.testSubnetName;
         }
 
-        public Builder disksDefault(@Nullable Input<InMageRcmDisksDefaultInputArgs> disksDefault) {
+        public Builder disksDefault(@Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault) {
             this.disksDefault = disksDefault;
             return this;
         }
 
         public Builder disksDefault(@Nullable InMageRcmDisksDefaultInputArgs disksDefault) {
-            this.disksDefault = Input.ofNullable(disksDefault);
+            this.disksDefault = Output.ofNullable(disksDefault);
             return this;
         }
 
-        public Builder disksToInclude(@Nullable Input<List<InMageRcmDiskInputArgs>> disksToInclude) {
+        public Builder disksToInclude(@Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude) {
             this.disksToInclude = disksToInclude;
             return this;
         }
 
         public Builder disksToInclude(@Nullable List<InMageRcmDiskInputArgs> disksToInclude) {
-            this.disksToInclude = Input.ofNullable(disksToInclude);
+            this.disksToInclude = Output.ofNullable(disksToInclude);
             return this;
         }
 
-        public Builder fabricDiscoveryMachineId(@Nullable Input<String> fabricDiscoveryMachineId) {
+        public Builder fabricDiscoveryMachineId(@Nullable Output<String> fabricDiscoveryMachineId) {
             this.fabricDiscoveryMachineId = fabricDiscoveryMachineId;
             return this;
         }
 
         public Builder fabricDiscoveryMachineId(@Nullable String fabricDiscoveryMachineId) {
-            this.fabricDiscoveryMachineId = Input.ofNullable(fabricDiscoveryMachineId);
+            this.fabricDiscoveryMachineId = Output.ofNullable(fabricDiscoveryMachineId);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder licenseType(@Nullable Input<Either<String,LicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Output<Either<String,LicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
         public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
-            this.licenseType = Input.ofNullable(licenseType);
+            this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
 
-        public Builder multiVmGroupName(@Nullable Input<String> multiVmGroupName) {
+        public Builder multiVmGroupName(@Nullable Output<String> multiVmGroupName) {
             this.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
         public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
-            this.multiVmGroupName = Input.ofNullable(multiVmGroupName);
+            this.multiVmGroupName = Output.ofNullable(multiVmGroupName);
             return this;
         }
 
-        public Builder processServerId(@Nullable Input<String> processServerId) {
+        public Builder processServerId(@Nullable Output<String> processServerId) {
             this.processServerId = processServerId;
             return this;
         }
 
         public Builder processServerId(@Nullable String processServerId) {
-            this.processServerId = Input.ofNullable(processServerId);
+            this.processServerId = Output.ofNullable(processServerId);
             return this;
         }
 
-        public Builder runAsAccountId(@Nullable Input<String> runAsAccountId) {
+        public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
             this.runAsAccountId = runAsAccountId;
             return this;
         }
 
         public Builder runAsAccountId(@Nullable String runAsAccountId) {
-            this.runAsAccountId = Input.ofNullable(runAsAccountId);
+            this.runAsAccountId = Output.ofNullable(runAsAccountId);
             return this;
         }
 
-        public Builder targetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = Input.ofNullable(targetAvailabilitySetId);
+            this.targetAvailabilitySetId = Output.ofNullable(targetAvailabilitySetId);
             return this;
         }
 
-        public Builder targetAvailabilityZone(@Nullable Input<String> targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable Output<String> targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
         public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
-            this.targetAvailabilityZone = Input.ofNullable(targetAvailabilityZone);
+            this.targetAvailabilityZone = Output.ofNullable(targetAvailabilityZone);
             return this;
         }
 
-        public Builder targetBootDiagnosticsStorageAccountId(@Nullable Input<String> targetBootDiagnosticsStorageAccountId) {
+        public Builder targetBootDiagnosticsStorageAccountId(@Nullable Output<String> targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
 
         public Builder targetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
-            this.targetBootDiagnosticsStorageAccountId = Input.ofNullable(targetBootDiagnosticsStorageAccountId);
+            this.targetBootDiagnosticsStorageAccountId = Output.ofNullable(targetBootDiagnosticsStorageAccountId);
             return this;
         }
 
-        public Builder targetNetworkId(@Nullable Input<String> targetNetworkId) {
+        public Builder targetNetworkId(@Nullable Output<String> targetNetworkId) {
             this.targetNetworkId = targetNetworkId;
             return this;
         }
 
         public Builder targetNetworkId(@Nullable String targetNetworkId) {
-            this.targetNetworkId = Input.ofNullable(targetNetworkId);
+            this.targetNetworkId = Output.ofNullable(targetNetworkId);
             return this;
         }
 
-        public Builder targetProximityPlacementGroupId(@Nullable Input<String> targetProximityPlacementGroupId) {
+        public Builder targetProximityPlacementGroupId(@Nullable Output<String> targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
         public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
-            this.targetProximityPlacementGroupId = Input.ofNullable(targetProximityPlacementGroupId);
+            this.targetProximityPlacementGroupId = Output.ofNullable(targetProximityPlacementGroupId);
             return this;
         }
 
-        public Builder targetResourceGroupId(@Nullable Input<String> targetResourceGroupId) {
+        public Builder targetResourceGroupId(@Nullable Output<String> targetResourceGroupId) {
             this.targetResourceGroupId = targetResourceGroupId;
             return this;
         }
 
         public Builder targetResourceGroupId(@Nullable String targetResourceGroupId) {
-            this.targetResourceGroupId = Input.ofNullable(targetResourceGroupId);
+            this.targetResourceGroupId = Output.ofNullable(targetResourceGroupId);
             return this;
         }
 
-        public Builder targetSubnetName(@Nullable Input<String> targetSubnetName) {
+        public Builder targetSubnetName(@Nullable Output<String> targetSubnetName) {
             this.targetSubnetName = targetSubnetName;
             return this;
         }
 
         public Builder targetSubnetName(@Nullable String targetSubnetName) {
-            this.targetSubnetName = Input.ofNullable(targetSubnetName);
+            this.targetSubnetName = Output.ofNullable(targetSubnetName);
             return this;
         }
 
-        public Builder targetVmName(@Nullable Input<String> targetVmName) {
+        public Builder targetVmName(@Nullable Output<String> targetVmName) {
             this.targetVmName = targetVmName;
             return this;
         }
 
         public Builder targetVmName(@Nullable String targetVmName) {
-            this.targetVmName = Input.ofNullable(targetVmName);
+            this.targetVmName = Output.ofNullable(targetVmName);
             return this;
         }
 
-        public Builder targetVmSize(@Nullable Input<String> targetVmSize) {
+        public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
 
         public Builder targetVmSize(@Nullable String targetVmSize) {
-            this.targetVmSize = Input.ofNullable(targetVmSize);
+            this.targetVmSize = Output.ofNullable(targetVmSize);
             return this;
         }
 
-        public Builder testNetworkId(@Nullable Input<String> testNetworkId) {
+        public Builder testNetworkId(@Nullable Output<String> testNetworkId) {
             this.testNetworkId = testNetworkId;
             return this;
         }
 
         public Builder testNetworkId(@Nullable String testNetworkId) {
-            this.testNetworkId = Input.ofNullable(testNetworkId);
+            this.testNetworkId = Output.ofNullable(testNetworkId);
             return this;
         }
 
-        public Builder testSubnetName(@Nullable Input<String> testSubnetName) {
+        public Builder testSubnetName(@Nullable Output<String> testSubnetName) {
             this.testSubnetName = testSubnetName;
             return this;
         }
 
         public Builder testSubnetName(@Nullable String testSubnetName) {
-            this.testSubnetName = Input.ofNullable(testSubnetName);
+            this.testSubnetName = Output.ofNullable(testSubnetName);
             return this;
         }
         public InMageRcmEnableProtectionInputArgs build() {

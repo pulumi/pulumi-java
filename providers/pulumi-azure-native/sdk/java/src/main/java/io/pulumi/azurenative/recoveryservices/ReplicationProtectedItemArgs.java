@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.EnableProtectionInputPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="fabricName", required=true)
-      private final Input<String> fabricName;
+      private final Output<String> fabricName;
 
-    public Input<String> getFabricName() {
+    public Output<String> getFabricName() {
         return this.fabricName;
     }
 
@@ -31,10 +31,10 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<EnableProtectionInputPropertiesArgs> properties;
+      private final @Nullable Output<EnableProtectionInputPropertiesArgs> properties;
 
-    public Input<EnableProtectionInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<EnableProtectionInputPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protectionContainerName", required=true)
-      private final Input<String> protectionContainerName;
+      private final Output<String> protectionContainerName;
 
-    public Input<String> getProtectionContainerName() {
+    public Output<String> getProtectionContainerName() {
         return this.protectionContainerName;
     }
 
@@ -53,10 +53,10 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="replicatedProtectedItemName")
-      private final @Nullable Input<String> replicatedProtectedItemName;
+      private final @Nullable Output<String> replicatedProtectedItemName;
 
-    public Input<String> getReplicatedProtectedItemName() {
-        return this.replicatedProtectedItemName == null ? Input.empty() : this.replicatedProtectedItemName;
+    public Output<String> getReplicatedProtectedItemName() {
+        return this.replicatedProtectedItemName == null ? Output.empty() : this.replicatedProtectedItemName;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,19 +75,19 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
     public ReplicationProtectedItemArgs(
-        Input<String> fabricName,
-        @Nullable Input<EnableProtectionInputPropertiesArgs> properties,
-        Input<String> protectionContainerName,
-        @Nullable Input<String> replicatedProtectedItemName,
-        Input<String> resourceGroupName,
-        Input<String> resourceName) {
+        Output<String> fabricName,
+        @Nullable Output<EnableProtectionInputPropertiesArgs> properties,
+        Output<String> protectionContainerName,
+        @Nullable Output<String> replicatedProtectedItemName,
+        Output<String> resourceGroupName,
+        Output<String> resourceName) {
         this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
         this.properties = properties;
         this.protectionContainerName = Objects.requireNonNull(protectionContainerName, "expected parameter 'protectionContainerName' to be non-null");
@@ -97,12 +97,12 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     }
 
     private ReplicationProtectedItemArgs() {
-        this.fabricName = Input.empty();
-        this.properties = Input.empty();
-        this.protectionContainerName = Input.empty();
-        this.replicatedProtectedItemName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
+        this.fabricName = Output.empty();
+        this.properties = Output.empty();
+        this.protectionContainerName = Output.empty();
+        this.replicatedProtectedItemName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> fabricName;
-        private @Nullable Input<EnableProtectionInputPropertiesArgs> properties;
-        private Input<String> protectionContainerName;
-        private @Nullable Input<String> replicatedProtectedItemName;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
+        private Output<String> fabricName;
+        private @Nullable Output<EnableProtectionInputPropertiesArgs> properties;
+        private Output<String> protectionContainerName;
+        private @Nullable Output<String> replicatedProtectedItemName;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder fabricName(Input<String> fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Input.of(Objects.requireNonNull(fabricName));
+            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
             return this;
         }
 
-        public Builder properties(@Nullable Input<EnableProtectionInputPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<EnableProtectionInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable EnableProtectionInputPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder protectionContainerName(Input<String> protectionContainerName) {
+        public Builder protectionContainerName(Output<String> protectionContainerName) {
             this.protectionContainerName = Objects.requireNonNull(protectionContainerName);
             return this;
         }
 
         public Builder protectionContainerName(String protectionContainerName) {
-            this.protectionContainerName = Input.of(Objects.requireNonNull(protectionContainerName));
+            this.protectionContainerName = Output.of(Objects.requireNonNull(protectionContainerName));
             return this;
         }
 
-        public Builder replicatedProtectedItemName(@Nullable Input<String> replicatedProtectedItemName) {
+        public Builder replicatedProtectedItemName(@Nullable Output<String> replicatedProtectedItemName) {
             this.replicatedProtectedItemName = replicatedProtectedItemName;
             return this;
         }
 
         public Builder replicatedProtectedItemName(@Nullable String replicatedProtectedItemName) {
-            this.replicatedProtectedItemName = Input.ofNullable(replicatedProtectedItemName);
+            this.replicatedProtectedItemName = Output.ofNullable(replicatedProtectedItemName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
         public ReplicationProtectedItemArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isBlockUserUploadEnabled")
-      private final @Nullable Input<Boolean> isBlockUserUploadEnabled;
+      private final @Nullable Output<Boolean> isBlockUserUploadEnabled;
 
-    public Input<Boolean> getIsBlockUserUploadEnabled() {
-        return this.isBlockUserUploadEnabled == null ? Input.empty() : this.isBlockUserUploadEnabled;
+    public Output<Boolean> getIsBlockUserUploadEnabled() {
+        return this.isBlockUserUploadEnabled == null ? Output.empty() : this.isBlockUserUploadEnabled;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -47,10 +47,10 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isSecureSiteEnabled")
-      private final @Nullable Input<Boolean> isSecureSiteEnabled;
+      private final @Nullable Output<Boolean> isSecureSiteEnabled;
 
-    public Input<Boolean> getIsSecureSiteEnabled() {
-        return this.isSecureSiteEnabled == null ? Input.empty() : this.isSecureSiteEnabled;
+    public Output<Boolean> getIsSecureSiteEnabled() {
+        return this.isSecureSiteEnabled == null ? Output.empty() : this.isSecureSiteEnabled;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isV1Enabled", required=true)
-      private final Input<Boolean> isV1Enabled;
+      private final Output<Boolean> isV1Enabled;
 
-    public Input<Boolean> getIsV1Enabled() {
+    public Output<Boolean> getIsV1Enabled() {
         return this.isV1Enabled;
     }
 
@@ -69,9 +69,9 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isV3Enabled", required=true)
-      private final Input<Boolean> isV3Enabled;
+      private final Output<Boolean> isV3Enabled;
 
-    public Input<Boolean> getIsV3Enabled() {
+    public Output<Boolean> getIsV3Enabled() {
         return this.isV3Enabled;
     }
 
@@ -80,9 +80,9 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteName", required=true)
-      private final Input<String> siteName;
+      private final Output<String> siteName;
 
-    public Input<String> getSiteName() {
+    public Output<String> getSiteName() {
         return this.siteName;
     }
 
@@ -91,20 +91,20 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedOrigins")
-      private final @Nullable Input<List<String>> trustedOrigins;
+      private final @Nullable Output<List<String>> trustedOrigins;
 
-    public Input<List<String>> getTrustedOrigins() {
-        return this.trustedOrigins == null ? Input.empty() : this.trustedOrigins;
+    public Output<List<String>> getTrustedOrigins() {
+        return this.trustedOrigins == null ? Output.empty() : this.trustedOrigins;
     }
 
     public DirectLineSiteArgs(
-        @Nullable Input<Boolean> isBlockUserUploadEnabled,
-        Input<Boolean> isEnabled,
-        @Nullable Input<Boolean> isSecureSiteEnabled,
-        Input<Boolean> isV1Enabled,
-        Input<Boolean> isV3Enabled,
-        Input<String> siteName,
-        @Nullable Input<List<String>> trustedOrigins) {
+        @Nullable Output<Boolean> isBlockUserUploadEnabled,
+        Output<Boolean> isEnabled,
+        @Nullable Output<Boolean> isSecureSiteEnabled,
+        Output<Boolean> isV1Enabled,
+        Output<Boolean> isV3Enabled,
+        Output<String> siteName,
+        @Nullable Output<List<String>> trustedOrigins) {
         this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
         this.isSecureSiteEnabled = isSecureSiteEnabled;
@@ -115,13 +115,13 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DirectLineSiteArgs() {
-        this.isBlockUserUploadEnabled = Input.empty();
-        this.isEnabled = Input.empty();
-        this.isSecureSiteEnabled = Input.empty();
-        this.isV1Enabled = Input.empty();
-        this.isV3Enabled = Input.empty();
-        this.siteName = Input.empty();
-        this.trustedOrigins = Input.empty();
+        this.isBlockUserUploadEnabled = Output.empty();
+        this.isEnabled = Output.empty();
+        this.isSecureSiteEnabled = Output.empty();
+        this.isV1Enabled = Output.empty();
+        this.isV3Enabled = Output.empty();
+        this.siteName = Output.empty();
+        this.trustedOrigins = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isBlockUserUploadEnabled;
-        private Input<Boolean> isEnabled;
-        private @Nullable Input<Boolean> isSecureSiteEnabled;
-        private Input<Boolean> isV1Enabled;
-        private Input<Boolean> isV3Enabled;
-        private Input<String> siteName;
-        private @Nullable Input<List<String>> trustedOrigins;
+        private @Nullable Output<Boolean> isBlockUserUploadEnabled;
+        private Output<Boolean> isEnabled;
+        private @Nullable Output<Boolean> isSecureSiteEnabled;
+        private Output<Boolean> isV1Enabled;
+        private Output<Boolean> isV3Enabled;
+        private Output<String> siteName;
+        private @Nullable Output<List<String>> trustedOrigins;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trustedOrigins = defaults.trustedOrigins;
         }
 
-        public Builder isBlockUserUploadEnabled(@Nullable Input<Boolean> isBlockUserUploadEnabled) {
+        public Builder isBlockUserUploadEnabled(@Nullable Output<Boolean> isBlockUserUploadEnabled) {
             this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
             return this;
         }
 
         public Builder isBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
-            this.isBlockUserUploadEnabled = Input.ofNullable(isBlockUserUploadEnabled);
+            this.isBlockUserUploadEnabled = Output.ofNullable(isBlockUserUploadEnabled);
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder isSecureSiteEnabled(@Nullable Input<Boolean> isSecureSiteEnabled) {
+        public Builder isSecureSiteEnabled(@Nullable Output<Boolean> isSecureSiteEnabled) {
             this.isSecureSiteEnabled = isSecureSiteEnabled;
             return this;
         }
 
         public Builder isSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
-            this.isSecureSiteEnabled = Input.ofNullable(isSecureSiteEnabled);
+            this.isSecureSiteEnabled = Output.ofNullable(isSecureSiteEnabled);
             return this;
         }
 
-        public Builder isV1Enabled(Input<Boolean> isV1Enabled) {
+        public Builder isV1Enabled(Output<Boolean> isV1Enabled) {
             this.isV1Enabled = Objects.requireNonNull(isV1Enabled);
             return this;
         }
 
         public Builder isV1Enabled(Boolean isV1Enabled) {
-            this.isV1Enabled = Input.of(Objects.requireNonNull(isV1Enabled));
+            this.isV1Enabled = Output.of(Objects.requireNonNull(isV1Enabled));
             return this;
         }
 
-        public Builder isV3Enabled(Input<Boolean> isV3Enabled) {
+        public Builder isV3Enabled(Output<Boolean> isV3Enabled) {
             this.isV3Enabled = Objects.requireNonNull(isV3Enabled);
             return this;
         }
 
         public Builder isV3Enabled(Boolean isV3Enabled) {
-            this.isV3Enabled = Input.of(Objects.requireNonNull(isV3Enabled));
+            this.isV3Enabled = Output.of(Objects.requireNonNull(isV3Enabled));
             return this;
         }
 
-        public Builder siteName(Input<String> siteName) {
+        public Builder siteName(Output<String> siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
 
         public Builder siteName(String siteName) {
-            this.siteName = Input.of(Objects.requireNonNull(siteName));
+            this.siteName = Output.of(Objects.requireNonNull(siteName));
             return this;
         }
 
-        public Builder trustedOrigins(@Nullable Input<List<String>> trustedOrigins) {
+        public Builder trustedOrigins(@Nullable Output<List<String>> trustedOrigins) {
             this.trustedOrigins = trustedOrigins;
             return this;
         }
 
         public Builder trustedOrigins(@Nullable List<String> trustedOrigins) {
-            this.trustedOrigins = Input.ofNullable(trustedOrigins);
+            this.trustedOrigins = Output.ofNullable(trustedOrigins);
             return this;
         }
         public DirectLineSiteArgs build() {

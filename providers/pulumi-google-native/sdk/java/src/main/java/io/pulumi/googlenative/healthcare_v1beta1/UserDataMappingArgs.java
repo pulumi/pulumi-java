@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.AttributeArgs;
 import java.lang.String;
@@ -17,9 +17,9 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     public static final UserDataMappingArgs Empty = new UserDataMappingArgs();
 
     @InputImport(name="consentStoreId", required=true)
-      private final Input<String> consentStoreId;
+      private final Output<String> consentStoreId;
 
-    public Input<String> getConsentStoreId() {
+    public Output<String> getConsentStoreId() {
         return this.consentStoreId;
     }
 
@@ -28,24 +28,24 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataId", required=true)
-      private final Input<String> dataId;
+      private final Output<String> dataId;
 
-    public Input<String> getDataId() {
+    public Output<String> getDataId() {
         return this.dataId;
     }
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceAttributes")
-      private final @Nullable Input<List<AttributeArgs>> resourceAttributes;
+      private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
-    public Input<List<AttributeArgs>> getResourceAttributes() {
-        return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;
+    public Output<List<AttributeArgs>> getResourceAttributes() {
+        return this.resourceAttributes == null ? Output.empty() : this.resourceAttributes;
     }
 
     /**
@@ -82,21 +82,21 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userId", required=true)
-      private final Input<String> userId;
+      private final Output<String> userId;
 
-    public Input<String> getUserId() {
+    public Output<String> getUserId() {
         return this.userId;
     }
 
     public UserDataMappingArgs(
-        Input<String> consentStoreId,
-        Input<String> dataId,
-        Input<String> datasetId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<AttributeArgs>> resourceAttributes,
-        Input<String> userId) {
+        Output<String> consentStoreId,
+        Output<String> dataId,
+        Output<String> datasetId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<AttributeArgs>> resourceAttributes,
+        Output<String> userId) {
         this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
         this.dataId = Objects.requireNonNull(dataId, "expected parameter 'dataId' to be non-null");
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
@@ -108,14 +108,14 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UserDataMappingArgs() {
-        this.consentStoreId = Input.empty();
-        this.dataId = Input.empty();
-        this.datasetId = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.resourceAttributes = Input.empty();
-        this.userId = Input.empty();
+        this.consentStoreId = Output.empty();
+        this.dataId = Output.empty();
+        this.datasetId = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.resourceAttributes = Output.empty();
+        this.userId = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,14 +127,14 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> consentStoreId;
-        private Input<String> dataId;
-        private Input<String> datasetId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<AttributeArgs>> resourceAttributes;
-        private Input<String> userId;
+        private Output<String> consentStoreId;
+        private Output<String> dataId;
+        private Output<String> datasetId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<AttributeArgs>> resourceAttributes;
+        private Output<String> userId;
 
         public Builder() {
     	      // Empty
@@ -152,83 +152,83 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userId = defaults.userId;
         }
 
-        public Builder consentStoreId(Input<String> consentStoreId) {
+        public Builder consentStoreId(Output<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
 
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Input.of(Objects.requireNonNull(consentStoreId));
+            this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
 
-        public Builder dataId(Input<String> dataId) {
+        public Builder dataId(Output<String> dataId) {
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
 
         public Builder dataId(String dataId) {
-            this.dataId = Input.of(Objects.requireNonNull(dataId));
+            this.dataId = Output.of(Objects.requireNonNull(dataId));
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder resourceAttributes(@Nullable Input<List<AttributeArgs>> resourceAttributes) {
+        public Builder resourceAttributes(@Nullable Output<List<AttributeArgs>> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
 
         public Builder resourceAttributes(@Nullable List<AttributeArgs> resourceAttributes) {
-            this.resourceAttributes = Input.ofNullable(resourceAttributes);
+            this.resourceAttributes = Output.ofNullable(resourceAttributes);
             return this;
         }
 
-        public Builder userId(Input<String> userId) {
+        public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
         public Builder userId(String userId) {
-            this.userId = Input.of(Objects.requireNonNull(userId));
+            this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
         public UserDataMappingArgs build() {

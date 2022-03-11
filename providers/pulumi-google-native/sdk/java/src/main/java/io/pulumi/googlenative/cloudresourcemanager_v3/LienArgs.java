@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origin")
-      private final @Nullable Input<String> origin;
+      private final @Nullable Output<String> origin;
 
-    public Input<String> getOrigin() {
-        return this.origin == null ? Input.empty() : this.origin;
+    public Output<String> getOrigin() {
+        return this.origin == null ? Output.empty() : this.origin;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason")
-      private final @Nullable Input<String> reason;
+      private final @Nullable Output<String> reason;
 
-    public Input<String> getReason() {
-        return this.reason == null ? Input.empty() : this.reason;
+    public Output<String> getReason() {
+        return this.reason == null ? Output.empty() : this.reason;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restrictions")
-      private final @Nullable Input<List<String>> restrictions;
+      private final @Nullable Output<List<String>> restrictions;
 
-    public Input<List<String>> getRestrictions() {
-        return this.restrictions == null ? Input.empty() : this.restrictions;
+    public Output<List<String>> getRestrictions() {
+        return this.restrictions == null ? Output.empty() : this.restrictions;
     }
 
     public LienArgs(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> name,
-        @Nullable Input<String> origin,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> reason,
-        @Nullable Input<List<String>> restrictions) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> name,
+        @Nullable Output<String> origin,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> reason,
+        @Nullable Output<List<String>> restrictions) {
         this.createTime = createTime;
         this.name = name;
         this.origin = origin;
@@ -97,12 +97,12 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LienArgs() {
-        this.createTime = Input.empty();
-        this.name = Input.empty();
-        this.origin = Input.empty();
-        this.parent = Input.empty();
-        this.reason = Input.empty();
-        this.restrictions = Input.empty();
+        this.createTime = Output.empty();
+        this.name = Output.empty();
+        this.origin = Output.empty();
+        this.parent = Output.empty();
+        this.reason = Output.empty();
+        this.restrictions = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> origin;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> reason;
-        private @Nullable Input<List<String>> restrictions;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> origin;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> reason;
+        private @Nullable Output<List<String>> restrictions;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restrictions = defaults.restrictions;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder origin(@Nullable Input<String> origin) {
+        public Builder origin(@Nullable Output<String> origin) {
             this.origin = origin;
             return this;
         }
 
         public Builder origin(@Nullable String origin) {
-            this.origin = Input.ofNullable(origin);
+            this.origin = Output.ofNullable(origin);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder reason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
 
         public Builder reason(@Nullable String reason) {
-            this.reason = Input.ofNullable(reason);
+            this.reason = Output.ofNullable(reason);
             return this;
         }
 
-        public Builder restrictions(@Nullable Input<List<String>> restrictions) {
+        public Builder restrictions(@Nullable Output<List<String>> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
         public Builder restrictions(@Nullable List<String> restrictions) {
-            this.restrictions = Input.ofNullable(restrictions);
+            this.restrictions = Output.ofNullable(restrictions);
             return this;
         }
         public LienArgs build() {

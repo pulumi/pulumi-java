@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultVersionId")
-      private final @Nullable Input<String> defaultVersionId;
+      private final @Nullable Output<String> defaultVersionId;
 
-    public Input<String> getDefaultVersionId() {
-        return this.defaultVersionId == null ? Input.empty() : this.defaultVersionId;
+    public Output<String> getDefaultVersionId() {
+        return this.defaultVersionId == null ? Output.empty() : this.defaultVersionId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public PolicyState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> defaultVersionId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> policy) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> defaultVersionId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> policy) {
         this.arn = arn;
         this.defaultVersionId = defaultVersionId;
         this.name = name;
@@ -70,10 +70,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyState() {
-        this.arn = Input.empty();
-        this.defaultVersionId = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
+        this.arn = Output.empty();
+        this.defaultVersionId = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> defaultVersionId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policy;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> defaultVersionId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder defaultVersionId(@Nullable Input<String> defaultVersionId) {
+        public Builder defaultVersionId(@Nullable Output<String> defaultVersionId) {
             this.defaultVersionId = defaultVersionId;
             return this;
         }
 
         public Builder defaultVersionId(@Nullable String defaultVersionId) {
-            this.defaultVersionId = Input.ofNullable(defaultVersionId);
+            this.defaultVersionId = Output.ofNullable(defaultVersionId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public PolicyState build() {

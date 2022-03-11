@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.AvroOptionsArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.BigtableOptionsArgs;
@@ -29,10 +29,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="autodetect")
-      private final @Nullable Input<Boolean> autodetect;
+      private final @Nullable Output<Boolean> autodetect;
 
-    public Input<Boolean> getAutodetect() {
-        return this.autodetect == null ? Input.empty() : this.autodetect;
+    public Output<Boolean> getAutodetect() {
+        return this.autodetect == null ? Output.empty() : this.autodetect;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="avroOptions")
-      private final @Nullable Input<AvroOptionsArgs> avroOptions;
+      private final @Nullable Output<AvroOptionsArgs> avroOptions;
 
-    public Input<AvroOptionsArgs> getAvroOptions() {
-        return this.avroOptions == null ? Input.empty() : this.avroOptions;
+    public Output<AvroOptionsArgs> getAvroOptions() {
+        return this.avroOptions == null ? Output.empty() : this.avroOptions;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bigtableOptions")
-      private final @Nullable Input<BigtableOptionsArgs> bigtableOptions;
+      private final @Nullable Output<BigtableOptionsArgs> bigtableOptions;
 
-    public Input<BigtableOptionsArgs> getBigtableOptions() {
-        return this.bigtableOptions == null ? Input.empty() : this.bigtableOptions;
+    public Output<BigtableOptionsArgs> getBigtableOptions() {
+        return this.bigtableOptions == null ? Output.empty() : this.bigtableOptions;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="compression")
-      private final @Nullable Input<String> compression;
+      private final @Nullable Output<String> compression;
 
-    public Input<String> getCompression() {
-        return this.compression == null ? Input.empty() : this.compression;
+    public Output<String> getCompression() {
+        return this.compression == null ? Output.empty() : this.compression;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectionId")
-      private final @Nullable Input<String> connectionId;
+      private final @Nullable Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
-        return this.connectionId == null ? Input.empty() : this.connectionId;
+    public Output<String> getConnectionId() {
+        return this.connectionId == null ? Output.empty() : this.connectionId;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="csvOptions")
-      private final @Nullable Input<CsvOptionsArgs> csvOptions;
+      private final @Nullable Output<CsvOptionsArgs> csvOptions;
 
-    public Input<CsvOptionsArgs> getCsvOptions() {
-        return this.csvOptions == null ? Input.empty() : this.csvOptions;
+    public Output<CsvOptionsArgs> getCsvOptions() {
+        return this.csvOptions == null ? Output.empty() : this.csvOptions;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="decimalTargetTypes")
-      private final @Nullable Input<List<String>> decimalTargetTypes;
+      private final @Nullable Output<List<String>> decimalTargetTypes;
 
-    public Input<List<String>> getDecimalTargetTypes() {
-        return this.decimalTargetTypes == null ? Input.empty() : this.decimalTargetTypes;
+    public Output<List<String>> getDecimalTargetTypes() {
+        return this.decimalTargetTypes == null ? Output.empty() : this.decimalTargetTypes;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="googleSheetsOptions")
-      private final @Nullable Input<GoogleSheetsOptionsArgs> googleSheetsOptions;
+      private final @Nullable Output<GoogleSheetsOptionsArgs> googleSheetsOptions;
 
-    public Input<GoogleSheetsOptionsArgs> getGoogleSheetsOptions() {
-        return this.googleSheetsOptions == null ? Input.empty() : this.googleSheetsOptions;
+    public Output<GoogleSheetsOptionsArgs> getGoogleSheetsOptions() {
+        return this.googleSheetsOptions == null ? Output.empty() : this.googleSheetsOptions;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="hivePartitioningOptions")
-      private final @Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions;
+      private final @Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions;
 
-    public Input<HivePartitioningOptionsArgs> getHivePartitioningOptions() {
-        return this.hivePartitioningOptions == null ? Input.empty() : this.hivePartitioningOptions;
+    public Output<HivePartitioningOptionsArgs> getHivePartitioningOptions() {
+        return this.hivePartitioningOptions == null ? Output.empty() : this.hivePartitioningOptions;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ignoreUnknownValues")
-      private final @Nullable Input<Boolean> ignoreUnknownValues;
+      private final @Nullable Output<Boolean> ignoreUnknownValues;
 
-    public Input<Boolean> getIgnoreUnknownValues() {
-        return this.ignoreUnknownValues == null ? Input.empty() : this.ignoreUnknownValues;
+    public Output<Boolean> getIgnoreUnknownValues() {
+        return this.ignoreUnknownValues == null ? Output.empty() : this.ignoreUnknownValues;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maxBadRecords")
-      private final @Nullable Input<Integer> maxBadRecords;
+      private final @Nullable Output<Integer> maxBadRecords;
 
-    public Input<Integer> getMaxBadRecords() {
-        return this.maxBadRecords == null ? Input.empty() : this.maxBadRecords;
+    public Output<Integer> getMaxBadRecords() {
+        return this.maxBadRecords == null ? Output.empty() : this.maxBadRecords;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parquetOptions")
-      private final @Nullable Input<ParquetOptionsArgs> parquetOptions;
+      private final @Nullable Output<ParquetOptionsArgs> parquetOptions;
 
-    public Input<ParquetOptionsArgs> getParquetOptions() {
-        return this.parquetOptions == null ? Input.empty() : this.parquetOptions;
+    public Output<ParquetOptionsArgs> getParquetOptions() {
+        return this.parquetOptions == null ? Output.empty() : this.parquetOptions;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<TableSchemaArgs> schema;
+      private final @Nullable Output<TableSchemaArgs> schema;
 
-    public Input<TableSchemaArgs> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<TableSchemaArgs> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourceFormat")
-      private final @Nullable Input<String> sourceFormat;
+      private final @Nullable Output<String> sourceFormat;
 
-    public Input<String> getSourceFormat() {
-        return this.sourceFormat == null ? Input.empty() : this.sourceFormat;
+    public Output<String> getSourceFormat() {
+        return this.sourceFormat == null ? Output.empty() : this.sourceFormat;
     }
 
     /**
@@ -183,28 +183,28 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourceUris")
-      private final @Nullable Input<List<String>> sourceUris;
+      private final @Nullable Output<List<String>> sourceUris;
 
-    public Input<List<String>> getSourceUris() {
-        return this.sourceUris == null ? Input.empty() : this.sourceUris;
+    public Output<List<String>> getSourceUris() {
+        return this.sourceUris == null ? Output.empty() : this.sourceUris;
     }
 
     public ExternalDataConfigurationArgs(
-        @Nullable Input<Boolean> autodetect,
-        @Nullable Input<AvroOptionsArgs> avroOptions,
-        @Nullable Input<BigtableOptionsArgs> bigtableOptions,
-        @Nullable Input<String> compression,
-        @Nullable Input<String> connectionId,
-        @Nullable Input<CsvOptionsArgs> csvOptions,
-        @Nullable Input<List<String>> decimalTargetTypes,
-        @Nullable Input<GoogleSheetsOptionsArgs> googleSheetsOptions,
-        @Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions,
-        @Nullable Input<Boolean> ignoreUnknownValues,
-        @Nullable Input<Integer> maxBadRecords,
-        @Nullable Input<ParquetOptionsArgs> parquetOptions,
-        @Nullable Input<TableSchemaArgs> schema,
-        @Nullable Input<String> sourceFormat,
-        @Nullable Input<List<String>> sourceUris) {
+        @Nullable Output<Boolean> autodetect,
+        @Nullable Output<AvroOptionsArgs> avroOptions,
+        @Nullable Output<BigtableOptionsArgs> bigtableOptions,
+        @Nullable Output<String> compression,
+        @Nullable Output<String> connectionId,
+        @Nullable Output<CsvOptionsArgs> csvOptions,
+        @Nullable Output<List<String>> decimalTargetTypes,
+        @Nullable Output<GoogleSheetsOptionsArgs> googleSheetsOptions,
+        @Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions,
+        @Nullable Output<Boolean> ignoreUnknownValues,
+        @Nullable Output<Integer> maxBadRecords,
+        @Nullable Output<ParquetOptionsArgs> parquetOptions,
+        @Nullable Output<TableSchemaArgs> schema,
+        @Nullable Output<String> sourceFormat,
+        @Nullable Output<List<String>> sourceUris) {
         this.autodetect = autodetect;
         this.avroOptions = avroOptions;
         this.bigtableOptions = bigtableOptions;
@@ -223,21 +223,21 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private ExternalDataConfigurationArgs() {
-        this.autodetect = Input.empty();
-        this.avroOptions = Input.empty();
-        this.bigtableOptions = Input.empty();
-        this.compression = Input.empty();
-        this.connectionId = Input.empty();
-        this.csvOptions = Input.empty();
-        this.decimalTargetTypes = Input.empty();
-        this.googleSheetsOptions = Input.empty();
-        this.hivePartitioningOptions = Input.empty();
-        this.ignoreUnknownValues = Input.empty();
-        this.maxBadRecords = Input.empty();
-        this.parquetOptions = Input.empty();
-        this.schema = Input.empty();
-        this.sourceFormat = Input.empty();
-        this.sourceUris = Input.empty();
+        this.autodetect = Output.empty();
+        this.avroOptions = Output.empty();
+        this.bigtableOptions = Output.empty();
+        this.compression = Output.empty();
+        this.connectionId = Output.empty();
+        this.csvOptions = Output.empty();
+        this.decimalTargetTypes = Output.empty();
+        this.googleSheetsOptions = Output.empty();
+        this.hivePartitioningOptions = Output.empty();
+        this.ignoreUnknownValues = Output.empty();
+        this.maxBadRecords = Output.empty();
+        this.parquetOptions = Output.empty();
+        this.schema = Output.empty();
+        this.sourceFormat = Output.empty();
+        this.sourceUris = Output.empty();
     }
 
     public static Builder builder() {
@@ -249,21 +249,21 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autodetect;
-        private @Nullable Input<AvroOptionsArgs> avroOptions;
-        private @Nullable Input<BigtableOptionsArgs> bigtableOptions;
-        private @Nullable Input<String> compression;
-        private @Nullable Input<String> connectionId;
-        private @Nullable Input<CsvOptionsArgs> csvOptions;
-        private @Nullable Input<List<String>> decimalTargetTypes;
-        private @Nullable Input<GoogleSheetsOptionsArgs> googleSheetsOptions;
-        private @Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions;
-        private @Nullable Input<Boolean> ignoreUnknownValues;
-        private @Nullable Input<Integer> maxBadRecords;
-        private @Nullable Input<ParquetOptionsArgs> parquetOptions;
-        private @Nullable Input<TableSchemaArgs> schema;
-        private @Nullable Input<String> sourceFormat;
-        private @Nullable Input<List<String>> sourceUris;
+        private @Nullable Output<Boolean> autodetect;
+        private @Nullable Output<AvroOptionsArgs> avroOptions;
+        private @Nullable Output<BigtableOptionsArgs> bigtableOptions;
+        private @Nullable Output<String> compression;
+        private @Nullable Output<String> connectionId;
+        private @Nullable Output<CsvOptionsArgs> csvOptions;
+        private @Nullable Output<List<String>> decimalTargetTypes;
+        private @Nullable Output<GoogleSheetsOptionsArgs> googleSheetsOptions;
+        private @Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions;
+        private @Nullable Output<Boolean> ignoreUnknownValues;
+        private @Nullable Output<Integer> maxBadRecords;
+        private @Nullable Output<ParquetOptionsArgs> parquetOptions;
+        private @Nullable Output<TableSchemaArgs> schema;
+        private @Nullable Output<String> sourceFormat;
+        private @Nullable Output<List<String>> sourceUris;
 
         public Builder() {
     	      // Empty
@@ -288,153 +288,153 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
     	      this.sourceUris = defaults.sourceUris;
         }
 
-        public Builder autodetect(@Nullable Input<Boolean> autodetect) {
+        public Builder autodetect(@Nullable Output<Boolean> autodetect) {
             this.autodetect = autodetect;
             return this;
         }
 
         public Builder autodetect(@Nullable Boolean autodetect) {
-            this.autodetect = Input.ofNullable(autodetect);
+            this.autodetect = Output.ofNullable(autodetect);
             return this;
         }
 
-        public Builder avroOptions(@Nullable Input<AvroOptionsArgs> avroOptions) {
+        public Builder avroOptions(@Nullable Output<AvroOptionsArgs> avroOptions) {
             this.avroOptions = avroOptions;
             return this;
         }
 
         public Builder avroOptions(@Nullable AvroOptionsArgs avroOptions) {
-            this.avroOptions = Input.ofNullable(avroOptions);
+            this.avroOptions = Output.ofNullable(avroOptions);
             return this;
         }
 
-        public Builder bigtableOptions(@Nullable Input<BigtableOptionsArgs> bigtableOptions) {
+        public Builder bigtableOptions(@Nullable Output<BigtableOptionsArgs> bigtableOptions) {
             this.bigtableOptions = bigtableOptions;
             return this;
         }
 
         public Builder bigtableOptions(@Nullable BigtableOptionsArgs bigtableOptions) {
-            this.bigtableOptions = Input.ofNullable(bigtableOptions);
+            this.bigtableOptions = Output.ofNullable(bigtableOptions);
             return this;
         }
 
-        public Builder compression(@Nullable Input<String> compression) {
+        public Builder compression(@Nullable Output<String> compression) {
             this.compression = compression;
             return this;
         }
 
         public Builder compression(@Nullable String compression) {
-            this.compression = Input.ofNullable(compression);
+            this.compression = Output.ofNullable(compression);
             return this;
         }
 
-        public Builder connectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Input.ofNullable(connectionId);
+            this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
 
-        public Builder csvOptions(@Nullable Input<CsvOptionsArgs> csvOptions) {
+        public Builder csvOptions(@Nullable Output<CsvOptionsArgs> csvOptions) {
             this.csvOptions = csvOptions;
             return this;
         }
 
         public Builder csvOptions(@Nullable CsvOptionsArgs csvOptions) {
-            this.csvOptions = Input.ofNullable(csvOptions);
+            this.csvOptions = Output.ofNullable(csvOptions);
             return this;
         }
 
-        public Builder decimalTargetTypes(@Nullable Input<List<String>> decimalTargetTypes) {
+        public Builder decimalTargetTypes(@Nullable Output<List<String>> decimalTargetTypes) {
             this.decimalTargetTypes = decimalTargetTypes;
             return this;
         }
 
         public Builder decimalTargetTypes(@Nullable List<String> decimalTargetTypes) {
-            this.decimalTargetTypes = Input.ofNullable(decimalTargetTypes);
+            this.decimalTargetTypes = Output.ofNullable(decimalTargetTypes);
             return this;
         }
 
-        public Builder googleSheetsOptions(@Nullable Input<GoogleSheetsOptionsArgs> googleSheetsOptions) {
+        public Builder googleSheetsOptions(@Nullable Output<GoogleSheetsOptionsArgs> googleSheetsOptions) {
             this.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
 
         public Builder googleSheetsOptions(@Nullable GoogleSheetsOptionsArgs googleSheetsOptions) {
-            this.googleSheetsOptions = Input.ofNullable(googleSheetsOptions);
+            this.googleSheetsOptions = Output.ofNullable(googleSheetsOptions);
             return this;
         }
 
-        public Builder hivePartitioningOptions(@Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions) {
+        public Builder hivePartitioningOptions(@Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions) {
             this.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
 
         public Builder hivePartitioningOptions(@Nullable HivePartitioningOptionsArgs hivePartitioningOptions) {
-            this.hivePartitioningOptions = Input.ofNullable(hivePartitioningOptions);
+            this.hivePartitioningOptions = Output.ofNullable(hivePartitioningOptions);
             return this;
         }
 
-        public Builder ignoreUnknownValues(@Nullable Input<Boolean> ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
 
         public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
-            this.ignoreUnknownValues = Input.ofNullable(ignoreUnknownValues);
+            this.ignoreUnknownValues = Output.ofNullable(ignoreUnknownValues);
             return this;
         }
 
-        public Builder maxBadRecords(@Nullable Input<Integer> maxBadRecords) {
+        public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
 
         public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
-            this.maxBadRecords = Input.ofNullable(maxBadRecords);
+            this.maxBadRecords = Output.ofNullable(maxBadRecords);
             return this;
         }
 
-        public Builder parquetOptions(@Nullable Input<ParquetOptionsArgs> parquetOptions) {
+        public Builder parquetOptions(@Nullable Output<ParquetOptionsArgs> parquetOptions) {
             this.parquetOptions = parquetOptions;
             return this;
         }
 
         public Builder parquetOptions(@Nullable ParquetOptionsArgs parquetOptions) {
-            this.parquetOptions = Input.ofNullable(parquetOptions);
+            this.parquetOptions = Output.ofNullable(parquetOptions);
             return this;
         }
 
-        public Builder schema(@Nullable Input<TableSchemaArgs> schema) {
+        public Builder schema(@Nullable Output<TableSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable TableSchemaArgs schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder sourceFormat(@Nullable Input<String> sourceFormat) {
+        public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
         }
 
         public Builder sourceFormat(@Nullable String sourceFormat) {
-            this.sourceFormat = Input.ofNullable(sourceFormat);
+            this.sourceFormat = Output.ofNullable(sourceFormat);
             return this;
         }
 
-        public Builder sourceUris(@Nullable Input<List<String>> sourceUris) {
+        public Builder sourceUris(@Nullable Output<List<String>> sourceUris) {
             this.sourceUris = sourceUris;
             return this;
         }
 
         public Builder sourceUris(@Nullable List<String> sourceUris) {
-            this.sourceUris = Input.ofNullable(sourceUris);
+            this.sourceUris = Output.ofNullable(sourceUris);
             return this;
         }
         public ExternalDataConfigurationArgs build() {

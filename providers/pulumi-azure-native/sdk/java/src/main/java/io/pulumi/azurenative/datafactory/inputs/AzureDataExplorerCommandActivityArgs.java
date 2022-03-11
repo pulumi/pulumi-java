@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -29,9 +29,9 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="command", required=true)
-      private final Input<Object> command;
+      private final Output<Object> command;
 
-    public Input<Object> getCommand() {
+    public Output<Object> getCommand() {
         return this.command;
     }
 
@@ -40,10 +40,10 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="commandTimeout")
-      private final @Nullable Input<Object> commandTimeout;
+      private final @Nullable Output<Object> commandTimeout;
 
-    public Input<Object> getCommandTimeout() {
-        return this.commandTimeout == null ? Input.empty() : this.commandTimeout;
+    public Output<Object> getCommandTimeout() {
+        return this.commandTimeout == null ? Output.empty() : this.commandTimeout;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -84,9 +84,9 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -95,10 +95,10 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -107,9 +107,9 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -118,22 +118,22 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public AzureDataExplorerCommandActivityArgs(
-        Input<Object> command,
-        @Nullable Input<Object> commandTimeout,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        Output<Object> command,
+        @Nullable Output<Object> commandTimeout,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
         this.commandTimeout = commandTimeout;
         this.dependsOn = dependsOn;
@@ -146,15 +146,15 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     }
 
     private AzureDataExplorerCommandActivityArgs() {
-        this.command = Input.empty();
-        this.commandTimeout = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.command = Output.empty();
+        this.commandTimeout = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -166,15 +166,15 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<Object> command;
-        private @Nullable Input<Object> commandTimeout;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private Output<Object> command;
+        private @Nullable Output<Object> commandTimeout;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -193,93 +193,93 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder command(Input<Object> command) {
+        public Builder command(Output<Object> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
         public Builder command(Object command) {
-            this.command = Input.of(Objects.requireNonNull(command));
+            this.command = Output.of(Objects.requireNonNull(command));
             return this;
         }
 
-        public Builder commandTimeout(@Nullable Input<Object> commandTimeout) {
+        public Builder commandTimeout(@Nullable Output<Object> commandTimeout) {
             this.commandTimeout = commandTimeout;
             return this;
         }
 
         public Builder commandTimeout(@Nullable Object commandTimeout) {
-            this.commandTimeout = Input.ofNullable(commandTimeout);
+            this.commandTimeout = Output.ofNullable(commandTimeout);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public AzureDataExplorerCommandActivityArgs build() {

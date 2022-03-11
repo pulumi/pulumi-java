@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLForwardedIPConfigurationFallbackBehavior;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class WebACLForwardedIPConfigurationArgs extends io.pulumi.resource
     public static final WebACLForwardedIPConfigurationArgs Empty = new WebACLForwardedIPConfigurationArgs();
 
     @InputImport(name="fallbackBehavior", required=true)
-      private final Input<WebACLForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
+      private final Output<WebACLForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
 
-    public Input<WebACLForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
+    public Output<WebACLForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
     public WebACLForwardedIPConfigurationArgs(
-        Input<WebACLForwardedIPConfigurationFallbackBehavior> fallbackBehavior,
-        Input<String> headerName) {
+        Output<WebACLForwardedIPConfigurationFallbackBehavior> fallbackBehavior,
+        Output<String> headerName) {
         this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
     }
 
     private WebACLForwardedIPConfigurationArgs() {
-        this.fallbackBehavior = Input.empty();
-        this.headerName = Input.empty();
+        this.fallbackBehavior = Output.empty();
+        this.headerName = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class WebACLForwardedIPConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<WebACLForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
-        private Input<String> headerName;
+        private Output<WebACLForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
+        private Output<String> headerName;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class WebACLForwardedIPConfigurationArgs extends io.pulumi.resource
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder fallbackBehavior(Input<WebACLForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
+        public Builder fallbackBehavior(Output<WebACLForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
         public Builder fallbackBehavior(WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
-            this.fallbackBehavior = Input.of(Objects.requireNonNull(fallbackBehavior));
+            this.fallbackBehavior = Output.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
         public WebACLForwardedIPConfigurationArgs build() {

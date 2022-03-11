@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ResolverSyncConfigLambdaConflictHandlerConfigArgs extends io.
      * 
      */
     @InputImport(name="lambdaConflictHandlerArn")
-      private final @Nullable Input<String> lambdaConflictHandlerArn;
+      private final @Nullable Output<String> lambdaConflictHandlerArn;
 
-    public Input<String> getLambdaConflictHandlerArn() {
-        return this.lambdaConflictHandlerArn == null ? Input.empty() : this.lambdaConflictHandlerArn;
+    public Output<String> getLambdaConflictHandlerArn() {
+        return this.lambdaConflictHandlerArn == null ? Output.empty() : this.lambdaConflictHandlerArn;
     }
 
-    public ResolverSyncConfigLambdaConflictHandlerConfigArgs(@Nullable Input<String> lambdaConflictHandlerArn) {
+    public ResolverSyncConfigLambdaConflictHandlerConfigArgs(@Nullable Output<String> lambdaConflictHandlerArn) {
         this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
     }
 
     private ResolverSyncConfigLambdaConflictHandlerConfigArgs() {
-        this.lambdaConflictHandlerArn = Input.empty();
+        this.lambdaConflictHandlerArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ResolverSyncConfigLambdaConflictHandlerConfigArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> lambdaConflictHandlerArn;
+        private @Nullable Output<String> lambdaConflictHandlerArn;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ResolverSyncConfigLambdaConflictHandlerConfigArgs extends io.
     	      this.lambdaConflictHandlerArn = defaults.lambdaConflictHandlerArn;
         }
 
-        public Builder lambdaConflictHandlerArn(@Nullable Input<String> lambdaConflictHandlerArn) {
+        public Builder lambdaConflictHandlerArn(@Nullable Output<String> lambdaConflictHandlerArn) {
             this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
             return this;
         }
 
         public Builder lambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
-            this.lambdaConflictHandlerArn = Input.ofNullable(lambdaConflictHandlerArn);
+            this.lambdaConflictHandlerArn = Output.ofNullable(lambdaConflictHandlerArn);
             return this;
         }
         public ResolverSyncConfigLambdaConflictHandlerConfigArgs build() {

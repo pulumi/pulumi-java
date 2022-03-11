@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Map<String,String>> value;
+      private final @Nullable Output<Map<String,String>> value;
 
-    public Input<Map<String,String>> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Map<String,String>> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public OptionArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> value) {
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> value) {
         this.name = name;
         this.value = value;
     }
 
     private OptionArgs() {
-        this.name = Input.empty();
-        this.value = Input.empty();
+        this.name = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> value;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> value;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder value(@Nullable Input<Map<String,String>> value) {
+        public Builder value(@Nullable Output<Map<String,String>> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Map<String,String> value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public OptionArgs build() {

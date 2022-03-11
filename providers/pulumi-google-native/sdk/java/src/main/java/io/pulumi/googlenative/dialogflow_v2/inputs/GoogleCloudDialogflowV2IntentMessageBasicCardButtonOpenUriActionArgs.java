@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs(Input<String> uri) {
+    public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs(Output<String> uri) {
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs() {
-        this.uri = Input.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
     }
 
     public static final class Builder {
-        private Input<String> uri;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
     	      this.uri = defaults.uri;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.IpFirewallRuleArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -140,24 +139,24 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IpFirewallRule(String name, IpFirewallRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:IpFirewallRule", name, args == null ? IpFirewallRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:synapse:IpFirewallRule", name, args == null ? IpFirewallRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IpFirewallRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IpFirewallRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:IpFirewallRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:synapse/v20190601preview:IpFirewallRule").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20201201:IpFirewallRule").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210301:IpFirewallRule").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210401preview:IpFirewallRule").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210501:IpFirewallRule").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601:IpFirewallRule").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601preview:IpFirewallRule").build())
+                Output.of(Alias.builder().setType("azure-native:synapse/v20190601preview:IpFirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20201201:IpFirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210301:IpFirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210401preview:IpFirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210501:IpFirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601:IpFirewallRule").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601preview:IpFirewallRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -171,7 +170,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IpFirewallRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IpFirewallRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IpFirewallRule(name, id, options);
     }
 }

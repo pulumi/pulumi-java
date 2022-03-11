@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ebs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-      private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Output<Boolean> encrypted;
 
-    public Input<Boolean> getEncrypted() {
-        return this.encrypted == null ? Input.empty() : this.encrypted;
+    public Output<Boolean> getEncrypted() {
+        return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permanentRestore")
-      private final @Nullable Input<Boolean> permanentRestore;
+      private final @Nullable Output<Boolean> permanentRestore;
 
-    public Input<Boolean> getPermanentRestore() {
-        return this.permanentRestore == null ? Input.empty() : this.permanentRestore;
+    public Output<Boolean> getPermanentRestore() {
+        return this.permanentRestore == null ? Output.empty() : this.permanentRestore;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRegion", required=true)
-      private final Input<String> sourceRegion;
+      private final Output<String> sourceRegion;
 
-    public Input<String> getSourceRegion() {
+    public Output<String> getSourceRegion() {
         return this.sourceRegion;
     }
 
@@ -77,9 +77,9 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshotId", required=true)
-      private final Input<String> sourceSnapshotId;
+      private final Output<String> sourceSnapshotId;
 
-    public Input<String> getSourceSnapshotId() {
+    public Output<String> getSourceSnapshotId() {
         return this.sourceSnapshotId;
     }
 
@@ -88,17 +88,17 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageTier")
-      private final @Nullable Input<String> storageTier;
+      private final @Nullable Output<String> storageTier;
 
-    public Input<String> getStorageTier() {
-        return this.storageTier == null ? Input.empty() : this.storageTier;
+    public Output<String> getStorageTier() {
+        return this.storageTier == null ? Output.empty() : this.storageTier;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -106,22 +106,22 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="temporaryRestoreDays")
-      private final @Nullable Input<Integer> temporaryRestoreDays;
+      private final @Nullable Output<Integer> temporaryRestoreDays;
 
-    public Input<Integer> getTemporaryRestoreDays() {
-        return this.temporaryRestoreDays == null ? Input.empty() : this.temporaryRestoreDays;
+    public Output<Integer> getTemporaryRestoreDays() {
+        return this.temporaryRestoreDays == null ? Output.empty() : this.temporaryRestoreDays;
     }
 
     public SnapshotCopyArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> encrypted,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<Boolean> permanentRestore,
-        Input<String> sourceRegion,
-        Input<String> sourceSnapshotId,
-        @Nullable Input<String> storageTier,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> temporaryRestoreDays) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> encrypted,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<Boolean> permanentRestore,
+        Output<String> sourceRegion,
+        Output<String> sourceSnapshotId,
+        @Nullable Output<String> storageTier,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> temporaryRestoreDays) {
         this.description = description;
         this.encrypted = encrypted;
         this.kmsKeyId = kmsKeyId;
@@ -134,15 +134,15 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotCopyArgs() {
-        this.description = Input.empty();
-        this.encrypted = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.permanentRestore = Input.empty();
-        this.sourceRegion = Input.empty();
-        this.sourceSnapshotId = Input.empty();
-        this.storageTier = Input.empty();
-        this.tags = Input.empty();
-        this.temporaryRestoreDays = Input.empty();
+        this.description = Output.empty();
+        this.encrypted = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.permanentRestore = Output.empty();
+        this.sourceRegion = Output.empty();
+        this.sourceSnapshotId = Output.empty();
+        this.storageTier = Output.empty();
+        this.tags = Output.empty();
+        this.temporaryRestoreDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -154,15 +154,15 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> encrypted;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<Boolean> permanentRestore;
-        private Input<String> sourceRegion;
-        private Input<String> sourceSnapshotId;
-        private @Nullable Input<String> storageTier;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> temporaryRestoreDays;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> encrypted;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<Boolean> permanentRestore;
+        private Output<String> sourceRegion;
+        private Output<String> sourceSnapshotId;
+        private @Nullable Output<String> storageTier;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> temporaryRestoreDays;
 
         public Builder() {
     	      // Empty
@@ -181,93 +181,93 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.temporaryRestoreDays = defaults.temporaryRestoreDays;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Input.ofNullable(encrypted);
+            this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder permanentRestore(@Nullable Input<Boolean> permanentRestore) {
+        public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
             this.permanentRestore = permanentRestore;
             return this;
         }
 
         public Builder permanentRestore(@Nullable Boolean permanentRestore) {
-            this.permanentRestore = Input.ofNullable(permanentRestore);
+            this.permanentRestore = Output.ofNullable(permanentRestore);
             return this;
         }
 
-        public Builder sourceRegion(Input<String> sourceRegion) {
+        public Builder sourceRegion(Output<String> sourceRegion) {
             this.sourceRegion = Objects.requireNonNull(sourceRegion);
             return this;
         }
 
         public Builder sourceRegion(String sourceRegion) {
-            this.sourceRegion = Input.of(Objects.requireNonNull(sourceRegion));
+            this.sourceRegion = Output.of(Objects.requireNonNull(sourceRegion));
             return this;
         }
 
-        public Builder sourceSnapshotId(Input<String> sourceSnapshotId) {
+        public Builder sourceSnapshotId(Output<String> sourceSnapshotId) {
             this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId);
             return this;
         }
 
         public Builder sourceSnapshotId(String sourceSnapshotId) {
-            this.sourceSnapshotId = Input.of(Objects.requireNonNull(sourceSnapshotId));
+            this.sourceSnapshotId = Output.of(Objects.requireNonNull(sourceSnapshotId));
             return this;
         }
 
-        public Builder storageTier(@Nullable Input<String> storageTier) {
+        public Builder storageTier(@Nullable Output<String> storageTier) {
             this.storageTier = storageTier;
             return this;
         }
 
         public Builder storageTier(@Nullable String storageTier) {
-            this.storageTier = Input.ofNullable(storageTier);
+            this.storageTier = Output.ofNullable(storageTier);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder temporaryRestoreDays(@Nullable Input<Integer> temporaryRestoreDays) {
+        public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
             this.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
 
         public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
-            this.temporaryRestoreDays = Input.ofNullable(temporaryRestoreDays);
+            this.temporaryRestoreDays = Output.ofNullable(temporaryRestoreDays);
             return this;
         }
         public SnapshotCopyArgs build() {

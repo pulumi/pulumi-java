@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * 
      */
     @InputImport(name="recordRowPath", required=true)
-      private final Input<String> recordRowPath;
+      private final Output<String> recordRowPath;
 
-    public Input<String> getRecordRowPath() {
+    public Output<String> getRecordRowPath() {
         return this.recordRowPath;
     }
 
-    public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs(Input<String> recordRowPath) {
+    public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs(Output<String> recordRowPath) {
         this.recordRowPath = Objects.requireNonNull(recordRowPath, "expected parameter 'recordRowPath' to be non-null");
     }
 
     private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs() {
-        this.recordRowPath = Input.empty();
+        this.recordRowPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     }
 
     public static final class Builder {
-        private Input<String> recordRowPath;
+        private Output<String> recordRowPath;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     	      this.recordRowPath = defaults.recordRowPath;
         }
 
-        public Builder recordRowPath(Input<String> recordRowPath) {
+        public Builder recordRowPath(Output<String> recordRowPath) {
             this.recordRowPath = Objects.requireNonNull(recordRowPath);
             return this;
         }
 
         public Builder recordRowPath(String recordRowPath) {
-            this.recordRowPath = Input.of(Objects.requireNonNull(recordRowPath));
+            this.recordRowPath = Output.of(Objects.requireNonNull(recordRowPath));
             return this;
         }
         public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs build() {

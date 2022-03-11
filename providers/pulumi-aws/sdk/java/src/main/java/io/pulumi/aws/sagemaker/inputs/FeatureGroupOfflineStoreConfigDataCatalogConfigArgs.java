@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends i
      * 
      */
     @InputImport(name="catalog")
-      private final @Nullable Input<String> catalog;
+      private final @Nullable Output<String> catalog;
 
-    public Input<String> getCatalog() {
-        return this.catalog == null ? Input.empty() : this.catalog;
+    public Output<String> getCatalog() {
+        return this.catalog == null ? Output.empty() : this.catalog;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends i
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<String> database;
+      private final @Nullable Output<String> database;
 
-    public Input<String> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<String> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends i
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     public FeatureGroupOfflineStoreConfigDataCatalogConfigArgs(
-        @Nullable Input<String> catalog,
-        @Nullable Input<String> database,
-        @Nullable Input<String> tableName) {
+        @Nullable Output<String> catalog,
+        @Nullable Output<String> database,
+        @Nullable Output<String> tableName) {
         this.catalog = catalog;
         this.database = database;
         this.tableName = tableName;
     }
 
     private FeatureGroupOfflineStoreConfigDataCatalogConfigArgs() {
-        this.catalog = Input.empty();
-        this.database = Input.empty();
-        this.tableName = Input.empty();
+        this.catalog = Output.empty();
+        this.database = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalog;
-        private @Nullable Input<String> database;
-        private @Nullable Input<String> tableName;
+        private @Nullable Output<String> catalog;
+        private @Nullable Output<String> database;
+        private @Nullable Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends i
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder catalog(@Nullable Input<String> catalog) {
+        public Builder catalog(@Nullable Output<String> catalog) {
             this.catalog = catalog;
             return this;
         }
 
         public Builder catalog(@Nullable String catalog) {
-            this.catalog = Input.ofNullable(catalog);
+            this.catalog = Output.ofNullable(catalog);
             return this;
         }
 
-        public Builder database(@Nullable Input<String> database) {
+        public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable String database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
         public FeatureGroupOfflineStoreConfigDataCatalogConfigArgs build() {

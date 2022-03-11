@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicenetworking.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,17 +20,17 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     @InputImport(name="peering")
-      private final @Nullable Input<String> peering;
+      private final @Nullable Output<String> peering;
 
-    public Input<String> getPeering() {
-        return this.peering == null ? Input.empty() : this.peering;
+    public Output<String> getPeering() {
+        return this.peering == null ? Output.empty() : this.peering;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedPeeringRanges")
-      private final @Nullable Input<List<String>> reservedPeeringRanges;
+      private final @Nullable Output<List<String>> reservedPeeringRanges;
 
-    public Input<List<String>> getReservedPeeringRanges() {
-        return this.reservedPeeringRanges == null ? Input.empty() : this.reservedPeeringRanges;
+    public Output<List<String>> getReservedPeeringRanges() {
+        return this.reservedPeeringRanges == null ? Output.empty() : this.reservedPeeringRanges;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public ConnectionState(
-        @Nullable Input<String> network,
-        @Nullable Input<String> peering,
-        @Nullable Input<List<String>> reservedPeeringRanges,
-        @Nullable Input<String> service) {
+        @Nullable Output<String> network,
+        @Nullable Output<String> peering,
+        @Nullable Output<List<String>> reservedPeeringRanges,
+        @Nullable Output<String> service) {
         this.network = network;
         this.peering = peering;
         this.reservedPeeringRanges = reservedPeeringRanges;
@@ -71,10 +71,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionState() {
-        this.network = Input.empty();
-        this.peering = Input.empty();
-        this.reservedPeeringRanges = Input.empty();
-        this.service = Input.empty();
+        this.network = Output.empty();
+        this.peering = Output.empty();
+        this.reservedPeeringRanges = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> peering;
-        private @Nullable Input<List<String>> reservedPeeringRanges;
-        private @Nullable Input<String> service;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> peering;
+        private @Nullable Output<List<String>> reservedPeeringRanges;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder peering(@Nullable Input<String> peering) {
+        public Builder peering(@Nullable Output<String> peering) {
             this.peering = peering;
             return this;
         }
 
         public Builder peering(@Nullable String peering) {
-            this.peering = Input.ofNullable(peering);
+            this.peering = Output.ofNullable(peering);
             return this;
         }
 
-        public Builder reservedPeeringRanges(@Nullable Input<List<String>> reservedPeeringRanges) {
+        public Builder reservedPeeringRanges(@Nullable Output<List<String>> reservedPeeringRanges) {
             this.reservedPeeringRanges = reservedPeeringRanges;
             return this;
         }
 
         public Builder reservedPeeringRanges(@Nullable List<String> reservedPeeringRanges) {
-            this.reservedPeeringRanges = Input.ofNullable(reservedPeeringRanges);
+            this.reservedPeeringRanges = Output.ofNullable(reservedPeeringRanges);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public ConnectionState build() {

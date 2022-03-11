@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CopyOnExpiryOptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
-    public CopyOnExpiryOptionArgs(Input<String> objectType) {
+    public CopyOnExpiryOptionArgs(Output<String> objectType) {
         this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
     }
 
     private CopyOnExpiryOptionArgs() {
-        this.objectType = Input.empty();
+        this.objectType = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CopyOnExpiryOptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> objectType;
+        private Output<String> objectType;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CopyOnExpiryOptionArgs extends io.pulumi.resources.ResourceAr
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
         public CopyOnExpiryOptionArgs build() {

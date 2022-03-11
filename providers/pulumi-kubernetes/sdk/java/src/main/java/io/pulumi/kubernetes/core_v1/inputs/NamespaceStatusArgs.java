@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.NamespaceConditionArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<NamespaceConditionArgs>> conditions;
+      private final @Nullable Output<List<NamespaceConditionArgs>> conditions;
 
-    public Input<List<NamespaceConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<NamespaceConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -40,22 +40,22 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="phase")
-      private final @Nullable Input<String> phase;
+      private final @Nullable Output<String> phase;
 
-    public Input<String> getPhase() {
-        return this.phase == null ? Input.empty() : this.phase;
+    public Output<String> getPhase() {
+        return this.phase == null ? Output.empty() : this.phase;
     }
 
     public NamespaceStatusArgs(
-        @Nullable Input<List<NamespaceConditionArgs>> conditions,
-        @Nullable Input<String> phase) {
+        @Nullable Output<List<NamespaceConditionArgs>> conditions,
+        @Nullable Output<String> phase) {
         this.conditions = conditions;
         this.phase = phase;
     }
 
     private NamespaceStatusArgs() {
-        this.conditions = Input.empty();
-        this.phase = Input.empty();
+        this.conditions = Output.empty();
+        this.phase = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,8 +67,8 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NamespaceConditionArgs>> conditions;
-        private @Nullable Input<String> phase;
+        private @Nullable Output<List<NamespaceConditionArgs>> conditions;
+        private @Nullable Output<String> phase;
 
         public Builder() {
     	      // Empty
@@ -80,23 +80,23 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
     	      this.phase = defaults.phase;
         }
 
-        public Builder conditions(@Nullable Input<List<NamespaceConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<NamespaceConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<NamespaceConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder phase(@Nullable Input<String> phase) {
+        public Builder phase(@Nullable Output<String> phase) {
             this.phase = phase;
             return this;
         }
 
         public Builder phase(@Nullable String phase) {
-            this.phase = Input.ofNullable(phase);
+            this.phase = Output.ofNullable(phase);
             return this;
         }
         public NamespaceStatusArgs build() {

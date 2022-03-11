@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ReceiptFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidr", required=true)
-      private final Input<String> cidr;
+      private final Output<String> cidr;
 
-    public Input<String> getCidr() {
+    public Output<String> getCidr() {
         return this.cidr;
     }
 
@@ -30,10 +30,10 @@ public final class ReceiptFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ReceiptFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
     public ReceiptFilterArgs(
-        Input<String> cidr,
-        @Nullable Input<String> name,
-        Input<String> policy) {
+        Output<String> cidr,
+        @Nullable Output<String> name,
+        Output<String> policy) {
         this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
         this.name = name;
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
     }
 
     private ReceiptFilterArgs() {
-        this.cidr = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
+        this.cidr = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ReceiptFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cidr;
-        private @Nullable Input<String> name;
-        private Input<String> policy;
+        private Output<String> cidr;
+        private @Nullable Output<String> name;
+        private Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ReceiptFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder cidr(Input<String> cidr) {
+        public Builder cidr(Output<String> cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
         public Builder cidr(String cidr) {
-            this.cidr = Input.of(Objects.requireNonNull(cidr));
+            this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(String policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
         public ReceiptFilterArgs build() {

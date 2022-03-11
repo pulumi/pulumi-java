@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retry")
-      private final @Nullable Input<Object> retry;
+      private final @Nullable Output<Object> retry;
 
-    public Input<Object> getRetry() {
-        return this.retry == null ? Input.empty() : this.retry;
+    public Output<Object> getRetry() {
+        return this.retry == null ? Output.empty() : this.retry;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryIntervalInSeconds")
-      private final @Nullable Input<Integer> retryIntervalInSeconds;
+      private final @Nullable Output<Integer> retryIntervalInSeconds;
 
-    public Input<Integer> getRetryIntervalInSeconds() {
-        return this.retryIntervalInSeconds == null ? Input.empty() : this.retryIntervalInSeconds;
+    public Output<Integer> getRetryIntervalInSeconds() {
+        return this.retryIntervalInSeconds == null ? Output.empty() : this.retryIntervalInSeconds;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secureInput")
-      private final @Nullable Input<Boolean> secureInput;
+      private final @Nullable Output<Boolean> secureInput;
 
-    public Input<Boolean> getSecureInput() {
-        return this.secureInput == null ? Input.empty() : this.secureInput;
+    public Output<Boolean> getSecureInput() {
+        return this.secureInput == null ? Output.empty() : this.secureInput;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secureOutput")
-      private final @Nullable Input<Boolean> secureOutput;
+      private final @Nullable Output<Boolean> secureOutput;
 
-    public Input<Boolean> getSecureOutput() {
-        return this.secureOutput == null ? Input.empty() : this.secureOutput;
+    public Output<Boolean> getSecureOutput() {
+        return this.secureOutput == null ? Output.empty() : this.secureOutput;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Object> timeout;
+      private final @Nullable Output<Object> timeout;
 
-    public Input<Object> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Object> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public ActivityPolicyArgs(
-        @Nullable Input<Object> retry,
-        @Nullable Input<Integer> retryIntervalInSeconds,
-        @Nullable Input<Boolean> secureInput,
-        @Nullable Input<Boolean> secureOutput,
-        @Nullable Input<Object> timeout) {
+        @Nullable Output<Object> retry,
+        @Nullable Output<Integer> retryIntervalInSeconds,
+        @Nullable Output<Boolean> secureInput,
+        @Nullable Output<Boolean> secureOutput,
+        @Nullable Output<Object> timeout) {
         this.retry = retry;
         this.retryIntervalInSeconds = retryIntervalInSeconds;
         this.secureInput = secureInput;
@@ -89,11 +89,11 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActivityPolicyArgs() {
-        this.retry = Input.empty();
-        this.retryIntervalInSeconds = Input.empty();
-        this.secureInput = Input.empty();
-        this.secureOutput = Input.empty();
-        this.timeout = Input.empty();
+        this.retry = Output.empty();
+        this.retryIntervalInSeconds = Output.empty();
+        this.secureInput = Output.empty();
+        this.secureOutput = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> retry;
-        private @Nullable Input<Integer> retryIntervalInSeconds;
-        private @Nullable Input<Boolean> secureInput;
-        private @Nullable Input<Boolean> secureOutput;
-        private @Nullable Input<Object> timeout;
+        private @Nullable Output<Object> retry;
+        private @Nullable Output<Integer> retryIntervalInSeconds;
+        private @Nullable Output<Boolean> secureInput;
+        private @Nullable Output<Boolean> secureOutput;
+        private @Nullable Output<Object> timeout;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder retry(@Nullable Input<Object> retry) {
+        public Builder retry(@Nullable Output<Object> retry) {
             this.retry = retry;
             return this;
         }
 
         public Builder retry(@Nullable Object retry) {
-            this.retry = Input.ofNullable(retry);
+            this.retry = Output.ofNullable(retry);
             return this;
         }
 
-        public Builder retryIntervalInSeconds(@Nullable Input<Integer> retryIntervalInSeconds) {
+        public Builder retryIntervalInSeconds(@Nullable Output<Integer> retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
 
         public Builder retryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
-            this.retryIntervalInSeconds = Input.ofNullable(retryIntervalInSeconds);
+            this.retryIntervalInSeconds = Output.ofNullable(retryIntervalInSeconds);
             return this;
         }
 
-        public Builder secureInput(@Nullable Input<Boolean> secureInput) {
+        public Builder secureInput(@Nullable Output<Boolean> secureInput) {
             this.secureInput = secureInput;
             return this;
         }
 
         public Builder secureInput(@Nullable Boolean secureInput) {
-            this.secureInput = Input.ofNullable(secureInput);
+            this.secureInput = Output.ofNullable(secureInput);
             return this;
         }
 
-        public Builder secureOutput(@Nullable Input<Boolean> secureOutput) {
+        public Builder secureOutput(@Nullable Output<Boolean> secureOutput) {
             this.secureOutput = secureOutput;
             return this;
         }
 
         public Builder secureOutput(@Nullable Boolean secureOutput) {
-            this.secureOutput = Input.ofNullable(secureOutput);
+            this.secureOutput = Output.ofNullable(secureOutput);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Object> timeout) {
+        public Builder timeout(@Nullable Output<Object> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Object timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public ActivityPolicyArgs build() {

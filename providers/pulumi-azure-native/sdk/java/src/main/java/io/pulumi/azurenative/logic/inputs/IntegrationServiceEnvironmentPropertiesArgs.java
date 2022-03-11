@@ -9,7 +9,7 @@ import io.pulumi.azurenative.logic.inputs.FlowEndpointsConfigurationArgs;
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmenEncryptionConfigurationArgs;
 import io.pulumi.azurenative.logic.inputs.NetworkConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -29,10 +29,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="encryptionConfiguration")
-      private final @Nullable Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
+    public Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> getEncryptionConfiguration() {
+        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="endpointsConfiguration")
-      private final @Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration;
+      private final @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
-    public Input<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
-        return this.endpointsConfiguration == null ? Input.empty() : this.endpointsConfiguration;
+    public Output<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
+        return this.endpointsConfiguration == null ? Output.empty() : this.endpointsConfiguration;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="integrationServiceEnvironmentId")
-      private final @Nullable Input<String> integrationServiceEnvironmentId;
+      private final @Nullable Output<String> integrationServiceEnvironmentId;
 
-    public Input<String> getIntegrationServiceEnvironmentId() {
-        return this.integrationServiceEnvironmentId == null ? Input.empty() : this.integrationServiceEnvironmentId;
+    public Output<String> getIntegrationServiceEnvironmentId() {
+        return this.integrationServiceEnvironmentId == null ? Output.empty() : this.integrationServiceEnvironmentId;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="networkConfiguration")
-      private final @Nullable Input<NetworkConfigurationArgs> networkConfiguration;
+      private final @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
 
-    public Input<NetworkConfigurationArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
+    public Output<NetworkConfigurationArgs> getNetworkConfiguration() {
+        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,WorkflowProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState;
 
-    public Input<Either<String,WorkflowProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,WorkflowProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -84,19 +84,19 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,WorkflowState>> state;
+      private final @Nullable Output<Either<String,WorkflowState>> state;
 
-    public Input<Either<String,WorkflowState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,WorkflowState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public IntegrationServiceEnvironmentPropertiesArgs(
-        @Nullable Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration,
-        @Nullable Input<String> integrationServiceEnvironmentId,
-        @Nullable Input<NetworkConfigurationArgs> networkConfiguration,
-        @Nullable Input<Either<String,WorkflowProvisioningState>> provisioningState,
-        @Nullable Input<Either<String,WorkflowState>> state) {
+        @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration,
+        @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration,
+        @Nullable Output<String> integrationServiceEnvironmentId,
+        @Nullable Output<NetworkConfigurationArgs> networkConfiguration,
+        @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState,
+        @Nullable Output<Either<String,WorkflowState>> state) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.endpointsConfiguration = endpointsConfiguration;
         this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
@@ -106,12 +106,12 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     }
 
     private IntegrationServiceEnvironmentPropertiesArgs() {
-        this.encryptionConfiguration = Input.empty();
-        this.endpointsConfiguration = Input.empty();
-        this.integrationServiceEnvironmentId = Input.empty();
-        this.networkConfiguration = Input.empty();
-        this.provisioningState = Input.empty();
-        this.state = Input.empty();
+        this.encryptionConfiguration = Output.empty();
+        this.endpointsConfiguration = Output.empty();
+        this.integrationServiceEnvironmentId = Output.empty();
+        this.networkConfiguration = Output.empty();
+        this.provisioningState = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,12 +123,12 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration;
-        private @Nullable Input<String> integrationServiceEnvironmentId;
-        private @Nullable Input<NetworkConfigurationArgs> networkConfiguration;
-        private @Nullable Input<Either<String,WorkflowProvisioningState>> provisioningState;
-        private @Nullable Input<Either<String,WorkflowState>> state;
+        private @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
+        private @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
+        private @Nullable Output<String> integrationServiceEnvironmentId;
+        private @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
+        private @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState;
+        private @Nullable Output<Either<String,WorkflowState>> state;
 
         public Builder() {
     	      // Empty
@@ -144,63 +144,63 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     	      this.state = defaults.state;
         }
 
-        public Builder encryptionConfiguration(@Nullable Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
         public Builder encryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder endpointsConfiguration(@Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
+        public Builder endpointsConfiguration(@Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
             this.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
 
         public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
-            this.endpointsConfiguration = Input.ofNullable(endpointsConfiguration);
+            this.endpointsConfiguration = Output.ofNullable(endpointsConfiguration);
             return this;
         }
 
-        public Builder integrationServiceEnvironmentId(@Nullable Input<String> integrationServiceEnvironmentId) {
+        public Builder integrationServiceEnvironmentId(@Nullable Output<String> integrationServiceEnvironmentId) {
             this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
             return this;
         }
 
         public Builder integrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
-            this.integrationServiceEnvironmentId = Input.ofNullable(integrationServiceEnvironmentId);
+            this.integrationServiceEnvironmentId = Output.ofNullable(integrationServiceEnvironmentId);
             return this;
         }
 
-        public Builder networkConfiguration(@Nullable Input<NetworkConfigurationArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Output<NetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
         public Builder networkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Input.ofNullable(networkConfiguration);
+            this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,WorkflowProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,WorkflowProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,WorkflowState>> state) {
+        public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,WorkflowState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public IntegrationServiceEnvironmentPropertiesArgs build() {

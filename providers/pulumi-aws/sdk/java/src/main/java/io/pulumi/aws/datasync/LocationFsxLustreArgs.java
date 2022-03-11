@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.datasync;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fsxFilesystemArn", required=true)
-      private final Input<String> fsxFilesystemArn;
+      private final Output<String> fsxFilesystemArn;
 
-    public Input<String> getFsxFilesystemArn() {
+    public Output<String> getFsxFilesystemArn() {
         return this.fsxFilesystemArn;
     }
 
@@ -32,9 +32,9 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupArns", required=true)
-      private final Input<List<String>> securityGroupArns;
+      private final Output<List<String>> securityGroupArns;
 
-    public Input<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> getSecurityGroupArns() {
         return this.securityGroupArns;
     }
 
@@ -43,10 +43,10 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subdirectory")
-      private final @Nullable Input<String> subdirectory;
+      private final @Nullable Output<String> subdirectory;
 
-    public Input<String> getSubdirectory() {
-        return this.subdirectory == null ? Input.empty() : this.subdirectory;
+    public Output<String> getSubdirectory() {
+        return this.subdirectory == null ? Output.empty() : this.subdirectory;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public LocationFsxLustreArgs(
-        Input<String> fsxFilesystemArn,
-        Input<List<String>> securityGroupArns,
-        @Nullable Input<String> subdirectory,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        Output<String> fsxFilesystemArn,
+        Output<List<String>> securityGroupArns,
+        @Nullable Output<String> subdirectory,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.fsxFilesystemArn = Objects.requireNonNull(fsxFilesystemArn, "expected parameter 'fsxFilesystemArn' to be non-null");
         this.securityGroupArns = Objects.requireNonNull(securityGroupArns, "expected parameter 'securityGroupArns' to be non-null");
         this.subdirectory = subdirectory;
@@ -85,11 +85,11 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LocationFsxLustreArgs() {
-        this.fsxFilesystemArn = Input.empty();
-        this.securityGroupArns = Input.empty();
-        this.subdirectory = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.fsxFilesystemArn = Output.empty();
+        this.securityGroupArns = Output.empty();
+        this.subdirectory = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> fsxFilesystemArn;
-        private Input<List<String>> securityGroupArns;
-        private @Nullable Input<String> subdirectory;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private Output<String> fsxFilesystemArn;
+        private Output<List<String>> securityGroupArns;
+        private @Nullable Output<String> subdirectory;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder fsxFilesystemArn(Input<String> fsxFilesystemArn) {
+        public Builder fsxFilesystemArn(Output<String> fsxFilesystemArn) {
             this.fsxFilesystemArn = Objects.requireNonNull(fsxFilesystemArn);
             return this;
         }
 
         public Builder fsxFilesystemArn(String fsxFilesystemArn) {
-            this.fsxFilesystemArn = Input.of(Objects.requireNonNull(fsxFilesystemArn));
+            this.fsxFilesystemArn = Output.of(Objects.requireNonNull(fsxFilesystemArn));
             return this;
         }
 
-        public Builder securityGroupArns(Input<List<String>> securityGroupArns) {
+        public Builder securityGroupArns(Output<List<String>> securityGroupArns) {
             this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
             return this;
         }
 
         public Builder securityGroupArns(List<String> securityGroupArns) {
-            this.securityGroupArns = Input.of(Objects.requireNonNull(securityGroupArns));
+            this.securityGroupArns = Output.of(Objects.requireNonNull(securityGroupArns));
             return this;
         }
 
-        public Builder subdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Input.ofNullable(subdirectory);
+            this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public LocationFsxLustreArgs build() {

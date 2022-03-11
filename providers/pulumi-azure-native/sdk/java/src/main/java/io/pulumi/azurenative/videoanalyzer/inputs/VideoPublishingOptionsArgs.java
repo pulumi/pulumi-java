@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VideoPublishingOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="disableArchive")
-      private final @Nullable Input<String> disableArchive;
+      private final @Nullable Output<String> disableArchive;
 
-    public Input<String> getDisableArchive() {
-        return this.disableArchive == null ? Input.empty() : this.disableArchive;
+    public Output<String> getDisableArchive() {
+        return this.disableArchive == null ? Output.empty() : this.disableArchive;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class VideoPublishingOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="disableRtspPublishing")
-      private final @Nullable Input<String> disableRtspPublishing;
+      private final @Nullable Output<String> disableRtspPublishing;
 
-    public Input<String> getDisableRtspPublishing() {
-        return this.disableRtspPublishing == null ? Input.empty() : this.disableRtspPublishing;
+    public Output<String> getDisableRtspPublishing() {
+        return this.disableRtspPublishing == null ? Output.empty() : this.disableRtspPublishing;
     }
 
     public VideoPublishingOptionsArgs(
-        @Nullable Input<String> disableArchive,
-        @Nullable Input<String> disableRtspPublishing) {
+        @Nullable Output<String> disableArchive,
+        @Nullable Output<String> disableRtspPublishing) {
         this.disableArchive = disableArchive;
         this.disableRtspPublishing = disableRtspPublishing;
     }
 
     private VideoPublishingOptionsArgs() {
-        this.disableArchive = Input.empty();
-        this.disableRtspPublishing = Input.empty();
+        this.disableArchive = Output.empty();
+        this.disableRtspPublishing = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class VideoPublishingOptionsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> disableArchive;
-        private @Nullable Input<String> disableRtspPublishing;
+        private @Nullable Output<String> disableArchive;
+        private @Nullable Output<String> disableRtspPublishing;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class VideoPublishingOptionsArgs extends io.pulumi.resources.Resour
     	      this.disableRtspPublishing = defaults.disableRtspPublishing;
         }
 
-        public Builder disableArchive(@Nullable Input<String> disableArchive) {
+        public Builder disableArchive(@Nullable Output<String> disableArchive) {
             this.disableArchive = disableArchive;
             return this;
         }
 
         public Builder disableArchive(@Nullable String disableArchive) {
-            this.disableArchive = Input.ofNullable(disableArchive);
+            this.disableArchive = Output.ofNullable(disableArchive);
             return this;
         }
 
-        public Builder disableRtspPublishing(@Nullable Input<String> disableRtspPublishing) {
+        public Builder disableRtspPublishing(@Nullable Output<String> disableRtspPublishing) {
             this.disableRtspPublishing = disableRtspPublishing;
             return this;
         }
 
         public Builder disableRtspPublishing(@Nullable String disableRtspPublishing) {
-            this.disableRtspPublishing = Input.ofNullable(disableRtspPublishing);
+            this.disableRtspPublishing = Output.ofNullable(disableRtspPublishing);
             return this;
         }
         public VideoPublishingOptionsArgs build() {

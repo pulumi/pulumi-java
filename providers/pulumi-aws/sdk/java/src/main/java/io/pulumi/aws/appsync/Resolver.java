@@ -9,7 +9,6 @@ import io.pulumi.aws.appsync.inputs.ResolverState;
 import io.pulumi.aws.appsync.outputs.ResolverCachingConfig;
 import io.pulumi.aws.appsync.outputs.ResolverPipelineConfig;
 import io.pulumi.aws.appsync.outputs.ResolverSyncConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -240,14 +239,14 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resolver(String name, ResolverArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appsync/resolver:Resolver", name, args == null ? ResolverArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:appsync/resolver:Resolver", name, args == null ? ResolverArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Resolver(String name, Input<String> id, @Nullable ResolverState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Resolver(String name, Output<String> id, @Nullable ResolverState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:appsync/resolver:Resolver", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -263,7 +262,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Resolver get(String name, Input<String> id, @Nullable ResolverState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Resolver get(String name, Output<String> id, @Nullable ResolverState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Resolver(name, id, state, options);
     }
 }

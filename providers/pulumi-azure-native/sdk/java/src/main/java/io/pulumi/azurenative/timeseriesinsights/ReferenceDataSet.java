@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.timeseriesinsights.ReferenceDataSetArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.ReferenceDataSetKeyPropertyResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,23 +183,23 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReferenceDataSet(String name, ReferenceDataSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:timeseriesinsights:ReferenceDataSet", name, args == null ? ReferenceDataSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:timeseriesinsights:ReferenceDataSet", name, args == null ? ReferenceDataSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ReferenceDataSet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ReferenceDataSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:timeseriesinsights:ReferenceDataSet", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:ReferenceDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:ReferenceDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:ReferenceDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:ReferenceDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:ReferenceDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:ReferenceDataSet").build())
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:ReferenceDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:ReferenceDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:ReferenceDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:ReferenceDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:ReferenceDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:ReferenceDataSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -214,7 +213,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReferenceDataSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ReferenceDataSet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReferenceDataSet(name, id, options);
     }
 }

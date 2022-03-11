@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.awsnative.gamelift.enums.FleetCertificateConfigurationCertificateType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class FleetCertificateConfigurationArgs extends io.pulumi.resources
     public static final FleetCertificateConfigurationArgs Empty = new FleetCertificateConfigurationArgs();
 
     @InputImport(name="certificateType", required=true)
-      private final Input<FleetCertificateConfigurationCertificateType> certificateType;
+      private final Output<FleetCertificateConfigurationCertificateType> certificateType;
 
-    public Input<FleetCertificateConfigurationCertificateType> getCertificateType() {
+    public Output<FleetCertificateConfigurationCertificateType> getCertificateType() {
         return this.certificateType;
     }
 
-    public FleetCertificateConfigurationArgs(Input<FleetCertificateConfigurationCertificateType> certificateType) {
+    public FleetCertificateConfigurationArgs(Output<FleetCertificateConfigurationCertificateType> certificateType) {
         this.certificateType = Objects.requireNonNull(certificateType, "expected parameter 'certificateType' to be non-null");
     }
 
     private FleetCertificateConfigurationArgs() {
-        this.certificateType = Input.empty();
+        this.certificateType = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FleetCertificateConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<FleetCertificateConfigurationCertificateType> certificateType;
+        private Output<FleetCertificateConfigurationCertificateType> certificateType;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FleetCertificateConfigurationArgs extends io.pulumi.resources
     	      this.certificateType = defaults.certificateType;
         }
 
-        public Builder certificateType(Input<FleetCertificateConfigurationCertificateType> certificateType) {
+        public Builder certificateType(Output<FleetCertificateConfigurationCertificateType> certificateType) {
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }
 
         public Builder certificateType(FleetCertificateConfigurationCertificateType certificateType) {
-            this.certificateType = Input.of(Objects.requireNonNull(certificateType));
+            this.certificateType = Output.of(Objects.requireNonNull(certificateType));
             return this;
         }
         public FleetCertificateConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs;
 import java.lang.Boolean;
@@ -21,10 +21,10 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * 
      */
     @InputImport(name="critical")
-      private final @Nullable Input<Boolean> critical;
+      private final @Nullable Output<Boolean> critical;
 
-    public Input<Boolean> getCritical() {
-        return this.critical == null ? Input.empty() : this.critical;
+    public Output<Boolean> getCritical() {
+        return this.critical == null ? Output.empty() : this.critical;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * 
      */
     @InputImport(name="objectId", required=true)
-      private final Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
+      private final Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
 
-    public Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> getObjectId() {
+    public Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> getObjectId() {
         return this.objectId;
     }
 
@@ -43,25 +43,25 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs(
-        @Nullable Input<Boolean> critical,
-        Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId,
-        Input<String> value) {
+        @Nullable Output<Boolean> critical,
+        Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId,
+        Output<String> value) {
         this.critical = critical;
         this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs() {
-        this.critical = Input.empty();
-        this.objectId = Input.empty();
-        this.value = Input.empty();
+        this.critical = Output.empty();
+        this.objectId = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> critical;
-        private Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
-        private Input<String> value;
+        private @Nullable Output<Boolean> critical;
+        private Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
     	      this.value = defaults.value;
         }
 
-        public Builder critical(@Nullable Input<Boolean> critical) {
+        public Builder critical(@Nullable Output<Boolean> critical) {
             this.critical = critical;
             return this;
         }
 
         public Builder critical(@Nullable Boolean critical) {
-            this.critical = Input.ofNullable(critical);
+            this.critical = Output.ofNullable(critical);
             return this;
         }
 
-        public Builder objectId(Input<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId) {
+        public Builder objectId(Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
         public Builder objectId(CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs objectId) {
-            this.objectId = Input.of(Objects.requireNonNull(objectId));
+            this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs build() {

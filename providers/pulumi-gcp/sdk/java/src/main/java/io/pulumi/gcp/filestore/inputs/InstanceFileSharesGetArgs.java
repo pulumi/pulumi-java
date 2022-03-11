@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.filestore.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.filestore.inputs.InstanceFileSharesNfsExportOptionGetArgs;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="capacityGb", required=true)
-      private final Input<Integer> capacityGb;
+      private final Output<Integer> capacityGb;
 
-    public Input<Integer> getCapacityGb() {
+    public Output<Integer> getCapacityGb() {
         return this.capacityGb;
     }
 
@@ -34,9 +34,9 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -46,25 +46,25 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="nfsExportOptions")
-      private final @Nullable Input<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions;
+      private final @Nullable Output<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions;
 
-    public Input<List<InstanceFileSharesNfsExportOptionGetArgs>> getNfsExportOptions() {
-        return this.nfsExportOptions == null ? Input.empty() : this.nfsExportOptions;
+    public Output<List<InstanceFileSharesNfsExportOptionGetArgs>> getNfsExportOptions() {
+        return this.nfsExportOptions == null ? Output.empty() : this.nfsExportOptions;
     }
 
     public InstanceFileSharesGetArgs(
-        Input<Integer> capacityGb,
-        Input<String> name,
-        @Nullable Input<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions) {
+        Output<Integer> capacityGb,
+        Output<String> name,
+        @Nullable Output<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions) {
         this.capacityGb = Objects.requireNonNull(capacityGb, "expected parameter 'capacityGb' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.nfsExportOptions = nfsExportOptions;
     }
 
     private InstanceFileSharesGetArgs() {
-        this.capacityGb = Input.empty();
-        this.name = Input.empty();
-        this.nfsExportOptions = Input.empty();
+        this.capacityGb = Output.empty();
+        this.name = Output.empty();
+        this.nfsExportOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Integer> capacityGb;
-        private Input<String> name;
-        private @Nullable Input<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions;
+        private Output<Integer> capacityGb;
+        private Output<String> name;
+        private @Nullable Output<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
     	      this.nfsExportOptions = defaults.nfsExportOptions;
         }
 
-        public Builder capacityGb(Input<Integer> capacityGb) {
+        public Builder capacityGb(Output<Integer> capacityGb) {
             this.capacityGb = Objects.requireNonNull(capacityGb);
             return this;
         }
 
         public Builder capacityGb(Integer capacityGb) {
-            this.capacityGb = Input.of(Objects.requireNonNull(capacityGb));
+            this.capacityGb = Output.of(Objects.requireNonNull(capacityGb));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder nfsExportOptions(@Nullable Input<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions) {
+        public Builder nfsExportOptions(@Nullable Output<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions) {
             this.nfsExportOptions = nfsExportOptions;
             return this;
         }
 
         public Builder nfsExportOptions(@Nullable List<InstanceFileSharesNfsExportOptionGetArgs> nfsExportOptions) {
-            this.nfsExportOptions = Input.ofNullable(nfsExportOptions);
+            this.nfsExportOptions = Output.ofNullable(nfsExportOptions);
             return this;
         }
         public InstanceFileSharesGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsAcl;
 import io.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsGid;
@@ -30,10 +30,10 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="acl")
-      private final @Nullable Input<MetadataOptionsAcl> acl;
+      private final @Nullable Output<MetadataOptionsAcl> acl;
 
-    public Input<MetadataOptionsAcl> getAcl() {
-        return this.acl == null ? Input.empty() : this.acl;
+    public Output<MetadataOptionsAcl> getAcl() {
+        return this.acl == null ? Output.empty() : this.acl;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gid")
-      private final @Nullable Input<MetadataOptionsGid> gid;
+      private final @Nullable Output<MetadataOptionsGid> gid;
 
-    public Input<MetadataOptionsGid> getGid() {
-        return this.gid == null ? Input.empty() : this.gid;
+    public Output<MetadataOptionsGid> getGid() {
+        return this.gid == null ? Output.empty() : this.gid;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKey")
-      private final @Nullable Input<MetadataOptionsKmsKey> kmsKey;
+      private final @Nullable Output<MetadataOptionsKmsKey> kmsKey;
 
-    public Input<MetadataOptionsKmsKey> getKmsKey() {
-        return this.kmsKey == null ? Input.empty() : this.kmsKey;
+    public Output<MetadataOptionsKmsKey> getKmsKey() {
+        return this.kmsKey == null ? Output.empty() : this.kmsKey;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<MetadataOptionsMode> mode;
+      private final @Nullable Output<MetadataOptionsMode> mode;
 
-    public Input<MetadataOptionsMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<MetadataOptionsMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageClass")
-      private final @Nullable Input<MetadataOptionsStorageClass> storageClass;
+      private final @Nullable Output<MetadataOptionsStorageClass> storageClass;
 
-    public Input<MetadataOptionsStorageClass> getStorageClass() {
-        return this.storageClass == null ? Input.empty() : this.storageClass;
+    public Output<MetadataOptionsStorageClass> getStorageClass() {
+        return this.storageClass == null ? Output.empty() : this.storageClass;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="symlink")
-      private final @Nullable Input<MetadataOptionsSymlink> symlink;
+      private final @Nullable Output<MetadataOptionsSymlink> symlink;
 
-    public Input<MetadataOptionsSymlink> getSymlink() {
-        return this.symlink == null ? Input.empty() : this.symlink;
+    public Output<MetadataOptionsSymlink> getSymlink() {
+        return this.symlink == null ? Output.empty() : this.symlink;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="temporaryHold")
-      private final @Nullable Input<MetadataOptionsTemporaryHold> temporaryHold;
+      private final @Nullable Output<MetadataOptionsTemporaryHold> temporaryHold;
 
-    public Input<MetadataOptionsTemporaryHold> getTemporaryHold() {
-        return this.temporaryHold == null ? Input.empty() : this.temporaryHold;
+    public Output<MetadataOptionsTemporaryHold> getTemporaryHold() {
+        return this.temporaryHold == null ? Output.empty() : this.temporaryHold;
     }
 
     /**
@@ -107,21 +107,21 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<MetadataOptionsUid> uid;
+      private final @Nullable Output<MetadataOptionsUid> uid;
 
-    public Input<MetadataOptionsUid> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<MetadataOptionsUid> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     public MetadataOptionsArgs(
-        @Nullable Input<MetadataOptionsAcl> acl,
-        @Nullable Input<MetadataOptionsGid> gid,
-        @Nullable Input<MetadataOptionsKmsKey> kmsKey,
-        @Nullable Input<MetadataOptionsMode> mode,
-        @Nullable Input<MetadataOptionsStorageClass> storageClass,
-        @Nullable Input<MetadataOptionsSymlink> symlink,
-        @Nullable Input<MetadataOptionsTemporaryHold> temporaryHold,
-        @Nullable Input<MetadataOptionsUid> uid) {
+        @Nullable Output<MetadataOptionsAcl> acl,
+        @Nullable Output<MetadataOptionsGid> gid,
+        @Nullable Output<MetadataOptionsKmsKey> kmsKey,
+        @Nullable Output<MetadataOptionsMode> mode,
+        @Nullable Output<MetadataOptionsStorageClass> storageClass,
+        @Nullable Output<MetadataOptionsSymlink> symlink,
+        @Nullable Output<MetadataOptionsTemporaryHold> temporaryHold,
+        @Nullable Output<MetadataOptionsUid> uid) {
         this.acl = acl;
         this.gid = gid;
         this.kmsKey = kmsKey;
@@ -133,14 +133,14 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private MetadataOptionsArgs() {
-        this.acl = Input.empty();
-        this.gid = Input.empty();
-        this.kmsKey = Input.empty();
-        this.mode = Input.empty();
-        this.storageClass = Input.empty();
-        this.symlink = Input.empty();
-        this.temporaryHold = Input.empty();
-        this.uid = Input.empty();
+        this.acl = Output.empty();
+        this.gid = Output.empty();
+        this.kmsKey = Output.empty();
+        this.mode = Output.empty();
+        this.storageClass = Output.empty();
+        this.symlink = Output.empty();
+        this.temporaryHold = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -152,14 +152,14 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<MetadataOptionsAcl> acl;
-        private @Nullable Input<MetadataOptionsGid> gid;
-        private @Nullable Input<MetadataOptionsKmsKey> kmsKey;
-        private @Nullable Input<MetadataOptionsMode> mode;
-        private @Nullable Input<MetadataOptionsStorageClass> storageClass;
-        private @Nullable Input<MetadataOptionsSymlink> symlink;
-        private @Nullable Input<MetadataOptionsTemporaryHold> temporaryHold;
-        private @Nullable Input<MetadataOptionsUid> uid;
+        private @Nullable Output<MetadataOptionsAcl> acl;
+        private @Nullable Output<MetadataOptionsGid> gid;
+        private @Nullable Output<MetadataOptionsKmsKey> kmsKey;
+        private @Nullable Output<MetadataOptionsMode> mode;
+        private @Nullable Output<MetadataOptionsStorageClass> storageClass;
+        private @Nullable Output<MetadataOptionsSymlink> symlink;
+        private @Nullable Output<MetadataOptionsTemporaryHold> temporaryHold;
+        private @Nullable Output<MetadataOptionsUid> uid;
 
         public Builder() {
     	      // Empty
@@ -177,83 +177,83 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uid = defaults.uid;
         }
 
-        public Builder acl(@Nullable Input<MetadataOptionsAcl> acl) {
+        public Builder acl(@Nullable Output<MetadataOptionsAcl> acl) {
             this.acl = acl;
             return this;
         }
 
         public Builder acl(@Nullable MetadataOptionsAcl acl) {
-            this.acl = Input.ofNullable(acl);
+            this.acl = Output.ofNullable(acl);
             return this;
         }
 
-        public Builder gid(@Nullable Input<MetadataOptionsGid> gid) {
+        public Builder gid(@Nullable Output<MetadataOptionsGid> gid) {
             this.gid = gid;
             return this;
         }
 
         public Builder gid(@Nullable MetadataOptionsGid gid) {
-            this.gid = Input.ofNullable(gid);
+            this.gid = Output.ofNullable(gid);
             return this;
         }
 
-        public Builder kmsKey(@Nullable Input<MetadataOptionsKmsKey> kmsKey) {
+        public Builder kmsKey(@Nullable Output<MetadataOptionsKmsKey> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
         public Builder kmsKey(@Nullable MetadataOptionsKmsKey kmsKey) {
-            this.kmsKey = Input.ofNullable(kmsKey);
+            this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder mode(@Nullable Input<MetadataOptionsMode> mode) {
+        public Builder mode(@Nullable Output<MetadataOptionsMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable MetadataOptionsMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder storageClass(@Nullable Input<MetadataOptionsStorageClass> storageClass) {
+        public Builder storageClass(@Nullable Output<MetadataOptionsStorageClass> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
         public Builder storageClass(@Nullable MetadataOptionsStorageClass storageClass) {
-            this.storageClass = Input.ofNullable(storageClass);
+            this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
 
-        public Builder symlink(@Nullable Input<MetadataOptionsSymlink> symlink) {
+        public Builder symlink(@Nullable Output<MetadataOptionsSymlink> symlink) {
             this.symlink = symlink;
             return this;
         }
 
         public Builder symlink(@Nullable MetadataOptionsSymlink symlink) {
-            this.symlink = Input.ofNullable(symlink);
+            this.symlink = Output.ofNullable(symlink);
             return this;
         }
 
-        public Builder temporaryHold(@Nullable Input<MetadataOptionsTemporaryHold> temporaryHold) {
+        public Builder temporaryHold(@Nullable Output<MetadataOptionsTemporaryHold> temporaryHold) {
             this.temporaryHold = temporaryHold;
             return this;
         }
 
         public Builder temporaryHold(@Nullable MetadataOptionsTemporaryHold temporaryHold) {
-            this.temporaryHold = Input.ofNullable(temporaryHold);
+            this.temporaryHold = Output.ofNullable(temporaryHold);
             return this;
         }
 
-        public Builder uid(@Nullable Input<MetadataOptionsUid> uid) {
+        public Builder uid(@Nullable Output<MetadataOptionsUid> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable MetadataOptionsUid uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
         public MetadataOptionsArgs build() {

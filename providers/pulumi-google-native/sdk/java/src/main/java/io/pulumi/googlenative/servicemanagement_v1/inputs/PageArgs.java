@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subpages")
-      private final @Nullable Input<List<PageArgs>> subpages;
+      private final @Nullable Output<List<PageArgs>> subpages;
 
-    public Input<List<PageArgs>> getSubpages() {
-        return this.subpages == null ? Input.empty() : this.subpages;
+    public Output<List<PageArgs>> getSubpages() {
+        return this.subpages == null ? Output.empty() : this.subpages;
     }
 
     public PageArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> name,
-        @Nullable Input<List<PageArgs>> subpages) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> name,
+        @Nullable Output<List<PageArgs>> subpages) {
         this.content = content;
         this.name = name;
         this.subpages = subpages;
     }
 
     private PageArgs() {
-        this.content = Input.empty();
-        this.name = Input.empty();
-        this.subpages = Input.empty();
+        this.content = Output.empty();
+        this.name = Output.empty();
+        this.subpages = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<PageArgs>> subpages;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<PageArgs>> subpages;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subpages = defaults.subpages;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder subpages(@Nullable Input<List<PageArgs>> subpages) {
+        public Builder subpages(@Nullable Output<List<PageArgs>> subpages) {
             this.subpages = subpages;
             return this;
         }
 
         public Builder subpages(@Nullable List<PageArgs> subpages) {
-            this.subpages = Input.ofNullable(subpages);
+            this.subpages = Output.ofNullable(subpages);
             return this;
         }
         public PageArgs build() {

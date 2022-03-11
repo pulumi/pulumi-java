@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudfront.RealtimeLogConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.RealtimeLogConfigState;
 import io.pulumi.aws.cloudfront.outputs.RealtimeLogConfigEndpoint;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,14 +140,14 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RealtimeLogConfig(String name, RealtimeLogConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/realtimeLogConfig:RealtimeLogConfig", name, args == null ? RealtimeLogConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudfront/realtimeLogConfig:RealtimeLogConfig", name, args == null ? RealtimeLogConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RealtimeLogConfig(String name, Input<String> id, @Nullable RealtimeLogConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RealtimeLogConfig(String name, Output<String> id, @Nullable RealtimeLogConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudfront/realtimeLogConfig:RealtimeLogConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -164,7 +163,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RealtimeLogConfig get(String name, Input<String> id, @Nullable RealtimeLogConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RealtimeLogConfig get(String name, Output<String> id, @Nullable RealtimeLogConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RealtimeLogConfig(name, id, state, options);
     }
 }

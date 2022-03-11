@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTargetResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hostedZoneArn")
-      private final @Nullable Input<String> hostedZoneArn;
+      private final @Nullable Output<String> hostedZoneArn;
 
-    public Input<String> getHostedZoneArn() {
-        return this.hostedZoneArn == null ? Input.empty() : this.hostedZoneArn;
+    public Output<String> getHostedZoneArn() {
+        return this.hostedZoneArn == null ? Output.empty() : this.hostedZoneArn;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recordSetId")
-      private final @Nullable Input<String> recordSetId;
+      private final @Nullable Output<String> recordSetId;
 
-    public Input<String> getRecordSetId() {
-        return this.recordSetId == null ? Input.empty() : this.recordSetId;
+    public Output<String> getRecordSetId() {
+        return this.recordSetId == null ? Output.empty() : this.recordSetId;
     }
 
     /**
@@ -57,25 +57,25 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recordType")
-      private final @Nullable Input<String> recordType;
+      private final @Nullable Output<String> recordType;
 
-    public Input<String> getRecordType() {
-        return this.recordType == null ? Input.empty() : this.recordType;
+    public Output<String> getRecordType() {
+        return this.recordType == null ? Output.empty() : this.recordType;
     }
 
     @InputImport(name="targetResource")
-      private final @Nullable Input<ResourceSetTargetResourceArgs> targetResource;
+      private final @Nullable Output<ResourceSetTargetResourceArgs> targetResource;
 
-    public Input<ResourceSetTargetResourceArgs> getTargetResource() {
-        return this.targetResource == null ? Input.empty() : this.targetResource;
+    public Output<ResourceSetTargetResourceArgs> getTargetResource() {
+        return this.targetResource == null ? Output.empty() : this.targetResource;
     }
 
     public ResourceSetDNSTargetResourceArgs(
-        @Nullable Input<String> domainName,
-        @Nullable Input<String> hostedZoneArn,
-        @Nullable Input<String> recordSetId,
-        @Nullable Input<String> recordType,
-        @Nullable Input<ResourceSetTargetResourceArgs> targetResource) {
+        @Nullable Output<String> domainName,
+        @Nullable Output<String> hostedZoneArn,
+        @Nullable Output<String> recordSetId,
+        @Nullable Output<String> recordType,
+        @Nullable Output<ResourceSetTargetResourceArgs> targetResource) {
         this.domainName = domainName;
         this.hostedZoneArn = hostedZoneArn;
         this.recordSetId = recordSetId;
@@ -84,11 +84,11 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
     }
 
     private ResourceSetDNSTargetResourceArgs() {
-        this.domainName = Input.empty();
-        this.hostedZoneArn = Input.empty();
-        this.recordSetId = Input.empty();
-        this.recordType = Input.empty();
-        this.targetResource = Input.empty();
+        this.domainName = Output.empty();
+        this.hostedZoneArn = Output.empty();
+        this.recordSetId = Output.empty();
+        this.recordType = Output.empty();
+        this.targetResource = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<String> hostedZoneArn;
-        private @Nullable Input<String> recordSetId;
-        private @Nullable Input<String> recordType;
-        private @Nullable Input<ResourceSetTargetResourceArgs> targetResource;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<String> hostedZoneArn;
+        private @Nullable Output<String> recordSetId;
+        private @Nullable Output<String> recordType;
+        private @Nullable Output<ResourceSetTargetResourceArgs> targetResource;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
     	      this.targetResource = defaults.targetResource;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder hostedZoneArn(@Nullable Input<String> hostedZoneArn) {
+        public Builder hostedZoneArn(@Nullable Output<String> hostedZoneArn) {
             this.hostedZoneArn = hostedZoneArn;
             return this;
         }
 
         public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
-            this.hostedZoneArn = Input.ofNullable(hostedZoneArn);
+            this.hostedZoneArn = Output.ofNullable(hostedZoneArn);
             return this;
         }
 
-        public Builder recordSetId(@Nullable Input<String> recordSetId) {
+        public Builder recordSetId(@Nullable Output<String> recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }
 
         public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = Input.ofNullable(recordSetId);
+            this.recordSetId = Output.ofNullable(recordSetId);
             return this;
         }
 
-        public Builder recordType(@Nullable Input<String> recordType) {
+        public Builder recordType(@Nullable Output<String> recordType) {
             this.recordType = recordType;
             return this;
         }
 
         public Builder recordType(@Nullable String recordType) {
-            this.recordType = Input.ofNullable(recordType);
+            this.recordType = Output.ofNullable(recordType);
             return this;
         }
 
-        public Builder targetResource(@Nullable Input<ResourceSetTargetResourceArgs> targetResource) {
+        public Builder targetResource(@Nullable Output<ResourceSetTargetResourceArgs> targetResource) {
             this.targetResource = targetResource;
             return this;
         }
 
         public Builder targetResource(@Nullable ResourceSetTargetResourceArgs targetResource) {
-            this.targetResource = Input.ofNullable(targetResource);
+            this.targetResource = Output.ofNullable(targetResource);
             return this;
         }
         public ResourceSetDNSTargetResourceArgs build() {

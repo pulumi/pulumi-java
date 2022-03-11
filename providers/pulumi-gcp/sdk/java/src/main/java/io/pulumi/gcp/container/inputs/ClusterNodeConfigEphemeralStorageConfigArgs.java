@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ClusterNodeConfigEphemeralStorageConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="localSsdCount", required=true)
-      private final Input<Integer> localSsdCount;
+      private final Output<Integer> localSsdCount;
 
-    public Input<Integer> getLocalSsdCount() {
+    public Output<Integer> getLocalSsdCount() {
         return this.localSsdCount;
     }
 
-    public ClusterNodeConfigEphemeralStorageConfigArgs(Input<Integer> localSsdCount) {
+    public ClusterNodeConfigEphemeralStorageConfigArgs(Output<Integer> localSsdCount) {
         this.localSsdCount = Objects.requireNonNull(localSsdCount, "expected parameter 'localSsdCount' to be non-null");
     }
 
     private ClusterNodeConfigEphemeralStorageConfigArgs() {
-        this.localSsdCount = Input.empty();
+        this.localSsdCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ClusterNodeConfigEphemeralStorageConfigArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<Integer> localSsdCount;
+        private Output<Integer> localSsdCount;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ClusterNodeConfigEphemeralStorageConfigArgs extends io.pulumi
     	      this.localSsdCount = defaults.localSsdCount;
         }
 
-        public Builder localSsdCount(Input<Integer> localSsdCount) {
+        public Builder localSsdCount(Output<Integer> localSsdCount) {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
 
         public Builder localSsdCount(Integer localSsdCount) {
-            this.localSsdCount = Input.of(Objects.requireNonNull(localSsdCount));
+            this.localSsdCount = Output.of(Objects.requireNonNull(localSsdCount));
             return this;
         }
         public ClusterNodeConfigEphemeralStorageConfigArgs build() {

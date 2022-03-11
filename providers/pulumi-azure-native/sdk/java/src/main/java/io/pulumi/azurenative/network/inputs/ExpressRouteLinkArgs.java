@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.ExpressRouteLinkAdminState;
 import io.pulumi.azurenative.network.inputs.ExpressRouteLinkMacSecConfigArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="adminState")
-      private final @Nullable Input<Either<String,ExpressRouteLinkAdminState>> adminState;
+      private final @Nullable Output<Either<String,ExpressRouteLinkAdminState>> adminState;
 
-    public Input<Either<String,ExpressRouteLinkAdminState>> getAdminState() {
-        return this.adminState == null ? Input.empty() : this.adminState;
+    public Output<Either<String,ExpressRouteLinkAdminState>> getAdminState() {
+        return this.adminState == null ? Output.empty() : this.adminState;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="macSecConfig")
-      private final @Nullable Input<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
+      private final @Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
 
-    public Input<ExpressRouteLinkMacSecConfigArgs> getMacSecConfig() {
-        return this.macSecConfig == null ? Input.empty() : this.macSecConfig;
+    public Output<ExpressRouteLinkMacSecConfigArgs> getMacSecConfig() {
+        return this.macSecConfig == null ? Output.empty() : this.macSecConfig;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ExpressRouteLinkArgs(
-        @Nullable Input<Either<String,ExpressRouteLinkAdminState>> adminState,
-        @Nullable Input<String> id,
-        @Nullable Input<ExpressRouteLinkMacSecConfigArgs> macSecConfig,
-        @Nullable Input<String> name) {
+        @Nullable Output<Either<String,ExpressRouteLinkAdminState>> adminState,
+        @Nullable Output<String> id,
+        @Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig,
+        @Nullable Output<String> name) {
         this.adminState = adminState;
         this.id = id;
         this.macSecConfig = macSecConfig;
@@ -77,10 +77,10 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ExpressRouteLinkArgs() {
-        this.adminState = Input.empty();
-        this.id = Input.empty();
-        this.macSecConfig = Input.empty();
-        this.name = Input.empty();
+        this.adminState = Output.empty();
+        this.id = Output.empty();
+        this.macSecConfig = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ExpressRouteLinkAdminState>> adminState;
-        private @Nullable Input<String> id;
-        private @Nullable Input<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
-        private @Nullable Input<String> name;
+        private @Nullable Output<Either<String,ExpressRouteLinkAdminState>> adminState;
+        private @Nullable Output<String> id;
+        private @Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
     	      this.name = defaults.name;
         }
 
-        public Builder adminState(@Nullable Input<Either<String,ExpressRouteLinkAdminState>> adminState) {
+        public Builder adminState(@Nullable Output<Either<String,ExpressRouteLinkAdminState>> adminState) {
             this.adminState = adminState;
             return this;
         }
 
         public Builder adminState(@Nullable Either<String,ExpressRouteLinkAdminState> adminState) {
-            this.adminState = Input.ofNullable(adminState);
+            this.adminState = Output.ofNullable(adminState);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder macSecConfig(@Nullable Input<ExpressRouteLinkMacSecConfigArgs> macSecConfig) {
+        public Builder macSecConfig(@Nullable Output<ExpressRouteLinkMacSecConfigArgs> macSecConfig) {
             this.macSecConfig = macSecConfig;
             return this;
         }
 
         public Builder macSecConfig(@Nullable ExpressRouteLinkMacSecConfigArgs macSecConfig) {
-            this.macSecConfig = Input.ofNullable(macSecConfig);
+            this.macSecConfig = Output.ofNullable(macSecConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ExpressRouteLinkArgs build() {

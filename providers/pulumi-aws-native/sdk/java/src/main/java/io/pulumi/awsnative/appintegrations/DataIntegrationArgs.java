@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appintegrations;
 
 import io.pulumi.awsnative.appintegrations.inputs.DataIntegrationScheduleConfigArgs;
 import io.pulumi.awsnative.appintegrations.inputs.DataIntegrationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKey", required=true)
-      private final Input<String> kmsKey;
+      private final Output<String> kmsKey;
 
-    public Input<String> getKmsKey() {
+    public Output<String> getKmsKey() {
         return this.kmsKey;
     }
 
@@ -44,10 +44,10 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scheduleConfig", required=true)
-      private final Input<DataIntegrationScheduleConfigArgs> scheduleConfig;
+      private final Output<DataIntegrationScheduleConfigArgs> scheduleConfig;
 
-    public Input<DataIntegrationScheduleConfigArgs> getScheduleConfig() {
+    public Output<DataIntegrationScheduleConfigArgs> getScheduleConfig() {
         return this.scheduleConfig;
     }
 
@@ -66,9 +66,9 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceURI", required=true)
-      private final Input<String> sourceURI;
+      private final Output<String> sourceURI;
 
-    public Input<String> getSourceURI() {
+    public Output<String> getSourceURI() {
         return this.sourceURI;
     }
 
@@ -77,19 +77,19 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DataIntegrationTagArgs>> tags;
+      private final @Nullable Output<List<DataIntegrationTagArgs>> tags;
 
-    public Input<List<DataIntegrationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DataIntegrationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DataIntegrationArgs(
-        @Nullable Input<String> description,
-        Input<String> kmsKey,
-        @Nullable Input<String> name,
-        Input<DataIntegrationScheduleConfigArgs> scheduleConfig,
-        Input<String> sourceURI,
-        @Nullable Input<List<DataIntegrationTagArgs>> tags) {
+        @Nullable Output<String> description,
+        Output<String> kmsKey,
+        @Nullable Output<String> name,
+        Output<DataIntegrationScheduleConfigArgs> scheduleConfig,
+        Output<String> sourceURI,
+        @Nullable Output<List<DataIntegrationTagArgs>> tags) {
         this.description = description;
         this.kmsKey = Objects.requireNonNull(kmsKey, "expected parameter 'kmsKey' to be non-null");
         this.name = name;
@@ -99,12 +99,12 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DataIntegrationArgs() {
-        this.description = Input.empty();
-        this.kmsKey = Input.empty();
-        this.name = Input.empty();
-        this.scheduleConfig = Input.empty();
-        this.sourceURI = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.kmsKey = Output.empty();
+        this.name = Output.empty();
+        this.scheduleConfig = Output.empty();
+        this.sourceURI = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> kmsKey;
-        private @Nullable Input<String> name;
-        private Input<DataIntegrationScheduleConfigArgs> scheduleConfig;
-        private Input<String> sourceURI;
-        private @Nullable Input<List<DataIntegrationTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private Output<String> kmsKey;
+        private @Nullable Output<String> name;
+        private Output<DataIntegrationScheduleConfigArgs> scheduleConfig;
+        private Output<String> sourceURI;
+        private @Nullable Output<List<DataIntegrationTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kmsKey(Input<String> kmsKey) {
+        public Builder kmsKey(Output<String> kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
 
         public Builder kmsKey(String kmsKey) {
-            this.kmsKey = Input.of(Objects.requireNonNull(kmsKey));
+            this.kmsKey = Output.of(Objects.requireNonNull(kmsKey));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder scheduleConfig(Input<DataIntegrationScheduleConfigArgs> scheduleConfig) {
+        public Builder scheduleConfig(Output<DataIntegrationScheduleConfigArgs> scheduleConfig) {
             this.scheduleConfig = Objects.requireNonNull(scheduleConfig);
             return this;
         }
 
         public Builder scheduleConfig(DataIntegrationScheduleConfigArgs scheduleConfig) {
-            this.scheduleConfig = Input.of(Objects.requireNonNull(scheduleConfig));
+            this.scheduleConfig = Output.of(Objects.requireNonNull(scheduleConfig));
             return this;
         }
 
-        public Builder sourceURI(Input<String> sourceURI) {
+        public Builder sourceURI(Output<String> sourceURI) {
             this.sourceURI = Objects.requireNonNull(sourceURI);
             return this;
         }
 
         public Builder sourceURI(String sourceURI) {
-            this.sourceURI = Input.of(Objects.requireNonNull(sourceURI));
+            this.sourceURI = Output.of(Objects.requireNonNull(sourceURI));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DataIntegrationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DataIntegrationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DataIntegrationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DataIntegrationArgs build() {

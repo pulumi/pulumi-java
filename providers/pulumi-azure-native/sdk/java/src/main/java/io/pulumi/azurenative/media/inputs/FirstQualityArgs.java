@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitrate", required=true)
-      private final Input<Integer> bitrate;
+      private final Output<Integer> bitrate;
 
-    public Input<Integer> getBitrate() {
+    public Output<Integer> getBitrate() {
         return this.bitrate;
     }
 
-    public FirstQualityArgs(Input<Integer> bitrate) {
+    public FirstQualityArgs(Output<Integer> bitrate) {
         this.bitrate = Objects.requireNonNull(bitrate, "expected parameter 'bitrate' to be non-null");
     }
 
     private FirstQualityArgs() {
-        this.bitrate = Input.empty();
+        this.bitrate = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> bitrate;
+        private Output<Integer> bitrate;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.bitrate = defaults.bitrate;
         }
 
-        public Builder bitrate(Input<Integer> bitrate) {
+        public Builder bitrate(Output<Integer> bitrate) {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }
 
         public Builder bitrate(Integer bitrate) {
-            this.bitrate = Input.of(Objects.requireNonNull(bitrate));
+            this.bitrate = Output.of(Objects.requireNonNull(bitrate));
             return this;
         }
         public FirstQualityArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class BudgetResourceAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="budgetName", required=true)
-      private final Input<String> budgetName;
+      private final Output<String> budgetName;
 
-    public Input<String> getBudgetName() {
+    public Output<String> getBudgetName() {
         return this.budgetName;
     }
 
@@ -29,22 +29,22 @@ public final class BudgetResourceAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
     public BudgetResourceAssociationArgs(
-        Input<String> budgetName,
-        Input<String> resourceId) {
+        Output<String> budgetName,
+        Output<String> resourceId) {
         this.budgetName = Objects.requireNonNull(budgetName, "expected parameter 'budgetName' to be non-null");
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
     }
 
     private BudgetResourceAssociationArgs() {
-        this.budgetName = Input.empty();
-        this.resourceId = Input.empty();
+        this.budgetName = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class BudgetResourceAssociationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> budgetName;
-        private Input<String> resourceId;
+        private Output<String> budgetName;
+        private Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class BudgetResourceAssociationArgs extends io.pulumi.resources.Res
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder budgetName(Input<String> budgetName) {
+        public Builder budgetName(Output<String> budgetName) {
             this.budgetName = Objects.requireNonNull(budgetName);
             return this;
         }
 
         public Builder budgetName(String budgetName) {
-            this.budgetName = Input.of(Objects.requireNonNull(budgetName));
+            this.budgetName = Output.of(Objects.requireNonNull(budgetName));
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
         public BudgetResourceAssociationArgs build() {

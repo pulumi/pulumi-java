@@ -103,7 +103,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.XeroSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.XmlSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -125,9 +125,9 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset", required=true)
-      private final Input<DatasetReferenceArgs> dataset;
+      private final Output<DatasetReferenceArgs> dataset;
 
-    public Input<DatasetReferenceArgs> getDataset() {
+    public Output<DatasetReferenceArgs> getDataset() {
         return this.dataset;
     }
 
@@ -136,10 +136,10 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstRowOnly")
-      private final @Nullable Input<Object> firstRowOnly;
+      private final @Nullable Output<Object> firstRowOnly;
 
-    public Input<Object> getFirstRowOnly() {
-        return this.firstRowOnly == null ? Input.empty() : this.firstRowOnly;
+    public Output<Object> getFirstRowOnly() {
+        return this.firstRowOnly == null ? Output.empty() : this.firstRowOnly;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -180,9 +180,9 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -191,10 +191,10 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -202,9 +202,9 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<Object> source;
+      private final Output<Object> source;
 
-    public Input<Object> getSource() {
+    public Output<Object> getSource() {
         return this.source;
     }
 
@@ -214,9 +214,9 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -225,23 +225,23 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public LookupActivityArgs(
-        Input<DatasetReferenceArgs> dataset,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> firstRowOnly,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        Input<Object> source,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        Output<DatasetReferenceArgs> dataset,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> firstRowOnly,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        Output<Object> source,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
         this.dependsOn = dependsOn;
         this.description = description;
@@ -255,16 +255,16 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LookupActivityArgs() {
-        this.dataset = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.firstRowOnly = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.source = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.dataset = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.firstRowOnly = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.source = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -276,16 +276,16 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<DatasetReferenceArgs> dataset;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> firstRowOnly;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private Input<Object> source;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private Output<DatasetReferenceArgs> dataset;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> firstRowOnly;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private Output<Object> source;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -305,103 +305,103 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder dataset(Input<DatasetReferenceArgs> dataset) {
+        public Builder dataset(Output<DatasetReferenceArgs> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
         public Builder dataset(DatasetReferenceArgs dataset) {
-            this.dataset = Input.of(Objects.requireNonNull(dataset));
+            this.dataset = Output.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder firstRowOnly(@Nullable Input<Object> firstRowOnly) {
+        public Builder firstRowOnly(@Nullable Output<Object> firstRowOnly) {
             this.firstRowOnly = firstRowOnly;
             return this;
         }
 
         public Builder firstRowOnly(@Nullable Object firstRowOnly) {
-            this.firstRowOnly = Input.ofNullable(firstRowOnly);
+            this.firstRowOnly = Output.ofNullable(firstRowOnly);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder source(Input<Object> source) {
+        public Builder source(Output<Object> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(Object source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public LookupActivityArgs build() {

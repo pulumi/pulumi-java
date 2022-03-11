@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class KubernetesRoleComputeArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vmProfile", required=true)
-      private final Input<String> vmProfile;
+      private final Output<String> vmProfile;
 
-    public Input<String> getVmProfile() {
+    public Output<String> getVmProfile() {
         return this.vmProfile;
     }
 
-    public KubernetesRoleComputeArgs(Input<String> vmProfile) {
+    public KubernetesRoleComputeArgs(Output<String> vmProfile) {
         this.vmProfile = Objects.requireNonNull(vmProfile, "expected parameter 'vmProfile' to be non-null");
     }
 
     private KubernetesRoleComputeArgs() {
-        this.vmProfile = Input.empty();
+        this.vmProfile = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class KubernetesRoleComputeArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> vmProfile;
+        private Output<String> vmProfile;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class KubernetesRoleComputeArgs extends io.pulumi.resources.Resourc
     	      this.vmProfile = defaults.vmProfile;
         }
 
-        public Builder vmProfile(Input<String> vmProfile) {
+        public Builder vmProfile(Output<String> vmProfile) {
             this.vmProfile = Objects.requireNonNull(vmProfile);
             return this;
         }
 
         public Builder vmProfile(String vmProfile) {
-            this.vmProfile = Input.of(Objects.requireNonNull(vmProfile));
+            this.vmProfile = Output.of(Objects.requireNonNull(vmProfile));
             return this;
         }
         public KubernetesRoleComputeArgs build() {

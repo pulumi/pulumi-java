@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.azurenative.eventgrid.enums.PartnerRegistrationVisibilityState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizedAzureSubscriptionIds")
-      private final @Nullable Input<List<String>> authorizedAzureSubscriptionIds;
+      private final @Nullable Output<List<String>> authorizedAzureSubscriptionIds;
 
-    public Input<List<String>> getAuthorizedAzureSubscriptionIds() {
-        return this.authorizedAzureSubscriptionIds == null ? Input.empty() : this.authorizedAzureSubscriptionIds;
+    public Output<List<String>> getAuthorizedAzureSubscriptionIds() {
+        return this.authorizedAzureSubscriptionIds == null ? Output.empty() : this.authorizedAzureSubscriptionIds;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="customerServiceUri")
-      private final @Nullable Input<String> customerServiceUri;
+      private final @Nullable Output<String> customerServiceUri;
 
-    public Input<String> getCustomerServiceUri() {
-        return this.customerServiceUri == null ? Input.empty() : this.customerServiceUri;
+    public Output<String> getCustomerServiceUri() {
+        return this.customerServiceUri == null ? Output.empty() : this.customerServiceUri;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="logoUri")
-      private final @Nullable Input<String> logoUri;
+      private final @Nullable Output<String> logoUri;
 
-    public Input<String> getLogoUri() {
-        return this.logoUri == null ? Input.empty() : this.logoUri;
+    public Output<String> getLogoUri() {
+        return this.logoUri == null ? Output.empty() : this.logoUri;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="longDescription")
-      private final @Nullable Input<String> longDescription;
+      private final @Nullable Output<String> longDescription;
 
-    public Input<String> getLongDescription() {
-        return this.longDescription == null ? Input.empty() : this.longDescription;
+    public Output<String> getLongDescription() {
+        return this.longDescription == null ? Output.empty() : this.longDescription;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerCustomerServiceExtension")
-      private final @Nullable Input<String> partnerCustomerServiceExtension;
+      private final @Nullable Output<String> partnerCustomerServiceExtension;
 
-    public Input<String> getPartnerCustomerServiceExtension() {
-        return this.partnerCustomerServiceExtension == null ? Input.empty() : this.partnerCustomerServiceExtension;
+    public Output<String> getPartnerCustomerServiceExtension() {
+        return this.partnerCustomerServiceExtension == null ? Output.empty() : this.partnerCustomerServiceExtension;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerCustomerServiceNumber")
-      private final @Nullable Input<String> partnerCustomerServiceNumber;
+      private final @Nullable Output<String> partnerCustomerServiceNumber;
 
-    public Input<String> getPartnerCustomerServiceNumber() {
-        return this.partnerCustomerServiceNumber == null ? Input.empty() : this.partnerCustomerServiceNumber;
+    public Output<String> getPartnerCustomerServiceNumber() {
+        return this.partnerCustomerServiceNumber == null ? Output.empty() : this.partnerCustomerServiceNumber;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerName")
-      private final @Nullable Input<String> partnerName;
+      private final @Nullable Output<String> partnerName;
 
-    public Input<String> getPartnerName() {
-        return this.partnerName == null ? Input.empty() : this.partnerName;
+    public Output<String> getPartnerName() {
+        return this.partnerName == null ? Output.empty() : this.partnerName;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerRegistrationName")
-      private final @Nullable Input<String> partnerRegistrationName;
+      private final @Nullable Output<String> partnerRegistrationName;
 
-    public Input<String> getPartnerRegistrationName() {
-        return this.partnerRegistrationName == null ? Input.empty() : this.partnerRegistrationName;
+    public Output<String> getPartnerRegistrationName() {
+        return this.partnerRegistrationName == null ? Output.empty() : this.partnerRegistrationName;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerResourceTypeDescription")
-      private final @Nullable Input<String> partnerResourceTypeDescription;
+      private final @Nullable Output<String> partnerResourceTypeDescription;
 
-    public Input<String> getPartnerResourceTypeDescription() {
-        return this.partnerResourceTypeDescription == null ? Input.empty() : this.partnerResourceTypeDescription;
+    public Output<String> getPartnerResourceTypeDescription() {
+        return this.partnerResourceTypeDescription == null ? Output.empty() : this.partnerResourceTypeDescription;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerResourceTypeDisplayName")
-      private final @Nullable Input<String> partnerResourceTypeDisplayName;
+      private final @Nullable Output<String> partnerResourceTypeDisplayName;
 
-    public Input<String> getPartnerResourceTypeDisplayName() {
-        return this.partnerResourceTypeDisplayName == null ? Input.empty() : this.partnerResourceTypeDisplayName;
+    public Output<String> getPartnerResourceTypeDisplayName() {
+        return this.partnerResourceTypeDisplayName == null ? Output.empty() : this.partnerResourceTypeDisplayName;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="partnerResourceTypeName")
-      private final @Nullable Input<String> partnerResourceTypeName;
+      private final @Nullable Output<String> partnerResourceTypeName;
 
-    public Input<String> getPartnerResourceTypeName() {
-        return this.partnerResourceTypeName == null ? Input.empty() : this.partnerResourceTypeName;
+    public Output<String> getPartnerResourceTypeName() {
+        return this.partnerResourceTypeName == null ? Output.empty() : this.partnerResourceTypeName;
     }
 
     /**
@@ -162,9 +162,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -174,10 +174,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="setupUri")
-      private final @Nullable Input<String> setupUri;
+      private final @Nullable Output<String> setupUri;
 
-    public Input<String> getSetupUri() {
-        return this.setupUri == null ? Input.empty() : this.setupUri;
+    public Output<String> getSetupUri() {
+        return this.setupUri == null ? Output.empty() : this.setupUri;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -196,29 +196,29 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="visibilityState")
-      private final @Nullable Input<Either<String,PartnerRegistrationVisibilityState>> visibilityState;
+      private final @Nullable Output<Either<String,PartnerRegistrationVisibilityState>> visibilityState;
 
-    public Input<Either<String,PartnerRegistrationVisibilityState>> getVisibilityState() {
-        return this.visibilityState == null ? Input.empty() : this.visibilityState;
+    public Output<Either<String,PartnerRegistrationVisibilityState>> getVisibilityState() {
+        return this.visibilityState == null ? Output.empty() : this.visibilityState;
     }
 
     public PartnerRegistrationArgs(
-        @Nullable Input<List<String>> authorizedAzureSubscriptionIds,
-        @Nullable Input<String> customerServiceUri,
-        @Nullable Input<String> location,
-        @Nullable Input<String> logoUri,
-        @Nullable Input<String> longDescription,
-        @Nullable Input<String> partnerCustomerServiceExtension,
-        @Nullable Input<String> partnerCustomerServiceNumber,
-        @Nullable Input<String> partnerName,
-        @Nullable Input<String> partnerRegistrationName,
-        @Nullable Input<String> partnerResourceTypeDescription,
-        @Nullable Input<String> partnerResourceTypeDisplayName,
-        @Nullable Input<String> partnerResourceTypeName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> setupUri,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Either<String,PartnerRegistrationVisibilityState>> visibilityState) {
+        @Nullable Output<List<String>> authorizedAzureSubscriptionIds,
+        @Nullable Output<String> customerServiceUri,
+        @Nullable Output<String> location,
+        @Nullable Output<String> logoUri,
+        @Nullable Output<String> longDescription,
+        @Nullable Output<String> partnerCustomerServiceExtension,
+        @Nullable Output<String> partnerCustomerServiceNumber,
+        @Nullable Output<String> partnerName,
+        @Nullable Output<String> partnerRegistrationName,
+        @Nullable Output<String> partnerResourceTypeDescription,
+        @Nullable Output<String> partnerResourceTypeDisplayName,
+        @Nullable Output<String> partnerResourceTypeName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> setupUri,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Either<String,PartnerRegistrationVisibilityState>> visibilityState) {
         this.authorizedAzureSubscriptionIds = authorizedAzureSubscriptionIds;
         this.customerServiceUri = customerServiceUri;
         this.location = location;
@@ -238,22 +238,22 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     }
 
     private PartnerRegistrationArgs() {
-        this.authorizedAzureSubscriptionIds = Input.empty();
-        this.customerServiceUri = Input.empty();
-        this.location = Input.empty();
-        this.logoUri = Input.empty();
-        this.longDescription = Input.empty();
-        this.partnerCustomerServiceExtension = Input.empty();
-        this.partnerCustomerServiceNumber = Input.empty();
-        this.partnerName = Input.empty();
-        this.partnerRegistrationName = Input.empty();
-        this.partnerResourceTypeDescription = Input.empty();
-        this.partnerResourceTypeDisplayName = Input.empty();
-        this.partnerResourceTypeName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.setupUri = Input.empty();
-        this.tags = Input.empty();
-        this.visibilityState = Input.empty();
+        this.authorizedAzureSubscriptionIds = Output.empty();
+        this.customerServiceUri = Output.empty();
+        this.location = Output.empty();
+        this.logoUri = Output.empty();
+        this.longDescription = Output.empty();
+        this.partnerCustomerServiceExtension = Output.empty();
+        this.partnerCustomerServiceNumber = Output.empty();
+        this.partnerName = Output.empty();
+        this.partnerRegistrationName = Output.empty();
+        this.partnerResourceTypeDescription = Output.empty();
+        this.partnerResourceTypeDisplayName = Output.empty();
+        this.partnerResourceTypeName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.setupUri = Output.empty();
+        this.tags = Output.empty();
+        this.visibilityState = Output.empty();
     }
 
     public static Builder builder() {
@@ -265,22 +265,22 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> authorizedAzureSubscriptionIds;
-        private @Nullable Input<String> customerServiceUri;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> logoUri;
-        private @Nullable Input<String> longDescription;
-        private @Nullable Input<String> partnerCustomerServiceExtension;
-        private @Nullable Input<String> partnerCustomerServiceNumber;
-        private @Nullable Input<String> partnerName;
-        private @Nullable Input<String> partnerRegistrationName;
-        private @Nullable Input<String> partnerResourceTypeDescription;
-        private @Nullable Input<String> partnerResourceTypeDisplayName;
-        private @Nullable Input<String> partnerResourceTypeName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> setupUri;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Either<String,PartnerRegistrationVisibilityState>> visibilityState;
+        private @Nullable Output<List<String>> authorizedAzureSubscriptionIds;
+        private @Nullable Output<String> customerServiceUri;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> logoUri;
+        private @Nullable Output<String> longDescription;
+        private @Nullable Output<String> partnerCustomerServiceExtension;
+        private @Nullable Output<String> partnerCustomerServiceNumber;
+        private @Nullable Output<String> partnerName;
+        private @Nullable Output<String> partnerRegistrationName;
+        private @Nullable Output<String> partnerResourceTypeDescription;
+        private @Nullable Output<String> partnerResourceTypeDisplayName;
+        private @Nullable Output<String> partnerResourceTypeName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> setupUri;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Either<String,PartnerRegistrationVisibilityState>> visibilityState;
 
         public Builder() {
     	      // Empty
@@ -306,163 +306,163 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     	      this.visibilityState = defaults.visibilityState;
         }
 
-        public Builder authorizedAzureSubscriptionIds(@Nullable Input<List<String>> authorizedAzureSubscriptionIds) {
+        public Builder authorizedAzureSubscriptionIds(@Nullable Output<List<String>> authorizedAzureSubscriptionIds) {
             this.authorizedAzureSubscriptionIds = authorizedAzureSubscriptionIds;
             return this;
         }
 
         public Builder authorizedAzureSubscriptionIds(@Nullable List<String> authorizedAzureSubscriptionIds) {
-            this.authorizedAzureSubscriptionIds = Input.ofNullable(authorizedAzureSubscriptionIds);
+            this.authorizedAzureSubscriptionIds = Output.ofNullable(authorizedAzureSubscriptionIds);
             return this;
         }
 
-        public Builder customerServiceUri(@Nullable Input<String> customerServiceUri) {
+        public Builder customerServiceUri(@Nullable Output<String> customerServiceUri) {
             this.customerServiceUri = customerServiceUri;
             return this;
         }
 
         public Builder customerServiceUri(@Nullable String customerServiceUri) {
-            this.customerServiceUri = Input.ofNullable(customerServiceUri);
+            this.customerServiceUri = Output.ofNullable(customerServiceUri);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder logoUri(@Nullable Input<String> logoUri) {
+        public Builder logoUri(@Nullable Output<String> logoUri) {
             this.logoUri = logoUri;
             return this;
         }
 
         public Builder logoUri(@Nullable String logoUri) {
-            this.logoUri = Input.ofNullable(logoUri);
+            this.logoUri = Output.ofNullable(logoUri);
             return this;
         }
 
-        public Builder longDescription(@Nullable Input<String> longDescription) {
+        public Builder longDescription(@Nullable Output<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
 
         public Builder longDescription(@Nullable String longDescription) {
-            this.longDescription = Input.ofNullable(longDescription);
+            this.longDescription = Output.ofNullable(longDescription);
             return this;
         }
 
-        public Builder partnerCustomerServiceExtension(@Nullable Input<String> partnerCustomerServiceExtension) {
+        public Builder partnerCustomerServiceExtension(@Nullable Output<String> partnerCustomerServiceExtension) {
             this.partnerCustomerServiceExtension = partnerCustomerServiceExtension;
             return this;
         }
 
         public Builder partnerCustomerServiceExtension(@Nullable String partnerCustomerServiceExtension) {
-            this.partnerCustomerServiceExtension = Input.ofNullable(partnerCustomerServiceExtension);
+            this.partnerCustomerServiceExtension = Output.ofNullable(partnerCustomerServiceExtension);
             return this;
         }
 
-        public Builder partnerCustomerServiceNumber(@Nullable Input<String> partnerCustomerServiceNumber) {
+        public Builder partnerCustomerServiceNumber(@Nullable Output<String> partnerCustomerServiceNumber) {
             this.partnerCustomerServiceNumber = partnerCustomerServiceNumber;
             return this;
         }
 
         public Builder partnerCustomerServiceNumber(@Nullable String partnerCustomerServiceNumber) {
-            this.partnerCustomerServiceNumber = Input.ofNullable(partnerCustomerServiceNumber);
+            this.partnerCustomerServiceNumber = Output.ofNullable(partnerCustomerServiceNumber);
             return this;
         }
 
-        public Builder partnerName(@Nullable Input<String> partnerName) {
+        public Builder partnerName(@Nullable Output<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
 
         public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Input.ofNullable(partnerName);
+            this.partnerName = Output.ofNullable(partnerName);
             return this;
         }
 
-        public Builder partnerRegistrationName(@Nullable Input<String> partnerRegistrationName) {
+        public Builder partnerRegistrationName(@Nullable Output<String> partnerRegistrationName) {
             this.partnerRegistrationName = partnerRegistrationName;
             return this;
         }
 
         public Builder partnerRegistrationName(@Nullable String partnerRegistrationName) {
-            this.partnerRegistrationName = Input.ofNullable(partnerRegistrationName);
+            this.partnerRegistrationName = Output.ofNullable(partnerRegistrationName);
             return this;
         }
 
-        public Builder partnerResourceTypeDescription(@Nullable Input<String> partnerResourceTypeDescription) {
+        public Builder partnerResourceTypeDescription(@Nullable Output<String> partnerResourceTypeDescription) {
             this.partnerResourceTypeDescription = partnerResourceTypeDescription;
             return this;
         }
 
         public Builder partnerResourceTypeDescription(@Nullable String partnerResourceTypeDescription) {
-            this.partnerResourceTypeDescription = Input.ofNullable(partnerResourceTypeDescription);
+            this.partnerResourceTypeDescription = Output.ofNullable(partnerResourceTypeDescription);
             return this;
         }
 
-        public Builder partnerResourceTypeDisplayName(@Nullable Input<String> partnerResourceTypeDisplayName) {
+        public Builder partnerResourceTypeDisplayName(@Nullable Output<String> partnerResourceTypeDisplayName) {
             this.partnerResourceTypeDisplayName = partnerResourceTypeDisplayName;
             return this;
         }
 
         public Builder partnerResourceTypeDisplayName(@Nullable String partnerResourceTypeDisplayName) {
-            this.partnerResourceTypeDisplayName = Input.ofNullable(partnerResourceTypeDisplayName);
+            this.partnerResourceTypeDisplayName = Output.ofNullable(partnerResourceTypeDisplayName);
             return this;
         }
 
-        public Builder partnerResourceTypeName(@Nullable Input<String> partnerResourceTypeName) {
+        public Builder partnerResourceTypeName(@Nullable Output<String> partnerResourceTypeName) {
             this.partnerResourceTypeName = partnerResourceTypeName;
             return this;
         }
 
         public Builder partnerResourceTypeName(@Nullable String partnerResourceTypeName) {
-            this.partnerResourceTypeName = Input.ofNullable(partnerResourceTypeName);
+            this.partnerResourceTypeName = Output.ofNullable(partnerResourceTypeName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setupUri(@Nullable Input<String> setupUri) {
+        public Builder setupUri(@Nullable Output<String> setupUri) {
             this.setupUri = setupUri;
             return this;
         }
 
         public Builder setupUri(@Nullable String setupUri) {
-            this.setupUri = Input.ofNullable(setupUri);
+            this.setupUri = Output.ofNullable(setupUri);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder visibilityState(@Nullable Input<Either<String,PartnerRegistrationVisibilityState>> visibilityState) {
+        public Builder visibilityState(@Nullable Output<Either<String,PartnerRegistrationVisibilityState>> visibilityState) {
             this.visibilityState = visibilityState;
             return this;
         }
 
         public Builder visibilityState(@Nullable Either<String,PartnerRegistrationVisibilityState> visibilityState) {
-            this.visibilityState = Input.ofNullable(visibilityState);
+            this.visibilityState = Output.ofNullable(visibilityState);
             return this;
         }
         public PartnerRegistrationArgs build() {

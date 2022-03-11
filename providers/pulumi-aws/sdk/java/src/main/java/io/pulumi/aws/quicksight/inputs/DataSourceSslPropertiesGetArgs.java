@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DataSourceSslPropertiesGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="disableSsl", required=true)
-      private final Input<Boolean> disableSsl;
+      private final Output<Boolean> disableSsl;
 
-    public Input<Boolean> getDisableSsl() {
+    public Output<Boolean> getDisableSsl() {
         return this.disableSsl;
     }
 
-    public DataSourceSslPropertiesGetArgs(Input<Boolean> disableSsl) {
+    public DataSourceSslPropertiesGetArgs(Output<Boolean> disableSsl) {
         this.disableSsl = Objects.requireNonNull(disableSsl, "expected parameter 'disableSsl' to be non-null");
     }
 
     private DataSourceSslPropertiesGetArgs() {
-        this.disableSsl = Input.empty();
+        this.disableSsl = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DataSourceSslPropertiesGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Boolean> disableSsl;
+        private Output<Boolean> disableSsl;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DataSourceSslPropertiesGetArgs extends io.pulumi.resources.Re
     	      this.disableSsl = defaults.disableSsl;
         }
 
-        public Builder disableSsl(Input<Boolean> disableSsl) {
+        public Builder disableSsl(Output<Boolean> disableSsl) {
             this.disableSsl = Objects.requireNonNull(disableSsl);
             return this;
         }
 
         public Builder disableSsl(Boolean disableSsl) {
-            this.disableSsl = Input.of(Objects.requireNonNull(disableSsl));
+            this.disableSsl = Output.of(Objects.requireNonNull(disableSsl));
             return this;
         }
         public DataSourceSslPropertiesGetArgs build() {

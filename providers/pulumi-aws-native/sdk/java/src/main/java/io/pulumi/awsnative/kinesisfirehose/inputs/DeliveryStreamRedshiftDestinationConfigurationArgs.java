@@ -9,7 +9,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamCopyCommandArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessingConfigurationArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRedshiftRetryOptionsArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,94 +21,94 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
     public static final DeliveryStreamRedshiftDestinationConfigurationArgs Empty = new DeliveryStreamRedshiftDestinationConfigurationArgs();
 
     @InputImport(name="cloudWatchLoggingOptions")
-      private final @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
+      private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
-    public Input<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
-        return this.cloudWatchLoggingOptions == null ? Input.empty() : this.cloudWatchLoggingOptions;
+    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
+        return this.cloudWatchLoggingOptions == null ? Output.empty() : this.cloudWatchLoggingOptions;
     }
 
     @InputImport(name="clusterJDBCURL", required=true)
-      private final Input<String> clusterJDBCURL;
+      private final Output<String> clusterJDBCURL;
 
-    public Input<String> getClusterJDBCURL() {
+    public Output<String> getClusterJDBCURL() {
         return this.clusterJDBCURL;
     }
 
     @InputImport(name="copyCommand", required=true)
-      private final Input<DeliveryStreamCopyCommandArgs> copyCommand;
+      private final Output<DeliveryStreamCopyCommandArgs> copyCommand;
 
-    public Input<DeliveryStreamCopyCommandArgs> getCopyCommand() {
+    public Output<DeliveryStreamCopyCommandArgs> getCopyCommand() {
         return this.copyCommand;
     }
 
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
     @InputImport(name="processingConfiguration")
-      private final @Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
+      private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
-    public Input<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
-        return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
+    public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
+        return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
     }
 
     @InputImport(name="retryOptions")
-      private final @Nullable Input<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions;
+      private final @Nullable Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions;
 
-    public Input<DeliveryStreamRedshiftRetryOptionsArgs> getRetryOptions() {
-        return this.retryOptions == null ? Input.empty() : this.retryOptions;
+    public Output<DeliveryStreamRedshiftRetryOptionsArgs> getRetryOptions() {
+        return this.retryOptions == null ? Output.empty() : this.retryOptions;
     }
 
     @InputImport(name="roleARN", required=true)
-      private final Input<String> roleARN;
+      private final Output<String> roleARN;
 
-    public Input<String> getRoleARN() {
+    public Output<String> getRoleARN() {
         return this.roleARN;
     }
 
     @InputImport(name="s3BackupConfiguration")
-      private final @Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
+      private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
 
-    public Input<DeliveryStreamS3DestinationConfigurationArgs> getS3BackupConfiguration() {
-        return this.s3BackupConfiguration == null ? Input.empty() : this.s3BackupConfiguration;
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3BackupConfiguration() {
+        return this.s3BackupConfiguration == null ? Output.empty() : this.s3BackupConfiguration;
     }
 
     @InputImport(name="s3BackupMode")
-      private final @Nullable Input<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode;
+      private final @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode;
 
-    public Input<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> getS3BackupMode() {
-        return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;
+    public Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> getS3BackupMode() {
+        return this.s3BackupMode == null ? Output.empty() : this.s3BackupMode;
     }
 
     @InputImport(name="s3Configuration", required=true)
-      private final Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
+      private final Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
-    public Input<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
         return this.s3Configuration;
     }
 
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public DeliveryStreamRedshiftDestinationConfigurationArgs(
-        @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions,
-        Input<String> clusterJDBCURL,
-        Input<DeliveryStreamCopyCommandArgs> copyCommand,
-        Input<String> password,
-        @Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration,
-        @Nullable Input<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions,
-        Input<String> roleARN,
-        @Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration,
-        @Nullable Input<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode,
-        Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration,
-        Input<String> username) {
+        @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions,
+        Output<String> clusterJDBCURL,
+        Output<DeliveryStreamCopyCommandArgs> copyCommand,
+        Output<String> password,
+        @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration,
+        @Nullable Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions,
+        Output<String> roleARN,
+        @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration,
+        @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode,
+        Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration,
+        Output<String> username) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.clusterJDBCURL = Objects.requireNonNull(clusterJDBCURL, "expected parameter 'clusterJDBCURL' to be non-null");
         this.copyCommand = Objects.requireNonNull(copyCommand, "expected parameter 'copyCommand' to be non-null");
@@ -123,17 +123,17 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
     }
 
     private DeliveryStreamRedshiftDestinationConfigurationArgs() {
-        this.cloudWatchLoggingOptions = Input.empty();
-        this.clusterJDBCURL = Input.empty();
-        this.copyCommand = Input.empty();
-        this.password = Input.empty();
-        this.processingConfiguration = Input.empty();
-        this.retryOptions = Input.empty();
-        this.roleARN = Input.empty();
-        this.s3BackupConfiguration = Input.empty();
-        this.s3BackupMode = Input.empty();
-        this.s3Configuration = Input.empty();
-        this.username = Input.empty();
+        this.cloudWatchLoggingOptions = Output.empty();
+        this.clusterJDBCURL = Output.empty();
+        this.copyCommand = Output.empty();
+        this.password = Output.empty();
+        this.processingConfiguration = Output.empty();
+        this.retryOptions = Output.empty();
+        this.roleARN = Output.empty();
+        this.s3BackupConfiguration = Output.empty();
+        this.s3BackupMode = Output.empty();
+        this.s3Configuration = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,17 +145,17 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
-        private Input<String> clusterJDBCURL;
-        private Input<DeliveryStreamCopyCommandArgs> copyCommand;
-        private Input<String> password;
-        private @Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
-        private @Nullable Input<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions;
-        private Input<String> roleARN;
-        private @Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
-        private @Nullable Input<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode;
-        private Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
-        private Input<String> username;
+        private @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
+        private Output<String> clusterJDBCURL;
+        private Output<DeliveryStreamCopyCommandArgs> copyCommand;
+        private Output<String> password;
+        private @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
+        private @Nullable Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions;
+        private Output<String> roleARN;
+        private @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
+        private @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode;
+        private Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -176,113 +176,113 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
     	      this.username = defaults.username;
         }
 
-        public Builder cloudWatchLoggingOptions(@Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
-            this.cloudWatchLoggingOptions = Input.ofNullable(cloudWatchLoggingOptions);
+            this.cloudWatchLoggingOptions = Output.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
 
-        public Builder clusterJDBCURL(Input<String> clusterJDBCURL) {
+        public Builder clusterJDBCURL(Output<String> clusterJDBCURL) {
             this.clusterJDBCURL = Objects.requireNonNull(clusterJDBCURL);
             return this;
         }
 
         public Builder clusterJDBCURL(String clusterJDBCURL) {
-            this.clusterJDBCURL = Input.of(Objects.requireNonNull(clusterJDBCURL));
+            this.clusterJDBCURL = Output.of(Objects.requireNonNull(clusterJDBCURL));
             return this;
         }
 
-        public Builder copyCommand(Input<DeliveryStreamCopyCommandArgs> copyCommand) {
+        public Builder copyCommand(Output<DeliveryStreamCopyCommandArgs> copyCommand) {
             this.copyCommand = Objects.requireNonNull(copyCommand);
             return this;
         }
 
         public Builder copyCommand(DeliveryStreamCopyCommandArgs copyCommand) {
-            this.copyCommand = Input.of(Objects.requireNonNull(copyCommand));
+            this.copyCommand = Output.of(Objects.requireNonNull(copyCommand));
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder processingConfiguration(@Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
+        public Builder processingConfiguration(@Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
-            this.processingConfiguration = Input.ofNullable(processingConfiguration);
+            this.processingConfiguration = Output.ofNullable(processingConfiguration);
             return this;
         }
 
-        public Builder retryOptions(@Nullable Input<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions) {
+        public Builder retryOptions(@Nullable Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
 
         public Builder retryOptions(@Nullable DeliveryStreamRedshiftRetryOptionsArgs retryOptions) {
-            this.retryOptions = Input.ofNullable(retryOptions);
+            this.retryOptions = Output.ofNullable(retryOptions);
             return this;
         }
 
-        public Builder roleARN(Input<String> roleARN) {
+        public Builder roleARN(Output<String> roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
         public Builder roleARN(String roleARN) {
-            this.roleARN = Input.of(Objects.requireNonNull(roleARN));
+            this.roleARN = Output.of(Objects.requireNonNull(roleARN));
             return this;
         }
 
-        public Builder s3BackupConfiguration(@Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration) {
+        public Builder s3BackupConfiguration(@Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
 
         public Builder s3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfigurationArgs s3BackupConfiguration) {
-            this.s3BackupConfiguration = Input.ofNullable(s3BackupConfiguration);
+            this.s3BackupConfiguration = Output.ofNullable(s3BackupConfiguration);
             return this;
         }
 
-        public Builder s3BackupMode(@Nullable Input<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode) {
+        public Builder s3BackupMode(@Nullable Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
         public Builder s3BackupMode(@Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode) {
-            this.s3BackupMode = Input.ofNullable(s3BackupMode);
+            this.s3BackupMode = Output.ofNullable(s3BackupMode);
             return this;
         }
 
-        public Builder s3Configuration(Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
+        public Builder s3Configuration(Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
 
         public Builder s3Configuration(DeliveryStreamS3DestinationConfigurationArgs s3Configuration) {
-            this.s3Configuration = Input.of(Objects.requireNonNull(s3Configuration));
+            this.s3Configuration = Output.of(Objects.requireNonNull(s3Configuration));
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public DeliveryStreamRedshiftDestinationConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-      private final @Nullable Input<String> bundleId;
+      private final @Nullable Output<String> bundleId;
 
-    public Input<String> getBundleId() {
-        return this.bundleId == null ? Input.empty() : this.bundleId;
+    public Output<String> getBundleId() {
+        return this.bundleId == null ? Output.empty() : this.bundleId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xcodeVersion")
-      private final @Nullable Input<String> xcodeVersion;
+      private final @Nullable Output<String> xcodeVersion;
 
-    public Input<String> getXcodeVersion() {
-        return this.xcodeVersion == null ? Input.empty() : this.xcodeVersion;
+    public Output<String> getXcodeVersion() {
+        return this.xcodeVersion == null ? Output.empty() : this.xcodeVersion;
     }
 
     public IosXcTestArgs(
-        @Nullable Input<String> bundleId,
-        @Nullable Input<String> xcodeVersion) {
+        @Nullable Output<String> bundleId,
+        @Nullable Output<String> xcodeVersion) {
         this.bundleId = bundleId;
         this.xcodeVersion = xcodeVersion;
     }
 
     private IosXcTestArgs() {
-        this.bundleId = Input.empty();
-        this.xcodeVersion = Input.empty();
+        this.bundleId = Output.empty();
+        this.xcodeVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bundleId;
-        private @Nullable Input<String> xcodeVersion;
+        private @Nullable Output<String> bundleId;
+        private @Nullable Output<String> xcodeVersion;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xcodeVersion = defaults.xcodeVersion;
         }
 
-        public Builder bundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Output<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Input.ofNullable(bundleId);
+            this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
 
-        public Builder xcodeVersion(@Nullable Input<String> xcodeVersion) {
+        public Builder xcodeVersion(@Nullable Output<String> xcodeVersion) {
             this.xcodeVersion = xcodeVersion;
             return this;
         }
 
         public Builder xcodeVersion(@Nullable String xcodeVersion) {
-            this.xcodeVersion = Input.ofNullable(xcodeVersion);
+            this.xcodeVersion = Output.ofNullable(xcodeVersion);
             return this;
         }
         public IosXcTestArgs build() {

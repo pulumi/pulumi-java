@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.inputs;
 
 import io.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managementGroups")
-      private final @Nullable Input<List<ResourceIdArgs>> managementGroups;
+      private final @Nullable Output<List<ResourceIdArgs>> managementGroups;
 
-    public Input<List<ResourceIdArgs>> getManagementGroups() {
-        return this.managementGroups == null ? Input.empty() : this.managementGroups;
+    public Output<List<ResourceIdArgs>> getManagementGroups() {
+        return this.managementGroups == null ? Output.empty() : this.managementGroups;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets")
-      private final @Nullable Input<List<ResourceIdArgs>> subnets;
+      private final @Nullable Output<List<ResourceIdArgs>> subnets;
 
-    public Input<List<ResourceIdArgs>> getSubnets() {
-        return this.subnets == null ? Input.empty() : this.subnets;
+    public Output<List<ResourceIdArgs>> getSubnets() {
+        return this.subnets == null ? Output.empty() : this.subnets;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptions")
-      private final @Nullable Input<List<ResourceIdArgs>> subscriptions;
+      private final @Nullable Output<List<ResourceIdArgs>> subscriptions;
 
-    public Input<List<ResourceIdArgs>> getSubscriptions() {
-        return this.subscriptions == null ? Input.empty() : this.subscriptions;
+    public Output<List<ResourceIdArgs>> getSubscriptions() {
+        return this.subscriptions == null ? Output.empty() : this.subscriptions;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworks")
-      private final @Nullable Input<List<ResourceIdArgs>> virtualNetworks;
+      private final @Nullable Output<List<ResourceIdArgs>> virtualNetworks;
 
-    public Input<List<ResourceIdArgs>> getVirtualNetworks() {
-        return this.virtualNetworks == null ? Input.empty() : this.virtualNetworks;
+    public Output<List<ResourceIdArgs>> getVirtualNetworks() {
+        return this.virtualNetworks == null ? Output.empty() : this.virtualNetworks;
     }
 
     public ScopeArgs(
-        @Nullable Input<List<ResourceIdArgs>> managementGroups,
-        @Nullable Input<List<ResourceIdArgs>> subnets,
-        @Nullable Input<List<ResourceIdArgs>> subscriptions,
-        @Nullable Input<List<ResourceIdArgs>> virtualNetworks) {
+        @Nullable Output<List<ResourceIdArgs>> managementGroups,
+        @Nullable Output<List<ResourceIdArgs>> subnets,
+        @Nullable Output<List<ResourceIdArgs>> subscriptions,
+        @Nullable Output<List<ResourceIdArgs>> virtualNetworks) {
         this.managementGroups = managementGroups;
         this.subnets = subnets;
         this.subscriptions = subscriptions;
@@ -75,10 +75,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScopeArgs() {
-        this.managementGroups = Input.empty();
-        this.subnets = Input.empty();
-        this.subscriptions = Input.empty();
-        this.virtualNetworks = Input.empty();
+        this.managementGroups = Output.empty();
+        this.subnets = Output.empty();
+        this.subscriptions = Output.empty();
+        this.virtualNetworks = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ResourceIdArgs>> managementGroups;
-        private @Nullable Input<List<ResourceIdArgs>> subnets;
-        private @Nullable Input<List<ResourceIdArgs>> subscriptions;
-        private @Nullable Input<List<ResourceIdArgs>> virtualNetworks;
+        private @Nullable Output<List<ResourceIdArgs>> managementGroups;
+        private @Nullable Output<List<ResourceIdArgs>> subnets;
+        private @Nullable Output<List<ResourceIdArgs>> subscriptions;
+        private @Nullable Output<List<ResourceIdArgs>> virtualNetworks;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworks = defaults.virtualNetworks;
         }
 
-        public Builder managementGroups(@Nullable Input<List<ResourceIdArgs>> managementGroups) {
+        public Builder managementGroups(@Nullable Output<List<ResourceIdArgs>> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
 
         public Builder managementGroups(@Nullable List<ResourceIdArgs> managementGroups) {
-            this.managementGroups = Input.ofNullable(managementGroups);
+            this.managementGroups = Output.ofNullable(managementGroups);
             return this;
         }
 
-        public Builder subnets(@Nullable Input<List<ResourceIdArgs>> subnets) {
+        public Builder subnets(@Nullable Output<List<ResourceIdArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
         public Builder subnets(@Nullable List<ResourceIdArgs> subnets) {
-            this.subnets = Input.ofNullable(subnets);
+            this.subnets = Output.ofNullable(subnets);
             return this;
         }
 
-        public Builder subscriptions(@Nullable Input<List<ResourceIdArgs>> subscriptions) {
+        public Builder subscriptions(@Nullable Output<List<ResourceIdArgs>> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
 
         public Builder subscriptions(@Nullable List<ResourceIdArgs> subscriptions) {
-            this.subscriptions = Input.ofNullable(subscriptions);
+            this.subscriptions = Output.ofNullable(subscriptions);
             return this;
         }
 
-        public Builder virtualNetworks(@Nullable Input<List<ResourceIdArgs>> virtualNetworks) {
+        public Builder virtualNetworks(@Nullable Output<List<ResourceIdArgs>> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
 
         public Builder virtualNetworks(@Nullable List<ResourceIdArgs> virtualNetworks) {
-            this.virtualNetworks = Input.ofNullable(virtualNetworks);
+            this.virtualNetworks = Output.ofNullable(virtualNetworks);
             return this;
         }
         public ScopeArgs build() {

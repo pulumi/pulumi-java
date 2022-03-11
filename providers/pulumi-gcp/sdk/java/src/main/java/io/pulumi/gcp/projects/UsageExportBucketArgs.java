@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
@@ -30,10 +30,10 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public UsageExportBucketArgs(
-        Input<String> bucketName,
-        @Nullable Input<String> prefix,
-        @Nullable Input<String> project) {
+        Output<String> bucketName,
+        @Nullable Output<String> prefix,
+        @Nullable Output<String> project) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.prefix = prefix;
         this.project = project;
     }
 
     private UsageExportBucketArgs() {
-        this.bucketName = Input.empty();
-        this.prefix = Input.empty();
-        this.project = Input.empty();
+        this.bucketName = Output.empty();
+        this.prefix = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<String> project;
+        private Output<String> bucketName;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
     	      this.project = defaults.project;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public UsageExportBucketArgs build() {

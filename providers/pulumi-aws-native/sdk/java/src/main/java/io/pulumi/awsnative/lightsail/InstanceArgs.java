@@ -9,7 +9,7 @@ import io.pulumi.awsnative.lightsail.inputs.InstanceLocationArgs;
 import io.pulumi.awsnative.lightsail.inputs.InstanceNetworkingArgs;
 import io.pulumi.awsnative.lightsail.inputs.InstanceStateArgs;
 import io.pulumi.awsnative.lightsail.inputs.InstanceTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addOns")
-      private final @Nullable Input<List<InstanceAddOnArgs>> addOns;
+      private final @Nullable Output<List<InstanceAddOnArgs>> addOns;
 
-    public Input<List<InstanceAddOnArgs>> getAddOns() {
-        return this.addOns == null ? Input.empty() : this.addOns;
+    public Output<List<InstanceAddOnArgs>> getAddOns() {
+        return this.addOns == null ? Output.empty() : this.addOns;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintId", required=true)
-      private final Input<String> blueprintId;
+      private final Output<String> blueprintId;
 
-    public Input<String> getBlueprintId() {
+    public Output<String> getBlueprintId() {
         return this.blueprintId;
     }
 
@@ -59,17 +59,17 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId", required=true)
-      private final Input<String> bundleId;
+      private final Output<String> bundleId;
 
-    public Input<String> getBundleId() {
+    public Output<String> getBundleId() {
         return this.bundleId;
     }
 
     @InputImport(name="hardware")
-      private final @Nullable Input<InstanceHardwareArgs> hardware;
+      private final @Nullable Output<InstanceHardwareArgs> hardware;
 
-    public Input<InstanceHardwareArgs> getHardware() {
-        return this.hardware == null ? Input.empty() : this.hardware;
+    public Output<InstanceHardwareArgs> getHardware() {
+        return this.hardware == null ? Output.empty() : this.hardware;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceName")
-      private final @Nullable Input<String> instanceName;
+      private final @Nullable Output<String> instanceName;
 
-    public Input<String> getInstanceName() {
-        return this.instanceName == null ? Input.empty() : this.instanceName;
+    public Output<String> getInstanceName() {
+        return this.instanceName == null ? Output.empty() : this.instanceName;
     }
 
     /**
@@ -88,31 +88,31 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPairName")
-      private final @Nullable Input<String> keyPairName;
+      private final @Nullable Output<String> keyPairName;
 
-    public Input<String> getKeyPairName() {
-        return this.keyPairName == null ? Input.empty() : this.keyPairName;
+    public Output<String> getKeyPairName() {
+        return this.keyPairName == null ? Output.empty() : this.keyPairName;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<InstanceLocationArgs> location;
+      private final @Nullable Output<InstanceLocationArgs> location;
 
-    public Input<InstanceLocationArgs> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<InstanceLocationArgs> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="networking")
-      private final @Nullable Input<InstanceNetworkingArgs> networking;
+      private final @Nullable Output<InstanceNetworkingArgs> networking;
 
-    public Input<InstanceNetworkingArgs> getNetworking() {
-        return this.networking == null ? Input.empty() : this.networking;
+    public Output<InstanceNetworkingArgs> getNetworking() {
+        return this.networking == null ? Output.empty() : this.networking;
     }
 
     @InputImport(name="state")
-      private final @Nullable Input<InstanceStateArgs> state;
+      private final @Nullable Output<InstanceStateArgs> state;
 
-    public Input<InstanceStateArgs> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<InstanceStateArgs> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<InstanceTagArgs>> tags;
+      private final @Nullable Output<List<InstanceTagArgs>> tags;
 
-    public Input<List<InstanceTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<InstanceTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -131,25 +131,25 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userData")
-      private final @Nullable Input<String> userData;
+      private final @Nullable Output<String> userData;
 
-    public Input<String> getUserData() {
-        return this.userData == null ? Input.empty() : this.userData;
+    public Output<String> getUserData() {
+        return this.userData == null ? Output.empty() : this.userData;
     }
 
     public InstanceArgs(
-        @Nullable Input<List<InstanceAddOnArgs>> addOns,
-        @Nullable Input<String> availabilityZone,
-        Input<String> blueprintId,
-        Input<String> bundleId,
-        @Nullable Input<InstanceHardwareArgs> hardware,
-        @Nullable Input<String> instanceName,
-        @Nullable Input<String> keyPairName,
-        @Nullable Input<InstanceLocationArgs> location,
-        @Nullable Input<InstanceNetworkingArgs> networking,
-        @Nullable Input<InstanceStateArgs> state,
-        @Nullable Input<List<InstanceTagArgs>> tags,
-        @Nullable Input<String> userData) {
+        @Nullable Output<List<InstanceAddOnArgs>> addOns,
+        @Nullable Output<String> availabilityZone,
+        Output<String> blueprintId,
+        Output<String> bundleId,
+        @Nullable Output<InstanceHardwareArgs> hardware,
+        @Nullable Output<String> instanceName,
+        @Nullable Output<String> keyPairName,
+        @Nullable Output<InstanceLocationArgs> location,
+        @Nullable Output<InstanceNetworkingArgs> networking,
+        @Nullable Output<InstanceStateArgs> state,
+        @Nullable Output<List<InstanceTagArgs>> tags,
+        @Nullable Output<String> userData) {
         this.addOns = addOns;
         this.availabilityZone = availabilityZone;
         this.blueprintId = Objects.requireNonNull(blueprintId, "expected parameter 'blueprintId' to be non-null");
@@ -165,18 +165,18 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.addOns = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.blueprintId = Input.empty();
-        this.bundleId = Input.empty();
-        this.hardware = Input.empty();
-        this.instanceName = Input.empty();
-        this.keyPairName = Input.empty();
-        this.location = Input.empty();
-        this.networking = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.userData = Input.empty();
+        this.addOns = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.blueprintId = Output.empty();
+        this.bundleId = Output.empty();
+        this.hardware = Output.empty();
+        this.instanceName = Output.empty();
+        this.keyPairName = Output.empty();
+        this.location = Output.empty();
+        this.networking = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.userData = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,18 +188,18 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<InstanceAddOnArgs>> addOns;
-        private @Nullable Input<String> availabilityZone;
-        private Input<String> blueprintId;
-        private Input<String> bundleId;
-        private @Nullable Input<InstanceHardwareArgs> hardware;
-        private @Nullable Input<String> instanceName;
-        private @Nullable Input<String> keyPairName;
-        private @Nullable Input<InstanceLocationArgs> location;
-        private @Nullable Input<InstanceNetworkingArgs> networking;
-        private @Nullable Input<InstanceStateArgs> state;
-        private @Nullable Input<List<InstanceTagArgs>> tags;
-        private @Nullable Input<String> userData;
+        private @Nullable Output<List<InstanceAddOnArgs>> addOns;
+        private @Nullable Output<String> availabilityZone;
+        private Output<String> blueprintId;
+        private Output<String> bundleId;
+        private @Nullable Output<InstanceHardwareArgs> hardware;
+        private @Nullable Output<String> instanceName;
+        private @Nullable Output<String> keyPairName;
+        private @Nullable Output<InstanceLocationArgs> location;
+        private @Nullable Output<InstanceNetworkingArgs> networking;
+        private @Nullable Output<InstanceStateArgs> state;
+        private @Nullable Output<List<InstanceTagArgs>> tags;
+        private @Nullable Output<String> userData;
 
         public Builder() {
     	      // Empty
@@ -221,123 +221,123 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userData = defaults.userData;
         }
 
-        public Builder addOns(@Nullable Input<List<InstanceAddOnArgs>> addOns) {
+        public Builder addOns(@Nullable Output<List<InstanceAddOnArgs>> addOns) {
             this.addOns = addOns;
             return this;
         }
 
         public Builder addOns(@Nullable List<InstanceAddOnArgs> addOns) {
-            this.addOns = Input.ofNullable(addOns);
+            this.addOns = Output.ofNullable(addOns);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder blueprintId(Input<String> blueprintId) {
+        public Builder blueprintId(Output<String> blueprintId) {
             this.blueprintId = Objects.requireNonNull(blueprintId);
             return this;
         }
 
         public Builder blueprintId(String blueprintId) {
-            this.blueprintId = Input.of(Objects.requireNonNull(blueprintId));
+            this.blueprintId = Output.of(Objects.requireNonNull(blueprintId));
             return this;
         }
 
-        public Builder bundleId(Input<String> bundleId) {
+        public Builder bundleId(Output<String> bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
 
         public Builder bundleId(String bundleId) {
-            this.bundleId = Input.of(Objects.requireNonNull(bundleId));
+            this.bundleId = Output.of(Objects.requireNonNull(bundleId));
             return this;
         }
 
-        public Builder hardware(@Nullable Input<InstanceHardwareArgs> hardware) {
+        public Builder hardware(@Nullable Output<InstanceHardwareArgs> hardware) {
             this.hardware = hardware;
             return this;
         }
 
         public Builder hardware(@Nullable InstanceHardwareArgs hardware) {
-            this.hardware = Input.ofNullable(hardware);
+            this.hardware = Output.ofNullable(hardware);
             return this;
         }
 
-        public Builder instanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Output<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Input.ofNullable(instanceName);
+            this.instanceName = Output.ofNullable(instanceName);
             return this;
         }
 
-        public Builder keyPairName(@Nullable Input<String> keyPairName) {
+        public Builder keyPairName(@Nullable Output<String> keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
 
         public Builder keyPairName(@Nullable String keyPairName) {
-            this.keyPairName = Input.ofNullable(keyPairName);
+            this.keyPairName = Output.ofNullable(keyPairName);
             return this;
         }
 
-        public Builder location(@Nullable Input<InstanceLocationArgs> location) {
+        public Builder location(@Nullable Output<InstanceLocationArgs> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable InstanceLocationArgs location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networking(@Nullable Input<InstanceNetworkingArgs> networking) {
+        public Builder networking(@Nullable Output<InstanceNetworkingArgs> networking) {
             this.networking = networking;
             return this;
         }
 
         public Builder networking(@Nullable InstanceNetworkingArgs networking) {
-            this.networking = Input.ofNullable(networking);
+            this.networking = Output.ofNullable(networking);
             return this;
         }
 
-        public Builder state(@Nullable Input<InstanceStateArgs> state) {
+        public Builder state(@Nullable Output<InstanceStateArgs> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable InstanceStateArgs state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<InstanceTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<InstanceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<InstanceTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
 
         public Builder userData(@Nullable String userData) {
-            this.userData = Input.ofNullable(userData);
+            this.userData = Output.ofNullable(userData);
             return this;
         }
         public InstanceArgs build() {

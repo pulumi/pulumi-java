@@ -5,7 +5,7 @@ package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.azurenative.desktopvirtualization.enums.RegistrationTokenOperation;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expirationTime")
-      private final @Nullable Input<String> expirationTime;
+      private final @Nullable Output<String> expirationTime;
 
-    public Input<String> getExpirationTime() {
-        return this.expirationTime == null ? Input.empty() : this.expirationTime;
+    public Output<String> getExpirationTime() {
+        return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="registrationTokenOperation")
-      private final @Nullable Input<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
+      private final @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
 
-    public Input<Either<String,RegistrationTokenOperation>> getRegistrationTokenOperation() {
-        return this.registrationTokenOperation == null ? Input.empty() : this.registrationTokenOperation;
+    public Output<Either<String,RegistrationTokenOperation>> getRegistrationTokenOperation() {
+        return this.registrationTokenOperation == null ? Output.empty() : this.registrationTokenOperation;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="token")
-      private final @Nullable Input<String> token;
+      private final @Nullable Output<String> token;
 
-    public Input<String> getToken() {
-        return this.token == null ? Input.empty() : this.token;
+    public Output<String> getToken() {
+        return this.token == null ? Output.empty() : this.token;
     }
 
     public RegistrationInfoArgs(
-        @Nullable Input<String> expirationTime,
-        @Nullable Input<Either<String,RegistrationTokenOperation>> registrationTokenOperation,
-        @Nullable Input<String> token) {
+        @Nullable Output<String> expirationTime,
+        @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation,
+        @Nullable Output<String> token) {
         this.expirationTime = expirationTime;
         this.registrationTokenOperation = registrationTokenOperation;
         this.token = token;
     }
 
     private RegistrationInfoArgs() {
-        this.expirationTime = Input.empty();
-        this.registrationTokenOperation = Input.empty();
-        this.token = Input.empty();
+        this.expirationTime = Output.empty();
+        this.registrationTokenOperation = Output.empty();
+        this.token = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expirationTime;
-        private @Nullable Input<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
-        private @Nullable Input<String> token;
+        private @Nullable Output<String> expirationTime;
+        private @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
+        private @Nullable Output<String> token;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
     	      this.token = defaults.token;
         }
 
-        public Builder expirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Input.ofNullable(expirationTime);
+            this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder registrationTokenOperation(@Nullable Input<Either<String,RegistrationTokenOperation>> registrationTokenOperation) {
+        public Builder registrationTokenOperation(@Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation) {
             this.registrationTokenOperation = registrationTokenOperation;
             return this;
         }
 
         public Builder registrationTokenOperation(@Nullable Either<String,RegistrationTokenOperation> registrationTokenOperation) {
-            this.registrationTokenOperation = Input.ofNullable(registrationTokenOperation);
+            this.registrationTokenOperation = Output.ofNullable(registrationTokenOperation);
             return this;
         }
 
-        public Builder token(@Nullable Input<String> token) {
+        public Builder token(@Nullable Output<String> token) {
             this.token = token;
             return this;
         }
 
         public Builder token(@Nullable String token) {
-            this.token = Input.ofNullable(token);
+            this.token = Output.ofNullable(token);
             return this;
         }
         public RegistrationInfoArgs build() {

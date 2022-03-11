@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.OptionsArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="collection")
-      private final @Nullable Input<String> collection;
+      private final @Nullable Output<String> collection;
 
-    public Input<String> getCollection() {
-        return this.collection == null ? Input.empty() : this.collection;
+    public Output<String> getCollection() {
+        return this.collection == null ? Output.empty() : this.collection;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<OptionsArgs> options;
+      private final @Nullable Output<OptionsArgs> options;
 
-    public Input<OptionsArgs> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<OptionsArgs> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     public CollectionOverrideArgs(
-        @Nullable Input<String> collection,
-        @Nullable Input<OptionsArgs> options) {
+        @Nullable Output<String> collection,
+        @Nullable Output<OptionsArgs> options) {
         this.collection = collection;
         this.options = options;
     }
 
     private CollectionOverrideArgs() {
-        this.collection = Input.empty();
-        this.options = Input.empty();
+        this.collection = Output.empty();
+        this.options = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> collection;
-        private @Nullable Input<OptionsArgs> options;
+        private @Nullable Output<String> collection;
+        private @Nullable Output<OptionsArgs> options;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
     	      this.options = defaults.options;
         }
 
-        public Builder collection(@Nullable Input<String> collection) {
+        public Builder collection(@Nullable Output<String> collection) {
             this.collection = collection;
             return this;
         }
 
         public Builder collection(@Nullable String collection) {
-            this.collection = Input.ofNullable(collection);
+            this.collection = Output.ofNullable(collection);
             return this;
         }
 
-        public Builder options(@Nullable Input<OptionsArgs> options) {
+        public Builder options(@Nullable Output<OptionsArgs> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable OptionsArgs options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
         public CollectionOverrideArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sasUri", required=true)
-      private final Input<String> sasUri;
+      private final Output<String> sasUri;
 
-    public Input<String> getSasUri() {
+    public Output<String> getSasUri() {
         return this.sasUri;
     }
 
@@ -34,22 +34,22 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public SasAuthenticationArgs(
-        Input<String> sasUri,
-        Input<String> type) {
+        Output<String> sasUri,
+        Output<String> type) {
         this.sasUri = Objects.requireNonNull(sasUri, "expected parameter 'sasUri' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SasAuthenticationArgs() {
-        this.sasUri = Input.empty();
-        this.type = Input.empty();
+        this.sasUri = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> sasUri;
-        private Input<String> type;
+        private Output<String> sasUri;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder sasUri(Input<String> sasUri) {
+        public Builder sasUri(Output<String> sasUri) {
             this.sasUri = Objects.requireNonNull(sasUri);
             return this;
         }
 
         public Builder sasUri(String sasUri) {
-            this.sasUri = Input.of(Objects.requireNonNull(sasUri));
+            this.sasUri = Output.of(Objects.requireNonNull(sasUri));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SasAuthenticationArgs build() {

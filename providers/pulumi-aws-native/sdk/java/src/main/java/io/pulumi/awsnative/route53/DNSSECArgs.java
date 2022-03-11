@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DNSSECArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneId", required=true)
-      private final Input<String> hostedZoneId;
+      private final Output<String> hostedZoneId;
 
-    public Input<String> getHostedZoneId() {
+    public Output<String> getHostedZoneId() {
         return this.hostedZoneId;
     }
 
-    public DNSSECArgs(Input<String> hostedZoneId) {
+    public DNSSECArgs(Output<String> hostedZoneId) {
         this.hostedZoneId = Objects.requireNonNull(hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
     }
 
     private DNSSECArgs() {
-        this.hostedZoneId = Input.empty();
+        this.hostedZoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DNSSECArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> hostedZoneId;
+        private Output<String> hostedZoneId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DNSSECArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hostedZoneId = defaults.hostedZoneId;
         }
 
-        public Builder hostedZoneId(Input<String> hostedZoneId) {
+        public Builder hostedZoneId(Output<String> hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
 
         public Builder hostedZoneId(String hostedZoneId) {
-            this.hostedZoneId = Input.of(Objects.requireNonNull(hostedZoneId));
+            this.hostedZoneId = Output.of(Objects.requireNonNull(hostedZoneId));
             return this;
         }
         public DNSSECArgs build() {

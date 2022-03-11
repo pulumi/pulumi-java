@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.ConfigMapEnvSourceArgs;
 import io.pulumi.googlenative.run_v1.inputs.SecretEnvSourceArgs;
@@ -25,10 +25,10 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configMapRef")
-      private final @Nullable Input<ConfigMapEnvSourceArgs> configMapRef;
+      private final @Nullable Output<ConfigMapEnvSourceArgs> configMapRef;
 
-    public Input<ConfigMapEnvSourceArgs> getConfigMapRef() {
-        return this.configMapRef == null ? Input.empty() : this.configMapRef;
+    public Output<ConfigMapEnvSourceArgs> getConfigMapRef() {
+        return this.configMapRef == null ? Output.empty() : this.configMapRef;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretRef")
-      private final @Nullable Input<SecretEnvSourceArgs> secretRef;
+      private final @Nullable Output<SecretEnvSourceArgs> secretRef;
 
-    public Input<SecretEnvSourceArgs> getSecretRef() {
-        return this.secretRef == null ? Input.empty() : this.secretRef;
+    public Output<SecretEnvSourceArgs> getSecretRef() {
+        return this.secretRef == null ? Output.empty() : this.secretRef;
     }
 
     public EnvFromSourceArgs(
-        @Nullable Input<ConfigMapEnvSourceArgs> configMapRef,
-        @Nullable Input<String> prefix,
-        @Nullable Input<SecretEnvSourceArgs> secretRef) {
+        @Nullable Output<ConfigMapEnvSourceArgs> configMapRef,
+        @Nullable Output<String> prefix,
+        @Nullable Output<SecretEnvSourceArgs> secretRef) {
         this.configMapRef = configMapRef;
         this.prefix = prefix;
         this.secretRef = secretRef;
     }
 
     private EnvFromSourceArgs() {
-        this.configMapRef = Input.empty();
-        this.prefix = Input.empty();
-        this.secretRef = Input.empty();
+        this.configMapRef = Output.empty();
+        this.prefix = Output.empty();
+        this.secretRef = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigMapEnvSourceArgs> configMapRef;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<SecretEnvSourceArgs> secretRef;
+        private @Nullable Output<ConfigMapEnvSourceArgs> configMapRef;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<SecretEnvSourceArgs> secretRef;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretRef = defaults.secretRef;
         }
 
-        public Builder configMapRef(@Nullable Input<ConfigMapEnvSourceArgs> configMapRef) {
+        public Builder configMapRef(@Nullable Output<ConfigMapEnvSourceArgs> configMapRef) {
             this.configMapRef = configMapRef;
             return this;
         }
 
         public Builder configMapRef(@Nullable ConfigMapEnvSourceArgs configMapRef) {
-            this.configMapRef = Input.ofNullable(configMapRef);
+            this.configMapRef = Output.ofNullable(configMapRef);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder secretRef(@Nullable Input<SecretEnvSourceArgs> secretRef) {
+        public Builder secretRef(@Nullable Output<SecretEnvSourceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
         public Builder secretRef(@Nullable SecretEnvSourceArgs secretRef) {
-            this.secretRef = Input.ofNullable(secretRef);
+            this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
         public EnvFromSourceArgs build() {

@@ -16,7 +16,6 @@ import io.pulumi.aws.cloudwatch.outputs.EventTargetRedshiftTarget;
 import io.pulumi.aws.cloudwatch.outputs.EventTargetRetryPolicy;
 import io.pulumi.aws.cloudwatch.outputs.EventTargetRunCommandTarget;
 import io.pulumi.aws.cloudwatch.outputs.EventTargetSqsTarget;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -330,14 +329,14 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventTarget(String name, EventTargetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/eventTarget:EventTarget", name, args == null ? EventTargetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudwatch/eventTarget:EventTarget", name, args == null ? EventTargetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventTarget(String name, Input<String> id, @Nullable EventTargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventTarget(String name, Output<String> id, @Nullable EventTargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudwatch/eventTarget:EventTarget", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -353,7 +352,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventTarget get(String name, Input<String> id, @Nullable EventTargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventTarget get(String name, Output<String> id, @Nullable EventTargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventTarget(name, id, state, options);
     }
 }

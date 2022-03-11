@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.AutoscalingSettingsAlgorithm;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class AutoscalingSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="algorithm")
-      private final @Nullable Input<AutoscalingSettingsAlgorithm> algorithm;
+      private final @Nullable Output<AutoscalingSettingsAlgorithm> algorithm;
 
-    public Input<AutoscalingSettingsAlgorithm> getAlgorithm() {
-        return this.algorithm == null ? Input.empty() : this.algorithm;
+    public Output<AutoscalingSettingsAlgorithm> getAlgorithm() {
+        return this.algorithm == null ? Output.empty() : this.algorithm;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AutoscalingSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxNumWorkers")
-      private final @Nullable Input<Integer> maxNumWorkers;
+      private final @Nullable Output<Integer> maxNumWorkers;
 
-    public Input<Integer> getMaxNumWorkers() {
-        return this.maxNumWorkers == null ? Input.empty() : this.maxNumWorkers;
+    public Output<Integer> getMaxNumWorkers() {
+        return this.maxNumWorkers == null ? Output.empty() : this.maxNumWorkers;
     }
 
     public AutoscalingSettingsArgs(
-        @Nullable Input<AutoscalingSettingsAlgorithm> algorithm,
-        @Nullable Input<Integer> maxNumWorkers) {
+        @Nullable Output<AutoscalingSettingsAlgorithm> algorithm,
+        @Nullable Output<Integer> maxNumWorkers) {
         this.algorithm = algorithm;
         this.maxNumWorkers = maxNumWorkers;
     }
 
     private AutoscalingSettingsArgs() {
-        this.algorithm = Input.empty();
-        this.maxNumWorkers = Input.empty();
+        this.algorithm = Output.empty();
+        this.maxNumWorkers = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AutoscalingSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoscalingSettingsAlgorithm> algorithm;
-        private @Nullable Input<Integer> maxNumWorkers;
+        private @Nullable Output<AutoscalingSettingsAlgorithm> algorithm;
+        private @Nullable Output<Integer> maxNumWorkers;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AutoscalingSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.maxNumWorkers = defaults.maxNumWorkers;
         }
 
-        public Builder algorithm(@Nullable Input<AutoscalingSettingsAlgorithm> algorithm) {
+        public Builder algorithm(@Nullable Output<AutoscalingSettingsAlgorithm> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
         public Builder algorithm(@Nullable AutoscalingSettingsAlgorithm algorithm) {
-            this.algorithm = Input.ofNullable(algorithm);
+            this.algorithm = Output.ofNullable(algorithm);
             return this;
         }
 
-        public Builder maxNumWorkers(@Nullable Input<Integer> maxNumWorkers) {
+        public Builder maxNumWorkers(@Nullable Output<Integer> maxNumWorkers) {
             this.maxNumWorkers = maxNumWorkers;
             return this;
         }
 
         public Builder maxNumWorkers(@Nullable Integer maxNumWorkers) {
-            this.maxNumWorkers = Input.ofNullable(maxNumWorkers);
+            this.maxNumWorkers = Output.ofNullable(maxNumWorkers);
             return this;
         }
         public AutoscalingSettingsArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus.inputs;
 
 import io.pulumi.azurenative.servicebus.inputs.SubnetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ignoreMissingVnetServiceEndpoint")
-      private final @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
+      private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
-    public Input<Boolean> getIgnoreMissingVnetServiceEndpoint() {
-        return this.ignoreMissingVnetServiceEndpoint == null ? Input.empty() : this.ignoreMissingVnetServiceEndpoint;
+    public Output<Boolean> getIgnoreMissingVnetServiceEndpoint() {
+        return this.ignoreMissingVnetServiceEndpoint == null ? Output.empty() : this.ignoreMissingVnetServiceEndpoint;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<SubnetArgs> subnet;
+      private final @Nullable Output<SubnetArgs> subnet;
 
-    public Input<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<SubnetArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     public NWRuleSetVirtualNetworkRulesArgs(
-        @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint,
-        @Nullable Input<SubnetArgs> subnet) {
+        @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint,
+        @Nullable Output<SubnetArgs> subnet) {
         this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
         this.subnet = subnet;
     }
 
     private NWRuleSetVirtualNetworkRulesArgs() {
-        this.ignoreMissingVnetServiceEndpoint = Input.empty();
-        this.subnet = Input.empty();
+        this.ignoreMissingVnetServiceEndpoint = Output.empty();
+        this.subnet = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
-        private @Nullable Input<SubnetArgs> subnet;
+        private @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
+        private @Nullable Output<SubnetArgs> subnet;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder ignoreMissingVnetServiceEndpoint(@Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint) {
+        public Builder ignoreMissingVnetServiceEndpoint(@Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint) {
             this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
 
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
-            this.ignoreMissingVnetServiceEndpoint = Input.ofNullable(ignoreMissingVnetServiceEndpoint);
+            this.ignoreMissingVnetServiceEndpoint = Output.ofNullable(ignoreMissingVnetServiceEndpoint);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<SubnetArgs> subnet) {
+        public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
         public NWRuleSetVirtualNetworkRulesArgs build() {

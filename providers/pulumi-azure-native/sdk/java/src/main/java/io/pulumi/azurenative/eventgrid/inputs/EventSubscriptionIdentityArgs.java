@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.azurenative.eventgrid.enums.EventSubscriptionIdentityType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,EventSubscriptionIdentityType>> type;
+      private final @Nullable Output<Either<String,EventSubscriptionIdentityType>> type;
 
-    public Input<Either<String,EventSubscriptionIdentityType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,EventSubscriptionIdentityType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userAssignedIdentity")
-      private final @Nullable Input<String> userAssignedIdentity;
+      private final @Nullable Output<String> userAssignedIdentity;
 
-    public Input<String> getUserAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;
+    public Output<String> getUserAssignedIdentity() {
+        return this.userAssignedIdentity == null ? Output.empty() : this.userAssignedIdentity;
     }
 
     public EventSubscriptionIdentityArgs(
-        @Nullable Input<Either<String,EventSubscriptionIdentityType>> type,
-        @Nullable Input<String> userAssignedIdentity) {
+        @Nullable Output<Either<String,EventSubscriptionIdentityType>> type,
+        @Nullable Output<String> userAssignedIdentity) {
         this.type = type;
         this.userAssignedIdentity = userAssignedIdentity;
     }
 
     private EventSubscriptionIdentityArgs() {
-        this.type = Input.empty();
-        this.userAssignedIdentity = Input.empty();
+        this.type = Output.empty();
+        this.userAssignedIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,EventSubscriptionIdentityType>> type;
-        private @Nullable Input<String> userAssignedIdentity;
+        private @Nullable Output<Either<String,EventSubscriptionIdentityType>> type;
+        private @Nullable Output<String> userAssignedIdentity;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class EventSubscriptionIdentityArgs extends io.pulumi.resources.Res
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder type(@Nullable Input<Either<String,EventSubscriptionIdentityType>> type) {
+        public Builder type(@Nullable Output<Either<String,EventSubscriptionIdentityType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,EventSubscriptionIdentityType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder userAssignedIdentity(@Nullable Input<String> userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
+            this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
             return this;
         }
         public EventSubscriptionIdentityArgs build() {

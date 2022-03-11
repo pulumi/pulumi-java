@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.AlertRuleAnyOfOrLeafConditionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="allOf", required=true)
-      private final Input<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
+      private final Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
 
-    public Input<List<AlertRuleAnyOfOrLeafConditionArgs>> getAllOf() {
+    public Output<List<AlertRuleAnyOfOrLeafConditionArgs>> getAllOf() {
         return this.allOf;
     }
 
-    public AlertRuleAllOfConditionArgs(Input<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf) {
+    public AlertRuleAllOfConditionArgs(Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf) {
         this.allOf = Objects.requireNonNull(allOf, "expected parameter 'allOf' to be non-null");
     }
 
     private AlertRuleAllOfConditionArgs() {
-        this.allOf = Input.empty();
+        this.allOf = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
+        private Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
     	      this.allOf = defaults.allOf;
         }
 
-        public Builder allOf(Input<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf) {
+        public Builder allOf(Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf) {
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }
 
         public Builder allOf(List<AlertRuleAnyOfOrLeafConditionArgs> allOf) {
-            this.allOf = Input.of(Objects.requireNonNull(allOf));
+            this.allOf = Output.of(Objects.requireNonNull(allOf));
             return this;
         }
         public AlertRuleAllOfConditionArgs build() {

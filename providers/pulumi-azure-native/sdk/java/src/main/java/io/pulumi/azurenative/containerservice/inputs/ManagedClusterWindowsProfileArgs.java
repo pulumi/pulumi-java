@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.enums.LicenseType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adminPassword")
-      private final @Nullable Input<String> adminPassword;
+      private final @Nullable Output<String> adminPassword;
 
-    public Input<String> getAdminPassword() {
-        return this.adminPassword == null ? Input.empty() : this.adminPassword;
+    public Output<String> getAdminPassword() {
+        return this.adminPassword == null ? Output.empty() : this.adminPassword;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adminUsername", required=true)
-      private final Input<String> adminUsername;
+      private final Output<String> adminUsername;
 
-    public Input<String> getAdminUsername() {
+    public Output<String> getAdminUsername() {
         return this.adminUsername;
     }
 
@@ -48,10 +48,10 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enableCSIProxy")
-      private final @Nullable Input<Boolean> enableCSIProxy;
+      private final @Nullable Output<Boolean> enableCSIProxy;
 
-    public Input<Boolean> getEnableCSIProxy() {
-        return this.enableCSIProxy == null ? Input.empty() : this.enableCSIProxy;
+    public Output<Boolean> getEnableCSIProxy() {
+        return this.enableCSIProxy == null ? Output.empty() : this.enableCSIProxy;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="licenseType")
-      private final @Nullable Input<Either<String,LicenseType>> licenseType;
+      private final @Nullable Output<Either<String,LicenseType>> licenseType;
 
-    public Input<Either<String,LicenseType>> getLicenseType() {
-        return this.licenseType == null ? Input.empty() : this.licenseType;
+    public Output<Either<String,LicenseType>> getLicenseType() {
+        return this.licenseType == null ? Output.empty() : this.licenseType;
     }
 
     public ManagedClusterWindowsProfileArgs(
-        @Nullable Input<String> adminPassword,
-        Input<String> adminUsername,
-        @Nullable Input<Boolean> enableCSIProxy,
-        @Nullable Input<Either<String,LicenseType>> licenseType) {
+        @Nullable Output<String> adminPassword,
+        Output<String> adminUsername,
+        @Nullable Output<Boolean> enableCSIProxy,
+        @Nullable Output<Either<String,LicenseType>> licenseType) {
         this.adminPassword = adminPassword;
         this.adminUsername = Objects.requireNonNull(adminUsername, "expected parameter 'adminUsername' to be non-null");
         this.enableCSIProxy = enableCSIProxy;
@@ -77,10 +77,10 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
     }
 
     private ManagedClusterWindowsProfileArgs() {
-        this.adminPassword = Input.empty();
-        this.adminUsername = Input.empty();
-        this.enableCSIProxy = Input.empty();
-        this.licenseType = Input.empty();
+        this.adminPassword = Output.empty();
+        this.adminUsername = Output.empty();
+        this.enableCSIProxy = Output.empty();
+        this.licenseType = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> adminPassword;
-        private Input<String> adminUsername;
-        private @Nullable Input<Boolean> enableCSIProxy;
-        private @Nullable Input<Either<String,LicenseType>> licenseType;
+        private @Nullable Output<String> adminPassword;
+        private Output<String> adminUsername;
+        private @Nullable Output<Boolean> enableCSIProxy;
+        private @Nullable Output<Either<String,LicenseType>> licenseType;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
     	      this.licenseType = defaults.licenseType;
         }
 
-        public Builder adminPassword(@Nullable Input<String> adminPassword) {
+        public Builder adminPassword(@Nullable Output<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Input.ofNullable(adminPassword);
+            this.adminPassword = Output.ofNullable(adminPassword);
             return this;
         }
 
-        public Builder adminUsername(Input<String> adminUsername) {
+        public Builder adminUsername(Output<String> adminUsername) {
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
 
         public Builder adminUsername(String adminUsername) {
-            this.adminUsername = Input.of(Objects.requireNonNull(adminUsername));
+            this.adminUsername = Output.of(Objects.requireNonNull(adminUsername));
             return this;
         }
 
-        public Builder enableCSIProxy(@Nullable Input<Boolean> enableCSIProxy) {
+        public Builder enableCSIProxy(@Nullable Output<Boolean> enableCSIProxy) {
             this.enableCSIProxy = enableCSIProxy;
             return this;
         }
 
         public Builder enableCSIProxy(@Nullable Boolean enableCSIProxy) {
-            this.enableCSIProxy = Input.ofNullable(enableCSIProxy);
+            this.enableCSIProxy = Output.ofNullable(enableCSIProxy);
             return this;
         }
 
-        public Builder licenseType(@Nullable Input<Either<String,LicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Output<Either<String,LicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
         public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
-            this.licenseType = Input.ofNullable(licenseType);
+            this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
         public ManagedClusterWindowsProfileArgs build() {

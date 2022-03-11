@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.DetectorDatasourcesS3LogsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class DetectorDatasourcesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="s3Logs")
-      private final @Nullable Input<DetectorDatasourcesS3LogsArgs> s3Logs;
+      private final @Nullable Output<DetectorDatasourcesS3LogsArgs> s3Logs;
 
-    public Input<DetectorDatasourcesS3LogsArgs> getS3Logs() {
-        return this.s3Logs == null ? Input.empty() : this.s3Logs;
+    public Output<DetectorDatasourcesS3LogsArgs> getS3Logs() {
+        return this.s3Logs == null ? Output.empty() : this.s3Logs;
     }
 
-    public DetectorDatasourcesArgs(@Nullable Input<DetectorDatasourcesS3LogsArgs> s3Logs) {
+    public DetectorDatasourcesArgs(@Nullable Output<DetectorDatasourcesS3LogsArgs> s3Logs) {
         this.s3Logs = s3Logs;
     }
 
     private DetectorDatasourcesArgs() {
-        this.s3Logs = Input.empty();
+        this.s3Logs = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DetectorDatasourcesArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<DetectorDatasourcesS3LogsArgs> s3Logs;
+        private @Nullable Output<DetectorDatasourcesS3LogsArgs> s3Logs;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DetectorDatasourcesArgs extends io.pulumi.resources.ResourceA
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder s3Logs(@Nullable Input<DetectorDatasourcesS3LogsArgs> s3Logs) {
+        public Builder s3Logs(@Nullable Output<DetectorDatasourcesS3LogsArgs> s3Logs) {
             this.s3Logs = s3Logs;
             return this;
         }
 
         public Builder s3Logs(@Nullable DetectorDatasourcesS3LogsArgs s3Logs) {
-            this.s3Logs = Input.ofNullable(s3Logs);
+            this.s3Logs = Output.ofNullable(s3Logs);
             return this;
         }
         public DetectorDatasourcesArgs build() {

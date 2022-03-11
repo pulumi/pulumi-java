@@ -6,7 +6,6 @@ package io.pulumi.aws.ssm;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssm.ActivationArgs;
 import io.pulumi.aws.ssm.inputs.ActivationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -211,14 +210,14 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Activation(String name, ActivationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssm/activation:Activation", name, args == null ? ActivationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ssm/activation:Activation", name, args == null ? ActivationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Activation(String name, Input<String> id, @Nullable ActivationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Activation(String name, Output<String> id, @Nullable ActivationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ssm/activation:Activation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -234,7 +233,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Activation get(String name, Input<String> id, @Nullable ActivationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Activation get(String name, Output<String> id, @Nullable ActivationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Activation(name, id, state, options);
     }
 }

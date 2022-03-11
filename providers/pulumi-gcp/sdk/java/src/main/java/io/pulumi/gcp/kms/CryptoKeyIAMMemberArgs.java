@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.kms.inputs.CryptoKeyIAMMemberConditionArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<CryptoKeyIAMMemberConditionArgs> condition;
+      private final @Nullable Output<CryptoKeyIAMMemberConditionArgs> condition;
 
-    public Input<CryptoKeyIAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<CryptoKeyIAMMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -35,16 +35,16 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cryptoKeyId", required=true)
-      private final Input<String> cryptoKeyId;
+      private final Output<String> cryptoKeyId;
 
-    public Input<String> getCryptoKeyId() {
+    public Output<String> getCryptoKeyId() {
         return this.cryptoKeyId;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -54,17 +54,17 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public CryptoKeyIAMMemberArgs(
-        @Nullable Input<CryptoKeyIAMMemberConditionArgs> condition,
-        Input<String> cryptoKeyId,
-        Input<String> member,
-        Input<String> role) {
+        @Nullable Output<CryptoKeyIAMMemberConditionArgs> condition,
+        Output<String> cryptoKeyId,
+        Output<String> member,
+        Output<String> role) {
         this.condition = condition;
         this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -72,10 +72,10 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CryptoKeyIAMMemberArgs() {
-        this.condition = Input.empty();
-        this.cryptoKeyId = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.cryptoKeyId = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<CryptoKeyIAMMemberConditionArgs> condition;
-        private Input<String> cryptoKeyId;
-        private Input<String> member;
-        private Input<String> role;
+        private @Nullable Output<CryptoKeyIAMMemberConditionArgs> condition;
+        private Output<String> cryptoKeyId;
+        private Output<String> member;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<CryptoKeyIAMMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<CryptoKeyIAMMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable CryptoKeyIAMMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder cryptoKeyId(Input<String> cryptoKeyId) {
+        public Builder cryptoKeyId(Output<String> cryptoKeyId) {
             this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
             return this;
         }
 
         public Builder cryptoKeyId(String cryptoKeyId) {
-            this.cryptoKeyId = Input.of(Objects.requireNonNull(cryptoKeyId));
+            this.cryptoKeyId = Output.of(Objects.requireNonNull(cryptoKeyId));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public CryptoKeyIAMMemberArgs build() {

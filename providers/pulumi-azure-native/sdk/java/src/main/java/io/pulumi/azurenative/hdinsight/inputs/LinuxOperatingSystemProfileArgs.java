@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.SshProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sshProfile")
-      private final @Nullable Input<SshProfileArgs> sshProfile;
+      private final @Nullable Output<SshProfileArgs> sshProfile;
 
-    public Input<SshProfileArgs> getSshProfile() {
-        return this.sshProfile == null ? Input.empty() : this.sshProfile;
+    public Output<SshProfileArgs> getSshProfile() {
+        return this.sshProfile == null ? Output.empty() : this.sshProfile;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public LinuxOperatingSystemProfileArgs(
-        @Nullable Input<String> password,
-        @Nullable Input<SshProfileArgs> sshProfile,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> password,
+        @Nullable Output<SshProfileArgs> sshProfile,
+        @Nullable Output<String> username) {
         this.password = password;
         this.sshProfile = sshProfile;
         this.username = username;
     }
 
     private LinuxOperatingSystemProfileArgs() {
-        this.password = Input.empty();
-        this.sshProfile = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.sshProfile = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private @Nullable Input<SshProfileArgs> sshProfile;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> password;
+        private @Nullable Output<SshProfileArgs> sshProfile;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
     	      this.username = defaults.username;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder sshProfile(@Nullable Input<SshProfileArgs> sshProfile) {
+        public Builder sshProfile(@Nullable Output<SshProfileArgs> sshProfile) {
             this.sshProfile = sshProfile;
             return this;
         }
 
         public Builder sshProfile(@Nullable SshProfileArgs sshProfile) {
-            this.sshProfile = Input.ofNullable(sshProfile);
+            this.sshProfile = Output.ofNullable(sshProfile);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public LinuxOperatingSystemProfileArgs build() {

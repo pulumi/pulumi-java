@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.CreatePolicyInputPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<CreatePolicyInputPropertiesArgs> properties;
+      private final @Nullable Output<CreatePolicyInputPropertiesArgs> properties;
 
-    public Input<CreatePolicyInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<CreatePolicyInputPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
     public ReplicationPolicyArgs(
-        @Nullable Input<String> policyName,
-        @Nullable Input<CreatePolicyInputPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> resourceName) {
+        @Nullable Output<String> policyName,
+        @Nullable Output<CreatePolicyInputPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> resourceName) {
         this.policyName = policyName;
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ReplicationPolicyArgs() {
-        this.policyName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
+        this.policyName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policyName;
-        private @Nullable Input<CreatePolicyInputPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
+        private @Nullable Output<String> policyName;
+        private @Nullable Output<CreatePolicyInputPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<CreatePolicyInputPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<CreatePolicyInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable CreatePolicyInputPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
         public ReplicationPolicyArgs build() {

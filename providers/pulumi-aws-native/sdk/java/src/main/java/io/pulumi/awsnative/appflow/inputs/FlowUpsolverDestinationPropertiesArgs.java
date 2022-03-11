@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.FlowUpsolverS3OutputFormatConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,39 +16,39 @@ public final class FlowUpsolverDestinationPropertiesArgs extends io.pulumi.resou
     public static final FlowUpsolverDestinationPropertiesArgs Empty = new FlowUpsolverDestinationPropertiesArgs();
 
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="bucketPrefix")
-      private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Output<String> bucketPrefix;
 
-    public Input<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
+    public Output<String> getBucketPrefix() {
+        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
     @InputImport(name="s3OutputFormatConfig", required=true)
-      private final Input<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig;
+      private final Output<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig;
 
-    public Input<FlowUpsolverS3OutputFormatConfigArgs> getS3OutputFormatConfig() {
+    public Output<FlowUpsolverS3OutputFormatConfigArgs> getS3OutputFormatConfig() {
         return this.s3OutputFormatConfig;
     }
 
     public FlowUpsolverDestinationPropertiesArgs(
-        Input<String> bucketName,
-        @Nullable Input<String> bucketPrefix,
-        Input<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig) {
+        Output<String> bucketName,
+        @Nullable Output<String> bucketPrefix,
+        Output<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.bucketPrefix = bucketPrefix;
         this.s3OutputFormatConfig = Objects.requireNonNull(s3OutputFormatConfig, "expected parameter 's3OutputFormatConfig' to be non-null");
     }
 
     private FlowUpsolverDestinationPropertiesArgs() {
-        this.bucketName = Input.empty();
-        this.bucketPrefix = Input.empty();
-        this.s3OutputFormatConfig = Input.empty();
+        this.bucketName = Output.empty();
+        this.bucketPrefix = Output.empty();
+        this.s3OutputFormatConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class FlowUpsolverDestinationPropertiesArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<String> bucketPrefix;
-        private Input<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig;
+        private Output<String> bucketName;
+        private @Nullable Output<String> bucketPrefix;
+        private Output<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class FlowUpsolverDestinationPropertiesArgs extends io.pulumi.resou
     	      this.s3OutputFormatConfig = defaults.s3OutputFormatConfig;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Input.ofNullable(bucketPrefix);
+            this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder s3OutputFormatConfig(Input<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig) {
+        public Builder s3OutputFormatConfig(Output<FlowUpsolverS3OutputFormatConfigArgs> s3OutputFormatConfig) {
             this.s3OutputFormatConfig = Objects.requireNonNull(s3OutputFormatConfig);
             return this;
         }
 
         public Builder s3OutputFormatConfig(FlowUpsolverS3OutputFormatConfigArgs s3OutputFormatConfig) {
-            this.s3OutputFormatConfig = Input.of(Objects.requireNonNull(s3OutputFormatConfig));
+            this.s3OutputFormatConfig = Output.of(Objects.requireNonNull(s3OutputFormatConfig));
             return this;
         }
         public FlowUpsolverDestinationPropertiesArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.enums.PreflightOption;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,29 +19,29 @@ public final class ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsAr
     public static final ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs Empty = new ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs();
 
     @InputImport(name="preflightOptions")
-      private final @Nullable Input<List<Either<String,PreflightOption>>> preflightOptions;
+      private final @Nullable Output<List<Either<String,PreflightOption>>> preflightOptions;
 
-    public Input<List<Either<String,PreflightOption>>> getPreflightOptions() {
-        return this.preflightOptions == null ? Input.empty() : this.preflightOptions;
+    public Output<List<Either<String,PreflightOption>>> getPreflightOptions() {
+        return this.preflightOptions == null ? Output.empty() : this.preflightOptions;
     }
 
     @InputImport(name="preflightSupported")
-      private final @Nullable Input<Boolean> preflightSupported;
+      private final @Nullable Output<Boolean> preflightSupported;
 
-    public Input<Boolean> getPreflightSupported() {
-        return this.preflightSupported == null ? Input.empty() : this.preflightSupported;
+    public Output<Boolean> getPreflightSupported() {
+        return this.preflightSupported == null ? Output.empty() : this.preflightSupported;
     }
 
     public ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs(
-        @Nullable Input<List<Either<String,PreflightOption>>> preflightOptions,
-        @Nullable Input<Boolean> preflightSupported) {
+        @Nullable Output<List<Either<String,PreflightOption>>> preflightOptions,
+        @Nullable Output<Boolean> preflightSupported) {
         this.preflightOptions = preflightOptions;
         this.preflightSupported = preflightSupported;
     }
 
     private ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs() {
-        this.preflightOptions = Input.empty();
-        this.preflightSupported = Input.empty();
+        this.preflightOptions = Output.empty();
+        this.preflightSupported = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,PreflightOption>>> preflightOptions;
-        private @Nullable Input<Boolean> preflightSupported;
+        private @Nullable Output<List<Either<String,PreflightOption>>> preflightOptions;
+        private @Nullable Output<Boolean> preflightSupported;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsAr
     	      this.preflightSupported = defaults.preflightSupported;
         }
 
-        public Builder preflightOptions(@Nullable Input<List<Either<String,PreflightOption>>> preflightOptions) {
+        public Builder preflightOptions(@Nullable Output<List<Either<String,PreflightOption>>> preflightOptions) {
             this.preflightOptions = preflightOptions;
             return this;
         }
 
         public Builder preflightOptions(@Nullable List<Either<String,PreflightOption>> preflightOptions) {
-            this.preflightOptions = Input.ofNullable(preflightOptions);
+            this.preflightOptions = Output.ofNullable(preflightOptions);
             return this;
         }
 
-        public Builder preflightSupported(@Nullable Input<Boolean> preflightSupported) {
+        public Builder preflightSupported(@Nullable Output<Boolean> preflightSupported) {
             this.preflightSupported = preflightSupported;
             return this;
         }
 
         public Builder preflightSupported(@Nullable Boolean preflightSupported) {
-            this.preflightSupported = Input.ofNullable(preflightSupported);
+            this.preflightSupported = Output.ofNullable(preflightSupported);
             return this;
         }
         public ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs build() {

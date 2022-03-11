@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.aws.storagegateway.inputs.SmbFileShareCacheAttributesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessBasedEnumeration")
-      private final @Nullable Input<Boolean> accessBasedEnumeration;
+      private final @Nullable Output<Boolean> accessBasedEnumeration;
 
-    public Input<Boolean> getAccessBasedEnumeration() {
-        return this.accessBasedEnumeration == null ? Input.empty() : this.accessBasedEnumeration;
+    public Output<Boolean> getAccessBasedEnumeration() {
+        return this.accessBasedEnumeration == null ? Output.empty() : this.accessBasedEnumeration;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUserLists")
-      private final @Nullable Input<List<String>> adminUserLists;
+      private final @Nullable Output<List<String>> adminUserLists;
 
-    public Input<List<String>> getAdminUserLists() {
-        return this.adminUserLists == null ? Input.empty() : this.adminUserLists;
+    public Output<List<String>> getAdminUserLists() {
+        return this.adminUserLists == null ? Output.empty() : this.adminUserLists;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditDestinationArn")
-      private final @Nullable Input<String> auditDestinationArn;
+      private final @Nullable Output<String> auditDestinationArn;
 
-    public Input<String> getAuditDestinationArn() {
-        return this.auditDestinationArn == null ? Input.empty() : this.auditDestinationArn;
+    public Output<String> getAuditDestinationArn() {
+        return this.auditDestinationArn == null ? Output.empty() : this.auditDestinationArn;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-      private final @Nullable Input<String> authentication;
+      private final @Nullable Output<String> authentication;
 
-    public Input<String> getAuthentication() {
-        return this.authentication == null ? Input.empty() : this.authentication;
+    public Output<String> getAuthentication() {
+        return this.authentication == null ? Output.empty() : this.authentication;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketRegion")
-      private final @Nullable Input<String> bucketRegion;
+      private final @Nullable Output<String> bucketRegion;
 
-    public Input<String> getBucketRegion() {
-        return this.bucketRegion == null ? Input.empty() : this.bucketRegion;
+    public Output<String> getBucketRegion() {
+        return this.bucketRegion == null ? Output.empty() : this.bucketRegion;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheAttributes")
-      private final @Nullable Input<SmbFileShareCacheAttributesGetArgs> cacheAttributes;
+      private final @Nullable Output<SmbFileShareCacheAttributesGetArgs> cacheAttributes;
 
-    public Input<SmbFileShareCacheAttributesGetArgs> getCacheAttributes() {
-        return this.cacheAttributes == null ? Input.empty() : this.cacheAttributes;
+    public Output<SmbFileShareCacheAttributesGetArgs> getCacheAttributes() {
+        return this.cacheAttributes == null ? Output.empty() : this.cacheAttributes;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caseSensitivity")
-      private final @Nullable Input<String> caseSensitivity;
+      private final @Nullable Output<String> caseSensitivity;
 
-    public Input<String> getCaseSensitivity() {
-        return this.caseSensitivity == null ? Input.empty() : this.caseSensitivity;
+    public Output<String> getCaseSensitivity() {
+        return this.caseSensitivity == null ? Output.empty() : this.caseSensitivity;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultStorageClass")
-      private final @Nullable Input<String> defaultStorageClass;
+      private final @Nullable Output<String> defaultStorageClass;
 
-    public Input<String> getDefaultStorageClass() {
-        return this.defaultStorageClass == null ? Input.empty() : this.defaultStorageClass;
+    public Output<String> getDefaultStorageClass() {
+        return this.defaultStorageClass == null ? Output.empty() : this.defaultStorageClass;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileShareName")
-      private final @Nullable Input<String> fileShareName;
+      private final @Nullable Output<String> fileShareName;
 
-    public Input<String> getFileShareName() {
-        return this.fileShareName == null ? Input.empty() : this.fileShareName;
+    public Output<String> getFileShareName() {
+        return this.fileShareName == null ? Output.empty() : this.fileShareName;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileshareId")
-      private final @Nullable Input<String> fileshareId;
+      private final @Nullable Output<String> fileshareId;
 
-    public Input<String> getFileshareId() {
-        return this.fileshareId == null ? Input.empty() : this.fileshareId;
+    public Output<String> getFileshareId() {
+        return this.fileshareId == null ? Output.empty() : this.fileshareId;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayArn")
-      private final @Nullable Input<String> gatewayArn;
+      private final @Nullable Output<String> gatewayArn;
 
-    public Input<String> getGatewayArn() {
-        return this.gatewayArn == null ? Input.empty() : this.gatewayArn;
+    public Output<String> getGatewayArn() {
+        return this.gatewayArn == null ? Output.empty() : this.gatewayArn;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guessMimeTypeEnabled")
-      private final @Nullable Input<Boolean> guessMimeTypeEnabled;
+      private final @Nullable Output<Boolean> guessMimeTypeEnabled;
 
-    public Input<Boolean> getGuessMimeTypeEnabled() {
-        return this.guessMimeTypeEnabled == null ? Input.empty() : this.guessMimeTypeEnabled;
+    public Output<Boolean> getGuessMimeTypeEnabled() {
+        return this.guessMimeTypeEnabled == null ? Output.empty() : this.guessMimeTypeEnabled;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invalidUserLists")
-      private final @Nullable Input<List<String>> invalidUserLists;
+      private final @Nullable Output<List<String>> invalidUserLists;
 
-    public Input<List<String>> getInvalidUserLists() {
-        return this.invalidUserLists == null ? Input.empty() : this.invalidUserLists;
+    public Output<List<String>> getInvalidUserLists() {
+        return this.invalidUserLists == null ? Output.empty() : this.invalidUserLists;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsEncrypted")
-      private final @Nullable Input<Boolean> kmsEncrypted;
+      private final @Nullable Output<Boolean> kmsEncrypted;
 
-    public Input<Boolean> getKmsEncrypted() {
-        return this.kmsEncrypted == null ? Input.empty() : this.kmsEncrypted;
+    public Output<Boolean> getKmsEncrypted() {
+        return this.kmsEncrypted == null ? Output.empty() : this.kmsEncrypted;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationArn")
-      private final @Nullable Input<String> locationArn;
+      private final @Nullable Output<String> locationArn;
 
-    public Input<String> getLocationArn() {
-        return this.locationArn == null ? Input.empty() : this.locationArn;
+    public Output<String> getLocationArn() {
+        return this.locationArn == null ? Output.empty() : this.locationArn;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationPolicy")
-      private final @Nullable Input<String> notificationPolicy;
+      private final @Nullable Output<String> notificationPolicy;
 
-    public Input<String> getNotificationPolicy() {
-        return this.notificationPolicy == null ? Input.empty() : this.notificationPolicy;
+    public Output<String> getNotificationPolicy() {
+        return this.notificationPolicy == null ? Output.empty() : this.notificationPolicy;
     }
 
     /**
@@ -221,10 +221,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectAcl")
-      private final @Nullable Input<String> objectAcl;
+      private final @Nullable Output<String> objectAcl;
 
-    public Input<String> getObjectAcl() {
-        return this.objectAcl == null ? Input.empty() : this.objectAcl;
+    public Output<String> getObjectAcl() {
+        return this.objectAcl == null ? Output.empty() : this.objectAcl;
     }
 
     /**
@@ -232,10 +232,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oplocksEnabled")
-      private final @Nullable Input<Boolean> oplocksEnabled;
+      private final @Nullable Output<Boolean> oplocksEnabled;
 
-    public Input<Boolean> getOplocksEnabled() {
-        return this.oplocksEnabled == null ? Input.empty() : this.oplocksEnabled;
+    public Output<Boolean> getOplocksEnabled() {
+        return this.oplocksEnabled == null ? Output.empty() : this.oplocksEnabled;
     }
 
     /**
@@ -243,10 +243,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -254,10 +254,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -265,10 +265,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requesterPays")
-      private final @Nullable Input<Boolean> requesterPays;
+      private final @Nullable Output<Boolean> requesterPays;
 
-    public Input<Boolean> getRequesterPays() {
-        return this.requesterPays == null ? Input.empty() : this.requesterPays;
+    public Output<Boolean> getRequesterPays() {
+        return this.requesterPays == null ? Output.empty() : this.requesterPays;
     }
 
     /**
@@ -276,10 +276,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -287,10 +287,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbAclEnabled")
-      private final @Nullable Input<Boolean> smbAclEnabled;
+      private final @Nullable Output<Boolean> smbAclEnabled;
 
-    public Input<Boolean> getSmbAclEnabled() {
-        return this.smbAclEnabled == null ? Input.empty() : this.smbAclEnabled;
+    public Output<Boolean> getSmbAclEnabled() {
+        return this.smbAclEnabled == null ? Output.empty() : this.smbAclEnabled;
     }
 
     /**
@@ -298,10 +298,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -309,10 +309,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -320,10 +320,10 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validUserLists")
-      private final @Nullable Input<List<String>> validUserLists;
+      private final @Nullable Output<List<String>> validUserLists;
 
-    public Input<List<String>> getValidUserLists() {
-        return this.validUserLists == null ? Input.empty() : this.validUserLists;
+    public Output<List<String>> getValidUserLists() {
+        return this.validUserLists == null ? Output.empty() : this.validUserLists;
     }
 
     /**
@@ -331,42 +331,42 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcEndpointDnsName")
-      private final @Nullable Input<String> vpcEndpointDnsName;
+      private final @Nullable Output<String> vpcEndpointDnsName;
 
-    public Input<String> getVpcEndpointDnsName() {
-        return this.vpcEndpointDnsName == null ? Input.empty() : this.vpcEndpointDnsName;
+    public Output<String> getVpcEndpointDnsName() {
+        return this.vpcEndpointDnsName == null ? Output.empty() : this.vpcEndpointDnsName;
     }
 
     public SmbFileShareState(
-        @Nullable Input<Boolean> accessBasedEnumeration,
-        @Nullable Input<List<String>> adminUserLists,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> auditDestinationArn,
-        @Nullable Input<String> authentication,
-        @Nullable Input<String> bucketRegion,
-        @Nullable Input<SmbFileShareCacheAttributesGetArgs> cacheAttributes,
-        @Nullable Input<String> caseSensitivity,
-        @Nullable Input<String> defaultStorageClass,
-        @Nullable Input<String> fileShareName,
-        @Nullable Input<String> fileshareId,
-        @Nullable Input<String> gatewayArn,
-        @Nullable Input<Boolean> guessMimeTypeEnabled,
-        @Nullable Input<List<String>> invalidUserLists,
-        @Nullable Input<Boolean> kmsEncrypted,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<String> locationArn,
-        @Nullable Input<String> notificationPolicy,
-        @Nullable Input<String> objectAcl,
-        @Nullable Input<Boolean> oplocksEnabled,
-        @Nullable Input<String> path,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<Boolean> requesterPays,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<Boolean> smbAclEnabled,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<String>> validUserLists,
-        @Nullable Input<String> vpcEndpointDnsName) {
+        @Nullable Output<Boolean> accessBasedEnumeration,
+        @Nullable Output<List<String>> adminUserLists,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> auditDestinationArn,
+        @Nullable Output<String> authentication,
+        @Nullable Output<String> bucketRegion,
+        @Nullable Output<SmbFileShareCacheAttributesGetArgs> cacheAttributes,
+        @Nullable Output<String> caseSensitivity,
+        @Nullable Output<String> defaultStorageClass,
+        @Nullable Output<String> fileShareName,
+        @Nullable Output<String> fileshareId,
+        @Nullable Output<String> gatewayArn,
+        @Nullable Output<Boolean> guessMimeTypeEnabled,
+        @Nullable Output<List<String>> invalidUserLists,
+        @Nullable Output<Boolean> kmsEncrypted,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<String> locationArn,
+        @Nullable Output<String> notificationPolicy,
+        @Nullable Output<String> objectAcl,
+        @Nullable Output<Boolean> oplocksEnabled,
+        @Nullable Output<String> path,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<Boolean> requesterPays,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<Boolean> smbAclEnabled,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<String>> validUserLists,
+        @Nullable Output<String> vpcEndpointDnsName) {
         this.accessBasedEnumeration = accessBasedEnumeration;
         this.adminUserLists = adminUserLists;
         this.arn = arn;
@@ -399,35 +399,35 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SmbFileShareState() {
-        this.accessBasedEnumeration = Input.empty();
-        this.adminUserLists = Input.empty();
-        this.arn = Input.empty();
-        this.auditDestinationArn = Input.empty();
-        this.authentication = Input.empty();
-        this.bucketRegion = Input.empty();
-        this.cacheAttributes = Input.empty();
-        this.caseSensitivity = Input.empty();
-        this.defaultStorageClass = Input.empty();
-        this.fileShareName = Input.empty();
-        this.fileshareId = Input.empty();
-        this.gatewayArn = Input.empty();
-        this.guessMimeTypeEnabled = Input.empty();
-        this.invalidUserLists = Input.empty();
-        this.kmsEncrypted = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.locationArn = Input.empty();
-        this.notificationPolicy = Input.empty();
-        this.objectAcl = Input.empty();
-        this.oplocksEnabled = Input.empty();
-        this.path = Input.empty();
-        this.readOnly = Input.empty();
-        this.requesterPays = Input.empty();
-        this.roleArn = Input.empty();
-        this.smbAclEnabled = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.validUserLists = Input.empty();
-        this.vpcEndpointDnsName = Input.empty();
+        this.accessBasedEnumeration = Output.empty();
+        this.adminUserLists = Output.empty();
+        this.arn = Output.empty();
+        this.auditDestinationArn = Output.empty();
+        this.authentication = Output.empty();
+        this.bucketRegion = Output.empty();
+        this.cacheAttributes = Output.empty();
+        this.caseSensitivity = Output.empty();
+        this.defaultStorageClass = Output.empty();
+        this.fileShareName = Output.empty();
+        this.fileshareId = Output.empty();
+        this.gatewayArn = Output.empty();
+        this.guessMimeTypeEnabled = Output.empty();
+        this.invalidUserLists = Output.empty();
+        this.kmsEncrypted = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.locationArn = Output.empty();
+        this.notificationPolicy = Output.empty();
+        this.objectAcl = Output.empty();
+        this.oplocksEnabled = Output.empty();
+        this.path = Output.empty();
+        this.readOnly = Output.empty();
+        this.requesterPays = Output.empty();
+        this.roleArn = Output.empty();
+        this.smbAclEnabled = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.validUserLists = Output.empty();
+        this.vpcEndpointDnsName = Output.empty();
     }
 
     public static Builder builder() {
@@ -439,35 +439,35 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> accessBasedEnumeration;
-        private @Nullable Input<List<String>> adminUserLists;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> auditDestinationArn;
-        private @Nullable Input<String> authentication;
-        private @Nullable Input<String> bucketRegion;
-        private @Nullable Input<SmbFileShareCacheAttributesGetArgs> cacheAttributes;
-        private @Nullable Input<String> caseSensitivity;
-        private @Nullable Input<String> defaultStorageClass;
-        private @Nullable Input<String> fileShareName;
-        private @Nullable Input<String> fileshareId;
-        private @Nullable Input<String> gatewayArn;
-        private @Nullable Input<Boolean> guessMimeTypeEnabled;
-        private @Nullable Input<List<String>> invalidUserLists;
-        private @Nullable Input<Boolean> kmsEncrypted;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<String> locationArn;
-        private @Nullable Input<String> notificationPolicy;
-        private @Nullable Input<String> objectAcl;
-        private @Nullable Input<Boolean> oplocksEnabled;
-        private @Nullable Input<String> path;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<Boolean> requesterPays;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<Boolean> smbAclEnabled;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<String>> validUserLists;
-        private @Nullable Input<String> vpcEndpointDnsName;
+        private @Nullable Output<Boolean> accessBasedEnumeration;
+        private @Nullable Output<List<String>> adminUserLists;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> auditDestinationArn;
+        private @Nullable Output<String> authentication;
+        private @Nullable Output<String> bucketRegion;
+        private @Nullable Output<SmbFileShareCacheAttributesGetArgs> cacheAttributes;
+        private @Nullable Output<String> caseSensitivity;
+        private @Nullable Output<String> defaultStorageClass;
+        private @Nullable Output<String> fileShareName;
+        private @Nullable Output<String> fileshareId;
+        private @Nullable Output<String> gatewayArn;
+        private @Nullable Output<Boolean> guessMimeTypeEnabled;
+        private @Nullable Output<List<String>> invalidUserLists;
+        private @Nullable Output<Boolean> kmsEncrypted;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<String> locationArn;
+        private @Nullable Output<String> notificationPolicy;
+        private @Nullable Output<String> objectAcl;
+        private @Nullable Output<Boolean> oplocksEnabled;
+        private @Nullable Output<String> path;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<Boolean> requesterPays;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<Boolean> smbAclEnabled;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<String>> validUserLists;
+        private @Nullable Output<String> vpcEndpointDnsName;
 
         public Builder() {
     	      // Empty
@@ -506,293 +506,293 @@ public final class SmbFileShareState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcEndpointDnsName = defaults.vpcEndpointDnsName;
         }
 
-        public Builder accessBasedEnumeration(@Nullable Input<Boolean> accessBasedEnumeration) {
+        public Builder accessBasedEnumeration(@Nullable Output<Boolean> accessBasedEnumeration) {
             this.accessBasedEnumeration = accessBasedEnumeration;
             return this;
         }
 
         public Builder accessBasedEnumeration(@Nullable Boolean accessBasedEnumeration) {
-            this.accessBasedEnumeration = Input.ofNullable(accessBasedEnumeration);
+            this.accessBasedEnumeration = Output.ofNullable(accessBasedEnumeration);
             return this;
         }
 
-        public Builder adminUserLists(@Nullable Input<List<String>> adminUserLists) {
+        public Builder adminUserLists(@Nullable Output<List<String>> adminUserLists) {
             this.adminUserLists = adminUserLists;
             return this;
         }
 
         public Builder adminUserLists(@Nullable List<String> adminUserLists) {
-            this.adminUserLists = Input.ofNullable(adminUserLists);
+            this.adminUserLists = Output.ofNullable(adminUserLists);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder auditDestinationArn(@Nullable Input<String> auditDestinationArn) {
+        public Builder auditDestinationArn(@Nullable Output<String> auditDestinationArn) {
             this.auditDestinationArn = auditDestinationArn;
             return this;
         }
 
         public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
-            this.auditDestinationArn = Input.ofNullable(auditDestinationArn);
+            this.auditDestinationArn = Output.ofNullable(auditDestinationArn);
             return this;
         }
 
-        public Builder authentication(@Nullable Input<String> authentication) {
+        public Builder authentication(@Nullable Output<String> authentication) {
             this.authentication = authentication;
             return this;
         }
 
         public Builder authentication(@Nullable String authentication) {
-            this.authentication = Input.ofNullable(authentication);
+            this.authentication = Output.ofNullable(authentication);
             return this;
         }
 
-        public Builder bucketRegion(@Nullable Input<String> bucketRegion) {
+        public Builder bucketRegion(@Nullable Output<String> bucketRegion) {
             this.bucketRegion = bucketRegion;
             return this;
         }
 
         public Builder bucketRegion(@Nullable String bucketRegion) {
-            this.bucketRegion = Input.ofNullable(bucketRegion);
+            this.bucketRegion = Output.ofNullable(bucketRegion);
             return this;
         }
 
-        public Builder cacheAttributes(@Nullable Input<SmbFileShareCacheAttributesGetArgs> cacheAttributes) {
+        public Builder cacheAttributes(@Nullable Output<SmbFileShareCacheAttributesGetArgs> cacheAttributes) {
             this.cacheAttributes = cacheAttributes;
             return this;
         }
 
         public Builder cacheAttributes(@Nullable SmbFileShareCacheAttributesGetArgs cacheAttributes) {
-            this.cacheAttributes = Input.ofNullable(cacheAttributes);
+            this.cacheAttributes = Output.ofNullable(cacheAttributes);
             return this;
         }
 
-        public Builder caseSensitivity(@Nullable Input<String> caseSensitivity) {
+        public Builder caseSensitivity(@Nullable Output<String> caseSensitivity) {
             this.caseSensitivity = caseSensitivity;
             return this;
         }
 
         public Builder caseSensitivity(@Nullable String caseSensitivity) {
-            this.caseSensitivity = Input.ofNullable(caseSensitivity);
+            this.caseSensitivity = Output.ofNullable(caseSensitivity);
             return this;
         }
 
-        public Builder defaultStorageClass(@Nullable Input<String> defaultStorageClass) {
+        public Builder defaultStorageClass(@Nullable Output<String> defaultStorageClass) {
             this.defaultStorageClass = defaultStorageClass;
             return this;
         }
 
         public Builder defaultStorageClass(@Nullable String defaultStorageClass) {
-            this.defaultStorageClass = Input.ofNullable(defaultStorageClass);
+            this.defaultStorageClass = Output.ofNullable(defaultStorageClass);
             return this;
         }
 
-        public Builder fileShareName(@Nullable Input<String> fileShareName) {
+        public Builder fileShareName(@Nullable Output<String> fileShareName) {
             this.fileShareName = fileShareName;
             return this;
         }
 
         public Builder fileShareName(@Nullable String fileShareName) {
-            this.fileShareName = Input.ofNullable(fileShareName);
+            this.fileShareName = Output.ofNullable(fileShareName);
             return this;
         }
 
-        public Builder fileshareId(@Nullable Input<String> fileshareId) {
+        public Builder fileshareId(@Nullable Output<String> fileshareId) {
             this.fileshareId = fileshareId;
             return this;
         }
 
         public Builder fileshareId(@Nullable String fileshareId) {
-            this.fileshareId = Input.ofNullable(fileshareId);
+            this.fileshareId = Output.ofNullable(fileshareId);
             return this;
         }
 
-        public Builder gatewayArn(@Nullable Input<String> gatewayArn) {
+        public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
             this.gatewayArn = gatewayArn;
             return this;
         }
 
         public Builder gatewayArn(@Nullable String gatewayArn) {
-            this.gatewayArn = Input.ofNullable(gatewayArn);
+            this.gatewayArn = Output.ofNullable(gatewayArn);
             return this;
         }
 
-        public Builder guessMimeTypeEnabled(@Nullable Input<Boolean> guessMimeTypeEnabled) {
+        public Builder guessMimeTypeEnabled(@Nullable Output<Boolean> guessMimeTypeEnabled) {
             this.guessMimeTypeEnabled = guessMimeTypeEnabled;
             return this;
         }
 
         public Builder guessMimeTypeEnabled(@Nullable Boolean guessMimeTypeEnabled) {
-            this.guessMimeTypeEnabled = Input.ofNullable(guessMimeTypeEnabled);
+            this.guessMimeTypeEnabled = Output.ofNullable(guessMimeTypeEnabled);
             return this;
         }
 
-        public Builder invalidUserLists(@Nullable Input<List<String>> invalidUserLists) {
+        public Builder invalidUserLists(@Nullable Output<List<String>> invalidUserLists) {
             this.invalidUserLists = invalidUserLists;
             return this;
         }
 
         public Builder invalidUserLists(@Nullable List<String> invalidUserLists) {
-            this.invalidUserLists = Input.ofNullable(invalidUserLists);
+            this.invalidUserLists = Output.ofNullable(invalidUserLists);
             return this;
         }
 
-        public Builder kmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
 
         public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
-            this.kmsEncrypted = Input.ofNullable(kmsEncrypted);
+            this.kmsEncrypted = Output.ofNullable(kmsEncrypted);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder locationArn(@Nullable Input<String> locationArn) {
+        public Builder locationArn(@Nullable Output<String> locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
         public Builder locationArn(@Nullable String locationArn) {
-            this.locationArn = Input.ofNullable(locationArn);
+            this.locationArn = Output.ofNullable(locationArn);
             return this;
         }
 
-        public Builder notificationPolicy(@Nullable Input<String> notificationPolicy) {
+        public Builder notificationPolicy(@Nullable Output<String> notificationPolicy) {
             this.notificationPolicy = notificationPolicy;
             return this;
         }
 
         public Builder notificationPolicy(@Nullable String notificationPolicy) {
-            this.notificationPolicy = Input.ofNullable(notificationPolicy);
+            this.notificationPolicy = Output.ofNullable(notificationPolicy);
             return this;
         }
 
-        public Builder objectAcl(@Nullable Input<String> objectAcl) {
+        public Builder objectAcl(@Nullable Output<String> objectAcl) {
             this.objectAcl = objectAcl;
             return this;
         }
 
         public Builder objectAcl(@Nullable String objectAcl) {
-            this.objectAcl = Input.ofNullable(objectAcl);
+            this.objectAcl = Output.ofNullable(objectAcl);
             return this;
         }
 
-        public Builder oplocksEnabled(@Nullable Input<Boolean> oplocksEnabled) {
+        public Builder oplocksEnabled(@Nullable Output<Boolean> oplocksEnabled) {
             this.oplocksEnabled = oplocksEnabled;
             return this;
         }
 
         public Builder oplocksEnabled(@Nullable Boolean oplocksEnabled) {
-            this.oplocksEnabled = Input.ofNullable(oplocksEnabled);
+            this.oplocksEnabled = Output.ofNullable(oplocksEnabled);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder requesterPays(@Nullable Input<Boolean> requesterPays) {
+        public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
             this.requesterPays = requesterPays;
             return this;
         }
 
         public Builder requesterPays(@Nullable Boolean requesterPays) {
-            this.requesterPays = Input.ofNullable(requesterPays);
+            this.requesterPays = Output.ofNullable(requesterPays);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder smbAclEnabled(@Nullable Input<Boolean> smbAclEnabled) {
+        public Builder smbAclEnabled(@Nullable Output<Boolean> smbAclEnabled) {
             this.smbAclEnabled = smbAclEnabled;
             return this;
         }
 
         public Builder smbAclEnabled(@Nullable Boolean smbAclEnabled) {
-            this.smbAclEnabled = Input.ofNullable(smbAclEnabled);
+            this.smbAclEnabled = Output.ofNullable(smbAclEnabled);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder validUserLists(@Nullable Input<List<String>> validUserLists) {
+        public Builder validUserLists(@Nullable Output<List<String>> validUserLists) {
             this.validUserLists = validUserLists;
             return this;
         }
 
         public Builder validUserLists(@Nullable List<String> validUserLists) {
-            this.validUserLists = Input.ofNullable(validUserLists);
+            this.validUserLists = Output.ofNullable(validUserLists);
             return this;
         }
 
-        public Builder vpcEndpointDnsName(@Nullable Input<String> vpcEndpointDnsName) {
+        public Builder vpcEndpointDnsName(@Nullable Output<String> vpcEndpointDnsName) {
             this.vpcEndpointDnsName = vpcEndpointDnsName;
             return this;
         }
 
         public Builder vpcEndpointDnsName(@Nullable String vpcEndpointDnsName) {
-            this.vpcEndpointDnsName = Input.ofNullable(vpcEndpointDnsName);
+            this.vpcEndpointDnsName = Output.ofNullable(vpcEndpointDnsName);
             return this;
         }
         public SmbFileShareState build() {

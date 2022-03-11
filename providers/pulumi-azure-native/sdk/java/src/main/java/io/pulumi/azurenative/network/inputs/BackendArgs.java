@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.BackendEnabledState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendHostHeader")
-      private final @Nullable Input<String> backendHostHeader;
+      private final @Nullable Output<String> backendHostHeader;
 
-    public Input<String> getBackendHostHeader() {
-        return this.backendHostHeader == null ? Input.empty() : this.backendHostHeader;
+    public Output<String> getBackendHostHeader() {
+        return this.backendHostHeader == null ? Output.empty() : this.backendHostHeader;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-      private final @Nullable Input<Either<String,BackendEnabledState>> enabledState;
+      private final @Nullable Output<Either<String,BackendEnabledState>> enabledState;
 
-    public Input<Either<String,BackendEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Input.empty() : this.enabledState;
+    public Output<Either<String,BackendEnabledState>> getEnabledState() {
+        return this.enabledState == null ? Output.empty() : this.enabledState;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpPort")
-      private final @Nullable Input<Integer> httpPort;
+      private final @Nullable Output<Integer> httpPort;
 
-    public Input<Integer> getHttpPort() {
-        return this.httpPort == null ? Input.empty() : this.httpPort;
+    public Output<Integer> getHttpPort() {
+        return this.httpPort == null ? Output.empty() : this.httpPort;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpsPort")
-      private final @Nullable Input<Integer> httpsPort;
+      private final @Nullable Output<Integer> httpsPort;
 
-    public Input<Integer> getHttpsPort() {
-        return this.httpsPort == null ? Input.empty() : this.httpsPort;
+    public Output<Integer> getHttpsPort() {
+        return this.httpsPort == null ? Output.empty() : this.httpsPort;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkAlias")
-      private final @Nullable Input<String> privateLinkAlias;
+      private final @Nullable Output<String> privateLinkAlias;
 
-    public Input<String> getPrivateLinkAlias() {
-        return this.privateLinkAlias == null ? Input.empty() : this.privateLinkAlias;
+    public Output<String> getPrivateLinkAlias() {
+        return this.privateLinkAlias == null ? Output.empty() : this.privateLinkAlias;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkApprovalMessage")
-      private final @Nullable Input<String> privateLinkApprovalMessage;
+      private final @Nullable Output<String> privateLinkApprovalMessage;
 
-    public Input<String> getPrivateLinkApprovalMessage() {
-        return this.privateLinkApprovalMessage == null ? Input.empty() : this.privateLinkApprovalMessage;
+    public Output<String> getPrivateLinkApprovalMessage() {
+        return this.privateLinkApprovalMessage == null ? Output.empty() : this.privateLinkApprovalMessage;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkLocation")
-      private final @Nullable Input<String> privateLinkLocation;
+      private final @Nullable Output<String> privateLinkLocation;
 
-    public Input<String> getPrivateLinkLocation() {
-        return this.privateLinkLocation == null ? Input.empty() : this.privateLinkLocation;
+    public Output<String> getPrivateLinkLocation() {
+        return this.privateLinkLocation == null ? Output.empty() : this.privateLinkLocation;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkResourceId")
-      private final @Nullable Input<String> privateLinkResourceId;
+      private final @Nullable Output<String> privateLinkResourceId;
 
-    public Input<String> getPrivateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
+    public Output<String> getPrivateLinkResourceId() {
+        return this.privateLinkResourceId == null ? Output.empty() : this.privateLinkResourceId;
     }
 
     /**
@@ -136,24 +136,24 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-      private final @Nullable Input<Integer> weight;
+      private final @Nullable Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Integer> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public BackendArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<String> backendHostHeader,
-        @Nullable Input<Either<String,BackendEnabledState>> enabledState,
-        @Nullable Input<Integer> httpPort,
-        @Nullable Input<Integer> httpsPort,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<String> privateLinkAlias,
-        @Nullable Input<String> privateLinkApprovalMessage,
-        @Nullable Input<String> privateLinkLocation,
-        @Nullable Input<String> privateLinkResourceId,
-        @Nullable Input<Integer> weight) {
+        @Nullable Output<String> address,
+        @Nullable Output<String> backendHostHeader,
+        @Nullable Output<Either<String,BackendEnabledState>> enabledState,
+        @Nullable Output<Integer> httpPort,
+        @Nullable Output<Integer> httpsPort,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<String> privateLinkAlias,
+        @Nullable Output<String> privateLinkApprovalMessage,
+        @Nullable Output<String> privateLinkLocation,
+        @Nullable Output<String> privateLinkResourceId,
+        @Nullable Output<Integer> weight) {
         this.address = address;
         this.backendHostHeader = backendHostHeader;
         this.enabledState = enabledState;
@@ -168,17 +168,17 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackendArgs() {
-        this.address = Input.empty();
-        this.backendHostHeader = Input.empty();
-        this.enabledState = Input.empty();
-        this.httpPort = Input.empty();
-        this.httpsPort = Input.empty();
-        this.priority = Input.empty();
-        this.privateLinkAlias = Input.empty();
-        this.privateLinkApprovalMessage = Input.empty();
-        this.privateLinkLocation = Input.empty();
-        this.privateLinkResourceId = Input.empty();
-        this.weight = Input.empty();
+        this.address = Output.empty();
+        this.backendHostHeader = Output.empty();
+        this.enabledState = Output.empty();
+        this.httpPort = Output.empty();
+        this.httpsPort = Output.empty();
+        this.priority = Output.empty();
+        this.privateLinkAlias = Output.empty();
+        this.privateLinkApprovalMessage = Output.empty();
+        this.privateLinkLocation = Output.empty();
+        this.privateLinkResourceId = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -190,17 +190,17 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<String> backendHostHeader;
-        private @Nullable Input<Either<String,BackendEnabledState>> enabledState;
-        private @Nullable Input<Integer> httpPort;
-        private @Nullable Input<Integer> httpsPort;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<String> privateLinkAlias;
-        private @Nullable Input<String> privateLinkApprovalMessage;
-        private @Nullable Input<String> privateLinkLocation;
-        private @Nullable Input<String> privateLinkResourceId;
-        private @Nullable Input<Integer> weight;
+        private @Nullable Output<String> address;
+        private @Nullable Output<String> backendHostHeader;
+        private @Nullable Output<Either<String,BackendEnabledState>> enabledState;
+        private @Nullable Output<Integer> httpPort;
+        private @Nullable Output<Integer> httpsPort;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<String> privateLinkAlias;
+        private @Nullable Output<String> privateLinkApprovalMessage;
+        private @Nullable Output<String> privateLinkLocation;
+        private @Nullable Output<String> privateLinkResourceId;
+        private @Nullable Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -221,113 +221,113 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weight = defaults.weight;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder backendHostHeader(@Nullable Input<String> backendHostHeader) {
+        public Builder backendHostHeader(@Nullable Output<String> backendHostHeader) {
             this.backendHostHeader = backendHostHeader;
             return this;
         }
 
         public Builder backendHostHeader(@Nullable String backendHostHeader) {
-            this.backendHostHeader = Input.ofNullable(backendHostHeader);
+            this.backendHostHeader = Output.ofNullable(backendHostHeader);
             return this;
         }
 
-        public Builder enabledState(@Nullable Input<Either<String,BackendEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Output<Either<String,BackendEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
         public Builder enabledState(@Nullable Either<String,BackendEnabledState> enabledState) {
-            this.enabledState = Input.ofNullable(enabledState);
+            this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
 
-        public Builder httpPort(@Nullable Input<Integer> httpPort) {
+        public Builder httpPort(@Nullable Output<Integer> httpPort) {
             this.httpPort = httpPort;
             return this;
         }
 
         public Builder httpPort(@Nullable Integer httpPort) {
-            this.httpPort = Input.ofNullable(httpPort);
+            this.httpPort = Output.ofNullable(httpPort);
             return this;
         }
 
-        public Builder httpsPort(@Nullable Input<Integer> httpsPort) {
+        public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
 
         public Builder httpsPort(@Nullable Integer httpsPort) {
-            this.httpsPort = Input.ofNullable(httpsPort);
+            this.httpsPort = Output.ofNullable(httpsPort);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder privateLinkAlias(@Nullable Input<String> privateLinkAlias) {
+        public Builder privateLinkAlias(@Nullable Output<String> privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
 
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
-            this.privateLinkAlias = Input.ofNullable(privateLinkAlias);
+            this.privateLinkAlias = Output.ofNullable(privateLinkAlias);
             return this;
         }
 
-        public Builder privateLinkApprovalMessage(@Nullable Input<String> privateLinkApprovalMessage) {
+        public Builder privateLinkApprovalMessage(@Nullable Output<String> privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
 
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
-            this.privateLinkApprovalMessage = Input.ofNullable(privateLinkApprovalMessage);
+            this.privateLinkApprovalMessage = Output.ofNullable(privateLinkApprovalMessage);
             return this;
         }
 
-        public Builder privateLinkLocation(@Nullable Input<String> privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
-            this.privateLinkLocation = Input.ofNullable(privateLinkLocation);
+            this.privateLinkLocation = Output.ofNullable(privateLinkLocation);
             return this;
         }
 
-        public Builder privateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Input.ofNullable(privateLinkResourceId);
+            this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public BackendArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authType", required=true)
-      private final Input<String> authType;
+      private final Output<String> authType;
 
-    public Input<String> getAuthType() {
+    public Output<String> getAuthType() {
         return this.authType;
     }
 
@@ -35,10 +35,10 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<String> secret;
+      private final @Nullable Output<String> secret;
 
-    public Input<String> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<String> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     public SecretAuthInfoArgs(
-        Input<String> authType,
-        @Nullable Input<String> name,
-        @Nullable Input<String> secret) {
+        Output<String> authType,
+        @Nullable Output<String> name,
+        @Nullable Output<String> secret) {
         this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
         this.name = name;
         this.secret = secret;
     }
 
     private SecretAuthInfoArgs() {
-        this.authType = Input.empty();
-        this.name = Input.empty();
-        this.secret = Input.empty();
+        this.authType = Output.empty();
+        this.name = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> authType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> secret;
+        private Output<String> authType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> secret;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secret = defaults.secret;
         }
 
-        public Builder authType(Input<String> authType) {
+        public Builder authType(Output<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
         public Builder authType(String authType) {
-            this.authType = Input.of(Objects.requireNonNull(authType));
+            this.authType = Output.of(Objects.requireNonNull(authType));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder secret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable String secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
         public SecretAuthInfoArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
     public static final WebACLImmunityTimePropertyArgs Empty = new WebACLImmunityTimePropertyArgs();
 
     @InputImport(name="immunityTime", required=true)
-      private final Input<Integer> immunityTime;
+      private final Output<Integer> immunityTime;
 
-    public Input<Integer> getImmunityTime() {
+    public Output<Integer> getImmunityTime() {
         return this.immunityTime;
     }
 
-    public WebACLImmunityTimePropertyArgs(Input<Integer> immunityTime) {
+    public WebACLImmunityTimePropertyArgs(Output<Integer> immunityTime) {
         this.immunityTime = Objects.requireNonNull(immunityTime, "expected parameter 'immunityTime' to be non-null");
     }
 
     private WebACLImmunityTimePropertyArgs() {
-        this.immunityTime = Input.empty();
+        this.immunityTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Integer> immunityTime;
+        private Output<Integer> immunityTime;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
     	      this.immunityTime = defaults.immunityTime;
         }
 
-        public Builder immunityTime(Input<Integer> immunityTime) {
+        public Builder immunityTime(Output<Integer> immunityTime) {
             this.immunityTime = Objects.requireNonNull(immunityTime);
             return this;
         }
 
         public Builder immunityTime(Integer immunityTime) {
-            this.immunityTime = Input.of(Objects.requireNonNull(immunityTime));
+            this.immunityTime = Output.of(Objects.requireNonNull(immunityTime));
             return this;
         }
         public WebACLImmunityTimePropertyArgs build() {

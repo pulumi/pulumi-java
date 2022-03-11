@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceRepoSourceArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceStorageSourceArgs;
@@ -21,10 +21,10 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="repoSource")
-      private final @Nullable Input<TriggerBuildSourceRepoSourceArgs> repoSource;
+      private final @Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource;
 
-    public Input<TriggerBuildSourceRepoSourceArgs> getRepoSource() {
-        return this.repoSource == null ? Input.empty() : this.repoSource;
+    public Output<TriggerBuildSourceRepoSourceArgs> getRepoSource() {
+        return this.repoSource == null ? Output.empty() : this.repoSource;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageSource")
-      private final @Nullable Input<TriggerBuildSourceStorageSourceArgs> storageSource;
+      private final @Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource;
 
-    public Input<TriggerBuildSourceStorageSourceArgs> getStorageSource() {
-        return this.storageSource == null ? Input.empty() : this.storageSource;
+    public Output<TriggerBuildSourceStorageSourceArgs> getStorageSource() {
+        return this.storageSource == null ? Output.empty() : this.storageSource;
     }
 
     public TriggerBuildSourceArgs(
-        @Nullable Input<TriggerBuildSourceRepoSourceArgs> repoSource,
-        @Nullable Input<TriggerBuildSourceStorageSourceArgs> storageSource) {
+        @Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource,
+        @Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource) {
         this.repoSource = repoSource;
         this.storageSource = storageSource;
     }
 
     private TriggerBuildSourceArgs() {
-        this.repoSource = Input.empty();
-        this.storageSource = Input.empty();
+        this.repoSource = Output.empty();
+        this.storageSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<TriggerBuildSourceRepoSourceArgs> repoSource;
-        private @Nullable Input<TriggerBuildSourceStorageSourceArgs> storageSource;
+        private @Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource;
+        private @Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.storageSource = defaults.storageSource;
         }
 
-        public Builder repoSource(@Nullable Input<TriggerBuildSourceRepoSourceArgs> repoSource) {
+        public Builder repoSource(@Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource) {
             this.repoSource = repoSource;
             return this;
         }
 
         public Builder repoSource(@Nullable TriggerBuildSourceRepoSourceArgs repoSource) {
-            this.repoSource = Input.ofNullable(repoSource);
+            this.repoSource = Output.ofNullable(repoSource);
             return this;
         }
 
-        public Builder storageSource(@Nullable Input<TriggerBuildSourceStorageSourceArgs> storageSource) {
+        public Builder storageSource(@Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource) {
             this.storageSource = storageSource;
             return this;
         }
 
         public Builder storageSource(@Nullable TriggerBuildSourceStorageSourceArgs storageSource) {
-            this.storageSource = Input.ofNullable(storageSource);
+            this.storageSource = Output.ofNullable(storageSource);
             return this;
         }
         public TriggerBuildSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1SuggestionFeatureType;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureArgs extends io.
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type;
 
-    public Input<GoogleCloudDialogflowV2beta1SuggestionFeatureType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<GoogleCloudDialogflowV2beta1SuggestionFeatureType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public GoogleCloudDialogflowV2beta1SuggestionFeatureArgs(@Nullable Input<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type) {
+    public GoogleCloudDialogflowV2beta1SuggestionFeatureArgs(@Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type) {
         this.type = type;
     }
 
     private GoogleCloudDialogflowV2beta1SuggestionFeatureArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureArgs extends io.
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type) {
+        public Builder type(@Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable GoogleCloudDialogflowV2beta1SuggestionFeatureType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GoogleCloudDialogflowV2beta1SuggestionFeatureArgs build() {

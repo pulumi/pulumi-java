@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class InquiryValidationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
-    public InquiryValidationArgs(@Nullable Input<String> status) {
+    public InquiryValidationArgs(@Nullable Output<String> status) {
         this.status = status;
     }
 
     private InquiryValidationArgs() {
-        this.status = Input.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class InquiryValidationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class InquiryValidationArgs extends io.pulumi.resources.ResourceArg
     	      this.status = defaults.status;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public InquiryValidationArgs build() {

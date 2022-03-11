@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowConfigBasedIssuance")
-      private final @Nullable Input<Boolean> allowConfigBasedIssuance;
+      private final @Nullable Output<Boolean> allowConfigBasedIssuance;
 
-    public Input<Boolean> getAllowConfigBasedIssuance() {
-        return this.allowConfigBasedIssuance == null ? Input.empty() : this.allowConfigBasedIssuance;
+    public Output<Boolean> getAllowConfigBasedIssuance() {
+        return this.allowConfigBasedIssuance == null ? Output.empty() : this.allowConfigBasedIssuance;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowCsrBasedIssuance")
-      private final @Nullable Input<Boolean> allowCsrBasedIssuance;
+      private final @Nullable Output<Boolean> allowCsrBasedIssuance;
 
-    public Input<Boolean> getAllowCsrBasedIssuance() {
-        return this.allowCsrBasedIssuance == null ? Input.empty() : this.allowCsrBasedIssuance;
+    public Output<Boolean> getAllowCsrBasedIssuance() {
+        return this.allowCsrBasedIssuance == null ? Output.empty() : this.allowCsrBasedIssuance;
     }
 
     public IssuanceModesArgs(
-        @Nullable Input<Boolean> allowConfigBasedIssuance,
-        @Nullable Input<Boolean> allowCsrBasedIssuance) {
+        @Nullable Output<Boolean> allowConfigBasedIssuance,
+        @Nullable Output<Boolean> allowCsrBasedIssuance) {
         this.allowConfigBasedIssuance = allowConfigBasedIssuance;
         this.allowCsrBasedIssuance = allowCsrBasedIssuance;
     }
 
     private IssuanceModesArgs() {
-        this.allowConfigBasedIssuance = Input.empty();
-        this.allowCsrBasedIssuance = Input.empty();
+        this.allowConfigBasedIssuance = Output.empty();
+        this.allowCsrBasedIssuance = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowConfigBasedIssuance;
-        private @Nullable Input<Boolean> allowCsrBasedIssuance;
+        private @Nullable Output<Boolean> allowConfigBasedIssuance;
+        private @Nullable Output<Boolean> allowCsrBasedIssuance;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.allowCsrBasedIssuance = defaults.allowCsrBasedIssuance;
         }
 
-        public Builder allowConfigBasedIssuance(@Nullable Input<Boolean> allowConfigBasedIssuance) {
+        public Builder allowConfigBasedIssuance(@Nullable Output<Boolean> allowConfigBasedIssuance) {
             this.allowConfigBasedIssuance = allowConfigBasedIssuance;
             return this;
         }
 
         public Builder allowConfigBasedIssuance(@Nullable Boolean allowConfigBasedIssuance) {
-            this.allowConfigBasedIssuance = Input.ofNullable(allowConfigBasedIssuance);
+            this.allowConfigBasedIssuance = Output.ofNullable(allowConfigBasedIssuance);
             return this;
         }
 
-        public Builder allowCsrBasedIssuance(@Nullable Input<Boolean> allowCsrBasedIssuance) {
+        public Builder allowCsrBasedIssuance(@Nullable Output<Boolean> allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = allowCsrBasedIssuance;
             return this;
         }
 
         public Builder allowCsrBasedIssuance(@Nullable Boolean allowCsrBasedIssuance) {
-            this.allowCsrBasedIssuance = Input.ofNullable(allowCsrBasedIssuance);
+            this.allowCsrBasedIssuance = Output.ofNullable(allowCsrBasedIssuance);
             return this;
         }
         public IssuanceModesArgs build() {

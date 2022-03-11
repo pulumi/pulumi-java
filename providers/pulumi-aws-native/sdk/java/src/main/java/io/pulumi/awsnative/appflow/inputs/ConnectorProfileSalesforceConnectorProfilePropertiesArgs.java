@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,29 +20,29 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
      * 
      */
     @InputImport(name="instanceUrl")
-      private final @Nullable Input<String> instanceUrl;
+      private final @Nullable Output<String> instanceUrl;
 
-    public Input<String> getInstanceUrl() {
-        return this.instanceUrl == null ? Input.empty() : this.instanceUrl;
+    public Output<String> getInstanceUrl() {
+        return this.instanceUrl == null ? Output.empty() : this.instanceUrl;
     }
 
     @InputImport(name="isSandboxEnvironment")
-      private final @Nullable Input<Boolean> isSandboxEnvironment;
+      private final @Nullable Output<Boolean> isSandboxEnvironment;
 
-    public Input<Boolean> getIsSandboxEnvironment() {
-        return this.isSandboxEnvironment == null ? Input.empty() : this.isSandboxEnvironment;
+    public Output<Boolean> getIsSandboxEnvironment() {
+        return this.isSandboxEnvironment == null ? Output.empty() : this.isSandboxEnvironment;
     }
 
     public ConnectorProfileSalesforceConnectorProfilePropertiesArgs(
-        @Nullable Input<String> instanceUrl,
-        @Nullable Input<Boolean> isSandboxEnvironment) {
+        @Nullable Output<String> instanceUrl,
+        @Nullable Output<Boolean> isSandboxEnvironment) {
         this.instanceUrl = instanceUrl;
         this.isSandboxEnvironment = isSandboxEnvironment;
     }
 
     private ConnectorProfileSalesforceConnectorProfilePropertiesArgs() {
-        this.instanceUrl = Input.empty();
-        this.isSandboxEnvironment = Input.empty();
+        this.instanceUrl = Output.empty();
+        this.isSandboxEnvironment = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceUrl;
-        private @Nullable Input<Boolean> isSandboxEnvironment;
+        private @Nullable Output<String> instanceUrl;
+        private @Nullable Output<Boolean> isSandboxEnvironment;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
     	      this.isSandboxEnvironment = defaults.isSandboxEnvironment;
         }
 
-        public Builder instanceUrl(@Nullable Input<String> instanceUrl) {
+        public Builder instanceUrl(@Nullable Output<String> instanceUrl) {
             this.instanceUrl = instanceUrl;
             return this;
         }
 
         public Builder instanceUrl(@Nullable String instanceUrl) {
-            this.instanceUrl = Input.ofNullable(instanceUrl);
+            this.instanceUrl = Output.ofNullable(instanceUrl);
             return this;
         }
 
-        public Builder isSandboxEnvironment(@Nullable Input<Boolean> isSandboxEnvironment) {
+        public Builder isSandboxEnvironment(@Nullable Output<Boolean> isSandboxEnvironment) {
             this.isSandboxEnvironment = isSandboxEnvironment;
             return this;
         }
 
         public Builder isSandboxEnvironment(@Nullable Boolean isSandboxEnvironment) {
-            this.isSandboxEnvironment = Input.ofNullable(isSandboxEnvironment);
+            this.isSandboxEnvironment = Output.ofNullable(isSandboxEnvironment);
             return this;
         }
         public ConnectorProfileSalesforceConnectorProfilePropertiesArgs build() {

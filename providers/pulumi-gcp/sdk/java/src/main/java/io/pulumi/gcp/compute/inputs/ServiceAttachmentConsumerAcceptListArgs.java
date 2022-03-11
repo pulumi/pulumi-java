@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ServiceAttachmentConsumerAcceptListArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="connectionLimit", required=true)
-      private final Input<Integer> connectionLimit;
+      private final Output<Integer> connectionLimit;
 
-    public Input<Integer> getConnectionLimit() {
+    public Output<Integer> getConnectionLimit() {
         return this.connectionLimit;
     }
 
@@ -31,22 +31,22 @@ public final class ServiceAttachmentConsumerAcceptListArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="projectIdOrNum", required=true)
-      private final Input<String> projectIdOrNum;
+      private final Output<String> projectIdOrNum;
 
-    public Input<String> getProjectIdOrNum() {
+    public Output<String> getProjectIdOrNum() {
         return this.projectIdOrNum;
     }
 
     public ServiceAttachmentConsumerAcceptListArgs(
-        Input<Integer> connectionLimit,
-        Input<String> projectIdOrNum) {
+        Output<Integer> connectionLimit,
+        Output<String> projectIdOrNum) {
         this.connectionLimit = Objects.requireNonNull(connectionLimit, "expected parameter 'connectionLimit' to be non-null");
         this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum, "expected parameter 'projectIdOrNum' to be non-null");
     }
 
     private ServiceAttachmentConsumerAcceptListArgs() {
-        this.connectionLimit = Input.empty();
-        this.projectIdOrNum = Input.empty();
+        this.connectionLimit = Output.empty();
+        this.projectIdOrNum = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ServiceAttachmentConsumerAcceptListArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<Integer> connectionLimit;
-        private Input<String> projectIdOrNum;
+        private Output<Integer> connectionLimit;
+        private Output<String> projectIdOrNum;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ServiceAttachmentConsumerAcceptListArgs extends io.pulumi.res
     	      this.projectIdOrNum = defaults.projectIdOrNum;
         }
 
-        public Builder connectionLimit(Input<Integer> connectionLimit) {
+        public Builder connectionLimit(Output<Integer> connectionLimit) {
             this.connectionLimit = Objects.requireNonNull(connectionLimit);
             return this;
         }
 
         public Builder connectionLimit(Integer connectionLimit) {
-            this.connectionLimit = Input.of(Objects.requireNonNull(connectionLimit));
+            this.connectionLimit = Output.of(Objects.requireNonNull(connectionLimit));
             return this;
         }
 
-        public Builder projectIdOrNum(Input<String> projectIdOrNum) {
+        public Builder projectIdOrNum(Output<String> projectIdOrNum) {
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
         }
 
         public Builder projectIdOrNum(String projectIdOrNum) {
-            this.projectIdOrNum = Input.of(Objects.requireNonNull(projectIdOrNum));
+            this.projectIdOrNum = Output.of(Objects.requireNonNull(projectIdOrNum));
             return this;
         }
         public ServiceAttachmentConsumerAcceptListArgs build() {

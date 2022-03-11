@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3objectlambda;
 
 import io.pulumi.awsnative.s3objectlambda.inputs.AccessPointObjectLambdaConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLambdaConfiguration", required=true)
-      private final Input<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
+      private final Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
 
-    public Input<AccessPointObjectLambdaConfigurationArgs> getObjectLambdaConfiguration() {
+    public Output<AccessPointObjectLambdaConfigurationArgs> getObjectLambdaConfiguration() {
         return this.objectLambdaConfiguration;
     }
 
     public AccessPointArgs(
-        @Nullable Input<String> name,
-        Input<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration) {
+        @Nullable Output<String> name,
+        Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration) {
         this.name = name;
         this.objectLambdaConfiguration = Objects.requireNonNull(objectLambdaConfiguration, "expected parameter 'objectLambdaConfiguration' to be non-null");
     }
 
     private AccessPointArgs() {
-        this.name = Input.empty();
-        this.objectLambdaConfiguration = Input.empty();
+        this.name = Output.empty();
+        this.objectLambdaConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
+        private @Nullable Output<String> name;
+        private Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.objectLambdaConfiguration = defaults.objectLambdaConfiguration;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder objectLambdaConfiguration(Input<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration) {
+        public Builder objectLambdaConfiguration(Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration) {
             this.objectLambdaConfiguration = Objects.requireNonNull(objectLambdaConfiguration);
             return this;
         }
 
         public Builder objectLambdaConfiguration(AccessPointObjectLambdaConfigurationArgs objectLambdaConfiguration) {
-            this.objectLambdaConfiguration = Input.of(Objects.requireNonNull(objectLambdaConfiguration));
+            this.objectLambdaConfiguration = Output.of(Objects.requireNonNull(objectLambdaConfiguration));
             return this;
         }
         public AccessPointArgs build() {

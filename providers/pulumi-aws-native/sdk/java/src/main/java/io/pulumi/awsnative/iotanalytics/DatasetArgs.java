@@ -10,7 +10,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatasetRetentionPeriodArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetTagArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetTriggerArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetVersioningConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,70 +23,70 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     public static final DatasetArgs Empty = new DatasetArgs();
 
     @InputImport(name="actions", required=true)
-      private final Input<List<DatasetActionArgs>> actions;
+      private final Output<List<DatasetActionArgs>> actions;
 
-    public Input<List<DatasetActionArgs>> getActions() {
+    public Output<List<DatasetActionArgs>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="contentDeliveryRules")
-      private final @Nullable Input<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules;
+      private final @Nullable Output<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules;
 
-    public Input<List<DatasetContentDeliveryRuleArgs>> getContentDeliveryRules() {
-        return this.contentDeliveryRules == null ? Input.empty() : this.contentDeliveryRules;
+    public Output<List<DatasetContentDeliveryRuleArgs>> getContentDeliveryRules() {
+        return this.contentDeliveryRules == null ? Output.empty() : this.contentDeliveryRules;
     }
 
     @InputImport(name="datasetName")
-      private final @Nullable Input<String> datasetName;
+      private final @Nullable Output<String> datasetName;
 
-    public Input<String> getDatasetName() {
-        return this.datasetName == null ? Input.empty() : this.datasetName;
+    public Output<String> getDatasetName() {
+        return this.datasetName == null ? Output.empty() : this.datasetName;
     }
 
     @InputImport(name="lateDataRules")
-      private final @Nullable Input<List<DatasetLateDataRuleArgs>> lateDataRules;
+      private final @Nullable Output<List<DatasetLateDataRuleArgs>> lateDataRules;
 
-    public Input<List<DatasetLateDataRuleArgs>> getLateDataRules() {
-        return this.lateDataRules == null ? Input.empty() : this.lateDataRules;
+    public Output<List<DatasetLateDataRuleArgs>> getLateDataRules() {
+        return this.lateDataRules == null ? Output.empty() : this.lateDataRules;
     }
 
     @InputImport(name="retentionPeriod")
-      private final @Nullable Input<DatasetRetentionPeriodArgs> retentionPeriod;
+      private final @Nullable Output<DatasetRetentionPeriodArgs> retentionPeriod;
 
-    public Input<DatasetRetentionPeriodArgs> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
+    public Output<DatasetRetentionPeriodArgs> getRetentionPeriod() {
+        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<DatasetTagArgs>> tags;
+      private final @Nullable Output<List<DatasetTagArgs>> tags;
 
-    public Input<List<DatasetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DatasetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="triggers")
-      private final @Nullable Input<List<DatasetTriggerArgs>> triggers;
+      private final @Nullable Output<List<DatasetTriggerArgs>> triggers;
 
-    public Input<List<DatasetTriggerArgs>> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<List<DatasetTriggerArgs>> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     @InputImport(name="versioningConfiguration")
-      private final @Nullable Input<DatasetVersioningConfigurationArgs> versioningConfiguration;
+      private final @Nullable Output<DatasetVersioningConfigurationArgs> versioningConfiguration;
 
-    public Input<DatasetVersioningConfigurationArgs> getVersioningConfiguration() {
-        return this.versioningConfiguration == null ? Input.empty() : this.versioningConfiguration;
+    public Output<DatasetVersioningConfigurationArgs> getVersioningConfiguration() {
+        return this.versioningConfiguration == null ? Output.empty() : this.versioningConfiguration;
     }
 
     public DatasetArgs(
-        Input<List<DatasetActionArgs>> actions,
-        @Nullable Input<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules,
-        @Nullable Input<String> datasetName,
-        @Nullable Input<List<DatasetLateDataRuleArgs>> lateDataRules,
-        @Nullable Input<DatasetRetentionPeriodArgs> retentionPeriod,
-        @Nullable Input<List<DatasetTagArgs>> tags,
-        @Nullable Input<List<DatasetTriggerArgs>> triggers,
-        @Nullable Input<DatasetVersioningConfigurationArgs> versioningConfiguration) {
+        Output<List<DatasetActionArgs>> actions,
+        @Nullable Output<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules,
+        @Nullable Output<String> datasetName,
+        @Nullable Output<List<DatasetLateDataRuleArgs>> lateDataRules,
+        @Nullable Output<DatasetRetentionPeriodArgs> retentionPeriod,
+        @Nullable Output<List<DatasetTagArgs>> tags,
+        @Nullable Output<List<DatasetTriggerArgs>> triggers,
+        @Nullable Output<DatasetVersioningConfigurationArgs> versioningConfiguration) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.contentDeliveryRules = contentDeliveryRules;
         this.datasetName = datasetName;
@@ -98,14 +98,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetArgs() {
-        this.actions = Input.empty();
-        this.contentDeliveryRules = Input.empty();
-        this.datasetName = Input.empty();
-        this.lateDataRules = Input.empty();
-        this.retentionPeriod = Input.empty();
-        this.tags = Input.empty();
-        this.triggers = Input.empty();
-        this.versioningConfiguration = Input.empty();
+        this.actions = Output.empty();
+        this.contentDeliveryRules = Output.empty();
+        this.datasetName = Output.empty();
+        this.lateDataRules = Output.empty();
+        this.retentionPeriod = Output.empty();
+        this.tags = Output.empty();
+        this.triggers = Output.empty();
+        this.versioningConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,14 +117,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<DatasetActionArgs>> actions;
-        private @Nullable Input<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules;
-        private @Nullable Input<String> datasetName;
-        private @Nullable Input<List<DatasetLateDataRuleArgs>> lateDataRules;
-        private @Nullable Input<DatasetRetentionPeriodArgs> retentionPeriod;
-        private @Nullable Input<List<DatasetTagArgs>> tags;
-        private @Nullable Input<List<DatasetTriggerArgs>> triggers;
-        private @Nullable Input<DatasetVersioningConfigurationArgs> versioningConfiguration;
+        private Output<List<DatasetActionArgs>> actions;
+        private @Nullable Output<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules;
+        private @Nullable Output<String> datasetName;
+        private @Nullable Output<List<DatasetLateDataRuleArgs>> lateDataRules;
+        private @Nullable Output<DatasetRetentionPeriodArgs> retentionPeriod;
+        private @Nullable Output<List<DatasetTagArgs>> tags;
+        private @Nullable Output<List<DatasetTriggerArgs>> triggers;
+        private @Nullable Output<DatasetVersioningConfigurationArgs> versioningConfiguration;
 
         public Builder() {
     	      // Empty
@@ -142,83 +142,83 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versioningConfiguration = defaults.versioningConfiguration;
         }
 
-        public Builder actions(Input<List<DatasetActionArgs>> actions) {
+        public Builder actions(Output<List<DatasetActionArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<DatasetActionArgs> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder contentDeliveryRules(@Nullable Input<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules) {
+        public Builder contentDeliveryRules(@Nullable Output<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules) {
             this.contentDeliveryRules = contentDeliveryRules;
             return this;
         }
 
         public Builder contentDeliveryRules(@Nullable List<DatasetContentDeliveryRuleArgs> contentDeliveryRules) {
-            this.contentDeliveryRules = Input.ofNullable(contentDeliveryRules);
+            this.contentDeliveryRules = Output.ofNullable(contentDeliveryRules);
             return this;
         }
 
-        public Builder datasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Output<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Input.ofNullable(datasetName);
+            this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
 
-        public Builder lateDataRules(@Nullable Input<List<DatasetLateDataRuleArgs>> lateDataRules) {
+        public Builder lateDataRules(@Nullable Output<List<DatasetLateDataRuleArgs>> lateDataRules) {
             this.lateDataRules = lateDataRules;
             return this;
         }
 
         public Builder lateDataRules(@Nullable List<DatasetLateDataRuleArgs> lateDataRules) {
-            this.lateDataRules = Input.ofNullable(lateDataRules);
+            this.lateDataRules = Output.ofNullable(lateDataRules);
             return this;
         }
 
-        public Builder retentionPeriod(@Nullable Input<DatasetRetentionPeriodArgs> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Output<DatasetRetentionPeriodArgs> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
         public Builder retentionPeriod(@Nullable DatasetRetentionPeriodArgs retentionPeriod) {
-            this.retentionPeriod = Input.ofNullable(retentionPeriod);
+            this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DatasetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DatasetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DatasetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder triggers(@Nullable Input<List<DatasetTriggerArgs>> triggers) {
+        public Builder triggers(@Nullable Output<List<DatasetTriggerArgs>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable List<DatasetTriggerArgs> triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
 
-        public Builder versioningConfiguration(@Nullable Input<DatasetVersioningConfigurationArgs> versioningConfiguration) {
+        public Builder versioningConfiguration(@Nullable Output<DatasetVersioningConfigurationArgs> versioningConfiguration) {
             this.versioningConfiguration = versioningConfiguration;
             return this;
         }
 
         public Builder versioningConfiguration(@Nullable DatasetVersioningConfigurationArgs versioningConfiguration) {
-            this.versioningConfiguration = Input.ofNullable(versioningConfiguration);
+            this.versioningConfiguration = Output.ofNullable(versioningConfiguration);
             return this;
         }
         public DatasetArgs build() {

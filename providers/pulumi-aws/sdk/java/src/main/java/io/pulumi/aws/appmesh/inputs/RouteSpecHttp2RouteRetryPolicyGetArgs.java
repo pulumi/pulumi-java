@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="httpRetryEvents")
-      private final @Nullable Input<List<String>> httpRetryEvents;
+      private final @Nullable Output<List<String>> httpRetryEvents;
 
-    public Input<List<String>> getHttpRetryEvents() {
-        return this.httpRetryEvents == null ? Input.empty() : this.httpRetryEvents;
+    public Output<List<String>> getHttpRetryEvents() {
+        return this.httpRetryEvents == null ? Output.empty() : this.httpRetryEvents;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxRetries", required=true)
-      private final Input<Integer> maxRetries;
+      private final Output<Integer> maxRetries;
 
-    public Input<Integer> getMaxRetries() {
+    public Output<Integer> getMaxRetries() {
         return this.maxRetries;
     }
 
@@ -46,9 +46,9 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="perRetryTimeout", required=true)
-      private final Input<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout;
+      private final Output<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout;
 
-    public Input<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> getPerRetryTimeout() {
+    public Output<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> getPerRetryTimeout() {
         return this.perRetryTimeout;
     }
 
@@ -57,17 +57,17 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="tcpRetryEvents")
-      private final @Nullable Input<List<String>> tcpRetryEvents;
+      private final @Nullable Output<List<String>> tcpRetryEvents;
 
-    public Input<List<String>> getTcpRetryEvents() {
-        return this.tcpRetryEvents == null ? Input.empty() : this.tcpRetryEvents;
+    public Output<List<String>> getTcpRetryEvents() {
+        return this.tcpRetryEvents == null ? Output.empty() : this.tcpRetryEvents;
     }
 
     public RouteSpecHttp2RouteRetryPolicyGetArgs(
-        @Nullable Input<List<String>> httpRetryEvents,
-        Input<Integer> maxRetries,
-        Input<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout,
-        @Nullable Input<List<String>> tcpRetryEvents) {
+        @Nullable Output<List<String>> httpRetryEvents,
+        Output<Integer> maxRetries,
+        Output<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout,
+        @Nullable Output<List<String>> tcpRetryEvents) {
         this.httpRetryEvents = httpRetryEvents;
         this.maxRetries = Objects.requireNonNull(maxRetries, "expected parameter 'maxRetries' to be non-null");
         this.perRetryTimeout = Objects.requireNonNull(perRetryTimeout, "expected parameter 'perRetryTimeout' to be non-null");
@@ -75,10 +75,10 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
     }
 
     private RouteSpecHttp2RouteRetryPolicyGetArgs() {
-        this.httpRetryEvents = Input.empty();
-        this.maxRetries = Input.empty();
-        this.perRetryTimeout = Input.empty();
-        this.tcpRetryEvents = Input.empty();
+        this.httpRetryEvents = Output.empty();
+        this.maxRetries = Output.empty();
+        this.perRetryTimeout = Output.empty();
+        this.tcpRetryEvents = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> httpRetryEvents;
-        private Input<Integer> maxRetries;
-        private Input<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout;
-        private @Nullable Input<List<String>> tcpRetryEvents;
+        private @Nullable Output<List<String>> httpRetryEvents;
+        private Output<Integer> maxRetries;
+        private Output<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout;
+        private @Nullable Output<List<String>> tcpRetryEvents;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
     	      this.tcpRetryEvents = defaults.tcpRetryEvents;
         }
 
-        public Builder httpRetryEvents(@Nullable Input<List<String>> httpRetryEvents) {
+        public Builder httpRetryEvents(@Nullable Output<List<String>> httpRetryEvents) {
             this.httpRetryEvents = httpRetryEvents;
             return this;
         }
 
         public Builder httpRetryEvents(@Nullable List<String> httpRetryEvents) {
-            this.httpRetryEvents = Input.ofNullable(httpRetryEvents);
+            this.httpRetryEvents = Output.ofNullable(httpRetryEvents);
             return this;
         }
 
-        public Builder maxRetries(Input<Integer> maxRetries) {
+        public Builder maxRetries(Output<Integer> maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
 
         public Builder maxRetries(Integer maxRetries) {
-            this.maxRetries = Input.of(Objects.requireNonNull(maxRetries));
+            this.maxRetries = Output.of(Objects.requireNonNull(maxRetries));
             return this;
         }
 
-        public Builder perRetryTimeout(Input<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout) {
+        public Builder perRetryTimeout(Output<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout) {
             this.perRetryTimeout = Objects.requireNonNull(perRetryTimeout);
             return this;
         }
 
         public Builder perRetryTimeout(RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs perRetryTimeout) {
-            this.perRetryTimeout = Input.of(Objects.requireNonNull(perRetryTimeout));
+            this.perRetryTimeout = Output.of(Objects.requireNonNull(perRetryTimeout));
             return this;
         }
 
-        public Builder tcpRetryEvents(@Nullable Input<List<String>> tcpRetryEvents) {
+        public Builder tcpRetryEvents(@Nullable Output<List<String>> tcpRetryEvents) {
             this.tcpRetryEvents = tcpRetryEvents;
             return this;
         }
 
         public Builder tcpRetryEvents(@Nullable List<String> tcpRetryEvents) {
-            this.tcpRetryEvents = Input.ofNullable(tcpRetryEvents);
+            this.tcpRetryEvents = Output.ofNullable(tcpRetryEvents);
             return this;
         }
         public RouteSpecHttp2RouteRetryPolicyGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.RetryArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retry")
-      private final @Nullable Input<RetryArgs> retry;
+      private final @Nullable Output<RetryArgs> retry;
 
-    public Input<RetryArgs> getRetry() {
-        return this.retry == null ? Input.empty() : this.retry;
+    public Output<RetryArgs> getRetry() {
+        return this.retry == null ? Output.empty() : this.retry;
     }
 
-    public FailurePolicyArgs(@Nullable Input<RetryArgs> retry) {
+    public FailurePolicyArgs(@Nullable Output<RetryArgs> retry) {
         this.retry = retry;
     }
 
     private FailurePolicyArgs() {
-        this.retry = Input.empty();
+        this.retry = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RetryArgs> retry;
+        private @Nullable Output<RetryArgs> retry;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.retry = defaults.retry;
         }
 
-        public Builder retry(@Nullable Input<RetryArgs> retry) {
+        public Builder retry(@Nullable Output<RetryArgs> retry) {
             this.retry = retry;
             return this;
         }
 
         public Builder retry(@Nullable RetryArgs retry) {
-            this.retry = Input.ofNullable(retry);
+            this.retry = Output.ofNullable(retry);
             return this;
         }
         public FailurePolicyArgs build() {

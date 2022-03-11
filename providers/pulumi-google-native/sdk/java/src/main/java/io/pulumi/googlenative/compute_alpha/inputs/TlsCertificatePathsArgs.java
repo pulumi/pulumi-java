@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="certificatePath")
-      private final @Nullable Input<String> certificatePath;
+      private final @Nullable Output<String> certificatePath;
 
-    public Input<String> getCertificatePath() {
-        return this.certificatePath == null ? Input.empty() : this.certificatePath;
+    public Output<String> getCertificatePath() {
+        return this.certificatePath == null ? Output.empty() : this.certificatePath;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateKeyPath")
-      private final @Nullable Input<String> privateKeyPath;
+      private final @Nullable Output<String> privateKeyPath;
 
-    public Input<String> getPrivateKeyPath() {
-        return this.privateKeyPath == null ? Input.empty() : this.privateKeyPath;
+    public Output<String> getPrivateKeyPath() {
+        return this.privateKeyPath == null ? Output.empty() : this.privateKeyPath;
     }
 
     public TlsCertificatePathsArgs(
-        @Nullable Input<String> certificatePath,
-        @Nullable Input<String> privateKeyPath) {
+        @Nullable Output<String> certificatePath,
+        @Nullable Output<String> privateKeyPath) {
         this.certificatePath = certificatePath;
         this.privateKeyPath = privateKeyPath;
     }
 
     private TlsCertificatePathsArgs() {
-        this.certificatePath = Input.empty();
-        this.privateKeyPath = Input.empty();
+        this.certificatePath = Output.empty();
+        this.privateKeyPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificatePath;
-        private @Nullable Input<String> privateKeyPath;
+        private @Nullable Output<String> certificatePath;
+        private @Nullable Output<String> privateKeyPath;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
     	      this.privateKeyPath = defaults.privateKeyPath;
         }
 
-        public Builder certificatePath(@Nullable Input<String> certificatePath) {
+        public Builder certificatePath(@Nullable Output<String> certificatePath) {
             this.certificatePath = certificatePath;
             return this;
         }
 
         public Builder certificatePath(@Nullable String certificatePath) {
-            this.certificatePath = Input.ofNullable(certificatePath);
+            this.certificatePath = Output.ofNullable(certificatePath);
             return this;
         }
 
-        public Builder privateKeyPath(@Nullable Input<String> privateKeyPath) {
+        public Builder privateKeyPath(@Nullable Output<String> privateKeyPath) {
             this.privateKeyPath = privateKeyPath;
             return this;
         }
 
         public Builder privateKeyPath(@Nullable String privateKeyPath) {
-            this.privateKeyPath = Input.ofNullable(privateKeyPath);
+            this.privateKeyPath = Output.ofNullable(privateKeyPath);
             return this;
         }
         public TlsCertificatePathsArgs build() {

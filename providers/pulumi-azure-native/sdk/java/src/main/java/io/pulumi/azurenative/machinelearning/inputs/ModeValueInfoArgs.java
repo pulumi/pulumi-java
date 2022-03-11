@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.ModuleAssetParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interfaceString")
-      private final @Nullable Input<String> interfaceString;
+      private final @Nullable Output<String> interfaceString;
 
-    public Input<String> getInterfaceString() {
-        return this.interfaceString == null ? Input.empty() : this.interfaceString;
+    public Output<String> getInterfaceString() {
+        return this.interfaceString == null ? Output.empty() : this.interfaceString;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<ModuleAssetParameterArgs>> parameters;
+      private final @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
 
-    public Input<List<ModuleAssetParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<ModuleAssetParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public ModeValueInfoArgs(
-        @Nullable Input<String> interfaceString,
-        @Nullable Input<List<ModuleAssetParameterArgs>> parameters) {
+        @Nullable Output<String> interfaceString,
+        @Nullable Output<List<ModuleAssetParameterArgs>> parameters) {
         this.interfaceString = interfaceString;
         this.parameters = parameters;
     }
 
     private ModeValueInfoArgs() {
-        this.interfaceString = Input.empty();
-        this.parameters = Input.empty();
+        this.interfaceString = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> interfaceString;
-        private @Nullable Input<List<ModuleAssetParameterArgs>> parameters;
+        private @Nullable Output<String> interfaceString;
+        private @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder interfaceString(@Nullable Input<String> interfaceString) {
+        public Builder interfaceString(@Nullable Output<String> interfaceString) {
             this.interfaceString = interfaceString;
             return this;
         }
 
         public Builder interfaceString(@Nullable String interfaceString) {
-            this.interfaceString = Input.ofNullable(interfaceString);
+            this.interfaceString = Output.ofNullable(interfaceString);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<ModuleAssetParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ModuleAssetParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public ModeValueInfoArgs build() {

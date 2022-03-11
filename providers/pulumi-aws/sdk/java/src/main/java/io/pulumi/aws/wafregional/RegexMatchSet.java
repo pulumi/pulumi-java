@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.wafregional.RegexMatchSetArgs;
 import io.pulumi.aws.wafregional.inputs.RegexMatchSetState;
 import io.pulumi.aws.wafregional.outputs.RegexMatchSetRegexMatchTuple;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class RegexMatchSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegexMatchSet(String name, @Nullable RegexMatchSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/regexMatchSet:RegexMatchSet", name, args == null ? RegexMatchSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:wafregional/regexMatchSet:RegexMatchSet", name, args == null ? RegexMatchSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RegexMatchSet(String name, Input<String> id, @Nullable RegexMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RegexMatchSet(String name, Output<String> id, @Nullable RegexMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:wafregional/regexMatchSet:RegexMatchSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class RegexMatchSet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegexMatchSet get(String name, Input<String> id, @Nullable RegexMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RegexMatchSet get(String name, Output<String> id, @Nullable RegexMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegexMatchSet(name, id, state, options);
     }
 }

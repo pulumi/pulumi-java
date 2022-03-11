@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.resourcegroups.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class GroupResourceQueryGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="query", required=true)
-      private final Input<String> query;
+      private final Output<String> query;
 
-    public Input<String> getQuery() {
+    public Output<String> getQuery() {
         return this.query;
     }
 
@@ -30,22 +30,22 @@ public final class GroupResourceQueryGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public GroupResourceQueryGetArgs(
-        Input<String> query,
-        @Nullable Input<String> type) {
+        Output<String> query,
+        @Nullable Output<String> type) {
         this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
         this.type = type;
     }
 
     private GroupResourceQueryGetArgs() {
-        this.query = Input.empty();
-        this.type = Input.empty();
+        this.query = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class GroupResourceQueryGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> query;
-        private @Nullable Input<String> type;
+        private Output<String> query;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class GroupResourceQueryGetArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder query(Input<String> query) {
+        public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
         public Builder query(String query) {
-            this.query = Input.of(Objects.requireNonNull(query));
+            this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GroupResourceQueryGetArgs build() {

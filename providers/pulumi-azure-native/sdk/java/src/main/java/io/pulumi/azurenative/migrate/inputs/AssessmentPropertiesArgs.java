@@ -18,7 +18,7 @@ import io.pulumi.azurenative.migrate.enums.ReservedInstance;
 import io.pulumi.azurenative.migrate.enums.TimeRange;
 import io.pulumi.azurenative.migrate.inputs.VmUptimeArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -39,9 +39,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureDiskType", required=true)
-      private final Input<Either<String,AzureDiskType>> azureDiskType;
+      private final Output<Either<String,AzureDiskType>> azureDiskType;
 
-    public Input<Either<String,AzureDiskType>> getAzureDiskType() {
+    public Output<Either<String,AzureDiskType>> getAzureDiskType() {
         return this.azureDiskType;
     }
 
@@ -50,9 +50,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureHybridUseBenefit", required=true)
-      private final Input<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit;
+      private final Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit;
 
-    public Input<Either<String,AzureHybridUseBenefit>> getAzureHybridUseBenefit() {
+    public Output<Either<String,AzureHybridUseBenefit>> getAzureHybridUseBenefit() {
         return this.azureHybridUseBenefit;
     }
 
@@ -61,9 +61,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureLocation", required=true)
-      private final Input<Either<String,AzureLocation>> azureLocation;
+      private final Output<Either<String,AzureLocation>> azureLocation;
 
-    public Input<Either<String,AzureLocation>> getAzureLocation() {
+    public Output<Either<String,AzureLocation>> getAzureLocation() {
         return this.azureLocation;
     }
 
@@ -72,9 +72,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureOfferCode", required=true)
-      private final Input<Either<String,AzureOfferCode>> azureOfferCode;
+      private final Output<Either<String,AzureOfferCode>> azureOfferCode;
 
-    public Input<Either<String,AzureOfferCode>> getAzureOfferCode() {
+    public Output<Either<String,AzureOfferCode>> getAzureOfferCode() {
         return this.azureOfferCode;
     }
 
@@ -83,9 +83,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azurePricingTier", required=true)
-      private final Input<Either<String,AzurePricingTier>> azurePricingTier;
+      private final Output<Either<String,AzurePricingTier>> azurePricingTier;
 
-    public Input<Either<String,AzurePricingTier>> getAzurePricingTier() {
+    public Output<Either<String,AzurePricingTier>> getAzurePricingTier() {
         return this.azurePricingTier;
     }
 
@@ -94,9 +94,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureStorageRedundancy", required=true)
-      private final Input<Either<String,AzureStorageRedundancy>> azureStorageRedundancy;
+      private final Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy;
 
-    public Input<Either<String,AzureStorageRedundancy>> getAzureStorageRedundancy() {
+    public Output<Either<String,AzureStorageRedundancy>> getAzureStorageRedundancy() {
         return this.azureStorageRedundancy;
     }
 
@@ -105,9 +105,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureVmFamilies", required=true)
-      private final Input<List<Either<String,AzureVmFamily>>> azureVmFamilies;
+      private final Output<List<Either<String,AzureVmFamily>>> azureVmFamilies;
 
-    public Input<List<Either<String,AzureVmFamily>>> getAzureVmFamilies() {
+    public Output<List<Either<String,AzureVmFamily>>> getAzureVmFamilies() {
         return this.azureVmFamilies;
     }
 
@@ -116,9 +116,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="currency", required=true)
-      private final Input<Either<String,Currency>> currency;
+      private final Output<Either<String,Currency>> currency;
 
-    public Input<Either<String,Currency>> getCurrency() {
+    public Output<Either<String,Currency>> getCurrency() {
         return this.currency;
     }
 
@@ -127,9 +127,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="discountPercentage", required=true)
-      private final Input<Double> discountPercentage;
+      private final Output<Double> discountPercentage;
 
-    public Input<Double> getDiscountPercentage() {
+    public Output<Double> getDiscountPercentage() {
         return this.discountPercentage;
     }
 
@@ -138,9 +138,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="percentile", required=true)
-      private final Input<Either<String,Percentile>> percentile;
+      private final Output<Either<String,Percentile>> percentile;
 
-    public Input<Either<String,Percentile>> getPercentile() {
+    public Output<Either<String,Percentile>> getPercentile() {
         return this.percentile;
     }
 
@@ -149,9 +149,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="reservedInstance", required=true)
-      private final Input<Either<String,ReservedInstance>> reservedInstance;
+      private final Output<Either<String,ReservedInstance>> reservedInstance;
 
-    public Input<Either<String,ReservedInstance>> getReservedInstance() {
+    public Output<Either<String,ReservedInstance>> getReservedInstance() {
         return this.reservedInstance;
     }
 
@@ -160,9 +160,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scalingFactor", required=true)
-      private final Input<Double> scalingFactor;
+      private final Output<Double> scalingFactor;
 
-    public Input<Double> getScalingFactor() {
+    public Output<Double> getScalingFactor() {
         return this.scalingFactor;
     }
 
@@ -171,9 +171,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sizingCriterion", required=true)
-      private final Input<Either<String,AssessmentSizingCriterion>> sizingCriterion;
+      private final Output<Either<String,AssessmentSizingCriterion>> sizingCriterion;
 
-    public Input<Either<String,AssessmentSizingCriterion>> getSizingCriterion() {
+    public Output<Either<String,AssessmentSizingCriterion>> getSizingCriterion() {
         return this.sizingCriterion;
     }
 
@@ -182,9 +182,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="stage", required=true)
-      private final Input<Either<String,AssessmentStage>> stage;
+      private final Output<Either<String,AssessmentStage>> stage;
 
-    public Input<Either<String,AssessmentStage>> getStage() {
+    public Output<Either<String,AssessmentStage>> getStage() {
         return this.stage;
     }
 
@@ -193,9 +193,9 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="timeRange", required=true)
-      private final Input<Either<String,TimeRange>> timeRange;
+      private final Output<Either<String,TimeRange>> timeRange;
 
-    public Input<Either<String,TimeRange>> getTimeRange() {
+    public Output<Either<String,TimeRange>> getTimeRange() {
         return this.timeRange;
     }
 
@@ -204,29 +204,29 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vmUptime", required=true)
-      private final Input<VmUptimeArgs> vmUptime;
+      private final Output<VmUptimeArgs> vmUptime;
 
-    public Input<VmUptimeArgs> getVmUptime() {
+    public Output<VmUptimeArgs> getVmUptime() {
         return this.vmUptime;
     }
 
     public AssessmentPropertiesArgs(
-        Input<Either<String,AzureDiskType>> azureDiskType,
-        Input<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit,
-        Input<Either<String,AzureLocation>> azureLocation,
-        Input<Either<String,AzureOfferCode>> azureOfferCode,
-        Input<Either<String,AzurePricingTier>> azurePricingTier,
-        Input<Either<String,AzureStorageRedundancy>> azureStorageRedundancy,
-        Input<List<Either<String,AzureVmFamily>>> azureVmFamilies,
-        Input<Either<String,Currency>> currency,
-        Input<Double> discountPercentage,
-        Input<Either<String,Percentile>> percentile,
-        Input<Either<String,ReservedInstance>> reservedInstance,
-        Input<Double> scalingFactor,
-        Input<Either<String,AssessmentSizingCriterion>> sizingCriterion,
-        Input<Either<String,AssessmentStage>> stage,
-        Input<Either<String,TimeRange>> timeRange,
-        Input<VmUptimeArgs> vmUptime) {
+        Output<Either<String,AzureDiskType>> azureDiskType,
+        Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit,
+        Output<Either<String,AzureLocation>> azureLocation,
+        Output<Either<String,AzureOfferCode>> azureOfferCode,
+        Output<Either<String,AzurePricingTier>> azurePricingTier,
+        Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy,
+        Output<List<Either<String,AzureVmFamily>>> azureVmFamilies,
+        Output<Either<String,Currency>> currency,
+        Output<Double> discountPercentage,
+        Output<Either<String,Percentile>> percentile,
+        Output<Either<String,ReservedInstance>> reservedInstance,
+        Output<Double> scalingFactor,
+        Output<Either<String,AssessmentSizingCriterion>> sizingCriterion,
+        Output<Either<String,AssessmentStage>> stage,
+        Output<Either<String,TimeRange>> timeRange,
+        Output<VmUptimeArgs> vmUptime) {
         this.azureDiskType = Objects.requireNonNull(azureDiskType, "expected parameter 'azureDiskType' to be non-null");
         this.azureHybridUseBenefit = Objects.requireNonNull(azureHybridUseBenefit, "expected parameter 'azureHybridUseBenefit' to be non-null");
         this.azureLocation = Objects.requireNonNull(azureLocation, "expected parameter 'azureLocation' to be non-null");
@@ -246,22 +246,22 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private AssessmentPropertiesArgs() {
-        this.azureDiskType = Input.empty();
-        this.azureHybridUseBenefit = Input.empty();
-        this.azureLocation = Input.empty();
-        this.azureOfferCode = Input.empty();
-        this.azurePricingTier = Input.empty();
-        this.azureStorageRedundancy = Input.empty();
-        this.azureVmFamilies = Input.empty();
-        this.currency = Input.empty();
-        this.discountPercentage = Input.empty();
-        this.percentile = Input.empty();
-        this.reservedInstance = Input.empty();
-        this.scalingFactor = Input.empty();
-        this.sizingCriterion = Input.empty();
-        this.stage = Input.empty();
-        this.timeRange = Input.empty();
-        this.vmUptime = Input.empty();
+        this.azureDiskType = Output.empty();
+        this.azureHybridUseBenefit = Output.empty();
+        this.azureLocation = Output.empty();
+        this.azureOfferCode = Output.empty();
+        this.azurePricingTier = Output.empty();
+        this.azureStorageRedundancy = Output.empty();
+        this.azureVmFamilies = Output.empty();
+        this.currency = Output.empty();
+        this.discountPercentage = Output.empty();
+        this.percentile = Output.empty();
+        this.reservedInstance = Output.empty();
+        this.scalingFactor = Output.empty();
+        this.sizingCriterion = Output.empty();
+        this.stage = Output.empty();
+        this.timeRange = Output.empty();
+        this.vmUptime = Output.empty();
     }
 
     public static Builder builder() {
@@ -273,22 +273,22 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<Either<String,AzureDiskType>> azureDiskType;
-        private Input<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit;
-        private Input<Either<String,AzureLocation>> azureLocation;
-        private Input<Either<String,AzureOfferCode>> azureOfferCode;
-        private Input<Either<String,AzurePricingTier>> azurePricingTier;
-        private Input<Either<String,AzureStorageRedundancy>> azureStorageRedundancy;
-        private Input<List<Either<String,AzureVmFamily>>> azureVmFamilies;
-        private Input<Either<String,Currency>> currency;
-        private Input<Double> discountPercentage;
-        private Input<Either<String,Percentile>> percentile;
-        private Input<Either<String,ReservedInstance>> reservedInstance;
-        private Input<Double> scalingFactor;
-        private Input<Either<String,AssessmentSizingCriterion>> sizingCriterion;
-        private Input<Either<String,AssessmentStage>> stage;
-        private Input<Either<String,TimeRange>> timeRange;
-        private Input<VmUptimeArgs> vmUptime;
+        private Output<Either<String,AzureDiskType>> azureDiskType;
+        private Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit;
+        private Output<Either<String,AzureLocation>> azureLocation;
+        private Output<Either<String,AzureOfferCode>> azureOfferCode;
+        private Output<Either<String,AzurePricingTier>> azurePricingTier;
+        private Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy;
+        private Output<List<Either<String,AzureVmFamily>>> azureVmFamilies;
+        private Output<Either<String,Currency>> currency;
+        private Output<Double> discountPercentage;
+        private Output<Either<String,Percentile>> percentile;
+        private Output<Either<String,ReservedInstance>> reservedInstance;
+        private Output<Double> scalingFactor;
+        private Output<Either<String,AssessmentSizingCriterion>> sizingCriterion;
+        private Output<Either<String,AssessmentStage>> stage;
+        private Output<Either<String,TimeRange>> timeRange;
+        private Output<VmUptimeArgs> vmUptime;
 
         public Builder() {
     	      // Empty
@@ -314,163 +314,163 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     	      this.vmUptime = defaults.vmUptime;
         }
 
-        public Builder azureDiskType(Input<Either<String,AzureDiskType>> azureDiskType) {
+        public Builder azureDiskType(Output<Either<String,AzureDiskType>> azureDiskType) {
             this.azureDiskType = Objects.requireNonNull(azureDiskType);
             return this;
         }
 
         public Builder azureDiskType(Either<String,AzureDiskType> azureDiskType) {
-            this.azureDiskType = Input.of(Objects.requireNonNull(azureDiskType));
+            this.azureDiskType = Output.of(Objects.requireNonNull(azureDiskType));
             return this;
         }
 
-        public Builder azureHybridUseBenefit(Input<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit) {
+        public Builder azureHybridUseBenefit(Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit) {
             this.azureHybridUseBenefit = Objects.requireNonNull(azureHybridUseBenefit);
             return this;
         }
 
         public Builder azureHybridUseBenefit(Either<String,AzureHybridUseBenefit> azureHybridUseBenefit) {
-            this.azureHybridUseBenefit = Input.of(Objects.requireNonNull(azureHybridUseBenefit));
+            this.azureHybridUseBenefit = Output.of(Objects.requireNonNull(azureHybridUseBenefit));
             return this;
         }
 
-        public Builder azureLocation(Input<Either<String,AzureLocation>> azureLocation) {
+        public Builder azureLocation(Output<Either<String,AzureLocation>> azureLocation) {
             this.azureLocation = Objects.requireNonNull(azureLocation);
             return this;
         }
 
         public Builder azureLocation(Either<String,AzureLocation> azureLocation) {
-            this.azureLocation = Input.of(Objects.requireNonNull(azureLocation));
+            this.azureLocation = Output.of(Objects.requireNonNull(azureLocation));
             return this;
         }
 
-        public Builder azureOfferCode(Input<Either<String,AzureOfferCode>> azureOfferCode) {
+        public Builder azureOfferCode(Output<Either<String,AzureOfferCode>> azureOfferCode) {
             this.azureOfferCode = Objects.requireNonNull(azureOfferCode);
             return this;
         }
 
         public Builder azureOfferCode(Either<String,AzureOfferCode> azureOfferCode) {
-            this.azureOfferCode = Input.of(Objects.requireNonNull(azureOfferCode));
+            this.azureOfferCode = Output.of(Objects.requireNonNull(azureOfferCode));
             return this;
         }
 
-        public Builder azurePricingTier(Input<Either<String,AzurePricingTier>> azurePricingTier) {
+        public Builder azurePricingTier(Output<Either<String,AzurePricingTier>> azurePricingTier) {
             this.azurePricingTier = Objects.requireNonNull(azurePricingTier);
             return this;
         }
 
         public Builder azurePricingTier(Either<String,AzurePricingTier> azurePricingTier) {
-            this.azurePricingTier = Input.of(Objects.requireNonNull(azurePricingTier));
+            this.azurePricingTier = Output.of(Objects.requireNonNull(azurePricingTier));
             return this;
         }
 
-        public Builder azureStorageRedundancy(Input<Either<String,AzureStorageRedundancy>> azureStorageRedundancy) {
+        public Builder azureStorageRedundancy(Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy) {
             this.azureStorageRedundancy = Objects.requireNonNull(azureStorageRedundancy);
             return this;
         }
 
         public Builder azureStorageRedundancy(Either<String,AzureStorageRedundancy> azureStorageRedundancy) {
-            this.azureStorageRedundancy = Input.of(Objects.requireNonNull(azureStorageRedundancy));
+            this.azureStorageRedundancy = Output.of(Objects.requireNonNull(azureStorageRedundancy));
             return this;
         }
 
-        public Builder azureVmFamilies(Input<List<Either<String,AzureVmFamily>>> azureVmFamilies) {
+        public Builder azureVmFamilies(Output<List<Either<String,AzureVmFamily>>> azureVmFamilies) {
             this.azureVmFamilies = Objects.requireNonNull(azureVmFamilies);
             return this;
         }
 
         public Builder azureVmFamilies(List<Either<String,AzureVmFamily>> azureVmFamilies) {
-            this.azureVmFamilies = Input.of(Objects.requireNonNull(azureVmFamilies));
+            this.azureVmFamilies = Output.of(Objects.requireNonNull(azureVmFamilies));
             return this;
         }
 
-        public Builder currency(Input<Either<String,Currency>> currency) {
+        public Builder currency(Output<Either<String,Currency>> currency) {
             this.currency = Objects.requireNonNull(currency);
             return this;
         }
 
         public Builder currency(Either<String,Currency> currency) {
-            this.currency = Input.of(Objects.requireNonNull(currency));
+            this.currency = Output.of(Objects.requireNonNull(currency));
             return this;
         }
 
-        public Builder discountPercentage(Input<Double> discountPercentage) {
+        public Builder discountPercentage(Output<Double> discountPercentage) {
             this.discountPercentage = Objects.requireNonNull(discountPercentage);
             return this;
         }
 
         public Builder discountPercentage(Double discountPercentage) {
-            this.discountPercentage = Input.of(Objects.requireNonNull(discountPercentage));
+            this.discountPercentage = Output.of(Objects.requireNonNull(discountPercentage));
             return this;
         }
 
-        public Builder percentile(Input<Either<String,Percentile>> percentile) {
+        public Builder percentile(Output<Either<String,Percentile>> percentile) {
             this.percentile = Objects.requireNonNull(percentile);
             return this;
         }
 
         public Builder percentile(Either<String,Percentile> percentile) {
-            this.percentile = Input.of(Objects.requireNonNull(percentile));
+            this.percentile = Output.of(Objects.requireNonNull(percentile));
             return this;
         }
 
-        public Builder reservedInstance(Input<Either<String,ReservedInstance>> reservedInstance) {
+        public Builder reservedInstance(Output<Either<String,ReservedInstance>> reservedInstance) {
             this.reservedInstance = Objects.requireNonNull(reservedInstance);
             return this;
         }
 
         public Builder reservedInstance(Either<String,ReservedInstance> reservedInstance) {
-            this.reservedInstance = Input.of(Objects.requireNonNull(reservedInstance));
+            this.reservedInstance = Output.of(Objects.requireNonNull(reservedInstance));
             return this;
         }
 
-        public Builder scalingFactor(Input<Double> scalingFactor) {
+        public Builder scalingFactor(Output<Double> scalingFactor) {
             this.scalingFactor = Objects.requireNonNull(scalingFactor);
             return this;
         }
 
         public Builder scalingFactor(Double scalingFactor) {
-            this.scalingFactor = Input.of(Objects.requireNonNull(scalingFactor));
+            this.scalingFactor = Output.of(Objects.requireNonNull(scalingFactor));
             return this;
         }
 
-        public Builder sizingCriterion(Input<Either<String,AssessmentSizingCriterion>> sizingCriterion) {
+        public Builder sizingCriterion(Output<Either<String,AssessmentSizingCriterion>> sizingCriterion) {
             this.sizingCriterion = Objects.requireNonNull(sizingCriterion);
             return this;
         }
 
         public Builder sizingCriterion(Either<String,AssessmentSizingCriterion> sizingCriterion) {
-            this.sizingCriterion = Input.of(Objects.requireNonNull(sizingCriterion));
+            this.sizingCriterion = Output.of(Objects.requireNonNull(sizingCriterion));
             return this;
         }
 
-        public Builder stage(Input<Either<String,AssessmentStage>> stage) {
+        public Builder stage(Output<Either<String,AssessmentStage>> stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
         public Builder stage(Either<String,AssessmentStage> stage) {
-            this.stage = Input.of(Objects.requireNonNull(stage));
+            this.stage = Output.of(Objects.requireNonNull(stage));
             return this;
         }
 
-        public Builder timeRange(Input<Either<String,TimeRange>> timeRange) {
+        public Builder timeRange(Output<Either<String,TimeRange>> timeRange) {
             this.timeRange = Objects.requireNonNull(timeRange);
             return this;
         }
 
         public Builder timeRange(Either<String,TimeRange> timeRange) {
-            this.timeRange = Input.of(Objects.requireNonNull(timeRange));
+            this.timeRange = Output.of(Objects.requireNonNull(timeRange));
             return this;
         }
 
-        public Builder vmUptime(Input<VmUptimeArgs> vmUptime) {
+        public Builder vmUptime(Output<VmUptimeArgs> vmUptime) {
             this.vmUptime = Objects.requireNonNull(vmUptime);
             return this;
         }
 
         public Builder vmUptime(VmUptimeArgs vmUptime) {
-            this.vmUptime = Input.of(Objects.requireNonNull(vmUptime));
+            this.vmUptime = Output.of(Objects.requireNonNull(vmUptime));
             return this;
         }
         public AssessmentPropertiesArgs build() {

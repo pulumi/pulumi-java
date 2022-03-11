@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="primaryKey")
-      private final @Nullable Input<String> primaryKey;
+      private final @Nullable Output<String> primaryKey;
 
-    public Input<String> getPrimaryKey() {
-        return this.primaryKey == null ? Input.empty() : this.primaryKey;
+    public Output<String> getPrimaryKey() {
+        return this.primaryKey == null ? Output.empty() : this.primaryKey;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="workspaceId")
-      private final @Nullable Input<String> workspaceId;
+      private final @Nullable Output<String> workspaceId;
 
-    public Input<String> getWorkspaceId() {
-        return this.workspaceId == null ? Input.empty() : this.workspaceId;
+    public Output<String> getWorkspaceId() {
+        return this.workspaceId == null ? Output.empty() : this.workspaceId;
     }
 
     public LogAnalyticsWorkspaceConfigArgs(
-        @Nullable Input<String> primaryKey,
-        @Nullable Input<String> workspaceId) {
+        @Nullable Output<String> primaryKey,
+        @Nullable Output<String> workspaceId) {
         this.primaryKey = primaryKey;
         this.workspaceId = workspaceId;
     }
 
     private LogAnalyticsWorkspaceConfigArgs() {
-        this.primaryKey = Input.empty();
-        this.workspaceId = Input.empty();
+        this.primaryKey = Output.empty();
+        this.workspaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> primaryKey;
-        private @Nullable Input<String> workspaceId;
+        private @Nullable Output<String> primaryKey;
+        private @Nullable Output<String> workspaceId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder primaryKey(@Nullable Input<String> primaryKey) {
+        public Builder primaryKey(@Nullable Output<String> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
         public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Input.ofNullable(primaryKey);
+            this.primaryKey = Output.ofNullable(primaryKey);
             return this;
         }
 
-        public Builder workspaceId(@Nullable Input<String> workspaceId) {
+        public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Input.ofNullable(workspaceId);
+            this.workspaceId = Output.ofNullable(workspaceId);
             return this;
         }
         public LogAnalyticsWorkspaceConfigArgs build() {

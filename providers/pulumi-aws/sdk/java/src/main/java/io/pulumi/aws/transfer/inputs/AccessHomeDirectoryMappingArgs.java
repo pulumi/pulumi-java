@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.transfer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AccessHomeDirectoryMappingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="entry", required=true)
-      private final Input<String> entry;
+      private final Output<String> entry;
 
-    public Input<String> getEntry() {
+    public Output<String> getEntry() {
         return this.entry;
     }
 
@@ -29,22 +29,22 @@ public final class AccessHomeDirectoryMappingArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="target", required=true)
-      private final Input<String> target;
+      private final Output<String> target;
 
-    public Input<String> getTarget() {
+    public Output<String> getTarget() {
         return this.target;
     }
 
     public AccessHomeDirectoryMappingArgs(
-        Input<String> entry,
-        Input<String> target) {
+        Output<String> entry,
+        Output<String> target) {
         this.entry = Objects.requireNonNull(entry, "expected parameter 'entry' to be non-null");
         this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
     }
 
     private AccessHomeDirectoryMappingArgs() {
-        this.entry = Input.empty();
-        this.target = Input.empty();
+        this.entry = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AccessHomeDirectoryMappingArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> entry;
-        private Input<String> target;
+        private Output<String> entry;
+        private Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AccessHomeDirectoryMappingArgs extends io.pulumi.resources.Re
     	      this.target = defaults.target;
         }
 
-        public Builder entry(Input<String> entry) {
+        public Builder entry(Output<String> entry) {
             this.entry = Objects.requireNonNull(entry);
             return this;
         }
 
         public Builder entry(String entry) {
-            this.entry = Input.of(Objects.requireNonNull(entry));
+            this.entry = Output.of(Objects.requireNonNull(entry));
             return this;
         }
 
-        public Builder target(Input<String> target) {
+        public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(String target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public AccessHomeDirectoryMappingArgs build() {

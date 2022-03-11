@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.BasicAuthArgs;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.ServiceAccountArgs;
@@ -25,10 +25,10 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basicAuth")
-      private final @Nullable Input<BasicAuthArgs> basicAuth;
+      private final @Nullable Output<BasicAuthArgs> basicAuth;
 
-    public Input<BasicAuthArgs> getBasicAuth() {
-        return this.basicAuth == null ? Input.empty() : this.basicAuth;
+    public Output<BasicAuthArgs> getBasicAuth() {
+        return this.basicAuth == null ? Output.empty() : this.basicAuth;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<ServiceAccountArgs> serviceAccount;
+      private final @Nullable Output<ServiceAccountArgs> serviceAccount;
 
-    public Input<ServiceAccountArgs> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<ServiceAccountArgs> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useProjectDefault")
-      private final @Nullable Input<Boolean> useProjectDefault;
+      private final @Nullable Output<Boolean> useProjectDefault;
 
-    public Input<Boolean> getUseProjectDefault() {
-        return this.useProjectDefault == null ? Input.empty() : this.useProjectDefault;
+    public Output<Boolean> getUseProjectDefault() {
+        return this.useProjectDefault == null ? Output.empty() : this.useProjectDefault;
     }
 
     public CredentialArgs(
-        @Nullable Input<BasicAuthArgs> basicAuth,
-        @Nullable Input<ServiceAccountArgs> serviceAccount,
-        @Nullable Input<Boolean> useProjectDefault) {
+        @Nullable Output<BasicAuthArgs> basicAuth,
+        @Nullable Output<ServiceAccountArgs> serviceAccount,
+        @Nullable Output<Boolean> useProjectDefault) {
         this.basicAuth = basicAuth;
         this.serviceAccount = serviceAccount;
         this.useProjectDefault = useProjectDefault;
     }
 
     private CredentialArgs() {
-        this.basicAuth = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.useProjectDefault = Input.empty();
+        this.basicAuth = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.useProjectDefault = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<BasicAuthArgs> basicAuth;
-        private @Nullable Input<ServiceAccountArgs> serviceAccount;
-        private @Nullable Input<Boolean> useProjectDefault;
+        private @Nullable Output<BasicAuthArgs> basicAuth;
+        private @Nullable Output<ServiceAccountArgs> serviceAccount;
+        private @Nullable Output<Boolean> useProjectDefault;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useProjectDefault = defaults.useProjectDefault;
         }
 
-        public Builder basicAuth(@Nullable Input<BasicAuthArgs> basicAuth) {
+        public Builder basicAuth(@Nullable Output<BasicAuthArgs> basicAuth) {
             this.basicAuth = basicAuth;
             return this;
         }
 
         public Builder basicAuth(@Nullable BasicAuthArgs basicAuth) {
-            this.basicAuth = Input.ofNullable(basicAuth);
+            this.basicAuth = Output.ofNullable(basicAuth);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<ServiceAccountArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<ServiceAccountArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable ServiceAccountArgs serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder useProjectDefault(@Nullable Input<Boolean> useProjectDefault) {
+        public Builder useProjectDefault(@Nullable Output<Boolean> useProjectDefault) {
             this.useProjectDefault = useProjectDefault;
             return this;
         }
 
         public Builder useProjectDefault(@Nullable Boolean useProjectDefault) {
-            this.useProjectDefault = Input.ofNullable(useProjectDefault);
+            this.useProjectDefault = Output.ofNullable(useProjectDefault);
             return this;
         }
         public CredentialArgs build() {

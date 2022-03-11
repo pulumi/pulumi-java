@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,24 +19,24 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createDate")
-      private final @Nullable Input<String> createDate;
+      private final @Nullable Output<String> createDate;
 
-    public Input<String> getCreateDate() {
-        return this.createDate == null ? Input.empty() : this.createDate;
+    public Output<String> getCreateDate() {
+        return this.createDate == null ? Output.empty() : this.createDate;
     }
 
     @InputImport(name="encryptedSecret")
-      private final @Nullable Input<String> encryptedSecret;
+      private final @Nullable Output<String> encryptedSecret;
 
-    public Input<String> getEncryptedSecret() {
-        return this.encryptedSecret == null ? Input.empty() : this.encryptedSecret;
+    public Output<String> getEncryptedSecret() {
+        return this.encryptedSecret == null ? Output.empty() : this.encryptedSecret;
     }
 
     @InputImport(name="encryptedSesSmtpPasswordV4")
-      private final @Nullable Input<String> encryptedSesSmtpPasswordV4;
+      private final @Nullable Output<String> encryptedSesSmtpPasswordV4;
 
-    public Input<String> getEncryptedSesSmtpPasswordV4() {
-        return this.encryptedSesSmtpPasswordV4 == null ? Input.empty() : this.encryptedSesSmtpPasswordV4;
+    public Output<String> getEncryptedSesSmtpPasswordV4() {
+        return this.encryptedSesSmtpPasswordV4 == null ? Output.empty() : this.encryptedSesSmtpPasswordV4;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyFingerprint")
-      private final @Nullable Input<String> keyFingerprint;
+      private final @Nullable Output<String> keyFingerprint;
 
-    public Input<String> getKeyFingerprint() {
-        return this.keyFingerprint == null ? Input.empty() : this.keyFingerprint;
+    public Output<String> getKeyFingerprint() {
+        return this.keyFingerprint == null ? Output.empty() : this.keyFingerprint;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pgpKey")
-      private final @Nullable Input<String> pgpKey;
+      private final @Nullable Output<String> pgpKey;
 
-    public Input<String> getPgpKey() {
-        return this.pgpKey == null ? Input.empty() : this.pgpKey;
+    public Output<String> getPgpKey() {
+        return this.pgpKey == null ? Output.empty() : this.pgpKey;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<String> secret;
+      private final @Nullable Output<String> secret;
 
-    public Input<String> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<String> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sesSmtpPasswordV4")
-      private final @Nullable Input<String> sesSmtpPasswordV4;
+      private final @Nullable Output<String> sesSmtpPasswordV4;
 
-    public Input<String> getSesSmtpPasswordV4() {
-        return this.sesSmtpPasswordV4 == null ? Input.empty() : this.sesSmtpPasswordV4;
+    public Output<String> getSesSmtpPasswordV4() {
+        return this.sesSmtpPasswordV4 == null ? Output.empty() : this.sesSmtpPasswordV4;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -99,22 +99,22 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public AccessKeyState(
-        @Nullable Input<String> createDate,
-        @Nullable Input<String> encryptedSecret,
-        @Nullable Input<String> encryptedSesSmtpPasswordV4,
-        @Nullable Input<String> keyFingerprint,
-        @Nullable Input<String> pgpKey,
-        @Nullable Input<String> secret,
-        @Nullable Input<String> sesSmtpPasswordV4,
-        @Nullable Input<String> status,
-        @Nullable Input<String> user) {
+        @Nullable Output<String> createDate,
+        @Nullable Output<String> encryptedSecret,
+        @Nullable Output<String> encryptedSesSmtpPasswordV4,
+        @Nullable Output<String> keyFingerprint,
+        @Nullable Output<String> pgpKey,
+        @Nullable Output<String> secret,
+        @Nullable Output<String> sesSmtpPasswordV4,
+        @Nullable Output<String> status,
+        @Nullable Output<String> user) {
         this.createDate = createDate;
         this.encryptedSecret = encryptedSecret;
         this.encryptedSesSmtpPasswordV4 = encryptedSesSmtpPasswordV4;
@@ -127,15 +127,15 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessKeyState() {
-        this.createDate = Input.empty();
-        this.encryptedSecret = Input.empty();
-        this.encryptedSesSmtpPasswordV4 = Input.empty();
-        this.keyFingerprint = Input.empty();
-        this.pgpKey = Input.empty();
-        this.secret = Input.empty();
-        this.sesSmtpPasswordV4 = Input.empty();
-        this.status = Input.empty();
-        this.user = Input.empty();
+        this.createDate = Output.empty();
+        this.encryptedSecret = Output.empty();
+        this.encryptedSesSmtpPasswordV4 = Output.empty();
+        this.keyFingerprint = Output.empty();
+        this.pgpKey = Output.empty();
+        this.secret = Output.empty();
+        this.sesSmtpPasswordV4 = Output.empty();
+        this.status = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,15 +147,15 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createDate;
-        private @Nullable Input<String> encryptedSecret;
-        private @Nullable Input<String> encryptedSesSmtpPasswordV4;
-        private @Nullable Input<String> keyFingerprint;
-        private @Nullable Input<String> pgpKey;
-        private @Nullable Input<String> secret;
-        private @Nullable Input<String> sesSmtpPasswordV4;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> user;
+        private @Nullable Output<String> createDate;
+        private @Nullable Output<String> encryptedSecret;
+        private @Nullable Output<String> encryptedSesSmtpPasswordV4;
+        private @Nullable Output<String> keyFingerprint;
+        private @Nullable Output<String> pgpKey;
+        private @Nullable Output<String> secret;
+        private @Nullable Output<String> sesSmtpPasswordV4;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -174,93 +174,93 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder createDate(@Nullable Input<String> createDate) {
+        public Builder createDate(@Nullable Output<String> createDate) {
             this.createDate = createDate;
             return this;
         }
 
         public Builder createDate(@Nullable String createDate) {
-            this.createDate = Input.ofNullable(createDate);
+            this.createDate = Output.ofNullable(createDate);
             return this;
         }
 
-        public Builder encryptedSecret(@Nullable Input<String> encryptedSecret) {
+        public Builder encryptedSecret(@Nullable Output<String> encryptedSecret) {
             this.encryptedSecret = encryptedSecret;
             return this;
         }
 
         public Builder encryptedSecret(@Nullable String encryptedSecret) {
-            this.encryptedSecret = Input.ofNullable(encryptedSecret);
+            this.encryptedSecret = Output.ofNullable(encryptedSecret);
             return this;
         }
 
-        public Builder encryptedSesSmtpPasswordV4(@Nullable Input<String> encryptedSesSmtpPasswordV4) {
+        public Builder encryptedSesSmtpPasswordV4(@Nullable Output<String> encryptedSesSmtpPasswordV4) {
             this.encryptedSesSmtpPasswordV4 = encryptedSesSmtpPasswordV4;
             return this;
         }
 
         public Builder encryptedSesSmtpPasswordV4(@Nullable String encryptedSesSmtpPasswordV4) {
-            this.encryptedSesSmtpPasswordV4 = Input.ofNullable(encryptedSesSmtpPasswordV4);
+            this.encryptedSesSmtpPasswordV4 = Output.ofNullable(encryptedSesSmtpPasswordV4);
             return this;
         }
 
-        public Builder keyFingerprint(@Nullable Input<String> keyFingerprint) {
+        public Builder keyFingerprint(@Nullable Output<String> keyFingerprint) {
             this.keyFingerprint = keyFingerprint;
             return this;
         }
 
         public Builder keyFingerprint(@Nullable String keyFingerprint) {
-            this.keyFingerprint = Input.ofNullable(keyFingerprint);
+            this.keyFingerprint = Output.ofNullable(keyFingerprint);
             return this;
         }
 
-        public Builder pgpKey(@Nullable Input<String> pgpKey) {
+        public Builder pgpKey(@Nullable Output<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
 
         public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Input.ofNullable(pgpKey);
+            this.pgpKey = Output.ofNullable(pgpKey);
             return this;
         }
 
-        public Builder secret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable String secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
 
-        public Builder sesSmtpPasswordV4(@Nullable Input<String> sesSmtpPasswordV4) {
+        public Builder sesSmtpPasswordV4(@Nullable Output<String> sesSmtpPasswordV4) {
             this.sesSmtpPasswordV4 = sesSmtpPasswordV4;
             return this;
         }
 
         public Builder sesSmtpPasswordV4(@Nullable String sesSmtpPasswordV4) {
-            this.sesSmtpPasswordV4 = Input.ofNullable(sesSmtpPasswordV4);
+            this.sesSmtpPasswordV4 = Output.ofNullable(sesSmtpPasswordV4);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public AccessKeyState build() {

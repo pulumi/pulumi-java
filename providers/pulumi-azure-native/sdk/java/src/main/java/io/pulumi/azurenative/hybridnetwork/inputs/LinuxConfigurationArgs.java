@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.SshConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ssh")
-      private final @Nullable Input<SshConfigurationArgs> ssh;
+      private final @Nullable Output<SshConfigurationArgs> ssh;
 
-    public Input<SshConfigurationArgs> getSsh() {
-        return this.ssh == null ? Input.empty() : this.ssh;
+    public Output<SshConfigurationArgs> getSsh() {
+        return this.ssh == null ? Output.empty() : this.ssh;
     }
 
-    public LinuxConfigurationArgs(@Nullable Input<SshConfigurationArgs> ssh) {
+    public LinuxConfigurationArgs(@Nullable Output<SshConfigurationArgs> ssh) {
         this.ssh = ssh;
     }
 
     private LinuxConfigurationArgs() {
-        this.ssh = Input.empty();
+        this.ssh = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<SshConfigurationArgs> ssh;
+        private @Nullable Output<SshConfigurationArgs> ssh;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder ssh(@Nullable Input<SshConfigurationArgs> ssh) {
+        public Builder ssh(@Nullable Output<SshConfigurationArgs> ssh) {
             this.ssh = ssh;
             return this;
         }
 
         public Builder ssh(@Nullable SshConfigurationArgs ssh) {
-            this.ssh = Input.ofNullable(ssh);
+            this.ssh = Output.ofNullable(ssh);
             return this;
         }
         public LinuxConfigurationArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLBodyParsingFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.WebACLJsonMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.WebACLJsonMatchPatternArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,39 +21,39 @@ public final class WebACLJsonBodyArgs extends io.pulumi.resources.ResourceArgs {
     public static final WebACLJsonBodyArgs Empty = new WebACLJsonBodyArgs();
 
     @InputImport(name="invalidFallbackBehavior")
-      private final @Nullable Input<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior;
+      private final @Nullable Output<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior;
 
-    public Input<WebACLBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
-        return this.invalidFallbackBehavior == null ? Input.empty() : this.invalidFallbackBehavior;
+    public Output<WebACLBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
+        return this.invalidFallbackBehavior == null ? Output.empty() : this.invalidFallbackBehavior;
     }
 
     @InputImport(name="matchPattern", required=true)
-      private final Input<WebACLJsonMatchPatternArgs> matchPattern;
+      private final Output<WebACLJsonMatchPatternArgs> matchPattern;
 
-    public Input<WebACLJsonMatchPatternArgs> getMatchPattern() {
+    public Output<WebACLJsonMatchPatternArgs> getMatchPattern() {
         return this.matchPattern;
     }
 
     @InputImport(name="matchScope", required=true)
-      private final Input<WebACLJsonMatchScope> matchScope;
+      private final Output<WebACLJsonMatchScope> matchScope;
 
-    public Input<WebACLJsonMatchScope> getMatchScope() {
+    public Output<WebACLJsonMatchScope> getMatchScope() {
         return this.matchScope;
     }
 
     public WebACLJsonBodyArgs(
-        @Nullable Input<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior,
-        Input<WebACLJsonMatchPatternArgs> matchPattern,
-        Input<WebACLJsonMatchScope> matchScope) {
+        @Nullable Output<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior,
+        Output<WebACLJsonMatchPatternArgs> matchPattern,
+        Output<WebACLJsonMatchScope> matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
         this.matchPattern = Objects.requireNonNull(matchPattern, "expected parameter 'matchPattern' to be non-null");
         this.matchScope = Objects.requireNonNull(matchScope, "expected parameter 'matchScope' to be non-null");
     }
 
     private WebACLJsonBodyArgs() {
-        this.invalidFallbackBehavior = Input.empty();
-        this.matchPattern = Input.empty();
-        this.matchScope = Input.empty();
+        this.invalidFallbackBehavior = Output.empty();
+        this.matchPattern = Output.empty();
+        this.matchScope = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,9 +65,9 @@ public final class WebACLJsonBodyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior;
-        private Input<WebACLJsonMatchPatternArgs> matchPattern;
-        private Input<WebACLJsonMatchScope> matchScope;
+        private @Nullable Output<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior;
+        private Output<WebACLJsonMatchPatternArgs> matchPattern;
+        private Output<WebACLJsonMatchScope> matchScope;
 
         public Builder() {
     	      // Empty
@@ -80,33 +80,33 @@ public final class WebACLJsonBodyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.matchScope = defaults.matchScope;
         }
 
-        public Builder invalidFallbackBehavior(@Nullable Input<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior) {
+        public Builder invalidFallbackBehavior(@Nullable Output<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior) {
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
 
         public Builder invalidFallbackBehavior(@Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior) {
-            this.invalidFallbackBehavior = Input.ofNullable(invalidFallbackBehavior);
+            this.invalidFallbackBehavior = Output.ofNullable(invalidFallbackBehavior);
             return this;
         }
 
-        public Builder matchPattern(Input<WebACLJsonMatchPatternArgs> matchPattern) {
+        public Builder matchPattern(Output<WebACLJsonMatchPatternArgs> matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
 
         public Builder matchPattern(WebACLJsonMatchPatternArgs matchPattern) {
-            this.matchPattern = Input.of(Objects.requireNonNull(matchPattern));
+            this.matchPattern = Output.of(Objects.requireNonNull(matchPattern));
             return this;
         }
 
-        public Builder matchScope(Input<WebACLJsonMatchScope> matchScope) {
+        public Builder matchScope(Output<WebACLJsonMatchScope> matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
 
         public Builder matchScope(WebACLJsonMatchScope matchScope) {
-            this.matchScope = Input.of(Objects.requireNonNull(matchScope));
+            this.matchScope = Output.of(Objects.requireNonNull(matchScope));
             return this;
         }
         public WebACLJsonBodyArgs build() {

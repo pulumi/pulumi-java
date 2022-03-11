@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbilling_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbilling_v1.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.cloudbilling_v1.inputs.BindingArgs;
@@ -23,16 +23,16 @@ public final class BillingAccountIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="auditConfigs")
-      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Input<List<AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
+    public Output<List<AuditConfigArgs>> getAuditConfigs() {
+        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
     }
 
     @InputImport(name="billingAccountId", required=true)
-      private final Input<String> billingAccountId;
+      private final Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
+    public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
@@ -41,10 +41,10 @@ public final class BillingAccountIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class BillingAccountIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class BillingAccountIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="updateMask")
-      private final @Nullable Input<String> updateMask;
+      private final @Nullable Output<String> updateMask;
 
-    public Input<String> getUpdateMask() {
-        return this.updateMask == null ? Input.empty() : this.updateMask;
+    public Output<String> getUpdateMask() {
+        return this.updateMask == null ? Output.empty() : this.updateMask;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class BillingAccountIamPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public BillingAccountIamPolicyArgs(
-        @Nullable Input<List<AuditConfigArgs>> auditConfigs,
-        Input<String> billingAccountId,
-        @Nullable Input<List<BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> updateMask,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<AuditConfigArgs>> auditConfigs,
+        Output<String> billingAccountId,
+        @Nullable Output<List<BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> updateMask,
+        @Nullable Output<Integer> version) {
         this.auditConfigs = auditConfigs;
         this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
         this.bindings = bindings;
@@ -96,12 +96,12 @@ public final class BillingAccountIamPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private BillingAccountIamPolicyArgs() {
-        this.auditConfigs = Input.empty();
-        this.billingAccountId = Input.empty();
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.updateMask = Input.empty();
-        this.version = Input.empty();
+        this.auditConfigs = Output.empty();
+        this.billingAccountId = Output.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.updateMask = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class BillingAccountIamPolicyArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AuditConfigArgs>> auditConfigs;
-        private Input<String> billingAccountId;
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> updateMask;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
+        private Output<String> billingAccountId;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> updateMask;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class BillingAccountIamPolicyArgs extends io.pulumi.resources.Resou
     	      this.version = defaults.version;
         }
 
-        public Builder auditConfigs(@Nullable Input<List<AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Output<List<AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
         public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Input.ofNullable(auditConfigs);
+            this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder billingAccountId(Input<String> billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Input.of(Objects.requireNonNull(billingAccountId));
+            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder updateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Input.ofNullable(updateMask);
+            this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public BillingAccountIamPolicyArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automanage;
 
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfileAssignmentPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="configurationProfileAssignmentName")
-      private final @Nullable Input<String> configurationProfileAssignmentName;
+      private final @Nullable Output<String> configurationProfileAssignmentName;
 
-    public Input<String> getConfigurationProfileAssignmentName() {
-        return this.configurationProfileAssignmentName == null ? Input.empty() : this.configurationProfileAssignmentName;
+    public Output<String> getConfigurationProfileAssignmentName() {
+        return this.configurationProfileAssignmentName == null ? Output.empty() : this.configurationProfileAssignmentName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ConfigurationProfileAssignmentPropertiesArgs> properties;
+      private final @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties;
 
-    public Input<ConfigurationProfileAssignmentPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ConfigurationProfileAssignmentPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="vmName", required=true)
-      private final Input<String> vmName;
+      private final Output<String> vmName;
 
-    public Input<String> getVmName() {
+    public Output<String> getVmName() {
         return this.vmName;
     }
 
     public ConfigurationProfileAssignmentArgs(
-        @Nullable Input<String> configurationProfileAssignmentName,
-        @Nullable Input<ConfigurationProfileAssignmentPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> vmName) {
+        @Nullable Output<String> configurationProfileAssignmentName,
+        @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> vmName) {
         this.configurationProfileAssignmentName = configurationProfileAssignmentName;
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
     }
 
     private ConfigurationProfileAssignmentArgs() {
-        this.configurationProfileAssignmentName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.vmName = Input.empty();
+        this.configurationProfileAssignmentName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.vmName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configurationProfileAssignmentName;
-        private @Nullable Input<ConfigurationProfileAssignmentPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> vmName;
+        private @Nullable Output<String> configurationProfileAssignmentName;
+        private @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> vmName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
     	      this.vmName = defaults.vmName;
         }
 
-        public Builder configurationProfileAssignmentName(@Nullable Input<String> configurationProfileAssignmentName) {
+        public Builder configurationProfileAssignmentName(@Nullable Output<String> configurationProfileAssignmentName) {
             this.configurationProfileAssignmentName = configurationProfileAssignmentName;
             return this;
         }
 
         public Builder configurationProfileAssignmentName(@Nullable String configurationProfileAssignmentName) {
-            this.configurationProfileAssignmentName = Input.ofNullable(configurationProfileAssignmentName);
+            this.configurationProfileAssignmentName = Output.ofNullable(configurationProfileAssignmentName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ConfigurationProfileAssignmentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ConfigurationProfileAssignmentPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder vmName(Input<String> vmName) {
+        public Builder vmName(Output<String> vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
 
         public Builder vmName(String vmName) {
-            this.vmName = Input.of(Objects.requireNonNull(vmName));
+            this.vmName = Output.of(Objects.requireNonNull(vmName));
             return this;
         }
         public ConfigurationProfileAssignmentArgs build() {

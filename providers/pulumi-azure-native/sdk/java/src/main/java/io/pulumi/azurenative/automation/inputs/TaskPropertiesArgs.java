@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class TaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class TaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     public TaskPropertiesArgs(
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<String> source) {
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<String> source) {
         this.parameters = parameters;
         this.source = source;
     }
 
     private TaskPropertiesArgs() {
-        this.parameters = Input.empty();
-        this.source = Input.empty();
+        this.parameters = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<String> source;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<String> source;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public TaskPropertiesArgs build() {

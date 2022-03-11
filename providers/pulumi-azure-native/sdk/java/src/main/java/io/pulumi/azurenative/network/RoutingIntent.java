@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.RoutingIntentArgs;
 import io.pulumi.azurenative.network.outputs.RoutingPolicyResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,18 +140,18 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RoutingIntent(String name, RoutingIntentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:RoutingIntent", name, args == null ? RoutingIntentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:RoutingIntent", name, args == null ? RoutingIntentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RoutingIntent(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RoutingIntent(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:RoutingIntent", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:RoutingIntent").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:RoutingIntent").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -166,7 +165,7 @@ public class RoutingIntent extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RoutingIntent get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RoutingIntent get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RoutingIntent(name, id, options);
     }
 }

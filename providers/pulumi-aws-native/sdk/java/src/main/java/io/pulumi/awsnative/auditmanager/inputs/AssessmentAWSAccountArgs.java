@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.auditmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,39 +19,39 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
     public static final AssessmentAWSAccountArgs Empty = new AssessmentAWSAccountArgs();
 
     @InputImport(name="emailAddress")
-      private final @Nullable Input<String> emailAddress;
+      private final @Nullable Output<String> emailAddress;
 
-    public Input<String> getEmailAddress() {
-        return this.emailAddress == null ? Input.empty() : this.emailAddress;
+    public Output<String> getEmailAddress() {
+        return this.emailAddress == null ? Output.empty() : this.emailAddress;
     }
 
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public AssessmentAWSAccountArgs(
-        @Nullable Input<String> emailAddress,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> emailAddress,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name) {
         this.emailAddress = emailAddress;
         this.id = id;
         this.name = name;
     }
 
     private AssessmentAWSAccountArgs() {
-        this.emailAddress = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
+        this.emailAddress = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> emailAddress;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> emailAddress;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class AssessmentAWSAccountArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder emailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Output<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Input.ofNullable(emailAddress);
+            this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public AssessmentAWSAccountArgs build() {

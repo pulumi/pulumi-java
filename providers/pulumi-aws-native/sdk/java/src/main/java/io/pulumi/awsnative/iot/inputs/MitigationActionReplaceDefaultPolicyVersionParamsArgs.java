@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionReplaceDefaultPolicyVersionParamsTemplateName;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends
     public static final MitigationActionReplaceDefaultPolicyVersionParamsArgs Empty = new MitigationActionReplaceDefaultPolicyVersionParamsArgs();
 
     @InputImport(name="templateName", required=true)
-      private final Input<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
+      private final Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
 
-    public Input<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> getTemplateName() {
+    public Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> getTemplateName() {
         return this.templateName;
     }
 
-    public MitigationActionReplaceDefaultPolicyVersionParamsArgs(Input<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName) {
+    public MitigationActionReplaceDefaultPolicyVersionParamsArgs(Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName) {
         this.templateName = Objects.requireNonNull(templateName, "expected parameter 'templateName' to be non-null");
     }
 
     private MitigationActionReplaceDefaultPolicyVersionParamsArgs() {
-        this.templateName = Input.empty();
+        this.templateName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends
     }
 
     public static final class Builder {
-        private Input<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
+        private Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends
     	      this.templateName = defaults.templateName;
         }
 
-        public Builder templateName(Input<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName) {
+        public Builder templateName(Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName) {
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }
 
         public Builder templateName(MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
-            this.templateName = Input.of(Objects.requireNonNull(templateName));
+            this.templateName = Output.of(Objects.requireNonNull(templateName));
             return this;
         }
         public MitigationActionReplaceDefaultPolicyVersionParamsArgs build() {

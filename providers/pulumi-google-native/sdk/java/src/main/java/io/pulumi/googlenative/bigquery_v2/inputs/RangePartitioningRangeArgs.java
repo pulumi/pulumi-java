@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="end")
-      private final @Nullable Input<String> end;
+      private final @Nullable Output<String> end;
 
-    public Input<String> getEnd() {
-        return this.end == null ? Input.empty() : this.end;
+    public Output<String> getEnd() {
+        return this.end == null ? Output.empty() : this.end;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<String> interval;
+      private final @Nullable Output<String> interval;
 
-    public Input<String> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<String> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="start")
-      private final @Nullable Input<String> start;
+      private final @Nullable Output<String> start;
 
-    public Input<String> getStart() {
-        return this.start == null ? Input.empty() : this.start;
+    public Output<String> getStart() {
+        return this.start == null ? Output.empty() : this.start;
     }
 
     public RangePartitioningRangeArgs(
-        @Nullable Input<String> end,
-        @Nullable Input<String> interval,
-        @Nullable Input<String> start) {
+        @Nullable Output<String> end,
+        @Nullable Output<String> interval,
+        @Nullable Output<String> start) {
         this.end = end;
         this.interval = interval;
         this.start = start;
     }
 
     private RangePartitioningRangeArgs() {
-        this.end = Input.empty();
-        this.interval = Input.empty();
-        this.start = Input.empty();
+        this.end = Output.empty();
+        this.interval = Output.empty();
+        this.start = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> end;
-        private @Nullable Input<String> interval;
-        private @Nullable Input<String> start;
+        private @Nullable Output<String> end;
+        private @Nullable Output<String> interval;
+        private @Nullable Output<String> start;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
     	      this.start = defaults.start;
         }
 
-        public Builder end(@Nullable Input<String> end) {
+        public Builder end(@Nullable Output<String> end) {
             this.end = end;
             return this;
         }
 
         public Builder end(@Nullable String end) {
-            this.end = Input.ofNullable(end);
+            this.end = Output.ofNullable(end);
             return this;
         }
 
-        public Builder interval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Output<String> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable String interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder start(@Nullable Input<String> start) {
+        public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
 
         public Builder start(@Nullable String start) {
-            this.start = Input.ofNullable(start);
+            this.start = Output.ofNullable(start);
             return this;
         }
         public RangePartitioningRangeArgs build() {

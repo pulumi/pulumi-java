@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.aws.apprunner.inputs.CustomDomainAssociationCertificateValidationRecordGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateValidationRecords")
-      private final @Nullable Input<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
+      private final @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
 
-    public Input<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> getCertificateValidationRecords() {
-        return this.certificateValidationRecords == null ? Input.empty() : this.certificateValidationRecords;
+    public Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> getCertificateValidationRecords() {
+        return this.certificateValidationRecords == null ? Output.empty() : this.certificateValidationRecords;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dnsTarget")
-      private final @Nullable Input<String> dnsTarget;
+      private final @Nullable Output<String> dnsTarget;
 
-    public Input<String> getDnsTarget() {
-        return this.dnsTarget == null ? Input.empty() : this.dnsTarget;
+    public Output<String> getDnsTarget() {
+        return this.dnsTarget == null ? Output.empty() : this.dnsTarget;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enableWwwSubdomain")
-      private final @Nullable Input<Boolean> enableWwwSubdomain;
+      private final @Nullable Output<Boolean> enableWwwSubdomain;
 
-    public Input<Boolean> getEnableWwwSubdomain() {
-        return this.enableWwwSubdomain == null ? Input.empty() : this.enableWwwSubdomain;
+    public Output<Boolean> getEnableWwwSubdomain() {
+        return this.enableWwwSubdomain == null ? Output.empty() : this.enableWwwSubdomain;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serviceArn")
-      private final @Nullable Input<String> serviceArn;
+      private final @Nullable Output<String> serviceArn;
 
-    public Input<String> getServiceArn() {
-        return this.serviceArn == null ? Input.empty() : this.serviceArn;
+    public Output<String> getServiceArn() {
+        return this.serviceArn == null ? Output.empty() : this.serviceArn;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public CustomDomainAssociationState(
-        @Nullable Input<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords,
-        @Nullable Input<String> dnsTarget,
-        @Nullable Input<String> domainName,
-        @Nullable Input<Boolean> enableWwwSubdomain,
-        @Nullable Input<String> serviceArn,
-        @Nullable Input<String> status) {
+        @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords,
+        @Nullable Output<String> dnsTarget,
+        @Nullable Output<String> domainName,
+        @Nullable Output<Boolean> enableWwwSubdomain,
+        @Nullable Output<String> serviceArn,
+        @Nullable Output<String> status) {
         this.certificateValidationRecords = certificateValidationRecords;
         this.dnsTarget = dnsTarget;
         this.domainName = domainName;
@@ -99,12 +99,12 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
     }
 
     private CustomDomainAssociationState() {
-        this.certificateValidationRecords = Input.empty();
-        this.dnsTarget = Input.empty();
-        this.domainName = Input.empty();
-        this.enableWwwSubdomain = Input.empty();
-        this.serviceArn = Input.empty();
-        this.status = Input.empty();
+        this.certificateValidationRecords = Output.empty();
+        this.dnsTarget = Output.empty();
+        this.domainName = Output.empty();
+        this.enableWwwSubdomain = Output.empty();
+        this.serviceArn = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
-        private @Nullable Input<String> dnsTarget;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<Boolean> enableWwwSubdomain;
-        private @Nullable Input<String> serviceArn;
-        private @Nullable Input<String> status;
+        private @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
+        private @Nullable Output<String> dnsTarget;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<Boolean> enableWwwSubdomain;
+        private @Nullable Output<String> serviceArn;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
     	      this.status = defaults.status;
         }
 
-        public Builder certificateValidationRecords(@Nullable Input<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords) {
+        public Builder certificateValidationRecords(@Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords) {
             this.certificateValidationRecords = certificateValidationRecords;
             return this;
         }
 
         public Builder certificateValidationRecords(@Nullable List<CustomDomainAssociationCertificateValidationRecordGetArgs> certificateValidationRecords) {
-            this.certificateValidationRecords = Input.ofNullable(certificateValidationRecords);
+            this.certificateValidationRecords = Output.ofNullable(certificateValidationRecords);
             return this;
         }
 
-        public Builder dnsTarget(@Nullable Input<String> dnsTarget) {
+        public Builder dnsTarget(@Nullable Output<String> dnsTarget) {
             this.dnsTarget = dnsTarget;
             return this;
         }
 
         public Builder dnsTarget(@Nullable String dnsTarget) {
-            this.dnsTarget = Input.ofNullable(dnsTarget);
+            this.dnsTarget = Output.ofNullable(dnsTarget);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder enableWwwSubdomain(@Nullable Input<Boolean> enableWwwSubdomain) {
+        public Builder enableWwwSubdomain(@Nullable Output<Boolean> enableWwwSubdomain) {
             this.enableWwwSubdomain = enableWwwSubdomain;
             return this;
         }
 
         public Builder enableWwwSubdomain(@Nullable Boolean enableWwwSubdomain) {
-            this.enableWwwSubdomain = Input.ofNullable(enableWwwSubdomain);
+            this.enableWwwSubdomain = Output.ofNullable(enableWwwSubdomain);
             return this;
         }
 
-        public Builder serviceArn(@Nullable Input<String> serviceArn) {
+        public Builder serviceArn(@Nullable Output<String> serviceArn) {
             this.serviceArn = serviceArn;
             return this;
         }
 
         public Builder serviceArn(@Nullable String serviceArn) {
-            this.serviceArn = Input.ofNullable(serviceArn);
+            this.serviceArn = Output.ofNullable(serviceArn);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public CustomDomainAssociationState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs exten
      * 
      */
     @InputImport(name="tls")
-      private final @Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls;
+      private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls;
 
-    public Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> getTls() {
-        return this.tls == null ? Input.empty() : this.tls;
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> getTls() {
+        return this.tls == null ? Output.empty() : this.tls;
     }
 
-    public VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs(@Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls) {
+    public VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls) {
         this.tls = tls;
     }
 
     private VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs() {
-        this.tls = Input.empty();
+        this.tls = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls;
+        private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs exten
     	      this.tls = defaults.tls;
         }
 
-        public Builder tls(@Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls) {
+        public Builder tls(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls) {
             this.tls = tls;
             return this;
         }
 
         public Builder tls(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs tls) {
-            this.tls = Input.ofNullable(tls);
+            this.tls = Output.ofNullable(tls);
             return this;
         }
         public VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs build() {

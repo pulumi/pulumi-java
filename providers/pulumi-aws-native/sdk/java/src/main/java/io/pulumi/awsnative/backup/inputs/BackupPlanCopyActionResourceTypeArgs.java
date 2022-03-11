@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.awsnative.backup.inputs.BackupPlanLifecycleResourceTypeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class BackupPlanCopyActionResourceTypeArgs extends io.pulumi.resour
     public static final BackupPlanCopyActionResourceTypeArgs Empty = new BackupPlanCopyActionResourceTypeArgs();
 
     @InputImport(name="destinationBackupVaultArn", required=true)
-      private final Input<String> destinationBackupVaultArn;
+      private final Output<String> destinationBackupVaultArn;
 
-    public Input<String> getDestinationBackupVaultArn() {
+    public Output<String> getDestinationBackupVaultArn() {
         return this.destinationBackupVaultArn;
     }
 
     @InputImport(name="lifecycle")
-      private final @Nullable Input<BackupPlanLifecycleResourceTypeArgs> lifecycle;
+      private final @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
 
-    public Input<BackupPlanLifecycleResourceTypeArgs> getLifecycle() {
-        return this.lifecycle == null ? Input.empty() : this.lifecycle;
+    public Output<BackupPlanLifecycleResourceTypeArgs> getLifecycle() {
+        return this.lifecycle == null ? Output.empty() : this.lifecycle;
     }
 
     public BackupPlanCopyActionResourceTypeArgs(
-        Input<String> destinationBackupVaultArn,
-        @Nullable Input<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
+        Output<String> destinationBackupVaultArn,
+        @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
         this.destinationBackupVaultArn = Objects.requireNonNull(destinationBackupVaultArn, "expected parameter 'destinationBackupVaultArn' to be non-null");
         this.lifecycle = lifecycle;
     }
 
     private BackupPlanCopyActionResourceTypeArgs() {
-        this.destinationBackupVaultArn = Input.empty();
-        this.lifecycle = Input.empty();
+        this.destinationBackupVaultArn = Output.empty();
+        this.lifecycle = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class BackupPlanCopyActionResourceTypeArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> destinationBackupVaultArn;
-        private @Nullable Input<BackupPlanLifecycleResourceTypeArgs> lifecycle;
+        private Output<String> destinationBackupVaultArn;
+        private @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class BackupPlanCopyActionResourceTypeArgs extends io.pulumi.resour
     	      this.lifecycle = defaults.lifecycle;
         }
 
-        public Builder destinationBackupVaultArn(Input<String> destinationBackupVaultArn) {
+        public Builder destinationBackupVaultArn(Output<String> destinationBackupVaultArn) {
             this.destinationBackupVaultArn = Objects.requireNonNull(destinationBackupVaultArn);
             return this;
         }
 
         public Builder destinationBackupVaultArn(String destinationBackupVaultArn) {
-            this.destinationBackupVaultArn = Input.of(Objects.requireNonNull(destinationBackupVaultArn));
+            this.destinationBackupVaultArn = Output.of(Objects.requireNonNull(destinationBackupVaultArn));
             return this;
         }
 
-        public Builder lifecycle(@Nullable Input<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
+        public Builder lifecycle(@Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
         public Builder lifecycle(@Nullable BackupPlanLifecycleResourceTypeArgs lifecycle) {
-            this.lifecycle = Input.ofNullable(lifecycle);
+            this.lifecycle = Output.ofNullable(lifecycle);
             return this;
         }
         public BackupPlanCopyActionResourceTypeArgs build() {

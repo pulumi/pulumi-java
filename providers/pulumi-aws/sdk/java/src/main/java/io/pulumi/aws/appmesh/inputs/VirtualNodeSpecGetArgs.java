@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backendDefaults")
-      private final @Nullable Input<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults;
+      private final @Nullable Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults;
 
-    public Input<VirtualNodeSpecBackendDefaultsGetArgs> getBackendDefaults() {
-        return this.backendDefaults == null ? Input.empty() : this.backendDefaults;
+    public Output<VirtualNodeSpecBackendDefaultsGetArgs> getBackendDefaults() {
+        return this.backendDefaults == null ? Output.empty() : this.backendDefaults;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backends")
-      private final @Nullable Input<List<VirtualNodeSpecBackendGetArgs>> backends;
+      private final @Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends;
 
-    public Input<List<VirtualNodeSpecBackendGetArgs>> getBackends() {
-        return this.backends == null ? Input.empty() : this.backends;
+    public Output<List<VirtualNodeSpecBackendGetArgs>> getBackends() {
+        return this.backends == null ? Output.empty() : this.backends;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="listener")
-      private final @Nullable Input<VirtualNodeSpecListenerGetArgs> listener;
+      private final @Nullable Output<VirtualNodeSpecListenerGetArgs> listener;
 
-    public Input<VirtualNodeSpecListenerGetArgs> getListener() {
-        return this.listener == null ? Input.empty() : this.listener;
+    public Output<VirtualNodeSpecListenerGetArgs> getListener() {
+        return this.listener == null ? Output.empty() : this.listener;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logging")
-      private final @Nullable Input<VirtualNodeSpecLoggingGetArgs> logging;
+      private final @Nullable Output<VirtualNodeSpecLoggingGetArgs> logging;
 
-    public Input<VirtualNodeSpecLoggingGetArgs> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<VirtualNodeSpecLoggingGetArgs> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceDiscovery")
-      private final @Nullable Input<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery;
+      private final @Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery;
 
-    public Input<VirtualNodeSpecServiceDiscoveryGetArgs> getServiceDiscovery() {
-        return this.serviceDiscovery == null ? Input.empty() : this.serviceDiscovery;
+    public Output<VirtualNodeSpecServiceDiscoveryGetArgs> getServiceDiscovery() {
+        return this.serviceDiscovery == null ? Output.empty() : this.serviceDiscovery;
     }
 
     public VirtualNodeSpecGetArgs(
-        @Nullable Input<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults,
-        @Nullable Input<List<VirtualNodeSpecBackendGetArgs>> backends,
-        @Nullable Input<VirtualNodeSpecListenerGetArgs> listener,
-        @Nullable Input<VirtualNodeSpecLoggingGetArgs> logging,
-        @Nullable Input<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery) {
+        @Nullable Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults,
+        @Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends,
+        @Nullable Output<VirtualNodeSpecListenerGetArgs> listener,
+        @Nullable Output<VirtualNodeSpecLoggingGetArgs> logging,
+        @Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery) {
         this.backendDefaults = backendDefaults;
         this.backends = backends;
         this.listener = listener;
@@ -88,11 +88,11 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VirtualNodeSpecGetArgs() {
-        this.backendDefaults = Input.empty();
-        this.backends = Input.empty();
-        this.listener = Input.empty();
-        this.logging = Input.empty();
-        this.serviceDiscovery = Input.empty();
+        this.backendDefaults = Output.empty();
+        this.backends = Output.empty();
+        this.listener = Output.empty();
+        this.logging = Output.empty();
+        this.serviceDiscovery = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults;
-        private @Nullable Input<List<VirtualNodeSpecBackendGetArgs>> backends;
-        private @Nullable Input<VirtualNodeSpecListenerGetArgs> listener;
-        private @Nullable Input<VirtualNodeSpecLoggingGetArgs> logging;
-        private @Nullable Input<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery;
+        private @Nullable Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults;
+        private @Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends;
+        private @Nullable Output<VirtualNodeSpecListenerGetArgs> listener;
+        private @Nullable Output<VirtualNodeSpecLoggingGetArgs> logging;
+        private @Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
     	      this.serviceDiscovery = defaults.serviceDiscovery;
         }
 
-        public Builder backendDefaults(@Nullable Input<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults) {
+        public Builder backendDefaults(@Nullable Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults) {
             this.backendDefaults = backendDefaults;
             return this;
         }
 
         public Builder backendDefaults(@Nullable VirtualNodeSpecBackendDefaultsGetArgs backendDefaults) {
-            this.backendDefaults = Input.ofNullable(backendDefaults);
+            this.backendDefaults = Output.ofNullable(backendDefaults);
             return this;
         }
 
-        public Builder backends(@Nullable Input<List<VirtualNodeSpecBackendGetArgs>> backends) {
+        public Builder backends(@Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends) {
             this.backends = backends;
             return this;
         }
 
         public Builder backends(@Nullable List<VirtualNodeSpecBackendGetArgs> backends) {
-            this.backends = Input.ofNullable(backends);
+            this.backends = Output.ofNullable(backends);
             return this;
         }
 
-        public Builder listener(@Nullable Input<VirtualNodeSpecListenerGetArgs> listener) {
+        public Builder listener(@Nullable Output<VirtualNodeSpecListenerGetArgs> listener) {
             this.listener = listener;
             return this;
         }
 
         public Builder listener(@Nullable VirtualNodeSpecListenerGetArgs listener) {
-            this.listener = Input.ofNullable(listener);
+            this.listener = Output.ofNullable(listener);
             return this;
         }
 
-        public Builder logging(@Nullable Input<VirtualNodeSpecLoggingGetArgs> logging) {
+        public Builder logging(@Nullable Output<VirtualNodeSpecLoggingGetArgs> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable VirtualNodeSpecLoggingGetArgs logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
 
-        public Builder serviceDiscovery(@Nullable Input<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery) {
+        public Builder serviceDiscovery(@Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery) {
             this.serviceDiscovery = serviceDiscovery;
             return this;
         }
 
         public Builder serviceDiscovery(@Nullable VirtualNodeSpecServiceDiscoveryGetArgs serviceDiscovery) {
-            this.serviceDiscovery = Input.ofNullable(serviceDiscovery);
+            this.serviceDiscovery = Output.ofNullable(serviceDiscovery);
             return this;
         }
         public VirtualNodeSpecGetArgs build() {

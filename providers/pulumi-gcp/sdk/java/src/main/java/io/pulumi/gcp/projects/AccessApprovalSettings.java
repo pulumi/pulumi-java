@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.projects;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,14 +184,14 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessApprovalSettings(String name, AccessApprovalSettingsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/accessApprovalSettings:AccessApprovalSettings", name, args == null ? AccessApprovalSettingsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:projects/accessApprovalSettings:AccessApprovalSettings", name, args == null ? AccessApprovalSettingsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AccessApprovalSettings(String name, Input<String> id, @Nullable AccessApprovalSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AccessApprovalSettings(String name, Output<String> id, @Nullable AccessApprovalSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:projects/accessApprovalSettings:AccessApprovalSettings", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -208,7 +207,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AccessApprovalSettings get(String name, Input<String> id, @Nullable AccessApprovalSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AccessApprovalSettings get(String name, Output<String> id, @Nullable AccessApprovalSettingsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessApprovalSettings(name, id, state, options);
     }
 }

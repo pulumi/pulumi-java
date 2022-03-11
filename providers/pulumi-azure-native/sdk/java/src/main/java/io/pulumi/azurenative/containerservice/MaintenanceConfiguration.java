@@ -9,7 +9,6 @@ import io.pulumi.azurenative.containerservice.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeInWeekResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeSpanResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -143,26 +142,26 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public MaintenanceConfiguration(String name, MaintenanceConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerservice:MaintenanceConfiguration", name, args == null ? MaintenanceConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:containerservice:MaintenanceConfiguration", name, args == null ? MaintenanceConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MaintenanceConfiguration(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MaintenanceConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerservice:MaintenanceConfiguration", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20201201:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210201:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210301:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210501:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210701:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210801:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210901:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20211001:MaintenanceConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20211101preview:MaintenanceConfiguration").build())
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20201201:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210201:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210301:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210501:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210701:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210801:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210901:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20211001:MaintenanceConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20211101preview:MaintenanceConfiguration").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -176,7 +175,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MaintenanceConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MaintenanceConfiguration get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MaintenanceConfiguration(name, id, options);
     }
 }

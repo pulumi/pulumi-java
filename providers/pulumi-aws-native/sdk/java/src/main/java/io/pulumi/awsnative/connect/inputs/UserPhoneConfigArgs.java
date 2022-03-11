@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.awsnative.connect.enums.UserPhoneType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,38 +22,38 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
     public static final UserPhoneConfigArgs Empty = new UserPhoneConfigArgs();
 
     @InputImport(name="afterContactWorkTimeLimit")
-      private final @Nullable Input<Integer> afterContactWorkTimeLimit;
+      private final @Nullable Output<Integer> afterContactWorkTimeLimit;
 
-    public Input<Integer> getAfterContactWorkTimeLimit() {
-        return this.afterContactWorkTimeLimit == null ? Input.empty() : this.afterContactWorkTimeLimit;
+    public Output<Integer> getAfterContactWorkTimeLimit() {
+        return this.afterContactWorkTimeLimit == null ? Output.empty() : this.afterContactWorkTimeLimit;
     }
 
     @InputImport(name="autoAccept")
-      private final @Nullable Input<Boolean> autoAccept;
+      private final @Nullable Output<Boolean> autoAccept;
 
-    public Input<Boolean> getAutoAccept() {
-        return this.autoAccept == null ? Input.empty() : this.autoAccept;
+    public Output<Boolean> getAutoAccept() {
+        return this.autoAccept == null ? Output.empty() : this.autoAccept;
     }
 
     @InputImport(name="deskPhoneNumber")
-      private final @Nullable Input<String> deskPhoneNumber;
+      private final @Nullable Output<String> deskPhoneNumber;
 
-    public Input<String> getDeskPhoneNumber() {
-        return this.deskPhoneNumber == null ? Input.empty() : this.deskPhoneNumber;
+    public Output<String> getDeskPhoneNumber() {
+        return this.deskPhoneNumber == null ? Output.empty() : this.deskPhoneNumber;
     }
 
     @InputImport(name="phoneType", required=true)
-      private final Input<UserPhoneType> phoneType;
+      private final Output<UserPhoneType> phoneType;
 
-    public Input<UserPhoneType> getPhoneType() {
+    public Output<UserPhoneType> getPhoneType() {
         return this.phoneType;
     }
 
     public UserPhoneConfigArgs(
-        @Nullable Input<Integer> afterContactWorkTimeLimit,
-        @Nullable Input<Boolean> autoAccept,
-        @Nullable Input<String> deskPhoneNumber,
-        Input<UserPhoneType> phoneType) {
+        @Nullable Output<Integer> afterContactWorkTimeLimit,
+        @Nullable Output<Boolean> autoAccept,
+        @Nullable Output<String> deskPhoneNumber,
+        Output<UserPhoneType> phoneType) {
         this.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
         this.autoAccept = autoAccept;
         this.deskPhoneNumber = deskPhoneNumber;
@@ -61,10 +61,10 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UserPhoneConfigArgs() {
-        this.afterContactWorkTimeLimit = Input.empty();
-        this.autoAccept = Input.empty();
-        this.deskPhoneNumber = Input.empty();
-        this.phoneType = Input.empty();
+        this.afterContactWorkTimeLimit = Output.empty();
+        this.autoAccept = Output.empty();
+        this.deskPhoneNumber = Output.empty();
+        this.phoneType = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,10 +76,10 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> afterContactWorkTimeLimit;
-        private @Nullable Input<Boolean> autoAccept;
-        private @Nullable Input<String> deskPhoneNumber;
-        private Input<UserPhoneType> phoneType;
+        private @Nullable Output<Integer> afterContactWorkTimeLimit;
+        private @Nullable Output<Boolean> autoAccept;
+        private @Nullable Output<String> deskPhoneNumber;
+        private Output<UserPhoneType> phoneType;
 
         public Builder() {
     	      // Empty
@@ -93,43 +93,43 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.phoneType = defaults.phoneType;
         }
 
-        public Builder afterContactWorkTimeLimit(@Nullable Input<Integer> afterContactWorkTimeLimit) {
+        public Builder afterContactWorkTimeLimit(@Nullable Output<Integer> afterContactWorkTimeLimit) {
             this.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
             return this;
         }
 
         public Builder afterContactWorkTimeLimit(@Nullable Integer afterContactWorkTimeLimit) {
-            this.afterContactWorkTimeLimit = Input.ofNullable(afterContactWorkTimeLimit);
+            this.afterContactWorkTimeLimit = Output.ofNullable(afterContactWorkTimeLimit);
             return this;
         }
 
-        public Builder autoAccept(@Nullable Input<Boolean> autoAccept) {
+        public Builder autoAccept(@Nullable Output<Boolean> autoAccept) {
             this.autoAccept = autoAccept;
             return this;
         }
 
         public Builder autoAccept(@Nullable Boolean autoAccept) {
-            this.autoAccept = Input.ofNullable(autoAccept);
+            this.autoAccept = Output.ofNullable(autoAccept);
             return this;
         }
 
-        public Builder deskPhoneNumber(@Nullable Input<String> deskPhoneNumber) {
+        public Builder deskPhoneNumber(@Nullable Output<String> deskPhoneNumber) {
             this.deskPhoneNumber = deskPhoneNumber;
             return this;
         }
 
         public Builder deskPhoneNumber(@Nullable String deskPhoneNumber) {
-            this.deskPhoneNumber = Input.ofNullable(deskPhoneNumber);
+            this.deskPhoneNumber = Output.ofNullable(deskPhoneNumber);
             return this;
         }
 
-        public Builder phoneType(Input<UserPhoneType> phoneType) {
+        public Builder phoneType(Output<UserPhoneType> phoneType) {
             this.phoneType = Objects.requireNonNull(phoneType);
             return this;
         }
 
         public Builder phoneType(UserPhoneType phoneType) {
-            this.phoneType = Input.of(Objects.requireNonNull(phoneType));
+            this.phoneType = Output.of(Objects.requireNonNull(phoneType));
             return this;
         }
         public UserPhoneConfigArgs build() {

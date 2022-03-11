@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class DistributionGeoRestrictionArgs extends io.pulumi.resources.Re
     public static final DistributionGeoRestrictionArgs Empty = new DistributionGeoRestrictionArgs();
 
     @InputImport(name="locations")
-      private final @Nullable Input<List<String>> locations;
+      private final @Nullable Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
-        return this.locations == null ? Input.empty() : this.locations;
+    public Output<List<String>> getLocations() {
+        return this.locations == null ? Output.empty() : this.locations;
     }
 
     @InputImport(name="restrictionType", required=true)
-      private final Input<String> restrictionType;
+      private final Output<String> restrictionType;
 
-    public Input<String> getRestrictionType() {
+    public Output<String> getRestrictionType() {
         return this.restrictionType;
     }
 
     public DistributionGeoRestrictionArgs(
-        @Nullable Input<List<String>> locations,
-        Input<String> restrictionType) {
+        @Nullable Output<List<String>> locations,
+        Output<String> restrictionType) {
         this.locations = locations;
         this.restrictionType = Objects.requireNonNull(restrictionType, "expected parameter 'restrictionType' to be non-null");
     }
 
     private DistributionGeoRestrictionArgs() {
-        this.locations = Input.empty();
-        this.restrictionType = Input.empty();
+        this.locations = Output.empty();
+        this.restrictionType = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DistributionGeoRestrictionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> locations;
-        private Input<String> restrictionType;
+        private @Nullable Output<List<String>> locations;
+        private Output<String> restrictionType;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DistributionGeoRestrictionArgs extends io.pulumi.resources.Re
     	      this.restrictionType = defaults.restrictionType;
         }
 
-        public Builder locations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Input.ofNullable(locations);
+            this.locations = Output.ofNullable(locations);
             return this;
         }
 
-        public Builder restrictionType(Input<String> restrictionType) {
+        public Builder restrictionType(Output<String> restrictionType) {
             this.restrictionType = Objects.requireNonNull(restrictionType);
             return this;
         }
 
         public Builder restrictionType(String restrictionType) {
-            this.restrictionType = Input.of(Objects.requireNonNull(restrictionType));
+            this.restrictionType = Output.of(Objects.requireNonNull(restrictionType));
             return this;
         }
         public DistributionGeoRestrictionArgs build() {

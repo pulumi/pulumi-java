@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedBy")
-      private final @Nullable Input<String> managedBy;
+      private final @Nullable Output<String> managedBy;
 
-    public Input<String> getManagedBy() {
-        return this.managedBy == null ? Input.empty() : this.managedBy;
+    public Output<String> getManagedBy() {
+        return this.managedBy == null ? Output.empty() : this.managedBy;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName")
-      private final @Nullable Input<String> resourceGroupName;
+      private final @Nullable Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
-        return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
+    public Output<String> getResourceGroupName() {
+        return this.resourceGroupName == null ? Output.empty() : this.resourceGroupName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ResourceGroupArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> managedBy,
-        @Nullable Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> managedBy,
+        @Nullable Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.managedBy = managedBy;
         this.resourceGroupName = resourceGroupName;
@@ -71,10 +71,10 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceGroupArgs() {
-        this.location = Input.empty();
-        this.managedBy = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.managedBy = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managedBy;
-        private @Nullable Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managedBy;
+        private @Nullable Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
         public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Input.ofNullable(managedBy);
+            this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
 
-        public Builder resourceGroupName(@Nullable Input<String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = Input.ofNullable(resourceGroupName);
+            this.resourceGroupName = Output.ofNullable(resourceGroupName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ResourceGroupArgs build() {

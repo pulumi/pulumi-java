@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteV2Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="attachedConnections")
-      private final @Nullable Input<List<String>> attachedConnections;
+      private final @Nullable Output<List<String>> attachedConnections;
 
-    public Input<List<String>> getAttachedConnections() {
-        return this.attachedConnections == null ? Input.empty() : this.attachedConnections;
+    public Output<List<String>> getAttachedConnections() {
+        return this.attachedConnections == null ? Output.empty() : this.attachedConnections;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,10 +65,10 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="routeTableName")
-      private final @Nullable Input<String> routeTableName;
+      private final @Nullable Output<String> routeTableName;
 
-    public Input<String> getRouteTableName() {
-        return this.routeTableName == null ? Input.empty() : this.routeTableName;
+    public Output<String> getRouteTableName() {
+        return this.routeTableName == null ? Output.empty() : this.routeTableName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="routes")
-      private final @Nullable Input<List<VirtualHubRouteV2Args>> routes;
+      private final @Nullable Output<List<VirtualHubRouteV2Args>> routes;
 
-    public Input<List<VirtualHubRouteV2Args>> getRoutes() {
-        return this.routes == null ? Input.empty() : this.routes;
+    public Output<List<VirtualHubRouteV2Args>> getRoutes() {
+        return this.routes == null ? Output.empty() : this.routes;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-      private final Input<String> virtualHubName;
+      private final Output<String> virtualHubName;
 
-    public Input<String> getVirtualHubName() {
+    public Output<String> getVirtualHubName() {
         return this.virtualHubName;
     }
 
     public VirtualHubRouteTableV2Args(
-        @Nullable Input<List<String>> attachedConnections,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> routeTableName,
-        @Nullable Input<List<VirtualHubRouteV2Args>> routes,
-        Input<String> virtualHubName) {
+        @Nullable Output<List<String>> attachedConnections,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> routeTableName,
+        @Nullable Output<List<VirtualHubRouteV2Args>> routes,
+        Output<String> virtualHubName) {
         this.attachedConnections = attachedConnections;
         this.id = id;
         this.name = name;
@@ -111,13 +111,13 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     }
 
     private VirtualHubRouteTableV2Args() {
-        this.attachedConnections = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.routeTableName = Input.empty();
-        this.routes = Input.empty();
-        this.virtualHubName = Input.empty();
+        this.attachedConnections = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.routeTableName = Output.empty();
+        this.routes = Output.empty();
+        this.virtualHubName = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> attachedConnections;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> routeTableName;
-        private @Nullable Input<List<VirtualHubRouteV2Args>> routes;
-        private Input<String> virtualHubName;
+        private @Nullable Output<List<String>> attachedConnections;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> routeTableName;
+        private @Nullable Output<List<VirtualHubRouteV2Args>> routes;
+        private Output<String> virtualHubName;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
     	      this.virtualHubName = defaults.virtualHubName;
         }
 
-        public Builder attachedConnections(@Nullable Input<List<String>> attachedConnections) {
+        public Builder attachedConnections(@Nullable Output<List<String>> attachedConnections) {
             this.attachedConnections = attachedConnections;
             return this;
         }
 
         public Builder attachedConnections(@Nullable List<String> attachedConnections) {
-            this.attachedConnections = Input.ofNullable(attachedConnections);
+            this.attachedConnections = Output.ofNullable(attachedConnections);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder routeTableName(@Nullable Input<String> routeTableName) {
+        public Builder routeTableName(@Nullable Output<String> routeTableName) {
             this.routeTableName = routeTableName;
             return this;
         }
 
         public Builder routeTableName(@Nullable String routeTableName) {
-            this.routeTableName = Input.ofNullable(routeTableName);
+            this.routeTableName = Output.ofNullable(routeTableName);
             return this;
         }
 
-        public Builder routes(@Nullable Input<List<VirtualHubRouteV2Args>> routes) {
+        public Builder routes(@Nullable Output<List<VirtualHubRouteV2Args>> routes) {
             this.routes = routes;
             return this;
         }
 
         public Builder routes(@Nullable List<VirtualHubRouteV2Args> routes) {
-            this.routes = Input.ofNullable(routes);
+            this.routes = Output.ofNullable(routes);
             return this;
         }
 
-        public Builder virtualHubName(Input<String> virtualHubName) {
+        public Builder virtualHubName(Output<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
 
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Input.of(Objects.requireNonNull(virtualHubName));
+            this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
             return this;
         }
         public VirtualHubRouteTableV2Args build() {

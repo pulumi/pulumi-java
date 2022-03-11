@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.enums.SortOptionsSortOrder;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatorName")
-      private final @Nullable Input<String> operatorName;
+      private final @Nullable Output<String> operatorName;
 
-    public Input<String> getOperatorName() {
-        return this.operatorName == null ? Input.empty() : this.operatorName;
+    public Output<String> getOperatorName() {
+        return this.operatorName == null ? Output.empty() : this.operatorName;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sortOrder")
-      private final @Nullable Input<SortOptionsSortOrder> sortOrder;
+      private final @Nullable Output<SortOptionsSortOrder> sortOrder;
 
-    public Input<SortOptionsSortOrder> getSortOrder() {
-        return this.sortOrder == null ? Input.empty() : this.sortOrder;
+    public Output<SortOptionsSortOrder> getSortOrder() {
+        return this.sortOrder == null ? Output.empty() : this.sortOrder;
     }
 
     public SortOptionsArgs(
-        @Nullable Input<String> operatorName,
-        @Nullable Input<SortOptionsSortOrder> sortOrder) {
+        @Nullable Output<String> operatorName,
+        @Nullable Output<SortOptionsSortOrder> sortOrder) {
         this.operatorName = operatorName;
         this.sortOrder = sortOrder;
     }
 
     private SortOptionsArgs() {
-        this.operatorName = Input.empty();
-        this.sortOrder = Input.empty();
+        this.operatorName = Output.empty();
+        this.sortOrder = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> operatorName;
-        private @Nullable Input<SortOptionsSortOrder> sortOrder;
+        private @Nullable Output<String> operatorName;
+        private @Nullable Output<SortOptionsSortOrder> sortOrder;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sortOrder = defaults.sortOrder;
         }
 
-        public Builder operatorName(@Nullable Input<String> operatorName) {
+        public Builder operatorName(@Nullable Output<String> operatorName) {
             this.operatorName = operatorName;
             return this;
         }
 
         public Builder operatorName(@Nullable String operatorName) {
-            this.operatorName = Input.ofNullable(operatorName);
+            this.operatorName = Output.ofNullable(operatorName);
             return this;
         }
 
-        public Builder sortOrder(@Nullable Input<SortOptionsSortOrder> sortOrder) {
+        public Builder sortOrder(@Nullable Output<SortOptionsSortOrder> sortOrder) {
             this.sortOrder = sortOrder;
             return this;
         }
 
         public Builder sortOrder(@Nullable SortOptionsSortOrder sortOrder) {
-            this.sortOrder = Input.ofNullable(sortOrder);
+            this.sortOrder = Output.ofNullable(sortOrder);
             return this;
         }
         public SortOptionsArgs build() {

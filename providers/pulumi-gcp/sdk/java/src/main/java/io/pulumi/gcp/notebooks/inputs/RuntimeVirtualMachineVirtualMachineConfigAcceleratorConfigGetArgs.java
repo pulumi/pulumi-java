@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
      * 
      */
     @InputImport(name="coreCount")
-      private final @Nullable Input<Integer> coreCount;
+      private final @Nullable Output<Integer> coreCount;
 
-    public Input<Integer> getCoreCount() {
-        return this.coreCount == null ? Input.empty() : this.coreCount;
+    public Output<Integer> getCoreCount() {
+        return this.coreCount == null ? Output.empty() : this.coreCount;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs(
-        @Nullable Input<Integer> coreCount,
-        @Nullable Input<String> type) {
+        @Nullable Output<Integer> coreCount,
+        @Nullable Output<String> type) {
         this.coreCount = coreCount;
         this.type = type;
     }
 
     private RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs() {
-        this.coreCount = Input.empty();
-        this.type = Input.empty();
+        this.coreCount = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> coreCount;
-        private @Nullable Input<String> type;
+        private @Nullable Output<Integer> coreCount;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
     	      this.type = defaults.type;
         }
 
-        public Builder coreCount(@Nullable Input<Integer> coreCount) {
+        public Builder coreCount(@Nullable Output<Integer> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
         public Builder coreCount(@Nullable Integer coreCount) {
-            this.coreCount = Input.ofNullable(coreCount);
+            this.coreCount = Output.ofNullable(coreCount);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs build() {

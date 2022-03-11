@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMa
      * 
      */
     @InputImport(name="fieldToMatch")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs> getFieldToMatch() {
+        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMa
      * 
      */
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
+      private final Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
 
-    public Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementArgs(
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch,
-        Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs>> textTransformations) {
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch,
+        Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs>> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
     }
 
     private WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementArgs() {
-        this.fieldToMatch = Input.empty();
-        this.textTransformations = Input.empty();
+        this.fieldToMatch = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMa
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
-        private Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
+        private Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMa
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder fieldToMatch(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
 
         public Builder fieldToMatch(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Input.ofNullable(fieldToMatch);
+            this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
 
-        public Builder textTransformations(Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementTextTransformationArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public WebAclRuleStatementRateBasedStatementScopeDownStatementSqliMatchStatementArgs build() {

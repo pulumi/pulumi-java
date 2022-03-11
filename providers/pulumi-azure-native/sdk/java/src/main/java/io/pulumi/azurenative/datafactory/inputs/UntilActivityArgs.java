@@ -43,7 +43,7 @@ import io.pulumi.azurenative.datafactory.inputs.ValidationActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -65,9 +65,9 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activities", required=true)
-      private final Input<List<Object>> activities;
+      private final Output<List<Object>> activities;
 
-    public Input<List<Object>> getActivities() {
+    public Output<List<Object>> getActivities() {
         return this.activities;
     }
 
@@ -76,10 +76,10 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -98,9 +98,9 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-      private final Input<ExpressionArgs> expression;
+      private final Output<ExpressionArgs> expression;
 
-    public Input<ExpressionArgs> getExpression() {
+    public Output<ExpressionArgs> getExpression() {
         return this.expression;
     }
 
@@ -109,9 +109,9 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -120,10 +120,10 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Object> timeout;
+      private final @Nullable Output<Object> timeout;
 
-    public Input<Object> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Object> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -132,9 +132,9 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -143,21 +143,21 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public UntilActivityArgs(
-        Input<List<Object>> activities,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        Input<ExpressionArgs> expression,
-        Input<String> name,
-        @Nullable Input<Object> timeout,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        Output<List<Object>> activities,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        Output<ExpressionArgs> expression,
+        Output<String> name,
+        @Nullable Output<Object> timeout,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.activities = Objects.requireNonNull(activities, "expected parameter 'activities' to be non-null");
         this.dependsOn = dependsOn;
         this.description = description;
@@ -169,14 +169,14 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UntilActivityArgs() {
-        this.activities = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.expression = Input.empty();
-        this.name = Input.empty();
-        this.timeout = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.activities = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.expression = Output.empty();
+        this.name = Output.empty();
+        this.timeout = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,14 +188,14 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<Object>> activities;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private Input<ExpressionArgs> expression;
-        private Input<String> name;
-        private @Nullable Input<Object> timeout;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private Output<List<Object>> activities;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private Output<ExpressionArgs> expression;
+        private Output<String> name;
+        private @Nullable Output<Object> timeout;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -213,83 +213,83 @@ public final class UntilActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder activities(Input<List<Object>> activities) {
+        public Builder activities(Output<List<Object>> activities) {
             this.activities = Objects.requireNonNull(activities);
             return this;
         }
 
         public Builder activities(List<Object> activities) {
-            this.activities = Input.of(Objects.requireNonNull(activities));
+            this.activities = Output.of(Objects.requireNonNull(activities));
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expression(Input<ExpressionArgs> expression) {
+        public Builder expression(Output<ExpressionArgs> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(ExpressionArgs expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Object> timeout) {
+        public Builder timeout(@Nullable Output<Object> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Object timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public UntilActivityArgs build() {

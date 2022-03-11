@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="certificateThumbprint")
-      private final @Nullable Input<String> certificateThumbprint;
+      private final @Nullable Output<String> certificateThumbprint;
 
-    public Input<String> getCertificateThumbprint() {
-        return this.certificateThumbprint == null ? Input.empty() : this.certificateThumbprint;
+    public Output<String> getCertificateThumbprint() {
+        return this.certificateThumbprint == null ? Output.empty() : this.certificateThumbprint;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Object> value;
+      private final @Nullable Output<Object> value;
 
-    public Input<Object> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Object> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public WebServiceParameterArgs(
-        @Nullable Input<String> certificateThumbprint,
-        @Nullable Input<Object> value) {
+        @Nullable Output<String> certificateThumbprint,
+        @Nullable Output<Object> value) {
         this.certificateThumbprint = certificateThumbprint;
         this.value = value;
     }
 
     private WebServiceParameterArgs() {
-        this.certificateThumbprint = Input.empty();
-        this.value = Input.empty();
+        this.certificateThumbprint = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateThumbprint;
-        private @Nullable Input<Object> value;
+        private @Nullable Output<String> certificateThumbprint;
+        private @Nullable Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
     	      this.value = defaults.value;
         }
 
-        public Builder certificateThumbprint(@Nullable Input<String> certificateThumbprint) {
+        public Builder certificateThumbprint(@Nullable Output<String> certificateThumbprint) {
             this.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
         public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
-            this.certificateThumbprint = Input.ofNullable(certificateThumbprint);
+            this.certificateThumbprint = Output.ofNullable(certificateThumbprint);
             return this;
         }
 
-        public Builder value(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Output<Object> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Object value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public WebServiceParameterArgs build() {

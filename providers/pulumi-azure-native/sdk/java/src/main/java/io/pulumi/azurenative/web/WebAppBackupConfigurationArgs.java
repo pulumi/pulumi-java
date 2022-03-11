@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.BackupScheduleArgs;
 import io.pulumi.azurenative.web.inputs.DatabaseBackupSettingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="backupName")
-      private final @Nullable Input<String> backupName;
+      private final @Nullable Output<String> backupName;
 
-    public Input<String> getBackupName() {
-        return this.backupName == null ? Input.empty() : this.backupName;
+    public Output<String> getBackupName() {
+        return this.backupName == null ? Output.empty() : this.backupName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="backupSchedule")
-      private final @Nullable Input<BackupScheduleArgs> backupSchedule;
+      private final @Nullable Output<BackupScheduleArgs> backupSchedule;
 
-    public Input<BackupScheduleArgs> getBackupSchedule() {
-        return this.backupSchedule == null ? Input.empty() : this.backupSchedule;
+    public Output<BackupScheduleArgs> getBackupSchedule() {
+        return this.backupSchedule == null ? Output.empty() : this.backupSchedule;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="databases")
-      private final @Nullable Input<List<DatabaseBackupSettingArgs>> databases;
+      private final @Nullable Output<List<DatabaseBackupSettingArgs>> databases;
 
-    public Input<List<DatabaseBackupSettingArgs>> getDatabases() {
-        return this.databases == null ? Input.empty() : this.databases;
+    public Output<List<DatabaseBackupSettingArgs>> getDatabases() {
+        return this.databases == null ? Output.empty() : this.databases;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -89,9 +89,9 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,21 +100,21 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccountUrl", required=true)
-      private final Input<String> storageAccountUrl;
+      private final Output<String> storageAccountUrl;
 
-    public Input<String> getStorageAccountUrl() {
+    public Output<String> getStorageAccountUrl() {
         return this.storageAccountUrl;
     }
 
     public WebAppBackupConfigurationArgs(
-        @Nullable Input<String> backupName,
-        @Nullable Input<BackupScheduleArgs> backupSchedule,
-        @Nullable Input<List<DatabaseBackupSettingArgs>> databases,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> kind,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        Input<String> storageAccountUrl) {
+        @Nullable Output<String> backupName,
+        @Nullable Output<BackupScheduleArgs> backupSchedule,
+        @Nullable Output<List<DatabaseBackupSettingArgs>> databases,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> kind,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        Output<String> storageAccountUrl) {
         this.backupName = backupName;
         this.backupSchedule = backupSchedule;
         this.databases = databases;
@@ -126,14 +126,14 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private WebAppBackupConfigurationArgs() {
-        this.backupName = Input.empty();
-        this.backupSchedule = Input.empty();
-        this.databases = Input.empty();
-        this.enabled = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccountUrl = Input.empty();
+        this.backupName = Output.empty();
+        this.backupSchedule = Output.empty();
+        this.databases = Output.empty();
+        this.enabled = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccountUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backupName;
-        private @Nullable Input<BackupScheduleArgs> backupSchedule;
-        private @Nullable Input<List<DatabaseBackupSettingArgs>> databases;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<String> storageAccountUrl;
+        private @Nullable Output<String> backupName;
+        private @Nullable Output<BackupScheduleArgs> backupSchedule;
+        private @Nullable Output<List<DatabaseBackupSettingArgs>> databases;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<String> storageAccountUrl;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class WebAppBackupConfigurationArgs extends io.pulumi.resources.Res
     	      this.storageAccountUrl = defaults.storageAccountUrl;
         }
 
-        public Builder backupName(@Nullable Input<String> backupName) {
+        public Builder backupName(@Nullable Output<String> backupName) {
             this.backupName = backupName;
             return this;
         }
 
         public Builder backupName(@Nullable String backupName) {
-            this.backupName = Input.ofNullable(backupName);
+            this.backupName = Output.ofNullable(backupName);
             return this;
         }
 
-        public Builder backupSchedule(@Nullable Input<BackupScheduleArgs> backupSchedule) {
+        public Builder backupSchedule(@Nullable Output<BackupScheduleArgs> backupSchedule) {
             this.backupSchedule = backupSchedule;
             return this;
         }
 
         public Builder backupSchedule(@Nullable BackupScheduleArgs backupSchedule) {
-            this.backupSchedule = Input.ofNullable(backupSchedule);
+            this.backupSchedule = Output.ofNullable(backupSchedule);
             return this;
         }
 
-        public Builder databases(@Nullable Input<List<DatabaseBackupSettingArgs>> databases) {
+        public Builder databases(@Nullable Output<List<DatabaseBackupSettingArgs>> databases) {
             this.databases = databases;
             return this;
         }
 
         public Builder databases(@Nullable List<DatabaseBackupSettingArgs> databases) {
-            this.databases = Input.ofNullable(databases);
+            this.databases = Output.ofNullable(databases);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccountUrl(Input<String> storageAccountUrl) {
+        public Builder storageAccountUrl(Output<String> storageAccountUrl) {
             this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
             return this;
         }
 
         public Builder storageAccountUrl(String storageAccountUrl) {
-            this.storageAccountUrl = Input.of(Objects.requireNonNull(storageAccountUrl));
+            this.storageAccountUrl = Output.of(Objects.requireNonNull(storageAccountUrl));
             return this;
         }
         public WebAppBackupConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicedirectory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointId")
-      private final @Nullable Input<String> endpointId;
+      private final @Nullable Output<String> endpointId;
 
-    public Input<String> getEndpointId() {
-        return this.endpointId == null ? Input.empty() : this.endpointId;
+    public Output<String> getEndpointId() {
+        return this.endpointId == null ? Output.empty() : this.endpointId;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public EndpointState(
-        @Nullable Input<String> address,
-        @Nullable Input<String> endpointId,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> service) {
+        @Nullable Output<String> address,
+        @Nullable Output<String> endpointId,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> service) {
         this.address = address;
         this.endpointId = endpointId;
         this.metadata = metadata;
@@ -116,13 +116,13 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointState() {
-        this.address = Input.empty();
-        this.endpointId = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.port = Input.empty();
-        this.service = Input.empty();
+        this.address = Output.empty();
+        this.endpointId = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.port = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<String> endpointId;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> service;
+        private @Nullable Output<String> address;
+        private @Nullable Output<String> endpointId;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder endpointId(@Nullable Input<String> endpointId) {
+        public Builder endpointId(@Nullable Output<String> endpointId) {
             this.endpointId = endpointId;
             return this;
         }
 
         public Builder endpointId(@Nullable String endpointId) {
-            this.endpointId = Input.ofNullable(endpointId);
+            this.endpointId = Output.ofNullable(endpointId);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public EndpointState build() {

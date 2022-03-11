@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="runAsUser")
-      private final @Nullable Input<Integer> runAsUser;
+      private final @Nullable Output<Integer> runAsUser;
 
-    public Input<Integer> getRunAsUser() {
-        return this.runAsUser == null ? Input.empty() : this.runAsUser;
+    public Output<Integer> getRunAsUser() {
+        return this.runAsUser == null ? Output.empty() : this.runAsUser;
     }
 
-    public SecurityContextArgs(@Nullable Input<Integer> runAsUser) {
+    public SecurityContextArgs(@Nullable Output<Integer> runAsUser) {
         this.runAsUser = runAsUser;
     }
 
     private SecurityContextArgs() {
-        this.runAsUser = Input.empty();
+        this.runAsUser = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> runAsUser;
+        private @Nullable Output<Integer> runAsUser;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     	      this.runAsUser = defaults.runAsUser;
         }
 
-        public Builder runAsUser(@Nullable Input<Integer> runAsUser) {
+        public Builder runAsUser(@Nullable Output<Integer> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
         public Builder runAsUser(@Nullable Integer runAsUser) {
-            this.runAsUser = Input.ofNullable(runAsUser);
+            this.runAsUser = Output.ofNullable(runAsUser);
             return this;
         }
         public SecurityContextArgs build() {

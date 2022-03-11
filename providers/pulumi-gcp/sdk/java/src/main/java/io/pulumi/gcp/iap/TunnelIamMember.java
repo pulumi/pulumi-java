@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -171,14 +170,14 @@ public class TunnelIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TunnelIamMember(String name, TunnelIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/tunnelIamMember:TunnelIamMember", name, args == null ? TunnelIamMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:iap/tunnelIamMember:TunnelIamMember", name, args == null ? TunnelIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TunnelIamMember(String name, Input<String> id, @Nullable TunnelIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TunnelIamMember(String name, Output<String> id, @Nullable TunnelIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:iap/tunnelIamMember:TunnelIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -194,7 +193,7 @@ public class TunnelIamMember extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TunnelIamMember get(String name, Input<String> id, @Nullable TunnelIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TunnelIamMember get(String name, Output<String> id, @Nullable TunnelIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TunnelIamMember(name, id, state, options);
     }
 }

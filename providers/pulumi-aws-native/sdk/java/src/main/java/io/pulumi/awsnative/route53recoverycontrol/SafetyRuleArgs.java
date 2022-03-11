@@ -7,7 +7,7 @@ import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleAssertionRule
 import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleGatingRuleArgs;
 import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleRuleConfigArgs;
 import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final SafetyRuleArgs Empty = new SafetyRuleArgs();
 
     @InputImport(name="assertionRule")
-      private final @Nullable Input<SafetyRuleAssertionRuleArgs> assertionRule;
+      private final @Nullable Output<SafetyRuleAssertionRuleArgs> assertionRule;
 
-    public Input<SafetyRuleAssertionRuleArgs> getAssertionRule() {
-        return this.assertionRule == null ? Input.empty() : this.assertionRule;
+    public Output<SafetyRuleAssertionRuleArgs> getAssertionRule() {
+        return this.assertionRule == null ? Output.empty() : this.assertionRule;
     }
 
     /**
@@ -31,31 +31,31 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controlPanelArn")
-      private final @Nullable Input<String> controlPanelArn;
+      private final @Nullable Output<String> controlPanelArn;
 
-    public Input<String> getControlPanelArn() {
-        return this.controlPanelArn == null ? Input.empty() : this.controlPanelArn;
+    public Output<String> getControlPanelArn() {
+        return this.controlPanelArn == null ? Output.empty() : this.controlPanelArn;
     }
 
     @InputImport(name="gatingRule")
-      private final @Nullable Input<SafetyRuleGatingRuleArgs> gatingRule;
+      private final @Nullable Output<SafetyRuleGatingRuleArgs> gatingRule;
 
-    public Input<SafetyRuleGatingRuleArgs> getGatingRule() {
-        return this.gatingRule == null ? Input.empty() : this.gatingRule;
+    public Output<SafetyRuleGatingRuleArgs> getGatingRule() {
+        return this.gatingRule == null ? Output.empty() : this.gatingRule;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="ruleConfig")
-      private final @Nullable Input<SafetyRuleRuleConfigArgs> ruleConfig;
+      private final @Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig;
 
-    public Input<SafetyRuleRuleConfigArgs> getRuleConfig() {
-        return this.ruleConfig == null ? Input.empty() : this.ruleConfig;
+    public Output<SafetyRuleRuleConfigArgs> getRuleConfig() {
+        return this.ruleConfig == null ? Output.empty() : this.ruleConfig;
     }
 
     /**
@@ -63,19 +63,19 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<SafetyRuleTagArgs>> tags;
+      private final @Nullable Output<List<SafetyRuleTagArgs>> tags;
 
-    public Input<List<SafetyRuleTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<SafetyRuleTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SafetyRuleArgs(
-        @Nullable Input<SafetyRuleAssertionRuleArgs> assertionRule,
-        @Nullable Input<String> controlPanelArn,
-        @Nullable Input<SafetyRuleGatingRuleArgs> gatingRule,
-        @Nullable Input<String> name,
-        @Nullable Input<SafetyRuleRuleConfigArgs> ruleConfig,
-        @Nullable Input<List<SafetyRuleTagArgs>> tags) {
+        @Nullable Output<SafetyRuleAssertionRuleArgs> assertionRule,
+        @Nullable Output<String> controlPanelArn,
+        @Nullable Output<SafetyRuleGatingRuleArgs> gatingRule,
+        @Nullable Output<String> name,
+        @Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig,
+        @Nullable Output<List<SafetyRuleTagArgs>> tags) {
         this.assertionRule = assertionRule;
         this.controlPanelArn = controlPanelArn;
         this.gatingRule = gatingRule;
@@ -85,12 +85,12 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SafetyRuleArgs() {
-        this.assertionRule = Input.empty();
-        this.controlPanelArn = Input.empty();
-        this.gatingRule = Input.empty();
-        this.name = Input.empty();
-        this.ruleConfig = Input.empty();
-        this.tags = Input.empty();
+        this.assertionRule = Output.empty();
+        this.controlPanelArn = Output.empty();
+        this.gatingRule = Output.empty();
+        this.name = Output.empty();
+        this.ruleConfig = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,12 +102,12 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SafetyRuleAssertionRuleArgs> assertionRule;
-        private @Nullable Input<String> controlPanelArn;
-        private @Nullable Input<SafetyRuleGatingRuleArgs> gatingRule;
-        private @Nullable Input<String> name;
-        private @Nullable Input<SafetyRuleRuleConfigArgs> ruleConfig;
-        private @Nullable Input<List<SafetyRuleTagArgs>> tags;
+        private @Nullable Output<SafetyRuleAssertionRuleArgs> assertionRule;
+        private @Nullable Output<String> controlPanelArn;
+        private @Nullable Output<SafetyRuleGatingRuleArgs> gatingRule;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig;
+        private @Nullable Output<List<SafetyRuleTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -123,63 +123,63 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder assertionRule(@Nullable Input<SafetyRuleAssertionRuleArgs> assertionRule) {
+        public Builder assertionRule(@Nullable Output<SafetyRuleAssertionRuleArgs> assertionRule) {
             this.assertionRule = assertionRule;
             return this;
         }
 
         public Builder assertionRule(@Nullable SafetyRuleAssertionRuleArgs assertionRule) {
-            this.assertionRule = Input.ofNullable(assertionRule);
+            this.assertionRule = Output.ofNullable(assertionRule);
             return this;
         }
 
-        public Builder controlPanelArn(@Nullable Input<String> controlPanelArn) {
+        public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
             this.controlPanelArn = controlPanelArn;
             return this;
         }
 
         public Builder controlPanelArn(@Nullable String controlPanelArn) {
-            this.controlPanelArn = Input.ofNullable(controlPanelArn);
+            this.controlPanelArn = Output.ofNullable(controlPanelArn);
             return this;
         }
 
-        public Builder gatingRule(@Nullable Input<SafetyRuleGatingRuleArgs> gatingRule) {
+        public Builder gatingRule(@Nullable Output<SafetyRuleGatingRuleArgs> gatingRule) {
             this.gatingRule = gatingRule;
             return this;
         }
 
         public Builder gatingRule(@Nullable SafetyRuleGatingRuleArgs gatingRule) {
-            this.gatingRule = Input.ofNullable(gatingRule);
+            this.gatingRule = Output.ofNullable(gatingRule);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ruleConfig(@Nullable Input<SafetyRuleRuleConfigArgs> ruleConfig) {
+        public Builder ruleConfig(@Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig) {
             this.ruleConfig = ruleConfig;
             return this;
         }
 
         public Builder ruleConfig(@Nullable SafetyRuleRuleConfigArgs ruleConfig) {
-            this.ruleConfig = Input.ofNullable(ruleConfig);
+            this.ruleConfig = Output.ofNullable(ruleConfig);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<SafetyRuleTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<SafetyRuleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<SafetyRuleTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SafetyRuleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class DataSourceAclConfigurationArgs extends io.pulumi.resources.Re
     public static final DataSourceAclConfigurationArgs Empty = new DataSourceAclConfigurationArgs();
 
     @InputImport(name="allowedGroupsColumnName", required=true)
-      private final Input<String> allowedGroupsColumnName;
+      private final Output<String> allowedGroupsColumnName;
 
-    public Input<String> getAllowedGroupsColumnName() {
+    public Output<String> getAllowedGroupsColumnName() {
         return this.allowedGroupsColumnName;
     }
 
-    public DataSourceAclConfigurationArgs(Input<String> allowedGroupsColumnName) {
+    public DataSourceAclConfigurationArgs(Output<String> allowedGroupsColumnName) {
         this.allowedGroupsColumnName = Objects.requireNonNull(allowedGroupsColumnName, "expected parameter 'allowedGroupsColumnName' to be non-null");
     }
 
     private DataSourceAclConfigurationArgs() {
-        this.allowedGroupsColumnName = Input.empty();
+        this.allowedGroupsColumnName = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class DataSourceAclConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> allowedGroupsColumnName;
+        private Output<String> allowedGroupsColumnName;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class DataSourceAclConfigurationArgs extends io.pulumi.resources.Re
     	      this.allowedGroupsColumnName = defaults.allowedGroupsColumnName;
         }
 
-        public Builder allowedGroupsColumnName(Input<String> allowedGroupsColumnName) {
+        public Builder allowedGroupsColumnName(Output<String> allowedGroupsColumnName) {
             this.allowedGroupsColumnName = Objects.requireNonNull(allowedGroupsColumnName);
             return this;
         }
 
         public Builder allowedGroupsColumnName(String allowedGroupsColumnName) {
-            this.allowedGroupsColumnName = Input.of(Objects.requireNonNull(allowedGroupsColumnName));
+            this.allowedGroupsColumnName = Output.of(Objects.requireNonNull(allowedGroupsColumnName));
             return this;
         }
         public DataSourceAclConfigurationArgs build() {

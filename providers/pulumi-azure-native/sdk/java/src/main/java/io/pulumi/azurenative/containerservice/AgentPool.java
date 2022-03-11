@@ -10,7 +10,6 @@ import io.pulumi.azurenative.containerservice.outputs.KubeletConfigResponse;
 import io.pulumi.azurenative.containerservice.outputs.LinuxOSConfigResponse;
 import io.pulumi.azurenative.containerservice.outputs.PowerStateResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -582,40 +581,40 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AgentPool(String name, AgentPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerservice:AgentPool", name, args == null ? AgentPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:containerservice:AgentPool", name, args == null ? AgentPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AgentPool(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AgentPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerservice:AgentPool", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20190201:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20190401:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20190601:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20190801:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20191001:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20191101:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20200101:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20200201:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20200301:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20200401:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20200601:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20200701:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20200901:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20201101:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20201201:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210201:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210301:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210501:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210701:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210801:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20210901:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20211001:AgentPool").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20211101preview:AgentPool").build())
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20190201:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20190401:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20190601:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20190801:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20191001:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20191101:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20200101:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20200201:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20200301:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20200401:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20200601:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20200701:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20200901:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20201101:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20201201:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210201:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210301:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210501:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210701:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210801:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20210901:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20211001:AgentPool").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20211101preview:AgentPool").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -629,7 +628,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AgentPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AgentPool get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AgentPool(name, id, options);
     }
 }

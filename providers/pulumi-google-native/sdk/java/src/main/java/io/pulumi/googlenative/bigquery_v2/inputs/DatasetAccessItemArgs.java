@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessEntryArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.RoutineReferenceArgs;
@@ -22,10 +22,10 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataset")
-      private final @Nullable Input<DatasetAccessEntryArgs> dataset;
+      private final @Nullable Output<DatasetAccessEntryArgs> dataset;
 
-    public Input<DatasetAccessEntryArgs> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<DatasetAccessEntryArgs> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="groupByEmail")
-      private final @Nullable Input<String> groupByEmail;
+      private final @Nullable Output<String> groupByEmail;
 
-    public Input<String> getGroupByEmail() {
-        return this.groupByEmail == null ? Input.empty() : this.groupByEmail;
+    public Output<String> getGroupByEmail() {
+        return this.groupByEmail == null ? Output.empty() : this.groupByEmail;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iamMember")
-      private final @Nullable Input<String> iamMember;
+      private final @Nullable Output<String> iamMember;
 
-    public Input<String> getIamMember() {
-        return this.iamMember == null ? Input.empty() : this.iamMember;
+    public Output<String> getIamMember() {
+        return this.iamMember == null ? Output.empty() : this.iamMember;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routine")
-      private final @Nullable Input<RoutineReferenceArgs> routine;
+      private final @Nullable Output<RoutineReferenceArgs> routine;
 
-    public Input<RoutineReferenceArgs> getRoutine() {
-        return this.routine == null ? Input.empty() : this.routine;
+    public Output<RoutineReferenceArgs> getRoutine() {
+        return this.routine == null ? Output.empty() : this.routine;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="specialGroup")
-      private final @Nullable Input<String> specialGroup;
+      private final @Nullable Output<String> specialGroup;
 
-    public Input<String> getSpecialGroup() {
-        return this.specialGroup == null ? Input.empty() : this.specialGroup;
+    public Output<String> getSpecialGroup() {
+        return this.specialGroup == null ? Output.empty() : this.specialGroup;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userByEmail")
-      private final @Nullable Input<String> userByEmail;
+      private final @Nullable Output<String> userByEmail;
 
-    public Input<String> getUserByEmail() {
-        return this.userByEmail == null ? Input.empty() : this.userByEmail;
+    public Output<String> getUserByEmail() {
+        return this.userByEmail == null ? Output.empty() : this.userByEmail;
     }
 
     /**
@@ -110,22 +110,22 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="view")
-      private final @Nullable Input<TableReferenceArgs> view;
+      private final @Nullable Output<TableReferenceArgs> view;
 
-    public Input<TableReferenceArgs> getView() {
-        return this.view == null ? Input.empty() : this.view;
+    public Output<TableReferenceArgs> getView() {
+        return this.view == null ? Output.empty() : this.view;
     }
 
     public DatasetAccessItemArgs(
-        @Nullable Input<DatasetAccessEntryArgs> dataset,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> groupByEmail,
-        @Nullable Input<String> iamMember,
-        @Nullable Input<String> role,
-        @Nullable Input<RoutineReferenceArgs> routine,
-        @Nullable Input<String> specialGroup,
-        @Nullable Input<String> userByEmail,
-        @Nullable Input<TableReferenceArgs> view) {
+        @Nullable Output<DatasetAccessEntryArgs> dataset,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> groupByEmail,
+        @Nullable Output<String> iamMember,
+        @Nullable Output<String> role,
+        @Nullable Output<RoutineReferenceArgs> routine,
+        @Nullable Output<String> specialGroup,
+        @Nullable Output<String> userByEmail,
+        @Nullable Output<TableReferenceArgs> view) {
         this.dataset = dataset;
         this.domain = domain;
         this.groupByEmail = groupByEmail;
@@ -138,15 +138,15 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DatasetAccessItemArgs() {
-        this.dataset = Input.empty();
-        this.domain = Input.empty();
-        this.groupByEmail = Input.empty();
-        this.iamMember = Input.empty();
-        this.role = Input.empty();
-        this.routine = Input.empty();
-        this.specialGroup = Input.empty();
-        this.userByEmail = Input.empty();
-        this.view = Input.empty();
+        this.dataset = Output.empty();
+        this.domain = Output.empty();
+        this.groupByEmail = Output.empty();
+        this.iamMember = Output.empty();
+        this.role = Output.empty();
+        this.routine = Output.empty();
+        this.specialGroup = Output.empty();
+        this.userByEmail = Output.empty();
+        this.view = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<DatasetAccessEntryArgs> dataset;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> groupByEmail;
-        private @Nullable Input<String> iamMember;
-        private @Nullable Input<String> role;
-        private @Nullable Input<RoutineReferenceArgs> routine;
-        private @Nullable Input<String> specialGroup;
-        private @Nullable Input<String> userByEmail;
-        private @Nullable Input<TableReferenceArgs> view;
+        private @Nullable Output<DatasetAccessEntryArgs> dataset;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> groupByEmail;
+        private @Nullable Output<String> iamMember;
+        private @Nullable Output<String> role;
+        private @Nullable Output<RoutineReferenceArgs> routine;
+        private @Nullable Output<String> specialGroup;
+        private @Nullable Output<String> userByEmail;
+        private @Nullable Output<TableReferenceArgs> view;
 
         public Builder() {
     	      // Empty
@@ -185,93 +185,93 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     	      this.view = defaults.view;
         }
 
-        public Builder dataset(@Nullable Input<DatasetAccessEntryArgs> dataset) {
+        public Builder dataset(@Nullable Output<DatasetAccessEntryArgs> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable DatasetAccessEntryArgs dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder groupByEmail(@Nullable Input<String> groupByEmail) {
+        public Builder groupByEmail(@Nullable Output<String> groupByEmail) {
             this.groupByEmail = groupByEmail;
             return this;
         }
 
         public Builder groupByEmail(@Nullable String groupByEmail) {
-            this.groupByEmail = Input.ofNullable(groupByEmail);
+            this.groupByEmail = Output.ofNullable(groupByEmail);
             return this;
         }
 
-        public Builder iamMember(@Nullable Input<String> iamMember) {
+        public Builder iamMember(@Nullable Output<String> iamMember) {
             this.iamMember = iamMember;
             return this;
         }
 
         public Builder iamMember(@Nullable String iamMember) {
-            this.iamMember = Input.ofNullable(iamMember);
+            this.iamMember = Output.ofNullable(iamMember);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder routine(@Nullable Input<RoutineReferenceArgs> routine) {
+        public Builder routine(@Nullable Output<RoutineReferenceArgs> routine) {
             this.routine = routine;
             return this;
         }
 
         public Builder routine(@Nullable RoutineReferenceArgs routine) {
-            this.routine = Input.ofNullable(routine);
+            this.routine = Output.ofNullable(routine);
             return this;
         }
 
-        public Builder specialGroup(@Nullable Input<String> specialGroup) {
+        public Builder specialGroup(@Nullable Output<String> specialGroup) {
             this.specialGroup = specialGroup;
             return this;
         }
 
         public Builder specialGroup(@Nullable String specialGroup) {
-            this.specialGroup = Input.ofNullable(specialGroup);
+            this.specialGroup = Output.ofNullable(specialGroup);
             return this;
         }
 
-        public Builder userByEmail(@Nullable Input<String> userByEmail) {
+        public Builder userByEmail(@Nullable Output<String> userByEmail) {
             this.userByEmail = userByEmail;
             return this;
         }
 
         public Builder userByEmail(@Nullable String userByEmail) {
-            this.userByEmail = Input.ofNullable(userByEmail);
+            this.userByEmail = Output.ofNullable(userByEmail);
             return this;
         }
 
-        public Builder view(@Nullable Input<TableReferenceArgs> view) {
+        public Builder view(@Nullable Output<TableReferenceArgs> view) {
             this.view = view;
             return this;
         }
 
         public Builder view(@Nullable TableReferenceArgs view) {
-            this.view = Input.ofNullable(view);
+            this.view = Output.ofNullable(view);
             return this;
         }
         public DatasetAccessItemArgs build() {

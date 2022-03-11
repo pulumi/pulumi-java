@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="interimSchemaName")
-      private final @Nullable Input<Object> interimSchemaName;
+      private final @Nullable Output<Object> interimSchemaName;
 
-    public Input<Object> getInterimSchemaName() {
-        return this.interimSchemaName == null ? Input.empty() : this.interimSchemaName;
+    public Output<Object> getInterimSchemaName() {
+        return this.interimSchemaName == null ? Output.empty() : this.interimSchemaName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<Object> keys;
+      private final @Nullable Output<Object> keys;
 
-    public Input<Object> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<Object> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     public SqlDWUpsertSettingsArgs(
-        @Nullable Input<Object> interimSchemaName,
-        @Nullable Input<Object> keys) {
+        @Nullable Output<Object> interimSchemaName,
+        @Nullable Output<Object> keys) {
         this.interimSchemaName = interimSchemaName;
         this.keys = keys;
     }
 
     private SqlDWUpsertSettingsArgs() {
-        this.interimSchemaName = Input.empty();
-        this.keys = Input.empty();
+        this.interimSchemaName = Output.empty();
+        this.keys = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> interimSchemaName;
-        private @Nullable Input<Object> keys;
+        private @Nullable Output<Object> interimSchemaName;
+        private @Nullable Output<Object> keys;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.keys = defaults.keys;
         }
 
-        public Builder interimSchemaName(@Nullable Input<Object> interimSchemaName) {
+        public Builder interimSchemaName(@Nullable Output<Object> interimSchemaName) {
             this.interimSchemaName = interimSchemaName;
             return this;
         }
 
         public Builder interimSchemaName(@Nullable Object interimSchemaName) {
-            this.interimSchemaName = Input.ofNullable(interimSchemaName);
+            this.interimSchemaName = Output.ofNullable(interimSchemaName);
             return this;
         }
 
-        public Builder keys(@Nullable Input<Object> keys) {
+        public Builder keys(@Nullable Output<Object> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable Object keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
         public SqlDWUpsertSettingsArgs build() {

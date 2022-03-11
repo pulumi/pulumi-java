@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.WebhookFilterGroupFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class WebhookFilterGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filters")
-      private final @Nullable Input<List<WebhookFilterGroupFilterArgs>> filters;
+      private final @Nullable Output<List<WebhookFilterGroupFilterArgs>> filters;
 
-    public Input<List<WebhookFilterGroupFilterArgs>> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<List<WebhookFilterGroupFilterArgs>> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
-    public WebhookFilterGroupArgs(@Nullable Input<List<WebhookFilterGroupFilterArgs>> filters) {
+    public WebhookFilterGroupArgs(@Nullable Output<List<WebhookFilterGroupFilterArgs>> filters) {
         this.filters = filters;
     }
 
     private WebhookFilterGroupArgs() {
-        this.filters = Input.empty();
+        this.filters = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class WebhookFilterGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WebhookFilterGroupFilterArgs>> filters;
+        private @Nullable Output<List<WebhookFilterGroupFilterArgs>> filters;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class WebhookFilterGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.filters = defaults.filters;
         }
 
-        public Builder filters(@Nullable Input<List<WebhookFilterGroupFilterArgs>> filters) {
+        public Builder filters(@Nullable Output<List<WebhookFilterGroupFilterArgs>> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<WebhookFilterGroupFilterArgs> filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
         public WebhookFilterGroupArgs build() {

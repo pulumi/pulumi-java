@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterValueArgs;
@@ -21,10 +21,10 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterType")
-      private final @Nullable Input<QueryParameterTypeArgs> parameterType;
+      private final @Nullable Output<QueryParameterTypeArgs> parameterType;
 
-    public Input<QueryParameterTypeArgs> getParameterType() {
-        return this.parameterType == null ? Input.empty() : this.parameterType;
+    public Output<QueryParameterTypeArgs> getParameterType() {
+        return this.parameterType == null ? Output.empty() : this.parameterType;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterValue")
-      private final @Nullable Input<QueryParameterValueArgs> parameterValue;
+      private final @Nullable Output<QueryParameterValueArgs> parameterValue;
 
-    public Input<QueryParameterValueArgs> getParameterValue() {
-        return this.parameterValue == null ? Input.empty() : this.parameterValue;
+    public Output<QueryParameterValueArgs> getParameterValue() {
+        return this.parameterValue == null ? Output.empty() : this.parameterValue;
     }
 
     public QueryParameterArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<QueryParameterTypeArgs> parameterType,
-        @Nullable Input<QueryParameterValueArgs> parameterValue) {
+        @Nullable Output<String> name,
+        @Nullable Output<QueryParameterTypeArgs> parameterType,
+        @Nullable Output<QueryParameterValueArgs> parameterValue) {
         this.name = name;
         this.parameterType = parameterType;
         this.parameterValue = parameterValue;
     }
 
     private QueryParameterArgs() {
-        this.name = Input.empty();
-        this.parameterType = Input.empty();
-        this.parameterValue = Input.empty();
+        this.name = Output.empty();
+        this.parameterType = Output.empty();
+        this.parameterValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<QueryParameterTypeArgs> parameterType;
-        private @Nullable Input<QueryParameterValueArgs> parameterValue;
+        private @Nullable Output<String> name;
+        private @Nullable Output<QueryParameterTypeArgs> parameterType;
+        private @Nullable Output<QueryParameterValueArgs> parameterValue;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameterType(@Nullable Input<QueryParameterTypeArgs> parameterType) {
+        public Builder parameterType(@Nullable Output<QueryParameterTypeArgs> parameterType) {
             this.parameterType = parameterType;
             return this;
         }
 
         public Builder parameterType(@Nullable QueryParameterTypeArgs parameterType) {
-            this.parameterType = Input.ofNullable(parameterType);
+            this.parameterType = Output.ofNullable(parameterType);
             return this;
         }
 
-        public Builder parameterValue(@Nullable Input<QueryParameterValueArgs> parameterValue) {
+        public Builder parameterValue(@Nullable Output<QueryParameterValueArgs> parameterValue) {
             this.parameterValue = parameterValue;
             return this;
         }
 
         public Builder parameterValue(@Nullable QueryParameterValueArgs parameterValue) {
-            this.parameterValue = Input.ofNullable(parameterValue);
+            this.parameterValue = Output.ofNullable(parameterValue);
             return this;
         }
         public QueryParameterArgs build() {

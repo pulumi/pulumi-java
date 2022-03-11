@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretKeySelectorArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="secretKeyRef")
-      private final @Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
+      private final @Nullable Output<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
 
-    public Input<GoogleCloudRunOpV2SecretKeySelectorArgs> getSecretKeyRef() {
-        return this.secretKeyRef == null ? Input.empty() : this.secretKeyRef;
+    public Output<GoogleCloudRunOpV2SecretKeySelectorArgs> getSecretKeyRef() {
+        return this.secretKeyRef == null ? Output.empty() : this.secretKeyRef;
     }
 
-    public GoogleCloudRunOpV2EnvVarSourceArgs(@Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef) {
+    public GoogleCloudRunOpV2EnvVarSourceArgs(@Nullable Output<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef) {
         this.secretKeyRef = secretKeyRef;
     }
 
     private GoogleCloudRunOpV2EnvVarSourceArgs() {
-        this.secretKeyRef = Input.empty();
+        this.secretKeyRef = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
+        private @Nullable Output<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
     	      this.secretKeyRef = defaults.secretKeyRef;
         }
 
-        public Builder secretKeyRef(@Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef) {
+        public Builder secretKeyRef(@Nullable Output<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef) {
             this.secretKeyRef = secretKeyRef;
             return this;
         }
 
         public Builder secretKeyRef(@Nullable GoogleCloudRunOpV2SecretKeySelectorArgs secretKeyRef) {
-            this.secretKeyRef = Input.ofNullable(secretKeyRef);
+            this.secretKeyRef = Output.ofNullable(secretKeyRef);
             return this;
         }
         public GoogleCloudRunOpV2EnvVarSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture", required=true)
-      private final Input<String> architecture;
+      private final Output<String> architecture;
 
-    public Input<String> getArchitecture() {
+    public Output<String> getArchitecture() {
         return this.architecture;
     }
 
@@ -33,9 +33,9 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootID", required=true)
-      private final Input<String> bootID;
+      private final Output<String> bootID;
 
-    public Input<String> getBootID() {
+    public Output<String> getBootID() {
         return this.bootID;
     }
 
@@ -44,9 +44,9 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerRuntimeVersion", required=true)
-      private final Input<String> containerRuntimeVersion;
+      private final Output<String> containerRuntimeVersion;
 
-    public Input<String> getContainerRuntimeVersion() {
+    public Output<String> getContainerRuntimeVersion() {
         return this.containerRuntimeVersion;
     }
 
@@ -55,9 +55,9 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kernelVersion", required=true)
-      private final Input<String> kernelVersion;
+      private final Output<String> kernelVersion;
 
-    public Input<String> getKernelVersion() {
+    public Output<String> getKernelVersion() {
         return this.kernelVersion;
     }
 
@@ -66,9 +66,9 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeProxyVersion", required=true)
-      private final Input<String> kubeProxyVersion;
+      private final Output<String> kubeProxyVersion;
 
-    public Input<String> getKubeProxyVersion() {
+    public Output<String> getKubeProxyVersion() {
         return this.kubeProxyVersion;
     }
 
@@ -77,9 +77,9 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeletVersion", required=true)
-      private final Input<String> kubeletVersion;
+      private final Output<String> kubeletVersion;
 
-    public Input<String> getKubeletVersion() {
+    public Output<String> getKubeletVersion() {
         return this.kubeletVersion;
     }
 
@@ -88,9 +88,9 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineID", required=true)
-      private final Input<String> machineID;
+      private final Output<String> machineID;
 
-    public Input<String> getMachineID() {
+    public Output<String> getMachineID() {
         return this.machineID;
     }
 
@@ -99,9 +99,9 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingSystem", required=true)
-      private final Input<String> operatingSystem;
+      private final Output<String> operatingSystem;
 
-    public Input<String> getOperatingSystem() {
+    public Output<String> getOperatingSystem() {
         return this.operatingSystem;
     }
 
@@ -110,9 +110,9 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osImage", required=true)
-      private final Input<String> osImage;
+      private final Output<String> osImage;
 
-    public Input<String> getOsImage() {
+    public Output<String> getOsImage() {
         return this.osImage;
     }
 
@@ -121,23 +121,23 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemUUID", required=true)
-      private final Input<String> systemUUID;
+      private final Output<String> systemUUID;
 
-    public Input<String> getSystemUUID() {
+    public Output<String> getSystemUUID() {
         return this.systemUUID;
     }
 
     public NodeSystemInfoArgs(
-        Input<String> architecture,
-        Input<String> bootID,
-        Input<String> containerRuntimeVersion,
-        Input<String> kernelVersion,
-        Input<String> kubeProxyVersion,
-        Input<String> kubeletVersion,
-        Input<String> machineID,
-        Input<String> operatingSystem,
-        Input<String> osImage,
-        Input<String> systemUUID) {
+        Output<String> architecture,
+        Output<String> bootID,
+        Output<String> containerRuntimeVersion,
+        Output<String> kernelVersion,
+        Output<String> kubeProxyVersion,
+        Output<String> kubeletVersion,
+        Output<String> machineID,
+        Output<String> operatingSystem,
+        Output<String> osImage,
+        Output<String> systemUUID) {
         this.architecture = Objects.requireNonNull(architecture, "expected parameter 'architecture' to be non-null");
         this.bootID = Objects.requireNonNull(bootID, "expected parameter 'bootID' to be non-null");
         this.containerRuntimeVersion = Objects.requireNonNull(containerRuntimeVersion, "expected parameter 'containerRuntimeVersion' to be non-null");
@@ -151,16 +151,16 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeSystemInfoArgs() {
-        this.architecture = Input.empty();
-        this.bootID = Input.empty();
-        this.containerRuntimeVersion = Input.empty();
-        this.kernelVersion = Input.empty();
-        this.kubeProxyVersion = Input.empty();
-        this.kubeletVersion = Input.empty();
-        this.machineID = Input.empty();
-        this.operatingSystem = Input.empty();
-        this.osImage = Input.empty();
-        this.systemUUID = Input.empty();
+        this.architecture = Output.empty();
+        this.bootID = Output.empty();
+        this.containerRuntimeVersion = Output.empty();
+        this.kernelVersion = Output.empty();
+        this.kubeProxyVersion = Output.empty();
+        this.kubeletVersion = Output.empty();
+        this.machineID = Output.empty();
+        this.operatingSystem = Output.empty();
+        this.osImage = Output.empty();
+        this.systemUUID = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> architecture;
-        private Input<String> bootID;
-        private Input<String> containerRuntimeVersion;
-        private Input<String> kernelVersion;
-        private Input<String> kubeProxyVersion;
-        private Input<String> kubeletVersion;
-        private Input<String> machineID;
-        private Input<String> operatingSystem;
-        private Input<String> osImage;
-        private Input<String> systemUUID;
+        private Output<String> architecture;
+        private Output<String> bootID;
+        private Output<String> containerRuntimeVersion;
+        private Output<String> kernelVersion;
+        private Output<String> kubeProxyVersion;
+        private Output<String> kubeletVersion;
+        private Output<String> machineID;
+        private Output<String> operatingSystem;
+        private Output<String> osImage;
+        private Output<String> systemUUID;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.systemUUID = defaults.systemUUID;
         }
 
-        public Builder architecture(Input<String> architecture) {
+        public Builder architecture(Output<String> architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
         public Builder architecture(String architecture) {
-            this.architecture = Input.of(Objects.requireNonNull(architecture));
+            this.architecture = Output.of(Objects.requireNonNull(architecture));
             return this;
         }
 
-        public Builder bootID(Input<String> bootID) {
+        public Builder bootID(Output<String> bootID) {
             this.bootID = Objects.requireNonNull(bootID);
             return this;
         }
 
         public Builder bootID(String bootID) {
-            this.bootID = Input.of(Objects.requireNonNull(bootID));
+            this.bootID = Output.of(Objects.requireNonNull(bootID));
             return this;
         }
 
-        public Builder containerRuntimeVersion(Input<String> containerRuntimeVersion) {
+        public Builder containerRuntimeVersion(Output<String> containerRuntimeVersion) {
             this.containerRuntimeVersion = Objects.requireNonNull(containerRuntimeVersion);
             return this;
         }
 
         public Builder containerRuntimeVersion(String containerRuntimeVersion) {
-            this.containerRuntimeVersion = Input.of(Objects.requireNonNull(containerRuntimeVersion));
+            this.containerRuntimeVersion = Output.of(Objects.requireNonNull(containerRuntimeVersion));
             return this;
         }
 
-        public Builder kernelVersion(Input<String> kernelVersion) {
+        public Builder kernelVersion(Output<String> kernelVersion) {
             this.kernelVersion = Objects.requireNonNull(kernelVersion);
             return this;
         }
 
         public Builder kernelVersion(String kernelVersion) {
-            this.kernelVersion = Input.of(Objects.requireNonNull(kernelVersion));
+            this.kernelVersion = Output.of(Objects.requireNonNull(kernelVersion));
             return this;
         }
 
-        public Builder kubeProxyVersion(Input<String> kubeProxyVersion) {
+        public Builder kubeProxyVersion(Output<String> kubeProxyVersion) {
             this.kubeProxyVersion = Objects.requireNonNull(kubeProxyVersion);
             return this;
         }
 
         public Builder kubeProxyVersion(String kubeProxyVersion) {
-            this.kubeProxyVersion = Input.of(Objects.requireNonNull(kubeProxyVersion));
+            this.kubeProxyVersion = Output.of(Objects.requireNonNull(kubeProxyVersion));
             return this;
         }
 
-        public Builder kubeletVersion(Input<String> kubeletVersion) {
+        public Builder kubeletVersion(Output<String> kubeletVersion) {
             this.kubeletVersion = Objects.requireNonNull(kubeletVersion);
             return this;
         }
 
         public Builder kubeletVersion(String kubeletVersion) {
-            this.kubeletVersion = Input.of(Objects.requireNonNull(kubeletVersion));
+            this.kubeletVersion = Output.of(Objects.requireNonNull(kubeletVersion));
             return this;
         }
 
-        public Builder machineID(Input<String> machineID) {
+        public Builder machineID(Output<String> machineID) {
             this.machineID = Objects.requireNonNull(machineID);
             return this;
         }
 
         public Builder machineID(String machineID) {
-            this.machineID = Input.of(Objects.requireNonNull(machineID));
+            this.machineID = Output.of(Objects.requireNonNull(machineID));
             return this;
         }
 
-        public Builder operatingSystem(Input<String> operatingSystem) {
+        public Builder operatingSystem(Output<String> operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
 
         public Builder operatingSystem(String operatingSystem) {
-            this.operatingSystem = Input.of(Objects.requireNonNull(operatingSystem));
+            this.operatingSystem = Output.of(Objects.requireNonNull(operatingSystem));
             return this;
         }
 
-        public Builder osImage(Input<String> osImage) {
+        public Builder osImage(Output<String> osImage) {
             this.osImage = Objects.requireNonNull(osImage);
             return this;
         }
 
         public Builder osImage(String osImage) {
-            this.osImage = Input.of(Objects.requireNonNull(osImage));
+            this.osImage = Output.of(Objects.requireNonNull(osImage));
             return this;
         }
 
-        public Builder systemUUID(Input<String> systemUUID) {
+        public Builder systemUUID(Output<String> systemUUID) {
             this.systemUUID = Objects.requireNonNull(systemUUID);
             return this;
         }
 
         public Builder systemUUID(String systemUUID) {
-            this.systemUUID = Input.of(Objects.requireNonNull(systemUUID));
+            this.systemUUID = Output.of(Objects.requireNonNull(systemUUID));
             return this;
         }
         public NodeSystemInfoArgs build() {

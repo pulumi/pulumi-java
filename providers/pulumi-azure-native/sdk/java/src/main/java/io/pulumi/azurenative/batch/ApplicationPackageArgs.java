@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,9 +30,9 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="applicationName", required=true)
-      private final Input<String> applicationName;
+      private final Output<String> applicationName;
 
-    public Input<String> getApplicationName() {
+    public Output<String> getApplicationName() {
         return this.applicationName;
     }
 
@@ -41,9 +41,9 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,17 +52,17 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="versionName")
-      private final @Nullable Input<String> versionName;
+      private final @Nullable Output<String> versionName;
 
-    public Input<String> getVersionName() {
-        return this.versionName == null ? Input.empty() : this.versionName;
+    public Output<String> getVersionName() {
+        return this.versionName == null ? Output.empty() : this.versionName;
     }
 
     public ApplicationPackageArgs(
-        Input<String> accountName,
-        Input<String> applicationName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> versionName) {
+        Output<String> accountName,
+        Output<String> applicationName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> versionName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -70,10 +70,10 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ApplicationPackageArgs() {
-        this.accountName = Input.empty();
-        this.applicationName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.versionName = Input.empty();
+        this.accountName = Output.empty();
+        this.applicationName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.versionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> applicationName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> versionName;
+        private Output<String> accountName;
+        private Output<String> applicationName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> versionName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder applicationName(Input<String> applicationName) {
+        public Builder applicationName(Output<String> applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
         public Builder applicationName(String applicationName) {
-            this.applicationName = Input.of(Objects.requireNonNull(applicationName));
+            this.applicationName = Output.of(Objects.requireNonNull(applicationName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder versionName(@Nullable Input<String> versionName) {
+        public Builder versionName(@Nullable Output<String> versionName) {
             this.versionName = versionName;
             return this;
         }
 
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Input.ofNullable(versionName);
+            this.versionName = Output.ofNullable(versionName);
             return this;
         }
         public ApplicationPackageArgs build() {

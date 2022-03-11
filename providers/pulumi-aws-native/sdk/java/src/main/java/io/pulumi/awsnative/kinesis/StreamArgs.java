@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesis;
 import io.pulumi.awsnative.kinesis.inputs.StreamEncryptionArgs;
 import io.pulumi.awsnative.kinesis.inputs.StreamModeDetailsArgs;
 import io.pulumi.awsnative.kinesis.inputs.StreamTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPeriodHours")
-      private final @Nullable Input<Integer> retentionPeriodHours;
+      private final @Nullable Output<Integer> retentionPeriodHours;
 
-    public Input<Integer> getRetentionPeriodHours() {
-        return this.retentionPeriodHours == null ? Input.empty() : this.retentionPeriodHours;
+    public Output<Integer> getRetentionPeriodHours() {
+        return this.retentionPeriodHours == null ? Output.empty() : this.retentionPeriodHours;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shardCount")
-      private final @Nullable Input<Integer> shardCount;
+      private final @Nullable Output<Integer> shardCount;
 
-    public Input<Integer> getShardCount() {
-        return this.shardCount == null ? Input.empty() : this.shardCount;
+    public Output<Integer> getShardCount() {
+        return this.shardCount == null ? Output.empty() : this.shardCount;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamEncryption")
-      private final @Nullable Input<StreamEncryptionArgs> streamEncryption;
+      private final @Nullable Output<StreamEncryptionArgs> streamEncryption;
 
-    public Input<StreamEncryptionArgs> getStreamEncryption() {
-        return this.streamEncryption == null ? Input.empty() : this.streamEncryption;
+    public Output<StreamEncryptionArgs> getStreamEncryption() {
+        return this.streamEncryption == null ? Output.empty() : this.streamEncryption;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamModeDetails")
-      private final @Nullable Input<StreamModeDetailsArgs> streamModeDetails;
+      private final @Nullable Output<StreamModeDetailsArgs> streamModeDetails;
 
-    public Input<StreamModeDetailsArgs> getStreamModeDetails() {
-        return this.streamModeDetails == null ? Input.empty() : this.streamModeDetails;
+    public Output<StreamModeDetailsArgs> getStreamModeDetails() {
+        return this.streamModeDetails == null ? Output.empty() : this.streamModeDetails;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<StreamTagArgs>> tags;
+      private final @Nullable Output<List<StreamTagArgs>> tags;
 
-    public Input<List<StreamTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<StreamTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public StreamArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> retentionPeriodHours,
-        @Nullable Input<Integer> shardCount,
-        @Nullable Input<StreamEncryptionArgs> streamEncryption,
-        @Nullable Input<StreamModeDetailsArgs> streamModeDetails,
-        @Nullable Input<List<StreamTagArgs>> tags) {
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> retentionPeriodHours,
+        @Nullable Output<Integer> shardCount,
+        @Nullable Output<StreamEncryptionArgs> streamEncryption,
+        @Nullable Output<StreamModeDetailsArgs> streamModeDetails,
+        @Nullable Output<List<StreamTagArgs>> tags) {
         this.name = name;
         this.retentionPeriodHours = retentionPeriodHours;
         this.shardCount = shardCount;
@@ -101,12 +101,12 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamArgs() {
-        this.name = Input.empty();
-        this.retentionPeriodHours = Input.empty();
-        this.shardCount = Input.empty();
-        this.streamEncryption = Input.empty();
-        this.streamModeDetails = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.retentionPeriodHours = Output.empty();
+        this.shardCount = Output.empty();
+        this.streamEncryption = Output.empty();
+        this.streamModeDetails = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> retentionPeriodHours;
-        private @Nullable Input<Integer> shardCount;
-        private @Nullable Input<StreamEncryptionArgs> streamEncryption;
-        private @Nullable Input<StreamModeDetailsArgs> streamModeDetails;
-        private @Nullable Input<List<StreamTagArgs>> tags;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> retentionPeriodHours;
+        private @Nullable Output<Integer> shardCount;
+        private @Nullable Output<StreamEncryptionArgs> streamEncryption;
+        private @Nullable Output<StreamModeDetailsArgs> streamModeDetails;
+        private @Nullable Output<List<StreamTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder retentionPeriodHours(@Nullable Input<Integer> retentionPeriodHours) {
+        public Builder retentionPeriodHours(@Nullable Output<Integer> retentionPeriodHours) {
             this.retentionPeriodHours = retentionPeriodHours;
             return this;
         }
 
         public Builder retentionPeriodHours(@Nullable Integer retentionPeriodHours) {
-            this.retentionPeriodHours = Input.ofNullable(retentionPeriodHours);
+            this.retentionPeriodHours = Output.ofNullable(retentionPeriodHours);
             return this;
         }
 
-        public Builder shardCount(@Nullable Input<Integer> shardCount) {
+        public Builder shardCount(@Nullable Output<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
 
         public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Input.ofNullable(shardCount);
+            this.shardCount = Output.ofNullable(shardCount);
             return this;
         }
 
-        public Builder streamEncryption(@Nullable Input<StreamEncryptionArgs> streamEncryption) {
+        public Builder streamEncryption(@Nullable Output<StreamEncryptionArgs> streamEncryption) {
             this.streamEncryption = streamEncryption;
             return this;
         }
 
         public Builder streamEncryption(@Nullable StreamEncryptionArgs streamEncryption) {
-            this.streamEncryption = Input.ofNullable(streamEncryption);
+            this.streamEncryption = Output.ofNullable(streamEncryption);
             return this;
         }
 
-        public Builder streamModeDetails(@Nullable Input<StreamModeDetailsArgs> streamModeDetails) {
+        public Builder streamModeDetails(@Nullable Output<StreamModeDetailsArgs> streamModeDetails) {
             this.streamModeDetails = streamModeDetails;
             return this;
         }
 
         public Builder streamModeDetails(@Nullable StreamModeDetailsArgs streamModeDetails) {
-            this.streamModeDetails = Input.ofNullable(streamModeDetails);
+            this.streamModeDetails = Output.ofNullable(streamModeDetails);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<StreamTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<StreamTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public StreamArgs build() {

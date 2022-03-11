@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.account;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="alternateContactType", required=true)
-      private final Input<String> alternateContactType;
+      private final Output<String> alternateContactType;
 
-    public Input<String> getAlternateContactType() {
+    public Output<String> getAlternateContactType() {
         return this.alternateContactType;
     }
 
@@ -41,9 +41,9 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="emailAddress", required=true)
-      private final Input<String> emailAddress;
+      private final Output<String> emailAddress;
 
-    public Input<String> getEmailAddress() {
+    public Output<String> getEmailAddress() {
         return this.emailAddress;
     }
 
@@ -52,10 +52,10 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-      private final Input<String> phoneNumber;
+      private final Output<String> phoneNumber;
 
-    public Input<String> getPhoneNumber() {
+    public Output<String> getPhoneNumber() {
         return this.phoneNumber;
     }
 
@@ -74,19 +74,19 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
     public AlternativeContactArgs(
-        @Nullable Input<String> accountId,
-        Input<String> alternateContactType,
-        Input<String> emailAddress,
-        @Nullable Input<String> name,
-        Input<String> phoneNumber,
-        Input<String> title) {
+        @Nullable Output<String> accountId,
+        Output<String> alternateContactType,
+        Output<String> emailAddress,
+        @Nullable Output<String> name,
+        Output<String> phoneNumber,
+        Output<String> title) {
         this.accountId = accountId;
         this.alternateContactType = Objects.requireNonNull(alternateContactType, "expected parameter 'alternateContactType' to be non-null");
         this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
@@ -96,12 +96,12 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AlternativeContactArgs() {
-        this.accountId = Input.empty();
-        this.alternateContactType = Input.empty();
-        this.emailAddress = Input.empty();
-        this.name = Input.empty();
-        this.phoneNumber = Input.empty();
-        this.title = Input.empty();
+        this.accountId = Output.empty();
+        this.alternateContactType = Output.empty();
+        this.emailAddress = Output.empty();
+        this.name = Output.empty();
+        this.phoneNumber = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private Input<String> alternateContactType;
-        private Input<String> emailAddress;
-        private @Nullable Input<String> name;
-        private Input<String> phoneNumber;
-        private Input<String> title;
+        private @Nullable Output<String> accountId;
+        private Output<String> alternateContactType;
+        private Output<String> emailAddress;
+        private @Nullable Output<String> name;
+        private Output<String> phoneNumber;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     	      this.title = defaults.title;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder alternateContactType(Input<String> alternateContactType) {
+        public Builder alternateContactType(Output<String> alternateContactType) {
             this.alternateContactType = Objects.requireNonNull(alternateContactType);
             return this;
         }
 
         public Builder alternateContactType(String alternateContactType) {
-            this.alternateContactType = Input.of(Objects.requireNonNull(alternateContactType));
+            this.alternateContactType = Output.of(Objects.requireNonNull(alternateContactType));
             return this;
         }
 
-        public Builder emailAddress(Input<String> emailAddress) {
+        public Builder emailAddress(Output<String> emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
 
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Input.of(Objects.requireNonNull(emailAddress));
+            this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder phoneNumber(Input<String> phoneNumber) {
+        public Builder phoneNumber(Output<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
+            this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public AlternativeContactArgs build() {

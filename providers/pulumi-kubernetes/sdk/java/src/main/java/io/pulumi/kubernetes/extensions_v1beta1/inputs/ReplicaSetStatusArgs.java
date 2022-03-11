@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.ReplicaSetConditionArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="availableReplicas")
-      private final @Nullable Input<Integer> availableReplicas;
+      private final @Nullable Output<Integer> availableReplicas;
 
-    public Input<Integer> getAvailableReplicas() {
-        return this.availableReplicas == null ? Input.empty() : this.availableReplicas;
+    public Output<Integer> getAvailableReplicas() {
+        return this.availableReplicas == null ? Output.empty() : this.availableReplicas;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<ReplicaSetConditionArgs>> conditions;
+      private final @Nullable Output<List<ReplicaSetConditionArgs>> conditions;
 
-    public Input<List<ReplicaSetConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<ReplicaSetConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fullyLabeledReplicas")
-      private final @Nullable Input<Integer> fullyLabeledReplicas;
+      private final @Nullable Output<Integer> fullyLabeledReplicas;
 
-    public Input<Integer> getFullyLabeledReplicas() {
-        return this.fullyLabeledReplicas == null ? Input.empty() : this.fullyLabeledReplicas;
+    public Output<Integer> getFullyLabeledReplicas() {
+        return this.fullyLabeledReplicas == null ? Output.empty() : this.fullyLabeledReplicas;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="readyReplicas")
-      private final @Nullable Input<Integer> readyReplicas;
+      private final @Nullable Output<Integer> readyReplicas;
 
-    public Input<Integer> getReadyReplicas() {
-        return this.readyReplicas == null ? Input.empty() : this.readyReplicas;
+    public Output<Integer> getReadyReplicas() {
+        return this.readyReplicas == null ? Output.empty() : this.readyReplicas;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicas", required=true)
-      private final Input<Integer> replicas;
+      private final Output<Integer> replicas;
 
-    public Input<Integer> getReplicas() {
+    public Output<Integer> getReplicas() {
         return this.replicas;
     }
 
     public ReplicaSetStatusArgs(
-        @Nullable Input<Integer> availableReplicas,
-        @Nullable Input<List<ReplicaSetConditionArgs>> conditions,
-        @Nullable Input<Integer> fullyLabeledReplicas,
-        @Nullable Input<Integer> observedGeneration,
-        @Nullable Input<Integer> readyReplicas,
-        Input<Integer> replicas) {
+        @Nullable Output<Integer> availableReplicas,
+        @Nullable Output<List<ReplicaSetConditionArgs>> conditions,
+        @Nullable Output<Integer> fullyLabeledReplicas,
+        @Nullable Output<Integer> observedGeneration,
+        @Nullable Output<Integer> readyReplicas,
+        Output<Integer> replicas) {
         this.availableReplicas = availableReplicas;
         this.conditions = conditions;
         this.fullyLabeledReplicas = fullyLabeledReplicas;
@@ -102,12 +102,12 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ReplicaSetStatusArgs() {
-        this.availableReplicas = Input.empty();
-        this.conditions = Input.empty();
-        this.fullyLabeledReplicas = Input.empty();
-        this.observedGeneration = Input.empty();
-        this.readyReplicas = Input.empty();
-        this.replicas = Input.empty();
+        this.availableReplicas = Output.empty();
+        this.conditions = Output.empty();
+        this.fullyLabeledReplicas = Output.empty();
+        this.observedGeneration = Output.empty();
+        this.readyReplicas = Output.empty();
+        this.replicas = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> availableReplicas;
-        private @Nullable Input<List<ReplicaSetConditionArgs>> conditions;
-        private @Nullable Input<Integer> fullyLabeledReplicas;
-        private @Nullable Input<Integer> observedGeneration;
-        private @Nullable Input<Integer> readyReplicas;
-        private Input<Integer> replicas;
+        private @Nullable Output<Integer> availableReplicas;
+        private @Nullable Output<List<ReplicaSetConditionArgs>> conditions;
+        private @Nullable Output<Integer> fullyLabeledReplicas;
+        private @Nullable Output<Integer> observedGeneration;
+        private @Nullable Output<Integer> readyReplicas;
+        private Output<Integer> replicas;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder availableReplicas(@Nullable Input<Integer> availableReplicas) {
+        public Builder availableReplicas(@Nullable Output<Integer> availableReplicas) {
             this.availableReplicas = availableReplicas;
             return this;
         }
 
         public Builder availableReplicas(@Nullable Integer availableReplicas) {
-            this.availableReplicas = Input.ofNullable(availableReplicas);
+            this.availableReplicas = Output.ofNullable(availableReplicas);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<ReplicaSetConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<ReplicaSetConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<ReplicaSetConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder fullyLabeledReplicas(@Nullable Input<Integer> fullyLabeledReplicas) {
+        public Builder fullyLabeledReplicas(@Nullable Output<Integer> fullyLabeledReplicas) {
             this.fullyLabeledReplicas = fullyLabeledReplicas;
             return this;
         }
 
         public Builder fullyLabeledReplicas(@Nullable Integer fullyLabeledReplicas) {
-            this.fullyLabeledReplicas = Input.ofNullable(fullyLabeledReplicas);
+            this.fullyLabeledReplicas = Output.ofNullable(fullyLabeledReplicas);
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder readyReplicas(@Nullable Input<Integer> readyReplicas) {
+        public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
 
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
-            this.readyReplicas = Input.ofNullable(readyReplicas);
+            this.readyReplicas = Output.ofNullable(readyReplicas);
             return this;
         }
 
-        public Builder replicas(Input<Integer> replicas) {
+        public Builder replicas(Output<Integer> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
 
         public Builder replicas(Integer replicas) {
-            this.replicas = Input.of(Objects.requireNonNull(replicas));
+            this.replicas = Output.of(Objects.requireNonNull(replicas));
             return this;
         }
         public ReplicaSetStatusArgs build() {

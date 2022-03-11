@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowTriggerType;
 import io.pulumi.awsnative.appflow.inputs.FlowScheduledTriggerPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="triggerProperties")
-      private final @Nullable Input<FlowScheduledTriggerPropertiesArgs> triggerProperties;
+      private final @Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties;
 
-    public Input<FlowScheduledTriggerPropertiesArgs> getTriggerProperties() {
-        return this.triggerProperties == null ? Input.empty() : this.triggerProperties;
+    public Output<FlowScheduledTriggerPropertiesArgs> getTriggerProperties() {
+        return this.triggerProperties == null ? Output.empty() : this.triggerProperties;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="triggerType", required=true)
-      private final Input<FlowTriggerType> triggerType;
+      private final Output<FlowTriggerType> triggerType;
 
-    public Input<FlowTriggerType> getTriggerType() {
+    public Output<FlowTriggerType> getTriggerType() {
         return this.triggerType;
     }
 
     public FlowTriggerConfigArgs(
-        @Nullable Input<FlowScheduledTriggerPropertiesArgs> triggerProperties,
-        Input<FlowTriggerType> triggerType) {
+        @Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties,
+        Output<FlowTriggerType> triggerType) {
         this.triggerProperties = triggerProperties;
         this.triggerType = Objects.requireNonNull(triggerType, "expected parameter 'triggerType' to be non-null");
     }
 
     private FlowTriggerConfigArgs() {
-        this.triggerProperties = Input.empty();
-        this.triggerType = Input.empty();
+        this.triggerProperties = Output.empty();
+        this.triggerType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<FlowScheduledTriggerPropertiesArgs> triggerProperties;
-        private Input<FlowTriggerType> triggerType;
+        private @Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties;
+        private Output<FlowTriggerType> triggerType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class FlowTriggerConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.triggerType = defaults.triggerType;
         }
 
-        public Builder triggerProperties(@Nullable Input<FlowScheduledTriggerPropertiesArgs> triggerProperties) {
+        public Builder triggerProperties(@Nullable Output<FlowScheduledTriggerPropertiesArgs> triggerProperties) {
             this.triggerProperties = triggerProperties;
             return this;
         }
 
         public Builder triggerProperties(@Nullable FlowScheduledTriggerPropertiesArgs triggerProperties) {
-            this.triggerProperties = Input.ofNullable(triggerProperties);
+            this.triggerProperties = Output.ofNullable(triggerProperties);
             return this;
         }
 
-        public Builder triggerType(Input<FlowTriggerType> triggerType) {
+        public Builder triggerType(Output<FlowTriggerType> triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }
 
         public Builder triggerType(FlowTriggerType triggerType) {
-            this.triggerType = Input.of(Objects.requireNonNull(triggerType));
+            this.triggerType = Output.of(Objects.requireNonNull(triggerType));
             return this;
         }
         public FlowTriggerConfigArgs build() {

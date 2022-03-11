@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="budgetName")
-      private final @Nullable Input<String> budgetName;
+      private final @Nullable Output<String> budgetName;
 
-    public Input<String> getBudgetName() {
-        return this.budgetName == null ? Input.empty() : this.budgetName;
+    public Output<String> getBudgetName() {
+        return this.budgetName == null ? Output.empty() : this.budgetName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     public BudgetResourceAssociationState(
-        @Nullable Input<String> budgetName,
-        @Nullable Input<String> resourceId) {
+        @Nullable Output<String> budgetName,
+        @Nullable Output<String> resourceId) {
         this.budgetName = budgetName;
         this.resourceId = resourceId;
     }
 
     private BudgetResourceAssociationState() {
-        this.budgetName = Input.empty();
-        this.resourceId = Input.empty();
+        this.budgetName = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> budgetName;
-        private @Nullable Input<String> resourceId;
+        private @Nullable Output<String> budgetName;
+        private @Nullable Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder budgetName(@Nullable Input<String> budgetName) {
+        public Builder budgetName(@Nullable Output<String> budgetName) {
             this.budgetName = budgetName;
             return this;
         }
 
         public Builder budgetName(@Nullable String budgetName) {
-            this.budgetName = Input.ofNullable(budgetName);
+            this.budgetName = Output.ofNullable(budgetName);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
         public BudgetResourceAssociationState build() {

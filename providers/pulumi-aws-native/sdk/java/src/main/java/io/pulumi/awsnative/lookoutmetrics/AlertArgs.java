@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AlertActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<AlertActionArgs> action;
+      private final Output<AlertActionArgs> action;
 
-    public Input<AlertActionArgs> getAction() {
+    public Output<AlertActionArgs> getAction() {
         return this.action;
     }
 
@@ -32,10 +32,10 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertDescription")
-      private final @Nullable Input<String> alertDescription;
+      private final @Nullable Output<String> alertDescription;
 
-    public Input<String> getAlertDescription() {
-        return this.alertDescription == null ? Input.empty() : this.alertDescription;
+    public Output<String> getAlertDescription() {
+        return this.alertDescription == null ? Output.empty() : this.alertDescription;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertName")
-      private final @Nullable Input<String> alertName;
+      private final @Nullable Output<String> alertName;
 
-    public Input<String> getAlertName() {
-        return this.alertName == null ? Input.empty() : this.alertName;
+    public Output<String> getAlertName() {
+        return this.alertName == null ? Output.empty() : this.alertName;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertSensitivityThreshold", required=true)
-      private final Input<Integer> alertSensitivityThreshold;
+      private final Output<Integer> alertSensitivityThreshold;
 
-    public Input<Integer> getAlertSensitivityThreshold() {
+    public Output<Integer> getAlertSensitivityThreshold() {
         return this.alertSensitivityThreshold;
     }
 
@@ -65,18 +65,18 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="anomalyDetectorArn", required=true)
-      private final Input<String> anomalyDetectorArn;
+      private final Output<String> anomalyDetectorArn;
 
-    public Input<String> getAnomalyDetectorArn() {
+    public Output<String> getAnomalyDetectorArn() {
         return this.anomalyDetectorArn;
     }
 
     public AlertArgs(
-        Input<AlertActionArgs> action,
-        @Nullable Input<String> alertDescription,
-        @Nullable Input<String> alertName,
-        Input<Integer> alertSensitivityThreshold,
-        Input<String> anomalyDetectorArn) {
+        Output<AlertActionArgs> action,
+        @Nullable Output<String> alertDescription,
+        @Nullable Output<String> alertName,
+        Output<Integer> alertSensitivityThreshold,
+        Output<String> anomalyDetectorArn) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.alertDescription = alertDescription;
         this.alertName = alertName;
@@ -85,11 +85,11 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlertArgs() {
-        this.action = Input.empty();
-        this.alertDescription = Input.empty();
-        this.alertName = Input.empty();
-        this.alertSensitivityThreshold = Input.empty();
-        this.anomalyDetectorArn = Input.empty();
+        this.action = Output.empty();
+        this.alertDescription = Output.empty();
+        this.alertName = Output.empty();
+        this.alertSensitivityThreshold = Output.empty();
+        this.anomalyDetectorArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<AlertActionArgs> action;
-        private @Nullable Input<String> alertDescription;
-        private @Nullable Input<String> alertName;
-        private Input<Integer> alertSensitivityThreshold;
-        private Input<String> anomalyDetectorArn;
+        private Output<AlertActionArgs> action;
+        private @Nullable Output<String> alertDescription;
+        private @Nullable Output<String> alertName;
+        private Output<Integer> alertSensitivityThreshold;
+        private Output<String> anomalyDetectorArn;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
     	      this.anomalyDetectorArn = defaults.anomalyDetectorArn;
         }
 
-        public Builder action(Input<AlertActionArgs> action) {
+        public Builder action(Output<AlertActionArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(AlertActionArgs action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder alertDescription(@Nullable Input<String> alertDescription) {
+        public Builder alertDescription(@Nullable Output<String> alertDescription) {
             this.alertDescription = alertDescription;
             return this;
         }
 
         public Builder alertDescription(@Nullable String alertDescription) {
-            this.alertDescription = Input.ofNullable(alertDescription);
+            this.alertDescription = Output.ofNullable(alertDescription);
             return this;
         }
 
-        public Builder alertName(@Nullable Input<String> alertName) {
+        public Builder alertName(@Nullable Output<String> alertName) {
             this.alertName = alertName;
             return this;
         }
 
         public Builder alertName(@Nullable String alertName) {
-            this.alertName = Input.ofNullable(alertName);
+            this.alertName = Output.ofNullable(alertName);
             return this;
         }
 
-        public Builder alertSensitivityThreshold(Input<Integer> alertSensitivityThreshold) {
+        public Builder alertSensitivityThreshold(Output<Integer> alertSensitivityThreshold) {
             this.alertSensitivityThreshold = Objects.requireNonNull(alertSensitivityThreshold);
             return this;
         }
 
         public Builder alertSensitivityThreshold(Integer alertSensitivityThreshold) {
-            this.alertSensitivityThreshold = Input.of(Objects.requireNonNull(alertSensitivityThreshold));
+            this.alertSensitivityThreshold = Output.of(Objects.requireNonNull(alertSensitivityThreshold));
             return this;
         }
 
-        public Builder anomalyDetectorArn(Input<String> anomalyDetectorArn) {
+        public Builder anomalyDetectorArn(Output<String> anomalyDetectorArn) {
             this.anomalyDetectorArn = Objects.requireNonNull(anomalyDetectorArn);
             return this;
         }
 
         public Builder anomalyDetectorArn(String anomalyDetectorArn) {
-            this.anomalyDetectorArn = Input.of(Objects.requireNonNull(anomalyDetectorArn));
+            this.anomalyDetectorArn = Output.of(Objects.requireNonNull(anomalyDetectorArn));
             return this;
         }
         public AlertArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lightsail;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone", required=true)
-      private final Input<String> availabilityZone;
+      private final Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
+    public Output<String> getAvailabilityZone() {
         return this.availabilityZone;
     }
 
@@ -32,9 +32,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintId", required=true)
-      private final Input<String> blueprintId;
+      private final Output<String> blueprintId;
 
-    public Input<String> getBlueprintId() {
+    public Output<String> getBlueprintId() {
         return this.blueprintId;
     }
 
@@ -43,9 +43,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId", required=true)
-      private final Input<String> bundleId;
+      private final Output<String> bundleId;
 
-    public Input<String> getBundleId() {
+    public Output<String> getBundleId() {
         return this.bundleId;
     }
 
@@ -55,10 +55,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPairName")
-      private final @Nullable Input<String> keyPairName;
+      private final @Nullable Output<String> keyPairName;
 
-    public Input<String> getKeyPairName() {
-        return this.keyPairName == null ? Input.empty() : this.keyPairName;
+    public Output<String> getKeyPairName() {
+        return this.keyPairName == null ? Output.empty() : this.keyPairName;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userData")
-      private final @Nullable Input<String> userData;
+      private final @Nullable Output<String> userData;
 
-    public Input<String> getUserData() {
-        return this.userData == null ? Input.empty() : this.userData;
+    public Output<String> getUserData() {
+        return this.userData == null ? Output.empty() : this.userData;
     }
 
     public InstanceArgs(
-        Input<String> availabilityZone,
-        Input<String> blueprintId,
-        Input<String> bundleId,
-        @Nullable Input<String> keyPairName,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> userData) {
+        Output<String> availabilityZone,
+        Output<String> blueprintId,
+        Output<String> bundleId,
+        @Nullable Output<String> keyPairName,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> userData) {
         this.availabilityZone = Objects.requireNonNull(availabilityZone, "expected parameter 'availabilityZone' to be non-null");
         this.blueprintId = Objects.requireNonNull(blueprintId, "expected parameter 'blueprintId' to be non-null");
         this.bundleId = Objects.requireNonNull(bundleId, "expected parameter 'bundleId' to be non-null");
@@ -112,13 +112,13 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.availabilityZone = Input.empty();
-        this.blueprintId = Input.empty();
-        this.bundleId = Input.empty();
-        this.keyPairName = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.userData = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.blueprintId = Output.empty();
+        this.bundleId = Output.empty();
+        this.keyPairName = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.userData = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> availabilityZone;
-        private Input<String> blueprintId;
-        private Input<String> bundleId;
-        private @Nullable Input<String> keyPairName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> userData;
+        private Output<String> availabilityZone;
+        private Output<String> blueprintId;
+        private Output<String> bundleId;
+        private @Nullable Output<String> keyPairName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> userData;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userData = defaults.userData;
         }
 
-        public Builder availabilityZone(Input<String> availabilityZone) {
+        public Builder availabilityZone(Output<String> availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
         public Builder availabilityZone(String availabilityZone) {
-            this.availabilityZone = Input.of(Objects.requireNonNull(availabilityZone));
+            this.availabilityZone = Output.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
 
-        public Builder blueprintId(Input<String> blueprintId) {
+        public Builder blueprintId(Output<String> blueprintId) {
             this.blueprintId = Objects.requireNonNull(blueprintId);
             return this;
         }
 
         public Builder blueprintId(String blueprintId) {
-            this.blueprintId = Input.of(Objects.requireNonNull(blueprintId));
+            this.blueprintId = Output.of(Objects.requireNonNull(blueprintId));
             return this;
         }
 
-        public Builder bundleId(Input<String> bundleId) {
+        public Builder bundleId(Output<String> bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
 
         public Builder bundleId(String bundleId) {
-            this.bundleId = Input.of(Objects.requireNonNull(bundleId));
+            this.bundleId = Output.of(Objects.requireNonNull(bundleId));
             return this;
         }
 
-        public Builder keyPairName(@Nullable Input<String> keyPairName) {
+        public Builder keyPairName(@Nullable Output<String> keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
 
         public Builder keyPairName(@Nullable String keyPairName) {
-            this.keyPairName = Input.ofNullable(keyPairName);
+            this.keyPairName = Output.ofNullable(keyPairName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
 
         public Builder userData(@Nullable String userData) {
-            this.userData = Input.ofNullable(userData);
+            this.userData = Output.ofNullable(userData);
             return this;
         }
         public InstanceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.ConversationMedium;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs;
@@ -23,10 +23,10 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentId")
-      private final @Nullable Input<String> agentId;
+      private final @Nullable Output<String> agentId;
 
-    public Input<String> getAgentId() {
-        return this.agentId == null ? Input.empty() : this.agentId;
+    public Output<String> getAgentId() {
+        return this.agentId == null ? Output.empty() : this.agentId;
     }
 
     /**
@@ -34,17 +34,17 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callMetadata")
-      private final @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata;
+      private final @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata;
 
-    public Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> getCallMetadata() {
-        return this.callMetadata == null ? Input.empty() : this.callMetadata;
+    public Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> getCallMetadata() {
+        return this.callMetadata == null ? Output.empty() : this.callMetadata;
     }
 
     @InputImport(name="conversationId")
-      private final @Nullable Input<String> conversationId;
+      private final @Nullable Output<String> conversationId;
 
-    public Input<String> getConversationId() {
-        return this.conversationId == null ? Input.empty() : this.conversationId;
+    public Output<String> getConversationId() {
+        return this.conversationId == null ? Output.empty() : this.conversationId;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSource")
-      private final @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource;
+      private final @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource;
 
-    public Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> getDataSource() {
-        return this.dataSource == null ? Input.empty() : this.dataSource;
+    public Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> getDataSource() {
+        return this.dataSource == null ? Output.empty() : this.dataSource;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-      private final @Nullable Input<String> expireTime;
+      private final @Nullable Output<String> expireTime;
 
-    public Input<String> getExpireTime() {
-        return this.expireTime == null ? Input.empty() : this.expireTime;
+    public Output<String> getExpireTime() {
+        return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -85,17 +85,17 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="medium")
-      private final @Nullable Input<ConversationMedium> medium;
+      private final @Nullable Output<ConversationMedium> medium;
 
-    public Input<ConversationMedium> getMedium() {
-        return this.medium == null ? Input.empty() : this.medium;
+    public Output<ConversationMedium> getMedium() {
+        return this.medium == null ? Output.empty() : this.medium;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -125,17 +125,17 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="obfuscatedUserId")
-      private final @Nullable Input<String> obfuscatedUserId;
+      private final @Nullable Output<String> obfuscatedUserId;
 
-    public Input<String> getObfuscatedUserId() {
-        return this.obfuscatedUserId == null ? Input.empty() : this.obfuscatedUserId;
+    public Output<String> getObfuscatedUserId() {
+        return this.obfuscatedUserId == null ? Output.empty() : this.obfuscatedUserId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -154,27 +154,27 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<String> ttl;
+      private final @Nullable Output<String> ttl;
 
-    public Input<String> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<String> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     public ConversationArgs(
-        @Nullable Input<String> agentId,
-        @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata,
-        @Nullable Input<String> conversationId,
-        @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource,
-        @Nullable Input<String> expireTime,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> languageCode,
-        @Nullable Input<String> location,
-        @Nullable Input<ConversationMedium> medium,
-        @Nullable Input<String> name,
-        @Nullable Input<String> obfuscatedUserId,
-        @Nullable Input<String> project,
-        @Nullable Input<String> startTime,
-        @Nullable Input<String> ttl) {
+        @Nullable Output<String> agentId,
+        @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata,
+        @Nullable Output<String> conversationId,
+        @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource,
+        @Nullable Output<String> expireTime,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> languageCode,
+        @Nullable Output<String> location,
+        @Nullable Output<ConversationMedium> medium,
+        @Nullable Output<String> name,
+        @Nullable Output<String> obfuscatedUserId,
+        @Nullable Output<String> project,
+        @Nullable Output<String> startTime,
+        @Nullable Output<String> ttl) {
         this.agentId = agentId;
         this.callMetadata = callMetadata;
         this.conversationId = conversationId;
@@ -192,20 +192,20 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConversationArgs() {
-        this.agentId = Input.empty();
-        this.callMetadata = Input.empty();
-        this.conversationId = Input.empty();
-        this.dataSource = Input.empty();
-        this.expireTime = Input.empty();
-        this.labels = Input.empty();
-        this.languageCode = Input.empty();
-        this.location = Input.empty();
-        this.medium = Input.empty();
-        this.name = Input.empty();
-        this.obfuscatedUserId = Input.empty();
-        this.project = Input.empty();
-        this.startTime = Input.empty();
-        this.ttl = Input.empty();
+        this.agentId = Output.empty();
+        this.callMetadata = Output.empty();
+        this.conversationId = Output.empty();
+        this.dataSource = Output.empty();
+        this.expireTime = Output.empty();
+        this.labels = Output.empty();
+        this.languageCode = Output.empty();
+        this.location = Output.empty();
+        this.medium = Output.empty();
+        this.name = Output.empty();
+        this.obfuscatedUserId = Output.empty();
+        this.project = Output.empty();
+        this.startTime = Output.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -217,20 +217,20 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> agentId;
-        private @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata;
-        private @Nullable Input<String> conversationId;
-        private @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource;
-        private @Nullable Input<String> expireTime;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> languageCode;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ConversationMedium> medium;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> obfuscatedUserId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<String> ttl;
+        private @Nullable Output<String> agentId;
+        private @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata;
+        private @Nullable Output<String> conversationId;
+        private @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource;
+        private @Nullable Output<String> expireTime;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> languageCode;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ConversationMedium> medium;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> obfuscatedUserId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<String> ttl;
 
         public Builder() {
     	      // Empty
@@ -254,143 +254,143 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder agentId(@Nullable Input<String> agentId) {
+        public Builder agentId(@Nullable Output<String> agentId) {
             this.agentId = agentId;
             return this;
         }
 
         public Builder agentId(@Nullable String agentId) {
-            this.agentId = Input.ofNullable(agentId);
+            this.agentId = Output.ofNullable(agentId);
             return this;
         }
 
-        public Builder callMetadata(@Nullable Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata) {
+        public Builder callMetadata(@Nullable Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata) {
             this.callMetadata = callMetadata;
             return this;
         }
 
         public Builder callMetadata(@Nullable GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs callMetadata) {
-            this.callMetadata = Input.ofNullable(callMetadata);
+            this.callMetadata = Output.ofNullable(callMetadata);
             return this;
         }
 
-        public Builder conversationId(@Nullable Input<String> conversationId) {
+        public Builder conversationId(@Nullable Output<String> conversationId) {
             this.conversationId = conversationId;
             return this;
         }
 
         public Builder conversationId(@Nullable String conversationId) {
-            this.conversationId = Input.ofNullable(conversationId);
+            this.conversationId = Output.ofNullable(conversationId);
             return this;
         }
 
-        public Builder dataSource(@Nullable Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource) {
+        public Builder dataSource(@Nullable Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
         public Builder dataSource(@Nullable GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs dataSource) {
-            this.dataSource = Input.ofNullable(dataSource);
+            this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
 
-        public Builder expireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Input.ofNullable(expireTime);
+            this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder medium(@Nullable Input<ConversationMedium> medium) {
+        public Builder medium(@Nullable Output<ConversationMedium> medium) {
             this.medium = medium;
             return this;
         }
 
         public Builder medium(@Nullable ConversationMedium medium) {
-            this.medium = Input.ofNullable(medium);
+            this.medium = Output.ofNullable(medium);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder obfuscatedUserId(@Nullable Input<String> obfuscatedUserId) {
+        public Builder obfuscatedUserId(@Nullable Output<String> obfuscatedUserId) {
             this.obfuscatedUserId = obfuscatedUserId;
             return this;
         }
 
         public Builder obfuscatedUserId(@Nullable String obfuscatedUserId) {
-            this.obfuscatedUserId = Input.ofNullable(obfuscatedUserId);
+            this.obfuscatedUserId = Output.ofNullable(obfuscatedUserId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public ConversationArgs build() {

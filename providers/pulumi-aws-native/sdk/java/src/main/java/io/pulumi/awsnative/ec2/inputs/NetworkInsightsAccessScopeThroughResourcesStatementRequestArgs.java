@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeResourceStatementRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
     public static final NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs Empty = new NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs();
 
     @InputImport(name="resourceStatement")
-      private final @Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
+      private final @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
-    public Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> getResourceStatement() {
-        return this.resourceStatement == null ? Input.empty() : this.resourceStatement;
+    public Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> getResourceStatement() {
+        return this.resourceStatement == null ? Output.empty() : this.resourceStatement;
     }
 
-    public NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs(@Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
+    public NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs(@Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
         this.resourceStatement = resourceStatement;
     }
 
     private NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs() {
-        this.resourceStatement = Input.empty();
+        this.resourceStatement = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
     }
 
     public static final class Builder {
-        private @Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
+        private @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
     	      this.resourceStatement = defaults.resourceStatement;
         }
 
-        public Builder resourceStatement(@Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
+        public Builder resourceStatement(@Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
             this.resourceStatement = resourceStatement;
             return this;
         }
 
         public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
-            this.resourceStatement = Input.ofNullable(resourceStatement);
+            this.resourceStatement = Output.ofNullable(resourceStatement);
             return this;
         }
         public NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
      * 
      */
     @InputImport(name="accessPointId")
-      private final @Nullable Input<String> accessPointId;
+      private final @Nullable Output<String> accessPointId;
 
-    public Input<String> getAccessPointId() {
-        return this.accessPointId == null ? Input.empty() : this.accessPointId;
+    public Output<String> getAccessPointId() {
+        return this.accessPointId == null ? Output.empty() : this.accessPointId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
      * 
      */
     @InputImport(name="iam")
-      private final @Nullable Input<String> iam;
+      private final @Nullable Output<String> iam;
 
-    public Input<String> getIam() {
-        return this.iam == null ? Input.empty() : this.iam;
+    public Output<String> getIam() {
+        return this.iam == null ? Output.empty() : this.iam;
     }
 
     public TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs(
-        @Nullable Input<String> accessPointId,
-        @Nullable Input<String> iam) {
+        @Nullable Output<String> accessPointId,
+        @Nullable Output<String> iam) {
         this.accessPointId = accessPointId;
         this.iam = iam;
     }
 
     private TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs() {
-        this.accessPointId = Input.empty();
-        this.iam = Input.empty();
+        this.accessPointId = Output.empty();
+        this.iam = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessPointId;
-        private @Nullable Input<String> iam;
+        private @Nullable Output<String> accessPointId;
+        private @Nullable Output<String> iam;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
     	      this.iam = defaults.iam;
         }
 
-        public Builder accessPointId(@Nullable Input<String> accessPointId) {
+        public Builder accessPointId(@Nullable Output<String> accessPointId) {
             this.accessPointId = accessPointId;
             return this;
         }
 
         public Builder accessPointId(@Nullable String accessPointId) {
-            this.accessPointId = Input.ofNullable(accessPointId);
+            this.accessPointId = Output.ofNullable(accessPointId);
             return this;
         }
 
-        public Builder iam(@Nullable Input<String> iam) {
+        public Builder iam(@Nullable Output<String> iam) {
             this.iam = iam;
             return this;
         }
 
         public Builder iam(@Nullable String iam) {
-            this.iam = Input.ofNullable(iam);
+            this.iam = Output.ofNullable(iam);
             return this;
         }
         public TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs build() {

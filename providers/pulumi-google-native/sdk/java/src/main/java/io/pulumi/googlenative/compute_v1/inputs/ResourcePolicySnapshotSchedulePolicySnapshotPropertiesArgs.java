@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="chainName")
-      private final @Nullable Input<String> chainName;
+      private final @Nullable Output<String> chainName;
 
-    public Input<String> getChainName() {
-        return this.chainName == null ? Input.empty() : this.chainName;
+    public Output<String> getChainName() {
+        return this.chainName == null ? Output.empty() : this.chainName;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="guestFlush")
-      private final @Nullable Input<Boolean> guestFlush;
+      private final @Nullable Output<Boolean> guestFlush;
 
-    public Input<Boolean> getGuestFlush() {
-        return this.guestFlush == null ? Input.empty() : this.guestFlush;
+    public Output<Boolean> getGuestFlush() {
+        return this.guestFlush == null ? Output.empty() : this.guestFlush;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="storageLocations")
-      private final @Nullable Input<List<String>> storageLocations;
+      private final @Nullable Output<List<String>> storageLocations;
 
-    public Input<List<String>> getStorageLocations() {
-        return this.storageLocations == null ? Input.empty() : this.storageLocations;
+    public Output<List<String>> getStorageLocations() {
+        return this.storageLocations == null ? Output.empty() : this.storageLocations;
     }
 
     public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(
-        @Nullable Input<String> chainName,
-        @Nullable Input<Boolean> guestFlush,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<List<String>> storageLocations) {
+        @Nullable Output<String> chainName,
+        @Nullable Output<Boolean> guestFlush,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<List<String>> storageLocations) {
         this.chainName = chainName;
         this.guestFlush = guestFlush;
         this.labels = labels;
@@ -77,10 +77,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     }
 
     private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs() {
-        this.chainName = Input.empty();
-        this.guestFlush = Input.empty();
-        this.labels = Input.empty();
-        this.storageLocations = Input.empty();
+        this.chainName = Output.empty();
+        this.guestFlush = Output.empty();
+        this.labels = Output.empty();
+        this.storageLocations = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<String> chainName;
-        private @Nullable Input<Boolean> guestFlush;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<List<String>> storageLocations;
+        private @Nullable Output<String> chainName;
+        private @Nullable Output<Boolean> guestFlush;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<List<String>> storageLocations;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     	      this.storageLocations = defaults.storageLocations;
         }
 
-        public Builder chainName(@Nullable Input<String> chainName) {
+        public Builder chainName(@Nullable Output<String> chainName) {
             this.chainName = chainName;
             return this;
         }
 
         public Builder chainName(@Nullable String chainName) {
-            this.chainName = Input.ofNullable(chainName);
+            this.chainName = Output.ofNullable(chainName);
             return this;
         }
 
-        public Builder guestFlush(@Nullable Input<Boolean> guestFlush) {
+        public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
 
         public Builder guestFlush(@Nullable Boolean guestFlush) {
-            this.guestFlush = Input.ofNullable(guestFlush);
+            this.guestFlush = Output.ofNullable(guestFlush);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder storageLocations(@Nullable Input<List<String>> storageLocations) {
+        public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
 
         public Builder storageLocations(@Nullable List<String> storageLocations) {
-            this.storageLocations = Input.ofNullable(storageLocations);
+            this.storageLocations = Output.ofNullable(storageLocations);
             return this;
         }
         public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs build() {

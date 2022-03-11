@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="configurationName")
-      private final @Nullable Input<String> configurationName;
+      private final @Nullable Output<String> configurationName;
 
-    public Input<String> getConfigurationName() {
-        return this.configurationName == null ? Input.empty() : this.configurationName;
+    public Output<String> getConfigurationName() {
+        return this.configurationName == null ? Output.empty() : this.configurationName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="productFamilyName")
-      private final @Nullable Input<String> productFamilyName;
+      private final @Nullable Output<String> productFamilyName;
 
-    public Input<String> getProductFamilyName() {
-        return this.productFamilyName == null ? Input.empty() : this.productFamilyName;
+    public Output<String> getProductFamilyName() {
+        return this.productFamilyName == null ? Output.empty() : this.productFamilyName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="productLineName")
-      private final @Nullable Input<String> productLineName;
+      private final @Nullable Output<String> productLineName;
 
-    public Input<String> getProductLineName() {
-        return this.productLineName == null ? Input.empty() : this.productLineName;
+    public Output<String> getProductLineName() {
+        return this.productLineName == null ? Output.empty() : this.productLineName;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="productName")
-      private final @Nullable Input<String> productName;
+      private final @Nullable Output<String> productName;
 
-    public Input<String> getProductName() {
-        return this.productName == null ? Input.empty() : this.productName;
+    public Output<String> getProductName() {
+        return this.productName == null ? Output.empty() : this.productName;
     }
 
     public HierarchyInformationArgs(
-        @Nullable Input<String> configurationName,
-        @Nullable Input<String> productFamilyName,
-        @Nullable Input<String> productLineName,
-        @Nullable Input<String> productName) {
+        @Nullable Output<String> configurationName,
+        @Nullable Output<String> productFamilyName,
+        @Nullable Output<String> productLineName,
+        @Nullable Output<String> productName) {
         this.configurationName = configurationName;
         this.productFamilyName = productFamilyName;
         this.productLineName = productLineName;
@@ -74,10 +74,10 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     }
 
     private HierarchyInformationArgs() {
-        this.configurationName = Input.empty();
-        this.productFamilyName = Input.empty();
-        this.productLineName = Input.empty();
-        this.productName = Input.empty();
+        this.configurationName = Output.empty();
+        this.productFamilyName = Output.empty();
+        this.productLineName = Output.empty();
+        this.productName = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configurationName;
-        private @Nullable Input<String> productFamilyName;
-        private @Nullable Input<String> productLineName;
-        private @Nullable Input<String> productName;
+        private @Nullable Output<String> configurationName;
+        private @Nullable Output<String> productFamilyName;
+        private @Nullable Output<String> productLineName;
+        private @Nullable Output<String> productName;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     	      this.productName = defaults.productName;
         }
 
-        public Builder configurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Output<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Input.ofNullable(configurationName);
+            this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
 
-        public Builder productFamilyName(@Nullable Input<String> productFamilyName) {
+        public Builder productFamilyName(@Nullable Output<String> productFamilyName) {
             this.productFamilyName = productFamilyName;
             return this;
         }
 
         public Builder productFamilyName(@Nullable String productFamilyName) {
-            this.productFamilyName = Input.ofNullable(productFamilyName);
+            this.productFamilyName = Output.ofNullable(productFamilyName);
             return this;
         }
 
-        public Builder productLineName(@Nullable Input<String> productLineName) {
+        public Builder productLineName(@Nullable Output<String> productLineName) {
             this.productLineName = productLineName;
             return this;
         }
 
         public Builder productLineName(@Nullable String productLineName) {
-            this.productLineName = Input.ofNullable(productLineName);
+            this.productLineName = Output.ofNullable(productLineName);
             return this;
         }
 
-        public Builder productName(@Nullable Input<String> productName) {
+        public Builder productName(@Nullable Output<String> productName) {
             this.productName = productName;
             return this;
         }
 
         public Builder productName(@Nullable String productName) {
-            this.productName = Input.ofNullable(productName);
+            this.productName = Output.ofNullable(productName);
             return this;
         }
         public HierarchyInformationArgs build() {

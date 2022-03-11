@@ -4,7 +4,6 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1;
 
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -117,10 +116,10 @@ public class IngressClass extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IngressClass(String name, @Nullable IngressClassArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:networking.k8s.io/v1:IngressClass", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("kubernetes:networking.k8s.io/v1:IngressClass", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private IngressClass(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IngressClass(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:networking.k8s.io/v1:IngressClass", name, null, makeResourceOptions(options, id));
     }
 
@@ -132,11 +131,11 @@ public class IngressClass extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("kubernetes:networking.k8s.io/v1beta1:IngressClass").build())
+                Output.of(Alias.builder().setType("kubernetes:networking.k8s.io/v1beta1:IngressClass").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -150,7 +149,7 @@ public class IngressClass extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IngressClass get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IngressClass get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IngressClass(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudBuildId")
-      private final @Nullable Input<String> cloudBuildId;
+      private final @Nullable Output<String> cloudBuildId;
 
-    public Input<String> getCloudBuildId() {
-        return this.cloudBuildId == null ? Input.empty() : this.cloudBuildId;
+    public Output<String> getCloudBuildId() {
+        return this.cloudBuildId == null ? Output.empty() : this.cloudBuildId;
     }
 
-    public BuildInfoArgs(@Nullable Input<String> cloudBuildId) {
+    public BuildInfoArgs(@Nullable Output<String> cloudBuildId) {
         this.cloudBuildId = cloudBuildId;
     }
 
     private BuildInfoArgs() {
-        this.cloudBuildId = Input.empty();
+        this.cloudBuildId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudBuildId;
+        private @Nullable Output<String> cloudBuildId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cloudBuildId = defaults.cloudBuildId;
         }
 
-        public Builder cloudBuildId(@Nullable Input<String> cloudBuildId) {
+        public Builder cloudBuildId(@Nullable Output<String> cloudBuildId) {
             this.cloudBuildId = cloudBuildId;
             return this;
         }
 
         public Builder cloudBuildId(@Nullable String cloudBuildId) {
-            this.cloudBuildId = Input.ofNullable(cloudBuildId);
+            this.cloudBuildId = Output.ofNullable(cloudBuildId);
             return this;
         }
         public BuildInfoArgs build() {

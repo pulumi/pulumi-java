@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="authenticationName")
-      private final @Nullable Input<String> authenticationName;
+      private final @Nullable Output<String> authenticationName;
 
-    public Input<String> getAuthenticationName() {
-        return this.authenticationName == null ? Input.empty() : this.authenticationName;
+    public Output<String> getAuthenticationName() {
+        return this.authenticationName == null ? Output.empty() : this.authenticationName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="azureADOnlyAuthentication", required=true)
-      private final Input<Boolean> azureADOnlyAuthentication;
+      private final Output<Boolean> azureADOnlyAuthentication;
 
-    public Input<Boolean> getAzureADOnlyAuthentication() {
+    public Output<Boolean> getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
 
@@ -42,9 +42,9 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-      private final Input<String> managedInstanceName;
+      private final Output<String> managedInstanceName;
 
-    public Input<String> getManagedInstanceName() {
+    public Output<String> getManagedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -53,17 +53,17 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ManagedInstanceAzureADOnlyAuthenticationArgs(
-        @Nullable Input<String> authenticationName,
-        Input<Boolean> azureADOnlyAuthentication,
-        Input<String> managedInstanceName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> authenticationName,
+        Output<Boolean> azureADOnlyAuthentication,
+        Output<String> managedInstanceName,
+        Output<String> resourceGroupName) {
         this.authenticationName = authenticationName;
         this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication, "expected parameter 'azureADOnlyAuthentication' to be non-null");
         this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
@@ -71,10 +71,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
     }
 
     private ManagedInstanceAzureADOnlyAuthenticationArgs() {
-        this.authenticationName = Input.empty();
-        this.azureADOnlyAuthentication = Input.empty();
-        this.managedInstanceName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.authenticationName = Output.empty();
+        this.azureADOnlyAuthentication = Output.empty();
+        this.managedInstanceName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authenticationName;
-        private Input<Boolean> azureADOnlyAuthentication;
-        private Input<String> managedInstanceName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> authenticationName;
+        private Output<Boolean> azureADOnlyAuthentication;
+        private Output<String> managedInstanceName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder authenticationName(@Nullable Input<String> authenticationName) {
+        public Builder authenticationName(@Nullable Output<String> authenticationName) {
             this.authenticationName = authenticationName;
             return this;
         }
 
         public Builder authenticationName(@Nullable String authenticationName) {
-            this.authenticationName = Input.ofNullable(authenticationName);
+            this.authenticationName = Output.ofNullable(authenticationName);
             return this;
         }
 
-        public Builder azureADOnlyAuthentication(Input<Boolean> azureADOnlyAuthentication) {
+        public Builder azureADOnlyAuthentication(Output<Boolean> azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
             return this;
         }
 
         public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
-            this.azureADOnlyAuthentication = Input.of(Objects.requireNonNull(azureADOnlyAuthentication));
+            this.azureADOnlyAuthentication = Output.of(Objects.requireNonNull(azureADOnlyAuthentication));
             return this;
         }
 
-        public Builder managedInstanceName(Input<String> managedInstanceName) {
+        public Builder managedInstanceName(Output<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
 
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Input.of(Objects.requireNonNull(managedInstanceName));
+            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ManagedInstanceAzureADOnlyAuthenticationArgs build() {

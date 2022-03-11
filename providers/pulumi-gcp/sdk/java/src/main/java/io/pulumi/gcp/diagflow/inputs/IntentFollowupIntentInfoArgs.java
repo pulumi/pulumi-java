@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
     public static final IntentFollowupIntentInfoArgs Empty = new IntentFollowupIntentInfoArgs();
 
     @InputImport(name="followupIntentName")
-      private final @Nullable Input<String> followupIntentName;
+      private final @Nullable Output<String> followupIntentName;
 
-    public Input<String> getFollowupIntentName() {
-        return this.followupIntentName == null ? Input.empty() : this.followupIntentName;
+    public Output<String> getFollowupIntentName() {
+        return this.followupIntentName == null ? Output.empty() : this.followupIntentName;
     }
 
     /**
@@ -27,22 +27,22 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="parentFollowupIntentName")
-      private final @Nullable Input<String> parentFollowupIntentName;
+      private final @Nullable Output<String> parentFollowupIntentName;
 
-    public Input<String> getParentFollowupIntentName() {
-        return this.parentFollowupIntentName == null ? Input.empty() : this.parentFollowupIntentName;
+    public Output<String> getParentFollowupIntentName() {
+        return this.parentFollowupIntentName == null ? Output.empty() : this.parentFollowupIntentName;
     }
 
     public IntentFollowupIntentInfoArgs(
-        @Nullable Input<String> followupIntentName,
-        @Nullable Input<String> parentFollowupIntentName) {
+        @Nullable Output<String> followupIntentName,
+        @Nullable Output<String> parentFollowupIntentName) {
         this.followupIntentName = followupIntentName;
         this.parentFollowupIntentName = parentFollowupIntentName;
     }
 
     private IntentFollowupIntentInfoArgs() {
-        this.followupIntentName = Input.empty();
-        this.parentFollowupIntentName = Input.empty();
+        this.followupIntentName = Output.empty();
+        this.parentFollowupIntentName = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> followupIntentName;
-        private @Nullable Input<String> parentFollowupIntentName;
+        private @Nullable Output<String> followupIntentName;
+        private @Nullable Output<String> parentFollowupIntentName;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
     	      this.parentFollowupIntentName = defaults.parentFollowupIntentName;
         }
 
-        public Builder followupIntentName(@Nullable Input<String> followupIntentName) {
+        public Builder followupIntentName(@Nullable Output<String> followupIntentName) {
             this.followupIntentName = followupIntentName;
             return this;
         }
 
         public Builder followupIntentName(@Nullable String followupIntentName) {
-            this.followupIntentName = Input.ofNullable(followupIntentName);
+            this.followupIntentName = Output.ofNullable(followupIntentName);
             return this;
         }
 
-        public Builder parentFollowupIntentName(@Nullable Input<String> parentFollowupIntentName) {
+        public Builder parentFollowupIntentName(@Nullable Output<String> parentFollowupIntentName) {
             this.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
 
         public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
-            this.parentFollowupIntentName = Input.ofNullable(parentFollowupIntentName);
+            this.parentFollowupIntentName = Output.ofNullable(parentFollowupIntentName);
             return this;
         }
         public IntentFollowupIntentInfoArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement;
 
 import io.pulumi.azurenative.costmanagement.inputs.SettingsPropertiesCacheArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cache")
-      private final @Nullable Input<List<SettingsPropertiesCacheArgs>> cache;
+      private final @Nullable Output<List<SettingsPropertiesCacheArgs>> cache;
 
-    public Input<List<SettingsPropertiesCacheArgs>> getCache() {
-        return this.cache == null ? Input.empty() : this.cache;
+    public Output<List<SettingsPropertiesCacheArgs>> getCache() {
+        return this.cache == null ? Output.empty() : this.cache;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -43,10 +43,10 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settingName")
-      private final @Nullable Input<String> settingName;
+      private final @Nullable Output<String> settingName;
 
-    public Input<String> getSettingName() {
-        return this.settingName == null ? Input.empty() : this.settingName;
+    public Output<String> getSettingName() {
+        return this.settingName == null ? Output.empty() : this.settingName;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startOn")
-      private final @Nullable Input<String> startOn;
+      private final @Nullable Output<String> startOn;
 
-    public Input<String> getStartOn() {
-        return this.startOn == null ? Input.empty() : this.startOn;
+    public Output<String> getStartOn() {
+        return this.startOn == null ? Output.empty() : this.startOn;
     }
 
     public SettingArgs(
-        @Nullable Input<List<SettingsPropertiesCacheArgs>> cache,
-        Input<String> scope,
-        @Nullable Input<String> settingName,
-        @Nullable Input<String> startOn) {
+        @Nullable Output<List<SettingsPropertiesCacheArgs>> cache,
+        Output<String> scope,
+        @Nullable Output<String> settingName,
+        @Nullable Output<String> startOn) {
         this.cache = cache;
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
         this.settingName = settingName;
@@ -72,10 +72,10 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SettingArgs() {
-        this.cache = Input.empty();
-        this.scope = Input.empty();
-        this.settingName = Input.empty();
-        this.startOn = Input.empty();
+        this.cache = Output.empty();
+        this.scope = Output.empty();
+        this.settingName = Output.empty();
+        this.startOn = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SettingsPropertiesCacheArgs>> cache;
-        private Input<String> scope;
-        private @Nullable Input<String> settingName;
-        private @Nullable Input<String> startOn;
+        private @Nullable Output<List<SettingsPropertiesCacheArgs>> cache;
+        private Output<String> scope;
+        private @Nullable Output<String> settingName;
+        private @Nullable Output<String> startOn;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startOn = defaults.startOn;
         }
 
-        public Builder cache(@Nullable Input<List<SettingsPropertiesCacheArgs>> cache) {
+        public Builder cache(@Nullable Output<List<SettingsPropertiesCacheArgs>> cache) {
             this.cache = cache;
             return this;
         }
 
         public Builder cache(@Nullable List<SettingsPropertiesCacheArgs> cache) {
-            this.cache = Input.ofNullable(cache);
+            this.cache = Output.ofNullable(cache);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder settingName(@Nullable Input<String> settingName) {
+        public Builder settingName(@Nullable Output<String> settingName) {
             this.settingName = settingName;
             return this;
         }
 
         public Builder settingName(@Nullable String settingName) {
-            this.settingName = Input.ofNullable(settingName);
+            this.settingName = Output.ofNullable(settingName);
             return this;
         }
 
-        public Builder startOn(@Nullable Input<String> startOn) {
+        public Builder startOn(@Nullable Output<String> startOn) {
             this.startOn = startOn;
             return this;
         }
 
         public Builder startOn(@Nullable String startOn) {
-            this.startOn = Input.ofNullable(startOn);
+            this.startOn = Output.ofNullable(startOn);
             return this;
         }
         public SettingArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.route53;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverFirewallRuleArgs;
 import io.pulumi.aws.route53.inputs.ResolverFirewallRuleState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -195,14 +194,14 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverFirewallRule(String name, ResolverFirewallRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverFirewallRule:ResolverFirewallRule", name, args == null ? ResolverFirewallRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:route53/resolverFirewallRule:ResolverFirewallRule", name, args == null ? ResolverFirewallRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResolverFirewallRule(String name, Input<String> id, @Nullable ResolverFirewallRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResolverFirewallRule(String name, Output<String> id, @Nullable ResolverFirewallRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:route53/resolverFirewallRule:ResolverFirewallRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -218,7 +217,7 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResolverFirewallRule get(String name, Input<String> id, @Nullable ResolverFirewallRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResolverFirewallRule get(String name, Output<String> id, @Nullable ResolverFirewallRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResolverFirewallRule(name, id, state, options);
     }
 }

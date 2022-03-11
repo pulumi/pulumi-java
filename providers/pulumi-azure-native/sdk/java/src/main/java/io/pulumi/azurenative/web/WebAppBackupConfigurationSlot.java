@@ -8,7 +8,6 @@ import io.pulumi.azurenative.web.WebAppBackupConfigurationSlotArgs;
 import io.pulumi.azurenative.web.outputs.BackupScheduleResponse;
 import io.pulumi.azurenative.web.outputs.DatabaseBackupSettingResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -182,30 +181,30 @@ public class WebAppBackupConfigurationSlot extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppBackupConfigurationSlot(String name, WebAppBackupConfigurationSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppBackupConfigurationSlot", name, args == null ? WebAppBackupConfigurationSlotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppBackupConfigurationSlot", name, args == null ? WebAppBackupConfigurationSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppBackupConfigurationSlot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppBackupConfigurationSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppBackupConfigurationSlot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20150801:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20160801:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppBackupConfigurationSlot").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppBackupConfigurationSlot").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppBackupConfigurationSlot").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppBackupConfigurationSlot").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -219,7 +218,7 @@ public class WebAppBackupConfigurationSlot extends io.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppBackupConfigurationSlot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppBackupConfigurationSlot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppBackupConfigurationSlot(name, id, options);
     }
 }

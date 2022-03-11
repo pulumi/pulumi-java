@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cassandra.inputs;
 
 import io.pulumi.awsnative.cassandra.enums.TableEncryptionType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class TableEncryptionSpecificationArgs extends io.pulumi.resources.
     public static final TableEncryptionSpecificationArgs Empty = new TableEncryptionSpecificationArgs();
 
     @InputImport(name="encryptionType", required=true)
-      private final Input<TableEncryptionType> encryptionType;
+      private final Output<TableEncryptionType> encryptionType;
 
-    public Input<TableEncryptionType> getEncryptionType() {
+    public Output<TableEncryptionType> getEncryptionType() {
         return this.encryptionType;
     }
 
     @InputImport(name="kmsKeyIdentifier")
-      private final @Nullable Input<String> kmsKeyIdentifier;
+      private final @Nullable Output<String> kmsKeyIdentifier;
 
-    public Input<String> getKmsKeyIdentifier() {
-        return this.kmsKeyIdentifier == null ? Input.empty() : this.kmsKeyIdentifier;
+    public Output<String> getKmsKeyIdentifier() {
+        return this.kmsKeyIdentifier == null ? Output.empty() : this.kmsKeyIdentifier;
     }
 
     public TableEncryptionSpecificationArgs(
-        Input<TableEncryptionType> encryptionType,
-        @Nullable Input<String> kmsKeyIdentifier) {
+        Output<TableEncryptionType> encryptionType,
+        @Nullable Output<String> kmsKeyIdentifier) {
         this.encryptionType = Objects.requireNonNull(encryptionType, "expected parameter 'encryptionType' to be non-null");
         this.kmsKeyIdentifier = kmsKeyIdentifier;
     }
 
     private TableEncryptionSpecificationArgs() {
-        this.encryptionType = Input.empty();
-        this.kmsKeyIdentifier = Input.empty();
+        this.encryptionType = Output.empty();
+        this.kmsKeyIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class TableEncryptionSpecificationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<TableEncryptionType> encryptionType;
-        private @Nullable Input<String> kmsKeyIdentifier;
+        private Output<TableEncryptionType> encryptionType;
+        private @Nullable Output<String> kmsKeyIdentifier;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class TableEncryptionSpecificationArgs extends io.pulumi.resources.
     	      this.kmsKeyIdentifier = defaults.kmsKeyIdentifier;
         }
 
-        public Builder encryptionType(Input<TableEncryptionType> encryptionType) {
+        public Builder encryptionType(Output<TableEncryptionType> encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
         public Builder encryptionType(TableEncryptionType encryptionType) {
-            this.encryptionType = Input.of(Objects.requireNonNull(encryptionType));
+            this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
             return this;
         }
 
-        public Builder kmsKeyIdentifier(@Nullable Input<String> kmsKeyIdentifier) {
+        public Builder kmsKeyIdentifier(@Nullable Output<String> kmsKeyIdentifier) {
             this.kmsKeyIdentifier = kmsKeyIdentifier;
             return this;
         }
 
         public Builder kmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
-            this.kmsKeyIdentifier = Input.ofNullable(kmsKeyIdentifier);
+            this.kmsKeyIdentifier = Output.ofNullable(kmsKeyIdentifier);
             return this;
         }
         public TableEncryptionSpecificationArgs build() {

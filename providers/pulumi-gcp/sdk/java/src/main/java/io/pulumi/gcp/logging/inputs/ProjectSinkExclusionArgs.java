@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="filter", required=true)
-      private final Input<String> filter;
+      private final Output<String> filter;
 
-    public Input<String> getFilter() {
+    public Output<String> getFilter() {
         return this.filter;
     }
 
@@ -54,17 +54,17 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public ProjectSinkExclusionArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disabled,
-        Input<String> filter,
-        Input<String> name) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disabled,
+        Output<String> filter,
+        Output<String> name) {
         this.description = description;
         this.disabled = disabled;
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
@@ -72,10 +72,10 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
     }
 
     private ProjectSinkExclusionArgs() {
-        this.description = Input.empty();
-        this.disabled = Input.empty();
-        this.filter = Input.empty();
-        this.name = Input.empty();
+        this.description = Output.empty();
+        this.disabled = Output.empty();
+        this.filter = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disabled;
-        private Input<String> filter;
-        private Input<String> name;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disabled;
+        private Output<String> filter;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder filter(Input<String> filter) {
+        public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(String filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ProjectSinkExclusionArgs build() {

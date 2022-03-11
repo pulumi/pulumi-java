@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialDuration")
-      private final @Nullable Input<Integer> credentialDuration;
+      private final @Nullable Output<Integer> credentialDuration;
 
-    public Input<Integer> getCredentialDuration() {
-        return this.credentialDuration == null ? Input.empty() : this.credentialDuration;
+    public Output<Integer> getCredentialDuration() {
+        return this.credentialDuration == null ? Output.empty() : this.credentialDuration;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public RoleAliasState(
-        @Nullable Input<String> alias,
-        @Nullable Input<String> arn,
-        @Nullable Input<Integer> credentialDuration,
-        @Nullable Input<String> roleArn) {
+        @Nullable Output<String> alias,
+        @Nullable Output<String> arn,
+        @Nullable Output<Integer> credentialDuration,
+        @Nullable Output<String> roleArn) {
         this.alias = alias;
         this.arn = arn;
         this.credentialDuration = credentialDuration;
@@ -71,10 +71,10 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleAliasState() {
-        this.alias = Input.empty();
-        this.arn = Input.empty();
-        this.credentialDuration = Input.empty();
-        this.roleArn = Input.empty();
+        this.alias = Output.empty();
+        this.arn = Output.empty();
+        this.credentialDuration = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alias;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Integer> credentialDuration;
-        private @Nullable Input<String> roleArn;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Integer> credentialDuration;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder credentialDuration(@Nullable Input<Integer> credentialDuration) {
+        public Builder credentialDuration(@Nullable Output<Integer> credentialDuration) {
             this.credentialDuration = credentialDuration;
             return this;
         }
 
         public Builder credentialDuration(@Nullable Integer credentialDuration) {
-            this.credentialDuration = Input.ofNullable(credentialDuration);
+            this.credentialDuration = Output.ofNullable(credentialDuration);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public RoleAliasState build() {

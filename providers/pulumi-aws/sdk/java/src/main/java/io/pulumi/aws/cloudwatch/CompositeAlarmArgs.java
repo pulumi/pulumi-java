@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionsEnabled")
-      private final @Nullable Input<Boolean> actionsEnabled;
+      private final @Nullable Output<Boolean> actionsEnabled;
 
-    public Input<Boolean> getActionsEnabled() {
-        return this.actionsEnabled == null ? Input.empty() : this.actionsEnabled;
+    public Output<Boolean> getActionsEnabled() {
+        return this.actionsEnabled == null ? Output.empty() : this.actionsEnabled;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmActions")
-      private final @Nullable Input<List<String>> alarmActions;
+      private final @Nullable Output<List<String>> alarmActions;
 
-    public Input<List<String>> getAlarmActions() {
-        return this.alarmActions == null ? Input.empty() : this.alarmActions;
+    public Output<List<String>> getAlarmActions() {
+        return this.alarmActions == null ? Output.empty() : this.alarmActions;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmDescription")
-      private final @Nullable Input<String> alarmDescription;
+      private final @Nullable Output<String> alarmDescription;
 
-    public Input<String> getAlarmDescription() {
-        return this.alarmDescription == null ? Input.empty() : this.alarmDescription;
+    public Output<String> getAlarmDescription() {
+        return this.alarmDescription == null ? Output.empty() : this.alarmDescription;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmName", required=true)
-      private final Input<String> alarmName;
+      private final Output<String> alarmName;
 
-    public Input<String> getAlarmName() {
+    public Output<String> getAlarmName() {
         return this.alarmName;
     }
 
@@ -66,9 +66,9 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmRule", required=true)
-      private final Input<String> alarmRule;
+      private final Output<String> alarmRule;
 
-    public Input<String> getAlarmRule() {
+    public Output<String> getAlarmRule() {
         return this.alarmRule;
     }
 
@@ -77,10 +77,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insufficientDataActions")
-      private final @Nullable Input<List<String>> insufficientDataActions;
+      private final @Nullable Output<List<String>> insufficientDataActions;
 
-    public Input<List<String>> getInsufficientDataActions() {
-        return this.insufficientDataActions == null ? Input.empty() : this.insufficientDataActions;
+    public Output<List<String>> getInsufficientDataActions() {
+        return this.insufficientDataActions == null ? Output.empty() : this.insufficientDataActions;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="okActions")
-      private final @Nullable Input<List<String>> okActions;
+      private final @Nullable Output<List<String>> okActions;
 
-    public Input<List<String>> getOkActions() {
-        return this.okActions == null ? Input.empty() : this.okActions;
+    public Output<List<String>> getOkActions() {
+        return this.okActions == null ? Output.empty() : this.okActions;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CompositeAlarmArgs(
-        @Nullable Input<Boolean> actionsEnabled,
-        @Nullable Input<List<String>> alarmActions,
-        @Nullable Input<String> alarmDescription,
-        Input<String> alarmName,
-        Input<String> alarmRule,
-        @Nullable Input<List<String>> insufficientDataActions,
-        @Nullable Input<List<String>> okActions,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> actionsEnabled,
+        @Nullable Output<List<String>> alarmActions,
+        @Nullable Output<String> alarmDescription,
+        Output<String> alarmName,
+        Output<String> alarmRule,
+        @Nullable Output<List<String>> insufficientDataActions,
+        @Nullable Output<List<String>> okActions,
+        @Nullable Output<Map<String,String>> tags) {
         this.actionsEnabled = actionsEnabled;
         this.alarmActions = alarmActions;
         this.alarmDescription = alarmDescription;
@@ -125,14 +125,14 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CompositeAlarmArgs() {
-        this.actionsEnabled = Input.empty();
-        this.alarmActions = Input.empty();
-        this.alarmDescription = Input.empty();
-        this.alarmName = Input.empty();
-        this.alarmRule = Input.empty();
-        this.insufficientDataActions = Input.empty();
-        this.okActions = Input.empty();
-        this.tags = Input.empty();
+        this.actionsEnabled = Output.empty();
+        this.alarmActions = Output.empty();
+        this.alarmDescription = Output.empty();
+        this.alarmName = Output.empty();
+        this.alarmRule = Output.empty();
+        this.insufficientDataActions = Output.empty();
+        this.okActions = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> actionsEnabled;
-        private @Nullable Input<List<String>> alarmActions;
-        private @Nullable Input<String> alarmDescription;
-        private Input<String> alarmName;
-        private Input<String> alarmRule;
-        private @Nullable Input<List<String>> insufficientDataActions;
-        private @Nullable Input<List<String>> okActions;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> actionsEnabled;
+        private @Nullable Output<List<String>> alarmActions;
+        private @Nullable Output<String> alarmDescription;
+        private Output<String> alarmName;
+        private Output<String> alarmRule;
+        private @Nullable Output<List<String>> insufficientDataActions;
+        private @Nullable Output<List<String>> okActions;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder actionsEnabled(@Nullable Input<Boolean> actionsEnabled) {
+        public Builder actionsEnabled(@Nullable Output<Boolean> actionsEnabled) {
             this.actionsEnabled = actionsEnabled;
             return this;
         }
 
         public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
-            this.actionsEnabled = Input.ofNullable(actionsEnabled);
+            this.actionsEnabled = Output.ofNullable(actionsEnabled);
             return this;
         }
 
-        public Builder alarmActions(@Nullable Input<List<String>> alarmActions) {
+        public Builder alarmActions(@Nullable Output<List<String>> alarmActions) {
             this.alarmActions = alarmActions;
             return this;
         }
 
         public Builder alarmActions(@Nullable List<String> alarmActions) {
-            this.alarmActions = Input.ofNullable(alarmActions);
+            this.alarmActions = Output.ofNullable(alarmActions);
             return this;
         }
 
-        public Builder alarmDescription(@Nullable Input<String> alarmDescription) {
+        public Builder alarmDescription(@Nullable Output<String> alarmDescription) {
             this.alarmDescription = alarmDescription;
             return this;
         }
 
         public Builder alarmDescription(@Nullable String alarmDescription) {
-            this.alarmDescription = Input.ofNullable(alarmDescription);
+            this.alarmDescription = Output.ofNullable(alarmDescription);
             return this;
         }
 
-        public Builder alarmName(Input<String> alarmName) {
+        public Builder alarmName(Output<String> alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
         public Builder alarmName(String alarmName) {
-            this.alarmName = Input.of(Objects.requireNonNull(alarmName));
+            this.alarmName = Output.of(Objects.requireNonNull(alarmName));
             return this;
         }
 
-        public Builder alarmRule(Input<String> alarmRule) {
+        public Builder alarmRule(Output<String> alarmRule) {
             this.alarmRule = Objects.requireNonNull(alarmRule);
             return this;
         }
 
         public Builder alarmRule(String alarmRule) {
-            this.alarmRule = Input.of(Objects.requireNonNull(alarmRule));
+            this.alarmRule = Output.of(Objects.requireNonNull(alarmRule));
             return this;
         }
 
-        public Builder insufficientDataActions(@Nullable Input<List<String>> insufficientDataActions) {
+        public Builder insufficientDataActions(@Nullable Output<List<String>> insufficientDataActions) {
             this.insufficientDataActions = insufficientDataActions;
             return this;
         }
 
         public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
-            this.insufficientDataActions = Input.ofNullable(insufficientDataActions);
+            this.insufficientDataActions = Output.ofNullable(insufficientDataActions);
             return this;
         }
 
-        public Builder okActions(@Nullable Input<List<String>> okActions) {
+        public Builder okActions(@Nullable Output<List<String>> okActions) {
             this.okActions = okActions;
             return this;
         }
 
         public Builder okActions(@Nullable List<String> okActions) {
-            this.okActions = Input.ofNullable(okActions);
+            this.okActions = Output.ofNullable(okActions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CompositeAlarmArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs;
@@ -25,10 +25,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="accelerators")
-      private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> accelerators;
+      private final @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> accelerators;
 
-    public Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> getAccelerators() {
-        return this.accelerators == null ? Input.empty() : this.accelerators;
+    public Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> getAccelerators() {
+        return this.accelerators == null ? Output.empty() : this.accelerators;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="diskConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> diskConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> diskConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> getDiskConfig() {
-        return this.diskConfig == null ? Input.empty() : this.diskConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> getDiskConfig() {
+        return this.diskConfig == null ? Output.empty() : this.diskConfig;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="instanceNames")
-      private final @Nullable Input<List<String>> instanceNames;
+      private final @Nullable Output<List<String>> instanceNames;
 
-    public Input<List<String>> getInstanceNames() {
-        return this.instanceNames == null ? Input.empty() : this.instanceNames;
+    public Output<List<String>> getInstanceNames() {
+        return this.instanceNames == null ? Output.empty() : this.instanceNames;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="isPreemptible")
-      private final @Nullable Input<Boolean> isPreemptible;
+      private final @Nullable Output<Boolean> isPreemptible;
 
-    public Input<Boolean> getIsPreemptible() {
-        return this.isPreemptible == null ? Input.empty() : this.isPreemptible;
+    public Output<Boolean> getIsPreemptible() {
+        return this.isPreemptible == null ? Output.empty() : this.isPreemptible;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="managedGroupConfigs")
-      private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> managedGroupConfigs;
+      private final @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> managedGroupConfigs;
 
-    public Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> getManagedGroupConfigs() {
-        return this.managedGroupConfigs == null ? Input.empty() : this.managedGroupConfigs;
+    public Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> getManagedGroupConfigs() {
+        return this.managedGroupConfigs == null ? Output.empty() : this.managedGroupConfigs;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="minCpuPlatform")
-      private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Output<String> minCpuPlatform;
 
-    public Input<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
+    public Output<String> getMinCpuPlatform() {
+        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="numInstances")
-      private final @Nullable Input<Integer> numInstances;
+      private final @Nullable Output<Integer> numInstances;
 
-    public Input<Integer> getNumInstances() {
-        return this.numInstances == null ? Input.empty() : this.numInstances;
+    public Output<Integer> getNumInstances() {
+        return this.numInstances == null ? Output.empty() : this.numInstances;
     }
 
     /**
@@ -127,23 +127,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
      * 
      */
     @InputImport(name="preemptibility")
-      private final @Nullable Input<String> preemptibility;
+      private final @Nullable Output<String> preemptibility;
 
-    public Input<String> getPreemptibility() {
-        return this.preemptibility == null ? Input.empty() : this.preemptibility;
+    public Output<String> getPreemptibility() {
+        return this.preemptibility == null ? Output.empty() : this.preemptibility;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs(
-        @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> accelerators,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> diskConfig,
-        @Nullable Input<String> image,
-        @Nullable Input<List<String>> instanceNames,
-        @Nullable Input<Boolean> isPreemptible,
-        @Nullable Input<String> machineType,
-        @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> managedGroupConfigs,
-        @Nullable Input<String> minCpuPlatform,
-        @Nullable Input<Integer> numInstances,
-        @Nullable Input<String> preemptibility) {
+        @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> accelerators,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> diskConfig,
+        @Nullable Output<String> image,
+        @Nullable Output<List<String>> instanceNames,
+        @Nullable Output<Boolean> isPreemptible,
+        @Nullable Output<String> machineType,
+        @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> managedGroupConfigs,
+        @Nullable Output<String> minCpuPlatform,
+        @Nullable Output<Integer> numInstances,
+        @Nullable Output<String> preemptibility) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.image = image;
@@ -157,16 +157,16 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs() {
-        this.accelerators = Input.empty();
-        this.diskConfig = Input.empty();
-        this.image = Input.empty();
-        this.instanceNames = Input.empty();
-        this.isPreemptible = Input.empty();
-        this.machineType = Input.empty();
-        this.managedGroupConfigs = Input.empty();
-        this.minCpuPlatform = Input.empty();
-        this.numInstances = Input.empty();
-        this.preemptibility = Input.empty();
+        this.accelerators = Output.empty();
+        this.diskConfig = Output.empty();
+        this.image = Output.empty();
+        this.instanceNames = Output.empty();
+        this.isPreemptible = Output.empty();
+        this.machineType = Output.empty();
+        this.managedGroupConfigs = Output.empty();
+        this.minCpuPlatform = Output.empty();
+        this.numInstances = Output.empty();
+        this.preemptibility = Output.empty();
     }
 
     public static Builder builder() {
@@ -178,16 +178,16 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> accelerators;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> diskConfig;
-        private @Nullable Input<String> image;
-        private @Nullable Input<List<String>> instanceNames;
-        private @Nullable Input<Boolean> isPreemptible;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> managedGroupConfigs;
-        private @Nullable Input<String> minCpuPlatform;
-        private @Nullable Input<Integer> numInstances;
-        private @Nullable Input<String> preemptibility;
+        private @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> accelerators;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> diskConfig;
+        private @Nullable Output<String> image;
+        private @Nullable Output<List<String>> instanceNames;
+        private @Nullable Output<Boolean> isPreemptible;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> managedGroupConfigs;
+        private @Nullable Output<String> minCpuPlatform;
+        private @Nullable Output<Integer> numInstances;
+        private @Nullable Output<String> preemptibility;
 
         public Builder() {
     	      // Empty
@@ -207,103 +207,103 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs
     	      this.preemptibility = defaults.preemptibility;
         }
 
-        public Builder accelerators(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> accelerators) {
+        public Builder accelerators(@Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs>> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
         public Builder accelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorArgs> accelerators) {
-            this.accelerators = Input.ofNullable(accelerators);
+            this.accelerators = Output.ofNullable(accelerators);
             return this;
         }
 
-        public Builder diskConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> diskConfig) {
+        public Builder diskConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
         public Builder diskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigArgs diskConfig) {
-            this.diskConfig = Input.ofNullable(diskConfig);
+            this.diskConfig = Output.ofNullable(diskConfig);
             return this;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder instanceNames(@Nullable Input<List<String>> instanceNames) {
+        public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
 
         public Builder instanceNames(@Nullable List<String> instanceNames) {
-            this.instanceNames = Input.ofNullable(instanceNames);
+            this.instanceNames = Output.ofNullable(instanceNames);
             return this;
         }
 
-        public Builder isPreemptible(@Nullable Input<Boolean> isPreemptible) {
+        public Builder isPreemptible(@Nullable Output<Boolean> isPreemptible) {
             this.isPreemptible = isPreemptible;
             return this;
         }
 
         public Builder isPreemptible(@Nullable Boolean isPreemptible) {
-            this.isPreemptible = Input.ofNullable(isPreemptible);
+            this.isPreemptible = Output.ofNullable(isPreemptible);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder managedGroupConfigs(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> managedGroupConfigs) {
+        public Builder managedGroupConfigs(@Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs>> managedGroupConfigs) {
             this.managedGroupConfigs = managedGroupConfigs;
             return this;
         }
 
         public Builder managedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigArgs> managedGroupConfigs) {
-            this.managedGroupConfigs = Input.ofNullable(managedGroupConfigs);
+            this.managedGroupConfigs = Output.ofNullable(managedGroupConfigs);
             return this;
         }
 
-        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder numInstances(@Nullable Input<Integer> numInstances) {
+        public Builder numInstances(@Nullable Output<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
 
         public Builder numInstances(@Nullable Integer numInstances) {
-            this.numInstances = Input.ofNullable(numInstances);
+            this.numInstances = Output.ofNullable(numInstances);
             return this;
         }
 
-        public Builder preemptibility(@Nullable Input<String> preemptibility) {
+        public Builder preemptibility(@Nullable Output<String> preemptibility) {
             this.preemptibility = preemptibility;
             return this;
         }
 
         public Builder preemptibility(@Nullable String preemptibility) {
-            this.preemptibility = Input.ofNullable(preemptibility);
+            this.preemptibility = Output.ofNullable(preemptibility);
             return this;
         }
         public WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs build() {

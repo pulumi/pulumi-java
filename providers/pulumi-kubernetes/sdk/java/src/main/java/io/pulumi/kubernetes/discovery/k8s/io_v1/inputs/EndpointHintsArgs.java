@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.inputs.ForZoneArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forZones")
-      private final @Nullable Input<List<ForZoneArgs>> forZones;
+      private final @Nullable Output<List<ForZoneArgs>> forZones;
 
-    public Input<List<ForZoneArgs>> getForZones() {
-        return this.forZones == null ? Input.empty() : this.forZones;
+    public Output<List<ForZoneArgs>> getForZones() {
+        return this.forZones == null ? Output.empty() : this.forZones;
     }
 
-    public EndpointHintsArgs(@Nullable Input<List<ForZoneArgs>> forZones) {
+    public EndpointHintsArgs(@Nullable Output<List<ForZoneArgs>> forZones) {
         this.forZones = forZones;
     }
 
     private EndpointHintsArgs() {
-        this.forZones = Input.empty();
+        this.forZones = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ForZoneArgs>> forZones;
+        private @Nullable Output<List<ForZoneArgs>> forZones;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.forZones = defaults.forZones;
         }
 
-        public Builder forZones(@Nullable Input<List<ForZoneArgs>> forZones) {
+        public Builder forZones(@Nullable Output<List<ForZoneArgs>> forZones) {
             this.forZones = forZones;
             return this;
         }
 
         public Builder forZones(@Nullable List<ForZoneArgs> forZones) {
-            this.forZones = Input.ofNullable(forZones);
+            this.forZones = Output.ofNullable(forZones);
             return this;
         }
         public EndpointHintsArgs build() {

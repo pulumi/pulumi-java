@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.signer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SigningJobDestinationS3GetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -30,22 +30,22 @@ public final class SigningJobDestinationS3GetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public SigningJobDestinationS3GetArgs(
-        Input<String> bucket,
-        @Nullable Input<String> prefix) {
+        Output<String> bucket,
+        @Nullable Output<String> prefix) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.prefix = prefix;
     }
 
     private SigningJobDestinationS3GetArgs() {
-        this.bucket = Input.empty();
-        this.prefix = Input.empty();
+        this.bucket = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SigningJobDestinationS3GetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<String> prefix;
+        private Output<String> bucket;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SigningJobDestinationS3GetArgs extends io.pulumi.resources.Re
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public SigningJobDestinationS3GetArgs build() {

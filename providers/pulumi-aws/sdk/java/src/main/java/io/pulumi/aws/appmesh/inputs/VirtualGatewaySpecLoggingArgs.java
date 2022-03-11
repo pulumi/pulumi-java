@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecLoggingAccessLogArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualGatewaySpecLoggingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accessLog")
-      private final @Nullable Input<VirtualGatewaySpecLoggingAccessLogArgs> accessLog;
+      private final @Nullable Output<VirtualGatewaySpecLoggingAccessLogArgs> accessLog;
 
-    public Input<VirtualGatewaySpecLoggingAccessLogArgs> getAccessLog() {
-        return this.accessLog == null ? Input.empty() : this.accessLog;
+    public Output<VirtualGatewaySpecLoggingAccessLogArgs> getAccessLog() {
+        return this.accessLog == null ? Output.empty() : this.accessLog;
     }
 
-    public VirtualGatewaySpecLoggingArgs(@Nullable Input<VirtualGatewaySpecLoggingAccessLogArgs> accessLog) {
+    public VirtualGatewaySpecLoggingArgs(@Nullable Output<VirtualGatewaySpecLoggingAccessLogArgs> accessLog) {
         this.accessLog = accessLog;
     }
 
     private VirtualGatewaySpecLoggingArgs() {
-        this.accessLog = Input.empty();
+        this.accessLog = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualGatewaySpecLoggingArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecLoggingAccessLogArgs> accessLog;
+        private @Nullable Output<VirtualGatewaySpecLoggingAccessLogArgs> accessLog;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualGatewaySpecLoggingArgs extends io.pulumi.resources.Res
     	      this.accessLog = defaults.accessLog;
         }
 
-        public Builder accessLog(@Nullable Input<VirtualGatewaySpecLoggingAccessLogArgs> accessLog) {
+        public Builder accessLog(@Nullable Output<VirtualGatewaySpecLoggingAccessLogArgs> accessLog) {
             this.accessLog = accessLog;
             return this;
         }
 
         public Builder accessLog(@Nullable VirtualGatewaySpecLoggingAccessLogArgs accessLog) {
-            this.accessLog = Input.ofNullable(accessLog);
+            this.accessLog = Output.ofNullable(accessLog);
             return this;
         }
         public VirtualGatewaySpecLoggingArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.inputs;
 
 import io.pulumi.azurenative.blueprint.inputs.KeyVaultReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVault", required=true)
-      private final Input<KeyVaultReferenceArgs> keyVault;
+      private final Output<KeyVaultReferenceArgs> keyVault;
 
-    public Input<KeyVaultReferenceArgs> getKeyVault() {
+    public Output<KeyVaultReferenceArgs> getKeyVault() {
         return this.keyVault;
     }
 
@@ -35,9 +35,9 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="secretName", required=true)
-      private final Input<String> secretName;
+      private final Output<String> secretName;
 
-    public Input<String> getSecretName() {
+    public Output<String> getSecretName() {
         return this.secretName;
     }
 
@@ -46,25 +46,25 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="secretVersion")
-      private final @Nullable Input<String> secretVersion;
+      private final @Nullable Output<String> secretVersion;
 
-    public Input<String> getSecretVersion() {
-        return this.secretVersion == null ? Input.empty() : this.secretVersion;
+    public Output<String> getSecretVersion() {
+        return this.secretVersion == null ? Output.empty() : this.secretVersion;
     }
 
     public SecretValueReferenceArgs(
-        Input<KeyVaultReferenceArgs> keyVault,
-        Input<String> secretName,
-        @Nullable Input<String> secretVersion) {
+        Output<KeyVaultReferenceArgs> keyVault,
+        Output<String> secretName,
+        @Nullable Output<String> secretVersion) {
         this.keyVault = Objects.requireNonNull(keyVault, "expected parameter 'keyVault' to be non-null");
         this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
         this.secretVersion = secretVersion;
     }
 
     private SecretValueReferenceArgs() {
-        this.keyVault = Input.empty();
-        this.secretName = Input.empty();
-        this.secretVersion = Input.empty();
+        this.keyVault = Output.empty();
+        this.secretName = Output.empty();
+        this.secretVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<KeyVaultReferenceArgs> keyVault;
-        private Input<String> secretName;
-        private @Nullable Input<String> secretVersion;
+        private Output<KeyVaultReferenceArgs> keyVault;
+        private Output<String> secretName;
+        private @Nullable Output<String> secretVersion;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
     	      this.secretVersion = defaults.secretVersion;
         }
 
-        public Builder keyVault(Input<KeyVaultReferenceArgs> keyVault) {
+        public Builder keyVault(Output<KeyVaultReferenceArgs> keyVault) {
             this.keyVault = Objects.requireNonNull(keyVault);
             return this;
         }
 
         public Builder keyVault(KeyVaultReferenceArgs keyVault) {
-            this.keyVault = Input.of(Objects.requireNonNull(keyVault));
+            this.keyVault = Output.of(Objects.requireNonNull(keyVault));
             return this;
         }
 
-        public Builder secretName(Input<String> secretName) {
+        public Builder secretName(Output<String> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
         public Builder secretName(String secretName) {
-            this.secretName = Input.of(Objects.requireNonNull(secretName));
+            this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
         }
 
-        public Builder secretVersion(@Nullable Input<String> secretVersion) {
+        public Builder secretVersion(@Nullable Output<String> secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Input.ofNullable(secretVersion);
+            this.secretVersion = Output.ofNullable(secretVersion);
             return this;
         }
         public SecretValueReferenceArgs build() {

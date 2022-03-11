@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1.inputs.HttpHeaderMatchArgs;
 import java.lang.Integer;
@@ -26,9 +26,9 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts", required=true)
-      private final Input<List<String>> hosts;
+      private final Output<List<String>> hosts;
 
-    public Input<List<String>> getHosts() {
+    public Output<List<String>> getHosts() {
         return this.hosts;
     }
 
@@ -37,10 +37,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpHeaderMatch")
-      private final @Nullable Input<HttpHeaderMatchArgs> httpHeaderMatch;
+      private final @Nullable Output<HttpHeaderMatchArgs> httpHeaderMatch;
 
-    public Input<HttpHeaderMatchArgs> getHttpHeaderMatch() {
-        return this.httpHeaderMatch == null ? Input.empty() : this.httpHeaderMatch;
+    public Output<HttpHeaderMatchArgs> getHttpHeaderMatch() {
+        return this.httpHeaderMatch == null ? Output.empty() : this.httpHeaderMatch;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methods")
-      private final @Nullable Input<List<String>> methods;
+      private final @Nullable Output<List<String>> methods;
 
-    public Input<List<String>> getMethods() {
-        return this.methods == null ? Input.empty() : this.methods;
+    public Output<List<String>> getMethods() {
+        return this.methods == null ? Output.empty() : this.methods;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports", required=true)
-      private final Input<List<Integer>> ports;
+      private final Output<List<Integer>> ports;
 
-    public Input<List<Integer>> getPorts() {
+    public Output<List<Integer>> getPorts() {
         return this.ports;
     }
 
     public DestinationArgs(
-        Input<List<String>> hosts,
-        @Nullable Input<HttpHeaderMatchArgs> httpHeaderMatch,
-        @Nullable Input<List<String>> methods,
-        Input<List<Integer>> ports) {
+        Output<List<String>> hosts,
+        @Nullable Output<HttpHeaderMatchArgs> httpHeaderMatch,
+        @Nullable Output<List<String>> methods,
+        Output<List<Integer>> ports) {
         this.hosts = Objects.requireNonNull(hosts, "expected parameter 'hosts' to be non-null");
         this.httpHeaderMatch = httpHeaderMatch;
         this.methods = methods;
@@ -77,10 +77,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DestinationArgs() {
-        this.hosts = Input.empty();
-        this.httpHeaderMatch = Input.empty();
-        this.methods = Input.empty();
-        this.ports = Input.empty();
+        this.hosts = Output.empty();
+        this.httpHeaderMatch = Output.empty();
+        this.methods = Output.empty();
+        this.ports = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> hosts;
-        private @Nullable Input<HttpHeaderMatchArgs> httpHeaderMatch;
-        private @Nullable Input<List<String>> methods;
-        private Input<List<Integer>> ports;
+        private Output<List<String>> hosts;
+        private @Nullable Output<HttpHeaderMatchArgs> httpHeaderMatch;
+        private @Nullable Output<List<String>> methods;
+        private Output<List<Integer>> ports;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ports = defaults.ports;
         }
 
-        public Builder hosts(Input<List<String>> hosts) {
+        public Builder hosts(Output<List<String>> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
         public Builder hosts(List<String> hosts) {
-            this.hosts = Input.of(Objects.requireNonNull(hosts));
+            this.hosts = Output.of(Objects.requireNonNull(hosts));
             return this;
         }
 
-        public Builder httpHeaderMatch(@Nullable Input<HttpHeaderMatchArgs> httpHeaderMatch) {
+        public Builder httpHeaderMatch(@Nullable Output<HttpHeaderMatchArgs> httpHeaderMatch) {
             this.httpHeaderMatch = httpHeaderMatch;
             return this;
         }
 
         public Builder httpHeaderMatch(@Nullable HttpHeaderMatchArgs httpHeaderMatch) {
-            this.httpHeaderMatch = Input.ofNullable(httpHeaderMatch);
+            this.httpHeaderMatch = Output.ofNullable(httpHeaderMatch);
             return this;
         }
 
-        public Builder methods(@Nullable Input<List<String>> methods) {
+        public Builder methods(@Nullable Output<List<String>> methods) {
             this.methods = methods;
             return this;
         }
 
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Input.ofNullable(methods);
+            this.methods = Output.ofNullable(methods);
             return this;
         }
 
-        public Builder ports(Input<List<Integer>> ports) {
+        public Builder ports(Output<List<Integer>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
         public Builder ports(List<Integer> ports) {
-            this.ports = Input.of(Objects.requireNonNull(ports));
+            this.ports = Output.of(Objects.requireNonNull(ports));
             return this;
         }
         public DestinationArgs build() {

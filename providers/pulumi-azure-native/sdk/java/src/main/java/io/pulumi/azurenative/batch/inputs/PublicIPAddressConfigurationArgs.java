@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.IPAddressProvisioningType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipAddressIds")
-      private final @Nullable Input<List<String>> ipAddressIds;
+      private final @Nullable Output<List<String>> ipAddressIds;
 
-    public Input<List<String>> getIpAddressIds() {
-        return this.ipAddressIds == null ? Input.empty() : this.ipAddressIds;
+    public Output<List<String>> getIpAddressIds() {
+        return this.ipAddressIds == null ? Output.empty() : this.ipAddressIds;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provision")
-      private final @Nullable Input<IPAddressProvisioningType> provision;
+      private final @Nullable Output<IPAddressProvisioningType> provision;
 
-    public Input<IPAddressProvisioningType> getProvision() {
-        return this.provision == null ? Input.empty() : this.provision;
+    public Output<IPAddressProvisioningType> getProvision() {
+        return this.provision == null ? Output.empty() : this.provision;
     }
 
     public PublicIPAddressConfigurationArgs(
-        @Nullable Input<List<String>> ipAddressIds,
-        @Nullable Input<IPAddressProvisioningType> provision) {
+        @Nullable Output<List<String>> ipAddressIds,
+        @Nullable Output<IPAddressProvisioningType> provision) {
         this.ipAddressIds = ipAddressIds;
         this.provision = provision;
     }
 
     private PublicIPAddressConfigurationArgs() {
-        this.ipAddressIds = Input.empty();
-        this.provision = Input.empty();
+        this.ipAddressIds = Output.empty();
+        this.provision = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> ipAddressIds;
-        private @Nullable Input<IPAddressProvisioningType> provision;
+        private @Nullable Output<List<String>> ipAddressIds;
+        private @Nullable Output<IPAddressProvisioningType> provision;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
     	      this.provision = defaults.provision;
         }
 
-        public Builder ipAddressIds(@Nullable Input<List<String>> ipAddressIds) {
+        public Builder ipAddressIds(@Nullable Output<List<String>> ipAddressIds) {
             this.ipAddressIds = ipAddressIds;
             return this;
         }
 
         public Builder ipAddressIds(@Nullable List<String> ipAddressIds) {
-            this.ipAddressIds = Input.ofNullable(ipAddressIds);
+            this.ipAddressIds = Output.ofNullable(ipAddressIds);
             return this;
         }
 
-        public Builder provision(@Nullable Input<IPAddressProvisioningType> provision) {
+        public Builder provision(@Nullable Output<IPAddressProvisioningType> provision) {
             this.provision = provision;
             return this;
         }
 
         public Builder provision(@Nullable IPAddressProvisioningType provision) {
-            this.provision = Input.ofNullable(provision);
+            this.provision = Output.ofNullable(provision);
             return this;
         }
         public PublicIPAddressConfigurationArgs build() {

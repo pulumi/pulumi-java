@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidModelId", required=true)
-      private final Input<String> androidModelId;
+      private final Output<String> androidModelId;
 
-    public Input<String> getAndroidModelId() {
+    public Output<String> getAndroidModelId() {
         return this.androidModelId;
     }
 
@@ -33,9 +33,9 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="androidVersionId", required=true)
-      private final Input<String> androidVersionId;
+      private final Output<String> androidVersionId;
 
-    public Input<String> getAndroidVersionId() {
+    public Output<String> getAndroidVersionId() {
         return this.androidVersionId;
     }
 
@@ -44,9 +44,9 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locale", required=true)
-      private final Input<String> locale;
+      private final Output<String> locale;
 
-    public Input<String> getLocale() {
+    public Output<String> getLocale() {
         return this.locale;
     }
 
@@ -55,17 +55,17 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orientation", required=true)
-      private final Input<String> orientation;
+      private final Output<String> orientation;
 
-    public Input<String> getOrientation() {
+    public Output<String> getOrientation() {
         return this.orientation;
     }
 
     public AndroidDeviceArgs(
-        Input<String> androidModelId,
-        Input<String> androidVersionId,
-        Input<String> locale,
-        Input<String> orientation) {
+        Output<String> androidModelId,
+        Output<String> androidVersionId,
+        Output<String> locale,
+        Output<String> orientation) {
         this.androidModelId = Objects.requireNonNull(androidModelId, "expected parameter 'androidModelId' to be non-null");
         this.androidVersionId = Objects.requireNonNull(androidVersionId, "expected parameter 'androidVersionId' to be non-null");
         this.locale = Objects.requireNonNull(locale, "expected parameter 'locale' to be non-null");
@@ -73,10 +73,10 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AndroidDeviceArgs() {
-        this.androidModelId = Input.empty();
-        this.androidVersionId = Input.empty();
-        this.locale = Input.empty();
-        this.orientation = Input.empty();
+        this.androidModelId = Output.empty();
+        this.androidVersionId = Output.empty();
+        this.locale = Output.empty();
+        this.orientation = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> androidModelId;
-        private Input<String> androidVersionId;
-        private Input<String> locale;
-        private Input<String> orientation;
+        private Output<String> androidModelId;
+        private Output<String> androidVersionId;
+        private Output<String> locale;
+        private Output<String> orientation;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.orientation = defaults.orientation;
         }
 
-        public Builder androidModelId(Input<String> androidModelId) {
+        public Builder androidModelId(Output<String> androidModelId) {
             this.androidModelId = Objects.requireNonNull(androidModelId);
             return this;
         }
 
         public Builder androidModelId(String androidModelId) {
-            this.androidModelId = Input.of(Objects.requireNonNull(androidModelId));
+            this.androidModelId = Output.of(Objects.requireNonNull(androidModelId));
             return this;
         }
 
-        public Builder androidVersionId(Input<String> androidVersionId) {
+        public Builder androidVersionId(Output<String> androidVersionId) {
             this.androidVersionId = Objects.requireNonNull(androidVersionId);
             return this;
         }
 
         public Builder androidVersionId(String androidVersionId) {
-            this.androidVersionId = Input.of(Objects.requireNonNull(androidVersionId));
+            this.androidVersionId = Output.of(Objects.requireNonNull(androidVersionId));
             return this;
         }
 
-        public Builder locale(Input<String> locale) {
+        public Builder locale(Output<String> locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
 
         public Builder locale(String locale) {
-            this.locale = Input.of(Objects.requireNonNull(locale));
+            this.locale = Output.of(Objects.requireNonNull(locale));
             return this;
         }
 
-        public Builder orientation(Input<String> orientation) {
+        public Builder orientation(Output<String> orientation) {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }
 
         public Builder orientation(String orientation) {
-            this.orientation = Input.of(Objects.requireNonNull(orientation));
+            this.orientation = Output.of(Objects.requireNonNull(orientation));
             return this;
         }
         public AndroidDeviceArgs build() {

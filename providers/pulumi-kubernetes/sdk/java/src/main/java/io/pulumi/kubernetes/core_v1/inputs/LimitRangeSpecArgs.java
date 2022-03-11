@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LimitRangeItemArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class LimitRangeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limits", required=true)
-      private final Input<List<LimitRangeItemArgs>> limits;
+      private final Output<List<LimitRangeItemArgs>> limits;
 
-    public Input<List<LimitRangeItemArgs>> getLimits() {
+    public Output<List<LimitRangeItemArgs>> getLimits() {
         return this.limits;
     }
 
-    public LimitRangeSpecArgs(Input<List<LimitRangeItemArgs>> limits) {
+    public LimitRangeSpecArgs(Output<List<LimitRangeItemArgs>> limits) {
         this.limits = Objects.requireNonNull(limits, "expected parameter 'limits' to be non-null");
     }
 
     private LimitRangeSpecArgs() {
-        this.limits = Input.empty();
+        this.limits = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LimitRangeSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<LimitRangeItemArgs>> limits;
+        private Output<List<LimitRangeItemArgs>> limits;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LimitRangeSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.limits = defaults.limits;
         }
 
-        public Builder limits(Input<List<LimitRangeItemArgs>> limits) {
+        public Builder limits(Output<List<LimitRangeItemArgs>> limits) {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
 
         public Builder limits(List<LimitRangeItemArgs> limits) {
-            this.limits = Input.of(Objects.requireNonNull(limits));
+            this.limits = Output.of(Objects.requireNonNull(limits));
             return this;
         }
         public LimitRangeSpecArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync;
 
 import io.pulumi.azurenative.storagesync.inputs.PrivateLinkServiceConnectionStateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateEndpointConnectionName")
-      private final @Nullable Input<String> privateEndpointConnectionName;
+      private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Input<String> getPrivateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
+    public Output<String> getPrivateEndpointConnectionName() {
+        return this.privateEndpointConnectionName == null ? Output.empty() : this.privateEndpointConnectionName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-      private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
 
@@ -42,9 +42,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageSyncServiceName", required=true)
-      private final Input<String> storageSyncServiceName;
+      private final Output<String> storageSyncServiceName;
 
-    public Input<String> getStorageSyncServiceName() {
+    public Output<String> getStorageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
     public PrivateEndpointConnectionArgs(
-        @Nullable Input<String> privateEndpointConnectionName,
-        Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
-        Input<String> resourceGroupName,
-        Input<String> storageSyncServiceName) {
+        @Nullable Output<String> privateEndpointConnectionName,
+        Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
+        Output<String> resourceGroupName,
+        Output<String> storageSyncServiceName) {
         this.privateEndpointConnectionName = privateEndpointConnectionName;
         this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.privateEndpointConnectionName = Input.empty();
-        this.privateLinkServiceConnectionState = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageSyncServiceName = Input.empty();
+        this.privateEndpointConnectionName = Output.empty();
+        this.privateLinkServiceConnectionState = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageSyncServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> privateEndpointConnectionName;
-        private Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
-        private Input<String> resourceGroupName;
-        private Input<String> storageSyncServiceName;
+        private @Nullable Output<String> privateEndpointConnectionName;
+        private Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private Output<String> resourceGroupName;
+        private Output<String> storageSyncServiceName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.storageSyncServiceName = defaults.storageSyncServiceName;
         }
 
-        public Builder privateEndpointConnectionName(@Nullable Input<String> privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Input.ofNullable(privateEndpointConnectionName);
+            this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
             return this;
         }
 
-        public Builder privateLinkServiceConnectionState(Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
 
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Input.of(Objects.requireNonNull(privateLinkServiceConnectionState));
+            this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageSyncServiceName(Input<String> storageSyncServiceName) {
+        public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
 
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            this.storageSyncServiceName = Input.of(Objects.requireNonNull(storageSyncServiceName));
+            this.storageSyncServiceName = Output.of(Objects.requireNonNull(storageSyncServiceName));
             return this;
         }
         public PrivateEndpointConnectionArgs build() {

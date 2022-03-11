@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuResourcePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nestedResourceTypeFirst", required=true)
-      private final Input<String> nestedResourceTypeFirst;
+      private final Output<String> nestedResourceTypeFirst;
 
-    public Input<String> getNestedResourceTypeFirst() {
+    public Output<String> getNestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
     }
 
@@ -31,9 +31,9 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nestedResourceTypeSecond", required=true)
-      private final Input<String> nestedResourceTypeSecond;
+      private final Output<String> nestedResourceTypeSecond;
 
-    public Input<String> getNestedResourceTypeSecond() {
+    public Output<String> getNestedResourceTypeSecond() {
         return this.nestedResourceTypeSecond;
     }
 
@@ -42,17 +42,17 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nestedResourceTypeThird", required=true)
-      private final Input<String> nestedResourceTypeThird;
+      private final Output<String> nestedResourceTypeThird;
 
-    public Input<String> getNestedResourceTypeThird() {
+    public Output<String> getNestedResourceTypeThird() {
         return this.nestedResourceTypeThird;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<SkuResourcePropertiesArgs> properties;
+      private final @Nullable Output<SkuResourcePropertiesArgs> properties;
 
-    public Input<SkuResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<SkuResourcePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -60,9 +60,9 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-      private final Input<String> providerNamespace;
+      private final Output<String> providerNamespace;
 
-    public Input<String> getProviderNamespace() {
+    public Output<String> getProviderNamespace() {
         return this.providerNamespace;
     }
 
@@ -71,9 +71,9 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -82,20 +82,20 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<String> sku;
+      private final @Nullable Output<String> sku;
 
-    public Input<String> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<String> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     public SkusNestedResourceTypeThirdArgs(
-        Input<String> nestedResourceTypeFirst,
-        Input<String> nestedResourceTypeSecond,
-        Input<String> nestedResourceTypeThird,
-        @Nullable Input<SkuResourcePropertiesArgs> properties,
-        Input<String> providerNamespace,
-        Input<String> resourceType,
-        @Nullable Input<String> sku) {
+        Output<String> nestedResourceTypeFirst,
+        Output<String> nestedResourceTypeSecond,
+        Output<String> nestedResourceTypeThird,
+        @Nullable Output<SkuResourcePropertiesArgs> properties,
+        Output<String> providerNamespace,
+        Output<String> resourceType,
+        @Nullable Output<String> sku) {
         this.nestedResourceTypeFirst = Objects.requireNonNull(nestedResourceTypeFirst, "expected parameter 'nestedResourceTypeFirst' to be non-null");
         this.nestedResourceTypeSecond = Objects.requireNonNull(nestedResourceTypeSecond, "expected parameter 'nestedResourceTypeSecond' to be non-null");
         this.nestedResourceTypeThird = Objects.requireNonNull(nestedResourceTypeThird, "expected parameter 'nestedResourceTypeThird' to be non-null");
@@ -106,13 +106,13 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
     }
 
     private SkusNestedResourceTypeThirdArgs() {
-        this.nestedResourceTypeFirst = Input.empty();
-        this.nestedResourceTypeSecond = Input.empty();
-        this.nestedResourceTypeThird = Input.empty();
-        this.properties = Input.empty();
-        this.providerNamespace = Input.empty();
-        this.resourceType = Input.empty();
-        this.sku = Input.empty();
+        this.nestedResourceTypeFirst = Output.empty();
+        this.nestedResourceTypeSecond = Output.empty();
+        this.nestedResourceTypeThird = Output.empty();
+        this.properties = Output.empty();
+        this.providerNamespace = Output.empty();
+        this.resourceType = Output.empty();
+        this.sku = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,13 +124,13 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> nestedResourceTypeFirst;
-        private Input<String> nestedResourceTypeSecond;
-        private Input<String> nestedResourceTypeThird;
-        private @Nullable Input<SkuResourcePropertiesArgs> properties;
-        private Input<String> providerNamespace;
-        private Input<String> resourceType;
-        private @Nullable Input<String> sku;
+        private Output<String> nestedResourceTypeFirst;
+        private Output<String> nestedResourceTypeSecond;
+        private Output<String> nestedResourceTypeThird;
+        private @Nullable Output<SkuResourcePropertiesArgs> properties;
+        private Output<String> providerNamespace;
+        private Output<String> resourceType;
+        private @Nullable Output<String> sku;
 
         public Builder() {
     	      // Empty
@@ -147,73 +147,73 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
     	      this.sku = defaults.sku;
         }
 
-        public Builder nestedResourceTypeFirst(Input<String> nestedResourceTypeFirst) {
+        public Builder nestedResourceTypeFirst(Output<String> nestedResourceTypeFirst) {
             this.nestedResourceTypeFirst = Objects.requireNonNull(nestedResourceTypeFirst);
             return this;
         }
 
         public Builder nestedResourceTypeFirst(String nestedResourceTypeFirst) {
-            this.nestedResourceTypeFirst = Input.of(Objects.requireNonNull(nestedResourceTypeFirst));
+            this.nestedResourceTypeFirst = Output.of(Objects.requireNonNull(nestedResourceTypeFirst));
             return this;
         }
 
-        public Builder nestedResourceTypeSecond(Input<String> nestedResourceTypeSecond) {
+        public Builder nestedResourceTypeSecond(Output<String> nestedResourceTypeSecond) {
             this.nestedResourceTypeSecond = Objects.requireNonNull(nestedResourceTypeSecond);
             return this;
         }
 
         public Builder nestedResourceTypeSecond(String nestedResourceTypeSecond) {
-            this.nestedResourceTypeSecond = Input.of(Objects.requireNonNull(nestedResourceTypeSecond));
+            this.nestedResourceTypeSecond = Output.of(Objects.requireNonNull(nestedResourceTypeSecond));
             return this;
         }
 
-        public Builder nestedResourceTypeThird(Input<String> nestedResourceTypeThird) {
+        public Builder nestedResourceTypeThird(Output<String> nestedResourceTypeThird) {
             this.nestedResourceTypeThird = Objects.requireNonNull(nestedResourceTypeThird);
             return this;
         }
 
         public Builder nestedResourceTypeThird(String nestedResourceTypeThird) {
-            this.nestedResourceTypeThird = Input.of(Objects.requireNonNull(nestedResourceTypeThird));
+            this.nestedResourceTypeThird = Output.of(Objects.requireNonNull(nestedResourceTypeThird));
             return this;
         }
 
-        public Builder properties(@Nullable Input<SkuResourcePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<SkuResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable SkuResourcePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder providerNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Output<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
+            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder sku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable String sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
         public SkusNestedResourceTypeThirdArgs build() {

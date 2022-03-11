@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class FirewallAllowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<String>> ports;
+      private final @Nullable Output<List<String>> ports;
 
-    public Input<List<String>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<String>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     /**
@@ -39,22 +39,22 @@ public final class FirewallAllowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<String> protocol;
+      private final Output<String> protocol;
 
-    public Input<String> getProtocol() {
+    public Output<String> getProtocol() {
         return this.protocol;
     }
 
     public FirewallAllowArgs(
-        @Nullable Input<List<String>> ports,
-        Input<String> protocol) {
+        @Nullable Output<List<String>> ports,
+        Output<String> protocol) {
         this.ports = ports;
         this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
     }
 
     private FirewallAllowArgs() {
-        this.ports = Input.empty();
-        this.protocol = Input.empty();
+        this.ports = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,8 +66,8 @@ public final class FirewallAllowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> ports;
-        private Input<String> protocol;
+        private @Nullable Output<List<String>> ports;
+        private Output<String> protocol;
 
         public Builder() {
     	      // Empty
@@ -79,23 +79,23 @@ public final class FirewallAllowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder ports(@Nullable Input<List<String>> ports) {
+        public Builder ports(@Nullable Output<List<String>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<String> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
 
-        public Builder protocol(Input<String> protocol) {
+        public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(String protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
         public FirewallAllowArgs build() {

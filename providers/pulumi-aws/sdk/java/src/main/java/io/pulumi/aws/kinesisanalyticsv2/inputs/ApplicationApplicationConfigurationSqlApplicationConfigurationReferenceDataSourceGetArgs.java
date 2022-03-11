@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,10 +17,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     public static final ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs Empty = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs();
 
     @InputImport(name="referenceId")
-      private final @Nullable Input<String> referenceId;
+      private final @Nullable Output<String> referenceId;
 
-    public Input<String> getReferenceId() {
-        return this.referenceId == null ? Input.empty() : this.referenceId;
+    public Output<String> getReferenceId() {
+        return this.referenceId == null ? Output.empty() : this.referenceId;
     }
 
     /**
@@ -28,9 +28,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="referenceSchema", required=true)
-      private final Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema;
+      private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema;
 
-    public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> getReferenceSchema() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> getReferenceSchema() {
         return this.referenceSchema;
     }
 
@@ -39,9 +39,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="s3ReferenceDataSource", required=true)
-      private final Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource;
+      private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource;
 
-    public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> getS3ReferenceDataSource() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> getS3ReferenceDataSource() {
         return this.s3ReferenceDataSource;
     }
 
@@ -50,17 +50,17 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs(
-        @Nullable Input<String> referenceId,
-        Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema,
-        Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource,
-        Input<String> tableName) {
+        @Nullable Output<String> referenceId,
+        Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema,
+        Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource,
+        Output<String> tableName) {
         this.referenceId = referenceId;
         this.referenceSchema = Objects.requireNonNull(referenceSchema, "expected parameter 'referenceSchema' to be non-null");
         this.s3ReferenceDataSource = Objects.requireNonNull(s3ReferenceDataSource, "expected parameter 's3ReferenceDataSource' to be non-null");
@@ -68,10 +68,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs() {
-        this.referenceId = Input.empty();
-        this.referenceSchema = Input.empty();
-        this.s3ReferenceDataSource = Input.empty();
-        this.tableName = Input.empty();
+        this.referenceId = Output.empty();
+        this.referenceSchema = Output.empty();
+        this.s3ReferenceDataSource = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     public static final class Builder {
-        private @Nullable Input<String> referenceId;
-        private Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema;
-        private Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource;
-        private Input<String> tableName;
+        private @Nullable Output<String> referenceId;
+        private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema;
+        private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder referenceId(@Nullable Input<String> referenceId) {
+        public Builder referenceId(@Nullable Output<String> referenceId) {
             this.referenceId = referenceId;
             return this;
         }
 
         public Builder referenceId(@Nullable String referenceId) {
-            this.referenceId = Input.ofNullable(referenceId);
+            this.referenceId = Output.ofNullable(referenceId);
             return this;
         }
 
-        public Builder referenceSchema(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema) {
+        public Builder referenceSchema(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema) {
             this.referenceSchema = Objects.requireNonNull(referenceSchema);
             return this;
         }
 
         public Builder referenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs referenceSchema) {
-            this.referenceSchema = Input.of(Objects.requireNonNull(referenceSchema));
+            this.referenceSchema = Output.of(Objects.requireNonNull(referenceSchema));
             return this;
         }
 
-        public Builder s3ReferenceDataSource(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource) {
+        public Builder s3ReferenceDataSource(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource) {
             this.s3ReferenceDataSource = Objects.requireNonNull(s3ReferenceDataSource);
             return this;
         }
 
         public Builder s3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs s3ReferenceDataSource) {
-            this.s3ReferenceDataSource = Input.of(Objects.requireNonNull(s3ReferenceDataSource));
+            this.s3ReferenceDataSource = Output.of(Objects.requireNonNull(s3ReferenceDataSource));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs build() {

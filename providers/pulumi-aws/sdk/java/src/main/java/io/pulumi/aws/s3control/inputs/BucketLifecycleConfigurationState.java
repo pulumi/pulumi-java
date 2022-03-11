@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
+      private final @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
 
-    public Input<List<BucketLifecycleConfigurationRuleGetArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<BucketLifecycleConfigurationRuleGetArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public BucketLifecycleConfigurationState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<List<BucketLifecycleConfigurationRuleGetArgs>> rules) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules) {
         this.bucket = bucket;
         this.rules = rules;
     }
 
     private BucketLifecycleConfigurationState() {
-        this.bucket = Input.empty();
-        this.rules = Input.empty();
+        this.bucket = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
     	      this.rules = defaults.rules;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<BucketLifecycleConfigurationRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<BucketLifecycleConfigurationRuleGetArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public BucketLifecycleConfigurationState build() {

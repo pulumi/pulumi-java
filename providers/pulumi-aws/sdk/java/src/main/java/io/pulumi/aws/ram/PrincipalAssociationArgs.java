@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ram;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PrincipalAssociationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="principal", required=true)
-      private final Input<String> principal;
+      private final Output<String> principal;
 
-    public Input<String> getPrincipal() {
+    public Output<String> getPrincipal() {
         return this.principal;
     }
 
@@ -29,22 +29,22 @@ public final class PrincipalAssociationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceShareArn", required=true)
-      private final Input<String> resourceShareArn;
+      private final Output<String> resourceShareArn;
 
-    public Input<String> getResourceShareArn() {
+    public Output<String> getResourceShareArn() {
         return this.resourceShareArn;
     }
 
     public PrincipalAssociationArgs(
-        Input<String> principal,
-        Input<String> resourceShareArn) {
+        Output<String> principal,
+        Output<String> resourceShareArn) {
         this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
         this.resourceShareArn = Objects.requireNonNull(resourceShareArn, "expected parameter 'resourceShareArn' to be non-null");
     }
 
     private PrincipalAssociationArgs() {
-        this.principal = Input.empty();
-        this.resourceShareArn = Input.empty();
+        this.principal = Output.empty();
+        this.resourceShareArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class PrincipalAssociationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> principal;
-        private Input<String> resourceShareArn;
+        private Output<String> principal;
+        private Output<String> resourceShareArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class PrincipalAssociationArgs extends io.pulumi.resources.Resource
     	      this.resourceShareArn = defaults.resourceShareArn;
         }
 
-        public Builder principal(Input<String> principal) {
+        public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
         public Builder principal(String principal) {
-            this.principal = Input.of(Objects.requireNonNull(principal));
+            this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
 
-        public Builder resourceShareArn(Input<String> resourceShareArn) {
+        public Builder resourceShareArn(Output<String> resourceShareArn) {
             this.resourceShareArn = Objects.requireNonNull(resourceShareArn);
             return this;
         }
 
         public Builder resourceShareArn(String resourceShareArn) {
-            this.resourceShareArn = Input.of(Objects.requireNonNull(resourceShareArn));
+            this.resourceShareArn = Output.of(Objects.requireNonNull(resourceShareArn));
             return this;
         }
         public PrincipalAssociationArgs build() {

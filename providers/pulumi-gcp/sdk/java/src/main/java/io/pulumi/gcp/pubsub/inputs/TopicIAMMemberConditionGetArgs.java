@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class TopicIAMMemberConditionGetArgs extends io.pulumi.resources.Re
     public static final TopicIAMMemberConditionGetArgs Empty = new TopicIAMMemberConditionGetArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="expression", required=true)
-      private final Input<String> expression;
+      private final Output<String> expression;
 
-    public Input<String> getExpression() {
+    public Output<String> getExpression() {
         return this.expression;
     }
 
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
     public TopicIAMMemberConditionGetArgs(
-        @Nullable Input<String> description,
-        Input<String> expression,
-        Input<String> title) {
+        @Nullable Output<String> description,
+        Output<String> expression,
+        Output<String> title) {
         this.description = description;
         this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
         this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
     }
 
     private TopicIAMMemberConditionGetArgs() {
-        this.description = Input.empty();
-        this.expression = Input.empty();
-        this.title = Input.empty();
+        this.description = Output.empty();
+        this.expression = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class TopicIAMMemberConditionGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> expression;
-        private Input<String> title;
+        private @Nullable Output<String> description;
+        private Output<String> expression;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class TopicIAMMemberConditionGetArgs extends io.pulumi.resources.Re
     	      this.title = defaults.title;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expression(Input<String> expression) {
+        public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(String expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public TopicIAMMemberConditionGetArgs build() {

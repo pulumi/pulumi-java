@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.recoveryservices.ReplicationPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.PolicyPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -127,29 +126,29 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationPolicy(String name, ReplicationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:recoveryservices:ReplicationPolicy", name, args == null ? ReplicationPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:recoveryservices:ReplicationPolicy", name, args == null ? ReplicationPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ReplicationPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ReplicationPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:ReplicationPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20160810:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20180110:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20180710:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211101:ReplicationPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ReplicationPolicy").build())
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20160810:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20180110:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20180710:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211101:ReplicationPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ReplicationPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -163,7 +162,7 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReplicationPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ReplicationPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicationPolicy(name, id, options);
     }
 }

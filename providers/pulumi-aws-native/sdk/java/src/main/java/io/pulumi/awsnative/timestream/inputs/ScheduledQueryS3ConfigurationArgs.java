@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryEncryptionOption;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,39 +20,39 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
     public static final ScheduledQueryS3ConfigurationArgs Empty = new ScheduledQueryS3ConfigurationArgs();
 
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="encryptionOption")
-      private final @Nullable Input<ScheduledQueryEncryptionOption> encryptionOption;
+      private final @Nullable Output<ScheduledQueryEncryptionOption> encryptionOption;
 
-    public Input<ScheduledQueryEncryptionOption> getEncryptionOption() {
-        return this.encryptionOption == null ? Input.empty() : this.encryptionOption;
+    public Output<ScheduledQueryEncryptionOption> getEncryptionOption() {
+        return this.encryptionOption == null ? Output.empty() : this.encryptionOption;
     }
 
     @InputImport(name="objectKeyPrefix")
-      private final @Nullable Input<String> objectKeyPrefix;
+      private final @Nullable Output<String> objectKeyPrefix;
 
-    public Input<String> getObjectKeyPrefix() {
-        return this.objectKeyPrefix == null ? Input.empty() : this.objectKeyPrefix;
+    public Output<String> getObjectKeyPrefix() {
+        return this.objectKeyPrefix == null ? Output.empty() : this.objectKeyPrefix;
     }
 
     public ScheduledQueryS3ConfigurationArgs(
-        Input<String> bucketName,
-        @Nullable Input<ScheduledQueryEncryptionOption> encryptionOption,
-        @Nullable Input<String> objectKeyPrefix) {
+        Output<String> bucketName,
+        @Nullable Output<ScheduledQueryEncryptionOption> encryptionOption,
+        @Nullable Output<String> objectKeyPrefix) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.encryptionOption = encryptionOption;
         this.objectKeyPrefix = objectKeyPrefix;
     }
 
     private ScheduledQueryS3ConfigurationArgs() {
-        this.bucketName = Input.empty();
-        this.encryptionOption = Input.empty();
-        this.objectKeyPrefix = Input.empty();
+        this.bucketName = Output.empty();
+        this.encryptionOption = Output.empty();
+        this.objectKeyPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,9 +64,9 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<ScheduledQueryEncryptionOption> encryptionOption;
-        private @Nullable Input<String> objectKeyPrefix;
+        private Output<String> bucketName;
+        private @Nullable Output<ScheduledQueryEncryptionOption> encryptionOption;
+        private @Nullable Output<String> objectKeyPrefix;
 
         public Builder() {
     	      // Empty
@@ -79,33 +79,33 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
     	      this.objectKeyPrefix = defaults.objectKeyPrefix;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder encryptionOption(@Nullable Input<ScheduledQueryEncryptionOption> encryptionOption) {
+        public Builder encryptionOption(@Nullable Output<ScheduledQueryEncryptionOption> encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
 
         public Builder encryptionOption(@Nullable ScheduledQueryEncryptionOption encryptionOption) {
-            this.encryptionOption = Input.ofNullable(encryptionOption);
+            this.encryptionOption = Output.ofNullable(encryptionOption);
             return this;
         }
 
-        public Builder objectKeyPrefix(@Nullable Input<String> objectKeyPrefix) {
+        public Builder objectKeyPrefix(@Nullable Output<String> objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
 
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
-            this.objectKeyPrefix = Input.ofNullable(objectKeyPrefix);
+            this.objectKeyPrefix = Output.ofNullable(objectKeyPrefix);
             return this;
         }
         public ScheduledQueryS3ConfigurationArgs build() {

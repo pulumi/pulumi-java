@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ClusterConfigArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -32,9 +32,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<ClusterConfigArgs> config;
+      private final Output<ClusterConfigArgs> config;
 
-    public Input<ClusterConfigArgs> getConfig() {
+    public Output<ClusterConfigArgs> getConfig() {
         return this.config;
     }
 
@@ -43,10 +43,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -54,33 +54,33 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     public ClusterArgs(
-        Input<String> clusterName,
-        Input<ClusterConfigArgs> config,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> project,
-        Input<String> region,
-        @Nullable Input<String> requestId) {
+        Output<String> clusterName,
+        Output<ClusterConfigArgs> config,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> project,
+        Output<String> region,
+        @Nullable Output<String> requestId) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
         this.labels = labels;
@@ -90,12 +90,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.clusterName = Input.empty();
-        this.config = Input.empty();
-        this.labels = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
+        this.clusterName = Output.empty();
+        this.config = Output.empty();
+        this.labels = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,12 +107,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private Input<ClusterConfigArgs> config;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> project;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
+        private Output<String> clusterName;
+        private Output<ClusterConfigArgs> config;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> project;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
 
         public Builder() {
     	      // Empty
@@ -128,63 +128,63 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder config(Input<ClusterConfigArgs> config) {
+        public Builder config(Output<ClusterConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(ClusterConfigArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
         public ClusterArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.BlobFolderDataSetArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -213,10 +212,10 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BlobFolderDataSet(String name, BlobFolderDataSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:BlobFolderDataSet", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:datashare:BlobFolderDataSet", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private BlobFolderDataSet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BlobFolderDataSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:BlobFolderDataSet", name, null, makeResourceOptions(options, id));
     }
 
@@ -227,15 +226,15 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:datashare/v20181101preview:BlobFolderDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20191101:BlobFolderDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20200901:BlobFolderDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20201001preview:BlobFolderDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20210801:BlobFolderDataSet").build())
+                Output.of(Alias.builder().setType("azure-native:datashare/v20181101preview:BlobFolderDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20191101:BlobFolderDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20200901:BlobFolderDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20201001preview:BlobFolderDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20210801:BlobFolderDataSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -249,7 +248,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BlobFolderDataSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BlobFolderDataSet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BlobFolderDataSet(name, id, options);
     }
 }

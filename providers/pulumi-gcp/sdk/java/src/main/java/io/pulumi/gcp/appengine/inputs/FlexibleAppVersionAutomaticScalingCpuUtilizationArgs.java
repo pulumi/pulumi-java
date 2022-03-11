@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
      * 
      */
     @InputImport(name="aggregationWindowLength")
-      private final @Nullable Input<String> aggregationWindowLength;
+      private final @Nullable Output<String> aggregationWindowLength;
 
-    public Input<String> getAggregationWindowLength() {
-        return this.aggregationWindowLength == null ? Input.empty() : this.aggregationWindowLength;
+    public Output<String> getAggregationWindowLength() {
+        return this.aggregationWindowLength == null ? Output.empty() : this.aggregationWindowLength;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
      * 
      */
     @InputImport(name="targetUtilization", required=true)
-      private final Input<Double> targetUtilization;
+      private final Output<Double> targetUtilization;
 
-    public Input<Double> getTargetUtilization() {
+    public Output<Double> getTargetUtilization() {
         return this.targetUtilization;
     }
 
     public FlexibleAppVersionAutomaticScalingCpuUtilizationArgs(
-        @Nullable Input<String> aggregationWindowLength,
-        Input<Double> targetUtilization) {
+        @Nullable Output<String> aggregationWindowLength,
+        Output<Double> targetUtilization) {
         this.aggregationWindowLength = aggregationWindowLength;
         this.targetUtilization = Objects.requireNonNull(targetUtilization, "expected parameter 'targetUtilization' to be non-null");
     }
 
     private FlexibleAppVersionAutomaticScalingCpuUtilizationArgs() {
-        this.aggregationWindowLength = Input.empty();
-        this.targetUtilization = Input.empty();
+        this.aggregationWindowLength = Output.empty();
+        this.targetUtilization = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aggregationWindowLength;
-        private Input<Double> targetUtilization;
+        private @Nullable Output<String> aggregationWindowLength;
+        private Output<Double> targetUtilization;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder aggregationWindowLength(@Nullable Input<String> aggregationWindowLength) {
+        public Builder aggregationWindowLength(@Nullable Output<String> aggregationWindowLength) {
             this.aggregationWindowLength = aggregationWindowLength;
             return this;
         }
 
         public Builder aggregationWindowLength(@Nullable String aggregationWindowLength) {
-            this.aggregationWindowLength = Input.ofNullable(aggregationWindowLength);
+            this.aggregationWindowLength = Output.ofNullable(aggregationWindowLength);
             return this;
         }
 
-        public Builder targetUtilization(Input<Double> targetUtilization) {
+        public Builder targetUtilization(Output<Double> targetUtilization) {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
 
         public Builder targetUtilization(Double targetUtilization) {
-            this.targetUtilization = Input.of(Objects.requireNonNull(targetUtilization));
+            this.targetUtilization = Output.of(Objects.requireNonNull(targetUtilization));
             return this;
         }
         public FlexibleAppVersionAutomaticScalingCpuUtilizationArgs build() {

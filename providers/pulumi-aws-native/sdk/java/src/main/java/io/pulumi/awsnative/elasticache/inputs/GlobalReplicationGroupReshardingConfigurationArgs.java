@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
      * 
      */
     @InputImport(name="nodeGroupId")
-      private final @Nullable Input<String> nodeGroupId;
+      private final @Nullable Output<String> nodeGroupId;
 
-    public Input<String> getNodeGroupId() {
-        return this.nodeGroupId == null ? Input.empty() : this.nodeGroupId;
+    public Output<String> getNodeGroupId() {
+        return this.nodeGroupId == null ? Output.empty() : this.nodeGroupId;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
      * 
      */
     @InputImport(name="preferredAvailabilityZones")
-      private final @Nullable Input<List<String>> preferredAvailabilityZones;
+      private final @Nullable Output<List<String>> preferredAvailabilityZones;
 
-    public Input<List<String>> getPreferredAvailabilityZones() {
-        return this.preferredAvailabilityZones == null ? Input.empty() : this.preferredAvailabilityZones;
+    public Output<List<String>> getPreferredAvailabilityZones() {
+        return this.preferredAvailabilityZones == null ? Output.empty() : this.preferredAvailabilityZones;
     }
 
     public GlobalReplicationGroupReshardingConfigurationArgs(
-        @Nullable Input<String> nodeGroupId,
-        @Nullable Input<List<String>> preferredAvailabilityZones) {
+        @Nullable Output<String> nodeGroupId,
+        @Nullable Output<List<String>> preferredAvailabilityZones) {
         this.nodeGroupId = nodeGroupId;
         this.preferredAvailabilityZones = preferredAvailabilityZones;
     }
 
     private GlobalReplicationGroupReshardingConfigurationArgs() {
-        this.nodeGroupId = Input.empty();
-        this.preferredAvailabilityZones = Input.empty();
+        this.nodeGroupId = Output.empty();
+        this.preferredAvailabilityZones = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> nodeGroupId;
-        private @Nullable Input<List<String>> preferredAvailabilityZones;
+        private @Nullable Output<String> nodeGroupId;
+        private @Nullable Output<List<String>> preferredAvailabilityZones;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
     	      this.preferredAvailabilityZones = defaults.preferredAvailabilityZones;
         }
 
-        public Builder nodeGroupId(@Nullable Input<String> nodeGroupId) {
+        public Builder nodeGroupId(@Nullable Output<String> nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
             return this;
         }
 
         public Builder nodeGroupId(@Nullable String nodeGroupId) {
-            this.nodeGroupId = Input.ofNullable(nodeGroupId);
+            this.nodeGroupId = Output.ofNullable(nodeGroupId);
             return this;
         }
 
-        public Builder preferredAvailabilityZones(@Nullable Input<List<String>> preferredAvailabilityZones) {
+        public Builder preferredAvailabilityZones(@Nullable Output<List<String>> preferredAvailabilityZones) {
             this.preferredAvailabilityZones = preferredAvailabilityZones;
             return this;
         }
 
         public Builder preferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
-            this.preferredAvailabilityZones = Input.ofNullable(preferredAvailabilityZones);
+            this.preferredAvailabilityZones = Output.ofNullable(preferredAvailabilityZones);
             return this;
         }
         public GlobalReplicationGroupReshardingConfigurationArgs build() {

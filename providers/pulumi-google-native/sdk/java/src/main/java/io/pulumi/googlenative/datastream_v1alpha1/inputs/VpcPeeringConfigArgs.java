@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnet", required=true)
-      private final Input<String> subnet;
+      private final Output<String> subnet;
 
-    public Input<String> getSubnet() {
+    public Output<String> getSubnet() {
         return this.subnet;
     }
 
@@ -33,22 +33,22 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vpcName", required=true)
-      private final Input<String> vpcName;
+      private final Output<String> vpcName;
 
-    public Input<String> getVpcName() {
+    public Output<String> getVpcName() {
         return this.vpcName;
     }
 
     public VpcPeeringConfigArgs(
-        Input<String> subnet,
-        Input<String> vpcName) {
+        Output<String> subnet,
+        Output<String> vpcName) {
         this.subnet = Objects.requireNonNull(subnet, "expected parameter 'subnet' to be non-null");
         this.vpcName = Objects.requireNonNull(vpcName, "expected parameter 'vpcName' to be non-null");
     }
 
     private VpcPeeringConfigArgs() {
-        this.subnet = Input.empty();
-        this.vpcName = Input.empty();
+        this.subnet = Output.empty();
+        this.vpcName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> subnet;
-        private Input<String> vpcName;
+        private Output<String> subnet;
+        private Output<String> vpcName;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.vpcName = defaults.vpcName;
         }
 
-        public Builder subnet(Input<String> subnet) {
+        public Builder subnet(Output<String> subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
 
         public Builder subnet(String subnet) {
-            this.subnet = Input.of(Objects.requireNonNull(subnet));
+            this.subnet = Output.of(Objects.requireNonNull(subnet));
             return this;
         }
 
-        public Builder vpcName(Input<String> vpcName) {
+        public Builder vpcName(Output<String> vpcName) {
             this.vpcName = Objects.requireNonNull(vpcName);
             return this;
         }
 
         public Builder vpcName(String vpcName) {
-            this.vpcName = Input.of(Objects.requireNonNull(vpcName));
+            this.vpcName = Output.of(Objects.requireNonNull(vpcName));
             return this;
         }
         public VpcPeeringConfigArgs build() {

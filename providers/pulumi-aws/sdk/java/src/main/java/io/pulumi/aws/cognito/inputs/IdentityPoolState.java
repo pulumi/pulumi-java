@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.IdentityPoolCognitoIdentityProviderGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowClassicFlow")
-      private final @Nullable Input<Boolean> allowClassicFlow;
+      private final @Nullable Output<Boolean> allowClassicFlow;
 
-    public Input<Boolean> getAllowClassicFlow() {
-        return this.allowClassicFlow == null ? Input.empty() : this.allowClassicFlow;
+    public Output<Boolean> getAllowClassicFlow() {
+        return this.allowClassicFlow == null ? Output.empty() : this.allowClassicFlow;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowUnauthenticatedIdentities")
-      private final @Nullable Input<Boolean> allowUnauthenticatedIdentities;
+      private final @Nullable Output<Boolean> allowUnauthenticatedIdentities;
 
-    public Input<Boolean> getAllowUnauthenticatedIdentities() {
-        return this.allowUnauthenticatedIdentities == null ? Input.empty() : this.allowUnauthenticatedIdentities;
+    public Output<Boolean> getAllowUnauthenticatedIdentities() {
+        return this.allowUnauthenticatedIdentities == null ? Output.empty() : this.allowUnauthenticatedIdentities;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cognitoIdentityProviders")
-      private final @Nullable Input<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders;
+      private final @Nullable Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders;
 
-    public Input<List<IdentityPoolCognitoIdentityProviderGetArgs>> getCognitoIdentityProviders() {
-        return this.cognitoIdentityProviders == null ? Input.empty() : this.cognitoIdentityProviders;
+    public Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> getCognitoIdentityProviders() {
+        return this.cognitoIdentityProviders == null ? Output.empty() : this.cognitoIdentityProviders;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="developerProviderName")
-      private final @Nullable Input<String> developerProviderName;
+      private final @Nullable Output<String> developerProviderName;
 
-    public Input<String> getDeveloperProviderName() {
-        return this.developerProviderName == null ? Input.empty() : this.developerProviderName;
+    public Output<String> getDeveloperProviderName() {
+        return this.developerProviderName == null ? Output.empty() : this.developerProviderName;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityPoolName")
-      private final @Nullable Input<String> identityPoolName;
+      private final @Nullable Output<String> identityPoolName;
 
-    public Input<String> getIdentityPoolName() {
-        return this.identityPoolName == null ? Input.empty() : this.identityPoolName;
+    public Output<String> getIdentityPoolName() {
+        return this.identityPoolName == null ? Output.empty() : this.identityPoolName;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openidConnectProviderArns")
-      private final @Nullable Input<List<String>> openidConnectProviderArns;
+      private final @Nullable Output<List<String>> openidConnectProviderArns;
 
-    public Input<List<String>> getOpenidConnectProviderArns() {
-        return this.openidConnectProviderArns == null ? Input.empty() : this.openidConnectProviderArns;
+    public Output<List<String>> getOpenidConnectProviderArns() {
+        return this.openidConnectProviderArns == null ? Output.empty() : this.openidConnectProviderArns;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="samlProviderArns")
-      private final @Nullable Input<List<String>> samlProviderArns;
+      private final @Nullable Output<List<String>> samlProviderArns;
 
-    public Input<List<String>> getSamlProviderArns() {
-        return this.samlProviderArns == null ? Input.empty() : this.samlProviderArns;
+    public Output<List<String>> getSamlProviderArns() {
+        return this.samlProviderArns == null ? Output.empty() : this.samlProviderArns;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedLoginProviders")
-      private final @Nullable Input<Map<String,String>> supportedLoginProviders;
+      private final @Nullable Output<Map<String,String>> supportedLoginProviders;
 
-    public Input<Map<String,String>> getSupportedLoginProviders() {
-        return this.supportedLoginProviders == null ? Input.empty() : this.supportedLoginProviders;
+    public Output<Map<String,String>> getSupportedLoginProviders() {
+        return this.supportedLoginProviders == null ? Output.empty() : this.supportedLoginProviders;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -134,24 +134,24 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public IdentityPoolState(
-        @Nullable Input<Boolean> allowClassicFlow,
-        @Nullable Input<Boolean> allowUnauthenticatedIdentities,
-        @Nullable Input<String> arn,
-        @Nullable Input<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders,
-        @Nullable Input<String> developerProviderName,
-        @Nullable Input<String> identityPoolName,
-        @Nullable Input<List<String>> openidConnectProviderArns,
-        @Nullable Input<List<String>> samlProviderArns,
-        @Nullable Input<Map<String,String>> supportedLoginProviders,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<Boolean> allowClassicFlow,
+        @Nullable Output<Boolean> allowUnauthenticatedIdentities,
+        @Nullable Output<String> arn,
+        @Nullable Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders,
+        @Nullable Output<String> developerProviderName,
+        @Nullable Output<String> identityPoolName,
+        @Nullable Output<List<String>> openidConnectProviderArns,
+        @Nullable Output<List<String>> samlProviderArns,
+        @Nullable Output<Map<String,String>> supportedLoginProviders,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.allowClassicFlow = allowClassicFlow;
         this.allowUnauthenticatedIdentities = allowUnauthenticatedIdentities;
         this.arn = arn;
@@ -166,17 +166,17 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IdentityPoolState() {
-        this.allowClassicFlow = Input.empty();
-        this.allowUnauthenticatedIdentities = Input.empty();
-        this.arn = Input.empty();
-        this.cognitoIdentityProviders = Input.empty();
-        this.developerProviderName = Input.empty();
-        this.identityPoolName = Input.empty();
-        this.openidConnectProviderArns = Input.empty();
-        this.samlProviderArns = Input.empty();
-        this.supportedLoginProviders = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.allowClassicFlow = Output.empty();
+        this.allowUnauthenticatedIdentities = Output.empty();
+        this.arn = Output.empty();
+        this.cognitoIdentityProviders = Output.empty();
+        this.developerProviderName = Output.empty();
+        this.identityPoolName = Output.empty();
+        this.openidConnectProviderArns = Output.empty();
+        this.samlProviderArns = Output.empty();
+        this.supportedLoginProviders = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,17 +188,17 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowClassicFlow;
-        private @Nullable Input<Boolean> allowUnauthenticatedIdentities;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders;
-        private @Nullable Input<String> developerProviderName;
-        private @Nullable Input<String> identityPoolName;
-        private @Nullable Input<List<String>> openidConnectProviderArns;
-        private @Nullable Input<List<String>> samlProviderArns;
-        private @Nullable Input<Map<String,String>> supportedLoginProviders;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<Boolean> allowClassicFlow;
+        private @Nullable Output<Boolean> allowUnauthenticatedIdentities;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders;
+        private @Nullable Output<String> developerProviderName;
+        private @Nullable Output<String> identityPoolName;
+        private @Nullable Output<List<String>> openidConnectProviderArns;
+        private @Nullable Output<List<String>> samlProviderArns;
+        private @Nullable Output<Map<String,String>> supportedLoginProviders;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -219,113 +219,113 @@ public final class IdentityPoolState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder allowClassicFlow(@Nullable Input<Boolean> allowClassicFlow) {
+        public Builder allowClassicFlow(@Nullable Output<Boolean> allowClassicFlow) {
             this.allowClassicFlow = allowClassicFlow;
             return this;
         }
 
         public Builder allowClassicFlow(@Nullable Boolean allowClassicFlow) {
-            this.allowClassicFlow = Input.ofNullable(allowClassicFlow);
+            this.allowClassicFlow = Output.ofNullable(allowClassicFlow);
             return this;
         }
 
-        public Builder allowUnauthenticatedIdentities(@Nullable Input<Boolean> allowUnauthenticatedIdentities) {
+        public Builder allowUnauthenticatedIdentities(@Nullable Output<Boolean> allowUnauthenticatedIdentities) {
             this.allowUnauthenticatedIdentities = allowUnauthenticatedIdentities;
             return this;
         }
 
         public Builder allowUnauthenticatedIdentities(@Nullable Boolean allowUnauthenticatedIdentities) {
-            this.allowUnauthenticatedIdentities = Input.ofNullable(allowUnauthenticatedIdentities);
+            this.allowUnauthenticatedIdentities = Output.ofNullable(allowUnauthenticatedIdentities);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder cognitoIdentityProviders(@Nullable Input<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders) {
+        public Builder cognitoIdentityProviders(@Nullable Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders) {
             this.cognitoIdentityProviders = cognitoIdentityProviders;
             return this;
         }
 
         public Builder cognitoIdentityProviders(@Nullable List<IdentityPoolCognitoIdentityProviderGetArgs> cognitoIdentityProviders) {
-            this.cognitoIdentityProviders = Input.ofNullable(cognitoIdentityProviders);
+            this.cognitoIdentityProviders = Output.ofNullable(cognitoIdentityProviders);
             return this;
         }
 
-        public Builder developerProviderName(@Nullable Input<String> developerProviderName) {
+        public Builder developerProviderName(@Nullable Output<String> developerProviderName) {
             this.developerProviderName = developerProviderName;
             return this;
         }
 
         public Builder developerProviderName(@Nullable String developerProviderName) {
-            this.developerProviderName = Input.ofNullable(developerProviderName);
+            this.developerProviderName = Output.ofNullable(developerProviderName);
             return this;
         }
 
-        public Builder identityPoolName(@Nullable Input<String> identityPoolName) {
+        public Builder identityPoolName(@Nullable Output<String> identityPoolName) {
             this.identityPoolName = identityPoolName;
             return this;
         }
 
         public Builder identityPoolName(@Nullable String identityPoolName) {
-            this.identityPoolName = Input.ofNullable(identityPoolName);
+            this.identityPoolName = Output.ofNullable(identityPoolName);
             return this;
         }
 
-        public Builder openidConnectProviderArns(@Nullable Input<List<String>> openidConnectProviderArns) {
+        public Builder openidConnectProviderArns(@Nullable Output<List<String>> openidConnectProviderArns) {
             this.openidConnectProviderArns = openidConnectProviderArns;
             return this;
         }
 
         public Builder openidConnectProviderArns(@Nullable List<String> openidConnectProviderArns) {
-            this.openidConnectProviderArns = Input.ofNullable(openidConnectProviderArns);
+            this.openidConnectProviderArns = Output.ofNullable(openidConnectProviderArns);
             return this;
         }
 
-        public Builder samlProviderArns(@Nullable Input<List<String>> samlProviderArns) {
+        public Builder samlProviderArns(@Nullable Output<List<String>> samlProviderArns) {
             this.samlProviderArns = samlProviderArns;
             return this;
         }
 
         public Builder samlProviderArns(@Nullable List<String> samlProviderArns) {
-            this.samlProviderArns = Input.ofNullable(samlProviderArns);
+            this.samlProviderArns = Output.ofNullable(samlProviderArns);
             return this;
         }
 
-        public Builder supportedLoginProviders(@Nullable Input<Map<String,String>> supportedLoginProviders) {
+        public Builder supportedLoginProviders(@Nullable Output<Map<String,String>> supportedLoginProviders) {
             this.supportedLoginProviders = supportedLoginProviders;
             return this;
         }
 
         public Builder supportedLoginProviders(@Nullable Map<String,String> supportedLoginProviders) {
-            this.supportedLoginProviders = Input.ofNullable(supportedLoginProviders);
+            this.supportedLoginProviders = Output.ofNullable(supportedLoginProviders);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public IdentityPoolState build() {

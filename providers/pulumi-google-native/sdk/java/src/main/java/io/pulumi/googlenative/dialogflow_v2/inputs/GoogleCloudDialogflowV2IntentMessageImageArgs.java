@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDialogflowV2IntentMessageImageArgs extends io.pulu
      * 
      */
     @InputImport(name="accessibilityText")
-      private final @Nullable Input<String> accessibilityText;
+      private final @Nullable Output<String> accessibilityText;
 
-    public Input<String> getAccessibilityText() {
-        return this.accessibilityText == null ? Input.empty() : this.accessibilityText;
+    public Output<String> getAccessibilityText() {
+        return this.accessibilityText == null ? Output.empty() : this.accessibilityText;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDialogflowV2IntentMessageImageArgs extends io.pulu
      * 
      */
     @InputImport(name="imageUri")
-      private final @Nullable Input<String> imageUri;
+      private final @Nullable Output<String> imageUri;
 
-    public Input<String> getImageUri() {
-        return this.imageUri == null ? Input.empty() : this.imageUri;
+    public Output<String> getImageUri() {
+        return this.imageUri == null ? Output.empty() : this.imageUri;
     }
 
     public GoogleCloudDialogflowV2IntentMessageImageArgs(
-        @Nullable Input<String> accessibilityText,
-        @Nullable Input<String> imageUri) {
+        @Nullable Output<String> accessibilityText,
+        @Nullable Output<String> imageUri) {
         this.accessibilityText = accessibilityText;
         this.imageUri = imageUri;
     }
 
     private GoogleCloudDialogflowV2IntentMessageImageArgs() {
-        this.accessibilityText = Input.empty();
-        this.imageUri = Input.empty();
+        this.accessibilityText = Output.empty();
+        this.imageUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDialogflowV2IntentMessageImageArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessibilityText;
-        private @Nullable Input<String> imageUri;
+        private @Nullable Output<String> accessibilityText;
+        private @Nullable Output<String> imageUri;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDialogflowV2IntentMessageImageArgs extends io.pulu
     	      this.imageUri = defaults.imageUri;
         }
 
-        public Builder accessibilityText(@Nullable Input<String> accessibilityText) {
+        public Builder accessibilityText(@Nullable Output<String> accessibilityText) {
             this.accessibilityText = accessibilityText;
             return this;
         }
 
         public Builder accessibilityText(@Nullable String accessibilityText) {
-            this.accessibilityText = Input.ofNullable(accessibilityText);
+            this.accessibilityText = Output.ofNullable(accessibilityText);
             return this;
         }
 
-        public Builder imageUri(@Nullable Input<String> imageUri) {
+        public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
         public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Input.ofNullable(imageUri);
+            this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageImageArgs build() {

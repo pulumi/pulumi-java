@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="authProviderX509CertUrl", required=true)
-      private final Input<String> authProviderX509CertUrl;
+      private final Output<String> authProviderX509CertUrl;
 
-    public Input<String> getAuthProviderX509CertUrl() {
+    public Output<String> getAuthProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
     }
 
@@ -33,9 +33,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="authUri", required=true)
-      private final Input<String> authUri;
+      private final Output<String> authUri;
 
-    public Input<String> getAuthUri() {
+    public Output<String> getAuthUri() {
         return this.authUri;
     }
 
@@ -45,9 +45,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="authenticationType", required=true)
-      private final Input<String> authenticationType;
+      private final Output<String> authenticationType;
 
-    public Input<String> getAuthenticationType() {
+    public Output<String> getAuthenticationType() {
         return this.authenticationType;
     }
 
@@ -56,9 +56,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="clientEmail", required=true)
-      private final Input<String> clientEmail;
+      private final Output<String> clientEmail;
 
-    public Input<String> getClientEmail() {
+    public Output<String> getClientEmail() {
         return this.clientEmail;
     }
 
@@ -67,9 +67,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -78,9 +78,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="clientX509CertUrl", required=true)
-      private final Input<String> clientX509CertUrl;
+      private final Output<String> clientX509CertUrl;
 
-    public Input<String> getClientX509CertUrl() {
+    public Output<String> getClientX509CertUrl() {
         return this.clientX509CertUrl;
     }
 
@@ -89,9 +89,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -100,9 +100,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateKey", required=true)
-      private final Input<String> privateKey;
+      private final Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
+    public Output<String> getPrivateKey() {
         return this.privateKey;
     }
 
@@ -111,9 +111,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateKeyId", required=true)
-      private final Input<String> privateKeyId;
+      private final Output<String> privateKeyId;
 
-    public Input<String> getPrivateKeyId() {
+    public Output<String> getPrivateKeyId() {
         return this.privateKeyId;
     }
 
@@ -122,9 +122,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="projectId", required=true)
-      private final Input<String> projectId;
+      private final Output<String> projectId;
 
-    public Input<String> getProjectId() {
+    public Output<String> getProjectId() {
         return this.projectId;
     }
 
@@ -133,9 +133,9 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tokenUri", required=true)
-      private final Input<String> tokenUri;
+      private final Output<String> tokenUri;
 
-    public Input<String> getTokenUri() {
+    public Output<String> getTokenUri() {
         return this.tokenUri;
     }
 
@@ -144,25 +144,25 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public GcpCredentialsDetailsPropertiesArgs(
-        Input<String> authProviderX509CertUrl,
-        Input<String> authUri,
-        Input<String> authenticationType,
-        Input<String> clientEmail,
-        Input<String> clientId,
-        Input<String> clientX509CertUrl,
-        Input<String> organizationId,
-        Input<String> privateKey,
-        Input<String> privateKeyId,
-        Input<String> projectId,
-        Input<String> tokenUri,
-        Input<String> type) {
+        Output<String> authProviderX509CertUrl,
+        Output<String> authUri,
+        Output<String> authenticationType,
+        Output<String> clientEmail,
+        Output<String> clientId,
+        Output<String> clientX509CertUrl,
+        Output<String> organizationId,
+        Output<String> privateKey,
+        Output<String> privateKeyId,
+        Output<String> projectId,
+        Output<String> tokenUri,
+        Output<String> type) {
         this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl, "expected parameter 'authProviderX509CertUrl' to be non-null");
         this.authUri = Objects.requireNonNull(authUri, "expected parameter 'authUri' to be non-null");
         this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
@@ -178,18 +178,18 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     }
 
     private GcpCredentialsDetailsPropertiesArgs() {
-        this.authProviderX509CertUrl = Input.empty();
-        this.authUri = Input.empty();
-        this.authenticationType = Input.empty();
-        this.clientEmail = Input.empty();
-        this.clientId = Input.empty();
-        this.clientX509CertUrl = Input.empty();
-        this.organizationId = Input.empty();
-        this.privateKey = Input.empty();
-        this.privateKeyId = Input.empty();
-        this.projectId = Input.empty();
-        this.tokenUri = Input.empty();
-        this.type = Input.empty();
+        this.authProviderX509CertUrl = Output.empty();
+        this.authUri = Output.empty();
+        this.authenticationType = Output.empty();
+        this.clientEmail = Output.empty();
+        this.clientId = Output.empty();
+        this.clientX509CertUrl = Output.empty();
+        this.organizationId = Output.empty();
+        this.privateKey = Output.empty();
+        this.privateKeyId = Output.empty();
+        this.projectId = Output.empty();
+        this.tokenUri = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -201,18 +201,18 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> authProviderX509CertUrl;
-        private Input<String> authUri;
-        private Input<String> authenticationType;
-        private Input<String> clientEmail;
-        private Input<String> clientId;
-        private Input<String> clientX509CertUrl;
-        private Input<String> organizationId;
-        private Input<String> privateKey;
-        private Input<String> privateKeyId;
-        private Input<String> projectId;
-        private Input<String> tokenUri;
-        private Input<String> type;
+        private Output<String> authProviderX509CertUrl;
+        private Output<String> authUri;
+        private Output<String> authenticationType;
+        private Output<String> clientEmail;
+        private Output<String> clientId;
+        private Output<String> clientX509CertUrl;
+        private Output<String> organizationId;
+        private Output<String> privateKey;
+        private Output<String> privateKeyId;
+        private Output<String> projectId;
+        private Output<String> tokenUri;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -234,123 +234,123 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder authProviderX509CertUrl(Input<String> authProviderX509CertUrl) {
+        public Builder authProviderX509CertUrl(Output<String> authProviderX509CertUrl) {
             this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl);
             return this;
         }
 
         public Builder authProviderX509CertUrl(String authProviderX509CertUrl) {
-            this.authProviderX509CertUrl = Input.of(Objects.requireNonNull(authProviderX509CertUrl));
+            this.authProviderX509CertUrl = Output.of(Objects.requireNonNull(authProviderX509CertUrl));
             return this;
         }
 
-        public Builder authUri(Input<String> authUri) {
+        public Builder authUri(Output<String> authUri) {
             this.authUri = Objects.requireNonNull(authUri);
             return this;
         }
 
         public Builder authUri(String authUri) {
-            this.authUri = Input.of(Objects.requireNonNull(authUri));
+            this.authUri = Output.of(Objects.requireNonNull(authUri));
             return this;
         }
 
-        public Builder authenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Output<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
+            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder clientEmail(Input<String> clientEmail) {
+        public Builder clientEmail(Output<String> clientEmail) {
             this.clientEmail = Objects.requireNonNull(clientEmail);
             return this;
         }
 
         public Builder clientEmail(String clientEmail) {
-            this.clientEmail = Input.of(Objects.requireNonNull(clientEmail));
+            this.clientEmail = Output.of(Objects.requireNonNull(clientEmail));
             return this;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder clientX509CertUrl(Input<String> clientX509CertUrl) {
+        public Builder clientX509CertUrl(Output<String> clientX509CertUrl) {
             this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl);
             return this;
         }
 
         public Builder clientX509CertUrl(String clientX509CertUrl) {
-            this.clientX509CertUrl = Input.of(Objects.requireNonNull(clientX509CertUrl));
+            this.clientX509CertUrl = Output.of(Objects.requireNonNull(clientX509CertUrl));
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder privateKey(Input<String> privateKey) {
+        public Builder privateKey(Output<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
         public Builder privateKey(String privateKey) {
-            this.privateKey = Input.of(Objects.requireNonNull(privateKey));
+            this.privateKey = Output.of(Objects.requireNonNull(privateKey));
             return this;
         }
 
-        public Builder privateKeyId(Input<String> privateKeyId) {
+        public Builder privateKeyId(Output<String> privateKeyId) {
             this.privateKeyId = Objects.requireNonNull(privateKeyId);
             return this;
         }
 
         public Builder privateKeyId(String privateKeyId) {
-            this.privateKeyId = Input.of(Objects.requireNonNull(privateKeyId));
+            this.privateKeyId = Output.of(Objects.requireNonNull(privateKeyId));
             return this;
         }
 
-        public Builder projectId(Input<String> projectId) {
+        public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Input.of(Objects.requireNonNull(projectId));
+            this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder tokenUri(Input<String> tokenUri) {
+        public Builder tokenUri(Output<String> tokenUri) {
             this.tokenUri = Objects.requireNonNull(tokenUri);
             return this;
         }
 
         public Builder tokenUri(String tokenUri) {
-            this.tokenUri = Input.of(Objects.requireNonNull(tokenUri));
+            this.tokenUri = Output.of(Objects.requireNonNull(tokenUri));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public GcpCredentialsDetailsPropertiesArgs build() {

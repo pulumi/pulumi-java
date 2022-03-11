@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.azurenative.operationalinsights.inputs.ColumnArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columns")
-      private final @Nullable Input<List<ColumnArgs>> columns;
+      private final @Nullable Output<List<ColumnArgs>> columns;
 
-    public Input<List<ColumnArgs>> getColumns() {
-        return this.columns == null ? Input.empty() : this.columns;
+    public Output<List<ColumnArgs>> getColumns() {
+        return this.columns == null ? Output.empty() : this.columns;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public SchemaArgs(
-        @Nullable Input<List<ColumnArgs>> columns,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name) {
+        @Nullable Output<List<ColumnArgs>> columns,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name) {
         this.columns = columns;
         this.description = description;
         this.displayName = displayName;
@@ -76,10 +76,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaArgs() {
-        this.columns = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
+        this.columns = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ColumnArgs>> columns;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
+        private @Nullable Output<List<ColumnArgs>> columns;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder columns(@Nullable Input<List<ColumnArgs>> columns) {
+        public Builder columns(@Nullable Output<List<ColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
         public Builder columns(@Nullable List<ColumnArgs> columns) {
-            this.columns = Input.ofNullable(columns);
+            this.columns = Output.ofNullable(columns);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public SchemaArgs build() {

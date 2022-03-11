@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.inputs.ManagedZoneServiceDirectoryConfigNamespaceArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     public static final ManagedZoneServiceDirectoryConfigArgs Empty = new ManagedZoneServiceDirectoryConfigArgs();
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
+      private final @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
-    public Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     public ManagedZoneServiceDirectoryConfigArgs(
-        @Nullable Input<String> kind,
-        @Nullable Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
+        @Nullable Output<String> kind,
+        @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
         this.kind = kind;
         this.namespace = namespace;
     }
 
     private ManagedZoneServiceDirectoryConfigArgs() {
-        this.kind = Input.empty();
-        this.namespace = Input.empty();
+        this.kind = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
+        public Builder namespace(@Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable ManagedZoneServiceDirectoryConfigNamespaceArgs namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
         public ManagedZoneServiceDirectoryConfigArgs build() {

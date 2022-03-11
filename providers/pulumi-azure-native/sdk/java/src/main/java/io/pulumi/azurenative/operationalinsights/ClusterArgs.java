@@ -8,7 +8,7 @@ import io.pulumi.azurenative.operationalinsights.inputs.ClusterSkuArgs;
 import io.pulumi.azurenative.operationalinsights.inputs.IdentityArgs;
 import io.pulumi.azurenative.operationalinsights.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingType")
-      private final @Nullable Input<Either<String,BillingType>> billingType;
+      private final @Nullable Output<Either<String,BillingType>> billingType;
 
-    public Input<Either<String,BillingType>> getBillingType() {
-        return this.billingType == null ? Input.empty() : this.billingType;
+    public Output<Either<String,BillingType>> getBillingType() {
+        return this.billingType == null ? Output.empty() : this.billingType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isAvailabilityZonesEnabled")
-      private final @Nullable Input<Boolean> isAvailabilityZonesEnabled;
+      private final @Nullable Output<Boolean> isAvailabilityZonesEnabled;
 
-    public Input<Boolean> getIsAvailabilityZonesEnabled() {
-        return this.isAvailabilityZonesEnabled == null ? Input.empty() : this.isAvailabilityZonesEnabled;
+    public Output<Boolean> getIsAvailabilityZonesEnabled() {
+        return this.isAvailabilityZonesEnabled == null ? Output.empty() : this.isAvailabilityZonesEnabled;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDoubleEncryptionEnabled")
-      private final @Nullable Input<Boolean> isDoubleEncryptionEnabled;
+      private final @Nullable Output<Boolean> isDoubleEncryptionEnabled;
 
-    public Input<Boolean> getIsDoubleEncryptionEnabled() {
-        return this.isDoubleEncryptionEnabled == null ? Input.empty() : this.isDoubleEncryptionEnabled;
+    public Output<Boolean> getIsDoubleEncryptionEnabled() {
+        return this.isDoubleEncryptionEnabled == null ? Output.empty() : this.isDoubleEncryptionEnabled;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVaultProperties")
-      private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+      private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
+    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,10 +114,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ClusterSkuArgs> sku;
+      private final @Nullable Output<ClusterSkuArgs> sku;
 
-    public Input<ClusterSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ClusterSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -125,23 +125,23 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClusterArgs(
-        @Nullable Input<Either<String,BillingType>> billingType,
-        @Nullable Input<String> clusterName,
-        @Nullable Input<IdentityArgs> identity,
-        @Nullable Input<Boolean> isAvailabilityZonesEnabled,
-        @Nullable Input<Boolean> isDoubleEncryptionEnabled,
-        @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<ClusterSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Either<String,BillingType>> billingType,
+        @Nullable Output<String> clusterName,
+        @Nullable Output<IdentityArgs> identity,
+        @Nullable Output<Boolean> isAvailabilityZonesEnabled,
+        @Nullable Output<Boolean> isDoubleEncryptionEnabled,
+        @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<ClusterSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.billingType = billingType;
         this.clusterName = clusterName;
         this.identity = identity;
@@ -155,16 +155,16 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.billingType = Input.empty();
-        this.clusterName = Input.empty();
-        this.identity = Input.empty();
-        this.isAvailabilityZonesEnabled = Input.empty();
-        this.isDoubleEncryptionEnabled = Input.empty();
-        this.keyVaultProperties = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.billingType = Output.empty();
+        this.clusterName = Output.empty();
+        this.identity = Output.empty();
+        this.isAvailabilityZonesEnabled = Output.empty();
+        this.isDoubleEncryptionEnabled = Output.empty();
+        this.keyVaultProperties = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -176,16 +176,16 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BillingType>> billingType;
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<IdentityArgs> identity;
-        private @Nullable Input<Boolean> isAvailabilityZonesEnabled;
-        private @Nullable Input<Boolean> isDoubleEncryptionEnabled;
-        private @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ClusterSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Either<String,BillingType>> billingType;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<IdentityArgs> identity;
+        private @Nullable Output<Boolean> isAvailabilityZonesEnabled;
+        private @Nullable Output<Boolean> isDoubleEncryptionEnabled;
+        private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ClusterSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -205,103 +205,103 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder billingType(@Nullable Input<Either<String,BillingType>> billingType) {
+        public Builder billingType(@Nullable Output<Either<String,BillingType>> billingType) {
             this.billingType = billingType;
             return this;
         }
 
         public Builder billingType(@Nullable Either<String,BillingType> billingType) {
-            this.billingType = Input.ofNullable(billingType);
+            this.billingType = Output.ofNullable(billingType);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder isAvailabilityZonesEnabled(@Nullable Input<Boolean> isAvailabilityZonesEnabled) {
+        public Builder isAvailabilityZonesEnabled(@Nullable Output<Boolean> isAvailabilityZonesEnabled) {
             this.isAvailabilityZonesEnabled = isAvailabilityZonesEnabled;
             return this;
         }
 
         public Builder isAvailabilityZonesEnabled(@Nullable Boolean isAvailabilityZonesEnabled) {
-            this.isAvailabilityZonesEnabled = Input.ofNullable(isAvailabilityZonesEnabled);
+            this.isAvailabilityZonesEnabled = Output.ofNullable(isAvailabilityZonesEnabled);
             return this;
         }
 
-        public Builder isDoubleEncryptionEnabled(@Nullable Input<Boolean> isDoubleEncryptionEnabled) {
+        public Builder isDoubleEncryptionEnabled(@Nullable Output<Boolean> isDoubleEncryptionEnabled) {
             this.isDoubleEncryptionEnabled = isDoubleEncryptionEnabled;
             return this;
         }
 
         public Builder isDoubleEncryptionEnabled(@Nullable Boolean isDoubleEncryptionEnabled) {
-            this.isDoubleEncryptionEnabled = Input.ofNullable(isDoubleEncryptionEnabled);
+            this.isDoubleEncryptionEnabled = Output.ofNullable(isDoubleEncryptionEnabled);
             return this;
         }
 
-        public Builder keyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<ClusterSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ClusterSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ClusterSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClusterArgs build() {

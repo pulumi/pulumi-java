@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ActionTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
@@ -30,9 +30,9 @@ public final class ActionTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identifier", required=true)
-      private final Input<String> identifier;
+      private final Output<String> identifier;
 
-    public Input<String> getIdentifier() {
+    public Output<String> getIdentifier() {
         return this.identifier;
     }
 
@@ -41,25 +41,25 @@ public final class ActionTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ActionTargetArgs(
-        Input<String> description,
-        Input<String> identifier,
-        @Nullable Input<String> name) {
+        Output<String> description,
+        Output<String> identifier,
+        @Nullable Output<String> name) {
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.identifier = Objects.requireNonNull(identifier, "expected parameter 'identifier' to be non-null");
         this.name = name;
     }
 
     private ActionTargetArgs() {
-        this.description = Input.empty();
-        this.identifier = Input.empty();
-        this.name = Input.empty();
+        this.description = Output.empty();
+        this.identifier = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ActionTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> description;
-        private Input<String> identifier;
-        private @Nullable Input<String> name;
+        private Output<String> description;
+        private Output<String> identifier;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ActionTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder identifier(Input<String> identifier) {
+        public Builder identifier(Output<String> identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
         public Builder identifier(String identifier) {
-            this.identifier = Input.of(Objects.requireNonNull(identifier));
+            this.identifier = Output.of(Objects.requireNonNull(identifier));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ActionTargetArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLRateBasedStatementAggregateKeyType;
 import io.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfigurationArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,38 +18,38 @@ public final class WebACLRateBasedStatementArgs extends io.pulumi.resources.Reso
     public static final WebACLRateBasedStatementArgs Empty = new WebACLRateBasedStatementArgs();
 
     @InputImport(name="aggregateKeyType", required=true)
-      private final Input<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
+      private final Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
 
-    public Input<WebACLRateBasedStatementAggregateKeyType> getAggregateKeyType() {
+    public Output<WebACLRateBasedStatementAggregateKeyType> getAggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @InputImport(name="forwardedIPConfig")
-      private final @Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
+      private final @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Input<WebACLForwardedIPConfigurationArgs> getForwardedIPConfig() {
-        return this.forwardedIPConfig == null ? Input.empty() : this.forwardedIPConfig;
+    public Output<WebACLForwardedIPConfigurationArgs> getForwardedIPConfig() {
+        return this.forwardedIPConfig == null ? Output.empty() : this.forwardedIPConfig;
     }
 
     @InputImport(name="limit", required=true)
-      private final Input<Integer> limit;
+      private final Output<Integer> limit;
 
-    public Input<Integer> getLimit() {
+    public Output<Integer> getLimit() {
         return this.limit;
     }
 
     @InputImport(name="scopeDownStatement")
-      private final @Nullable Input<WebACLStatementArgs> scopeDownStatement;
+      private final @Nullable Output<WebACLStatementArgs> scopeDownStatement;
 
-    public Input<WebACLStatementArgs> getScopeDownStatement() {
-        return this.scopeDownStatement == null ? Input.empty() : this.scopeDownStatement;
+    public Output<WebACLStatementArgs> getScopeDownStatement() {
+        return this.scopeDownStatement == null ? Output.empty() : this.scopeDownStatement;
     }
 
     public WebACLRateBasedStatementArgs(
-        Input<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType,
-        @Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig,
-        Input<Integer> limit,
-        @Nullable Input<WebACLStatementArgs> scopeDownStatement) {
+        Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType,
+        @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig,
+        Output<Integer> limit,
+        @Nullable Output<WebACLStatementArgs> scopeDownStatement) {
         this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType, "expected parameter 'aggregateKeyType' to be non-null");
         this.forwardedIPConfig = forwardedIPConfig;
         this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
@@ -57,10 +57,10 @@ public final class WebACLRateBasedStatementArgs extends io.pulumi.resources.Reso
     }
 
     private WebACLRateBasedStatementArgs() {
-        this.aggregateKeyType = Input.empty();
-        this.forwardedIPConfig = Input.empty();
-        this.limit = Input.empty();
-        this.scopeDownStatement = Input.empty();
+        this.aggregateKeyType = Output.empty();
+        this.forwardedIPConfig = Output.empty();
+        this.limit = Output.empty();
+        this.scopeDownStatement = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class WebACLRateBasedStatementArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
-        private @Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
-        private Input<Integer> limit;
-        private @Nullable Input<WebACLStatementArgs> scopeDownStatement;
+        private Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
+        private @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
+        private Output<Integer> limit;
+        private @Nullable Output<WebACLStatementArgs> scopeDownStatement;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class WebACLRateBasedStatementArgs extends io.pulumi.resources.Reso
     	      this.scopeDownStatement = defaults.scopeDownStatement;
         }
 
-        public Builder aggregateKeyType(Input<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType) {
+        public Builder aggregateKeyType(Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType) {
             this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
             return this;
         }
 
         public Builder aggregateKeyType(WebACLRateBasedStatementAggregateKeyType aggregateKeyType) {
-            this.aggregateKeyType = Input.of(Objects.requireNonNull(aggregateKeyType));
+            this.aggregateKeyType = Output.of(Objects.requireNonNull(aggregateKeyType));
             return this;
         }
 
-        public Builder forwardedIPConfig(@Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
         public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
-            this.forwardedIPConfig = Input.ofNullable(forwardedIPConfig);
+            this.forwardedIPConfig = Output.ofNullable(forwardedIPConfig);
             return this;
         }
 
-        public Builder limit(Input<Integer> limit) {
+        public Builder limit(Output<Integer> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
         public Builder limit(Integer limit) {
-            this.limit = Input.of(Objects.requireNonNull(limit));
+            this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
 
-        public Builder scopeDownStatement(@Nullable Input<WebACLStatementArgs> scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable Output<WebACLStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
         public Builder scopeDownStatement(@Nullable WebACLStatementArgs scopeDownStatement) {
-            this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
+            this.scopeDownStatement = Output.ofNullable(scopeDownStatement);
             return this;
         }
         public WebACLRateBasedStatementArgs build() {

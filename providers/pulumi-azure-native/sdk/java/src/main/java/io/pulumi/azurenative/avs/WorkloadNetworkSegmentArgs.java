@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.inputs.WorkloadNetworkSegmentSubnetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="connectedGateway")
-      private final @Nullable Input<String> connectedGateway;
+      private final @Nullable Output<String> connectedGateway;
 
-    public Input<String> getConnectedGateway() {
-        return this.connectedGateway == null ? Input.empty() : this.connectedGateway;
+    public Output<String> getConnectedGateway() {
+        return this.connectedGateway == null ? Output.empty() : this.connectedGateway;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -54,9 +54,9 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,10 +65,10 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<Double> revision;
+      private final @Nullable Output<Double> revision;
 
-    public Input<Double> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<Double> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="segmentId")
-      private final @Nullable Input<String> segmentId;
+      private final @Nullable Output<String> segmentId;
 
-    public Input<String> getSegmentId() {
-        return this.segmentId == null ? Input.empty() : this.segmentId;
+    public Output<String> getSegmentId() {
+        return this.segmentId == null ? Output.empty() : this.segmentId;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<WorkloadNetworkSegmentSubnetArgs> subnet;
+      private final @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet;
 
-    public Input<WorkloadNetworkSegmentSubnetArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<WorkloadNetworkSegmentSubnetArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     public WorkloadNetworkSegmentArgs(
-        @Nullable Input<String> connectedGateway,
-        @Nullable Input<String> displayName,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Double> revision,
-        @Nullable Input<String> segmentId,
-        @Nullable Input<WorkloadNetworkSegmentSubnetArgs> subnet) {
+        @Nullable Output<String> connectedGateway,
+        @Nullable Output<String> displayName,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Double> revision,
+        @Nullable Output<String> segmentId,
+        @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet) {
         this.connectedGateway = connectedGateway;
         this.displayName = displayName;
         this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
@@ -111,13 +111,13 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadNetworkSegmentArgs() {
-        this.connectedGateway = Input.empty();
-        this.displayName = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.revision = Input.empty();
-        this.segmentId = Input.empty();
-        this.subnet = Input.empty();
+        this.connectedGateway = Output.empty();
+        this.displayName = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.revision = Output.empty();
+        this.segmentId = Output.empty();
+        this.subnet = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectedGateway;
-        private @Nullable Input<String> displayName;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Double> revision;
-        private @Nullable Input<String> segmentId;
-        private @Nullable Input<WorkloadNetworkSegmentSubnetArgs> subnet;
+        private @Nullable Output<String> connectedGateway;
+        private @Nullable Output<String> displayName;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Double> revision;
+        private @Nullable Output<String> segmentId;
+        private @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder connectedGateway(@Nullable Input<String> connectedGateway) {
+        public Builder connectedGateway(@Nullable Output<String> connectedGateway) {
             this.connectedGateway = connectedGateway;
             return this;
         }
 
         public Builder connectedGateway(@Nullable String connectedGateway) {
-            this.connectedGateway = Input.ofNullable(connectedGateway);
+            this.connectedGateway = Output.ofNullable(connectedGateway);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder revision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Output<Double> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable Double revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
 
-        public Builder segmentId(@Nullable Input<String> segmentId) {
+        public Builder segmentId(@Nullable Output<String> segmentId) {
             this.segmentId = segmentId;
             return this;
         }
 
         public Builder segmentId(@Nullable String segmentId) {
-            this.segmentId = Input.ofNullable(segmentId);
+            this.segmentId = Output.ofNullable(segmentId);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<WorkloadNetworkSegmentSubnetArgs> subnet) {
+        public Builder subnet(@Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable WorkloadNetworkSegmentSubnetArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
         public WorkloadNetworkSegmentArgs build() {

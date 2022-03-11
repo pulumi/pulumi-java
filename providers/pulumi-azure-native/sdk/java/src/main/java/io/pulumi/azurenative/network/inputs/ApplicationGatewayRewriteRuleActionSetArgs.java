@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayHeaderConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayUrlConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="requestHeaderConfigurations")
-      private final @Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
+      private final @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
 
-    public Input<List<ApplicationGatewayHeaderConfigurationArgs>> getRequestHeaderConfigurations() {
-        return this.requestHeaderConfigurations == null ? Input.empty() : this.requestHeaderConfigurations;
+    public Output<List<ApplicationGatewayHeaderConfigurationArgs>> getRequestHeaderConfigurations() {
+        return this.requestHeaderConfigurations == null ? Output.empty() : this.requestHeaderConfigurations;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="responseHeaderConfigurations")
-      private final @Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
+      private final @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
 
-    public Input<List<ApplicationGatewayHeaderConfigurationArgs>> getResponseHeaderConfigurations() {
-        return this.responseHeaderConfigurations == null ? Input.empty() : this.responseHeaderConfigurations;
+    public Output<List<ApplicationGatewayHeaderConfigurationArgs>> getResponseHeaderConfigurations() {
+        return this.responseHeaderConfigurations == null ? Output.empty() : this.responseHeaderConfigurations;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="urlConfiguration")
-      private final @Nullable Input<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
+      private final @Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
 
-    public Input<ApplicationGatewayUrlConfigurationArgs> getUrlConfiguration() {
-        return this.urlConfiguration == null ? Input.empty() : this.urlConfiguration;
+    public Output<ApplicationGatewayUrlConfigurationArgs> getUrlConfiguration() {
+        return this.urlConfiguration == null ? Output.empty() : this.urlConfiguration;
     }
 
     public ApplicationGatewayRewriteRuleActionSetArgs(
-        @Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations,
-        @Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations,
-        @Nullable Input<ApplicationGatewayUrlConfigurationArgs> urlConfiguration) {
+        @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations,
+        @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations,
+        @Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration) {
         this.requestHeaderConfigurations = requestHeaderConfigurations;
         this.responseHeaderConfigurations = responseHeaderConfigurations;
         this.urlConfiguration = urlConfiguration;
     }
 
     private ApplicationGatewayRewriteRuleActionSetArgs() {
-        this.requestHeaderConfigurations = Input.empty();
-        this.responseHeaderConfigurations = Input.empty();
-        this.urlConfiguration = Input.empty();
+        this.requestHeaderConfigurations = Output.empty();
+        this.responseHeaderConfigurations = Output.empty();
+        this.urlConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
-        private @Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
-        private @Nullable Input<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
+        private @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
+        private @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
+        private @Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
     	      this.urlConfiguration = defaults.urlConfiguration;
         }
 
-        public Builder requestHeaderConfigurations(@Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations) {
+        public Builder requestHeaderConfigurations(@Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations) {
             this.requestHeaderConfigurations = requestHeaderConfigurations;
             return this;
         }
 
         public Builder requestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> requestHeaderConfigurations) {
-            this.requestHeaderConfigurations = Input.ofNullable(requestHeaderConfigurations);
+            this.requestHeaderConfigurations = Output.ofNullable(requestHeaderConfigurations);
             return this;
         }
 
-        public Builder responseHeaderConfigurations(@Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations) {
+        public Builder responseHeaderConfigurations(@Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations) {
             this.responseHeaderConfigurations = responseHeaderConfigurations;
             return this;
         }
 
         public Builder responseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> responseHeaderConfigurations) {
-            this.responseHeaderConfigurations = Input.ofNullable(responseHeaderConfigurations);
+            this.responseHeaderConfigurations = Output.ofNullable(responseHeaderConfigurations);
             return this;
         }
 
-        public Builder urlConfiguration(@Nullable Input<ApplicationGatewayUrlConfigurationArgs> urlConfiguration) {
+        public Builder urlConfiguration(@Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration) {
             this.urlConfiguration = urlConfiguration;
             return this;
         }
 
         public Builder urlConfiguration(@Nullable ApplicationGatewayUrlConfigurationArgs urlConfiguration) {
-            this.urlConfiguration = Input.ofNullable(urlConfiguration);
+            this.urlConfiguration = Output.ofNullable(urlConfiguration);
             return this;
         }
         public ApplicationGatewayRewriteRuleActionSetArgs build() {

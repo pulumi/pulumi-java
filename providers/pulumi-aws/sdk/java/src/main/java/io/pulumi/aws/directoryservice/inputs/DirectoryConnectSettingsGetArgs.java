@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directoryservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,10 +16,10 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     public static final DirectoryConnectSettingsGetArgs Empty = new DirectoryConnectSettingsGetArgs();
 
     @InputImport(name="availabilityZones")
-      private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
+    public Output<List<String>> getAvailabilityZones() {
+        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="connectIps")
-      private final @Nullable Input<List<String>> connectIps;
+      private final @Nullable Output<List<String>> connectIps;
 
-    public Input<List<String>> getConnectIps() {
-        return this.connectIps == null ? Input.empty() : this.connectIps;
+    public Output<List<String>> getConnectIps() {
+        return this.connectIps == null ? Output.empty() : this.connectIps;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customerDnsIps", required=true)
-      private final Input<List<String>> customerDnsIps;
+      private final Output<List<String>> customerDnsIps;
 
-    public Input<List<String>> getCustomerDnsIps() {
+    public Output<List<String>> getCustomerDnsIps() {
         return this.customerDnsIps;
     }
 
@@ -49,9 +49,9 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customerUsername", required=true)
-      private final Input<String> customerUsername;
+      private final Output<String> customerUsername;
 
-    public Input<String> getCustomerUsername() {
+    public Output<String> getCustomerUsername() {
         return this.customerUsername;
     }
 
@@ -60,9 +60,9 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
@@ -71,19 +71,19 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public DirectoryConnectSettingsGetArgs(
-        @Nullable Input<List<String>> availabilityZones,
-        @Nullable Input<List<String>> connectIps,
-        Input<List<String>> customerDnsIps,
-        Input<String> customerUsername,
-        Input<List<String>> subnetIds,
-        Input<String> vpcId) {
+        @Nullable Output<List<String>> availabilityZones,
+        @Nullable Output<List<String>> connectIps,
+        Output<List<String>> customerDnsIps,
+        Output<String> customerUsername,
+        Output<List<String>> subnetIds,
+        Output<String> vpcId) {
         this.availabilityZones = availabilityZones;
         this.connectIps = connectIps;
         this.customerDnsIps = Objects.requireNonNull(customerDnsIps, "expected parameter 'customerDnsIps' to be non-null");
@@ -93,12 +93,12 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     }
 
     private DirectoryConnectSettingsGetArgs() {
-        this.availabilityZones = Input.empty();
-        this.connectIps = Input.empty();
-        this.customerDnsIps = Input.empty();
-        this.customerUsername = Input.empty();
-        this.subnetIds = Input.empty();
-        this.vpcId = Input.empty();
+        this.availabilityZones = Output.empty();
+        this.connectIps = Output.empty();
+        this.customerDnsIps = Output.empty();
+        this.customerUsername = Output.empty();
+        this.subnetIds = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,12 +110,12 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> availabilityZones;
-        private @Nullable Input<List<String>> connectIps;
-        private Input<List<String>> customerDnsIps;
-        private Input<String> customerUsername;
-        private Input<List<String>> subnetIds;
-        private Input<String> vpcId;
+        private @Nullable Output<List<String>> availabilityZones;
+        private @Nullable Output<List<String>> connectIps;
+        private Output<List<String>> customerDnsIps;
+        private Output<String> customerUsername;
+        private Output<List<String>> subnetIds;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -131,63 +131,63 @@ public final class DirectoryConnectSettingsGetArgs extends io.pulumi.resources.R
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Input.ofNullable(availabilityZones);
+            this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder connectIps(@Nullable Input<List<String>> connectIps) {
+        public Builder connectIps(@Nullable Output<List<String>> connectIps) {
             this.connectIps = connectIps;
             return this;
         }
 
         public Builder connectIps(@Nullable List<String> connectIps) {
-            this.connectIps = Input.ofNullable(connectIps);
+            this.connectIps = Output.ofNullable(connectIps);
             return this;
         }
 
-        public Builder customerDnsIps(Input<List<String>> customerDnsIps) {
+        public Builder customerDnsIps(Output<List<String>> customerDnsIps) {
             this.customerDnsIps = Objects.requireNonNull(customerDnsIps);
             return this;
         }
 
         public Builder customerDnsIps(List<String> customerDnsIps) {
-            this.customerDnsIps = Input.of(Objects.requireNonNull(customerDnsIps));
+            this.customerDnsIps = Output.of(Objects.requireNonNull(customerDnsIps));
             return this;
         }
 
-        public Builder customerUsername(Input<String> customerUsername) {
+        public Builder customerUsername(Output<String> customerUsername) {
             this.customerUsername = Objects.requireNonNull(customerUsername);
             return this;
         }
 
         public Builder customerUsername(String customerUsername) {
-            this.customerUsername = Input.of(Objects.requireNonNull(customerUsername));
+            this.customerUsername = Output.of(Objects.requireNonNull(customerUsername));
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public DirectoryConnectSettingsGetArgs build() {

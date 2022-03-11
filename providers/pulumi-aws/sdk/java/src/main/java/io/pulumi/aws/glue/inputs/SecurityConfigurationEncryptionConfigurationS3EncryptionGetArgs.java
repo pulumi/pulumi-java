@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
      * 
      */
     @InputImport(name="s3EncryptionMode")
-      private final @Nullable Input<String> s3EncryptionMode;
+      private final @Nullable Output<String> s3EncryptionMode;
 
-    public Input<String> getS3EncryptionMode() {
-        return this.s3EncryptionMode == null ? Input.empty() : this.s3EncryptionMode;
+    public Output<String> getS3EncryptionMode() {
+        return this.s3EncryptionMode == null ? Output.empty() : this.s3EncryptionMode;
     }
 
     public SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs(
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<String> s3EncryptionMode) {
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<String> s3EncryptionMode) {
         this.kmsKeyArn = kmsKeyArn;
         this.s3EncryptionMode = s3EncryptionMode;
     }
 
     private SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs() {
-        this.kmsKeyArn = Input.empty();
-        this.s3EncryptionMode = Input.empty();
+        this.kmsKeyArn = Output.empty();
+        this.s3EncryptionMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<String> s3EncryptionMode;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<String> s3EncryptionMode;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
     	      this.s3EncryptionMode = defaults.s3EncryptionMode;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder s3EncryptionMode(@Nullable Input<String> s3EncryptionMode) {
+        public Builder s3EncryptionMode(@Nullable Output<String> s3EncryptionMode) {
             this.s3EncryptionMode = s3EncryptionMode;
             return this;
         }
 
         public Builder s3EncryptionMode(@Nullable String s3EncryptionMode) {
-            this.s3EncryptionMode = Input.ofNullable(s3EncryptionMode);
+            this.s3EncryptionMode = Output.ofNullable(s3EncryptionMode);
             return this;
         }
         public SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs build() {

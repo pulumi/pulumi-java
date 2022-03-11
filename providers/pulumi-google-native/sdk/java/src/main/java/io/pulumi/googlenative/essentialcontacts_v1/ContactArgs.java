@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.essentialcontacts_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.essentialcontacts_v1.enums.ContactNotificationCategorySubscriptionsItem;
 import io.pulumi.googlenative.essentialcontacts_v1.enums.ContactValidationState;
@@ -22,9 +22,9 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
@@ -33,10 +33,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageTag")
-      private final @Nullable Input<String> languageTag;
+      private final @Nullable Output<String> languageTag;
 
-    public Input<String> getLanguageTag() {
-        return this.languageTag == null ? Input.empty() : this.languageTag;
+    public Output<String> getLanguageTag() {
+        return this.languageTag == null ? Output.empty() : this.languageTag;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationCategorySubscriptions")
-      private final @Nullable Input<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
+      private final @Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
 
-    public Input<List<ContactNotificationCategorySubscriptionsItem>> getNotificationCategorySubscriptions() {
-        return this.notificationCategorySubscriptions == null ? Input.empty() : this.notificationCategorySubscriptions;
+    public Output<List<ContactNotificationCategorySubscriptionsItem>> getNotificationCategorySubscriptions() {
+        return this.notificationCategorySubscriptions == null ? Output.empty() : this.notificationCategorySubscriptions;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validateTime")
-      private final @Nullable Input<String> validateTime;
+      private final @Nullable Output<String> validateTime;
 
-    public Input<String> getValidateTime() {
-        return this.validateTime == null ? Input.empty() : this.validateTime;
+    public Output<String> getValidateTime() {
+        return this.validateTime == null ? Output.empty() : this.validateTime;
     }
 
     /**
@@ -84,20 +84,20 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationState")
-      private final @Nullable Input<ContactValidationState> validationState;
+      private final @Nullable Output<ContactValidationState> validationState;
 
-    public Input<ContactValidationState> getValidationState() {
-        return this.validationState == null ? Input.empty() : this.validationState;
+    public Output<ContactValidationState> getValidationState() {
+        return this.validationState == null ? Output.empty() : this.validationState;
     }
 
     public ContactArgs(
-        Input<String> email,
-        @Nullable Input<String> languageTag,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions,
-        @Nullable Input<String> project,
-        @Nullable Input<String> validateTime,
-        @Nullable Input<ContactValidationState> validationState) {
+        Output<String> email,
+        @Nullable Output<String> languageTag,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions,
+        @Nullable Output<String> project,
+        @Nullable Output<String> validateTime,
+        @Nullable Output<ContactValidationState> validationState) {
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
         this.languageTag = languageTag;
         this.name = name;
@@ -108,13 +108,13 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.email = Input.empty();
-        this.languageTag = Input.empty();
-        this.name = Input.empty();
-        this.notificationCategorySubscriptions = Input.empty();
-        this.project = Input.empty();
-        this.validateTime = Input.empty();
-        this.validationState = Input.empty();
+        this.email = Output.empty();
+        this.languageTag = Output.empty();
+        this.name = Output.empty();
+        this.notificationCategorySubscriptions = Output.empty();
+        this.project = Output.empty();
+        this.validateTime = Output.empty();
+        this.validationState = Output.empty();
     }
 
     public static Builder builder() {
@@ -126,13 +126,13 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> email;
-        private @Nullable Input<String> languageTag;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> validateTime;
-        private @Nullable Input<ContactValidationState> validationState;
+        private Output<String> email;
+        private @Nullable Output<String> languageTag;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> validateTime;
+        private @Nullable Output<ContactValidationState> validationState;
 
         public Builder() {
     	      // Empty
@@ -149,73 +149,73 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationState = defaults.validationState;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder languageTag(@Nullable Input<String> languageTag) {
+        public Builder languageTag(@Nullable Output<String> languageTag) {
             this.languageTag = languageTag;
             return this;
         }
 
         public Builder languageTag(@Nullable String languageTag) {
-            this.languageTag = Input.ofNullable(languageTag);
+            this.languageTag = Output.ofNullable(languageTag);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationCategorySubscriptions(@Nullable Input<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(@Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
 
         public Builder notificationCategorySubscriptions(@Nullable List<ContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Input.ofNullable(notificationCategorySubscriptions);
+            this.notificationCategorySubscriptions = Output.ofNullable(notificationCategorySubscriptions);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder validateTime(@Nullable Input<String> validateTime) {
+        public Builder validateTime(@Nullable Output<String> validateTime) {
             this.validateTime = validateTime;
             return this;
         }
 
         public Builder validateTime(@Nullable String validateTime) {
-            this.validateTime = Input.ofNullable(validateTime);
+            this.validateTime = Output.ofNullable(validateTime);
             return this;
         }
 
-        public Builder validationState(@Nullable Input<ContactValidationState> validationState) {
+        public Builder validationState(@Nullable Output<ContactValidationState> validationState) {
             this.validationState = validationState;
             return this;
         }
 
         public Builder validationState(@Nullable ContactValidationState validationState) {
-            this.validationState = Input.ofNullable(validationState);
+            this.validationState = Output.ofNullable(validationState);
             return this;
         }
         public ContactArgs build() {

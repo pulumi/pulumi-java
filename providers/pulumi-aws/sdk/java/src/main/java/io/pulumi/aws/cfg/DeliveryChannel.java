@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cfg.DeliveryChannelArgs;
 import io.pulumi.aws.cfg.inputs.DeliveryChannelState;
 import io.pulumi.aws.cfg.outputs.DeliveryChannelSnapshotDeliveryProperties;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,14 +154,14 @@ public class DeliveryChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeliveryChannel(String name, DeliveryChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/deliveryChannel:DeliveryChannel", name, args == null ? DeliveryChannelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cfg/deliveryChannel:DeliveryChannel", name, args == null ? DeliveryChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DeliveryChannel(String name, Input<String> id, @Nullable DeliveryChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DeliveryChannel(String name, Output<String> id, @Nullable DeliveryChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cfg/deliveryChannel:DeliveryChannel", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -178,7 +177,7 @@ public class DeliveryChannel extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DeliveryChannel get(String name, Input<String> id, @Nullable DeliveryChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DeliveryChannel get(String name, Output<String> id, @Nullable DeliveryChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DeliveryChannel(name, id, state, options);
     }
 }

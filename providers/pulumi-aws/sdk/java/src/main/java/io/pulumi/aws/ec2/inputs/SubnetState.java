@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignIpv6AddressOnCreation")
-      private final @Nullable Input<Boolean> assignIpv6AddressOnCreation;
+      private final @Nullable Output<Boolean> assignIpv6AddressOnCreation;
 
-    public Input<Boolean> getAssignIpv6AddressOnCreation() {
-        return this.assignIpv6AddressOnCreation == null ? Input.empty() : this.assignIpv6AddressOnCreation;
+    public Output<Boolean> getAssignIpv6AddressOnCreation() {
+        return this.assignIpv6AddressOnCreation == null ? Output.empty() : this.assignIpv6AddressOnCreation;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZoneId")
-      private final @Nullable Input<String> availabilityZoneId;
+      private final @Nullable Output<String> availabilityZoneId;
 
-    public Input<String> getAvailabilityZoneId() {
-        return this.availabilityZoneId == null ? Input.empty() : this.availabilityZoneId;
+    public Output<String> getAvailabilityZoneId() {
+        return this.availabilityZoneId == null ? Output.empty() : this.availabilityZoneId;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-      private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Output<String> cidrBlock;
 
-    public Input<String> getCidrBlock() {
-        return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
+    public Output<String> getCidrBlock() {
+        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerOwnedIpv4Pool")
-      private final @Nullable Input<String> customerOwnedIpv4Pool;
+      private final @Nullable Output<String> customerOwnedIpv4Pool;
 
-    public Input<String> getCustomerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool == null ? Input.empty() : this.customerOwnedIpv4Pool;
+    public Output<String> getCustomerOwnedIpv4Pool() {
+        return this.customerOwnedIpv4Pool == null ? Output.empty() : this.customerOwnedIpv4Pool;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDns64")
-      private final @Nullable Input<Boolean> enableDns64;
+      private final @Nullable Output<Boolean> enableDns64;
 
-    public Input<Boolean> getEnableDns64() {
-        return this.enableDns64 == null ? Input.empty() : this.enableDns64;
+    public Output<Boolean> getEnableDns64() {
+        return this.enableDns64 == null ? Output.empty() : this.enableDns64;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableResourceNameDnsARecordOnLaunch")
-      private final @Nullable Input<Boolean> enableResourceNameDnsARecordOnLaunch;
+      private final @Nullable Output<Boolean> enableResourceNameDnsARecordOnLaunch;
 
-    public Input<Boolean> getEnableResourceNameDnsARecordOnLaunch() {
-        return this.enableResourceNameDnsARecordOnLaunch == null ? Input.empty() : this.enableResourceNameDnsARecordOnLaunch;
+    public Output<Boolean> getEnableResourceNameDnsARecordOnLaunch() {
+        return this.enableResourceNameDnsARecordOnLaunch == null ? Output.empty() : this.enableResourceNameDnsARecordOnLaunch;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableResourceNameDnsAaaaRecordOnLaunch")
-      private final @Nullable Input<Boolean> enableResourceNameDnsAaaaRecordOnLaunch;
+      private final @Nullable Output<Boolean> enableResourceNameDnsAaaaRecordOnLaunch;
 
-    public Input<Boolean> getEnableResourceNameDnsAaaaRecordOnLaunch() {
-        return this.enableResourceNameDnsAaaaRecordOnLaunch == null ? Input.empty() : this.enableResourceNameDnsAaaaRecordOnLaunch;
+    public Output<Boolean> getEnableResourceNameDnsAaaaRecordOnLaunch() {
+        return this.enableResourceNameDnsAaaaRecordOnLaunch == null ? Output.empty() : this.enableResourceNameDnsAaaaRecordOnLaunch;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6CidrBlock")
-      private final @Nullable Input<String> ipv6CidrBlock;
+      private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Input<String> getIpv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Input.empty() : this.ipv6CidrBlock;
+    public Output<String> getIpv6CidrBlock() {
+        return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6CidrBlockAssociationId")
-      private final @Nullable Input<String> ipv6CidrBlockAssociationId;
+      private final @Nullable Output<String> ipv6CidrBlockAssociationId;
 
-    public Input<String> getIpv6CidrBlockAssociationId() {
-        return this.ipv6CidrBlockAssociationId == null ? Input.empty() : this.ipv6CidrBlockAssociationId;
+    public Output<String> getIpv6CidrBlockAssociationId() {
+        return this.ipv6CidrBlockAssociationId == null ? Output.empty() : this.ipv6CidrBlockAssociationId;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6Native")
-      private final @Nullable Input<Boolean> ipv6Native;
+      private final @Nullable Output<Boolean> ipv6Native;
 
-    public Input<Boolean> getIpv6Native() {
-        return this.ipv6Native == null ? Input.empty() : this.ipv6Native;
+    public Output<Boolean> getIpv6Native() {
+        return this.ipv6Native == null ? Output.empty() : this.ipv6Native;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mapCustomerOwnedIpOnLaunch")
-      private final @Nullable Input<Boolean> mapCustomerOwnedIpOnLaunch;
+      private final @Nullable Output<Boolean> mapCustomerOwnedIpOnLaunch;
 
-    public Input<Boolean> getMapCustomerOwnedIpOnLaunch() {
-        return this.mapCustomerOwnedIpOnLaunch == null ? Input.empty() : this.mapCustomerOwnedIpOnLaunch;
+    public Output<Boolean> getMapCustomerOwnedIpOnLaunch() {
+        return this.mapCustomerOwnedIpOnLaunch == null ? Output.empty() : this.mapCustomerOwnedIpOnLaunch;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mapPublicIpOnLaunch")
-      private final @Nullable Input<Boolean> mapPublicIpOnLaunch;
+      private final @Nullable Output<Boolean> mapPublicIpOnLaunch;
 
-    public Input<Boolean> getMapPublicIpOnLaunch() {
-        return this.mapPublicIpOnLaunch == null ? Input.empty() : this.mapPublicIpOnLaunch;
+    public Output<Boolean> getMapPublicIpOnLaunch() {
+        return this.mapPublicIpOnLaunch == null ? Output.empty() : this.mapPublicIpOnLaunch;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostArn")
-      private final @Nullable Input<String> outpostArn;
+      private final @Nullable Output<String> outpostArn;
 
-    public Input<String> getOutpostArn() {
-        return this.outpostArn == null ? Input.empty() : this.outpostArn;
+    public Output<String> getOutpostArn() {
+        return this.outpostArn == null ? Output.empty() : this.outpostArn;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -202,10 +202,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateDnsHostnameTypeOnLaunch")
-      private final @Nullable Input<String> privateDnsHostnameTypeOnLaunch;
+      private final @Nullable Output<String> privateDnsHostnameTypeOnLaunch;
 
-    public Input<String> getPrivateDnsHostnameTypeOnLaunch() {
-        return this.privateDnsHostnameTypeOnLaunch == null ? Input.empty() : this.privateDnsHostnameTypeOnLaunch;
+    public Output<String> getPrivateDnsHostnameTypeOnLaunch() {
+        return this.privateDnsHostnameTypeOnLaunch == null ? Output.empty() : this.privateDnsHostnameTypeOnLaunch;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -224,10 +224,10 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -235,33 +235,33 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public SubnetState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> assignIpv6AddressOnCreation,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> availabilityZoneId,
-        @Nullable Input<String> cidrBlock,
-        @Nullable Input<String> customerOwnedIpv4Pool,
-        @Nullable Input<Boolean> enableDns64,
-        @Nullable Input<Boolean> enableResourceNameDnsARecordOnLaunch,
-        @Nullable Input<Boolean> enableResourceNameDnsAaaaRecordOnLaunch,
-        @Nullable Input<String> ipv6CidrBlock,
-        @Nullable Input<String> ipv6CidrBlockAssociationId,
-        @Nullable Input<Boolean> ipv6Native,
-        @Nullable Input<Boolean> mapCustomerOwnedIpOnLaunch,
-        @Nullable Input<Boolean> mapPublicIpOnLaunch,
-        @Nullable Input<String> outpostArn,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<String> privateDnsHostnameTypeOnLaunch,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> assignIpv6AddressOnCreation,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> availabilityZoneId,
+        @Nullable Output<String> cidrBlock,
+        @Nullable Output<String> customerOwnedIpv4Pool,
+        @Nullable Output<Boolean> enableDns64,
+        @Nullable Output<Boolean> enableResourceNameDnsARecordOnLaunch,
+        @Nullable Output<Boolean> enableResourceNameDnsAaaaRecordOnLaunch,
+        @Nullable Output<String> ipv6CidrBlock,
+        @Nullable Output<String> ipv6CidrBlockAssociationId,
+        @Nullable Output<Boolean> ipv6Native,
+        @Nullable Output<Boolean> mapCustomerOwnedIpOnLaunch,
+        @Nullable Output<Boolean> mapPublicIpOnLaunch,
+        @Nullable Output<String> outpostArn,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<String> privateDnsHostnameTypeOnLaunch,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcId) {
         this.arn = arn;
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         this.availabilityZone = availabilityZone;
@@ -285,26 +285,26 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetState() {
-        this.arn = Input.empty();
-        this.assignIpv6AddressOnCreation = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.availabilityZoneId = Input.empty();
-        this.cidrBlock = Input.empty();
-        this.customerOwnedIpv4Pool = Input.empty();
-        this.enableDns64 = Input.empty();
-        this.enableResourceNameDnsARecordOnLaunch = Input.empty();
-        this.enableResourceNameDnsAaaaRecordOnLaunch = Input.empty();
-        this.ipv6CidrBlock = Input.empty();
-        this.ipv6CidrBlockAssociationId = Input.empty();
-        this.ipv6Native = Input.empty();
-        this.mapCustomerOwnedIpOnLaunch = Input.empty();
-        this.mapPublicIpOnLaunch = Input.empty();
-        this.outpostArn = Input.empty();
-        this.ownerId = Input.empty();
-        this.privateDnsHostnameTypeOnLaunch = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcId = Input.empty();
+        this.arn = Output.empty();
+        this.assignIpv6AddressOnCreation = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.availabilityZoneId = Output.empty();
+        this.cidrBlock = Output.empty();
+        this.customerOwnedIpv4Pool = Output.empty();
+        this.enableDns64 = Output.empty();
+        this.enableResourceNameDnsARecordOnLaunch = Output.empty();
+        this.enableResourceNameDnsAaaaRecordOnLaunch = Output.empty();
+        this.ipv6CidrBlock = Output.empty();
+        this.ipv6CidrBlockAssociationId = Output.empty();
+        this.ipv6Native = Output.empty();
+        this.mapCustomerOwnedIpOnLaunch = Output.empty();
+        this.mapPublicIpOnLaunch = Output.empty();
+        this.outpostArn = Output.empty();
+        this.ownerId = Output.empty();
+        this.privateDnsHostnameTypeOnLaunch = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -316,26 +316,26 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> assignIpv6AddressOnCreation;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> availabilityZoneId;
-        private @Nullable Input<String> cidrBlock;
-        private @Nullable Input<String> customerOwnedIpv4Pool;
-        private @Nullable Input<Boolean> enableDns64;
-        private @Nullable Input<Boolean> enableResourceNameDnsARecordOnLaunch;
-        private @Nullable Input<Boolean> enableResourceNameDnsAaaaRecordOnLaunch;
-        private @Nullable Input<String> ipv6CidrBlock;
-        private @Nullable Input<String> ipv6CidrBlockAssociationId;
-        private @Nullable Input<Boolean> ipv6Native;
-        private @Nullable Input<Boolean> mapCustomerOwnedIpOnLaunch;
-        private @Nullable Input<Boolean> mapPublicIpOnLaunch;
-        private @Nullable Input<String> outpostArn;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<String> privateDnsHostnameTypeOnLaunch;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> assignIpv6AddressOnCreation;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> availabilityZoneId;
+        private @Nullable Output<String> cidrBlock;
+        private @Nullable Output<String> customerOwnedIpv4Pool;
+        private @Nullable Output<Boolean> enableDns64;
+        private @Nullable Output<Boolean> enableResourceNameDnsARecordOnLaunch;
+        private @Nullable Output<Boolean> enableResourceNameDnsAaaaRecordOnLaunch;
+        private @Nullable Output<String> ipv6CidrBlock;
+        private @Nullable Output<String> ipv6CidrBlockAssociationId;
+        private @Nullable Output<Boolean> ipv6Native;
+        private @Nullable Output<Boolean> mapCustomerOwnedIpOnLaunch;
+        private @Nullable Output<Boolean> mapPublicIpOnLaunch;
+        private @Nullable Output<String> outpostArn;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<String> privateDnsHostnameTypeOnLaunch;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -365,203 +365,203 @@ public final class SubnetState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder assignIpv6AddressOnCreation(@Nullable Input<Boolean> assignIpv6AddressOnCreation) {
+        public Builder assignIpv6AddressOnCreation(@Nullable Output<Boolean> assignIpv6AddressOnCreation) {
             this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
             return this;
         }
 
         public Builder assignIpv6AddressOnCreation(@Nullable Boolean assignIpv6AddressOnCreation) {
-            this.assignIpv6AddressOnCreation = Input.ofNullable(assignIpv6AddressOnCreation);
+            this.assignIpv6AddressOnCreation = Output.ofNullable(assignIpv6AddressOnCreation);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder availabilityZoneId(@Nullable Input<String> availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            this.availabilityZoneId = Input.ofNullable(availabilityZoneId);
+            this.availabilityZoneId = Output.ofNullable(availabilityZoneId);
             return this;
         }
 
-        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Input.ofNullable(cidrBlock);
+            this.cidrBlock = Output.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder customerOwnedIpv4Pool(@Nullable Input<String> customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
 
         public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
-            this.customerOwnedIpv4Pool = Input.ofNullable(customerOwnedIpv4Pool);
+            this.customerOwnedIpv4Pool = Output.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
 
-        public Builder enableDns64(@Nullable Input<Boolean> enableDns64) {
+        public Builder enableDns64(@Nullable Output<Boolean> enableDns64) {
             this.enableDns64 = enableDns64;
             return this;
         }
 
         public Builder enableDns64(@Nullable Boolean enableDns64) {
-            this.enableDns64 = Input.ofNullable(enableDns64);
+            this.enableDns64 = Output.ofNullable(enableDns64);
             return this;
         }
 
-        public Builder enableResourceNameDnsARecordOnLaunch(@Nullable Input<Boolean> enableResourceNameDnsARecordOnLaunch) {
+        public Builder enableResourceNameDnsARecordOnLaunch(@Nullable Output<Boolean> enableResourceNameDnsARecordOnLaunch) {
             this.enableResourceNameDnsARecordOnLaunch = enableResourceNameDnsARecordOnLaunch;
             return this;
         }
 
         public Builder enableResourceNameDnsARecordOnLaunch(@Nullable Boolean enableResourceNameDnsARecordOnLaunch) {
-            this.enableResourceNameDnsARecordOnLaunch = Input.ofNullable(enableResourceNameDnsARecordOnLaunch);
+            this.enableResourceNameDnsARecordOnLaunch = Output.ofNullable(enableResourceNameDnsARecordOnLaunch);
             return this;
         }
 
-        public Builder enableResourceNameDnsAaaaRecordOnLaunch(@Nullable Input<Boolean> enableResourceNameDnsAaaaRecordOnLaunch) {
+        public Builder enableResourceNameDnsAaaaRecordOnLaunch(@Nullable Output<Boolean> enableResourceNameDnsAaaaRecordOnLaunch) {
             this.enableResourceNameDnsAaaaRecordOnLaunch = enableResourceNameDnsAaaaRecordOnLaunch;
             return this;
         }
 
         public Builder enableResourceNameDnsAaaaRecordOnLaunch(@Nullable Boolean enableResourceNameDnsAaaaRecordOnLaunch) {
-            this.enableResourceNameDnsAaaaRecordOnLaunch = Input.ofNullable(enableResourceNameDnsAaaaRecordOnLaunch);
+            this.enableResourceNameDnsAaaaRecordOnLaunch = Output.ofNullable(enableResourceNameDnsAaaaRecordOnLaunch);
             return this;
         }
 
-        public Builder ipv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Input.ofNullable(ipv6CidrBlock);
+            this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
             return this;
         }
 
-        public Builder ipv6CidrBlockAssociationId(@Nullable Input<String> ipv6CidrBlockAssociationId) {
+        public Builder ipv6CidrBlockAssociationId(@Nullable Output<String> ipv6CidrBlockAssociationId) {
             this.ipv6CidrBlockAssociationId = ipv6CidrBlockAssociationId;
             return this;
         }
 
         public Builder ipv6CidrBlockAssociationId(@Nullable String ipv6CidrBlockAssociationId) {
-            this.ipv6CidrBlockAssociationId = Input.ofNullable(ipv6CidrBlockAssociationId);
+            this.ipv6CidrBlockAssociationId = Output.ofNullable(ipv6CidrBlockAssociationId);
             return this;
         }
 
-        public Builder ipv6Native(@Nullable Input<Boolean> ipv6Native) {
+        public Builder ipv6Native(@Nullable Output<Boolean> ipv6Native) {
             this.ipv6Native = ipv6Native;
             return this;
         }
 
         public Builder ipv6Native(@Nullable Boolean ipv6Native) {
-            this.ipv6Native = Input.ofNullable(ipv6Native);
+            this.ipv6Native = Output.ofNullable(ipv6Native);
             return this;
         }
 
-        public Builder mapCustomerOwnedIpOnLaunch(@Nullable Input<Boolean> mapCustomerOwnedIpOnLaunch) {
+        public Builder mapCustomerOwnedIpOnLaunch(@Nullable Output<Boolean> mapCustomerOwnedIpOnLaunch) {
             this.mapCustomerOwnedIpOnLaunch = mapCustomerOwnedIpOnLaunch;
             return this;
         }
 
         public Builder mapCustomerOwnedIpOnLaunch(@Nullable Boolean mapCustomerOwnedIpOnLaunch) {
-            this.mapCustomerOwnedIpOnLaunch = Input.ofNullable(mapCustomerOwnedIpOnLaunch);
+            this.mapCustomerOwnedIpOnLaunch = Output.ofNullable(mapCustomerOwnedIpOnLaunch);
             return this;
         }
 
-        public Builder mapPublicIpOnLaunch(@Nullable Input<Boolean> mapPublicIpOnLaunch) {
+        public Builder mapPublicIpOnLaunch(@Nullable Output<Boolean> mapPublicIpOnLaunch) {
             this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
             return this;
         }
 
         public Builder mapPublicIpOnLaunch(@Nullable Boolean mapPublicIpOnLaunch) {
-            this.mapPublicIpOnLaunch = Input.ofNullable(mapPublicIpOnLaunch);
+            this.mapPublicIpOnLaunch = Output.ofNullable(mapPublicIpOnLaunch);
             return this;
         }
 
-        public Builder outpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Output<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
         public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Input.ofNullable(outpostArn);
+            this.outpostArn = Output.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder privateDnsHostnameTypeOnLaunch(@Nullable Input<String> privateDnsHostnameTypeOnLaunch) {
+        public Builder privateDnsHostnameTypeOnLaunch(@Nullable Output<String> privateDnsHostnameTypeOnLaunch) {
             this.privateDnsHostnameTypeOnLaunch = privateDnsHostnameTypeOnLaunch;
             return this;
         }
 
         public Builder privateDnsHostnameTypeOnLaunch(@Nullable String privateDnsHostnameTypeOnLaunch) {
-            this.privateDnsHostnameTypeOnLaunch = Input.ofNullable(privateDnsHostnameTypeOnLaunch);
+            this.privateDnsHostnameTypeOnLaunch = Output.ofNullable(privateDnsHostnameTypeOnLaunch);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public SubnetState build() {

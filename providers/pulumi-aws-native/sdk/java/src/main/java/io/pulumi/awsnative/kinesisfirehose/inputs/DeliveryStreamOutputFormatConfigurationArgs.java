@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSerializerArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class DeliveryStreamOutputFormatConfigurationArgs extends io.pulumi
     public static final DeliveryStreamOutputFormatConfigurationArgs Empty = new DeliveryStreamOutputFormatConfigurationArgs();
 
     @InputImport(name="serializer")
-      private final @Nullable Input<DeliveryStreamSerializerArgs> serializer;
+      private final @Nullable Output<DeliveryStreamSerializerArgs> serializer;
 
-    public Input<DeliveryStreamSerializerArgs> getSerializer() {
-        return this.serializer == null ? Input.empty() : this.serializer;
+    public Output<DeliveryStreamSerializerArgs> getSerializer() {
+        return this.serializer == null ? Output.empty() : this.serializer;
     }
 
-    public DeliveryStreamOutputFormatConfigurationArgs(@Nullable Input<DeliveryStreamSerializerArgs> serializer) {
+    public DeliveryStreamOutputFormatConfigurationArgs(@Nullable Output<DeliveryStreamSerializerArgs> serializer) {
         this.serializer = serializer;
     }
 
     private DeliveryStreamOutputFormatConfigurationArgs() {
-        this.serializer = Input.empty();
+        this.serializer = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DeliveryStreamOutputFormatConfigurationArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<DeliveryStreamSerializerArgs> serializer;
+        private @Nullable Output<DeliveryStreamSerializerArgs> serializer;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DeliveryStreamOutputFormatConfigurationArgs extends io.pulumi
     	      this.serializer = defaults.serializer;
         }
 
-        public Builder serializer(@Nullable Input<DeliveryStreamSerializerArgs> serializer) {
+        public Builder serializer(@Nullable Output<DeliveryStreamSerializerArgs> serializer) {
             this.serializer = serializer;
             return this;
         }
 
         public Builder serializer(@Nullable DeliveryStreamSerializerArgs serializer) {
-            this.serializer = Input.ofNullable(serializer);
+            this.serializer = Output.ofNullable(serializer);
             return this;
         }
         public DeliveryStreamOutputFormatConfigurationArgs build() {

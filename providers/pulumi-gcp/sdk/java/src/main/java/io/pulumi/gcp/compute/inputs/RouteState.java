@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destRange")
-      private final @Nullable Input<String> destRange;
+      private final @Nullable Output<String> destRange;
 
-    public Input<String> getDestRange() {
-        return this.destRange == null ? Input.empty() : this.destRange;
+    public Output<String> getDestRange() {
+        return this.destRange == null ? Output.empty() : this.destRange;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopGateway")
-      private final @Nullable Input<String> nextHopGateway;
+      private final @Nullable Output<String> nextHopGateway;
 
-    public Input<String> getNextHopGateway() {
-        return this.nextHopGateway == null ? Input.empty() : this.nextHopGateway;
+    public Output<String> getNextHopGateway() {
+        return this.nextHopGateway == null ? Output.empty() : this.nextHopGateway;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopIlb")
-      private final @Nullable Input<String> nextHopIlb;
+      private final @Nullable Output<String> nextHopIlb;
 
-    public Input<String> getNextHopIlb() {
-        return this.nextHopIlb == null ? Input.empty() : this.nextHopIlb;
+    public Output<String> getNextHopIlb() {
+        return this.nextHopIlb == null ? Output.empty() : this.nextHopIlb;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopInstance")
-      private final @Nullable Input<String> nextHopInstance;
+      private final @Nullable Output<String> nextHopInstance;
 
-    public Input<String> getNextHopInstance() {
-        return this.nextHopInstance == null ? Input.empty() : this.nextHopInstance;
+    public Output<String> getNextHopInstance() {
+        return this.nextHopInstance == null ? Output.empty() : this.nextHopInstance;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopInstanceZone")
-      private final @Nullable Input<String> nextHopInstanceZone;
+      private final @Nullable Output<String> nextHopInstanceZone;
 
-    public Input<String> getNextHopInstanceZone() {
-        return this.nextHopInstanceZone == null ? Input.empty() : this.nextHopInstanceZone;
+    public Output<String> getNextHopInstanceZone() {
+        return this.nextHopInstanceZone == null ? Output.empty() : this.nextHopInstanceZone;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopIp")
-      private final @Nullable Input<String> nextHopIp;
+      private final @Nullable Output<String> nextHopIp;
 
-    public Input<String> getNextHopIp() {
-        return this.nextHopIp == null ? Input.empty() : this.nextHopIp;
+    public Output<String> getNextHopIp() {
+        return this.nextHopIp == null ? Output.empty() : this.nextHopIp;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopNetwork")
-      private final @Nullable Input<String> nextHopNetwork;
+      private final @Nullable Output<String> nextHopNetwork;
 
-    public Input<String> getNextHopNetwork() {
-        return this.nextHopNetwork == null ? Input.empty() : this.nextHopNetwork;
+    public Output<String> getNextHopNetwork() {
+        return this.nextHopNetwork == null ? Output.empty() : this.nextHopNetwork;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopVpnTunnel")
-      private final @Nullable Input<String> nextHopVpnTunnel;
+      private final @Nullable Output<String> nextHopVpnTunnel;
 
-    public Input<String> getNextHopVpnTunnel() {
-        return this.nextHopVpnTunnel == null ? Input.empty() : this.nextHopVpnTunnel;
+    public Output<String> getNextHopVpnTunnel() {
+        return this.nextHopVpnTunnel == null ? Output.empty() : this.nextHopVpnTunnel;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -203,10 +203,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -214,28 +214,28 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RouteState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> destRange,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<String> nextHopGateway,
-        @Nullable Input<String> nextHopIlb,
-        @Nullable Input<String> nextHopInstance,
-        @Nullable Input<String> nextHopInstanceZone,
-        @Nullable Input<String> nextHopIp,
-        @Nullable Input<String> nextHopNetwork,
-        @Nullable Input<String> nextHopVpnTunnel,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<String> project,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<List<String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> destRange,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<String> nextHopGateway,
+        @Nullable Output<String> nextHopIlb,
+        @Nullable Output<String> nextHopInstance,
+        @Nullable Output<String> nextHopInstanceZone,
+        @Nullable Output<String> nextHopIp,
+        @Nullable Output<String> nextHopNetwork,
+        @Nullable Output<String> nextHopVpnTunnel,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<String> project,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<List<String>> tags) {
         this.description = description;
         this.destRange = destRange;
         this.name = name;
@@ -254,21 +254,21 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteState() {
-        this.description = Input.empty();
-        this.destRange = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.nextHopGateway = Input.empty();
-        this.nextHopIlb = Input.empty();
-        this.nextHopInstance = Input.empty();
-        this.nextHopInstanceZone = Input.empty();
-        this.nextHopIp = Input.empty();
-        this.nextHopNetwork = Input.empty();
-        this.nextHopVpnTunnel = Input.empty();
-        this.priority = Input.empty();
-        this.project = Input.empty();
-        this.selfLink = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.destRange = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.nextHopGateway = Output.empty();
+        this.nextHopIlb = Output.empty();
+        this.nextHopInstance = Output.empty();
+        this.nextHopInstanceZone = Output.empty();
+        this.nextHopIp = Output.empty();
+        this.nextHopNetwork = Output.empty();
+        this.nextHopVpnTunnel = Output.empty();
+        this.priority = Output.empty();
+        this.project = Output.empty();
+        this.selfLink = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -280,21 +280,21 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> destRange;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> nextHopGateway;
-        private @Nullable Input<String> nextHopIlb;
-        private @Nullable Input<String> nextHopInstance;
-        private @Nullable Input<String> nextHopInstanceZone;
-        private @Nullable Input<String> nextHopIp;
-        private @Nullable Input<String> nextHopNetwork;
-        private @Nullable Input<String> nextHopVpnTunnel;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<List<String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> destRange;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> nextHopGateway;
+        private @Nullable Output<String> nextHopIlb;
+        private @Nullable Output<String> nextHopInstance;
+        private @Nullable Output<String> nextHopInstanceZone;
+        private @Nullable Output<String> nextHopIp;
+        private @Nullable Output<String> nextHopNetwork;
+        private @Nullable Output<String> nextHopVpnTunnel;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<List<String>> tags;
 
         public Builder() {
     	      // Empty
@@ -319,153 +319,153 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destRange(@Nullable Input<String> destRange) {
+        public Builder destRange(@Nullable Output<String> destRange) {
             this.destRange = destRange;
             return this;
         }
 
         public Builder destRange(@Nullable String destRange) {
-            this.destRange = Input.ofNullable(destRange);
+            this.destRange = Output.ofNullable(destRange);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder nextHopGateway(@Nullable Input<String> nextHopGateway) {
+        public Builder nextHopGateway(@Nullable Output<String> nextHopGateway) {
             this.nextHopGateway = nextHopGateway;
             return this;
         }
 
         public Builder nextHopGateway(@Nullable String nextHopGateway) {
-            this.nextHopGateway = Input.ofNullable(nextHopGateway);
+            this.nextHopGateway = Output.ofNullable(nextHopGateway);
             return this;
         }
 
-        public Builder nextHopIlb(@Nullable Input<String> nextHopIlb) {
+        public Builder nextHopIlb(@Nullable Output<String> nextHopIlb) {
             this.nextHopIlb = nextHopIlb;
             return this;
         }
 
         public Builder nextHopIlb(@Nullable String nextHopIlb) {
-            this.nextHopIlb = Input.ofNullable(nextHopIlb);
+            this.nextHopIlb = Output.ofNullable(nextHopIlb);
             return this;
         }
 
-        public Builder nextHopInstance(@Nullable Input<String> nextHopInstance) {
+        public Builder nextHopInstance(@Nullable Output<String> nextHopInstance) {
             this.nextHopInstance = nextHopInstance;
             return this;
         }
 
         public Builder nextHopInstance(@Nullable String nextHopInstance) {
-            this.nextHopInstance = Input.ofNullable(nextHopInstance);
+            this.nextHopInstance = Output.ofNullable(nextHopInstance);
             return this;
         }
 
-        public Builder nextHopInstanceZone(@Nullable Input<String> nextHopInstanceZone) {
+        public Builder nextHopInstanceZone(@Nullable Output<String> nextHopInstanceZone) {
             this.nextHopInstanceZone = nextHopInstanceZone;
             return this;
         }
 
         public Builder nextHopInstanceZone(@Nullable String nextHopInstanceZone) {
-            this.nextHopInstanceZone = Input.ofNullable(nextHopInstanceZone);
+            this.nextHopInstanceZone = Output.ofNullable(nextHopInstanceZone);
             return this;
         }
 
-        public Builder nextHopIp(@Nullable Input<String> nextHopIp) {
+        public Builder nextHopIp(@Nullable Output<String> nextHopIp) {
             this.nextHopIp = nextHopIp;
             return this;
         }
 
         public Builder nextHopIp(@Nullable String nextHopIp) {
-            this.nextHopIp = Input.ofNullable(nextHopIp);
+            this.nextHopIp = Output.ofNullable(nextHopIp);
             return this;
         }
 
-        public Builder nextHopNetwork(@Nullable Input<String> nextHopNetwork) {
+        public Builder nextHopNetwork(@Nullable Output<String> nextHopNetwork) {
             this.nextHopNetwork = nextHopNetwork;
             return this;
         }
 
         public Builder nextHopNetwork(@Nullable String nextHopNetwork) {
-            this.nextHopNetwork = Input.ofNullable(nextHopNetwork);
+            this.nextHopNetwork = Output.ofNullable(nextHopNetwork);
             return this;
         }
 
-        public Builder nextHopVpnTunnel(@Nullable Input<String> nextHopVpnTunnel) {
+        public Builder nextHopVpnTunnel(@Nullable Output<String> nextHopVpnTunnel) {
             this.nextHopVpnTunnel = nextHopVpnTunnel;
             return this;
         }
 
         public Builder nextHopVpnTunnel(@Nullable String nextHopVpnTunnel) {
-            this.nextHopVpnTunnel = Input.ofNullable(nextHopVpnTunnel);
+            this.nextHopVpnTunnel = Output.ofNullable(nextHopVpnTunnel);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RouteState build() {

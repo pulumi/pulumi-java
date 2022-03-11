@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expandNestedMemberships")
-      private final @Nullable Input<Boolean> expandNestedMemberships;
+      private final @Nullable Output<Boolean> expandNestedMemberships;
 
-    public Input<Boolean> getExpandNestedMemberships() {
-        return this.expandNestedMemberships == null ? Input.empty() : this.expandNestedMemberships;
+    public Output<Boolean> getExpandNestedMemberships() {
+        return this.expandNestedMemberships == null ? Output.empty() : this.expandNestedMemberships;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="inactiveDuration")
-      private final @Nullable Input<String> inactiveDuration;
+      private final @Nullable Output<String> inactiveDuration;
 
-    public Input<String> getInactiveDuration() {
-        return this.inactiveDuration == null ? Input.empty() : this.inactiveDuration;
+    public Output<String> getInactiveDuration() {
+        return this.inactiveDuration == null ? Output.empty() : this.inactiveDuration;
     }
 
     public AccessReviewScopeArgs(
-        @Nullable Input<Boolean> expandNestedMemberships,
-        @Nullable Input<String> inactiveDuration) {
+        @Nullable Output<Boolean> expandNestedMemberships,
+        @Nullable Output<String> inactiveDuration) {
         this.expandNestedMemberships = expandNestedMemberships;
         this.inactiveDuration = inactiveDuration;
     }
 
     private AccessReviewScopeArgs() {
-        this.expandNestedMemberships = Input.empty();
-        this.inactiveDuration = Input.empty();
+        this.expandNestedMemberships = Output.empty();
+        this.inactiveDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> expandNestedMemberships;
-        private @Nullable Input<String> inactiveDuration;
+        private @Nullable Output<Boolean> expandNestedMemberships;
+        private @Nullable Output<String> inactiveDuration;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
     	      this.inactiveDuration = defaults.inactiveDuration;
         }
 
-        public Builder expandNestedMemberships(@Nullable Input<Boolean> expandNestedMemberships) {
+        public Builder expandNestedMemberships(@Nullable Output<Boolean> expandNestedMemberships) {
             this.expandNestedMemberships = expandNestedMemberships;
             return this;
         }
 
         public Builder expandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
-            this.expandNestedMemberships = Input.ofNullable(expandNestedMemberships);
+            this.expandNestedMemberships = Output.ofNullable(expandNestedMemberships);
             return this;
         }
 
-        public Builder inactiveDuration(@Nullable Input<String> inactiveDuration) {
+        public Builder inactiveDuration(@Nullable Output<String> inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
 
         public Builder inactiveDuration(@Nullable String inactiveDuration) {
-            this.inactiveDuration = Input.ofNullable(inactiveDuration);
+            this.inactiveDuration = Output.ofNullable(inactiveDuration);
             return this;
         }
         public AccessReviewScopeArgs build() {

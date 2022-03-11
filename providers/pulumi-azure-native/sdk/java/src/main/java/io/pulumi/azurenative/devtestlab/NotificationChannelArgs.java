@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.devtestlab.inputs.EventArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="emailRecipient")
-      private final @Nullable Input<String> emailRecipient;
+      private final @Nullable Output<String> emailRecipient;
 
-    public Input<String> getEmailRecipient() {
-        return this.emailRecipient == null ? Input.empty() : this.emailRecipient;
+    public Output<String> getEmailRecipient() {
+        return this.emailRecipient == null ? Output.empty() : this.emailRecipient;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="events")
-      private final @Nullable Input<List<EventArgs>> events;
+      private final @Nullable Output<List<EventArgs>> events;
 
-    public Input<List<EventArgs>> getEvents() {
-        return this.events == null ? Input.empty() : this.events;
+    public Output<List<EventArgs>> getEvents() {
+        return this.events == null ? Output.empty() : this.events;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="labName", required=true)
-      private final Input<String> labName;
+      private final Output<String> labName;
 
-    public Input<String> getLabName() {
+    public Output<String> getLabName() {
         return this.labName;
     }
 
@@ -66,10 +66,10 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="notificationLocale")
-      private final @Nullable Input<String> notificationLocale;
+      private final @Nullable Output<String> notificationLocale;
 
-    public Input<String> getNotificationLocale() {
-        return this.notificationLocale == null ? Input.empty() : this.notificationLocale;
+    public Output<String> getNotificationLocale() {
+        return this.notificationLocale == null ? Output.empty() : this.notificationLocale;
     }
 
     /**
@@ -99,9 +99,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -110,10 +110,10 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="webHookUrl")
-      private final @Nullable Input<String> webHookUrl;
+      private final @Nullable Output<String> webHookUrl;
 
-    public Input<String> getWebHookUrl() {
-        return this.webHookUrl == null ? Input.empty() : this.webHookUrl;
+    public Output<String> getWebHookUrl() {
+        return this.webHookUrl == null ? Output.empty() : this.webHookUrl;
     }
 
     public NotificationChannelArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> emailRecipient,
-        @Nullable Input<List<EventArgs>> events,
-        Input<String> labName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> notificationLocale,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> webHookUrl) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> emailRecipient,
+        @Nullable Output<List<EventArgs>> events,
+        Output<String> labName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> notificationLocale,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> webHookUrl) {
         this.description = description;
         this.emailRecipient = emailRecipient;
         this.events = events;
@@ -151,16 +151,16 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     }
 
     private NotificationChannelArgs() {
-        this.description = Input.empty();
-        this.emailRecipient = Input.empty();
-        this.events = Input.empty();
-        this.labName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.notificationLocale = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.webHookUrl = Input.empty();
+        this.description = Output.empty();
+        this.emailRecipient = Output.empty();
+        this.events = Output.empty();
+        this.labName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.notificationLocale = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.webHookUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> emailRecipient;
-        private @Nullable Input<List<EventArgs>> events;
-        private Input<String> labName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> notificationLocale;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> webHookUrl;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> emailRecipient;
+        private @Nullable Output<List<EventArgs>> events;
+        private Output<String> labName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> notificationLocale;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> webHookUrl;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     	      this.webHookUrl = defaults.webHookUrl;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder emailRecipient(@Nullable Input<String> emailRecipient) {
+        public Builder emailRecipient(@Nullable Output<String> emailRecipient) {
             this.emailRecipient = emailRecipient;
             return this;
         }
 
         public Builder emailRecipient(@Nullable String emailRecipient) {
-            this.emailRecipient = Input.ofNullable(emailRecipient);
+            this.emailRecipient = Output.ofNullable(emailRecipient);
             return this;
         }
 
-        public Builder events(@Nullable Input<List<EventArgs>> events) {
+        public Builder events(@Nullable Output<List<EventArgs>> events) {
             this.events = events;
             return this;
         }
 
         public Builder events(@Nullable List<EventArgs> events) {
-            this.events = Input.ofNullable(events);
+            this.events = Output.ofNullable(events);
             return this;
         }
 
-        public Builder labName(Input<String> labName) {
+        public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
         public Builder labName(String labName) {
-            this.labName = Input.of(Objects.requireNonNull(labName));
+            this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationLocale(@Nullable Input<String> notificationLocale) {
+        public Builder notificationLocale(@Nullable Output<String> notificationLocale) {
             this.notificationLocale = notificationLocale;
             return this;
         }
 
         public Builder notificationLocale(@Nullable String notificationLocale) {
-            this.notificationLocale = Input.ofNullable(notificationLocale);
+            this.notificationLocale = Output.ofNullable(notificationLocale);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder webHookUrl(@Nullable Input<String> webHookUrl) {
+        public Builder webHookUrl(@Nullable Output<String> webHookUrl) {
             this.webHookUrl = webHookUrl;
             return this;
         }
 
         public Builder webHookUrl(@Nullable String webHookUrl) {
-            this.webHookUrl = Input.ofNullable(webHookUrl);
+            this.webHookUrl = Output.ofNullable(webHookUrl);
             return this;
         }
         public NotificationChannelArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="contents", required=true)
-      private final Input<String> contents;
+      private final Output<String> contents;
 
-    public Input<String> getContents() {
+    public Output<String> getContents() {
         return this.contents;
     }
 
@@ -29,22 +29,22 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
     public ApiConfigOpenapiDocumentDocumentGetArgs(
-        Input<String> contents,
-        Input<String> path) {
+        Output<String> contents,
+        Output<String> path) {
         this.contents = Objects.requireNonNull(contents, "expected parameter 'contents' to be non-null");
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
     }
 
     private ApiConfigOpenapiDocumentDocumentGetArgs() {
-        this.contents = Input.empty();
-        this.path = Input.empty();
+        this.contents = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> contents;
-        private Input<String> path;
+        private Output<String> contents;
+        private Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends io.pulumi.res
     	      this.path = defaults.path;
         }
 
-        public Builder contents(Input<String> contents) {
+        public Builder contents(Output<String> contents) {
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
 
         public Builder contents(String contents) {
-            this.contents = Input.of(Objects.requireNonNull(contents));
+            this.contents = Output.of(Objects.requireNonNull(contents));
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
         public ApiConfigOpenapiDocumentDocumentGetArgs build() {

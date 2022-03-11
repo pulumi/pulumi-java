@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hostname")
-      private final @Nullable Input<String> hostname;
+      private final @Nullable Output<String> hostname;
 
-    public Input<String> getHostname() {
-        return this.hostname == null ? Input.empty() : this.hostname;
+    public Output<String> getHostname() {
+        return this.hostname == null ? Output.empty() : this.hostname;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -53,9 +53,9 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -64,10 +64,10 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="relayArmUri")
-      private final @Nullable Input<String> relayArmUri;
+      private final @Nullable Output<String> relayArmUri;
 
-    public Input<String> getRelayArmUri() {
-        return this.relayArmUri == null ? Input.empty() : this.relayArmUri;
+    public Output<String> getRelayArmUri() {
+        return this.relayArmUri == null ? Output.empty() : this.relayArmUri;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="relayName")
-      private final @Nullable Input<String> relayName;
+      private final @Nullable Output<String> relayName;
 
-    public Input<String> getRelayName() {
-        return this.relayName == null ? Input.empty() : this.relayName;
+    public Output<String> getRelayName() {
+        return this.relayName == null ? Output.empty() : this.relayName;
     }
 
     /**
@@ -97,9 +97,9 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -108,10 +108,10 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sendKeyName")
-      private final @Nullable Input<String> sendKeyName;
+      private final @Nullable Output<String> sendKeyName;
 
-    public Input<String> getSendKeyName() {
-        return this.sendKeyName == null ? Input.empty() : this.sendKeyName;
+    public Output<String> getSendKeyName() {
+        return this.sendKeyName == null ? Output.empty() : this.sendKeyName;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sendKeyValue")
-      private final @Nullable Input<String> sendKeyValue;
+      private final @Nullable Output<String> sendKeyValue;
 
-    public Input<String> getSendKeyValue() {
-        return this.sendKeyValue == null ? Input.empty() : this.sendKeyValue;
+    public Output<String> getSendKeyValue() {
+        return this.sendKeyValue == null ? Output.empty() : this.sendKeyValue;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="serviceBusNamespace")
-      private final @Nullable Input<String> serviceBusNamespace;
+      private final @Nullable Output<String> serviceBusNamespace;
 
-    public Input<String> getServiceBusNamespace() {
-        return this.serviceBusNamespace == null ? Input.empty() : this.serviceBusNamespace;
+    public Output<String> getServiceBusNamespace() {
+        return this.serviceBusNamespace == null ? Output.empty() : this.serviceBusNamespace;
     }
 
     /**
@@ -142,25 +142,25 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="serviceBusSuffix")
-      private final @Nullable Input<String> serviceBusSuffix;
+      private final @Nullable Output<String> serviceBusSuffix;
 
-    public Input<String> getServiceBusSuffix() {
-        return this.serviceBusSuffix == null ? Input.empty() : this.serviceBusSuffix;
+    public Output<String> getServiceBusSuffix() {
+        return this.serviceBusSuffix == null ? Output.empty() : this.serviceBusSuffix;
     }
 
     public WebAppHybridConnectionArgs(
-        @Nullable Input<String> hostname,
-        @Nullable Input<String> kind,
-        Input<String> name,
-        Input<String> namespaceName,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> relayArmUri,
-        @Nullable Input<String> relayName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sendKeyName,
-        @Nullable Input<String> sendKeyValue,
-        @Nullable Input<String> serviceBusNamespace,
-        @Nullable Input<String> serviceBusSuffix) {
+        @Nullable Output<String> hostname,
+        @Nullable Output<String> kind,
+        Output<String> name,
+        Output<String> namespaceName,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> relayArmUri,
+        @Nullable Output<String> relayName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sendKeyName,
+        @Nullable Output<String> sendKeyValue,
+        @Nullable Output<String> serviceBusNamespace,
+        @Nullable Output<String> serviceBusSuffix) {
         this.hostname = hostname;
         this.kind = kind;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -176,18 +176,18 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
     }
 
     private WebAppHybridConnectionArgs() {
-        this.hostname = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.namespaceName = Input.empty();
-        this.port = Input.empty();
-        this.relayArmUri = Input.empty();
-        this.relayName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sendKeyName = Input.empty();
-        this.sendKeyValue = Input.empty();
-        this.serviceBusNamespace = Input.empty();
-        this.serviceBusSuffix = Input.empty();
+        this.hostname = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.namespaceName = Output.empty();
+        this.port = Output.empty();
+        this.relayArmUri = Output.empty();
+        this.relayName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sendKeyName = Output.empty();
+        this.sendKeyValue = Output.empty();
+        this.serviceBusNamespace = Output.empty();
+        this.serviceBusSuffix = Output.empty();
     }
 
     public static Builder builder() {
@@ -199,18 +199,18 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostname;
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private Input<String> namespaceName;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> relayArmUri;
-        private @Nullable Input<String> relayName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sendKeyName;
-        private @Nullable Input<String> sendKeyValue;
-        private @Nullable Input<String> serviceBusNamespace;
-        private @Nullable Input<String> serviceBusSuffix;
+        private @Nullable Output<String> hostname;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private Output<String> namespaceName;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> relayArmUri;
+        private @Nullable Output<String> relayName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sendKeyName;
+        private @Nullable Output<String> sendKeyValue;
+        private @Nullable Output<String> serviceBusNamespace;
+        private @Nullable Output<String> serviceBusSuffix;
 
         public Builder() {
     	      // Empty
@@ -232,123 +232,123 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
     	      this.serviceBusSuffix = defaults.serviceBusSuffix;
         }
 
-        public Builder hostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Input.ofNullable(hostname);
+            this.hostname = Output.ofNullable(hostname);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder relayArmUri(@Nullable Input<String> relayArmUri) {
+        public Builder relayArmUri(@Nullable Output<String> relayArmUri) {
             this.relayArmUri = relayArmUri;
             return this;
         }
 
         public Builder relayArmUri(@Nullable String relayArmUri) {
-            this.relayArmUri = Input.ofNullable(relayArmUri);
+            this.relayArmUri = Output.ofNullable(relayArmUri);
             return this;
         }
 
-        public Builder relayName(@Nullable Input<String> relayName) {
+        public Builder relayName(@Nullable Output<String> relayName) {
             this.relayName = relayName;
             return this;
         }
 
         public Builder relayName(@Nullable String relayName) {
-            this.relayName = Input.ofNullable(relayName);
+            this.relayName = Output.ofNullable(relayName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sendKeyName(@Nullable Input<String> sendKeyName) {
+        public Builder sendKeyName(@Nullable Output<String> sendKeyName) {
             this.sendKeyName = sendKeyName;
             return this;
         }
 
         public Builder sendKeyName(@Nullable String sendKeyName) {
-            this.sendKeyName = Input.ofNullable(sendKeyName);
+            this.sendKeyName = Output.ofNullable(sendKeyName);
             return this;
         }
 
-        public Builder sendKeyValue(@Nullable Input<String> sendKeyValue) {
+        public Builder sendKeyValue(@Nullable Output<String> sendKeyValue) {
             this.sendKeyValue = sendKeyValue;
             return this;
         }
 
         public Builder sendKeyValue(@Nullable String sendKeyValue) {
-            this.sendKeyValue = Input.ofNullable(sendKeyValue);
+            this.sendKeyValue = Output.ofNullable(sendKeyValue);
             return this;
         }
 
-        public Builder serviceBusNamespace(@Nullable Input<String> serviceBusNamespace) {
+        public Builder serviceBusNamespace(@Nullable Output<String> serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
-            this.serviceBusNamespace = Input.ofNullable(serviceBusNamespace);
+            this.serviceBusNamespace = Output.ofNullable(serviceBusNamespace);
             return this;
         }
 
-        public Builder serviceBusSuffix(@Nullable Input<String> serviceBusSuffix) {
+        public Builder serviceBusSuffix(@Nullable Output<String> serviceBusSuffix) {
             this.serviceBusSuffix = serviceBusSuffix;
             return this;
         }
 
         public Builder serviceBusSuffix(@Nullable String serviceBusSuffix) {
-            this.serviceBusSuffix = Input.ofNullable(serviceBusSuffix);
+            this.serviceBusSuffix = Output.ofNullable(serviceBusSuffix);
             return this;
         }
         public WebAppHybridConnectionArgs build() {

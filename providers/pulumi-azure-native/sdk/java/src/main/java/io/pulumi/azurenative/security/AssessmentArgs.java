@@ -9,7 +9,7 @@ import io.pulumi.azurenative.security.inputs.OnPremiseResourceDetailsArgs;
 import io.pulumi.azurenative.security.inputs.OnPremiseSqlResourceDetailsArgs;
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentMetadataPropertiesArgs;
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentPartnerDataArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalData")
-      private final @Nullable Input<Map<String,String>> additionalData;
+      private final @Nullable Output<Map<String,String>> additionalData;
 
-    public Input<Map<String,String>> getAdditionalData() {
-        return this.additionalData == null ? Input.empty() : this.additionalData;
+    public Output<Map<String,String>> getAdditionalData() {
+        return this.additionalData == null ? Output.empty() : this.additionalData;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assessmentName")
-      private final @Nullable Input<String> assessmentName;
+      private final @Nullable Output<String> assessmentName;
 
-    public Input<String> getAssessmentName() {
-        return this.assessmentName == null ? Input.empty() : this.assessmentName;
+    public Output<String> getAssessmentName() {
+        return this.assessmentName == null ? Output.empty() : this.assessmentName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<SecurityAssessmentMetadataPropertiesArgs> metadata;
+      private final @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata;
 
-    public Input<SecurityAssessmentMetadataPropertiesArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<SecurityAssessmentMetadataPropertiesArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnersData")
-      private final @Nullable Input<SecurityAssessmentPartnerDataArgs> partnersData;
+      private final @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData;
 
-    public Input<SecurityAssessmentPartnerDataArgs> getPartnersData() {
-        return this.partnersData == null ? Input.empty() : this.partnersData;
+    public Output<SecurityAssessmentPartnerDataArgs> getPartnersData() {
+        return this.partnersData == null ? Output.empty() : this.partnersData;
     }
 
     /**
@@ -71,9 +71,9 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceDetails", required=true)
-      private final Input<Object> resourceDetails;
+      private final Output<Object> resourceDetails;
 
-    public Input<Object> getResourceDetails() {
+    public Output<Object> getResourceDetails() {
         return this.resourceDetails;
     }
 
@@ -82,9 +82,9 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -93,20 +93,20 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<AssessmentStatusArgs> status;
+      private final Output<AssessmentStatusArgs> status;
 
-    public Input<AssessmentStatusArgs> getStatus() {
+    public Output<AssessmentStatusArgs> getStatus() {
         return this.status;
     }
 
     public AssessmentArgs(
-        @Nullable Input<Map<String,String>> additionalData,
-        @Nullable Input<String> assessmentName,
-        @Nullable Input<SecurityAssessmentMetadataPropertiesArgs> metadata,
-        @Nullable Input<SecurityAssessmentPartnerDataArgs> partnersData,
-        Input<Object> resourceDetails,
-        Input<String> resourceId,
-        Input<AssessmentStatusArgs> status) {
+        @Nullable Output<Map<String,String>> additionalData,
+        @Nullable Output<String> assessmentName,
+        @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata,
+        @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData,
+        Output<Object> resourceDetails,
+        Output<String> resourceId,
+        Output<AssessmentStatusArgs> status) {
         this.additionalData = additionalData;
         this.assessmentName = assessmentName;
         this.metadata = metadata;
@@ -117,13 +117,13 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssessmentArgs() {
-        this.additionalData = Input.empty();
-        this.assessmentName = Input.empty();
-        this.metadata = Input.empty();
-        this.partnersData = Input.empty();
-        this.resourceDetails = Input.empty();
-        this.resourceId = Input.empty();
-        this.status = Input.empty();
+        this.additionalData = Output.empty();
+        this.assessmentName = Output.empty();
+        this.metadata = Output.empty();
+        this.partnersData = Output.empty();
+        this.resourceDetails = Output.empty();
+        this.resourceId = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> additionalData;
-        private @Nullable Input<String> assessmentName;
-        private @Nullable Input<SecurityAssessmentMetadataPropertiesArgs> metadata;
-        private @Nullable Input<SecurityAssessmentPartnerDataArgs> partnersData;
-        private Input<Object> resourceDetails;
-        private Input<String> resourceId;
-        private Input<AssessmentStatusArgs> status;
+        private @Nullable Output<Map<String,String>> additionalData;
+        private @Nullable Output<String> assessmentName;
+        private @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata;
+        private @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData;
+        private Output<Object> resourceDetails;
+        private Output<String> resourceId;
+        private Output<AssessmentStatusArgs> status;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder additionalData(@Nullable Input<Map<String,String>> additionalData) {
+        public Builder additionalData(@Nullable Output<Map<String,String>> additionalData) {
             this.additionalData = additionalData;
             return this;
         }
 
         public Builder additionalData(@Nullable Map<String,String> additionalData) {
-            this.additionalData = Input.ofNullable(additionalData);
+            this.additionalData = Output.ofNullable(additionalData);
             return this;
         }
 
-        public Builder assessmentName(@Nullable Input<String> assessmentName) {
+        public Builder assessmentName(@Nullable Output<String> assessmentName) {
             this.assessmentName = assessmentName;
             return this;
         }
 
         public Builder assessmentName(@Nullable String assessmentName) {
-            this.assessmentName = Input.ofNullable(assessmentName);
+            this.assessmentName = Output.ofNullable(assessmentName);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<SecurityAssessmentMetadataPropertiesArgs> metadata) {
+        public Builder metadata(@Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable SecurityAssessmentMetadataPropertiesArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder partnersData(@Nullable Input<SecurityAssessmentPartnerDataArgs> partnersData) {
+        public Builder partnersData(@Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData) {
             this.partnersData = partnersData;
             return this;
         }
 
         public Builder partnersData(@Nullable SecurityAssessmentPartnerDataArgs partnersData) {
-            this.partnersData = Input.ofNullable(partnersData);
+            this.partnersData = Output.ofNullable(partnersData);
             return this;
         }
 
-        public Builder resourceDetails(Input<Object> resourceDetails) {
+        public Builder resourceDetails(Output<Object> resourceDetails) {
             this.resourceDetails = Objects.requireNonNull(resourceDetails);
             return this;
         }
 
         public Builder resourceDetails(Object resourceDetails) {
-            this.resourceDetails = Input.of(Objects.requireNonNull(resourceDetails));
+            this.resourceDetails = Output.of(Objects.requireNonNull(resourceDetails));
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder status(Input<AssessmentStatusArgs> status) {
+        public Builder status(Output<AssessmentStatusArgs> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(AssessmentStatusArgs status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public AssessmentArgs build() {

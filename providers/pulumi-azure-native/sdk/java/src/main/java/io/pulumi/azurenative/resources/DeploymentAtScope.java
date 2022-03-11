@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.resources.DeploymentAtScopeArgs;
 import io.pulumi.azurenative.resources.outputs.DeploymentPropertiesExtendedResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -142,25 +141,25 @@ public class DeploymentAtScope extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeploymentAtScope(String name, DeploymentAtScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:resources:DeploymentAtScope", name, args == null ? DeploymentAtScopeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:resources:DeploymentAtScope", name, args == null ? DeploymentAtScopeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DeploymentAtScope(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DeploymentAtScope(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resources:DeploymentAtScope", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:resources/v20190701:DeploymentAtScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20190801:DeploymentAtScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20191001:DeploymentAtScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20200601:DeploymentAtScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20200801:DeploymentAtScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20201001:DeploymentAtScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20210101:DeploymentAtScope").build()),
-                Input.of(Alias.builder().setType("azure-native:resources/v20210401:DeploymentAtScope").build())
+                Output.of(Alias.builder().setType("azure-native:resources/v20190701:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20190801:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20191001:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20200601:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20200801:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20201001:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20210101:DeploymentAtScope").build()),
+                Output.of(Alias.builder().setType("azure-native:resources/v20210401:DeploymentAtScope").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -174,7 +173,7 @@ public class DeploymentAtScope extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DeploymentAtScope get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DeploymentAtScope get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DeploymentAtScope(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publishCaCert")
-      private final @Nullable Input<Boolean> publishCaCert;
+      private final @Nullable Output<Boolean> publishCaCert;
 
-    public Input<Boolean> getPublishCaCert() {
-        return this.publishCaCert == null ? Input.empty() : this.publishCaCert;
+    public Output<Boolean> getPublishCaCert() {
+        return this.publishCaCert == null ? Output.empty() : this.publishCaCert;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publishCrl")
-      private final @Nullable Input<Boolean> publishCrl;
+      private final @Nullable Output<Boolean> publishCrl;
 
-    public Input<Boolean> getPublishCrl() {
-        return this.publishCrl == null ? Input.empty() : this.publishCrl;
+    public Output<Boolean> getPublishCrl() {
+        return this.publishCrl == null ? Output.empty() : this.publishCrl;
     }
 
     public PublishingOptionsArgs(
-        @Nullable Input<Boolean> publishCaCert,
-        @Nullable Input<Boolean> publishCrl) {
+        @Nullable Output<Boolean> publishCaCert,
+        @Nullable Output<Boolean> publishCrl) {
         this.publishCaCert = publishCaCert;
         this.publishCrl = publishCrl;
     }
 
     private PublishingOptionsArgs() {
-        this.publishCaCert = Input.empty();
-        this.publishCrl = Input.empty();
+        this.publishCaCert = Output.empty();
+        this.publishCrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> publishCaCert;
-        private @Nullable Input<Boolean> publishCrl;
+        private @Nullable Output<Boolean> publishCaCert;
+        private @Nullable Output<Boolean> publishCrl;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
     	      this.publishCrl = defaults.publishCrl;
         }
 
-        public Builder publishCaCert(@Nullable Input<Boolean> publishCaCert) {
+        public Builder publishCaCert(@Nullable Output<Boolean> publishCaCert) {
             this.publishCaCert = publishCaCert;
             return this;
         }
 
         public Builder publishCaCert(@Nullable Boolean publishCaCert) {
-            this.publishCaCert = Input.ofNullable(publishCaCert);
+            this.publishCaCert = Output.ofNullable(publishCaCert);
             return this;
         }
 
-        public Builder publishCrl(@Nullable Input<Boolean> publishCrl) {
+        public Builder publishCrl(@Nullable Output<Boolean> publishCrl) {
             this.publishCrl = publishCrl;
             return this;
         }
 
         public Builder publishCrl(@Nullable Boolean publishCrl) {
-            this.publishCrl = Input.ofNullable(publishCrl);
+            this.publishCrl = Output.ofNullable(publishCrl);
             return this;
         }
         public PublishingOptionsArgs build() {

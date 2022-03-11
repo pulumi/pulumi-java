@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyGKEClusterArgs;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyNetworkArgs;
@@ -18,10 +18,10 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final ResponsePolicyArgs Empty = new ResponsePolicyArgs();
 
     @InputImport(name="clientOperationId")
-      private final @Nullable Input<String> clientOperationId;
+      private final @Nullable Output<String> clientOperationId;
 
-    public Input<String> getClientOperationId() {
-        return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
+    public Output<String> getClientOperationId() {
+        return this.clientOperationId == null ? Output.empty() : this.clientOperationId;
     }
 
     /**
@@ -29,10 +29,10 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gkeClusters")
-      private final @Nullable Input<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
+      private final @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
 
-    public Input<List<ResponsePolicyGKEClusterArgs>> getGkeClusters() {
-        return this.gkeClusters == null ? Input.empty() : this.gkeClusters;
+    public Output<List<ResponsePolicyGKEClusterArgs>> getGkeClusters() {
+        return this.gkeClusters == null ? Output.empty() : this.gkeClusters;
     }
 
     /**
@@ -51,17 +51,17 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -69,17 +69,17 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networks")
-      private final @Nullable Input<List<ResponsePolicyNetworkArgs>> networks;
+      private final @Nullable Output<List<ResponsePolicyNetworkArgs>> networks;
 
-    public Input<List<ResponsePolicyNetworkArgs>> getNetworks() {
-        return this.networks == null ? Input.empty() : this.networks;
+    public Output<List<ResponsePolicyNetworkArgs>> getNetworks() {
+        return this.networks == null ? Output.empty() : this.networks;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -87,21 +87,21 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responsePolicyName")
-      private final @Nullable Input<String> responsePolicyName;
+      private final @Nullable Output<String> responsePolicyName;
 
-    public Input<String> getResponsePolicyName() {
-        return this.responsePolicyName == null ? Input.empty() : this.responsePolicyName;
+    public Output<String> getResponsePolicyName() {
+        return this.responsePolicyName == null ? Output.empty() : this.responsePolicyName;
     }
 
     public ResponsePolicyArgs(
-        @Nullable Input<String> clientOperationId,
-        @Nullable Input<String> description,
-        @Nullable Input<List<ResponsePolicyGKEClusterArgs>> gkeClusters,
-        @Nullable Input<String> id,
-        @Nullable Input<String> kind,
-        @Nullable Input<List<ResponsePolicyNetworkArgs>> networks,
-        @Nullable Input<String> project,
-        @Nullable Input<String> responsePolicyName) {
+        @Nullable Output<String> clientOperationId,
+        @Nullable Output<String> description,
+        @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters,
+        @Nullable Output<String> id,
+        @Nullable Output<String> kind,
+        @Nullable Output<List<ResponsePolicyNetworkArgs>> networks,
+        @Nullable Output<String> project,
+        @Nullable Output<String> responsePolicyName) {
         this.clientOperationId = clientOperationId;
         this.description = description;
         this.gkeClusters = gkeClusters;
@@ -113,14 +113,14 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResponsePolicyArgs() {
-        this.clientOperationId = Input.empty();
-        this.description = Input.empty();
-        this.gkeClusters = Input.empty();
-        this.id = Input.empty();
-        this.kind = Input.empty();
-        this.networks = Input.empty();
-        this.project = Input.empty();
-        this.responsePolicyName = Input.empty();
+        this.clientOperationId = Output.empty();
+        this.description = Output.empty();
+        this.gkeClusters = Output.empty();
+        this.id = Output.empty();
+        this.kind = Output.empty();
+        this.networks = Output.empty();
+        this.project = Output.empty();
+        this.responsePolicyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,14 +132,14 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientOperationId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<List<ResponsePolicyNetworkArgs>> networks;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> responsePolicyName;
+        private @Nullable Output<String> clientOperationId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<List<ResponsePolicyNetworkArgs>> networks;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> responsePolicyName;
 
         public Builder() {
     	      // Empty
@@ -157,83 +157,83 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.responsePolicyName = defaults.responsePolicyName;
         }
 
-        public Builder clientOperationId(@Nullable Input<String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Input.ofNullable(clientOperationId);
+            this.clientOperationId = Output.ofNullable(clientOperationId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder gkeClusters(@Nullable Input<List<ResponsePolicyGKEClusterArgs>> gkeClusters) {
+        public Builder gkeClusters(@Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters) {
             this.gkeClusters = gkeClusters;
             return this;
         }
 
         public Builder gkeClusters(@Nullable List<ResponsePolicyGKEClusterArgs> gkeClusters) {
-            this.gkeClusters = Input.ofNullable(gkeClusters);
+            this.gkeClusters = Output.ofNullable(gkeClusters);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder networks(@Nullable Input<List<ResponsePolicyNetworkArgs>> networks) {
+        public Builder networks(@Nullable Output<List<ResponsePolicyNetworkArgs>> networks) {
             this.networks = networks;
             return this;
         }
 
         public Builder networks(@Nullable List<ResponsePolicyNetworkArgs> networks) {
-            this.networks = Input.ofNullable(networks);
+            this.networks = Output.ofNullable(networks);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder responsePolicyName(@Nullable Input<String> responsePolicyName) {
+        public Builder responsePolicyName(@Nullable Output<String> responsePolicyName) {
             this.responsePolicyName = responsePolicyName;
             return this;
         }
 
         public Builder responsePolicyName(@Nullable String responsePolicyName) {
-            this.responsePolicyName = Input.ofNullable(responsePolicyName);
+            this.responsePolicyName = Output.ofNullable(responsePolicyName);
             return this;
         }
         public ResponsePolicyArgs build() {

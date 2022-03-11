@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AlertLambdaConfigurationArgs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AlertSNSConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class AlertActionArgs extends io.pulumi.resources.ResourceArgs {
     public static final AlertActionArgs Empty = new AlertActionArgs();
 
     @InputImport(name="lambdaConfiguration")
-      private final @Nullable Input<AlertLambdaConfigurationArgs> lambdaConfiguration;
+      private final @Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration;
 
-    public Input<AlertLambdaConfigurationArgs> getLambdaConfiguration() {
-        return this.lambdaConfiguration == null ? Input.empty() : this.lambdaConfiguration;
+    public Output<AlertLambdaConfigurationArgs> getLambdaConfiguration() {
+        return this.lambdaConfiguration == null ? Output.empty() : this.lambdaConfiguration;
     }
 
     @InputImport(name="sNSConfiguration")
-      private final @Nullable Input<AlertSNSConfigurationArgs> sNSConfiguration;
+      private final @Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration;
 
-    public Input<AlertSNSConfigurationArgs> getSNSConfiguration() {
-        return this.sNSConfiguration == null ? Input.empty() : this.sNSConfiguration;
+    public Output<AlertSNSConfigurationArgs> getSNSConfiguration() {
+        return this.sNSConfiguration == null ? Output.empty() : this.sNSConfiguration;
     }
 
     public AlertActionArgs(
-        @Nullable Input<AlertLambdaConfigurationArgs> lambdaConfiguration,
-        @Nullable Input<AlertSNSConfigurationArgs> sNSConfiguration) {
+        @Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration,
+        @Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration) {
         this.lambdaConfiguration = lambdaConfiguration;
         this.sNSConfiguration = sNSConfiguration;
     }
 
     private AlertActionArgs() {
-        this.lambdaConfiguration = Input.empty();
-        this.sNSConfiguration = Input.empty();
+        this.lambdaConfiguration = Output.empty();
+        this.sNSConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class AlertActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AlertLambdaConfigurationArgs> lambdaConfiguration;
-        private @Nullable Input<AlertSNSConfigurationArgs> sNSConfiguration;
+        private @Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration;
+        private @Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class AlertActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sNSConfiguration = defaults.sNSConfiguration;
         }
 
-        public Builder lambdaConfiguration(@Nullable Input<AlertLambdaConfigurationArgs> lambdaConfiguration) {
+        public Builder lambdaConfiguration(@Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration) {
             this.lambdaConfiguration = lambdaConfiguration;
             return this;
         }
 
         public Builder lambdaConfiguration(@Nullable AlertLambdaConfigurationArgs lambdaConfiguration) {
-            this.lambdaConfiguration = Input.ofNullable(lambdaConfiguration);
+            this.lambdaConfiguration = Output.ofNullable(lambdaConfiguration);
             return this;
         }
 
-        public Builder sNSConfiguration(@Nullable Input<AlertSNSConfigurationArgs> sNSConfiguration) {
+        public Builder sNSConfiguration(@Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration) {
             this.sNSConfiguration = sNSConfiguration;
             return this;
         }
 
         public Builder sNSConfiguration(@Nullable AlertSNSConfigurationArgs sNSConfiguration) {
-            this.sNSConfiguration = Input.ofNullable(sNSConfiguration);
+            this.sNSConfiguration = Output.ofNullable(sNSConfiguration);
             return this;
         }
         public AlertActionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.stepfunctions;
 
 import io.pulumi.awsnative.stepfunctions.inputs.ActivityTagsEntryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class ActivityArgs extends io.pulumi.resources.ResourceArgs {
     public static final ActivityArgs Empty = new ActivityArgs();
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<ActivityTagsEntryArgs>> tags;
+      private final @Nullable Output<List<ActivityTagsEntryArgs>> tags;
 
-    public Input<List<ActivityTagsEntryArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ActivityTagsEntryArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ActivityArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<ActivityTagsEntryArgs>> tags) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<ActivityTagsEntryArgs>> tags) {
         this.name = name;
         this.tags = tags;
     }
 
     private ActivityArgs() {
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class ActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ActivityTagsEntryArgs>> tags;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ActivityTagsEntryArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class ActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ActivityTagsEntryArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ActivityTagsEntryArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ActivityTagsEntryArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ActivityArgs build() {

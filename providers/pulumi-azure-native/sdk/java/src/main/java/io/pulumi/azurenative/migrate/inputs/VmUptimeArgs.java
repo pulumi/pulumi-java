@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="daysPerMonth")
-      private final @Nullable Input<Double> daysPerMonth;
+      private final @Nullable Output<Double> daysPerMonth;
 
-    public Input<Double> getDaysPerMonth() {
-        return this.daysPerMonth == null ? Input.empty() : this.daysPerMonth;
+    public Output<Double> getDaysPerMonth() {
+        return this.daysPerMonth == null ? Output.empty() : this.daysPerMonth;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hoursPerDay")
-      private final @Nullable Input<Double> hoursPerDay;
+      private final @Nullable Output<Double> hoursPerDay;
 
-    public Input<Double> getHoursPerDay() {
-        return this.hoursPerDay == null ? Input.empty() : this.hoursPerDay;
+    public Output<Double> getHoursPerDay() {
+        return this.hoursPerDay == null ? Output.empty() : this.hoursPerDay;
     }
 
     public VmUptimeArgs(
-        @Nullable Input<Double> daysPerMonth,
-        @Nullable Input<Double> hoursPerDay) {
+        @Nullable Output<Double> daysPerMonth,
+        @Nullable Output<Double> hoursPerDay) {
         this.daysPerMonth = daysPerMonth;
         this.hoursPerDay = hoursPerDay;
     }
 
     private VmUptimeArgs() {
-        this.daysPerMonth = Input.empty();
-        this.hoursPerDay = Input.empty();
+        this.daysPerMonth = Output.empty();
+        this.hoursPerDay = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> daysPerMonth;
-        private @Nullable Input<Double> hoursPerDay;
+        private @Nullable Output<Double> daysPerMonth;
+        private @Nullable Output<Double> hoursPerDay;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hoursPerDay = defaults.hoursPerDay;
         }
 
-        public Builder daysPerMonth(@Nullable Input<Double> daysPerMonth) {
+        public Builder daysPerMonth(@Nullable Output<Double> daysPerMonth) {
             this.daysPerMonth = daysPerMonth;
             return this;
         }
 
         public Builder daysPerMonth(@Nullable Double daysPerMonth) {
-            this.daysPerMonth = Input.ofNullable(daysPerMonth);
+            this.daysPerMonth = Output.ofNullable(daysPerMonth);
             return this;
         }
 
-        public Builder hoursPerDay(@Nullable Input<Double> hoursPerDay) {
+        public Builder hoursPerDay(@Nullable Output<Double> hoursPerDay) {
             this.hoursPerDay = hoursPerDay;
             return this;
         }
 
         public Builder hoursPerDay(@Nullable Double hoursPerDay) {
-            this.hoursPerDay = Input.ofNullable(hoursPerDay);
+            this.hoursPerDay = Output.ofNullable(hoursPerDay);
             return this;
         }
         public VmUptimeArgs build() {

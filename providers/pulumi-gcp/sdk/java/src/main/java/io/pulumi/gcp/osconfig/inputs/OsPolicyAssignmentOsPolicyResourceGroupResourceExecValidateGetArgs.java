@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file;
+      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
      * 
      */
     @InputImport(name="interpreter", required=true)
-      private final Input<String> interpreter;
+      private final Output<String> interpreter;
 
-    public Input<String> getInterpreter() {
+    public Output<String> getInterpreter() {
         return this.interpreter;
     }
 
@@ -54,10 +54,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
      * 
      */
     @InputImport(name="outputFilePath")
-      private final @Nullable Input<String> outputFilePath;
+      private final @Nullable Output<String> outputFilePath;
 
-    public Input<String> getOutputFilePath() {
-        return this.outputFilePath == null ? Input.empty() : this.outputFilePath;
+    public Output<String> getOutputFilePath() {
+        return this.outputFilePath == null ? Output.empty() : this.outputFilePath;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
      * 
      */
     @InputImport(name="script")
-      private final @Nullable Input<String> script;
+      private final @Nullable Output<String> script;
 
-    public Input<String> getScript() {
-        return this.script == null ? Input.empty() : this.script;
+    public Output<String> getScript() {
+        return this.script == null ? Output.empty() : this.script;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs(
-        @Nullable Input<List<String>> args,
-        @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file,
-        Input<String> interpreter,
-        @Nullable Input<String> outputFilePath,
-        @Nullable Input<String> script) {
+        @Nullable Output<List<String>> args,
+        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file,
+        Output<String> interpreter,
+        @Nullable Output<String> outputFilePath,
+        @Nullable Output<String> script) {
         this.args = args;
         this.file = file;
         this.interpreter = Objects.requireNonNull(interpreter, "expected parameter 'interpreter' to be non-null");
@@ -85,11 +85,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs() {
-        this.args = Input.empty();
-        this.file = Input.empty();
-        this.interpreter = Input.empty();
-        this.outputFilePath = Input.empty();
-        this.script = Input.empty();
+        this.args = Output.empty();
+        this.file = Output.empty();
+        this.interpreter = Output.empty();
+        this.outputFilePath = Output.empty();
+        this.script = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file;
-        private Input<String> interpreter;
-        private @Nullable Input<String> outputFilePath;
-        private @Nullable Input<String> script;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file;
+        private Output<String> interpreter;
+        private @Nullable Output<String> outputFilePath;
+        private @Nullable Output<String> script;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
     	      this.script = defaults.script;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder file(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file) {
+        public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder interpreter(Input<String> interpreter) {
+        public Builder interpreter(Output<String> interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
         public Builder interpreter(String interpreter) {
-            this.interpreter = Input.of(Objects.requireNonNull(interpreter));
+            this.interpreter = Output.of(Objects.requireNonNull(interpreter));
             return this;
         }
 
-        public Builder outputFilePath(@Nullable Input<String> outputFilePath) {
+        public Builder outputFilePath(@Nullable Output<String> outputFilePath) {
             this.outputFilePath = outputFilePath;
             return this;
         }
 
         public Builder outputFilePath(@Nullable String outputFilePath) {
-            this.outputFilePath = Input.ofNullable(outputFilePath);
+            this.outputFilePath = Output.ofNullable(outputFilePath);
             return this;
         }
 
-        public Builder script(@Nullable Input<String> script) {
+        public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
 
         public Builder script(@Nullable String script) {
-            this.script = Input.ofNullable(script);
+            this.script = Output.ofNullable(script);
             return this;
         }
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs build() {

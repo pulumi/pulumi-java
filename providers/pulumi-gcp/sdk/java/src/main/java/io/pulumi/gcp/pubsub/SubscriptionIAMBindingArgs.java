@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMBindingConditionArgs;
 import java.lang.String;
@@ -17,16 +17,16 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     public static final SubscriptionIAMBindingArgs Empty = new SubscriptionIAMBindingArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<SubscriptionIAMBindingConditionArgs> condition;
+      private final @Nullable Output<SubscriptionIAMBindingConditionArgs> condition;
 
-    public Input<SubscriptionIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<SubscriptionIAMBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -36,10 +36,10 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -60,18 +60,18 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subscription", required=true)
-      private final Input<String> subscription;
+      private final Output<String> subscription;
 
-    public Input<String> getSubscription() {
+    public Output<String> getSubscription() {
         return this.subscription;
     }
 
     public SubscriptionIAMBindingArgs(
-        @Nullable Input<SubscriptionIAMBindingConditionArgs> condition,
-        Input<List<String>> members,
-        @Nullable Input<String> project,
-        Input<String> role,
-        Input<String> subscription) {
+        @Nullable Output<SubscriptionIAMBindingConditionArgs> condition,
+        Output<List<String>> members,
+        @Nullable Output<String> project,
+        Output<String> role,
+        Output<String> subscription) {
         this.condition = condition;
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
         this.project = project;
@@ -80,11 +80,11 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     }
 
     private SubscriptionIAMBindingArgs() {
-        this.condition = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.subscription = Input.empty();
+        this.condition = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.subscription = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,11 +96,11 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<SubscriptionIAMBindingConditionArgs> condition;
-        private Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private Input<String> role;
-        private Input<String> subscription;
+        private @Nullable Output<SubscriptionIAMBindingConditionArgs> condition;
+        private Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private Output<String> role;
+        private Output<String> subscription;
 
         public Builder() {
     	      // Empty
@@ -115,53 +115,53 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     	      this.subscription = defaults.subscription;
         }
 
-        public Builder condition(@Nullable Input<SubscriptionIAMBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<SubscriptionIAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable SubscriptionIAMBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder subscription(Input<String> subscription) {
+        public Builder subscription(Output<String> subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
 
         public Builder subscription(String subscription) {
-            this.subscription = Input.of(Objects.requireNonNull(subscription));
+            this.subscription = Output.of(Objects.requireNonNull(subscription));
             return this;
         }
         public SubscriptionIAMBindingArgs build() {

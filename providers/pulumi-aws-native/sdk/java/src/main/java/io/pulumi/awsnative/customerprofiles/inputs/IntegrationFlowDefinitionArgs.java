@@ -6,7 +6,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationSourceFlowConfigArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTaskArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTriggerConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,54 +19,54 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
     public static final IntegrationFlowDefinitionArgs Empty = new IntegrationFlowDefinitionArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="flowName", required=true)
-      private final Input<String> flowName;
+      private final Output<String> flowName;
 
-    public Input<String> getFlowName() {
+    public Output<String> getFlowName() {
         return this.flowName;
     }
 
     @InputImport(name="kmsArn", required=true)
-      private final Input<String> kmsArn;
+      private final Output<String> kmsArn;
 
-    public Input<String> getKmsArn() {
+    public Output<String> getKmsArn() {
         return this.kmsArn;
     }
 
     @InputImport(name="sourceFlowConfig", required=true)
-      private final Input<IntegrationSourceFlowConfigArgs> sourceFlowConfig;
+      private final Output<IntegrationSourceFlowConfigArgs> sourceFlowConfig;
 
-    public Input<IntegrationSourceFlowConfigArgs> getSourceFlowConfig() {
+    public Output<IntegrationSourceFlowConfigArgs> getSourceFlowConfig() {
         return this.sourceFlowConfig;
     }
 
     @InputImport(name="tasks", required=true)
-      private final Input<List<IntegrationTaskArgs>> tasks;
+      private final Output<List<IntegrationTaskArgs>> tasks;
 
-    public Input<List<IntegrationTaskArgs>> getTasks() {
+    public Output<List<IntegrationTaskArgs>> getTasks() {
         return this.tasks;
     }
 
     @InputImport(name="triggerConfig", required=true)
-      private final Input<IntegrationTriggerConfigArgs> triggerConfig;
+      private final Output<IntegrationTriggerConfigArgs> triggerConfig;
 
-    public Input<IntegrationTriggerConfigArgs> getTriggerConfig() {
+    public Output<IntegrationTriggerConfigArgs> getTriggerConfig() {
         return this.triggerConfig;
     }
 
     public IntegrationFlowDefinitionArgs(
-        @Nullable Input<String> description,
-        Input<String> flowName,
-        Input<String> kmsArn,
-        Input<IntegrationSourceFlowConfigArgs> sourceFlowConfig,
-        Input<List<IntegrationTaskArgs>> tasks,
-        Input<IntegrationTriggerConfigArgs> triggerConfig) {
+        @Nullable Output<String> description,
+        Output<String> flowName,
+        Output<String> kmsArn,
+        Output<IntegrationSourceFlowConfigArgs> sourceFlowConfig,
+        Output<List<IntegrationTaskArgs>> tasks,
+        Output<IntegrationTriggerConfigArgs> triggerConfig) {
         this.description = description;
         this.flowName = Objects.requireNonNull(flowName, "expected parameter 'flowName' to be non-null");
         this.kmsArn = Objects.requireNonNull(kmsArn, "expected parameter 'kmsArn' to be non-null");
@@ -76,12 +76,12 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
     }
 
     private IntegrationFlowDefinitionArgs() {
-        this.description = Input.empty();
-        this.flowName = Input.empty();
-        this.kmsArn = Input.empty();
-        this.sourceFlowConfig = Input.empty();
-        this.tasks = Input.empty();
-        this.triggerConfig = Input.empty();
+        this.description = Output.empty();
+        this.flowName = Output.empty();
+        this.kmsArn = Output.empty();
+        this.sourceFlowConfig = Output.empty();
+        this.tasks = Output.empty();
+        this.triggerConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,12 +93,12 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> flowName;
-        private Input<String> kmsArn;
-        private Input<IntegrationSourceFlowConfigArgs> sourceFlowConfig;
-        private Input<List<IntegrationTaskArgs>> tasks;
-        private Input<IntegrationTriggerConfigArgs> triggerConfig;
+        private @Nullable Output<String> description;
+        private Output<String> flowName;
+        private Output<String> kmsArn;
+        private Output<IntegrationSourceFlowConfigArgs> sourceFlowConfig;
+        private Output<List<IntegrationTaskArgs>> tasks;
+        private Output<IntegrationTriggerConfigArgs> triggerConfig;
 
         public Builder() {
     	      // Empty
@@ -114,63 +114,63 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
     	      this.triggerConfig = defaults.triggerConfig;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder flowName(Input<String> flowName) {
+        public Builder flowName(Output<String> flowName) {
             this.flowName = Objects.requireNonNull(flowName);
             return this;
         }
 
         public Builder flowName(String flowName) {
-            this.flowName = Input.of(Objects.requireNonNull(flowName));
+            this.flowName = Output.of(Objects.requireNonNull(flowName));
             return this;
         }
 
-        public Builder kmsArn(Input<String> kmsArn) {
+        public Builder kmsArn(Output<String> kmsArn) {
             this.kmsArn = Objects.requireNonNull(kmsArn);
             return this;
         }
 
         public Builder kmsArn(String kmsArn) {
-            this.kmsArn = Input.of(Objects.requireNonNull(kmsArn));
+            this.kmsArn = Output.of(Objects.requireNonNull(kmsArn));
             return this;
         }
 
-        public Builder sourceFlowConfig(Input<IntegrationSourceFlowConfigArgs> sourceFlowConfig) {
+        public Builder sourceFlowConfig(Output<IntegrationSourceFlowConfigArgs> sourceFlowConfig) {
             this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
             return this;
         }
 
         public Builder sourceFlowConfig(IntegrationSourceFlowConfigArgs sourceFlowConfig) {
-            this.sourceFlowConfig = Input.of(Objects.requireNonNull(sourceFlowConfig));
+            this.sourceFlowConfig = Output.of(Objects.requireNonNull(sourceFlowConfig));
             return this;
         }
 
-        public Builder tasks(Input<List<IntegrationTaskArgs>> tasks) {
+        public Builder tasks(Output<List<IntegrationTaskArgs>> tasks) {
             this.tasks = Objects.requireNonNull(tasks);
             return this;
         }
 
         public Builder tasks(List<IntegrationTaskArgs> tasks) {
-            this.tasks = Input.of(Objects.requireNonNull(tasks));
+            this.tasks = Output.of(Objects.requireNonNull(tasks));
             return this;
         }
 
-        public Builder triggerConfig(Input<IntegrationTriggerConfigArgs> triggerConfig) {
+        public Builder triggerConfig(Output<IntegrationTriggerConfigArgs> triggerConfig) {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
         }
 
         public Builder triggerConfig(IntegrationTriggerConfigArgs triggerConfig) {
-            this.triggerConfig = Input.of(Objects.requireNonNull(triggerConfig));
+            this.triggerConfig = Output.of(Objects.requireNonNull(triggerConfig));
             return this;
         }
         public IntegrationFlowDefinitionArgs build() {

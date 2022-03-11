@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlFieldArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="columns")
-      private final @Nullable Input<List<StandardSqlFieldArgs>> columns;
+      private final @Nullable Output<List<StandardSqlFieldArgs>> columns;
 
-    public Input<List<StandardSqlFieldArgs>> getColumns() {
-        return this.columns == null ? Input.empty() : this.columns;
+    public Output<List<StandardSqlFieldArgs>> getColumns() {
+        return this.columns == null ? Output.empty() : this.columns;
     }
 
-    public StandardSqlTableTypeArgs(@Nullable Input<List<StandardSqlFieldArgs>> columns) {
+    public StandardSqlTableTypeArgs(@Nullable Output<List<StandardSqlFieldArgs>> columns) {
         this.columns = columns;
     }
 
     private StandardSqlTableTypeArgs() {
-        this.columns = Input.empty();
+        this.columns = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<StandardSqlFieldArgs>> columns;
+        private @Nullable Output<List<StandardSqlFieldArgs>> columns;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
     	      this.columns = defaults.columns;
         }
 
-        public Builder columns(@Nullable Input<List<StandardSqlFieldArgs>> columns) {
+        public Builder columns(@Nullable Output<List<StandardSqlFieldArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
         public Builder columns(@Nullable List<StandardSqlFieldArgs> columns) {
-            this.columns = Input.ofNullable(columns);
+            this.columns = Output.ofNullable(columns);
             return this;
         }
         public StandardSqlTableTypeArgs build() {

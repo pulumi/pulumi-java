@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.firestore;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -188,14 +187,14 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Index(String name, IndexArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:firestore/index:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:firestore/index:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Index(String name, Input<String> id, @Nullable IndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Index(String name, Output<String> id, @Nullable IndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:firestore/index:Index", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -211,7 +210,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Index get(String name, Input<String> id, @Nullable IndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Index get(String name, Output<String> id, @Nullable IndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Index(name, id, state, options);
     }
 }

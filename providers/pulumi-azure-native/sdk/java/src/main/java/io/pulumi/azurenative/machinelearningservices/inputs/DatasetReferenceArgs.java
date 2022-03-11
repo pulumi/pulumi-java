@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public DatasetReferenceArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> name) {
         this.id = id;
         this.name = name;
     }
 
     private DatasetReferenceArgs() {
-        this.id = Input.empty();
-        this.name = Input.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
     	      this.name = defaults.name;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public DatasetReferenceArgs build() {

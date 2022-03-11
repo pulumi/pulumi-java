@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.ResourceServerScopeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identifier")
-      private final @Nullable Input<String> identifier;
+      private final @Nullable Output<String> identifier;
 
-    public Input<String> getIdentifier() {
-        return this.identifier == null ? Input.empty() : this.identifier;
+    public Output<String> getIdentifier() {
+        return this.identifier == null ? Output.empty() : this.identifier;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scopeIdentifiers")
-      private final @Nullable Input<List<String>> scopeIdentifiers;
+      private final @Nullable Output<List<String>> scopeIdentifiers;
 
-    public Input<List<String>> getScopeIdentifiers() {
-        return this.scopeIdentifiers == null ? Input.empty() : this.scopeIdentifiers;
+    public Output<List<String>> getScopeIdentifiers() {
+        return this.scopeIdentifiers == null ? Output.empty() : this.scopeIdentifiers;
     }
 
     /**
@@ -54,25 +54,25 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<List<ResourceServerScopeGetArgs>> scopes;
+      private final @Nullable Output<List<ResourceServerScopeGetArgs>> scopes;
 
-    public Input<List<ResourceServerScopeGetArgs>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<ResourceServerScopeGetArgs>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     @InputImport(name="userPoolId")
-      private final @Nullable Input<String> userPoolId;
+      private final @Nullable Output<String> userPoolId;
 
-    public Input<String> getUserPoolId() {
-        return this.userPoolId == null ? Input.empty() : this.userPoolId;
+    public Output<String> getUserPoolId() {
+        return this.userPoolId == null ? Output.empty() : this.userPoolId;
     }
 
     public ResourceServerState(
-        @Nullable Input<String> identifier,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> scopeIdentifiers,
-        @Nullable Input<List<ResourceServerScopeGetArgs>> scopes,
-        @Nullable Input<String> userPoolId) {
+        @Nullable Output<String> identifier,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> scopeIdentifiers,
+        @Nullable Output<List<ResourceServerScopeGetArgs>> scopes,
+        @Nullable Output<String> userPoolId) {
         this.identifier = identifier;
         this.name = name;
         this.scopeIdentifiers = scopeIdentifiers;
@@ -81,11 +81,11 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     }
 
     private ResourceServerState() {
-        this.identifier = Input.empty();
-        this.name = Input.empty();
-        this.scopeIdentifiers = Input.empty();
-        this.scopes = Input.empty();
-        this.userPoolId = Input.empty();
+        this.identifier = Output.empty();
+        this.name = Output.empty();
+        this.scopeIdentifiers = Output.empty();
+        this.scopes = Output.empty();
+        this.userPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,11 +97,11 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> identifier;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> scopeIdentifiers;
-        private @Nullable Input<List<ResourceServerScopeGetArgs>> scopes;
-        private @Nullable Input<String> userPoolId;
+        private @Nullable Output<String> identifier;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> scopeIdentifiers;
+        private @Nullable Output<List<ResourceServerScopeGetArgs>> scopes;
+        private @Nullable Output<String> userPoolId;
 
         public Builder() {
     	      // Empty
@@ -116,53 +116,53 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder identifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Input.ofNullable(identifier);
+            this.identifier = Output.ofNullable(identifier);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder scopeIdentifiers(@Nullable Input<List<String>> scopeIdentifiers) {
+        public Builder scopeIdentifiers(@Nullable Output<List<String>> scopeIdentifiers) {
             this.scopeIdentifiers = scopeIdentifiers;
             return this;
         }
 
         public Builder scopeIdentifiers(@Nullable List<String> scopeIdentifiers) {
-            this.scopeIdentifiers = Input.ofNullable(scopeIdentifiers);
+            this.scopeIdentifiers = Output.ofNullable(scopeIdentifiers);
             return this;
         }
 
-        public Builder scopes(@Nullable Input<List<ResourceServerScopeGetArgs>> scopes) {
+        public Builder scopes(@Nullable Output<List<ResourceServerScopeGetArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<ResourceServerScopeGetArgs> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
 
-        public Builder userPoolId(@Nullable Input<String> userPoolId) {
+        public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
 
         public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Input.ofNullable(userPoolId);
+            this.userPoolId = Output.ofNullable(userPoolId);
             return this;
         }
         public ResourceServerState build() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationIncludedObjectVe
 import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationOptionalFieldsItem;
 import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationScheduleFrequency;
 import io.pulumi.awsnative.s3.inputs.BucketDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     public static final BucketInventoryConfigurationArgs Empty = new BucketInventoryConfigurationArgs();
 
     @InputImport(name="destination", required=true)
-      private final Input<BucketDestinationArgs> destination;
+      private final Output<BucketDestinationArgs> destination;
 
-    public Input<BucketDestinationArgs> getDestination() {
+    public Output<BucketDestinationArgs> getDestination() {
         return this.destination;
     }
 
@@ -32,9 +32,9 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -43,9 +43,9 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -54,9 +54,9 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="includedObjectVersions", required=true)
-      private final Input<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions;
+      private final Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions;
 
-    public Input<BucketInventoryConfigurationIncludedObjectVersions> getIncludedObjectVersions() {
+    public Output<BucketInventoryConfigurationIncludedObjectVersions> getIncludedObjectVersions() {
         return this.includedObjectVersions;
     }
 
@@ -65,10 +65,10 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="optionalFields")
-      private final @Nullable Input<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields;
+      private final @Nullable Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields;
 
-    public Input<List<BucketInventoryConfigurationOptionalFieldsItem>> getOptionalFields() {
-        return this.optionalFields == null ? Input.empty() : this.optionalFields;
+    public Output<List<BucketInventoryConfigurationOptionalFieldsItem>> getOptionalFields() {
+        return this.optionalFields == null ? Output.empty() : this.optionalFields;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scheduleFrequency", required=true)
-      private final Input<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency;
+      private final Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency;
 
-    public Input<BucketInventoryConfigurationScheduleFrequency> getScheduleFrequency() {
+    public Output<BucketInventoryConfigurationScheduleFrequency> getScheduleFrequency() {
         return this.scheduleFrequency;
     }
 
     public BucketInventoryConfigurationArgs(
-        Input<BucketDestinationArgs> destination,
-        Input<Boolean> enabled,
-        Input<String> id,
-        Input<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions,
-        @Nullable Input<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields,
-        @Nullable Input<String> prefix,
-        Input<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency) {
+        Output<BucketDestinationArgs> destination,
+        Output<Boolean> enabled,
+        Output<String> id,
+        Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions,
+        @Nullable Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields,
+        @Nullable Output<String> prefix,
+        Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
@@ -111,13 +111,13 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     }
 
     private BucketInventoryConfigurationArgs() {
-        this.destination = Input.empty();
-        this.enabled = Input.empty();
-        this.id = Input.empty();
-        this.includedObjectVersions = Input.empty();
-        this.optionalFields = Input.empty();
-        this.prefix = Input.empty();
-        this.scheduleFrequency = Input.empty();
+        this.destination = Output.empty();
+        this.enabled = Output.empty();
+        this.id = Output.empty();
+        this.includedObjectVersions = Output.empty();
+        this.optionalFields = Output.empty();
+        this.prefix = Output.empty();
+        this.scheduleFrequency = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<BucketDestinationArgs> destination;
-        private Input<Boolean> enabled;
-        private Input<String> id;
-        private Input<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions;
-        private @Nullable Input<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields;
-        private @Nullable Input<String> prefix;
-        private Input<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency;
+        private Output<BucketDestinationArgs> destination;
+        private Output<Boolean> enabled;
+        private Output<String> id;
+        private Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions;
+        private @Nullable Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields;
+        private @Nullable Output<String> prefix;
+        private Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     	      this.scheduleFrequency = defaults.scheduleFrequency;
         }
 
-        public Builder destination(Input<BucketDestinationArgs> destination) {
+        public Builder destination(Output<BucketDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(BucketDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder includedObjectVersions(Input<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions) {
+        public Builder includedObjectVersions(Output<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions) {
             this.includedObjectVersions = Objects.requireNonNull(includedObjectVersions);
             return this;
         }
 
         public Builder includedObjectVersions(BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions) {
-            this.includedObjectVersions = Input.of(Objects.requireNonNull(includedObjectVersions));
+            this.includedObjectVersions = Output.of(Objects.requireNonNull(includedObjectVersions));
             return this;
         }
 
-        public Builder optionalFields(@Nullable Input<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields) {
+        public Builder optionalFields(@Nullable Output<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields) {
             this.optionalFields = optionalFields;
             return this;
         }
 
         public Builder optionalFields(@Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields) {
-            this.optionalFields = Input.ofNullable(optionalFields);
+            this.optionalFields = Output.ofNullable(optionalFields);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder scheduleFrequency(Input<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency) {
+        public Builder scheduleFrequency(Output<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency) {
             this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency);
             return this;
         }
 
         public Builder scheduleFrequency(BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
-            this.scheduleFrequency = Input.of(Objects.requireNonNull(scheduleFrequency));
+            this.scheduleFrequency = Output.of(Objects.requireNonNull(scheduleFrequency));
             return this;
         }
         public BucketInventoryConfigurationArgs build() {

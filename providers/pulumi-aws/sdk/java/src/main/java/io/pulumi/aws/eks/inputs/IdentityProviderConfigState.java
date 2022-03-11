@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.IdentityProviderConfigOidcGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="oidc")
-      private final @Nullable Input<IdentityProviderConfigOidcGetArgs> oidc;
+      private final @Nullable Output<IdentityProviderConfigOidcGetArgs> oidc;
 
-    public Input<IdentityProviderConfigOidcGetArgs> getOidc() {
-        return this.oidc == null ? Input.empty() : this.oidc;
+    public Output<IdentityProviderConfigOidcGetArgs> getOidc() {
+        return this.oidc == null ? Output.empty() : this.oidc;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public IdentityProviderConfigState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> clusterName,
-        @Nullable Input<IdentityProviderConfigOidcGetArgs> oidc,
-        @Nullable Input<String> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> clusterName,
+        @Nullable Output<IdentityProviderConfigOidcGetArgs> oidc,
+        @Nullable Output<String> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.clusterName = clusterName;
         this.oidc = oidc;
@@ -98,12 +98,12 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
     }
 
     private IdentityProviderConfigState() {
-        this.arn = Input.empty();
-        this.clusterName = Input.empty();
-        this.oidc = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.clusterName = Output.empty();
+        this.oidc = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<IdentityProviderConfigOidcGetArgs> oidc;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<IdentityProviderConfigOidcGetArgs> oidc;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder oidc(@Nullable Input<IdentityProviderConfigOidcGetArgs> oidc) {
+        public Builder oidc(@Nullable Output<IdentityProviderConfigOidcGetArgs> oidc) {
             this.oidc = oidc;
             return this;
         }
 
         public Builder oidc(@Nullable IdentityProviderConfigOidcGetArgs oidc) {
-            this.oidc = Input.ofNullable(oidc);
+            this.oidc = Output.ofNullable(oidc);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public IdentityProviderConfigState build() {

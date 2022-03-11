@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.enums.Operator;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator")
-      private final @Nullable Input<Either<String,Operator>> operator;
+      private final @Nullable Output<Either<String,Operator>> operator;
 
-    public Input<Either<String,Operator>> getOperator() {
-        return this.operator == null ? Input.empty() : this.operator;
+    public Output<Either<String,Operator>> getOperator() {
+        return this.operator == null ? Output.empty() : this.operator;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public ConditionArgs(
-        @Nullable Input<Either<String,Operator>> operator,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<Either<String,Operator>> operator,
+        @Nullable Output<List<String>> values) {
         this.operator = operator;
         this.values = values;
     }
 
     private ConditionArgs() {
-        this.operator = Input.empty();
-        this.values = Input.empty();
+        this.operator = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Operator>> operator;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<Either<String,Operator>> operator;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder operator(@Nullable Input<Either<String,Operator>> operator) {
+        public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
             this.operator = operator;
             return this;
         }
 
         public Builder operator(@Nullable Either<String,Operator> operator) {
-            this.operator = Input.ofNullable(operator);
+            this.operator = Output.ofNullable(operator);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ConditionArgs build() {

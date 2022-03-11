@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class WebBackendServiceIamPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -32,10 +32,10 @@ public final class WebBackendServiceIamPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class WebBackendServiceIamPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="webBackendService", required=true)
-      private final Input<String> webBackendService;
+      private final Output<String> webBackendService;
 
-    public Input<String> getWebBackendService() {
+    public Output<String> getWebBackendService() {
         return this.webBackendService;
     }
 
     public WebBackendServiceIamPolicyArgs(
-        Input<String> policyData,
-        @Nullable Input<String> project,
-        Input<String> webBackendService) {
+        Output<String> policyData,
+        @Nullable Output<String> project,
+        Output<String> webBackendService) {
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
         this.webBackendService = Objects.requireNonNull(webBackendService, "expected parameter 'webBackendService' to be non-null");
     }
 
     private WebBackendServiceIamPolicyArgs() {
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.webBackendService = Input.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.webBackendService = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class WebBackendServiceIamPolicyArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
-        private Input<String> webBackendService;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
+        private Output<String> webBackendService;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class WebBackendServiceIamPolicyArgs extends io.pulumi.resources.Re
     	      this.webBackendService = defaults.webBackendService;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder webBackendService(Input<String> webBackendService) {
+        public Builder webBackendService(Output<String> webBackendService) {
             this.webBackendService = Objects.requireNonNull(webBackendService);
             return this;
         }
 
         public Builder webBackendService(String webBackendService) {
-            this.webBackendService = Input.of(Objects.requireNonNull(webBackendService));
+            this.webBackendService = Output.of(Objects.requireNonNull(webBackendService));
             return this;
         }
         public WebBackendServiceIamPolicyArgs build() {

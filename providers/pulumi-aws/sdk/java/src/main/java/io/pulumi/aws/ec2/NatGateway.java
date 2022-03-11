@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.NatGatewayArgs;
 import io.pulumi.aws.ec2.inputs.NatGatewayState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -181,14 +180,14 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NatGateway(String name, NatGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/natGateway:NatGateway", name, args == null ? NatGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/natGateway:NatGateway", name, args == null ? NatGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NatGateway(String name, Input<String> id, @Nullable NatGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NatGateway(String name, Output<String> id, @Nullable NatGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/natGateway:NatGateway", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -204,7 +203,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NatGateway get(String name, Input<String> id, @Nullable NatGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NatGateway get(String name, Output<String> id, @Nullable NatGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NatGateway(name, id, state, options);
     }
 }

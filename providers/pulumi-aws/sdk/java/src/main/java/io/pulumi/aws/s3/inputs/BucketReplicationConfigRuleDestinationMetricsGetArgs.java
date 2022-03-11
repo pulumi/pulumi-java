@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
      * 
      */
     @InputImport(name="eventThreshold")
-      private final @Nullable Input<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold;
+      private final @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold;
 
-    public Input<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> getEventThreshold() {
-        return this.eventThreshold == null ? Input.empty() : this.eventThreshold;
+    public Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> getEventThreshold() {
+        return this.eventThreshold == null ? Output.empty() : this.eventThreshold;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<String> status;
+      private final Output<String> status;
 
-    public Input<String> getStatus() {
+    public Output<String> getStatus() {
         return this.status;
     }
 
     public BucketReplicationConfigRuleDestinationMetricsGetArgs(
-        @Nullable Input<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold,
-        Input<String> status) {
+        @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold,
+        Output<String> status) {
         this.eventThreshold = eventThreshold;
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private BucketReplicationConfigRuleDestinationMetricsGetArgs() {
-        this.eventThreshold = Input.empty();
-        this.status = Input.empty();
+        this.eventThreshold = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold;
-        private Input<String> status;
+        private @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold;
+        private Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
     	      this.status = defaults.status;
         }
 
-        public Builder eventThreshold(@Nullable Input<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold) {
+        public Builder eventThreshold(@Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold) {
             this.eventThreshold = eventThreshold;
             return this;
         }
 
         public Builder eventThreshold(@Nullable BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs eventThreshold) {
-            this.eventThreshold = Input.ofNullable(eventThreshold);
+            this.eventThreshold = Output.ofNullable(eventThreshold);
             return this;
         }
 
-        public Builder status(Input<String> status) {
+        public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(String status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public BucketReplicationConfigRuleDestinationMetricsGetArgs build() {

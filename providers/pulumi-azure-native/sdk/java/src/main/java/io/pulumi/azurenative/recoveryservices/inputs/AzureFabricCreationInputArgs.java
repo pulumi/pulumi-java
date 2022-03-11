@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     public AzureFabricCreationInputArgs(
-        @Nullable Input<String> instanceType,
-        @Nullable Input<String> location) {
+        @Nullable Output<String> instanceType,
+        @Nullable Output<String> location) {
         this.instanceType = instanceType;
         this.location = location;
     }
 
     private AzureFabricCreationInputArgs() {
-        this.instanceType = Input.empty();
-        this.location = Input.empty();
+        this.instanceType = Output.empty();
+        this.location = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<String> location;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<String> location;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
     	      this.location = defaults.location;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
         public AzureFabricCreationInputArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,18 +24,18 @@ public final class UnknownTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Output<Map<String,String>> attributes;
 
-    public Input<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Map<String,String>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
-    public UnknownTargetArgs(@Nullable Input<Map<String,String>> attributes) {
+    public UnknownTargetArgs(@Nullable Output<Map<String,String>> attributes) {
         this.attributes = attributes;
     }
 
     private UnknownTargetArgs() {
-        this.attributes = Input.empty();
+        this.attributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class UnknownTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> attributes;
+        private @Nullable Output<Map<String,String>> attributes;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class UnknownTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
         public UnknownTargetArgs build() {

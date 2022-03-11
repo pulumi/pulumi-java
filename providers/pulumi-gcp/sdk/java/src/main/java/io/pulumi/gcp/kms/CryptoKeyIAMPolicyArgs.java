@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="cryptoKeyId", required=true)
-      private final Input<String> cryptoKeyId;
+      private final Output<String> cryptoKeyId;
 
-    public Input<String> getCryptoKeyId() {
+    public Output<String> getCryptoKeyId() {
         return this.cryptoKeyId;
     }
 
@@ -33,22 +33,22 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public CryptoKeyIAMPolicyArgs(
-        Input<String> cryptoKeyId,
-        Input<String> policyData) {
+        Output<String> cryptoKeyId,
+        Output<String> policyData) {
         this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private CryptoKeyIAMPolicyArgs() {
-        this.cryptoKeyId = Input.empty();
-        this.policyData = Input.empty();
+        this.cryptoKeyId = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> cryptoKeyId;
-        private Input<String> policyData;
+        private Output<String> cryptoKeyId;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder cryptoKeyId(Input<String> cryptoKeyId) {
+        public Builder cryptoKeyId(Output<String> cryptoKeyId) {
             this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
             return this;
         }
 
         public Builder cryptoKeyId(String cryptoKeyId) {
-            this.cryptoKeyId = Input.of(Objects.requireNonNull(cryptoKeyId));
+            this.cryptoKeyId = Output.of(Objects.requireNonNull(cryptoKeyId));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public CryptoKeyIAMPolicyArgs build() {

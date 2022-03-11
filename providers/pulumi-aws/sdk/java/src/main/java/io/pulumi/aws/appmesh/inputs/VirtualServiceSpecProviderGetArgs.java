@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderVirtualNodeGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderVirtualRouterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class VirtualServiceSpecProviderGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="virtualNode")
-      private final @Nullable Input<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode;
+      private final @Nullable Output<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode;
 
-    public Input<VirtualServiceSpecProviderVirtualNodeGetArgs> getVirtualNode() {
-        return this.virtualNode == null ? Input.empty() : this.virtualNode;
+    public Output<VirtualServiceSpecProviderVirtualNodeGetArgs> getVirtualNode() {
+        return this.virtualNode == null ? Output.empty() : this.virtualNode;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class VirtualServiceSpecProviderGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="virtualRouter")
-      private final @Nullable Input<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter;
+      private final @Nullable Output<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter;
 
-    public Input<VirtualServiceSpecProviderVirtualRouterGetArgs> getVirtualRouter() {
-        return this.virtualRouter == null ? Input.empty() : this.virtualRouter;
+    public Output<VirtualServiceSpecProviderVirtualRouterGetArgs> getVirtualRouter() {
+        return this.virtualRouter == null ? Output.empty() : this.virtualRouter;
     }
 
     public VirtualServiceSpecProviderGetArgs(
-        @Nullable Input<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode,
-        @Nullable Input<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter) {
+        @Nullable Output<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode,
+        @Nullable Output<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter) {
         this.virtualNode = virtualNode;
         this.virtualRouter = virtualRouter;
     }
 
     private VirtualServiceSpecProviderGetArgs() {
-        this.virtualNode = Input.empty();
-        this.virtualRouter = Input.empty();
+        this.virtualNode = Output.empty();
+        this.virtualRouter = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class VirtualServiceSpecProviderGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode;
-        private @Nullable Input<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter;
+        private @Nullable Output<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode;
+        private @Nullable Output<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class VirtualServiceSpecProviderGetArgs extends io.pulumi.resources
     	      this.virtualRouter = defaults.virtualRouter;
         }
 
-        public Builder virtualNode(@Nullable Input<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode) {
+        public Builder virtualNode(@Nullable Output<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode) {
             this.virtualNode = virtualNode;
             return this;
         }
 
         public Builder virtualNode(@Nullable VirtualServiceSpecProviderVirtualNodeGetArgs virtualNode) {
-            this.virtualNode = Input.ofNullable(virtualNode);
+            this.virtualNode = Output.ofNullable(virtualNode);
             return this;
         }
 
-        public Builder virtualRouter(@Nullable Input<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter) {
+        public Builder virtualRouter(@Nullable Output<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter) {
             this.virtualRouter = virtualRouter;
             return this;
         }
 
         public Builder virtualRouter(@Nullable VirtualServiceSpecProviderVirtualRouterGetArgs virtualRouter) {
-            this.virtualRouter = Input.ofNullable(virtualRouter);
+            this.virtualRouter = Output.ofNullable(virtualRouter);
             return this;
         }
         public VirtualServiceSpecProviderGetArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.authorization.enums.PolicyType;
 import io.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
-    public Input<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyDefinitionName")
-      private final @Nullable Input<String> policyDefinitionName;
+      private final @Nullable Output<String> policyDefinitionName;
 
-    public Input<String> getPolicyDefinitionName() {
-        return this.policyDefinitionName == null ? Input.empty() : this.policyDefinitionName;
+    public Output<String> getPolicyDefinitionName() {
+        return this.policyDefinitionName == null ? Output.empty() : this.policyDefinitionName;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyRule")
-      private final @Nullable Input<Object> policyRule;
+      private final @Nullable Output<Object> policyRule;
 
-    public Input<Object> getPolicyRule() {
-        return this.policyRule == null ? Input.empty() : this.policyRule;
+    public Output<Object> getPolicyRule() {
+        return this.policyRule == null ? Output.empty() : this.policyRule;
     }
 
     /**
@@ -101,25 +101,25 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyType")
-      private final @Nullable Input<Either<String,PolicyType>> policyType;
+      private final @Nullable Output<Either<String,PolicyType>> policyType;
 
-    public Input<Either<String,PolicyType>> getPolicyType() {
-        return this.policyType == null ? Input.empty() : this.policyType;
+    public Output<Either<String,PolicyType>> getPolicyType() {
+        return this.policyType == null ? Output.empty() : this.policyType;
     }
 
     public PolicyDefinitionArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Object> metadata,
-        @Nullable Input<String> mode,
-        @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters,
-        @Nullable Input<String> policyDefinitionName,
-        @Nullable Input<Object> policyRule,
-        @Nullable Input<Either<String,PolicyType>> policyType) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Object> metadata,
+        @Nullable Output<String> mode,
+        @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters,
+        @Nullable Output<String> policyDefinitionName,
+        @Nullable Output<Object> policyRule,
+        @Nullable Output<Either<String,PolicyType>> policyType) {
         this.description = description;
         this.displayName = displayName;
         this.metadata = metadata;
-        this.mode = mode == null ? Input.ofNullable("Indexed") : mode;
+        this.mode = mode == null ? Output.ofNullable("Indexed") : mode;
         this.parameters = parameters;
         this.policyDefinitionName = policyDefinitionName;
         this.policyRule = policyRule;
@@ -127,14 +127,14 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PolicyDefinitionArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.metadata = Input.empty();
-        this.mode = Input.empty();
-        this.parameters = Input.empty();
-        this.policyDefinitionName = Input.empty();
-        this.policyRule = Input.empty();
-        this.policyType = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.metadata = Output.empty();
+        this.mode = Output.empty();
+        this.parameters = Output.empty();
+        this.policyDefinitionName = Output.empty();
+        this.policyRule = Output.empty();
+        this.policyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Object> metadata;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
-        private @Nullable Input<String> policyDefinitionName;
-        private @Nullable Input<Object> policyRule;
-        private @Nullable Input<Either<String,PolicyType>> policyType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Object> metadata;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
+        private @Nullable Output<String> policyDefinitionName;
+        private @Nullable Output<Object> policyRule;
+        private @Nullable Output<Either<String,PolicyType>> policyType;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
     	      this.policyType = defaults.policyType;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder policyDefinitionName(@Nullable Input<String> policyDefinitionName) {
+        public Builder policyDefinitionName(@Nullable Output<String> policyDefinitionName) {
             this.policyDefinitionName = policyDefinitionName;
             return this;
         }
 
         public Builder policyDefinitionName(@Nullable String policyDefinitionName) {
-            this.policyDefinitionName = Input.ofNullable(policyDefinitionName);
+            this.policyDefinitionName = Output.ofNullable(policyDefinitionName);
             return this;
         }
 
-        public Builder policyRule(@Nullable Input<Object> policyRule) {
+        public Builder policyRule(@Nullable Output<Object> policyRule) {
             this.policyRule = policyRule;
             return this;
         }
 
         public Builder policyRule(@Nullable Object policyRule) {
-            this.policyRule = Input.ofNullable(policyRule);
+            this.policyRule = Output.ofNullable(policyRule);
             return this;
         }
 
-        public Builder policyType(@Nullable Input<Either<String,PolicyType>> policyType) {
+        public Builder policyType(@Nullable Output<Either<String,PolicyType>> policyType) {
             this.policyType = policyType;
             return this;
         }
 
         public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
-            this.policyType = Input.ofNullable(policyType);
+            this.policyType = Output.ofNullable(policyType);
             return this;
         }
         public PolicyDefinitionArgs build() {

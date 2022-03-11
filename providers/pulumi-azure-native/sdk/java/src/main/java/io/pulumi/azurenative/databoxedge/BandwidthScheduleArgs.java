@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.databoxedge.enums.DayOfWeek;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="days", required=true)
-      private final Input<List<Either<String,DayOfWeek>>> days;
+      private final Output<List<Either<String,DayOfWeek>>> days;
 
-    public Input<List<Either<String,DayOfWeek>>> getDays() {
+    public Output<List<Either<String,DayOfWeek>>> getDays() {
         return this.days;
     }
 
@@ -34,9 +34,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -45,10 +45,10 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rateInMbps", required=true)
-      private final Input<Integer> rateInMbps;
+      private final Output<Integer> rateInMbps;
 
-    public Input<Integer> getRateInMbps() {
+    public Output<Integer> getRateInMbps() {
         return this.rateInMbps;
     }
 
@@ -67,9 +67,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,9 +78,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="start", required=true)
-      private final Input<String> start;
+      private final Output<String> start;
 
-    public Input<String> getStart() {
+    public Output<String> getStart() {
         return this.start;
     }
 
@@ -89,20 +89,20 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stop", required=true)
-      private final Input<String> stop;
+      private final Output<String> stop;
 
-    public Input<String> getStop() {
+    public Output<String> getStop() {
         return this.stop;
     }
 
     public BandwidthScheduleArgs(
-        Input<List<Either<String,DayOfWeek>>> days,
-        Input<String> deviceName,
-        @Nullable Input<String> name,
-        Input<Integer> rateInMbps,
-        Input<String> resourceGroupName,
-        Input<String> start,
-        Input<String> stop) {
+        Output<List<Either<String,DayOfWeek>>> days,
+        Output<String> deviceName,
+        @Nullable Output<String> name,
+        Output<Integer> rateInMbps,
+        Output<String> resourceGroupName,
+        Output<String> start,
+        Output<String> stop) {
         this.days = Objects.requireNonNull(days, "expected parameter 'days' to be non-null");
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.name = name;
@@ -113,13 +113,13 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BandwidthScheduleArgs() {
-        this.days = Input.empty();
-        this.deviceName = Input.empty();
-        this.name = Input.empty();
-        this.rateInMbps = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.start = Input.empty();
-        this.stop = Input.empty();
+        this.days = Output.empty();
+        this.deviceName = Output.empty();
+        this.name = Output.empty();
+        this.rateInMbps = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.start = Output.empty();
+        this.stop = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<List<Either<String,DayOfWeek>>> days;
-        private Input<String> deviceName;
-        private @Nullable Input<String> name;
-        private Input<Integer> rateInMbps;
-        private Input<String> resourceGroupName;
-        private Input<String> start;
-        private Input<String> stop;
+        private Output<List<Either<String,DayOfWeek>>> days;
+        private Output<String> deviceName;
+        private @Nullable Output<String> name;
+        private Output<Integer> rateInMbps;
+        private Output<String> resourceGroupName;
+        private Output<String> start;
+        private Output<String> stop;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     	      this.stop = defaults.stop;
         }
 
-        public Builder days(Input<List<Either<String,DayOfWeek>>> days) {
+        public Builder days(Output<List<Either<String,DayOfWeek>>> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
         public Builder days(List<Either<String,DayOfWeek>> days) {
-            this.days = Input.of(Objects.requireNonNull(days));
+            this.days = Output.of(Objects.requireNonNull(days));
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rateInMbps(Input<Integer> rateInMbps) {
+        public Builder rateInMbps(Output<Integer> rateInMbps) {
             this.rateInMbps = Objects.requireNonNull(rateInMbps);
             return this;
         }
 
         public Builder rateInMbps(Integer rateInMbps) {
-            this.rateInMbps = Input.of(Objects.requireNonNull(rateInMbps));
+            this.rateInMbps = Output.of(Objects.requireNonNull(rateInMbps));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder start(Input<String> start) {
+        public Builder start(Output<String> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
         public Builder start(String start) {
-            this.start = Input.of(Objects.requireNonNull(start));
+            this.start = Output.of(Objects.requireNonNull(start));
             return this;
         }
 
-        public Builder stop(Input<String> stop) {
+        public Builder stop(Output<String> stop) {
             this.stop = Objects.requireNonNull(stop);
             return this;
         }
 
         public Builder stop(String stop) {
-            this.stop = Input.of(Objects.requireNonNull(stop));
+            this.stop = Output.of(Objects.requireNonNull(stop));
             return this;
         }
         public BandwidthScheduleArgs build() {

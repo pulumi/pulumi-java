@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerbi;
 
 import io.pulumi.azurenative.powerbi.inputs.PrivateEndpointConnectionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="azureResourceName")
-      private final @Nullable Input<String> azureResourceName;
+      private final @Nullable Output<String> azureResourceName;
 
-    public Input<String> getAzureResourceName() {
-        return this.azureResourceName == null ? Input.empty() : this.azureResourceName;
+    public Output<String> getAzureResourceName() {
+        return this.azureResourceName == null ? Output.empty() : this.azureResourceName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateEndpointConnections")
-      private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+      private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Input<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
-        return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
+    public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
+        return this.privateEndpointConnections == null ? Output.empty() : this.privateEndpointConnections;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,10 +66,10 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     public PowerBIResourceArgs(
-        @Nullable Input<String> azureResourceName,
-        @Nullable Input<String> location,
-        @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> tenantId) {
+        @Nullable Output<String> azureResourceName,
+        @Nullable Output<String> location,
+        @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> tenantId) {
         this.azureResourceName = azureResourceName;
         this.location = location;
         this.privateEndpointConnections = privateEndpointConnections;
@@ -99,12 +99,12 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PowerBIResourceArgs() {
-        this.azureResourceName = Input.empty();
-        this.location = Input.empty();
-        this.privateEndpointConnections = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.tenantId = Input.empty();
+        this.azureResourceName = Output.empty();
+        this.location = Output.empty();
+        this.privateEndpointConnections = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> azureResourceName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> tenantId;
+        private @Nullable Output<String> azureResourceName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder azureResourceName(@Nullable Input<String> azureResourceName) {
+        public Builder azureResourceName(@Nullable Output<String> azureResourceName) {
             this.azureResourceName = azureResourceName;
             return this;
         }
 
         public Builder azureResourceName(@Nullable String azureResourceName) {
-            this.azureResourceName = Input.ofNullable(azureResourceName);
+            this.azureResourceName = Output.ofNullable(azureResourceName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
-            this.privateEndpointConnections = Input.ofNullable(privateEndpointConnections);
+            this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public PowerBIResourceArgs build() {

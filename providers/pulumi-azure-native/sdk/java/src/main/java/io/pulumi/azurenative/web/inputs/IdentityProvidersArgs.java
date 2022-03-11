@@ -12,7 +12,7 @@ import io.pulumi.azurenative.web.inputs.GitHubArgs;
 import io.pulumi.azurenative.web.inputs.GoogleArgs;
 import io.pulumi.azurenative.web.inputs.LegacyMicrosoftAccountArgs;
 import io.pulumi.azurenative.web.inputs.TwitterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -33,10 +33,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apple")
-      private final @Nullable Input<AppleArgs> apple;
+      private final @Nullable Output<AppleArgs> apple;
 
-    public Input<AppleArgs> getApple() {
-        return this.apple == null ? Input.empty() : this.apple;
+    public Output<AppleArgs> getApple() {
+        return this.apple == null ? Output.empty() : this.apple;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="azureActiveDirectory")
-      private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
+      private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
-    public Input<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
-        return this.azureActiveDirectory == null ? Input.empty() : this.azureActiveDirectory;
+    public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
+        return this.azureActiveDirectory == null ? Output.empty() : this.azureActiveDirectory;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="azureStaticWebApps")
-      private final @Nullable Input<AzureStaticWebAppsArgs> azureStaticWebApps;
+      private final @Nullable Output<AzureStaticWebAppsArgs> azureStaticWebApps;
 
-    public Input<AzureStaticWebAppsArgs> getAzureStaticWebApps() {
-        return this.azureStaticWebApps == null ? Input.empty() : this.azureStaticWebApps;
+    public Output<AzureStaticWebAppsArgs> getAzureStaticWebApps() {
+        return this.azureStaticWebApps == null ? Output.empty() : this.azureStaticWebApps;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customOpenIdConnectProviders")
-      private final @Nullable Input<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
+      private final @Nullable Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
 
-    public Input<Map<String,CustomOpenIdConnectProviderArgs>> getCustomOpenIdConnectProviders() {
-        return this.customOpenIdConnectProviders == null ? Input.empty() : this.customOpenIdConnectProviders;
+    public Output<Map<String,CustomOpenIdConnectProviderArgs>> getCustomOpenIdConnectProviders() {
+        return this.customOpenIdConnectProviders == null ? Output.empty() : this.customOpenIdConnectProviders;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="facebook")
-      private final @Nullable Input<FacebookArgs> facebook;
+      private final @Nullable Output<FacebookArgs> facebook;
 
-    public Input<FacebookArgs> getFacebook() {
-        return this.facebook == null ? Input.empty() : this.facebook;
+    public Output<FacebookArgs> getFacebook() {
+        return this.facebook == null ? Output.empty() : this.facebook;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gitHub")
-      private final @Nullable Input<GitHubArgs> gitHub;
+      private final @Nullable Output<GitHubArgs> gitHub;
 
-    public Input<GitHubArgs> getGitHub() {
-        return this.gitHub == null ? Input.empty() : this.gitHub;
+    public Output<GitHubArgs> getGitHub() {
+        return this.gitHub == null ? Output.empty() : this.gitHub;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="google")
-      private final @Nullable Input<GoogleArgs> google;
+      private final @Nullable Output<GoogleArgs> google;
 
-    public Input<GoogleArgs> getGoogle() {
-        return this.google == null ? Input.empty() : this.google;
+    public Output<GoogleArgs> getGoogle() {
+        return this.google == null ? Output.empty() : this.google;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="legacyMicrosoftAccount")
-      private final @Nullable Input<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
+      private final @Nullable Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
 
-    public Input<LegacyMicrosoftAccountArgs> getLegacyMicrosoftAccount() {
-        return this.legacyMicrosoftAccount == null ? Input.empty() : this.legacyMicrosoftAccount;
+    public Output<LegacyMicrosoftAccountArgs> getLegacyMicrosoftAccount() {
+        return this.legacyMicrosoftAccount == null ? Output.empty() : this.legacyMicrosoftAccount;
     }
 
     /**
@@ -122,22 +122,22 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="twitter")
-      private final @Nullable Input<TwitterArgs> twitter;
+      private final @Nullable Output<TwitterArgs> twitter;
 
-    public Input<TwitterArgs> getTwitter() {
-        return this.twitter == null ? Input.empty() : this.twitter;
+    public Output<TwitterArgs> getTwitter() {
+        return this.twitter == null ? Output.empty() : this.twitter;
     }
 
     public IdentityProvidersArgs(
-        @Nullable Input<AppleArgs> apple,
-        @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory,
-        @Nullable Input<AzureStaticWebAppsArgs> azureStaticWebApps,
-        @Nullable Input<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders,
-        @Nullable Input<FacebookArgs> facebook,
-        @Nullable Input<GitHubArgs> gitHub,
-        @Nullable Input<GoogleArgs> google,
-        @Nullable Input<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount,
-        @Nullable Input<TwitterArgs> twitter) {
+        @Nullable Output<AppleArgs> apple,
+        @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory,
+        @Nullable Output<AzureStaticWebAppsArgs> azureStaticWebApps,
+        @Nullable Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders,
+        @Nullable Output<FacebookArgs> facebook,
+        @Nullable Output<GitHubArgs> gitHub,
+        @Nullable Output<GoogleArgs> google,
+        @Nullable Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount,
+        @Nullable Output<TwitterArgs> twitter) {
         this.apple = apple;
         this.azureActiveDirectory = azureActiveDirectory;
         this.azureStaticWebApps = azureStaticWebApps;
@@ -150,15 +150,15 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
     }
 
     private IdentityProvidersArgs() {
-        this.apple = Input.empty();
-        this.azureActiveDirectory = Input.empty();
-        this.azureStaticWebApps = Input.empty();
-        this.customOpenIdConnectProviders = Input.empty();
-        this.facebook = Input.empty();
-        this.gitHub = Input.empty();
-        this.google = Input.empty();
-        this.legacyMicrosoftAccount = Input.empty();
-        this.twitter = Input.empty();
+        this.apple = Output.empty();
+        this.azureActiveDirectory = Output.empty();
+        this.azureStaticWebApps = Output.empty();
+        this.customOpenIdConnectProviders = Output.empty();
+        this.facebook = Output.empty();
+        this.gitHub = Output.empty();
+        this.google = Output.empty();
+        this.legacyMicrosoftAccount = Output.empty();
+        this.twitter = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,15 +170,15 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<AppleArgs> apple;
-        private @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
-        private @Nullable Input<AzureStaticWebAppsArgs> azureStaticWebApps;
-        private @Nullable Input<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
-        private @Nullable Input<FacebookArgs> facebook;
-        private @Nullable Input<GitHubArgs> gitHub;
-        private @Nullable Input<GoogleArgs> google;
-        private @Nullable Input<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
-        private @Nullable Input<TwitterArgs> twitter;
+        private @Nullable Output<AppleArgs> apple;
+        private @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
+        private @Nullable Output<AzureStaticWebAppsArgs> azureStaticWebApps;
+        private @Nullable Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
+        private @Nullable Output<FacebookArgs> facebook;
+        private @Nullable Output<GitHubArgs> gitHub;
+        private @Nullable Output<GoogleArgs> google;
+        private @Nullable Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
+        private @Nullable Output<TwitterArgs> twitter;
 
         public Builder() {
     	      // Empty
@@ -197,93 +197,93 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
     	      this.twitter = defaults.twitter;
         }
 
-        public Builder apple(@Nullable Input<AppleArgs> apple) {
+        public Builder apple(@Nullable Output<AppleArgs> apple) {
             this.apple = apple;
             return this;
         }
 
         public Builder apple(@Nullable AppleArgs apple) {
-            this.apple = Input.ofNullable(apple);
+            this.apple = Output.ofNullable(apple);
             return this;
         }
 
-        public Builder azureActiveDirectory(@Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
 
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
-            this.azureActiveDirectory = Input.ofNullable(azureActiveDirectory);
+            this.azureActiveDirectory = Output.ofNullable(azureActiveDirectory);
             return this;
         }
 
-        public Builder azureStaticWebApps(@Nullable Input<AzureStaticWebAppsArgs> azureStaticWebApps) {
+        public Builder azureStaticWebApps(@Nullable Output<AzureStaticWebAppsArgs> azureStaticWebApps) {
             this.azureStaticWebApps = azureStaticWebApps;
             return this;
         }
 
         public Builder azureStaticWebApps(@Nullable AzureStaticWebAppsArgs azureStaticWebApps) {
-            this.azureStaticWebApps = Input.ofNullable(azureStaticWebApps);
+            this.azureStaticWebApps = Output.ofNullable(azureStaticWebApps);
             return this;
         }
 
-        public Builder customOpenIdConnectProviders(@Nullable Input<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders) {
+        public Builder customOpenIdConnectProviders(@Nullable Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders) {
             this.customOpenIdConnectProviders = customOpenIdConnectProviders;
             return this;
         }
 
         public Builder customOpenIdConnectProviders(@Nullable Map<String,CustomOpenIdConnectProviderArgs> customOpenIdConnectProviders) {
-            this.customOpenIdConnectProviders = Input.ofNullable(customOpenIdConnectProviders);
+            this.customOpenIdConnectProviders = Output.ofNullable(customOpenIdConnectProviders);
             return this;
         }
 
-        public Builder facebook(@Nullable Input<FacebookArgs> facebook) {
+        public Builder facebook(@Nullable Output<FacebookArgs> facebook) {
             this.facebook = facebook;
             return this;
         }
 
         public Builder facebook(@Nullable FacebookArgs facebook) {
-            this.facebook = Input.ofNullable(facebook);
+            this.facebook = Output.ofNullable(facebook);
             return this;
         }
 
-        public Builder gitHub(@Nullable Input<GitHubArgs> gitHub) {
+        public Builder gitHub(@Nullable Output<GitHubArgs> gitHub) {
             this.gitHub = gitHub;
             return this;
         }
 
         public Builder gitHub(@Nullable GitHubArgs gitHub) {
-            this.gitHub = Input.ofNullable(gitHub);
+            this.gitHub = Output.ofNullable(gitHub);
             return this;
         }
 
-        public Builder google(@Nullable Input<GoogleArgs> google) {
+        public Builder google(@Nullable Output<GoogleArgs> google) {
             this.google = google;
             return this;
         }
 
         public Builder google(@Nullable GoogleArgs google) {
-            this.google = Input.ofNullable(google);
+            this.google = Output.ofNullable(google);
             return this;
         }
 
-        public Builder legacyMicrosoftAccount(@Nullable Input<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount) {
+        public Builder legacyMicrosoftAccount(@Nullable Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount) {
             this.legacyMicrosoftAccount = legacyMicrosoftAccount;
             return this;
         }
 
         public Builder legacyMicrosoftAccount(@Nullable LegacyMicrosoftAccountArgs legacyMicrosoftAccount) {
-            this.legacyMicrosoftAccount = Input.ofNullable(legacyMicrosoftAccount);
+            this.legacyMicrosoftAccount = Output.ofNullable(legacyMicrosoftAccount);
             return this;
         }
 
-        public Builder twitter(@Nullable Input<TwitterArgs> twitter) {
+        public Builder twitter(@Nullable Output<TwitterArgs> twitter) {
             this.twitter = twitter;
             return this;
         }
 
         public Builder twitter(@Nullable TwitterArgs twitter) {
-            this.twitter = Input.ofNullable(twitter);
+            this.twitter = Output.ofNullable(twitter);
             return this;
         }
         public IdentityProvidersArgs build() {

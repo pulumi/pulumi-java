@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
     public static final ClusterLoggingPropertiesArgs Empty = new ClusterLoggingPropertiesArgs();
 
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="s3KeyPrefix")
-      private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Output<String> s3KeyPrefix;
 
-    public Input<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
+    public Output<String> getS3KeyPrefix() {
+        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
     }
 
     public ClusterLoggingPropertiesArgs(
-        Input<String> bucketName,
-        @Nullable Input<String> s3KeyPrefix) {
+        Output<String> bucketName,
+        @Nullable Output<String> s3KeyPrefix) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.s3KeyPrefix = s3KeyPrefix;
     }
 
     private ClusterLoggingPropertiesArgs() {
-        this.bucketName = Input.empty();
-        this.s3KeyPrefix = Input.empty();
+        this.bucketName = Output.empty();
+        this.s3KeyPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<String> s3KeyPrefix;
+        private Output<String> bucketName;
+        private @Nullable Output<String> s3KeyPrefix;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
     	      this.s3KeyPrefix = defaults.s3KeyPrefix;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder s3KeyPrefix(@Nullable Input<String> s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
 
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Input.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
         }
         public ClusterLoggingPropertiesArgs build() {

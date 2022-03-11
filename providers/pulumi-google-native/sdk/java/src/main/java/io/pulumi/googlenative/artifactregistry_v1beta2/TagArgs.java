@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     public static final TagArgs Empty = new TagArgs();
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -26,38 +26,38 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="packageId", required=true)
-      private final Input<String> packageId;
+      private final Output<String> packageId;
 
-    public Input<String> getPackageId() {
+    public Output<String> getPackageId() {
         return this.packageId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="repositoryId", required=true)
-      private final Input<String> repositoryId;
+      private final Output<String> repositoryId;
 
-    public Input<String> getRepositoryId() {
+    public Output<String> getRepositoryId() {
         return this.repositoryId;
     }
 
     @InputImport(name="tagId")
-      private final @Nullable Input<String> tagId;
+      private final @Nullable Output<String> tagId;
 
-    public Input<String> getTagId() {
-        return this.tagId == null ? Input.empty() : this.tagId;
+    public Output<String> getTagId() {
+        return this.tagId == null ? Output.empty() : this.tagId;
     }
 
     /**
@@ -65,20 +65,20 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public TagArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> packageId,
-        @Nullable Input<String> project,
-        Input<String> repositoryId,
-        @Nullable Input<String> tagId,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> packageId,
+        @Nullable Output<String> project,
+        Output<String> repositoryId,
+        @Nullable Output<String> tagId,
+        @Nullable Output<String> version) {
         this.location = location;
         this.name = name;
         this.packageId = Objects.requireNonNull(packageId, "expected parameter 'packageId' to be non-null");
@@ -89,13 +89,13 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagArgs() {
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.packageId = Input.empty();
-        this.project = Input.empty();
-        this.repositoryId = Input.empty();
-        this.tagId = Input.empty();
-        this.version = Input.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.packageId = Output.empty();
+        this.project = Output.empty();
+        this.repositoryId = Output.empty();
+        this.tagId = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,13 +107,13 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> packageId;
-        private @Nullable Input<String> project;
-        private Input<String> repositoryId;
-        private @Nullable Input<String> tagId;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> packageId;
+        private @Nullable Output<String> project;
+        private Output<String> repositoryId;
+        private @Nullable Output<String> tagId;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -130,73 +130,73 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder packageId(Input<String> packageId) {
+        public Builder packageId(Output<String> packageId) {
             this.packageId = Objects.requireNonNull(packageId);
             return this;
         }
 
         public Builder packageId(String packageId) {
-            this.packageId = Input.of(Objects.requireNonNull(packageId));
+            this.packageId = Output.of(Objects.requireNonNull(packageId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder repositoryId(Input<String> repositoryId) {
+        public Builder repositoryId(Output<String> repositoryId) {
             this.repositoryId = Objects.requireNonNull(repositoryId);
             return this;
         }
 
         public Builder repositoryId(String repositoryId) {
-            this.repositoryId = Input.of(Objects.requireNonNull(repositoryId));
+            this.repositoryId = Output.of(Objects.requireNonNull(repositoryId));
             return this;
         }
 
-        public Builder tagId(@Nullable Input<String> tagId) {
+        public Builder tagId(@Nullable Output<String> tagId) {
             this.tagId = tagId;
             return this;
         }
 
         public Builder tagId(@Nullable String tagId) {
-            this.tagId = Input.ofNullable(tagId);
+            this.tagId = Output.ofNullable(tagId);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public TagArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.awsnative.cloudformation.enums.PublicTypeVersionType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logDeliveryBucket")
-      private final @Nullable Input<String> logDeliveryBucket;
+      private final @Nullable Output<String> logDeliveryBucket;
 
-    public Input<String> getLogDeliveryBucket() {
-        return this.logDeliveryBucket == null ? Input.empty() : this.logDeliveryBucket;
+    public Output<String> getLogDeliveryBucket() {
+        return this.logDeliveryBucket == null ? Output.empty() : this.logDeliveryBucket;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicVersionNumber")
-      private final @Nullable Input<String> publicVersionNumber;
+      private final @Nullable Output<String> publicVersionNumber;
 
-    public Input<String> getPublicVersionNumber() {
-        return this.publicVersionNumber == null ? Input.empty() : this.publicVersionNumber;
+    public Output<String> getPublicVersionNumber() {
+        return this.publicVersionNumber == null ? Output.empty() : this.publicVersionNumber;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<PublicTypeVersionType> type;
+      private final @Nullable Output<PublicTypeVersionType> type;
 
-    public Input<PublicTypeVersionType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<PublicTypeVersionType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="typeName")
-      private final @Nullable Input<String> typeName;
+      private final @Nullable Output<String> typeName;
 
-    public Input<String> getTypeName() {
-        return this.typeName == null ? Input.empty() : this.typeName;
+    public Output<String> getTypeName() {
+        return this.typeName == null ? Output.empty() : this.typeName;
     }
 
     public PublicTypeVersionArgs(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> logDeliveryBucket,
-        @Nullable Input<String> publicVersionNumber,
-        @Nullable Input<PublicTypeVersionType> type,
-        @Nullable Input<String> typeName) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> logDeliveryBucket,
+        @Nullable Output<String> publicVersionNumber,
+        @Nullable Output<PublicTypeVersionType> type,
+        @Nullable Output<String> typeName) {
         this.arn = arn;
         this.logDeliveryBucket = logDeliveryBucket;
         this.publicVersionNumber = publicVersionNumber;
@@ -86,11 +86,11 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PublicTypeVersionArgs() {
-        this.arn = Input.empty();
-        this.logDeliveryBucket = Input.empty();
-        this.publicVersionNumber = Input.empty();
-        this.type = Input.empty();
-        this.typeName = Input.empty();
+        this.arn = Output.empty();
+        this.logDeliveryBucket = Output.empty();
+        this.publicVersionNumber = Output.empty();
+        this.type = Output.empty();
+        this.typeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> logDeliveryBucket;
-        private @Nullable Input<String> publicVersionNumber;
-        private @Nullable Input<PublicTypeVersionType> type;
-        private @Nullable Input<String> typeName;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> logDeliveryBucket;
+        private @Nullable Output<String> publicVersionNumber;
+        private @Nullable Output<PublicTypeVersionType> type;
+        private @Nullable Output<String> typeName;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder logDeliveryBucket(@Nullable Input<String> logDeliveryBucket) {
+        public Builder logDeliveryBucket(@Nullable Output<String> logDeliveryBucket) {
             this.logDeliveryBucket = logDeliveryBucket;
             return this;
         }
 
         public Builder logDeliveryBucket(@Nullable String logDeliveryBucket) {
-            this.logDeliveryBucket = Input.ofNullable(logDeliveryBucket);
+            this.logDeliveryBucket = Output.ofNullable(logDeliveryBucket);
             return this;
         }
 
-        public Builder publicVersionNumber(@Nullable Input<String> publicVersionNumber) {
+        public Builder publicVersionNumber(@Nullable Output<String> publicVersionNumber) {
             this.publicVersionNumber = publicVersionNumber;
             return this;
         }
 
         public Builder publicVersionNumber(@Nullable String publicVersionNumber) {
-            this.publicVersionNumber = Input.ofNullable(publicVersionNumber);
+            this.publicVersionNumber = Output.ofNullable(publicVersionNumber);
             return this;
         }
 
-        public Builder type(@Nullable Input<PublicTypeVersionType> type) {
+        public Builder type(@Nullable Output<PublicTypeVersionType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable PublicTypeVersionType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder typeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Input.ofNullable(typeName);
+            this.typeName = Output.ofNullable(typeName);
             return this;
         }
         public PublicTypeVersionArgs build() {

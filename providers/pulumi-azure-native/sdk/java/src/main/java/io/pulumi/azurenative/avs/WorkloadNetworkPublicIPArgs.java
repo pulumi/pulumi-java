@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="numberOfPublicIPs")
-      private final @Nullable Input<Double> numberOfPublicIPs;
+      private final @Nullable Output<Double> numberOfPublicIPs;
 
-    public Input<Double> getNumberOfPublicIPs() {
-        return this.numberOfPublicIPs == null ? Input.empty() : this.numberOfPublicIPs;
+    public Output<Double> getNumberOfPublicIPs() {
+        return this.numberOfPublicIPs == null ? Output.empty() : this.numberOfPublicIPs;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -53,10 +53,10 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publicIPId")
-      private final @Nullable Input<String> publicIPId;
+      private final @Nullable Output<String> publicIPId;
 
-    public Input<String> getPublicIPId() {
-        return this.publicIPId == null ? Input.empty() : this.publicIPId;
+    public Output<String> getPublicIPId() {
+        return this.publicIPId == null ? Output.empty() : this.publicIPId;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public WorkloadNetworkPublicIPArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<Double> numberOfPublicIPs,
-        Input<String> privateCloudName,
-        @Nullable Input<String> publicIPId,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<Double> numberOfPublicIPs,
+        Output<String> privateCloudName,
+        @Nullable Output<String> publicIPId,
+        Output<String> resourceGroupName) {
         this.displayName = displayName;
         this.numberOfPublicIPs = numberOfPublicIPs;
         this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
@@ -84,11 +84,11 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
     }
 
     private WorkloadNetworkPublicIPArgs() {
-        this.displayName = Input.empty();
-        this.numberOfPublicIPs = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.publicIPId = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.displayName = Output.empty();
+        this.numberOfPublicIPs = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.publicIPId = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Double> numberOfPublicIPs;
-        private Input<String> privateCloudName;
-        private @Nullable Input<String> publicIPId;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Double> numberOfPublicIPs;
+        private Output<String> privateCloudName;
+        private @Nullable Output<String> publicIPId;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder numberOfPublicIPs(@Nullable Input<Double> numberOfPublicIPs) {
+        public Builder numberOfPublicIPs(@Nullable Output<Double> numberOfPublicIPs) {
             this.numberOfPublicIPs = numberOfPublicIPs;
             return this;
         }
 
         public Builder numberOfPublicIPs(@Nullable Double numberOfPublicIPs) {
-            this.numberOfPublicIPs = Input.ofNullable(numberOfPublicIPs);
+            this.numberOfPublicIPs = Output.ofNullable(numberOfPublicIPs);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder publicIPId(@Nullable Input<String> publicIPId) {
+        public Builder publicIPId(@Nullable Output<String> publicIPId) {
             this.publicIPId = publicIPId;
             return this;
         }
 
         public Builder publicIPId(@Nullable String publicIPId) {
-            this.publicIPId = Input.ofNullable(publicIPId);
+            this.publicIPId = Output.ofNullable(publicIPId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public WorkloadNetworkPublicIPArgs build() {

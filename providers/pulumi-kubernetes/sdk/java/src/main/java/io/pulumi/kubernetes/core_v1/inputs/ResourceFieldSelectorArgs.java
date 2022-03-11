@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="containerName")
-      private final @Nullable Input<String> containerName;
+      private final @Nullable Output<String> containerName;
 
-    public Input<String> getContainerName() {
-        return this.containerName == null ? Input.empty() : this.containerName;
+    public Output<String> getContainerName() {
+        return this.containerName == null ? Output.empty() : this.containerName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="divisor")
-      private final @Nullable Input<String> divisor;
+      private final @Nullable Output<String> divisor;
 
-    public Input<String> getDivisor() {
-        return this.divisor == null ? Input.empty() : this.divisor;
+    public Output<String> getDivisor() {
+        return this.divisor == null ? Output.empty() : this.divisor;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resource", required=true)
-      private final Input<String> resource;
+      private final Output<String> resource;
 
-    public Input<String> getResource() {
+    public Output<String> getResource() {
         return this.resource;
     }
 
     public ResourceFieldSelectorArgs(
-        @Nullable Input<String> containerName,
-        @Nullable Input<String> divisor,
-        Input<String> resource) {
+        @Nullable Output<String> containerName,
+        @Nullable Output<String> divisor,
+        Output<String> resource) {
         this.containerName = containerName;
         this.divisor = divisor;
         this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
     }
 
     private ResourceFieldSelectorArgs() {
-        this.containerName = Input.empty();
-        this.divisor = Input.empty();
-        this.resource = Input.empty();
+        this.containerName = Output.empty();
+        this.divisor = Output.empty();
+        this.resource = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerName;
-        private @Nullable Input<String> divisor;
-        private Input<String> resource;
+        private @Nullable Output<String> containerName;
+        private @Nullable Output<String> divisor;
+        private Output<String> resource;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
     	      this.resource = defaults.resource;
         }
 
-        public Builder containerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Input.ofNullable(containerName);
+            this.containerName = Output.ofNullable(containerName);
             return this;
         }
 
-        public Builder divisor(@Nullable Input<String> divisor) {
+        public Builder divisor(@Nullable Output<String> divisor) {
             this.divisor = divisor;
             return this;
         }
 
         public Builder divisor(@Nullable String divisor) {
-            this.divisor = Input.ofNullable(divisor);
+            this.divisor = Output.ofNullable(divisor);
             return this;
         }
 
-        public Builder resource(Input<String> resource) {
+        public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
         public Builder resource(String resource) {
-            this.resource = Input.of(Objects.requireNonNull(resource));
+            this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
         public ResourceFieldSelectorArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachedTo")
-      private final @Nullable Input<String> attachedTo;
+      private final @Nullable Output<String> attachedTo;
 
-    public Input<String> getAttachedTo() {
-        return this.attachedTo == null ? Input.empty() : this.attachedTo;
+    public Output<String> getAttachedTo() {
+        return this.attachedTo == null ? Output.empty() : this.attachedTo;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticIpName")
-      private final @Nullable Input<String> staticIpName;
+      private final @Nullable Output<String> staticIpName;
 
-    public Input<String> getStaticIpName() {
-        return this.staticIpName == null ? Input.empty() : this.staticIpName;
+    public Output<String> getStaticIpName() {
+        return this.staticIpName == null ? Output.empty() : this.staticIpName;
     }
 
     public StaticIpArgs(
-        @Nullable Input<String> attachedTo,
-        @Nullable Input<String> staticIpName) {
+        @Nullable Output<String> attachedTo,
+        @Nullable Output<String> staticIpName) {
         this.attachedTo = attachedTo;
         this.staticIpName = staticIpName;
     }
 
     private StaticIpArgs() {
-        this.attachedTo = Input.empty();
-        this.staticIpName = Input.empty();
+        this.attachedTo = Output.empty();
+        this.staticIpName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attachedTo;
-        private @Nullable Input<String> staticIpName;
+        private @Nullable Output<String> attachedTo;
+        private @Nullable Output<String> staticIpName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
     	      this.staticIpName = defaults.staticIpName;
         }
 
-        public Builder attachedTo(@Nullable Input<String> attachedTo) {
+        public Builder attachedTo(@Nullable Output<String> attachedTo) {
             this.attachedTo = attachedTo;
             return this;
         }
 
         public Builder attachedTo(@Nullable String attachedTo) {
-            this.attachedTo = Input.ofNullable(attachedTo);
+            this.attachedTo = Output.ofNullable(attachedTo);
             return this;
         }
 
-        public Builder staticIpName(@Nullable Input<String> staticIpName) {
+        public Builder staticIpName(@Nullable Output<String> staticIpName) {
             this.staticIpName = staticIpName;
             return this;
         }
 
         public Builder staticIpName(@Nullable String staticIpName) {
-            this.staticIpName = Input.ofNullable(staticIpName);
+            this.staticIpName = Output.ofNullable(staticIpName);
             return this;
         }
         public StaticIpArgs build() {

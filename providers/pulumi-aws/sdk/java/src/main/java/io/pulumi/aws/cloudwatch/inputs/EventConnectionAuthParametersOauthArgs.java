@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthClientParametersArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthOauthHttpParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="authorizationEndpoint", required=true)
-      private final Input<String> authorizationEndpoint;
+      private final Output<String> authorizationEndpoint;
 
-    public Input<String> getAuthorizationEndpoint() {
+    public Output<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
@@ -32,10 +32,10 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="clientParameters")
-      private final @Nullable Input<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters;
+      private final @Nullable Output<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters;
 
-    public Input<EventConnectionAuthParametersOauthClientParametersArgs> getClientParameters() {
-        return this.clientParameters == null ? Input.empty() : this.clientParameters;
+    public Output<EventConnectionAuthParametersOauthClientParametersArgs> getClientParameters() {
+        return this.clientParameters == null ? Output.empty() : this.clientParameters;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpMethod", required=true)
-      private final Input<String> httpMethod;
+      private final Output<String> httpMethod;
 
-    public Input<String> getHttpMethod() {
+    public Output<String> getHttpMethod() {
         return this.httpMethod;
     }
 
@@ -54,17 +54,17 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="oauthHttpParameters", required=true)
-      private final Input<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters;
+      private final Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters;
 
-    public Input<EventConnectionAuthParametersOauthOauthHttpParametersArgs> getOauthHttpParameters() {
+    public Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> getOauthHttpParameters() {
         return this.oauthHttpParameters;
     }
 
     public EventConnectionAuthParametersOauthArgs(
-        Input<String> authorizationEndpoint,
-        @Nullable Input<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters,
-        Input<String> httpMethod,
-        Input<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters) {
+        Output<String> authorizationEndpoint,
+        @Nullable Output<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters,
+        Output<String> httpMethod,
+        Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters) {
         this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
         this.clientParameters = clientParameters;
         this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
@@ -72,10 +72,10 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
     }
 
     private EventConnectionAuthParametersOauthArgs() {
-        this.authorizationEndpoint = Input.empty();
-        this.clientParameters = Input.empty();
-        this.httpMethod = Input.empty();
-        this.oauthHttpParameters = Input.empty();
+        this.authorizationEndpoint = Output.empty();
+        this.clientParameters = Output.empty();
+        this.httpMethod = Output.empty();
+        this.oauthHttpParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> authorizationEndpoint;
-        private @Nullable Input<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters;
-        private Input<String> httpMethod;
-        private Input<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters;
+        private Output<String> authorizationEndpoint;
+        private @Nullable Output<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters;
+        private Output<String> httpMethod;
+        private Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
     	      this.oauthHttpParameters = defaults.oauthHttpParameters;
         }
 
-        public Builder authorizationEndpoint(Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(Output<String> authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
         public Builder authorizationEndpoint(String authorizationEndpoint) {
-            this.authorizationEndpoint = Input.of(Objects.requireNonNull(authorizationEndpoint));
+            this.authorizationEndpoint = Output.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
 
-        public Builder clientParameters(@Nullable Input<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters) {
+        public Builder clientParameters(@Nullable Output<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters) {
             this.clientParameters = clientParameters;
             return this;
         }
 
         public Builder clientParameters(@Nullable EventConnectionAuthParametersOauthClientParametersArgs clientParameters) {
-            this.clientParameters = Input.ofNullable(clientParameters);
+            this.clientParameters = Output.ofNullable(clientParameters);
             return this;
         }
 
-        public Builder httpMethod(Input<String> httpMethod) {
+        public Builder httpMethod(Output<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
+            this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder oauthHttpParameters(Input<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters) {
+        public Builder oauthHttpParameters(Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters) {
             this.oauthHttpParameters = Objects.requireNonNull(oauthHttpParameters);
             return this;
         }
 
         public Builder oauthHttpParameters(EventConnectionAuthParametersOauthOauthHttpParametersArgs oauthHttpParameters) {
-            this.oauthHttpParameters = Input.of(Objects.requireNonNull(oauthHttpParameters));
+            this.oauthHttpParameters = Output.of(Objects.requireNonNull(oauthHttpParameters));
             return this;
         }
         public EventConnectionAuthParametersOauthArgs build() {

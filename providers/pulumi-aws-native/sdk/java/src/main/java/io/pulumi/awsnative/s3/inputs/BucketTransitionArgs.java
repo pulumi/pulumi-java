@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketTransitionStorageClass;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,39 +21,39 @@ public final class BucketTransitionArgs extends io.pulumi.resources.ResourceArgs
     public static final BucketTransitionArgs Empty = new BucketTransitionArgs();
 
     @InputImport(name="storageClass", required=true)
-      private final Input<BucketTransitionStorageClass> storageClass;
+      private final Output<BucketTransitionStorageClass> storageClass;
 
-    public Input<BucketTransitionStorageClass> getStorageClass() {
+    public Output<BucketTransitionStorageClass> getStorageClass() {
         return this.storageClass;
     }
 
     @InputImport(name="transitionDate")
-      private final @Nullable Input<String> transitionDate;
+      private final @Nullable Output<String> transitionDate;
 
-    public Input<String> getTransitionDate() {
-        return this.transitionDate == null ? Input.empty() : this.transitionDate;
+    public Output<String> getTransitionDate() {
+        return this.transitionDate == null ? Output.empty() : this.transitionDate;
     }
 
     @InputImport(name="transitionInDays")
-      private final @Nullable Input<Integer> transitionInDays;
+      private final @Nullable Output<Integer> transitionInDays;
 
-    public Input<Integer> getTransitionInDays() {
-        return this.transitionInDays == null ? Input.empty() : this.transitionInDays;
+    public Output<Integer> getTransitionInDays() {
+        return this.transitionInDays == null ? Output.empty() : this.transitionInDays;
     }
 
     public BucketTransitionArgs(
-        Input<BucketTransitionStorageClass> storageClass,
-        @Nullable Input<String> transitionDate,
-        @Nullable Input<Integer> transitionInDays) {
+        Output<BucketTransitionStorageClass> storageClass,
+        @Nullable Output<String> transitionDate,
+        @Nullable Output<Integer> transitionInDays) {
         this.storageClass = Objects.requireNonNull(storageClass, "expected parameter 'storageClass' to be non-null");
         this.transitionDate = transitionDate;
         this.transitionInDays = transitionInDays;
     }
 
     private BucketTransitionArgs() {
-        this.storageClass = Input.empty();
-        this.transitionDate = Input.empty();
-        this.transitionInDays = Input.empty();
+        this.storageClass = Output.empty();
+        this.transitionDate = Output.empty();
+        this.transitionInDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,9 +65,9 @@ public final class BucketTransitionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<BucketTransitionStorageClass> storageClass;
-        private @Nullable Input<String> transitionDate;
-        private @Nullable Input<Integer> transitionInDays;
+        private Output<BucketTransitionStorageClass> storageClass;
+        private @Nullable Output<String> transitionDate;
+        private @Nullable Output<Integer> transitionInDays;
 
         public Builder() {
     	      // Empty
@@ -80,33 +80,33 @@ public final class BucketTransitionArgs extends io.pulumi.resources.ResourceArgs
     	      this.transitionInDays = defaults.transitionInDays;
         }
 
-        public Builder storageClass(Input<BucketTransitionStorageClass> storageClass) {
+        public Builder storageClass(Output<BucketTransitionStorageClass> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
         public Builder storageClass(BucketTransitionStorageClass storageClass) {
-            this.storageClass = Input.of(Objects.requireNonNull(storageClass));
+            this.storageClass = Output.of(Objects.requireNonNull(storageClass));
             return this;
         }
 
-        public Builder transitionDate(@Nullable Input<String> transitionDate) {
+        public Builder transitionDate(@Nullable Output<String> transitionDate) {
             this.transitionDate = transitionDate;
             return this;
         }
 
         public Builder transitionDate(@Nullable String transitionDate) {
-            this.transitionDate = Input.ofNullable(transitionDate);
+            this.transitionDate = Output.ofNullable(transitionDate);
             return this;
         }
 
-        public Builder transitionInDays(@Nullable Input<Integer> transitionInDays) {
+        public Builder transitionInDays(@Nullable Output<Integer> transitionInDays) {
             this.transitionInDays = transitionInDays;
             return this;
         }
 
         public Builder transitionInDays(@Nullable Integer transitionInDays) {
-            this.transitionInDays = Input.ofNullable(transitionInDays);
+            this.transitionInDays = Output.ofNullable(transitionInDays);
             return this;
         }
         public BucketTransitionArgs build() {

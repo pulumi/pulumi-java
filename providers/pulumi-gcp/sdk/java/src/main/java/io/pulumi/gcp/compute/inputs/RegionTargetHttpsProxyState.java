@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="proxyId")
-      private final @Nullable Input<Integer> proxyId;
+      private final @Nullable Output<Integer> proxyId;
 
-    public Input<Integer> getProxyId() {
-        return this.proxyId == null ? Input.empty() : this.proxyId;
+    public Output<Integer> getProxyId() {
+        return this.proxyId == null ? Output.empty() : this.proxyId;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sslCertificates")
-      private final @Nullable Input<List<String>> sslCertificates;
+      private final @Nullable Output<List<String>> sslCertificates;
 
-    public Input<List<String>> getSslCertificates() {
-        return this.sslCertificates == null ? Input.empty() : this.sslCertificates;
+    public Output<List<String>> getSslCertificates() {
+        return this.sslCertificates == null ? Output.empty() : this.sslCertificates;
     }
 
     /**
@@ -120,22 +120,22 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="urlMap")
-      private final @Nullable Input<String> urlMap;
+      private final @Nullable Output<String> urlMap;
 
-    public Input<String> getUrlMap() {
-        return this.urlMap == null ? Input.empty() : this.urlMap;
+    public Output<String> getUrlMap() {
+        return this.urlMap == null ? Output.empty() : this.urlMap;
     }
 
     public RegionTargetHttpsProxyState(
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<Integer> proxyId,
-        @Nullable Input<String> region,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<List<String>> sslCertificates,
-        @Nullable Input<String> urlMap) {
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<Integer> proxyId,
+        @Nullable Output<String> region,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<List<String>> sslCertificates,
+        @Nullable Output<String> urlMap) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.name = name;
@@ -148,15 +148,15 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
     }
 
     private RegionTargetHttpsProxyState() {
-        this.creationTimestamp = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.proxyId = Input.empty();
-        this.region = Input.empty();
-        this.selfLink = Input.empty();
-        this.sslCertificates = Input.empty();
-        this.urlMap = Input.empty();
+        this.creationTimestamp = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.proxyId = Output.empty();
+        this.region = Output.empty();
+        this.selfLink = Output.empty();
+        this.sslCertificates = Output.empty();
+        this.urlMap = Output.empty();
     }
 
     public static Builder builder() {
@@ -168,15 +168,15 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Integer> proxyId;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<List<String>> sslCertificates;
-        private @Nullable Input<String> urlMap;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Integer> proxyId;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<List<String>> sslCertificates;
+        private @Nullable Output<String> urlMap;
 
         public Builder() {
     	      // Empty
@@ -195,93 +195,93 @@ public final class RegionTargetHttpsProxyState extends io.pulumi.resources.Resou
     	      this.urlMap = defaults.urlMap;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder proxyId(@Nullable Input<Integer> proxyId) {
+        public Builder proxyId(@Nullable Output<Integer> proxyId) {
             this.proxyId = proxyId;
             return this;
         }
 
         public Builder proxyId(@Nullable Integer proxyId) {
-            this.proxyId = Input.ofNullable(proxyId);
+            this.proxyId = Output.ofNullable(proxyId);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder sslCertificates(@Nullable Input<List<String>> sslCertificates) {
+        public Builder sslCertificates(@Nullable Output<List<String>> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
 
         public Builder sslCertificates(@Nullable List<String> sslCertificates) {
-            this.sslCertificates = Input.ofNullable(sslCertificates);
+            this.sslCertificates = Output.ofNullable(sslCertificates);
             return this;
         }
 
-        public Builder urlMap(@Nullable Input<String> urlMap) {
+        public Builder urlMap(@Nullable Output<String> urlMap) {
             this.urlMap = urlMap;
             return this;
         }
 
         public Builder urlMap(@Nullable String urlMap) {
-            this.urlMap = Input.ofNullable(urlMap);
+            this.urlMap = Output.ofNullable(urlMap);
             return this;
         }
         public RegionTargetHttpsProxyState build() {

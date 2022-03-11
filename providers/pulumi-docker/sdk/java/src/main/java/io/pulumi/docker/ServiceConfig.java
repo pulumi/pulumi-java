@@ -3,7 +3,6 @@
 
 package io.pulumi.docker;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class ServiceConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceConfig(String name, ServiceConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("docker:index/serviceConfig:ServiceConfig", name, args == null ? ServiceConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("docker:index/serviceConfig:ServiceConfig", name, args == null ? ServiceConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServiceConfig(String name, Input<String> id, @Nullable ServiceConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServiceConfig(String name, Output<String> id, @Nullable ServiceConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("docker:index/serviceConfig:ServiceConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class ServiceConfig extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceConfig get(String name, Input<String> id, @Nullable ServiceConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceConfig get(String name, Output<String> id, @Nullable ServiceConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceConfig(name, id, state, options);
     }
 }

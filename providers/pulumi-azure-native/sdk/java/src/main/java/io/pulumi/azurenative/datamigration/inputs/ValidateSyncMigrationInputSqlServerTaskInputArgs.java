@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbSyncDatabaseInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-      private final Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
+      private final Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
 
-    public Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> getSelectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -35,9 +35,9 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-      private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
+      private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Input<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -46,25 +46,25 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-      private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
+      private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Input<SqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
     public ValidateSyncMigrationInputSqlServerTaskInputArgs(
-        Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases,
-        Input<SqlConnectionInfoArgs> sourceConnectionInfo,
-        Input<SqlConnectionInfoArgs> targetConnectionInfo) {
+        Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases,
+        Output<SqlConnectionInfoArgs> sourceConnectionInfo,
+        Output<SqlConnectionInfoArgs> targetConnectionInfo) {
         this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
         this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
     }
 
     private ValidateSyncMigrationInputSqlServerTaskInputArgs() {
-        this.selectedDatabases = Input.empty();
-        this.sourceConnectionInfo = Input.empty();
-        this.targetConnectionInfo = Input.empty();
+        this.selectedDatabases = Output.empty();
+        this.sourceConnectionInfo = Output.empty();
+        this.targetConnectionInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
-        private Input<SqlConnectionInfoArgs> sourceConnectionInfo;
-        private Input<SqlConnectionInfoArgs> targetConnectionInfo;
+        private Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
+        private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
+        private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder selectedDatabases(Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases) {
+        public Builder selectedDatabases(Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
         public Builder selectedDatabases(List<MigrateSqlServerSqlDbSyncDatabaseInputArgs> selectedDatabases) {
-            this.selectedDatabases = Input.of(Objects.requireNonNull(selectedDatabases));
+            this.selectedDatabases = Output.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
 
-        public Builder sourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
-            this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
+            this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
 
-        public Builder targetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
+            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
         public ValidateSyncMigrationInputSqlServerTaskInputArgs build() {

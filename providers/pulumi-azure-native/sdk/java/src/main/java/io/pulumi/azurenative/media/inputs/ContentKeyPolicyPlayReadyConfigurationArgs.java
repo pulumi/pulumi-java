@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyLicenseArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="licenses", required=true)
-      private final Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
+      private final Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
 
-    public Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> getLicenses() {
+    public Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> getLicenses() {
         return this.licenses;
     }
 
@@ -37,9 +37,9 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -48,25 +48,25 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="responseCustomData")
-      private final @Nullable Input<String> responseCustomData;
+      private final @Nullable Output<String> responseCustomData;
 
-    public Input<String> getResponseCustomData() {
-        return this.responseCustomData == null ? Input.empty() : this.responseCustomData;
+    public Output<String> getResponseCustomData() {
+        return this.responseCustomData == null ? Output.empty() : this.responseCustomData;
     }
 
     public ContentKeyPolicyPlayReadyConfigurationArgs(
-        Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses,
-        Input<String> odataType,
-        @Nullable Input<String> responseCustomData) {
+        Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses,
+        Output<String> odataType,
+        @Nullable Output<String> responseCustomData) {
         this.licenses = Objects.requireNonNull(licenses, "expected parameter 'licenses' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.responseCustomData = responseCustomData;
     }
 
     private ContentKeyPolicyPlayReadyConfigurationArgs() {
-        this.licenses = Input.empty();
-        this.odataType = Input.empty();
-        this.responseCustomData = Input.empty();
+        this.licenses = Output.empty();
+        this.odataType = Output.empty();
+        this.responseCustomData = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
-        private Input<String> odataType;
-        private @Nullable Input<String> responseCustomData;
+        private Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
+        private Output<String> odataType;
+        private @Nullable Output<String> responseCustomData;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
     	      this.responseCustomData = defaults.responseCustomData;
         }
 
-        public Builder licenses(Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses) {
+        public Builder licenses(Output<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
         public Builder licenses(List<ContentKeyPolicyPlayReadyLicenseArgs> licenses) {
-            this.licenses = Input.of(Objects.requireNonNull(licenses));
+            this.licenses = Output.of(Objects.requireNonNull(licenses));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder responseCustomData(@Nullable Input<String> responseCustomData) {
+        public Builder responseCustomData(@Nullable Output<String> responseCustomData) {
             this.responseCustomData = responseCustomData;
             return this;
         }
 
         public Builder responseCustomData(@Nullable String responseCustomData) {
-            this.responseCustomData = Input.ofNullable(responseCustomData);
+            this.responseCustomData = Output.ofNullable(responseCustomData);
             return this;
         }
         public ContentKeyPolicyPlayReadyConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -17,70 +17,70 @@ public final class ListenerRuleAuthenticateCognitoConfigArgs extends io.pulumi.r
     public static final ListenerRuleAuthenticateCognitoConfigArgs Empty = new ListenerRuleAuthenticateCognitoConfigArgs();
 
     @InputImport(name="authenticationRequestExtraParams")
-      private final @Nullable Input<Object> authenticationRequestExtraParams;
+      private final @Nullable Output<Object> authenticationRequestExtraParams;
 
-    public Input<Object> getAuthenticationRequestExtraParams() {
-        return this.authenticationRequestExtraParams == null ? Input.empty() : this.authenticationRequestExtraParams;
+    public Output<Object> getAuthenticationRequestExtraParams() {
+        return this.authenticationRequestExtraParams == null ? Output.empty() : this.authenticationRequestExtraParams;
     }
 
     @InputImport(name="onUnauthenticatedRequest")
-      private final @Nullable Input<String> onUnauthenticatedRequest;
+      private final @Nullable Output<String> onUnauthenticatedRequest;
 
-    public Input<String> getOnUnauthenticatedRequest() {
-        return this.onUnauthenticatedRequest == null ? Input.empty() : this.onUnauthenticatedRequest;
+    public Output<String> getOnUnauthenticatedRequest() {
+        return this.onUnauthenticatedRequest == null ? Output.empty() : this.onUnauthenticatedRequest;
     }
 
     @InputImport(name="scope")
-      private final @Nullable Input<String> scope;
+      private final @Nullable Output<String> scope;
 
-    public Input<String> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<String> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     @InputImport(name="sessionCookieName")
-      private final @Nullable Input<String> sessionCookieName;
+      private final @Nullable Output<String> sessionCookieName;
 
-    public Input<String> getSessionCookieName() {
-        return this.sessionCookieName == null ? Input.empty() : this.sessionCookieName;
+    public Output<String> getSessionCookieName() {
+        return this.sessionCookieName == null ? Output.empty() : this.sessionCookieName;
     }
 
     @InputImport(name="sessionTimeout")
-      private final @Nullable Input<Integer> sessionTimeout;
+      private final @Nullable Output<Integer> sessionTimeout;
 
-    public Input<Integer> getSessionTimeout() {
-        return this.sessionTimeout == null ? Input.empty() : this.sessionTimeout;
+    public Output<Integer> getSessionTimeout() {
+        return this.sessionTimeout == null ? Output.empty() : this.sessionTimeout;
     }
 
     @InputImport(name="userPoolArn", required=true)
-      private final Input<String> userPoolArn;
+      private final Output<String> userPoolArn;
 
-    public Input<String> getUserPoolArn() {
+    public Output<String> getUserPoolArn() {
         return this.userPoolArn;
     }
 
     @InputImport(name="userPoolClientId", required=true)
-      private final Input<String> userPoolClientId;
+      private final Output<String> userPoolClientId;
 
-    public Input<String> getUserPoolClientId() {
+    public Output<String> getUserPoolClientId() {
         return this.userPoolClientId;
     }
 
     @InputImport(name="userPoolDomain", required=true)
-      private final Input<String> userPoolDomain;
+      private final Output<String> userPoolDomain;
 
-    public Input<String> getUserPoolDomain() {
+    public Output<String> getUserPoolDomain() {
         return this.userPoolDomain;
     }
 
     public ListenerRuleAuthenticateCognitoConfigArgs(
-        @Nullable Input<Object> authenticationRequestExtraParams,
-        @Nullable Input<String> onUnauthenticatedRequest,
-        @Nullable Input<String> scope,
-        @Nullable Input<String> sessionCookieName,
-        @Nullable Input<Integer> sessionTimeout,
-        Input<String> userPoolArn,
-        Input<String> userPoolClientId,
-        Input<String> userPoolDomain) {
+        @Nullable Output<Object> authenticationRequestExtraParams,
+        @Nullable Output<String> onUnauthenticatedRequest,
+        @Nullable Output<String> scope,
+        @Nullable Output<String> sessionCookieName,
+        @Nullable Output<Integer> sessionTimeout,
+        Output<String> userPoolArn,
+        Output<String> userPoolClientId,
+        Output<String> userPoolDomain) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.onUnauthenticatedRequest = onUnauthenticatedRequest;
         this.scope = scope;
@@ -92,14 +92,14 @@ public final class ListenerRuleAuthenticateCognitoConfigArgs extends io.pulumi.r
     }
 
     private ListenerRuleAuthenticateCognitoConfigArgs() {
-        this.authenticationRequestExtraParams = Input.empty();
-        this.onUnauthenticatedRequest = Input.empty();
-        this.scope = Input.empty();
-        this.sessionCookieName = Input.empty();
-        this.sessionTimeout = Input.empty();
-        this.userPoolArn = Input.empty();
-        this.userPoolClientId = Input.empty();
-        this.userPoolDomain = Input.empty();
+        this.authenticationRequestExtraParams = Output.empty();
+        this.onUnauthenticatedRequest = Output.empty();
+        this.scope = Output.empty();
+        this.sessionCookieName = Output.empty();
+        this.sessionTimeout = Output.empty();
+        this.userPoolArn = Output.empty();
+        this.userPoolClientId = Output.empty();
+        this.userPoolDomain = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,14 +111,14 @@ public final class ListenerRuleAuthenticateCognitoConfigArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> authenticationRequestExtraParams;
-        private @Nullable Input<String> onUnauthenticatedRequest;
-        private @Nullable Input<String> scope;
-        private @Nullable Input<String> sessionCookieName;
-        private @Nullable Input<Integer> sessionTimeout;
-        private Input<String> userPoolArn;
-        private Input<String> userPoolClientId;
-        private Input<String> userPoolDomain;
+        private @Nullable Output<Object> authenticationRequestExtraParams;
+        private @Nullable Output<String> onUnauthenticatedRequest;
+        private @Nullable Output<String> scope;
+        private @Nullable Output<String> sessionCookieName;
+        private @Nullable Output<Integer> sessionTimeout;
+        private Output<String> userPoolArn;
+        private Output<String> userPoolClientId;
+        private Output<String> userPoolDomain;
 
         public Builder() {
     	      // Empty
@@ -136,83 +136,83 @@ public final class ListenerRuleAuthenticateCognitoConfigArgs extends io.pulumi.r
     	      this.userPoolDomain = defaults.userPoolDomain;
         }
 
-        public Builder authenticationRequestExtraParams(@Nullable Input<Object> authenticationRequestExtraParams) {
+        public Builder authenticationRequestExtraParams(@Nullable Output<Object> authenticationRequestExtraParams) {
             this.authenticationRequestExtraParams = authenticationRequestExtraParams;
             return this;
         }
 
         public Builder authenticationRequestExtraParams(@Nullable Object authenticationRequestExtraParams) {
-            this.authenticationRequestExtraParams = Input.ofNullable(authenticationRequestExtraParams);
+            this.authenticationRequestExtraParams = Output.ofNullable(authenticationRequestExtraParams);
             return this;
         }
 
-        public Builder onUnauthenticatedRequest(@Nullable Input<String> onUnauthenticatedRequest) {
+        public Builder onUnauthenticatedRequest(@Nullable Output<String> onUnauthenticatedRequest) {
             this.onUnauthenticatedRequest = onUnauthenticatedRequest;
             return this;
         }
 
         public Builder onUnauthenticatedRequest(@Nullable String onUnauthenticatedRequest) {
-            this.onUnauthenticatedRequest = Input.ofNullable(onUnauthenticatedRequest);
+            this.onUnauthenticatedRequest = Output.ofNullable(onUnauthenticatedRequest);
             return this;
         }
 
-        public Builder scope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable String scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
 
-        public Builder sessionCookieName(@Nullable Input<String> sessionCookieName) {
+        public Builder sessionCookieName(@Nullable Output<String> sessionCookieName) {
             this.sessionCookieName = sessionCookieName;
             return this;
         }
 
         public Builder sessionCookieName(@Nullable String sessionCookieName) {
-            this.sessionCookieName = Input.ofNullable(sessionCookieName);
+            this.sessionCookieName = Output.ofNullable(sessionCookieName);
             return this;
         }
 
-        public Builder sessionTimeout(@Nullable Input<Integer> sessionTimeout) {
+        public Builder sessionTimeout(@Nullable Output<Integer> sessionTimeout) {
             this.sessionTimeout = sessionTimeout;
             return this;
         }
 
         public Builder sessionTimeout(@Nullable Integer sessionTimeout) {
-            this.sessionTimeout = Input.ofNullable(sessionTimeout);
+            this.sessionTimeout = Output.ofNullable(sessionTimeout);
             return this;
         }
 
-        public Builder userPoolArn(Input<String> userPoolArn) {
+        public Builder userPoolArn(Output<String> userPoolArn) {
             this.userPoolArn = Objects.requireNonNull(userPoolArn);
             return this;
         }
 
         public Builder userPoolArn(String userPoolArn) {
-            this.userPoolArn = Input.of(Objects.requireNonNull(userPoolArn));
+            this.userPoolArn = Output.of(Objects.requireNonNull(userPoolArn));
             return this;
         }
 
-        public Builder userPoolClientId(Input<String> userPoolClientId) {
+        public Builder userPoolClientId(Output<String> userPoolClientId) {
             this.userPoolClientId = Objects.requireNonNull(userPoolClientId);
             return this;
         }
 
         public Builder userPoolClientId(String userPoolClientId) {
-            this.userPoolClientId = Input.of(Objects.requireNonNull(userPoolClientId));
+            this.userPoolClientId = Output.of(Objects.requireNonNull(userPoolClientId));
             return this;
         }
 
-        public Builder userPoolDomain(Input<String> userPoolDomain) {
+        public Builder userPoolDomain(Output<String> userPoolDomain) {
             this.userPoolDomain = Objects.requireNonNull(userPoolDomain);
             return this;
         }
 
         public Builder userPoolDomain(String userPoolDomain) {
-            this.userPoolDomain = Input.of(Objects.requireNonNull(userPoolDomain));
+            this.userPoolDomain = Output.of(Objects.requireNonNull(userPoolDomain));
             return this;
         }
         public ListenerRuleAuthenticateCognitoConfigArgs build() {

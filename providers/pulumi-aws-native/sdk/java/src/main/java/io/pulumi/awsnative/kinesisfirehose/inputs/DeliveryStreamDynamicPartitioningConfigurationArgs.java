@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRetryOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends io
     public static final DeliveryStreamDynamicPartitioningConfigurationArgs Empty = new DeliveryStreamDynamicPartitioningConfigurationArgs();
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     @InputImport(name="retryOptions")
-      private final @Nullable Input<DeliveryStreamRetryOptionsArgs> retryOptions;
+      private final @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
 
-    public Input<DeliveryStreamRetryOptionsArgs> getRetryOptions() {
-        return this.retryOptions == null ? Input.empty() : this.retryOptions;
+    public Output<DeliveryStreamRetryOptionsArgs> getRetryOptions() {
+        return this.retryOptions == null ? Output.empty() : this.retryOptions;
     }
 
     public DeliveryStreamDynamicPartitioningConfigurationArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<DeliveryStreamRetryOptionsArgs> retryOptions) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions) {
         this.enabled = enabled;
         this.retryOptions = retryOptions;
     }
 
     private DeliveryStreamDynamicPartitioningConfigurationArgs() {
-        this.enabled = Input.empty();
-        this.retryOptions = Input.empty();
+        this.enabled = Output.empty();
+        this.retryOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<DeliveryStreamRetryOptionsArgs> retryOptions;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends io
     	      this.retryOptions = defaults.retryOptions;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder retryOptions(@Nullable Input<DeliveryStreamRetryOptionsArgs> retryOptions) {
+        public Builder retryOptions(@Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
 
         public Builder retryOptions(@Nullable DeliveryStreamRetryOptionsArgs retryOptions) {
-            this.retryOptions = Input.ofNullable(retryOptions);
+            this.retryOptions = Output.ofNullable(retryOptions);
             return this;
         }
         public DeliveryStreamDynamicPartitioningConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="statements", required=true)
-      private final Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> statements;
+      private final Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> statements;
 
-    public Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> getStatements() {
+    public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> getStatements() {
         return this.statements;
     }
 
-    public WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementArgs(Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> statements) {
+    public WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementArgs(Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> statements) {
         this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
     }
 
     private WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementArgs() {
-        this.statements = Input.empty();
+        this.statements = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     }
 
     public static final class Builder {
-        private Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> statements;
+        private Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> statements;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     	      this.statements = defaults.statements;
         }
 
-        public Builder statements(Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> statements) {
+        public Builder statements(Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
         public Builder statements(List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs> statements) {
-            this.statements = Input.of(Objects.requireNonNull(statements));
+            this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
         public WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementArgs build() {

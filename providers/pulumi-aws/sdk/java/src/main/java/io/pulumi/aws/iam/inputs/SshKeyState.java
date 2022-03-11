@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<String> encoding;
+      private final @Nullable Output<String> encoding;
 
-    public Input<String> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<String> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<String> publicKey;
+      private final @Nullable Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<String> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshPublicKeyId")
-      private final @Nullable Input<String> sshPublicKeyId;
+      private final @Nullable Output<String> sshPublicKeyId;
 
-    public Input<String> getSshPublicKeyId() {
-        return this.sshPublicKeyId == null ? Input.empty() : this.sshPublicKeyId;
+    public Output<String> getSshPublicKeyId() {
+        return this.sshPublicKeyId == null ? Output.empty() : this.sshPublicKeyId;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public SshKeyState(
-        @Nullable Input<String> encoding,
-        @Nullable Input<String> fingerprint,
-        @Nullable Input<String> publicKey,
-        @Nullable Input<String> sshPublicKeyId,
-        @Nullable Input<String> status,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> encoding,
+        @Nullable Output<String> fingerprint,
+        @Nullable Output<String> publicKey,
+        @Nullable Output<String> sshPublicKeyId,
+        @Nullable Output<String> status,
+        @Nullable Output<String> username) {
         this.encoding = encoding;
         this.fingerprint = fingerprint;
         this.publicKey = publicKey;
@@ -96,12 +96,12 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshKeyState() {
-        this.encoding = Input.empty();
-        this.fingerprint = Input.empty();
-        this.publicKey = Input.empty();
-        this.sshPublicKeyId = Input.empty();
-        this.status = Input.empty();
-        this.username = Input.empty();
+        this.encoding = Output.empty();
+        this.fingerprint = Output.empty();
+        this.publicKey = Output.empty();
+        this.sshPublicKeyId = Output.empty();
+        this.status = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> encoding;
-        private @Nullable Input<String> fingerprint;
-        private @Nullable Input<String> publicKey;
-        private @Nullable Input<String> sshPublicKeyId;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> encoding;
+        private @Nullable Output<String> fingerprint;
+        private @Nullable Output<String> publicKey;
+        private @Nullable Output<String> sshPublicKeyId;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder encoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
 
-        public Builder sshPublicKeyId(@Nullable Input<String> sshPublicKeyId) {
+        public Builder sshPublicKeyId(@Nullable Output<String> sshPublicKeyId) {
             this.sshPublicKeyId = sshPublicKeyId;
             return this;
         }
 
         public Builder sshPublicKeyId(@Nullable String sshPublicKeyId) {
-            this.sshPublicKeyId = Input.ofNullable(sshPublicKeyId);
+            this.sshPublicKeyId = Output.ofNullable(sshPublicKeyId);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public SshKeyState build() {

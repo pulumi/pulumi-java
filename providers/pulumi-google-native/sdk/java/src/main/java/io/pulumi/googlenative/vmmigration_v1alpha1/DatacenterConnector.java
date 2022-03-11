@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -199,14 +198,14 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DatacenterConnector(String name, DatacenterConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vmmigration/v1alpha1:DatacenterConnector", name, args == null ? DatacenterConnectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:vmmigration/v1alpha1:DatacenterConnector", name, args == null ? DatacenterConnectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DatacenterConnector(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DatacenterConnector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:vmmigration/v1alpha1:DatacenterConnector", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -221,7 +220,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DatacenterConnector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DatacenterConnector get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DatacenterConnector(name, id, options);
     }
 }

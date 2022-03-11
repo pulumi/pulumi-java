@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentVersion")
-      private final @Nullable Input<String> contentVersion;
+      private final @Nullable Output<String> contentVersion;
 
-    public Input<String> getContentVersion() {
-        return this.contentVersion == null ? Input.empty() : this.contentVersion;
+    public Output<String> getContentVersion() {
+        return this.contentVersion == null ? Output.empty() : this.contentVersion;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public ParametersLinkArgs(
-        @Nullable Input<String> contentVersion,
-        Input<String> uri) {
+        @Nullable Output<String> contentVersion,
+        Output<String> uri) {
         this.contentVersion = contentVersion;
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private ParametersLinkArgs() {
-        this.contentVersion = Input.empty();
-        this.uri = Input.empty();
+        this.contentVersion = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentVersion;
-        private Input<String> uri;
+        private @Nullable Output<String> contentVersion;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder contentVersion(@Nullable Input<String> contentVersion) {
+        public Builder contentVersion(@Nullable Output<String> contentVersion) {
             this.contentVersion = contentVersion;
             return this;
         }
 
         public Builder contentVersion(@Nullable String contentVersion) {
-            this.contentVersion = Input.ofNullable(contentVersion);
+            this.contentVersion = Output.ofNullable(contentVersion);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public ParametersLinkArgs build() {

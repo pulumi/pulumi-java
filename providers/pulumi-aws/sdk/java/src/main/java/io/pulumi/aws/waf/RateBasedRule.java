@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.waf.RateBasedRuleArgs;
 import io.pulumi.aws.waf.inputs.RateBasedRuleState;
 import io.pulumi.aws.waf.outputs.RateBasedRulePredicate;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,14 +183,14 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RateBasedRule(String name, RateBasedRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:waf/rateBasedRule:RateBasedRule", name, args == null ? RateBasedRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:waf/rateBasedRule:RateBasedRule", name, args == null ? RateBasedRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RateBasedRule(String name, Input<String> id, @Nullable RateBasedRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RateBasedRule(String name, Output<String> id, @Nullable RateBasedRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:waf/rateBasedRule:RateBasedRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -207,7 +206,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RateBasedRule get(String name, Input<String> id, @Nullable RateBasedRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RateBasedRule get(String name, Output<String> id, @Nullable RateBasedRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RateBasedRule(name, id, state, options);
     }
 }

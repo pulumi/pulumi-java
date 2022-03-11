@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ecr.RegistryScanningConfigurationArgs;
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationState;
 import io.pulumi.aws.ecr.outputs.RegistryScanningConfigurationRule;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,14 +111,14 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public RegistryScanningConfiguration(String name, RegistryScanningConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/registryScanningConfiguration:RegistryScanningConfiguration", name, args == null ? RegistryScanningConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ecr/registryScanningConfiguration:RegistryScanningConfiguration", name, args == null ? RegistryScanningConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RegistryScanningConfiguration(String name, Input<String> id, @Nullable RegistryScanningConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RegistryScanningConfiguration(String name, Output<String> id, @Nullable RegistryScanningConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ecr/registryScanningConfiguration:RegistryScanningConfiguration", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -135,7 +134,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegistryScanningConfiguration get(String name, Input<String> id, @Nullable RegistryScanningConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RegistryScanningConfiguration get(String name, Output<String> id, @Nullable RegistryScanningConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegistryScanningConfiguration(name, id, state, options);
     }
 }

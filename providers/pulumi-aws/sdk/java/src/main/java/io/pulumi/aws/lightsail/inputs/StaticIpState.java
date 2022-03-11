@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportCode")
-      private final @Nullable Input<String> supportCode;
+      private final @Nullable Output<String> supportCode;
 
-    public Input<String> getSupportCode() {
-        return this.supportCode == null ? Input.empty() : this.supportCode;
+    public Output<String> getSupportCode() {
+        return this.supportCode == null ? Output.empty() : this.supportCode;
     }
 
     public StaticIpState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> name,
-        @Nullable Input<String> supportCode) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> name,
+        @Nullable Output<String> supportCode) {
         this.arn = arn;
         this.ipAddress = ipAddress;
         this.name = name;
@@ -70,10 +70,10 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
     }
 
     private StaticIpState() {
-        this.arn = Input.empty();
-        this.ipAddress = Input.empty();
-        this.name = Input.empty();
-        this.supportCode = Input.empty();
+        this.arn = Output.empty();
+        this.ipAddress = Output.empty();
+        this.name = Output.empty();
+        this.supportCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> supportCode;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> supportCode;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
     	      this.supportCode = defaults.supportCode;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder supportCode(@Nullable Input<String> supportCode) {
+        public Builder supportCode(@Nullable Output<String> supportCode) {
             this.supportCode = supportCode;
             return this;
         }
 
         public Builder supportCode(@Nullable String supportCode) {
-            this.supportCode = Input.ofNullable(supportCode);
+            this.supportCode = Output.ofNullable(supportCode);
             return this;
         }
         public StaticIpState build() {

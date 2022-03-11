@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts")
-      private final @Nullable Input<List<String>> hosts;
+      private final @Nullable Output<List<String>> hosts;
 
-    public Input<List<String>> getHosts() {
-        return this.hosts == null ? Input.empty() : this.hosts;
+    public Output<List<String>> getHosts() {
+        return this.hosts == null ? Output.empty() : this.hosts;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretName")
-      private final @Nullable Input<String> secretName;
+      private final @Nullable Output<String> secretName;
 
-    public Input<String> getSecretName() {
-        return this.secretName == null ? Input.empty() : this.secretName;
+    public Output<String> getSecretName() {
+        return this.secretName == null ? Output.empty() : this.secretName;
     }
 
     public IngressTLSArgs(
-        @Nullable Input<List<String>> hosts,
-        @Nullable Input<String> secretName) {
+        @Nullable Output<List<String>> hosts,
+        @Nullable Output<String> secretName) {
         this.hosts = hosts;
         this.secretName = secretName;
     }
 
     private IngressTLSArgs() {
-        this.hosts = Input.empty();
-        this.secretName = Input.empty();
+        this.hosts = Output.empty();
+        this.secretName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> hosts;
-        private @Nullable Input<String> secretName;
+        private @Nullable Output<List<String>> hosts;
+        private @Nullable Output<String> secretName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder hosts(@Nullable Input<List<String>> hosts) {
+        public Builder hosts(@Nullable Output<List<String>> hosts) {
             this.hosts = hosts;
             return this;
         }
 
         public Builder hosts(@Nullable List<String> hosts) {
-            this.hosts = Input.ofNullable(hosts);
+            this.hosts = Output.ofNullable(hosts);
             return this;
         }
 
-        public Builder secretName(@Nullable Input<String> secretName) {
+        public Builder secretName(@Nullable Output<String> secretName) {
             this.secretName = secretName;
             return this;
         }
 
         public Builder secretName(@Nullable String secretName) {
-            this.secretName = Input.ofNullable(secretName);
+            this.secretName = Output.ofNullable(secretName);
             return this;
         }
         public IngressTLSArgs build() {

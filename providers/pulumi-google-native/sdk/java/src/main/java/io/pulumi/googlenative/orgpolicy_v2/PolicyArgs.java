@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecArgs;
 import java.lang.String;
@@ -20,17 +20,17 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -38,25 +38,25 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
+      private final @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
-    public Input<GoogleCloudOrgpolicyV2PolicySpecArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<GoogleCloudOrgpolicyV2PolicySpecArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
     public PolicyArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
         this.name = name;
         this.project = project;
         this.spec = spec;
     }
 
     private PolicyArgs() {
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.spec = Input.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.spec = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spec = defaults.spec;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder spec(@Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
+        public Builder spec(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
         public PolicyArgs build() {

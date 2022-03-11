@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanismArgs extends i
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,22 +30,22 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanismArgs extends i
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
     public UserPoolAccountRecoverySettingRecoveryMechanismArgs(
-        Input<String> name,
-        Input<Integer> priority) {
+        Output<String> name,
+        Output<Integer> priority) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
     }
 
     private UserPoolAccountRecoverySettingRecoveryMechanismArgs() {
-        this.name = Input.empty();
-        this.priority = Input.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanismArgs extends i
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<Integer> priority;
+        private Output<String> name;
+        private Output<Integer> priority;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanismArgs extends i
     	      this.priority = defaults.priority;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
         public UserPoolAccountRecoverySettingRecoveryMechanismArgs build() {

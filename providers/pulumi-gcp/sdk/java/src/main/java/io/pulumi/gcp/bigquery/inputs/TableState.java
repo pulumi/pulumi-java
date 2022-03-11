@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.TableEncryptionConfigurationGetArgs;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationGetArgs;
@@ -31,10 +31,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterings")
-      private final @Nullable Input<List<String>> clusterings;
+      private final @Nullable Output<List<String>> clusterings;
 
-    public Input<List<String>> getClusterings() {
-        return this.clusterings == null ? Input.empty() : this.clusterings;
+    public Output<List<String>> getClusterings() {
+        return this.clusterings == null ? Output.empty() : this.clusterings;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<Integer> creationTime;
+      private final @Nullable Output<Integer> creationTime;
 
-    public Input<Integer> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<Integer> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetId")
-      private final @Nullable Input<String> datasetId;
+      private final @Nullable Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
-        return this.datasetId == null ? Input.empty() : this.datasetId;
+    public Output<String> getDatasetId() {
+        return this.datasetId == null ? Output.empty() : this.datasetId;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionProtection")
-      private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Output<Boolean> deletionProtection;
 
-    public Input<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
+    public Output<Boolean> getDeletionProtection() {
+        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfiguration")
-      private final @Nullable Input<TableEncryptionConfigurationGetArgs> encryptionConfiguration;
+      private final @Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration;
 
-    public Input<TableEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
+    public Output<TableEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
+        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-      private final @Nullable Input<Integer> expirationTime;
+      private final @Nullable Output<Integer> expirationTime;
 
-    public Input<Integer> getExpirationTime() {
-        return this.expirationTime == null ? Input.empty() : this.expirationTime;
+    public Output<Integer> getExpirationTime() {
+        return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalDataConfiguration")
-      private final @Nullable Input<TableExternalDataConfigurationGetArgs> externalDataConfiguration;
+      private final @Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration;
 
-    public Input<TableExternalDataConfigurationGetArgs> getExternalDataConfiguration() {
-        return this.externalDataConfiguration == null ? Input.empty() : this.externalDataConfiguration;
+    public Output<TableExternalDataConfigurationGetArgs> getExternalDataConfiguration() {
+        return this.externalDataConfiguration == null ? Output.empty() : this.externalDataConfiguration;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedTime")
-      private final @Nullable Input<Integer> lastModifiedTime;
+      private final @Nullable Output<Integer> lastModifiedTime;
 
-    public Input<Integer> getLastModifiedTime() {
-        return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
+    public Output<Integer> getLastModifiedTime() {
+        return this.lastModifiedTime == null ? Output.empty() : this.lastModifiedTime;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="materializedView")
-      private final @Nullable Input<TableMaterializedViewGetArgs> materializedView;
+      private final @Nullable Output<TableMaterializedViewGetArgs> materializedView;
 
-    public Input<TableMaterializedViewGetArgs> getMaterializedView() {
-        return this.materializedView == null ? Input.empty() : this.materializedView;
+    public Output<TableMaterializedViewGetArgs> getMaterializedView() {
+        return this.materializedView == null ? Output.empty() : this.materializedView;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numBytes")
-      private final @Nullable Input<Integer> numBytes;
+      private final @Nullable Output<Integer> numBytes;
 
-    public Input<Integer> getNumBytes() {
-        return this.numBytes == null ? Input.empty() : this.numBytes;
+    public Output<Integer> getNumBytes() {
+        return this.numBytes == null ? Output.empty() : this.numBytes;
     }
 
     /**
@@ -207,10 +207,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numLongTermBytes")
-      private final @Nullable Input<Integer> numLongTermBytes;
+      private final @Nullable Output<Integer> numLongTermBytes;
 
-    public Input<Integer> getNumLongTermBytes() {
-        return this.numLongTermBytes == null ? Input.empty() : this.numLongTermBytes;
+    public Output<Integer> getNumLongTermBytes() {
+        return this.numLongTermBytes == null ? Output.empty() : this.numLongTermBytes;
     }
 
     /**
@@ -218,10 +218,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numRows")
-      private final @Nullable Input<Integer> numRows;
+      private final @Nullable Output<Integer> numRows;
 
-    public Input<Integer> getNumRows() {
-        return this.numRows == null ? Input.empty() : this.numRows;
+    public Output<Integer> getNumRows() {
+        return this.numRows == null ? Output.empty() : this.numRows;
     }
 
     /**
@@ -230,10 +230,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -242,10 +242,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rangePartitioning")
-      private final @Nullable Input<TableRangePartitioningGetArgs> rangePartitioning;
+      private final @Nullable Output<TableRangePartitioningGetArgs> rangePartitioning;
 
-    public Input<TableRangePartitioningGetArgs> getRangePartitioning() {
-        return this.rangePartitioning == null ? Input.empty() : this.rangePartitioning;
+    public Output<TableRangePartitioningGetArgs> getRangePartitioning() {
+        return this.rangePartitioning == null ? Output.empty() : this.rangePartitioning;
     }
 
     /**
@@ -263,10 +263,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<String> schema;
+      private final @Nullable Output<String> schema;
 
-    public Input<String> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<String> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -274,10 +274,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -286,10 +286,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableId")
-      private final @Nullable Input<String> tableId;
+      private final @Nullable Output<String> tableId;
 
-    public Input<String> getTableId() {
-        return this.tableId == null ? Input.empty() : this.tableId;
+    public Output<String> getTableId() {
+        return this.tableId == null ? Output.empty() : this.tableId;
     }
 
     /**
@@ -298,10 +298,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timePartitioning")
-      private final @Nullable Input<TableTimePartitioningGetArgs> timePartitioning;
+      private final @Nullable Output<TableTimePartitioningGetArgs> timePartitioning;
 
-    public Input<TableTimePartitioningGetArgs> getTimePartitioning() {
-        return this.timePartitioning == null ? Input.empty() : this.timePartitioning;
+    public Output<TableTimePartitioningGetArgs> getTimePartitioning() {
+        return this.timePartitioning == null ? Output.empty() : this.timePartitioning;
     }
 
     /**
@@ -310,10 +310,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -322,38 +322,38 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="view")
-      private final @Nullable Input<TableViewGetArgs> view;
+      private final @Nullable Output<TableViewGetArgs> view;
 
-    public Input<TableViewGetArgs> getView() {
-        return this.view == null ? Input.empty() : this.view;
+    public Output<TableViewGetArgs> getView() {
+        return this.view == null ? Output.empty() : this.view;
     }
 
     public TableState(
-        @Nullable Input<List<String>> clusterings,
-        @Nullable Input<Integer> creationTime,
-        @Nullable Input<String> datasetId,
-        @Nullable Input<Boolean> deletionProtection,
-        @Nullable Input<String> description,
-        @Nullable Input<TableEncryptionConfigurationGetArgs> encryptionConfiguration,
-        @Nullable Input<String> etag,
-        @Nullable Input<Integer> expirationTime,
-        @Nullable Input<TableExternalDataConfigurationGetArgs> externalDataConfiguration,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<Integer> lastModifiedTime,
-        @Nullable Input<String> location,
-        @Nullable Input<TableMaterializedViewGetArgs> materializedView,
-        @Nullable Input<Integer> numBytes,
-        @Nullable Input<Integer> numLongTermBytes,
-        @Nullable Input<Integer> numRows,
-        @Nullable Input<String> project,
-        @Nullable Input<TableRangePartitioningGetArgs> rangePartitioning,
-        @Nullable Input<String> schema,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> tableId,
-        @Nullable Input<TableTimePartitioningGetArgs> timePartitioning,
-        @Nullable Input<String> type,
-        @Nullable Input<TableViewGetArgs> view) {
+        @Nullable Output<List<String>> clusterings,
+        @Nullable Output<Integer> creationTime,
+        @Nullable Output<String> datasetId,
+        @Nullable Output<Boolean> deletionProtection,
+        @Nullable Output<String> description,
+        @Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration,
+        @Nullable Output<String> etag,
+        @Nullable Output<Integer> expirationTime,
+        @Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<Integer> lastModifiedTime,
+        @Nullable Output<String> location,
+        @Nullable Output<TableMaterializedViewGetArgs> materializedView,
+        @Nullable Output<Integer> numBytes,
+        @Nullable Output<Integer> numLongTermBytes,
+        @Nullable Output<Integer> numRows,
+        @Nullable Output<String> project,
+        @Nullable Output<TableRangePartitioningGetArgs> rangePartitioning,
+        @Nullable Output<String> schema,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> tableId,
+        @Nullable Output<TableTimePartitioningGetArgs> timePartitioning,
+        @Nullable Output<String> type,
+        @Nullable Output<TableViewGetArgs> view) {
         this.clusterings = clusterings;
         this.creationTime = creationTime;
         this.datasetId = datasetId;
@@ -382,31 +382,31 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableState() {
-        this.clusterings = Input.empty();
-        this.creationTime = Input.empty();
-        this.datasetId = Input.empty();
-        this.deletionProtection = Input.empty();
-        this.description = Input.empty();
-        this.encryptionConfiguration = Input.empty();
-        this.etag = Input.empty();
-        this.expirationTime = Input.empty();
-        this.externalDataConfiguration = Input.empty();
-        this.friendlyName = Input.empty();
-        this.labels = Input.empty();
-        this.lastModifiedTime = Input.empty();
-        this.location = Input.empty();
-        this.materializedView = Input.empty();
-        this.numBytes = Input.empty();
-        this.numLongTermBytes = Input.empty();
-        this.numRows = Input.empty();
-        this.project = Input.empty();
-        this.rangePartitioning = Input.empty();
-        this.schema = Input.empty();
-        this.selfLink = Input.empty();
-        this.tableId = Input.empty();
-        this.timePartitioning = Input.empty();
-        this.type = Input.empty();
-        this.view = Input.empty();
+        this.clusterings = Output.empty();
+        this.creationTime = Output.empty();
+        this.datasetId = Output.empty();
+        this.deletionProtection = Output.empty();
+        this.description = Output.empty();
+        this.encryptionConfiguration = Output.empty();
+        this.etag = Output.empty();
+        this.expirationTime = Output.empty();
+        this.externalDataConfiguration = Output.empty();
+        this.friendlyName = Output.empty();
+        this.labels = Output.empty();
+        this.lastModifiedTime = Output.empty();
+        this.location = Output.empty();
+        this.materializedView = Output.empty();
+        this.numBytes = Output.empty();
+        this.numLongTermBytes = Output.empty();
+        this.numRows = Output.empty();
+        this.project = Output.empty();
+        this.rangePartitioning = Output.empty();
+        this.schema = Output.empty();
+        this.selfLink = Output.empty();
+        this.tableId = Output.empty();
+        this.timePartitioning = Output.empty();
+        this.type = Output.empty();
+        this.view = Output.empty();
     }
 
     public static Builder builder() {
@@ -418,31 +418,31 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> clusterings;
-        private @Nullable Input<Integer> creationTime;
-        private @Nullable Input<String> datasetId;
-        private @Nullable Input<Boolean> deletionProtection;
-        private @Nullable Input<String> description;
-        private @Nullable Input<TableEncryptionConfigurationGetArgs> encryptionConfiguration;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<Integer> expirationTime;
-        private @Nullable Input<TableExternalDataConfigurationGetArgs> externalDataConfiguration;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<Integer> lastModifiedTime;
-        private @Nullable Input<String> location;
-        private @Nullable Input<TableMaterializedViewGetArgs> materializedView;
-        private @Nullable Input<Integer> numBytes;
-        private @Nullable Input<Integer> numLongTermBytes;
-        private @Nullable Input<Integer> numRows;
-        private @Nullable Input<String> project;
-        private @Nullable Input<TableRangePartitioningGetArgs> rangePartitioning;
-        private @Nullable Input<String> schema;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> tableId;
-        private @Nullable Input<TableTimePartitioningGetArgs> timePartitioning;
-        private @Nullable Input<String> type;
-        private @Nullable Input<TableViewGetArgs> view;
+        private @Nullable Output<List<String>> clusterings;
+        private @Nullable Output<Integer> creationTime;
+        private @Nullable Output<String> datasetId;
+        private @Nullable Output<Boolean> deletionProtection;
+        private @Nullable Output<String> description;
+        private @Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<Integer> expirationTime;
+        private @Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<Integer> lastModifiedTime;
+        private @Nullable Output<String> location;
+        private @Nullable Output<TableMaterializedViewGetArgs> materializedView;
+        private @Nullable Output<Integer> numBytes;
+        private @Nullable Output<Integer> numLongTermBytes;
+        private @Nullable Output<Integer> numRows;
+        private @Nullable Output<String> project;
+        private @Nullable Output<TableRangePartitioningGetArgs> rangePartitioning;
+        private @Nullable Output<String> schema;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> tableId;
+        private @Nullable Output<TableTimePartitioningGetArgs> timePartitioning;
+        private @Nullable Output<String> type;
+        private @Nullable Output<TableViewGetArgs> view;
 
         public Builder() {
     	      // Empty
@@ -477,253 +477,253 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     	      this.view = defaults.view;
         }
 
-        public Builder clusterings(@Nullable Input<List<String>> clusterings) {
+        public Builder clusterings(@Nullable Output<List<String>> clusterings) {
             this.clusterings = clusterings;
             return this;
         }
 
         public Builder clusterings(@Nullable List<String> clusterings) {
-            this.clusterings = Input.ofNullable(clusterings);
+            this.clusterings = Output.ofNullable(clusterings);
             return this;
         }
 
-        public Builder creationTime(@Nullable Input<Integer> creationTime) {
+        public Builder creationTime(@Nullable Output<Integer> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable Integer creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder datasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Output<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Input.ofNullable(datasetId);
+            this.datasetId = Output.ofNullable(datasetId);
             return this;
         }
 
-        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Input.ofNullable(deletionProtection);
+            this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptionConfiguration(@Nullable Input<TableEncryptionConfigurationGetArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
         public Builder encryptionConfiguration(@Nullable TableEncryptionConfigurationGetArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder expirationTime(@Nullable Input<Integer> expirationTime) {
+        public Builder expirationTime(@Nullable Output<Integer> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
         public Builder expirationTime(@Nullable Integer expirationTime) {
-            this.expirationTime = Input.ofNullable(expirationTime);
+            this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder externalDataConfiguration(@Nullable Input<TableExternalDataConfigurationGetArgs> externalDataConfiguration) {
+        public Builder externalDataConfiguration(@Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration) {
             this.externalDataConfiguration = externalDataConfiguration;
             return this;
         }
 
         public Builder externalDataConfiguration(@Nullable TableExternalDataConfigurationGetArgs externalDataConfiguration) {
-            this.externalDataConfiguration = Input.ofNullable(externalDataConfiguration);
+            this.externalDataConfiguration = Output.ofNullable(externalDataConfiguration);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lastModifiedTime(@Nullable Input<Integer> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Output<Integer> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
         public Builder lastModifiedTime(@Nullable Integer lastModifiedTime) {
-            this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
+            this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder materializedView(@Nullable Input<TableMaterializedViewGetArgs> materializedView) {
+        public Builder materializedView(@Nullable Output<TableMaterializedViewGetArgs> materializedView) {
             this.materializedView = materializedView;
             return this;
         }
 
         public Builder materializedView(@Nullable TableMaterializedViewGetArgs materializedView) {
-            this.materializedView = Input.ofNullable(materializedView);
+            this.materializedView = Output.ofNullable(materializedView);
             return this;
         }
 
-        public Builder numBytes(@Nullable Input<Integer> numBytes) {
+        public Builder numBytes(@Nullable Output<Integer> numBytes) {
             this.numBytes = numBytes;
             return this;
         }
 
         public Builder numBytes(@Nullable Integer numBytes) {
-            this.numBytes = Input.ofNullable(numBytes);
+            this.numBytes = Output.ofNullable(numBytes);
             return this;
         }
 
-        public Builder numLongTermBytes(@Nullable Input<Integer> numLongTermBytes) {
+        public Builder numLongTermBytes(@Nullable Output<Integer> numLongTermBytes) {
             this.numLongTermBytes = numLongTermBytes;
             return this;
         }
 
         public Builder numLongTermBytes(@Nullable Integer numLongTermBytes) {
-            this.numLongTermBytes = Input.ofNullable(numLongTermBytes);
+            this.numLongTermBytes = Output.ofNullable(numLongTermBytes);
             return this;
         }
 
-        public Builder numRows(@Nullable Input<Integer> numRows) {
+        public Builder numRows(@Nullable Output<Integer> numRows) {
             this.numRows = numRows;
             return this;
         }
 
         public Builder numRows(@Nullable Integer numRows) {
-            this.numRows = Input.ofNullable(numRows);
+            this.numRows = Output.ofNullable(numRows);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rangePartitioning(@Nullable Input<TableRangePartitioningGetArgs> rangePartitioning) {
+        public Builder rangePartitioning(@Nullable Output<TableRangePartitioningGetArgs> rangePartitioning) {
             this.rangePartitioning = rangePartitioning;
             return this;
         }
 
         public Builder rangePartitioning(@Nullable TableRangePartitioningGetArgs rangePartitioning) {
-            this.rangePartitioning = Input.ofNullable(rangePartitioning);
+            this.rangePartitioning = Output.ofNullable(rangePartitioning);
             return this;
         }
 
-        public Builder schema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable String schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder tableId(@Nullable Input<String> tableId) {
+        public Builder tableId(@Nullable Output<String> tableId) {
             this.tableId = tableId;
             return this;
         }
 
         public Builder tableId(@Nullable String tableId) {
-            this.tableId = Input.ofNullable(tableId);
+            this.tableId = Output.ofNullable(tableId);
             return this;
         }
 
-        public Builder timePartitioning(@Nullable Input<TableTimePartitioningGetArgs> timePartitioning) {
+        public Builder timePartitioning(@Nullable Output<TableTimePartitioningGetArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
 
         public Builder timePartitioning(@Nullable TableTimePartitioningGetArgs timePartitioning) {
-            this.timePartitioning = Input.ofNullable(timePartitioning);
+            this.timePartitioning = Output.ofNullable(timePartitioning);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder view(@Nullable Input<TableViewGetArgs> view) {
+        public Builder view(@Nullable Output<TableViewGetArgs> view) {
             this.view = view;
             return this;
         }
 
         public Builder view(@Nullable TableViewGetArgs view) {
-            this.view = Input.ofNullable(view);
+            this.view = Output.ofNullable(view);
             return this;
         }
         public TableState build() {

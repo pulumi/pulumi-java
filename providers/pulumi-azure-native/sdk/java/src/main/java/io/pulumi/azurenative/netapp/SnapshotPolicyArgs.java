@@ -7,7 +7,7 @@ import io.pulumi.azurenative.netapp.inputs.DailyScheduleArgs;
 import io.pulumi.azurenative.netapp.inputs.HourlyScheduleArgs;
 import io.pulumi.azurenative.netapp.inputs.MonthlyScheduleArgs;
 import io.pulumi.azurenative.netapp.inputs.WeeklyScheduleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -36,10 +36,10 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dailySchedule")
-      private final @Nullable Input<DailyScheduleArgs> dailySchedule;
+      private final @Nullable Output<DailyScheduleArgs> dailySchedule;
 
-    public Input<DailyScheduleArgs> getDailySchedule() {
-        return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
+    public Output<DailyScheduleArgs> getDailySchedule() {
+        return this.dailySchedule == null ? Output.empty() : this.dailySchedule;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hourlySchedule")
-      private final @Nullable Input<HourlyScheduleArgs> hourlySchedule;
+      private final @Nullable Output<HourlyScheduleArgs> hourlySchedule;
 
-    public Input<HourlyScheduleArgs> getHourlySchedule() {
-        return this.hourlySchedule == null ? Input.empty() : this.hourlySchedule;
+    public Output<HourlyScheduleArgs> getHourlySchedule() {
+        return this.hourlySchedule == null ? Output.empty() : this.hourlySchedule;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monthlySchedule")
-      private final @Nullable Input<MonthlyScheduleArgs> monthlySchedule;
+      private final @Nullable Output<MonthlyScheduleArgs> monthlySchedule;
 
-    public Input<MonthlyScheduleArgs> getMonthlySchedule() {
-        return this.monthlySchedule == null ? Input.empty() : this.monthlySchedule;
+    public Output<MonthlyScheduleArgs> getMonthlySchedule() {
+        return this.monthlySchedule == null ? Output.empty() : this.monthlySchedule;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,10 +102,10 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotPolicyName")
-      private final @Nullable Input<String> snapshotPolicyName;
+      private final @Nullable Output<String> snapshotPolicyName;
 
-    public Input<String> getSnapshotPolicyName() {
-        return this.snapshotPolicyName == null ? Input.empty() : this.snapshotPolicyName;
+    public Output<String> getSnapshotPolicyName() {
+        return this.snapshotPolicyName == null ? Output.empty() : this.snapshotPolicyName;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weeklySchedule")
-      private final @Nullable Input<WeeklyScheduleArgs> weeklySchedule;
+      private final @Nullable Output<WeeklyScheduleArgs> weeklySchedule;
 
-    public Input<WeeklyScheduleArgs> getWeeklySchedule() {
-        return this.weeklySchedule == null ? Input.empty() : this.weeklySchedule;
+    public Output<WeeklyScheduleArgs> getWeeklySchedule() {
+        return this.weeklySchedule == null ? Output.empty() : this.weeklySchedule;
     }
 
     public SnapshotPolicyArgs(
-        Input<String> accountName,
-        @Nullable Input<DailyScheduleArgs> dailySchedule,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<HourlyScheduleArgs> hourlySchedule,
-        @Nullable Input<String> location,
-        @Nullable Input<MonthlyScheduleArgs> monthlySchedule,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> snapshotPolicyName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<WeeklyScheduleArgs> weeklySchedule) {
+        Output<String> accountName,
+        @Nullable Output<DailyScheduleArgs> dailySchedule,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<HourlyScheduleArgs> hourlySchedule,
+        @Nullable Output<String> location,
+        @Nullable Output<MonthlyScheduleArgs> monthlySchedule,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> snapshotPolicyName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<WeeklyScheduleArgs> weeklySchedule) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dailySchedule = dailySchedule;
         this.enabled = enabled;
@@ -154,16 +154,16 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotPolicyArgs() {
-        this.accountName = Input.empty();
-        this.dailySchedule = Input.empty();
-        this.enabled = Input.empty();
-        this.hourlySchedule = Input.empty();
-        this.location = Input.empty();
-        this.monthlySchedule = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.snapshotPolicyName = Input.empty();
-        this.tags = Input.empty();
-        this.weeklySchedule = Input.empty();
+        this.accountName = Output.empty();
+        this.dailySchedule = Output.empty();
+        this.enabled = Output.empty();
+        this.hourlySchedule = Output.empty();
+        this.location = Output.empty();
+        this.monthlySchedule = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.snapshotPolicyName = Output.empty();
+        this.tags = Output.empty();
+        this.weeklySchedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<DailyScheduleArgs> dailySchedule;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<HourlyScheduleArgs> hourlySchedule;
-        private @Nullable Input<String> location;
-        private @Nullable Input<MonthlyScheduleArgs> monthlySchedule;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> snapshotPolicyName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<WeeklyScheduleArgs> weeklySchedule;
+        private Output<String> accountName;
+        private @Nullable Output<DailyScheduleArgs> dailySchedule;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<HourlyScheduleArgs> hourlySchedule;
+        private @Nullable Output<String> location;
+        private @Nullable Output<MonthlyScheduleArgs> monthlySchedule;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> snapshotPolicyName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<WeeklyScheduleArgs> weeklySchedule;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder dailySchedule(@Nullable Input<DailyScheduleArgs> dailySchedule) {
+        public Builder dailySchedule(@Nullable Output<DailyScheduleArgs> dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
         public Builder dailySchedule(@Nullable DailyScheduleArgs dailySchedule) {
-            this.dailySchedule = Input.ofNullable(dailySchedule);
+            this.dailySchedule = Output.ofNullable(dailySchedule);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder hourlySchedule(@Nullable Input<HourlyScheduleArgs> hourlySchedule) {
+        public Builder hourlySchedule(@Nullable Output<HourlyScheduleArgs> hourlySchedule) {
             this.hourlySchedule = hourlySchedule;
             return this;
         }
 
         public Builder hourlySchedule(@Nullable HourlyScheduleArgs hourlySchedule) {
-            this.hourlySchedule = Input.ofNullable(hourlySchedule);
+            this.hourlySchedule = Output.ofNullable(hourlySchedule);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder monthlySchedule(@Nullable Input<MonthlyScheduleArgs> monthlySchedule) {
+        public Builder monthlySchedule(@Nullable Output<MonthlyScheduleArgs> monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
 
         public Builder monthlySchedule(@Nullable MonthlyScheduleArgs monthlySchedule) {
-            this.monthlySchedule = Input.ofNullable(monthlySchedule);
+            this.monthlySchedule = Output.ofNullable(monthlySchedule);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder snapshotPolicyName(@Nullable Input<String> snapshotPolicyName) {
+        public Builder snapshotPolicyName(@Nullable Output<String> snapshotPolicyName) {
             this.snapshotPolicyName = snapshotPolicyName;
             return this;
         }
 
         public Builder snapshotPolicyName(@Nullable String snapshotPolicyName) {
-            this.snapshotPolicyName = Input.ofNullable(snapshotPolicyName);
+            this.snapshotPolicyName = Output.ofNullable(snapshotPolicyName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder weeklySchedule(@Nullable Input<WeeklyScheduleArgs> weeklySchedule) {
+        public Builder weeklySchedule(@Nullable Output<WeeklyScheduleArgs> weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
 
         public Builder weeklySchedule(@Nullable WeeklyScheduleArgs weeklySchedule) {
-            this.weeklySchedule = Input.ofNullable(weeklySchedule);
+            this.weeklySchedule = Output.ofNullable(weeklySchedule);
             return this;
         }
         public SnapshotPolicyArgs build() {

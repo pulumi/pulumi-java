@@ -6,7 +6,6 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.SqlPoolSensitivityLabelArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -231,24 +230,24 @@ public class SqlPoolSensitivityLabel extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlPoolSensitivityLabel(String name, SqlPoolSensitivityLabelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:SqlPoolSensitivityLabel", name, args == null ? SqlPoolSensitivityLabelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:synapse:SqlPoolSensitivityLabel", name, args == null ? SqlPoolSensitivityLabelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlPoolSensitivityLabel(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlPoolSensitivityLabel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:SqlPoolSensitivityLabel", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:synapse/v20190601preview:SqlPoolSensitivityLabel").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20201201:SqlPoolSensitivityLabel").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210301:SqlPoolSensitivityLabel").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210401preview:SqlPoolSensitivityLabel").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210501:SqlPoolSensitivityLabel").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601:SqlPoolSensitivityLabel").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601preview:SqlPoolSensitivityLabel").build())
+                Output.of(Alias.builder().setType("azure-native:synapse/v20190601preview:SqlPoolSensitivityLabel").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20201201:SqlPoolSensitivityLabel").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210301:SqlPoolSensitivityLabel").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210401preview:SqlPoolSensitivityLabel").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210501:SqlPoolSensitivityLabel").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601:SqlPoolSensitivityLabel").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601preview:SqlPoolSensitivityLabel").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -262,7 +261,7 @@ public class SqlPoolSensitivityLabel extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlPoolSensitivityLabel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlPoolSensitivityLabel get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlPoolSensitivityLabel(name, id, options);
     }
 }

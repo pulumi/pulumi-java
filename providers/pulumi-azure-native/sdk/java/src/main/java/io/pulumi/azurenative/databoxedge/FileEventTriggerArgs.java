@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.databoxedge.inputs.FileSourceInfoArgs;
 import io.pulumi.azurenative.databoxedge.inputs.RoleSinkInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="customContextTag")
-      private final @Nullable Input<String> customContextTag;
+      private final @Nullable Output<String> customContextTag;
 
-    public Input<String> getCustomContextTag() {
-        return this.customContextTag == null ? Input.empty() : this.customContextTag;
+    public Output<String> getCustomContextTag() {
+        return this.customContextTag == null ? Output.empty() : this.customContextTag;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -44,9 +44,9 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -55,10 +55,10 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,9 +77,9 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sinkInfo", required=true)
-      private final Input<RoleSinkInfoArgs> sinkInfo;
+      private final Output<RoleSinkInfoArgs> sinkInfo;
 
-    public Input<RoleSinkInfoArgs> getSinkInfo() {
+    public Output<RoleSinkInfoArgs> getSinkInfo() {
         return this.sinkInfo;
     }
 
@@ -88,20 +88,20 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceInfo", required=true)
-      private final Input<FileSourceInfoArgs> sourceInfo;
+      private final Output<FileSourceInfoArgs> sourceInfo;
 
-    public Input<FileSourceInfoArgs> getSourceInfo() {
+    public Output<FileSourceInfoArgs> getSourceInfo() {
         return this.sourceInfo;
     }
 
     public FileEventTriggerArgs(
-        @Nullable Input<String> customContextTag,
-        Input<String> deviceName,
-        Input<String> kind,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        Input<RoleSinkInfoArgs> sinkInfo,
-        Input<FileSourceInfoArgs> sourceInfo) {
+        @Nullable Output<String> customContextTag,
+        Output<String> deviceName,
+        Output<String> kind,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        Output<RoleSinkInfoArgs> sinkInfo,
+        Output<FileSourceInfoArgs> sourceInfo) {
         this.customContextTag = customContextTag;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -112,13 +112,13 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FileEventTriggerArgs() {
-        this.customContextTag = Input.empty();
-        this.deviceName = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sinkInfo = Input.empty();
-        this.sourceInfo = Input.empty();
+        this.customContextTag = Output.empty();
+        this.deviceName = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sinkInfo = Output.empty();
+        this.sourceInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customContextTag;
-        private Input<String> deviceName;
-        private Input<String> kind;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<RoleSinkInfoArgs> sinkInfo;
-        private Input<FileSourceInfoArgs> sourceInfo;
+        private @Nullable Output<String> customContextTag;
+        private Output<String> deviceName;
+        private Output<String> kind;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<RoleSinkInfoArgs> sinkInfo;
+        private Output<FileSourceInfoArgs> sourceInfo;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
     	      this.sourceInfo = defaults.sourceInfo;
         }
 
-        public Builder customContextTag(@Nullable Input<String> customContextTag) {
+        public Builder customContextTag(@Nullable Output<String> customContextTag) {
             this.customContextTag = customContextTag;
             return this;
         }
 
         public Builder customContextTag(@Nullable String customContextTag) {
-            this.customContextTag = Input.ofNullable(customContextTag);
+            this.customContextTag = Output.ofNullable(customContextTag);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sinkInfo(Input<RoleSinkInfoArgs> sinkInfo) {
+        public Builder sinkInfo(Output<RoleSinkInfoArgs> sinkInfo) {
             this.sinkInfo = Objects.requireNonNull(sinkInfo);
             return this;
         }
 
         public Builder sinkInfo(RoleSinkInfoArgs sinkInfo) {
-            this.sinkInfo = Input.of(Objects.requireNonNull(sinkInfo));
+            this.sinkInfo = Output.of(Objects.requireNonNull(sinkInfo));
             return this;
         }
 
-        public Builder sourceInfo(Input<FileSourceInfoArgs> sourceInfo) {
+        public Builder sourceInfo(Output<FileSourceInfoArgs> sourceInfo) {
             this.sourceInfo = Objects.requireNonNull(sourceInfo);
             return this;
         }
 
         public Builder sourceInfo(FileSourceInfoArgs sourceInfo) {
-            this.sourceInfo = Input.of(Objects.requireNonNull(sourceInfo));
+            this.sourceInfo = Output.of(Objects.requireNonNull(sourceInfo));
             return this;
         }
         public FileEventTriggerArgs build() {

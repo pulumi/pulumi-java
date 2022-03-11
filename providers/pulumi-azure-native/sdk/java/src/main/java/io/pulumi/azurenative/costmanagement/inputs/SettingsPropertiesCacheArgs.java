@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="channel", required=true)
-      private final Input<String> channel;
+      private final Output<String> channel;
 
-    public Input<String> getChannel() {
+    public Output<String> getChannel() {
         return this.channel;
     }
 
@@ -30,9 +30,9 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -41,9 +41,9 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -52,10 +52,10 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subchannel", required=true)
-      private final Input<String> subchannel;
+      private final Output<String> subchannel;
 
-    public Input<String> getSubchannel() {
+    public Output<String> getSubchannel() {
         return this.subchannel;
     }
 
     public SettingsPropertiesCacheArgs(
-        Input<String> channel,
-        Input<String> id,
-        Input<String> name,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> status,
-        Input<String> subchannel) {
+        Output<String> channel,
+        Output<String> id,
+        Output<String> name,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> status,
+        Output<String> subchannel) {
         this.channel = Objects.requireNonNull(channel, "expected parameter 'channel' to be non-null");
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -96,12 +96,12 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     }
 
     private SettingsPropertiesCacheArgs() {
-        this.channel = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.status = Input.empty();
-        this.subchannel = Input.empty();
+        this.channel = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.status = Output.empty();
+        this.subchannel = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> channel;
-        private Input<String> id;
-        private Input<String> name;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> status;
-        private Input<String> subchannel;
+        private Output<String> channel;
+        private Output<String> id;
+        private Output<String> name;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> status;
+        private Output<String> subchannel;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     	      this.subchannel = defaults.subchannel;
         }
 
-        public Builder channel(Input<String> channel) {
+        public Builder channel(Output<String> channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
 
         public Builder channel(String channel) {
-            this.channel = Input.of(Objects.requireNonNull(channel));
+            this.channel = Output.of(Objects.requireNonNull(channel));
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder subchannel(Input<String> subchannel) {
+        public Builder subchannel(Output<String> subchannel) {
             this.subchannel = Objects.requireNonNull(subchannel);
             return this;
         }
 
         public Builder subchannel(String subchannel) {
-            this.subchannel = Input.of(Objects.requireNonNull(subchannel));
+            this.subchannel = Output.of(Objects.requireNonNull(subchannel));
             return this;
         }
         public SettingsPropertiesCacheArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="compilationMode")
-      private final @Nullable Input<Object> compilationMode;
+      private final @Nullable Output<Object> compilationMode;
 
-    public Input<Object> getCompilationMode() {
-        return this.compilationMode == null ? Input.empty() : this.compilationMode;
+    public Output<Object> getCompilationMode() {
+        return this.compilationMode == null ? Output.empty() : this.compilationMode;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="degreeOfParallelism")
-      private final @Nullable Input<Object> degreeOfParallelism;
+      private final @Nullable Output<Object> degreeOfParallelism;
 
-    public Input<Object> getDegreeOfParallelism() {
-        return this.degreeOfParallelism == null ? Input.empty() : this.degreeOfParallelism;
+    public Output<Object> getDegreeOfParallelism() {
+        return this.degreeOfParallelism == null ? Output.empty() : this.degreeOfParallelism;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -85,9 +85,9 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -96,10 +96,10 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,Object>> parameters;
+      private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Input<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,Object>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Object> priority;
+      private final @Nullable Output<Object> priority;
 
-    public Input<Object> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Object> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="runtimeVersion")
-      private final @Nullable Input<Object> runtimeVersion;
+      private final @Nullable Output<Object> runtimeVersion;
 
-    public Input<Object> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
+    public Output<Object> getRuntimeVersion() {
+        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
     }
 
     /**
@@ -140,9 +140,9 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scriptLinkedService", required=true)
-      private final Input<LinkedServiceReferenceArgs> scriptLinkedService;
+      private final Output<LinkedServiceReferenceArgs> scriptLinkedService;
 
-    public Input<LinkedServiceReferenceArgs> getScriptLinkedService() {
+    public Output<LinkedServiceReferenceArgs> getScriptLinkedService() {
         return this.scriptLinkedService;
     }
 
@@ -151,9 +151,9 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scriptPath", required=true)
-      private final Input<Object> scriptPath;
+      private final Output<Object> scriptPath;
 
-    public Input<Object> getScriptPath() {
+    public Output<Object> getScriptPath() {
         return this.scriptPath;
     }
 
@@ -163,9 +163,9 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -174,27 +174,27 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public DataLakeAnalyticsUSQLActivityArgs(
-        @Nullable Input<Object> compilationMode,
-        @Nullable Input<Object> degreeOfParallelism,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        Input<String> name,
-        @Nullable Input<Map<String,Object>> parameters,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        @Nullable Input<Object> priority,
-        @Nullable Input<Object> runtimeVersion,
-        Input<LinkedServiceReferenceArgs> scriptLinkedService,
-        Input<Object> scriptPath,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<Object> compilationMode,
+        @Nullable Output<Object> degreeOfParallelism,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        Output<String> name,
+        @Nullable Output<Map<String,Object>> parameters,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        @Nullable Output<Object> priority,
+        @Nullable Output<Object> runtimeVersion,
+        Output<LinkedServiceReferenceArgs> scriptLinkedService,
+        Output<Object> scriptPath,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.compilationMode = compilationMode;
         this.degreeOfParallelism = degreeOfParallelism;
         this.dependsOn = dependsOn;
@@ -212,20 +212,20 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
     }
 
     private DataLakeAnalyticsUSQLActivityArgs() {
-        this.compilationMode = Input.empty();
-        this.degreeOfParallelism = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.policy = Input.empty();
-        this.priority = Input.empty();
-        this.runtimeVersion = Input.empty();
-        this.scriptLinkedService = Input.empty();
-        this.scriptPath = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.compilationMode = Output.empty();
+        this.degreeOfParallelism = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.policy = Output.empty();
+        this.priority = Output.empty();
+        this.runtimeVersion = Output.empty();
+        this.scriptLinkedService = Output.empty();
+        this.scriptPath = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -237,20 +237,20 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> compilationMode;
-        private @Nullable Input<Object> degreeOfParallelism;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private Input<String> name;
-        private @Nullable Input<Map<String,Object>> parameters;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private @Nullable Input<Object> priority;
-        private @Nullable Input<Object> runtimeVersion;
-        private Input<LinkedServiceReferenceArgs> scriptLinkedService;
-        private Input<Object> scriptPath;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<Object> compilationMode;
+        private @Nullable Output<Object> degreeOfParallelism;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private Output<String> name;
+        private @Nullable Output<Map<String,Object>> parameters;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private @Nullable Output<Object> priority;
+        private @Nullable Output<Object> runtimeVersion;
+        private Output<LinkedServiceReferenceArgs> scriptLinkedService;
+        private Output<Object> scriptPath;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -274,143 +274,143 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder compilationMode(@Nullable Input<Object> compilationMode) {
+        public Builder compilationMode(@Nullable Output<Object> compilationMode) {
             this.compilationMode = compilationMode;
             return this;
         }
 
         public Builder compilationMode(@Nullable Object compilationMode) {
-            this.compilationMode = Input.ofNullable(compilationMode);
+            this.compilationMode = Output.ofNullable(compilationMode);
             return this;
         }
 
-        public Builder degreeOfParallelism(@Nullable Input<Object> degreeOfParallelism) {
+        public Builder degreeOfParallelism(@Nullable Output<Object> degreeOfParallelism) {
             this.degreeOfParallelism = degreeOfParallelism;
             return this;
         }
 
         public Builder degreeOfParallelism(@Nullable Object degreeOfParallelism) {
-            this.degreeOfParallelism = Input.ofNullable(degreeOfParallelism);
+            this.degreeOfParallelism = Output.ofNullable(degreeOfParallelism);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Object> priority) {
+        public Builder priority(@Nullable Output<Object> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Object priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder runtimeVersion(@Nullable Input<Object> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Output<Object> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
         public Builder runtimeVersion(@Nullable Object runtimeVersion) {
-            this.runtimeVersion = Input.ofNullable(runtimeVersion);
+            this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
         }
 
-        public Builder scriptLinkedService(Input<LinkedServiceReferenceArgs> scriptLinkedService) {
+        public Builder scriptLinkedService(Output<LinkedServiceReferenceArgs> scriptLinkedService) {
             this.scriptLinkedService = Objects.requireNonNull(scriptLinkedService);
             return this;
         }
 
         public Builder scriptLinkedService(LinkedServiceReferenceArgs scriptLinkedService) {
-            this.scriptLinkedService = Input.of(Objects.requireNonNull(scriptLinkedService));
+            this.scriptLinkedService = Output.of(Objects.requireNonNull(scriptLinkedService));
             return this;
         }
 
-        public Builder scriptPath(Input<Object> scriptPath) {
+        public Builder scriptPath(Output<Object> scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
 
         public Builder scriptPath(Object scriptPath) {
-            this.scriptPath = Input.of(Objects.requireNonNull(scriptPath));
+            this.scriptPath = Output.of(Objects.requireNonNull(scriptPath));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public DataLakeAnalyticsUSQLActivityArgs build() {

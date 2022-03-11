@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.enums.StorageAccountType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,StorageAccountType>> type;
+      private final Output<Either<String,StorageAccountType>> type;
 
-    public Input<Either<String,StorageAccountType>> getType() {
+    public Output<Either<String,StorageAccountType>> getType() {
         return this.type;
     }
 
     public StorageAccountArgs(
-        @Nullable Input<String> id,
-        Input<Either<String,StorageAccountType>> type) {
+        @Nullable Output<String> id,
+        Output<Either<String,StorageAccountType>> type) {
         this.id = id;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private StorageAccountArgs() {
-        this.id = Input.empty();
-        this.type = Input.empty();
+        this.id = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private Input<Either<String,StorageAccountType>> type;
+        private @Nullable Output<String> id;
+        private Output<Either<String,StorageAccountType>> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder type(Input<Either<String,StorageAccountType>> type) {
+        public Builder type(Output<Either<String,StorageAccountType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,StorageAccountType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public StorageAccountArgs build() {

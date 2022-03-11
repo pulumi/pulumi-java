@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs;
 import java.lang.Boolean;
@@ -27,10 +27,10 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="internalIpOnly")
-      private final @Nullable Input<Boolean> internalIpOnly;
+      private final @Nullable Output<Boolean> internalIpOnly;
 
-    public Input<Boolean> getInternalIpOnly() {
-        return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
+    public Output<Boolean> getInternalIpOnly() {
+        return this.internalIpOnly == null ? Output.empty() : this.internalIpOnly;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="serviceAccountScopes")
-      private final @Nullable Input<List<String>> serviceAccountScopes;
+      private final @Nullable Output<List<String>> serviceAccountScopes;
 
-    public Input<List<String>> getServiceAccountScopes() {
-        return this.serviceAccountScopes == null ? Input.empty() : this.serviceAccountScopes;
+    public Output<List<String>> getServiceAccountScopes() {
+        return this.serviceAccountScopes == null ? Output.empty() : this.serviceAccountScopes;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-      private final @Nullable Input<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Input<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
+    public Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -131,22 +131,22 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public ClusterClusterConfigGceClusterConfigArgs(
-        @Nullable Input<Boolean> internalIpOnly,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> network,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<List<String>> serviceAccountScopes,
-        @Nullable Input<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Input<String> subnetwork,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<String> zone) {
+        @Nullable Output<Boolean> internalIpOnly,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> network,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<List<String>> serviceAccountScopes,
+        @Nullable Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig,
+        @Nullable Output<String> subnetwork,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<String> zone) {
         this.internalIpOnly = internalIpOnly;
         this.metadata = metadata;
         this.network = network;
@@ -159,15 +159,15 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     }
 
     private ClusterClusterConfigGceClusterConfigArgs() {
-        this.internalIpOnly = Input.empty();
-        this.metadata = Input.empty();
-        this.network = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.serviceAccountScopes = Input.empty();
-        this.shieldedInstanceConfig = Input.empty();
-        this.subnetwork = Input.empty();
-        this.tags = Input.empty();
-        this.zone = Input.empty();
+        this.internalIpOnly = Output.empty();
+        this.metadata = Output.empty();
+        this.network = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.serviceAccountScopes = Output.empty();
+        this.shieldedInstanceConfig = Output.empty();
+        this.subnetwork = Output.empty();
+        this.tags = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -179,15 +179,15 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> internalIpOnly;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<List<String>> serviceAccountScopes;
-        private @Nullable Input<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Input<String> subnetwork;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<Boolean> internalIpOnly;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<List<String>> serviceAccountScopes;
+        private @Nullable Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
+        private @Nullable Output<String> subnetwork;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -206,93 +206,93 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     	      this.zone = defaults.zone;
         }
 
-        public Builder internalIpOnly(@Nullable Input<Boolean> internalIpOnly) {
+        public Builder internalIpOnly(@Nullable Output<Boolean> internalIpOnly) {
             this.internalIpOnly = internalIpOnly;
             return this;
         }
 
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
-            this.internalIpOnly = Input.ofNullable(internalIpOnly);
+            this.internalIpOnly = Output.ofNullable(internalIpOnly);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder serviceAccountScopes(@Nullable Input<List<String>> serviceAccountScopes) {
+        public Builder serviceAccountScopes(@Nullable Output<List<String>> serviceAccountScopes) {
             this.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
 
         public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
-            this.serviceAccountScopes = Input.ofNullable(serviceAccountScopes);
+            this.serviceAccountScopes = Output.ofNullable(serviceAccountScopes);
             return this;
         }
 
-        public Builder shieldedInstanceConfig(@Nullable Input<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
         public Builder shieldedInstanceConfig(@Nullable ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public ClusterClusterConfigGceClusterConfigArgs build() {

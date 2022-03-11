@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.FirewallLogConfigMetadata;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<FirewallLogConfigMetadata> metadata;
+      private final @Nullable Output<FirewallLogConfigMetadata> metadata;
 
-    public Input<FirewallLogConfigMetadata> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<FirewallLogConfigMetadata> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     public FirewallLogConfigArgs(
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<FirewallLogConfigMetadata> metadata) {
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<FirewallLogConfigMetadata> metadata) {
         this.enable = enable;
         this.metadata = metadata;
     }
 
     private FirewallLogConfigArgs() {
-        this.enable = Input.empty();
-        this.metadata = Input.empty();
+        this.enable = Output.empty();
+        this.metadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<FirewallLogConfigMetadata> metadata;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<FirewallLogConfigMetadata> metadata;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<FirewallLogConfigMetadata> metadata) {
+        public Builder metadata(@Nullable Output<FirewallLogConfigMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable FirewallLogConfigMetadata metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
         public FirewallLogConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class CloudServiceConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="osFamily", required=true)
-      private final Input<String> osFamily;
+      private final Output<String> osFamily;
 
-    public Input<String> getOsFamily() {
+    public Output<String> getOsFamily() {
         return this.osFamily;
     }
 
@@ -30,22 +30,22 @@ public final class CloudServiceConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="osVersion")
-      private final @Nullable Input<String> osVersion;
+      private final @Nullable Output<String> osVersion;
 
-    public Input<String> getOsVersion() {
-        return this.osVersion == null ? Input.empty() : this.osVersion;
+    public Output<String> getOsVersion() {
+        return this.osVersion == null ? Output.empty() : this.osVersion;
     }
 
     public CloudServiceConfigurationArgs(
-        Input<String> osFamily,
-        @Nullable Input<String> osVersion) {
+        Output<String> osFamily,
+        @Nullable Output<String> osVersion) {
         this.osFamily = Objects.requireNonNull(osFamily, "expected parameter 'osFamily' to be non-null");
         this.osVersion = osVersion;
     }
 
     private CloudServiceConfigurationArgs() {
-        this.osFamily = Input.empty();
-        this.osVersion = Input.empty();
+        this.osFamily = Output.empty();
+        this.osVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class CloudServiceConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> osFamily;
-        private @Nullable Input<String> osVersion;
+        private Output<String> osFamily;
+        private @Nullable Output<String> osVersion;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class CloudServiceConfigurationArgs extends io.pulumi.resources.Res
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder osFamily(Input<String> osFamily) {
+        public Builder osFamily(Output<String> osFamily) {
             this.osFamily = Objects.requireNonNull(osFamily);
             return this;
         }
 
         public Builder osFamily(String osFamily) {
-            this.osFamily = Input.of(Objects.requireNonNull(osFamily));
+            this.osFamily = Output.of(Objects.requireNonNull(osFamily));
             return this;
         }
 
-        public Builder osVersion(@Nullable Input<String> osVersion) {
+        public Builder osVersion(@Nullable Output<String> osVersion) {
             this.osVersion = osVersion;
             return this;
         }
 
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Input.ofNullable(osVersion);
+            this.osVersion = Output.ofNullable(osVersion);
             return this;
         }
         public CloudServiceConfigurationArgs build() {

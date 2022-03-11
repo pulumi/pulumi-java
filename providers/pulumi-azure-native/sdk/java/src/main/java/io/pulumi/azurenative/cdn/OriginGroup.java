@@ -10,7 +10,6 @@ import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -201,22 +200,22 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OriginGroup(String name, OriginGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cdn:OriginGroup", name, args == null ? OriginGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:cdn:OriginGroup", name, args == null ? OriginGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OriginGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OriginGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:OriginGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:cdn/v20191231:OriginGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20200331:OriginGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20200415:OriginGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20200901:OriginGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20210601:OriginGroup").build())
+                Output.of(Alias.builder().setType("azure-native:cdn/v20191231:OriginGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20200331:OriginGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20200415:OriginGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20200901:OriginGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20210601:OriginGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -230,7 +229,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OriginGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OriginGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OriginGroup(name, id, options);
     }
 }

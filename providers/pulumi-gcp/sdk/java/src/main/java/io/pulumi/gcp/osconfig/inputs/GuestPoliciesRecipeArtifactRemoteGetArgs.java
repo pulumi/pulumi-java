@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="checkSum")
-      private final @Nullable Input<String> checkSum;
+      private final @Nullable Output<String> checkSum;
 
-    public Input<String> getCheckSum() {
-        return this.checkSum == null ? Input.empty() : this.checkSum;
+    public Output<String> getCheckSum() {
+        return this.checkSum == null ? Output.empty() : this.checkSum;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public GuestPoliciesRecipeArtifactRemoteGetArgs(
-        @Nullable Input<String> checkSum,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> checkSum,
+        @Nullable Output<String> uri) {
         this.checkSum = checkSum;
         this.uri = uri;
     }
 
     private GuestPoliciesRecipeArtifactRemoteGetArgs() {
-        this.checkSum = Input.empty();
-        this.uri = Input.empty();
+        this.checkSum = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> checkSum;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> checkSum;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
     	      this.uri = defaults.uri;
         }
 
-        public Builder checkSum(@Nullable Input<String> checkSum) {
+        public Builder checkSum(@Nullable Output<String> checkSum) {
             this.checkSum = checkSum;
             return this;
         }
 
         public Builder checkSum(@Nullable String checkSum) {
-            this.checkSum = Input.ofNullable(checkSum);
+            this.checkSum = Output.ofNullable(checkSum);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public GuestPoliciesRecipeArtifactRemoteGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class EntryBigqueryTableSpecViewSpecGetArgs extends io.pulumi.resou
     public static final EntryBigqueryTableSpecViewSpecGetArgs Empty = new EntryBigqueryTableSpecViewSpecGetArgs();
 
     @InputImport(name="viewQuery")
-      private final @Nullable Input<String> viewQuery;
+      private final @Nullable Output<String> viewQuery;
 
-    public Input<String> getViewQuery() {
-        return this.viewQuery == null ? Input.empty() : this.viewQuery;
+    public Output<String> getViewQuery() {
+        return this.viewQuery == null ? Output.empty() : this.viewQuery;
     }
 
-    public EntryBigqueryTableSpecViewSpecGetArgs(@Nullable Input<String> viewQuery) {
+    public EntryBigqueryTableSpecViewSpecGetArgs(@Nullable Output<String> viewQuery) {
         this.viewQuery = viewQuery;
     }
 
     private EntryBigqueryTableSpecViewSpecGetArgs() {
-        this.viewQuery = Input.empty();
+        this.viewQuery = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class EntryBigqueryTableSpecViewSpecGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> viewQuery;
+        private @Nullable Output<String> viewQuery;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class EntryBigqueryTableSpecViewSpecGetArgs extends io.pulumi.resou
     	      this.viewQuery = defaults.viewQuery;
         }
 
-        public Builder viewQuery(@Nullable Input<String> viewQuery) {
+        public Builder viewQuery(@Nullable Output<String> viewQuery) {
             this.viewQuery = viewQuery;
             return this;
         }
 
         public Builder viewQuery(@Nullable String viewQuery) {
-            this.viewQuery = Input.ofNullable(viewQuery);
+            this.viewQuery = Output.ofNullable(viewQuery);
             return this;
         }
         public EntryBigqueryTableSpecViewSpecGetArgs build() {

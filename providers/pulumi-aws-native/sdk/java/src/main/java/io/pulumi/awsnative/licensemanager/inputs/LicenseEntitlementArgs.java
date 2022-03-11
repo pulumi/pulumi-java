@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -17,54 +17,54 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
     public static final LicenseEntitlementArgs Empty = new LicenseEntitlementArgs();
 
     @InputImport(name="allowCheckIn")
-      private final @Nullable Input<Boolean> allowCheckIn;
+      private final @Nullable Output<Boolean> allowCheckIn;
 
-    public Input<Boolean> getAllowCheckIn() {
-        return this.allowCheckIn == null ? Input.empty() : this.allowCheckIn;
+    public Output<Boolean> getAllowCheckIn() {
+        return this.allowCheckIn == null ? Output.empty() : this.allowCheckIn;
     }
 
     @InputImport(name="maxCount")
-      private final @Nullable Input<Integer> maxCount;
+      private final @Nullable Output<Integer> maxCount;
 
-    public Input<Integer> getMaxCount() {
-        return this.maxCount == null ? Input.empty() : this.maxCount;
+    public Output<Integer> getMaxCount() {
+        return this.maxCount == null ? Output.empty() : this.maxCount;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="overage")
-      private final @Nullable Input<Boolean> overage;
+      private final @Nullable Output<Boolean> overage;
 
-    public Input<Boolean> getOverage() {
-        return this.overage == null ? Input.empty() : this.overage;
+    public Output<Boolean> getOverage() {
+        return this.overage == null ? Output.empty() : this.overage;
     }
 
     @InputImport(name="unit", required=true)
-      private final Input<String> unit;
+      private final Output<String> unit;
 
-    public Input<String> getUnit() {
+    public Output<String> getUnit() {
         return this.unit;
     }
 
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public LicenseEntitlementArgs(
-        @Nullable Input<Boolean> allowCheckIn,
-        @Nullable Input<Integer> maxCount,
-        Input<String> name,
-        @Nullable Input<Boolean> overage,
-        Input<String> unit,
-        @Nullable Input<String> value) {
+        @Nullable Output<Boolean> allowCheckIn,
+        @Nullable Output<Integer> maxCount,
+        Output<String> name,
+        @Nullable Output<Boolean> overage,
+        Output<String> unit,
+        @Nullable Output<String> value) {
         this.allowCheckIn = allowCheckIn;
         this.maxCount = maxCount;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -74,12 +74,12 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LicenseEntitlementArgs() {
-        this.allowCheckIn = Input.empty();
-        this.maxCount = Input.empty();
-        this.name = Input.empty();
-        this.overage = Input.empty();
-        this.unit = Input.empty();
-        this.value = Input.empty();
+        this.allowCheckIn = Output.empty();
+        this.maxCount = Output.empty();
+        this.name = Output.empty();
+        this.overage = Output.empty();
+        this.unit = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,12 +91,12 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowCheckIn;
-        private @Nullable Input<Integer> maxCount;
-        private Input<String> name;
-        private @Nullable Input<Boolean> overage;
-        private Input<String> unit;
-        private @Nullable Input<String> value;
+        private @Nullable Output<Boolean> allowCheckIn;
+        private @Nullable Output<Integer> maxCount;
+        private Output<String> name;
+        private @Nullable Output<Boolean> overage;
+        private Output<String> unit;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -112,63 +112,63 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
     	      this.value = defaults.value;
         }
 
-        public Builder allowCheckIn(@Nullable Input<Boolean> allowCheckIn) {
+        public Builder allowCheckIn(@Nullable Output<Boolean> allowCheckIn) {
             this.allowCheckIn = allowCheckIn;
             return this;
         }
 
         public Builder allowCheckIn(@Nullable Boolean allowCheckIn) {
-            this.allowCheckIn = Input.ofNullable(allowCheckIn);
+            this.allowCheckIn = Output.ofNullable(allowCheckIn);
             return this;
         }
 
-        public Builder maxCount(@Nullable Input<Integer> maxCount) {
+        public Builder maxCount(@Nullable Output<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
         public Builder maxCount(@Nullable Integer maxCount) {
-            this.maxCount = Input.ofNullable(maxCount);
+            this.maxCount = Output.ofNullable(maxCount);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder overage(@Nullable Input<Boolean> overage) {
+        public Builder overage(@Nullable Output<Boolean> overage) {
             this.overage = overage;
             return this;
         }
 
         public Builder overage(@Nullable Boolean overage) {
-            this.overage = Input.ofNullable(overage);
+            this.overage = Output.ofNullable(overage);
             return this;
         }
 
-        public Builder unit(Input<String> unit) {
+        public Builder unit(Output<String> unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
         public Builder unit(String unit) {
-            this.unit = Input.of(Objects.requireNonNull(unit));
+            this.unit = Output.of(Objects.requireNonNull(unit));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public LicenseEntitlementArgs build() {

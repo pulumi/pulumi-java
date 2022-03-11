@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class GlobalTableKeySchemaArgs extends io.pulumi.resources.Resource
     public static final GlobalTableKeySchemaArgs Empty = new GlobalTableKeySchemaArgs();
 
     @InputImport(name="attributeName", required=true)
-      private final Input<String> attributeName;
+      private final Output<String> attributeName;
 
-    public Input<String> getAttributeName() {
+    public Output<String> getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="keyType", required=true)
-      private final Input<String> keyType;
+      private final Output<String> keyType;
 
-    public Input<String> getKeyType() {
+    public Output<String> getKeyType() {
         return this.keyType;
     }
 
     public GlobalTableKeySchemaArgs(
-        Input<String> attributeName,
-        Input<String> keyType) {
+        Output<String> attributeName,
+        Output<String> keyType) {
         this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
         this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
     }
 
     private GlobalTableKeySchemaArgs() {
-        this.attributeName = Input.empty();
-        this.keyType = Input.empty();
+        this.attributeName = Output.empty();
+        this.keyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class GlobalTableKeySchemaArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> attributeName;
-        private Input<String> keyType;
+        private Output<String> attributeName;
+        private Output<String> keyType;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class GlobalTableKeySchemaArgs extends io.pulumi.resources.Resource
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder attributeName(Input<String> attributeName) {
+        public Builder attributeName(Output<String> attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
         public Builder attributeName(String attributeName) {
-            this.attributeName = Input.of(Objects.requireNonNull(attributeName));
+            this.attributeName = Output.of(Objects.requireNonNull(attributeName));
             return this;
         }
 
-        public Builder keyType(Input<String> keyType) {
+        public Builder keyType(Output<String> keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
 
         public Builder keyType(String keyType) {
-            this.keyType = Input.of(Objects.requireNonNull(keyType));
+            this.keyType = Output.of(Objects.requireNonNull(keyType));
             return this;
         }
         public GlobalTableKeySchemaArgs build() {

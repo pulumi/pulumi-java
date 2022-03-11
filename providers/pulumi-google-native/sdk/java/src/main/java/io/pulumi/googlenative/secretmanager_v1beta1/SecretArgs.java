@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.ReplicationArgs;
 import java.lang.String;
@@ -21,17 +21,17 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -39,24 +39,24 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replication", required=true)
-      private final Input<ReplicationArgs> replication;
+      private final Output<ReplicationArgs> replication;
 
-    public Input<ReplicationArgs> getReplication() {
+    public Output<ReplicationArgs> getReplication() {
         return this.replication;
     }
 
     @InputImport(name="secretId", required=true)
-      private final Input<String> secretId;
+      private final Output<String> secretId;
 
-    public Input<String> getSecretId() {
+    public Output<String> getSecretId() {
         return this.secretId;
     }
 
     public SecretArgs(
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> project,
-        Input<ReplicationArgs> replication,
-        Input<String> secretId) {
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> project,
+        Output<ReplicationArgs> replication,
+        Output<String> secretId) {
         this.labels = labels;
         this.project = project;
         this.replication = Objects.requireNonNull(replication, "expected parameter 'replication' to be non-null");
@@ -64,10 +64,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.labels = Input.empty();
-        this.project = Input.empty();
-        this.replication = Input.empty();
-        this.secretId = Input.empty();
+        this.labels = Output.empty();
+        this.project = Output.empty();
+        this.replication = Output.empty();
+        this.secretId = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,10 +79,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> project;
-        private Input<ReplicationArgs> replication;
-        private Input<String> secretId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> project;
+        private Output<ReplicationArgs> replication;
+        private Output<String> secretId;
 
         public Builder() {
     	      // Empty
@@ -96,43 +96,43 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretId = defaults.secretId;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder replication(Input<ReplicationArgs> replication) {
+        public Builder replication(Output<ReplicationArgs> replication) {
             this.replication = Objects.requireNonNull(replication);
             return this;
         }
 
         public Builder replication(ReplicationArgs replication) {
-            this.replication = Input.of(Objects.requireNonNull(replication));
+            this.replication = Output.of(Objects.requireNonNull(replication));
             return this;
         }
 
-        public Builder secretId(Input<String> secretId) {
+        public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
         public Builder secretId(String secretId) {
-            this.secretId = Input.of(Objects.requireNonNull(secretId));
+            this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
         }
         public SecretArgs build() {

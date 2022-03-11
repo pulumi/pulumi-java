@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics;
 
 import io.pulumi.azurenative.streamanalytics.inputs.ClusterSkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ClusterSkuArgs> sku;
+      private final @Nullable Output<ClusterSkuArgs> sku;
 
-    public Input<ClusterSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ClusterSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClusterArgs(
-        @Nullable Input<String> clusterName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<ClusterSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> clusterName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<ClusterSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.clusterName = clusterName;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.clusterName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.clusterName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ClusterSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ClusterSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<ClusterSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ClusterSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ClusterSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClusterArgs build() {

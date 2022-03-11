@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigArgs;
@@ -27,10 +27,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions;
+      private final @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
-    public Input<List<GooglePrivacyDlpV2ActionArgs>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<GooglePrivacyDlpV2ActionArgs>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="inspectConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
-    public Input<GooglePrivacyDlpV2InspectConfigArgs> getInspectConfig() {
-        return this.inspectConfig == null ? Input.empty() : this.inspectConfig;
+    public Output<GooglePrivacyDlpV2InspectConfigArgs> getInspectConfig() {
+        return this.inspectConfig == null ? Output.empty() : this.inspectConfig;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="inspectTemplateName")
-      private final @Nullable Input<String> inspectTemplateName;
+      private final @Nullable Output<String> inspectTemplateName;
 
-    public Input<String> getInspectTemplateName() {
-        return this.inspectTemplateName == null ? Input.empty() : this.inspectTemplateName;
+    public Output<String> getInspectTemplateName() {
+        return this.inspectTemplateName == null ? Output.empty() : this.inspectTemplateName;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="storageConfig")
-      private final @Nullable Input<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
+      private final @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
 
-    public Input<GooglePrivacyDlpV2StorageConfigArgs> getStorageConfig() {
-        return this.storageConfig == null ? Input.empty() : this.storageConfig;
+    public Output<GooglePrivacyDlpV2StorageConfigArgs> getStorageConfig() {
+        return this.storageConfig == null ? Output.empty() : this.storageConfig;
     }
 
     public GooglePrivacyDlpV2InspectJobConfigArgs(
-        @Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions,
-        @Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig,
-        @Nullable Input<String> inspectTemplateName,
-        @Nullable Input<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
+        @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions,
+        @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig,
+        @Nullable Output<String> inspectTemplateName,
+        @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
         this.actions = actions;
         this.inspectConfig = inspectConfig;
         this.inspectTemplateName = inspectTemplateName;
@@ -78,10 +78,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
     }
 
     private GooglePrivacyDlpV2InspectJobConfigArgs() {
-        this.actions = Input.empty();
-        this.inspectConfig = Input.empty();
-        this.inspectTemplateName = Input.empty();
-        this.storageConfig = Input.empty();
+        this.actions = Output.empty();
+        this.inspectConfig = Output.empty();
+        this.inspectTemplateName = Output.empty();
+        this.storageConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions;
-        private @Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
-        private @Nullable Input<String> inspectTemplateName;
-        private @Nullable Input<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
+        private @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
+        private @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
+        private @Nullable Output<String> inspectTemplateName;
+        private @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
     	      this.storageConfig = defaults.storageConfig;
         }
 
-        public Builder actions(@Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions) {
+        public Builder actions(@Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder inspectConfig(@Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig) {
+        public Builder inspectConfig(@Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig) {
             this.inspectConfig = inspectConfig;
             return this;
         }
 
         public Builder inspectConfig(@Nullable GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
-            this.inspectConfig = Input.ofNullable(inspectConfig);
+            this.inspectConfig = Output.ofNullable(inspectConfig);
             return this;
         }
 
-        public Builder inspectTemplateName(@Nullable Input<String> inspectTemplateName) {
+        public Builder inspectTemplateName(@Nullable Output<String> inspectTemplateName) {
             this.inspectTemplateName = inspectTemplateName;
             return this;
         }
 
         public Builder inspectTemplateName(@Nullable String inspectTemplateName) {
-            this.inspectTemplateName = Input.ofNullable(inspectTemplateName);
+            this.inspectTemplateName = Output.ofNullable(inspectTemplateName);
             return this;
         }
 
-        public Builder storageConfig(@Nullable Input<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
+        public Builder storageConfig(@Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
             this.storageConfig = storageConfig;
             return this;
         }
 
         public Builder storageConfig(@Nullable GooglePrivacyDlpV2StorageConfigArgs storageConfig) {
-            this.storageConfig = Input.ofNullable(storageConfig);
+            this.storageConfig = Output.ofNullable(storageConfig);
             return this;
         }
         public GooglePrivacyDlpV2InspectJobConfigArgs build() {

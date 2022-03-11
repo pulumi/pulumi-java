@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appstream;
 import io.pulumi.awsnative.appstream.inputs.AppBlockS3LocationArgs;
 import io.pulumi.awsnative.appstream.inputs.AppBlockScriptDetailsArgs;
 import io.pulumi.awsnative.appstream.inputs.AppBlockTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,54 +19,54 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
     public static final AppBlockArgs Empty = new AppBlockArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="setupScriptDetails", required=true)
-      private final Input<AppBlockScriptDetailsArgs> setupScriptDetails;
+      private final Output<AppBlockScriptDetailsArgs> setupScriptDetails;
 
-    public Input<AppBlockScriptDetailsArgs> getSetupScriptDetails() {
+    public Output<AppBlockScriptDetailsArgs> getSetupScriptDetails() {
         return this.setupScriptDetails;
     }
 
     @InputImport(name="sourceS3Location", required=true)
-      private final Input<AppBlockS3LocationArgs> sourceS3Location;
+      private final Output<AppBlockS3LocationArgs> sourceS3Location;
 
-    public Input<AppBlockS3LocationArgs> getSourceS3Location() {
+    public Output<AppBlockS3LocationArgs> getSourceS3Location() {
         return this.sourceS3Location;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<AppBlockTagArgs>> tags;
+      private final @Nullable Output<List<AppBlockTagArgs>> tags;
 
-    public Input<List<AppBlockTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AppBlockTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AppBlockArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        Input<AppBlockScriptDetailsArgs> setupScriptDetails,
-        Input<AppBlockS3LocationArgs> sourceS3Location,
-        @Nullable Input<List<AppBlockTagArgs>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        Output<AppBlockScriptDetailsArgs> setupScriptDetails,
+        Output<AppBlockS3LocationArgs> sourceS3Location,
+        @Nullable Output<List<AppBlockTagArgs>> tags) {
         this.description = description;
         this.displayName = displayName;
         this.name = name;
@@ -76,12 +76,12 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppBlockArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.setupScriptDetails = Input.empty();
-        this.sourceS3Location = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.setupScriptDetails = Output.empty();
+        this.sourceS3Location = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,12 +93,12 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private Input<AppBlockScriptDetailsArgs> setupScriptDetails;
-        private Input<AppBlockS3LocationArgs> sourceS3Location;
-        private @Nullable Input<List<AppBlockTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private Output<AppBlockScriptDetailsArgs> setupScriptDetails;
+        private Output<AppBlockS3LocationArgs> sourceS3Location;
+        private @Nullable Output<List<AppBlockTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -114,63 +114,63 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder setupScriptDetails(Input<AppBlockScriptDetailsArgs> setupScriptDetails) {
+        public Builder setupScriptDetails(Output<AppBlockScriptDetailsArgs> setupScriptDetails) {
             this.setupScriptDetails = Objects.requireNonNull(setupScriptDetails);
             return this;
         }
 
         public Builder setupScriptDetails(AppBlockScriptDetailsArgs setupScriptDetails) {
-            this.setupScriptDetails = Input.of(Objects.requireNonNull(setupScriptDetails));
+            this.setupScriptDetails = Output.of(Objects.requireNonNull(setupScriptDetails));
             return this;
         }
 
-        public Builder sourceS3Location(Input<AppBlockS3LocationArgs> sourceS3Location) {
+        public Builder sourceS3Location(Output<AppBlockS3LocationArgs> sourceS3Location) {
             this.sourceS3Location = Objects.requireNonNull(sourceS3Location);
             return this;
         }
 
         public Builder sourceS3Location(AppBlockS3LocationArgs sourceS3Location) {
-            this.sourceS3Location = Input.of(Objects.requireNonNull(sourceS3Location));
+            this.sourceS3Location = Output.of(Objects.requireNonNull(sourceS3Location));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AppBlockTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AppBlockTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AppBlockTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AppBlockArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs;
@@ -22,10 +22,10 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs ext
      * 
      */
     @InputImport(name="ingressFrom")
-      private final @Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom;
+      private final @Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom;
 
-    public Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> getIngressFrom() {
-        return this.ingressFrom == null ? Input.empty() : this.ingressFrom;
+    public Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> getIngressFrom() {
+        return this.ingressFrom == null ? Output.empty() : this.ingressFrom;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs ext
      * 
      */
     @InputImport(name="ingressTo")
-      private final @Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo;
+      private final @Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo;
 
-    public Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> getIngressTo() {
-        return this.ingressTo == null ? Input.empty() : this.ingressTo;
+    public Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> getIngressTo() {
+        return this.ingressTo == null ? Output.empty() : this.ingressTo;
     }
 
     public ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs(
-        @Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom,
-        @Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo) {
+        @Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom,
+        @Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo) {
         this.ingressFrom = ingressFrom;
         this.ingressTo = ingressTo;
     }
 
     private ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs() {
-        this.ingressFrom = Input.empty();
-        this.ingressTo = Input.empty();
+        this.ingressFrom = Output.empty();
+        this.ingressTo = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom;
-        private @Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo;
+        private @Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom;
+        private @Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs ext
     	      this.ingressTo = defaults.ingressTo;
         }
 
-        public Builder ingressFrom(@Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom) {
+        public Builder ingressFrom(@Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom) {
             this.ingressFrom = ingressFrom;
             return this;
         }
 
         public Builder ingressFrom(@Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs ingressFrom) {
-            this.ingressFrom = Input.ofNullable(ingressFrom);
+            this.ingressFrom = Output.ofNullable(ingressFrom);
             return this;
         }
 
-        public Builder ingressTo(@Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo) {
+        public Builder ingressTo(@Nullable Output<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo) {
             this.ingressTo = ingressTo;
             return this;
         }
 
         public Builder ingressTo(@Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs ingressTo) {
-            this.ingressTo = Input.ofNullable(ingressTo);
+            this.ingressTo = Output.ofNullable(ingressTo);
             return this;
         }
         public ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs build() {

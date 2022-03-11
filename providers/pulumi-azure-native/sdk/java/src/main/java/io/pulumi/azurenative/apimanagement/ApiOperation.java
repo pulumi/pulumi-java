@@ -9,7 +9,6 @@ import io.pulumi.azurenative.apimanagement.outputs.ParameterContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.RequestContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.ResponseContractResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -213,30 +212,30 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiOperation(String name, ApiOperationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ApiOperation", name, args == null ? ApiOperationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:ApiOperation", name, args == null ? ApiOperationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApiOperation(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApiOperation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiOperation", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20160707:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20161010:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ApiOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ApiOperation").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20160707:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20161010:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ApiOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ApiOperation").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -250,7 +249,7 @@ public class ApiOperation extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApiOperation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApiOperation get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiOperation(name, id, options);
     }
 }

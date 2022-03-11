@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateAttachmentGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class FirewallFirewallStatusSyncStateGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="attachments")
-      private final @Nullable Input<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments;
+      private final @Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments;
 
-    public Input<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> getAttachments() {
-        return this.attachments == null ? Input.empty() : this.attachments;
+    public Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> getAttachments() {
+        return this.attachments == null ? Output.empty() : this.attachments;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class FirewallFirewallStatusSyncStateGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     public FirewallFirewallStatusSyncStateGetArgs(
-        @Nullable Input<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments,
-        @Nullable Input<String> availabilityZone) {
+        @Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments,
+        @Nullable Output<String> availabilityZone) {
         this.attachments = attachments;
         this.availabilityZone = availabilityZone;
     }
 
     private FirewallFirewallStatusSyncStateGetArgs() {
-        this.attachments = Input.empty();
-        this.availabilityZone = Input.empty();
+        this.attachments = Output.empty();
+        this.availabilityZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class FirewallFirewallStatusSyncStateGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments;
-        private @Nullable Input<String> availabilityZone;
+        private @Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments;
+        private @Nullable Output<String> availabilityZone;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class FirewallFirewallStatusSyncStateGetArgs extends io.pulumi.reso
     	      this.availabilityZone = defaults.availabilityZone;
         }
 
-        public Builder attachments(@Nullable Input<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments) {
+        public Builder attachments(@Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments) {
             this.attachments = attachments;
             return this;
         }
 
         public Builder attachments(@Nullable List<FirewallFirewallStatusSyncStateAttachmentGetArgs> attachments) {
-            this.attachments = Input.ofNullable(attachments);
+            this.attachments = Output.ofNullable(attachments);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
         public FirewallFirewallStatusSyncStateGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
     public static final GrafeasV1beta1IntotoSignatureArgs Empty = new GrafeasV1beta1IntotoSignatureArgs();
 
     @InputImport(name="keyid")
-      private final @Nullable Input<String> keyid;
+      private final @Nullable Output<String> keyid;
 
-    public Input<String> getKeyid() {
-        return this.keyid == null ? Input.empty() : this.keyid;
+    public Output<String> getKeyid() {
+        return this.keyid == null ? Output.empty() : this.keyid;
     }
 
     @InputImport(name="sig")
-      private final @Nullable Input<String> sig;
+      private final @Nullable Output<String> sig;
 
-    public Input<String> getSig() {
-        return this.sig == null ? Input.empty() : this.sig;
+    public Output<String> getSig() {
+        return this.sig == null ? Output.empty() : this.sig;
     }
 
     public GrafeasV1beta1IntotoSignatureArgs(
-        @Nullable Input<String> keyid,
-        @Nullable Input<String> sig) {
+        @Nullable Output<String> keyid,
+        @Nullable Output<String> sig) {
         this.keyid = keyid;
         this.sig = sig;
     }
 
     private GrafeasV1beta1IntotoSignatureArgs() {
-        this.keyid = Input.empty();
-        this.sig = Input.empty();
+        this.keyid = Output.empty();
+        this.sig = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyid;
-        private @Nullable Input<String> sig;
+        private @Nullable Output<String> keyid;
+        private @Nullable Output<String> sig;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
     	      this.sig = defaults.sig;
         }
 
-        public Builder keyid(@Nullable Input<String> keyid) {
+        public Builder keyid(@Nullable Output<String> keyid) {
             this.keyid = keyid;
             return this;
         }
 
         public Builder keyid(@Nullable String keyid) {
-            this.keyid = Input.ofNullable(keyid);
+            this.keyid = Output.ofNullable(keyid);
             return this;
         }
 
-        public Builder sig(@Nullable Input<String> sig) {
+        public Builder sig(@Nullable Output<String> sig) {
             this.sig = sig;
             return this;
         }
 
         public Builder sig(@Nullable String sig) {
-            this.sig = Input.ofNullable(sig);
+            this.sig = Output.ofNullable(sig);
             return this;
         }
         public GrafeasV1beta1IntotoSignatureArgs build() {

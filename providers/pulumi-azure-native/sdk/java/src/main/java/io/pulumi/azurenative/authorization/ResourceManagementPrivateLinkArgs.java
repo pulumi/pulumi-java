@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,25 +41,25 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="rmplName")
-      private final @Nullable Input<String> rmplName;
+      private final @Nullable Output<String> rmplName;
 
-    public Input<String> getRmplName() {
-        return this.rmplName == null ? Input.empty() : this.rmplName;
+    public Output<String> getRmplName() {
+        return this.rmplName == null ? Output.empty() : this.rmplName;
     }
 
     public ResourceManagementPrivateLinkArgs(
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> rmplName) {
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> rmplName) {
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.rmplName = rmplName;
     }
 
     private ResourceManagementPrivateLinkArgs() {
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.rmplName = Input.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.rmplName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> rmplName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> rmplName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
     	      this.rmplName = defaults.rmplName;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder rmplName(@Nullable Input<String> rmplName) {
+        public Builder rmplName(@Nullable Output<String> rmplName) {
             this.rmplName = rmplName;
             return this;
         }
 
         public Builder rmplName(@Nullable String rmplName) {
-            this.rmplName = Input.ofNullable(rmplName);
+            this.rmplName = Output.ofNullable(rmplName);
             return this;
         }
         public ResourceManagementPrivateLinkArgs build() {

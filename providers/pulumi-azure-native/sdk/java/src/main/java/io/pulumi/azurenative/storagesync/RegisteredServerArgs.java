@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="agentVersion")
-      private final @Nullable Input<String> agentVersion;
+      private final @Nullable Output<String> agentVersion;
 
-    public Input<String> getAgentVersion() {
-        return this.agentVersion == null ? Input.empty() : this.agentVersion;
+    public Output<String> getAgentVersion() {
+        return this.agentVersion == null ? Output.empty() : this.agentVersion;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clusterId")
-      private final @Nullable Input<String> clusterId;
+      private final @Nullable Output<String> clusterId;
 
-    public Input<String> getClusterId() {
-        return this.clusterId == null ? Input.empty() : this.clusterId;
+    public Output<String> getClusterId() {
+        return this.clusterId == null ? Output.empty() : this.clusterId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lastHeartBeat")
-      private final @Nullable Input<String> lastHeartBeat;
+      private final @Nullable Output<String> lastHeartBeat;
 
-    public Input<String> getLastHeartBeat() {
-        return this.lastHeartBeat == null ? Input.empty() : this.lastHeartBeat;
+    public Output<String> getLastHeartBeat() {
+        return this.lastHeartBeat == null ? Output.empty() : this.lastHeartBeat;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -85,10 +85,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverCertificate")
-      private final @Nullable Input<String> serverCertificate;
+      private final @Nullable Output<String> serverCertificate;
 
-    public Input<String> getServerCertificate() {
-        return this.serverCertificate == null ? Input.empty() : this.serverCertificate;
+    public Output<String> getServerCertificate() {
+        return this.serverCertificate == null ? Output.empty() : this.serverCertificate;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverId")
-      private final @Nullable Input<String> serverId;
+      private final @Nullable Output<String> serverId;
 
-    public Input<String> getServerId() {
-        return this.serverId == null ? Input.empty() : this.serverId;
+    public Output<String> getServerId() {
+        return this.serverId == null ? Output.empty() : this.serverId;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverOSVersion")
-      private final @Nullable Input<String> serverOSVersion;
+      private final @Nullable Output<String> serverOSVersion;
 
-    public Input<String> getServerOSVersion() {
-        return this.serverOSVersion == null ? Input.empty() : this.serverOSVersion;
+    public Output<String> getServerOSVersion() {
+        return this.serverOSVersion == null ? Output.empty() : this.serverOSVersion;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverRole")
-      private final @Nullable Input<String> serverRole;
+      private final @Nullable Output<String> serverRole;
 
-    public Input<String> getServerRole() {
-        return this.serverRole == null ? Input.empty() : this.serverRole;
+    public Output<String> getServerRole() {
+        return this.serverRole == null ? Output.empty() : this.serverRole;
     }
 
     /**
@@ -129,24 +129,24 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storageSyncServiceName", required=true)
-      private final Input<String> storageSyncServiceName;
+      private final Output<String> storageSyncServiceName;
 
-    public Input<String> getStorageSyncServiceName() {
+    public Output<String> getStorageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
     public RegisteredServerArgs(
-        @Nullable Input<String> agentVersion,
-        @Nullable Input<String> clusterId,
-        @Nullable Input<String> clusterName,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<String> lastHeartBeat,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serverCertificate,
-        @Nullable Input<String> serverId,
-        @Nullable Input<String> serverOSVersion,
-        @Nullable Input<String> serverRole,
-        Input<String> storageSyncServiceName) {
+        @Nullable Output<String> agentVersion,
+        @Nullable Output<String> clusterId,
+        @Nullable Output<String> clusterName,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<String> lastHeartBeat,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serverCertificate,
+        @Nullable Output<String> serverId,
+        @Nullable Output<String> serverOSVersion,
+        @Nullable Output<String> serverRole,
+        Output<String> storageSyncServiceName) {
         this.agentVersion = agentVersion;
         this.clusterId = clusterId;
         this.clusterName = clusterName;
@@ -161,17 +161,17 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RegisteredServerArgs() {
-        this.agentVersion = Input.empty();
-        this.clusterId = Input.empty();
-        this.clusterName = Input.empty();
-        this.friendlyName = Input.empty();
-        this.lastHeartBeat = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverCertificate = Input.empty();
-        this.serverId = Input.empty();
-        this.serverOSVersion = Input.empty();
-        this.serverRole = Input.empty();
-        this.storageSyncServiceName = Input.empty();
+        this.agentVersion = Output.empty();
+        this.clusterId = Output.empty();
+        this.clusterName = Output.empty();
+        this.friendlyName = Output.empty();
+        this.lastHeartBeat = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverCertificate = Output.empty();
+        this.serverId = Output.empty();
+        this.serverOSVersion = Output.empty();
+        this.serverRole = Output.empty();
+        this.storageSyncServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -183,17 +183,17 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> agentVersion;
-        private @Nullable Input<String> clusterId;
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<String> lastHeartBeat;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serverCertificate;
-        private @Nullable Input<String> serverId;
-        private @Nullable Input<String> serverOSVersion;
-        private @Nullable Input<String> serverRole;
-        private Input<String> storageSyncServiceName;
+        private @Nullable Output<String> agentVersion;
+        private @Nullable Output<String> clusterId;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<String> lastHeartBeat;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serverCertificate;
+        private @Nullable Output<String> serverId;
+        private @Nullable Output<String> serverOSVersion;
+        private @Nullable Output<String> serverRole;
+        private Output<String> storageSyncServiceName;
 
         public Builder() {
     	      // Empty
@@ -214,113 +214,113 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     	      this.storageSyncServiceName = defaults.storageSyncServiceName;
         }
 
-        public Builder agentVersion(@Nullable Input<String> agentVersion) {
+        public Builder agentVersion(@Nullable Output<String> agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Input.ofNullable(agentVersion);
+            this.agentVersion = Output.ofNullable(agentVersion);
             return this;
         }
 
-        public Builder clusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Output<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Input.ofNullable(clusterId);
+            this.clusterId = Output.ofNullable(clusterId);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder lastHeartBeat(@Nullable Input<String> lastHeartBeat) {
+        public Builder lastHeartBeat(@Nullable Output<String> lastHeartBeat) {
             this.lastHeartBeat = lastHeartBeat;
             return this;
         }
 
         public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
-            this.lastHeartBeat = Input.ofNullable(lastHeartBeat);
+            this.lastHeartBeat = Output.ofNullable(lastHeartBeat);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverCertificate(@Nullable Input<String> serverCertificate) {
+        public Builder serverCertificate(@Nullable Output<String> serverCertificate) {
             this.serverCertificate = serverCertificate;
             return this;
         }
 
         public Builder serverCertificate(@Nullable String serverCertificate) {
-            this.serverCertificate = Input.ofNullable(serverCertificate);
+            this.serverCertificate = Output.ofNullable(serverCertificate);
             return this;
         }
 
-        public Builder serverId(@Nullable Input<String> serverId) {
+        public Builder serverId(@Nullable Output<String> serverId) {
             this.serverId = serverId;
             return this;
         }
 
         public Builder serverId(@Nullable String serverId) {
-            this.serverId = Input.ofNullable(serverId);
+            this.serverId = Output.ofNullable(serverId);
             return this;
         }
 
-        public Builder serverOSVersion(@Nullable Input<String> serverOSVersion) {
+        public Builder serverOSVersion(@Nullable Output<String> serverOSVersion) {
             this.serverOSVersion = serverOSVersion;
             return this;
         }
 
         public Builder serverOSVersion(@Nullable String serverOSVersion) {
-            this.serverOSVersion = Input.ofNullable(serverOSVersion);
+            this.serverOSVersion = Output.ofNullable(serverOSVersion);
             return this;
         }
 
-        public Builder serverRole(@Nullable Input<String> serverRole) {
+        public Builder serverRole(@Nullable Output<String> serverRole) {
             this.serverRole = serverRole;
             return this;
         }
 
         public Builder serverRole(@Nullable String serverRole) {
-            this.serverRole = Input.ofNullable(serverRole);
+            this.serverRole = Output.ofNullable(serverRole);
             return this;
         }
 
-        public Builder storageSyncServiceName(Input<String> storageSyncServiceName) {
+        public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
 
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            this.storageSyncServiceName = Input.of(Objects.requireNonNull(storageSyncServiceName));
+            this.storageSyncServiceName = Output.of(Objects.requireNonNull(storageSyncServiceName));
             return this;
         }
         public RegisteredServerArgs build() {

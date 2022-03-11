@@ -3,7 +3,7 @@
 
 package io.pulumi.foobar.submodule1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.foobar.inputs.TopLevelArgs;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ModuleResourceArgs Empty = new ModuleResourceArgs();
 
     @InputImport(name="thing")
-      private final @Nullable Input<TopLevelArgs> thing;
+      private final @Nullable Output<TopLevelArgs> thing;
 
-    public Input<TopLevelArgs> getThing() {
-        return this.thing == null ? Input.empty() : this.thing;
+    public Output<TopLevelArgs> getThing() {
+        return this.thing == null ? Output.empty() : this.thing;
     }
 
-    public ModuleResourceArgs(@Nullable Input<TopLevelArgs> thing) {
+    public ModuleResourceArgs(@Nullable Output<TopLevelArgs> thing) {
         this.thing = thing;
     }
 
     private ModuleResourceArgs() {
-        this.thing = Input.empty();
+        this.thing = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TopLevelArgs> thing;
+        private @Nullable Output<TopLevelArgs> thing;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thing = defaults.thing;
         }
 
-        public Builder thing(@Nullable Input<TopLevelArgs> thing) {
+        public Builder thing(@Nullable Output<TopLevelArgs> thing) {
             this.thing = thing;
             return this;
         }
 
         public Builder thing(@Nullable TopLevelArgs thing) {
-            this.thing = Input.ofNullable(thing);
+            this.thing = Output.ofNullable(thing);
             return this;
         }
         public ModuleResourceArgs build() {

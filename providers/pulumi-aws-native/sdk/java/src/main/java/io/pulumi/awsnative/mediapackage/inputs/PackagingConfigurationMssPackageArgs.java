@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssManifestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
     public static final PackagingConfigurationMssPackageArgs Empty = new PackagingConfigurationMssPackageArgs();
 
     @InputImport(name="encryption")
-      private final @Nullable Input<PackagingConfigurationMssEncryptionArgs> encryption;
+      private final @Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption;
 
-    public Input<PackagingConfigurationMssEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<PackagingConfigurationMssEncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -33,32 +33,32 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="mssManifests", required=true)
-      private final Input<List<PackagingConfigurationMssManifestArgs>> mssManifests;
+      private final Output<List<PackagingConfigurationMssManifestArgs>> mssManifests;
 
-    public Input<List<PackagingConfigurationMssManifestArgs>> getMssManifests() {
+    public Output<List<PackagingConfigurationMssManifestArgs>> getMssManifests() {
         return this.mssManifests;
     }
 
     @InputImport(name="segmentDurationSeconds")
-      private final @Nullable Input<Integer> segmentDurationSeconds;
+      private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Input<Integer> getSegmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
+    public Output<Integer> getSegmentDurationSeconds() {
+        return this.segmentDurationSeconds == null ? Output.empty() : this.segmentDurationSeconds;
     }
 
     public PackagingConfigurationMssPackageArgs(
-        @Nullable Input<PackagingConfigurationMssEncryptionArgs> encryption,
-        Input<List<PackagingConfigurationMssManifestArgs>> mssManifests,
-        @Nullable Input<Integer> segmentDurationSeconds) {
+        @Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption,
+        Output<List<PackagingConfigurationMssManifestArgs>> mssManifests,
+        @Nullable Output<Integer> segmentDurationSeconds) {
         this.encryption = encryption;
         this.mssManifests = Objects.requireNonNull(mssManifests, "expected parameter 'mssManifests' to be non-null");
         this.segmentDurationSeconds = segmentDurationSeconds;
     }
 
     private PackagingConfigurationMssPackageArgs() {
-        this.encryption = Input.empty();
-        this.mssManifests = Input.empty();
-        this.segmentDurationSeconds = Input.empty();
+        this.encryption = Output.empty();
+        this.mssManifests = Output.empty();
+        this.segmentDurationSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<PackagingConfigurationMssEncryptionArgs> encryption;
-        private Input<List<PackagingConfigurationMssManifestArgs>> mssManifests;
-        private @Nullable Input<Integer> segmentDurationSeconds;
+        private @Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption;
+        private Output<List<PackagingConfigurationMssManifestArgs>> mssManifests;
+        private @Nullable Output<Integer> segmentDurationSeconds;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
     	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
         }
 
-        public Builder encryption(@Nullable Input<PackagingConfigurationMssEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable PackagingConfigurationMssEncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder mssManifests(Input<List<PackagingConfigurationMssManifestArgs>> mssManifests) {
+        public Builder mssManifests(Output<List<PackagingConfigurationMssManifestArgs>> mssManifests) {
             this.mssManifests = Objects.requireNonNull(mssManifests);
             return this;
         }
 
         public Builder mssManifests(List<PackagingConfigurationMssManifestArgs> mssManifests) {
-            this.mssManifests = Input.of(Objects.requireNonNull(mssManifests));
+            this.mssManifests = Output.of(Objects.requireNonNull(mssManifests));
             return this;
         }
 
-        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
+            this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
         }
         public PackagingConfigurationMssPackageArgs build() {

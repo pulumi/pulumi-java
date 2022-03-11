@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3;
 
 import io.pulumi.awsnative.s3.inputs.MultiRegionAccessPointPublicAccessBlockConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.MultiRegionAccessPointRegionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publicAccessBlockConfiguration")
-      private final @Nullable Input<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
+      private final @Nullable Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
-    public Input<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
-        return this.publicAccessBlockConfiguration == null ? Input.empty() : this.publicAccessBlockConfiguration;
+    public Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
+        return this.publicAccessBlockConfiguration == null ? Output.empty() : this.publicAccessBlockConfiguration;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="regions", required=true)
-      private final Input<List<MultiRegionAccessPointRegionArgs>> regions;
+      private final Output<List<MultiRegionAccessPointRegionArgs>> regions;
 
-    public Input<List<MultiRegionAccessPointRegionArgs>> getRegions() {
+    public Output<List<MultiRegionAccessPointRegionArgs>> getRegions() {
         return this.regions;
     }
 
     public MultiRegionAccessPointArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration,
-        Input<List<MultiRegionAccessPointRegionArgs>> regions) {
+        @Nullable Output<String> name,
+        @Nullable Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration,
+        Output<List<MultiRegionAccessPointRegionArgs>> regions) {
         this.name = name;
         this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
         this.regions = Objects.requireNonNull(regions, "expected parameter 'regions' to be non-null");
     }
 
     private MultiRegionAccessPointArgs() {
-        this.name = Input.empty();
-        this.publicAccessBlockConfiguration = Input.empty();
-        this.regions = Input.empty();
+        this.name = Output.empty();
+        this.publicAccessBlockConfiguration = Output.empty();
+        this.regions = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
-        private Input<List<MultiRegionAccessPointRegionArgs>> regions;
+        private @Nullable Output<String> name;
+        private @Nullable Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
+        private Output<List<MultiRegionAccessPointRegionArgs>> regions;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
     	      this.regions = defaults.regions;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder publicAccessBlockConfiguration(@Nullable Input<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
 
         public Builder publicAccessBlockConfiguration(@Nullable MultiRegionAccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
-            this.publicAccessBlockConfiguration = Input.ofNullable(publicAccessBlockConfiguration);
+            this.publicAccessBlockConfiguration = Output.ofNullable(publicAccessBlockConfiguration);
             return this;
         }
 
-        public Builder regions(Input<List<MultiRegionAccessPointRegionArgs>> regions) {
+        public Builder regions(Output<List<MultiRegionAccessPointRegionArgs>> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
 
         public Builder regions(List<MultiRegionAccessPointRegionArgs> regions) {
-            this.regions = Input.of(Objects.requireNonNull(regions));
+            this.regions = Output.of(Objects.requireNonNull(regions));
             return this;
         }
         public MultiRegionAccessPointArgs build() {

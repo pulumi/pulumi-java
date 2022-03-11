@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class FirewallPolicyRuleSecureTagArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
-    public FirewallPolicyRuleSecureTagArgs(@Nullable Input<String> name) {
+    public FirewallPolicyRuleSecureTagArgs(@Nullable Output<String> name) {
         this.name = name;
     }
 
     private FirewallPolicyRuleSecureTagArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class FirewallPolicyRuleSecureTagArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class FirewallPolicyRuleSecureTagArgs extends io.pulumi.resources.R
     	      this.name = defaults.name;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public FirewallPolicyRuleSecureTagArgs build() {

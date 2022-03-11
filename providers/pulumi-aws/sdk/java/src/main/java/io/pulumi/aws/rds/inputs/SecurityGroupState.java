@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.aws.rds.inputs.SecurityGroupIngressGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingress")
-      private final @Nullable Input<List<SecurityGroupIngressGetArgs>> ingress;
+      private final @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress;
 
-    public Input<List<SecurityGroupIngressGetArgs>> getIngress() {
-        return this.ingress == null ? Input.empty() : this.ingress;
+    public Output<List<SecurityGroupIngressGetArgs>> getIngress() {
+        return this.ingress == null ? Output.empty() : this.ingress;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,21 +77,21 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public SecurityGroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<List<SecurityGroupIngressGetArgs>> ingress,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
-        this.description = description == null ? Input.ofNullable("Managed by Pulumi") : description;
+        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
         this.ingress = ingress;
         this.name = name;
         this.tags = tags;
@@ -99,12 +99,12 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecurityGroupState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.ingress = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.ingress = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<SecurityGroupIngressGetArgs>> ingress;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ingress(@Nullable Input<List<SecurityGroupIngressGetArgs>> ingress) {
+        public Builder ingress(@Nullable Output<List<SecurityGroupIngressGetArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
         public Builder ingress(@Nullable List<SecurityGroupIngressGetArgs> ingress) {
-            this.ingress = Input.ofNullable(ingress);
+            this.ingress = Output.ofNullable(ingress);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public SecurityGroupState build() {

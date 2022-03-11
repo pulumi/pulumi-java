@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerAutoHealingPoliciesArgs;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerNamedPortArgs;
@@ -28,10 +28,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="autoHealingPolicies")
-      private final @Nullable Input<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
+      private final @Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
 
-    public Input<InstanceGroupManagerAutoHealingPoliciesArgs> getAutoHealingPolicies() {
-        return this.autoHealingPolicies == null ? Input.empty() : this.autoHealingPolicies;
+    public Output<InstanceGroupManagerAutoHealingPoliciesArgs> getAutoHealingPolicies() {
+        return this.autoHealingPolicies == null ? Output.empty() : this.autoHealingPolicies;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="baseInstanceName", required=true)
-      private final Input<String> baseInstanceName;
+      private final Output<String> baseInstanceName;
 
-    public Input<String> getBaseInstanceName() {
+    public Output<String> getBaseInstanceName() {
         return this.baseInstanceName;
     }
 
@@ -56,10 +56,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="namedPorts")
-      private final @Nullable Input<List<InstanceGroupManagerNamedPortArgs>> namedPorts;
+      private final @Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts;
 
-    public Input<List<InstanceGroupManagerNamedPortArgs>> getNamedPorts() {
-        return this.namedPorts == null ? Input.empty() : this.namedPorts;
+    public Output<List<InstanceGroupManagerNamedPortArgs>> getNamedPorts() {
+        return this.namedPorts == null ? Output.empty() : this.namedPorts;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="statefulDisks")
-      private final @Nullable Input<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks;
+      private final @Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks;
 
-    public Input<List<InstanceGroupManagerStatefulDiskArgs>> getStatefulDisks() {
-        return this.statefulDisks == null ? Input.empty() : this.statefulDisks;
+    public Output<List<InstanceGroupManagerStatefulDiskArgs>> getStatefulDisks() {
+        return this.statefulDisks == null ? Output.empty() : this.statefulDisks;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="targetPools")
-      private final @Nullable Input<List<String>> targetPools;
+      private final @Nullable Output<List<String>> targetPools;
 
-    public Input<List<String>> getTargetPools() {
-        return this.targetPools == null ? Input.empty() : this.targetPools;
+    public Output<List<String>> getTargetPools() {
+        return this.targetPools == null ? Output.empty() : this.targetPools;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="targetSize")
-      private final @Nullable Input<Integer> targetSize;
+      private final @Nullable Output<Integer> targetSize;
 
-    public Input<Integer> getTargetSize() {
-        return this.targetSize == null ? Input.empty() : this.targetSize;
+    public Output<Integer> getTargetSize() {
+        return this.targetSize == null ? Output.empty() : this.targetSize;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="updatePolicy")
-      private final @Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
+      private final @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
-    public Input<InstanceGroupManagerUpdatePolicyArgs> getUpdatePolicy() {
-        return this.updatePolicy == null ? Input.empty() : this.updatePolicy;
+    public Output<InstanceGroupManagerUpdatePolicyArgs> getUpdatePolicy() {
+        return this.updatePolicy == null ? Output.empty() : this.updatePolicy;
     }
 
     /**
@@ -150,9 +150,9 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="versions", required=true)
-      private final Input<List<InstanceGroupManagerVersionArgs>> versions;
+      private final Output<List<InstanceGroupManagerVersionArgs>> versions;
 
-    public Input<List<InstanceGroupManagerVersionArgs>> getVersions() {
+    public Output<List<InstanceGroupManagerVersionArgs>> getVersions() {
         return this.versions;
     }
 
@@ -163,10 +163,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="waitForInstances")
-      private final @Nullable Input<Boolean> waitForInstances;
+      private final @Nullable Output<Boolean> waitForInstances;
 
-    public Input<Boolean> getWaitForInstances() {
-        return this.waitForInstances == null ? Input.empty() : this.waitForInstances;
+    public Output<Boolean> getWaitForInstances() {
+        return this.waitForInstances == null ? Output.empty() : this.waitForInstances;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="waitForInstancesStatus")
-      private final @Nullable Input<String> waitForInstancesStatus;
+      private final @Nullable Output<String> waitForInstancesStatus;
 
-    public Input<String> getWaitForInstancesStatus() {
-        return this.waitForInstancesStatus == null ? Input.empty() : this.waitForInstancesStatus;
+    public Output<String> getWaitForInstancesStatus() {
+        return this.waitForInstancesStatus == null ? Output.empty() : this.waitForInstancesStatus;
     }
 
     /**
@@ -189,27 +189,27 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public InstanceGroupManagerArgs(
-        @Nullable Input<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies,
-        Input<String> baseInstanceName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<List<InstanceGroupManagerNamedPortArgs>> namedPorts,
-        @Nullable Input<String> project,
-        @Nullable Input<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks,
-        @Nullable Input<List<String>> targetPools,
-        @Nullable Input<Integer> targetSize,
-        @Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy,
-        Input<List<InstanceGroupManagerVersionArgs>> versions,
-        @Nullable Input<Boolean> waitForInstances,
-        @Nullable Input<String> waitForInstancesStatus,
-        @Nullable Input<String> zone) {
+        @Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies,
+        Output<String> baseInstanceName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts,
+        @Nullable Output<String> project,
+        @Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks,
+        @Nullable Output<List<String>> targetPools,
+        @Nullable Output<Integer> targetSize,
+        @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy,
+        Output<List<InstanceGroupManagerVersionArgs>> versions,
+        @Nullable Output<Boolean> waitForInstances,
+        @Nullable Output<String> waitForInstancesStatus,
+        @Nullable Output<String> zone) {
         this.autoHealingPolicies = autoHealingPolicies;
         this.baseInstanceName = Objects.requireNonNull(baseInstanceName, "expected parameter 'baseInstanceName' to be non-null");
         this.description = description;
@@ -227,20 +227,20 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     }
 
     private InstanceGroupManagerArgs() {
-        this.autoHealingPolicies = Input.empty();
-        this.baseInstanceName = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.namedPorts = Input.empty();
-        this.project = Input.empty();
-        this.statefulDisks = Input.empty();
-        this.targetPools = Input.empty();
-        this.targetSize = Input.empty();
-        this.updatePolicy = Input.empty();
-        this.versions = Input.empty();
-        this.waitForInstances = Input.empty();
-        this.waitForInstancesStatus = Input.empty();
-        this.zone = Input.empty();
+        this.autoHealingPolicies = Output.empty();
+        this.baseInstanceName = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.namedPorts = Output.empty();
+        this.project = Output.empty();
+        this.statefulDisks = Output.empty();
+        this.targetPools = Output.empty();
+        this.targetSize = Output.empty();
+        this.updatePolicy = Output.empty();
+        this.versions = Output.empty();
+        this.waitForInstances = Output.empty();
+        this.waitForInstancesStatus = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -252,20 +252,20 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
-        private Input<String> baseInstanceName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<InstanceGroupManagerNamedPortArgs>> namedPorts;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks;
-        private @Nullable Input<List<String>> targetPools;
-        private @Nullable Input<Integer> targetSize;
-        private @Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
-        private Input<List<InstanceGroupManagerVersionArgs>> versions;
-        private @Nullable Input<Boolean> waitForInstances;
-        private @Nullable Input<String> waitForInstancesStatus;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
+        private Output<String> baseInstanceName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks;
+        private @Nullable Output<List<String>> targetPools;
+        private @Nullable Output<Integer> targetSize;
+        private @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
+        private Output<List<InstanceGroupManagerVersionArgs>> versions;
+        private @Nullable Output<Boolean> waitForInstances;
+        private @Nullable Output<String> waitForInstancesStatus;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -289,143 +289,143 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     	      this.zone = defaults.zone;
         }
 
-        public Builder autoHealingPolicies(@Nullable Input<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies) {
             this.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
 
         public Builder autoHealingPolicies(@Nullable InstanceGroupManagerAutoHealingPoliciesArgs autoHealingPolicies) {
-            this.autoHealingPolicies = Input.ofNullable(autoHealingPolicies);
+            this.autoHealingPolicies = Output.ofNullable(autoHealingPolicies);
             return this;
         }
 
-        public Builder baseInstanceName(Input<String> baseInstanceName) {
+        public Builder baseInstanceName(Output<String> baseInstanceName) {
             this.baseInstanceName = Objects.requireNonNull(baseInstanceName);
             return this;
         }
 
         public Builder baseInstanceName(String baseInstanceName) {
-            this.baseInstanceName = Input.of(Objects.requireNonNull(baseInstanceName));
+            this.baseInstanceName = Output.of(Objects.requireNonNull(baseInstanceName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namedPorts(@Nullable Input<List<InstanceGroupManagerNamedPortArgs>> namedPorts) {
+        public Builder namedPorts(@Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts) {
             this.namedPorts = namedPorts;
             return this;
         }
 
         public Builder namedPorts(@Nullable List<InstanceGroupManagerNamedPortArgs> namedPorts) {
-            this.namedPorts = Input.ofNullable(namedPorts);
+            this.namedPorts = Output.ofNullable(namedPorts);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder statefulDisks(@Nullable Input<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks) {
+        public Builder statefulDisks(@Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks) {
             this.statefulDisks = statefulDisks;
             return this;
         }
 
         public Builder statefulDisks(@Nullable List<InstanceGroupManagerStatefulDiskArgs> statefulDisks) {
-            this.statefulDisks = Input.ofNullable(statefulDisks);
+            this.statefulDisks = Output.ofNullable(statefulDisks);
             return this;
         }
 
-        public Builder targetPools(@Nullable Input<List<String>> targetPools) {
+        public Builder targetPools(@Nullable Output<List<String>> targetPools) {
             this.targetPools = targetPools;
             return this;
         }
 
         public Builder targetPools(@Nullable List<String> targetPools) {
-            this.targetPools = Input.ofNullable(targetPools);
+            this.targetPools = Output.ofNullable(targetPools);
             return this;
         }
 
-        public Builder targetSize(@Nullable Input<Integer> targetSize) {
+        public Builder targetSize(@Nullable Output<Integer> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
 
         public Builder targetSize(@Nullable Integer targetSize) {
-            this.targetSize = Input.ofNullable(targetSize);
+            this.targetSize = Output.ofNullable(targetSize);
             return this;
         }
 
-        public Builder updatePolicy(@Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
+        public Builder updatePolicy(@Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
             this.updatePolicy = updatePolicy;
             return this;
         }
 
         public Builder updatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
-            this.updatePolicy = Input.ofNullable(updatePolicy);
+            this.updatePolicy = Output.ofNullable(updatePolicy);
             return this;
         }
 
-        public Builder versions(Input<List<InstanceGroupManagerVersionArgs>> versions) {
+        public Builder versions(Output<List<InstanceGroupManagerVersionArgs>> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
 
         public Builder versions(List<InstanceGroupManagerVersionArgs> versions) {
-            this.versions = Input.of(Objects.requireNonNull(versions));
+            this.versions = Output.of(Objects.requireNonNull(versions));
             return this;
         }
 
-        public Builder waitForInstances(@Nullable Input<Boolean> waitForInstances) {
+        public Builder waitForInstances(@Nullable Output<Boolean> waitForInstances) {
             this.waitForInstances = waitForInstances;
             return this;
         }
 
         public Builder waitForInstances(@Nullable Boolean waitForInstances) {
-            this.waitForInstances = Input.ofNullable(waitForInstances);
+            this.waitForInstances = Output.ofNullable(waitForInstances);
             return this;
         }
 
-        public Builder waitForInstancesStatus(@Nullable Input<String> waitForInstancesStatus) {
+        public Builder waitForInstancesStatus(@Nullable Output<String> waitForInstancesStatus) {
             this.waitForInstancesStatus = waitForInstancesStatus;
             return this;
         }
 
         public Builder waitForInstancesStatus(@Nullable String waitForInstancesStatus) {
-            this.waitForInstancesStatus = Input.ofNullable(waitForInstancesStatus);
+            this.waitForInstancesStatus = Output.ofNullable(waitForInstancesStatus);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public InstanceGroupManagerArgs build() {

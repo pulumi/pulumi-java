@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VersionSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mshField")
-      private final @Nullable Input<String> mshField;
+      private final @Nullable Output<String> mshField;
 
-    public Input<String> getMshField() {
-        return this.mshField == null ? Input.empty() : this.mshField;
+    public Output<String> getMshField() {
+        return this.mshField == null ? Output.empty() : this.mshField;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class VersionSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public VersionSourceArgs(
-        @Nullable Input<String> mshField,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> mshField,
+        @Nullable Output<String> value) {
         this.mshField = mshField;
         this.value = value;
     }
 
     private VersionSourceArgs() {
-        this.mshField = Input.empty();
-        this.value = Input.empty();
+        this.mshField = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class VersionSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> mshField;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> mshField;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class VersionSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder mshField(@Nullable Input<String> mshField) {
+        public Builder mshField(@Nullable Output<String> mshField) {
             this.mshField = mshField;
             return this;
         }
 
         public Builder mshField(@Nullable String mshField) {
-            this.mshField = Input.ofNullable(mshField);
+            this.mshField = Output.ofNullable(mshField);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public VersionSourceArgs build() {

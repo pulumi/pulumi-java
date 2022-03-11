@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class VirtualServiceSpecProviderVirtualNodeGetArgs extends io.pulum
      * 
      */
     @InputImport(name="virtualNodeName", required=true)
-      private final Input<String> virtualNodeName;
+      private final Output<String> virtualNodeName;
 
-    public Input<String> getVirtualNodeName() {
+    public Output<String> getVirtualNodeName() {
         return this.virtualNodeName;
     }
 
-    public VirtualServiceSpecProviderVirtualNodeGetArgs(Input<String> virtualNodeName) {
+    public VirtualServiceSpecProviderVirtualNodeGetArgs(Output<String> virtualNodeName) {
         this.virtualNodeName = Objects.requireNonNull(virtualNodeName, "expected parameter 'virtualNodeName' to be non-null");
     }
 
     private VirtualServiceSpecProviderVirtualNodeGetArgs() {
-        this.virtualNodeName = Input.empty();
+        this.virtualNodeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class VirtualServiceSpecProviderVirtualNodeGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> virtualNodeName;
+        private Output<String> virtualNodeName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class VirtualServiceSpecProviderVirtualNodeGetArgs extends io.pulum
     	      this.virtualNodeName = defaults.virtualNodeName;
         }
 
-        public Builder virtualNodeName(Input<String> virtualNodeName) {
+        public Builder virtualNodeName(Output<String> virtualNodeName) {
             this.virtualNodeName = Objects.requireNonNull(virtualNodeName);
             return this;
         }
 
         public Builder virtualNodeName(String virtualNodeName) {
-            this.virtualNodeName = Input.of(Objects.requireNonNull(virtualNodeName));
+            this.virtualNodeName = Output.of(Objects.requireNonNull(virtualNodeName));
             return this;
         }
         public VirtualServiceSpecProviderVirtualNodeGetArgs build() {

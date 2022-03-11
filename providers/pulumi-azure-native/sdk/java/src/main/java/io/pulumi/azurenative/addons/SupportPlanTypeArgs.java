@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.addons;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="planTypeName")
-      private final @Nullable Input<String> planTypeName;
+      private final @Nullable Output<String> planTypeName;
 
-    public Input<String> getPlanTypeName() {
-        return this.planTypeName == null ? Input.empty() : this.planTypeName;
+    public Output<String> getPlanTypeName() {
+        return this.planTypeName == null ? Output.empty() : this.planTypeName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="providerName", required=true)
-      private final Input<String> providerName;
+      private final Output<String> providerName;
 
-    public Input<String> getProviderName() {
+    public Output<String> getProviderName() {
         return this.providerName;
     }
 
     public SupportPlanTypeArgs(
-        @Nullable Input<String> planTypeName,
-        Input<String> providerName) {
+        @Nullable Output<String> planTypeName,
+        Output<String> providerName) {
         this.planTypeName = planTypeName;
         this.providerName = Objects.requireNonNull(providerName, "expected parameter 'providerName' to be non-null");
     }
 
     private SupportPlanTypeArgs() {
-        this.planTypeName = Input.empty();
-        this.providerName = Input.empty();
+        this.planTypeName = Output.empty();
+        this.providerName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> planTypeName;
-        private Input<String> providerName;
+        private @Nullable Output<String> planTypeName;
+        private Output<String> providerName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SupportPlanTypeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.providerName = defaults.providerName;
         }
 
-        public Builder planTypeName(@Nullable Input<String> planTypeName) {
+        public Builder planTypeName(@Nullable Output<String> planTypeName) {
             this.planTypeName = planTypeName;
             return this;
         }
 
         public Builder planTypeName(@Nullable String planTypeName) {
-            this.planTypeName = Input.ofNullable(planTypeName);
+            this.planTypeName = Output.ofNullable(planTypeName);
             return this;
         }
 
-        public Builder providerName(Input<String> providerName) {
+        public Builder providerName(Output<String> providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
 
         public Builder providerName(String providerName) {
-            this.providerName = Input.of(Objects.requireNonNull(providerName));
+            this.providerName = Output.of(Objects.requireNonNull(providerName));
             return this;
         }
         public SupportPlanTypeArgs build() {

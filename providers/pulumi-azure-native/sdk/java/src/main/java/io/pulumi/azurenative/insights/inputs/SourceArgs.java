@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.QueryType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedResources")
-      private final @Nullable Input<List<String>> authorizedResources;
+      private final @Nullable Output<List<String>> authorizedResources;
 
-    public Input<List<String>> getAuthorizedResources() {
-        return this.authorizedResources == null ? Input.empty() : this.authorizedResources;
+    public Output<List<String>> getAuthorizedResources() {
+        return this.authorizedResources == null ? Output.empty() : this.authorizedResources;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceId", required=true)
-      private final Input<String> dataSourceId;
+      private final Output<String> dataSourceId;
 
-    public Input<String> getDataSourceId() {
+    public Output<String> getDataSourceId() {
         return this.dataSourceId;
     }
 
@@ -48,10 +48,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryType")
-      private final @Nullable Input<Either<String,QueryType>> queryType;
+      private final @Nullable Output<Either<String,QueryType>> queryType;
 
-    public Input<Either<String,QueryType>> getQueryType() {
-        return this.queryType == null ? Input.empty() : this.queryType;
+    public Output<Either<String,QueryType>> getQueryType() {
+        return this.queryType == null ? Output.empty() : this.queryType;
     }
 
     public SourceArgs(
-        @Nullable Input<List<String>> authorizedResources,
-        Input<String> dataSourceId,
-        @Nullable Input<String> query,
-        @Nullable Input<Either<String,QueryType>> queryType) {
+        @Nullable Output<List<String>> authorizedResources,
+        Output<String> dataSourceId,
+        @Nullable Output<String> query,
+        @Nullable Output<Either<String,QueryType>> queryType) {
         this.authorizedResources = authorizedResources;
         this.dataSourceId = Objects.requireNonNull(dataSourceId, "expected parameter 'dataSourceId' to be non-null");
         this.query = query;
@@ -77,10 +77,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceArgs() {
-        this.authorizedResources = Input.empty();
-        this.dataSourceId = Input.empty();
-        this.query = Input.empty();
-        this.queryType = Input.empty();
+        this.authorizedResources = Output.empty();
+        this.dataSourceId = Output.empty();
+        this.query = Output.empty();
+        this.queryType = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> authorizedResources;
-        private Input<String> dataSourceId;
-        private @Nullable Input<String> query;
-        private @Nullable Input<Either<String,QueryType>> queryType;
+        private @Nullable Output<List<String>> authorizedResources;
+        private Output<String> dataSourceId;
+        private @Nullable Output<String> query;
+        private @Nullable Output<Either<String,QueryType>> queryType;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queryType = defaults.queryType;
         }
 
-        public Builder authorizedResources(@Nullable Input<List<String>> authorizedResources) {
+        public Builder authorizedResources(@Nullable Output<List<String>> authorizedResources) {
             this.authorizedResources = authorizedResources;
             return this;
         }
 
         public Builder authorizedResources(@Nullable List<String> authorizedResources) {
-            this.authorizedResources = Input.ofNullable(authorizedResources);
+            this.authorizedResources = Output.ofNullable(authorizedResources);
             return this;
         }
 
-        public Builder dataSourceId(Input<String> dataSourceId) {
+        public Builder dataSourceId(Output<String> dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
 
         public Builder dataSourceId(String dataSourceId) {
-            this.dataSourceId = Input.of(Objects.requireNonNull(dataSourceId));
+            this.dataSourceId = Output.of(Objects.requireNonNull(dataSourceId));
             return this;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder queryType(@Nullable Input<Either<String,QueryType>> queryType) {
+        public Builder queryType(@Nullable Output<Either<String,QueryType>> queryType) {
             this.queryType = queryType;
             return this;
         }
 
         public Builder queryType(@Nullable Either<String,QueryType> queryType) {
-            this.queryType = Input.ofNullable(queryType);
+            this.queryType = Output.ofNullable(queryType);
             return this;
         }
         public SourceArgs build() {

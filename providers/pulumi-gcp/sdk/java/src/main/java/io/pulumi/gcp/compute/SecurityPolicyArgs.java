@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleArgs;
@@ -22,10 +22,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adaptiveProtectionConfig")
-      private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
+      private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
-    public Input<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
-        return this.adaptiveProtectionConfig == null ? Input.empty() : this.adaptiveProtectionConfig;
+    public Output<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
+        return this.adaptiveProtectionConfig == null ? Output.empty() : this.adaptiveProtectionConfig;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<SecurityPolicyRuleArgs>> rules;
+      private final @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
-    public Input<List<SecurityPolicyRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<SecurityPolicyRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public SecurityPolicyArgs(
-        @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<SecurityPolicyRuleArgs>> rules) {
+        @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         this.description = description;
         this.name = name;
@@ -89,11 +89,11 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecurityPolicyArgs() {
-        this.adaptiveProtectionConfig = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.rules = Input.empty();
+        this.adaptiveProtectionConfig = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<SecurityPolicyRuleArgs>> rules;
+        private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder adaptiveProtectionConfig(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
 
         public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = Input.ofNullable(adaptiveProtectionConfig);
+            this.adaptiveProtectionConfig = Output.ofNullable(adaptiveProtectionConfig);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<SecurityPolicyRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<SecurityPolicyRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public SecurityPolicyArgs build() {

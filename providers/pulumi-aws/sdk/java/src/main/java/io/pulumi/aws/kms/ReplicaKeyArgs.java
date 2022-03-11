@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bypassPolicyLockoutSafetyCheck")
-      private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
+      private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Input<Boolean> getBypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Input.empty() : this.bypassPolicyLockoutSafetyCheck;
+    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
+        return this.bypassPolicyLockoutSafetyCheck == null ? Output.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionWindowInDays")
-      private final @Nullable Input<Integer> deletionWindowInDays;
+      private final @Nullable Output<Integer> deletionWindowInDays;
 
-    public Input<Integer> getDeletionWindowInDays() {
-        return this.deletionWindowInDays == null ? Input.empty() : this.deletionWindowInDays;
+    public Output<Integer> getDeletionWindowInDays() {
+        return this.deletionWindowInDays == null ? Output.empty() : this.deletionWindowInDays;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryKeyArn", required=true)
-      private final Input<String> primaryKeyArn;
+      private final Output<String> primaryKeyArn;
 
-    public Input<String> getPrimaryKeyArn() {
+    public Output<String> getPrimaryKeyArn() {
         return this.primaryKeyArn;
     }
 
@@ -88,20 +88,20 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ReplicaKeyArgs(
-        @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck,
-        @Nullable Input<Integer> deletionWindowInDays,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> policy,
-        Input<String> primaryKeyArn,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck,
+        @Nullable Output<Integer> deletionWindowInDays,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> policy,
+        Output<String> primaryKeyArn,
+        @Nullable Output<Map<String,String>> tags) {
         this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
         this.deletionWindowInDays = deletionWindowInDays;
         this.description = description;
@@ -112,13 +112,13 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReplicaKeyArgs() {
-        this.bypassPolicyLockoutSafetyCheck = Input.empty();
-        this.deletionWindowInDays = Input.empty();
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.policy = Input.empty();
-        this.primaryKeyArn = Input.empty();
-        this.tags = Input.empty();
+        this.bypassPolicyLockoutSafetyCheck = Output.empty();
+        this.deletionWindowInDays = Output.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.policy = Output.empty();
+        this.primaryKeyArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
-        private @Nullable Input<Integer> deletionWindowInDays;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> policy;
-        private Input<String> primaryKeyArn;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
+        private @Nullable Output<Integer> deletionWindowInDays;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> policy;
+        private Output<String> primaryKeyArn;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck) {
+        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
 
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Input.ofNullable(bypassPolicyLockoutSafetyCheck);
+            this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
 
-        public Builder deletionWindowInDays(@Nullable Input<Integer> deletionWindowInDays) {
+        public Builder deletionWindowInDays(@Nullable Output<Integer> deletionWindowInDays) {
             this.deletionWindowInDays = deletionWindowInDays;
             return this;
         }
 
         public Builder deletionWindowInDays(@Nullable Integer deletionWindowInDays) {
-            this.deletionWindowInDays = Input.ofNullable(deletionWindowInDays);
+            this.deletionWindowInDays = Output.ofNullable(deletionWindowInDays);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder primaryKeyArn(Input<String> primaryKeyArn) {
+        public Builder primaryKeyArn(Output<String> primaryKeyArn) {
             this.primaryKeyArn = Objects.requireNonNull(primaryKeyArn);
             return this;
         }
 
         public Builder primaryKeyArn(String primaryKeyArn) {
-            this.primaryKeyArn = Input.of(Objects.requireNonNull(primaryKeyArn));
+            this.primaryKeyArn = Output.of(Objects.requireNonNull(primaryKeyArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ReplicaKeyArgs build() {

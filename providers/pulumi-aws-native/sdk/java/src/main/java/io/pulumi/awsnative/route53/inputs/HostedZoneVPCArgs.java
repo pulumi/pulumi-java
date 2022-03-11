@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vPCId", required=true)
-      private final Input<String> vPCId;
+      private final Output<String> vPCId;
 
-    public Input<String> getVPCId() {
+    public Output<String> getVPCId() {
         return this.vPCId;
     }
 
@@ -33,22 +33,22 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vPCRegion", required=true)
-      private final Input<String> vPCRegion;
+      private final Output<String> vPCRegion;
 
-    public Input<String> getVPCRegion() {
+    public Output<String> getVPCRegion() {
         return this.vPCRegion;
     }
 
     public HostedZoneVPCArgs(
-        Input<String> vPCId,
-        Input<String> vPCRegion) {
+        Output<String> vPCId,
+        Output<String> vPCRegion) {
         this.vPCId = Objects.requireNonNull(vPCId, "expected parameter 'vPCId' to be non-null");
         this.vPCRegion = Objects.requireNonNull(vPCRegion, "expected parameter 'vPCRegion' to be non-null");
     }
 
     private HostedZoneVPCArgs() {
-        this.vPCId = Input.empty();
-        this.vPCRegion = Input.empty();
+        this.vPCId = Output.empty();
+        this.vPCRegion = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> vPCId;
-        private Input<String> vPCRegion;
+        private Output<String> vPCId;
+        private Output<String> vPCRegion;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vPCRegion = defaults.vPCRegion;
         }
 
-        public Builder vPCId(Input<String> vPCId) {
+        public Builder vPCId(Output<String> vPCId) {
             this.vPCId = Objects.requireNonNull(vPCId);
             return this;
         }
 
         public Builder vPCId(String vPCId) {
-            this.vPCId = Input.of(Objects.requireNonNull(vPCId));
+            this.vPCId = Output.of(Objects.requireNonNull(vPCId));
             return this;
         }
 
-        public Builder vPCRegion(Input<String> vPCRegion) {
+        public Builder vPCRegion(Output<String> vPCRegion) {
             this.vPCRegion = Objects.requireNonNull(vPCRegion);
             return this;
         }
 
         public Builder vPCRegion(String vPCRegion) {
-            this.vPCRegion = Input.of(Objects.requireNonNull(vPCRegion));
+            this.vPCRegion = Output.of(Objects.requireNonNull(vPCRegion));
             return this;
         }
         public HostedZoneVPCArgs build() {

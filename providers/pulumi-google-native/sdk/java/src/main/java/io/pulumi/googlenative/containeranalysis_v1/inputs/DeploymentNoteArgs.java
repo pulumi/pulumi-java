@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class DeploymentNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-      private final Input<List<String>> resourceUri;
+      private final Output<List<String>> resourceUri;
 
-    public Input<List<String>> getResourceUri() {
+    public Output<List<String>> getResourceUri() {
         return this.resourceUri;
     }
 
-    public DeploymentNoteArgs(Input<List<String>> resourceUri) {
+    public DeploymentNoteArgs(Output<List<String>> resourceUri) {
         this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
     }
 
     private DeploymentNoteArgs() {
-        this.resourceUri = Input.empty();
+        this.resourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DeploymentNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> resourceUri;
+        private Output<List<String>> resourceUri;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DeploymentNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder resourceUri(Input<List<String>> resourceUri) {
+        public Builder resourceUri(Output<List<String>> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
         public Builder resourceUri(List<String> resourceUri) {
-            this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
+            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
         public DeploymentNoteArgs build() {

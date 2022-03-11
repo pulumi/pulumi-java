@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationsmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="containedResources")
-      private final @Nullable Input<List<String>> containedResources;
+      private final @Nullable Output<List<String>> containedResources;
 
-    public Input<List<String>> getContainedResources() {
-        return this.containedResources == null ? Input.empty() : this.containedResources;
+    public Output<List<String>> getContainedResources() {
+        return this.containedResources == null ? Output.empty() : this.containedResources;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="referencedResources")
-      private final @Nullable Input<List<String>> referencedResources;
+      private final @Nullable Output<List<String>> referencedResources;
 
-    public Input<List<String>> getReferencedResources() {
-        return this.referencedResources == null ? Input.empty() : this.referencedResources;
+    public Output<List<String>> getReferencedResources() {
+        return this.referencedResources == null ? Output.empty() : this.referencedResources;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workspaceResourceId", required=true)
-      private final Input<String> workspaceResourceId;
+      private final Output<String> workspaceResourceId;
 
-    public Input<String> getWorkspaceResourceId() {
+    public Output<String> getWorkspaceResourceId() {
         return this.workspaceResourceId;
     }
 
     public SolutionPropertiesArgs(
-        @Nullable Input<List<String>> containedResources,
-        @Nullable Input<List<String>> referencedResources,
-        Input<String> workspaceResourceId) {
+        @Nullable Output<List<String>> containedResources,
+        @Nullable Output<List<String>> referencedResources,
+        Output<String> workspaceResourceId) {
         this.containedResources = containedResources;
         this.referencedResources = referencedResources;
         this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId, "expected parameter 'workspaceResourceId' to be non-null");
     }
 
     private SolutionPropertiesArgs() {
-        this.containedResources = Input.empty();
-        this.referencedResources = Input.empty();
-        this.workspaceResourceId = Input.empty();
+        this.containedResources = Output.empty();
+        this.referencedResources = Output.empty();
+        this.workspaceResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> containedResources;
-        private @Nullable Input<List<String>> referencedResources;
-        private Input<String> workspaceResourceId;
+        private @Nullable Output<List<String>> containedResources;
+        private @Nullable Output<List<String>> referencedResources;
+        private Output<String> workspaceResourceId;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder containedResources(@Nullable Input<List<String>> containedResources) {
+        public Builder containedResources(@Nullable Output<List<String>> containedResources) {
             this.containedResources = containedResources;
             return this;
         }
 
         public Builder containedResources(@Nullable List<String> containedResources) {
-            this.containedResources = Input.ofNullable(containedResources);
+            this.containedResources = Output.ofNullable(containedResources);
             return this;
         }
 
-        public Builder referencedResources(@Nullable Input<List<String>> referencedResources) {
+        public Builder referencedResources(@Nullable Output<List<String>> referencedResources) {
             this.referencedResources = referencedResources;
             return this;
         }
 
         public Builder referencedResources(@Nullable List<String> referencedResources) {
-            this.referencedResources = Input.ofNullable(referencedResources);
+            this.referencedResources = Output.ofNullable(referencedResources);
             return this;
         }
 
-        public Builder workspaceResourceId(Input<String> workspaceResourceId) {
+        public Builder workspaceResourceId(Output<String> workspaceResourceId) {
             this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId);
             return this;
         }
 
         public Builder workspaceResourceId(String workspaceResourceId) {
-            this.workspaceResourceId = Input.of(Objects.requireNonNull(workspaceResourceId));
+            this.workspaceResourceId = Output.of(Objects.requireNonNull(workspaceResourceId));
             return this;
         }
         public SolutionPropertiesArgs build() {

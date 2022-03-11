@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -32,10 +32,10 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="encryptionDisabled")
-      private final @Nullable Input<Boolean> encryptionDisabled;
+      private final @Nullable Output<Boolean> encryptionDisabled;
 
-    public Input<Boolean> getEncryptionDisabled() {
-        return this.encryptionDisabled == null ? Input.empty() : this.encryptionDisabled;
+    public Output<Boolean> getEncryptionDisabled() {
+        return this.encryptionDisabled == null ? Output.empty() : this.encryptionDisabled;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="encryptionKey", required=true)
-      private final Input<String> encryptionKey;
+      private final Output<String> encryptionKey;
 
-    public Input<String> getEncryptionKey() {
+    public Output<String> getEncryptionKey() {
         return this.encryptionKey;
     }
 
@@ -54,10 +54,10 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="packaging")
-      private final @Nullable Input<String> packaging;
+      private final @Nullable Output<String> packaging;
 
-    public Input<String> getPackaging() {
-        return this.packaging == null ? Input.empty() : this.packaging;
+    public Output<String> getPackaging() {
+        return this.packaging == null ? Output.empty() : this.packaging;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     public ReportGroupExportConfigS3DestinationArgs(
-        Input<String> bucket,
-        @Nullable Input<Boolean> encryptionDisabled,
-        Input<String> encryptionKey,
-        @Nullable Input<String> packaging,
-        @Nullable Input<String> path) {
+        Output<String> bucket,
+        @Nullable Output<Boolean> encryptionDisabled,
+        Output<String> encryptionKey,
+        @Nullable Output<String> packaging,
+        @Nullable Output<String> path) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.encryptionDisabled = encryptionDisabled;
         this.encryptionKey = Objects.requireNonNull(encryptionKey, "expected parameter 'encryptionKey' to be non-null");
@@ -85,11 +85,11 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
     }
 
     private ReportGroupExportConfigS3DestinationArgs() {
-        this.bucket = Input.empty();
-        this.encryptionDisabled = Input.empty();
-        this.encryptionKey = Input.empty();
-        this.packaging = Input.empty();
-        this.path = Input.empty();
+        this.bucket = Output.empty();
+        this.encryptionDisabled = Output.empty();
+        this.encryptionKey = Output.empty();
+        this.packaging = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<Boolean> encryptionDisabled;
-        private Input<String> encryptionKey;
-        private @Nullable Input<String> packaging;
-        private @Nullable Input<String> path;
+        private Output<String> bucket;
+        private @Nullable Output<Boolean> encryptionDisabled;
+        private Output<String> encryptionKey;
+        private @Nullable Output<String> packaging;
+        private @Nullable Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
     	      this.path = defaults.path;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder encryptionDisabled(@Nullable Input<Boolean> encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
         public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
-            this.encryptionDisabled = Input.ofNullable(encryptionDisabled);
+            this.encryptionDisabled = Output.ofNullable(encryptionDisabled);
             return this;
         }
 
-        public Builder encryptionKey(Input<String> encryptionKey) {
+        public Builder encryptionKey(Output<String> encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }
 
         public Builder encryptionKey(String encryptionKey) {
-            this.encryptionKey = Input.of(Objects.requireNonNull(encryptionKey));
+            this.encryptionKey = Output.of(Objects.requireNonNull(encryptionKey));
             return this;
         }
 
-        public Builder packaging(@Nullable Input<String> packaging) {
+        public Builder packaging(@Nullable Output<String> packaging) {
             this.packaging = packaging;
             return this;
         }
 
         public Builder packaging(@Nullable String packaging) {
-            this.packaging = Input.ofNullable(packaging);
+            this.packaging = Output.ofNullable(packaging);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
         public ReportGroupExportConfigS3DestinationArgs build() {

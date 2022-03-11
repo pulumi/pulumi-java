@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dynamics365fraudprotection.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
-    public DFPInstanceAdministratorsArgs(@Nullable Input<List<String>> members) {
+    public DFPInstanceAdministratorsArgs(@Nullable Output<List<String>> members) {
         this.members = members;
     }
 
     private DFPInstanceAdministratorsArgs() {
-        this.members = Input.empty();
+        this.members = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> members;
+        private @Nullable Output<List<String>> members;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.Res
     	      this.members = defaults.members;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
         public DFPInstanceAdministratorsArgs build() {

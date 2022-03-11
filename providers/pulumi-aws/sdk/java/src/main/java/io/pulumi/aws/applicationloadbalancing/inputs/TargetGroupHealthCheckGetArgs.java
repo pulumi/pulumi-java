@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="healthyThreshold")
-      private final @Nullable Input<Integer> healthyThreshold;
+      private final @Nullable Output<Integer> healthyThreshold;
 
-    public Input<Integer> getHealthyThreshold() {
-        return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
+    public Output<Integer> getHealthyThreshold() {
+        return this.healthyThreshold == null ? Output.empty() : this.healthyThreshold;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Integer> interval;
+      private final @Nullable Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Integer> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="matcher")
-      private final @Nullable Input<String> matcher;
+      private final @Nullable Output<String> matcher;
 
-    public Input<String> getMatcher() {
-        return this.matcher == null ? Input.empty() : this.matcher;
+    public Output<String> getMatcher() {
+        return this.matcher == null ? Output.empty() : this.matcher;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<String> port;
+      private final @Nullable Output<String> port;
 
-    public Input<String> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<String> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="unhealthyThreshold")
-      private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Input<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;
+    public Output<Integer> getUnhealthyThreshold() {
+        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
     }
 
     public TargetGroupHealthCheckGetArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Integer> healthyThreshold,
-        @Nullable Input<Integer> interval,
-        @Nullable Input<String> matcher,
-        @Nullable Input<String> path,
-        @Nullable Input<String> port,
-        @Nullable Input<String> protocol,
-        @Nullable Input<Integer> timeout,
-        @Nullable Input<Integer> unhealthyThreshold) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Integer> healthyThreshold,
+        @Nullable Output<Integer> interval,
+        @Nullable Output<String> matcher,
+        @Nullable Output<String> path,
+        @Nullable Output<String> port,
+        @Nullable Output<String> protocol,
+        @Nullable Output<Integer> timeout,
+        @Nullable Output<Integer> unhealthyThreshold) {
         this.enabled = enabled;
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;
@@ -137,15 +137,15 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
     }
 
     private TargetGroupHealthCheckGetArgs() {
-        this.enabled = Input.empty();
-        this.healthyThreshold = Input.empty();
-        this.interval = Input.empty();
-        this.matcher = Input.empty();
-        this.path = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
-        this.timeout = Input.empty();
-        this.unhealthyThreshold = Input.empty();
+        this.enabled = Output.empty();
+        this.healthyThreshold = Output.empty();
+        this.interval = Output.empty();
+        this.matcher = Output.empty();
+        this.path = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
+        this.timeout = Output.empty();
+        this.unhealthyThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Integer> healthyThreshold;
-        private @Nullable Input<Integer> interval;
-        private @Nullable Input<String> matcher;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> port;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<Integer> timeout;
-        private @Nullable Input<Integer> unhealthyThreshold;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Integer> healthyThreshold;
+        private @Nullable Output<Integer> interval;
+        private @Nullable Output<String> matcher;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> port;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<Integer> timeout;
+        private @Nullable Output<Integer> unhealthyThreshold;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class TargetGroupHealthCheckGetArgs extends io.pulumi.resources.Res
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder healthyThreshold(@Nullable Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
 
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Input.ofNullable(healthyThreshold);
+            this.healthyThreshold = Output.ofNullable(healthyThreshold);
             return this;
         }
 
-        public Builder interval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder matcher(@Nullable Input<String> matcher) {
+        public Builder matcher(@Nullable Output<String> matcher) {
             this.matcher = matcher;
             return this;
         }
 
         public Builder matcher(@Nullable String matcher) {
-            this.matcher = Input.ofNullable(matcher);
+            this.matcher = Output.ofNullable(matcher);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder port(@Nullable Input<String> port) {
+        public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable String port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder unhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
             return this;
         }
         public TargetGroupHealthCheckGetArgs build() {

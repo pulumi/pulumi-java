@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptedPassword")
-      private final @Nullable Input<String> encryptedPassword;
+      private final @Nullable Output<String> encryptedPassword;
 
-    public Input<String> getEncryptedPassword() {
-        return this.encryptedPassword == null ? Input.empty() : this.encryptedPassword;
+    public Output<String> getEncryptedPassword() {
+        return this.encryptedPassword == null ? Output.empty() : this.encryptedPassword;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyFingerprint")
-      private final @Nullable Input<String> keyFingerprint;
+      private final @Nullable Output<String> keyFingerprint;
 
-    public Input<String> getKeyFingerprint() {
-        return this.keyFingerprint == null ? Input.empty() : this.keyFingerprint;
+    public Output<String> getKeyFingerprint() {
+        return this.keyFingerprint == null ? Output.empty() : this.keyFingerprint;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="passwordLength")
-      private final @Nullable Input<Integer> passwordLength;
+      private final @Nullable Output<Integer> passwordLength;
 
-    public Input<Integer> getPasswordLength() {
-        return this.passwordLength == null ? Input.empty() : this.passwordLength;
+    public Output<Integer> getPasswordLength() {
+        return this.passwordLength == null ? Output.empty() : this.passwordLength;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="passwordResetRequired")
-      private final @Nullable Input<Boolean> passwordResetRequired;
+      private final @Nullable Output<Boolean> passwordResetRequired;
 
-    public Input<Boolean> getPasswordResetRequired() {
-        return this.passwordResetRequired == null ? Input.empty() : this.passwordResetRequired;
+    public Output<Boolean> getPasswordResetRequired() {
+        return this.passwordResetRequired == null ? Output.empty() : this.passwordResetRequired;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="pgpKey")
-      private final @Nullable Input<String> pgpKey;
+      private final @Nullable Output<String> pgpKey;
 
-    public Input<String> getPgpKey() {
-        return this.pgpKey == null ? Input.empty() : this.pgpKey;
+    public Output<String> getPgpKey() {
+        return this.pgpKey == null ? Output.empty() : this.pgpKey;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public UserLoginProfileState(
-        @Nullable Input<String> encryptedPassword,
-        @Nullable Input<String> keyFingerprint,
-        @Nullable Input<Integer> passwordLength,
-        @Nullable Input<Boolean> passwordResetRequired,
-        @Nullable Input<String> pgpKey,
-        @Nullable Input<String> user) {
+        @Nullable Output<String> encryptedPassword,
+        @Nullable Output<String> keyFingerprint,
+        @Nullable Output<Integer> passwordLength,
+        @Nullable Output<Boolean> passwordResetRequired,
+        @Nullable Output<String> pgpKey,
+        @Nullable Output<String> user) {
         this.encryptedPassword = encryptedPassword;
         this.keyFingerprint = keyFingerprint;
         this.passwordLength = passwordLength;
@@ -98,12 +98,12 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
     }
 
     private UserLoginProfileState() {
-        this.encryptedPassword = Input.empty();
-        this.keyFingerprint = Input.empty();
-        this.passwordLength = Input.empty();
-        this.passwordResetRequired = Input.empty();
-        this.pgpKey = Input.empty();
-        this.user = Input.empty();
+        this.encryptedPassword = Output.empty();
+        this.keyFingerprint = Output.empty();
+        this.passwordLength = Output.empty();
+        this.passwordResetRequired = Output.empty();
+        this.pgpKey = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> encryptedPassword;
-        private @Nullable Input<String> keyFingerprint;
-        private @Nullable Input<Integer> passwordLength;
-        private @Nullable Input<Boolean> passwordResetRequired;
-        private @Nullable Input<String> pgpKey;
-        private @Nullable Input<String> user;
+        private @Nullable Output<String> encryptedPassword;
+        private @Nullable Output<String> keyFingerprint;
+        private @Nullable Output<Integer> passwordLength;
+        private @Nullable Output<Boolean> passwordResetRequired;
+        private @Nullable Output<String> pgpKey;
+        private @Nullable Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
     	      this.user = defaults.user;
         }
 
-        public Builder encryptedPassword(@Nullable Input<String> encryptedPassword) {
+        public Builder encryptedPassword(@Nullable Output<String> encryptedPassword) {
             this.encryptedPassword = encryptedPassword;
             return this;
         }
 
         public Builder encryptedPassword(@Nullable String encryptedPassword) {
-            this.encryptedPassword = Input.ofNullable(encryptedPassword);
+            this.encryptedPassword = Output.ofNullable(encryptedPassword);
             return this;
         }
 
-        public Builder keyFingerprint(@Nullable Input<String> keyFingerprint) {
+        public Builder keyFingerprint(@Nullable Output<String> keyFingerprint) {
             this.keyFingerprint = keyFingerprint;
             return this;
         }
 
         public Builder keyFingerprint(@Nullable String keyFingerprint) {
-            this.keyFingerprint = Input.ofNullable(keyFingerprint);
+            this.keyFingerprint = Output.ofNullable(keyFingerprint);
             return this;
         }
 
-        public Builder passwordLength(@Nullable Input<Integer> passwordLength) {
+        public Builder passwordLength(@Nullable Output<Integer> passwordLength) {
             this.passwordLength = passwordLength;
             return this;
         }
 
         public Builder passwordLength(@Nullable Integer passwordLength) {
-            this.passwordLength = Input.ofNullable(passwordLength);
+            this.passwordLength = Output.ofNullable(passwordLength);
             return this;
         }
 
-        public Builder passwordResetRequired(@Nullable Input<Boolean> passwordResetRequired) {
+        public Builder passwordResetRequired(@Nullable Output<Boolean> passwordResetRequired) {
             this.passwordResetRequired = passwordResetRequired;
             return this;
         }
 
         public Builder passwordResetRequired(@Nullable Boolean passwordResetRequired) {
-            this.passwordResetRequired = Input.ofNullable(passwordResetRequired);
+            this.passwordResetRequired = Output.ofNullable(passwordResetRequired);
             return this;
         }
 
-        public Builder pgpKey(@Nullable Input<String> pgpKey) {
+        public Builder pgpKey(@Nullable Output<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
 
         public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Input.ofNullable(pgpKey);
+            this.pgpKey = Output.ofNullable(pgpKey);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public UserLoginProfileState build() {

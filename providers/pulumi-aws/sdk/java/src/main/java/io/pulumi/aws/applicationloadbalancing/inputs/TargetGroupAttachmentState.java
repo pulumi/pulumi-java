@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="targetGroupArn")
-      private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Output<String> targetGroupArn;
 
-    public Input<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;
+    public Output<String> getTargetGroupArn() {
+        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="targetId")
-      private final @Nullable Input<String> targetId;
+      private final @Nullable Output<String> targetId;
 
-    public Input<String> getTargetId() {
-        return this.targetId == null ? Input.empty() : this.targetId;
+    public Output<String> getTargetId() {
+        return this.targetId == null ? Output.empty() : this.targetId;
     }
 
     public TargetGroupAttachmentState(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> targetGroupArn,
-        @Nullable Input<String> targetId) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> targetGroupArn,
+        @Nullable Output<String> targetId) {
         this.availabilityZone = availabilityZone;
         this.port = port;
         this.targetGroupArn = targetGroupArn;
@@ -71,10 +71,10 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
     }
 
     private TargetGroupAttachmentState() {
-        this.availabilityZone = Input.empty();
-        this.port = Input.empty();
-        this.targetGroupArn = Input.empty();
-        this.targetId = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.port = Output.empty();
+        this.targetGroupArn = Output.empty();
+        this.targetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> targetGroupArn;
-        private @Nullable Input<String> targetId;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> targetGroupArn;
+        private @Nullable Output<String> targetId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder targetGroupArn(@Nullable Input<String> targetGroupArn) {
+        public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Input.ofNullable(targetGroupArn);
+            this.targetGroupArn = Output.ofNullable(targetGroupArn);
             return this;
         }
 
-        public Builder targetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Input.ofNullable(targetId);
+            this.targetId = Output.ofNullable(targetId);
             return this;
         }
         public TargetGroupAttachmentState build() {

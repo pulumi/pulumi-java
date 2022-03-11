@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs;
 import java.util.List;
@@ -16,18 +16,18 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     public static final CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs Empty = new CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs();
 
     @InputImport(name="obectIds")
-      private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds;
+      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds;
 
-    public Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> getObectIds() {
-        return this.obectIds == null ? Input.empty() : this.obectIds;
+    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> getObectIds() {
+        return this.obectIds == null ? Output.empty() : this.obectIds;
     }
 
-    public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds) {
+    public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds) {
         this.obectIds = obectIds;
     }
 
     private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs() {
-        this.obectIds = Input.empty();
+        this.obectIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds;
+        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     	      this.obectIds = defaults.obectIds;
         }
 
-        public Builder obectIds(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds) {
+        public Builder obectIds(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs>> obectIds) {
             this.obectIds = obectIds;
             return this;
         }
 
         public Builder obectIds(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectIdArgs> obectIds) {
-            this.obectIds = Input.ofNullable(obectIds);
+            this.obectIds = Output.ofNullable(obectIds);
             return this;
         }
         public CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs build() {

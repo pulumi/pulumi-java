@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.enums.OSPolicyResourceRepositoryResourceAptRepositoryArchiveType;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
      * 
      */
     @InputImport(name="archiveType", required=true)
-      private final Input<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType;
+      private final Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType;
 
-    public Input<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> getArchiveType() {
+    public Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> getArchiveType() {
         return this.archiveType;
     }
 
@@ -36,9 +36,9 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
      * 
      */
     @InputImport(name="components", required=true)
-      private final Input<List<String>> components;
+      private final Output<List<String>> components;
 
-    public Input<List<String>> getComponents() {
+    public Output<List<String>> getComponents() {
         return this.components;
     }
 
@@ -47,9 +47,9 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
      * 
      */
     @InputImport(name="distribution", required=true)
-      private final Input<String> distribution;
+      private final Output<String> distribution;
 
-    public Input<String> getDistribution() {
+    public Output<String> getDistribution() {
         return this.distribution;
     }
 
@@ -58,10 +58,10 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
      * 
      */
     @InputImport(name="gpgKey")
-      private final @Nullable Input<String> gpgKey;
+      private final @Nullable Output<String> gpgKey;
 
-    public Input<String> getGpgKey() {
-        return this.gpgKey == null ? Input.empty() : this.gpgKey;
+    public Output<String> getGpgKey() {
+        return this.gpgKey == null ? Output.empty() : this.gpgKey;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public OSPolicyResourceRepositoryResourceAptRepositoryArgs(
-        Input<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType,
-        Input<List<String>> components,
-        Input<String> distribution,
-        @Nullable Input<String> gpgKey,
-        Input<String> uri) {
+        Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType,
+        Output<List<String>> components,
+        Output<String> distribution,
+        @Nullable Output<String> gpgKey,
+        Output<String> uri) {
         this.archiveType = Objects.requireNonNull(archiveType, "expected parameter 'archiveType' to be non-null");
         this.components = Objects.requireNonNull(components, "expected parameter 'components' to be non-null");
         this.distribution = Objects.requireNonNull(distribution, "expected parameter 'distribution' to be non-null");
@@ -89,11 +89,11 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
     }
 
     private OSPolicyResourceRepositoryResourceAptRepositoryArgs() {
-        this.archiveType = Input.empty();
-        this.components = Input.empty();
-        this.distribution = Input.empty();
-        this.gpgKey = Input.empty();
-        this.uri = Input.empty();
+        this.archiveType = Output.empty();
+        this.components = Output.empty();
+        this.distribution = Output.empty();
+        this.gpgKey = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
     }
 
     public static final class Builder {
-        private Input<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType;
-        private Input<List<String>> components;
-        private Input<String> distribution;
-        private @Nullable Input<String> gpgKey;
-        private Input<String> uri;
+        private Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType;
+        private Output<List<String>> components;
+        private Output<String> distribution;
+        private @Nullable Output<String> gpgKey;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
     	      this.uri = defaults.uri;
         }
 
-        public Builder archiveType(Input<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType) {
+        public Builder archiveType(Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType) {
             this.archiveType = Objects.requireNonNull(archiveType);
             return this;
         }
 
         public Builder archiveType(OSPolicyResourceRepositoryResourceAptRepositoryArchiveType archiveType) {
-            this.archiveType = Input.of(Objects.requireNonNull(archiveType));
+            this.archiveType = Output.of(Objects.requireNonNull(archiveType));
             return this;
         }
 
-        public Builder components(Input<List<String>> components) {
+        public Builder components(Output<List<String>> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
 
         public Builder components(List<String> components) {
-            this.components = Input.of(Objects.requireNonNull(components));
+            this.components = Output.of(Objects.requireNonNull(components));
             return this;
         }
 
-        public Builder distribution(Input<String> distribution) {
+        public Builder distribution(Output<String> distribution) {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
 
         public Builder distribution(String distribution) {
-            this.distribution = Input.of(Objects.requireNonNull(distribution));
+            this.distribution = Output.of(Objects.requireNonNull(distribution));
             return this;
         }
 
-        public Builder gpgKey(@Nullable Input<String> gpgKey) {
+        public Builder gpgKey(@Nullable Output<String> gpgKey) {
             this.gpgKey = gpgKey;
             return this;
         }
 
         public Builder gpgKey(@Nullable String gpgKey) {
-            this.gpgKey = Input.ofNullable(gpgKey);
+            this.gpgKey = Output.ofNullable(gpgKey);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public OSPolicyResourceRepositoryResourceAptRepositoryArgs build() {

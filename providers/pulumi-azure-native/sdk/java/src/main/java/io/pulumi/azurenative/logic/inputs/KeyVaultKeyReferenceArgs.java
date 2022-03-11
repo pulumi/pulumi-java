@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.KeyVaultKeyReferenceKeyVaultArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyName", required=true)
-      private final Input<String> keyName;
+      private final Output<String> keyName;
 
-    public Input<String> getKeyName() {
+    public Output<String> getKeyName() {
         return this.keyName;
     }
 
@@ -35,9 +35,9 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVault", required=true)
-      private final Input<KeyVaultKeyReferenceKeyVaultArgs> keyVault;
+      private final Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault;
 
-    public Input<KeyVaultKeyReferenceKeyVaultArgs> getKeyVault() {
+    public Output<KeyVaultKeyReferenceKeyVaultArgs> getKeyVault() {
         return this.keyVault;
     }
 
@@ -46,25 +46,25 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVersion")
-      private final @Nullable Input<String> keyVersion;
+      private final @Nullable Output<String> keyVersion;
 
-    public Input<String> getKeyVersion() {
-        return this.keyVersion == null ? Input.empty() : this.keyVersion;
+    public Output<String> getKeyVersion() {
+        return this.keyVersion == null ? Output.empty() : this.keyVersion;
     }
 
     public KeyVaultKeyReferenceArgs(
-        Input<String> keyName,
-        Input<KeyVaultKeyReferenceKeyVaultArgs> keyVault,
-        @Nullable Input<String> keyVersion) {
+        Output<String> keyName,
+        Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault,
+        @Nullable Output<String> keyVersion) {
         this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
         this.keyVault = Objects.requireNonNull(keyVault, "expected parameter 'keyVault' to be non-null");
         this.keyVersion = keyVersion;
     }
 
     private KeyVaultKeyReferenceArgs() {
-        this.keyName = Input.empty();
-        this.keyVault = Input.empty();
-        this.keyVersion = Input.empty();
+        this.keyName = Output.empty();
+        this.keyVault = Output.empty();
+        this.keyVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> keyName;
-        private Input<KeyVaultKeyReferenceKeyVaultArgs> keyVault;
-        private @Nullable Input<String> keyVersion;
+        private Output<String> keyName;
+        private Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault;
+        private @Nullable Output<String> keyVersion;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
     	      this.keyVersion = defaults.keyVersion;
         }
 
-        public Builder keyName(Input<String> keyName) {
+        public Builder keyName(Output<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Input.of(Objects.requireNonNull(keyName));
+            this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder keyVault(Input<KeyVaultKeyReferenceKeyVaultArgs> keyVault) {
+        public Builder keyVault(Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault) {
             this.keyVault = Objects.requireNonNull(keyVault);
             return this;
         }
 
         public Builder keyVault(KeyVaultKeyReferenceKeyVaultArgs keyVault) {
-            this.keyVault = Input.of(Objects.requireNonNull(keyVault));
+            this.keyVault = Output.of(Objects.requireNonNull(keyVault));
             return this;
         }
 
-        public Builder keyVersion(@Nullable Input<String> keyVersion) {
+        public Builder keyVersion(@Nullable Output<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Input.ofNullable(keyVersion);
+            this.keyVersion = Output.ofNullable(keyVersion);
             return this;
         }
         public KeyVaultKeyReferenceArgs build() {

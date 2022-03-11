@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail", required=true)
-      private final Input<String> serviceAccountEmail;
+      private final Output<String> serviceAccountEmail;
 
-    public Input<String> getServiceAccountEmail() {
+    public Output<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
@@ -44,25 +44,25 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public HmacKeyArgs(
-        @Nullable Input<String> project,
-        Input<String> serviceAccountEmail,
-        @Nullable Input<String> state) {
+        @Nullable Output<String> project,
+        Output<String> serviceAccountEmail,
+        @Nullable Output<String> state) {
         this.project = project;
         this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
         this.state = state;
     }
 
     private HmacKeyArgs() {
-        this.project = Input.empty();
-        this.serviceAccountEmail = Input.empty();
-        this.state = Input.empty();
+        this.project = Output.empty();
+        this.serviceAccountEmail = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> project;
-        private Input<String> serviceAccountEmail;
-        private @Nullable Input<String> state;
+        private @Nullable Output<String> project;
+        private Output<String> serviceAccountEmail;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceAccountEmail(Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Input.of(Objects.requireNonNull(serviceAccountEmail));
+            this.serviceAccountEmail = Output.of(Objects.requireNonNull(serviceAccountEmail));
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public HmacKeyArgs build() {

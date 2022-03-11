@@ -5,7 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesEc2ConfigurationArgs;
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesLaunchTemplateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="allocationStrategy")
-      private final @Nullable Input<String> allocationStrategy;
+      private final @Nullable Output<String> allocationStrategy;
 
-    public Input<String> getAllocationStrategy() {
-        return this.allocationStrategy == null ? Input.empty() : this.allocationStrategy;
+    public Output<String> getAllocationStrategy() {
+        return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="bidPercentage")
-      private final @Nullable Input<Integer> bidPercentage;
+      private final @Nullable Output<Integer> bidPercentage;
 
-    public Input<Integer> getBidPercentage() {
-        return this.bidPercentage == null ? Input.empty() : this.bidPercentage;
+    public Output<Integer> getBidPercentage() {
+        return this.bidPercentage == null ? Output.empty() : this.bidPercentage;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="desiredVcpus")
-      private final @Nullable Input<Integer> desiredVcpus;
+      private final @Nullable Output<Integer> desiredVcpus;
 
-    public Input<Integer> getDesiredVcpus() {
-        return this.desiredVcpus == null ? Input.empty() : this.desiredVcpus;
+    public Output<Integer> getDesiredVcpus() {
+        return this.desiredVcpus == null ? Output.empty() : this.desiredVcpus;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ec2Configuration")
-      private final @Nullable Input<ComputeEnvironmentComputeResourcesEc2ConfigurationArgs> ec2Configuration;
+      private final @Nullable Output<ComputeEnvironmentComputeResourcesEc2ConfigurationArgs> ec2Configuration;
 
-    public Input<ComputeEnvironmentComputeResourcesEc2ConfigurationArgs> getEc2Configuration() {
-        return this.ec2Configuration == null ? Input.empty() : this.ec2Configuration;
+    public Output<ComputeEnvironmentComputeResourcesEc2ConfigurationArgs> getEc2Configuration() {
+        return this.ec2Configuration == null ? Output.empty() : this.ec2Configuration;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ec2KeyPair")
-      private final @Nullable Input<String> ec2KeyPair;
+      private final @Nullable Output<String> ec2KeyPair;
 
-    public Input<String> getEc2KeyPair() {
-        return this.ec2KeyPair == null ? Input.empty() : this.ec2KeyPair;
+    public Output<String> getEc2KeyPair() {
+        return this.ec2KeyPair == null ? Output.empty() : this.ec2KeyPair;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="imageId")
-      private final @Nullable Input<String> imageId;
+      private final @Nullable Output<String> imageId;
 
-    public Input<String> getImageId() {
-        return this.imageId == null ? Input.empty() : this.imageId;
+    public Output<String> getImageId() {
+        return this.imageId == null ? Output.empty() : this.imageId;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instanceRole")
-      private final @Nullable Input<String> instanceRole;
+      private final @Nullable Output<String> instanceRole;
 
-    public Input<String> getInstanceRole() {
-        return this.instanceRole == null ? Input.empty() : this.instanceRole;
+    public Output<String> getInstanceRole() {
+        return this.instanceRole == null ? Output.empty() : this.instanceRole;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instanceTypes")
-      private final @Nullable Input<List<String>> instanceTypes;
+      private final @Nullable Output<List<String>> instanceTypes;
 
-    public Input<List<String>> getInstanceTypes() {
-        return this.instanceTypes == null ? Input.empty() : this.instanceTypes;
+    public Output<List<String>> getInstanceTypes() {
+        return this.instanceTypes == null ? Output.empty() : this.instanceTypes;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="launchTemplate")
-      private final @Nullable Input<ComputeEnvironmentComputeResourcesLaunchTemplateArgs> launchTemplate;
+      private final @Nullable Output<ComputeEnvironmentComputeResourcesLaunchTemplateArgs> launchTemplate;
 
-    public Input<ComputeEnvironmentComputeResourcesLaunchTemplateArgs> getLaunchTemplate() {
-        return this.launchTemplate == null ? Input.empty() : this.launchTemplate;
+    public Output<ComputeEnvironmentComputeResourcesLaunchTemplateArgs> getLaunchTemplate() {
+        return this.launchTemplate == null ? Output.empty() : this.launchTemplate;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="maxVcpus", required=true)
-      private final Input<Integer> maxVcpus;
+      private final Output<Integer> maxVcpus;
 
-    public Input<Integer> getMaxVcpus() {
+    public Output<Integer> getMaxVcpus() {
         return this.maxVcpus;
     }
 
@@ -134,10 +134,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="minVcpus")
-      private final @Nullable Input<Integer> minVcpus;
+      private final @Nullable Output<Integer> minVcpus;
 
-    public Input<Integer> getMinVcpus() {
-        return this.minVcpus == null ? Input.empty() : this.minVcpus;
+    public Output<Integer> getMinVcpus() {
+        return this.minVcpus == null ? Output.empty() : this.minVcpus;
     }
 
     /**
@@ -145,9 +145,9 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -156,10 +156,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="spotIamFleetRole")
-      private final @Nullable Input<String> spotIamFleetRole;
+      private final @Nullable Output<String> spotIamFleetRole;
 
-    public Input<String> getSpotIamFleetRole() {
-        return this.spotIamFleetRole == null ? Input.empty() : this.spotIamFleetRole;
+    public Output<String> getSpotIamFleetRole() {
+        return this.spotIamFleetRole == null ? Output.empty() : this.spotIamFleetRole;
     }
 
     /**
@@ -167,9 +167,9 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="subnets", required=true)
-      private final Input<List<String>> subnets;
+      private final Output<List<String>> subnets;
 
-    public Input<List<String>> getSubnets() {
+    public Output<List<String>> getSubnets() {
         return this.subnets;
     }
 
@@ -178,10 +178,10 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -189,29 +189,29 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ComputeEnvironmentComputeResourcesArgs(
-        @Nullable Input<String> allocationStrategy,
-        @Nullable Input<Integer> bidPercentage,
-        @Nullable Input<Integer> desiredVcpus,
-        @Nullable Input<ComputeEnvironmentComputeResourcesEc2ConfigurationArgs> ec2Configuration,
-        @Nullable Input<String> ec2KeyPair,
-        @Nullable Input<String> imageId,
-        @Nullable Input<String> instanceRole,
-        @Nullable Input<List<String>> instanceTypes,
-        @Nullable Input<ComputeEnvironmentComputeResourcesLaunchTemplateArgs> launchTemplate,
-        Input<Integer> maxVcpus,
-        @Nullable Input<Integer> minVcpus,
-        Input<List<String>> securityGroupIds,
-        @Nullable Input<String> spotIamFleetRole,
-        Input<List<String>> subnets,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> type) {
+        @Nullable Output<String> allocationStrategy,
+        @Nullable Output<Integer> bidPercentage,
+        @Nullable Output<Integer> desiredVcpus,
+        @Nullable Output<ComputeEnvironmentComputeResourcesEc2ConfigurationArgs> ec2Configuration,
+        @Nullable Output<String> ec2KeyPair,
+        @Nullable Output<String> imageId,
+        @Nullable Output<String> instanceRole,
+        @Nullable Output<List<String>> instanceTypes,
+        @Nullable Output<ComputeEnvironmentComputeResourcesLaunchTemplateArgs> launchTemplate,
+        Output<Integer> maxVcpus,
+        @Nullable Output<Integer> minVcpus,
+        Output<List<String>> securityGroupIds,
+        @Nullable Output<String> spotIamFleetRole,
+        Output<List<String>> subnets,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> type) {
         this.allocationStrategy = allocationStrategy;
         this.bidPercentage = bidPercentage;
         this.desiredVcpus = desiredVcpus;
@@ -231,22 +231,22 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
     }
 
     private ComputeEnvironmentComputeResourcesArgs() {
-        this.allocationStrategy = Input.empty();
-        this.bidPercentage = Input.empty();
-        this.desiredVcpus = Input.empty();
-        this.ec2Configuration = Input.empty();
-        this.ec2KeyPair = Input.empty();
-        this.imageId = Input.empty();
-        this.instanceRole = Input.empty();
-        this.instanceTypes = Input.empty();
-        this.launchTemplate = Input.empty();
-        this.maxVcpus = Input.empty();
-        this.minVcpus = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.spotIamFleetRole = Input.empty();
-        this.subnets = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.allocationStrategy = Output.empty();
+        this.bidPercentage = Output.empty();
+        this.desiredVcpus = Output.empty();
+        this.ec2Configuration = Output.empty();
+        this.ec2KeyPair = Output.empty();
+        this.imageId = Output.empty();
+        this.instanceRole = Output.empty();
+        this.instanceTypes = Output.empty();
+        this.launchTemplate = Output.empty();
+        this.maxVcpus = Output.empty();
+        this.minVcpus = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.spotIamFleetRole = Output.empty();
+        this.subnets = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -258,22 +258,22 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allocationStrategy;
-        private @Nullable Input<Integer> bidPercentage;
-        private @Nullable Input<Integer> desiredVcpus;
-        private @Nullable Input<ComputeEnvironmentComputeResourcesEc2ConfigurationArgs> ec2Configuration;
-        private @Nullable Input<String> ec2KeyPair;
-        private @Nullable Input<String> imageId;
-        private @Nullable Input<String> instanceRole;
-        private @Nullable Input<List<String>> instanceTypes;
-        private @Nullable Input<ComputeEnvironmentComputeResourcesLaunchTemplateArgs> launchTemplate;
-        private Input<Integer> maxVcpus;
-        private @Nullable Input<Integer> minVcpus;
-        private Input<List<String>> securityGroupIds;
-        private @Nullable Input<String> spotIamFleetRole;
-        private Input<List<String>> subnets;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> type;
+        private @Nullable Output<String> allocationStrategy;
+        private @Nullable Output<Integer> bidPercentage;
+        private @Nullable Output<Integer> desiredVcpus;
+        private @Nullable Output<ComputeEnvironmentComputeResourcesEc2ConfigurationArgs> ec2Configuration;
+        private @Nullable Output<String> ec2KeyPair;
+        private @Nullable Output<String> imageId;
+        private @Nullable Output<String> instanceRole;
+        private @Nullable Output<List<String>> instanceTypes;
+        private @Nullable Output<ComputeEnvironmentComputeResourcesLaunchTemplateArgs> launchTemplate;
+        private Output<Integer> maxVcpus;
+        private @Nullable Output<Integer> minVcpus;
+        private Output<List<String>> securityGroupIds;
+        private @Nullable Output<String> spotIamFleetRole;
+        private Output<List<String>> subnets;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -299,163 +299,163 @@ public final class ComputeEnvironmentComputeResourcesArgs extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder allocationStrategy(@Nullable Input<String> allocationStrategy) {
+        public Builder allocationStrategy(@Nullable Output<String> allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Input.ofNullable(allocationStrategy);
+            this.allocationStrategy = Output.ofNullable(allocationStrategy);
             return this;
         }
 
-        public Builder bidPercentage(@Nullable Input<Integer> bidPercentage) {
+        public Builder bidPercentage(@Nullable Output<Integer> bidPercentage) {
             this.bidPercentage = bidPercentage;
             return this;
         }
 
         public Builder bidPercentage(@Nullable Integer bidPercentage) {
-            this.bidPercentage = Input.ofNullable(bidPercentage);
+            this.bidPercentage = Output.ofNullable(bidPercentage);
             return this;
         }
 
-        public Builder desiredVcpus(@Nullable Input<Integer> desiredVcpus) {
+        public Builder desiredVcpus(@Nullable Output<Integer> desiredVcpus) {
             this.desiredVcpus = desiredVcpus;
             return this;
         }
 
         public Builder desiredVcpus(@Nullable Integer desiredVcpus) {
-            this.desiredVcpus = Input.ofNullable(desiredVcpus);
+            this.desiredVcpus = Output.ofNullable(desiredVcpus);
             return this;
         }
 
-        public Builder ec2Configuration(@Nullable Input<ComputeEnvironmentComputeResourcesEc2ConfigurationArgs> ec2Configuration) {
+        public Builder ec2Configuration(@Nullable Output<ComputeEnvironmentComputeResourcesEc2ConfigurationArgs> ec2Configuration) {
             this.ec2Configuration = ec2Configuration;
             return this;
         }
 
         public Builder ec2Configuration(@Nullable ComputeEnvironmentComputeResourcesEc2ConfigurationArgs ec2Configuration) {
-            this.ec2Configuration = Input.ofNullable(ec2Configuration);
+            this.ec2Configuration = Output.ofNullable(ec2Configuration);
             return this;
         }
 
-        public Builder ec2KeyPair(@Nullable Input<String> ec2KeyPair) {
+        public Builder ec2KeyPair(@Nullable Output<String> ec2KeyPair) {
             this.ec2KeyPair = ec2KeyPair;
             return this;
         }
 
         public Builder ec2KeyPair(@Nullable String ec2KeyPair) {
-            this.ec2KeyPair = Input.ofNullable(ec2KeyPair);
+            this.ec2KeyPair = Output.ofNullable(ec2KeyPair);
             return this;
         }
 
-        public Builder imageId(@Nullable Input<String> imageId) {
+        public Builder imageId(@Nullable Output<String> imageId) {
             this.imageId = imageId;
             return this;
         }
 
         public Builder imageId(@Nullable String imageId) {
-            this.imageId = Input.ofNullable(imageId);
+            this.imageId = Output.ofNullable(imageId);
             return this;
         }
 
-        public Builder instanceRole(@Nullable Input<String> instanceRole) {
+        public Builder instanceRole(@Nullable Output<String> instanceRole) {
             this.instanceRole = instanceRole;
             return this;
         }
 
         public Builder instanceRole(@Nullable String instanceRole) {
-            this.instanceRole = Input.ofNullable(instanceRole);
+            this.instanceRole = Output.ofNullable(instanceRole);
             return this;
         }
 
-        public Builder instanceTypes(@Nullable Input<List<String>> instanceTypes) {
+        public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
 
         public Builder instanceTypes(@Nullable List<String> instanceTypes) {
-            this.instanceTypes = Input.ofNullable(instanceTypes);
+            this.instanceTypes = Output.ofNullable(instanceTypes);
             return this;
         }
 
-        public Builder launchTemplate(@Nullable Input<ComputeEnvironmentComputeResourcesLaunchTemplateArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Output<ComputeEnvironmentComputeResourcesLaunchTemplateArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
 
         public Builder launchTemplate(@Nullable ComputeEnvironmentComputeResourcesLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Input.ofNullable(launchTemplate);
+            this.launchTemplate = Output.ofNullable(launchTemplate);
             return this;
         }
 
-        public Builder maxVcpus(Input<Integer> maxVcpus) {
+        public Builder maxVcpus(Output<Integer> maxVcpus) {
             this.maxVcpus = Objects.requireNonNull(maxVcpus);
             return this;
         }
 
         public Builder maxVcpus(Integer maxVcpus) {
-            this.maxVcpus = Input.of(Objects.requireNonNull(maxVcpus));
+            this.maxVcpus = Output.of(Objects.requireNonNull(maxVcpus));
             return this;
         }
 
-        public Builder minVcpus(@Nullable Input<Integer> minVcpus) {
+        public Builder minVcpus(@Nullable Output<Integer> minVcpus) {
             this.minVcpus = minVcpus;
             return this;
         }
 
         public Builder minVcpus(@Nullable Integer minVcpus) {
-            this.minVcpus = Input.ofNullable(minVcpus);
+            this.minVcpus = Output.ofNullable(minVcpus);
             return this;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder spotIamFleetRole(@Nullable Input<String> spotIamFleetRole) {
+        public Builder spotIamFleetRole(@Nullable Output<String> spotIamFleetRole) {
             this.spotIamFleetRole = spotIamFleetRole;
             return this;
         }
 
         public Builder spotIamFleetRole(@Nullable String spotIamFleetRole) {
-            this.spotIamFleetRole = Input.ofNullable(spotIamFleetRole);
+            this.spotIamFleetRole = Output.ofNullable(spotIamFleetRole);
             return this;
         }
 
-        public Builder subnets(Input<List<String>> subnets) {
+        public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
         public Builder subnets(List<String> subnets) {
-            this.subnets = Input.of(Objects.requireNonNull(subnets));
+            this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ComputeEnvironmentComputeResourcesArgs build() {

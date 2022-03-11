@@ -5,7 +5,6 @@ package io.pulumi.awsnative.redshift;
 
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.redshift.EndpointAuthorizationArgs;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -228,14 +227,14 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EndpointAuthorization(String name, EndpointAuthorizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:redshift:EndpointAuthorization", name, args == null ? EndpointAuthorizationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:redshift:EndpointAuthorization", name, args == null ? EndpointAuthorizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EndpointAuthorization(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EndpointAuthorization(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:redshift:EndpointAuthorization", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -250,7 +249,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EndpointAuthorization get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EndpointAuthorization get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EndpointAuthorization(name, id, options);
     }
 }

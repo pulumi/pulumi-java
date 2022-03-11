@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
     public static final FlowErrorHandlingConfigArgs Empty = new FlowErrorHandlingConfigArgs();
 
     @InputImport(name="bucketName")
-      private final @Nullable Input<String> bucketName;
+      private final @Nullable Output<String> bucketName;
 
-    public Input<String> getBucketName() {
-        return this.bucketName == null ? Input.empty() : this.bucketName;
+    public Output<String> getBucketName() {
+        return this.bucketName == null ? Output.empty() : this.bucketName;
     }
 
     @InputImport(name="bucketPrefix")
-      private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Output<String> bucketPrefix;
 
-    public Input<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
+    public Output<String> getBucketPrefix() {
+        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
     @InputImport(name="failOnFirstError")
-      private final @Nullable Input<Boolean> failOnFirstError;
+      private final @Nullable Output<Boolean> failOnFirstError;
 
-    public Input<Boolean> getFailOnFirstError() {
-        return this.failOnFirstError == null ? Input.empty() : this.failOnFirstError;
+    public Output<Boolean> getFailOnFirstError() {
+        return this.failOnFirstError == null ? Output.empty() : this.failOnFirstError;
     }
 
     public FlowErrorHandlingConfigArgs(
-        @Nullable Input<String> bucketName,
-        @Nullable Input<String> bucketPrefix,
-        @Nullable Input<Boolean> failOnFirstError) {
+        @Nullable Output<String> bucketName,
+        @Nullable Output<String> bucketPrefix,
+        @Nullable Output<Boolean> failOnFirstError) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.failOnFirstError = failOnFirstError;
     }
 
     private FlowErrorHandlingConfigArgs() {
-        this.bucketName = Input.empty();
-        this.bucketPrefix = Input.empty();
-        this.failOnFirstError = Input.empty();
+        this.bucketName = Output.empty();
+        this.bucketPrefix = Output.empty();
+        this.failOnFirstError = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketName;
-        private @Nullable Input<String> bucketPrefix;
-        private @Nullable Input<Boolean> failOnFirstError;
+        private @Nullable Output<String> bucketName;
+        private @Nullable Output<String> bucketPrefix;
+        private @Nullable Output<Boolean> failOnFirstError;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
     	      this.failOnFirstError = defaults.failOnFirstError;
         }
 
-        public Builder bucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Output<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Input.ofNullable(bucketName);
+            this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
 
-        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Input.ofNullable(bucketPrefix);
+            this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder failOnFirstError(@Nullable Input<Boolean> failOnFirstError) {
+        public Builder failOnFirstError(@Nullable Output<Boolean> failOnFirstError) {
             this.failOnFirstError = failOnFirstError;
             return this;
         }
 
         public Builder failOnFirstError(@Nullable Boolean failOnFirstError) {
-            this.failOnFirstError = Input.ofNullable(failOnFirstError);
+            this.failOnFirstError = Output.ofNullable(failOnFirstError);
             return this;
         }
         public FlowErrorHandlingConfigArgs build() {

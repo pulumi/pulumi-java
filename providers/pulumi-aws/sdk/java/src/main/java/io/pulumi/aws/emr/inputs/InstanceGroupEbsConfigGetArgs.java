@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="iops")
-      private final @Nullable Input<Integer> iops;
+      private final @Nullable Output<Integer> iops;
 
-    public Input<Integer> getIops() {
-        return this.iops == null ? Input.empty() : this.iops;
+    public Output<Integer> getIops() {
+        return this.iops == null ? Output.empty() : this.iops;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="size", required=true)
-      private final Input<Integer> size;
+      private final Output<Integer> size;
 
-    public Input<Integer> getSize() {
+    public Output<Integer> getSize() {
         return this.size;
     }
 
@@ -42,9 +42,9 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -53,17 +53,17 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="volumesPerInstance")
-      private final @Nullable Input<Integer> volumesPerInstance;
+      private final @Nullable Output<Integer> volumesPerInstance;
 
-    public Input<Integer> getVolumesPerInstance() {
-        return this.volumesPerInstance == null ? Input.empty() : this.volumesPerInstance;
+    public Output<Integer> getVolumesPerInstance() {
+        return this.volumesPerInstance == null ? Output.empty() : this.volumesPerInstance;
     }
 
     public InstanceGroupEbsConfigGetArgs(
-        @Nullable Input<Integer> iops,
-        Input<Integer> size,
-        Input<String> type,
-        @Nullable Input<Integer> volumesPerInstance) {
+        @Nullable Output<Integer> iops,
+        Output<Integer> size,
+        Output<String> type,
+        @Nullable Output<Integer> volumesPerInstance) {
         this.iops = iops;
         this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -71,10 +71,10 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
     }
 
     private InstanceGroupEbsConfigGetArgs() {
-        this.iops = Input.empty();
-        this.size = Input.empty();
-        this.type = Input.empty();
-        this.volumesPerInstance = Input.empty();
+        this.iops = Output.empty();
+        this.size = Output.empty();
+        this.type = Output.empty();
+        this.volumesPerInstance = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> iops;
-        private Input<Integer> size;
-        private Input<String> type;
-        private @Nullable Input<Integer> volumesPerInstance;
+        private @Nullable Output<Integer> iops;
+        private Output<Integer> size;
+        private Output<String> type;
+        private @Nullable Output<Integer> volumesPerInstance;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class InstanceGroupEbsConfigGetArgs extends io.pulumi.resources.Res
     	      this.volumesPerInstance = defaults.volumesPerInstance;
         }
 
-        public Builder iops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Input.ofNullable(iops);
+            this.iops = Output.ofNullable(iops);
             return this;
         }
 
-        public Builder size(Input<Integer> size) {
+        public Builder size(Output<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
         public Builder size(Integer size) {
-            this.size = Input.of(Objects.requireNonNull(size));
+            this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder volumesPerInstance(@Nullable Input<Integer> volumesPerInstance) {
+        public Builder volumesPerInstance(@Nullable Output<Integer> volumesPerInstance) {
             this.volumesPerInstance = volumesPerInstance;
             return this;
         }
 
         public Builder volumesPerInstance(@Nullable Integer volumesPerInstance) {
-            this.volumesPerInstance = Input.ofNullable(volumesPerInstance);
+            this.volumesPerInstance = Output.ofNullable(volumesPerInstance);
             return this;
         }
         public InstanceGroupEbsConfigGetArgs build() {

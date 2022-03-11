@@ -10,7 +10,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementByte
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,10 +25,10 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
      * 
      */
     @InputImport(name="allQueryArguments")
-      private final @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
+      private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
 
-    public Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> getAllQueryArguments() {
-        return this.allQueryArguments == null ? Input.empty() : this.allQueryArguments;
+    public Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> getAllQueryArguments() {
+        return this.allQueryArguments == null ? Output.empty() : this.allQueryArguments;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body;
+      private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body;
 
-    public Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
      * 
      */
     @InputImport(name="method")
-      private final @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method;
+      private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method;
 
-    public Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> getMethod() {
-        return this.method == null ? Input.empty() : this.method;
+    public Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> getMethod() {
+        return this.method == null ? Output.empty() : this.method;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
      * 
      */
     @InputImport(name="queryString")
-      private final @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString;
+      private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString;
 
-    public Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> getQueryString() {
-        return this.queryString == null ? Input.empty() : this.queryString;
+    public Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> getQueryString() {
+        return this.queryString == null ? Output.empty() : this.queryString;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
      * 
      */
     @InputImport(name="singleHeader")
-      private final @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
+      private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
 
-    public Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> getSingleHeader() {
-        return this.singleHeader == null ? Input.empty() : this.singleHeader;
+    public Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> getSingleHeader() {
+        return this.singleHeader == null ? Output.empty() : this.singleHeader;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
      * 
      */
     @InputImport(name="singleQueryArgument")
-      private final @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
+      private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
 
-    public Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> getSingleQueryArgument() {
-        return this.singleQueryArgument == null ? Input.empty() : this.singleQueryArgument;
+    public Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> getSingleQueryArgument() {
+        return this.singleQueryArgument == null ? Output.empty() : this.singleQueryArgument;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
      * 
      */
     @InputImport(name="uriPath")
-      private final @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath;
+      private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath;
 
-    public Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> getUriPath() {
-        return this.uriPath == null ? Input.empty() : this.uriPath;
+    public Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> getUriPath() {
+        return this.uriPath == null ? Output.empty() : this.uriPath;
     }
 
     public RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchGetArgs(
-        @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments,
-        @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body,
-        @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method,
-        @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString,
-        @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader,
-        @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument,
-        @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath) {
+        @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments,
+        @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body,
+        @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method,
+        @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString,
+        @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader,
+        @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument,
+        @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.method = method;
@@ -115,13 +115,13 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
     }
 
     private RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchGetArgs() {
-        this.allQueryArguments = Input.empty();
-        this.body = Input.empty();
-        this.method = Input.empty();
-        this.queryString = Input.empty();
-        this.singleHeader = Input.empty();
-        this.singleQueryArgument = Input.empty();
-        this.uriPath = Input.empty();
+        this.allQueryArguments = Output.empty();
+        this.body = Output.empty();
+        this.method = Output.empty();
+        this.queryString = Output.empty();
+        this.singleHeader = Output.empty();
+        this.singleQueryArgument = Output.empty();
+        this.uriPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
-        private @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body;
-        private @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method;
-        private @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString;
-        private @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
-        private @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
-        private @Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath;
+        private @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
+        private @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body;
+        private @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method;
+        private @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString;
+        private @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
+        private @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
+        private @Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder allQueryArguments(@Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments) {
+        public Builder allQueryArguments(@Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments) {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
 
         public Builder allQueryArguments(@Nullable RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs allQueryArguments) {
-            this.allQueryArguments = Input.ofNullable(allQueryArguments);
+            this.allQueryArguments = Output.ofNullable(allQueryArguments);
             return this;
         }
 
-        public Builder body(@Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body) {
+        public Builder body(@Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder method(@Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method) {
+        public Builder method(@Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method) {
             this.method = method;
             return this;
         }
 
         public Builder method(@Nullable RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs method) {
-            this.method = Input.ofNullable(method);
+            this.method = Output.ofNullable(method);
             return this;
         }
 
-        public Builder queryString(@Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString) {
+        public Builder queryString(@Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString) {
             this.queryString = queryString;
             return this;
         }
 
         public Builder queryString(@Nullable RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs queryString) {
-            this.queryString = Input.ofNullable(queryString);
+            this.queryString = Output.ofNullable(queryString);
             return this;
         }
 
-        public Builder singleHeader(@Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader) {
+        public Builder singleHeader(@Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
         public Builder singleHeader(@Nullable RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs singleHeader) {
-            this.singleHeader = Input.ofNullable(singleHeader);
+            this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
 
-        public Builder singleQueryArgument(@Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
         public Builder singleQueryArgument(@Nullable RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs singleQueryArgument) {
-            this.singleQueryArgument = Input.ofNullable(singleQueryArgument);
+            this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
             return this;
         }
 
-        public Builder uriPath(@Nullable Input<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath) {
+        public Builder uriPath(@Nullable Output<RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
 
         public Builder uriPath(@Nullable RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs uriPath) {
-            this.uriPath = Input.ofNullable(uriPath);
+            this.uriPath = Output.ofNullable(uriPath);
             return this;
         }
         public RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchGetArgs build() {

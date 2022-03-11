@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.RuntimeIamBindingConditionArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     public static final RuntimeIamBindingArgs Empty = new RuntimeIamBindingArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<RuntimeIamBindingConditionArgs> condition;
+      private final @Nullable Output<RuntimeIamBindingConditionArgs> condition;
 
-    public Input<RuntimeIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<RuntimeIamBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -28,16 +28,16 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -47,10 +47,10 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -60,9 +60,9 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -71,19 +71,19 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="runtimeName", required=true)
-      private final Input<String> runtimeName;
+      private final Output<String> runtimeName;
 
-    public Input<String> getRuntimeName() {
+    public Output<String> getRuntimeName() {
         return this.runtimeName;
     }
 
     public RuntimeIamBindingArgs(
-        @Nullable Input<RuntimeIamBindingConditionArgs> condition,
-        @Nullable Input<String> location,
-        Input<List<String>> members,
-        @Nullable Input<String> project,
-        Input<String> role,
-        Input<String> runtimeName) {
+        @Nullable Output<RuntimeIamBindingConditionArgs> condition,
+        @Nullable Output<String> location,
+        Output<List<String>> members,
+        @Nullable Output<String> project,
+        Output<String> role,
+        Output<String> runtimeName) {
         this.condition = condition;
         this.location = location;
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
@@ -93,12 +93,12 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RuntimeIamBindingArgs() {
-        this.condition = Input.empty();
-        this.location = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.runtimeName = Input.empty();
+        this.condition = Output.empty();
+        this.location = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.runtimeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,12 +110,12 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<RuntimeIamBindingConditionArgs> condition;
-        private @Nullable Input<String> location;
-        private Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private Input<String> role;
-        private Input<String> runtimeName;
+        private @Nullable Output<RuntimeIamBindingConditionArgs> condition;
+        private @Nullable Output<String> location;
+        private Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private Output<String> role;
+        private Output<String> runtimeName;
 
         public Builder() {
     	      // Empty
@@ -131,63 +131,63 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     	      this.runtimeName = defaults.runtimeName;
         }
 
-        public Builder condition(@Nullable Input<RuntimeIamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<RuntimeIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable RuntimeIamBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder runtimeName(Input<String> runtimeName) {
+        public Builder runtimeName(Output<String> runtimeName) {
             this.runtimeName = Objects.requireNonNull(runtimeName);
             return this;
         }
 
         public Builder runtimeName(String runtimeName) {
-            this.runtimeName = Input.of(Objects.requireNonNull(runtimeName));
+            this.runtimeName = Output.of(Objects.requireNonNull(runtimeName));
             return this;
         }
         public RuntimeIamBindingArgs build() {

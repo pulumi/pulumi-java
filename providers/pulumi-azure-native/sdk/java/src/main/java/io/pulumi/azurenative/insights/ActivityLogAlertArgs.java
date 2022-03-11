@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.ActionListArgs;
 import io.pulumi.azurenative.insights.inputs.AlertRuleAllOfConditionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="actions", required=true)
-      private final Input<ActionListArgs> actions;
+      private final Output<ActionListArgs> actions;
 
-    public Input<ActionListArgs> getActions() {
+    public Output<ActionListArgs> getActions() {
         return this.actions;
     }
 
@@ -35,10 +35,10 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="activityLogAlertName")
-      private final @Nullable Input<String> activityLogAlertName;
+      private final @Nullable Output<String> activityLogAlertName;
 
-    public Input<String> getActivityLogAlertName() {
-        return this.activityLogAlertName == null ? Input.empty() : this.activityLogAlertName;
+    public Output<String> getActivityLogAlertName() {
+        return this.activityLogAlertName == null ? Output.empty() : this.activityLogAlertName;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="condition", required=true)
-      private final Input<AlertRuleAllOfConditionArgs> condition;
+      private final Output<AlertRuleAllOfConditionArgs> condition;
 
-    public Input<AlertRuleAllOfConditionArgs> getCondition() {
+    public Output<AlertRuleAllOfConditionArgs> getCondition() {
         return this.condition;
     }
 
@@ -57,10 +57,10 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,9 +101,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scopes", required=true)
-      private final Input<List<String>> scopes;
+      private final Output<List<String>> scopes;
 
-    public Input<List<String>> getScopes() {
+    public Output<List<String>> getScopes() {
         return this.scopes;
     }
 
@@ -112,43 +112,43 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ActivityLogAlertArgs(
-        Input<ActionListArgs> actions,
-        @Nullable Input<String> activityLogAlertName,
-        Input<AlertRuleAllOfConditionArgs> condition,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<List<String>> scopes,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<ActionListArgs> actions,
+        @Nullable Output<String> activityLogAlertName,
+        Output<AlertRuleAllOfConditionArgs> condition,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<List<String>> scopes,
+        @Nullable Output<Map<String,String>> tags) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.activityLogAlertName = activityLogAlertName;
         this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
         this.description = description;
-        this.enabled = enabled == null ? Input.ofNullable(true) : enabled;
-        this.location = location == null ? Input.ofNullable("global") : location;
+        this.enabled = enabled == null ? Output.ofNullable(true) : enabled;
+        this.location = location == null ? Output.ofNullable("global") : location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.scopes = Objects.requireNonNull(scopes, "expected parameter 'scopes' to be non-null");
         this.tags = tags;
     }
 
     private ActivityLogAlertArgs() {
-        this.actions = Input.empty();
-        this.activityLogAlertName = Input.empty();
-        this.condition = Input.empty();
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scopes = Input.empty();
-        this.tags = Input.empty();
+        this.actions = Output.empty();
+        this.activityLogAlertName = Output.empty();
+        this.condition = Output.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scopes = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<ActionListArgs> actions;
-        private @Nullable Input<String> activityLogAlertName;
-        private Input<AlertRuleAllOfConditionArgs> condition;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<List<String>> scopes;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<ActionListArgs> actions;
+        private @Nullable Output<String> activityLogAlertName;
+        private Output<AlertRuleAllOfConditionArgs> condition;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<List<String>> scopes;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder actions(Input<ActionListArgs> actions) {
+        public Builder actions(Output<ActionListArgs> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(ActionListArgs actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder activityLogAlertName(@Nullable Input<String> activityLogAlertName) {
+        public Builder activityLogAlertName(@Nullable Output<String> activityLogAlertName) {
             this.activityLogAlertName = activityLogAlertName;
             return this;
         }
 
         public Builder activityLogAlertName(@Nullable String activityLogAlertName) {
-            this.activityLogAlertName = Input.ofNullable(activityLogAlertName);
+            this.activityLogAlertName = Output.ofNullable(activityLogAlertName);
             return this;
         }
 
-        public Builder condition(Input<AlertRuleAllOfConditionArgs> condition) {
+        public Builder condition(Output<AlertRuleAllOfConditionArgs> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
         public Builder condition(AlertRuleAllOfConditionArgs condition) {
-            this.condition = Input.of(Objects.requireNonNull(condition));
+            this.condition = Output.of(Objects.requireNonNull(condition));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scopes(Input<List<String>> scopes) {
+        public Builder scopes(Output<List<String>> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
         public Builder scopes(List<String> scopes) {
-            this.scopes = Input.of(Objects.requireNonNull(scopes));
+            this.scopes = Output.of(Objects.requireNonNull(scopes));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ActivityLogAlertArgs build() {

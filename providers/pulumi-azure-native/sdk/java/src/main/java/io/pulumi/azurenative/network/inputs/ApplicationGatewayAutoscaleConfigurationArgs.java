@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="maxCapacity")
-      private final @Nullable Input<Integer> maxCapacity;
+      private final @Nullable Output<Integer> maxCapacity;
 
-    public Input<Integer> getMaxCapacity() {
-        return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
+    public Output<Integer> getMaxCapacity() {
+        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="minCapacity", required=true)
-      private final Input<Integer> minCapacity;
+      private final Output<Integer> minCapacity;
 
-    public Input<Integer> getMinCapacity() {
+    public Output<Integer> getMinCapacity() {
         return this.minCapacity;
     }
 
     public ApplicationGatewayAutoscaleConfigurationArgs(
-        @Nullable Input<Integer> maxCapacity,
-        Input<Integer> minCapacity) {
+        @Nullable Output<Integer> maxCapacity,
+        Output<Integer> minCapacity) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = Objects.requireNonNull(minCapacity, "expected parameter 'minCapacity' to be non-null");
     }
 
     private ApplicationGatewayAutoscaleConfigurationArgs() {
-        this.maxCapacity = Input.empty();
-        this.minCapacity = Input.empty();
+        this.maxCapacity = Output.empty();
+        this.minCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxCapacity;
-        private Input<Integer> minCapacity;
+        private @Nullable Output<Integer> maxCapacity;
+        private Output<Integer> minCapacity;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApplicationGatewayAutoscaleConfigurationArgs extends io.pulum
     	      this.minCapacity = defaults.minCapacity;
         }
 
-        public Builder maxCapacity(@Nullable Input<Integer> maxCapacity) {
+        public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Input.ofNullable(maxCapacity);
+            this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder minCapacity(Input<Integer> minCapacity) {
+        public Builder minCapacity(Output<Integer> minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
 
         public Builder minCapacity(Integer minCapacity) {
-            this.minCapacity = Input.of(Objects.requireNonNull(minCapacity));
+            this.minCapacity = Output.of(Objects.requireNonNull(minCapacity));
             return this;
         }
         public ApplicationGatewayAutoscaleConfigurationArgs build() {

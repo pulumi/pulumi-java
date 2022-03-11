@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,29 +18,29 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-      private final Input<String> orgId;
+      private final Output<String> orgId;
 
-    public Input<String> getOrgId() {
+    public Output<String> getOrgId() {
         return this.orgId;
     }
 
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public IAMPolicyArgs(
-        Input<String> orgId,
-        Input<String> policyData) {
+        Output<String> orgId,
+        Output<String> policyData) {
         this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private IAMPolicyArgs() {
-        this.orgId = Input.empty();
-        this.policyData = Input.empty();
+        this.orgId = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> orgId;
-        private Input<String> policyData;
+        private Output<String> orgId;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder orgId(Input<String> orgId) {
+        public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
         public Builder orgId(String orgId) {
-            this.orgId = Input.of(Objects.requireNonNull(orgId));
+            this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public IAMPolicyArgs build() {

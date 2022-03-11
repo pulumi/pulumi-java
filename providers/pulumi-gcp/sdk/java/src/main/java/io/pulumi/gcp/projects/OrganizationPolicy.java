@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.projects;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -200,14 +199,14 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationPolicy(String name, OrganizationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/organizationPolicy:OrganizationPolicy", name, args == null ? OrganizationPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:projects/organizationPolicy:OrganizationPolicy", name, args == null ? OrganizationPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OrganizationPolicy(String name, Input<String> id, @Nullable OrganizationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationPolicy(String name, Output<String> id, @Nullable OrganizationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:projects/organizationPolicy:OrganizationPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -223,7 +222,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationPolicy get(String name, Input<String> id, @Nullable OrganizationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationPolicy get(String name, Output<String> id, @Nullable OrganizationPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrganizationPolicy(name, id, state, options);
     }
 }

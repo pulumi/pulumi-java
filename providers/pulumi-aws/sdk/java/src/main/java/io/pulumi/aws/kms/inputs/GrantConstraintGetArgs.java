@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class GrantConstraintGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="encryptionContextEquals")
-      private final @Nullable Input<Map<String,String>> encryptionContextEquals;
+      private final @Nullable Output<Map<String,String>> encryptionContextEquals;
 
-    public Input<Map<String,String>> getEncryptionContextEquals() {
-        return this.encryptionContextEquals == null ? Input.empty() : this.encryptionContextEquals;
+    public Output<Map<String,String>> getEncryptionContextEquals() {
+        return this.encryptionContextEquals == null ? Output.empty() : this.encryptionContextEquals;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class GrantConstraintGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="encryptionContextSubset")
-      private final @Nullable Input<Map<String,String>> encryptionContextSubset;
+      private final @Nullable Output<Map<String,String>> encryptionContextSubset;
 
-    public Input<Map<String,String>> getEncryptionContextSubset() {
-        return this.encryptionContextSubset == null ? Input.empty() : this.encryptionContextSubset;
+    public Output<Map<String,String>> getEncryptionContextSubset() {
+        return this.encryptionContextSubset == null ? Output.empty() : this.encryptionContextSubset;
     }
 
     public GrantConstraintGetArgs(
-        @Nullable Input<Map<String,String>> encryptionContextEquals,
-        @Nullable Input<Map<String,String>> encryptionContextSubset) {
+        @Nullable Output<Map<String,String>> encryptionContextEquals,
+        @Nullable Output<Map<String,String>> encryptionContextSubset) {
         this.encryptionContextEquals = encryptionContextEquals;
         this.encryptionContextSubset = encryptionContextSubset;
     }
 
     private GrantConstraintGetArgs() {
-        this.encryptionContextEquals = Input.empty();
-        this.encryptionContextSubset = Input.empty();
+        this.encryptionContextEquals = Output.empty();
+        this.encryptionContextSubset = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class GrantConstraintGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> encryptionContextEquals;
-        private @Nullable Input<Map<String,String>> encryptionContextSubset;
+        private @Nullable Output<Map<String,String>> encryptionContextEquals;
+        private @Nullable Output<Map<String,String>> encryptionContextSubset;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class GrantConstraintGetArgs extends io.pulumi.resources.ResourceAr
     	      this.encryptionContextSubset = defaults.encryptionContextSubset;
         }
 
-        public Builder encryptionContextEquals(@Nullable Input<Map<String,String>> encryptionContextEquals) {
+        public Builder encryptionContextEquals(@Nullable Output<Map<String,String>> encryptionContextEquals) {
             this.encryptionContextEquals = encryptionContextEquals;
             return this;
         }
 
         public Builder encryptionContextEquals(@Nullable Map<String,String> encryptionContextEquals) {
-            this.encryptionContextEquals = Input.ofNullable(encryptionContextEquals);
+            this.encryptionContextEquals = Output.ofNullable(encryptionContextEquals);
             return this;
         }
 
-        public Builder encryptionContextSubset(@Nullable Input<Map<String,String>> encryptionContextSubset) {
+        public Builder encryptionContextSubset(@Nullable Output<Map<String,String>> encryptionContextSubset) {
             this.encryptionContextSubset = encryptionContextSubset;
             return this;
         }
 
         public Builder encryptionContextSubset(@Nullable Map<String,String> encryptionContextSubset) {
-            this.encryptionContextSubset = Input.ofNullable(encryptionContextSubset);
+            this.encryptionContextSubset = Output.ofNullable(encryptionContextSubset);
             return this;
         }
         public GrantConstraintGetArgs build() {

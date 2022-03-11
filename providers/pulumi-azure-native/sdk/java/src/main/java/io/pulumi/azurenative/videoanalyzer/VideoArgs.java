@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,10 +30,10 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,10 +52,10 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoName")
-      private final @Nullable Input<String> videoName;
+      private final @Nullable Output<String> videoName;
 
-    public Input<String> getVideoName() {
-        return this.videoName == null ? Input.empty() : this.videoName;
+    public Output<String> getVideoName() {
+        return this.videoName == null ? Output.empty() : this.videoName;
     }
 
     public VideoArgs(
-        Input<String> accountName,
-        @Nullable Input<String> description,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> title,
-        @Nullable Input<String> videoName) {
+        Output<String> accountName,
+        @Nullable Output<String> description,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> title,
+        @Nullable Output<String> videoName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.description = description;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -83,11 +83,11 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoArgs() {
-        this.accountName = Input.empty();
-        this.description = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.title = Input.empty();
-        this.videoName = Input.empty();
+        this.accountName = Output.empty();
+        this.description = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.title = Output.empty();
+        this.videoName = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> description;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> title;
-        private @Nullable Input<String> videoName;
+        private Output<String> accountName;
+        private @Nullable Output<String> description;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> title;
+        private @Nullable Output<String> videoName;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.videoName = defaults.videoName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder videoName(@Nullable Input<String> videoName) {
+        public Builder videoName(@Nullable Output<String> videoName) {
             this.videoName = videoName;
             return this;
         }
 
         public Builder videoName(@Nullable String videoName) {
-            this.videoName = Input.ofNullable(videoName);
+            this.videoName = Output.ofNullable(videoName);
             return this;
         }
         public VideoArgs build() {

@@ -4,7 +4,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Struct;
 import com.google.protobuf.util.JsonFormat;
 import io.pulumi.Log;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.annotations.OutputCustomType.Constructor;
 import io.pulumi.core.annotations.OutputCustomType.Parameter;
@@ -29,17 +29,17 @@ public class PropertiesSerializerTests {
         // against a JSON rendering of the proto struct.
         //
         // For a practical example of where this applies, see Provider resource in pulumi-kubernetes.
-        assertThat(showStruct(new ExampleResourceArgs().setB(Input.of(true))))
+        assertThat(showStruct(new ExampleResourceArgs().setB(Output.of(true))))
                 .isEqualTo("{\"b\":true}");
-        assertThat(showStruct(new ExampleResourceArgs().setBJson(Input.of(true))))
+        assertThat(showStruct(new ExampleResourceArgs().setBJson(Output.of(true))))
                 .isEqualTo("{\"bJson\":\"true\"}");
-        assertThat(showStruct(new ExampleResourceArgs().setStr(Input.of("x"))))
+        assertThat(showStruct(new ExampleResourceArgs().setStr(Output.of("x"))))
                 .isEqualTo("{\"str\":\"x\"}");
-        assertThat(showStruct(new ExampleResourceArgs().setStrJson(Input.of("x"))))
+        assertThat(showStruct(new ExampleResourceArgs().setStrJson(Output.of("x"))))
                 .isEqualTo("{\"strJson\":\"\\\"x\\\"\"}");
-        assertThat(showStruct(new ExampleResourceArgs().setHelper(Input.of(new HelperArgs(Input.of(1))))))
+        assertThat(showStruct(new ExampleResourceArgs().setHelper(Output.of(new HelperArgs(Output.of(1))))))
                 .isEqualTo("{\"helper\":{\"intProp\":1.0}}"); // 1 should work also, not 1.0 - Int in the source
-        assertThat(showStruct(new ExampleResourceArgs().setHelperJson(Input.of(new HelperArgs(Input.of(1))))))
+        assertThat(showStruct(new ExampleResourceArgs().setHelperJson(Output.of(new HelperArgs(Output.of(1))))))
                 .isEqualTo("{\"helperJson\":\"{\\\"intProp\\\":1.0}\"}"); // 1 should work also, not 1.0 - Int in the source
     }
 
@@ -68,27 +68,27 @@ public class PropertiesSerializerTests {
 
         @InputImport(name = "str")
         private @Nullable
-        Input<String> str;
+        Output<String> str;
 
         @InputImport(name = "strJson", json = true)
         private @Nullable
-        Input<String> strJson;
+        Output<String> strJson;
 
         @InputImport(name = "b")
         private @Nullable
-        Input<Boolean> b;
+        Output<Boolean> b;
 
         @InputImport(name = "bJson", json = true)
         private @Nullable
-        Input<Boolean> bJson;
+        Output<Boolean> bJson;
 
         @InputImport(name = "helper")
         private @Nullable
-        Input<HelperArgs> helper;
+        Output<HelperArgs> helper;
 
         @InputImport(name = "helperJson", json = true)
         private @Nullable
-        Input<HelperArgs> helperJson;
+        Output<HelperArgs> helperJson;
 
         public ExampleResourceArgs() {
             this.str = null;
@@ -99,32 +99,32 @@ public class PropertiesSerializerTests {
             this.helperJson = null;
         }
 
-        public ExampleResourceArgs setHelperJson(@Nullable Input<HelperArgs> helperJson) {
+        public ExampleResourceArgs setHelperJson(@Nullable Output<HelperArgs> helperJson) {
             this.helperJson = helperJson;
             return this;
         }
 
-        public ExampleResourceArgs setHelper(@Nullable Input<HelperArgs> helper) {
+        public ExampleResourceArgs setHelper(@Nullable Output<HelperArgs> helper) {
             this.helper = helper;
             return this;
         }
 
-        public ExampleResourceArgs setBJson(@Nullable Input<Boolean> bJson) {
+        public ExampleResourceArgs setBJson(@Nullable Output<Boolean> bJson) {
             this.bJson = bJson;
             return this;
         }
 
-        public ExampleResourceArgs setB(@Nullable Input<Boolean> b) {
+        public ExampleResourceArgs setB(@Nullable Output<Boolean> b) {
             this.b = b;
             return this;
         }
 
-        public ExampleResourceArgs setStrJson(@Nullable Input<String> strJson) {
+        public ExampleResourceArgs setStrJson(@Nullable Output<String> strJson) {
             this.strJson = strJson;
             return this;
         }
 
-        public ExampleResourceArgs setStr(@Nullable Input<String> str) {
+        public ExampleResourceArgs setStr(@Nullable Output<String> str) {
             this.str = str;
             return this;
         }
@@ -135,10 +135,10 @@ public class PropertiesSerializerTests {
         @InputImport()
         @SuppressWarnings({"FieldCanBeLocal", "unused"})
         @Nullable
-        private final Input<Integer> intProp;
+        private final Output<Integer> intProp;
 
         @Constructor
-        private HelperArgs(@Nullable @Parameter("intProp") Input<Integer> intProp) {
+        private HelperArgs(@Nullable @Parameter("intProp") Output<Integer> intProp) {
             this.intProp = intProp;
         }
     }

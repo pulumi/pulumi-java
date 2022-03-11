@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class BackendServiceOutlierDetectionIntervalGetArgs extends io.pulu
      * 
      */
     @InputImport(name="nanos")
-      private final @Nullable Input<Integer> nanos;
+      private final @Nullable Output<Integer> nanos;
 
-    public Input<Integer> getNanos() {
-        return this.nanos == null ? Input.empty() : this.nanos;
+    public Output<Integer> getNanos() {
+        return this.nanos == null ? Output.empty() : this.nanos;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class BackendServiceOutlierDetectionIntervalGetArgs extends io.pulu
      * 
      */
     @InputImport(name="seconds", required=true)
-      private final Input<Integer> seconds;
+      private final Output<Integer> seconds;
 
-    public Input<Integer> getSeconds() {
+    public Output<Integer> getSeconds() {
         return this.seconds;
     }
 
     public BackendServiceOutlierDetectionIntervalGetArgs(
-        @Nullable Input<Integer> nanos,
-        Input<Integer> seconds) {
+        @Nullable Output<Integer> nanos,
+        Output<Integer> seconds) {
         this.nanos = nanos;
         this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
     }
 
     private BackendServiceOutlierDetectionIntervalGetArgs() {
-        this.nanos = Input.empty();
-        this.seconds = Input.empty();
+        this.nanos = Output.empty();
+        this.seconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class BackendServiceOutlierDetectionIntervalGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> nanos;
-        private Input<Integer> seconds;
+        private @Nullable Output<Integer> nanos;
+        private Output<Integer> seconds;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class BackendServiceOutlierDetectionIntervalGetArgs extends io.pulu
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder nanos(@Nullable Input<Integer> nanos) {
+        public Builder nanos(@Nullable Output<Integer> nanos) {
             this.nanos = nanos;
             return this;
         }
 
         public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Input.ofNullable(nanos);
+            this.nanos = Output.ofNullable(nanos);
             return this;
         }
 
-        public Builder seconds(Input<Integer> seconds) {
+        public Builder seconds(Output<Integer> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
 
         public Builder seconds(Integer seconds) {
-            this.seconds = Input.of(Objects.requireNonNull(seconds));
+            this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
         }
         public BackendServiceOutlierDetectionIntervalGetArgs build() {

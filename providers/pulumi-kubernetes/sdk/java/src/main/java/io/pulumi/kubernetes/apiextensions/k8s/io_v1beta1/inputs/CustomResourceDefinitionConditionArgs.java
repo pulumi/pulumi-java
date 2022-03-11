@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="lastTransitionTime")
-      private final @Nullable Input<String> lastTransitionTime;
+      private final @Nullable Output<String> lastTransitionTime;
 
-    public Input<String> getLastTransitionTime() {
-        return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
+    public Output<String> getLastTransitionTime() {
+        return this.lastTransitionTime == null ? Output.empty() : this.lastTransitionTime;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="reason")
-      private final @Nullable Input<String> reason;
+      private final @Nullable Output<String> reason;
 
-    public Input<String> getReason() {
-        return this.reason == null ? Input.empty() : this.reason;
+    public Output<String> getReason() {
+        return this.reason == null ? Output.empty() : this.reason;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<String> status;
+      private final Output<String> status;
 
-    public Input<String> getStatus() {
+    public Output<String> getStatus() {
         return this.status;
     }
 
@@ -67,18 +67,18 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public CustomResourceDefinitionConditionArgs(
-        @Nullable Input<String> lastTransitionTime,
-        @Nullable Input<String> message,
-        @Nullable Input<String> reason,
-        Input<String> status,
-        Input<String> type) {
+        @Nullable Output<String> lastTransitionTime,
+        @Nullable Output<String> message,
+        @Nullable Output<String> reason,
+        Output<String> status,
+        Output<String> type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.reason = reason;
@@ -87,11 +87,11 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
     }
 
     private CustomResourceDefinitionConditionArgs() {
-        this.lastTransitionTime = Input.empty();
-        this.message = Input.empty();
-        this.reason = Input.empty();
-        this.status = Input.empty();
-        this.type = Input.empty();
+        this.lastTransitionTime = Output.empty();
+        this.message = Output.empty();
+        this.reason = Output.empty();
+        this.status = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> lastTransitionTime;
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> reason;
-        private Input<String> status;
-        private Input<String> type;
+        private @Nullable Output<String> lastTransitionTime;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> reason;
+        private Output<String> status;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder lastTransitionTime(@Nullable Input<String> lastTransitionTime) {
+        public Builder lastTransitionTime(@Nullable Output<String> lastTransitionTime) {
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
         public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
-            this.lastTransitionTime = Input.ofNullable(lastTransitionTime);
+            this.lastTransitionTime = Output.ofNullable(lastTransitionTime);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder reason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
 
         public Builder reason(@Nullable String reason) {
-            this.reason = Input.ofNullable(reason);
+            this.reason = Output.ofNullable(reason);
             return this;
         }
 
-        public Builder status(Input<String> status) {
+        public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(String status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public CustomResourceDefinitionConditionArgs build() {

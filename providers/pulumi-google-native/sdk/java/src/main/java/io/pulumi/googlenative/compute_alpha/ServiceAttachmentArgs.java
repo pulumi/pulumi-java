@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.ServiceAttachmentConnectionPreference;
 import io.pulumi.googlenative.compute_alpha.inputs.ServiceAttachmentConsumerProjectLimitArgs;
@@ -23,10 +23,10 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionPreference")
-      private final @Nullable Input<ServiceAttachmentConnectionPreference> connectionPreference;
+      private final @Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference;
 
-    public Input<ServiceAttachmentConnectionPreference> getConnectionPreference() {
-        return this.connectionPreference == null ? Input.empty() : this.connectionPreference;
+    public Output<ServiceAttachmentConnectionPreference> getConnectionPreference() {
+        return this.connectionPreference == null ? Output.empty() : this.connectionPreference;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="consumerAcceptLists")
-      private final @Nullable Input<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
+      private final @Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
 
-    public Input<List<ServiceAttachmentConsumerProjectLimitArgs>> getConsumerAcceptLists() {
-        return this.consumerAcceptLists == null ? Input.empty() : this.consumerAcceptLists;
+    public Output<List<ServiceAttachmentConsumerProjectLimitArgs>> getConsumerAcceptLists() {
+        return this.consumerAcceptLists == null ? Output.empty() : this.consumerAcceptLists;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="consumerRejectLists")
-      private final @Nullable Input<List<String>> consumerRejectLists;
+      private final @Nullable Output<List<String>> consumerRejectLists;
 
-    public Input<List<String>> getConsumerRejectLists() {
-        return this.consumerRejectLists == null ? Input.empty() : this.consumerRejectLists;
+    public Output<List<String>> getConsumerRejectLists() {
+        return this.consumerRejectLists == null ? Output.empty() : this.consumerRejectLists;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="domainNames")
-      private final @Nullable Input<List<String>> domainNames;
+      private final @Nullable Output<List<String>> domainNames;
 
-    public Input<List<String>> getDomainNames() {
-        return this.domainNames == null ? Input.empty() : this.domainNames;
+    public Output<List<String>> getDomainNames() {
+        return this.domainNames == null ? Output.empty() : this.domainNames;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableProxyProtocol")
-      private final @Nullable Input<Boolean> enableProxyProtocol;
+      private final @Nullable Output<Boolean> enableProxyProtocol;
 
-    public Input<Boolean> getEnableProxyProtocol() {
-        return this.enableProxyProtocol == null ? Input.empty() : this.enableProxyProtocol;
+    public Output<Boolean> getEnableProxyProtocol() {
+        return this.enableProxyProtocol == null ? Output.empty() : this.enableProxyProtocol;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="natSubnets")
-      private final @Nullable Input<List<String>> natSubnets;
+      private final @Nullable Output<List<String>> natSubnets;
 
-    public Input<List<String>> getNatSubnets() {
-        return this.natSubnets == null ? Input.empty() : this.natSubnets;
+    public Output<List<String>> getNatSubnets() {
+        return this.natSubnets == null ? Output.empty() : this.natSubnets;
     }
 
     /**
@@ -111,31 +111,31 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="producerForwardingRule")
-      private final @Nullable Input<String> producerForwardingRule;
+      private final @Nullable Output<String> producerForwardingRule;
 
-    public Input<String> getProducerForwardingRule() {
-        return this.producerForwardingRule == null ? Input.empty() : this.producerForwardingRule;
+    public Output<String> getProducerForwardingRule() {
+        return this.producerForwardingRule == null ? Output.empty() : this.producerForwardingRule;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -143,26 +143,26 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetService")
-      private final @Nullable Input<String> targetService;
+      private final @Nullable Output<String> targetService;
 
-    public Input<String> getTargetService() {
-        return this.targetService == null ? Input.empty() : this.targetService;
+    public Output<String> getTargetService() {
+        return this.targetService == null ? Output.empty() : this.targetService;
     }
 
     public ServiceAttachmentArgs(
-        @Nullable Input<ServiceAttachmentConnectionPreference> connectionPreference,
-        @Nullable Input<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists,
-        @Nullable Input<List<String>> consumerRejectLists,
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> domainNames,
-        @Nullable Input<Boolean> enableProxyProtocol,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> natSubnets,
-        @Nullable Input<String> producerForwardingRule,
-        @Nullable Input<String> project,
-        Input<String> region,
-        @Nullable Input<String> requestId,
-        @Nullable Input<String> targetService) {
+        @Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference,
+        @Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists,
+        @Nullable Output<List<String>> consumerRejectLists,
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> domainNames,
+        @Nullable Output<Boolean> enableProxyProtocol,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> natSubnets,
+        @Nullable Output<String> producerForwardingRule,
+        @Nullable Output<String> project,
+        Output<String> region,
+        @Nullable Output<String> requestId,
+        @Nullable Output<String> targetService) {
         this.connectionPreference = connectionPreference;
         this.consumerAcceptLists = consumerAcceptLists;
         this.consumerRejectLists = consumerRejectLists;
@@ -179,19 +179,19 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServiceAttachmentArgs() {
-        this.connectionPreference = Input.empty();
-        this.consumerAcceptLists = Input.empty();
-        this.consumerRejectLists = Input.empty();
-        this.description = Input.empty();
-        this.domainNames = Input.empty();
-        this.enableProxyProtocol = Input.empty();
-        this.name = Input.empty();
-        this.natSubnets = Input.empty();
-        this.producerForwardingRule = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
-        this.targetService = Input.empty();
+        this.connectionPreference = Output.empty();
+        this.consumerAcceptLists = Output.empty();
+        this.consumerRejectLists = Output.empty();
+        this.description = Output.empty();
+        this.domainNames = Output.empty();
+        this.enableProxyProtocol = Output.empty();
+        this.name = Output.empty();
+        this.natSubnets = Output.empty();
+        this.producerForwardingRule = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
+        this.targetService = Output.empty();
     }
 
     public static Builder builder() {
@@ -203,19 +203,19 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceAttachmentConnectionPreference> connectionPreference;
-        private @Nullable Input<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
-        private @Nullable Input<List<String>> consumerRejectLists;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> domainNames;
-        private @Nullable Input<Boolean> enableProxyProtocol;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> natSubnets;
-        private @Nullable Input<String> producerForwardingRule;
-        private @Nullable Input<String> project;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<String> targetService;
+        private @Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference;
+        private @Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
+        private @Nullable Output<List<String>> consumerRejectLists;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> domainNames;
+        private @Nullable Output<Boolean> enableProxyProtocol;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> natSubnets;
+        private @Nullable Output<String> producerForwardingRule;
+        private @Nullable Output<String> project;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<String> targetService;
 
         public Builder() {
     	      // Empty
@@ -238,133 +238,133 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     	      this.targetService = defaults.targetService;
         }
 
-        public Builder connectionPreference(@Nullable Input<ServiceAttachmentConnectionPreference> connectionPreference) {
+        public Builder connectionPreference(@Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference) {
             this.connectionPreference = connectionPreference;
             return this;
         }
 
         public Builder connectionPreference(@Nullable ServiceAttachmentConnectionPreference connectionPreference) {
-            this.connectionPreference = Input.ofNullable(connectionPreference);
+            this.connectionPreference = Output.ofNullable(connectionPreference);
             return this;
         }
 
-        public Builder consumerAcceptLists(@Nullable Input<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists) {
+        public Builder consumerAcceptLists(@Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists) {
             this.consumerAcceptLists = consumerAcceptLists;
             return this;
         }
 
         public Builder consumerAcceptLists(@Nullable List<ServiceAttachmentConsumerProjectLimitArgs> consumerAcceptLists) {
-            this.consumerAcceptLists = Input.ofNullable(consumerAcceptLists);
+            this.consumerAcceptLists = Output.ofNullable(consumerAcceptLists);
             return this;
         }
 
-        public Builder consumerRejectLists(@Nullable Input<List<String>> consumerRejectLists) {
+        public Builder consumerRejectLists(@Nullable Output<List<String>> consumerRejectLists) {
             this.consumerRejectLists = consumerRejectLists;
             return this;
         }
 
         public Builder consumerRejectLists(@Nullable List<String> consumerRejectLists) {
-            this.consumerRejectLists = Input.ofNullable(consumerRejectLists);
+            this.consumerRejectLists = Output.ofNullable(consumerRejectLists);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder domainNames(@Nullable Input<List<String>> domainNames) {
+        public Builder domainNames(@Nullable Output<List<String>> domainNames) {
             this.domainNames = domainNames;
             return this;
         }
 
         public Builder domainNames(@Nullable List<String> domainNames) {
-            this.domainNames = Input.ofNullable(domainNames);
+            this.domainNames = Output.ofNullable(domainNames);
             return this;
         }
 
-        public Builder enableProxyProtocol(@Nullable Input<Boolean> enableProxyProtocol) {
+        public Builder enableProxyProtocol(@Nullable Output<Boolean> enableProxyProtocol) {
             this.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
 
         public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
-            this.enableProxyProtocol = Input.ofNullable(enableProxyProtocol);
+            this.enableProxyProtocol = Output.ofNullable(enableProxyProtocol);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder natSubnets(@Nullable Input<List<String>> natSubnets) {
+        public Builder natSubnets(@Nullable Output<List<String>> natSubnets) {
             this.natSubnets = natSubnets;
             return this;
         }
 
         public Builder natSubnets(@Nullable List<String> natSubnets) {
-            this.natSubnets = Input.ofNullable(natSubnets);
+            this.natSubnets = Output.ofNullable(natSubnets);
             return this;
         }
 
-        public Builder producerForwardingRule(@Nullable Input<String> producerForwardingRule) {
+        public Builder producerForwardingRule(@Nullable Output<String> producerForwardingRule) {
             this.producerForwardingRule = producerForwardingRule;
             return this;
         }
 
         public Builder producerForwardingRule(@Nullable String producerForwardingRule) {
-            this.producerForwardingRule = Input.ofNullable(producerForwardingRule);
+            this.producerForwardingRule = Output.ofNullable(producerForwardingRule);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder targetService(@Nullable Input<String> targetService) {
+        public Builder targetService(@Nullable Output<String> targetService) {
             this.targetService = targetService;
             return this;
         }
 
         public Builder targetService(@Nullable String targetService) {
-            this.targetService = Input.ofNullable(targetService);
+            this.targetService = Output.ofNullable(targetService);
             return this;
         }
         public ServiceAttachmentArgs build() {

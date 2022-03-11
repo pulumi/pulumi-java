@@ -11,7 +11,6 @@ import io.pulumi.awsnative.quicksight.outputs.DashboardResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.DashboardSourceEntity;
 import io.pulumi.awsnative.quicksight.outputs.DashboardTag;
 import io.pulumi.awsnative.quicksight.outputs.DashboardVersion;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -242,14 +241,14 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dashboard(String name, DashboardArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:quicksight:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:quicksight:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Dashboard(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Dashboard(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:quicksight:Dashboard", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -264,7 +263,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Dashboard get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Dashboard get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Dashboard(name, id, options);
     }
 }

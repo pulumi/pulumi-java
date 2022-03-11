@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
@@ -31,10 +31,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamUserAccessToBilling")
-      private final @Nullable Input<String> iamUserAccessToBilling;
+      private final @Nullable Output<String> iamUserAccessToBilling;
 
-    public Input<String> getIamUserAccessToBilling() {
-        return this.iamUserAccessToBilling == null ? Input.empty() : this.iamUserAccessToBilling;
+    public Output<String> getIamUserAccessToBilling() {
+        return this.iamUserAccessToBilling == null ? Output.empty() : this.iamUserAccessToBilling;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentId")
-      private final @Nullable Input<String> parentId;
+      private final @Nullable Output<String> parentId;
 
-    public Input<String> getParentId() {
-        return this.parentId == null ? Input.empty() : this.parentId;
+    public Output<String> getParentId() {
+        return this.parentId == null ? Output.empty() : this.parentId;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName")
-      private final @Nullable Input<String> roleName;
+      private final @Nullable Output<String> roleName;
 
-    public Input<String> getRoleName() {
-        return this.roleName == null ? Input.empty() : this.roleName;
+    public Output<String> getRoleName() {
+        return this.roleName == null ? Output.empty() : this.roleName;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AccountArgs(
-        Input<String> email,
-        @Nullable Input<String> iamUserAccessToBilling,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parentId,
-        @Nullable Input<String> roleName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> email,
+        @Nullable Output<String> iamUserAccessToBilling,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parentId,
+        @Nullable Output<String> roleName,
+        @Nullable Output<Map<String,String>> tags) {
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
         this.iamUserAccessToBilling = iamUserAccessToBilling;
         this.name = name;
@@ -97,12 +97,12 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.email = Input.empty();
-        this.iamUserAccessToBilling = Input.empty();
-        this.name = Input.empty();
-        this.parentId = Input.empty();
-        this.roleName = Input.empty();
-        this.tags = Input.empty();
+        this.email = Output.empty();
+        this.iamUserAccessToBilling = Output.empty();
+        this.name = Output.empty();
+        this.parentId = Output.empty();
+        this.roleName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> email;
-        private @Nullable Input<String> iamUserAccessToBilling;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parentId;
-        private @Nullable Input<String> roleName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> email;
+        private @Nullable Output<String> iamUserAccessToBilling;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parentId;
+        private @Nullable Output<String> roleName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder iamUserAccessToBilling(@Nullable Input<String> iamUserAccessToBilling) {
+        public Builder iamUserAccessToBilling(@Nullable Output<String> iamUserAccessToBilling) {
             this.iamUserAccessToBilling = iamUserAccessToBilling;
             return this;
         }
 
         public Builder iamUserAccessToBilling(@Nullable String iamUserAccessToBilling) {
-            this.iamUserAccessToBilling = Input.ofNullable(iamUserAccessToBilling);
+            this.iamUserAccessToBilling = Output.ofNullable(iamUserAccessToBilling);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentId(@Nullable Input<String> parentId) {
+        public Builder parentId(@Nullable Output<String> parentId) {
             this.parentId = parentId;
             return this;
         }
 
         public Builder parentId(@Nullable String parentId) {
-            this.parentId = Input.ofNullable(parentId);
+            this.parentId = Output.ofNullable(parentId);
             return this;
         }
 
-        public Builder roleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Input.ofNullable(roleName);
+            this.roleName = Output.ofNullable(roleName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AccountArgs build() {

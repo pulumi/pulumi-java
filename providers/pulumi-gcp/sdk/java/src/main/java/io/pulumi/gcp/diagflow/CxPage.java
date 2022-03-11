@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.diagflow;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -263,14 +262,14 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CxPage(String name, CxPageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/cxPage:CxPage", name, args == null ? CxPageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:diagflow/cxPage:CxPage", name, args == null ? CxPageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CxPage(String name, Input<String> id, @Nullable CxPageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CxPage(String name, Output<String> id, @Nullable CxPageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:diagflow/cxPage:CxPage", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -286,7 +285,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CxPage get(String name, Input<String> id, @Nullable CxPageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CxPage get(String name, Output<String> id, @Nullable CxPageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CxPage(name, id, state, options);
     }
 }

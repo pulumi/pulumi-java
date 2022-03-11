@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1alpha1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -16,16 +16,16 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     public static final BackupArgs Empty = new BackupArgs();
 
     @InputImport(name="backupId", required=true)
-      private final Input<String> backupId;
+      private final Output<String> backupId;
 
-    public Input<String> getBackupId() {
+    public Output<String> getBackupId() {
         return this.backupId;
     }
 
     @InputImport(name="domainId", required=true)
-      private final Input<String> domainId;
+      private final Output<String> domainId;
 
-    public Input<String> getDomainId() {
+    public Output<String> getDomainId() {
         return this.domainId;
     }
 
@@ -34,24 +34,24 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public BackupArgs(
-        Input<String> backupId,
-        Input<String> domainId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> project) {
+        Output<String> backupId,
+        Output<String> domainId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> project) {
         this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
         this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
         this.labels = labels;
@@ -59,10 +59,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupArgs() {
-        this.backupId = Input.empty();
-        this.domainId = Input.empty();
-        this.labels = Input.empty();
-        this.project = Input.empty();
+        this.backupId = Output.empty();
+        this.domainId = Output.empty();
+        this.labels = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,10 +74,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> backupId;
-        private Input<String> domainId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> project;
+        private Output<String> backupId;
+        private Output<String> domainId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -91,43 +91,43 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder backupId(Input<String> backupId) {
+        public Builder backupId(Output<String> backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
         public Builder backupId(String backupId) {
-            this.backupId = Input.of(Objects.requireNonNull(backupId));
+            this.backupId = Output.of(Objects.requireNonNull(backupId));
             return this;
         }
 
-        public Builder domainId(Input<String> domainId) {
+        public Builder domainId(Output<String> domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
 
         public Builder domainId(String domainId) {
-            this.domainId = Input.of(Objects.requireNonNull(domainId));
+            this.domainId = Output.of(Objects.requireNonNull(domainId));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public BackupArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="detectSentiment", required=true)
-      private final Input<Boolean> detectSentiment;
+      private final Output<Boolean> detectSentiment;
 
-    public Input<Boolean> getDetectSentiment() {
+    public Output<Boolean> getDetectSentiment() {
         return this.detectSentiment;
     }
 
-    public SentimentAnalysisSettingsPropertiesArgs(Input<Boolean> detectSentiment) {
+    public SentimentAnalysisSettingsPropertiesArgs(Output<Boolean> detectSentiment) {
         this.detectSentiment = Objects.requireNonNull(detectSentiment, "expected parameter 'detectSentiment' to be non-null");
     }
 
     private SentimentAnalysisSettingsPropertiesArgs() {
-        this.detectSentiment = Input.empty();
+        this.detectSentiment = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<Boolean> detectSentiment;
+        private Output<Boolean> detectSentiment;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends io.pulumi.res
     	      this.detectSentiment = defaults.detectSentiment;
         }
 
-        public Builder detectSentiment(Input<Boolean> detectSentiment) {
+        public Builder detectSentiment(Output<Boolean> detectSentiment) {
             this.detectSentiment = Objects.requireNonNull(detectSentiment);
             return this;
         }
 
         public Builder detectSentiment(Boolean detectSentiment) {
-            this.detectSentiment = Input.of(Objects.requireNonNull(detectSentiment));
+            this.detectSentiment = Output.of(Objects.requireNonNull(detectSentiment));
             return this;
         }
         public SentimentAnalysisSettingsPropertiesArgs build() {

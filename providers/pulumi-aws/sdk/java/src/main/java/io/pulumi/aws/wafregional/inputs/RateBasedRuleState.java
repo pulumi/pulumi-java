@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.RateBasedRulePredicateGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName")
-      private final @Nullable Input<String> metricName;
+      private final @Nullable Output<String> metricName;
 
-    public Input<String> getMetricName() {
-        return this.metricName == null ? Input.empty() : this.metricName;
+    public Output<String> getMetricName() {
+        return this.metricName == null ? Output.empty() : this.metricName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predicates")
-      private final @Nullable Input<List<RateBasedRulePredicateGetArgs>> predicates;
+      private final @Nullable Output<List<RateBasedRulePredicateGetArgs>> predicates;
 
-    public Input<List<RateBasedRulePredicateGetArgs>> getPredicates() {
-        return this.predicates == null ? Input.empty() : this.predicates;
+    public Output<List<RateBasedRulePredicateGetArgs>> getPredicates() {
+        return this.predicates == null ? Output.empty() : this.predicates;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateKey")
-      private final @Nullable Input<String> rateKey;
+      private final @Nullable Output<String> rateKey;
 
-    public Input<String> getRateKey() {
-        return this.rateKey == null ? Input.empty() : this.rateKey;
+    public Output<String> getRateKey() {
+        return this.rateKey == null ? Output.empty() : this.rateKey;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimit")
-      private final @Nullable Input<Integer> rateLimit;
+      private final @Nullable Output<Integer> rateLimit;
 
-    public Input<Integer> getRateLimit() {
-        return this.rateLimit == null ? Input.empty() : this.rateLimit;
+    public Output<Integer> getRateLimit() {
+        return this.rateLimit == null ? Output.empty() : this.rateLimit;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public RateBasedRuleState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> metricName,
-        @Nullable Input<String> name,
-        @Nullable Input<List<RateBasedRulePredicateGetArgs>> predicates,
-        @Nullable Input<String> rateKey,
-        @Nullable Input<Integer> rateLimit,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> metricName,
+        @Nullable Output<String> name,
+        @Nullable Output<List<RateBasedRulePredicateGetArgs>> predicates,
+        @Nullable Output<String> rateKey,
+        @Nullable Output<Integer> rateLimit,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.metricName = metricName;
         this.name = name;
@@ -126,14 +126,14 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RateBasedRuleState() {
-        this.arn = Input.empty();
-        this.metricName = Input.empty();
-        this.name = Input.empty();
-        this.predicates = Input.empty();
-        this.rateKey = Input.empty();
-        this.rateLimit = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.metricName = Output.empty();
+        this.name = Output.empty();
+        this.predicates = Output.empty();
+        this.rateKey = Output.empty();
+        this.rateLimit = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> metricName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<RateBasedRulePredicateGetArgs>> predicates;
-        private @Nullable Input<String> rateKey;
-        private @Nullable Input<Integer> rateLimit;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> metricName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<RateBasedRulePredicateGetArgs>> predicates;
+        private @Nullable Output<String> rateKey;
+        private @Nullable Output<Integer> rateLimit;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder metricName(@Nullable Input<String> metricName) {
+        public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
 
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Input.ofNullable(metricName);
+            this.metricName = Output.ofNullable(metricName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder predicates(@Nullable Input<List<RateBasedRulePredicateGetArgs>> predicates) {
+        public Builder predicates(@Nullable Output<List<RateBasedRulePredicateGetArgs>> predicates) {
             this.predicates = predicates;
             return this;
         }
 
         public Builder predicates(@Nullable List<RateBasedRulePredicateGetArgs> predicates) {
-            this.predicates = Input.ofNullable(predicates);
+            this.predicates = Output.ofNullable(predicates);
             return this;
         }
 
-        public Builder rateKey(@Nullable Input<String> rateKey) {
+        public Builder rateKey(@Nullable Output<String> rateKey) {
             this.rateKey = rateKey;
             return this;
         }
 
         public Builder rateKey(@Nullable String rateKey) {
-            this.rateKey = Input.ofNullable(rateKey);
+            this.rateKey = Output.ofNullable(rateKey);
             return this;
         }
 
-        public Builder rateLimit(@Nullable Input<Integer> rateLimit) {
+        public Builder rateLimit(@Nullable Output<Integer> rateLimit) {
             this.rateLimit = rateLimit;
             return this;
         }
 
         public Builder rateLimit(@Nullable Integer rateLimit) {
-            this.rateLimit = Input.ofNullable(rateLimit);
+            this.rateLimit = Output.ofNullable(rateLimit);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public RateBasedRuleState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devopsguru;
 
 import io.pulumi.awsnative.devopsguru.inputs.ResourceCollectionFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class ResourceCollectionArgs extends io.pulumi.resources.ResourceAr
     public static final ResourceCollectionArgs Empty = new ResourceCollectionArgs();
 
     @InputImport(name="resourceCollectionFilter", required=true)
-      private final Input<ResourceCollectionFilterArgs> resourceCollectionFilter;
+      private final Output<ResourceCollectionFilterArgs> resourceCollectionFilter;
 
-    public Input<ResourceCollectionFilterArgs> getResourceCollectionFilter() {
+    public Output<ResourceCollectionFilterArgs> getResourceCollectionFilter() {
         return this.resourceCollectionFilter;
     }
 
-    public ResourceCollectionArgs(Input<ResourceCollectionFilterArgs> resourceCollectionFilter) {
+    public ResourceCollectionArgs(Output<ResourceCollectionFilterArgs> resourceCollectionFilter) {
         this.resourceCollectionFilter = Objects.requireNonNull(resourceCollectionFilter, "expected parameter 'resourceCollectionFilter' to be non-null");
     }
 
     private ResourceCollectionArgs() {
-        this.resourceCollectionFilter = Input.empty();
+        this.resourceCollectionFilter = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class ResourceCollectionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<ResourceCollectionFilterArgs> resourceCollectionFilter;
+        private Output<ResourceCollectionFilterArgs> resourceCollectionFilter;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class ResourceCollectionArgs extends io.pulumi.resources.ResourceAr
     	      this.resourceCollectionFilter = defaults.resourceCollectionFilter;
         }
 
-        public Builder resourceCollectionFilter(Input<ResourceCollectionFilterArgs> resourceCollectionFilter) {
+        public Builder resourceCollectionFilter(Output<ResourceCollectionFilterArgs> resourceCollectionFilter) {
             this.resourceCollectionFilter = Objects.requireNonNull(resourceCollectionFilter);
             return this;
         }
 
         public Builder resourceCollectionFilter(ResourceCollectionFilterArgs resourceCollectionFilter) {
-            this.resourceCollectionFilter = Input.of(Objects.requireNonNull(resourceCollectionFilter));
+            this.resourceCollectionFilter = Output.of(Objects.requireNonNull(resourceCollectionFilter));
             return this;
         }
         public ResourceCollectionArgs build() {

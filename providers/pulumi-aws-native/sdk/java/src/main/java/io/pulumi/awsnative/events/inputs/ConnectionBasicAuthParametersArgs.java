@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class ConnectionBasicAuthParametersArgs extends io.pulumi.resources
     public static final ConnectionBasicAuthParametersArgs Empty = new ConnectionBasicAuthParametersArgs();
 
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public ConnectionBasicAuthParametersArgs(
-        Input<String> password,
-        Input<String> username) {
+        Output<String> password,
+        Output<String> username) {
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }
 
     private ConnectionBasicAuthParametersArgs() {
-        this.password = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class ConnectionBasicAuthParametersArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> password;
-        private Input<String> username;
+        private Output<String> password;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class ConnectionBasicAuthParametersArgs extends io.pulumi.resources
     	      this.username = defaults.username;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public ConnectionBasicAuthParametersArgs build() {

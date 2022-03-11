@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetId")
-      private final @Nullable Input<String> targetId;
+      private final @Nullable Output<String> targetId;
 
-    public Input<String> getTargetId() {
-        return this.targetId == null ? Input.empty() : this.targetId;
+    public Output<String> getTargetId() {
+        return this.targetId == null ? Output.empty() : this.targetId;
     }
 
     public PolicyAttachmentState(
-        @Nullable Input<String> policyId,
-        @Nullable Input<String> targetId) {
+        @Nullable Output<String> policyId,
+        @Nullable Output<String> targetId) {
         this.policyId = policyId;
         this.targetId = targetId;
     }
 
     private PolicyAttachmentState() {
-        this.policyId = Input.empty();
-        this.targetId = Input.empty();
+        this.policyId = Output.empty();
+        this.targetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policyId;
-        private @Nullable Input<String> targetId;
+        private @Nullable Output<String> policyId;
+        private @Nullable Output<String> targetId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder targetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Input.ofNullable(targetId);
+            this.targetId = Output.ofNullable(targetId);
             return this;
         }
         public PolicyAttachmentState build() {

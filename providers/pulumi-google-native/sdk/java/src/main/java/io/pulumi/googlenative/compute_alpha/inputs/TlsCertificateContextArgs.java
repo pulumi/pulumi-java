@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.TlsCertificateContextCertificateSource;
 import io.pulumi.googlenative.compute_alpha.inputs.SdsConfigArgs;
@@ -25,10 +25,10 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificatePaths")
-      private final @Nullable Input<TlsCertificatePathsArgs> certificatePaths;
+      private final @Nullable Output<TlsCertificatePathsArgs> certificatePaths;
 
-    public Input<TlsCertificatePathsArgs> getCertificatePaths() {
-        return this.certificatePaths == null ? Input.empty() : this.certificatePaths;
+    public Output<TlsCertificatePathsArgs> getCertificatePaths() {
+        return this.certificatePaths == null ? Output.empty() : this.certificatePaths;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateSource")
-      private final @Nullable Input<TlsCertificateContextCertificateSource> certificateSource;
+      private final @Nullable Output<TlsCertificateContextCertificateSource> certificateSource;
 
-    public Input<TlsCertificateContextCertificateSource> getCertificateSource() {
-        return this.certificateSource == null ? Input.empty() : this.certificateSource;
+    public Output<TlsCertificateContextCertificateSource> getCertificateSource() {
+        return this.certificateSource == null ? Output.empty() : this.certificateSource;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sdsConfig")
-      private final @Nullable Input<SdsConfigArgs> sdsConfig;
+      private final @Nullable Output<SdsConfigArgs> sdsConfig;
 
-    public Input<SdsConfigArgs> getSdsConfig() {
-        return this.sdsConfig == null ? Input.empty() : this.sdsConfig;
+    public Output<SdsConfigArgs> getSdsConfig() {
+        return this.sdsConfig == null ? Output.empty() : this.sdsConfig;
     }
 
     public TlsCertificateContextArgs(
-        @Nullable Input<TlsCertificatePathsArgs> certificatePaths,
-        @Nullable Input<TlsCertificateContextCertificateSource> certificateSource,
-        @Nullable Input<SdsConfigArgs> sdsConfig) {
+        @Nullable Output<TlsCertificatePathsArgs> certificatePaths,
+        @Nullable Output<TlsCertificateContextCertificateSource> certificateSource,
+        @Nullable Output<SdsConfigArgs> sdsConfig) {
         this.certificatePaths = certificatePaths;
         this.certificateSource = certificateSource;
         this.sdsConfig = sdsConfig;
     }
 
     private TlsCertificateContextArgs() {
-        this.certificatePaths = Input.empty();
-        this.certificateSource = Input.empty();
-        this.sdsConfig = Input.empty();
+        this.certificatePaths = Output.empty();
+        this.certificateSource = Output.empty();
+        this.sdsConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<TlsCertificatePathsArgs> certificatePaths;
-        private @Nullable Input<TlsCertificateContextCertificateSource> certificateSource;
-        private @Nullable Input<SdsConfigArgs> sdsConfig;
+        private @Nullable Output<TlsCertificatePathsArgs> certificatePaths;
+        private @Nullable Output<TlsCertificateContextCertificateSource> certificateSource;
+        private @Nullable Output<SdsConfigArgs> sdsConfig;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
     	      this.sdsConfig = defaults.sdsConfig;
         }
 
-        public Builder certificatePaths(@Nullable Input<TlsCertificatePathsArgs> certificatePaths) {
+        public Builder certificatePaths(@Nullable Output<TlsCertificatePathsArgs> certificatePaths) {
             this.certificatePaths = certificatePaths;
             return this;
         }
 
         public Builder certificatePaths(@Nullable TlsCertificatePathsArgs certificatePaths) {
-            this.certificatePaths = Input.ofNullable(certificatePaths);
+            this.certificatePaths = Output.ofNullable(certificatePaths);
             return this;
         }
 
-        public Builder certificateSource(@Nullable Input<TlsCertificateContextCertificateSource> certificateSource) {
+        public Builder certificateSource(@Nullable Output<TlsCertificateContextCertificateSource> certificateSource) {
             this.certificateSource = certificateSource;
             return this;
         }
 
         public Builder certificateSource(@Nullable TlsCertificateContextCertificateSource certificateSource) {
-            this.certificateSource = Input.ofNullable(certificateSource);
+            this.certificateSource = Output.ofNullable(certificateSource);
             return this;
         }
 
-        public Builder sdsConfig(@Nullable Input<SdsConfigArgs> sdsConfig) {
+        public Builder sdsConfig(@Nullable Output<SdsConfigArgs> sdsConfig) {
             this.sdsConfig = sdsConfig;
             return this;
         }
 
         public Builder sdsConfig(@Nullable SdsConfigArgs sdsConfig) {
-            this.sdsConfig = Input.ofNullable(sdsConfig);
+            this.sdsConfig = Output.ofNullable(sdsConfig);
             return this;
         }
         public TlsCertificateContextArgs build() {

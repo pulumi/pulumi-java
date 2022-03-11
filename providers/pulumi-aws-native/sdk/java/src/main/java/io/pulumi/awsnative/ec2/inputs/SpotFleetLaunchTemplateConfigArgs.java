@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetFleetLaunchTemplateSpecificationArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetLaunchTemplateOverridesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class SpotFleetLaunchTemplateConfigArgs extends io.pulumi.resources
     public static final SpotFleetLaunchTemplateConfigArgs Empty = new SpotFleetLaunchTemplateConfigArgs();
 
     @InputImport(name="launchTemplateSpecification")
-      private final @Nullable Input<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification;
+      private final @Nullable Output<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
-    public Input<SpotFleetFleetLaunchTemplateSpecificationArgs> getLaunchTemplateSpecification() {
-        return this.launchTemplateSpecification == null ? Input.empty() : this.launchTemplateSpecification;
+    public Output<SpotFleetFleetLaunchTemplateSpecificationArgs> getLaunchTemplateSpecification() {
+        return this.launchTemplateSpecification == null ? Output.empty() : this.launchTemplateSpecification;
     }
 
     @InputImport(name="overrides")
-      private final @Nullable Input<List<SpotFleetLaunchTemplateOverridesArgs>> overrides;
+      private final @Nullable Output<List<SpotFleetLaunchTemplateOverridesArgs>> overrides;
 
-    public Input<List<SpotFleetLaunchTemplateOverridesArgs>> getOverrides() {
-        return this.overrides == null ? Input.empty() : this.overrides;
+    public Output<List<SpotFleetLaunchTemplateOverridesArgs>> getOverrides() {
+        return this.overrides == null ? Output.empty() : this.overrides;
     }
 
     public SpotFleetLaunchTemplateConfigArgs(
-        @Nullable Input<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification,
-        @Nullable Input<List<SpotFleetLaunchTemplateOverridesArgs>> overrides) {
+        @Nullable Output<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification,
+        @Nullable Output<List<SpotFleetLaunchTemplateOverridesArgs>> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }
 
     private SpotFleetLaunchTemplateConfigArgs() {
-        this.launchTemplateSpecification = Input.empty();
-        this.overrides = Input.empty();
+        this.launchTemplateSpecification = Output.empty();
+        this.overrides = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class SpotFleetLaunchTemplateConfigArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification;
-        private @Nullable Input<List<SpotFleetLaunchTemplateOverridesArgs>> overrides;
+        private @Nullable Output<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification;
+        private @Nullable Output<List<SpotFleetLaunchTemplateOverridesArgs>> overrides;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class SpotFleetLaunchTemplateConfigArgs extends io.pulumi.resources
     	      this.overrides = defaults.overrides;
         }
 
-        public Builder launchTemplateSpecification(@Nullable Input<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(@Nullable Output<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification) {
             this.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
 
         public Builder launchTemplateSpecification(@Nullable SpotFleetFleetLaunchTemplateSpecificationArgs launchTemplateSpecification) {
-            this.launchTemplateSpecification = Input.ofNullable(launchTemplateSpecification);
+            this.launchTemplateSpecification = Output.ofNullable(launchTemplateSpecification);
             return this;
         }
 
-        public Builder overrides(@Nullable Input<List<SpotFleetLaunchTemplateOverridesArgs>> overrides) {
+        public Builder overrides(@Nullable Output<List<SpotFleetLaunchTemplateOverridesArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
 
         public Builder overrides(@Nullable List<SpotFleetLaunchTemplateOverridesArgs> overrides) {
-            this.overrides = Input.ofNullable(overrides);
+            this.overrides = Output.ofNullable(overrides);
             return this;
         }
         public SpotFleetLaunchTemplateConfigArgs build() {

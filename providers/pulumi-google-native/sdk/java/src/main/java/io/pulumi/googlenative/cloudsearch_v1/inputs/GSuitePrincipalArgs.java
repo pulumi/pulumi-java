@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gsuiteDomain")
-      private final @Nullable Input<Boolean> gsuiteDomain;
+      private final @Nullable Output<Boolean> gsuiteDomain;
 
-    public Input<Boolean> getGsuiteDomain() {
-        return this.gsuiteDomain == null ? Input.empty() : this.gsuiteDomain;
+    public Output<Boolean> getGsuiteDomain() {
+        return this.gsuiteDomain == null ? Output.empty() : this.gsuiteDomain;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gsuiteGroupEmail")
-      private final @Nullable Input<String> gsuiteGroupEmail;
+      private final @Nullable Output<String> gsuiteGroupEmail;
 
-    public Input<String> getGsuiteGroupEmail() {
-        return this.gsuiteGroupEmail == null ? Input.empty() : this.gsuiteGroupEmail;
+    public Output<String> getGsuiteGroupEmail() {
+        return this.gsuiteGroupEmail == null ? Output.empty() : this.gsuiteGroupEmail;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gsuiteUserEmail")
-      private final @Nullable Input<String> gsuiteUserEmail;
+      private final @Nullable Output<String> gsuiteUserEmail;
 
-    public Input<String> getGsuiteUserEmail() {
-        return this.gsuiteUserEmail == null ? Input.empty() : this.gsuiteUserEmail;
+    public Output<String> getGsuiteUserEmail() {
+        return this.gsuiteUserEmail == null ? Output.empty() : this.gsuiteUserEmail;
     }
 
     public GSuitePrincipalArgs(
-        @Nullable Input<Boolean> gsuiteDomain,
-        @Nullable Input<String> gsuiteGroupEmail,
-        @Nullable Input<String> gsuiteUserEmail) {
+        @Nullable Output<Boolean> gsuiteDomain,
+        @Nullable Output<String> gsuiteGroupEmail,
+        @Nullable Output<String> gsuiteUserEmail) {
         this.gsuiteDomain = gsuiteDomain;
         this.gsuiteGroupEmail = gsuiteGroupEmail;
         this.gsuiteUserEmail = gsuiteUserEmail;
     }
 
     private GSuitePrincipalArgs() {
-        this.gsuiteDomain = Input.empty();
-        this.gsuiteGroupEmail = Input.empty();
-        this.gsuiteUserEmail = Input.empty();
+        this.gsuiteDomain = Output.empty();
+        this.gsuiteGroupEmail = Output.empty();
+        this.gsuiteUserEmail = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> gsuiteDomain;
-        private @Nullable Input<String> gsuiteGroupEmail;
-        private @Nullable Input<String> gsuiteUserEmail;
+        private @Nullable Output<Boolean> gsuiteDomain;
+        private @Nullable Output<String> gsuiteGroupEmail;
+        private @Nullable Output<String> gsuiteUserEmail;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
     	      this.gsuiteUserEmail = defaults.gsuiteUserEmail;
         }
 
-        public Builder gsuiteDomain(@Nullable Input<Boolean> gsuiteDomain) {
+        public Builder gsuiteDomain(@Nullable Output<Boolean> gsuiteDomain) {
             this.gsuiteDomain = gsuiteDomain;
             return this;
         }
 
         public Builder gsuiteDomain(@Nullable Boolean gsuiteDomain) {
-            this.gsuiteDomain = Input.ofNullable(gsuiteDomain);
+            this.gsuiteDomain = Output.ofNullable(gsuiteDomain);
             return this;
         }
 
-        public Builder gsuiteGroupEmail(@Nullable Input<String> gsuiteGroupEmail) {
+        public Builder gsuiteGroupEmail(@Nullable Output<String> gsuiteGroupEmail) {
             this.gsuiteGroupEmail = gsuiteGroupEmail;
             return this;
         }
 
         public Builder gsuiteGroupEmail(@Nullable String gsuiteGroupEmail) {
-            this.gsuiteGroupEmail = Input.ofNullable(gsuiteGroupEmail);
+            this.gsuiteGroupEmail = Output.ofNullable(gsuiteGroupEmail);
             return this;
         }
 
-        public Builder gsuiteUserEmail(@Nullable Input<String> gsuiteUserEmail) {
+        public Builder gsuiteUserEmail(@Nullable Output<String> gsuiteUserEmail) {
             this.gsuiteUserEmail = gsuiteUserEmail;
             return this;
         }
 
         public Builder gsuiteUserEmail(@Nullable String gsuiteUserEmail) {
-            this.gsuiteUserEmail = Input.ofNullable(gsuiteUserEmail);
+            this.gsuiteUserEmail = Output.ofNullable(gsuiteUserEmail);
             return this;
         }
         public GSuitePrincipalArgs build() {

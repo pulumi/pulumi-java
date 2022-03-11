@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.glue;
 
 import io.pulumi.awsnative.glue.inputs.SchemaVersionSchemaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     public static final SchemaVersionArgs Empty = new SchemaVersionArgs();
 
     @InputImport(name="schema", required=true)
-      private final Input<SchemaVersionSchemaArgs> schema;
+      private final Output<SchemaVersionSchemaArgs> schema;
 
-    public Input<SchemaVersionSchemaArgs> getSchema() {
+    public Output<SchemaVersionSchemaArgs> getSchema() {
         return this.schema;
     }
 
@@ -26,22 +26,22 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaDefinition", required=true)
-      private final Input<String> schemaDefinition;
+      private final Output<String> schemaDefinition;
 
-    public Input<String> getSchemaDefinition() {
+    public Output<String> getSchemaDefinition() {
         return this.schemaDefinition;
     }
 
     public SchemaVersionArgs(
-        Input<SchemaVersionSchemaArgs> schema,
-        Input<String> schemaDefinition) {
+        Output<SchemaVersionSchemaArgs> schema,
+        Output<String> schemaDefinition) {
         this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
         this.schemaDefinition = Objects.requireNonNull(schemaDefinition, "expected parameter 'schemaDefinition' to be non-null");
     }
 
     private SchemaVersionArgs() {
-        this.schema = Input.empty();
-        this.schemaDefinition = Input.empty();
+        this.schema = Output.empty();
+        this.schemaDefinition = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<SchemaVersionSchemaArgs> schema;
-        private Input<String> schemaDefinition;
+        private Output<SchemaVersionSchemaArgs> schema;
+        private Output<String> schemaDefinition;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schemaDefinition = defaults.schemaDefinition;
         }
 
-        public Builder schema(Input<SchemaVersionSchemaArgs> schema) {
+        public Builder schema(Output<SchemaVersionSchemaArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
         public Builder schema(SchemaVersionSchemaArgs schema) {
-            this.schema = Input.of(Objects.requireNonNull(schema));
+            this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
 
-        public Builder schemaDefinition(Input<String> schemaDefinition) {
+        public Builder schemaDefinition(Output<String> schemaDefinition) {
             this.schemaDefinition = Objects.requireNonNull(schemaDefinition);
             return this;
         }
 
         public Builder schemaDefinition(String schemaDefinition) {
-            this.schemaDefinition = Input.of(Objects.requireNonNull(schemaDefinition));
+            this.schemaDefinition = Output.of(Objects.requireNonNull(schemaDefinition));
             return this;
         }
         public SchemaVersionArgs build() {

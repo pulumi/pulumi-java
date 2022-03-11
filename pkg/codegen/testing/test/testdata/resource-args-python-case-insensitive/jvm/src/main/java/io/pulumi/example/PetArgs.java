@@ -3,7 +3,7 @@
 
 package io.pulumi.example;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
     public static final PetArgs Empty = new PetArgs();
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
-    public PetArgs(@Nullable Input<String> name) {
+    public PetArgs(@Nullable Output<String> name) {
         this.name = name;
     }
 
     private PetArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class PetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public PetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ScopeSelectorArgs;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hard")
-      private final @Nullable Input<Map<String,String>> hard;
+      private final @Nullable Output<Map<String,String>> hard;
 
-    public Input<Map<String,String>> getHard() {
-        return this.hard == null ? Input.empty() : this.hard;
+    public Output<Map<String,String>> getHard() {
+        return this.hard == null ? Output.empty() : this.hard;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scopeSelector")
-      private final @Nullable Input<ScopeSelectorArgs> scopeSelector;
+      private final @Nullable Output<ScopeSelectorArgs> scopeSelector;
 
-    public Input<ScopeSelectorArgs> getScopeSelector() {
-        return this.scopeSelector == null ? Input.empty() : this.scopeSelector;
+    public Output<ScopeSelectorArgs> getScopeSelector() {
+        return this.scopeSelector == null ? Output.empty() : this.scopeSelector;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Output<List<String>> scopes;
 
-    public Input<List<String>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<String>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     public ResourceQuotaSpecArgs(
-        @Nullable Input<Map<String,String>> hard,
-        @Nullable Input<ScopeSelectorArgs> scopeSelector,
-        @Nullable Input<List<String>> scopes) {
+        @Nullable Output<Map<String,String>> hard,
+        @Nullable Output<ScopeSelectorArgs> scopeSelector,
+        @Nullable Output<List<String>> scopes) {
         this.hard = hard;
         this.scopeSelector = scopeSelector;
         this.scopes = scopes;
     }
 
     private ResourceQuotaSpecArgs() {
-        this.hard = Input.empty();
-        this.scopeSelector = Input.empty();
-        this.scopes = Input.empty();
+        this.hard = Output.empty();
+        this.scopeSelector = Output.empty();
+        this.scopes = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> hard;
-        private @Nullable Input<ScopeSelectorArgs> scopeSelector;
-        private @Nullable Input<List<String>> scopes;
+        private @Nullable Output<Map<String,String>> hard;
+        private @Nullable Output<ScopeSelectorArgs> scopeSelector;
+        private @Nullable Output<List<String>> scopes;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder hard(@Nullable Input<Map<String,String>> hard) {
+        public Builder hard(@Nullable Output<Map<String,String>> hard) {
             this.hard = hard;
             return this;
         }
 
         public Builder hard(@Nullable Map<String,String> hard) {
-            this.hard = Input.ofNullable(hard);
+            this.hard = Output.ofNullable(hard);
             return this;
         }
 
-        public Builder scopeSelector(@Nullable Input<ScopeSelectorArgs> scopeSelector) {
+        public Builder scopeSelector(@Nullable Output<ScopeSelectorArgs> scopeSelector) {
             this.scopeSelector = scopeSelector;
             return this;
         }
 
         public Builder scopeSelector(@Nullable ScopeSelectorArgs scopeSelector) {
-            this.scopeSelector = Input.ofNullable(scopeSelector);
+            this.scopeSelector = Output.ofNullable(scopeSelector);
             return this;
         }
 
-        public Builder scopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
         public ResourceQuotaSpecArgs build() {

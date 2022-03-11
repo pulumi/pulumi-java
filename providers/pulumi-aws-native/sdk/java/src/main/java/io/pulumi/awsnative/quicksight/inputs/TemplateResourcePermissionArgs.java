@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class TemplateResourcePermissionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="actions", required=true)
-      private final Input<List<String>> actions;
+      private final Output<List<String>> actions;
 
-    public Input<List<String>> getActions() {
+    public Output<List<String>> getActions() {
         return this.actions;
     }
 
@@ -48,22 +48,22 @@ public final class TemplateResourcePermissionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="principal", required=true)
-      private final Input<String> principal;
+      private final Output<String> principal;
 
-    public Input<String> getPrincipal() {
+    public Output<String> getPrincipal() {
         return this.principal;
     }
 
     public TemplateResourcePermissionArgs(
-        Input<List<String>> actions,
-        Input<String> principal) {
+        Output<List<String>> actions,
+        Output<String> principal) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
     }
 
     private TemplateResourcePermissionArgs() {
-        this.actions = Input.empty();
-        this.principal = Input.empty();
+        this.actions = Output.empty();
+        this.principal = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,8 +75,8 @@ public final class TemplateResourcePermissionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<List<String>> actions;
-        private Input<String> principal;
+        private Output<List<String>> actions;
+        private Output<String> principal;
 
         public Builder() {
     	      // Empty
@@ -88,23 +88,23 @@ public final class TemplateResourcePermissionArgs extends io.pulumi.resources.Re
     	      this.principal = defaults.principal;
         }
 
-        public Builder actions(Input<List<String>> actions) {
+        public Builder actions(Output<List<String>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<String> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder principal(Input<String> principal) {
+        public Builder principal(Output<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
         public Builder principal(String principal) {
-            this.principal = Input.of(Objects.requireNonNull(principal));
+            this.principal = Output.of(Objects.requireNonNull(principal));
             return this;
         }
         public TemplateResourcePermissionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.TopicIAMMemberConditionArgs;
 import java.lang.String;
@@ -16,16 +16,16 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     public static final TopicIAMMemberArgs Empty = new TopicIAMMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<TopicIAMMemberConditionArgs> condition;
+      private final @Nullable Output<TopicIAMMemberConditionArgs> condition;
 
-    public Input<TopicIAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<TopicIAMMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -35,10 +35,10 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -59,18 +59,18 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic", required=true)
-      private final Input<String> topic;
+      private final Output<String> topic;
 
-    public Input<String> getTopic() {
+    public Output<String> getTopic() {
         return this.topic;
     }
 
     public TopicIAMMemberArgs(
-        @Nullable Input<TopicIAMMemberConditionArgs> condition,
-        Input<String> member,
-        @Nullable Input<String> project,
-        Input<String> role,
-        Input<String> topic) {
+        @Nullable Output<TopicIAMMemberConditionArgs> condition,
+        Output<String> member,
+        @Nullable Output<String> project,
+        Output<String> role,
+        Output<String> topic) {
         this.condition = condition;
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
         this.project = project;
@@ -79,11 +79,11 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopicIAMMemberArgs() {
-        this.condition = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.topic = Input.empty();
+        this.condition = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,11 +95,11 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TopicIAMMemberConditionArgs> condition;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private Input<String> role;
-        private Input<String> topic;
+        private @Nullable Output<TopicIAMMemberConditionArgs> condition;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private Output<String> role;
+        private Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -114,53 +114,53 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder condition(@Nullable Input<TopicIAMMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<TopicIAMMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable TopicIAMMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder topic(Input<String> topic) {
+        public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
         public Builder topic(String topic) {
-            this.topic = Input.of(Objects.requireNonNull(topic));
+            this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
         }
         public TopicIAMMemberArgs build() {

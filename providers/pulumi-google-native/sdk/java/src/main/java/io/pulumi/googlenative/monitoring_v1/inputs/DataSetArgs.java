@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.enums.DataSetPlotType;
 import io.pulumi.googlenative.monitoring_v1.enums.DataSetTargetAxis;
@@ -26,10 +26,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="legendTemplate")
-      private final @Nullable Input<String> legendTemplate;
+      private final @Nullable Output<String> legendTemplate;
 
-    public Input<String> getLegendTemplate() {
-        return this.legendTemplate == null ? Input.empty() : this.legendTemplate;
+    public Output<String> getLegendTemplate() {
+        return this.legendTemplate == null ? Output.empty() : this.legendTemplate;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minAlignmentPeriod")
-      private final @Nullable Input<String> minAlignmentPeriod;
+      private final @Nullable Output<String> minAlignmentPeriod;
 
-    public Input<String> getMinAlignmentPeriod() {
-        return this.minAlignmentPeriod == null ? Input.empty() : this.minAlignmentPeriod;
+    public Output<String> getMinAlignmentPeriod() {
+        return this.minAlignmentPeriod == null ? Output.empty() : this.minAlignmentPeriod;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plotType")
-      private final @Nullable Input<DataSetPlotType> plotType;
+      private final @Nullable Output<DataSetPlotType> plotType;
 
-    public Input<DataSetPlotType> getPlotType() {
-        return this.plotType == null ? Input.empty() : this.plotType;
+    public Output<DataSetPlotType> getPlotType() {
+        return this.plotType == null ? Output.empty() : this.plotType;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetAxis")
-      private final @Nullable Input<DataSetTargetAxis> targetAxis;
+      private final @Nullable Output<DataSetTargetAxis> targetAxis;
 
-    public Input<DataSetTargetAxis> getTargetAxis() {
-        return this.targetAxis == null ? Input.empty() : this.targetAxis;
+    public Output<DataSetTargetAxis> getTargetAxis() {
+        return this.targetAxis == null ? Output.empty() : this.targetAxis;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSeriesQuery", required=true)
-      private final Input<TimeSeriesQueryArgs> timeSeriesQuery;
+      private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
-    public Input<TimeSeriesQueryArgs> getTimeSeriesQuery() {
+    public Output<TimeSeriesQueryArgs> getTimeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 
     public DataSetArgs(
-        @Nullable Input<String> legendTemplate,
-        @Nullable Input<String> minAlignmentPeriod,
-        @Nullable Input<DataSetPlotType> plotType,
-        @Nullable Input<DataSetTargetAxis> targetAxis,
-        Input<TimeSeriesQueryArgs> timeSeriesQuery) {
+        @Nullable Output<String> legendTemplate,
+        @Nullable Output<String> minAlignmentPeriod,
+        @Nullable Output<DataSetPlotType> plotType,
+        @Nullable Output<DataSetTargetAxis> targetAxis,
+        Output<TimeSeriesQueryArgs> timeSeriesQuery) {
         this.legendTemplate = legendTemplate;
         this.minAlignmentPeriod = minAlignmentPeriod;
         this.plotType = plotType;
@@ -90,11 +90,11 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSetArgs() {
-        this.legendTemplate = Input.empty();
-        this.minAlignmentPeriod = Input.empty();
-        this.plotType = Input.empty();
-        this.targetAxis = Input.empty();
-        this.timeSeriesQuery = Input.empty();
+        this.legendTemplate = Output.empty();
+        this.minAlignmentPeriod = Output.empty();
+        this.plotType = Output.empty();
+        this.targetAxis = Output.empty();
+        this.timeSeriesQuery = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> legendTemplate;
-        private @Nullable Input<String> minAlignmentPeriod;
-        private @Nullable Input<DataSetPlotType> plotType;
-        private @Nullable Input<DataSetTargetAxis> targetAxis;
-        private Input<TimeSeriesQueryArgs> timeSeriesQuery;
+        private @Nullable Output<String> legendTemplate;
+        private @Nullable Output<String> minAlignmentPeriod;
+        private @Nullable Output<DataSetPlotType> plotType;
+        private @Nullable Output<DataSetTargetAxis> targetAxis;
+        private Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeSeriesQuery = defaults.timeSeriesQuery;
         }
 
-        public Builder legendTemplate(@Nullable Input<String> legendTemplate) {
+        public Builder legendTemplate(@Nullable Output<String> legendTemplate) {
             this.legendTemplate = legendTemplate;
             return this;
         }
 
         public Builder legendTemplate(@Nullable String legendTemplate) {
-            this.legendTemplate = Input.ofNullable(legendTemplate);
+            this.legendTemplate = Output.ofNullable(legendTemplate);
             return this;
         }
 
-        public Builder minAlignmentPeriod(@Nullable Input<String> minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(@Nullable Output<String> minAlignmentPeriod) {
             this.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
 
         public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Input.ofNullable(minAlignmentPeriod);
+            this.minAlignmentPeriod = Output.ofNullable(minAlignmentPeriod);
             return this;
         }
 
-        public Builder plotType(@Nullable Input<DataSetPlotType> plotType) {
+        public Builder plotType(@Nullable Output<DataSetPlotType> plotType) {
             this.plotType = plotType;
             return this;
         }
 
         public Builder plotType(@Nullable DataSetPlotType plotType) {
-            this.plotType = Input.ofNullable(plotType);
+            this.plotType = Output.ofNullable(plotType);
             return this;
         }
 
-        public Builder targetAxis(@Nullable Input<DataSetTargetAxis> targetAxis) {
+        public Builder targetAxis(@Nullable Output<DataSetTargetAxis> targetAxis) {
             this.targetAxis = targetAxis;
             return this;
         }
 
         public Builder targetAxis(@Nullable DataSetTargetAxis targetAxis) {
-            this.targetAxis = Input.ofNullable(targetAxis);
+            this.targetAxis = Output.ofNullable(targetAxis);
             return this;
         }
 
-        public Builder timeSeriesQuery(Input<TimeSeriesQueryArgs> timeSeriesQuery) {
+        public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
 
         public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
-            this.timeSeriesQuery = Input.of(Objects.requireNonNull(timeSeriesQuery));
+            this.timeSeriesQuery = Output.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
         }
         public DataSetArgs build() {

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.servicelinker.inputs.ServicePrincipalSecretAuthInfo
 import io.pulumi.azurenative.servicelinker.inputs.SystemAssignedIdentityAuthInfoArgs;
 import io.pulumi.azurenative.servicelinker.inputs.UserAssignedIdentityAuthInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authInfo")
-      private final @Nullable Input<Object> authInfo;
+      private final @Nullable Output<Object> authInfo;
 
-    public Input<Object> getAuthInfo() {
-        return this.authInfo == null ? Input.empty() : this.authInfo;
+    public Output<Object> getAuthInfo() {
+        return this.authInfo == null ? Output.empty() : this.authInfo;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientType")
-      private final @Nullable Input<Either<String,ClientType>> clientType;
+      private final @Nullable Output<Either<String,ClientType>> clientType;
 
-    public Input<Either<String,ClientType>> getClientType() {
-        return this.clientType == null ? Input.empty() : this.clientType;
+    public Output<Either<String,ClientType>> getClientType() {
+        return this.clientType == null ? Output.empty() : this.clientType;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkerName")
-      private final @Nullable Input<String> linkerName;
+      private final @Nullable Output<String> linkerName;
 
-    public Input<String> getLinkerName() {
-        return this.linkerName == null ? Input.empty() : this.linkerName;
+    public Output<String> getLinkerName() {
+        return this.linkerName == null ? Output.empty() : this.linkerName;
     }
 
     /**
@@ -60,9 +60,9 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-      private final Input<String> resourceUri;
+      private final Output<String> resourceUri;
 
-    public Input<String> getResourceUri() {
+    public Output<String> getResourceUri() {
         return this.resourceUri;
     }
 
@@ -71,18 +71,18 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetId")
-      private final @Nullable Input<String> targetId;
+      private final @Nullable Output<String> targetId;
 
-    public Input<String> getTargetId() {
-        return this.targetId == null ? Input.empty() : this.targetId;
+    public Output<String> getTargetId() {
+        return this.targetId == null ? Output.empty() : this.targetId;
     }
 
     public LinkerArgs(
-        @Nullable Input<Object> authInfo,
-        @Nullable Input<Either<String,ClientType>> clientType,
-        @Nullable Input<String> linkerName,
-        Input<String> resourceUri,
-        @Nullable Input<String> targetId) {
+        @Nullable Output<Object> authInfo,
+        @Nullable Output<Either<String,ClientType>> clientType,
+        @Nullable Output<String> linkerName,
+        Output<String> resourceUri,
+        @Nullable Output<String> targetId) {
         this.authInfo = authInfo;
         this.clientType = clientType;
         this.linkerName = linkerName;
@@ -91,11 +91,11 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkerArgs() {
-        this.authInfo = Input.empty();
-        this.clientType = Input.empty();
-        this.linkerName = Input.empty();
-        this.resourceUri = Input.empty();
-        this.targetId = Input.empty();
+        this.authInfo = Output.empty();
+        this.clientType = Output.empty();
+        this.linkerName = Output.empty();
+        this.resourceUri = Output.empty();
+        this.targetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> authInfo;
-        private @Nullable Input<Either<String,ClientType>> clientType;
-        private @Nullable Input<String> linkerName;
-        private Input<String> resourceUri;
-        private @Nullable Input<String> targetId;
+        private @Nullable Output<Object> authInfo;
+        private @Nullable Output<Either<String,ClientType>> clientType;
+        private @Nullable Output<String> linkerName;
+        private Output<String> resourceUri;
+        private @Nullable Output<String> targetId;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder authInfo(@Nullable Input<Object> authInfo) {
+        public Builder authInfo(@Nullable Output<Object> authInfo) {
             this.authInfo = authInfo;
             return this;
         }
 
         public Builder authInfo(@Nullable Object authInfo) {
-            this.authInfo = Input.ofNullable(authInfo);
+            this.authInfo = Output.ofNullable(authInfo);
             return this;
         }
 
-        public Builder clientType(@Nullable Input<Either<String,ClientType>> clientType) {
+        public Builder clientType(@Nullable Output<Either<String,ClientType>> clientType) {
             this.clientType = clientType;
             return this;
         }
 
         public Builder clientType(@Nullable Either<String,ClientType> clientType) {
-            this.clientType = Input.ofNullable(clientType);
+            this.clientType = Output.ofNullable(clientType);
             return this;
         }
 
-        public Builder linkerName(@Nullable Input<String> linkerName) {
+        public Builder linkerName(@Nullable Output<String> linkerName) {
             this.linkerName = linkerName;
             return this;
         }
 
         public Builder linkerName(@Nullable String linkerName) {
-            this.linkerName = Input.ofNullable(linkerName);
+            this.linkerName = Output.ofNullable(linkerName);
             return this;
         }
 
-        public Builder resourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
+            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
 
-        public Builder targetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Input.ofNullable(targetId);
+            this.targetId = Output.ofNullable(targetId);
             return this;
         }
         public LinkerArgs build() {

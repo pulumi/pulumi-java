@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs extends io
      * 
      */
     @InputImport(name="speechModelVariant")
-      private final @Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant;
+      private final @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant;
 
-    public Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> getSpeechModelVariant() {
-        return this.speechModelVariant == null ? Input.empty() : this.speechModelVariant;
+    public Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> getSpeechModelVariant() {
+        return this.speechModelVariant == null ? Output.empty() : this.speechModelVariant;
     }
 
-    public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs(@Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
+    public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs(@Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
         this.speechModelVariant = speechModelVariant;
     }
 
     private GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs() {
-        this.speechModelVariant = Input.empty();
+        this.speechModelVariant = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant;
+        private @Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs extends io
     	      this.speechModelVariant = defaults.speechModelVariant;
         }
 
-        public Builder speechModelVariant(@Nullable Input<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
+        public Builder speechModelVariant(@Nullable Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
             this.speechModelVariant = speechModelVariant;
             return this;
         }
 
         public Builder speechModelVariant(@Nullable GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariant speechModelVariant) {
-            this.speechModelVariant = Input.ofNullable(speechModelVariant);
+            this.speechModelVariant = Output.ofNullable(speechModelVariant);
             return this;
         }
         public GoogleCloudDialogflowV2beta1SpeechToTextConfigArgs build() {

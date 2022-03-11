@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="handSize")
-      private final @Nullable Input<Integer> handSize;
+      private final @Nullable Output<Integer> handSize;
 
-    public Input<Integer> getHandSize() {
-        return this.handSize == null ? Input.empty() : this.handSize;
+    public Output<Integer> getHandSize() {
+        return this.handSize == null ? Output.empty() : this.handSize;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queueLengthLimit")
-      private final @Nullable Input<Integer> queueLengthLimit;
+      private final @Nullable Output<Integer> queueLengthLimit;
 
-    public Input<Integer> getQueueLengthLimit() {
-        return this.queueLengthLimit == null ? Input.empty() : this.queueLengthLimit;
+    public Output<Integer> getQueueLengthLimit() {
+        return this.queueLengthLimit == null ? Output.empty() : this.queueLengthLimit;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queues")
-      private final @Nullable Input<Integer> queues;
+      private final @Nullable Output<Integer> queues;
 
-    public Input<Integer> getQueues() {
-        return this.queues == null ? Input.empty() : this.queues;
+    public Output<Integer> getQueues() {
+        return this.queues == null ? Output.empty() : this.queues;
     }
 
     public QueuingConfigurationArgs(
-        @Nullable Input<Integer> handSize,
-        @Nullable Input<Integer> queueLengthLimit,
-        @Nullable Input<Integer> queues) {
+        @Nullable Output<Integer> handSize,
+        @Nullable Output<Integer> queueLengthLimit,
+        @Nullable Output<Integer> queues) {
         this.handSize = handSize;
         this.queueLengthLimit = queueLengthLimit;
         this.queues = queues;
     }
 
     private QueuingConfigurationArgs() {
-        this.handSize = Input.empty();
-        this.queueLengthLimit = Input.empty();
-        this.queues = Input.empty();
+        this.handSize = Output.empty();
+        this.queueLengthLimit = Output.empty();
+        this.queues = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> handSize;
-        private @Nullable Input<Integer> queueLengthLimit;
-        private @Nullable Input<Integer> queues;
+        private @Nullable Output<Integer> handSize;
+        private @Nullable Output<Integer> queueLengthLimit;
+        private @Nullable Output<Integer> queues;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
     	      this.queues = defaults.queues;
         }
 
-        public Builder handSize(@Nullable Input<Integer> handSize) {
+        public Builder handSize(@Nullable Output<Integer> handSize) {
             this.handSize = handSize;
             return this;
         }
 
         public Builder handSize(@Nullable Integer handSize) {
-            this.handSize = Input.ofNullable(handSize);
+            this.handSize = Output.ofNullable(handSize);
             return this;
         }
 
-        public Builder queueLengthLimit(@Nullable Input<Integer> queueLengthLimit) {
+        public Builder queueLengthLimit(@Nullable Output<Integer> queueLengthLimit) {
             this.queueLengthLimit = queueLengthLimit;
             return this;
         }
 
         public Builder queueLengthLimit(@Nullable Integer queueLengthLimit) {
-            this.queueLengthLimit = Input.ofNullable(queueLengthLimit);
+            this.queueLengthLimit = Output.ofNullable(queueLengthLimit);
             return this;
         }
 
-        public Builder queues(@Nullable Input<Integer> queues) {
+        public Builder queues(@Nullable Output<Integer> queues) {
             this.queues = queues;
             return this;
         }
 
         public Builder queues(@Nullable Integer queues) {
-            this.queues = Input.ofNullable(queues);
+            this.queues = Output.ofNullable(queues);
             return this;
         }
         public QueuingConfigurationArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs;
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -19,9 +19,9 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGet
      * 
      */
     @InputImport(name="connectionPasswordEncryption", required=true)
-      private final Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption;
+      private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption;
 
-    public Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> getConnectionPasswordEncryption() {
+    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> getConnectionPasswordEncryption() {
         return this.connectionPasswordEncryption;
     }
 
@@ -30,22 +30,22 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGet
      * 
      */
     @InputImport(name="encryptionAtRest", required=true)
-      private final Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest;
+      private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest;
 
-    public Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> getEncryptionAtRest() {
+    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> getEncryptionAtRest() {
         return this.encryptionAtRest;
     }
 
     public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs(
-        Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption,
-        Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest) {
+        Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption,
+        Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest) {
         this.connectionPasswordEncryption = Objects.requireNonNull(connectionPasswordEncryption, "expected parameter 'connectionPasswordEncryption' to be non-null");
         this.encryptionAtRest = Objects.requireNonNull(encryptionAtRest, "expected parameter 'encryptionAtRest' to be non-null");
     }
 
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs() {
-        this.connectionPasswordEncryption = Input.empty();
-        this.encryptionAtRest = Input.empty();
+        this.connectionPasswordEncryption = Output.empty();
+        this.encryptionAtRest = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGet
     }
 
     public static final class Builder {
-        private Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption;
-        private Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest;
+        private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption;
+        private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGet
     	      this.encryptionAtRest = defaults.encryptionAtRest;
         }
 
-        public Builder connectionPasswordEncryption(Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption) {
+        public Builder connectionPasswordEncryption(Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption) {
             this.connectionPasswordEncryption = Objects.requireNonNull(connectionPasswordEncryption);
             return this;
         }
 
         public Builder connectionPasswordEncryption(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs connectionPasswordEncryption) {
-            this.connectionPasswordEncryption = Input.of(Objects.requireNonNull(connectionPasswordEncryption));
+            this.connectionPasswordEncryption = Output.of(Objects.requireNonNull(connectionPasswordEncryption));
             return this;
         }
 
-        public Builder encryptionAtRest(Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest) {
+        public Builder encryptionAtRest(Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest) {
             this.encryptionAtRest = Objects.requireNonNull(encryptionAtRest);
             return this;
         }
 
         public Builder encryptionAtRest(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs encryptionAtRest) {
-            this.encryptionAtRest = Input.of(Objects.requireNonNull(encryptionAtRest));
+            this.encryptionAtRest = Output.of(Objects.requireNonNull(encryptionAtRest));
             return this;
         }
         public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs build() {

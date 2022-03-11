@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.storsimple.enums.Kind;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="algorithm", required=true)
-      private final Input<String> algorithm;
+      private final Output<String> algorithm;
 
-    public Input<String> getAlgorithm() {
+    public Output<String> getAlgorithm() {
         return this.algorithm;
     }
 
@@ -31,10 +31,10 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encryptionKey")
-      private final @Nullable Input<String> encryptionKey;
+      private final @Nullable Output<String> encryptionKey;
 
-    public Input<String> getEncryptionKey() {
-        return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
+    public Output<String> getEncryptionKey() {
+        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encryptionKeyThumbprint")
-      private final @Nullable Input<String> encryptionKeyThumbprint;
+      private final @Nullable Output<String> encryptionKeyThumbprint;
 
-    public Input<String> getEncryptionKeyThumbprint() {
-        return this.encryptionKeyThumbprint == null ? Input.empty() : this.encryptionKeyThumbprint;
+    public Output<String> getEncryptionKeyThumbprint() {
+        return this.encryptionKeyThumbprint == null ? Output.empty() : this.encryptionKeyThumbprint;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="integrityKey", required=true)
-      private final Input<String> integrityKey;
+      private final Output<String> integrityKey;
 
-    public Input<String> getIntegrityKey() {
+    public Output<String> getIntegrityKey() {
         return this.integrityKey;
     }
 
@@ -64,10 +64,10 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Kind> kind;
+      private final @Nullable Output<Kind> kind;
 
-    public Input<Kind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Kind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="managerName", required=true)
-      private final Input<String> managerName;
+      private final Output<String> managerName;
 
-    public Input<String> getManagerName() {
+    public Output<String> getManagerName() {
         return this.managerName;
     }
 
@@ -86,10 +86,10 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="portalCertificateThumbprint")
-      private final @Nullable Input<String> portalCertificateThumbprint;
+      private final @Nullable Output<String> portalCertificateThumbprint;
 
-    public Input<String> getPortalCertificateThumbprint() {
-        return this.portalCertificateThumbprint == null ? Input.empty() : this.portalCertificateThumbprint;
+    public Output<String> getPortalCertificateThumbprint() {
+        return this.portalCertificateThumbprint == null ? Output.empty() : this.portalCertificateThumbprint;
     }
 
     /**
@@ -97,9 +97,9 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -108,22 +108,22 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ManagerExtendedInfoArgs(
-        Input<String> algorithm,
-        @Nullable Input<String> encryptionKey,
-        @Nullable Input<String> encryptionKeyThumbprint,
-        Input<String> integrityKey,
-        @Nullable Input<Kind> kind,
-        Input<String> managerName,
-        @Nullable Input<String> portalCertificateThumbprint,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> version) {
+        Output<String> algorithm,
+        @Nullable Output<String> encryptionKey,
+        @Nullable Output<String> encryptionKeyThumbprint,
+        Output<String> integrityKey,
+        @Nullable Output<Kind> kind,
+        Output<String> managerName,
+        @Nullable Output<String> portalCertificateThumbprint,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> version) {
         this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
         this.encryptionKey = encryptionKey;
         this.encryptionKeyThumbprint = encryptionKeyThumbprint;
@@ -136,15 +136,15 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     }
 
     private ManagerExtendedInfoArgs() {
-        this.algorithm = Input.empty();
-        this.encryptionKey = Input.empty();
-        this.encryptionKeyThumbprint = Input.empty();
-        this.integrityKey = Input.empty();
-        this.kind = Input.empty();
-        this.managerName = Input.empty();
-        this.portalCertificateThumbprint = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.version = Input.empty();
+        this.algorithm = Output.empty();
+        this.encryptionKey = Output.empty();
+        this.encryptionKeyThumbprint = Output.empty();
+        this.integrityKey = Output.empty();
+        this.kind = Output.empty();
+        this.managerName = Output.empty();
+        this.portalCertificateThumbprint = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> algorithm;
-        private @Nullable Input<String> encryptionKey;
-        private @Nullable Input<String> encryptionKeyThumbprint;
-        private Input<String> integrityKey;
-        private @Nullable Input<Kind> kind;
-        private Input<String> managerName;
-        private @Nullable Input<String> portalCertificateThumbprint;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> version;
+        private Output<String> algorithm;
+        private @Nullable Output<String> encryptionKey;
+        private @Nullable Output<String> encryptionKeyThumbprint;
+        private Output<String> integrityKey;
+        private @Nullable Output<Kind> kind;
+        private Output<String> managerName;
+        private @Nullable Output<String> portalCertificateThumbprint;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     	      this.version = defaults.version;
         }
 
-        public Builder algorithm(Input<String> algorithm) {
+        public Builder algorithm(Output<String> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Input.of(Objects.requireNonNull(algorithm));
+            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder encryptionKey(@Nullable Input<String> encryptionKey) {
+        public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
         public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Input.ofNullable(encryptionKey);
+            this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder encryptionKeyThumbprint(@Nullable Input<String> encryptionKeyThumbprint) {
+        public Builder encryptionKeyThumbprint(@Nullable Output<String> encryptionKeyThumbprint) {
             this.encryptionKeyThumbprint = encryptionKeyThumbprint;
             return this;
         }
 
         public Builder encryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
-            this.encryptionKeyThumbprint = Input.ofNullable(encryptionKeyThumbprint);
+            this.encryptionKeyThumbprint = Output.ofNullable(encryptionKeyThumbprint);
             return this;
         }
 
-        public Builder integrityKey(Input<String> integrityKey) {
+        public Builder integrityKey(Output<String> integrityKey) {
             this.integrityKey = Objects.requireNonNull(integrityKey);
             return this;
         }
 
         public Builder integrityKey(String integrityKey) {
-            this.integrityKey = Input.of(Objects.requireNonNull(integrityKey));
+            this.integrityKey = Output.of(Objects.requireNonNull(integrityKey));
             return this;
         }
 
-        public Builder kind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder managerName(Input<String> managerName) {
+        public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Input.of(Objects.requireNonNull(managerName));
+            this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder portalCertificateThumbprint(@Nullable Input<String> portalCertificateThumbprint) {
+        public Builder portalCertificateThumbprint(@Nullable Output<String> portalCertificateThumbprint) {
             this.portalCertificateThumbprint = portalCertificateThumbprint;
             return this;
         }
 
         public Builder portalCertificateThumbprint(@Nullable String portalCertificateThumbprint) {
-            this.portalCertificateThumbprint = Input.ofNullable(portalCertificateThumbprint);
+            this.portalCertificateThumbprint = Output.ofNullable(portalCertificateThumbprint);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ManagerExtendedInfoArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.azurenative.cache.RedisEnterpriseArgs;
 import io.pulumi.azurenative.cache.outputs.EnterpriseSkuResponse;
 import io.pulumi.azurenative.cache.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -241,22 +240,22 @@ public class RedisEnterprise extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RedisEnterprise(String name, RedisEnterpriseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cache:RedisEnterprise", name, args == null ? RedisEnterpriseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:cache:RedisEnterprise", name, args == null ? RedisEnterpriseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RedisEnterprise(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RedisEnterprise(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cache:RedisEnterprise", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:cache/v20201001preview:RedisEnterprise").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20210201preview:RedisEnterprise").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20210301:RedisEnterprise").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20210801:RedisEnterprise").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20220101:RedisEnterprise").build())
+                Output.of(Alias.builder().setType("azure-native:cache/v20201001preview:RedisEnterprise").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20210201preview:RedisEnterprise").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20210301:RedisEnterprise").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20210801:RedisEnterprise").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20220101:RedisEnterprise").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -270,7 +269,7 @@ public class RedisEnterprise extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RedisEnterprise get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RedisEnterprise get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RedisEnterprise(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.TrackPropertyConditionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trackSelections")
-      private final @Nullable Input<List<TrackPropertyConditionArgs>> trackSelections;
+      private final @Nullable Output<List<TrackPropertyConditionArgs>> trackSelections;
 
-    public Input<List<TrackPropertyConditionArgs>> getTrackSelections() {
-        return this.trackSelections == null ? Input.empty() : this.trackSelections;
+    public Output<List<TrackPropertyConditionArgs>> getTrackSelections() {
+        return this.trackSelections == null ? Output.empty() : this.trackSelections;
     }
 
-    public TrackSelectionArgs(@Nullable Input<List<TrackPropertyConditionArgs>> trackSelections) {
+    public TrackSelectionArgs(@Nullable Output<List<TrackPropertyConditionArgs>> trackSelections) {
         this.trackSelections = trackSelections;
     }
 
     private TrackSelectionArgs() {
-        this.trackSelections = Input.empty();
+        this.trackSelections = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TrackPropertyConditionArgs>> trackSelections;
+        private @Nullable Output<List<TrackPropertyConditionArgs>> trackSelections;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trackSelections = defaults.trackSelections;
         }
 
-        public Builder trackSelections(@Nullable Input<List<TrackPropertyConditionArgs>> trackSelections) {
+        public Builder trackSelections(@Nullable Output<List<TrackPropertyConditionArgs>> trackSelections) {
             this.trackSelections = trackSelections;
             return this;
         }
 
         public Builder trackSelections(@Nullable List<TrackPropertyConditionArgs> trackSelections) {
-            this.trackSelections = Input.ofNullable(trackSelections);
+            this.trackSelections = Output.ofNullable(trackSelections);
             return this;
         }
         public TrackSelectionArgs build() {

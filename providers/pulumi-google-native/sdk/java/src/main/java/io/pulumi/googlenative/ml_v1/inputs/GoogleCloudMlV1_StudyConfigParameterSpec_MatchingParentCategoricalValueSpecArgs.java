@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCatego
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
-    public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs(@Nullable Input<List<String>> values) {
+    public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs(@Nullable Output<List<String>> values) {
         this.values = values;
     }
 
     private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs() {
-        this.values = Input.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCatego
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCatego
     	      this.values = defaults.values;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs build() {

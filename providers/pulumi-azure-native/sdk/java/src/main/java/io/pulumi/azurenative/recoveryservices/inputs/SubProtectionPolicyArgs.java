@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.LongTermSchedulePolicyArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyType")
-      private final @Nullable Input<Either<String,PolicyType>> policyType;
+      private final @Nullable Output<Either<String,PolicyType>> policyType;
 
-    public Input<Either<String,PolicyType>> getPolicyType() {
-        return this.policyType == null ? Input.empty() : this.policyType;
+    public Output<Either<String,PolicyType>> getPolicyType() {
+        return this.policyType == null ? Output.empty() : this.policyType;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="retentionPolicy")
-      private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+      private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
-    public Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
+    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
+        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
     }
 
     /**
@@ -53,25 +53,25 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schedulePolicy")
-      private final @Nullable Input<Object> schedulePolicy;
+      private final @Nullable Output<Object> schedulePolicy;
 
-    public Input<Object> getSchedulePolicy() {
-        return this.schedulePolicy == null ? Input.empty() : this.schedulePolicy;
+    public Output<Object> getSchedulePolicy() {
+        return this.schedulePolicy == null ? Output.empty() : this.schedulePolicy;
     }
 
     public SubProtectionPolicyArgs(
-        @Nullable Input<Either<String,PolicyType>> policyType,
-        @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy,
-        @Nullable Input<Object> schedulePolicy) {
+        @Nullable Output<Either<String,PolicyType>> policyType,
+        @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy,
+        @Nullable Output<Object> schedulePolicy) {
         this.policyType = policyType;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;
     }
 
     private SubProtectionPolicyArgs() {
-        this.policyType = Input.empty();
-        this.retentionPolicy = Input.empty();
-        this.schedulePolicy = Input.empty();
+        this.policyType = Output.empty();
+        this.retentionPolicy = Output.empty();
+        this.schedulePolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,9 +83,9 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,PolicyType>> policyType;
-        private @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
-        private @Nullable Input<Object> schedulePolicy;
+        private @Nullable Output<Either<String,PolicyType>> policyType;
+        private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+        private @Nullable Output<Object> schedulePolicy;
 
         public Builder() {
     	      // Empty
@@ -98,33 +98,33 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.schedulePolicy = defaults.schedulePolicy;
         }
 
-        public Builder policyType(@Nullable Input<Either<String,PolicyType>> policyType) {
+        public Builder policyType(@Nullable Output<Either<String,PolicyType>> policyType) {
             this.policyType = policyType;
             return this;
         }
 
         public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
-            this.policyType = Input.ofNullable(policyType);
+            this.policyType = Output.ofNullable(policyType);
             return this;
         }
 
-        public Builder retentionPolicy(@Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Input.ofNullable(retentionPolicy);
+            this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder schedulePolicy(@Nullable Input<Object> schedulePolicy) {
+        public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
 
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = Input.ofNullable(schedulePolicy);
+            this.schedulePolicy = Output.ofNullable(schedulePolicy);
             return this;
         }
         public SubProtectionPolicyArgs build() {

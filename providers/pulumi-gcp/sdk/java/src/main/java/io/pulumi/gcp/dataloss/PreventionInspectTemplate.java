@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.dataloss;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -161,14 +160,14 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public PreventionInspectTemplate(String name, PreventionInspectTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate", name, args == null ? PreventionInspectTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate", name, args == null ? PreventionInspectTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PreventionInspectTemplate(String name, Input<String> id, @Nullable PreventionInspectTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PreventionInspectTemplate(String name, Output<String> id, @Nullable PreventionInspectTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -184,7 +183,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PreventionInspectTemplate get(String name, Input<String> id, @Nullable PreventionInspectTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PreventionInspectTemplate get(String name, Output<String> id, @Nullable PreventionInspectTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PreventionInspectTemplate(name, id, state, options);
     }
 }

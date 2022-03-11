@@ -6,7 +6,7 @@ package io.pulumi.aws.s3;
 import io.pulumi.aws.s3.inputs.InventoryDestinationArgs;
 import io.pulumi.aws.s3.inputs.InventoryFilterArgs;
 import io.pulumi.aws.s3.inputs.InventoryScheduleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -35,9 +35,9 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<InventoryDestinationArgs> destination;
+      private final Output<InventoryDestinationArgs> destination;
 
-    public Input<InventoryDestinationArgs> getDestination() {
+    public Output<InventoryDestinationArgs> getDestination() {
         return this.destination;
     }
 
@@ -46,10 +46,10 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<InventoryFilterArgs> filter;
+      private final @Nullable Output<InventoryFilterArgs> filter;
 
-    public Input<InventoryFilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<InventoryFilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includedObjectVersions", required=true)
-      private final Input<String> includedObjectVersions;
+      private final Output<String> includedObjectVersions;
 
-    public Input<String> getIncludedObjectVersions() {
+    public Output<String> getIncludedObjectVersions() {
         return this.includedObjectVersions;
     }
 
@@ -79,10 +79,10 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optionalFields")
-      private final @Nullable Input<List<String>> optionalFields;
+      private final @Nullable Output<List<String>> optionalFields;
 
-    public Input<List<String>> getOptionalFields() {
-        return this.optionalFields == null ? Input.empty() : this.optionalFields;
+    public Output<List<String>> getOptionalFields() {
+        return this.optionalFields == null ? Output.empty() : this.optionalFields;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<InventoryScheduleArgs> schedule;
+      private final Output<InventoryScheduleArgs> schedule;
 
-    public Input<InventoryScheduleArgs> getSchedule() {
+    public Output<InventoryScheduleArgs> getSchedule() {
         return this.schedule;
     }
 
     public InventoryArgs(
-        Input<String> bucket,
-        Input<InventoryDestinationArgs> destination,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<InventoryFilterArgs> filter,
-        Input<String> includedObjectVersions,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> optionalFields,
-        Input<InventoryScheduleArgs> schedule) {
+        Output<String> bucket,
+        Output<InventoryDestinationArgs> destination,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<InventoryFilterArgs> filter,
+        Output<String> includedObjectVersions,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> optionalFields,
+        Output<InventoryScheduleArgs> schedule) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.enabled = enabled;
@@ -127,14 +127,14 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InventoryArgs() {
-        this.bucket = Input.empty();
-        this.destination = Input.empty();
-        this.enabled = Input.empty();
-        this.filter = Input.empty();
-        this.includedObjectVersions = Input.empty();
-        this.name = Input.empty();
-        this.optionalFields = Input.empty();
-        this.schedule = Input.empty();
+        this.bucket = Output.empty();
+        this.destination = Output.empty();
+        this.enabled = Output.empty();
+        this.filter = Output.empty();
+        this.includedObjectVersions = Output.empty();
+        this.name = Output.empty();
+        this.optionalFields = Output.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private Input<InventoryDestinationArgs> destination;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<InventoryFilterArgs> filter;
-        private Input<String> includedObjectVersions;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> optionalFields;
-        private Input<InventoryScheduleArgs> schedule;
+        private Output<String> bucket;
+        private Output<InventoryDestinationArgs> destination;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<InventoryFilterArgs> filter;
+        private Output<String> includedObjectVersions;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> optionalFields;
+        private Output<InventoryScheduleArgs> schedule;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder destination(Input<InventoryDestinationArgs> destination) {
+        public Builder destination(Output<InventoryDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(InventoryDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder filter(@Nullable Input<InventoryFilterArgs> filter) {
+        public Builder filter(@Nullable Output<InventoryFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable InventoryFilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder includedObjectVersions(Input<String> includedObjectVersions) {
+        public Builder includedObjectVersions(Output<String> includedObjectVersions) {
             this.includedObjectVersions = Objects.requireNonNull(includedObjectVersions);
             return this;
         }
 
         public Builder includedObjectVersions(String includedObjectVersions) {
-            this.includedObjectVersions = Input.of(Objects.requireNonNull(includedObjectVersions));
+            this.includedObjectVersions = Output.of(Objects.requireNonNull(includedObjectVersions));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder optionalFields(@Nullable Input<List<String>> optionalFields) {
+        public Builder optionalFields(@Nullable Output<List<String>> optionalFields) {
             this.optionalFields = optionalFields;
             return this;
         }
 
         public Builder optionalFields(@Nullable List<String> optionalFields) {
-            this.optionalFields = Input.ofNullable(optionalFields);
+            this.optionalFields = Output.ofNullable(optionalFields);
             return this;
         }
 
-        public Builder schedule(Input<InventoryScheduleArgs> schedule) {
+        public Builder schedule(Output<InventoryScheduleArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(InventoryScheduleArgs schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
         public InventoryArgs build() {

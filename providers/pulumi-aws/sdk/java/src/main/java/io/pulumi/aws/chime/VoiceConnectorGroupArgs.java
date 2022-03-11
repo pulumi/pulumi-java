@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime;
 
 import io.pulumi.aws.chime.inputs.VoiceConnectorGroupConnectorArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="connectors")
-      private final @Nullable Input<List<VoiceConnectorGroupConnectorArgs>> connectors;
+      private final @Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors;
 
-    public Input<List<VoiceConnectorGroupConnectorArgs>> getConnectors() {
-        return this.connectors == null ? Input.empty() : this.connectors;
+    public Output<List<VoiceConnectorGroupConnectorArgs>> getConnectors() {
+        return this.connectors == null ? Output.empty() : this.connectors;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public VoiceConnectorGroupArgs(
-        @Nullable Input<List<VoiceConnectorGroupConnectorArgs>> connectors,
-        @Nullable Input<String> name) {
+        @Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors,
+        @Nullable Output<String> name) {
         this.connectors = connectors;
         this.name = name;
     }
 
     private VoiceConnectorGroupArgs() {
-        this.connectors = Input.empty();
-        this.name = Input.empty();
+        this.connectors = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<VoiceConnectorGroupConnectorArgs>> connectors;
-        private @Nullable Input<String> name;
+        private @Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder connectors(@Nullable Input<List<VoiceConnectorGroupConnectorArgs>> connectors) {
+        public Builder connectors(@Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors) {
             this.connectors = connectors;
             return this;
         }
 
         public Builder connectors(@Nullable List<VoiceConnectorGroupConnectorArgs> connectors) {
-            this.connectors = Input.ofNullable(connectors);
+            this.connectors = Output.ofNullable(connectors);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public VoiceConnectorGroupArgs build() {

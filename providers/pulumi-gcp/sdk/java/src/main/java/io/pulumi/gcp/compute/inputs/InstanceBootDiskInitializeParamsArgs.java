@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -30,10 +30,10 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,Object>> labels;
+      private final @Nullable Output<Map<String,Object>> labels;
 
-    public Input<Map<String,Object>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,Object>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<Integer> size;
+      private final @Nullable Output<Integer> size;
 
-    public Input<Integer> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Integer> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -64,17 +64,17 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public InstanceBootDiskInitializeParamsArgs(
-        @Nullable Input<String> image,
-        @Nullable Input<Map<String,Object>> labels,
-        @Nullable Input<Integer> size,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> image,
+        @Nullable Output<Map<String,Object>> labels,
+        @Nullable Output<Integer> size,
+        @Nullable Output<String> type) {
         this.image = image;
         this.labels = labels;
         this.size = size;
@@ -82,10 +82,10 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
     }
 
     private InstanceBootDiskInitializeParamsArgs() {
-        this.image = Input.empty();
-        this.labels = Input.empty();
-        this.size = Input.empty();
-        this.type = Input.empty();
+        this.image = Output.empty();
+        this.labels = Output.empty();
+        this.size = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,10 +97,10 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> image;
-        private @Nullable Input<Map<String,Object>> labels;
-        private @Nullable Input<Integer> size;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> image;
+        private @Nullable Output<Map<String,Object>> labels;
+        private @Nullable Output<Integer> size;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -114,43 +114,43 @@ public final class InstanceBootDiskInitializeParamsArgs extends io.pulumi.resour
     	      this.type = defaults.type;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,Object>> labels) {
+        public Builder labels(@Nullable Output<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,Object> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder size(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Integer size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public InstanceBootDiskInitializeParamsArgs build() {

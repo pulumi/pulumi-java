@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediaconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="vpcInterfaceName")
-      private final @Nullable Input<String> vpcInterfaceName;
+      private final @Nullable Output<String> vpcInterfaceName;
 
-    public Input<String> getVpcInterfaceName() {
-        return this.vpcInterfaceName == null ? Input.empty() : this.vpcInterfaceName;
+    public Output<String> getVpcInterfaceName() {
+        return this.vpcInterfaceName == null ? Output.empty() : this.vpcInterfaceName;
     }
 
-    public FlowOutputVpcInterfaceAttachmentArgs(@Nullable Input<String> vpcInterfaceName) {
+    public FlowOutputVpcInterfaceAttachmentArgs(@Nullable Output<String> vpcInterfaceName) {
         this.vpcInterfaceName = vpcInterfaceName;
     }
 
     private FlowOutputVpcInterfaceAttachmentArgs() {
-        this.vpcInterfaceName = Input.empty();
+        this.vpcInterfaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> vpcInterfaceName;
+        private @Nullable Output<String> vpcInterfaceName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
     	      this.vpcInterfaceName = defaults.vpcInterfaceName;
         }
 
-        public Builder vpcInterfaceName(@Nullable Input<String> vpcInterfaceName) {
+        public Builder vpcInterfaceName(@Nullable Output<String> vpcInterfaceName) {
             this.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
 
         public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
-            this.vpcInterfaceName = Input.ofNullable(vpcInterfaceName);
+            this.vpcInterfaceName = Output.ofNullable(vpcInterfaceName);
             return this;
         }
         public FlowOutputVpcInterfaceAttachmentArgs build() {

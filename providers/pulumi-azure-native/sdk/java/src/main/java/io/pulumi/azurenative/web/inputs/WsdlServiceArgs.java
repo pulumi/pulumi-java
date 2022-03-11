@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointQualifiedNames")
-      private final @Nullable Input<List<String>> endpointQualifiedNames;
+      private final @Nullable Output<List<String>> endpointQualifiedNames;
 
-    public Input<List<String>> getEndpointQualifiedNames() {
-        return this.endpointQualifiedNames == null ? Input.empty() : this.endpointQualifiedNames;
+    public Output<List<String>> getEndpointQualifiedNames() {
+        return this.endpointQualifiedNames == null ? Output.empty() : this.endpointQualifiedNames;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qualifiedName", required=true)
-      private final Input<String> qualifiedName;
+      private final Output<String> qualifiedName;
 
-    public Input<String> getQualifiedName() {
+    public Output<String> getQualifiedName() {
         return this.qualifiedName;
     }
 
     public WsdlServiceArgs(
-        @Nullable Input<List<String>> endpointQualifiedNames,
-        Input<String> qualifiedName) {
+        @Nullable Output<List<String>> endpointQualifiedNames,
+        Output<String> qualifiedName) {
         this.endpointQualifiedNames = endpointQualifiedNames;
         this.qualifiedName = Objects.requireNonNull(qualifiedName, "expected parameter 'qualifiedName' to be non-null");
     }
 
     private WsdlServiceArgs() {
-        this.endpointQualifiedNames = Input.empty();
-        this.qualifiedName = Input.empty();
+        this.endpointQualifiedNames = Output.empty();
+        this.qualifiedName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> endpointQualifiedNames;
-        private Input<String> qualifiedName;
+        private @Nullable Output<List<String>> endpointQualifiedNames;
+        private Output<String> qualifiedName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.qualifiedName = defaults.qualifiedName;
         }
 
-        public Builder endpointQualifiedNames(@Nullable Input<List<String>> endpointQualifiedNames) {
+        public Builder endpointQualifiedNames(@Nullable Output<List<String>> endpointQualifiedNames) {
             this.endpointQualifiedNames = endpointQualifiedNames;
             return this;
         }
 
         public Builder endpointQualifiedNames(@Nullable List<String> endpointQualifiedNames) {
-            this.endpointQualifiedNames = Input.ofNullable(endpointQualifiedNames);
+            this.endpointQualifiedNames = Output.ofNullable(endpointQualifiedNames);
             return this;
         }
 
-        public Builder qualifiedName(Input<String> qualifiedName) {
+        public Builder qualifiedName(Output<String> qualifiedName) {
             this.qualifiedName = Objects.requireNonNull(qualifiedName);
             return this;
         }
 
         public Builder qualifiedName(String qualifiedName) {
-            this.qualifiedName = Input.of(Objects.requireNonNull(qualifiedName));
+            this.qualifiedName = Output.of(Objects.requireNonNull(qualifiedName));
             return this;
         }
         public WsdlServiceArgs build() {

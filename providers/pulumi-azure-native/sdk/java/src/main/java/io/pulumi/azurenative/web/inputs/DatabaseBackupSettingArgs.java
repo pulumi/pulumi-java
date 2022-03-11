@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.DatabaseType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionString")
-      private final @Nullable Input<String> connectionString;
+      private final @Nullable Output<String> connectionString;
 
-    public Input<String> getConnectionString() {
-        return this.connectionString == null ? Input.empty() : this.connectionString;
+    public Output<String> getConnectionString() {
+        return this.connectionString == null ? Output.empty() : this.connectionString;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionStringName")
-      private final @Nullable Input<String> connectionStringName;
+      private final @Nullable Output<String> connectionStringName;
 
-    public Input<String> getConnectionStringName() {
-        return this.connectionStringName == null ? Input.empty() : this.connectionStringName;
+    public Output<String> getConnectionStringName() {
+        return this.connectionStringName == null ? Output.empty() : this.connectionStringName;
     }
 
     /**
@@ -48,24 +48,24 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="databaseType", required=true)
-      private final Input<Either<String,DatabaseType>> databaseType;
+      private final Output<Either<String,DatabaseType>> databaseType;
 
-    public Input<Either<String,DatabaseType>> getDatabaseType() {
+    public Output<Either<String,DatabaseType>> getDatabaseType() {
         return this.databaseType;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public DatabaseBackupSettingArgs(
-        @Nullable Input<String> connectionString,
-        @Nullable Input<String> connectionStringName,
-        Input<Either<String,DatabaseType>> databaseType,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> connectionString,
+        @Nullable Output<String> connectionStringName,
+        Output<Either<String,DatabaseType>> databaseType,
+        @Nullable Output<String> name) {
         this.connectionString = connectionString;
         this.connectionStringName = connectionStringName;
         this.databaseType = Objects.requireNonNull(databaseType, "expected parameter 'databaseType' to be non-null");
@@ -73,10 +73,10 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     }
 
     private DatabaseBackupSettingArgs() {
-        this.connectionString = Input.empty();
-        this.connectionStringName = Input.empty();
-        this.databaseType = Input.empty();
-        this.name = Input.empty();
+        this.connectionString = Output.empty();
+        this.connectionStringName = Output.empty();
+        this.databaseType = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectionString;
-        private @Nullable Input<String> connectionStringName;
-        private Input<Either<String,DatabaseType>> databaseType;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> connectionString;
+        private @Nullable Output<String> connectionStringName;
+        private Output<Either<String,DatabaseType>> databaseType;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     	      this.name = defaults.name;
         }
 
-        public Builder connectionString(@Nullable Input<String> connectionString) {
+        public Builder connectionString(@Nullable Output<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Input.ofNullable(connectionString);
+            this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
 
-        public Builder connectionStringName(@Nullable Input<String> connectionStringName) {
+        public Builder connectionStringName(@Nullable Output<String> connectionStringName) {
             this.connectionStringName = connectionStringName;
             return this;
         }
 
         public Builder connectionStringName(@Nullable String connectionStringName) {
-            this.connectionStringName = Input.ofNullable(connectionStringName);
+            this.connectionStringName = Output.ofNullable(connectionStringName);
             return this;
         }
 
-        public Builder databaseType(Input<Either<String,DatabaseType>> databaseType) {
+        public Builder databaseType(Output<Either<String,DatabaseType>> databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
 
         public Builder databaseType(Either<String,DatabaseType> databaseType) {
-            this.databaseType = Input.of(Objects.requireNonNull(databaseType));
+            this.databaseType = Output.of(Objects.requireNonNull(databaseType));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public DatabaseBackupSettingArgs build() {

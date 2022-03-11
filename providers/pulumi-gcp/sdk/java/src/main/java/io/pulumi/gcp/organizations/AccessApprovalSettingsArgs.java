@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.AccessApprovalSettingsEnrolledServiceArgs;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enrolledServices", required=true)
-      private final Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
+      private final Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
-    public Input<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
+    public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
         return this.enrolledServices;
     }
 
@@ -38,10 +38,10 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="notificationEmails")
-      private final @Nullable Input<List<String>> notificationEmails;
+      private final @Nullable Output<List<String>> notificationEmails;
 
-    public Input<List<String>> getNotificationEmails() {
-        return this.notificationEmails == null ? Input.empty() : this.notificationEmails;
+    public Output<List<String>> getNotificationEmails() {
+        return this.notificationEmails == null ? Output.empty() : this.notificationEmails;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public AccessApprovalSettingsArgs(
-        Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices,
-        @Nullable Input<List<String>> notificationEmails,
-        Input<String> organizationId) {
+        Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices,
+        @Nullable Output<List<String>> notificationEmails,
+        Output<String> organizationId) {
         this.enrolledServices = Objects.requireNonNull(enrolledServices, "expected parameter 'enrolledServices' to be non-null");
         this.notificationEmails = notificationEmails;
         this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
     }
 
     private AccessApprovalSettingsArgs() {
-        this.enrolledServices = Input.empty();
-        this.notificationEmails = Input.empty();
-        this.organizationId = Input.empty();
+        this.enrolledServices = Output.empty();
+        this.notificationEmails = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
-        private @Nullable Input<List<String>> notificationEmails;
-        private Input<String> organizationId;
+        private Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
+        private @Nullable Output<List<String>> notificationEmails;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder enrolledServices(Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
+        public Builder enrolledServices(Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
             this.enrolledServices = Objects.requireNonNull(enrolledServices);
             return this;
         }
 
         public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
-            this.enrolledServices = Input.of(Objects.requireNonNull(enrolledServices));
+            this.enrolledServices = Output.of(Objects.requireNonNull(enrolledServices));
             return this;
         }
 
-        public Builder notificationEmails(@Nullable Input<List<String>> notificationEmails) {
+        public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
             this.notificationEmails = notificationEmails;
             return this;
         }
 
         public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Input.ofNullable(notificationEmails);
+            this.notificationEmails = Output.ofNullable(notificationEmails);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public AccessApprovalSettingsArgs build() {

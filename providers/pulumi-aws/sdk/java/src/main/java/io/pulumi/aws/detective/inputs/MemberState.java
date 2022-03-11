@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.detective.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administratorId")
-      private final @Nullable Input<String> administratorId;
+      private final @Nullable Output<String> administratorId;
 
-    public Input<String> getAdministratorId() {
-        return this.administratorId == null ? Input.empty() : this.administratorId;
+    public Output<String> getAdministratorId() {
+        return this.administratorId == null ? Output.empty() : this.administratorId;
     }
 
     /**
@@ -42,17 +42,17 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableEmailNotification")
-      private final @Nullable Input<Boolean> disableEmailNotification;
+      private final @Nullable Output<Boolean> disableEmailNotification;
 
-    public Input<Boolean> getDisableEmailNotification() {
-        return this.disableEmailNotification == null ? Input.empty() : this.disableEmailNotification;
+    public Output<Boolean> getDisableEmailNotification() {
+        return this.disableEmailNotification == null ? Output.empty() : this.disableEmailNotification;
     }
 
     @InputImport(name="disabledReason")
-      private final @Nullable Input<String> disabledReason;
+      private final @Nullable Output<String> disabledReason;
 
-    public Input<String> getDisabledReason() {
-        return this.disabledReason == null ? Input.empty() : this.disabledReason;
+    public Output<String> getDisabledReason() {
+        return this.disabledReason == null ? Output.empty() : this.disabledReason;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailAddress")
-      private final @Nullable Input<String> emailAddress;
+      private final @Nullable Output<String> emailAddress;
 
-    public Input<String> getEmailAddress() {
-        return this.emailAddress == null ? Input.empty() : this.emailAddress;
+    public Output<String> getEmailAddress() {
+        return this.emailAddress == null ? Output.empty() : this.emailAddress;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="graphArn")
-      private final @Nullable Input<String> graphArn;
+      private final @Nullable Output<String> graphArn;
 
-    public Input<String> getGraphArn() {
-        return this.graphArn == null ? Input.empty() : this.graphArn;
+    public Output<String> getGraphArn() {
+        return this.graphArn == null ? Output.empty() : this.graphArn;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitedTime")
-      private final @Nullable Input<String> invitedTime;
+      private final @Nullable Output<String> invitedTime;
 
-    public Input<String> getInvitedTime() {
-        return this.invitedTime == null ? Input.empty() : this.invitedTime;
+    public Output<String> getInvitedTime() {
+        return this.invitedTime == null ? Output.empty() : this.invitedTime;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedTime")
-      private final @Nullable Input<String> updatedTime;
+      private final @Nullable Output<String> updatedTime;
 
-    public Input<String> getUpdatedTime() {
-        return this.updatedTime == null ? Input.empty() : this.updatedTime;
+    public Output<String> getUpdatedTime() {
+        return this.updatedTime == null ? Output.empty() : this.updatedTime;
     }
 
     /**
@@ -126,24 +126,24 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeUsageInBytes")
-      private final @Nullable Input<String> volumeUsageInBytes;
+      private final @Nullable Output<String> volumeUsageInBytes;
 
-    public Input<String> getVolumeUsageInBytes() {
-        return this.volumeUsageInBytes == null ? Input.empty() : this.volumeUsageInBytes;
+    public Output<String> getVolumeUsageInBytes() {
+        return this.volumeUsageInBytes == null ? Output.empty() : this.volumeUsageInBytes;
     }
 
     public MemberState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> administratorId,
-        @Nullable Input<Boolean> disableEmailNotification,
-        @Nullable Input<String> disabledReason,
-        @Nullable Input<String> emailAddress,
-        @Nullable Input<String> graphArn,
-        @Nullable Input<String> invitedTime,
-        @Nullable Input<String> message,
-        @Nullable Input<String> status,
-        @Nullable Input<String> updatedTime,
-        @Nullable Input<String> volumeUsageInBytes) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> administratorId,
+        @Nullable Output<Boolean> disableEmailNotification,
+        @Nullable Output<String> disabledReason,
+        @Nullable Output<String> emailAddress,
+        @Nullable Output<String> graphArn,
+        @Nullable Output<String> invitedTime,
+        @Nullable Output<String> message,
+        @Nullable Output<String> status,
+        @Nullable Output<String> updatedTime,
+        @Nullable Output<String> volumeUsageInBytes) {
         this.accountId = accountId;
         this.administratorId = administratorId;
         this.disableEmailNotification = disableEmailNotification;
@@ -158,17 +158,17 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberState() {
-        this.accountId = Input.empty();
-        this.administratorId = Input.empty();
-        this.disableEmailNotification = Input.empty();
-        this.disabledReason = Input.empty();
-        this.emailAddress = Input.empty();
-        this.graphArn = Input.empty();
-        this.invitedTime = Input.empty();
-        this.message = Input.empty();
-        this.status = Input.empty();
-        this.updatedTime = Input.empty();
-        this.volumeUsageInBytes = Input.empty();
+        this.accountId = Output.empty();
+        this.administratorId = Output.empty();
+        this.disableEmailNotification = Output.empty();
+        this.disabledReason = Output.empty();
+        this.emailAddress = Output.empty();
+        this.graphArn = Output.empty();
+        this.invitedTime = Output.empty();
+        this.message = Output.empty();
+        this.status = Output.empty();
+        this.updatedTime = Output.empty();
+        this.volumeUsageInBytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -180,17 +180,17 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> administratorId;
-        private @Nullable Input<Boolean> disableEmailNotification;
-        private @Nullable Input<String> disabledReason;
-        private @Nullable Input<String> emailAddress;
-        private @Nullable Input<String> graphArn;
-        private @Nullable Input<String> invitedTime;
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> updatedTime;
-        private @Nullable Input<String> volumeUsageInBytes;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> administratorId;
+        private @Nullable Output<Boolean> disableEmailNotification;
+        private @Nullable Output<String> disabledReason;
+        private @Nullable Output<String> emailAddress;
+        private @Nullable Output<String> graphArn;
+        private @Nullable Output<String> invitedTime;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> updatedTime;
+        private @Nullable Output<String> volumeUsageInBytes;
 
         public Builder() {
     	      // Empty
@@ -211,113 +211,113 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     	      this.volumeUsageInBytes = defaults.volumeUsageInBytes;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder administratorId(@Nullable Input<String> administratorId) {
+        public Builder administratorId(@Nullable Output<String> administratorId) {
             this.administratorId = administratorId;
             return this;
         }
 
         public Builder administratorId(@Nullable String administratorId) {
-            this.administratorId = Input.ofNullable(administratorId);
+            this.administratorId = Output.ofNullable(administratorId);
             return this;
         }
 
-        public Builder disableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
         public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
-            this.disableEmailNotification = Input.ofNullable(disableEmailNotification);
+            this.disableEmailNotification = Output.ofNullable(disableEmailNotification);
             return this;
         }
 
-        public Builder disabledReason(@Nullable Input<String> disabledReason) {
+        public Builder disabledReason(@Nullable Output<String> disabledReason) {
             this.disabledReason = disabledReason;
             return this;
         }
 
         public Builder disabledReason(@Nullable String disabledReason) {
-            this.disabledReason = Input.ofNullable(disabledReason);
+            this.disabledReason = Output.ofNullable(disabledReason);
             return this;
         }
 
-        public Builder emailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Output<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Input.ofNullable(emailAddress);
+            this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
 
-        public Builder graphArn(@Nullable Input<String> graphArn) {
+        public Builder graphArn(@Nullable Output<String> graphArn) {
             this.graphArn = graphArn;
             return this;
         }
 
         public Builder graphArn(@Nullable String graphArn) {
-            this.graphArn = Input.ofNullable(graphArn);
+            this.graphArn = Output.ofNullable(graphArn);
             return this;
         }
 
-        public Builder invitedTime(@Nullable Input<String> invitedTime) {
+        public Builder invitedTime(@Nullable Output<String> invitedTime) {
             this.invitedTime = invitedTime;
             return this;
         }
 
         public Builder invitedTime(@Nullable String invitedTime) {
-            this.invitedTime = Input.ofNullable(invitedTime);
+            this.invitedTime = Output.ofNullable(invitedTime);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder updatedTime(@Nullable Input<String> updatedTime) {
+        public Builder updatedTime(@Nullable Output<String> updatedTime) {
             this.updatedTime = updatedTime;
             return this;
         }
 
         public Builder updatedTime(@Nullable String updatedTime) {
-            this.updatedTime = Input.ofNullable(updatedTime);
+            this.updatedTime = Output.ofNullable(updatedTime);
             return this;
         }
 
-        public Builder volumeUsageInBytes(@Nullable Input<String> volumeUsageInBytes) {
+        public Builder volumeUsageInBytes(@Nullable Output<String> volumeUsageInBytes) {
             this.volumeUsageInBytes = volumeUsageInBytes;
             return this;
         }
 
         public Builder volumeUsageInBytes(@Nullable String volumeUsageInBytes) {
-            this.volumeUsageInBytes = Input.ofNullable(volumeUsageInBytes);
+            this.volumeUsageInBytes = Output.ofNullable(volumeUsageInBytes);
             return this;
         }
         public MemberState build() {

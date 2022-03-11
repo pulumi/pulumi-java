@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs;
@@ -22,10 +22,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      * 
      */
     @InputImport(name="allowInsecure")
-      private final @Nullable Input<Boolean> allowInsecure;
+      private final @Nullable Output<Boolean> allowInsecure;
 
-    public Input<Boolean> getAllowInsecure() {
-        return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
+    public Output<Boolean> getAllowInsecure() {
+        return this.allowInsecure == null ? Output.empty() : this.allowInsecure;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      * 
      */
     @InputImport(name="gcs")
-      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs;
+      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> getGcs() {
-        return this.gcs == null ? Input.empty() : this.gcs;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> getGcs() {
+        return this.gcs == null ? Output.empty() : this.gcs;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      * 
      */
     @InputImport(name="localPath")
-      private final @Nullable Input<String> localPath;
+      private final @Nullable Output<String> localPath;
 
-    public Input<String> getLocalPath() {
-        return this.localPath == null ? Input.empty() : this.localPath;
+    public Output<String> getLocalPath() {
+        return this.localPath == null ? Output.empty() : this.localPath;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      * 
      */
     @InputImport(name="remote")
-      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote;
+      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> getRemote() {
-        return this.remote == null ? Input.empty() : this.remote;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> getRemote() {
+        return this.remote == null ? Output.empty() : this.remote;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs(
-        @Nullable Input<Boolean> allowInsecure,
-        @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs,
-        @Nullable Input<String> localPath,
-        @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote) {
+        @Nullable Output<Boolean> allowInsecure,
+        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs,
+        @Nullable Output<String> localPath,
+        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;
@@ -73,10 +73,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs() {
-        this.allowInsecure = Input.empty();
-        this.gcs = Input.empty();
-        this.localPath = Input.empty();
-        this.remote = Input.empty();
+        this.allowInsecure = Output.empty();
+        this.gcs = Output.empty();
+        this.localPath = Output.empty();
+        this.remote = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowInsecure;
-        private @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs;
-        private @Nullable Input<String> localPath;
-        private @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote;
+        private @Nullable Output<Boolean> allowInsecure;
+        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs;
+        private @Nullable Output<String> localPath;
+        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
     	      this.remote = defaults.remote;
         }
 
-        public Builder allowInsecure(@Nullable Input<Boolean> allowInsecure) {
+        public Builder allowInsecure(@Nullable Output<Boolean> allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = Input.ofNullable(allowInsecure);
+            this.allowInsecure = Output.ofNullable(allowInsecure);
             return this;
         }
 
-        public Builder gcs(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs) {
+        public Builder gcs(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
 
         public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs gcs) {
-            this.gcs = Input.ofNullable(gcs);
+            this.gcs = Output.ofNullable(gcs);
             return this;
         }
 
-        public Builder localPath(@Nullable Input<String> localPath) {
+        public Builder localPath(@Nullable Output<String> localPath) {
             this.localPath = localPath;
             return this;
         }
 
         public Builder localPath(@Nullable String localPath) {
-            this.localPath = Input.ofNullable(localPath);
+            this.localPath = Output.ofNullable(localPath);
             return this;
         }
 
-        public Builder remote(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote) {
+        public Builder remote(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote) {
             this.remote = remote;
             return this;
         }
 
         public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs remote) {
-            this.remote = Input.ofNullable(remote);
+            this.remote = Output.ofNullable(remote);
             return this;
         }
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs build() {

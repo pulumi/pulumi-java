@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -186,14 +185,14 @@ public class WebTypeAppEngingIamBinding extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public WebTypeAppEngingIamBinding(String name, WebTypeAppEngingIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/webTypeAppEngingIamBinding:WebTypeAppEngingIamBinding", name, args == null ? WebTypeAppEngingIamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:iap/webTypeAppEngingIamBinding:WebTypeAppEngingIamBinding", name, args == null ? WebTypeAppEngingIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebTypeAppEngingIamBinding(String name, Input<String> id, @Nullable WebTypeAppEngingIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebTypeAppEngingIamBinding(String name, Output<String> id, @Nullable WebTypeAppEngingIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:iap/webTypeAppEngingIamBinding:WebTypeAppEngingIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -209,7 +208,7 @@ public class WebTypeAppEngingIamBinding extends io.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebTypeAppEngingIamBinding get(String name, Input<String> id, @Nullable WebTypeAppEngingIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebTypeAppEngingIamBinding get(String name, Output<String> id, @Nullable WebTypeAppEngingIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebTypeAppEngingIamBinding(name, id, state, options);
     }
 }

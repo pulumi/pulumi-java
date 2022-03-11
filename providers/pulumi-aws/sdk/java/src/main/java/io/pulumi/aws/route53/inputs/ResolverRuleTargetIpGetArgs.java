@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ResolverRuleTargetIpGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ip", required=true)
-      private final Input<String> ip;
+      private final Output<String> ip;
 
-    public Input<String> getIp() {
+    public Output<String> getIp() {
         return this.ip;
     }
 
@@ -31,22 +31,22 @@ public final class ResolverRuleTargetIpGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public ResolverRuleTargetIpGetArgs(
-        Input<String> ip,
-        @Nullable Input<Integer> port) {
+        Output<String> ip,
+        @Nullable Output<Integer> port) {
         this.ip = Objects.requireNonNull(ip, "expected parameter 'ip' to be non-null");
         this.port = port;
     }
 
     private ResolverRuleTargetIpGetArgs() {
-        this.ip = Input.empty();
-        this.port = Input.empty();
+        this.ip = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ResolverRuleTargetIpGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> ip;
-        private @Nullable Input<Integer> port;
+        private Output<String> ip;
+        private @Nullable Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ResolverRuleTargetIpGetArgs extends io.pulumi.resources.Resou
     	      this.port = defaults.port;
         }
 
-        public Builder ip(Input<String> ip) {
+        public Builder ip(Output<String> ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
 
         public Builder ip(String ip) {
-            this.ip = Input.of(Objects.requireNonNull(ip));
+            this.ip = Output.of(Objects.requireNonNull(ip));
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public ResolverRuleTargetIpGetArgs build() {

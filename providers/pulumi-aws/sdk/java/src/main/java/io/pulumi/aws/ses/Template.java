@@ -6,7 +6,6 @@ package io.pulumi.aws.ses;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.TemplateArgs;
 import io.pulumi.aws.ses.inputs.TemplateState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -138,14 +137,14 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Template(String name, @Nullable TemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/template:Template", name, args == null ? TemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ses/template:Template", name, args == null ? TemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Template(String name, Input<String> id, @Nullable TemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Template(String name, Output<String> id, @Nullable TemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ses/template:Template", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -161,7 +160,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Template get(String name, Input<String> id, @Nullable TemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Template get(String name, Output<String> id, @Nullable TemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Template(name, id, state, options);
     }
 }

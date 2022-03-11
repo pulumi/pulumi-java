@@ -8,7 +8,6 @@ import io.pulumi.azurenative.fluidrelay.FluidRelayServerArgs;
 import io.pulumi.azurenative.fluidrelay.outputs.FluidRelayEndpointsResponse;
 import io.pulumi.azurenative.fluidrelay.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,21 +184,21 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FluidRelayServer(String name, FluidRelayServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:fluidrelay:FluidRelayServer", name, args == null ? FluidRelayServerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:fluidrelay:FluidRelayServer", name, args == null ? FluidRelayServerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FluidRelayServer(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FluidRelayServer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:fluidrelay:FluidRelayServer", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:fluidrelay/v20210312preview:FluidRelayServer").build()),
-                Input.of(Alias.builder().setType("azure-native:fluidrelay/v20210615preview:FluidRelayServer").build()),
-                Input.of(Alias.builder().setType("azure-native:fluidrelay/v20210830preview:FluidRelayServer").build()),
-                Input.of(Alias.builder().setType("azure-native:fluidrelay/v20210910preview:FluidRelayServer").build())
+                Output.of(Alias.builder().setType("azure-native:fluidrelay/v20210312preview:FluidRelayServer").build()),
+                Output.of(Alias.builder().setType("azure-native:fluidrelay/v20210615preview:FluidRelayServer").build()),
+                Output.of(Alias.builder().setType("azure-native:fluidrelay/v20210830preview:FluidRelayServer").build()),
+                Output.of(Alias.builder().setType("azure-native:fluidrelay/v20210910preview:FluidRelayServer").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -213,7 +212,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FluidRelayServer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FluidRelayServer get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FluidRelayServer(name, id, options);
     }
 }

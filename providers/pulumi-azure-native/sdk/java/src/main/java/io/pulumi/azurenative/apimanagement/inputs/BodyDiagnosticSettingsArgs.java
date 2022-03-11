@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BodyDiagnosticSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bytes")
-      private final @Nullable Input<Integer> bytes;
+      private final @Nullable Output<Integer> bytes;
 
-    public Input<Integer> getBytes() {
-        return this.bytes == null ? Input.empty() : this.bytes;
+    public Output<Integer> getBytes() {
+        return this.bytes == null ? Output.empty() : this.bytes;
     }
 
-    public BodyDiagnosticSettingsArgs(@Nullable Input<Integer> bytes) {
+    public BodyDiagnosticSettingsArgs(@Nullable Output<Integer> bytes) {
         this.bytes = bytes;
     }
 
     private BodyDiagnosticSettingsArgs() {
-        this.bytes = Input.empty();
+        this.bytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BodyDiagnosticSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bytes;
+        private @Nullable Output<Integer> bytes;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BodyDiagnosticSettingsArgs extends io.pulumi.resources.Resour
     	      this.bytes = defaults.bytes;
         }
 
-        public Builder bytes(@Nullable Input<Integer> bytes) {
+        public Builder bytes(@Nullable Output<Integer> bytes) {
             this.bytes = bytes;
             return this;
         }
 
         public Builder bytes(@Nullable Integer bytes) {
-            this.bytes = Input.ofNullable(bytes);
+            this.bytes = Output.ofNullable(bytes);
             return this;
         }
         public BodyDiagnosticSettingsArgs build() {

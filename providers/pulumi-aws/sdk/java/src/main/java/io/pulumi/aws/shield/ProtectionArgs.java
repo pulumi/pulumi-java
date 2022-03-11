@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.shield;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ProtectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ProtectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceArn", required=true)
-      private final Input<String> resourceArn;
+      private final Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
+    public Output<String> getResourceArn() {
         return this.resourceArn;
     }
 
@@ -42,25 +42,25 @@ public final class ProtectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ProtectionArgs(
-        @Nullable Input<String> name,
-        Input<String> resourceArn,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> name,
+        Output<String> resourceArn,
+        @Nullable Output<Map<String,String>> tags) {
         this.name = name;
         this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
         this.tags = tags;
     }
 
     private ProtectionArgs() {
-        this.name = Input.empty();
-        this.resourceArn = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.resourceArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ProtectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<String> resourceArn;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> name;
+        private Output<String> resourceArn;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ProtectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
+            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ProtectionArgs build() {

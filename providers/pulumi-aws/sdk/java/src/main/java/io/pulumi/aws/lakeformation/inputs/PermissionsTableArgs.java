@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -42,24 +42,24 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="wildcard")
-      private final @Nullable Input<Boolean> wildcard;
+      private final @Nullable Output<Boolean> wildcard;
 
-    public Input<Boolean> getWildcard() {
-        return this.wildcard == null ? Input.empty() : this.wildcard;
+    public Output<Boolean> getWildcard() {
+        return this.wildcard == null ? Output.empty() : this.wildcard;
     }
 
     public PermissionsTableArgs(
-        @Nullable Input<String> catalogId,
-        Input<String> databaseName,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> wildcard) {
+        @Nullable Output<String> catalogId,
+        Output<String> databaseName,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> wildcard) {
         this.catalogId = catalogId;
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.name = name;
@@ -67,10 +67,10 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PermissionsTableArgs() {
-        this.catalogId = Input.empty();
-        this.databaseName = Input.empty();
-        this.name = Input.empty();
-        this.wildcard = Input.empty();
+        this.catalogId = Output.empty();
+        this.databaseName = Output.empty();
+        this.name = Output.empty();
+        this.wildcard = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private Input<String> databaseName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> wildcard;
+        private @Nullable Output<String> catalogId;
+        private Output<String> databaseName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> wildcard;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
     	      this.wildcard = defaults.wildcard;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder wildcard(@Nullable Input<Boolean> wildcard) {
+        public Builder wildcard(@Nullable Output<Boolean> wildcard) {
             this.wildcard = wildcard;
             return this;
         }
 
         public Builder wildcard(@Nullable Boolean wildcard) {
-            this.wildcard = Input.ofNullable(wildcard);
+            this.wildcard = Output.ofNullable(wildcard);
             return this;
         }
         public PermissionsTableArgs build() {

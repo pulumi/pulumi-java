@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ManagedRuleSetArgs;
 import io.pulumi.azurenative.network.inputs.OwaspCrsExclusionEntryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="exclusions")
-      private final @Nullable Input<List<OwaspCrsExclusionEntryArgs>> exclusions;
+      private final @Nullable Output<List<OwaspCrsExclusionEntryArgs>> exclusions;
 
-    public Input<List<OwaspCrsExclusionEntryArgs>> getExclusions() {
-        return this.exclusions == null ? Input.empty() : this.exclusions;
+    public Output<List<OwaspCrsExclusionEntryArgs>> getExclusions() {
+        return this.exclusions == null ? Output.empty() : this.exclusions;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="managedRuleSets", required=true)
-      private final Input<List<ManagedRuleSetArgs>> managedRuleSets;
+      private final Output<List<ManagedRuleSetArgs>> managedRuleSets;
 
-    public Input<List<ManagedRuleSetArgs>> getManagedRuleSets() {
+    public Output<List<ManagedRuleSetArgs>> getManagedRuleSets() {
         return this.managedRuleSets;
     }
 
     public ManagedRulesDefinitionArgs(
-        @Nullable Input<List<OwaspCrsExclusionEntryArgs>> exclusions,
-        Input<List<ManagedRuleSetArgs>> managedRuleSets) {
+        @Nullable Output<List<OwaspCrsExclusionEntryArgs>> exclusions,
+        Output<List<ManagedRuleSetArgs>> managedRuleSets) {
         this.exclusions = exclusions;
         this.managedRuleSets = Objects.requireNonNull(managedRuleSets, "expected parameter 'managedRuleSets' to be non-null");
     }
 
     private ManagedRulesDefinitionArgs() {
-        this.exclusions = Input.empty();
-        this.managedRuleSets = Input.empty();
+        this.exclusions = Output.empty();
+        this.managedRuleSets = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OwaspCrsExclusionEntryArgs>> exclusions;
-        private Input<List<ManagedRuleSetArgs>> managedRuleSets;
+        private @Nullable Output<List<OwaspCrsExclusionEntryArgs>> exclusions;
+        private Output<List<ManagedRuleSetArgs>> managedRuleSets;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ManagedRulesDefinitionArgs extends io.pulumi.resources.Resour
     	      this.managedRuleSets = defaults.managedRuleSets;
         }
 
-        public Builder exclusions(@Nullable Input<List<OwaspCrsExclusionEntryArgs>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<OwaspCrsExclusionEntryArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
         public Builder exclusions(@Nullable List<OwaspCrsExclusionEntryArgs> exclusions) {
-            this.exclusions = Input.ofNullable(exclusions);
+            this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
 
-        public Builder managedRuleSets(Input<List<ManagedRuleSetArgs>> managedRuleSets) {
+        public Builder managedRuleSets(Output<List<ManagedRuleSetArgs>> managedRuleSets) {
             this.managedRuleSets = Objects.requireNonNull(managedRuleSets);
             return this;
         }
 
         public Builder managedRuleSets(List<ManagedRuleSetArgs> managedRuleSets) {
-            this.managedRuleSets = Input.of(Objects.requireNonNull(managedRuleSets));
+            this.managedRuleSets = Output.of(Objects.requireNonNull(managedRuleSets));
             return this;
         }
         public ManagedRulesDefinitionArgs build() {

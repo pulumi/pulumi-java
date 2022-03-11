@@ -6,7 +6,7 @@ package io.pulumi.azurenative.solutions.inputs;
 import io.pulumi.azurenative.solutions.enums.JitApprovalMode;
 import io.pulumi.azurenative.solutions.inputs.JitApproverDefinitionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,9 +28,9 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jitAccessEnabled", required=true)
-      private final Input<Boolean> jitAccessEnabled;
+      private final Output<Boolean> jitAccessEnabled;
 
-    public Input<Boolean> getJitAccessEnabled() {
+    public Output<Boolean> getJitAccessEnabled() {
         return this.jitAccessEnabled;
     }
 
@@ -39,10 +39,10 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jitApprovalMode")
-      private final @Nullable Input<Either<String,JitApprovalMode>> jitApprovalMode;
+      private final @Nullable Output<Either<String,JitApprovalMode>> jitApprovalMode;
 
-    public Input<Either<String,JitApprovalMode>> getJitApprovalMode() {
-        return this.jitApprovalMode == null ? Input.empty() : this.jitApprovalMode;
+    public Output<Either<String,JitApprovalMode>> getJitApprovalMode() {
+        return this.jitApprovalMode == null ? Output.empty() : this.jitApprovalMode;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jitApprovers")
-      private final @Nullable Input<List<JitApproverDefinitionArgs>> jitApprovers;
+      private final @Nullable Output<List<JitApproverDefinitionArgs>> jitApprovers;
 
-    public Input<List<JitApproverDefinitionArgs>> getJitApprovers() {
-        return this.jitApprovers == null ? Input.empty() : this.jitApprovers;
+    public Output<List<JitApproverDefinitionArgs>> getJitApprovers() {
+        return this.jitApprovers == null ? Output.empty() : this.jitApprovers;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maximumJitAccessDuration")
-      private final @Nullable Input<String> maximumJitAccessDuration;
+      private final @Nullable Output<String> maximumJitAccessDuration;
 
-    public Input<String> getMaximumJitAccessDuration() {
-        return this.maximumJitAccessDuration == null ? Input.empty() : this.maximumJitAccessDuration;
+    public Output<String> getMaximumJitAccessDuration() {
+        return this.maximumJitAccessDuration == null ? Output.empty() : this.maximumJitAccessDuration;
     }
 
     public ApplicationJitAccessPolicyArgs(
-        Input<Boolean> jitAccessEnabled,
-        @Nullable Input<Either<String,JitApprovalMode>> jitApprovalMode,
-        @Nullable Input<List<JitApproverDefinitionArgs>> jitApprovers,
-        @Nullable Input<String> maximumJitAccessDuration) {
+        Output<Boolean> jitAccessEnabled,
+        @Nullable Output<Either<String,JitApprovalMode>> jitApprovalMode,
+        @Nullable Output<List<JitApproverDefinitionArgs>> jitApprovers,
+        @Nullable Output<String> maximumJitAccessDuration) {
         this.jitAccessEnabled = Objects.requireNonNull(jitAccessEnabled, "expected parameter 'jitAccessEnabled' to be non-null");
         this.jitApprovalMode = jitApprovalMode;
         this.jitApprovers = jitApprovers;
@@ -79,10 +79,10 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
     }
 
     private ApplicationJitAccessPolicyArgs() {
-        this.jitAccessEnabled = Input.empty();
-        this.jitApprovalMode = Input.empty();
-        this.jitApprovers = Input.empty();
-        this.maximumJitAccessDuration = Input.empty();
+        this.jitAccessEnabled = Output.empty();
+        this.jitApprovalMode = Output.empty();
+        this.jitApprovers = Output.empty();
+        this.maximumJitAccessDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Boolean> jitAccessEnabled;
-        private @Nullable Input<Either<String,JitApprovalMode>> jitApprovalMode;
-        private @Nullable Input<List<JitApproverDefinitionArgs>> jitApprovers;
-        private @Nullable Input<String> maximumJitAccessDuration;
+        private Output<Boolean> jitAccessEnabled;
+        private @Nullable Output<Either<String,JitApprovalMode>> jitApprovalMode;
+        private @Nullable Output<List<JitApproverDefinitionArgs>> jitApprovers;
+        private @Nullable Output<String> maximumJitAccessDuration;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
     	      this.maximumJitAccessDuration = defaults.maximumJitAccessDuration;
         }
 
-        public Builder jitAccessEnabled(Input<Boolean> jitAccessEnabled) {
+        public Builder jitAccessEnabled(Output<Boolean> jitAccessEnabled) {
             this.jitAccessEnabled = Objects.requireNonNull(jitAccessEnabled);
             return this;
         }
 
         public Builder jitAccessEnabled(Boolean jitAccessEnabled) {
-            this.jitAccessEnabled = Input.of(Objects.requireNonNull(jitAccessEnabled));
+            this.jitAccessEnabled = Output.of(Objects.requireNonNull(jitAccessEnabled));
             return this;
         }
 
-        public Builder jitApprovalMode(@Nullable Input<Either<String,JitApprovalMode>> jitApprovalMode) {
+        public Builder jitApprovalMode(@Nullable Output<Either<String,JitApprovalMode>> jitApprovalMode) {
             this.jitApprovalMode = jitApprovalMode;
             return this;
         }
 
         public Builder jitApprovalMode(@Nullable Either<String,JitApprovalMode> jitApprovalMode) {
-            this.jitApprovalMode = Input.ofNullable(jitApprovalMode);
+            this.jitApprovalMode = Output.ofNullable(jitApprovalMode);
             return this;
         }
 
-        public Builder jitApprovers(@Nullable Input<List<JitApproverDefinitionArgs>> jitApprovers) {
+        public Builder jitApprovers(@Nullable Output<List<JitApproverDefinitionArgs>> jitApprovers) {
             this.jitApprovers = jitApprovers;
             return this;
         }
 
         public Builder jitApprovers(@Nullable List<JitApproverDefinitionArgs> jitApprovers) {
-            this.jitApprovers = Input.ofNullable(jitApprovers);
+            this.jitApprovers = Output.ofNullable(jitApprovers);
             return this;
         }
 
-        public Builder maximumJitAccessDuration(@Nullable Input<String> maximumJitAccessDuration) {
+        public Builder maximumJitAccessDuration(@Nullable Output<String> maximumJitAccessDuration) {
             this.maximumJitAccessDuration = maximumJitAccessDuration;
             return this;
         }
 
         public Builder maximumJitAccessDuration(@Nullable String maximumJitAccessDuration) {
-            this.maximumJitAccessDuration = Input.ofNullable(maximumJitAccessDuration);
+            this.maximumJitAccessDuration = Output.ofNullable(maximumJitAccessDuration);
             return this;
         }
         public ApplicationJitAccessPolicyArgs build() {

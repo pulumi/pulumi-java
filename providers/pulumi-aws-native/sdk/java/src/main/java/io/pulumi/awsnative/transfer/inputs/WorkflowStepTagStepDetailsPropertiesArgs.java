@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.awsnative.transfer.inputs.WorkflowS3TagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<WorkflowS3TagArgs>> tags;
+      private final @Nullable Output<List<WorkflowS3TagArgs>> tags;
 
-    public Input<List<WorkflowS3TagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<WorkflowS3TagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public WorkflowStepTagStepDetailsPropertiesArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<WorkflowS3TagArgs>> tags) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<WorkflowS3TagArgs>> tags) {
         this.name = name;
         this.tags = tags;
     }
 
     private WorkflowStepTagStepDetailsPropertiesArgs() {
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<WorkflowS3TagArgs>> tags;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<WorkflowS3TagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<WorkflowS3TagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<WorkflowS3TagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<WorkflowS3TagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public WorkflowStepTagStepDetailsPropertiesArgs build() {

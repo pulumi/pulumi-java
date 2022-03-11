@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="variables")
-      private final @Nullable Input<Object> variables;
+      private final @Nullable Output<Object> variables;
 
-    public Input<Object> getVariables() {
-        return this.variables == null ? Input.empty() : this.variables;
+    public Output<Object> getVariables() {
+        return this.variables == null ? Output.empty() : this.variables;
     }
 
-    public FunctionEnvironmentArgs(@Nullable Input<Object> variables) {
+    public FunctionEnvironmentArgs(@Nullable Output<Object> variables) {
         this.variables = variables;
     }
 
     private FunctionEnvironmentArgs() {
-        this.variables = Input.empty();
+        this.variables = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> variables;
+        private @Nullable Output<Object> variables;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
     	      this.variables = defaults.variables;
         }
 
-        public Builder variables(@Nullable Input<Object> variables) {
+        public Builder variables(@Nullable Output<Object> variables) {
             this.variables = variables;
             return this;
         }
 
         public Builder variables(@Nullable Object variables) {
-            this.variables = Input.ofNullable(variables);
+            this.variables = Output.ofNullable(variables);
             return this;
         }
         public FunctionEnvironmentArgs build() {

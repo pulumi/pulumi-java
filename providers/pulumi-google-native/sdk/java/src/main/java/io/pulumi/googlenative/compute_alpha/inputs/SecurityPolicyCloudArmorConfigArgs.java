@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableMl")
-      private final @Nullable Input<Boolean> enableMl;
+      private final @Nullable Output<Boolean> enableMl;
 
-    public Input<Boolean> getEnableMl() {
-        return this.enableMl == null ? Input.empty() : this.enableMl;
+    public Output<Boolean> getEnableMl() {
+        return this.enableMl == null ? Output.empty() : this.enableMl;
     }
 
-    public SecurityPolicyCloudArmorConfigArgs(@Nullable Input<Boolean> enableMl) {
+    public SecurityPolicyCloudArmorConfigArgs(@Nullable Output<Boolean> enableMl) {
         this.enableMl = enableMl;
     }
 
     private SecurityPolicyCloudArmorConfigArgs() {
-        this.enableMl = Input.empty();
+        this.enableMl = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableMl;
+        private @Nullable Output<Boolean> enableMl;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
     	      this.enableMl = defaults.enableMl;
         }
 
-        public Builder enableMl(@Nullable Input<Boolean> enableMl) {
+        public Builder enableMl(@Nullable Output<Boolean> enableMl) {
             this.enableMl = enableMl;
             return this;
         }
 
         public Builder enableMl(@Nullable Boolean enableMl) {
-            this.enableMl = Input.ofNullable(enableMl);
+            this.enableMl = Output.ofNullable(enableMl);
             return this;
         }
         public SecurityPolicyCloudArmorConfigArgs build() {

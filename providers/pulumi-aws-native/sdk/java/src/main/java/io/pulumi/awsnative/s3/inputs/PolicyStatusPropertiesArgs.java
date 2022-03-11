@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class PolicyStatusPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isPublic", required=true)
-      private final Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;
+      private final Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;
 
-    public Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> getIsPublic() {
+    public Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> getIsPublic() {
         return this.isPublic;
     }
 
-    public PolicyStatusPropertiesArgs(Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic) {
+    public PolicyStatusPropertiesArgs(Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic) {
         this.isPublic = Objects.requireNonNull(isPublic, "expected parameter 'isPublic' to be non-null");
     }
 
     private PolicyStatusPropertiesArgs() {
-        this.isPublic = Input.empty();
+        this.isPublic = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class PolicyStatusPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;
+        private Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class PolicyStatusPropertiesArgs extends io.pulumi.resources.Resour
     	      this.isPublic = defaults.isPublic;
         }
 
-        public Builder isPublic(Input<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic) {
+        public Builder isPublic(Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic) {
             this.isPublic = Objects.requireNonNull(isPublic);
             return this;
         }
 
         public Builder isPublic(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
-            this.isPublic = Input.of(Objects.requireNonNull(isPublic));
+            this.isPublic = Output.of(Objects.requireNonNull(isPublic));
             return this;
         }
         public PolicyStatusPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class PipelineFilterArgs extends io.pulumi.resources.ResourceArgs {
     public static final PipelineFilterArgs Empty = new PipelineFilterArgs();
 
     @InputImport(name="filter", required=true)
-      private final Input<String> filter;
+      private final Output<String> filter;
 
-    public Input<String> getFilter() {
+    public Output<String> getFilter() {
         return this.filter;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-      private final @Nullable Input<String> next;
+      private final @Nullable Output<String> next;
 
-    public Input<String> getNext() {
-        return this.next == null ? Input.empty() : this.next;
+    public Output<String> getNext() {
+        return this.next == null ? Output.empty() : this.next;
     }
 
     public PipelineFilterArgs(
-        Input<String> filter,
-        Input<String> name,
-        @Nullable Input<String> next) {
+        Output<String> filter,
+        Output<String> name,
+        @Nullable Output<String> next) {
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.next = next;
     }
 
     private PipelineFilterArgs() {
-        this.filter = Input.empty();
-        this.name = Input.empty();
-        this.next = Input.empty();
+        this.filter = Output.empty();
+        this.name = Output.empty();
+        this.next = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class PipelineFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> filter;
-        private Input<String> name;
-        private @Nullable Input<String> next;
+        private Output<String> filter;
+        private Output<String> name;
+        private @Nullable Output<String> next;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class PipelineFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.next = defaults.next;
         }
 
-        public Builder filter(Input<String> filter) {
+        public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(String filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder next(@Nullable Input<String> next) {
+        public Builder next(@Nullable Output<String> next) {
             this.next = next;
             return this;
         }
 
         public Builder next(@Nullable String next) {
-            this.next = Input.ofNullable(next);
+            this.next = Output.ofNullable(next);
             return this;
         }
         public PipelineFilterArgs build() {

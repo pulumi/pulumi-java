@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="iam")
-      private final @Nullable Input<Boolean> iam;
+      private final @Nullable Output<Boolean> iam;
 
-    public Input<Boolean> getIam() {
-        return this.iam == null ? Input.empty() : this.iam;
+    public Output<Boolean> getIam() {
+        return this.iam == null ? Output.empty() : this.iam;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scram")
-      private final @Nullable Input<Boolean> scram;
+      private final @Nullable Output<Boolean> scram;
 
-    public Input<Boolean> getScram() {
-        return this.scram == null ? Input.empty() : this.scram;
+    public Output<Boolean> getScram() {
+        return this.scram == null ? Output.empty() : this.scram;
     }
 
     public ClusterClientAuthenticationSaslGetArgs(
-        @Nullable Input<Boolean> iam,
-        @Nullable Input<Boolean> scram) {
+        @Nullable Output<Boolean> iam,
+        @Nullable Output<Boolean> scram) {
         this.iam = iam;
         this.scram = scram;
     }
 
     private ClusterClientAuthenticationSaslGetArgs() {
-        this.iam = Input.empty();
-        this.scram = Input.empty();
+        this.iam = Output.empty();
+        this.scram = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> iam;
-        private @Nullable Input<Boolean> scram;
+        private @Nullable Output<Boolean> iam;
+        private @Nullable Output<Boolean> scram;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
     	      this.scram = defaults.scram;
         }
 
-        public Builder iam(@Nullable Input<Boolean> iam) {
+        public Builder iam(@Nullable Output<Boolean> iam) {
             this.iam = iam;
             return this;
         }
 
         public Builder iam(@Nullable Boolean iam) {
-            this.iam = Input.ofNullable(iam);
+            this.iam = Output.ofNullable(iam);
             return this;
         }
 
-        public Builder scram(@Nullable Input<Boolean> scram) {
+        public Builder scram(@Nullable Output<Boolean> scram) {
             this.scram = scram;
             return this;
         }
 
         public Builder scram(@Nullable Boolean scram) {
-            this.scram = Input.ofNullable(scram);
+            this.scram = Output.ofNullable(scram);
             return this;
         }
         public ClusterClientAuthenticationSaslGetArgs build() {

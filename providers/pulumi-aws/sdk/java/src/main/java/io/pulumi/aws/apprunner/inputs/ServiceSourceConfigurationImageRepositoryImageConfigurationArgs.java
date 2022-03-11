@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apprunner.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationAr
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<String> port;
+      private final @Nullable Output<String> port;
 
-    public Input<String> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<String> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationAr
      * 
      */
     @InputImport(name="runtimeEnvironmentVariables")
-      private final @Nullable Input<Map<String,String>> runtimeEnvironmentVariables;
+      private final @Nullable Output<Map<String,String>> runtimeEnvironmentVariables;
 
-    public Input<Map<String,String>> getRuntimeEnvironmentVariables() {
-        return this.runtimeEnvironmentVariables == null ? Input.empty() : this.runtimeEnvironmentVariables;
+    public Output<Map<String,String>> getRuntimeEnvironmentVariables() {
+        return this.runtimeEnvironmentVariables == null ? Output.empty() : this.runtimeEnvironmentVariables;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationAr
      * 
      */
     @InputImport(name="startCommand")
-      private final @Nullable Input<String> startCommand;
+      private final @Nullable Output<String> startCommand;
 
-    public Input<String> getStartCommand() {
-        return this.startCommand == null ? Input.empty() : this.startCommand;
+    public Output<String> getStartCommand() {
+        return this.startCommand == null ? Output.empty() : this.startCommand;
     }
 
     public ServiceSourceConfigurationImageRepositoryImageConfigurationArgs(
-        @Nullable Input<String> port,
-        @Nullable Input<Map<String,String>> runtimeEnvironmentVariables,
-        @Nullable Input<String> startCommand) {
+        @Nullable Output<String> port,
+        @Nullable Output<Map<String,String>> runtimeEnvironmentVariables,
+        @Nullable Output<String> startCommand) {
         this.port = port;
         this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
         this.startCommand = startCommand;
     }
 
     private ServiceSourceConfigurationImageRepositoryImageConfigurationArgs() {
-        this.port = Input.empty();
-        this.runtimeEnvironmentVariables = Input.empty();
-        this.startCommand = Input.empty();
+        this.port = Output.empty();
+        this.runtimeEnvironmentVariables = Output.empty();
+        this.startCommand = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> port;
-        private @Nullable Input<Map<String,String>> runtimeEnvironmentVariables;
-        private @Nullable Input<String> startCommand;
+        private @Nullable Output<String> port;
+        private @Nullable Output<Map<String,String>> runtimeEnvironmentVariables;
+        private @Nullable Output<String> startCommand;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationAr
     	      this.startCommand = defaults.startCommand;
         }
 
-        public Builder port(@Nullable Input<String> port) {
+        public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable String port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder runtimeEnvironmentVariables(@Nullable Input<Map<String,String>> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable Output<Map<String,String>> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
         public Builder runtimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
-            this.runtimeEnvironmentVariables = Input.ofNullable(runtimeEnvironmentVariables);
+            this.runtimeEnvironmentVariables = Output.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
 
-        public Builder startCommand(@Nullable Input<String> startCommand) {
+        public Builder startCommand(@Nullable Output<String> startCommand) {
             this.startCommand = startCommand;
             return this;
         }
 
         public Builder startCommand(@Nullable String startCommand) {
-            this.startCommand = Input.ofNullable(startCommand);
+            this.startCommand = Output.ofNullable(startCommand);
             return this;
         }
         public ServiceSourceConfigurationImageRepositoryImageConfigurationArgs build() {

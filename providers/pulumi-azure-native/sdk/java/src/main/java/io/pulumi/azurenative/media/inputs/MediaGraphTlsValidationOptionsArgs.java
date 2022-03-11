@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class MediaGraphTlsValidationOptionsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ignoreHostname", required=true)
-      private final Input<Boolean> ignoreHostname;
+      private final Output<Boolean> ignoreHostname;
 
-    public Input<Boolean> getIgnoreHostname() {
+    public Output<Boolean> getIgnoreHostname() {
         return this.ignoreHostname;
     }
 
@@ -33,22 +33,22 @@ public final class MediaGraphTlsValidationOptionsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ignoreSignature", required=true)
-      private final Input<Boolean> ignoreSignature;
+      private final Output<Boolean> ignoreSignature;
 
-    public Input<Boolean> getIgnoreSignature() {
+    public Output<Boolean> getIgnoreSignature() {
         return this.ignoreSignature;
     }
 
     public MediaGraphTlsValidationOptionsArgs(
-        Input<Boolean> ignoreHostname,
-        Input<Boolean> ignoreSignature) {
+        Output<Boolean> ignoreHostname,
+        Output<Boolean> ignoreSignature) {
         this.ignoreHostname = Objects.requireNonNull(ignoreHostname, "expected parameter 'ignoreHostname' to be non-null");
         this.ignoreSignature = Objects.requireNonNull(ignoreSignature, "expected parameter 'ignoreSignature' to be non-null");
     }
 
     private MediaGraphTlsValidationOptionsArgs() {
-        this.ignoreHostname = Input.empty();
-        this.ignoreSignature = Input.empty();
+        this.ignoreHostname = Output.empty();
+        this.ignoreSignature = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class MediaGraphTlsValidationOptionsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<Boolean> ignoreHostname;
-        private Input<Boolean> ignoreSignature;
+        private Output<Boolean> ignoreHostname;
+        private Output<Boolean> ignoreSignature;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class MediaGraphTlsValidationOptionsArgs extends io.pulumi.resource
     	      this.ignoreSignature = defaults.ignoreSignature;
         }
 
-        public Builder ignoreHostname(Input<Boolean> ignoreHostname) {
+        public Builder ignoreHostname(Output<Boolean> ignoreHostname) {
             this.ignoreHostname = Objects.requireNonNull(ignoreHostname);
             return this;
         }
 
         public Builder ignoreHostname(Boolean ignoreHostname) {
-            this.ignoreHostname = Input.of(Objects.requireNonNull(ignoreHostname));
+            this.ignoreHostname = Output.of(Objects.requireNonNull(ignoreHostname));
             return this;
         }
 
-        public Builder ignoreSignature(Input<Boolean> ignoreSignature) {
+        public Builder ignoreSignature(Output<Boolean> ignoreSignature) {
             this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
             return this;
         }
 
         public Builder ignoreSignature(Boolean ignoreSignature) {
-            this.ignoreSignature = Input.of(Objects.requireNonNull(ignoreSignature));
+            this.ignoreSignature = Output.of(Objects.requireNonNull(ignoreSignature));
             return this;
         }
         public MediaGraphTlsValidationOptionsArgs build() {

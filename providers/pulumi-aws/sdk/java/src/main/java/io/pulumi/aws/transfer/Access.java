@@ -8,7 +8,6 @@ import io.pulumi.aws.transfer.AccessArgs;
 import io.pulumi.aws.transfer.inputs.AccessState;
 import io.pulumi.aws.transfer.outputs.AccessHomeDirectoryMapping;
 import io.pulumi.aws.transfer.outputs.AccessPosixProfile;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -175,14 +174,14 @@ public class Access extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Access(String name, AccessArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:transfer/access:Access", name, args == null ? AccessArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:transfer/access:Access", name, args == null ? AccessArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Access(String name, Input<String> id, @Nullable AccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Access(String name, Output<String> id, @Nullable AccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:transfer/access:Access", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -198,7 +197,7 @@ public class Access extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Access get(String name, Input<String> id, @Nullable AccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Access get(String name, Output<String> id, @Nullable AccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Access(name, id, state, options);
     }
 }

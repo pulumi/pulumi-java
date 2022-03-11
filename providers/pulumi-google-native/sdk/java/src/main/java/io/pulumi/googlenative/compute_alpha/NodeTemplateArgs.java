@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.NodeTemplateCpuOvercommitType;
 import io.pulumi.googlenative.compute_alpha.inputs.AcceleratorConfigArgs;
@@ -22,10 +22,10 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     public static final NodeTemplateArgs Empty = new NodeTemplateArgs();
 
     @InputImport(name="accelerators")
-      private final @Nullable Input<List<AcceleratorConfigArgs>> accelerators;
+      private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
 
-    public Input<List<AcceleratorConfigArgs>> getAccelerators() {
-        return this.accelerators == null ? Input.empty() : this.accelerators;
+    public Output<List<AcceleratorConfigArgs>> getAccelerators() {
+        return this.accelerators == null ? Output.empty() : this.accelerators;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpuOvercommitType")
-      private final @Nullable Input<NodeTemplateCpuOvercommitType> cpuOvercommitType;
+      private final @Nullable Output<NodeTemplateCpuOvercommitType> cpuOvercommitType;
 
-    public Input<NodeTemplateCpuOvercommitType> getCpuOvercommitType() {
-        return this.cpuOvercommitType == null ? Input.empty() : this.cpuOvercommitType;
+    public Output<NodeTemplateCpuOvercommitType> getCpuOvercommitType() {
+        return this.cpuOvercommitType == null ? Output.empty() : this.cpuOvercommitType;
     }
 
     /**
@@ -44,17 +44,17 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="disks")
-      private final @Nullable Input<List<LocalDiskArgs>> disks;
+      private final @Nullable Output<List<LocalDiskArgs>> disks;
 
-    public Input<List<LocalDiskArgs>> getDisks() {
-        return this.disks == null ? Input.empty() : this.disks;
+    public Output<List<LocalDiskArgs>> getDisks() {
+        return this.disks == null ? Output.empty() : this.disks;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeAffinityLabels")
-      private final @Nullable Input<Map<String,String>> nodeAffinityLabels;
+      private final @Nullable Output<Map<String,String>> nodeAffinityLabels;
 
-    public Input<Map<String,String>> getNodeAffinityLabels() {
-        return this.nodeAffinityLabels == null ? Input.empty() : this.nodeAffinityLabels;
+    public Output<Map<String,String>> getNodeAffinityLabels() {
+        return this.nodeAffinityLabels == null ? Output.empty() : this.nodeAffinityLabels;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeType")
-      private final @Nullable Input<String> nodeType;
+      private final @Nullable Output<String> nodeType;
 
-    public Input<String> getNodeType() {
-        return this.nodeType == null ? Input.empty() : this.nodeType;
+    public Output<String> getNodeType() {
+        return this.nodeType == null ? Output.empty() : this.nodeType;
     }
 
     /**
@@ -95,31 +95,31 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTypeFlexibility")
-      private final @Nullable Input<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility;
+      private final @Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility;
 
-    public Input<NodeTemplateNodeTypeFlexibilityArgs> getNodeTypeFlexibility() {
-        return this.nodeTypeFlexibility == null ? Input.empty() : this.nodeTypeFlexibility;
+    public Output<NodeTemplateNodeTypeFlexibilityArgs> getNodeTypeFlexibility() {
+        return this.nodeTypeFlexibility == null ? Output.empty() : this.nodeTypeFlexibility;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -127,25 +127,25 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverBinding")
-      private final @Nullable Input<ServerBindingArgs> serverBinding;
+      private final @Nullable Output<ServerBindingArgs> serverBinding;
 
-    public Input<ServerBindingArgs> getServerBinding() {
-        return this.serverBinding == null ? Input.empty() : this.serverBinding;
+    public Output<ServerBindingArgs> getServerBinding() {
+        return this.serverBinding == null ? Output.empty() : this.serverBinding;
     }
 
     public NodeTemplateArgs(
-        @Nullable Input<List<AcceleratorConfigArgs>> accelerators,
-        @Nullable Input<NodeTemplateCpuOvercommitType> cpuOvercommitType,
-        @Nullable Input<String> description,
-        @Nullable Input<List<LocalDiskArgs>> disks,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> nodeAffinityLabels,
-        @Nullable Input<String> nodeType,
-        @Nullable Input<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility,
-        @Nullable Input<String> project,
-        Input<String> region,
-        @Nullable Input<String> requestId,
-        @Nullable Input<ServerBindingArgs> serverBinding) {
+        @Nullable Output<List<AcceleratorConfigArgs>> accelerators,
+        @Nullable Output<NodeTemplateCpuOvercommitType> cpuOvercommitType,
+        @Nullable Output<String> description,
+        @Nullable Output<List<LocalDiskArgs>> disks,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> nodeAffinityLabels,
+        @Nullable Output<String> nodeType,
+        @Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility,
+        @Nullable Output<String> project,
+        Output<String> region,
+        @Nullable Output<String> requestId,
+        @Nullable Output<ServerBindingArgs> serverBinding) {
         this.accelerators = accelerators;
         this.cpuOvercommitType = cpuOvercommitType;
         this.description = description;
@@ -161,18 +161,18 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeTemplateArgs() {
-        this.accelerators = Input.empty();
-        this.cpuOvercommitType = Input.empty();
-        this.description = Input.empty();
-        this.disks = Input.empty();
-        this.name = Input.empty();
-        this.nodeAffinityLabels = Input.empty();
-        this.nodeType = Input.empty();
-        this.nodeTypeFlexibility = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
-        this.serverBinding = Input.empty();
+        this.accelerators = Output.empty();
+        this.cpuOvercommitType = Output.empty();
+        this.description = Output.empty();
+        this.disks = Output.empty();
+        this.name = Output.empty();
+        this.nodeAffinityLabels = Output.empty();
+        this.nodeType = Output.empty();
+        this.nodeTypeFlexibility = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
+        this.serverBinding = Output.empty();
     }
 
     public static Builder builder() {
@@ -184,18 +184,18 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AcceleratorConfigArgs>> accelerators;
-        private @Nullable Input<NodeTemplateCpuOvercommitType> cpuOvercommitType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<LocalDiskArgs>> disks;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> nodeAffinityLabels;
-        private @Nullable Input<String> nodeType;
-        private @Nullable Input<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility;
-        private @Nullable Input<String> project;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<ServerBindingArgs> serverBinding;
+        private @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
+        private @Nullable Output<NodeTemplateCpuOvercommitType> cpuOvercommitType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<LocalDiskArgs>> disks;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> nodeAffinityLabels;
+        private @Nullable Output<String> nodeType;
+        private @Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility;
+        private @Nullable Output<String> project;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<ServerBindingArgs> serverBinding;
 
         public Builder() {
     	      // Empty
@@ -217,123 +217,123 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverBinding = defaults.serverBinding;
         }
 
-        public Builder accelerators(@Nullable Input<List<AcceleratorConfigArgs>> accelerators) {
+        public Builder accelerators(@Nullable Output<List<AcceleratorConfigArgs>> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
         public Builder accelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
-            this.accelerators = Input.ofNullable(accelerators);
+            this.accelerators = Output.ofNullable(accelerators);
             return this;
         }
 
-        public Builder cpuOvercommitType(@Nullable Input<NodeTemplateCpuOvercommitType> cpuOvercommitType) {
+        public Builder cpuOvercommitType(@Nullable Output<NodeTemplateCpuOvercommitType> cpuOvercommitType) {
             this.cpuOvercommitType = cpuOvercommitType;
             return this;
         }
 
         public Builder cpuOvercommitType(@Nullable NodeTemplateCpuOvercommitType cpuOvercommitType) {
-            this.cpuOvercommitType = Input.ofNullable(cpuOvercommitType);
+            this.cpuOvercommitType = Output.ofNullable(cpuOvercommitType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disks(@Nullable Input<List<LocalDiskArgs>> disks) {
+        public Builder disks(@Nullable Output<List<LocalDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
         public Builder disks(@Nullable List<LocalDiskArgs> disks) {
-            this.disks = Input.ofNullable(disks);
+            this.disks = Output.ofNullable(disks);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nodeAffinityLabels(@Nullable Input<Map<String,String>> nodeAffinityLabels) {
+        public Builder nodeAffinityLabels(@Nullable Output<Map<String,String>> nodeAffinityLabels) {
             this.nodeAffinityLabels = nodeAffinityLabels;
             return this;
         }
 
         public Builder nodeAffinityLabels(@Nullable Map<String,String> nodeAffinityLabels) {
-            this.nodeAffinityLabels = Input.ofNullable(nodeAffinityLabels);
+            this.nodeAffinityLabels = Output.ofNullable(nodeAffinityLabels);
             return this;
         }
 
-        public Builder nodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
         public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Input.ofNullable(nodeType);
+            this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
 
-        public Builder nodeTypeFlexibility(@Nullable Input<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility) {
+        public Builder nodeTypeFlexibility(@Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility) {
             this.nodeTypeFlexibility = nodeTypeFlexibility;
             return this;
         }
 
         public Builder nodeTypeFlexibility(@Nullable NodeTemplateNodeTypeFlexibilityArgs nodeTypeFlexibility) {
-            this.nodeTypeFlexibility = Input.ofNullable(nodeTypeFlexibility);
+            this.nodeTypeFlexibility = Output.ofNullable(nodeTypeFlexibility);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder serverBinding(@Nullable Input<ServerBindingArgs> serverBinding) {
+        public Builder serverBinding(@Nullable Output<ServerBindingArgs> serverBinding) {
             this.serverBinding = serverBinding;
             return this;
         }
 
         public Builder serverBinding(@Nullable ServerBindingArgs serverBinding) {
-            this.serverBinding = Input.ofNullable(serverBinding);
+            this.serverBinding = Output.ofNullable(serverBinding);
             return this;
         }
         public NodeTemplateArgs build() {

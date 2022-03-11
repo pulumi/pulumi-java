@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.relay;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hybridConnectionName")
-      private final @Nullable Input<String> hybridConnectionName;
+      private final @Nullable Output<String> hybridConnectionName;
 
-    public Input<String> getHybridConnectionName() {
-        return this.hybridConnectionName == null ? Input.empty() : this.hybridConnectionName;
+    public Output<String> getHybridConnectionName() {
+        return this.hybridConnectionName == null ? Output.empty() : this.hybridConnectionName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -42,10 +42,10 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requiresClientAuthorization")
-      private final @Nullable Input<Boolean> requiresClientAuthorization;
+      private final @Nullable Output<Boolean> requiresClientAuthorization;
 
-    public Input<Boolean> getRequiresClientAuthorization() {
-        return this.requiresClientAuthorization == null ? Input.empty() : this.requiresClientAuthorization;
+    public Output<Boolean> getRequiresClientAuthorization() {
+        return this.requiresClientAuthorization == null ? Output.empty() : this.requiresClientAuthorization;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,18 +64,18 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="userMetadata")
-      private final @Nullable Input<String> userMetadata;
+      private final @Nullable Output<String> userMetadata;
 
-    public Input<String> getUserMetadata() {
-        return this.userMetadata == null ? Input.empty() : this.userMetadata;
+    public Output<String> getUserMetadata() {
+        return this.userMetadata == null ? Output.empty() : this.userMetadata;
     }
 
     public HybridConnectionArgs(
-        @Nullable Input<String> hybridConnectionName,
-        Input<String> namespaceName,
-        @Nullable Input<Boolean> requiresClientAuthorization,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> userMetadata) {
+        @Nullable Output<String> hybridConnectionName,
+        Output<String> namespaceName,
+        @Nullable Output<Boolean> requiresClientAuthorization,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> userMetadata) {
         this.hybridConnectionName = hybridConnectionName;
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
         this.requiresClientAuthorization = requiresClientAuthorization;
@@ -84,11 +84,11 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HybridConnectionArgs() {
-        this.hybridConnectionName = Input.empty();
-        this.namespaceName = Input.empty();
-        this.requiresClientAuthorization = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.userMetadata = Input.empty();
+        this.hybridConnectionName = Output.empty();
+        this.namespaceName = Output.empty();
+        this.requiresClientAuthorization = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.userMetadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hybridConnectionName;
-        private Input<String> namespaceName;
-        private @Nullable Input<Boolean> requiresClientAuthorization;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> userMetadata;
+        private @Nullable Output<String> hybridConnectionName;
+        private Output<String> namespaceName;
+        private @Nullable Output<Boolean> requiresClientAuthorization;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> userMetadata;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
     	      this.userMetadata = defaults.userMetadata;
         }
 
-        public Builder hybridConnectionName(@Nullable Input<String> hybridConnectionName) {
+        public Builder hybridConnectionName(@Nullable Output<String> hybridConnectionName) {
             this.hybridConnectionName = hybridConnectionName;
             return this;
         }
 
         public Builder hybridConnectionName(@Nullable String hybridConnectionName) {
-            this.hybridConnectionName = Input.ofNullable(hybridConnectionName);
+            this.hybridConnectionName = Output.ofNullable(hybridConnectionName);
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder requiresClientAuthorization(@Nullable Input<Boolean> requiresClientAuthorization) {
+        public Builder requiresClientAuthorization(@Nullable Output<Boolean> requiresClientAuthorization) {
             this.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
 
         public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
-            this.requiresClientAuthorization = Input.ofNullable(requiresClientAuthorization);
+            this.requiresClientAuthorization = Output.ofNullable(requiresClientAuthorization);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder userMetadata(@Nullable Input<String> userMetadata) {
+        public Builder userMetadata(@Nullable Output<String> userMetadata) {
             this.userMetadata = userMetadata;
             return this;
         }
 
         public Builder userMetadata(@Nullable String userMetadata) {
-            this.userMetadata = Input.ofNullable(userMetadata);
+            this.userMetadata = Output.ofNullable(userMetadata);
             return this;
         }
         public HybridConnectionArgs build() {

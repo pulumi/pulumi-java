@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.MaintenanceWindowUpdateTrack;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="day")
-      private final @Nullable Input<Integer> day;
+      private final @Nullable Output<Integer> day;
 
-    public Input<Integer> getDay() {
-        return this.day == null ? Input.empty() : this.day;
+    public Output<Integer> getDay() {
+        return this.day == null ? Output.empty() : this.day;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hour")
-      private final @Nullable Input<Integer> hour;
+      private final @Nullable Output<Integer> hour;
 
-    public Input<Integer> getHour() {
-        return this.hour == null ? Input.empty() : this.hour;
+    public Output<Integer> getHour() {
+        return this.hour == null ? Output.empty() : this.hour;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updateTrack")
-      private final @Nullable Input<MaintenanceWindowUpdateTrack> updateTrack;
+      private final @Nullable Output<MaintenanceWindowUpdateTrack> updateTrack;
 
-    public Input<MaintenanceWindowUpdateTrack> getUpdateTrack() {
-        return this.updateTrack == null ? Input.empty() : this.updateTrack;
+    public Output<MaintenanceWindowUpdateTrack> getUpdateTrack() {
+        return this.updateTrack == null ? Output.empty() : this.updateTrack;
     }
 
     public MaintenanceWindowArgs(
-        @Nullable Input<Integer> day,
-        @Nullable Input<Integer> hour,
-        @Nullable Input<String> kind,
-        @Nullable Input<MaintenanceWindowUpdateTrack> updateTrack) {
+        @Nullable Output<Integer> day,
+        @Nullable Output<Integer> hour,
+        @Nullable Output<String> kind,
+        @Nullable Output<MaintenanceWindowUpdateTrack> updateTrack) {
         this.day = day;
         this.hour = hour;
         this.kind = kind;
@@ -76,10 +76,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MaintenanceWindowArgs() {
-        this.day = Input.empty();
-        this.hour = Input.empty();
-        this.kind = Input.empty();
-        this.updateTrack = Input.empty();
+        this.day = Output.empty();
+        this.hour = Output.empty();
+        this.kind = Output.empty();
+        this.updateTrack = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> day;
-        private @Nullable Input<Integer> hour;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<MaintenanceWindowUpdateTrack> updateTrack;
+        private @Nullable Output<Integer> day;
+        private @Nullable Output<Integer> hour;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<MaintenanceWindowUpdateTrack> updateTrack;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     	      this.updateTrack = defaults.updateTrack;
         }
 
-        public Builder day(@Nullable Input<Integer> day) {
+        public Builder day(@Nullable Output<Integer> day) {
             this.day = day;
             return this;
         }
 
         public Builder day(@Nullable Integer day) {
-            this.day = Input.ofNullable(day);
+            this.day = Output.ofNullable(day);
             return this;
         }
 
-        public Builder hour(@Nullable Input<Integer> hour) {
+        public Builder hour(@Nullable Output<Integer> hour) {
             this.hour = hour;
             return this;
         }
 
         public Builder hour(@Nullable Integer hour) {
-            this.hour = Input.ofNullable(hour);
+            this.hour = Output.ofNullable(hour);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder updateTrack(@Nullable Input<MaintenanceWindowUpdateTrack> updateTrack) {
+        public Builder updateTrack(@Nullable Output<MaintenanceWindowUpdateTrack> updateTrack) {
             this.updateTrack = updateTrack;
             return this;
         }
 
         public Builder updateTrack(@Nullable MaintenanceWindowUpdateTrack updateTrack) {
-            this.updateTrack = Input.ofNullable(updateTrack);
+            this.updateTrack = Output.ofNullable(updateTrack);
             return this;
         }
         public MaintenanceWindowArgs build() {

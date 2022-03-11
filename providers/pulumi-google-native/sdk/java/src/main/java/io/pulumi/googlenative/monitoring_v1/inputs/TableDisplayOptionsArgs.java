@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="shownColumns")
-      private final @Nullable Input<List<String>> shownColumns;
+      private final @Nullable Output<List<String>> shownColumns;
 
-    public Input<List<String>> getShownColumns() {
-        return this.shownColumns == null ? Input.empty() : this.shownColumns;
+    public Output<List<String>> getShownColumns() {
+        return this.shownColumns == null ? Output.empty() : this.shownColumns;
     }
 
-    public TableDisplayOptionsArgs(@Nullable Input<List<String>> shownColumns) {
+    public TableDisplayOptionsArgs(@Nullable Output<List<String>> shownColumns) {
         this.shownColumns = shownColumns;
     }
 
     private TableDisplayOptionsArgs() {
-        this.shownColumns = Input.empty();
+        this.shownColumns = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> shownColumns;
+        private @Nullable Output<List<String>> shownColumns;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
     	      this.shownColumns = defaults.shownColumns;
         }
 
-        public Builder shownColumns(@Nullable Input<List<String>> shownColumns) {
+        public Builder shownColumns(@Nullable Output<List<String>> shownColumns) {
             this.shownColumns = shownColumns;
             return this;
         }
 
         public Builder shownColumns(@Nullable List<String> shownColumns) {
-            this.shownColumns = Input.ofNullable(shownColumns);
+            this.shownColumns = Output.ofNullable(shownColumns);
             return this;
         }
         public TableDisplayOptionsArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs;
 import io.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class FunctionEventInvokeConfigDestinationConfigGetArgs extends io.
      * 
      */
     @InputImport(name="onFailure")
-      private final @Nullable Input<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure;
+      private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure;
 
-    public Input<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> getOnFailure() {
-        return this.onFailure == null ? Input.empty() : this.onFailure;
+    public Output<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> getOnFailure() {
+        return this.onFailure == null ? Output.empty() : this.onFailure;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FunctionEventInvokeConfigDestinationConfigGetArgs extends io.
      * 
      */
     @InputImport(name="onSuccess")
-      private final @Nullable Input<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess;
+      private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess;
 
-    public Input<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> getOnSuccess() {
-        return this.onSuccess == null ? Input.empty() : this.onSuccess;
+    public Output<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> getOnSuccess() {
+        return this.onSuccess == null ? Output.empty() : this.onSuccess;
     }
 
     public FunctionEventInvokeConfigDestinationConfigGetArgs(
-        @Nullable Input<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure,
-        @Nullable Input<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess) {
+        @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure,
+        @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess) {
         this.onFailure = onFailure;
         this.onSuccess = onSuccess;
     }
 
     private FunctionEventInvokeConfigDestinationConfigGetArgs() {
-        this.onFailure = Input.empty();
-        this.onSuccess = Input.empty();
+        this.onFailure = Output.empty();
+        this.onSuccess = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FunctionEventInvokeConfigDestinationConfigGetArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure;
-        private @Nullable Input<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess;
+        private @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure;
+        private @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FunctionEventInvokeConfigDestinationConfigGetArgs extends io.
     	      this.onSuccess = defaults.onSuccess;
         }
 
-        public Builder onFailure(@Nullable Input<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure) {
+        public Builder onFailure(@Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure) {
             this.onFailure = onFailure;
             return this;
         }
 
         public Builder onFailure(@Nullable FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs onFailure) {
-            this.onFailure = Input.ofNullable(onFailure);
+            this.onFailure = Output.ofNullable(onFailure);
             return this;
         }
 
-        public Builder onSuccess(@Nullable Input<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess) {
+        public Builder onSuccess(@Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess) {
             this.onSuccess = onSuccess;
             return this;
         }
 
         public Builder onSuccess(@Nullable FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs onSuccess) {
-            this.onSuccess = Input.ofNullable(onSuccess);
+            this.onSuccess = Output.ofNullable(onSuccess);
             return this;
         }
         public FunctionEventInvokeConfigDestinationConfigGetArgs build() {

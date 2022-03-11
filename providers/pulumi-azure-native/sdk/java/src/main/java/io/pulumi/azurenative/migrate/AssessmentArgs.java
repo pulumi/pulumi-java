@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.AssessmentPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assessmentName")
-      private final @Nullable Input<String> assessmentName;
+      private final @Nullable Output<String> assessmentName;
 
-    public Input<String> getAssessmentName() {
-        return this.assessmentName == null ? Input.empty() : this.assessmentName;
+    public Output<String> getAssessmentName() {
+        return this.assessmentName == null ? Output.empty() : this.assessmentName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-      private final Input<String> groupName;
+      private final Output<String> groupName;
 
-    public Input<String> getGroupName() {
+    public Output<String> getGroupName() {
         return this.groupName;
     }
 
@@ -53,9 +53,9 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-      private final Input<String> projectName;
+      private final Output<String> projectName;
 
-    public Input<String> getProjectName() {
+    public Output<String> getProjectName() {
         return this.projectName;
     }
 
@@ -64,9 +64,9 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<AssessmentPropertiesArgs> properties;
+      private final Output<AssessmentPropertiesArgs> properties;
 
-    public Input<AssessmentPropertiesArgs> getProperties() {
+    public Output<AssessmentPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -75,19 +75,19 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public AssessmentArgs(
-        @Nullable Input<String> assessmentName,
-        @Nullable Input<String> eTag,
-        Input<String> groupName,
-        Input<String> projectName,
-        Input<AssessmentPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> assessmentName,
+        @Nullable Output<String> eTag,
+        Output<String> groupName,
+        Output<String> projectName,
+        Output<AssessmentPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.assessmentName = assessmentName;
         this.eTag = eTag;
         this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
@@ -97,12 +97,12 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssessmentArgs() {
-        this.assessmentName = Input.empty();
-        this.eTag = Input.empty();
-        this.groupName = Input.empty();
-        this.projectName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.assessmentName = Output.empty();
+        this.eTag = Output.empty();
+        this.groupName = Output.empty();
+        this.projectName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assessmentName;
-        private @Nullable Input<String> eTag;
-        private Input<String> groupName;
-        private Input<String> projectName;
-        private Input<AssessmentPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> assessmentName;
+        private @Nullable Output<String> eTag;
+        private Output<String> groupName;
+        private Output<String> projectName;
+        private Output<AssessmentPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder assessmentName(@Nullable Input<String> assessmentName) {
+        public Builder assessmentName(@Nullable Output<String> assessmentName) {
             this.assessmentName = assessmentName;
             return this;
         }
 
         public Builder assessmentName(@Nullable String assessmentName) {
-            this.assessmentName = Input.ofNullable(assessmentName);
+            this.assessmentName = Output.ofNullable(assessmentName);
             return this;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder groupName(Input<String> groupName) {
+        public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
         public Builder groupName(String groupName) {
-            this.groupName = Input.of(Objects.requireNonNull(groupName));
+            this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder projectName(Input<String> projectName) {
+        public Builder projectName(Output<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Input.of(Objects.requireNonNull(projectName));
+            this.projectName = Output.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder properties(Input<AssessmentPropertiesArgs> properties) {
+        public Builder properties(Output<AssessmentPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(AssessmentPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public AssessmentArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import io.pulumi.azurenative.vmwarecloudsimple.enums.DiskIndependenceMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controllerId", required=true)
-      private final Input<String> controllerId;
+      private final Output<String> controllerId;
 
-    public Input<String> getControllerId() {
+    public Output<String> getControllerId() {
         return this.controllerId;
     }
 
@@ -36,9 +36,9 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="independenceMode", required=true)
-      private final Input<DiskIndependenceMode> independenceMode;
+      private final Output<DiskIndependenceMode> independenceMode;
 
-    public Input<DiskIndependenceMode> getIndependenceMode() {
+    public Output<DiskIndependenceMode> getIndependenceMode() {
         return this.independenceMode;
     }
 
@@ -47,9 +47,9 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="totalSize", required=true)
-      private final Input<Integer> totalSize;
+      private final Output<Integer> totalSize;
 
-    public Input<Integer> getTotalSize() {
+    public Output<Integer> getTotalSize() {
         return this.totalSize;
     }
 
@@ -58,17 +58,17 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualDiskId")
-      private final @Nullable Input<String> virtualDiskId;
+      private final @Nullable Output<String> virtualDiskId;
 
-    public Input<String> getVirtualDiskId() {
-        return this.virtualDiskId == null ? Input.empty() : this.virtualDiskId;
+    public Output<String> getVirtualDiskId() {
+        return this.virtualDiskId == null ? Output.empty() : this.virtualDiskId;
     }
 
     public VirtualDiskArgs(
-        Input<String> controllerId,
-        Input<DiskIndependenceMode> independenceMode,
-        Input<Integer> totalSize,
-        @Nullable Input<String> virtualDiskId) {
+        Output<String> controllerId,
+        Output<DiskIndependenceMode> independenceMode,
+        Output<Integer> totalSize,
+        @Nullable Output<String> virtualDiskId) {
         this.controllerId = Objects.requireNonNull(controllerId, "expected parameter 'controllerId' to be non-null");
         this.independenceMode = Objects.requireNonNull(independenceMode, "expected parameter 'independenceMode' to be non-null");
         this.totalSize = Objects.requireNonNull(totalSize, "expected parameter 'totalSize' to be non-null");
@@ -76,10 +76,10 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualDiskArgs() {
-        this.controllerId = Input.empty();
-        this.independenceMode = Input.empty();
-        this.totalSize = Input.empty();
-        this.virtualDiskId = Input.empty();
+        this.controllerId = Output.empty();
+        this.independenceMode = Output.empty();
+        this.totalSize = Output.empty();
+        this.virtualDiskId = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> controllerId;
-        private Input<DiskIndependenceMode> independenceMode;
-        private Input<Integer> totalSize;
-        private @Nullable Input<String> virtualDiskId;
+        private Output<String> controllerId;
+        private Output<DiskIndependenceMode> independenceMode;
+        private Output<Integer> totalSize;
+        private @Nullable Output<String> virtualDiskId;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualDiskId = defaults.virtualDiskId;
         }
 
-        public Builder controllerId(Input<String> controllerId) {
+        public Builder controllerId(Output<String> controllerId) {
             this.controllerId = Objects.requireNonNull(controllerId);
             return this;
         }
 
         public Builder controllerId(String controllerId) {
-            this.controllerId = Input.of(Objects.requireNonNull(controllerId));
+            this.controllerId = Output.of(Objects.requireNonNull(controllerId));
             return this;
         }
 
-        public Builder independenceMode(Input<DiskIndependenceMode> independenceMode) {
+        public Builder independenceMode(Output<DiskIndependenceMode> independenceMode) {
             this.independenceMode = Objects.requireNonNull(independenceMode);
             return this;
         }
 
         public Builder independenceMode(DiskIndependenceMode independenceMode) {
-            this.independenceMode = Input.of(Objects.requireNonNull(independenceMode));
+            this.independenceMode = Output.of(Objects.requireNonNull(independenceMode));
             return this;
         }
 
-        public Builder totalSize(Input<Integer> totalSize) {
+        public Builder totalSize(Output<Integer> totalSize) {
             this.totalSize = Objects.requireNonNull(totalSize);
             return this;
         }
 
         public Builder totalSize(Integer totalSize) {
-            this.totalSize = Input.of(Objects.requireNonNull(totalSize));
+            this.totalSize = Output.of(Objects.requireNonNull(totalSize));
             return this;
         }
 
-        public Builder virtualDiskId(@Nullable Input<String> virtualDiskId) {
+        public Builder virtualDiskId(@Nullable Output<String> virtualDiskId) {
             this.virtualDiskId = virtualDiskId;
             return this;
         }
 
         public Builder virtualDiskId(@Nullable String virtualDiskId) {
-            this.virtualDiskId = Input.ofNullable(virtualDiskId);
+            this.virtualDiskId = Output.ofNullable(virtualDiskId);
             return this;
         }
         public VirtualDiskArgs build() {

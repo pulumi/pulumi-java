@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.CbcsDrmConfigurationArgs;
 import io.pulumi.azurenative.media.inputs.EnabledProtocolsArgs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysArgs;
 import io.pulumi.azurenative.media.inputs.TrackSelectionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clearTracks")
-      private final @Nullable Input<List<TrackSelectionArgs>> clearTracks;
+      private final @Nullable Output<List<TrackSelectionArgs>> clearTracks;
 
-    public Input<List<TrackSelectionArgs>> getClearTracks() {
-        return this.clearTracks == null ? Input.empty() : this.clearTracks;
+    public Output<List<TrackSelectionArgs>> getClearTracks() {
+        return this.clearTracks == null ? Output.empty() : this.clearTracks;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="contentKeys")
-      private final @Nullable Input<StreamingPolicyContentKeysArgs> contentKeys;
+      private final @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
 
-    public Input<StreamingPolicyContentKeysArgs> getContentKeys() {
-        return this.contentKeys == null ? Input.empty() : this.contentKeys;
+    public Output<StreamingPolicyContentKeysArgs> getContentKeys() {
+        return this.contentKeys == null ? Output.empty() : this.contentKeys;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="drm")
-      private final @Nullable Input<CbcsDrmConfigurationArgs> drm;
+      private final @Nullable Output<CbcsDrmConfigurationArgs> drm;
 
-    public Input<CbcsDrmConfigurationArgs> getDrm() {
-        return this.drm == null ? Input.empty() : this.drm;
+    public Output<CbcsDrmConfigurationArgs> getDrm() {
+        return this.drm == null ? Output.empty() : this.drm;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabledProtocols")
-      private final @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
+      private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
-    public Input<EnabledProtocolsArgs> getEnabledProtocols() {
-        return this.enabledProtocols == null ? Input.empty() : this.enabledProtocols;
+    public Output<EnabledProtocolsArgs> getEnabledProtocols() {
+        return this.enabledProtocols == null ? Output.empty() : this.enabledProtocols;
     }
 
     public CommonEncryptionCbcsArgs(
-        @Nullable Input<List<TrackSelectionArgs>> clearTracks,
-        @Nullable Input<StreamingPolicyContentKeysArgs> contentKeys,
-        @Nullable Input<CbcsDrmConfigurationArgs> drm,
-        @Nullable Input<EnabledProtocolsArgs> enabledProtocols) {
+        @Nullable Output<List<TrackSelectionArgs>> clearTracks,
+        @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys,
+        @Nullable Output<CbcsDrmConfigurationArgs> drm,
+        @Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
         this.clearTracks = clearTracks;
         this.contentKeys = contentKeys;
         this.drm = drm;
@@ -78,10 +78,10 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
     }
 
     private CommonEncryptionCbcsArgs() {
-        this.clearTracks = Input.empty();
-        this.contentKeys = Input.empty();
-        this.drm = Input.empty();
-        this.enabledProtocols = Input.empty();
+        this.clearTracks = Output.empty();
+        this.contentKeys = Output.empty();
+        this.drm = Output.empty();
+        this.enabledProtocols = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TrackSelectionArgs>> clearTracks;
-        private @Nullable Input<StreamingPolicyContentKeysArgs> contentKeys;
-        private @Nullable Input<CbcsDrmConfigurationArgs> drm;
-        private @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
+        private @Nullable Output<List<TrackSelectionArgs>> clearTracks;
+        private @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
+        private @Nullable Output<CbcsDrmConfigurationArgs> drm;
+        private @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
     	      this.enabledProtocols = defaults.enabledProtocols;
         }
 
-        public Builder clearTracks(@Nullable Input<List<TrackSelectionArgs>> clearTracks) {
+        public Builder clearTracks(@Nullable Output<List<TrackSelectionArgs>> clearTracks) {
             this.clearTracks = clearTracks;
             return this;
         }
 
         public Builder clearTracks(@Nullable List<TrackSelectionArgs> clearTracks) {
-            this.clearTracks = Input.ofNullable(clearTracks);
+            this.clearTracks = Output.ofNullable(clearTracks);
             return this;
         }
 
-        public Builder contentKeys(@Nullable Input<StreamingPolicyContentKeysArgs> contentKeys) {
+        public Builder contentKeys(@Nullable Output<StreamingPolicyContentKeysArgs> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
 
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysArgs contentKeys) {
-            this.contentKeys = Input.ofNullable(contentKeys);
+            this.contentKeys = Output.ofNullable(contentKeys);
             return this;
         }
 
-        public Builder drm(@Nullable Input<CbcsDrmConfigurationArgs> drm) {
+        public Builder drm(@Nullable Output<CbcsDrmConfigurationArgs> drm) {
             this.drm = drm;
             return this;
         }
 
         public Builder drm(@Nullable CbcsDrmConfigurationArgs drm) {
-            this.drm = Input.ofNullable(drm);
+            this.drm = Output.ofNullable(drm);
             return this;
         }
 
-        public Builder enabledProtocols(@Nullable Input<EnabledProtocolsArgs> enabledProtocols) {
+        public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
 
         public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
-            this.enabledProtocols = Input.ofNullable(enabledProtocols);
+            this.enabledProtocols = Output.ofNullable(enabledProtocols);
             return this;
         }
         public CommonEncryptionCbcsArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.keyvault.SecretArgs;
 import io.pulumi.azurenative.keyvault.outputs.SecretPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -142,26 +141,26 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Secret(String name, SecretArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:keyvault:Secret", name, args == null ? SecretArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:keyvault:Secret", name, args == null ? SecretArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Secret(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Secret(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:keyvault:Secret", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20161001:Secret").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20180214:Secret").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20180214preview:Secret").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20190901:Secret").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20200401preview:Secret").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20210401preview:Secret").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20210601preview:Secret").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20211001:Secret").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20211101preview:Secret").build())
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20161001:Secret").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20180214:Secret").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20180214preview:Secret").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20190901:Secret").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20200401preview:Secret").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20210401preview:Secret").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20210601preview:Secret").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20211001:Secret").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20211101preview:Secret").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -175,7 +174,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Secret get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Secret get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Secret(name, id, options);
     }
 }

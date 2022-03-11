@@ -14,7 +14,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDown
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,10 +29,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="andStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs> andStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs> andStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs> getAndStatement() {
-        return this.andStatement == null ? Input.empty() : this.andStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs> getAndStatement() {
+        return this.andStatement == null ? Output.empty() : this.andStatement;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="byteMatchStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs> getByteMatchStatement() {
-        return this.byteMatchStatement == null ? Input.empty() : this.byteMatchStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs> getByteMatchStatement() {
+        return this.byteMatchStatement == null ? Output.empty() : this.byteMatchStatement;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="geoMatchStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs> getGeoMatchStatement() {
-        return this.geoMatchStatement == null ? Input.empty() : this.geoMatchStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs> getGeoMatchStatement() {
+        return this.geoMatchStatement == null ? Output.empty() : this.geoMatchStatement;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="ipSetReferenceStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs> getIpSetReferenceStatement() {
-        return this.ipSetReferenceStatement == null ? Input.empty() : this.ipSetReferenceStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs> getIpSetReferenceStatement() {
+        return this.ipSetReferenceStatement == null ? Output.empty() : this.ipSetReferenceStatement;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="labelMatchStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs> getLabelMatchStatement() {
-        return this.labelMatchStatement == null ? Input.empty() : this.labelMatchStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs> getLabelMatchStatement() {
+        return this.labelMatchStatement == null ? Output.empty() : this.labelMatchStatement;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="notStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs> notStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs> notStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs> getNotStatement() {
-        return this.notStatement == null ? Input.empty() : this.notStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs> getNotStatement() {
+        return this.notStatement == null ? Output.empty() : this.notStatement;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="orStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs> orStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs> orStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs> getOrStatement() {
-        return this.orStatement == null ? Input.empty() : this.orStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs> getOrStatement() {
+        return this.orStatement == null ? Output.empty() : this.orStatement;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="regexPatternSetReferenceStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs> getRegexPatternSetReferenceStatement() {
-        return this.regexPatternSetReferenceStatement == null ? Input.empty() : this.regexPatternSetReferenceStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs> getRegexPatternSetReferenceStatement() {
+        return this.regexPatternSetReferenceStatement == null ? Output.empty() : this.regexPatternSetReferenceStatement;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="sizeConstraintStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs> getSizeConstraintStatement() {
-        return this.sizeConstraintStatement == null ? Input.empty() : this.sizeConstraintStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs> getSizeConstraintStatement() {
+        return this.sizeConstraintStatement == null ? Output.empty() : this.sizeConstraintStatement;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="sqliMatchStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs> getSqliMatchStatement() {
-        return this.sqliMatchStatement == null ? Input.empty() : this.sqliMatchStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs> getSqliMatchStatement() {
+        return this.sqliMatchStatement == null ? Output.empty() : this.sqliMatchStatement;
     }
 
     /**
@@ -139,24 +139,24 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      * 
      */
     @InputImport(name="xssMatchStatement")
-      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
+      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
 
-    public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs> getXssMatchStatement() {
-        return this.xssMatchStatement == null ? Input.empty() : this.xssMatchStatement;
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs> getXssMatchStatement() {
+        return this.xssMatchStatement == null ? Output.empty() : this.xssMatchStatement;
     }
 
     public WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGetArgs(
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs> andStatement,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs> byteMatchStatement,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs> geoMatchStatement,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs> labelMatchStatement,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs> notStatement,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs> orStatement,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement,
-        @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs> xssMatchStatement) {
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs> andStatement,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs> byteMatchStatement,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs> geoMatchStatement,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs> labelMatchStatement,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs> notStatement,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs> orStatement,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement,
+        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs> xssMatchStatement) {
         this.andStatement = andStatement;
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;
@@ -171,17 +171,17 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     }
 
     private WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGetArgs() {
-        this.andStatement = Input.empty();
-        this.byteMatchStatement = Input.empty();
-        this.geoMatchStatement = Input.empty();
-        this.ipSetReferenceStatement = Input.empty();
-        this.labelMatchStatement = Input.empty();
-        this.notStatement = Input.empty();
-        this.orStatement = Input.empty();
-        this.regexPatternSetReferenceStatement = Input.empty();
-        this.sizeConstraintStatement = Input.empty();
-        this.sqliMatchStatement = Input.empty();
-        this.xssMatchStatement = Input.empty();
+        this.andStatement = Output.empty();
+        this.byteMatchStatement = Output.empty();
+        this.geoMatchStatement = Output.empty();
+        this.ipSetReferenceStatement = Output.empty();
+        this.labelMatchStatement = Output.empty();
+        this.notStatement = Output.empty();
+        this.orStatement = Output.empty();
+        this.regexPatternSetReferenceStatement = Output.empty();
+        this.sizeConstraintStatement = Output.empty();
+        this.sqliMatchStatement = Output.empty();
+        this.xssMatchStatement = Output.empty();
     }
 
     public static Builder builder() {
@@ -193,17 +193,17 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs> andStatement;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs> notStatement;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs> orStatement;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
-        private @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs> andStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs> notStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs> orStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
+        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
 
         public Builder() {
     	      // Empty
@@ -224,113 +224,113 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     	      this.xssMatchStatement = defaults.xssMatchStatement;
         }
 
-        public Builder andStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs> andStatement) {
+        public Builder andStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs> andStatement) {
             this.andStatement = andStatement;
             return this;
         }
 
         public Builder andStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementGetArgs andStatement) {
-            this.andStatement = Input.ofNullable(andStatement);
+            this.andStatement = Output.ofNullable(andStatement);
             return this;
         }
 
-        public Builder byteMatchStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs> byteMatchStatement) {
+        public Builder byteMatchStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs> byteMatchStatement) {
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
 
         public Builder byteMatchStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementGetArgs byteMatchStatement) {
-            this.byteMatchStatement = Input.ofNullable(byteMatchStatement);
+            this.byteMatchStatement = Output.ofNullable(byteMatchStatement);
             return this;
         }
 
-        public Builder geoMatchStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs> geoMatchStatement) {
+        public Builder geoMatchStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs> geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
 
         public Builder geoMatchStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatementGetArgs geoMatchStatement) {
-            this.geoMatchStatement = Input.ofNullable(geoMatchStatement);
+            this.geoMatchStatement = Output.ofNullable(geoMatchStatement);
             return this;
         }
 
-        public Builder ipSetReferenceStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement) {
+        public Builder ipSetReferenceStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement) {
             this.ipSetReferenceStatement = ipSetReferenceStatement;
             return this;
         }
 
         public Builder ipSetReferenceStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementGetArgs ipSetReferenceStatement) {
-            this.ipSetReferenceStatement = Input.ofNullable(ipSetReferenceStatement);
+            this.ipSetReferenceStatement = Output.ofNullable(ipSetReferenceStatement);
             return this;
         }
 
-        public Builder labelMatchStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs> labelMatchStatement) {
+        public Builder labelMatchStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs> labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
 
         public Builder labelMatchStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatementGetArgs labelMatchStatement) {
-            this.labelMatchStatement = Input.ofNullable(labelMatchStatement);
+            this.labelMatchStatement = Output.ofNullable(labelMatchStatement);
             return this;
         }
 
-        public Builder notStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs> notStatement) {
+        public Builder notStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs> notStatement) {
             this.notStatement = notStatement;
             return this;
         }
 
         public Builder notStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementGetArgs notStatement) {
-            this.notStatement = Input.ofNullable(notStatement);
+            this.notStatement = Output.ofNullable(notStatement);
             return this;
         }
 
-        public Builder orStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs> orStatement) {
+        public Builder orStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs> orStatement) {
             this.orStatement = orStatement;
             return this;
         }
 
         public Builder orStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementGetArgs orStatement) {
-            this.orStatement = Input.ofNullable(orStatement);
+            this.orStatement = Output.ofNullable(orStatement);
             return this;
         }
 
-        public Builder regexPatternSetReferenceStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement) {
+        public Builder regexPatternSetReferenceStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
 
         public Builder regexPatternSetReferenceStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatementGetArgs regexPatternSetReferenceStatement) {
-            this.regexPatternSetReferenceStatement = Input.ofNullable(regexPatternSetReferenceStatement);
+            this.regexPatternSetReferenceStatement = Output.ofNullable(regexPatternSetReferenceStatement);
             return this;
         }
 
-        public Builder sizeConstraintStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement) {
+        public Builder sizeConstraintStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
 
         public Builder sizeConstraintStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatementGetArgs sizeConstraintStatement) {
-            this.sizeConstraintStatement = Input.ofNullable(sizeConstraintStatement);
+            this.sizeConstraintStatement = Output.ofNullable(sizeConstraintStatement);
             return this;
         }
 
-        public Builder sqliMatchStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement) {
+        public Builder sqliMatchStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
 
         public Builder sqliMatchStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatementGetArgs sqliMatchStatement) {
-            this.sqliMatchStatement = Input.ofNullable(sqliMatchStatement);
+            this.sqliMatchStatement = Output.ofNullable(sqliMatchStatement);
             return this;
         }
 
-        public Builder xssMatchStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs> xssMatchStatement) {
+        public Builder xssMatchStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs> xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
         }
 
         public Builder xssMatchStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatementGetArgs xssMatchStatement) {
-            this.xssMatchStatement = Input.ofNullable(xssMatchStatement);
+            this.xssMatchStatement = Output.ofNullable(xssMatchStatement);
             return this;
         }
         public WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGetArgs build() {

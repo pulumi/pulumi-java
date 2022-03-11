@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeCaCertUrl", required=true)
-      private final Input<Boolean> includeCaCertUrl;
+      private final Output<Boolean> includeCaCertUrl;
 
-    public Input<Boolean> getIncludeCaCertUrl() {
+    public Output<Boolean> getIncludeCaCertUrl() {
         return this.includeCaCertUrl;
     }
 
@@ -33,22 +33,22 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeCrlAccessUrl", required=true)
-      private final Input<Boolean> includeCrlAccessUrl;
+      private final Output<Boolean> includeCrlAccessUrl;
 
-    public Input<Boolean> getIncludeCrlAccessUrl() {
+    public Output<Boolean> getIncludeCrlAccessUrl() {
         return this.includeCrlAccessUrl;
     }
 
     public IssuingOptionsArgs(
-        Input<Boolean> includeCaCertUrl,
-        Input<Boolean> includeCrlAccessUrl) {
+        Output<Boolean> includeCaCertUrl,
+        Output<Boolean> includeCrlAccessUrl) {
         this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl, "expected parameter 'includeCaCertUrl' to be non-null");
         this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl, "expected parameter 'includeCrlAccessUrl' to be non-null");
     }
 
     private IssuingOptionsArgs() {
-        this.includeCaCertUrl = Input.empty();
-        this.includeCrlAccessUrl = Input.empty();
+        this.includeCaCertUrl = Output.empty();
+        this.includeCrlAccessUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Boolean> includeCaCertUrl;
-        private Input<Boolean> includeCrlAccessUrl;
+        private Output<Boolean> includeCaCertUrl;
+        private Output<Boolean> includeCrlAccessUrl;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class IssuingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.includeCrlAccessUrl = defaults.includeCrlAccessUrl;
         }
 
-        public Builder includeCaCertUrl(Input<Boolean> includeCaCertUrl) {
+        public Builder includeCaCertUrl(Output<Boolean> includeCaCertUrl) {
             this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl);
             return this;
         }
 
         public Builder includeCaCertUrl(Boolean includeCaCertUrl) {
-            this.includeCaCertUrl = Input.of(Objects.requireNonNull(includeCaCertUrl));
+            this.includeCaCertUrl = Output.of(Objects.requireNonNull(includeCaCertUrl));
             return this;
         }
 
-        public Builder includeCrlAccessUrl(Input<Boolean> includeCrlAccessUrl) {
+        public Builder includeCrlAccessUrl(Output<Boolean> includeCrlAccessUrl) {
             this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl);
             return this;
         }
 
         public Builder includeCrlAccessUrl(Boolean includeCrlAccessUrl) {
-            this.includeCrlAccessUrl = Input.of(Objects.requireNonNull(includeCrlAccessUrl));
+            this.includeCrlAccessUrl = Output.of(Objects.requireNonNull(includeCrlAccessUrl));
             return this;
         }
         public IssuingOptionsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerCredentials")
-      private final @Nullable Input<String> authorizerCredentials;
+      private final @Nullable Output<String> authorizerCredentials;
 
-    public Input<String> getAuthorizerCredentials() {
-        return this.authorizerCredentials == null ? Input.empty() : this.authorizerCredentials;
+    public Output<String> getAuthorizerCredentials() {
+        return this.authorizerCredentials == null ? Output.empty() : this.authorizerCredentials;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerResultTtlInSeconds")
-      private final @Nullable Input<Integer> authorizerResultTtlInSeconds;
+      private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
-    public Input<Integer> getAuthorizerResultTtlInSeconds() {
-        return this.authorizerResultTtlInSeconds == null ? Input.empty() : this.authorizerResultTtlInSeconds;
+    public Output<Integer> getAuthorizerResultTtlInSeconds() {
+        return this.authorizerResultTtlInSeconds == null ? Output.empty() : this.authorizerResultTtlInSeconds;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerUri")
-      private final @Nullable Input<String> authorizerUri;
+      private final @Nullable Output<String> authorizerUri;
 
-    public Input<String> getAuthorizerUri() {
-        return this.authorizerUri == null ? Input.empty() : this.authorizerUri;
+    public Output<String> getAuthorizerUri() {
+        return this.authorizerUri == null ? Output.empty() : this.authorizerUri;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identitySource")
-      private final @Nullable Input<String> identitySource;
+      private final @Nullable Output<String> identitySource;
 
-    public Input<String> getIdentitySource() {
-        return this.identitySource == null ? Input.empty() : this.identitySource;
+    public Output<String> getIdentitySource() {
+        return this.identitySource == null ? Output.empty() : this.identitySource;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityValidationExpression")
-      private final @Nullable Input<String> identityValidationExpression;
+      private final @Nullable Output<String> identityValidationExpression;
 
-    public Input<String> getIdentityValidationExpression() {
-        return this.identityValidationExpression == null ? Input.empty() : this.identityValidationExpression;
+    public Output<String> getIdentityValidationExpression() {
+        return this.identityValidationExpression == null ? Output.empty() : this.identityValidationExpression;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerArns")
-      private final @Nullable Input<List<String>> providerArns;
+      private final @Nullable Output<List<String>> providerArns;
 
-    public Input<List<String>> getProviderArns() {
-        return this.providerArns == null ? Input.empty() : this.providerArns;
+    public Output<List<String>> getProviderArns() {
+        return this.providerArns == null ? Output.empty() : this.providerArns;
     }
 
     /**
@@ -99,9 +99,9 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-      private final Input<String> restApi;
+      private final Output<String> restApi;
 
-    public Input<String> getRestApi() {
+    public Output<String> getRestApi() {
         return this.restApi;
     }
 
@@ -110,22 +110,22 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AuthorizerArgs(
-        @Nullable Input<String> authorizerCredentials,
-        @Nullable Input<Integer> authorizerResultTtlInSeconds,
-        @Nullable Input<String> authorizerUri,
-        @Nullable Input<String> identitySource,
-        @Nullable Input<String> identityValidationExpression,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> providerArns,
-        Input<String> restApi,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> authorizerCredentials,
+        @Nullable Output<Integer> authorizerResultTtlInSeconds,
+        @Nullable Output<String> authorizerUri,
+        @Nullable Output<String> identitySource,
+        @Nullable Output<String> identityValidationExpression,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> providerArns,
+        Output<String> restApi,
+        @Nullable Output<String> type) {
         this.authorizerCredentials = authorizerCredentials;
         this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
         this.authorizerUri = authorizerUri;
@@ -138,15 +138,15 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthorizerArgs() {
-        this.authorizerCredentials = Input.empty();
-        this.authorizerResultTtlInSeconds = Input.empty();
-        this.authorizerUri = Input.empty();
-        this.identitySource = Input.empty();
-        this.identityValidationExpression = Input.empty();
-        this.name = Input.empty();
-        this.providerArns = Input.empty();
-        this.restApi = Input.empty();
-        this.type = Input.empty();
+        this.authorizerCredentials = Output.empty();
+        this.authorizerResultTtlInSeconds = Output.empty();
+        this.authorizerUri = Output.empty();
+        this.identitySource = Output.empty();
+        this.identityValidationExpression = Output.empty();
+        this.name = Output.empty();
+        this.providerArns = Output.empty();
+        this.restApi = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizerCredentials;
-        private @Nullable Input<Integer> authorizerResultTtlInSeconds;
-        private @Nullable Input<String> authorizerUri;
-        private @Nullable Input<String> identitySource;
-        private @Nullable Input<String> identityValidationExpression;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> providerArns;
-        private Input<String> restApi;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> authorizerCredentials;
+        private @Nullable Output<Integer> authorizerResultTtlInSeconds;
+        private @Nullable Output<String> authorizerUri;
+        private @Nullable Output<String> identitySource;
+        private @Nullable Output<String> identityValidationExpression;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> providerArns;
+        private Output<String> restApi;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -185,88 +185,88 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder authorizerCredentials(@Nullable Input<String> authorizerCredentials) {
+        public Builder authorizerCredentials(@Nullable Output<String> authorizerCredentials) {
             this.authorizerCredentials = authorizerCredentials;
             return this;
         }
 
         public Builder authorizerCredentials(@Nullable String authorizerCredentials) {
-            this.authorizerCredentials = Input.ofNullable(authorizerCredentials);
+            this.authorizerCredentials = Output.ofNullable(authorizerCredentials);
             return this;
         }
 
-        public Builder authorizerResultTtlInSeconds(@Nullable Input<Integer> authorizerResultTtlInSeconds) {
+        public Builder authorizerResultTtlInSeconds(@Nullable Output<Integer> authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
 
         public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
-            this.authorizerResultTtlInSeconds = Input.ofNullable(authorizerResultTtlInSeconds);
+            this.authorizerResultTtlInSeconds = Output.ofNullable(authorizerResultTtlInSeconds);
             return this;
         }
 
-        public Builder authorizerUri(@Nullable Input<String> authorizerUri) {
+        public Builder authorizerUri(@Nullable Output<String> authorizerUri) {
             this.authorizerUri = authorizerUri;
             return this;
         }
 
         public Builder authorizerUri(@Nullable String authorizerUri) {
-            this.authorizerUri = Input.ofNullable(authorizerUri);
+            this.authorizerUri = Output.ofNullable(authorizerUri);
             return this;
         }
 
-        public Builder identitySource(@Nullable Input<String> identitySource) {
+        public Builder identitySource(@Nullable Output<String> identitySource) {
             this.identitySource = identitySource;
             return this;
         }
 
         public Builder identitySource(@Nullable String identitySource) {
-            this.identitySource = Input.ofNullable(identitySource);
+            this.identitySource = Output.ofNullable(identitySource);
             return this;
         }
 
-        public Builder identityValidationExpression(@Nullable Input<String> identityValidationExpression) {
+        public Builder identityValidationExpression(@Nullable Output<String> identityValidationExpression) {
             this.identityValidationExpression = identityValidationExpression;
             return this;
         }
 
         public Builder identityValidationExpression(@Nullable String identityValidationExpression) {
-            this.identityValidationExpression = Input.ofNullable(identityValidationExpression);
+            this.identityValidationExpression = Output.ofNullable(identityValidationExpression);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder providerArns(@Nullable Input<List<String>> providerArns) {
+        public Builder providerArns(@Nullable Output<List<String>> providerArns) {
             this.providerArns = providerArns;
             return this;
         }
 
         public Builder providerArns(@Nullable List<String> providerArns) {
-            this.providerArns = Input.ofNullable(providerArns);
+            this.providerArns = Output.ofNullable(providerArns);
             return this;
         }
 
-        public Builder restApi(Input<String> restApi) {
+        public Builder restApi(Output<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AuthorizerArgs build() {

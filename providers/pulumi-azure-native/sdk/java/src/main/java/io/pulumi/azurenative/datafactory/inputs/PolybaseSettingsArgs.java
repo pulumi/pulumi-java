@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.PolybaseSettingsRejectType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rejectSampleValue")
-      private final @Nullable Input<Object> rejectSampleValue;
+      private final @Nullable Output<Object> rejectSampleValue;
 
-    public Input<Object> getRejectSampleValue() {
-        return this.rejectSampleValue == null ? Input.empty() : this.rejectSampleValue;
+    public Output<Object> getRejectSampleValue() {
+        return this.rejectSampleValue == null ? Output.empty() : this.rejectSampleValue;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rejectType")
-      private final @Nullable Input<Either<String,PolybaseSettingsRejectType>> rejectType;
+      private final @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType;
 
-    public Input<Either<String,PolybaseSettingsRejectType>> getRejectType() {
-        return this.rejectType == null ? Input.empty() : this.rejectType;
+    public Output<Either<String,PolybaseSettingsRejectType>> getRejectType() {
+        return this.rejectType == null ? Output.empty() : this.rejectType;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rejectValue")
-      private final @Nullable Input<Object> rejectValue;
+      private final @Nullable Output<Object> rejectValue;
 
-    public Input<Object> getRejectValue() {
-        return this.rejectValue == null ? Input.empty() : this.rejectValue;
+    public Output<Object> getRejectValue() {
+        return this.rejectValue == null ? Output.empty() : this.rejectValue;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="useTypeDefault")
-      private final @Nullable Input<Object> useTypeDefault;
+      private final @Nullable Output<Object> useTypeDefault;
 
-    public Input<Object> getUseTypeDefault() {
-        return this.useTypeDefault == null ? Input.empty() : this.useTypeDefault;
+    public Output<Object> getUseTypeDefault() {
+        return this.useTypeDefault == null ? Output.empty() : this.useTypeDefault;
     }
 
     public PolybaseSettingsArgs(
-        @Nullable Input<Object> rejectSampleValue,
-        @Nullable Input<Either<String,PolybaseSettingsRejectType>> rejectType,
-        @Nullable Input<Object> rejectValue,
-        @Nullable Input<Object> useTypeDefault) {
+        @Nullable Output<Object> rejectSampleValue,
+        @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType,
+        @Nullable Output<Object> rejectValue,
+        @Nullable Output<Object> useTypeDefault) {
         this.rejectSampleValue = rejectSampleValue;
         this.rejectType = rejectType;
         this.rejectValue = rejectValue;
@@ -77,10 +77,10 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PolybaseSettingsArgs() {
-        this.rejectSampleValue = Input.empty();
-        this.rejectType = Input.empty();
-        this.rejectValue = Input.empty();
-        this.useTypeDefault = Input.empty();
+        this.rejectSampleValue = Output.empty();
+        this.rejectType = Output.empty();
+        this.rejectValue = Output.empty();
+        this.useTypeDefault = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> rejectSampleValue;
-        private @Nullable Input<Either<String,PolybaseSettingsRejectType>> rejectType;
-        private @Nullable Input<Object> rejectValue;
-        private @Nullable Input<Object> useTypeDefault;
+        private @Nullable Output<Object> rejectSampleValue;
+        private @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType;
+        private @Nullable Output<Object> rejectValue;
+        private @Nullable Output<Object> useTypeDefault;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.useTypeDefault = defaults.useTypeDefault;
         }
 
-        public Builder rejectSampleValue(@Nullable Input<Object> rejectSampleValue) {
+        public Builder rejectSampleValue(@Nullable Output<Object> rejectSampleValue) {
             this.rejectSampleValue = rejectSampleValue;
             return this;
         }
 
         public Builder rejectSampleValue(@Nullable Object rejectSampleValue) {
-            this.rejectSampleValue = Input.ofNullable(rejectSampleValue);
+            this.rejectSampleValue = Output.ofNullable(rejectSampleValue);
             return this;
         }
 
-        public Builder rejectType(@Nullable Input<Either<String,PolybaseSettingsRejectType>> rejectType) {
+        public Builder rejectType(@Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType) {
             this.rejectType = rejectType;
             return this;
         }
 
         public Builder rejectType(@Nullable Either<String,PolybaseSettingsRejectType> rejectType) {
-            this.rejectType = Input.ofNullable(rejectType);
+            this.rejectType = Output.ofNullable(rejectType);
             return this;
         }
 
-        public Builder rejectValue(@Nullable Input<Object> rejectValue) {
+        public Builder rejectValue(@Nullable Output<Object> rejectValue) {
             this.rejectValue = rejectValue;
             return this;
         }
 
         public Builder rejectValue(@Nullable Object rejectValue) {
-            this.rejectValue = Input.ofNullable(rejectValue);
+            this.rejectValue = Output.ofNullable(rejectValue);
             return this;
         }
 
-        public Builder useTypeDefault(@Nullable Input<Object> useTypeDefault) {
+        public Builder useTypeDefault(@Nullable Output<Object> useTypeDefault) {
             this.useTypeDefault = useTypeDefault;
             return this;
         }
 
         public Builder useTypeDefault(@Nullable Object useTypeDefault) {
-            this.useTypeDefault = Input.ofNullable(useTypeDefault);
+            this.useTypeDefault = Output.ofNullable(useTypeDefault);
             return this;
         }
         public PolybaseSettingsArgs build() {

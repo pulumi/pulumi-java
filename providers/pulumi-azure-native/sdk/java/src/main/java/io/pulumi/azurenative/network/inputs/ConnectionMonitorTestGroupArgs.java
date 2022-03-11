@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="destinations", required=true)
-      private final Input<List<String>> destinations;
+      private final Output<List<String>> destinations;
 
-    public Input<List<String>> getDestinations() {
+    public Output<List<String>> getDestinations() {
         return this.destinations;
     }
 
@@ -36,10 +36,10 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="disable")
-      private final @Nullable Input<Boolean> disable;
+      private final @Nullable Output<Boolean> disable;
 
-    public Input<Boolean> getDisable() {
-        return this.disable == null ? Input.empty() : this.disable;
+    public Output<Boolean> getDisable() {
+        return this.disable == null ? Output.empty() : this.disable;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -58,9 +58,9 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sources", required=true)
-      private final Input<List<String>> sources;
+      private final Output<List<String>> sources;
 
-    public Input<List<String>> getSources() {
+    public Output<List<String>> getSources() {
         return this.sources;
     }
 
@@ -69,18 +69,18 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="testConfigurations", required=true)
-      private final Input<List<String>> testConfigurations;
+      private final Output<List<String>> testConfigurations;
 
-    public Input<List<String>> getTestConfigurations() {
+    public Output<List<String>> getTestConfigurations() {
         return this.testConfigurations;
     }
 
     public ConnectionMonitorTestGroupArgs(
-        Input<List<String>> destinations,
-        @Nullable Input<Boolean> disable,
-        Input<String> name,
-        Input<List<String>> sources,
-        Input<List<String>> testConfigurations) {
+        Output<List<String>> destinations,
+        @Nullable Output<Boolean> disable,
+        Output<String> name,
+        Output<List<String>> sources,
+        Output<List<String>> testConfigurations) {
         this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
         this.disable = disable;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -89,11 +89,11 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     }
 
     private ConnectionMonitorTestGroupArgs() {
-        this.destinations = Input.empty();
-        this.disable = Input.empty();
-        this.name = Input.empty();
-        this.sources = Input.empty();
-        this.testConfigurations = Input.empty();
+        this.destinations = Output.empty();
+        this.disable = Output.empty();
+        this.name = Output.empty();
+        this.sources = Output.empty();
+        this.testConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<List<String>> destinations;
-        private @Nullable Input<Boolean> disable;
-        private Input<String> name;
-        private Input<List<String>> sources;
-        private Input<List<String>> testConfigurations;
+        private Output<List<String>> destinations;
+        private @Nullable Output<Boolean> disable;
+        private Output<String> name;
+        private Output<List<String>> sources;
+        private Output<List<String>> testConfigurations;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     	      this.testConfigurations = defaults.testConfigurations;
         }
 
-        public Builder destinations(Input<List<String>> destinations) {
+        public Builder destinations(Output<List<String>> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
         public Builder destinations(List<String> destinations) {
-            this.destinations = Input.of(Objects.requireNonNull(destinations));
+            this.destinations = Output.of(Objects.requireNonNull(destinations));
             return this;
         }
 
-        public Builder disable(@Nullable Input<Boolean> disable) {
+        public Builder disable(@Nullable Output<Boolean> disable) {
             this.disable = disable;
             return this;
         }
 
         public Builder disable(@Nullable Boolean disable) {
-            this.disable = Input.ofNullable(disable);
+            this.disable = Output.ofNullable(disable);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder sources(Input<List<String>> sources) {
+        public Builder sources(Output<List<String>> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
 
         public Builder sources(List<String> sources) {
-            this.sources = Input.of(Objects.requireNonNull(sources));
+            this.sources = Output.of(Objects.requireNonNull(sources));
             return this;
         }
 
-        public Builder testConfigurations(Input<List<String>> testConfigurations) {
+        public Builder testConfigurations(Output<List<String>> testConfigurations) {
             this.testConfigurations = Objects.requireNonNull(testConfigurations);
             return this;
         }
 
         public Builder testConfigurations(List<String> testConfigurations) {
-            this.testConfigurations = Input.of(Objects.requireNonNull(testConfigurations));
+            this.testConfigurations = Output.of(Objects.requireNonNull(testConfigurations));
             return this;
         }
         public ConnectionMonitorTestGroupArgs build() {

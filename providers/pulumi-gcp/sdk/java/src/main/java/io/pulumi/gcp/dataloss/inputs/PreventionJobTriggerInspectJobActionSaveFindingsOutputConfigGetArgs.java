@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigG
      * 
      */
     @InputImport(name="outputSchema")
-      private final @Nullable Input<String> outputSchema;
+      private final @Nullable Output<String> outputSchema;
 
-    public Input<String> getOutputSchema() {
-        return this.outputSchema == null ? Input.empty() : this.outputSchema;
+    public Output<String> getOutputSchema() {
+        return this.outputSchema == null ? Output.empty() : this.outputSchema;
     }
 
     /**
@@ -39,22 +39,22 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigG
      * 
      */
     @InputImport(name="table", required=true)
-      private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table;
+      private final Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table;
 
-    public Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> getTable() {
+    public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> getTable() {
         return this.table;
     }
 
     public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs(
-        @Nullable Input<String> outputSchema,
-        Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table) {
+        @Nullable Output<String> outputSchema,
+        Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table) {
         this.outputSchema = outputSchema;
         this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
     }
 
     private PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs() {
-        this.outputSchema = Input.empty();
-        this.table = Input.empty();
+        this.outputSchema = Output.empty();
+        this.table = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,8 +66,8 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigG
     }
 
     public static final class Builder {
-        private @Nullable Input<String> outputSchema;
-        private Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table;
+        private @Nullable Output<String> outputSchema;
+        private Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table;
 
         public Builder() {
     	      // Empty
@@ -79,23 +79,23 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigG
     	      this.table = defaults.table;
         }
 
-        public Builder outputSchema(@Nullable Input<String> outputSchema) {
+        public Builder outputSchema(@Nullable Output<String> outputSchema) {
             this.outputSchema = outputSchema;
             return this;
         }
 
         public Builder outputSchema(@Nullable String outputSchema) {
-            this.outputSchema = Input.ofNullable(outputSchema);
+            this.outputSchema = Output.ofNullable(outputSchema);
             return this;
         }
 
-        public Builder table(Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table) {
+        public Builder table(Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
         public Builder table(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs table) {
-            this.table = Input.of(Objects.requireNonNull(table));
+            this.table = Output.of(Objects.requireNonNull(table));
             return this;
         }
         public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs build() {

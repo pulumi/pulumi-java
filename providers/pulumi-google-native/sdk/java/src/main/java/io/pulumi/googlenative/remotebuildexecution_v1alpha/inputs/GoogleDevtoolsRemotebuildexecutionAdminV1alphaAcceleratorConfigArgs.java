@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * 
      */
     @InputImport(name="acceleratorCount")
-      private final @Nullable Input<String> acceleratorCount;
+      private final @Nullable Output<String> acceleratorCount;
 
-    public Input<String> getAcceleratorCount() {
-        return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
+    public Output<String> getAcceleratorCount() {
+        return this.acceleratorCount == null ? Output.empty() : this.acceleratorCount;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * 
      */
     @InputImport(name="acceleratorType")
-      private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Output<String> acceleratorType;
 
-    public Input<String> getAcceleratorType() {
-        return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
+    public Output<String> getAcceleratorType() {
+        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
     }
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs(
-        @Nullable Input<String> acceleratorCount,
-        @Nullable Input<String> acceleratorType) {
+        @Nullable Output<String> acceleratorCount,
+        @Nullable Output<String> acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }
 
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs() {
-        this.acceleratorCount = Input.empty();
-        this.acceleratorType = Input.empty();
+        this.acceleratorCount = Output.empty();
+        this.acceleratorType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceleratorCount;
-        private @Nullable Input<String> acceleratorType;
+        private @Nullable Output<String> acceleratorCount;
+        private @Nullable Output<String> acceleratorType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     	      this.acceleratorType = defaults.acceleratorType;
         }
 
-        public Builder acceleratorCount(@Nullable Input<String> acceleratorCount) {
+        public Builder acceleratorCount(@Nullable Output<String> acceleratorCount) {
             this.acceleratorCount = acceleratorCount;
             return this;
         }
 
         public Builder acceleratorCount(@Nullable String acceleratorCount) {
-            this.acceleratorCount = Input.ofNullable(acceleratorCount);
+            this.acceleratorCount = Output.ofNullable(acceleratorCount);
             return this;
         }
 
-        public Builder acceleratorType(@Nullable Input<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
         public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Input.ofNullable(acceleratorType);
+            this.acceleratorType = Output.ofNullable(acceleratorType);
             return this;
         }
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs build() {

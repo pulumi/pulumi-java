@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -30,10 +30,10 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainTopicName")
-      private final @Nullable Input<String> domainTopicName;
+      private final @Nullable Output<String> domainTopicName;
 
-    public Input<String> getDomainTopicName() {
-        return this.domainTopicName == null ? Input.empty() : this.domainTopicName;
+    public Output<String> getDomainTopicName() {
+        return this.domainTopicName == null ? Output.empty() : this.domainTopicName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public DomainTopicArgs(
-        Input<String> domainName,
-        @Nullable Input<String> domainTopicName,
-        Input<String> resourceGroupName) {
+        Output<String> domainName,
+        @Nullable Output<String> domainTopicName,
+        Output<String> resourceGroupName) {
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.domainTopicName = domainTopicName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
     }
 
     private DomainTopicArgs() {
-        this.domainName = Input.empty();
-        this.domainTopicName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.domainName = Output.empty();
+        this.domainTopicName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> domainName;
-        private @Nullable Input<String> domainTopicName;
-        private Input<String> resourceGroupName;
+        private Output<String> domainName;
+        private @Nullable Output<String> domainTopicName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder domainTopicName(@Nullable Input<String> domainTopicName) {
+        public Builder domainTopicName(@Nullable Output<String> domainTopicName) {
             this.domainTopicName = domainTopicName;
             return this;
         }
 
         public Builder domainTopicName(@Nullable String domainTopicName) {
-            this.domainTopicName = Input.ofNullable(domainTopicName);
+            this.domainTopicName = Output.ofNullable(domainTopicName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public DomainTopicArgs build() {

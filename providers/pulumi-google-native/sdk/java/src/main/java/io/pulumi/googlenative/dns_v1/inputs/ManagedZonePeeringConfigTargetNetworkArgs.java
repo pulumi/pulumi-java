@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,17 +19,17 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="deactivateTime")
-      private final @Nullable Input<String> deactivateTime;
+      private final @Nullable Output<String> deactivateTime;
 
-    public Input<String> getDeactivateTime() {
-        return this.deactivateTime == null ? Input.empty() : this.deactivateTime;
+    public Output<String> getDeactivateTime() {
+        return this.deactivateTime == null ? Output.empty() : this.deactivateTime;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -37,25 +37,25 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="networkUrl")
-      private final @Nullable Input<String> networkUrl;
+      private final @Nullable Output<String> networkUrl;
 
-    public Input<String> getNetworkUrl() {
-        return this.networkUrl == null ? Input.empty() : this.networkUrl;
+    public Output<String> getNetworkUrl() {
+        return this.networkUrl == null ? Output.empty() : this.networkUrl;
     }
 
     public ManagedZonePeeringConfigTargetNetworkArgs(
-        @Nullable Input<String> deactivateTime,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> networkUrl) {
+        @Nullable Output<String> deactivateTime,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> networkUrl) {
         this.deactivateTime = deactivateTime;
         this.kind = kind;
         this.networkUrl = networkUrl;
     }
 
     private ManagedZonePeeringConfigTargetNetworkArgs() {
-        this.deactivateTime = Input.empty();
-        this.kind = Input.empty();
-        this.networkUrl = Input.empty();
+        this.deactivateTime = Output.empty();
+        this.kind = Output.empty();
+        this.networkUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deactivateTime;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> networkUrl;
+        private @Nullable Output<String> deactivateTime;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> networkUrl;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
     	      this.networkUrl = defaults.networkUrl;
         }
 
-        public Builder deactivateTime(@Nullable Input<String> deactivateTime) {
+        public Builder deactivateTime(@Nullable Output<String> deactivateTime) {
             this.deactivateTime = deactivateTime;
             return this;
         }
 
         public Builder deactivateTime(@Nullable String deactivateTime) {
-            this.deactivateTime = Input.ofNullable(deactivateTime);
+            this.deactivateTime = Output.ofNullable(deactivateTime);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder networkUrl(@Nullable Input<String> networkUrl) {
+        public Builder networkUrl(@Nullable Output<String> networkUrl) {
             this.networkUrl = networkUrl;
             return this;
         }
 
         public Builder networkUrl(@Nullable String networkUrl) {
-            this.networkUrl = Input.ofNullable(networkUrl);
+            this.networkUrl = Output.ofNullable(networkUrl);
             return this;
         }
         public ManagedZonePeeringConfigTargetNetworkArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1.inputs.IPAllocationPolicyArgs;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Output<Integer> diskSizeGb;
 
-    public Input<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<Integer> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAllocationPolicy")
-      private final @Nullable Input<IPAllocationPolicyArgs> ipAllocationPolicy;
+      private final @Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy;
 
-    public Input<IPAllocationPolicyArgs> getIpAllocationPolicy() {
-        return this.ipAllocationPolicy == null ? Input.empty() : this.ipAllocationPolicy;
+    public Output<IPAllocationPolicyArgs> getIpAllocationPolicy() {
+        return this.ipAllocationPolicy == null ? Output.empty() : this.ipAllocationPolicy;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oauthScopes")
-      private final @Nullable Input<List<String>> oauthScopes;
+      private final @Nullable Output<List<String>> oauthScopes;
 
-    public Input<List<String>> getOauthScopes() {
-        return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
+    public Output<List<String>> getOauthScopes() {
+        return this.oauthScopes == null ? Output.empty() : this.oauthScopes;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NodeConfigArgs(
-        @Nullable Input<Integer> diskSizeGb,
-        @Nullable Input<IPAllocationPolicyArgs> ipAllocationPolicy,
-        @Nullable Input<String> location,
-        @Nullable Input<String> machineType,
-        @Nullable Input<String> network,
-        @Nullable Input<List<String>> oauthScopes,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<String> subnetwork,
-        @Nullable Input<List<String>> tags) {
+        @Nullable Output<Integer> diskSizeGb,
+        @Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy,
+        @Nullable Output<String> location,
+        @Nullable Output<String> machineType,
+        @Nullable Output<String> network,
+        @Nullable Output<List<String>> oauthScopes,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<String> subnetwork,
+        @Nullable Output<List<String>> tags) {
         this.diskSizeGb = diskSizeGb;
         this.ipAllocationPolicy = ipAllocationPolicy;
         this.location = location;
@@ -142,15 +142,15 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeConfigArgs() {
-        this.diskSizeGb = Input.empty();
-        this.ipAllocationPolicy = Input.empty();
-        this.location = Input.empty();
-        this.machineType = Input.empty();
-        this.network = Input.empty();
-        this.oauthScopes = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.subnetwork = Input.empty();
-        this.tags = Input.empty();
+        this.diskSizeGb = Output.empty();
+        this.ipAllocationPolicy = Output.empty();
+        this.location = Output.empty();
+        this.machineType = Output.empty();
+        this.network = Output.empty();
+        this.oauthScopes = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.subnetwork = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> diskSizeGb;
-        private @Nullable Input<IPAllocationPolicyArgs> ipAllocationPolicy;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<String> network;
-        private @Nullable Input<List<String>> oauthScopes;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<String> subnetwork;
-        private @Nullable Input<List<String>> tags;
+        private @Nullable Output<Integer> diskSizeGb;
+        private @Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<String> network;
+        private @Nullable Output<List<String>> oauthScopes;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<String> subnetwork;
+        private @Nullable Output<List<String>> tags;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder ipAllocationPolicy(@Nullable Input<IPAllocationPolicyArgs> ipAllocationPolicy) {
+        public Builder ipAllocationPolicy(@Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy) {
             this.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
 
         public Builder ipAllocationPolicy(@Nullable IPAllocationPolicyArgs ipAllocationPolicy) {
-            this.ipAllocationPolicy = Input.ofNullable(ipAllocationPolicy);
+            this.ipAllocationPolicy = Output.ofNullable(ipAllocationPolicy);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder oauthScopes(@Nullable Input<List<String>> oauthScopes) {
+        public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Input.ofNullable(oauthScopes);
+            this.oauthScopes = Output.ofNullable(oauthScopes);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NodeConfigArgs build() {

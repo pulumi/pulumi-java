@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.inputs.EnvironmentSettingArgs;
 import io.pulumi.azurenative.batch.inputs.ResourceFileArgs;
 import io.pulumi.azurenative.batch.inputs.TaskContainerSettingsArgs;
 import io.pulumi.azurenative.batch.inputs.UserIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,10 +30,10 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commandLine")
-      private final @Nullable Input<String> commandLine;
+      private final @Nullable Output<String> commandLine;
 
-    public Input<String> getCommandLine() {
-        return this.commandLine == null ? Input.empty() : this.commandLine;
+    public Output<String> getCommandLine() {
+        return this.commandLine == null ? Output.empty() : this.commandLine;
     }
 
     /**
@@ -41,17 +41,17 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerSettings")
-      private final @Nullable Input<TaskContainerSettingsArgs> containerSettings;
+      private final @Nullable Output<TaskContainerSettingsArgs> containerSettings;
 
-    public Input<TaskContainerSettingsArgs> getContainerSettings() {
-        return this.containerSettings == null ? Input.empty() : this.containerSettings;
+    public Output<TaskContainerSettingsArgs> getContainerSettings() {
+        return this.containerSettings == null ? Output.empty() : this.containerSettings;
     }
 
     @InputImport(name="environmentSettings")
-      private final @Nullable Input<List<EnvironmentSettingArgs>> environmentSettings;
+      private final @Nullable Output<List<EnvironmentSettingArgs>> environmentSettings;
 
-    public Input<List<EnvironmentSettingArgs>> getEnvironmentSettings() {
-        return this.environmentSettings == null ? Input.empty() : this.environmentSettings;
+    public Output<List<EnvironmentSettingArgs>> getEnvironmentSettings() {
+        return this.environmentSettings == null ? Output.empty() : this.environmentSettings;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxTaskRetryCount")
-      private final @Nullable Input<Integer> maxTaskRetryCount;
+      private final @Nullable Output<Integer> maxTaskRetryCount;
 
-    public Input<Integer> getMaxTaskRetryCount() {
-        return this.maxTaskRetryCount == null ? Input.empty() : this.maxTaskRetryCount;
+    public Output<Integer> getMaxTaskRetryCount() {
+        return this.maxTaskRetryCount == null ? Output.empty() : this.maxTaskRetryCount;
     }
 
     @InputImport(name="resourceFiles")
-      private final @Nullable Input<List<ResourceFileArgs>> resourceFiles;
+      private final @Nullable Output<List<ResourceFileArgs>> resourceFiles;
 
-    public Input<List<ResourceFileArgs>> getResourceFiles() {
-        return this.resourceFiles == null ? Input.empty() : this.resourceFiles;
+    public Output<List<ResourceFileArgs>> getResourceFiles() {
+        return this.resourceFiles == null ? Output.empty() : this.resourceFiles;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userIdentity")
-      private final @Nullable Input<UserIdentityArgs> userIdentity;
+      private final @Nullable Output<UserIdentityArgs> userIdentity;
 
-    public Input<UserIdentityArgs> getUserIdentity() {
-        return this.userIdentity == null ? Input.empty() : this.userIdentity;
+    public Output<UserIdentityArgs> getUserIdentity() {
+        return this.userIdentity == null ? Output.empty() : this.userIdentity;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForSuccess")
-      private final @Nullable Input<Boolean> waitForSuccess;
+      private final @Nullable Output<Boolean> waitForSuccess;
 
-    public Input<Boolean> getWaitForSuccess() {
-        return this.waitForSuccess == null ? Input.empty() : this.waitForSuccess;
+    public Output<Boolean> getWaitForSuccess() {
+        return this.waitForSuccess == null ? Output.empty() : this.waitForSuccess;
     }
 
     public StartTaskArgs(
-        @Nullable Input<String> commandLine,
-        @Nullable Input<TaskContainerSettingsArgs> containerSettings,
-        @Nullable Input<List<EnvironmentSettingArgs>> environmentSettings,
-        @Nullable Input<Integer> maxTaskRetryCount,
-        @Nullable Input<List<ResourceFileArgs>> resourceFiles,
-        @Nullable Input<UserIdentityArgs> userIdentity,
-        @Nullable Input<Boolean> waitForSuccess) {
+        @Nullable Output<String> commandLine,
+        @Nullable Output<TaskContainerSettingsArgs> containerSettings,
+        @Nullable Output<List<EnvironmentSettingArgs>> environmentSettings,
+        @Nullable Output<Integer> maxTaskRetryCount,
+        @Nullable Output<List<ResourceFileArgs>> resourceFiles,
+        @Nullable Output<UserIdentityArgs> userIdentity,
+        @Nullable Output<Boolean> waitForSuccess) {
         this.commandLine = commandLine;
         this.containerSettings = containerSettings;
         this.environmentSettings = environmentSettings;
@@ -112,13 +112,13 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StartTaskArgs() {
-        this.commandLine = Input.empty();
-        this.containerSettings = Input.empty();
-        this.environmentSettings = Input.empty();
-        this.maxTaskRetryCount = Input.empty();
-        this.resourceFiles = Input.empty();
-        this.userIdentity = Input.empty();
-        this.waitForSuccess = Input.empty();
+        this.commandLine = Output.empty();
+        this.containerSettings = Output.empty();
+        this.environmentSettings = Output.empty();
+        this.maxTaskRetryCount = Output.empty();
+        this.resourceFiles = Output.empty();
+        this.userIdentity = Output.empty();
+        this.waitForSuccess = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> commandLine;
-        private @Nullable Input<TaskContainerSettingsArgs> containerSettings;
-        private @Nullable Input<List<EnvironmentSettingArgs>> environmentSettings;
-        private @Nullable Input<Integer> maxTaskRetryCount;
-        private @Nullable Input<List<ResourceFileArgs>> resourceFiles;
-        private @Nullable Input<UserIdentityArgs> userIdentity;
-        private @Nullable Input<Boolean> waitForSuccess;
+        private @Nullable Output<String> commandLine;
+        private @Nullable Output<TaskContainerSettingsArgs> containerSettings;
+        private @Nullable Output<List<EnvironmentSettingArgs>> environmentSettings;
+        private @Nullable Output<Integer> maxTaskRetryCount;
+        private @Nullable Output<List<ResourceFileArgs>> resourceFiles;
+        private @Nullable Output<UserIdentityArgs> userIdentity;
+        private @Nullable Output<Boolean> waitForSuccess;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitForSuccess = defaults.waitForSuccess;
         }
 
-        public Builder commandLine(@Nullable Input<String> commandLine) {
+        public Builder commandLine(@Nullable Output<String> commandLine) {
             this.commandLine = commandLine;
             return this;
         }
 
         public Builder commandLine(@Nullable String commandLine) {
-            this.commandLine = Input.ofNullable(commandLine);
+            this.commandLine = Output.ofNullable(commandLine);
             return this;
         }
 
-        public Builder containerSettings(@Nullable Input<TaskContainerSettingsArgs> containerSettings) {
+        public Builder containerSettings(@Nullable Output<TaskContainerSettingsArgs> containerSettings) {
             this.containerSettings = containerSettings;
             return this;
         }
 
         public Builder containerSettings(@Nullable TaskContainerSettingsArgs containerSettings) {
-            this.containerSettings = Input.ofNullable(containerSettings);
+            this.containerSettings = Output.ofNullable(containerSettings);
             return this;
         }
 
-        public Builder environmentSettings(@Nullable Input<List<EnvironmentSettingArgs>> environmentSettings) {
+        public Builder environmentSettings(@Nullable Output<List<EnvironmentSettingArgs>> environmentSettings) {
             this.environmentSettings = environmentSettings;
             return this;
         }
 
         public Builder environmentSettings(@Nullable List<EnvironmentSettingArgs> environmentSettings) {
-            this.environmentSettings = Input.ofNullable(environmentSettings);
+            this.environmentSettings = Output.ofNullable(environmentSettings);
             return this;
         }
 
-        public Builder maxTaskRetryCount(@Nullable Input<Integer> maxTaskRetryCount) {
+        public Builder maxTaskRetryCount(@Nullable Output<Integer> maxTaskRetryCount) {
             this.maxTaskRetryCount = maxTaskRetryCount;
             return this;
         }
 
         public Builder maxTaskRetryCount(@Nullable Integer maxTaskRetryCount) {
-            this.maxTaskRetryCount = Input.ofNullable(maxTaskRetryCount);
+            this.maxTaskRetryCount = Output.ofNullable(maxTaskRetryCount);
             return this;
         }
 
-        public Builder resourceFiles(@Nullable Input<List<ResourceFileArgs>> resourceFiles) {
+        public Builder resourceFiles(@Nullable Output<List<ResourceFileArgs>> resourceFiles) {
             this.resourceFiles = resourceFiles;
             return this;
         }
 
         public Builder resourceFiles(@Nullable List<ResourceFileArgs> resourceFiles) {
-            this.resourceFiles = Input.ofNullable(resourceFiles);
+            this.resourceFiles = Output.ofNullable(resourceFiles);
             return this;
         }
 
-        public Builder userIdentity(@Nullable Input<UserIdentityArgs> userIdentity) {
+        public Builder userIdentity(@Nullable Output<UserIdentityArgs> userIdentity) {
             this.userIdentity = userIdentity;
             return this;
         }
 
         public Builder userIdentity(@Nullable UserIdentityArgs userIdentity) {
-            this.userIdentity = Input.ofNullable(userIdentity);
+            this.userIdentity = Output.ofNullable(userIdentity);
             return this;
         }
 
-        public Builder waitForSuccess(@Nullable Input<Boolean> waitForSuccess) {
+        public Builder waitForSuccess(@Nullable Output<Boolean> waitForSuccess) {
             this.waitForSuccess = waitForSuccess;
             return this;
         }
 
         public Builder waitForSuccess(@Nullable Boolean waitForSuccess) {
-            this.waitForSuccess = Input.ofNullable(waitForSuccess);
+            this.waitForSuccess = Output.ofNullable(waitForSuccess);
             return this;
         }
         public StartTaskArgs build() {

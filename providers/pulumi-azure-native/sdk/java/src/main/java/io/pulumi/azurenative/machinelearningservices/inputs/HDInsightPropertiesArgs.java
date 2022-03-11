@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineSshCredentialsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="administratorAccount")
-      private final @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount;
+      private final @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount;
 
-    public Input<VirtualMachineSshCredentialsArgs> getAdministratorAccount() {
-        return this.administratorAccount == null ? Input.empty() : this.administratorAccount;
+    public Output<VirtualMachineSshCredentialsArgs> getAdministratorAccount() {
+        return this.administratorAccount == null ? Output.empty() : this.administratorAccount;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sshPort")
-      private final @Nullable Input<Integer> sshPort;
+      private final @Nullable Output<Integer> sshPort;
 
-    public Input<Integer> getSshPort() {
-        return this.sshPort == null ? Input.empty() : this.sshPort;
+    public Output<Integer> getSshPort() {
+        return this.sshPort == null ? Output.empty() : this.sshPort;
     }
 
     public HDInsightPropertiesArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount,
-        @Nullable Input<Integer> sshPort) {
+        @Nullable Output<String> address,
+        @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount,
+        @Nullable Output<Integer> sshPort) {
         this.address = address;
         this.administratorAccount = administratorAccount;
         this.sshPort = sshPort;
     }
 
     private HDInsightPropertiesArgs() {
-        this.address = Input.empty();
-        this.administratorAccount = Input.empty();
-        this.sshPort = Input.empty();
+        this.address = Output.empty();
+        this.administratorAccount = Output.empty();
+        this.sshPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount;
-        private @Nullable Input<Integer> sshPort;
+        private @Nullable Output<String> address;
+        private @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount;
+        private @Nullable Output<Integer> sshPort;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.sshPort = defaults.sshPort;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder administratorAccount(@Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount) {
+        public Builder administratorAccount(@Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount) {
             this.administratorAccount = administratorAccount;
             return this;
         }
 
         public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsArgs administratorAccount) {
-            this.administratorAccount = Input.ofNullable(administratorAccount);
+            this.administratorAccount = Output.ofNullable(administratorAccount);
             return this;
         }
 
-        public Builder sshPort(@Nullable Input<Integer> sshPort) {
+        public Builder sshPort(@Nullable Output<Integer> sshPort) {
             this.sshPort = sshPort;
             return this;
         }
 
         public Builder sshPort(@Nullable Integer sshPort) {
-            this.sshPort = Input.ofNullable(sshPort);
+            this.sshPort = Output.ofNullable(sshPort);
             return this;
         }
         public HDInsightPropertiesArgs build() {

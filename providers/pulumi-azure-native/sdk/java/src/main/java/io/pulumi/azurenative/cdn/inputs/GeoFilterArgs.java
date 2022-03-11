@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.enums.GeoFilterActions;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<GeoFilterActions> action;
+      private final Output<GeoFilterActions> action;
 
-    public Input<GeoFilterActions> getAction() {
+    public Output<GeoFilterActions> getAction() {
         return this.action;
     }
 
@@ -35,9 +35,9 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="countryCodes", required=true)
-      private final Input<List<String>> countryCodes;
+      private final Output<List<String>> countryCodes;
 
-    public Input<List<String>> getCountryCodes() {
+    public Output<List<String>> getCountryCodes() {
         return this.countryCodes;
     }
 
@@ -46,25 +46,25 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativePath", required=true)
-      private final Input<String> relativePath;
+      private final Output<String> relativePath;
 
-    public Input<String> getRelativePath() {
+    public Output<String> getRelativePath() {
         return this.relativePath;
     }
 
     public GeoFilterArgs(
-        Input<GeoFilterActions> action,
-        Input<List<String>> countryCodes,
-        Input<String> relativePath) {
+        Output<GeoFilterActions> action,
+        Output<List<String>> countryCodes,
+        Output<String> relativePath) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.countryCodes = Objects.requireNonNull(countryCodes, "expected parameter 'countryCodes' to be non-null");
         this.relativePath = Objects.requireNonNull(relativePath, "expected parameter 'relativePath' to be non-null");
     }
 
     private GeoFilterArgs() {
-        this.action = Input.empty();
-        this.countryCodes = Input.empty();
-        this.relativePath = Input.empty();
+        this.action = Output.empty();
+        this.countryCodes = Output.empty();
+        this.relativePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<GeoFilterActions> action;
-        private Input<List<String>> countryCodes;
-        private Input<String> relativePath;
+        private Output<GeoFilterActions> action;
+        private Output<List<String>> countryCodes;
+        private Output<String> relativePath;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.relativePath = defaults.relativePath;
         }
 
-        public Builder action(Input<GeoFilterActions> action) {
+        public Builder action(Output<GeoFilterActions> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(GeoFilterActions action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder countryCodes(Input<List<String>> countryCodes) {
+        public Builder countryCodes(Output<List<String>> countryCodes) {
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
 
         public Builder countryCodes(List<String> countryCodes) {
-            this.countryCodes = Input.of(Objects.requireNonNull(countryCodes));
+            this.countryCodes = Output.of(Objects.requireNonNull(countryCodes));
             return this;
         }
 
-        public Builder relativePath(Input<String> relativePath) {
+        public Builder relativePath(Output<String> relativePath) {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
 
         public Builder relativePath(String relativePath) {
-            this.relativePath = Input.of(Objects.requireNonNull(relativePath));
+            this.relativePath = Output.of(Objects.requireNonNull(relativePath));
             return this;
         }
         public GeoFilterArgs build() {

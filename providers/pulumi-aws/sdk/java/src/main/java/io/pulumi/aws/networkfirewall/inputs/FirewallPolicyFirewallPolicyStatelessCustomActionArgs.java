@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionArgs extends
      * 
      */
     @InputImport(name="actionDefinition", required=true)
-      private final Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> actionDefinition;
+      private final Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> actionDefinition;
 
-    public Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> getActionDefinition() {
+    public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> getActionDefinition() {
         return this.actionDefinition;
     }
 
@@ -30,22 +30,22 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionArgs extends
      * 
      */
     @InputImport(name="actionName", required=true)
-      private final Input<String> actionName;
+      private final Output<String> actionName;
 
-    public Input<String> getActionName() {
+    public Output<String> getActionName() {
         return this.actionName;
     }
 
     public FirewallPolicyFirewallPolicyStatelessCustomActionArgs(
-        Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> actionDefinition,
-        Input<String> actionName) {
+        Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> actionDefinition,
+        Output<String> actionName) {
         this.actionDefinition = Objects.requireNonNull(actionDefinition, "expected parameter 'actionDefinition' to be non-null");
         this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
     }
 
     private FirewallPolicyFirewallPolicyStatelessCustomActionArgs() {
-        this.actionDefinition = Input.empty();
-        this.actionName = Input.empty();
+        this.actionDefinition = Output.empty();
+        this.actionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionArgs extends
     }
 
     public static final class Builder {
-        private Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> actionDefinition;
-        private Input<String> actionName;
+        private Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> actionDefinition;
+        private Output<String> actionName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionArgs extends
     	      this.actionName = defaults.actionName;
         }
 
-        public Builder actionDefinition(Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> actionDefinition) {
+        public Builder actionDefinition(Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs> actionDefinition) {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
 
         public Builder actionDefinition(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs actionDefinition) {
-            this.actionDefinition = Input.of(Objects.requireNonNull(actionDefinition));
+            this.actionDefinition = Output.of(Objects.requireNonNull(actionDefinition));
             return this;
         }
 
-        public Builder actionName(Input<String> actionName) {
+        public Builder actionName(Output<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Input.of(Objects.requireNonNull(actionName));
+            this.actionName = Output.of(Objects.requireNonNull(actionName));
             return this;
         }
         public FirewallPolicyFirewallPolicyStatelessCustomActionArgs build() {

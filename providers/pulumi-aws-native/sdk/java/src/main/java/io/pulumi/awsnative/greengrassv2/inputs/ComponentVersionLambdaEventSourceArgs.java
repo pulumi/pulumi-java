@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.greengrassv2.inputs;
 
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaEventSourceType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class ComponentVersionLambdaEventSourceArgs extends io.pulumi.resou
     public static final ComponentVersionLambdaEventSourceArgs Empty = new ComponentVersionLambdaEventSourceArgs();
 
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<ComponentVersionLambdaEventSourceType> type;
+      private final @Nullable Output<ComponentVersionLambdaEventSourceType> type;
 
-    public Input<ComponentVersionLambdaEventSourceType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ComponentVersionLambdaEventSourceType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ComponentVersionLambdaEventSourceArgs(
-        @Nullable Input<String> topic,
-        @Nullable Input<ComponentVersionLambdaEventSourceType> type) {
+        @Nullable Output<String> topic,
+        @Nullable Output<ComponentVersionLambdaEventSourceType> type) {
         this.topic = topic;
         this.type = type;
     }
 
     private ComponentVersionLambdaEventSourceArgs() {
-        this.topic = Input.empty();
-        this.type = Input.empty();
+        this.topic = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ComponentVersionLambdaEventSourceArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> topic;
-        private @Nullable Input<ComponentVersionLambdaEventSourceType> type;
+        private @Nullable Output<String> topic;
+        private @Nullable Output<ComponentVersionLambdaEventSourceType> type;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ComponentVersionLambdaEventSourceArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
 
-        public Builder type(@Nullable Input<ComponentVersionLambdaEventSourceType> type) {
+        public Builder type(@Nullable Output<ComponentVersionLambdaEventSourceType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ComponentVersionLambdaEventSourceType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ComponentVersionLambdaEventSourceArgs build() {

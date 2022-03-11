@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.LinuxOperatingSystemProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxOperatingSystemProfile")
-      private final @Nullable Input<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
+      private final @Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
 
-    public Input<LinuxOperatingSystemProfileArgs> getLinuxOperatingSystemProfile() {
-        return this.linuxOperatingSystemProfile == null ? Input.empty() : this.linuxOperatingSystemProfile;
+    public Output<LinuxOperatingSystemProfileArgs> getLinuxOperatingSystemProfile() {
+        return this.linuxOperatingSystemProfile == null ? Output.empty() : this.linuxOperatingSystemProfile;
     }
 
-    public OsProfileArgs(@Nullable Input<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile) {
+    public OsProfileArgs(@Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile) {
         this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
     }
 
     private OsProfileArgs() {
-        this.linuxOperatingSystemProfile = Input.empty();
+        this.linuxOperatingSystemProfile = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
+        private @Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.linuxOperatingSystemProfile = defaults.linuxOperatingSystemProfile;
         }
 
-        public Builder linuxOperatingSystemProfile(@Nullable Input<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile) {
+        public Builder linuxOperatingSystemProfile(@Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile) {
             this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
         }
 
         public Builder linuxOperatingSystemProfile(@Nullable LinuxOperatingSystemProfileArgs linuxOperatingSystemProfile) {
-            this.linuxOperatingSystemProfile = Input.ofNullable(linuxOperatingSystemProfile);
+            this.linuxOperatingSystemProfile = Output.ofNullable(linuxOperatingSystemProfile);
             return this;
         }
         public OsProfileArgs build() {

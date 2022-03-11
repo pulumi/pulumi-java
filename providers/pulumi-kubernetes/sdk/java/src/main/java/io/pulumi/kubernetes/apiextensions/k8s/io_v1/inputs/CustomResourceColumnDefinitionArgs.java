@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="jsonPath", required=true)
-      private final Input<String> jsonPath;
+      private final Output<String> jsonPath;
 
-    public Input<String> getJsonPath() {
+    public Output<String> getJsonPath() {
         return this.jsonPath;
     }
 
@@ -57,9 +57,9 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -68,10 +68,10 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public CustomResourceColumnDefinitionArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> format,
-        Input<String> jsonPath,
-        Input<String> name,
-        @Nullable Input<Integer> priority,
-        Input<String> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> format,
+        Output<String> jsonPath,
+        Output<String> name,
+        @Nullable Output<Integer> priority,
+        Output<String> type) {
         this.description = description;
         this.format = format;
         this.jsonPath = Objects.requireNonNull(jsonPath, "expected parameter 'jsonPath' to be non-null");
@@ -101,12 +101,12 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     }
 
     private CustomResourceColumnDefinitionArgs() {
-        this.description = Input.empty();
-        this.format = Input.empty();
-        this.jsonPath = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.format = Output.empty();
+        this.jsonPath = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> format;
-        private Input<String> jsonPath;
-        private Input<String> name;
-        private @Nullable Input<Integer> priority;
-        private Input<String> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> format;
+        private Output<String> jsonPath;
+        private Output<String> name;
+        private @Nullable Output<Integer> priority;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder jsonPath(Input<String> jsonPath) {
+        public Builder jsonPath(Output<String> jsonPath) {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
 
         public Builder jsonPath(String jsonPath) {
-            this.jsonPath = Input.of(Objects.requireNonNull(jsonPath));
+            this.jsonPath = Output.of(Objects.requireNonNull(jsonPath));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public CustomResourceColumnDefinitionArgs build() {

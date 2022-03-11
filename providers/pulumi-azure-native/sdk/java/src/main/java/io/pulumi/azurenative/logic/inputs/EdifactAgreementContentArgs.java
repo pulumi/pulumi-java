@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.EdifactOneWayAgreementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,9 +22,9 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="receiveAgreement", required=true)
-      private final Input<EdifactOneWayAgreementArgs> receiveAgreement;
+      private final Output<EdifactOneWayAgreementArgs> receiveAgreement;
 
-    public Input<EdifactOneWayAgreementArgs> getReceiveAgreement() {
+    public Output<EdifactOneWayAgreementArgs> getReceiveAgreement() {
         return this.receiveAgreement;
     }
 
@@ -33,22 +33,22 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sendAgreement", required=true)
-      private final Input<EdifactOneWayAgreementArgs> sendAgreement;
+      private final Output<EdifactOneWayAgreementArgs> sendAgreement;
 
-    public Input<EdifactOneWayAgreementArgs> getSendAgreement() {
+    public Output<EdifactOneWayAgreementArgs> getSendAgreement() {
         return this.sendAgreement;
     }
 
     public EdifactAgreementContentArgs(
-        Input<EdifactOneWayAgreementArgs> receiveAgreement,
-        Input<EdifactOneWayAgreementArgs> sendAgreement) {
+        Output<EdifactOneWayAgreementArgs> receiveAgreement,
+        Output<EdifactOneWayAgreementArgs> sendAgreement) {
         this.receiveAgreement = Objects.requireNonNull(receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
         this.sendAgreement = Objects.requireNonNull(sendAgreement, "expected parameter 'sendAgreement' to be non-null");
     }
 
     private EdifactAgreementContentArgs() {
-        this.receiveAgreement = Input.empty();
-        this.sendAgreement = Input.empty();
+        this.receiveAgreement = Output.empty();
+        this.sendAgreement = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<EdifactOneWayAgreementArgs> receiveAgreement;
-        private Input<EdifactOneWayAgreementArgs> sendAgreement;
+        private Output<EdifactOneWayAgreementArgs> receiveAgreement;
+        private Output<EdifactOneWayAgreementArgs> sendAgreement;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
     	      this.sendAgreement = defaults.sendAgreement;
         }
 
-        public Builder receiveAgreement(Input<EdifactOneWayAgreementArgs> receiveAgreement) {
+        public Builder receiveAgreement(Output<EdifactOneWayAgreementArgs> receiveAgreement) {
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
 
         public Builder receiveAgreement(EdifactOneWayAgreementArgs receiveAgreement) {
-            this.receiveAgreement = Input.of(Objects.requireNonNull(receiveAgreement));
+            this.receiveAgreement = Output.of(Objects.requireNonNull(receiveAgreement));
             return this;
         }
 
-        public Builder sendAgreement(Input<EdifactOneWayAgreementArgs> sendAgreement) {
+        public Builder sendAgreement(Output<EdifactOneWayAgreementArgs> sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
 
         public Builder sendAgreement(EdifactOneWayAgreementArgs sendAgreement) {
-            this.sendAgreement = Input.of(Objects.requireNonNull(sendAgreement));
+            this.sendAgreement = Output.of(Objects.requireNonNull(sendAgreement));
             return this;
         }
         public EdifactAgreementContentArgs build() {

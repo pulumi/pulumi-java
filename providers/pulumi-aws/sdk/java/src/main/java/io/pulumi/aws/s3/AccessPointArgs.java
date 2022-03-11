@@ -5,7 +5,7 @@ package io.pulumi.aws.s3;
 
 import io.pulumi.aws.s3.inputs.AccessPointPublicAccessBlockConfigurationArgs;
 import io.pulumi.aws.s3.inputs.AccessPointVpcConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -43,10 +43,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicAccessBlockConfiguration")
-      private final @Nullable Input<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
+      private final @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
-    public Input<AccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
-        return this.publicAccessBlockConfiguration == null ? Input.empty() : this.publicAccessBlockConfiguration;
+    public Output<AccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
+        return this.publicAccessBlockConfiguration == null ? Output.empty() : this.publicAccessBlockConfiguration;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfiguration")
-      private final @Nullable Input<AccessPointVpcConfigurationArgs> vpcConfiguration;
+      private final @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
-    public Input<AccessPointVpcConfigurationArgs> getVpcConfiguration() {
-        return this.vpcConfiguration == null ? Input.empty() : this.vpcConfiguration;
+    public Output<AccessPointVpcConfigurationArgs> getVpcConfiguration() {
+        return this.vpcConfiguration == null ? Output.empty() : this.vpcConfiguration;
     }
 
     public AccessPointArgs(
-        @Nullable Input<String> accountId,
-        Input<String> bucket,
-        @Nullable Input<String> name,
-        @Nullable Input<String> policy,
-        @Nullable Input<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration,
-        @Nullable Input<AccessPointVpcConfigurationArgs> vpcConfiguration) {
+        @Nullable Output<String> accountId,
+        Output<String> bucket,
+        @Nullable Output<String> name,
+        @Nullable Output<String> policy,
+        @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration,
+        @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration) {
         this.accountId = accountId;
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.name = name;
@@ -98,12 +98,12 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessPointArgs() {
-        this.accountId = Input.empty();
-        this.bucket = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.publicAccessBlockConfiguration = Input.empty();
-        this.vpcConfiguration = Input.empty();
+        this.accountId = Output.empty();
+        this.bucket = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.publicAccessBlockConfiguration = Output.empty();
+        this.vpcConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private Input<String> bucket;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
-        private @Nullable Input<AccessPointVpcConfigurationArgs> vpcConfiguration;
+        private @Nullable Output<String> accountId;
+        private Output<String> bucket;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
+        private @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder publicAccessBlockConfiguration(@Nullable Input<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
 
         public Builder publicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
-            this.publicAccessBlockConfiguration = Input.ofNullable(publicAccessBlockConfiguration);
+            this.publicAccessBlockConfiguration = Output.ofNullable(publicAccessBlockConfiguration);
             return this;
         }
 
-        public Builder vpcConfiguration(@Nullable Input<AccessPointVpcConfigurationArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
         public Builder vpcConfiguration(@Nullable AccessPointVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
+            this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
             return this;
         }
         public AccessPointArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.costmanagement.enums.RecurrenceType;
 import io.pulumi.azurenative.costmanagement.enums.StatusType;
 import io.pulumi.azurenative.costmanagement.inputs.ExportRecurrencePeriodArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrence")
-      private final @Nullable Input<Either<String,RecurrenceType>> recurrence;
+      private final @Nullable Output<Either<String,RecurrenceType>> recurrence;
 
-    public Input<Either<String,RecurrenceType>> getRecurrence() {
-        return this.recurrence == null ? Input.empty() : this.recurrence;
+    public Output<Either<String,RecurrenceType>> getRecurrence() {
+        return this.recurrence == null ? Output.empty() : this.recurrence;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrencePeriod")
-      private final @Nullable Input<ExportRecurrencePeriodArgs> recurrencePeriod;
+      private final @Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod;
 
-    public Input<ExportRecurrencePeriodArgs> getRecurrencePeriod() {
-        return this.recurrencePeriod == null ? Input.empty() : this.recurrencePeriod;
+    public Output<ExportRecurrencePeriodArgs> getRecurrencePeriod() {
+        return this.recurrencePeriod == null ? Output.empty() : this.recurrencePeriod;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,StatusType>> status;
+      private final @Nullable Output<Either<String,StatusType>> status;
 
-    public Input<Either<String,StatusType>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,StatusType>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public ExportScheduleArgs(
-        @Nullable Input<Either<String,RecurrenceType>> recurrence,
-        @Nullable Input<ExportRecurrencePeriodArgs> recurrencePeriod,
-        @Nullable Input<Either<String,StatusType>> status) {
+        @Nullable Output<Either<String,RecurrenceType>> recurrence,
+        @Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod,
+        @Nullable Output<Either<String,StatusType>> status) {
         this.recurrence = recurrence;
         this.recurrencePeriod = recurrencePeriod;
         this.status = status;
     }
 
     private ExportScheduleArgs() {
-        this.recurrence = Input.empty();
-        this.recurrencePeriod = Input.empty();
-        this.status = Input.empty();
+        this.recurrence = Output.empty();
+        this.recurrencePeriod = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,RecurrenceType>> recurrence;
-        private @Nullable Input<ExportRecurrencePeriodArgs> recurrencePeriod;
-        private @Nullable Input<Either<String,StatusType>> status;
+        private @Nullable Output<Either<String,RecurrenceType>> recurrence;
+        private @Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod;
+        private @Nullable Output<Either<String,StatusType>> status;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder recurrence(@Nullable Input<Either<String,RecurrenceType>> recurrence) {
+        public Builder recurrence(@Nullable Output<Either<String,RecurrenceType>> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
         public Builder recurrence(@Nullable Either<String,RecurrenceType> recurrence) {
-            this.recurrence = Input.ofNullable(recurrence);
+            this.recurrence = Output.ofNullable(recurrence);
             return this;
         }
 
-        public Builder recurrencePeriod(@Nullable Input<ExportRecurrencePeriodArgs> recurrencePeriod) {
+        public Builder recurrencePeriod(@Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod) {
             this.recurrencePeriod = recurrencePeriod;
             return this;
         }
 
         public Builder recurrencePeriod(@Nullable ExportRecurrencePeriodArgs recurrencePeriod) {
-            this.recurrencePeriod = Input.ofNullable(recurrencePeriod);
+            this.recurrencePeriod = Output.ofNullable(recurrencePeriod);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,StatusType>> status) {
+        public Builder status(@Nullable Output<Either<String,StatusType>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,StatusType> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public ExportScheduleArgs build() {

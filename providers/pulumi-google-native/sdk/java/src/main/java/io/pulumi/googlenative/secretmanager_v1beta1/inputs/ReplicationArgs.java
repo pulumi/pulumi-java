@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.AutomaticArgs;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.UserManagedArgs;
@@ -24,10 +24,10 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automatic")
-      private final @Nullable Input<AutomaticArgs> automatic;
+      private final @Nullable Output<AutomaticArgs> automatic;
 
-    public Input<AutomaticArgs> getAutomatic() {
-        return this.automatic == null ? Input.empty() : this.automatic;
+    public Output<AutomaticArgs> getAutomatic() {
+        return this.automatic == null ? Output.empty() : this.automatic;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userManaged")
-      private final @Nullable Input<UserManagedArgs> userManaged;
+      private final @Nullable Output<UserManagedArgs> userManaged;
 
-    public Input<UserManagedArgs> getUserManaged() {
-        return this.userManaged == null ? Input.empty() : this.userManaged;
+    public Output<UserManagedArgs> getUserManaged() {
+        return this.userManaged == null ? Output.empty() : this.userManaged;
     }
 
     public ReplicationArgs(
-        @Nullable Input<AutomaticArgs> automatic,
-        @Nullable Input<UserManagedArgs> userManaged) {
+        @Nullable Output<AutomaticArgs> automatic,
+        @Nullable Output<UserManagedArgs> userManaged) {
         this.automatic = automatic;
         this.userManaged = userManaged;
     }
 
     private ReplicationArgs() {
-        this.automatic = Input.empty();
-        this.userManaged = Input.empty();
+        this.automatic = Output.empty();
+        this.userManaged = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AutomaticArgs> automatic;
-        private @Nullable Input<UserManagedArgs> userManaged;
+        private @Nullable Output<AutomaticArgs> automatic;
+        private @Nullable Output<UserManagedArgs> userManaged;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder automatic(@Nullable Input<AutomaticArgs> automatic) {
+        public Builder automatic(@Nullable Output<AutomaticArgs> automatic) {
             this.automatic = automatic;
             return this;
         }
 
         public Builder automatic(@Nullable AutomaticArgs automatic) {
-            this.automatic = Input.ofNullable(automatic);
+            this.automatic = Output.ofNullable(automatic);
             return this;
         }
 
-        public Builder userManaged(@Nullable Input<UserManagedArgs> userManaged) {
+        public Builder userManaged(@Nullable Output<UserManagedArgs> userManaged) {
             this.userManaged = userManaged;
             return this;
         }
 
         public Builder userManaged(@Nullable UserManagedArgs userManaged) {
-            this.userManaged = Input.ofNullable(userManaged);
+            this.userManaged = Output.ofNullable(userManaged);
             return this;
         }
         public ReplicationArgs build() {

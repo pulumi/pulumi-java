@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class AssociationOutputLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="s3BucketName", required=true)
-      private final Input<String> s3BucketName;
+      private final Output<String> s3BucketName;
 
-    public Input<String> getS3BucketName() {
+    public Output<String> getS3BucketName() {
         return this.s3BucketName;
     }
 
@@ -30,10 +30,10 @@ public final class AssociationOutputLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="s3KeyPrefix")
-      private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Output<String> s3KeyPrefix;
 
-    public Input<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
+    public Output<String> getS3KeyPrefix() {
+        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class AssociationOutputLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="s3Region")
-      private final @Nullable Input<String> s3Region;
+      private final @Nullable Output<String> s3Region;
 
-    public Input<String> getS3Region() {
-        return this.s3Region == null ? Input.empty() : this.s3Region;
+    public Output<String> getS3Region() {
+        return this.s3Region == null ? Output.empty() : this.s3Region;
     }
 
     public AssociationOutputLocationGetArgs(
-        Input<String> s3BucketName,
-        @Nullable Input<String> s3KeyPrefix,
-        @Nullable Input<String> s3Region) {
+        Output<String> s3BucketName,
+        @Nullable Output<String> s3KeyPrefix,
+        @Nullable Output<String> s3Region) {
         this.s3BucketName = Objects.requireNonNull(s3BucketName, "expected parameter 's3BucketName' to be non-null");
         this.s3KeyPrefix = s3KeyPrefix;
         this.s3Region = s3Region;
     }
 
     private AssociationOutputLocationGetArgs() {
-        this.s3BucketName = Input.empty();
-        this.s3KeyPrefix = Input.empty();
-        this.s3Region = Input.empty();
+        this.s3BucketName = Output.empty();
+        this.s3KeyPrefix = Output.empty();
+        this.s3Region = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AssociationOutputLocationGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> s3BucketName;
-        private @Nullable Input<String> s3KeyPrefix;
-        private @Nullable Input<String> s3Region;
+        private Output<String> s3BucketName;
+        private @Nullable Output<String> s3KeyPrefix;
+        private @Nullable Output<String> s3Region;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AssociationOutputLocationGetArgs extends io.pulumi.resources.
     	      this.s3Region = defaults.s3Region;
         }
 
-        public Builder s3BucketName(Input<String> s3BucketName) {
+        public Builder s3BucketName(Output<String> s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
         public Builder s3BucketName(String s3BucketName) {
-            this.s3BucketName = Input.of(Objects.requireNonNull(s3BucketName));
+            this.s3BucketName = Output.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
 
-        public Builder s3KeyPrefix(@Nullable Input<String> s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
 
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Input.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
         }
 
-        public Builder s3Region(@Nullable Input<String> s3Region) {
+        public Builder s3Region(@Nullable Output<String> s3Region) {
             this.s3Region = s3Region;
             return this;
         }
 
         public Builder s3Region(@Nullable String s3Region) {
-            this.s3Region = Input.ofNullable(s3Region);
+            this.s3Region = Output.ofNullable(s3Region);
             return this;
         }
         public AssociationOutputLocationGetArgs build() {

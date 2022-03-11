@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="samplingRatio")
-      private final @Nullable Input<Double> samplingRatio;
+      private final @Nullable Output<Double> samplingRatio;
 
-    public Input<Double> getSamplingRatio() {
-        return this.samplingRatio == null ? Input.empty() : this.samplingRatio;
+    public Output<Double> getSamplingRatio() {
+        return this.samplingRatio == null ? Output.empty() : this.samplingRatio;
     }
 
-    public StackdriverLoggingConfigArgs(@Nullable Input<Double> samplingRatio) {
+    public StackdriverLoggingConfigArgs(@Nullable Output<Double> samplingRatio) {
         this.samplingRatio = samplingRatio;
     }
 
     private StackdriverLoggingConfigArgs() {
-        this.samplingRatio = Input.empty();
+        this.samplingRatio = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> samplingRatio;
+        private @Nullable Output<Double> samplingRatio;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
     	      this.samplingRatio = defaults.samplingRatio;
         }
 
-        public Builder samplingRatio(@Nullable Input<Double> samplingRatio) {
+        public Builder samplingRatio(@Nullable Output<Double> samplingRatio) {
             this.samplingRatio = samplingRatio;
             return this;
         }
 
         public Builder samplingRatio(@Nullable Double samplingRatio) {
-            this.samplingRatio = Input.ofNullable(samplingRatio);
+            this.samplingRatio = Output.ofNullable(samplingRatio);
             return this;
         }
         public StackdriverLoggingConfigArgs build() {

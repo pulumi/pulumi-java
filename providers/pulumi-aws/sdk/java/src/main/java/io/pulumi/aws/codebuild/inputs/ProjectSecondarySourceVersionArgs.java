@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ProjectSecondarySourceVersionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sourceIdentifier", required=true)
-      private final Input<String> sourceIdentifier;
+      private final Output<String> sourceIdentifier;
 
-    public Input<String> getSourceIdentifier() {
+    public Output<String> getSourceIdentifier() {
         return this.sourceIdentifier;
     }
 
@@ -29,22 +29,22 @@ public final class ProjectSecondarySourceVersionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sourceVersion", required=true)
-      private final Input<String> sourceVersion;
+      private final Output<String> sourceVersion;
 
-    public Input<String> getSourceVersion() {
+    public Output<String> getSourceVersion() {
         return this.sourceVersion;
     }
 
     public ProjectSecondarySourceVersionArgs(
-        Input<String> sourceIdentifier,
-        Input<String> sourceVersion) {
+        Output<String> sourceIdentifier,
+        Output<String> sourceVersion) {
         this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier, "expected parameter 'sourceIdentifier' to be non-null");
         this.sourceVersion = Objects.requireNonNull(sourceVersion, "expected parameter 'sourceVersion' to be non-null");
     }
 
     private ProjectSecondarySourceVersionArgs() {
-        this.sourceIdentifier = Input.empty();
-        this.sourceVersion = Input.empty();
+        this.sourceIdentifier = Output.empty();
+        this.sourceVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ProjectSecondarySourceVersionArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> sourceIdentifier;
-        private Input<String> sourceVersion;
+        private Output<String> sourceIdentifier;
+        private Output<String> sourceVersion;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ProjectSecondarySourceVersionArgs extends io.pulumi.resources
     	      this.sourceVersion = defaults.sourceVersion;
         }
 
-        public Builder sourceIdentifier(Input<String> sourceIdentifier) {
+        public Builder sourceIdentifier(Output<String> sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
 
         public Builder sourceIdentifier(String sourceIdentifier) {
-            this.sourceIdentifier = Input.of(Objects.requireNonNull(sourceIdentifier));
+            this.sourceIdentifier = Output.of(Objects.requireNonNull(sourceIdentifier));
             return this;
         }
 
-        public Builder sourceVersion(Input<String> sourceVersion) {
+        public Builder sourceVersion(Output<String> sourceVersion) {
             this.sourceVersion = Objects.requireNonNull(sourceVersion);
             return this;
         }
 
         public Builder sourceVersion(String sourceVersion) {
-            this.sourceVersion = Input.of(Objects.requireNonNull(sourceVersion));
+            this.sourceVersion = Output.of(Objects.requireNonNull(sourceVersion));
             return this;
         }
         public ProjectSecondarySourceVersionArgs build() {

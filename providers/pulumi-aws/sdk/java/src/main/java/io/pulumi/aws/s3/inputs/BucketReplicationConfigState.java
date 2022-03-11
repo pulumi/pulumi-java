@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<BucketReplicationConfigRuleGetArgs>> rules;
+      private final @Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules;
 
-    public Input<List<BucketReplicationConfigRuleGetArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<BucketReplicationConfigRuleGetArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public BucketReplicationConfigState(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> role,
-        @Nullable Input<List<BucketReplicationConfigRuleGetArgs>> rules) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> role,
+        @Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules) {
         this.bucket = bucket;
         this.role = role;
         this.rules = rules;
     }
 
     private BucketReplicationConfigState() {
-        this.bucket = Input.empty();
-        this.role = Input.empty();
-        this.rules = Input.empty();
+        this.bucket = Output.empty();
+        this.role = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> role;
-        private @Nullable Input<List<BucketReplicationConfigRuleGetArgs>> rules;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> role;
+        private @Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
     	      this.rules = defaults.rules;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<BucketReplicationConfigRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<BucketReplicationConfigRuleGetArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public BucketReplicationConfigState build() {

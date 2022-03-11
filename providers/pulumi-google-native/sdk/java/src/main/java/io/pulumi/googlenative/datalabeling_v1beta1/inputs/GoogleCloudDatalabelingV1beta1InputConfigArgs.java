@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datalabeling_v1beta1.enums.GoogleCloudDatalabelingV1beta1InputConfigAnnotationType;
 import io.pulumi.googlenative.datalabeling_v1beta1.enums.GoogleCloudDatalabelingV1beta1InputConfigDataType;
@@ -28,10 +28,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="annotationType")
-      private final @Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
+      private final @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
 
-    public Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> getAnnotationType() {
-        return this.annotationType == null ? Input.empty() : this.annotationType;
+    public Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> getAnnotationType() {
+        return this.annotationType == null ? Output.empty() : this.annotationType;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="bigquerySource")
-      private final @Nullable Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
+      private final @Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
 
-    public Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> getBigquerySource() {
-        return this.bigquerySource == null ? Input.empty() : this.bigquerySource;
+    public Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> getBigquerySource() {
+        return this.bigquerySource == null ? Output.empty() : this.bigquerySource;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="classificationMetadata")
-      private final @Nullable Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
+      private final @Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
 
-    public Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> getClassificationMetadata() {
-        return this.classificationMetadata == null ? Input.empty() : this.classificationMetadata;
+    public Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> getClassificationMetadata() {
+        return this.classificationMetadata == null ? Output.empty() : this.classificationMetadata;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="dataType", required=true)
-      private final Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
+      private final Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
 
-    public Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> getDataType() {
+    public Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> getDataType() {
         return this.dataType;
     }
 
@@ -72,10 +72,10 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="gcsSource")
-      private final @Nullable Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
+      private final @Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
 
-    public Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> getGcsSource() {
-        return this.gcsSource == null ? Input.empty() : this.gcsSource;
+    public Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> getGcsSource() {
+        return this.gcsSource == null ? Output.empty() : this.gcsSource;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="textMetadata")
-      private final @Nullable Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
+      private final @Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
 
-    public Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> getTextMetadata() {
-        return this.textMetadata == null ? Input.empty() : this.textMetadata;
+    public Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> getTextMetadata() {
+        return this.textMetadata == null ? Output.empty() : this.textMetadata;
     }
 
     public GoogleCloudDatalabelingV1beta1InputConfigArgs(
-        @Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType,
-        @Nullable Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource,
-        @Nullable Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata,
-        Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType,
-        @Nullable Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource,
-        @Nullable Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata) {
+        @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType,
+        @Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource,
+        @Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata,
+        Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType,
+        @Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource,
+        @Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata) {
         this.annotationType = annotationType;
         this.bigquerySource = bigquerySource;
         this.classificationMetadata = classificationMetadata;
@@ -105,12 +105,12 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
     }
 
     private GoogleCloudDatalabelingV1beta1InputConfigArgs() {
-        this.annotationType = Input.empty();
-        this.bigquerySource = Input.empty();
-        this.classificationMetadata = Input.empty();
-        this.dataType = Input.empty();
-        this.gcsSource = Input.empty();
-        this.textMetadata = Input.empty();
+        this.annotationType = Output.empty();
+        this.bigquerySource = Output.empty();
+        this.classificationMetadata = Output.empty();
+        this.dataType = Output.empty();
+        this.gcsSource = Output.empty();
+        this.textMetadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
-        private @Nullable Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
-        private @Nullable Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
-        private Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
-        private @Nullable Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
-        private @Nullable Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
+        private @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
+        private @Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
+        private @Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
+        private Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
+        private @Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
+        private @Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
     	      this.textMetadata = defaults.textMetadata;
         }
 
-        public Builder annotationType(@Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType) {
+        public Builder annotationType(@Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType) {
             this.annotationType = annotationType;
             return this;
         }
 
         public Builder annotationType(@Nullable GoogleCloudDatalabelingV1beta1InputConfigAnnotationType annotationType) {
-            this.annotationType = Input.ofNullable(annotationType);
+            this.annotationType = Output.ofNullable(annotationType);
             return this;
         }
 
-        public Builder bigquerySource(@Nullable Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource) {
+        public Builder bigquerySource(@Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource) {
             this.bigquerySource = bigquerySource;
             return this;
         }
 
         public Builder bigquerySource(@Nullable GoogleCloudDatalabelingV1beta1BigQuerySourceArgs bigquerySource) {
-            this.bigquerySource = Input.ofNullable(bigquerySource);
+            this.bigquerySource = Output.ofNullable(bigquerySource);
             return this;
         }
 
-        public Builder classificationMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata) {
+        public Builder classificationMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata) {
             this.classificationMetadata = classificationMetadata;
             return this;
         }
 
         public Builder classificationMetadata(@Nullable GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs classificationMetadata) {
-            this.classificationMetadata = Input.ofNullable(classificationMetadata);
+            this.classificationMetadata = Output.ofNullable(classificationMetadata);
             return this;
         }
 
-        public Builder dataType(Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType) {
+        public Builder dataType(Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
 
         public Builder dataType(GoogleCloudDatalabelingV1beta1InputConfigDataType dataType) {
-            this.dataType = Input.of(Objects.requireNonNull(dataType));
+            this.dataType = Output.of(Objects.requireNonNull(dataType));
             return this;
         }
 
-        public Builder gcsSource(@Nullable Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource) {
+        public Builder gcsSource(@Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource) {
             this.gcsSource = gcsSource;
             return this;
         }
 
         public Builder gcsSource(@Nullable GoogleCloudDatalabelingV1beta1GcsSourceArgs gcsSource) {
-            this.gcsSource = Input.ofNullable(gcsSource);
+            this.gcsSource = Output.ofNullable(gcsSource);
             return this;
         }
 
-        public Builder textMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata) {
+        public Builder textMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata) {
             this.textMetadata = textMetadata;
             return this;
         }
 
         public Builder textMetadata(@Nullable GoogleCloudDatalabelingV1beta1TextMetadataArgs textMetadata) {
-            this.textMetadata = Input.ofNullable(textMetadata);
+            this.textMetadata = Output.ofNullable(textMetadata);
             return this;
         }
         public GoogleCloudDatalabelingV1beta1InputConfigArgs build() {

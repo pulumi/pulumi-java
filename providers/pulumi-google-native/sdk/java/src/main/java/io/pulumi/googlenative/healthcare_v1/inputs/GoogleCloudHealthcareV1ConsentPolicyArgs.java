@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.inputs.AttributeArgs;
 import io.pulumi.googlenative.healthcare_v1.inputs.ExprArgs;
@@ -25,9 +25,9 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="authorizationRule", required=true)
-      private final Input<ExprArgs> authorizationRule;
+      private final Output<ExprArgs> authorizationRule;
 
-    public Input<ExprArgs> getAuthorizationRule() {
+    public Output<ExprArgs> getAuthorizationRule() {
         return this.authorizationRule;
     }
 
@@ -36,22 +36,22 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceAttributes")
-      private final @Nullable Input<List<AttributeArgs>> resourceAttributes;
+      private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
-    public Input<List<AttributeArgs>> getResourceAttributes() {
-        return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;
+    public Output<List<AttributeArgs>> getResourceAttributes() {
+        return this.resourceAttributes == null ? Output.empty() : this.resourceAttributes;
     }
 
     public GoogleCloudHealthcareV1ConsentPolicyArgs(
-        Input<ExprArgs> authorizationRule,
-        @Nullable Input<List<AttributeArgs>> resourceAttributes) {
+        Output<ExprArgs> authorizationRule,
+        @Nullable Output<List<AttributeArgs>> resourceAttributes) {
         this.authorizationRule = Objects.requireNonNull(authorizationRule, "expected parameter 'authorizationRule' to be non-null");
         this.resourceAttributes = resourceAttributes;
     }
 
     private GoogleCloudHealthcareV1ConsentPolicyArgs() {
-        this.authorizationRule = Input.empty();
-        this.resourceAttributes = Input.empty();
+        this.authorizationRule = Output.empty();
+        this.resourceAttributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<ExprArgs> authorizationRule;
-        private @Nullable Input<List<AttributeArgs>> resourceAttributes;
+        private Output<ExprArgs> authorizationRule;
+        private @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
     	      this.resourceAttributes = defaults.resourceAttributes;
         }
 
-        public Builder authorizationRule(Input<ExprArgs> authorizationRule) {
+        public Builder authorizationRule(Output<ExprArgs> authorizationRule) {
             this.authorizationRule = Objects.requireNonNull(authorizationRule);
             return this;
         }
 
         public Builder authorizationRule(ExprArgs authorizationRule) {
-            this.authorizationRule = Input.of(Objects.requireNonNull(authorizationRule));
+            this.authorizationRule = Output.of(Objects.requireNonNull(authorizationRule));
             return this;
         }
 
-        public Builder resourceAttributes(@Nullable Input<List<AttributeArgs>> resourceAttributes) {
+        public Builder resourceAttributes(@Nullable Output<List<AttributeArgs>> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
 
         public Builder resourceAttributes(@Nullable List<AttributeArgs> resourceAttributes) {
-            this.resourceAttributes = Input.ofNullable(resourceAttributes);
+            this.resourceAttributes = Output.ofNullable(resourceAttributes);
             return this;
         }
         public GoogleCloudHealthcareV1ConsentPolicyArgs build() {

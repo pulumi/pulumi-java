@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public RelationshipOccurrenceArgs(
-        @Nullable Input<String> comment,
-        @Nullable Input<String> source,
-        @Nullable Input<String> target) {
+        @Nullable Output<String> comment,
+        @Nullable Output<String> source,
+        @Nullable Output<String> target) {
         this.comment = comment;
         this.source = source;
         this.target = target;
     }
 
     private RelationshipOccurrenceArgs() {
-        this.comment = Input.empty();
-        this.source = Input.empty();
-        this.target = Input.empty();
+        this.comment = Output.empty();
+        this.source = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> source;
-        private @Nullable Input<String> target;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> source;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
     	      this.target = defaults.target;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public RelationshipOccurrenceArgs build() {

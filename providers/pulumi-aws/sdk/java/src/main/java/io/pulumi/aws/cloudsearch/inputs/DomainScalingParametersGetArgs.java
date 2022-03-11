@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="desiredInstanceType")
-      private final @Nullable Input<String> desiredInstanceType;
+      private final @Nullable Output<String> desiredInstanceType;
 
-    public Input<String> getDesiredInstanceType() {
-        return this.desiredInstanceType == null ? Input.empty() : this.desiredInstanceType;
+    public Output<String> getDesiredInstanceType() {
+        return this.desiredInstanceType == null ? Output.empty() : this.desiredInstanceType;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="desiredPartitionCount")
-      private final @Nullable Input<Integer> desiredPartitionCount;
+      private final @Nullable Output<Integer> desiredPartitionCount;
 
-    public Input<Integer> getDesiredPartitionCount() {
-        return this.desiredPartitionCount == null ? Input.empty() : this.desiredPartitionCount;
+    public Output<Integer> getDesiredPartitionCount() {
+        return this.desiredPartitionCount == null ? Output.empty() : this.desiredPartitionCount;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="desiredReplicationCount")
-      private final @Nullable Input<Integer> desiredReplicationCount;
+      private final @Nullable Output<Integer> desiredReplicationCount;
 
-    public Input<Integer> getDesiredReplicationCount() {
-        return this.desiredReplicationCount == null ? Input.empty() : this.desiredReplicationCount;
+    public Output<Integer> getDesiredReplicationCount() {
+        return this.desiredReplicationCount == null ? Output.empty() : this.desiredReplicationCount;
     }
 
     public DomainScalingParametersGetArgs(
-        @Nullable Input<String> desiredInstanceType,
-        @Nullable Input<Integer> desiredPartitionCount,
-        @Nullable Input<Integer> desiredReplicationCount) {
+        @Nullable Output<String> desiredInstanceType,
+        @Nullable Output<Integer> desiredPartitionCount,
+        @Nullable Output<Integer> desiredReplicationCount) {
         this.desiredInstanceType = desiredInstanceType;
         this.desiredPartitionCount = desiredPartitionCount;
         this.desiredReplicationCount = desiredReplicationCount;
     }
 
     private DomainScalingParametersGetArgs() {
-        this.desiredInstanceType = Input.empty();
-        this.desiredPartitionCount = Input.empty();
-        this.desiredReplicationCount = Input.empty();
+        this.desiredInstanceType = Output.empty();
+        this.desiredPartitionCount = Output.empty();
+        this.desiredReplicationCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> desiredInstanceType;
-        private @Nullable Input<Integer> desiredPartitionCount;
-        private @Nullable Input<Integer> desiredReplicationCount;
+        private @Nullable Output<String> desiredInstanceType;
+        private @Nullable Output<Integer> desiredPartitionCount;
+        private @Nullable Output<Integer> desiredReplicationCount;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class DomainScalingParametersGetArgs extends io.pulumi.resources.Re
     	      this.desiredReplicationCount = defaults.desiredReplicationCount;
         }
 
-        public Builder desiredInstanceType(@Nullable Input<String> desiredInstanceType) {
+        public Builder desiredInstanceType(@Nullable Output<String> desiredInstanceType) {
             this.desiredInstanceType = desiredInstanceType;
             return this;
         }
 
         public Builder desiredInstanceType(@Nullable String desiredInstanceType) {
-            this.desiredInstanceType = Input.ofNullable(desiredInstanceType);
+            this.desiredInstanceType = Output.ofNullable(desiredInstanceType);
             return this;
         }
 
-        public Builder desiredPartitionCount(@Nullable Input<Integer> desiredPartitionCount) {
+        public Builder desiredPartitionCount(@Nullable Output<Integer> desiredPartitionCount) {
             this.desiredPartitionCount = desiredPartitionCount;
             return this;
         }
 
         public Builder desiredPartitionCount(@Nullable Integer desiredPartitionCount) {
-            this.desiredPartitionCount = Input.ofNullable(desiredPartitionCount);
+            this.desiredPartitionCount = Output.ofNullable(desiredPartitionCount);
             return this;
         }
 
-        public Builder desiredReplicationCount(@Nullable Input<Integer> desiredReplicationCount) {
+        public Builder desiredReplicationCount(@Nullable Output<Integer> desiredReplicationCount) {
             this.desiredReplicationCount = desiredReplicationCount;
             return this;
         }
 
         public Builder desiredReplicationCount(@Nullable Integer desiredReplicationCount) {
-            this.desiredReplicationCount = Input.ofNullable(desiredReplicationCount);
+            this.desiredReplicationCount = Output.ofNullable(desiredReplicationCount);
             return this;
         }
         public DomainScalingParametersGetArgs build() {

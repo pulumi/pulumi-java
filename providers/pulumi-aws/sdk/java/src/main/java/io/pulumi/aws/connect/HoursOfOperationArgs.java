@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect;
 
 import io.pulumi.aws.connect.inputs.HoursOfOperationConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configs", required=true)
-      private final Input<List<HoursOfOperationConfigArgs>> configs;
+      private final Output<List<HoursOfOperationConfigArgs>> configs;
 
-    public Input<List<HoursOfOperationConfigArgs>> getConfigs() {
+    public Output<List<HoursOfOperationConfigArgs>> getConfigs() {
         return this.configs;
     }
 
@@ -33,10 +33,10 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -55,10 +55,10 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeZone", required=true)
-      private final Input<String> timeZone;
+      private final Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
+    public Output<String> getTimeZone() {
         return this.timeZone;
     }
 
     public HoursOfOperationArgs(
-        Input<List<HoursOfOperationConfigArgs>> configs,
-        @Nullable Input<String> description,
-        Input<String> instanceId,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        Input<String> timeZone) {
+        Output<List<HoursOfOperationConfigArgs>> configs,
+        @Nullable Output<String> description,
+        Output<String> instanceId,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        Output<String> timeZone) {
         this.configs = Objects.requireNonNull(configs, "expected parameter 'configs' to be non-null");
         this.description = description;
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
@@ -112,13 +112,13 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HoursOfOperationArgs() {
-        this.configs = Input.empty();
-        this.description = Input.empty();
-        this.instanceId = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.timeZone = Input.empty();
+        this.configs = Output.empty();
+        this.description = Output.empty();
+        this.instanceId = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<HoursOfOperationConfigArgs>> configs;
-        private @Nullable Input<String> description;
-        private Input<String> instanceId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private Input<String> timeZone;
+        private Output<List<HoursOfOperationConfigArgs>> configs;
+        private @Nullable Output<String> description;
+        private Output<String> instanceId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder configs(Input<List<HoursOfOperationConfigArgs>> configs) {
+        public Builder configs(Output<List<HoursOfOperationConfigArgs>> configs) {
             this.configs = Objects.requireNonNull(configs);
             return this;
         }
 
         public Builder configs(List<HoursOfOperationConfigArgs> configs) {
-            this.configs = Input.of(Objects.requireNonNull(configs));
+            this.configs = Output.of(Objects.requireNonNull(configs));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder timeZone(Input<String> timeZone) {
+        public Builder timeZone(Output<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
         public Builder timeZone(String timeZone) {
-            this.timeZone = Input.of(Objects.requireNonNull(timeZone));
+            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
             return this;
         }
         public HoursOfOperationArgs build() {

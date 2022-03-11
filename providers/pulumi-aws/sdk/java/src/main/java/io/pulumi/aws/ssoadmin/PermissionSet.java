@@ -6,7 +6,6 @@ package io.pulumi.aws.ssoadmin;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssoadmin.PermissionSetArgs;
 import io.pulumi.aws.ssoadmin.inputs.PermissionSetState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -195,14 +194,14 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PermissionSet(String name, PermissionSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssoadmin/permissionSet:PermissionSet", name, args == null ? PermissionSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ssoadmin/permissionSet:PermissionSet", name, args == null ? PermissionSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PermissionSet(String name, Input<String> id, @Nullable PermissionSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PermissionSet(String name, Output<String> id, @Nullable PermissionSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ssoadmin/permissionSet:PermissionSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -218,7 +217,7 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PermissionSet get(String name, Input<String> id, @Nullable PermissionSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PermissionSet get(String name, Output<String> id, @Nullable PermissionSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PermissionSet(name, id, state, options);
     }
 }

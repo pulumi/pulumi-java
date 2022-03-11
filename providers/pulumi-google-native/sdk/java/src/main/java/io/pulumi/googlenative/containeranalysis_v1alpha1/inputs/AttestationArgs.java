@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.PgpSignedAttestationArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     public static final AttestationArgs Empty = new AttestationArgs();
 
     @InputImport(name="pgpSignedAttestation")
-      private final @Nullable Input<PgpSignedAttestationArgs> pgpSignedAttestation;
+      private final @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation;
 
-    public Input<PgpSignedAttestationArgs> getPgpSignedAttestation() {
-        return this.pgpSignedAttestation == null ? Input.empty() : this.pgpSignedAttestation;
+    public Output<PgpSignedAttestationArgs> getPgpSignedAttestation() {
+        return this.pgpSignedAttestation == null ? Output.empty() : this.pgpSignedAttestation;
     }
 
-    public AttestationArgs(@Nullable Input<PgpSignedAttestationArgs> pgpSignedAttestation) {
+    public AttestationArgs(@Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation) {
         this.pgpSignedAttestation = pgpSignedAttestation;
     }
 
     private AttestationArgs() {
-        this.pgpSignedAttestation = Input.empty();
+        this.pgpSignedAttestation = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<PgpSignedAttestationArgs> pgpSignedAttestation;
+        private @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pgpSignedAttestation = defaults.pgpSignedAttestation;
         }
 
-        public Builder pgpSignedAttestation(@Nullable Input<PgpSignedAttestationArgs> pgpSignedAttestation) {
+        public Builder pgpSignedAttestation(@Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation) {
             this.pgpSignedAttestation = pgpSignedAttestation;
             return this;
         }
 
         public Builder pgpSignedAttestation(@Nullable PgpSignedAttestationArgs pgpSignedAttestation) {
-            this.pgpSignedAttestation = Input.ofNullable(pgpSignedAttestation);
+            this.pgpSignedAttestation = Output.ofNullable(pgpSignedAttestation);
             return this;
         }
         public AttestationArgs build() {

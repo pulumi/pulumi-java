@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -30,22 +30,22 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
      * 
      */
     @InputImport(name="roleSessionName")
-      private final @Nullable Input<String> roleSessionName;
+      private final @Nullable Output<String> roleSessionName;
 
-    public Input<String> getRoleSessionName() {
-        return this.roleSessionName == null ? Input.empty() : this.roleSessionName;
+    public Output<String> getRoleSessionName() {
+        return this.roleSessionName == null ? Output.empty() : this.roleSessionName;
     }
 
     public AwsClusterControlPlaneAwsServicesAuthenticationArgs(
-        Input<String> roleArn,
-        @Nullable Input<String> roleSessionName) {
+        Output<String> roleArn,
+        @Nullable Output<String> roleSessionName) {
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.roleSessionName = roleSessionName;
     }
 
     private AwsClusterControlPlaneAwsServicesAuthenticationArgs() {
-        this.roleArn = Input.empty();
-        this.roleSessionName = Input.empty();
+        this.roleArn = Output.empty();
+        this.roleSessionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
     }
 
     public static final class Builder {
-        private Input<String> roleArn;
-        private @Nullable Input<String> roleSessionName;
+        private Output<String> roleArn;
+        private @Nullable Output<String> roleSessionName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
     	      this.roleSessionName = defaults.roleSessionName;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder roleSessionName(@Nullable Input<String> roleSessionName) {
+        public Builder roleSessionName(@Nullable Output<String> roleSessionName) {
             this.roleSessionName = roleSessionName;
             return this;
         }
 
         public Builder roleSessionName(@Nullable String roleSessionName) {
-            this.roleSessionName = Input.ofNullable(roleSessionName);
+            this.roleSessionName = Output.ofNullable(roleSessionName);
             return this;
         }
         public AwsClusterControlPlaneAwsServicesAuthenticationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="portfolioId", required=true)
-      private final Input<String> portfolioId;
+      private final Output<String> portfolioId;
 
-    public Input<String> getPortfolioId() {
+    public Output<String> getPortfolioId() {
         return this.portfolioId;
     }
 
@@ -41,9 +41,9 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="productId", required=true)
-      private final Input<String> productId;
+      private final Output<String> productId;
 
-    public Input<String> getProductId() {
+    public Output<String> getProductId() {
         return this.productId;
     }
 
@@ -52,17 +52,17 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sourcePortfolioId")
-      private final @Nullable Input<String> sourcePortfolioId;
+      private final @Nullable Output<String> sourcePortfolioId;
 
-    public Input<String> getSourcePortfolioId() {
-        return this.sourcePortfolioId == null ? Input.empty() : this.sourcePortfolioId;
+    public Output<String> getSourcePortfolioId() {
+        return this.sourcePortfolioId == null ? Output.empty() : this.sourcePortfolioId;
     }
 
     public ProductPortfolioAssociationArgs(
-        @Nullable Input<String> acceptLanguage,
-        Input<String> portfolioId,
-        Input<String> productId,
-        @Nullable Input<String> sourcePortfolioId) {
+        @Nullable Output<String> acceptLanguage,
+        Output<String> portfolioId,
+        Output<String> productId,
+        @Nullable Output<String> sourcePortfolioId) {
         this.acceptLanguage = acceptLanguage;
         this.portfolioId = Objects.requireNonNull(portfolioId, "expected parameter 'portfolioId' to be non-null");
         this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
@@ -70,10 +70,10 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
     }
 
     private ProductPortfolioAssociationArgs() {
-        this.acceptLanguage = Input.empty();
-        this.portfolioId = Input.empty();
-        this.productId = Input.empty();
-        this.sourcePortfolioId = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.portfolioId = Output.empty();
+        this.productId = Output.empty();
+        this.sourcePortfolioId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private Input<String> portfolioId;
-        private Input<String> productId;
-        private @Nullable Input<String> sourcePortfolioId;
+        private @Nullable Output<String> acceptLanguage;
+        private Output<String> portfolioId;
+        private Output<String> productId;
+        private @Nullable Output<String> sourcePortfolioId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
     	      this.sourcePortfolioId = defaults.sourcePortfolioId;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder portfolioId(Input<String> portfolioId) {
+        public Builder portfolioId(Output<String> portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
 
         public Builder portfolioId(String portfolioId) {
-            this.portfolioId = Input.of(Objects.requireNonNull(portfolioId));
+            this.portfolioId = Output.of(Objects.requireNonNull(portfolioId));
             return this;
         }
 
-        public Builder productId(Input<String> productId) {
+        public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
         public Builder productId(String productId) {
-            this.productId = Input.of(Objects.requireNonNull(productId));
+            this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder sourcePortfolioId(@Nullable Input<String> sourcePortfolioId) {
+        public Builder sourcePortfolioId(@Nullable Output<String> sourcePortfolioId) {
             this.sourcePortfolioId = sourcePortfolioId;
             return this;
         }
 
         public Builder sourcePortfolioId(@Nullable String sourcePortfolioId) {
-            this.sourcePortfolioId = Input.ofNullable(sourcePortfolioId);
+            this.sourcePortfolioId = Output.ofNullable(sourcePortfolioId);
             return this;
         }
         public ProductPortfolioAssociationArgs build() {

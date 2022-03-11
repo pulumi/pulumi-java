@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.RulesetColumnSelectorArgs;
 import io.pulumi.awsnative.databrew.inputs.RulesetSubstitutionValueArgs;
 import io.pulumi.awsnative.databrew.inputs.RulesetThresholdArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,24 +24,24 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final RulesetRuleArgs Empty = new RulesetRuleArgs();
 
     @InputImport(name="checkExpression", required=true)
-      private final Input<String> checkExpression;
+      private final Output<String> checkExpression;
 
-    public Input<String> getCheckExpression() {
+    public Output<String> getCheckExpression() {
         return this.checkExpression;
     }
 
     @InputImport(name="columnSelectors")
-      private final @Nullable Input<List<RulesetColumnSelectorArgs>> columnSelectors;
+      private final @Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors;
 
-    public Input<List<RulesetColumnSelectorArgs>> getColumnSelectors() {
-        return this.columnSelectors == null ? Input.empty() : this.columnSelectors;
+    public Output<List<RulesetColumnSelectorArgs>> getColumnSelectors() {
+        return this.columnSelectors == null ? Output.empty() : this.columnSelectors;
     }
 
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -49,33 +49,33 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="substitutionMap")
-      private final @Nullable Input<List<RulesetSubstitutionValueArgs>> substitutionMap;
+      private final @Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap;
 
-    public Input<List<RulesetSubstitutionValueArgs>> getSubstitutionMap() {
-        return this.substitutionMap == null ? Input.empty() : this.substitutionMap;
+    public Output<List<RulesetSubstitutionValueArgs>> getSubstitutionMap() {
+        return this.substitutionMap == null ? Output.empty() : this.substitutionMap;
     }
 
     @InputImport(name="threshold")
-      private final @Nullable Input<RulesetThresholdArgs> threshold;
+      private final @Nullable Output<RulesetThresholdArgs> threshold;
 
-    public Input<RulesetThresholdArgs> getThreshold() {
-        return this.threshold == null ? Input.empty() : this.threshold;
+    public Output<RulesetThresholdArgs> getThreshold() {
+        return this.threshold == null ? Output.empty() : this.threshold;
     }
 
     public RulesetRuleArgs(
-        Input<String> checkExpression,
-        @Nullable Input<List<RulesetColumnSelectorArgs>> columnSelectors,
-        @Nullable Input<Boolean> disabled,
-        Input<String> name,
-        @Nullable Input<List<RulesetSubstitutionValueArgs>> substitutionMap,
-        @Nullable Input<RulesetThresholdArgs> threshold) {
+        Output<String> checkExpression,
+        @Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors,
+        @Nullable Output<Boolean> disabled,
+        Output<String> name,
+        @Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap,
+        @Nullable Output<RulesetThresholdArgs> threshold) {
         this.checkExpression = Objects.requireNonNull(checkExpression, "expected parameter 'checkExpression' to be non-null");
         this.columnSelectors = columnSelectors;
         this.disabled = disabled;
@@ -85,12 +85,12 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RulesetRuleArgs() {
-        this.checkExpression = Input.empty();
-        this.columnSelectors = Input.empty();
-        this.disabled = Input.empty();
-        this.name = Input.empty();
-        this.substitutionMap = Input.empty();
-        this.threshold = Input.empty();
+        this.checkExpression = Output.empty();
+        this.columnSelectors = Output.empty();
+        this.disabled = Output.empty();
+        this.name = Output.empty();
+        this.substitutionMap = Output.empty();
+        this.threshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,12 +102,12 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> checkExpression;
-        private @Nullable Input<List<RulesetColumnSelectorArgs>> columnSelectors;
-        private @Nullable Input<Boolean> disabled;
-        private Input<String> name;
-        private @Nullable Input<List<RulesetSubstitutionValueArgs>> substitutionMap;
-        private @Nullable Input<RulesetThresholdArgs> threshold;
+        private Output<String> checkExpression;
+        private @Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors;
+        private @Nullable Output<Boolean> disabled;
+        private Output<String> name;
+        private @Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap;
+        private @Nullable Output<RulesetThresholdArgs> threshold;
 
         public Builder() {
     	      // Empty
@@ -123,63 +123,63 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder checkExpression(Input<String> checkExpression) {
+        public Builder checkExpression(Output<String> checkExpression) {
             this.checkExpression = Objects.requireNonNull(checkExpression);
             return this;
         }
 
         public Builder checkExpression(String checkExpression) {
-            this.checkExpression = Input.of(Objects.requireNonNull(checkExpression));
+            this.checkExpression = Output.of(Objects.requireNonNull(checkExpression));
             return this;
         }
 
-        public Builder columnSelectors(@Nullable Input<List<RulesetColumnSelectorArgs>> columnSelectors) {
+        public Builder columnSelectors(@Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors) {
             this.columnSelectors = columnSelectors;
             return this;
         }
 
         public Builder columnSelectors(@Nullable List<RulesetColumnSelectorArgs> columnSelectors) {
-            this.columnSelectors = Input.ofNullable(columnSelectors);
+            this.columnSelectors = Output.ofNullable(columnSelectors);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder substitutionMap(@Nullable Input<List<RulesetSubstitutionValueArgs>> substitutionMap) {
+        public Builder substitutionMap(@Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap) {
             this.substitutionMap = substitutionMap;
             return this;
         }
 
         public Builder substitutionMap(@Nullable List<RulesetSubstitutionValueArgs> substitutionMap) {
-            this.substitutionMap = Input.ofNullable(substitutionMap);
+            this.substitutionMap = Output.ofNullable(substitutionMap);
             return this;
         }
 
-        public Builder threshold(@Nullable Input<RulesetThresholdArgs> threshold) {
+        public Builder threshold(@Nullable Output<RulesetThresholdArgs> threshold) {
             this.threshold = threshold;
             return this;
         }
 
         public Builder threshold(@Nullable RulesetThresholdArgs threshold) {
-            this.threshold = Input.ofNullable(threshold);
+            this.threshold = Output.ofNullable(threshold);
             return this;
         }
         public RulesetRuleArgs build() {

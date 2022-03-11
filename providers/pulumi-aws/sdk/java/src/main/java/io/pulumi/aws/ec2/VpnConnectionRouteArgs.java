@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destinationCidrBlock", required=true)
-      private final Input<String> destinationCidrBlock;
+      private final Output<String> destinationCidrBlock;
 
-    public Input<String> getDestinationCidrBlock() {
+    public Output<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock;
     }
 
@@ -29,22 +29,22 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vpnConnectionId", required=true)
-      private final Input<String> vpnConnectionId;
+      private final Output<String> vpnConnectionId;
 
-    public Input<String> getVpnConnectionId() {
+    public Output<String> getVpnConnectionId() {
         return this.vpnConnectionId;
     }
 
     public VpnConnectionRouteArgs(
-        Input<String> destinationCidrBlock,
-        Input<String> vpnConnectionId) {
+        Output<String> destinationCidrBlock,
+        Output<String> vpnConnectionId) {
         this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
         this.vpnConnectionId = Objects.requireNonNull(vpnConnectionId, "expected parameter 'vpnConnectionId' to be non-null");
     }
 
     private VpnConnectionRouteArgs() {
-        this.destinationCidrBlock = Input.empty();
-        this.vpnConnectionId = Input.empty();
+        this.destinationCidrBlock = Output.empty();
+        this.vpnConnectionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> destinationCidrBlock;
-        private Input<String> vpnConnectionId;
+        private Output<String> destinationCidrBlock;
+        private Output<String> vpnConnectionId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     	      this.vpnConnectionId = defaults.vpnConnectionId;
         }
 
-        public Builder destinationCidrBlock(Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
 
         public Builder destinationCidrBlock(String destinationCidrBlock) {
-            this.destinationCidrBlock = Input.of(Objects.requireNonNull(destinationCidrBlock));
+            this.destinationCidrBlock = Output.of(Objects.requireNonNull(destinationCidrBlock));
             return this;
         }
 
-        public Builder vpnConnectionId(Input<String> vpnConnectionId) {
+        public Builder vpnConnectionId(Output<String> vpnConnectionId) {
             this.vpnConnectionId = Objects.requireNonNull(vpnConnectionId);
             return this;
         }
 
         public Builder vpnConnectionId(String vpnConnectionId) {
-            this.vpnConnectionId = Input.of(Objects.requireNonNull(vpnConnectionId));
+            this.vpnConnectionId = Output.of(Objects.requireNonNull(vpnConnectionId));
             return this;
         }
         public VpnConnectionRouteArgs build() {

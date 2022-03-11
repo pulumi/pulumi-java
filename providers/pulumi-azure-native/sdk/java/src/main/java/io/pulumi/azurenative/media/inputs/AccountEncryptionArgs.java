@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.AccountEncryptionKeyType;
 import io.pulumi.azurenative.media.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyVaultProperties")
-      private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+      private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
+    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,AccountEncryptionKeyType>> type;
+      private final Output<Either<String,AccountEncryptionKeyType>> type;
 
-    public Input<Either<String,AccountEncryptionKeyType>> getType() {
+    public Output<Either<String,AccountEncryptionKeyType>> getType() {
         return this.type;
     }
 
     public AccountEncryptionArgs(
-        @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties,
-        Input<Either<String,AccountEncryptionKeyType>> type) {
+        @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties,
+        Output<Either<String,AccountEncryptionKeyType>> type) {
         this.keyVaultProperties = keyVaultProperties;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private AccountEncryptionArgs() {
-        this.keyVaultProperties = Input.empty();
-        this.type = Input.empty();
+        this.keyVaultProperties = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
-        private Input<Either<String,AccountEncryptionKeyType>> type;
+        private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
+        private Output<Either<String,AccountEncryptionKeyType>> type;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder keyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
 
-        public Builder type(Input<Either<String,AccountEncryptionKeyType>> type) {
+        public Builder type(Output<Either<String,AccountEncryptionKeyType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,AccountEncryptionKeyType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AccountEncryptionArgs build() {

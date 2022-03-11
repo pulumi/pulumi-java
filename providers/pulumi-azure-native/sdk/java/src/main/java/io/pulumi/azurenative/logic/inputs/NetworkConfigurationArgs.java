@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentAccessEndpointArgs;
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accessEndpoint")
-      private final @Nullable Input<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
+      private final @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
 
-    public Input<IntegrationServiceEnvironmentAccessEndpointArgs> getAccessEndpoint() {
-        return this.accessEndpoint == null ? Input.empty() : this.accessEndpoint;
+    public Output<IntegrationServiceEnvironmentAccessEndpointArgs> getAccessEndpoint() {
+        return this.accessEndpoint == null ? Output.empty() : this.accessEndpoint;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnets")
-      private final @Nullable Input<List<ResourceReferenceArgs>> subnets;
+      private final @Nullable Output<List<ResourceReferenceArgs>> subnets;
 
-    public Input<List<ResourceReferenceArgs>> getSubnets() {
-        return this.subnets == null ? Input.empty() : this.subnets;
+    public Output<List<ResourceReferenceArgs>> getSubnets() {
+        return this.subnets == null ? Output.empty() : this.subnets;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="virtualNetworkAddressSpace")
-      private final @Nullable Input<String> virtualNetworkAddressSpace;
+      private final @Nullable Output<String> virtualNetworkAddressSpace;
 
-    public Input<String> getVirtualNetworkAddressSpace() {
-        return this.virtualNetworkAddressSpace == null ? Input.empty() : this.virtualNetworkAddressSpace;
+    public Output<String> getVirtualNetworkAddressSpace() {
+        return this.virtualNetworkAddressSpace == null ? Output.empty() : this.virtualNetworkAddressSpace;
     }
 
     public NetworkConfigurationArgs(
-        @Nullable Input<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint,
-        @Nullable Input<List<ResourceReferenceArgs>> subnets,
-        @Nullable Input<String> virtualNetworkAddressSpace) {
+        @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint,
+        @Nullable Output<List<ResourceReferenceArgs>> subnets,
+        @Nullable Output<String> virtualNetworkAddressSpace) {
         this.accessEndpoint = accessEndpoint;
         this.subnets = subnets;
         this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
     }
 
     private NetworkConfigurationArgs() {
-        this.accessEndpoint = Input.empty();
-        this.subnets = Input.empty();
-        this.virtualNetworkAddressSpace = Input.empty();
+        this.accessEndpoint = Output.empty();
+        this.subnets = Output.empty();
+        this.virtualNetworkAddressSpace = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
-        private @Nullable Input<List<ResourceReferenceArgs>> subnets;
-        private @Nullable Input<String> virtualNetworkAddressSpace;
+        private @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
+        private @Nullable Output<List<ResourceReferenceArgs>> subnets;
+        private @Nullable Output<String> virtualNetworkAddressSpace;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
     	      this.virtualNetworkAddressSpace = defaults.virtualNetworkAddressSpace;
         }
 
-        public Builder accessEndpoint(@Nullable Input<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint) {
+        public Builder accessEndpoint(@Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint) {
             this.accessEndpoint = accessEndpoint;
             return this;
         }
 
         public Builder accessEndpoint(@Nullable IntegrationServiceEnvironmentAccessEndpointArgs accessEndpoint) {
-            this.accessEndpoint = Input.ofNullable(accessEndpoint);
+            this.accessEndpoint = Output.ofNullable(accessEndpoint);
             return this;
         }
 
-        public Builder subnets(@Nullable Input<List<ResourceReferenceArgs>> subnets) {
+        public Builder subnets(@Nullable Output<List<ResourceReferenceArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
         public Builder subnets(@Nullable List<ResourceReferenceArgs> subnets) {
-            this.subnets = Input.ofNullable(subnets);
+            this.subnets = Output.ofNullable(subnets);
             return this;
         }
 
-        public Builder virtualNetworkAddressSpace(@Nullable Input<String> virtualNetworkAddressSpace) {
+        public Builder virtualNetworkAddressSpace(@Nullable Output<String> virtualNetworkAddressSpace) {
             this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
             return this;
         }
 
         public Builder virtualNetworkAddressSpace(@Nullable String virtualNetworkAddressSpace) {
-            this.virtualNetworkAddressSpace = Input.ofNullable(virtualNetworkAddressSpace);
+            this.virtualNetworkAddressSpace = Output.ofNullable(virtualNetworkAddressSpace);
             return this;
         }
         public NetworkConfigurationArgs build() {

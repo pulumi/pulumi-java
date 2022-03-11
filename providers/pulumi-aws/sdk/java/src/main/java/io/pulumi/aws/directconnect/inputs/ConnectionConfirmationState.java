@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ConnectionConfirmationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectionId")
-      private final @Nullable Input<String> connectionId;
+      private final @Nullable Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
-        return this.connectionId == null ? Input.empty() : this.connectionId;
+    public Output<String> getConnectionId() {
+        return this.connectionId == null ? Output.empty() : this.connectionId;
     }
 
-    public ConnectionConfirmationState(@Nullable Input<String> connectionId) {
+    public ConnectionConfirmationState(@Nullable Output<String> connectionId) {
         this.connectionId = connectionId;
     }
 
     private ConnectionConfirmationState() {
-        this.connectionId = Input.empty();
+        this.connectionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ConnectionConfirmationState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectionId;
+        private @Nullable Output<String> connectionId;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ConnectionConfirmationState extends io.pulumi.resources.Resou
     	      this.connectionId = defaults.connectionId;
         }
 
-        public Builder connectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Input.ofNullable(connectionId);
+            this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
         public ConnectionConfirmationState build() {

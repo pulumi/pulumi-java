@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
      * 
      */
     @InputImport(name="kinesisStreamArn", required=true)
-      private final Input<String> kinesisStreamArn;
+      private final Output<String> kinesisStreamArn;
 
-    public Input<String> getKinesisStreamArn() {
+    public Output<String> getKinesisStreamArn() {
         return this.kinesisStreamArn;
     }
 
@@ -29,22 +29,22 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs(
-        Input<String> kinesisStreamArn,
-        Input<String> roleArn) {
+        Output<String> kinesisStreamArn,
+        Output<String> roleArn) {
         this.kinesisStreamArn = Objects.requireNonNull(kinesisStreamArn, "expected parameter 'kinesisStreamArn' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs() {
-        this.kinesisStreamArn = Input.empty();
-        this.roleArn = Input.empty();
+        this.kinesisStreamArn = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
     }
 
     public static final class Builder {
-        private Input<String> kinesisStreamArn;
-        private Input<String> roleArn;
+        private Output<String> kinesisStreamArn;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder kinesisStreamArn(Input<String> kinesisStreamArn) {
+        public Builder kinesisStreamArn(Output<String> kinesisStreamArn) {
             this.kinesisStreamArn = Objects.requireNonNull(kinesisStreamArn);
             return this;
         }
 
         public Builder kinesisStreamArn(String kinesisStreamArn) {
-            this.kinesisStreamArn = Input.of(Objects.requireNonNull(kinesisStreamArn));
+            this.kinesisStreamArn = Output.of(Objects.requireNonNull(kinesisStreamArn));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs build() {

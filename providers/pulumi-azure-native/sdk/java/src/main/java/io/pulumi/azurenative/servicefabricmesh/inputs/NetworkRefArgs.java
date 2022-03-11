@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.EndpointRefArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointRefs")
-      private final @Nullable Input<List<EndpointRefArgs>> endpointRefs;
+      private final @Nullable Output<List<EndpointRefArgs>> endpointRefs;
 
-    public Input<List<EndpointRefArgs>> getEndpointRefs() {
-        return this.endpointRefs == null ? Input.empty() : this.endpointRefs;
+    public Output<List<EndpointRefArgs>> getEndpointRefs() {
+        return this.endpointRefs == null ? Output.empty() : this.endpointRefs;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public NetworkRefArgs(
-        @Nullable Input<List<EndpointRefArgs>> endpointRefs,
-        @Nullable Input<String> name) {
+        @Nullable Output<List<EndpointRefArgs>> endpointRefs,
+        @Nullable Output<String> name) {
         this.endpointRefs = endpointRefs;
         this.name = name;
     }
 
     private NetworkRefArgs() {
-        this.endpointRefs = Input.empty();
-        this.name = Input.empty();
+        this.endpointRefs = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EndpointRefArgs>> endpointRefs;
-        private @Nullable Input<String> name;
+        private @Nullable Output<List<EndpointRefArgs>> endpointRefs;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder endpointRefs(@Nullable Input<List<EndpointRefArgs>> endpointRefs) {
+        public Builder endpointRefs(@Nullable Output<List<EndpointRefArgs>> endpointRefs) {
             this.endpointRefs = endpointRefs;
             return this;
         }
 
         public Builder endpointRefs(@Nullable List<EndpointRefArgs> endpointRefs) {
-            this.endpointRefs = Input.ofNullable(endpointRefs);
+            this.endpointRefs = Output.ofNullable(endpointRefs);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public NetworkRefArgs build() {

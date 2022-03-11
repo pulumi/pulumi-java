@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amplify;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
@@ -32,10 +32,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendEnvironmentArn")
-      private final @Nullable Input<String> backendEnvironmentArn;
+      private final @Nullable Output<String> backendEnvironmentArn;
 
-    public Input<String> getBackendEnvironmentArn() {
-        return this.backendEnvironmentArn == null ? Input.empty() : this.backendEnvironmentArn;
+    public Output<String> getBackendEnvironmentArn() {
+        return this.backendEnvironmentArn == null ? Output.empty() : this.backendEnvironmentArn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basicAuthCredentials")
-      private final @Nullable Input<String> basicAuthCredentials;
+      private final @Nullable Output<String> basicAuthCredentials;
 
-    public Input<String> getBasicAuthCredentials() {
-        return this.basicAuthCredentials == null ? Input.empty() : this.basicAuthCredentials;
+    public Output<String> getBasicAuthCredentials() {
+        return this.basicAuthCredentials == null ? Output.empty() : this.basicAuthCredentials;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchName", required=true)
-      private final Input<String> branchName;
+      private final Output<String> branchName;
 
-    public Input<String> getBranchName() {
+    public Output<String> getBranchName() {
         return this.branchName;
     }
 
@@ -65,10 +65,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableAutoBuild")
-      private final @Nullable Input<Boolean> enableAutoBuild;
+      private final @Nullable Output<Boolean> enableAutoBuild;
 
-    public Input<Boolean> getEnableAutoBuild() {
-        return this.enableAutoBuild == null ? Input.empty() : this.enableAutoBuild;
+    public Output<Boolean> getEnableAutoBuild() {
+        return this.enableAutoBuild == null ? Output.empty() : this.enableAutoBuild;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBasicAuth")
-      private final @Nullable Input<Boolean> enableBasicAuth;
+      private final @Nullable Output<Boolean> enableBasicAuth;
 
-    public Input<Boolean> getEnableBasicAuth() {
-        return this.enableBasicAuth == null ? Input.empty() : this.enableBasicAuth;
+    public Output<Boolean> getEnableBasicAuth() {
+        return this.enableBasicAuth == null ? Output.empty() : this.enableBasicAuth;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableNotification")
-      private final @Nullable Input<Boolean> enableNotification;
+      private final @Nullable Output<Boolean> enableNotification;
 
-    public Input<Boolean> getEnableNotification() {
-        return this.enableNotification == null ? Input.empty() : this.enableNotification;
+    public Output<Boolean> getEnableNotification() {
+        return this.enableNotification == null ? Output.empty() : this.enableNotification;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enablePerformanceMode")
-      private final @Nullable Input<Boolean> enablePerformanceMode;
+      private final @Nullable Output<Boolean> enablePerformanceMode;
 
-    public Input<Boolean> getEnablePerformanceMode() {
-        return this.enablePerformanceMode == null ? Input.empty() : this.enablePerformanceMode;
+    public Output<Boolean> getEnablePerformanceMode() {
+        return this.enablePerformanceMode == null ? Output.empty() : this.enablePerformanceMode;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enablePullRequestPreview")
-      private final @Nullable Input<Boolean> enablePullRequestPreview;
+      private final @Nullable Output<Boolean> enablePullRequestPreview;
 
-    public Input<Boolean> getEnablePullRequestPreview() {
-        return this.enablePullRequestPreview == null ? Input.empty() : this.enablePullRequestPreview;
+    public Output<Boolean> getEnablePullRequestPreview() {
+        return this.enablePullRequestPreview == null ? Output.empty() : this.enablePullRequestPreview;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-      private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Input<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
+    public Output<Map<String,String>> getEnvironmentVariables() {
+        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="framework")
-      private final @Nullable Input<String> framework;
+      private final @Nullable Output<String> framework;
 
-    public Input<String> getFramework() {
-        return this.framework == null ? Input.empty() : this.framework;
+    public Output<String> getFramework() {
+        return this.framework == null ? Output.empty() : this.framework;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pullRequestEnvironmentName")
-      private final @Nullable Input<String> pullRequestEnvironmentName;
+      private final @Nullable Output<String> pullRequestEnvironmentName;
 
-    public Input<String> getPullRequestEnvironmentName() {
-        return this.pullRequestEnvironmentName == null ? Input.empty() : this.pullRequestEnvironmentName;
+    public Output<String> getPullRequestEnvironmentName() {
+        return this.pullRequestEnvironmentName == null ? Output.empty() : this.pullRequestEnvironmentName;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stage")
-      private final @Nullable Input<String> stage;
+      private final @Nullable Output<String> stage;
 
-    public Input<String> getStage() {
-        return this.stage == null ? Input.empty() : this.stage;
+    public Output<String> getStage() {
+        return this.stage == null ? Output.empty() : this.stage;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -197,30 +197,30 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<String> ttl;
+      private final @Nullable Output<String> ttl;
 
-    public Input<String> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<String> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     public BranchArgs(
-        Input<String> appId,
-        @Nullable Input<String> backendEnvironmentArn,
-        @Nullable Input<String> basicAuthCredentials,
-        Input<String> branchName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Boolean> enableAutoBuild,
-        @Nullable Input<Boolean> enableBasicAuth,
-        @Nullable Input<Boolean> enableNotification,
-        @Nullable Input<Boolean> enablePerformanceMode,
-        @Nullable Input<Boolean> enablePullRequestPreview,
-        @Nullable Input<Map<String,String>> environmentVariables,
-        @Nullable Input<String> framework,
-        @Nullable Input<String> pullRequestEnvironmentName,
-        @Nullable Input<String> stage,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> ttl) {
+        Output<String> appId,
+        @Nullable Output<String> backendEnvironmentArn,
+        @Nullable Output<String> basicAuthCredentials,
+        Output<String> branchName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Boolean> enableAutoBuild,
+        @Nullable Output<Boolean> enableBasicAuth,
+        @Nullable Output<Boolean> enableNotification,
+        @Nullable Output<Boolean> enablePerformanceMode,
+        @Nullable Output<Boolean> enablePullRequestPreview,
+        @Nullable Output<Map<String,String>> environmentVariables,
+        @Nullable Output<String> framework,
+        @Nullable Output<String> pullRequestEnvironmentName,
+        @Nullable Output<String> stage,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> ttl) {
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
         this.backendEnvironmentArn = backendEnvironmentArn;
         this.basicAuthCredentials = basicAuthCredentials;
@@ -241,23 +241,23 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BranchArgs() {
-        this.appId = Input.empty();
-        this.backendEnvironmentArn = Input.empty();
-        this.basicAuthCredentials = Input.empty();
-        this.branchName = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.enableAutoBuild = Input.empty();
-        this.enableBasicAuth = Input.empty();
-        this.enableNotification = Input.empty();
-        this.enablePerformanceMode = Input.empty();
-        this.enablePullRequestPreview = Input.empty();
-        this.environmentVariables = Input.empty();
-        this.framework = Input.empty();
-        this.pullRequestEnvironmentName = Input.empty();
-        this.stage = Input.empty();
-        this.tags = Input.empty();
-        this.ttl = Input.empty();
+        this.appId = Output.empty();
+        this.backendEnvironmentArn = Output.empty();
+        this.basicAuthCredentials = Output.empty();
+        this.branchName = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.enableAutoBuild = Output.empty();
+        this.enableBasicAuth = Output.empty();
+        this.enableNotification = Output.empty();
+        this.enablePerformanceMode = Output.empty();
+        this.enablePullRequestPreview = Output.empty();
+        this.environmentVariables = Output.empty();
+        this.framework = Output.empty();
+        this.pullRequestEnvironmentName = Output.empty();
+        this.stage = Output.empty();
+        this.tags = Output.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -269,23 +269,23 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appId;
-        private @Nullable Input<String> backendEnvironmentArn;
-        private @Nullable Input<String> basicAuthCredentials;
-        private Input<String> branchName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Boolean> enableAutoBuild;
-        private @Nullable Input<Boolean> enableBasicAuth;
-        private @Nullable Input<Boolean> enableNotification;
-        private @Nullable Input<Boolean> enablePerformanceMode;
-        private @Nullable Input<Boolean> enablePullRequestPreview;
-        private @Nullable Input<Map<String,String>> environmentVariables;
-        private @Nullable Input<String> framework;
-        private @Nullable Input<String> pullRequestEnvironmentName;
-        private @Nullable Input<String> stage;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> ttl;
+        private Output<String> appId;
+        private @Nullable Output<String> backendEnvironmentArn;
+        private @Nullable Output<String> basicAuthCredentials;
+        private Output<String> branchName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Boolean> enableAutoBuild;
+        private @Nullable Output<Boolean> enableBasicAuth;
+        private @Nullable Output<Boolean> enableNotification;
+        private @Nullable Output<Boolean> enablePerformanceMode;
+        private @Nullable Output<Boolean> enablePullRequestPreview;
+        private @Nullable Output<Map<String,String>> environmentVariables;
+        private @Nullable Output<String> framework;
+        private @Nullable Output<String> pullRequestEnvironmentName;
+        private @Nullable Output<String> stage;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> ttl;
 
         public Builder() {
     	      // Empty
@@ -312,173 +312,173 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder backendEnvironmentArn(@Nullable Input<String> backendEnvironmentArn) {
+        public Builder backendEnvironmentArn(@Nullable Output<String> backendEnvironmentArn) {
             this.backendEnvironmentArn = backendEnvironmentArn;
             return this;
         }
 
         public Builder backendEnvironmentArn(@Nullable String backendEnvironmentArn) {
-            this.backendEnvironmentArn = Input.ofNullable(backendEnvironmentArn);
+            this.backendEnvironmentArn = Output.ofNullable(backendEnvironmentArn);
             return this;
         }
 
-        public Builder basicAuthCredentials(@Nullable Input<String> basicAuthCredentials) {
+        public Builder basicAuthCredentials(@Nullable Output<String> basicAuthCredentials) {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
 
         public Builder basicAuthCredentials(@Nullable String basicAuthCredentials) {
-            this.basicAuthCredentials = Input.ofNullable(basicAuthCredentials);
+            this.basicAuthCredentials = Output.ofNullable(basicAuthCredentials);
             return this;
         }
 
-        public Builder branchName(Input<String> branchName) {
+        public Builder branchName(Output<String> branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
         public Builder branchName(String branchName) {
-            this.branchName = Input.of(Objects.requireNonNull(branchName));
+            this.branchName = Output.of(Objects.requireNonNull(branchName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder enableAutoBuild(@Nullable Input<Boolean> enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Output<Boolean> enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
 
         public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
-            this.enableAutoBuild = Input.ofNullable(enableAutoBuild);
+            this.enableAutoBuild = Output.ofNullable(enableAutoBuild);
             return this;
         }
 
-        public Builder enableBasicAuth(@Nullable Input<Boolean> enableBasicAuth) {
+        public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
 
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Input.ofNullable(enableBasicAuth);
+            this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
             return this;
         }
 
-        public Builder enableNotification(@Nullable Input<Boolean> enableNotification) {
+        public Builder enableNotification(@Nullable Output<Boolean> enableNotification) {
             this.enableNotification = enableNotification;
             return this;
         }
 
         public Builder enableNotification(@Nullable Boolean enableNotification) {
-            this.enableNotification = Input.ofNullable(enableNotification);
+            this.enableNotification = Output.ofNullable(enableNotification);
             return this;
         }
 
-        public Builder enablePerformanceMode(@Nullable Input<Boolean> enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Output<Boolean> enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
 
         public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
-            this.enablePerformanceMode = Input.ofNullable(enablePerformanceMode);
+            this.enablePerformanceMode = Output.ofNullable(enablePerformanceMode);
             return this;
         }
 
-        public Builder enablePullRequestPreview(@Nullable Input<Boolean> enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Output<Boolean> enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
 
         public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
-            this.enablePullRequestPreview = Input.ofNullable(enablePullRequestPreview);
+            this.enablePullRequestPreview = Output.ofNullable(enablePullRequestPreview);
             return this;
         }
 
-        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Input.ofNullable(environmentVariables);
+            this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder framework(@Nullable Input<String> framework) {
+        public Builder framework(@Nullable Output<String> framework) {
             this.framework = framework;
             return this;
         }
 
         public Builder framework(@Nullable String framework) {
-            this.framework = Input.ofNullable(framework);
+            this.framework = Output.ofNullable(framework);
             return this;
         }
 
-        public Builder pullRequestEnvironmentName(@Nullable Input<String> pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable Output<String> pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
 
         public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
-            this.pullRequestEnvironmentName = Input.ofNullable(pullRequestEnvironmentName);
+            this.pullRequestEnvironmentName = Output.ofNullable(pullRequestEnvironmentName);
             return this;
         }
 
-        public Builder stage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
 
         public Builder stage(@Nullable String stage) {
-            this.stage = Input.ofNullable(stage);
+            this.stage = Output.ofNullable(stage);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public BranchArgs build() {

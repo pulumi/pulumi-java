@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="permissions", required=true)
-      private final Input<String> permissions;
+      private final Output<String> permissions;
 
-    public Input<String> getPermissions() {
+    public Output<String> getPermissions() {
         return this.permissions;
     }
 
@@ -29,9 +29,9 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -40,25 +40,25 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public PermissionScopeArgs(
-        Input<String> permissions,
-        Input<String> resourceName,
-        Input<String> service) {
+        Output<String> permissions,
+        Output<String> resourceName,
+        Output<String> service) {
         this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
         this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
         this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
     }
 
     private PermissionScopeArgs() {
-        this.permissions = Input.empty();
-        this.resourceName = Input.empty();
-        this.service = Input.empty();
+        this.permissions = Output.empty();
+        this.resourceName = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> permissions;
-        private Input<String> resourceName;
-        private Input<String> service;
+        private Output<String> permissions;
+        private Output<String> resourceName;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.service = defaults.service;
         }
 
-        public Builder permissions(Input<String> permissions) {
+        public Builder permissions(Output<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
         public Builder permissions(String permissions) {
-            this.permissions = Input.of(Objects.requireNonNull(permissions));
+            this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public PermissionScopeArgs build() {

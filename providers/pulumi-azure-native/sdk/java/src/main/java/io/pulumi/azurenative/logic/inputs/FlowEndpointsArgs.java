@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IpAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessEndpointIpAddresses")
-      private final @Nullable Input<List<IpAddressArgs>> accessEndpointIpAddresses;
+      private final @Nullable Output<List<IpAddressArgs>> accessEndpointIpAddresses;
 
-    public Input<List<IpAddressArgs>> getAccessEndpointIpAddresses() {
-        return this.accessEndpointIpAddresses == null ? Input.empty() : this.accessEndpointIpAddresses;
+    public Output<List<IpAddressArgs>> getAccessEndpointIpAddresses() {
+        return this.accessEndpointIpAddresses == null ? Output.empty() : this.accessEndpointIpAddresses;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outgoingIpAddresses")
-      private final @Nullable Input<List<IpAddressArgs>> outgoingIpAddresses;
+      private final @Nullable Output<List<IpAddressArgs>> outgoingIpAddresses;
 
-    public Input<List<IpAddressArgs>> getOutgoingIpAddresses() {
-        return this.outgoingIpAddresses == null ? Input.empty() : this.outgoingIpAddresses;
+    public Output<List<IpAddressArgs>> getOutgoingIpAddresses() {
+        return this.outgoingIpAddresses == null ? Output.empty() : this.outgoingIpAddresses;
     }
 
     public FlowEndpointsArgs(
-        @Nullable Input<List<IpAddressArgs>> accessEndpointIpAddresses,
-        @Nullable Input<List<IpAddressArgs>> outgoingIpAddresses) {
+        @Nullable Output<List<IpAddressArgs>> accessEndpointIpAddresses,
+        @Nullable Output<List<IpAddressArgs>> outgoingIpAddresses) {
         this.accessEndpointIpAddresses = accessEndpointIpAddresses;
         this.outgoingIpAddresses = outgoingIpAddresses;
     }
 
     private FlowEndpointsArgs() {
-        this.accessEndpointIpAddresses = Input.empty();
-        this.outgoingIpAddresses = Input.empty();
+        this.accessEndpointIpAddresses = Output.empty();
+        this.outgoingIpAddresses = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IpAddressArgs>> accessEndpointIpAddresses;
-        private @Nullable Input<List<IpAddressArgs>> outgoingIpAddresses;
+        private @Nullable Output<List<IpAddressArgs>> accessEndpointIpAddresses;
+        private @Nullable Output<List<IpAddressArgs>> outgoingIpAddresses;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class FlowEndpointsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.outgoingIpAddresses = defaults.outgoingIpAddresses;
         }
 
-        public Builder accessEndpointIpAddresses(@Nullable Input<List<IpAddressArgs>> accessEndpointIpAddresses) {
+        public Builder accessEndpointIpAddresses(@Nullable Output<List<IpAddressArgs>> accessEndpointIpAddresses) {
             this.accessEndpointIpAddresses = accessEndpointIpAddresses;
             return this;
         }
 
         public Builder accessEndpointIpAddresses(@Nullable List<IpAddressArgs> accessEndpointIpAddresses) {
-            this.accessEndpointIpAddresses = Input.ofNullable(accessEndpointIpAddresses);
+            this.accessEndpointIpAddresses = Output.ofNullable(accessEndpointIpAddresses);
             return this;
         }
 
-        public Builder outgoingIpAddresses(@Nullable Input<List<IpAddressArgs>> outgoingIpAddresses) {
+        public Builder outgoingIpAddresses(@Nullable Output<List<IpAddressArgs>> outgoingIpAddresses) {
             this.outgoingIpAddresses = outgoingIpAddresses;
             return this;
         }
 
         public Builder outgoingIpAddresses(@Nullable List<IpAddressArgs> outgoingIpAddresses) {
-            this.outgoingIpAddresses = Input.ofNullable(outgoingIpAddresses);
+            this.outgoingIpAddresses = Output.ofNullable(outgoingIpAddresses);
             return this;
         }
         public FlowEndpointsArgs build() {

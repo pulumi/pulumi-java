@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class VpcEndpointConnectionAccepterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="vpcEndpointId", required=true)
-      private final Input<String> vpcEndpointId;
+      private final Output<String> vpcEndpointId;
 
-    public Input<String> getVpcEndpointId() {
+    public Output<String> getVpcEndpointId() {
         return this.vpcEndpointId;
     }
 
@@ -29,22 +29,22 @@ public final class VpcEndpointConnectionAccepterArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="vpcEndpointServiceId", required=true)
-      private final Input<String> vpcEndpointServiceId;
+      private final Output<String> vpcEndpointServiceId;
 
-    public Input<String> getVpcEndpointServiceId() {
+    public Output<String> getVpcEndpointServiceId() {
         return this.vpcEndpointServiceId;
     }
 
     public VpcEndpointConnectionAccepterArgs(
-        Input<String> vpcEndpointId,
-        Input<String> vpcEndpointServiceId) {
+        Output<String> vpcEndpointId,
+        Output<String> vpcEndpointServiceId) {
         this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId, "expected parameter 'vpcEndpointId' to be non-null");
         this.vpcEndpointServiceId = Objects.requireNonNull(vpcEndpointServiceId, "expected parameter 'vpcEndpointServiceId' to be non-null");
     }
 
     private VpcEndpointConnectionAccepterArgs() {
-        this.vpcEndpointId = Input.empty();
-        this.vpcEndpointServiceId = Input.empty();
+        this.vpcEndpointId = Output.empty();
+        this.vpcEndpointServiceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class VpcEndpointConnectionAccepterArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> vpcEndpointId;
-        private Input<String> vpcEndpointServiceId;
+        private Output<String> vpcEndpointId;
+        private Output<String> vpcEndpointServiceId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class VpcEndpointConnectionAccepterArgs extends io.pulumi.resources
     	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
         }
 
-        public Builder vpcEndpointId(Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(Output<String> vpcEndpointId) {
             this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId);
             return this;
         }
 
         public Builder vpcEndpointId(String vpcEndpointId) {
-            this.vpcEndpointId = Input.of(Objects.requireNonNull(vpcEndpointId));
+            this.vpcEndpointId = Output.of(Objects.requireNonNull(vpcEndpointId));
             return this;
         }
 
-        public Builder vpcEndpointServiceId(Input<String> vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(Output<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = Objects.requireNonNull(vpcEndpointServiceId);
             return this;
         }
 
         public Builder vpcEndpointServiceId(String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Input.of(Objects.requireNonNull(vpcEndpointServiceId));
+            this.vpcEndpointServiceId = Output.of(Objects.requireNonNull(vpcEndpointServiceId));
             return this;
         }
         public VpcEndpointConnectionAccepterArgs build() {

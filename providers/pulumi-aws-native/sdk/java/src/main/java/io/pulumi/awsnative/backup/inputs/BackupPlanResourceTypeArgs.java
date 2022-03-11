@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.awsnative.backup.inputs.BackupPlanAdvancedBackupSettingResourceTypeArgs;
 import io.pulumi.awsnative.backup.inputs.BackupPlanBackupRuleResourceTypeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,39 +18,39 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
     public static final BackupPlanResourceTypeArgs Empty = new BackupPlanResourceTypeArgs();
 
     @InputImport(name="advancedBackupSettings")
-      private final @Nullable Input<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
+      private final @Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
 
-    public Input<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> getAdvancedBackupSettings() {
-        return this.advancedBackupSettings == null ? Input.empty() : this.advancedBackupSettings;
+    public Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> getAdvancedBackupSettings() {
+        return this.advancedBackupSettings == null ? Output.empty() : this.advancedBackupSettings;
     }
 
     @InputImport(name="backupPlanName", required=true)
-      private final Input<String> backupPlanName;
+      private final Output<String> backupPlanName;
 
-    public Input<String> getBackupPlanName() {
+    public Output<String> getBackupPlanName() {
         return this.backupPlanName;
     }
 
     @InputImport(name="backupPlanRule", required=true)
-      private final Input<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
+      private final Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
 
-    public Input<List<BackupPlanBackupRuleResourceTypeArgs>> getBackupPlanRule() {
+    public Output<List<BackupPlanBackupRuleResourceTypeArgs>> getBackupPlanRule() {
         return this.backupPlanRule;
     }
 
     public BackupPlanResourceTypeArgs(
-        @Nullable Input<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings,
-        Input<String> backupPlanName,
-        Input<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule) {
+        @Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings,
+        Output<String> backupPlanName,
+        Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule) {
         this.advancedBackupSettings = advancedBackupSettings;
         this.backupPlanName = Objects.requireNonNull(backupPlanName, "expected parameter 'backupPlanName' to be non-null");
         this.backupPlanRule = Objects.requireNonNull(backupPlanRule, "expected parameter 'backupPlanRule' to be non-null");
     }
 
     private BackupPlanResourceTypeArgs() {
-        this.advancedBackupSettings = Input.empty();
-        this.backupPlanName = Input.empty();
-        this.backupPlanRule = Input.empty();
+        this.advancedBackupSettings = Output.empty();
+        this.backupPlanName = Output.empty();
+        this.backupPlanRule = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
-        private Input<String> backupPlanName;
-        private Input<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
+        private @Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
+        private Output<String> backupPlanName;
+        private Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
     	      this.backupPlanRule = defaults.backupPlanRule;
         }
 
-        public Builder advancedBackupSettings(@Nullable Input<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings) {
+        public Builder advancedBackupSettings(@Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings) {
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
 
         public Builder advancedBackupSettings(@Nullable List<BackupPlanAdvancedBackupSettingResourceTypeArgs> advancedBackupSettings) {
-            this.advancedBackupSettings = Input.ofNullable(advancedBackupSettings);
+            this.advancedBackupSettings = Output.ofNullable(advancedBackupSettings);
             return this;
         }
 
-        public Builder backupPlanName(Input<String> backupPlanName) {
+        public Builder backupPlanName(Output<String> backupPlanName) {
             this.backupPlanName = Objects.requireNonNull(backupPlanName);
             return this;
         }
 
         public Builder backupPlanName(String backupPlanName) {
-            this.backupPlanName = Input.of(Objects.requireNonNull(backupPlanName));
+            this.backupPlanName = Output.of(Objects.requireNonNull(backupPlanName));
             return this;
         }
 
-        public Builder backupPlanRule(Input<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule) {
+        public Builder backupPlanRule(Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule) {
             this.backupPlanRule = Objects.requireNonNull(backupPlanRule);
             return this;
         }
 
         public Builder backupPlanRule(List<BackupPlanBackupRuleResourceTypeArgs> backupPlanRule) {
-            this.backupPlanRule = Input.of(Objects.requireNonNull(backupPlanRule));
+            this.backupPlanRule = Output.of(Objects.requireNonNull(backupPlanRule));
             return this;
         }
         public BackupPlanResourceTypeArgs build() {

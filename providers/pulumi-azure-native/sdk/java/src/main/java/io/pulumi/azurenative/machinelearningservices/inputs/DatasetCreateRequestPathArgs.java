@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequestDataPathArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,10 +16,10 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
     public static final DatasetCreateRequestPathArgs Empty = new DatasetCreateRequestPathArgs();
 
     @InputImport(name="dataPath")
-      private final @Nullable Input<DatasetCreateRequestDataPathArgs> dataPath;
+      private final @Nullable Output<DatasetCreateRequestDataPathArgs> dataPath;
 
-    public Input<DatasetCreateRequestDataPathArgs> getDataPath() {
-        return this.dataPath == null ? Input.empty() : this.dataPath;
+    public Output<DatasetCreateRequestDataPathArgs> getDataPath() {
+        return this.dataPath == null ? Output.empty() : this.dataPath;
     }
 
     /**
@@ -27,22 +27,22 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="httpUrl")
-      private final @Nullable Input<String> httpUrl;
+      private final @Nullable Output<String> httpUrl;
 
-    public Input<String> getHttpUrl() {
-        return this.httpUrl == null ? Input.empty() : this.httpUrl;
+    public Output<String> getHttpUrl() {
+        return this.httpUrl == null ? Output.empty() : this.httpUrl;
     }
 
     public DatasetCreateRequestPathArgs(
-        @Nullable Input<DatasetCreateRequestDataPathArgs> dataPath,
-        @Nullable Input<String> httpUrl) {
+        @Nullable Output<DatasetCreateRequestDataPathArgs> dataPath,
+        @Nullable Output<String> httpUrl) {
         this.dataPath = dataPath;
         this.httpUrl = httpUrl;
     }
 
     private DatasetCreateRequestPathArgs() {
-        this.dataPath = Input.empty();
-        this.httpUrl = Input.empty();
+        this.dataPath = Output.empty();
+        this.httpUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<DatasetCreateRequestDataPathArgs> dataPath;
-        private @Nullable Input<String> httpUrl;
+        private @Nullable Output<DatasetCreateRequestDataPathArgs> dataPath;
+        private @Nullable Output<String> httpUrl;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
     	      this.httpUrl = defaults.httpUrl;
         }
 
-        public Builder dataPath(@Nullable Input<DatasetCreateRequestDataPathArgs> dataPath) {
+        public Builder dataPath(@Nullable Output<DatasetCreateRequestDataPathArgs> dataPath) {
             this.dataPath = dataPath;
             return this;
         }
 
         public Builder dataPath(@Nullable DatasetCreateRequestDataPathArgs dataPath) {
-            this.dataPath = Input.ofNullable(dataPath);
+            this.dataPath = Output.ofNullable(dataPath);
             return this;
         }
 
-        public Builder httpUrl(@Nullable Input<String> httpUrl) {
+        public Builder httpUrl(@Nullable Output<String> httpUrl) {
             this.httpUrl = httpUrl;
             return this;
         }
 
         public Builder httpUrl(@Nullable String httpUrl) {
-            this.httpUrl = Input.ofNullable(httpUrl);
+            this.httpUrl = Output.ofNullable(httpUrl);
             return this;
         }
         public DatasetCreateRequestPathArgs build() {

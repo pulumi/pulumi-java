@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.enums.ResourceIdentityType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalId")
-      private final @Nullable Input<String> principalId;
+      private final @Nullable Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
-        return this.principalId == null ? Input.empty() : this.principalId;
+    public Output<String> getPrincipalId() {
+        return this.principalId == null ? Output.empty() : this.principalId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ResourceIdentityType>> type;
+      private final @Nullable Output<Either<String,ResourceIdentityType>> type;
 
-    public Input<Either<String,ResourceIdentityType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ResourceIdentityType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public IdentityArgs(
-        @Nullable Input<String> principalId,
-        @Nullable Input<String> tenantId,
-        @Nullable Input<Either<String,ResourceIdentityType>> type) {
+        @Nullable Output<String> principalId,
+        @Nullable Output<String> tenantId,
+        @Nullable Output<Either<String,ResourceIdentityType>> type) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;
     }
 
     private IdentityArgs() {
-        this.principalId = Input.empty();
-        this.tenantId = Input.empty();
-        this.type = Input.empty();
+        this.principalId = Output.empty();
+        this.tenantId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> principalId;
-        private @Nullable Input<String> tenantId;
-        private @Nullable Input<Either<String,ResourceIdentityType>> type;
+        private @Nullable Output<String> principalId;
+        private @Nullable Output<String> tenantId;
+        private @Nullable Output<Either<String,ResourceIdentityType>> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder principalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Input.ofNullable(principalId);
+            this.principalId = Output.ofNullable(principalId);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,ResourceIdentityType>> type) {
+        public Builder type(@Nullable Output<Either<String,ResourceIdentityType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ResourceIdentityType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public IdentityArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     public HubArgs(
-        @Nullable Input<String> resourceId,
-        @Nullable Input<String> resourceType) {
+        @Nullable Output<String> resourceId,
+        @Nullable Output<String> resourceType) {
         this.resourceId = resourceId;
         this.resourceType = resourceType;
     }
 
     private HubArgs() {
-        this.resourceId = Input.empty();
-        this.resourceType = Input.empty();
+        this.resourceId = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<String> resourceType;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
         public HubArgs build() {

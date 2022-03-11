@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
@@ -30,10 +30,10 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="commentId")
-      private final @Nullable Input<String> commentId;
+      private final @Nullable Output<String> commentId;
 
-    public Input<String> getCommentId() {
-        return this.commentId == null ? Input.empty() : this.commentId;
+    public Output<String> getCommentId() {
+        return this.commentId == null ? Output.empty() : this.commentId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createdDate")
-      private final @Nullable Input<String> createdDate;
+      private final @Nullable Output<String> createdDate;
 
-    public Input<String> getCreatedDate() {
-        return this.createdDate == null ? Input.empty() : this.createdDate;
+    public Output<String> getCreatedDate() {
+        return this.createdDate == null ? Output.empty() : this.createdDate;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="issueId", required=true)
-      private final Input<String> issueId;
+      private final Output<String> issueId;
 
-    public Input<String> getIssueId() {
+    public Output<String> getIssueId() {
         return this.issueId;
     }
 
@@ -63,9 +63,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -74,9 +74,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -85,9 +85,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="text", required=true)
-      private final Input<String> text;
+      private final Output<String> text;
 
-    public Input<String> getText() {
+    public Output<String> getText() {
         return this.text;
     }
 
@@ -96,21 +96,21 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userId", required=true)
-      private final Input<String> userId;
+      private final Output<String> userId;
 
-    public Input<String> getUserId() {
+    public Output<String> getUserId() {
         return this.userId;
     }
 
     public ApiIssueCommentArgs(
-        Input<String> apiId,
-        @Nullable Input<String> commentId,
-        @Nullable Input<String> createdDate,
-        Input<String> issueId,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        Input<String> text,
-        Input<String> userId) {
+        Output<String> apiId,
+        @Nullable Output<String> commentId,
+        @Nullable Output<String> createdDate,
+        Output<String> issueId,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        Output<String> text,
+        Output<String> userId) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
         this.commentId = commentId;
         this.createdDate = createdDate;
@@ -122,14 +122,14 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ApiIssueCommentArgs() {
-        this.apiId = Input.empty();
-        this.commentId = Input.empty();
-        this.createdDate = Input.empty();
-        this.issueId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.text = Input.empty();
-        this.userId = Input.empty();
+        this.apiId = Output.empty();
+        this.commentId = Output.empty();
+        this.createdDate = Output.empty();
+        this.issueId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.text = Output.empty();
+        this.userId = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> apiId;
-        private @Nullable Input<String> commentId;
-        private @Nullable Input<String> createdDate;
-        private Input<String> issueId;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private Input<String> text;
-        private Input<String> userId;
+        private Output<String> apiId;
+        private @Nullable Output<String> commentId;
+        private @Nullable Output<String> createdDate;
+        private Output<String> issueId;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private Output<String> text;
+        private Output<String> userId;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userId = defaults.userId;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder commentId(@Nullable Input<String> commentId) {
+        public Builder commentId(@Nullable Output<String> commentId) {
             this.commentId = commentId;
             return this;
         }
 
         public Builder commentId(@Nullable String commentId) {
-            this.commentId = Input.ofNullable(commentId);
+            this.commentId = Output.ofNullable(commentId);
             return this;
         }
 
-        public Builder createdDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Input.ofNullable(createdDate);
+            this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
 
-        public Builder issueId(Input<String> issueId) {
+        public Builder issueId(Output<String> issueId) {
             this.issueId = Objects.requireNonNull(issueId);
             return this;
         }
 
         public Builder issueId(String issueId) {
-            this.issueId = Input.of(Objects.requireNonNull(issueId));
+            this.issueId = Output.of(Objects.requireNonNull(issueId));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder text(Input<String> text) {
+        public Builder text(Output<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
         public Builder text(String text) {
-            this.text = Input.of(Objects.requireNonNull(text));
+            this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
 
-        public Builder userId(Input<String> userId) {
+        public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
         public Builder userId(String userId) {
-            this.userId = Input.of(Objects.requireNonNull(userId));
+            this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
         public ApiIssueCommentArgs build() {

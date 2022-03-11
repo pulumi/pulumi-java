@@ -9,7 +9,6 @@ import io.pulumi.awsnative.servicecatalog.enums.CloudFormationProvisionedProduct
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductProvisioningParameter;
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductProvisioningPreferences;
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -167,14 +166,14 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudFormationProvisionedProduct(String name, @Nullable CloudFormationProvisionedProductArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:servicecatalog:CloudFormationProvisionedProduct", name, args == null ? CloudFormationProvisionedProductArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:servicecatalog:CloudFormationProvisionedProduct", name, args == null ? CloudFormationProvisionedProductArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CloudFormationProvisionedProduct(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CloudFormationProvisionedProduct(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:servicecatalog:CloudFormationProvisionedProduct", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -189,7 +188,7 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CloudFormationProvisionedProduct get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CloudFormationProvisionedProduct get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CloudFormationProvisionedProduct(name, id, options);
     }
 }

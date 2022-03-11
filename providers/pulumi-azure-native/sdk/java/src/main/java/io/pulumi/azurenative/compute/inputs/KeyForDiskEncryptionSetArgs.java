@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SourceVaultArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="keyUrl", required=true)
-      private final Input<String> keyUrl;
+      private final Output<String> keyUrl;
 
-    public Input<String> getKeyUrl() {
+    public Output<String> getKeyUrl() {
         return this.keyUrl;
     }
 
@@ -35,22 +35,22 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceVault")
-      private final @Nullable Input<SourceVaultArgs> sourceVault;
+      private final @Nullable Output<SourceVaultArgs> sourceVault;
 
-    public Input<SourceVaultArgs> getSourceVault() {
-        return this.sourceVault == null ? Input.empty() : this.sourceVault;
+    public Output<SourceVaultArgs> getSourceVault() {
+        return this.sourceVault == null ? Output.empty() : this.sourceVault;
     }
 
     public KeyForDiskEncryptionSetArgs(
-        Input<String> keyUrl,
-        @Nullable Input<SourceVaultArgs> sourceVault) {
+        Output<String> keyUrl,
+        @Nullable Output<SourceVaultArgs> sourceVault) {
         this.keyUrl = Objects.requireNonNull(keyUrl, "expected parameter 'keyUrl' to be non-null");
         this.sourceVault = sourceVault;
     }
 
     private KeyForDiskEncryptionSetArgs() {
-        this.keyUrl = Input.empty();
-        this.sourceVault = Input.empty();
+        this.keyUrl = Output.empty();
+        this.sourceVault = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> keyUrl;
-        private @Nullable Input<SourceVaultArgs> sourceVault;
+        private Output<String> keyUrl;
+        private @Nullable Output<SourceVaultArgs> sourceVault;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class KeyForDiskEncryptionSetArgs extends io.pulumi.resources.Resou
     	      this.sourceVault = defaults.sourceVault;
         }
 
-        public Builder keyUrl(Input<String> keyUrl) {
+        public Builder keyUrl(Output<String> keyUrl) {
             this.keyUrl = Objects.requireNonNull(keyUrl);
             return this;
         }
 
         public Builder keyUrl(String keyUrl) {
-            this.keyUrl = Input.of(Objects.requireNonNull(keyUrl));
+            this.keyUrl = Output.of(Objects.requireNonNull(keyUrl));
             return this;
         }
 
-        public Builder sourceVault(@Nullable Input<SourceVaultArgs> sourceVault) {
+        public Builder sourceVault(@Nullable Output<SourceVaultArgs> sourceVault) {
             this.sourceVault = sourceVault;
             return this;
         }
 
         public Builder sourceVault(@Nullable SourceVaultArgs sourceVault) {
-            this.sourceVault = Input.ofNullable(sourceVault);
+            this.sourceVault = Output.ofNullable(sourceVault);
             return this;
         }
         public KeyForDiskEncryptionSetArgs build() {

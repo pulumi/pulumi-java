@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.StorageLensActivityMetricsArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensPrefixLevelArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class StorageLensBucketLevelArgs extends io.pulumi.resources.Resour
     public static final StorageLensBucketLevelArgs Empty = new StorageLensBucketLevelArgs();
 
     @InputImport(name="activityMetrics")
-      private final @Nullable Input<StorageLensActivityMetricsArgs> activityMetrics;
+      private final @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
 
-    public Input<StorageLensActivityMetricsArgs> getActivityMetrics() {
-        return this.activityMetrics == null ? Input.empty() : this.activityMetrics;
+    public Output<StorageLensActivityMetricsArgs> getActivityMetrics() {
+        return this.activityMetrics == null ? Output.empty() : this.activityMetrics;
     }
 
     @InputImport(name="prefixLevel")
-      private final @Nullable Input<StorageLensPrefixLevelArgs> prefixLevel;
+      private final @Nullable Output<StorageLensPrefixLevelArgs> prefixLevel;
 
-    public Input<StorageLensPrefixLevelArgs> getPrefixLevel() {
-        return this.prefixLevel == null ? Input.empty() : this.prefixLevel;
+    public Output<StorageLensPrefixLevelArgs> getPrefixLevel() {
+        return this.prefixLevel == null ? Output.empty() : this.prefixLevel;
     }
 
     public StorageLensBucketLevelArgs(
-        @Nullable Input<StorageLensActivityMetricsArgs> activityMetrics,
-        @Nullable Input<StorageLensPrefixLevelArgs> prefixLevel) {
+        @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics,
+        @Nullable Output<StorageLensPrefixLevelArgs> prefixLevel) {
         this.activityMetrics = activityMetrics;
         this.prefixLevel = prefixLevel;
     }
 
     private StorageLensBucketLevelArgs() {
-        this.activityMetrics = Input.empty();
-        this.prefixLevel = Input.empty();
+        this.activityMetrics = Output.empty();
+        this.prefixLevel = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class StorageLensBucketLevelArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<StorageLensActivityMetricsArgs> activityMetrics;
-        private @Nullable Input<StorageLensPrefixLevelArgs> prefixLevel;
+        private @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
+        private @Nullable Output<StorageLensPrefixLevelArgs> prefixLevel;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class StorageLensBucketLevelArgs extends io.pulumi.resources.Resour
     	      this.prefixLevel = defaults.prefixLevel;
         }
 
-        public Builder activityMetrics(@Nullable Input<StorageLensActivityMetricsArgs> activityMetrics) {
+        public Builder activityMetrics(@Nullable Output<StorageLensActivityMetricsArgs> activityMetrics) {
             this.activityMetrics = activityMetrics;
             return this;
         }
 
         public Builder activityMetrics(@Nullable StorageLensActivityMetricsArgs activityMetrics) {
-            this.activityMetrics = Input.ofNullable(activityMetrics);
+            this.activityMetrics = Output.ofNullable(activityMetrics);
             return this;
         }
 
-        public Builder prefixLevel(@Nullable Input<StorageLensPrefixLevelArgs> prefixLevel) {
+        public Builder prefixLevel(@Nullable Output<StorageLensPrefixLevelArgs> prefixLevel) {
             this.prefixLevel = prefixLevel;
             return this;
         }
 
         public Builder prefixLevel(@Nullable StorageLensPrefixLevelArgs prefixLevel) {
-            this.prefixLevel = Input.ofNullable(prefixLevel);
+            this.prefixLevel = Output.ofNullable(prefixLevel);
             return this;
         }
         public StorageLensBucketLevelArgs build() {

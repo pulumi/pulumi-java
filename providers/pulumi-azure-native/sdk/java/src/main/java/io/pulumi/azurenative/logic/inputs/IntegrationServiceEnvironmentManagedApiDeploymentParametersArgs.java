@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ContentLinkArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
      * 
      */
     @InputImport(name="contentLinkDefinition")
-      private final @Nullable Input<ContentLinkArgs> contentLinkDefinition;
+      private final @Nullable Output<ContentLinkArgs> contentLinkDefinition;
 
-    public Input<ContentLinkArgs> getContentLinkDefinition() {
-        return this.contentLinkDefinition == null ? Input.empty() : this.contentLinkDefinition;
+    public Output<ContentLinkArgs> getContentLinkDefinition() {
+        return this.contentLinkDefinition == null ? Output.empty() : this.contentLinkDefinition;
     }
 
-    public IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs(@Nullable Input<ContentLinkArgs> contentLinkDefinition) {
+    public IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs(@Nullable Output<ContentLinkArgs> contentLinkDefinition) {
         this.contentLinkDefinition = contentLinkDefinition;
     }
 
     private IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs() {
-        this.contentLinkDefinition = Input.empty();
+        this.contentLinkDefinition = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
     }
 
     public static final class Builder {
-        private @Nullable Input<ContentLinkArgs> contentLinkDefinition;
+        private @Nullable Output<ContentLinkArgs> contentLinkDefinition;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
     	      this.contentLinkDefinition = defaults.contentLinkDefinition;
         }
 
-        public Builder contentLinkDefinition(@Nullable Input<ContentLinkArgs> contentLinkDefinition) {
+        public Builder contentLinkDefinition(@Nullable Output<ContentLinkArgs> contentLinkDefinition) {
             this.contentLinkDefinition = contentLinkDefinition;
             return this;
         }
 
         public Builder contentLinkDefinition(@Nullable ContentLinkArgs contentLinkDefinition) {
-            this.contentLinkDefinition = Input.ofNullable(contentLinkDefinition);
+            this.contentLinkDefinition = Output.ofNullable(contentLinkDefinition);
             return this;
         }
         public IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs build() {

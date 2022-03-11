@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class BucketReplicationTimeValueArgs extends io.pulumi.resources.Re
     public static final BucketReplicationTimeValueArgs Empty = new BucketReplicationTimeValueArgs();
 
     @InputImport(name="minutes", required=true)
-      private final Input<Integer> minutes;
+      private final Output<Integer> minutes;
 
-    public Input<Integer> getMinutes() {
+    public Output<Integer> getMinutes() {
         return this.minutes;
     }
 
-    public BucketReplicationTimeValueArgs(Input<Integer> minutes) {
+    public BucketReplicationTimeValueArgs(Output<Integer> minutes) {
         this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
     }
 
     private BucketReplicationTimeValueArgs() {
-        this.minutes = Input.empty();
+        this.minutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class BucketReplicationTimeValueArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Integer> minutes;
+        private Output<Integer> minutes;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class BucketReplicationTimeValueArgs extends io.pulumi.resources.Re
     	      this.minutes = defaults.minutes;
         }
 
-        public Builder minutes(Input<Integer> minutes) {
+        public Builder minutes(Output<Integer> minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
 
         public Builder minutes(Integer minutes) {
-            this.minutes = Input.of(Objects.requireNonNull(minutes));
+            this.minutes = Output.of(Objects.requireNonNull(minutes));
             return this;
         }
         public BucketReplicationTimeValueArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routes", required=true)
-      private final Input<List<HttpRouteConfigArgs>> routes;
+      private final Output<List<HttpRouteConfigArgs>> routes;
 
-    public Input<List<HttpRouteConfigArgs>> getRoutes() {
+    public Output<List<HttpRouteConfigArgs>> getRoutes() {
         return this.routes;
     }
 
     public HttpHostConfigArgs(
-        Input<String> name,
-        Input<List<HttpRouteConfigArgs>> routes) {
+        Output<String> name,
+        Output<List<HttpRouteConfigArgs>> routes) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.routes = Objects.requireNonNull(routes, "expected parameter 'routes' to be non-null");
     }
 
     private HttpHostConfigArgs() {
-        this.name = Input.empty();
-        this.routes = Input.empty();
+        this.name = Output.empty();
+        this.routes = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<List<HttpRouteConfigArgs>> routes;
+        private Output<String> name;
+        private Output<List<HttpRouteConfigArgs>> routes;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routes = defaults.routes;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder routes(Input<List<HttpRouteConfigArgs>> routes) {
+        public Builder routes(Output<List<HttpRouteConfigArgs>> routes) {
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
 
         public Builder routes(List<HttpRouteConfigArgs> routes) {
-            this.routes = Input.of(Objects.requireNonNull(routes));
+            this.routes = Output.of(Objects.requireNonNull(routes));
             return this;
         }
         public HttpHostConfigArgs build() {

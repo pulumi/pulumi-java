@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificateContextArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsValidationContextArgs;
@@ -24,10 +24,10 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateContext")
-      private final @Nullable Input<TlsCertificateContextArgs> certificateContext;
+      private final @Nullable Output<TlsCertificateContextArgs> certificateContext;
 
-    public Input<TlsCertificateContextArgs> getCertificateContext() {
-        return this.certificateContext == null ? Input.empty() : this.certificateContext;
+    public Output<TlsCertificateContextArgs> getCertificateContext() {
+        return this.certificateContext == null ? Output.empty() : this.certificateContext;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationContext")
-      private final @Nullable Input<TlsValidationContextArgs> validationContext;
+      private final @Nullable Output<TlsValidationContextArgs> validationContext;
 
-    public Input<TlsValidationContextArgs> getValidationContext() {
-        return this.validationContext == null ? Input.empty() : this.validationContext;
+    public Output<TlsValidationContextArgs> getValidationContext() {
+        return this.validationContext == null ? Output.empty() : this.validationContext;
     }
 
     public TlsContextArgs(
-        @Nullable Input<TlsCertificateContextArgs> certificateContext,
-        @Nullable Input<TlsValidationContextArgs> validationContext) {
+        @Nullable Output<TlsCertificateContextArgs> certificateContext,
+        @Nullable Output<TlsValidationContextArgs> validationContext) {
         this.certificateContext = certificateContext;
         this.validationContext = validationContext;
     }
 
     private TlsContextArgs() {
-        this.certificateContext = Input.empty();
-        this.validationContext = Input.empty();
+        this.certificateContext = Output.empty();
+        this.validationContext = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TlsCertificateContextArgs> certificateContext;
-        private @Nullable Input<TlsValidationContextArgs> validationContext;
+        private @Nullable Output<TlsCertificateContextArgs> certificateContext;
+        private @Nullable Output<TlsValidationContextArgs> validationContext;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TlsContextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationContext = defaults.validationContext;
         }
 
-        public Builder certificateContext(@Nullable Input<TlsCertificateContextArgs> certificateContext) {
+        public Builder certificateContext(@Nullable Output<TlsCertificateContextArgs> certificateContext) {
             this.certificateContext = certificateContext;
             return this;
         }
 
         public Builder certificateContext(@Nullable TlsCertificateContextArgs certificateContext) {
-            this.certificateContext = Input.ofNullable(certificateContext);
+            this.certificateContext = Output.ofNullable(certificateContext);
             return this;
         }
 
-        public Builder validationContext(@Nullable Input<TlsValidationContextArgs> validationContext) {
+        public Builder validationContext(@Nullable Output<TlsValidationContextArgs> validationContext) {
             this.validationContext = validationContext;
             return this;
         }
 
         public Builder validationContext(@Nullable TlsValidationContextArgs validationContext) {
-            this.validationContext = Input.ofNullable(validationContext);
+            this.validationContext = Output.ofNullable(validationContext);
             return this;
         }
         public TlsContextArgs build() {

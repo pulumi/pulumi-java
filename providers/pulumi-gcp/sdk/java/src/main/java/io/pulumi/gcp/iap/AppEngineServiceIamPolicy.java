@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -174,14 +173,14 @@ public class AppEngineServiceIamPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AppEngineServiceIamPolicy(String name, AppEngineServiceIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/appEngineServiceIamPolicy:AppEngineServiceIamPolicy", name, args == null ? AppEngineServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:iap/appEngineServiceIamPolicy:AppEngineServiceIamPolicy", name, args == null ? AppEngineServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AppEngineServiceIamPolicy(String name, Input<String> id, @Nullable AppEngineServiceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AppEngineServiceIamPolicy(String name, Output<String> id, @Nullable AppEngineServiceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:iap/appEngineServiceIamPolicy:AppEngineServiceIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -197,7 +196,7 @@ public class AppEngineServiceIamPolicy extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppEngineServiceIamPolicy get(String name, Input<String> id, @Nullable AppEngineServiceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AppEngineServiceIamPolicy get(String name, Output<String> id, @Nullable AppEngineServiceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AppEngineServiceIamPolicy(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableFreshness")
-      private final @Nullable Input<Boolean> disableFreshness;
+      private final @Nullable Output<Boolean> disableFreshness;
 
-    public Input<Boolean> getDisableFreshness() {
-        return this.disableFreshness == null ? Input.empty() : this.disableFreshness;
+    public Output<Boolean> getDisableFreshness() {
+        return this.disableFreshness == null ? Output.empty() : this.disableFreshness;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disablePersonalization")
-      private final @Nullable Input<Boolean> disablePersonalization;
+      private final @Nullable Output<Boolean> disablePersonalization;
 
-    public Input<Boolean> getDisablePersonalization() {
-        return this.disablePersonalization == null ? Input.empty() : this.disablePersonalization;
+    public Output<Boolean> getDisablePersonalization() {
+        return this.disablePersonalization == null ? Output.empty() : this.disablePersonalization;
     }
 
     public ScoringConfigArgs(
-        @Nullable Input<Boolean> disableFreshness,
-        @Nullable Input<Boolean> disablePersonalization) {
+        @Nullable Output<Boolean> disableFreshness,
+        @Nullable Output<Boolean> disablePersonalization) {
         this.disableFreshness = disableFreshness;
         this.disablePersonalization = disablePersonalization;
     }
 
     private ScoringConfigArgs() {
-        this.disableFreshness = Input.empty();
-        this.disablePersonalization = Input.empty();
+        this.disableFreshness = Output.empty();
+        this.disablePersonalization = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableFreshness;
-        private @Nullable Input<Boolean> disablePersonalization;
+        private @Nullable Output<Boolean> disableFreshness;
+        private @Nullable Output<Boolean> disablePersonalization;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.disablePersonalization = defaults.disablePersonalization;
         }
 
-        public Builder disableFreshness(@Nullable Input<Boolean> disableFreshness) {
+        public Builder disableFreshness(@Nullable Output<Boolean> disableFreshness) {
             this.disableFreshness = disableFreshness;
             return this;
         }
 
         public Builder disableFreshness(@Nullable Boolean disableFreshness) {
-            this.disableFreshness = Input.ofNullable(disableFreshness);
+            this.disableFreshness = Output.ofNullable(disableFreshness);
             return this;
         }
 
-        public Builder disablePersonalization(@Nullable Input<Boolean> disablePersonalization) {
+        public Builder disablePersonalization(@Nullable Output<Boolean> disablePersonalization) {
             this.disablePersonalization = disablePersonalization;
             return this;
         }
 
         public Builder disablePersonalization(@Nullable Boolean disablePersonalization) {
-            this.disablePersonalization = Input.ofNullable(disablePersonalization);
+            this.disablePersonalization = Output.ofNullable(disablePersonalization);
             return this;
         }
         public ScoringConfigArgs build() {

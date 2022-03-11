@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub;
 
 import io.pulumi.azurenative.webpubsub.inputs.WebPubSubHubPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName")
-      private final @Nullable Input<String> hubName;
+      private final @Nullable Output<String> hubName;
 
-    public Input<String> getHubName() {
-        return this.hubName == null ? Input.empty() : this.hubName;
+    public Output<String> getHubName() {
+        return this.hubName == null ? Output.empty() : this.hubName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<WebPubSubHubPropertiesArgs> properties;
+      private final Output<WebPubSubHubPropertiesArgs> properties;
 
-    public Input<WebPubSubHubPropertiesArgs> getProperties() {
+    public Output<WebPubSubHubPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -42,9 +42,9 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
     public WebPubSubHubArgs(
-        @Nullable Input<String> hubName,
-        Input<WebPubSubHubPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> resourceName) {
+        @Nullable Output<String> hubName,
+        Output<WebPubSubHubPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> resourceName) {
         this.hubName = hubName;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebPubSubHubArgs() {
-        this.hubName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
+        this.hubName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hubName;
-        private Input<WebPubSubHubPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
+        private @Nullable Output<String> hubName;
+        private Output<WebPubSubHubPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder hubName(@Nullable Input<String> hubName) {
+        public Builder hubName(@Nullable Output<String> hubName) {
             this.hubName = hubName;
             return this;
         }
 
         public Builder hubName(@Nullable String hubName) {
-            this.hubName = Input.ofNullable(hubName);
+            this.hubName = Output.ofNullable(hubName);
             return this;
         }
 
-        public Builder properties(Input<WebPubSubHubPropertiesArgs> properties) {
+        public Builder properties(Output<WebPubSubHubPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(WebPubSubHubPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
         public WebPubSubHubArgs build() {

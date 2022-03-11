@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.synapse.enums.TransparentDataEncryptionStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,9 +32,9 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sqlPoolName", required=true)
-      private final Input<String> sqlPoolName;
+      private final Output<String> sqlPoolName;
 
-    public Input<String> getSqlPoolName() {
+    public Output<String> getSqlPoolName() {
         return this.sqlPoolName;
     }
 
@@ -43,10 +43,10 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status;
+      private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
-    public Input<Either<String,TransparentDataEncryptionStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,TransparentDataEncryptionStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="transparentDataEncryptionName")
-      private final @Nullable Input<String> transparentDataEncryptionName;
+      private final @Nullable Output<String> transparentDataEncryptionName;
 
-    public Input<String> getTransparentDataEncryptionName() {
-        return this.transparentDataEncryptionName == null ? Input.empty() : this.transparentDataEncryptionName;
+    public Output<String> getTransparentDataEncryptionName() {
+        return this.transparentDataEncryptionName == null ? Output.empty() : this.transparentDataEncryptionName;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public SqlPoolTransparentDataEncryptionArgs(
-        Input<String> resourceGroupName,
-        Input<String> sqlPoolName,
-        @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status,
-        @Nullable Input<String> transparentDataEncryptionName,
-        Input<String> workspaceName) {
+        Output<String> resourceGroupName,
+        Output<String> sqlPoolName,
+        @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status,
+        @Nullable Output<String> transparentDataEncryptionName,
+        Output<String> workspaceName) {
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.sqlPoolName = Objects.requireNonNull(sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
         this.status = status;
@@ -85,11 +85,11 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
     }
 
     private SqlPoolTransparentDataEncryptionArgs() {
-        this.resourceGroupName = Input.empty();
-        this.sqlPoolName = Input.empty();
-        this.status = Input.empty();
-        this.transparentDataEncryptionName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.resourceGroupName = Output.empty();
+        this.sqlPoolName = Output.empty();
+        this.status = Output.empty();
+        this.transparentDataEncryptionName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> resourceGroupName;
-        private Input<String> sqlPoolName;
-        private @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status;
-        private @Nullable Input<String> transparentDataEncryptionName;
-        private Input<String> workspaceName;
+        private Output<String> resourceGroupName;
+        private Output<String> sqlPoolName;
+        private @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
+        private @Nullable Output<String> transparentDataEncryptionName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sqlPoolName(Input<String> sqlPoolName) {
+        public Builder sqlPoolName(Output<String> sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
 
         public Builder sqlPoolName(String sqlPoolName) {
-            this.sqlPoolName = Input.of(Objects.requireNonNull(sqlPoolName));
+            this.sqlPoolName = Output.of(Objects.requireNonNull(sqlPoolName));
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,TransparentDataEncryptionStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,TransparentDataEncryptionStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder transparentDataEncryptionName(@Nullable Input<String> transparentDataEncryptionName) {
+        public Builder transparentDataEncryptionName(@Nullable Output<String> transparentDataEncryptionName) {
             this.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
         }
 
         public Builder transparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
-            this.transparentDataEncryptionName = Input.ofNullable(transparentDataEncryptionName);
+            this.transparentDataEncryptionName = Output.ofNullable(transparentDataEncryptionName);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public SqlPoolTransparentDataEncryptionArgs build() {

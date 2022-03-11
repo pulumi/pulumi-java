@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.AvroFileFormatArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.JsonFileFormatArgs;
@@ -26,10 +26,10 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="avroFileFormat")
-      private final @Nullable Input<AvroFileFormatArgs> avroFileFormat;
+      private final @Nullable Output<AvroFileFormatArgs> avroFileFormat;
 
-    public Input<AvroFileFormatArgs> getAvroFileFormat() {
-        return this.avroFileFormat == null ? Input.empty() : this.avroFileFormat;
+    public Output<AvroFileFormatArgs> getAvroFileFormat() {
+        return this.avroFileFormat == null ? Output.empty() : this.avroFileFormat;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fileRotationInterval")
-      private final @Nullable Input<String> fileRotationInterval;
+      private final @Nullable Output<String> fileRotationInterval;
 
-    public Input<String> getFileRotationInterval() {
-        return this.fileRotationInterval == null ? Input.empty() : this.fileRotationInterval;
+    public Output<String> getFileRotationInterval() {
+        return this.fileRotationInterval == null ? Output.empty() : this.fileRotationInterval;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fileRotationMb")
-      private final @Nullable Input<Integer> fileRotationMb;
+      private final @Nullable Output<Integer> fileRotationMb;
 
-    public Input<Integer> getFileRotationMb() {
-        return this.fileRotationMb == null ? Input.empty() : this.fileRotationMb;
+    public Output<Integer> getFileRotationMb() {
+        return this.fileRotationMb == null ? Output.empty() : this.fileRotationMb;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="jsonFileFormat")
-      private final @Nullable Input<JsonFileFormatArgs> jsonFileFormat;
+      private final @Nullable Output<JsonFileFormatArgs> jsonFileFormat;
 
-    public Input<JsonFileFormatArgs> getJsonFileFormat() {
-        return this.jsonFileFormat == null ? Input.empty() : this.jsonFileFormat;
+    public Output<JsonFileFormatArgs> getJsonFileFormat() {
+        return this.jsonFileFormat == null ? Output.empty() : this.jsonFileFormat;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     public GcsDestinationConfigArgs(
-        @Nullable Input<AvroFileFormatArgs> avroFileFormat,
-        @Nullable Input<String> fileRotationInterval,
-        @Nullable Input<Integer> fileRotationMb,
-        @Nullable Input<JsonFileFormatArgs> jsonFileFormat,
-        @Nullable Input<String> path) {
+        @Nullable Output<AvroFileFormatArgs> avroFileFormat,
+        @Nullable Output<String> fileRotationInterval,
+        @Nullable Output<Integer> fileRotationMb,
+        @Nullable Output<JsonFileFormatArgs> jsonFileFormat,
+        @Nullable Output<String> path) {
         this.avroFileFormat = avroFileFormat;
         this.fileRotationInterval = fileRotationInterval;
         this.fileRotationMb = fileRotationMb;
@@ -90,11 +90,11 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
     }
 
     private GcsDestinationConfigArgs() {
-        this.avroFileFormat = Input.empty();
-        this.fileRotationInterval = Input.empty();
-        this.fileRotationMb = Input.empty();
-        this.jsonFileFormat = Input.empty();
-        this.path = Input.empty();
+        this.avroFileFormat = Output.empty();
+        this.fileRotationInterval = Output.empty();
+        this.fileRotationMb = Output.empty();
+        this.jsonFileFormat = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<AvroFileFormatArgs> avroFileFormat;
-        private @Nullable Input<String> fileRotationInterval;
-        private @Nullable Input<Integer> fileRotationMb;
-        private @Nullable Input<JsonFileFormatArgs> jsonFileFormat;
-        private @Nullable Input<String> path;
+        private @Nullable Output<AvroFileFormatArgs> avroFileFormat;
+        private @Nullable Output<String> fileRotationInterval;
+        private @Nullable Output<Integer> fileRotationMb;
+        private @Nullable Output<JsonFileFormatArgs> jsonFileFormat;
+        private @Nullable Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
     	      this.path = defaults.path;
         }
 
-        public Builder avroFileFormat(@Nullable Input<AvroFileFormatArgs> avroFileFormat) {
+        public Builder avroFileFormat(@Nullable Output<AvroFileFormatArgs> avroFileFormat) {
             this.avroFileFormat = avroFileFormat;
             return this;
         }
 
         public Builder avroFileFormat(@Nullable AvroFileFormatArgs avroFileFormat) {
-            this.avroFileFormat = Input.ofNullable(avroFileFormat);
+            this.avroFileFormat = Output.ofNullable(avroFileFormat);
             return this;
         }
 
-        public Builder fileRotationInterval(@Nullable Input<String> fileRotationInterval) {
+        public Builder fileRotationInterval(@Nullable Output<String> fileRotationInterval) {
             this.fileRotationInterval = fileRotationInterval;
             return this;
         }
 
         public Builder fileRotationInterval(@Nullable String fileRotationInterval) {
-            this.fileRotationInterval = Input.ofNullable(fileRotationInterval);
+            this.fileRotationInterval = Output.ofNullable(fileRotationInterval);
             return this;
         }
 
-        public Builder fileRotationMb(@Nullable Input<Integer> fileRotationMb) {
+        public Builder fileRotationMb(@Nullable Output<Integer> fileRotationMb) {
             this.fileRotationMb = fileRotationMb;
             return this;
         }
 
         public Builder fileRotationMb(@Nullable Integer fileRotationMb) {
-            this.fileRotationMb = Input.ofNullable(fileRotationMb);
+            this.fileRotationMb = Output.ofNullable(fileRotationMb);
             return this;
         }
 
-        public Builder jsonFileFormat(@Nullable Input<JsonFileFormatArgs> jsonFileFormat) {
+        public Builder jsonFileFormat(@Nullable Output<JsonFileFormatArgs> jsonFileFormat) {
             this.jsonFileFormat = jsonFileFormat;
             return this;
         }
 
         public Builder jsonFileFormat(@Nullable JsonFileFormatArgs jsonFileFormat) {
-            this.jsonFileFormat = Input.ofNullable(jsonFileFormat);
+            this.jsonFileFormat = Output.ofNullable(jsonFileFormat);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
         public GcsDestinationConfigArgs build() {

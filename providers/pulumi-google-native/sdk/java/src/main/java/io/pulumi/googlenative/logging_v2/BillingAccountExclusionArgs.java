@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.logging_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,9 +16,9 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
     public static final BillingAccountExclusionArgs Empty = new BillingAccountExclusionArgs();
 
     @InputImport(name="billingAccountId", required=true)
-      private final Input<String> billingAccountId;
+      private final Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
+    public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
@@ -27,10 +27,10 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="filter", required=true)
-      private final Input<String> filter;
+      private final Output<String> filter;
 
-    public Input<String> getFilter() {
+    public Output<String> getFilter() {
         return this.filter;
     }
 
@@ -60,18 +60,18 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public BillingAccountExclusionArgs(
-        Input<String> billingAccountId,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disabled,
-        Input<String> filter,
-        @Nullable Input<String> name) {
+        Output<String> billingAccountId,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disabled,
+        Output<String> filter,
+        @Nullable Output<String> name) {
         this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
         this.description = description;
         this.disabled = disabled;
@@ -80,11 +80,11 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
     }
 
     private BillingAccountExclusionArgs() {
-        this.billingAccountId = Input.empty();
-        this.description = Input.empty();
-        this.disabled = Input.empty();
-        this.filter = Input.empty();
-        this.name = Input.empty();
+        this.billingAccountId = Output.empty();
+        this.description = Output.empty();
+        this.disabled = Output.empty();
+        this.filter = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,11 +96,11 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> billingAccountId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disabled;
-        private Input<String> filter;
-        private @Nullable Input<String> name;
+        private Output<String> billingAccountId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disabled;
+        private Output<String> filter;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -115,53 +115,53 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
     	      this.name = defaults.name;
         }
 
-        public Builder billingAccountId(Input<String> billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Input.of(Objects.requireNonNull(billingAccountId));
+            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder filter(Input<String> filter) {
+        public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(String filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public BillingAccountExclusionArgs build() {

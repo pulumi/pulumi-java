@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="restApiId")
-      private final @Nullable Input<String> restApiId;
+      private final @Nullable Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
-        return this.restApiId == null ? Input.empty() : this.restApiId;
+    public Output<String> getRestApiId() {
+        return this.restApiId == null ? Output.empty() : this.restApiId;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public DocumentationVersionState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> restApiId,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> restApiId,
+        @Nullable Output<String> version) {
         this.description = description;
         this.restApiId = restApiId;
         this.version = version;
     }
 
     private DocumentationVersionState() {
-        this.description = Input.empty();
-        this.restApiId = Input.empty();
-        this.version = Input.empty();
+        this.description = Output.empty();
+        this.restApiId = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> restApiId;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> restApiId;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder restApiId(@Nullable Input<String> restApiId) {
+        public Builder restApiId(@Nullable Output<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
 
         public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Input.ofNullable(restApiId);
+            this.restApiId = Output.ofNullable(restApiId);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public DocumentationVersionState build() {

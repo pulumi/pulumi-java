@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -31,22 +31,22 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
     public FolderArgs(
-        Input<String> displayName,
-        Input<String> parent) {
+        Output<String> displayName,
+        Output<String> parent) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
     }
 
     private FolderArgs() {
-        this.displayName = Input.empty();
-        this.parent = Input.empty();
+        this.displayName = Output.empty();
+        this.parent = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private Input<String> parent;
+        private Output<String> displayName;
+        private Output<String> parent;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parent = defaults.parent;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
         public FolderArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,46 +14,46 @@ public final class TopicRuleElasticsearchActionArgs extends io.pulumi.resources.
     public static final TopicRuleElasticsearchActionArgs Empty = new TopicRuleElasticsearchActionArgs();
 
     @InputImport(name="endpoint", required=true)
-      private final Input<String> endpoint;
+      private final Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
+    public Output<String> getEndpoint() {
         return this.endpoint;
     }
 
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
     @InputImport(name="index", required=true)
-      private final Input<String> index;
+      private final Output<String> index;
 
-    public Input<String> getIndex() {
+    public Output<String> getIndex() {
         return this.index;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public TopicRuleElasticsearchActionArgs(
-        Input<String> endpoint,
-        Input<String> id,
-        Input<String> index,
-        Input<String> roleArn,
-        Input<String> type) {
+        Output<String> endpoint,
+        Output<String> id,
+        Output<String> index,
+        Output<String> roleArn,
+        Output<String> type) {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
@@ -62,11 +62,11 @@ public final class TopicRuleElasticsearchActionArgs extends io.pulumi.resources.
     }
 
     private TopicRuleElasticsearchActionArgs() {
-        this.endpoint = Input.empty();
-        this.id = Input.empty();
-        this.index = Input.empty();
-        this.roleArn = Input.empty();
-        this.type = Input.empty();
+        this.endpoint = Output.empty();
+        this.id = Output.empty();
+        this.index = Output.empty();
+        this.roleArn = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,11 +78,11 @@ public final class TopicRuleElasticsearchActionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> endpoint;
-        private Input<String> id;
-        private Input<String> index;
-        private Input<String> roleArn;
-        private Input<String> type;
+        private Output<String> endpoint;
+        private Output<String> id;
+        private Output<String> index;
+        private Output<String> roleArn;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -97,53 +97,53 @@ public final class TopicRuleElasticsearchActionArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder endpoint(Input<String> endpoint) {
+        public Builder endpoint(Output<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Input.of(Objects.requireNonNull(endpoint));
+            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder index(Input<String> index) {
+        public Builder index(Output<String> index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
 
         public Builder index(String index) {
-            this.index = Input.of(Objects.requireNonNull(index));
+            this.index = Output.of(Objects.requireNonNull(index));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TopicRuleElasticsearchActionArgs build() {

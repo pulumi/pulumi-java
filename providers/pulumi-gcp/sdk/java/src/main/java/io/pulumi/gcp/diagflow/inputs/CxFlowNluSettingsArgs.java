@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class CxFlowNluSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="classificationThreshold")
-      private final @Nullable Input<Double> classificationThreshold;
+      private final @Nullable Output<Double> classificationThreshold;
 
-    public Input<Double> getClassificationThreshold() {
-        return this.classificationThreshold == null ? Input.empty() : this.classificationThreshold;
+    public Output<Double> getClassificationThreshold() {
+        return this.classificationThreshold == null ? Output.empty() : this.classificationThreshold;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CxFlowNluSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="modelTrainingMode")
-      private final @Nullable Input<String> modelTrainingMode;
+      private final @Nullable Output<String> modelTrainingMode;
 
-    public Input<String> getModelTrainingMode() {
-        return this.modelTrainingMode == null ? Input.empty() : this.modelTrainingMode;
+    public Output<String> getModelTrainingMode() {
+        return this.modelTrainingMode == null ? Output.empty() : this.modelTrainingMode;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class CxFlowNluSettingsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="modelType")
-      private final @Nullable Input<String> modelType;
+      private final @Nullable Output<String> modelType;
 
-    public Input<String> getModelType() {
-        return this.modelType == null ? Input.empty() : this.modelType;
+    public Output<String> getModelType() {
+        return this.modelType == null ? Output.empty() : this.modelType;
     }
 
     public CxFlowNluSettingsArgs(
-        @Nullable Input<Double> classificationThreshold,
-        @Nullable Input<String> modelTrainingMode,
-        @Nullable Input<String> modelType) {
+        @Nullable Output<Double> classificationThreshold,
+        @Nullable Output<String> modelTrainingMode,
+        @Nullable Output<String> modelType) {
         this.classificationThreshold = classificationThreshold;
         this.modelTrainingMode = modelTrainingMode;
         this.modelType = modelType;
     }
 
     private CxFlowNluSettingsArgs() {
-        this.classificationThreshold = Input.empty();
-        this.modelTrainingMode = Input.empty();
-        this.modelType = Input.empty();
+        this.classificationThreshold = Output.empty();
+        this.modelTrainingMode = Output.empty();
+        this.modelType = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class CxFlowNluSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> classificationThreshold;
-        private @Nullable Input<String> modelTrainingMode;
-        private @Nullable Input<String> modelType;
+        private @Nullable Output<Double> classificationThreshold;
+        private @Nullable Output<String> modelTrainingMode;
+        private @Nullable Output<String> modelType;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class CxFlowNluSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.modelType = defaults.modelType;
         }
 
-        public Builder classificationThreshold(@Nullable Input<Double> classificationThreshold) {
+        public Builder classificationThreshold(@Nullable Output<Double> classificationThreshold) {
             this.classificationThreshold = classificationThreshold;
             return this;
         }
 
         public Builder classificationThreshold(@Nullable Double classificationThreshold) {
-            this.classificationThreshold = Input.ofNullable(classificationThreshold);
+            this.classificationThreshold = Output.ofNullable(classificationThreshold);
             return this;
         }
 
-        public Builder modelTrainingMode(@Nullable Input<String> modelTrainingMode) {
+        public Builder modelTrainingMode(@Nullable Output<String> modelTrainingMode) {
             this.modelTrainingMode = modelTrainingMode;
             return this;
         }
 
         public Builder modelTrainingMode(@Nullable String modelTrainingMode) {
-            this.modelTrainingMode = Input.ofNullable(modelTrainingMode);
+            this.modelTrainingMode = Output.ofNullable(modelTrainingMode);
             return this;
         }
 
-        public Builder modelType(@Nullable Input<String> modelType) {
+        public Builder modelType(@Nullable Output<String> modelType) {
             this.modelType = modelType;
             return this;
         }
 
         public Builder modelType(@Nullable String modelType) {
-            this.modelType = Input.ofNullable(modelType);
+            this.modelType = Output.ofNullable(modelType);
             return this;
         }
         public CxFlowNluSettingsArgs build() {

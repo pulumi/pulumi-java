@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class ConfigUplinkEchoConfigArgs extends io.pulumi.resources.Resour
     public static final ConfigUplinkEchoConfigArgs Empty = new ConfigUplinkEchoConfigArgs();
 
     @InputImport(name="antennaUplinkConfigArn")
-      private final @Nullable Input<String> antennaUplinkConfigArn;
+      private final @Nullable Output<String> antennaUplinkConfigArn;
 
-    public Input<String> getAntennaUplinkConfigArn() {
-        return this.antennaUplinkConfigArn == null ? Input.empty() : this.antennaUplinkConfigArn;
+    public Output<String> getAntennaUplinkConfigArn() {
+        return this.antennaUplinkConfigArn == null ? Output.empty() : this.antennaUplinkConfigArn;
     }
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     public ConfigUplinkEchoConfigArgs(
-        @Nullable Input<String> antennaUplinkConfigArn,
-        @Nullable Input<Boolean> enabled) {
+        @Nullable Output<String> antennaUplinkConfigArn,
+        @Nullable Output<Boolean> enabled) {
         this.antennaUplinkConfigArn = antennaUplinkConfigArn;
         this.enabled = enabled;
     }
 
     private ConfigUplinkEchoConfigArgs() {
-        this.antennaUplinkConfigArn = Input.empty();
-        this.enabled = Input.empty();
+        this.antennaUplinkConfigArn = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ConfigUplinkEchoConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> antennaUplinkConfigArn;
-        private @Nullable Input<Boolean> enabled;
+        private @Nullable Output<String> antennaUplinkConfigArn;
+        private @Nullable Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ConfigUplinkEchoConfigArgs extends io.pulumi.resources.Resour
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder antennaUplinkConfigArn(@Nullable Input<String> antennaUplinkConfigArn) {
+        public Builder antennaUplinkConfigArn(@Nullable Output<String> antennaUplinkConfigArn) {
             this.antennaUplinkConfigArn = antennaUplinkConfigArn;
             return this;
         }
 
         public Builder antennaUplinkConfigArn(@Nullable String antennaUplinkConfigArn) {
-            this.antennaUplinkConfigArn = Input.ofNullable(antennaUplinkConfigArn);
+            this.antennaUplinkConfigArn = Output.ofNullable(antennaUplinkConfigArn);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
         public ConfigUplinkEchoConfigArgs build() {

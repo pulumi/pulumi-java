@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sns;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
@@ -29,22 +29,22 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
     public TopicPolicyArgs(
-        Input<String> arn,
-        Input<String> policy) {
+        Output<String> arn,
+        Output<String> policy) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
     }
 
     private TopicPolicyArgs() {
-        this.arn = Input.empty();
-        this.policy = Input.empty();
+        this.arn = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private Input<String> policy;
+        private Output<String> arn;
+        private Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(String policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
         public TopicPolicyArgs build() {

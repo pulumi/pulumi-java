@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class OpenZfsVolumeUserAndGroupQuotaArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<Integer> id;
+      private final Output<Integer> id;
 
-    public Input<Integer> getId() {
+    public Output<Integer> getId() {
         return this.id;
     }
 
@@ -30,32 +30,32 @@ public final class OpenZfsVolumeUserAndGroupQuotaArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storageCapacityQuotaGib", required=true)
-      private final Input<Integer> storageCapacityQuotaGib;
+      private final Output<Integer> storageCapacityQuotaGib;
 
-    public Input<Integer> getStorageCapacityQuotaGib() {
+    public Output<Integer> getStorageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public OpenZfsVolumeUserAndGroupQuotaArgs(
-        Input<Integer> id,
-        Input<Integer> storageCapacityQuotaGib,
-        Input<String> type) {
+        Output<Integer> id,
+        Output<Integer> storageCapacityQuotaGib,
+        Output<String> type) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.storageCapacityQuotaGib = Objects.requireNonNull(storageCapacityQuotaGib, "expected parameter 'storageCapacityQuotaGib' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private OpenZfsVolumeUserAndGroupQuotaArgs() {
-        this.id = Input.empty();
-        this.storageCapacityQuotaGib = Input.empty();
-        this.type = Input.empty();
+        this.id = Output.empty();
+        this.storageCapacityQuotaGib = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class OpenZfsVolumeUserAndGroupQuotaArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<Integer> id;
-        private Input<Integer> storageCapacityQuotaGib;
-        private Input<String> type;
+        private Output<Integer> id;
+        private Output<Integer> storageCapacityQuotaGib;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class OpenZfsVolumeUserAndGroupQuotaArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder id(Input<Integer> id) {
+        public Builder id(Output<Integer> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(Integer id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder storageCapacityQuotaGib(Input<Integer> storageCapacityQuotaGib) {
+        public Builder storageCapacityQuotaGib(Output<Integer> storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = Objects.requireNonNull(storageCapacityQuotaGib);
             return this;
         }
 
         public Builder storageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
-            this.storageCapacityQuotaGib = Input.of(Objects.requireNonNull(storageCapacityQuotaGib));
+            this.storageCapacityQuotaGib = Output.of(Objects.requireNonNull(storageCapacityQuotaGib));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public OpenZfsVolumeUserAndGroupQuotaArgs build() {

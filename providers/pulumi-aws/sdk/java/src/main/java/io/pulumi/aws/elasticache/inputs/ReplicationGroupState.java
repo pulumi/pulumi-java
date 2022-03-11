@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.aws.elasticache.inputs.ReplicationGroupClusterModeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="applyImmediately")
-      private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Output<Boolean> applyImmediately;
 
-    public Input<Boolean> getApplyImmediately() {
-        return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
+    public Output<Boolean> getApplyImmediately() {
+        return this.applyImmediately == null ? Output.empty() : this.applyImmediately;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="atRestEncryptionEnabled")
-      private final @Nullable Input<Boolean> atRestEncryptionEnabled;
+      private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
-    public Input<Boolean> getAtRestEncryptionEnabled() {
-        return this.atRestEncryptionEnabled == null ? Input.empty() : this.atRestEncryptionEnabled;
+    public Output<Boolean> getAtRestEncryptionEnabled() {
+        return this.atRestEncryptionEnabled == null ? Output.empty() : this.atRestEncryptionEnabled;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authToken")
-      private final @Nullable Input<String> authToken;
+      private final @Nullable Output<String> authToken;
 
-    public Input<String> getAuthToken() {
-        return this.authToken == null ? Input.empty() : this.authToken;
+    public Output<String> getAuthToken() {
+        return this.authToken == null ? Output.empty() : this.authToken;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Input<Boolean> getAutoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
+    public Output<Boolean> getAutoMinorVersionUpgrade() {
+        return this.autoMinorVersionUpgrade == null ? Output.empty() : this.autoMinorVersionUpgrade;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="automaticFailoverEnabled")
-      private final @Nullable Input<Boolean> automaticFailoverEnabled;
+      private final @Nullable Output<Boolean> automaticFailoverEnabled;
 
-    public Input<Boolean> getAutomaticFailoverEnabled() {
-        return this.automaticFailoverEnabled == null ? Input.empty() : this.automaticFailoverEnabled;
+    public Output<Boolean> getAutomaticFailoverEnabled() {
+        return this.automaticFailoverEnabled == null ? Output.empty() : this.automaticFailoverEnabled;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="availabilityZones")
-      private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
+    public Output<List<String>> getAvailabilityZones() {
+        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterEnabled")
-      private final @Nullable Input<Boolean> clusterEnabled;
+      private final @Nullable Output<Boolean> clusterEnabled;
 
-    public Input<Boolean> getClusterEnabled() {
-        return this.clusterEnabled == null ? Input.empty() : this.clusterEnabled;
+    public Output<Boolean> getClusterEnabled() {
+        return this.clusterEnabled == null ? Output.empty() : this.clusterEnabled;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterMode")
-      private final @Nullable Input<ReplicationGroupClusterModeGetArgs> clusterMode;
+      private final @Nullable Output<ReplicationGroupClusterModeGetArgs> clusterMode;
 
-    public Input<ReplicationGroupClusterModeGetArgs> getClusterMode() {
-        return this.clusterMode == null ? Input.empty() : this.clusterMode;
+    public Output<ReplicationGroupClusterModeGetArgs> getClusterMode() {
+        return this.clusterMode == null ? Output.empty() : this.clusterMode;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configurationEndpointAddress")
-      private final @Nullable Input<String> configurationEndpointAddress;
+      private final @Nullable Output<String> configurationEndpointAddress;
 
-    public Input<String> getConfigurationEndpointAddress() {
-        return this.configurationEndpointAddress == null ? Input.empty() : this.configurationEndpointAddress;
+    public Output<String> getConfigurationEndpointAddress() {
+        return this.configurationEndpointAddress == null ? Output.empty() : this.configurationEndpointAddress;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataTieringEnabled")
-      private final @Nullable Input<Boolean> dataTieringEnabled;
+      private final @Nullable Output<Boolean> dataTieringEnabled;
 
-    public Input<Boolean> getDataTieringEnabled() {
-        return this.dataTieringEnabled == null ? Input.empty() : this.dataTieringEnabled;
+    public Output<Boolean> getDataTieringEnabled() {
+        return this.dataTieringEnabled == null ? Output.empty() : this.dataTieringEnabled;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="engineVersionActual")
-      private final @Nullable Input<String> engineVersionActual;
+      private final @Nullable Output<String> engineVersionActual;
 
-    public Input<String> getEngineVersionActual() {
-        return this.engineVersionActual == null ? Input.empty() : this.engineVersionActual;
+    public Output<String> getEngineVersionActual() {
+        return this.engineVersionActual == null ? Output.empty() : this.engineVersionActual;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="finalSnapshotIdentifier")
-      private final @Nullable Input<String> finalSnapshotIdentifier;
+      private final @Nullable Output<String> finalSnapshotIdentifier;
 
-    public Input<String> getFinalSnapshotIdentifier() {
-        return this.finalSnapshotIdentifier == null ? Input.empty() : this.finalSnapshotIdentifier;
+    public Output<String> getFinalSnapshotIdentifier() {
+        return this.finalSnapshotIdentifier == null ? Output.empty() : this.finalSnapshotIdentifier;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="globalReplicationGroupId")
-      private final @Nullable Input<String> globalReplicationGroupId;
+      private final @Nullable Output<String> globalReplicationGroupId;
 
-    public Input<String> getGlobalReplicationGroupId() {
-        return this.globalReplicationGroupId == null ? Input.empty() : this.globalReplicationGroupId;
+    public Output<String> getGlobalReplicationGroupId() {
+        return this.globalReplicationGroupId == null ? Output.empty() : this.globalReplicationGroupId;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<String> maintenanceWindow;
+      private final @Nullable Output<String> maintenanceWindow;
 
-    public Input<String> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<String> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="memberClusters")
-      private final @Nullable Input<List<String>> memberClusters;
+      private final @Nullable Output<List<String>> memberClusters;
 
-    public Input<List<String>> getMemberClusters() {
-        return this.memberClusters == null ? Input.empty() : this.memberClusters;
+    public Output<List<String>> getMemberClusters() {
+        return this.memberClusters == null ? Output.empty() : this.memberClusters;
     }
 
     /**
@@ -233,10 +233,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="multiAzEnabled")
-      private final @Nullable Input<Boolean> multiAzEnabled;
+      private final @Nullable Output<Boolean> multiAzEnabled;
 
-    public Input<Boolean> getMultiAzEnabled() {
-        return this.multiAzEnabled == null ? Input.empty() : this.multiAzEnabled;
+    public Output<Boolean> getMultiAzEnabled() {
+        return this.multiAzEnabled == null ? Output.empty() : this.multiAzEnabled;
     }
 
     /**
@@ -244,10 +244,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nodeType")
-      private final @Nullable Input<String> nodeType;
+      private final @Nullable Output<String> nodeType;
 
-    public Input<String> getNodeType() {
-        return this.nodeType == null ? Input.empty() : this.nodeType;
+    public Output<String> getNodeType() {
+        return this.nodeType == null ? Output.empty() : this.nodeType;
     }
 
     /**
@@ -255,10 +255,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="notificationTopicArn")
-      private final @Nullable Input<String> notificationTopicArn;
+      private final @Nullable Output<String> notificationTopicArn;
 
-    public Input<String> getNotificationTopicArn() {
-        return this.notificationTopicArn == null ? Input.empty() : this.notificationTopicArn;
+    public Output<String> getNotificationTopicArn() {
+        return this.notificationTopicArn == null ? Output.empty() : this.notificationTopicArn;
     }
 
     /**
@@ -266,10 +266,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="numberCacheClusters")
-      private final @Nullable Input<Integer> numberCacheClusters;
+      private final @Nullable Output<Integer> numberCacheClusters;
 
-    public Input<Integer> getNumberCacheClusters() {
-        return this.numberCacheClusters == null ? Input.empty() : this.numberCacheClusters;
+    public Output<Integer> getNumberCacheClusters() {
+        return this.numberCacheClusters == null ? Output.empty() : this.numberCacheClusters;
     }
 
     /**
@@ -277,10 +277,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameterGroupName")
-      private final @Nullable Input<String> parameterGroupName;
+      private final @Nullable Output<String> parameterGroupName;
 
-    public Input<String> getParameterGroupName() {
-        return this.parameterGroupName == null ? Input.empty() : this.parameterGroupName;
+    public Output<String> getParameterGroupName() {
+        return this.parameterGroupName == null ? Output.empty() : this.parameterGroupName;
     }
 
     /**
@@ -288,10 +288,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -299,10 +299,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="primaryEndpointAddress")
-      private final @Nullable Input<String> primaryEndpointAddress;
+      private final @Nullable Output<String> primaryEndpointAddress;
 
-    public Input<String> getPrimaryEndpointAddress() {
-        return this.primaryEndpointAddress == null ? Input.empty() : this.primaryEndpointAddress;
+    public Output<String> getPrimaryEndpointAddress() {
+        return this.primaryEndpointAddress == null ? Output.empty() : this.primaryEndpointAddress;
     }
 
     /**
@@ -310,10 +310,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="readerEndpointAddress")
-      private final @Nullable Input<String> readerEndpointAddress;
+      private final @Nullable Output<String> readerEndpointAddress;
 
-    public Input<String> getReaderEndpointAddress() {
-        return this.readerEndpointAddress == null ? Input.empty() : this.readerEndpointAddress;
+    public Output<String> getReaderEndpointAddress() {
+        return this.readerEndpointAddress == null ? Output.empty() : this.readerEndpointAddress;
     }
 
     /**
@@ -321,10 +321,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicationGroupDescription")
-      private final @Nullable Input<String> replicationGroupDescription;
+      private final @Nullable Output<String> replicationGroupDescription;
 
-    public Input<String> getReplicationGroupDescription() {
-        return this.replicationGroupDescription == null ? Input.empty() : this.replicationGroupDescription;
+    public Output<String> getReplicationGroupDescription() {
+        return this.replicationGroupDescription == null ? Output.empty() : this.replicationGroupDescription;
     }
 
     /**
@@ -332,10 +332,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicationGroupId")
-      private final @Nullable Input<String> replicationGroupId;
+      private final @Nullable Output<String> replicationGroupId;
 
-    public Input<String> getReplicationGroupId() {
-        return this.replicationGroupId == null ? Input.empty() : this.replicationGroupId;
+    public Output<String> getReplicationGroupId() {
+        return this.replicationGroupId == null ? Output.empty() : this.replicationGroupId;
     }
 
     /**
@@ -343,10 +343,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -354,10 +354,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupNames")
-      private final @Nullable Input<List<String>> securityGroupNames;
+      private final @Nullable Output<List<String>> securityGroupNames;
 
-    public Input<List<String>> getSecurityGroupNames() {
-        return this.securityGroupNames == null ? Input.empty() : this.securityGroupNames;
+    public Output<List<String>> getSecurityGroupNames() {
+        return this.securityGroupNames == null ? Output.empty() : this.securityGroupNames;
     }
 
     /**
@@ -365,10 +365,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snapshotArns")
-      private final @Nullable Input<List<String>> snapshotArns;
+      private final @Nullable Output<List<String>> snapshotArns;
 
-    public Input<List<String>> getSnapshotArns() {
-        return this.snapshotArns == null ? Input.empty() : this.snapshotArns;
+    public Output<List<String>> getSnapshotArns() {
+        return this.snapshotArns == null ? Output.empty() : this.snapshotArns;
     }
 
     /**
@@ -376,10 +376,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snapshotName")
-      private final @Nullable Input<String> snapshotName;
+      private final @Nullable Output<String> snapshotName;
 
-    public Input<String> getSnapshotName() {
-        return this.snapshotName == null ? Input.empty() : this.snapshotName;
+    public Output<String> getSnapshotName() {
+        return this.snapshotName == null ? Output.empty() : this.snapshotName;
     }
 
     /**
@@ -387,10 +387,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snapshotRetentionLimit")
-      private final @Nullable Input<Integer> snapshotRetentionLimit;
+      private final @Nullable Output<Integer> snapshotRetentionLimit;
 
-    public Input<Integer> getSnapshotRetentionLimit() {
-        return this.snapshotRetentionLimit == null ? Input.empty() : this.snapshotRetentionLimit;
+    public Output<Integer> getSnapshotRetentionLimit() {
+        return this.snapshotRetentionLimit == null ? Output.empty() : this.snapshotRetentionLimit;
     }
 
     /**
@@ -398,10 +398,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snapshotWindow")
-      private final @Nullable Input<String> snapshotWindow;
+      private final @Nullable Output<String> snapshotWindow;
 
-    public Input<String> getSnapshotWindow() {
-        return this.snapshotWindow == null ? Input.empty() : this.snapshotWindow;
+    public Output<String> getSnapshotWindow() {
+        return this.snapshotWindow == null ? Output.empty() : this.snapshotWindow;
     }
 
     /**
@@ -409,24 +409,24 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetGroupName")
-      private final @Nullable Input<String> subnetGroupName;
+      private final @Nullable Output<String> subnetGroupName;
 
-    public Input<String> getSubnetGroupName() {
-        return this.subnetGroupName == null ? Input.empty() : this.subnetGroupName;
+    public Output<String> getSubnetGroupName() {
+        return this.subnetGroupName == null ? Output.empty() : this.subnetGroupName;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -434,10 +434,10 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="transitEncryptionEnabled")
-      private final @Nullable Input<Boolean> transitEncryptionEnabled;
+      private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
-    public Input<Boolean> getTransitEncryptionEnabled() {
-        return this.transitEncryptionEnabled == null ? Input.empty() : this.transitEncryptionEnabled;
+    public Output<Boolean> getTransitEncryptionEnabled() {
+        return this.transitEncryptionEnabled == null ? Output.empty() : this.transitEncryptionEnabled;
     }
 
     /**
@@ -445,53 +445,53 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userGroupIds")
-      private final @Nullable Input<List<String>> userGroupIds;
+      private final @Nullable Output<List<String>> userGroupIds;
 
-    public Input<List<String>> getUserGroupIds() {
-        return this.userGroupIds == null ? Input.empty() : this.userGroupIds;
+    public Output<List<String>> getUserGroupIds() {
+        return this.userGroupIds == null ? Output.empty() : this.userGroupIds;
     }
 
     public ReplicationGroupState(
-        @Nullable Input<Boolean> applyImmediately,
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> atRestEncryptionEnabled,
-        @Nullable Input<String> authToken,
-        @Nullable Input<Boolean> autoMinorVersionUpgrade,
-        @Nullable Input<Boolean> automaticFailoverEnabled,
-        @Nullable Input<List<String>> availabilityZones,
-        @Nullable Input<Boolean> clusterEnabled,
-        @Nullable Input<ReplicationGroupClusterModeGetArgs> clusterMode,
-        @Nullable Input<String> configurationEndpointAddress,
-        @Nullable Input<Boolean> dataTieringEnabled,
-        @Nullable Input<String> engine,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<String> engineVersionActual,
-        @Nullable Input<String> finalSnapshotIdentifier,
-        @Nullable Input<String> globalReplicationGroupId,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> maintenanceWindow,
-        @Nullable Input<List<String>> memberClusters,
-        @Nullable Input<Boolean> multiAzEnabled,
-        @Nullable Input<String> nodeType,
-        @Nullable Input<String> notificationTopicArn,
-        @Nullable Input<Integer> numberCacheClusters,
-        @Nullable Input<String> parameterGroupName,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> primaryEndpointAddress,
-        @Nullable Input<String> readerEndpointAddress,
-        @Nullable Input<String> replicationGroupDescription,
-        @Nullable Input<String> replicationGroupId,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<List<String>> securityGroupNames,
-        @Nullable Input<List<String>> snapshotArns,
-        @Nullable Input<String> snapshotName,
-        @Nullable Input<Integer> snapshotRetentionLimit,
-        @Nullable Input<String> snapshotWindow,
-        @Nullable Input<String> subnetGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Boolean> transitEncryptionEnabled,
-        @Nullable Input<List<String>> userGroupIds) {
+        @Nullable Output<Boolean> applyImmediately,
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> atRestEncryptionEnabled,
+        @Nullable Output<String> authToken,
+        @Nullable Output<Boolean> autoMinorVersionUpgrade,
+        @Nullable Output<Boolean> automaticFailoverEnabled,
+        @Nullable Output<List<String>> availabilityZones,
+        @Nullable Output<Boolean> clusterEnabled,
+        @Nullable Output<ReplicationGroupClusterModeGetArgs> clusterMode,
+        @Nullable Output<String> configurationEndpointAddress,
+        @Nullable Output<Boolean> dataTieringEnabled,
+        @Nullable Output<String> engine,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<String> engineVersionActual,
+        @Nullable Output<String> finalSnapshotIdentifier,
+        @Nullable Output<String> globalReplicationGroupId,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> maintenanceWindow,
+        @Nullable Output<List<String>> memberClusters,
+        @Nullable Output<Boolean> multiAzEnabled,
+        @Nullable Output<String> nodeType,
+        @Nullable Output<String> notificationTopicArn,
+        @Nullable Output<Integer> numberCacheClusters,
+        @Nullable Output<String> parameterGroupName,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> primaryEndpointAddress,
+        @Nullable Output<String> readerEndpointAddress,
+        @Nullable Output<String> replicationGroupDescription,
+        @Nullable Output<String> replicationGroupId,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<List<String>> securityGroupNames,
+        @Nullable Output<List<String>> snapshotArns,
+        @Nullable Output<String> snapshotName,
+        @Nullable Output<Integer> snapshotRetentionLimit,
+        @Nullable Output<String> snapshotWindow,
+        @Nullable Output<String> subnetGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Boolean> transitEncryptionEnabled,
+        @Nullable Output<List<String>> userGroupIds) {
         this.applyImmediately = applyImmediately;
         this.arn = arn;
         this.atRestEncryptionEnabled = atRestEncryptionEnabled;
@@ -535,46 +535,46 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
     }
 
     private ReplicationGroupState() {
-        this.applyImmediately = Input.empty();
-        this.arn = Input.empty();
-        this.atRestEncryptionEnabled = Input.empty();
-        this.authToken = Input.empty();
-        this.autoMinorVersionUpgrade = Input.empty();
-        this.automaticFailoverEnabled = Input.empty();
-        this.availabilityZones = Input.empty();
-        this.clusterEnabled = Input.empty();
-        this.clusterMode = Input.empty();
-        this.configurationEndpointAddress = Input.empty();
-        this.dataTieringEnabled = Input.empty();
-        this.engine = Input.empty();
-        this.engineVersion = Input.empty();
-        this.engineVersionActual = Input.empty();
-        this.finalSnapshotIdentifier = Input.empty();
-        this.globalReplicationGroupId = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.memberClusters = Input.empty();
-        this.multiAzEnabled = Input.empty();
-        this.nodeType = Input.empty();
-        this.notificationTopicArn = Input.empty();
-        this.numberCacheClusters = Input.empty();
-        this.parameterGroupName = Input.empty();
-        this.port = Input.empty();
-        this.primaryEndpointAddress = Input.empty();
-        this.readerEndpointAddress = Input.empty();
-        this.replicationGroupDescription = Input.empty();
-        this.replicationGroupId = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.securityGroupNames = Input.empty();
-        this.snapshotArns = Input.empty();
-        this.snapshotName = Input.empty();
-        this.snapshotRetentionLimit = Input.empty();
-        this.snapshotWindow = Input.empty();
-        this.subnetGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.transitEncryptionEnabled = Input.empty();
-        this.userGroupIds = Input.empty();
+        this.applyImmediately = Output.empty();
+        this.arn = Output.empty();
+        this.atRestEncryptionEnabled = Output.empty();
+        this.authToken = Output.empty();
+        this.autoMinorVersionUpgrade = Output.empty();
+        this.automaticFailoverEnabled = Output.empty();
+        this.availabilityZones = Output.empty();
+        this.clusterEnabled = Output.empty();
+        this.clusterMode = Output.empty();
+        this.configurationEndpointAddress = Output.empty();
+        this.dataTieringEnabled = Output.empty();
+        this.engine = Output.empty();
+        this.engineVersion = Output.empty();
+        this.engineVersionActual = Output.empty();
+        this.finalSnapshotIdentifier = Output.empty();
+        this.globalReplicationGroupId = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.memberClusters = Output.empty();
+        this.multiAzEnabled = Output.empty();
+        this.nodeType = Output.empty();
+        this.notificationTopicArn = Output.empty();
+        this.numberCacheClusters = Output.empty();
+        this.parameterGroupName = Output.empty();
+        this.port = Output.empty();
+        this.primaryEndpointAddress = Output.empty();
+        this.readerEndpointAddress = Output.empty();
+        this.replicationGroupDescription = Output.empty();
+        this.replicationGroupId = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.securityGroupNames = Output.empty();
+        this.snapshotArns = Output.empty();
+        this.snapshotName = Output.empty();
+        this.snapshotRetentionLimit = Output.empty();
+        this.snapshotWindow = Output.empty();
+        this.subnetGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.transitEncryptionEnabled = Output.empty();
+        this.userGroupIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -586,46 +586,46 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> applyImmediately;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> atRestEncryptionEnabled;
-        private @Nullable Input<String> authToken;
-        private @Nullable Input<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Input<Boolean> automaticFailoverEnabled;
-        private @Nullable Input<List<String>> availabilityZones;
-        private @Nullable Input<Boolean> clusterEnabled;
-        private @Nullable Input<ReplicationGroupClusterModeGetArgs> clusterMode;
-        private @Nullable Input<String> configurationEndpointAddress;
-        private @Nullable Input<Boolean> dataTieringEnabled;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<String> engineVersionActual;
-        private @Nullable Input<String> finalSnapshotIdentifier;
-        private @Nullable Input<String> globalReplicationGroupId;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> maintenanceWindow;
-        private @Nullable Input<List<String>> memberClusters;
-        private @Nullable Input<Boolean> multiAzEnabled;
-        private @Nullable Input<String> nodeType;
-        private @Nullable Input<String> notificationTopicArn;
-        private @Nullable Input<Integer> numberCacheClusters;
-        private @Nullable Input<String> parameterGroupName;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> primaryEndpointAddress;
-        private @Nullable Input<String> readerEndpointAddress;
-        private @Nullable Input<String> replicationGroupDescription;
-        private @Nullable Input<String> replicationGroupId;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<List<String>> securityGroupNames;
-        private @Nullable Input<List<String>> snapshotArns;
-        private @Nullable Input<String> snapshotName;
-        private @Nullable Input<Integer> snapshotRetentionLimit;
-        private @Nullable Input<String> snapshotWindow;
-        private @Nullable Input<String> subnetGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Boolean> transitEncryptionEnabled;
-        private @Nullable Input<List<String>> userGroupIds;
+        private @Nullable Output<Boolean> applyImmediately;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> atRestEncryptionEnabled;
+        private @Nullable Output<String> authToken;
+        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
+        private @Nullable Output<Boolean> automaticFailoverEnabled;
+        private @Nullable Output<List<String>> availabilityZones;
+        private @Nullable Output<Boolean> clusterEnabled;
+        private @Nullable Output<ReplicationGroupClusterModeGetArgs> clusterMode;
+        private @Nullable Output<String> configurationEndpointAddress;
+        private @Nullable Output<Boolean> dataTieringEnabled;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<String> engineVersionActual;
+        private @Nullable Output<String> finalSnapshotIdentifier;
+        private @Nullable Output<String> globalReplicationGroupId;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> maintenanceWindow;
+        private @Nullable Output<List<String>> memberClusters;
+        private @Nullable Output<Boolean> multiAzEnabled;
+        private @Nullable Output<String> nodeType;
+        private @Nullable Output<String> notificationTopicArn;
+        private @Nullable Output<Integer> numberCacheClusters;
+        private @Nullable Output<String> parameterGroupName;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> primaryEndpointAddress;
+        private @Nullable Output<String> readerEndpointAddress;
+        private @Nullable Output<String> replicationGroupDescription;
+        private @Nullable Output<String> replicationGroupId;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<List<String>> securityGroupNames;
+        private @Nullable Output<List<String>> snapshotArns;
+        private @Nullable Output<String> snapshotName;
+        private @Nullable Output<Integer> snapshotRetentionLimit;
+        private @Nullable Output<String> snapshotWindow;
+        private @Nullable Output<String> subnetGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Boolean> transitEncryptionEnabled;
+        private @Nullable Output<List<String>> userGroupIds;
 
         public Builder() {
     	      // Empty
@@ -675,403 +675,403 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
     	      this.userGroupIds = defaults.userGroupIds;
         }
 
-        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Input.ofNullable(applyImmediately);
+            this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder atRestEncryptionEnabled(@Nullable Input<Boolean> atRestEncryptionEnabled) {
+        public Builder atRestEncryptionEnabled(@Nullable Output<Boolean> atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
 
         public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
-            this.atRestEncryptionEnabled = Input.ofNullable(atRestEncryptionEnabled);
+            this.atRestEncryptionEnabled = Output.ofNullable(atRestEncryptionEnabled);
             return this;
         }
 
-        public Builder authToken(@Nullable Input<String> authToken) {
+        public Builder authToken(@Nullable Output<String> authToken) {
             this.authToken = authToken;
             return this;
         }
 
         public Builder authToken(@Nullable String authToken) {
-            this.authToken = Input.ofNullable(authToken);
+            this.authToken = Output.ofNullable(authToken);
             return this;
         }
 
-        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
+            this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder automaticFailoverEnabled(@Nullable Input<Boolean> automaticFailoverEnabled) {
+        public Builder automaticFailoverEnabled(@Nullable Output<Boolean> automaticFailoverEnabled) {
             this.automaticFailoverEnabled = automaticFailoverEnabled;
             return this;
         }
 
         public Builder automaticFailoverEnabled(@Nullable Boolean automaticFailoverEnabled) {
-            this.automaticFailoverEnabled = Input.ofNullable(automaticFailoverEnabled);
+            this.automaticFailoverEnabled = Output.ofNullable(automaticFailoverEnabled);
             return this;
         }
 
-        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Input.ofNullable(availabilityZones);
+            this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder clusterEnabled(@Nullable Input<Boolean> clusterEnabled) {
+        public Builder clusterEnabled(@Nullable Output<Boolean> clusterEnabled) {
             this.clusterEnabled = clusterEnabled;
             return this;
         }
 
         public Builder clusterEnabled(@Nullable Boolean clusterEnabled) {
-            this.clusterEnabled = Input.ofNullable(clusterEnabled);
+            this.clusterEnabled = Output.ofNullable(clusterEnabled);
             return this;
         }
 
-        public Builder clusterMode(@Nullable Input<ReplicationGroupClusterModeGetArgs> clusterMode) {
+        public Builder clusterMode(@Nullable Output<ReplicationGroupClusterModeGetArgs> clusterMode) {
             this.clusterMode = clusterMode;
             return this;
         }
 
         public Builder clusterMode(@Nullable ReplicationGroupClusterModeGetArgs clusterMode) {
-            this.clusterMode = Input.ofNullable(clusterMode);
+            this.clusterMode = Output.ofNullable(clusterMode);
             return this;
         }
 
-        public Builder configurationEndpointAddress(@Nullable Input<String> configurationEndpointAddress) {
+        public Builder configurationEndpointAddress(@Nullable Output<String> configurationEndpointAddress) {
             this.configurationEndpointAddress = configurationEndpointAddress;
             return this;
         }
 
         public Builder configurationEndpointAddress(@Nullable String configurationEndpointAddress) {
-            this.configurationEndpointAddress = Input.ofNullable(configurationEndpointAddress);
+            this.configurationEndpointAddress = Output.ofNullable(configurationEndpointAddress);
             return this;
         }
 
-        public Builder dataTieringEnabled(@Nullable Input<Boolean> dataTieringEnabled) {
+        public Builder dataTieringEnabled(@Nullable Output<Boolean> dataTieringEnabled) {
             this.dataTieringEnabled = dataTieringEnabled;
             return this;
         }
 
         public Builder dataTieringEnabled(@Nullable Boolean dataTieringEnabled) {
-            this.dataTieringEnabled = Input.ofNullable(dataTieringEnabled);
+            this.dataTieringEnabled = Output.ofNullable(dataTieringEnabled);
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder engineVersionActual(@Nullable Input<String> engineVersionActual) {
+        public Builder engineVersionActual(@Nullable Output<String> engineVersionActual) {
             this.engineVersionActual = engineVersionActual;
             return this;
         }
 
         public Builder engineVersionActual(@Nullable String engineVersionActual) {
-            this.engineVersionActual = Input.ofNullable(engineVersionActual);
+            this.engineVersionActual = Output.ofNullable(engineVersionActual);
             return this;
         }
 
-        public Builder finalSnapshotIdentifier(@Nullable Input<String> finalSnapshotIdentifier) {
+        public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
             this.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
 
         public Builder finalSnapshotIdentifier(@Nullable String finalSnapshotIdentifier) {
-            this.finalSnapshotIdentifier = Input.ofNullable(finalSnapshotIdentifier);
+            this.finalSnapshotIdentifier = Output.ofNullable(finalSnapshotIdentifier);
             return this;
         }
 
-        public Builder globalReplicationGroupId(@Nullable Input<String> globalReplicationGroupId) {
+        public Builder globalReplicationGroupId(@Nullable Output<String> globalReplicationGroupId) {
             this.globalReplicationGroupId = globalReplicationGroupId;
             return this;
         }
 
         public Builder globalReplicationGroupId(@Nullable String globalReplicationGroupId) {
-            this.globalReplicationGroupId = Input.ofNullable(globalReplicationGroupId);
+            this.globalReplicationGroupId = Output.ofNullable(globalReplicationGroupId);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<String> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder memberClusters(@Nullable Input<List<String>> memberClusters) {
+        public Builder memberClusters(@Nullable Output<List<String>> memberClusters) {
             this.memberClusters = memberClusters;
             return this;
         }
 
         public Builder memberClusters(@Nullable List<String> memberClusters) {
-            this.memberClusters = Input.ofNullable(memberClusters);
+            this.memberClusters = Output.ofNullable(memberClusters);
             return this;
         }
 
-        public Builder multiAzEnabled(@Nullable Input<Boolean> multiAzEnabled) {
+        public Builder multiAzEnabled(@Nullable Output<Boolean> multiAzEnabled) {
             this.multiAzEnabled = multiAzEnabled;
             return this;
         }
 
         public Builder multiAzEnabled(@Nullable Boolean multiAzEnabled) {
-            this.multiAzEnabled = Input.ofNullable(multiAzEnabled);
+            this.multiAzEnabled = Output.ofNullable(multiAzEnabled);
             return this;
         }
 
-        public Builder nodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
         public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Input.ofNullable(nodeType);
+            this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
 
-        public Builder notificationTopicArn(@Nullable Input<String> notificationTopicArn) {
+        public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
             this.notificationTopicArn = notificationTopicArn;
             return this;
         }
 
         public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
-            this.notificationTopicArn = Input.ofNullable(notificationTopicArn);
+            this.notificationTopicArn = Output.ofNullable(notificationTopicArn);
             return this;
         }
 
-        public Builder numberCacheClusters(@Nullable Input<Integer> numberCacheClusters) {
+        public Builder numberCacheClusters(@Nullable Output<Integer> numberCacheClusters) {
             this.numberCacheClusters = numberCacheClusters;
             return this;
         }
 
         public Builder numberCacheClusters(@Nullable Integer numberCacheClusters) {
-            this.numberCacheClusters = Input.ofNullable(numberCacheClusters);
+            this.numberCacheClusters = Output.ofNullable(numberCacheClusters);
             return this;
         }
 
-        public Builder parameterGroupName(@Nullable Input<String> parameterGroupName) {
+        public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
 
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Input.ofNullable(parameterGroupName);
+            this.parameterGroupName = Output.ofNullable(parameterGroupName);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder primaryEndpointAddress(@Nullable Input<String> primaryEndpointAddress) {
+        public Builder primaryEndpointAddress(@Nullable Output<String> primaryEndpointAddress) {
             this.primaryEndpointAddress = primaryEndpointAddress;
             return this;
         }
 
         public Builder primaryEndpointAddress(@Nullable String primaryEndpointAddress) {
-            this.primaryEndpointAddress = Input.ofNullable(primaryEndpointAddress);
+            this.primaryEndpointAddress = Output.ofNullable(primaryEndpointAddress);
             return this;
         }
 
-        public Builder readerEndpointAddress(@Nullable Input<String> readerEndpointAddress) {
+        public Builder readerEndpointAddress(@Nullable Output<String> readerEndpointAddress) {
             this.readerEndpointAddress = readerEndpointAddress;
             return this;
         }
 
         public Builder readerEndpointAddress(@Nullable String readerEndpointAddress) {
-            this.readerEndpointAddress = Input.ofNullable(readerEndpointAddress);
+            this.readerEndpointAddress = Output.ofNullable(readerEndpointAddress);
             return this;
         }
 
-        public Builder replicationGroupDescription(@Nullable Input<String> replicationGroupDescription) {
+        public Builder replicationGroupDescription(@Nullable Output<String> replicationGroupDescription) {
             this.replicationGroupDescription = replicationGroupDescription;
             return this;
         }
 
         public Builder replicationGroupDescription(@Nullable String replicationGroupDescription) {
-            this.replicationGroupDescription = Input.ofNullable(replicationGroupDescription);
+            this.replicationGroupDescription = Output.ofNullable(replicationGroupDescription);
             return this;
         }
 
-        public Builder replicationGroupId(@Nullable Input<String> replicationGroupId) {
+        public Builder replicationGroupId(@Nullable Output<String> replicationGroupId) {
             this.replicationGroupId = replicationGroupId;
             return this;
         }
 
         public Builder replicationGroupId(@Nullable String replicationGroupId) {
-            this.replicationGroupId = Input.ofNullable(replicationGroupId);
+            this.replicationGroupId = Output.ofNullable(replicationGroupId);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder securityGroupNames(@Nullable Input<List<String>> securityGroupNames) {
+        public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
             this.securityGroupNames = securityGroupNames;
             return this;
         }
 
         public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
-            this.securityGroupNames = Input.ofNullable(securityGroupNames);
+            this.securityGroupNames = Output.ofNullable(securityGroupNames);
             return this;
         }
 
-        public Builder snapshotArns(@Nullable Input<List<String>> snapshotArns) {
+        public Builder snapshotArns(@Nullable Output<List<String>> snapshotArns) {
             this.snapshotArns = snapshotArns;
             return this;
         }
 
         public Builder snapshotArns(@Nullable List<String> snapshotArns) {
-            this.snapshotArns = Input.ofNullable(snapshotArns);
+            this.snapshotArns = Output.ofNullable(snapshotArns);
             return this;
         }
 
-        public Builder snapshotName(@Nullable Input<String> snapshotName) {
+        public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
 
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Input.ofNullable(snapshotName);
+            this.snapshotName = Output.ofNullable(snapshotName);
             return this;
         }
 
-        public Builder snapshotRetentionLimit(@Nullable Input<Integer> snapshotRetentionLimit) {
+        public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
             this.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
 
         public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
-            this.snapshotRetentionLimit = Input.ofNullable(snapshotRetentionLimit);
+            this.snapshotRetentionLimit = Output.ofNullable(snapshotRetentionLimit);
             return this;
         }
 
-        public Builder snapshotWindow(@Nullable Input<String> snapshotWindow) {
+        public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
             this.snapshotWindow = snapshotWindow;
             return this;
         }
 
         public Builder snapshotWindow(@Nullable String snapshotWindow) {
-            this.snapshotWindow = Input.ofNullable(snapshotWindow);
+            this.snapshotWindow = Output.ofNullable(snapshotWindow);
             return this;
         }
 
-        public Builder subnetGroupName(@Nullable Input<String> subnetGroupName) {
+        public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
 
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Input.ofNullable(subnetGroupName);
+            this.subnetGroupName = Output.ofNullable(subnetGroupName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder transitEncryptionEnabled(@Nullable Input<Boolean> transitEncryptionEnabled) {
+        public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
             this.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
 
         public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
-            this.transitEncryptionEnabled = Input.ofNullable(transitEncryptionEnabled);
+            this.transitEncryptionEnabled = Output.ofNullable(transitEncryptionEnabled);
             return this;
         }
 
-        public Builder userGroupIds(@Nullable Input<List<String>> userGroupIds) {
+        public Builder userGroupIds(@Nullable Output<List<String>> userGroupIds) {
             this.userGroupIds = userGroupIds;
             return this;
         }
 
         public Builder userGroupIds(@Nullable List<String> userGroupIds) {
-            this.userGroupIds = Input.ofNullable(userGroupIds);
+            this.userGroupIds = Output.ofNullable(userGroupIds);
             return this;
         }
         public ReplicationGroupState build() {

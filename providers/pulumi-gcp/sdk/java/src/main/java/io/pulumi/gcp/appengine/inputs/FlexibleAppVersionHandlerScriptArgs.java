@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class FlexibleAppVersionHandlerScriptArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="scriptPath", required=true)
-      private final Input<String> scriptPath;
+      private final Output<String> scriptPath;
 
-    public Input<String> getScriptPath() {
+    public Output<String> getScriptPath() {
         return this.scriptPath;
     }
 
-    public FlexibleAppVersionHandlerScriptArgs(Input<String> scriptPath) {
+    public FlexibleAppVersionHandlerScriptArgs(Output<String> scriptPath) {
         this.scriptPath = Objects.requireNonNull(scriptPath, "expected parameter 'scriptPath' to be non-null");
     }
 
     private FlexibleAppVersionHandlerScriptArgs() {
-        this.scriptPath = Input.empty();
+        this.scriptPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FlexibleAppVersionHandlerScriptArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> scriptPath;
+        private Output<String> scriptPath;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FlexibleAppVersionHandlerScriptArgs extends io.pulumi.resourc
     	      this.scriptPath = defaults.scriptPath;
         }
 
-        public Builder scriptPath(Input<String> scriptPath) {
+        public Builder scriptPath(Output<String> scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
 
         public Builder scriptPath(String scriptPath) {
-            this.scriptPath = Input.of(Objects.requireNonNull(scriptPath));
+            this.scriptPath = Output.of(Objects.requireNonNull(scriptPath));
             return this;
         }
         public FlexibleAppVersionHandlerScriptArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allocatedStorage")
-      private final @Nullable Input<Integer> allocatedStorage;
+      private final @Nullable Output<Integer> allocatedStorage;
 
-    public Input<Integer> getAllocatedStorage() {
-        return this.allocatedStorage == null ? Input.empty() : this.allocatedStorage;
+    public Output<Integer> getAllocatedStorage() {
+        return this.allocatedStorage == null ? Output.empty() : this.allocatedStorage;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowMajorVersionUpgrade")
-      private final @Nullable Input<Boolean> allowMajorVersionUpgrade;
+      private final @Nullable Output<Boolean> allowMajorVersionUpgrade;
 
-    public Input<Boolean> getAllowMajorVersionUpgrade() {
-        return this.allowMajorVersionUpgrade == null ? Input.empty() : this.allowMajorVersionUpgrade;
+    public Output<Boolean> getAllowMajorVersionUpgrade() {
+        return this.allowMajorVersionUpgrade == null ? Output.empty() : this.allowMajorVersionUpgrade;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="applyImmediately")
-      private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Output<Boolean> applyImmediately;
 
-    public Input<Boolean> getApplyImmediately() {
-        return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
+    public Output<Boolean> getApplyImmediately() {
+        return this.applyImmediately == null ? Output.empty() : this.applyImmediately;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Input<Boolean> getAutoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
+    public Output<Boolean> getAutoMinorVersionUpgrade() {
+        return this.autoMinorVersionUpgrade == null ? Output.empty() : this.autoMinorVersionUpgrade;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="multiAz")
-      private final @Nullable Input<Boolean> multiAz;
+      private final @Nullable Output<Boolean> multiAz;
 
-    public Input<Boolean> getMultiAz() {
-        return this.multiAz == null ? Input.empty() : this.multiAz;
+    public Output<Boolean> getMultiAz() {
+        return this.multiAz == null ? Output.empty() : this.multiAz;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="preferredMaintenanceWindow")
-      private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Input<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
+    public Output<String> getPreferredMaintenanceWindow() {
+        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publiclyAccessible")
-      private final @Nullable Input<Boolean> publiclyAccessible;
+      private final @Nullable Output<Boolean> publiclyAccessible;
 
-    public Input<Boolean> getPubliclyAccessible() {
-        return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
+    public Output<Boolean> getPubliclyAccessible() {
+        return this.publiclyAccessible == null ? Output.empty() : this.publiclyAccessible;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationInstanceArn")
-      private final @Nullable Input<String> replicationInstanceArn;
+      private final @Nullable Output<String> replicationInstanceArn;
 
-    public Input<String> getReplicationInstanceArn() {
-        return this.replicationInstanceArn == null ? Input.empty() : this.replicationInstanceArn;
+    public Output<String> getReplicationInstanceArn() {
+        return this.replicationInstanceArn == null ? Output.empty() : this.replicationInstanceArn;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationInstanceClass")
-      private final @Nullable Input<String> replicationInstanceClass;
+      private final @Nullable Output<String> replicationInstanceClass;
 
-    public Input<String> getReplicationInstanceClass() {
-        return this.replicationInstanceClass == null ? Input.empty() : this.replicationInstanceClass;
+    public Output<String> getReplicationInstanceClass() {
+        return this.replicationInstanceClass == null ? Output.empty() : this.replicationInstanceClass;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationInstanceId")
-      private final @Nullable Input<String> replicationInstanceId;
+      private final @Nullable Output<String> replicationInstanceId;
 
-    public Input<String> getReplicationInstanceId() {
-        return this.replicationInstanceId == null ? Input.empty() : this.replicationInstanceId;
+    public Output<String> getReplicationInstanceId() {
+        return this.replicationInstanceId == null ? Output.empty() : this.replicationInstanceId;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationInstancePrivateIps")
-      private final @Nullable Input<List<String>> replicationInstancePrivateIps;
+      private final @Nullable Output<List<String>> replicationInstancePrivateIps;
 
-    public Input<List<String>> getReplicationInstancePrivateIps() {
-        return this.replicationInstancePrivateIps == null ? Input.empty() : this.replicationInstancePrivateIps;
+    public Output<List<String>> getReplicationInstancePrivateIps() {
+        return this.replicationInstancePrivateIps == null ? Output.empty() : this.replicationInstancePrivateIps;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationInstancePublicIps")
-      private final @Nullable Input<List<String>> replicationInstancePublicIps;
+      private final @Nullable Output<List<String>> replicationInstancePublicIps;
 
-    public Input<List<String>> getReplicationInstancePublicIps() {
-        return this.replicationInstancePublicIps == null ? Input.empty() : this.replicationInstancePublicIps;
+    public Output<List<String>> getReplicationInstancePublicIps() {
+        return this.replicationInstancePublicIps == null ? Output.empty() : this.replicationInstancePublicIps;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="replicationSubnetGroupId")
-      private final @Nullable Input<String> replicationSubnetGroupId;
+      private final @Nullable Output<String> replicationSubnetGroupId;
 
-    public Input<String> getReplicationSubnetGroupId() {
-        return this.replicationSubnetGroupId == null ? Input.empty() : this.replicationSubnetGroupId;
+    public Output<String> getReplicationSubnetGroupId() {
+        return this.replicationSubnetGroupId == null ? Output.empty() : this.replicationSubnetGroupId;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -221,32 +221,32 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Input<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
+    public Output<List<String>> getVpcSecurityGroupIds() {
+        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
     }
 
     public ReplicationInstanceState(
-        @Nullable Input<Integer> allocatedStorage,
-        @Nullable Input<Boolean> allowMajorVersionUpgrade,
-        @Nullable Input<Boolean> applyImmediately,
-        @Nullable Input<Boolean> autoMinorVersionUpgrade,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<Boolean> multiAz,
-        @Nullable Input<String> preferredMaintenanceWindow,
-        @Nullable Input<Boolean> publiclyAccessible,
-        @Nullable Input<String> replicationInstanceArn,
-        @Nullable Input<String> replicationInstanceClass,
-        @Nullable Input<String> replicationInstanceId,
-        @Nullable Input<List<String>> replicationInstancePrivateIps,
-        @Nullable Input<List<String>> replicationInstancePublicIps,
-        @Nullable Input<String> replicationSubnetGroupId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<String>> vpcSecurityGroupIds) {
+        @Nullable Output<Integer> allocatedStorage,
+        @Nullable Output<Boolean> allowMajorVersionUpgrade,
+        @Nullable Output<Boolean> applyImmediately,
+        @Nullable Output<Boolean> autoMinorVersionUpgrade,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<Boolean> multiAz,
+        @Nullable Output<String> preferredMaintenanceWindow,
+        @Nullable Output<Boolean> publiclyAccessible,
+        @Nullable Output<String> replicationInstanceArn,
+        @Nullable Output<String> replicationInstanceClass,
+        @Nullable Output<String> replicationInstanceId,
+        @Nullable Output<List<String>> replicationInstancePrivateIps,
+        @Nullable Output<List<String>> replicationInstancePublicIps,
+        @Nullable Output<String> replicationSubnetGroupId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<String>> vpcSecurityGroupIds) {
         this.allocatedStorage = allocatedStorage;
         this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
         this.applyImmediately = applyImmediately;
@@ -269,25 +269,25 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     }
 
     private ReplicationInstanceState() {
-        this.allocatedStorage = Input.empty();
-        this.allowMajorVersionUpgrade = Input.empty();
-        this.applyImmediately = Input.empty();
-        this.autoMinorVersionUpgrade = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.engineVersion = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.multiAz = Input.empty();
-        this.preferredMaintenanceWindow = Input.empty();
-        this.publiclyAccessible = Input.empty();
-        this.replicationInstanceArn = Input.empty();
-        this.replicationInstanceClass = Input.empty();
-        this.replicationInstanceId = Input.empty();
-        this.replicationInstancePrivateIps = Input.empty();
-        this.replicationInstancePublicIps = Input.empty();
-        this.replicationSubnetGroupId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcSecurityGroupIds = Input.empty();
+        this.allocatedStorage = Output.empty();
+        this.allowMajorVersionUpgrade = Output.empty();
+        this.applyImmediately = Output.empty();
+        this.autoMinorVersionUpgrade = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.engineVersion = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.multiAz = Output.empty();
+        this.preferredMaintenanceWindow = Output.empty();
+        this.publiclyAccessible = Output.empty();
+        this.replicationInstanceArn = Output.empty();
+        this.replicationInstanceClass = Output.empty();
+        this.replicationInstanceId = Output.empty();
+        this.replicationInstancePrivateIps = Output.empty();
+        this.replicationInstancePublicIps = Output.empty();
+        this.replicationSubnetGroupId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcSecurityGroupIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -299,25 +299,25 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> allocatedStorage;
-        private @Nullable Input<Boolean> allowMajorVersionUpgrade;
-        private @Nullable Input<Boolean> applyImmediately;
-        private @Nullable Input<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<Boolean> multiAz;
-        private @Nullable Input<String> preferredMaintenanceWindow;
-        private @Nullable Input<Boolean> publiclyAccessible;
-        private @Nullable Input<String> replicationInstanceArn;
-        private @Nullable Input<String> replicationInstanceClass;
-        private @Nullable Input<String> replicationInstanceId;
-        private @Nullable Input<List<String>> replicationInstancePrivateIps;
-        private @Nullable Input<List<String>> replicationInstancePublicIps;
-        private @Nullable Input<String> replicationSubnetGroupId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<String>> vpcSecurityGroupIds;
+        private @Nullable Output<Integer> allocatedStorage;
+        private @Nullable Output<Boolean> allowMajorVersionUpgrade;
+        private @Nullable Output<Boolean> applyImmediately;
+        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<Boolean> multiAz;
+        private @Nullable Output<String> preferredMaintenanceWindow;
+        private @Nullable Output<Boolean> publiclyAccessible;
+        private @Nullable Output<String> replicationInstanceArn;
+        private @Nullable Output<String> replicationInstanceClass;
+        private @Nullable Output<String> replicationInstanceId;
+        private @Nullable Output<List<String>> replicationInstancePrivateIps;
+        private @Nullable Output<List<String>> replicationInstancePublicIps;
+        private @Nullable Output<String> replicationSubnetGroupId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
         public Builder() {
     	      // Empty
@@ -346,193 +346,193 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder allocatedStorage(@Nullable Input<Integer> allocatedStorage) {
+        public Builder allocatedStorage(@Nullable Output<Integer> allocatedStorage) {
             this.allocatedStorage = allocatedStorage;
             return this;
         }
 
         public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
-            this.allocatedStorage = Input.ofNullable(allocatedStorage);
+            this.allocatedStorage = Output.ofNullable(allocatedStorage);
             return this;
         }
 
-        public Builder allowMajorVersionUpgrade(@Nullable Input<Boolean> allowMajorVersionUpgrade) {
+        public Builder allowMajorVersionUpgrade(@Nullable Output<Boolean> allowMajorVersionUpgrade) {
             this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
             return this;
         }
 
         public Builder allowMajorVersionUpgrade(@Nullable Boolean allowMajorVersionUpgrade) {
-            this.allowMajorVersionUpgrade = Input.ofNullable(allowMajorVersionUpgrade);
+            this.allowMajorVersionUpgrade = Output.ofNullable(allowMajorVersionUpgrade);
             return this;
         }
 
-        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Input.ofNullable(applyImmediately);
+            this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
+            this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder multiAz(@Nullable Input<Boolean> multiAz) {
+        public Builder multiAz(@Nullable Output<Boolean> multiAz) {
             this.multiAz = multiAz;
             return this;
         }
 
         public Builder multiAz(@Nullable Boolean multiAz) {
-            this.multiAz = Input.ofNullable(multiAz);
+            this.multiAz = Output.ofNullable(multiAz);
             return this;
         }
 
-        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
+            this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder replicationInstanceArn(@Nullable Input<String> replicationInstanceArn) {
+        public Builder replicationInstanceArn(@Nullable Output<String> replicationInstanceArn) {
             this.replicationInstanceArn = replicationInstanceArn;
             return this;
         }
 
         public Builder replicationInstanceArn(@Nullable String replicationInstanceArn) {
-            this.replicationInstanceArn = Input.ofNullable(replicationInstanceArn);
+            this.replicationInstanceArn = Output.ofNullable(replicationInstanceArn);
             return this;
         }
 
-        public Builder replicationInstanceClass(@Nullable Input<String> replicationInstanceClass) {
+        public Builder replicationInstanceClass(@Nullable Output<String> replicationInstanceClass) {
             this.replicationInstanceClass = replicationInstanceClass;
             return this;
         }
 
         public Builder replicationInstanceClass(@Nullable String replicationInstanceClass) {
-            this.replicationInstanceClass = Input.ofNullable(replicationInstanceClass);
+            this.replicationInstanceClass = Output.ofNullable(replicationInstanceClass);
             return this;
         }
 
-        public Builder replicationInstanceId(@Nullable Input<String> replicationInstanceId) {
+        public Builder replicationInstanceId(@Nullable Output<String> replicationInstanceId) {
             this.replicationInstanceId = replicationInstanceId;
             return this;
         }
 
         public Builder replicationInstanceId(@Nullable String replicationInstanceId) {
-            this.replicationInstanceId = Input.ofNullable(replicationInstanceId);
+            this.replicationInstanceId = Output.ofNullable(replicationInstanceId);
             return this;
         }
 
-        public Builder replicationInstancePrivateIps(@Nullable Input<List<String>> replicationInstancePrivateIps) {
+        public Builder replicationInstancePrivateIps(@Nullable Output<List<String>> replicationInstancePrivateIps) {
             this.replicationInstancePrivateIps = replicationInstancePrivateIps;
             return this;
         }
 
         public Builder replicationInstancePrivateIps(@Nullable List<String> replicationInstancePrivateIps) {
-            this.replicationInstancePrivateIps = Input.ofNullable(replicationInstancePrivateIps);
+            this.replicationInstancePrivateIps = Output.ofNullable(replicationInstancePrivateIps);
             return this;
         }
 
-        public Builder replicationInstancePublicIps(@Nullable Input<List<String>> replicationInstancePublicIps) {
+        public Builder replicationInstancePublicIps(@Nullable Output<List<String>> replicationInstancePublicIps) {
             this.replicationInstancePublicIps = replicationInstancePublicIps;
             return this;
         }
 
         public Builder replicationInstancePublicIps(@Nullable List<String> replicationInstancePublicIps) {
-            this.replicationInstancePublicIps = Input.ofNullable(replicationInstancePublicIps);
+            this.replicationInstancePublicIps = Output.ofNullable(replicationInstancePublicIps);
             return this;
         }
 
-        public Builder replicationSubnetGroupId(@Nullable Input<String> replicationSubnetGroupId) {
+        public Builder replicationSubnetGroupId(@Nullable Output<String> replicationSubnetGroupId) {
             this.replicationSubnetGroupId = replicationSubnetGroupId;
             return this;
         }
 
         public Builder replicationSubnetGroupId(@Nullable String replicationSubnetGroupId) {
-            this.replicationSubnetGroupId = Input.ofNullable(replicationSubnetGroupId);
+            this.replicationSubnetGroupId = Output.ofNullable(replicationSubnetGroupId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public ReplicationInstanceState build() {

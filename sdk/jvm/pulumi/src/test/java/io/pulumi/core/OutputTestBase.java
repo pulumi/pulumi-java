@@ -36,7 +36,7 @@ public abstract class OutputTestBase {
     void testApplyCanRunOnKnownValue() {
         var o1 = Output.of(0);
         var o2 = o1.applyValue(a -> a + 1);
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo(1);
     }
@@ -45,7 +45,7 @@ public abstract class OutputTestBase {
     void testApplyCanRunOnKnownAwaitableValue() {
         var o1 = Output.of(0);
         var o2 = o1.applyFuture(a -> CompletableFuture.completedFuture("inner"));
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo("inner");
     }
@@ -54,7 +54,7 @@ public abstract class OutputTestBase {
     void testApplyCanRunOnKnownKnownOutputValue() {
         var o1 = Output.of(0);
         var o2 = o1.applyValue(a -> "inner");
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo("inner");
     }
@@ -62,8 +62,8 @@ public abstract class OutputTestBase {
     @Test
     void testApplyFloatsUnknown() {
         var o1 = Output.of(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknown());
-        var data = InputOutputTests.waitFor(o2);
+        var o2 = o1.apply(a -> OutputTests.unknown());
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
     }
@@ -71,13 +71,13 @@ public abstract class OutputTestBase {
     @Test
     void testApplyValueTerminatesOnUnknown() {
         var runCounter = new AtomicInteger(0);
-        Output<Integer> o1 = InputOutputTests.unknown();
+        Output<Integer> o1 = OutputTests.unknown();
         var o2 = o1.applyValue(a ->
         {
             runCounter.incrementAndGet();
             return (a + 1);
         });
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
         assertThat(runCounter.get()).isEqualTo(0);
@@ -85,14 +85,14 @@ public abstract class OutputTestBase {
 
     @Test
     void testApplyFutureTerminatesOnUnknown() {
-        var o1 = InputOutputTests.unknown();
+        var o1 = OutputTests.unknown();
         var runCounter = new AtomicInteger(0);
         var o2 = o1.applyFuture(a ->
         {
             runCounter.incrementAndGet();
             return CompletableFuture.completedFuture("inner");
         });
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
         assertThat(runCounter.get()).isEqualTo(0);
@@ -100,14 +100,14 @@ public abstract class OutputTestBase {
 
     @Test
     void testApplyTerminatesOnUnkonwn() {
-        var o1 = InputOutputTests.unknown();
+        var o1 = OutputTests.unknown();
         var runCounter = new AtomicInteger(0);
         var o2 = o1.apply(a ->
         {
             runCounter.incrementAndGet();
             return Output.of("inner");
         });
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
         assertThat(runCounter.get()).isEqualTo(0);
@@ -117,7 +117,7 @@ public abstract class OutputTestBase {
     void testApplyPreservesSecretOnKnown() {
         var o1 = Output.ofSecret(0);
         var o2 = o1.applyValue(a -> a + 1);
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo(1);
@@ -127,7 +127,7 @@ public abstract class OutputTestBase {
     void testApplyPreservesSecretOnKnownAwaitable() {
         var o1 = Output.ofSecret(0);
         var o2 = o1.applyFuture(a -> CompletableFuture.completedFuture("inner"));
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo("inner");
@@ -137,7 +137,7 @@ public abstract class OutputTestBase {
     void testApplyPreservesSecretOnKnownKnownOutput() {
         var o1 = Output.ofSecret(0);
         var o2 = o1.apply(a -> Output.of("inner"));
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo("inner");
@@ -146,8 +146,8 @@ public abstract class OutputTestBase {
     @Test
     void testApplyPreservesSecretOnKnownUnknownOutput() {
         var o1 = Output.ofSecret(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknown());
-        var data = InputOutputTests.waitFor(o2);
+        var o2 = o1.apply(a -> OutputTests.unknown());
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNull();
@@ -155,9 +155,9 @@ public abstract class OutputTestBase {
 
     @Test
     void testApplyPreservesSecretOnUnknown() {
-        Output<Integer> o1 = InputOutputTests.unknownSecret();
+        Output<Integer> o1 = OutputTests.unknownSecret();
         var o2 = o1.applyValue(a -> a + 1);
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNull();
@@ -165,9 +165,9 @@ public abstract class OutputTestBase {
 
     @Test
     void testApplyPreservesSecretOnUnknownAwaitable() {
-        Output<Integer> o1 = InputOutputTests.unknownSecret();
+        Output<Integer> o1 = OutputTests.unknownSecret();
         var o2 = o1.applyFuture(a -> CompletableFuture.completedFuture("inner"));
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNull();
@@ -177,7 +177,7 @@ public abstract class OutputTestBase {
     void testApplyPropagatesSecretOnKnownKnownOutput() {
         var o1 = Output.of(0);
         var o2 = o1.apply(a -> Output.ofSecret("inner"));
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo("inner");
@@ -186,8 +186,8 @@ public abstract class OutputTestBase {
     @Test
     void testApplyPropagatesSecretOnKnownUnknownOutput() {
         var o1 = Output.of(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknownSecret());
-        var data = InputOutputTests.waitFor(o2);
+        var o2 = o1.apply(a -> OutputTests.unknownSecret());
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNull();
@@ -195,9 +195,9 @@ public abstract class OutputTestBase {
 
     @Test
     void testApplyPreservesSecretOnUnknownKnownOutput() {
-        var o1 = InputOutputTests.unknownSecret();
+        var o1 = OutputTests.unknownSecret();
         var o2 = o1.apply(a -> Output.of("inner"));
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNull();
@@ -205,9 +205,9 @@ public abstract class OutputTestBase {
 
     @Test
     void testApplyPreservesSecretOnUnknownUnknownOutput() {
-        var o1 = InputOutputTests.unknownSecret();
-        var o2 = o1.apply(a -> InputOutputTests.unknown());
-        var data = InputOutputTests.waitFor(o2);
+        var o1 = OutputTests.unknownSecret();
+        var o2 = o1.apply(a -> OutputTests.unknown());
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNull();
@@ -215,9 +215,9 @@ public abstract class OutputTestBase {
 
     @Test
     void testApplyPropagatesSecretOnUnknownKnownOutput() {
-        var o1 = InputOutputTests.unknown();
+        var o1 = OutputTests.unknown();
         var o2 = o1.apply(a -> Output.ofSecret("inner"));
-        var data = InputOutputTests.waitFor(o2);
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.getValueNullable()).isNull();
@@ -225,9 +225,9 @@ public abstract class OutputTestBase {
 
     @Test
     void testApplyPropagatesSecretOnUnknownUnknownOutput() {
-        var o1 = InputOutputTests.unknown();
-        var o2 = o1.apply(a -> InputOutputTests.unknownSecret());
-        var data = InputOutputTests.waitFor(o2);
+        var o1 = OutputTests.unknown();
+        var o2 = o1.apply(a -> OutputTests.unknownSecret());
+        var data = OutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isFalse();
         assertThat(data.getValueNullable()).isNull();
@@ -236,15 +236,15 @@ public abstract class OutputTestBase {
     @Test
     void testApplyTupleHandlesEmpty() {
         var output = Output.tuple(Output.empty(), Output.empty());
-        var data = InputOutputTests.waitFor(output);
+        var data = OutputTests.waitFor(output);
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEqualTo(Tuples.of(null, null));
     }
 
     @Test
     void testApplyTupleHandlesUnknown() {
-        var output = Output.tuple(InputOutputTests.unknown(), InputOutputTests.unknown());
-        var data = InputOutputTests.waitFor(output);
+        var output = Output.tuple(OutputTests.unknown(), OutputTests.unknown());
+        var data = OutputTests.waitFor(output);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
     }
@@ -253,24 +253,15 @@ public abstract class OutputTestBase {
     void testAllParamsOutputs() {
         var o1 = Output.of(1);
         var o2 = Output.of(2);
-        var o3 = Output.allOutputs(o1, o2);
-        var data = InputOutputTests.waitFor(o3);
-        assertThat(data.getValueNullable()).containsExactly(1, 2);
-    }
-
-    @Test
-    void testAllParamsInputs() {
-        var o1 = Input.of(1);
-        var o2 = Input.of(2);
-        var o3 = Output.allInputs(o1, o2);
-        var data = InputOutputTests.waitFor(o3);
+        var o3 = Output.all(o1, o2);
+        var data = OutputTests.waitFor(o3);
         assertThat(data.getValueNullable()).containsExactly(1, 2);
     }
 
     @Test
     void testIsSecretAsyncOnKnownOutput() {
-        var o1 = Input.ofSecret(0);
-        var o2 = Input.of(1);
+        var o1 = Output.ofSecret(0);
+        var o2 = Output.of(1);
         var isSecret1 = Internal.of(o1).isSecret().join();
         var isSecret2 = Internal.of(o2).isSecret().join();
         assertThat(isSecret1).isTrue();
@@ -279,8 +270,8 @@ public abstract class OutputTestBase {
 
     @Test
     void testIsSecretAsyncOnAwaitableOutput() {
-        var o1 = Input.ofSecret(0).applyFuture(a -> CompletableFuture.completedFuture("inner1"));
-        var o2 = Input.of(1).applyFuture(a -> CompletableFuture.completedFuture("inner2"));
+        var o1 = Output.ofSecret(0).applyFuture(a -> CompletableFuture.completedFuture("inner1"));
+        var o2 = Output.of(1).applyFuture(a -> CompletableFuture.completedFuture("inner2"));
         var isSecret1 = Internal.of(o1).isSecret().join();
         var isSecret2 = Internal.of(o2).isSecret().join();
         assertThat(isSecret1).isTrue();
@@ -289,7 +280,7 @@ public abstract class OutputTestBase {
 
     @Test
     void testUnsecretOnKnownSecretValue() {
-        var secret = Input.ofSecret(1);
+        var secret = Output.ofSecret(1);
         var notSecret = secret.asPlaintext();
         var notSecretData = Internal.of(notSecret).getDataAsync().join();
         assertThat(notSecretData.isSecret()).isFalse();
@@ -298,7 +289,7 @@ public abstract class OutputTestBase {
 
     @Test
     void testUnsecretOnAwaitableSecretValue() {
-        var secret = Input.ofSecret(1).applyFuture(a -> CompletableFuture.completedFuture("inner"));
+        var secret = Output.ofSecret(1).applyFuture(a -> CompletableFuture.completedFuture("inner"));
         var notSecret = secret.asPlaintext();
         var notSecretData = Internal.of(notSecret).getDataAsync().join();
         assertThat(notSecretData.isSecret()).isFalse();
@@ -307,7 +298,7 @@ public abstract class OutputTestBase {
 
     @Test
     void testUnsecretOnNonSecretValue() {
-        var secret = Input.of(2);
+        var secret = Output.of(2);
         var notSecret = secret.asPlaintext();
         var notSecretData = Internal.of(notSecret).getDataAsync().join();
         assertThat(notSecretData.isSecret()).isFalse();

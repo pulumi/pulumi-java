@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters", required=true)
-      private final Input<String> parameters;
+      private final Output<String> parameters;
 
-    public Input<String> getParameters() {
+    public Output<String> getParameters() {
         return this.parameters;
     }
 
@@ -52,9 +52,9 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portfolioId", required=true)
-      private final Input<String> portfolioId;
+      private final Output<String> portfolioId;
 
-    public Input<String> getPortfolioId() {
+    public Output<String> getPortfolioId() {
         return this.portfolioId;
     }
 
@@ -63,9 +63,9 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productId", required=true)
-      private final Input<String> productId;
+      private final Output<String> productId;
 
-    public Input<String> getProductId() {
+    public Output<String> getProductId() {
         return this.productId;
     }
 
@@ -74,19 +74,19 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ConstraintArgs(
-        @Nullable Input<String> acceptLanguage,
-        @Nullable Input<String> description,
-        Input<String> parameters,
-        Input<String> portfolioId,
-        Input<String> productId,
-        Input<String> type) {
+        @Nullable Output<String> acceptLanguage,
+        @Nullable Output<String> description,
+        Output<String> parameters,
+        Output<String> portfolioId,
+        Output<String> productId,
+        Output<String> type) {
         this.acceptLanguage = acceptLanguage;
         this.description = description;
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
@@ -96,12 +96,12 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConstraintArgs() {
-        this.acceptLanguage = Input.empty();
-        this.description = Input.empty();
-        this.parameters = Input.empty();
-        this.portfolioId = Input.empty();
-        this.productId = Input.empty();
-        this.type = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.description = Output.empty();
+        this.parameters = Output.empty();
+        this.portfolioId = Output.empty();
+        this.productId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private @Nullable Input<String> description;
-        private Input<String> parameters;
-        private Input<String> portfolioId;
-        private Input<String> productId;
-        private Input<String> type;
+        private @Nullable Output<String> acceptLanguage;
+        private @Nullable Output<String> description;
+        private Output<String> parameters;
+        private Output<String> portfolioId;
+        private Output<String> productId;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder parameters(Input<String> parameters) {
+        public Builder parameters(Output<String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
         public Builder parameters(String parameters) {
-            this.parameters = Input.of(Objects.requireNonNull(parameters));
+            this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder portfolioId(Input<String> portfolioId) {
+        public Builder portfolioId(Output<String> portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
 
         public Builder portfolioId(String portfolioId) {
-            this.portfolioId = Input.of(Objects.requireNonNull(portfolioId));
+            this.portfolioId = Output.of(Objects.requireNonNull(portfolioId));
             return this;
         }
 
-        public Builder productId(Input<String> productId) {
+        public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
         public Builder productId(String productId) {
-            this.productId = Input.of(Objects.requireNonNull(productId));
+            this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ConstraintArgs build() {

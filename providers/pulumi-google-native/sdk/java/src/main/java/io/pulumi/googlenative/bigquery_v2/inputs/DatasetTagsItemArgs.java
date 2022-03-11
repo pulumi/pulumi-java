@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagKey")
-      private final @Nullable Input<String> tagKey;
+      private final @Nullable Output<String> tagKey;
 
-    public Input<String> getTagKey() {
-        return this.tagKey == null ? Input.empty() : this.tagKey;
+    public Output<String> getTagKey() {
+        return this.tagKey == null ? Output.empty() : this.tagKey;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagValue")
-      private final @Nullable Input<String> tagValue;
+      private final @Nullable Output<String> tagValue;
 
-    public Input<String> getTagValue() {
-        return this.tagValue == null ? Input.empty() : this.tagValue;
+    public Output<String> getTagValue() {
+        return this.tagValue == null ? Output.empty() : this.tagValue;
     }
 
     public DatasetTagsItemArgs(
-        @Nullable Input<String> tagKey,
-        @Nullable Input<String> tagValue) {
+        @Nullable Output<String> tagKey,
+        @Nullable Output<String> tagValue) {
         this.tagKey = tagKey;
         this.tagValue = tagValue;
     }
 
     private DatasetTagsItemArgs() {
-        this.tagKey = Input.empty();
-        this.tagValue = Input.empty();
+        this.tagKey = Output.empty();
+        this.tagValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> tagKey;
-        private @Nullable Input<String> tagValue;
+        private @Nullable Output<String> tagKey;
+        private @Nullable Output<String> tagValue;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder tagKey(@Nullable Input<String> tagKey) {
+        public Builder tagKey(@Nullable Output<String> tagKey) {
             this.tagKey = tagKey;
             return this;
         }
 
         public Builder tagKey(@Nullable String tagKey) {
-            this.tagKey = Input.ofNullable(tagKey);
+            this.tagKey = Output.ofNullable(tagKey);
             return this;
         }
 
-        public Builder tagValue(@Nullable Input<String> tagValue) {
+        public Builder tagValue(@Nullable Output<String> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
 
         public Builder tagValue(@Nullable String tagValue) {
-            this.tagValue = Input.ofNullable(tagValue);
+            this.tagValue = Output.ofNullable(tagValue);
             return this;
         }
         public DatasetTagsItemArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dlClass", required=true)
-      private final Input<String> dlClass;
+      private final Output<String> dlClass;
 
-    public Input<String> getDlClass() {
+    public Output<String> getDlClass() {
         return this.dlClass;
     }
 
@@ -31,10 +31,10 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="numberOfDevicesInGroup")
-      private final @Nullable Input<Integer> numberOfDevicesInGroup;
+      private final @Nullable Output<Integer> numberOfDevicesInGroup;
 
-    public Input<Integer> getNumberOfDevicesInGroup() {
-        return this.numberOfDevicesInGroup == null ? Input.empty() : this.numberOfDevicesInGroup;
+    public Output<Integer> getNumberOfDevicesInGroup() {
+        return this.numberOfDevicesInGroup == null ? Output.empty() : this.numberOfDevicesInGroup;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="numberOfDevicesRequested")
-      private final @Nullable Input<Integer> numberOfDevicesRequested;
+      private final @Nullable Output<Integer> numberOfDevicesRequested;
 
-    public Input<Integer> getNumberOfDevicesRequested() {
-        return this.numberOfDevicesRequested == null ? Input.empty() : this.numberOfDevicesRequested;
+    public Output<Integer> getNumberOfDevicesRequested() {
+        return this.numberOfDevicesRequested == null ? Output.empty() : this.numberOfDevicesRequested;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rfRegion", required=true)
-      private final Input<String> rfRegion;
+      private final Output<String> rfRegion;
 
-    public Input<String> getRfRegion() {
+    public Output<String> getRfRegion() {
         return this.rfRegion;
     }
 
     public MulticastGroupLoRaWANArgs(
-        Input<String> dlClass,
-        @Nullable Input<Integer> numberOfDevicesInGroup,
-        @Nullable Input<Integer> numberOfDevicesRequested,
-        Input<String> rfRegion) {
+        Output<String> dlClass,
+        @Nullable Output<Integer> numberOfDevicesInGroup,
+        @Nullable Output<Integer> numberOfDevicesRequested,
+        Output<String> rfRegion) {
         this.dlClass = Objects.requireNonNull(dlClass, "expected parameter 'dlClass' to be non-null");
         this.numberOfDevicesInGroup = numberOfDevicesInGroup;
         this.numberOfDevicesRequested = numberOfDevicesRequested;
@@ -71,10 +71,10 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
     }
 
     private MulticastGroupLoRaWANArgs() {
-        this.dlClass = Input.empty();
-        this.numberOfDevicesInGroup = Input.empty();
-        this.numberOfDevicesRequested = Input.empty();
-        this.rfRegion = Input.empty();
+        this.dlClass = Output.empty();
+        this.numberOfDevicesInGroup = Output.empty();
+        this.numberOfDevicesRequested = Output.empty();
+        this.rfRegion = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> dlClass;
-        private @Nullable Input<Integer> numberOfDevicesInGroup;
-        private @Nullable Input<Integer> numberOfDevicesRequested;
-        private Input<String> rfRegion;
+        private Output<String> dlClass;
+        private @Nullable Output<Integer> numberOfDevicesInGroup;
+        private @Nullable Output<Integer> numberOfDevicesRequested;
+        private Output<String> rfRegion;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
     	      this.rfRegion = defaults.rfRegion;
         }
 
-        public Builder dlClass(Input<String> dlClass) {
+        public Builder dlClass(Output<String> dlClass) {
             this.dlClass = Objects.requireNonNull(dlClass);
             return this;
         }
 
         public Builder dlClass(String dlClass) {
-            this.dlClass = Input.of(Objects.requireNonNull(dlClass));
+            this.dlClass = Output.of(Objects.requireNonNull(dlClass));
             return this;
         }
 
-        public Builder numberOfDevicesInGroup(@Nullable Input<Integer> numberOfDevicesInGroup) {
+        public Builder numberOfDevicesInGroup(@Nullable Output<Integer> numberOfDevicesInGroup) {
             this.numberOfDevicesInGroup = numberOfDevicesInGroup;
             return this;
         }
 
         public Builder numberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
-            this.numberOfDevicesInGroup = Input.ofNullable(numberOfDevicesInGroup);
+            this.numberOfDevicesInGroup = Output.ofNullable(numberOfDevicesInGroup);
             return this;
         }
 
-        public Builder numberOfDevicesRequested(@Nullable Input<Integer> numberOfDevicesRequested) {
+        public Builder numberOfDevicesRequested(@Nullable Output<Integer> numberOfDevicesRequested) {
             this.numberOfDevicesRequested = numberOfDevicesRequested;
             return this;
         }
 
         public Builder numberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
-            this.numberOfDevicesRequested = Input.ofNullable(numberOfDevicesRequested);
+            this.numberOfDevicesRequested = Output.ofNullable(numberOfDevicesRequested);
             return this;
         }
 
-        public Builder rfRegion(Input<String> rfRegion) {
+        public Builder rfRegion(Output<String> rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
 
         public Builder rfRegion(String rfRegion) {
-            this.rfRegion = Input.of(Objects.requireNonNull(rfRegion));
+            this.rfRegion = Output.of(Objects.requireNonNull(rfRegion));
             return this;
         }
         public MulticastGroupLoRaWANArgs build() {

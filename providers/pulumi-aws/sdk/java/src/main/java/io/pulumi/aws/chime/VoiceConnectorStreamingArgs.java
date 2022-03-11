@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.chime;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,9 +22,9 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataRetention", required=true)
-      private final Input<Integer> dataRetention;
+      private final Output<Integer> dataRetention;
 
-    public Input<Integer> getDataRetention() {
+    public Output<Integer> getDataRetention() {
         return this.dataRetention;
     }
 
@@ -33,10 +33,10 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="streamingNotificationTargets")
-      private final @Nullable Input<List<String>> streamingNotificationTargets;
+      private final @Nullable Output<List<String>> streamingNotificationTargets;
 
-    public Input<List<String>> getStreamingNotificationTargets() {
-        return this.streamingNotificationTargets == null ? Input.empty() : this.streamingNotificationTargets;
+    public Output<List<String>> getStreamingNotificationTargets() {
+        return this.streamingNotificationTargets == null ? Output.empty() : this.streamingNotificationTargets;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="voiceConnectorId", required=true)
-      private final Input<String> voiceConnectorId;
+      private final Output<String> voiceConnectorId;
 
-    public Input<String> getVoiceConnectorId() {
+    public Output<String> getVoiceConnectorId() {
         return this.voiceConnectorId;
     }
 
     public VoiceConnectorStreamingArgs(
-        Input<Integer> dataRetention,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<List<String>> streamingNotificationTargets,
-        Input<String> voiceConnectorId) {
+        Output<Integer> dataRetention,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<List<String>> streamingNotificationTargets,
+        Output<String> voiceConnectorId) {
         this.dataRetention = Objects.requireNonNull(dataRetention, "expected parameter 'dataRetention' to be non-null");
         this.disabled = disabled;
         this.streamingNotificationTargets = streamingNotificationTargets;
@@ -73,10 +73,10 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
     }
 
     private VoiceConnectorStreamingArgs() {
-        this.dataRetention = Input.empty();
-        this.disabled = Input.empty();
-        this.streamingNotificationTargets = Input.empty();
-        this.voiceConnectorId = Input.empty();
+        this.dataRetention = Output.empty();
+        this.disabled = Output.empty();
+        this.streamingNotificationTargets = Output.empty();
+        this.voiceConnectorId = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<Integer> dataRetention;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<List<String>> streamingNotificationTargets;
-        private Input<String> voiceConnectorId;
+        private Output<Integer> dataRetention;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<List<String>> streamingNotificationTargets;
+        private Output<String> voiceConnectorId;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
     	      this.voiceConnectorId = defaults.voiceConnectorId;
         }
 
-        public Builder dataRetention(Input<Integer> dataRetention) {
+        public Builder dataRetention(Output<Integer> dataRetention) {
             this.dataRetention = Objects.requireNonNull(dataRetention);
             return this;
         }
 
         public Builder dataRetention(Integer dataRetention) {
-            this.dataRetention = Input.of(Objects.requireNonNull(dataRetention));
+            this.dataRetention = Output.of(Objects.requireNonNull(dataRetention));
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder streamingNotificationTargets(@Nullable Input<List<String>> streamingNotificationTargets) {
+        public Builder streamingNotificationTargets(@Nullable Output<List<String>> streamingNotificationTargets) {
             this.streamingNotificationTargets = streamingNotificationTargets;
             return this;
         }
 
         public Builder streamingNotificationTargets(@Nullable List<String> streamingNotificationTargets) {
-            this.streamingNotificationTargets = Input.ofNullable(streamingNotificationTargets);
+            this.streamingNotificationTargets = Output.ofNullable(streamingNotificationTargets);
             return this;
         }
 
-        public Builder voiceConnectorId(Input<String> voiceConnectorId) {
+        public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }
 
         public Builder voiceConnectorId(String voiceConnectorId) {
-            this.voiceConnectorId = Input.of(Objects.requireNonNull(voiceConnectorId));
+            this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
             return this;
         }
         public VoiceConnectorStreamingArgs build() {

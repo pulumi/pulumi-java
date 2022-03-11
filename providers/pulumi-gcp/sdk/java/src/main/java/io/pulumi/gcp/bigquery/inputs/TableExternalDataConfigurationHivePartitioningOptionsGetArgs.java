@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
      * 
      */
     @InputImport(name="requirePartitionFilter")
-      private final @Nullable Input<Boolean> requirePartitionFilter;
+      private final @Nullable Output<Boolean> requirePartitionFilter;
 
-    public Input<Boolean> getRequirePartitionFilter() {
-        return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
+    public Output<Boolean> getRequirePartitionFilter() {
+        return this.requirePartitionFilter == null ? Output.empty() : this.requirePartitionFilter;
     }
 
     /**
@@ -58,25 +58,25 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
      * 
      */
     @InputImport(name="sourceUriPrefix")
-      private final @Nullable Input<String> sourceUriPrefix;
+      private final @Nullable Output<String> sourceUriPrefix;
 
-    public Input<String> getSourceUriPrefix() {
-        return this.sourceUriPrefix == null ? Input.empty() : this.sourceUriPrefix;
+    public Output<String> getSourceUriPrefix() {
+        return this.sourceUriPrefix == null ? Output.empty() : this.sourceUriPrefix;
     }
 
     public TableExternalDataConfigurationHivePartitioningOptionsGetArgs(
-        @Nullable Input<String> mode,
-        @Nullable Input<Boolean> requirePartitionFilter,
-        @Nullable Input<String> sourceUriPrefix) {
+        @Nullable Output<String> mode,
+        @Nullable Output<Boolean> requirePartitionFilter,
+        @Nullable Output<String> sourceUriPrefix) {
         this.mode = mode;
         this.requirePartitionFilter = requirePartitionFilter;
         this.sourceUriPrefix = sourceUriPrefix;
     }
 
     private TableExternalDataConfigurationHivePartitioningOptionsGetArgs() {
-        this.mode = Input.empty();
-        this.requirePartitionFilter = Input.empty();
-        this.sourceUriPrefix = Input.empty();
+        this.mode = Output.empty();
+        this.requirePartitionFilter = Output.empty();
+        this.sourceUriPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,9 +88,9 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> mode;
-        private @Nullable Input<Boolean> requirePartitionFilter;
-        private @Nullable Input<String> sourceUriPrefix;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<Boolean> requirePartitionFilter;
+        private @Nullable Output<String> sourceUriPrefix;
 
         public Builder() {
     	      // Empty
@@ -103,33 +103,33 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
     	      this.sourceUriPrefix = defaults.sourceUriPrefix;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder requirePartitionFilter(@Nullable Input<Boolean> requirePartitionFilter) {
+        public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
 
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
-            this.requirePartitionFilter = Input.ofNullable(requirePartitionFilter);
+            this.requirePartitionFilter = Output.ofNullable(requirePartitionFilter);
             return this;
         }
 
-        public Builder sourceUriPrefix(@Nullable Input<String> sourceUriPrefix) {
+        public Builder sourceUriPrefix(@Nullable Output<String> sourceUriPrefix) {
             this.sourceUriPrefix = sourceUriPrefix;
             return this;
         }
 
         public Builder sourceUriPrefix(@Nullable String sourceUriPrefix) {
-            this.sourceUriPrefix = Input.ofNullable(sourceUriPrefix);
+            this.sourceUriPrefix = Output.ofNullable(sourceUriPrefix);
             return this;
         }
         public TableExternalDataConfigurationHivePartitioningOptionsGetArgs build() {

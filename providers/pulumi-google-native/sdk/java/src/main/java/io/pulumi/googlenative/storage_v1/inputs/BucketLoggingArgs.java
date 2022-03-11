@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logBucket")
-      private final @Nullable Input<String> logBucket;
+      private final @Nullable Output<String> logBucket;
 
-    public Input<String> getLogBucket() {
-        return this.logBucket == null ? Input.empty() : this.logBucket;
+    public Output<String> getLogBucket() {
+        return this.logBucket == null ? Output.empty() : this.logBucket;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logObjectPrefix")
-      private final @Nullable Input<String> logObjectPrefix;
+      private final @Nullable Output<String> logObjectPrefix;
 
-    public Input<String> getLogObjectPrefix() {
-        return this.logObjectPrefix == null ? Input.empty() : this.logObjectPrefix;
+    public Output<String> getLogObjectPrefix() {
+        return this.logObjectPrefix == null ? Output.empty() : this.logObjectPrefix;
     }
 
     public BucketLoggingArgs(
-        @Nullable Input<String> logBucket,
-        @Nullable Input<String> logObjectPrefix) {
+        @Nullable Output<String> logBucket,
+        @Nullable Output<String> logObjectPrefix) {
         this.logBucket = logBucket;
         this.logObjectPrefix = logObjectPrefix;
     }
 
     private BucketLoggingArgs() {
-        this.logBucket = Input.empty();
-        this.logObjectPrefix = Input.empty();
+        this.logBucket = Output.empty();
+        this.logObjectPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> logBucket;
-        private @Nullable Input<String> logObjectPrefix;
+        private @Nullable Output<String> logBucket;
+        private @Nullable Output<String> logObjectPrefix;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.logObjectPrefix = defaults.logObjectPrefix;
         }
 
-        public Builder logBucket(@Nullable Input<String> logBucket) {
+        public Builder logBucket(@Nullable Output<String> logBucket) {
             this.logBucket = logBucket;
             return this;
         }
 
         public Builder logBucket(@Nullable String logBucket) {
-            this.logBucket = Input.ofNullable(logBucket);
+            this.logBucket = Output.ofNullable(logBucket);
             return this;
         }
 
-        public Builder logObjectPrefix(@Nullable Input<String> logObjectPrefix) {
+        public Builder logObjectPrefix(@Nullable Output<String> logObjectPrefix) {
             this.logObjectPrefix = logObjectPrefix;
             return this;
         }
 
         public Builder logObjectPrefix(@Nullable String logObjectPrefix) {
-            this.logObjectPrefix = Input.ofNullable(logObjectPrefix);
+            this.logObjectPrefix = Output.ofNullable(logObjectPrefix);
             return this;
         }
         public BucketLoggingArgs build() {

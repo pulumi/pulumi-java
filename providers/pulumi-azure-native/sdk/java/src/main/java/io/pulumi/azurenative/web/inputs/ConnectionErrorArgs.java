@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<String> code;
+      private final @Nullable Output<String> code;
 
-    public Input<String> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<String> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ConnectionErrorArgs(
-        @Nullable Input<String> code,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> location,
-        @Nullable Input<String> message,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> code,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> location,
+        @Nullable Output<String> message,
+        @Nullable Output<Map<String,String>> tags) {
         this.code = code;
         this.etag = etag;
         this.location = location;
@@ -88,11 +88,11 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ConnectionErrorArgs() {
-        this.code = Input.empty();
-        this.etag = Input.empty();
-        this.location = Input.empty();
-        this.message = Input.empty();
-        this.tags = Input.empty();
+        this.code = Output.empty();
+        this.etag = Output.empty();
+        this.location = Output.empty();
+        this.message = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> code;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> message;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> code;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> message;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder code(@Nullable Input<String> code) {
+        public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable String code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ConnectionErrorArgs build() {

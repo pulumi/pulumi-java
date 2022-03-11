@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.datasync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class S3LocationS3ConfigGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bucketAccessRoleArn", required=true)
-      private final Input<String> bucketAccessRoleArn;
+      private final Output<String> bucketAccessRoleArn;
 
-    public Input<String> getBucketAccessRoleArn() {
+    public Output<String> getBucketAccessRoleArn() {
         return this.bucketAccessRoleArn;
     }
 
-    public S3LocationS3ConfigGetArgs(Input<String> bucketAccessRoleArn) {
+    public S3LocationS3ConfigGetArgs(Output<String> bucketAccessRoleArn) {
         this.bucketAccessRoleArn = Objects.requireNonNull(bucketAccessRoleArn, "expected parameter 'bucketAccessRoleArn' to be non-null");
     }
 
     private S3LocationS3ConfigGetArgs() {
-        this.bucketAccessRoleArn = Input.empty();
+        this.bucketAccessRoleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class S3LocationS3ConfigGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> bucketAccessRoleArn;
+        private Output<String> bucketAccessRoleArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class S3LocationS3ConfigGetArgs extends io.pulumi.resources.Resourc
     	      this.bucketAccessRoleArn = defaults.bucketAccessRoleArn;
         }
 
-        public Builder bucketAccessRoleArn(Input<String> bucketAccessRoleArn) {
+        public Builder bucketAccessRoleArn(Output<String> bucketAccessRoleArn) {
             this.bucketAccessRoleArn = Objects.requireNonNull(bucketAccessRoleArn);
             return this;
         }
 
         public Builder bucketAccessRoleArn(String bucketAccessRoleArn) {
-            this.bucketAccessRoleArn = Input.of(Objects.requireNonNull(bucketAccessRoleArn));
+            this.bucketAccessRoleArn = Output.of(Objects.requireNonNull(bucketAccessRoleArn));
             return this;
         }
         public S3LocationS3ConfigGetArgs build() {

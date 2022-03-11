@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.ExtensionDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.PerfCounterDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.SyslogDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.WindowsEventLogDataSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -28,10 +28,10 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="extensions")
-      private final @Nullable Input<List<ExtensionDataSourceArgs>> extensions;
+      private final @Nullable Output<List<ExtensionDataSourceArgs>> extensions;
 
-    public Input<List<ExtensionDataSourceArgs>> getExtensions() {
-        return this.extensions == null ? Input.empty() : this.extensions;
+    public Output<List<ExtensionDataSourceArgs>> getExtensions() {
+        return this.extensions == null ? Output.empty() : this.extensions;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="performanceCounters")
-      private final @Nullable Input<List<PerfCounterDataSourceArgs>> performanceCounters;
+      private final @Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters;
 
-    public Input<List<PerfCounterDataSourceArgs>> getPerformanceCounters() {
-        return this.performanceCounters == null ? Input.empty() : this.performanceCounters;
+    public Output<List<PerfCounterDataSourceArgs>> getPerformanceCounters() {
+        return this.performanceCounters == null ? Output.empty() : this.performanceCounters;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="syslog")
-      private final @Nullable Input<List<SyslogDataSourceArgs>> syslog;
+      private final @Nullable Output<List<SyslogDataSourceArgs>> syslog;
 
-    public Input<List<SyslogDataSourceArgs>> getSyslog() {
-        return this.syslog == null ? Input.empty() : this.syslog;
+    public Output<List<SyslogDataSourceArgs>> getSyslog() {
+        return this.syslog == null ? Output.empty() : this.syslog;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="windowsEventLogs")
-      private final @Nullable Input<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
+      private final @Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
 
-    public Input<List<WindowsEventLogDataSourceArgs>> getWindowsEventLogs() {
-        return this.windowsEventLogs == null ? Input.empty() : this.windowsEventLogs;
+    public Output<List<WindowsEventLogDataSourceArgs>> getWindowsEventLogs() {
+        return this.windowsEventLogs == null ? Output.empty() : this.windowsEventLogs;
     }
 
     public DataCollectionRuleDataSourcesArgs(
-        @Nullable Input<List<ExtensionDataSourceArgs>> extensions,
-        @Nullable Input<List<PerfCounterDataSourceArgs>> performanceCounters,
-        @Nullable Input<List<SyslogDataSourceArgs>> syslog,
-        @Nullable Input<List<WindowsEventLogDataSourceArgs>> windowsEventLogs) {
+        @Nullable Output<List<ExtensionDataSourceArgs>> extensions,
+        @Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters,
+        @Nullable Output<List<SyslogDataSourceArgs>> syslog,
+        @Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs) {
         this.extensions = extensions;
         this.performanceCounters = performanceCounters;
         this.syslog = syslog;
@@ -79,10 +79,10 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
     }
 
     private DataCollectionRuleDataSourcesArgs() {
-        this.extensions = Input.empty();
-        this.performanceCounters = Input.empty();
-        this.syslog = Input.empty();
-        this.windowsEventLogs = Input.empty();
+        this.extensions = Output.empty();
+        this.performanceCounters = Output.empty();
+        this.syslog = Output.empty();
+        this.windowsEventLogs = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ExtensionDataSourceArgs>> extensions;
-        private @Nullable Input<List<PerfCounterDataSourceArgs>> performanceCounters;
-        private @Nullable Input<List<SyslogDataSourceArgs>> syslog;
-        private @Nullable Input<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
+        private @Nullable Output<List<ExtensionDataSourceArgs>> extensions;
+        private @Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters;
+        private @Nullable Output<List<SyslogDataSourceArgs>> syslog;
+        private @Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
     	      this.windowsEventLogs = defaults.windowsEventLogs;
         }
 
-        public Builder extensions(@Nullable Input<List<ExtensionDataSourceArgs>> extensions) {
+        public Builder extensions(@Nullable Output<List<ExtensionDataSourceArgs>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
         public Builder extensions(@Nullable List<ExtensionDataSourceArgs> extensions) {
-            this.extensions = Input.ofNullable(extensions);
+            this.extensions = Output.ofNullable(extensions);
             return this;
         }
 
-        public Builder performanceCounters(@Nullable Input<List<PerfCounterDataSourceArgs>> performanceCounters) {
+        public Builder performanceCounters(@Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters) {
             this.performanceCounters = performanceCounters;
             return this;
         }
 
         public Builder performanceCounters(@Nullable List<PerfCounterDataSourceArgs> performanceCounters) {
-            this.performanceCounters = Input.ofNullable(performanceCounters);
+            this.performanceCounters = Output.ofNullable(performanceCounters);
             return this;
         }
 
-        public Builder syslog(@Nullable Input<List<SyslogDataSourceArgs>> syslog) {
+        public Builder syslog(@Nullable Output<List<SyslogDataSourceArgs>> syslog) {
             this.syslog = syslog;
             return this;
         }
 
         public Builder syslog(@Nullable List<SyslogDataSourceArgs> syslog) {
-            this.syslog = Input.ofNullable(syslog);
+            this.syslog = Output.ofNullable(syslog);
             return this;
         }
 
-        public Builder windowsEventLogs(@Nullable Input<List<WindowsEventLogDataSourceArgs>> windowsEventLogs) {
+        public Builder windowsEventLogs(@Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs) {
             this.windowsEventLogs = windowsEventLogs;
             return this;
         }
 
         public Builder windowsEventLogs(@Nullable List<WindowsEventLogDataSourceArgs> windowsEventLogs) {
-            this.windowsEventLogs = Input.ofNullable(windowsEventLogs);
+            this.windowsEventLogs = Output.ofNullable(windowsEventLogs);
             return this;
         }
         public DataCollectionRuleDataSourcesArgs build() {

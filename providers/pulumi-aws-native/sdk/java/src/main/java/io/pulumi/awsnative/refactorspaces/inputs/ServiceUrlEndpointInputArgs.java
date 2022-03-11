@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.refactorspaces.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ServiceUrlEndpointInputArgs extends io.pulumi.resources.Resou
     public static final ServiceUrlEndpointInputArgs Empty = new ServiceUrlEndpointInputArgs();
 
     @InputImport(name="healthUrl")
-      private final @Nullable Input<String> healthUrl;
+      private final @Nullable Output<String> healthUrl;
 
-    public Input<String> getHealthUrl() {
-        return this.healthUrl == null ? Input.empty() : this.healthUrl;
+    public Output<String> getHealthUrl() {
+        return this.healthUrl == null ? Output.empty() : this.healthUrl;
     }
 
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public ServiceUrlEndpointInputArgs(
-        @Nullable Input<String> healthUrl,
-        Input<String> url) {
+        @Nullable Output<String> healthUrl,
+        Output<String> url) {
         this.healthUrl = healthUrl;
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 
     private ServiceUrlEndpointInputArgs() {
-        this.healthUrl = Input.empty();
-        this.url = Input.empty();
+        this.healthUrl = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ServiceUrlEndpointInputArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> healthUrl;
-        private Input<String> url;
+        private @Nullable Output<String> healthUrl;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ServiceUrlEndpointInputArgs extends io.pulumi.resources.Resou
     	      this.url = defaults.url;
         }
 
-        public Builder healthUrl(@Nullable Input<String> healthUrl) {
+        public Builder healthUrl(@Nullable Output<String> healthUrl) {
             this.healthUrl = healthUrl;
             return this;
         }
 
         public Builder healthUrl(@Nullable String healthUrl) {
-            this.healthUrl = Input.ofNullable(healthUrl);
+            this.healthUrl = Output.ofNullable(healthUrl);
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public ServiceUrlEndpointInputArgs build() {

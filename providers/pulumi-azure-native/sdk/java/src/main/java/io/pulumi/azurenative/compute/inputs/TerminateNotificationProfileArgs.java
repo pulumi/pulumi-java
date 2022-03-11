@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="notBeforeTimeout")
-      private final @Nullable Input<String> notBeforeTimeout;
+      private final @Nullable Output<String> notBeforeTimeout;
 
-    public Input<String> getNotBeforeTimeout() {
-        return this.notBeforeTimeout == null ? Input.empty() : this.notBeforeTimeout;
+    public Output<String> getNotBeforeTimeout() {
+        return this.notBeforeTimeout == null ? Output.empty() : this.notBeforeTimeout;
     }
 
     public TerminateNotificationProfileArgs(
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<String> notBeforeTimeout) {
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<String> notBeforeTimeout) {
         this.enable = enable;
         this.notBeforeTimeout = notBeforeTimeout;
     }
 
     private TerminateNotificationProfileArgs() {
-        this.enable = Input.empty();
-        this.notBeforeTimeout = Input.empty();
+        this.enable = Output.empty();
+        this.notBeforeTimeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<String> notBeforeTimeout;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<String> notBeforeTimeout;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
     	      this.notBeforeTimeout = defaults.notBeforeTimeout;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder notBeforeTimeout(@Nullable Input<String> notBeforeTimeout) {
+        public Builder notBeforeTimeout(@Nullable Output<String> notBeforeTimeout) {
             this.notBeforeTimeout = notBeforeTimeout;
             return this;
         }
 
         public Builder notBeforeTimeout(@Nullable String notBeforeTimeout) {
-            this.notBeforeTimeout = Input.ofNullable(notBeforeTimeout);
+            this.notBeforeTimeout = Output.ofNullable(notBeforeTimeout);
             return this;
         }
         public TerminateNotificationProfileArgs build() {

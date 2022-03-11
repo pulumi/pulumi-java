@@ -15,7 +15,7 @@ import io.pulumi.awsnative.databrew.inputs.JobRecipeArgs;
 import io.pulumi.awsnative.databrew.inputs.JobSampleArgs;
 import io.pulumi.awsnative.databrew.inputs.JobTagArgs;
 import io.pulumi.awsnative.databrew.inputs.JobValidationConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,17 +29,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobArgs Empty = new JobArgs();
 
     @InputImport(name="dataCatalogOutputs")
-      private final @Nullable Input<List<JobDataCatalogOutputArgs>> dataCatalogOutputs;
+      private final @Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs;
 
-    public Input<List<JobDataCatalogOutputArgs>> getDataCatalogOutputs() {
-        return this.dataCatalogOutputs == null ? Input.empty() : this.dataCatalogOutputs;
+    public Output<List<JobDataCatalogOutputArgs>> getDataCatalogOutputs() {
+        return this.dataCatalogOutputs == null ? Output.empty() : this.dataCatalogOutputs;
     }
 
     @InputImport(name="databaseOutputs")
-      private final @Nullable Input<List<JobDatabaseOutputArgs>> databaseOutputs;
+      private final @Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs;
 
-    public Input<List<JobDatabaseOutputArgs>> getDatabaseOutputs() {
-        return this.databaseOutputs == null ? Input.empty() : this.databaseOutputs;
+    public Output<List<JobDatabaseOutputArgs>> getDatabaseOutputs() {
+        return this.databaseOutputs == null ? Output.empty() : this.databaseOutputs;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetName")
-      private final @Nullable Input<String> datasetName;
+      private final @Nullable Output<String> datasetName;
 
-    public Input<String> getDatasetName() {
-        return this.datasetName == null ? Input.empty() : this.datasetName;
+    public Output<String> getDatasetName() {
+        return this.datasetName == null ? Output.empty() : this.datasetName;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionKeyArn")
-      private final @Nullable Input<String> encryptionKeyArn;
+      private final @Nullable Output<String> encryptionKeyArn;
 
-    public Input<String> getEncryptionKeyArn() {
-        return this.encryptionKeyArn == null ? Input.empty() : this.encryptionKeyArn;
+    public Output<String> getEncryptionKeyArn() {
+        return this.encryptionKeyArn == null ? Output.empty() : this.encryptionKeyArn;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionMode")
-      private final @Nullable Input<JobEncryptionMode> encryptionMode;
+      private final @Nullable Output<JobEncryptionMode> encryptionMode;
 
-    public Input<JobEncryptionMode> getEncryptionMode() {
-        return this.encryptionMode == null ? Input.empty() : this.encryptionMode;
+    public Output<JobEncryptionMode> getEncryptionMode() {
+        return this.encryptionMode == null ? Output.empty() : this.encryptionMode;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobSample")
-      private final @Nullable Input<JobSampleArgs> jobSample;
+      private final @Nullable Output<JobSampleArgs> jobSample;
 
-    public Input<JobSampleArgs> getJobSample() {
-        return this.jobSample == null ? Input.empty() : this.jobSample;
+    public Output<JobSampleArgs> getJobSample() {
+        return this.jobSample == null ? Output.empty() : this.jobSample;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logSubscription")
-      private final @Nullable Input<JobLogSubscription> logSubscription;
+      private final @Nullable Output<JobLogSubscription> logSubscription;
 
-    public Input<JobLogSubscription> getLogSubscription() {
-        return this.logSubscription == null ? Input.empty() : this.logSubscription;
+    public Output<JobLogSubscription> getLogSubscription() {
+        return this.logSubscription == null ? Output.empty() : this.logSubscription;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxCapacity")
-      private final @Nullable Input<Integer> maxCapacity;
+      private final @Nullable Output<Integer> maxCapacity;
 
-    public Input<Integer> getMaxCapacity() {
-        return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
+    public Output<Integer> getMaxCapacity() {
+        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRetries")
-      private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Output<Integer> maxRetries;
 
-    public Input<Integer> getMaxRetries() {
-        return this.maxRetries == null ? Input.empty() : this.maxRetries;
+    public Output<Integer> getMaxRetries() {
+        return this.maxRetries == null ? Output.empty() : this.maxRetries;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -135,17 +135,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputLocation")
-      private final @Nullable Input<JobOutputLocationArgs> outputLocation;
+      private final @Nullable Output<JobOutputLocationArgs> outputLocation;
 
-    public Input<JobOutputLocationArgs> getOutputLocation() {
-        return this.outputLocation == null ? Input.empty() : this.outputLocation;
+    public Output<JobOutputLocationArgs> getOutputLocation() {
+        return this.outputLocation == null ? Output.empty() : this.outputLocation;
     }
 
     @InputImport(name="outputs")
-      private final @Nullable Input<List<JobOutputArgs>> outputs;
+      private final @Nullable Output<List<JobOutputArgs>> outputs;
 
-    public Input<List<JobOutputArgs>> getOutputs() {
-        return this.outputs == null ? Input.empty() : this.outputs;
+    public Output<List<JobOutputArgs>> getOutputs() {
+        return this.outputs == null ? Output.empty() : this.outputs;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileConfiguration")
-      private final @Nullable Input<JobProfileConfigurationArgs> profileConfiguration;
+      private final @Nullable Output<JobProfileConfigurationArgs> profileConfiguration;
 
-    public Input<JobProfileConfigurationArgs> getProfileConfiguration() {
-        return this.profileConfiguration == null ? Input.empty() : this.profileConfiguration;
+    public Output<JobProfileConfigurationArgs> getProfileConfiguration() {
+        return this.profileConfiguration == null ? Output.empty() : this.profileConfiguration;
     }
 
     /**
@@ -164,17 +164,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName")
-      private final @Nullable Input<String> projectName;
+      private final @Nullable Output<String> projectName;
 
-    public Input<String> getProjectName() {
-        return this.projectName == null ? Input.empty() : this.projectName;
+    public Output<String> getProjectName() {
+        return this.projectName == null ? Output.empty() : this.projectName;
     }
 
     @InputImport(name="recipe")
-      private final @Nullable Input<JobRecipeArgs> recipe;
+      private final @Nullable Output<JobRecipeArgs> recipe;
 
-    public Input<JobRecipeArgs> getRecipe() {
-        return this.recipe == null ? Input.empty() : this.recipe;
+    public Output<JobRecipeArgs> getRecipe() {
+        return this.recipe == null ? Output.empty() : this.recipe;
     }
 
     /**
@@ -182,17 +182,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<JobTagArgs>> tags;
+      private final @Nullable Output<List<JobTagArgs>> tags;
 
-    public Input<List<JobTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<JobTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -211,9 +211,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<JobType> type;
+      private final Output<JobType> type;
 
-    public Input<JobType> getType() {
+    public Output<JobType> getType() {
         return this.type;
     }
 
@@ -222,33 +222,33 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationConfigurations")
-      private final @Nullable Input<List<JobValidationConfigurationArgs>> validationConfigurations;
+      private final @Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations;
 
-    public Input<List<JobValidationConfigurationArgs>> getValidationConfigurations() {
-        return this.validationConfigurations == null ? Input.empty() : this.validationConfigurations;
+    public Output<List<JobValidationConfigurationArgs>> getValidationConfigurations() {
+        return this.validationConfigurations == null ? Output.empty() : this.validationConfigurations;
     }
 
     public JobArgs(
-        @Nullable Input<List<JobDataCatalogOutputArgs>> dataCatalogOutputs,
-        @Nullable Input<List<JobDatabaseOutputArgs>> databaseOutputs,
-        @Nullable Input<String> datasetName,
-        @Nullable Input<String> encryptionKeyArn,
-        @Nullable Input<JobEncryptionMode> encryptionMode,
-        @Nullable Input<JobSampleArgs> jobSample,
-        @Nullable Input<JobLogSubscription> logSubscription,
-        @Nullable Input<Integer> maxCapacity,
-        @Nullable Input<Integer> maxRetries,
-        @Nullable Input<String> name,
-        @Nullable Input<JobOutputLocationArgs> outputLocation,
-        @Nullable Input<List<JobOutputArgs>> outputs,
-        @Nullable Input<JobProfileConfigurationArgs> profileConfiguration,
-        @Nullable Input<String> projectName,
-        @Nullable Input<JobRecipeArgs> recipe,
-        Input<String> roleArn,
-        @Nullable Input<List<JobTagArgs>> tags,
-        @Nullable Input<Integer> timeout,
-        Input<JobType> type,
-        @Nullable Input<List<JobValidationConfigurationArgs>> validationConfigurations) {
+        @Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs,
+        @Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs,
+        @Nullable Output<String> datasetName,
+        @Nullable Output<String> encryptionKeyArn,
+        @Nullable Output<JobEncryptionMode> encryptionMode,
+        @Nullable Output<JobSampleArgs> jobSample,
+        @Nullable Output<JobLogSubscription> logSubscription,
+        @Nullable Output<Integer> maxCapacity,
+        @Nullable Output<Integer> maxRetries,
+        @Nullable Output<String> name,
+        @Nullable Output<JobOutputLocationArgs> outputLocation,
+        @Nullable Output<List<JobOutputArgs>> outputs,
+        @Nullable Output<JobProfileConfigurationArgs> profileConfiguration,
+        @Nullable Output<String> projectName,
+        @Nullable Output<JobRecipeArgs> recipe,
+        Output<String> roleArn,
+        @Nullable Output<List<JobTagArgs>> tags,
+        @Nullable Output<Integer> timeout,
+        Output<JobType> type,
+        @Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations) {
         this.dataCatalogOutputs = dataCatalogOutputs;
         this.databaseOutputs = databaseOutputs;
         this.datasetName = datasetName;
@@ -272,26 +272,26 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.dataCatalogOutputs = Input.empty();
-        this.databaseOutputs = Input.empty();
-        this.datasetName = Input.empty();
-        this.encryptionKeyArn = Input.empty();
-        this.encryptionMode = Input.empty();
-        this.jobSample = Input.empty();
-        this.logSubscription = Input.empty();
-        this.maxCapacity = Input.empty();
-        this.maxRetries = Input.empty();
-        this.name = Input.empty();
-        this.outputLocation = Input.empty();
-        this.outputs = Input.empty();
-        this.profileConfiguration = Input.empty();
-        this.projectName = Input.empty();
-        this.recipe = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
-        this.timeout = Input.empty();
-        this.type = Input.empty();
-        this.validationConfigurations = Input.empty();
+        this.dataCatalogOutputs = Output.empty();
+        this.databaseOutputs = Output.empty();
+        this.datasetName = Output.empty();
+        this.encryptionKeyArn = Output.empty();
+        this.encryptionMode = Output.empty();
+        this.jobSample = Output.empty();
+        this.logSubscription = Output.empty();
+        this.maxCapacity = Output.empty();
+        this.maxRetries = Output.empty();
+        this.name = Output.empty();
+        this.outputLocation = Output.empty();
+        this.outputs = Output.empty();
+        this.profileConfiguration = Output.empty();
+        this.projectName = Output.empty();
+        this.recipe = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
+        this.timeout = Output.empty();
+        this.type = Output.empty();
+        this.validationConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -303,26 +303,26 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<JobDataCatalogOutputArgs>> dataCatalogOutputs;
-        private @Nullable Input<List<JobDatabaseOutputArgs>> databaseOutputs;
-        private @Nullable Input<String> datasetName;
-        private @Nullable Input<String> encryptionKeyArn;
-        private @Nullable Input<JobEncryptionMode> encryptionMode;
-        private @Nullable Input<JobSampleArgs> jobSample;
-        private @Nullable Input<JobLogSubscription> logSubscription;
-        private @Nullable Input<Integer> maxCapacity;
-        private @Nullable Input<Integer> maxRetries;
-        private @Nullable Input<String> name;
-        private @Nullable Input<JobOutputLocationArgs> outputLocation;
-        private @Nullable Input<List<JobOutputArgs>> outputs;
-        private @Nullable Input<JobProfileConfigurationArgs> profileConfiguration;
-        private @Nullable Input<String> projectName;
-        private @Nullable Input<JobRecipeArgs> recipe;
-        private Input<String> roleArn;
-        private @Nullable Input<List<JobTagArgs>> tags;
-        private @Nullable Input<Integer> timeout;
-        private Input<JobType> type;
-        private @Nullable Input<List<JobValidationConfigurationArgs>> validationConfigurations;
+        private @Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs;
+        private @Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs;
+        private @Nullable Output<String> datasetName;
+        private @Nullable Output<String> encryptionKeyArn;
+        private @Nullable Output<JobEncryptionMode> encryptionMode;
+        private @Nullable Output<JobSampleArgs> jobSample;
+        private @Nullable Output<JobLogSubscription> logSubscription;
+        private @Nullable Output<Integer> maxCapacity;
+        private @Nullable Output<Integer> maxRetries;
+        private @Nullable Output<String> name;
+        private @Nullable Output<JobOutputLocationArgs> outputLocation;
+        private @Nullable Output<List<JobOutputArgs>> outputs;
+        private @Nullable Output<JobProfileConfigurationArgs> profileConfiguration;
+        private @Nullable Output<String> projectName;
+        private @Nullable Output<JobRecipeArgs> recipe;
+        private Output<String> roleArn;
+        private @Nullable Output<List<JobTagArgs>> tags;
+        private @Nullable Output<Integer> timeout;
+        private Output<JobType> type;
+        private @Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations;
 
         public Builder() {
     	      // Empty
@@ -352,203 +352,203 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationConfigurations = defaults.validationConfigurations;
         }
 
-        public Builder dataCatalogOutputs(@Nullable Input<List<JobDataCatalogOutputArgs>> dataCatalogOutputs) {
+        public Builder dataCatalogOutputs(@Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs) {
             this.dataCatalogOutputs = dataCatalogOutputs;
             return this;
         }
 
         public Builder dataCatalogOutputs(@Nullable List<JobDataCatalogOutputArgs> dataCatalogOutputs) {
-            this.dataCatalogOutputs = Input.ofNullable(dataCatalogOutputs);
+            this.dataCatalogOutputs = Output.ofNullable(dataCatalogOutputs);
             return this;
         }
 
-        public Builder databaseOutputs(@Nullable Input<List<JobDatabaseOutputArgs>> databaseOutputs) {
+        public Builder databaseOutputs(@Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs) {
             this.databaseOutputs = databaseOutputs;
             return this;
         }
 
         public Builder databaseOutputs(@Nullable List<JobDatabaseOutputArgs> databaseOutputs) {
-            this.databaseOutputs = Input.ofNullable(databaseOutputs);
+            this.databaseOutputs = Output.ofNullable(databaseOutputs);
             return this;
         }
 
-        public Builder datasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Output<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Input.ofNullable(datasetName);
+            this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
 
-        public Builder encryptionKeyArn(@Nullable Input<String> encryptionKeyArn) {
+        public Builder encryptionKeyArn(@Nullable Output<String> encryptionKeyArn) {
             this.encryptionKeyArn = encryptionKeyArn;
             return this;
         }
 
         public Builder encryptionKeyArn(@Nullable String encryptionKeyArn) {
-            this.encryptionKeyArn = Input.ofNullable(encryptionKeyArn);
+            this.encryptionKeyArn = Output.ofNullable(encryptionKeyArn);
             return this;
         }
 
-        public Builder encryptionMode(@Nullable Input<JobEncryptionMode> encryptionMode) {
+        public Builder encryptionMode(@Nullable Output<JobEncryptionMode> encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
 
         public Builder encryptionMode(@Nullable JobEncryptionMode encryptionMode) {
-            this.encryptionMode = Input.ofNullable(encryptionMode);
+            this.encryptionMode = Output.ofNullable(encryptionMode);
             return this;
         }
 
-        public Builder jobSample(@Nullable Input<JobSampleArgs> jobSample) {
+        public Builder jobSample(@Nullable Output<JobSampleArgs> jobSample) {
             this.jobSample = jobSample;
             return this;
         }
 
         public Builder jobSample(@Nullable JobSampleArgs jobSample) {
-            this.jobSample = Input.ofNullable(jobSample);
+            this.jobSample = Output.ofNullable(jobSample);
             return this;
         }
 
-        public Builder logSubscription(@Nullable Input<JobLogSubscription> logSubscription) {
+        public Builder logSubscription(@Nullable Output<JobLogSubscription> logSubscription) {
             this.logSubscription = logSubscription;
             return this;
         }
 
         public Builder logSubscription(@Nullable JobLogSubscription logSubscription) {
-            this.logSubscription = Input.ofNullable(logSubscription);
+            this.logSubscription = Output.ofNullable(logSubscription);
             return this;
         }
 
-        public Builder maxCapacity(@Nullable Input<Integer> maxCapacity) {
+        public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Input.ofNullable(maxCapacity);
+            this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Input.ofNullable(maxRetries);
+            this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outputLocation(@Nullable Input<JobOutputLocationArgs> outputLocation) {
+        public Builder outputLocation(@Nullable Output<JobOutputLocationArgs> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
         public Builder outputLocation(@Nullable JobOutputLocationArgs outputLocation) {
-            this.outputLocation = Input.ofNullable(outputLocation);
+            this.outputLocation = Output.ofNullable(outputLocation);
             return this;
         }
 
-        public Builder outputs(@Nullable Input<List<JobOutputArgs>> outputs) {
+        public Builder outputs(@Nullable Output<List<JobOutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
         public Builder outputs(@Nullable List<JobOutputArgs> outputs) {
-            this.outputs = Input.ofNullable(outputs);
+            this.outputs = Output.ofNullable(outputs);
             return this;
         }
 
-        public Builder profileConfiguration(@Nullable Input<JobProfileConfigurationArgs> profileConfiguration) {
+        public Builder profileConfiguration(@Nullable Output<JobProfileConfigurationArgs> profileConfiguration) {
             this.profileConfiguration = profileConfiguration;
             return this;
         }
 
         public Builder profileConfiguration(@Nullable JobProfileConfigurationArgs profileConfiguration) {
-            this.profileConfiguration = Input.ofNullable(profileConfiguration);
+            this.profileConfiguration = Output.ofNullable(profileConfiguration);
             return this;
         }
 
-        public Builder projectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Input.ofNullable(projectName);
+            this.projectName = Output.ofNullable(projectName);
             return this;
         }
 
-        public Builder recipe(@Nullable Input<JobRecipeArgs> recipe) {
+        public Builder recipe(@Nullable Output<JobRecipeArgs> recipe) {
             this.recipe = recipe;
             return this;
         }
 
         public Builder recipe(@Nullable JobRecipeArgs recipe) {
-            this.recipe = Input.ofNullable(recipe);
+            this.recipe = Output.ofNullable(recipe);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<JobTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<JobTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<JobTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder type(Input<JobType> type) {
+        public Builder type(Output<JobType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(JobType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder validationConfigurations(@Nullable Input<List<JobValidationConfigurationArgs>> validationConfigurations) {
+        public Builder validationConfigurations(@Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations) {
             this.validationConfigurations = validationConfigurations;
             return this;
         }
 
         public Builder validationConfigurations(@Nullable List<JobValidationConfigurationArgs> validationConfigurations) {
-            this.validationConfigurations = Input.ofNullable(validationConfigurations);
+            this.validationConfigurations = Output.ofNullable(validationConfigurations);
             return this;
         }
         public JobArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateId")
-      private final @Nullable Input<String> certificateId;
+      private final @Nullable Output<String> certificateId;
 
-    public Input<String> getCertificateId() {
-        return this.certificateId == null ? Input.empty() : this.certificateId;
+    public Output<String> getCertificateId() {
+        return this.certificateId == null ? Output.empty() : this.certificateId;
     }
 
-    public SslSettingsArgs(@Nullable Input<String> certificateId) {
+    public SslSettingsArgs(@Nullable Output<String> certificateId) {
         this.certificateId = certificateId;
     }
 
     private SslSettingsArgs() {
-        this.certificateId = Input.empty();
+        this.certificateId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateId;
+        private @Nullable Output<String> certificateId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.certificateId = defaults.certificateId;
         }
 
-        public Builder certificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Output<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Input.ofNullable(certificateId);
+            this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
         public SslSettingsArgs build() {

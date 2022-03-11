@@ -9,7 +9,6 @@ import io.pulumi.azurenative.mixedreality.outputs.IdentityResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SkuResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -242,21 +241,21 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RemoteRenderingAccount(String name, RemoteRenderingAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:mixedreality:RemoteRenderingAccount", name, args == null ? RemoteRenderingAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:mixedreality:RemoteRenderingAccount", name, args == null ? RemoteRenderingAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RemoteRenderingAccount(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RemoteRenderingAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:mixedreality:RemoteRenderingAccount", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:mixedreality/v20191202preview:RemoteRenderingAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:mixedreality/v20200406preview:RemoteRenderingAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:mixedreality/v20210101:RemoteRenderingAccount").build()),
-                Input.of(Alias.builder().setType("azure-native:mixedreality/v20210301preview:RemoteRenderingAccount").build())
+                Output.of(Alias.builder().setType("azure-native:mixedreality/v20191202preview:RemoteRenderingAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:mixedreality/v20200406preview:RemoteRenderingAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:mixedreality/v20210101:RemoteRenderingAccount").build()),
+                Output.of(Alias.builder().setType("azure-native:mixedreality/v20210301preview:RemoteRenderingAccount").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -270,7 +269,7 @@ public class RemoteRenderingAccount extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RemoteRenderingAccount get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RemoteRenderingAccount get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RemoteRenderingAccount(name, id, options);
     }
 }

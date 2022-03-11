@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datastore;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datastore.inputs.DataStoreIndexPropertyArgs;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ancestor")
-      private final @Nullable Input<String> ancestor;
+      private final @Nullable Output<String> ancestor;
 
-    public Input<String> getAncestor() {
-        return this.ancestor == null ? Input.empty() : this.ancestor;
+    public Output<String> getAncestor() {
+        return this.ancestor == null ? Output.empty() : this.ancestor;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -46,10 +46,10 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<List<DataStoreIndexPropertyArgs>> properties;
+      private final @Nullable Output<List<DataStoreIndexPropertyArgs>> properties;
 
-    public Input<List<DataStoreIndexPropertyArgs>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<List<DataStoreIndexPropertyArgs>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public DataStoreIndexArgs(
-        @Nullable Input<String> ancestor,
-        Input<String> kind,
-        @Nullable Input<String> project,
-        @Nullable Input<List<DataStoreIndexPropertyArgs>> properties) {
+        @Nullable Output<String> ancestor,
+        Output<String> kind,
+        @Nullable Output<String> project,
+        @Nullable Output<List<DataStoreIndexPropertyArgs>> properties) {
         this.ancestor = ancestor;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.project = project;
@@ -76,10 +76,10 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataStoreIndexArgs() {
-        this.ancestor = Input.empty();
-        this.kind = Input.empty();
-        this.project = Input.empty();
-        this.properties = Input.empty();
+        this.ancestor = Output.empty();
+        this.kind = Output.empty();
+        this.project = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ancestor;
-        private Input<String> kind;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<DataStoreIndexPropertyArgs>> properties;
+        private @Nullable Output<String> ancestor;
+        private Output<String> kind;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<DataStoreIndexPropertyArgs>> properties;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder ancestor(@Nullable Input<String> ancestor) {
+        public Builder ancestor(@Nullable Output<String> ancestor) {
             this.ancestor = ancestor;
             return this;
         }
 
         public Builder ancestor(@Nullable String ancestor) {
-            this.ancestor = Input.ofNullable(ancestor);
+            this.ancestor = Output.ofNullable(ancestor);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder properties(@Nullable Input<List<DataStoreIndexPropertyArgs>> properties) {
+        public Builder properties(@Nullable Output<List<DataStoreIndexPropertyArgs>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable List<DataStoreIndexPropertyArgs> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public DataStoreIndexArgs build() {

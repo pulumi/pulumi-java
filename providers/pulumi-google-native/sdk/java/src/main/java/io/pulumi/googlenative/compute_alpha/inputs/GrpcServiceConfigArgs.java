@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.CallCredentialsArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ChannelCredentialsArgs;
@@ -25,10 +25,10 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="callCredentials")
-      private final @Nullable Input<CallCredentialsArgs> callCredentials;
+      private final @Nullable Output<CallCredentialsArgs> callCredentials;
 
-    public Input<CallCredentialsArgs> getCallCredentials() {
-        return this.callCredentials == null ? Input.empty() : this.callCredentials;
+    public Output<CallCredentialsArgs> getCallCredentials() {
+        return this.callCredentials == null ? Output.empty() : this.callCredentials;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="channelCredentials")
-      private final @Nullable Input<ChannelCredentialsArgs> channelCredentials;
+      private final @Nullable Output<ChannelCredentialsArgs> channelCredentials;
 
-    public Input<ChannelCredentialsArgs> getChannelCredentials() {
-        return this.channelCredentials == null ? Input.empty() : this.channelCredentials;
+    public Output<ChannelCredentialsArgs> getChannelCredentials() {
+        return this.channelCredentials == null ? Output.empty() : this.channelCredentials;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetUri")
-      private final @Nullable Input<String> targetUri;
+      private final @Nullable Output<String> targetUri;
 
-    public Input<String> getTargetUri() {
-        return this.targetUri == null ? Input.empty() : this.targetUri;
+    public Output<String> getTargetUri() {
+        return this.targetUri == null ? Output.empty() : this.targetUri;
     }
 
     public GrpcServiceConfigArgs(
-        @Nullable Input<CallCredentialsArgs> callCredentials,
-        @Nullable Input<ChannelCredentialsArgs> channelCredentials,
-        @Nullable Input<String> targetUri) {
+        @Nullable Output<CallCredentialsArgs> callCredentials,
+        @Nullable Output<ChannelCredentialsArgs> channelCredentials,
+        @Nullable Output<String> targetUri) {
         this.callCredentials = callCredentials;
         this.channelCredentials = channelCredentials;
         this.targetUri = targetUri;
     }
 
     private GrpcServiceConfigArgs() {
-        this.callCredentials = Input.empty();
-        this.channelCredentials = Input.empty();
-        this.targetUri = Input.empty();
+        this.callCredentials = Output.empty();
+        this.channelCredentials = Output.empty();
+        this.targetUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<CallCredentialsArgs> callCredentials;
-        private @Nullable Input<ChannelCredentialsArgs> channelCredentials;
-        private @Nullable Input<String> targetUri;
+        private @Nullable Output<CallCredentialsArgs> callCredentials;
+        private @Nullable Output<ChannelCredentialsArgs> channelCredentials;
+        private @Nullable Output<String> targetUri;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.targetUri = defaults.targetUri;
         }
 
-        public Builder callCredentials(@Nullable Input<CallCredentialsArgs> callCredentials) {
+        public Builder callCredentials(@Nullable Output<CallCredentialsArgs> callCredentials) {
             this.callCredentials = callCredentials;
             return this;
         }
 
         public Builder callCredentials(@Nullable CallCredentialsArgs callCredentials) {
-            this.callCredentials = Input.ofNullable(callCredentials);
+            this.callCredentials = Output.ofNullable(callCredentials);
             return this;
         }
 
-        public Builder channelCredentials(@Nullable Input<ChannelCredentialsArgs> channelCredentials) {
+        public Builder channelCredentials(@Nullable Output<ChannelCredentialsArgs> channelCredentials) {
             this.channelCredentials = channelCredentials;
             return this;
         }
 
         public Builder channelCredentials(@Nullable ChannelCredentialsArgs channelCredentials) {
-            this.channelCredentials = Input.ofNullable(channelCredentials);
+            this.channelCredentials = Output.ofNullable(channelCredentials);
             return this;
         }
 
-        public Builder targetUri(@Nullable Input<String> targetUri) {
+        public Builder targetUri(@Nullable Output<String> targetUri) {
             this.targetUri = targetUri;
             return this;
         }
 
         public Builder targetUri(@Nullable String targetUri) {
-            this.targetUri = Input.ofNullable(targetUri);
+            this.targetUri = Output.ofNullable(targetUri);
             return this;
         }
         public GrpcServiceConfigArgs build() {

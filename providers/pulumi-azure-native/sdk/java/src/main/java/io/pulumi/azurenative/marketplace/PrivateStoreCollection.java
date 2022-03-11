@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.marketplace.PrivateStoreCollectionArgs;
 import io.pulumi.azurenative.marketplace.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -213,18 +212,18 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateStoreCollection(String name, PrivateStoreCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:marketplace:PrivateStoreCollection", name, args == null ? PrivateStoreCollectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:marketplace:PrivateStoreCollection", name, args == null ? PrivateStoreCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PrivateStoreCollection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PrivateStoreCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:marketplace:PrivateStoreCollection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:marketplace/v20210601:PrivateStoreCollection").build())
+                Output.of(Alias.builder().setType("azure-native:marketplace/v20210601:PrivateStoreCollection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -238,7 +237,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrivateStoreCollection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PrivateStoreCollection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateStoreCollection(name, id, options);
     }
 }

@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.EventTargetEcsTargetNetworkConfigurationGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventTargetEcsTargetPlacementConstraintGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableEcsManagedTags")
-      private final @Nullable Input<Boolean> enableEcsManagedTags;
+      private final @Nullable Output<Boolean> enableEcsManagedTags;
 
-    public Input<Boolean> getEnableEcsManagedTags() {
-        return this.enableEcsManagedTags == null ? Input.empty() : this.enableEcsManagedTags;
+    public Output<Boolean> getEnableEcsManagedTags() {
+        return this.enableEcsManagedTags == null ? Output.empty() : this.enableEcsManagedTags;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableExecuteCommand")
-      private final @Nullable Input<Boolean> enableExecuteCommand;
+      private final @Nullable Output<Boolean> enableExecuteCommand;
 
-    public Input<Boolean> getEnableExecuteCommand() {
-        return this.enableExecuteCommand == null ? Input.empty() : this.enableExecuteCommand;
+    public Output<Boolean> getEnableExecuteCommand() {
+        return this.enableExecuteCommand == null ? Output.empty() : this.enableExecuteCommand;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="group")
-      private final @Nullable Input<String> group;
+      private final @Nullable Output<String> group;
 
-    public Input<String> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<String> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="launchType")
-      private final @Nullable Input<String> launchType;
+      private final @Nullable Output<String> launchType;
 
-    public Input<String> getLaunchType() {
-        return this.launchType == null ? Input.empty() : this.launchType;
+    public Output<String> getLaunchType() {
+        return this.launchType == null ? Output.empty() : this.launchType;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="networkConfiguration")
-      private final @Nullable Input<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration;
+      private final @Nullable Output<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration;
 
-    public Input<EventTargetEcsTargetNetworkConfigurationGetArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
+    public Output<EventTargetEcsTargetNetworkConfigurationGetArgs> getNetworkConfiguration() {
+        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="placementConstraints")
-      private final @Nullable Input<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints;
+      private final @Nullable Output<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints;
 
-    public Input<List<EventTargetEcsTargetPlacementConstraintGetArgs>> getPlacementConstraints() {
-        return this.placementConstraints == null ? Input.empty() : this.placementConstraints;
+    public Output<List<EventTargetEcsTargetPlacementConstraintGetArgs>> getPlacementConstraints() {
+        return this.placementConstraints == null ? Output.empty() : this.placementConstraints;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="platformVersion")
-      private final @Nullable Input<String> platformVersion;
+      private final @Nullable Output<String> platformVersion;
 
-    public Input<String> getPlatformVersion() {
-        return this.platformVersion == null ? Input.empty() : this.platformVersion;
+    public Output<String> getPlatformVersion() {
+        return this.platformVersion == null ? Output.empty() : this.platformVersion;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="propagateTags")
-      private final @Nullable Input<String> propagateTags;
+      private final @Nullable Output<String> propagateTags;
 
-    public Input<String> getPropagateTags() {
-        return this.propagateTags == null ? Input.empty() : this.propagateTags;
+    public Output<String> getPropagateTags() {
+        return this.propagateTags == null ? Output.empty() : this.propagateTags;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="taskCount")
-      private final @Nullable Input<Integer> taskCount;
+      private final @Nullable Output<Integer> taskCount;
 
-    public Input<Integer> getTaskCount() {
-        return this.taskCount == null ? Input.empty() : this.taskCount;
+    public Output<Integer> getTaskCount() {
+        return this.taskCount == null ? Output.empty() : this.taskCount;
     }
 
     /**
@@ -135,24 +135,24 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="taskDefinitionArn", required=true)
-      private final Input<String> taskDefinitionArn;
+      private final Output<String> taskDefinitionArn;
 
-    public Input<String> getTaskDefinitionArn() {
+    public Output<String> getTaskDefinitionArn() {
         return this.taskDefinitionArn;
     }
 
     public EventTargetEcsTargetGetArgs(
-        @Nullable Input<Boolean> enableEcsManagedTags,
-        @Nullable Input<Boolean> enableExecuteCommand,
-        @Nullable Input<String> group,
-        @Nullable Input<String> launchType,
-        @Nullable Input<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration,
-        @Nullable Input<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints,
-        @Nullable Input<String> platformVersion,
-        @Nullable Input<String> propagateTags,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> taskCount,
-        Input<String> taskDefinitionArn) {
+        @Nullable Output<Boolean> enableEcsManagedTags,
+        @Nullable Output<Boolean> enableExecuteCommand,
+        @Nullable Output<String> group,
+        @Nullable Output<String> launchType,
+        @Nullable Output<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration,
+        @Nullable Output<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints,
+        @Nullable Output<String> platformVersion,
+        @Nullable Output<String> propagateTags,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> taskCount,
+        Output<String> taskDefinitionArn) {
         this.enableEcsManagedTags = enableEcsManagedTags;
         this.enableExecuteCommand = enableExecuteCommand;
         this.group = group;
@@ -167,17 +167,17 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     }
 
     private EventTargetEcsTargetGetArgs() {
-        this.enableEcsManagedTags = Input.empty();
-        this.enableExecuteCommand = Input.empty();
-        this.group = Input.empty();
-        this.launchType = Input.empty();
-        this.networkConfiguration = Input.empty();
-        this.placementConstraints = Input.empty();
-        this.platformVersion = Input.empty();
-        this.propagateTags = Input.empty();
-        this.tags = Input.empty();
-        this.taskCount = Input.empty();
-        this.taskDefinitionArn = Input.empty();
+        this.enableEcsManagedTags = Output.empty();
+        this.enableExecuteCommand = Output.empty();
+        this.group = Output.empty();
+        this.launchType = Output.empty();
+        this.networkConfiguration = Output.empty();
+        this.placementConstraints = Output.empty();
+        this.platformVersion = Output.empty();
+        this.propagateTags = Output.empty();
+        this.tags = Output.empty();
+        this.taskCount = Output.empty();
+        this.taskDefinitionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,17 +189,17 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableEcsManagedTags;
-        private @Nullable Input<Boolean> enableExecuteCommand;
-        private @Nullable Input<String> group;
-        private @Nullable Input<String> launchType;
-        private @Nullable Input<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration;
-        private @Nullable Input<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints;
-        private @Nullable Input<String> platformVersion;
-        private @Nullable Input<String> propagateTags;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> taskCount;
-        private Input<String> taskDefinitionArn;
+        private @Nullable Output<Boolean> enableEcsManagedTags;
+        private @Nullable Output<Boolean> enableExecuteCommand;
+        private @Nullable Output<String> group;
+        private @Nullable Output<String> launchType;
+        private @Nullable Output<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration;
+        private @Nullable Output<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints;
+        private @Nullable Output<String> platformVersion;
+        private @Nullable Output<String> propagateTags;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> taskCount;
+        private Output<String> taskDefinitionArn;
 
         public Builder() {
     	      // Empty
@@ -220,113 +220,113 @@ public final class EventTargetEcsTargetGetArgs extends io.pulumi.resources.Resou
     	      this.taskDefinitionArn = defaults.taskDefinitionArn;
         }
 
-        public Builder enableEcsManagedTags(@Nullable Input<Boolean> enableEcsManagedTags) {
+        public Builder enableEcsManagedTags(@Nullable Output<Boolean> enableEcsManagedTags) {
             this.enableEcsManagedTags = enableEcsManagedTags;
             return this;
         }
 
         public Builder enableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
-            this.enableEcsManagedTags = Input.ofNullable(enableEcsManagedTags);
+            this.enableEcsManagedTags = Output.ofNullable(enableEcsManagedTags);
             return this;
         }
 
-        public Builder enableExecuteCommand(@Nullable Input<Boolean> enableExecuteCommand) {
+        public Builder enableExecuteCommand(@Nullable Output<Boolean> enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
 
         public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
-            this.enableExecuteCommand = Input.ofNullable(enableExecuteCommand);
+            this.enableExecuteCommand = Output.ofNullable(enableExecuteCommand);
             return this;
         }
 
-        public Builder group(@Nullable Input<String> group) {
+        public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
 
         public Builder group(@Nullable String group) {
-            this.group = Input.ofNullable(group);
+            this.group = Output.ofNullable(group);
             return this;
         }
 
-        public Builder launchType(@Nullable Input<String> launchType) {
+        public Builder launchType(@Nullable Output<String> launchType) {
             this.launchType = launchType;
             return this;
         }
 
         public Builder launchType(@Nullable String launchType) {
-            this.launchType = Input.ofNullable(launchType);
+            this.launchType = Output.ofNullable(launchType);
             return this;
         }
 
-        public Builder networkConfiguration(@Nullable Input<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Output<EventTargetEcsTargetNetworkConfigurationGetArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
         public Builder networkConfiguration(@Nullable EventTargetEcsTargetNetworkConfigurationGetArgs networkConfiguration) {
-            this.networkConfiguration = Input.ofNullable(networkConfiguration);
+            this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder placementConstraints(@Nullable Input<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints) {
+        public Builder placementConstraints(@Nullable Output<List<EventTargetEcsTargetPlacementConstraintGetArgs>> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
 
         public Builder placementConstraints(@Nullable List<EventTargetEcsTargetPlacementConstraintGetArgs> placementConstraints) {
-            this.placementConstraints = Input.ofNullable(placementConstraints);
+            this.placementConstraints = Output.ofNullable(placementConstraints);
             return this;
         }
 
-        public Builder platformVersion(@Nullable Input<String> platformVersion) {
+        public Builder platformVersion(@Nullable Output<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
         public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Input.ofNullable(platformVersion);
+            this.platformVersion = Output.ofNullable(platformVersion);
             return this;
         }
 
-        public Builder propagateTags(@Nullable Input<String> propagateTags) {
+        public Builder propagateTags(@Nullable Output<String> propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
 
         public Builder propagateTags(@Nullable String propagateTags) {
-            this.propagateTags = Input.ofNullable(propagateTags);
+            this.propagateTags = Output.ofNullable(propagateTags);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder taskCount(@Nullable Input<Integer> taskCount) {
+        public Builder taskCount(@Nullable Output<Integer> taskCount) {
             this.taskCount = taskCount;
             return this;
         }
 
         public Builder taskCount(@Nullable Integer taskCount) {
-            this.taskCount = Input.ofNullable(taskCount);
+            this.taskCount = Output.ofNullable(taskCount);
             return this;
         }
 
-        public Builder taskDefinitionArn(Input<String> taskDefinitionArn) {
+        public Builder taskDefinitionArn(Output<String> taskDefinitionArn) {
             this.taskDefinitionArn = Objects.requireNonNull(taskDefinitionArn);
             return this;
         }
 
         public Builder taskDefinitionArn(String taskDefinitionArn) {
-            this.taskDefinitionArn = Input.of(Objects.requireNonNull(taskDefinitionArn));
+            this.taskDefinitionArn = Output.of(Objects.requireNonNull(taskDefinitionArn));
             return this;
         }
         public EventTargetEcsTargetGetArgs build() {

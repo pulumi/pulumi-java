@@ -10,7 +10,6 @@ import io.pulumi.azurenative.elastic.outputs.MonitorPropertiesResponse;
 import io.pulumi.azurenative.elastic.outputs.ResourceSkuResponse;
 import io.pulumi.azurenative.elastic.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -187,21 +186,21 @@ public class Monitor extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Monitor(String name, MonitorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:elastic:Monitor", name, args == null ? MonitorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:elastic:Monitor", name, args == null ? MonitorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Monitor(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Monitor(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:elastic:Monitor", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:elastic/v20200701:Monitor").build()),
-                Input.of(Alias.builder().setType("azure-native:elastic/v20200701preview:Monitor").build()),
-                Input.of(Alias.builder().setType("azure-native:elastic/v20210901preview:Monitor").build()),
-                Input.of(Alias.builder().setType("azure-native:elastic/v20211001preview:Monitor").build())
+                Output.of(Alias.builder().setType("azure-native:elastic/v20200701:Monitor").build()),
+                Output.of(Alias.builder().setType("azure-native:elastic/v20200701preview:Monitor").build()),
+                Output.of(Alias.builder().setType("azure-native:elastic/v20210901preview:Monitor").build()),
+                Output.of(Alias.builder().setType("azure-native:elastic/v20211001preview:Monitor").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -215,7 +214,7 @@ public class Monitor extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Monitor get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Monitor get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Monitor(name, id, options);
     }
 }

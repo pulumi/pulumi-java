@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.enums.DatasetAccessEntryTargetTypesItem;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceArgs;
@@ -21,29 +21,29 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataset")
-      private final @Nullable Input<DatasetReferenceArgs> dataset;
+      private final @Nullable Output<DatasetReferenceArgs> dataset;
 
-    public Input<DatasetReferenceArgs> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<DatasetReferenceArgs> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     @InputImport(name="targetTypes")
-      private final @Nullable Input<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
+      private final @Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
 
-    public Input<List<DatasetAccessEntryTargetTypesItem>> getTargetTypes() {
-        return this.targetTypes == null ? Input.empty() : this.targetTypes;
+    public Output<List<DatasetAccessEntryTargetTypesItem>> getTargetTypes() {
+        return this.targetTypes == null ? Output.empty() : this.targetTypes;
     }
 
     public DatasetAccessEntryArgs(
-        @Nullable Input<DatasetReferenceArgs> dataset,
-        @Nullable Input<List<DatasetAccessEntryTargetTypesItem>> targetTypes) {
+        @Nullable Output<DatasetReferenceArgs> dataset,
+        @Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes) {
         this.dataset = dataset;
         this.targetTypes = targetTypes;
     }
 
     private DatasetAccessEntryArgs() {
-        this.dataset = Input.empty();
-        this.targetTypes = Input.empty();
+        this.dataset = Output.empty();
+        this.targetTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<DatasetReferenceArgs> dataset;
-        private @Nullable Input<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
+        private @Nullable Output<DatasetReferenceArgs> dataset;
+        private @Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
     	      this.targetTypes = defaults.targetTypes;
         }
 
-        public Builder dataset(@Nullable Input<DatasetReferenceArgs> dataset) {
+        public Builder dataset(@Nullable Output<DatasetReferenceArgs> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable DatasetReferenceArgs dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder targetTypes(@Nullable Input<List<DatasetAccessEntryTargetTypesItem>> targetTypes) {
+        public Builder targetTypes(@Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes) {
             this.targetTypes = targetTypes;
             return this;
         }
 
         public Builder targetTypes(@Nullable List<DatasetAccessEntryTargetTypesItem> targetTypes) {
-            this.targetTypes = Input.ofNullable(targetTypes);
+            this.targetTypes = Output.ofNullable(targetTypes);
             return this;
         }
         public DatasetAccessEntryArgs build() {

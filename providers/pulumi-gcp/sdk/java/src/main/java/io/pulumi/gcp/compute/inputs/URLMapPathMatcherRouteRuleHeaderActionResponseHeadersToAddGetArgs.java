@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGet
      * 
      */
     @InputImport(name="headerName", required=true)
-      private final Input<String> headerName;
+      private final Output<String> headerName;
 
-    public Input<String> getHeaderName() {
+    public Output<String> getHeaderName() {
         return this.headerName;
     }
 
@@ -30,9 +30,9 @@ public final class URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGet
      * 
      */
     @InputImport(name="headerValue", required=true)
-      private final Input<String> headerValue;
+      private final Output<String> headerValue;
 
-    public Input<String> getHeaderValue() {
+    public Output<String> getHeaderValue() {
         return this.headerValue;
     }
 
@@ -42,25 +42,25 @@ public final class URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGet
      * 
      */
     @InputImport(name="replace", required=true)
-      private final Input<Boolean> replace;
+      private final Output<Boolean> replace;
 
-    public Input<Boolean> getReplace() {
+    public Output<Boolean> getReplace() {
         return this.replace;
     }
 
     public URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGetArgs(
-        Input<String> headerName,
-        Input<String> headerValue,
-        Input<Boolean> replace) {
+        Output<String> headerName,
+        Output<String> headerValue,
+        Output<Boolean> replace) {
         this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
         this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
         this.replace = Objects.requireNonNull(replace, "expected parameter 'replace' to be non-null");
     }
 
     private URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGetArgs() {
-        this.headerName = Input.empty();
-        this.headerValue = Input.empty();
-        this.replace = Input.empty();
+        this.headerName = Output.empty();
+        this.headerValue = Output.empty();
+        this.replace = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGet
     }
 
     public static final class Builder {
-        private Input<String> headerName;
-        private Input<String> headerValue;
-        private Input<Boolean> replace;
+        private Output<String> headerName;
+        private Output<String> headerValue;
+        private Output<Boolean> replace;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGet
     	      this.replace = defaults.replace;
         }
 
-        public Builder headerName(Input<String> headerName) {
+        public Builder headerName(Output<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Input.of(Objects.requireNonNull(headerName));
+            this.headerName = Output.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder headerValue(Input<String> headerValue) {
+        public Builder headerValue(Output<String> headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
         public Builder headerValue(String headerValue) {
-            this.headerValue = Input.of(Objects.requireNonNull(headerValue));
+            this.headerValue = Output.of(Objects.requireNonNull(headerValue));
             return this;
         }
 
-        public Builder replace(Input<Boolean> replace) {
+        public Builder replace(Output<Boolean> replace) {
             this.replace = Objects.requireNonNull(replace);
             return this;
         }
 
         public Builder replace(Boolean replace) {
-            this.replace = Input.of(Objects.requireNonNull(replace));
+            this.replace = Output.of(Objects.requireNonNull(replace));
             return this;
         }
         public URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGetArgs build() {

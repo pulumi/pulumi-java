@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.enums.TimeframeType;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDatasetArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ExportTimePeriodArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -28,10 +28,10 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataSet")
-      private final @Nullable Input<ExportDatasetArgs> dataSet;
+      private final @Nullable Output<ExportDatasetArgs> dataSet;
 
-    public Input<ExportDatasetArgs> getDataSet() {
-        return this.dataSet == null ? Input.empty() : this.dataSet;
+    public Output<ExportDatasetArgs> getDataSet() {
+        return this.dataSet == null ? Output.empty() : this.dataSet;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timePeriod")
-      private final @Nullable Input<ExportTimePeriodArgs> timePeriod;
+      private final @Nullable Output<ExportTimePeriodArgs> timePeriod;
 
-    public Input<ExportTimePeriodArgs> getTimePeriod() {
-        return this.timePeriod == null ? Input.empty() : this.timePeriod;
+    public Output<ExportTimePeriodArgs> getTimePeriod() {
+        return this.timePeriod == null ? Output.empty() : this.timePeriod;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeframe", required=true)
-      private final Input<Either<String,TimeframeType>> timeframe;
+      private final Output<Either<String,TimeframeType>> timeframe;
 
-    public Input<Either<String,TimeframeType>> getTimeframe() {
+    public Output<Either<String,TimeframeType>> getTimeframe() {
         return this.timeframe;
     }
 
@@ -61,17 +61,17 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ExportType>> type;
+      private final Output<Either<String,ExportType>> type;
 
-    public Input<Either<String,ExportType>> getType() {
+    public Output<Either<String,ExportType>> getType() {
         return this.type;
     }
 
     public ExportDefinitionArgs(
-        @Nullable Input<ExportDatasetArgs> dataSet,
-        @Nullable Input<ExportTimePeriodArgs> timePeriod,
-        Input<Either<String,TimeframeType>> timeframe,
-        Input<Either<String,ExportType>> type) {
+        @Nullable Output<ExportDatasetArgs> dataSet,
+        @Nullable Output<ExportTimePeriodArgs> timePeriod,
+        Output<Either<String,TimeframeType>> timeframe,
+        Output<Either<String,ExportType>> type) {
         this.dataSet = dataSet;
         this.timePeriod = timePeriod;
         this.timeframe = Objects.requireNonNull(timeframe, "expected parameter 'timeframe' to be non-null");
@@ -79,10 +79,10 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ExportDefinitionArgs() {
-        this.dataSet = Input.empty();
-        this.timePeriod = Input.empty();
-        this.timeframe = Input.empty();
-        this.type = Input.empty();
+        this.dataSet = Output.empty();
+        this.timePeriod = Output.empty();
+        this.timeframe = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ExportDatasetArgs> dataSet;
-        private @Nullable Input<ExportTimePeriodArgs> timePeriod;
-        private Input<Either<String,TimeframeType>> timeframe;
-        private Input<Either<String,ExportType>> type;
+        private @Nullable Output<ExportDatasetArgs> dataSet;
+        private @Nullable Output<ExportTimePeriodArgs> timePeriod;
+        private Output<Either<String,TimeframeType>> timeframe;
+        private Output<Either<String,ExportType>> type;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder dataSet(@Nullable Input<ExportDatasetArgs> dataSet) {
+        public Builder dataSet(@Nullable Output<ExportDatasetArgs> dataSet) {
             this.dataSet = dataSet;
             return this;
         }
 
         public Builder dataSet(@Nullable ExportDatasetArgs dataSet) {
-            this.dataSet = Input.ofNullable(dataSet);
+            this.dataSet = Output.ofNullable(dataSet);
             return this;
         }
 
-        public Builder timePeriod(@Nullable Input<ExportTimePeriodArgs> timePeriod) {
+        public Builder timePeriod(@Nullable Output<ExportTimePeriodArgs> timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
 
         public Builder timePeriod(@Nullable ExportTimePeriodArgs timePeriod) {
-            this.timePeriod = Input.ofNullable(timePeriod);
+            this.timePeriod = Output.ofNullable(timePeriod);
             return this;
         }
 
-        public Builder timeframe(Input<Either<String,TimeframeType>> timeframe) {
+        public Builder timeframe(Output<Either<String,TimeframeType>> timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
 
         public Builder timeframe(Either<String,TimeframeType> timeframe) {
-            this.timeframe = Input.of(Objects.requireNonNull(timeframe));
+            this.timeframe = Output.of(Objects.requireNonNull(timeframe));
             return this;
         }
 
-        public Builder type(Input<Either<String,ExportType>> type) {
+        public Builder type(Output<Either<String,ExportType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ExportType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ExportDefinitionArgs build() {

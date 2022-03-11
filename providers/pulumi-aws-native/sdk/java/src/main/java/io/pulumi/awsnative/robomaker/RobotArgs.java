@@ -5,7 +5,7 @@ package io.pulumi.awsnative.robomaker;
 
 import io.pulumi.awsnative.robomaker.enums.RobotArchitecture;
 import io.pulumi.awsnative.robomaker.inputs.RobotTagsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture", required=true)
-      private final Input<RobotArchitecture> architecture;
+      private final Output<RobotArchitecture> architecture;
 
-    public Input<RobotArchitecture> getArchitecture() {
+    public Output<RobotArchitecture> getArchitecture() {
         return this.architecture;
     }
 
@@ -32,10 +32,10 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleet")
-      private final @Nullable Input<String> fleet;
+      private final @Nullable Output<String> fleet;
 
-    public Input<String> getFleet() {
-        return this.fleet == null ? Input.empty() : this.fleet;
+    public Output<String> getFleet() {
+        return this.fleet == null ? Output.empty() : this.fleet;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="greengrassGroupId", required=true)
-      private final Input<String> greengrassGroupId;
+      private final Output<String> greengrassGroupId;
 
-    public Input<String> getGreengrassGroupId() {
+    public Output<String> getGreengrassGroupId() {
         return this.greengrassGroupId;
     }
 
@@ -54,25 +54,25 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<RobotTagsArgs> tags;
+      private final @Nullable Output<RobotTagsArgs> tags;
 
-    public Input<RobotTagsArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<RobotTagsArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RobotArgs(
-        Input<RobotArchitecture> architecture,
-        @Nullable Input<String> fleet,
-        Input<String> greengrassGroupId,
-        @Nullable Input<String> name,
-        @Nullable Input<RobotTagsArgs> tags) {
+        Output<RobotArchitecture> architecture,
+        @Nullable Output<String> fleet,
+        Output<String> greengrassGroupId,
+        @Nullable Output<String> name,
+        @Nullable Output<RobotTagsArgs> tags) {
         this.architecture = Objects.requireNonNull(architecture, "expected parameter 'architecture' to be non-null");
         this.fleet = fleet;
         this.greengrassGroupId = Objects.requireNonNull(greengrassGroupId, "expected parameter 'greengrassGroupId' to be non-null");
@@ -81,11 +81,11 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RobotArgs() {
-        this.architecture = Input.empty();
-        this.fleet = Input.empty();
-        this.greengrassGroupId = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.architecture = Output.empty();
+        this.fleet = Output.empty();
+        this.greengrassGroupId = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,11 +97,11 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<RobotArchitecture> architecture;
-        private @Nullable Input<String> fleet;
-        private Input<String> greengrassGroupId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<RobotTagsArgs> tags;
+        private Output<RobotArchitecture> architecture;
+        private @Nullable Output<String> fleet;
+        private Output<String> greengrassGroupId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RobotTagsArgs> tags;
 
         public Builder() {
     	      // Empty
@@ -116,53 +116,53 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder architecture(Input<RobotArchitecture> architecture) {
+        public Builder architecture(Output<RobotArchitecture> architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
         public Builder architecture(RobotArchitecture architecture) {
-            this.architecture = Input.of(Objects.requireNonNull(architecture));
+            this.architecture = Output.of(Objects.requireNonNull(architecture));
             return this;
         }
 
-        public Builder fleet(@Nullable Input<String> fleet) {
+        public Builder fleet(@Nullable Output<String> fleet) {
             this.fleet = fleet;
             return this;
         }
 
         public Builder fleet(@Nullable String fleet) {
-            this.fleet = Input.ofNullable(fleet);
+            this.fleet = Output.ofNullable(fleet);
             return this;
         }
 
-        public Builder greengrassGroupId(Input<String> greengrassGroupId) {
+        public Builder greengrassGroupId(Output<String> greengrassGroupId) {
             this.greengrassGroupId = Objects.requireNonNull(greengrassGroupId);
             return this;
         }
 
         public Builder greengrassGroupId(String greengrassGroupId) {
-            this.greengrassGroupId = Input.of(Objects.requireNonNull(greengrassGroupId));
+            this.greengrassGroupId = Output.of(Objects.requireNonNull(greengrassGroupId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<RobotTagsArgs> tags) {
+        public Builder tags(@Nullable Output<RobotTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable RobotTagsArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RobotArgs build() {

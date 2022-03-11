@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
      * 
      */
     @InputImport(name="azureAvailabilityZone", required=true)
-      private final Input<String> azureAvailabilityZone;
+      private final Output<String> azureAvailabilityZone;
 
-    public Input<String> getAzureAvailabilityZone() {
+    public Output<String> getAzureAvailabilityZone() {
         return this.azureAvailabilityZone;
     }
 
@@ -29,22 +29,22 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public AzureClusterControlPlaneReplicaPlacementGetArgs(
-        Input<String> azureAvailabilityZone,
-        Input<String> subnetId) {
+        Output<String> azureAvailabilityZone,
+        Output<String> subnetId) {
         this.azureAvailabilityZone = Objects.requireNonNull(azureAvailabilityZone, "expected parameter 'azureAvailabilityZone' to be non-null");
         this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
     }
 
     private AzureClusterControlPlaneReplicaPlacementGetArgs() {
-        this.azureAvailabilityZone = Input.empty();
-        this.subnetId = Input.empty();
+        this.azureAvailabilityZone = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<String> azureAvailabilityZone;
-        private Input<String> subnetId;
+        private Output<String> azureAvailabilityZone;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder azureAvailabilityZone(Input<String> azureAvailabilityZone) {
+        public Builder azureAvailabilityZone(Output<String> azureAvailabilityZone) {
             this.azureAvailabilityZone = Objects.requireNonNull(azureAvailabilityZone);
             return this;
         }
 
         public Builder azureAvailabilityZone(String azureAvailabilityZone) {
-            this.azureAvailabilityZone = Input.of(Objects.requireNonNull(azureAvailabilityZone));
+            this.azureAvailabilityZone = Output.of(Objects.requireNonNull(azureAvailabilityZone));
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public AzureClusterControlPlaneReplicaPlacementGetArgs build() {

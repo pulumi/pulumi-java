@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tpu.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class NodeNetworkEndpointArgs extends io.pulumi.resources.ResourceA
     public static final NodeNetworkEndpointArgs Empty = new NodeNetworkEndpointArgs();
 
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public NodeNetworkEndpointArgs(
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<Integer> port) {
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<Integer> port) {
         this.ipAddress = ipAddress;
         this.port = port;
     }
 
     private NodeNetworkEndpointArgs() {
-        this.ipAddress = Input.empty();
-        this.port = Input.empty();
+        this.ipAddress = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class NodeNetworkEndpointArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<Integer> port;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class NodeNetworkEndpointArgs extends io.pulumi.resources.ResourceA
     	      this.port = defaults.port;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public NodeNetworkEndpointArgs build() {

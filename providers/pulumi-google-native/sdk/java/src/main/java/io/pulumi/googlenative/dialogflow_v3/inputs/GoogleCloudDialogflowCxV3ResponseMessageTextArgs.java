@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextArgs extends io.p
      * 
      */
     @InputImport(name="text", required=true)
-      private final Input<List<String>> text;
+      private final Output<List<String>> text;
 
-    public Input<List<String>> getText() {
+    public Output<List<String>> getText() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowCxV3ResponseMessageTextArgs(Input<List<String>> text) {
+    public GoogleCloudDialogflowCxV3ResponseMessageTextArgs(Output<List<String>> text) {
         this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
     }
 
     private GoogleCloudDialogflowCxV3ResponseMessageTextArgs() {
-        this.text = Input.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<List<String>> text;
+        private Output<List<String>> text;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextArgs extends io.p
     	      this.text = defaults.text;
         }
 
-        public Builder text(Input<List<String>> text) {
+        public Builder text(Output<List<String>> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
         public Builder text(List<String> text) {
-            this.text = Input.of(Objects.requireNonNull(text));
+            this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
         public GoogleCloudDialogflowCxV3ResponseMessageTextArgs build() {

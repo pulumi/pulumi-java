@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.ServerBindingType;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ServerBindingArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServerBindingArgs Empty = new ServerBindingArgs();
 
     @InputImport(name="type")
-      private final @Nullable Input<ServerBindingType> type;
+      private final @Nullable Output<ServerBindingType> type;
 
-    public Input<ServerBindingType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ServerBindingType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public ServerBindingArgs(@Nullable Input<ServerBindingType> type) {
+    public ServerBindingArgs(@Nullable Output<ServerBindingType> type) {
         this.type = type;
     }
 
     private ServerBindingArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ServerBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ServerBindingType> type;
+        private @Nullable Output<ServerBindingType> type;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ServerBindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<ServerBindingType> type) {
+        public Builder type(@Nullable Output<ServerBindingType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ServerBindingType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ServerBindingArgs build() {

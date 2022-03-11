@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="companyName")
-      private final @Nullable Input<String> companyName;
+      private final @Nullable Output<String> companyName;
 
-    public Input<String> getCompanyName() {
-        return this.companyName == null ? Input.empty() : this.companyName;
+    public Output<String> getCompanyName() {
+        return this.companyName == null ? Output.empty() : this.companyName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enterpriseAppId")
-      private final @Nullable Input<String> enterpriseAppId;
+      private final @Nullable Output<String> enterpriseAppId;
 
-    public Input<String> getEnterpriseAppId() {
-        return this.enterpriseAppId == null ? Input.empty() : this.enterpriseAppId;
+    public Output<String> getEnterpriseAppId() {
+        return this.enterpriseAppId == null ? Output.empty() : this.enterpriseAppId;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="singleSignOnUrl")
-      private final @Nullable Input<String> singleSignOnUrl;
+      private final @Nullable Output<String> singleSignOnUrl;
 
-    public Input<String> getSingleSignOnUrl() {
-        return this.singleSignOnUrl == null ? Input.empty() : this.singleSignOnUrl;
+    public Output<String> getSingleSignOnUrl() {
+        return this.singleSignOnUrl == null ? Output.empty() : this.singleSignOnUrl;
     }
 
     public LogzOrganizationPropertiesArgs(
-        @Nullable Input<String> companyName,
-        @Nullable Input<String> enterpriseAppId,
-        @Nullable Input<String> singleSignOnUrl) {
+        @Nullable Output<String> companyName,
+        @Nullable Output<String> enterpriseAppId,
+        @Nullable Output<String> singleSignOnUrl) {
         this.companyName = companyName;
         this.enterpriseAppId = enterpriseAppId;
         this.singleSignOnUrl = singleSignOnUrl;
     }
 
     private LogzOrganizationPropertiesArgs() {
-        this.companyName = Input.empty();
-        this.enterpriseAppId = Input.empty();
-        this.singleSignOnUrl = Input.empty();
+        this.companyName = Output.empty();
+        this.enterpriseAppId = Output.empty();
+        this.singleSignOnUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> companyName;
-        private @Nullable Input<String> enterpriseAppId;
-        private @Nullable Input<String> singleSignOnUrl;
+        private @Nullable Output<String> companyName;
+        private @Nullable Output<String> enterpriseAppId;
+        private @Nullable Output<String> singleSignOnUrl;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
     	      this.singleSignOnUrl = defaults.singleSignOnUrl;
         }
 
-        public Builder companyName(@Nullable Input<String> companyName) {
+        public Builder companyName(@Nullable Output<String> companyName) {
             this.companyName = companyName;
             return this;
         }
 
         public Builder companyName(@Nullable String companyName) {
-            this.companyName = Input.ofNullable(companyName);
+            this.companyName = Output.ofNullable(companyName);
             return this;
         }
 
-        public Builder enterpriseAppId(@Nullable Input<String> enterpriseAppId) {
+        public Builder enterpriseAppId(@Nullable Output<String> enterpriseAppId) {
             this.enterpriseAppId = enterpriseAppId;
             return this;
         }
 
         public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
-            this.enterpriseAppId = Input.ofNullable(enterpriseAppId);
+            this.enterpriseAppId = Output.ofNullable(enterpriseAppId);
             return this;
         }
 
-        public Builder singleSignOnUrl(@Nullable Input<String> singleSignOnUrl) {
+        public Builder singleSignOnUrl(@Nullable Output<String> singleSignOnUrl) {
             this.singleSignOnUrl = singleSignOnUrl;
             return this;
         }
 
         public Builder singleSignOnUrl(@Nullable String singleSignOnUrl) {
-            this.singleSignOnUrl = Input.ofNullable(singleSignOnUrl);
+            this.singleSignOnUrl = Output.ofNullable(singleSignOnUrl);
             return this;
         }
         public LogzOrganizationPropertiesArgs build() {

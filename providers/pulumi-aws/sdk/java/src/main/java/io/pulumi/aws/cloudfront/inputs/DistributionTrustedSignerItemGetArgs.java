@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="awsAccountNumber")
-      private final @Nullable Input<String> awsAccountNumber;
+      private final @Nullable Output<String> awsAccountNumber;
 
-    public Input<String> getAwsAccountNumber() {
-        return this.awsAccountNumber == null ? Input.empty() : this.awsAccountNumber;
+    public Output<String> getAwsAccountNumber() {
+        return this.awsAccountNumber == null ? Output.empty() : this.awsAccountNumber;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="keyPairIds")
-      private final @Nullable Input<List<String>> keyPairIds;
+      private final @Nullable Output<List<String>> keyPairIds;
 
-    public Input<List<String>> getKeyPairIds() {
-        return this.keyPairIds == null ? Input.empty() : this.keyPairIds;
+    public Output<List<String>> getKeyPairIds() {
+        return this.keyPairIds == null ? Output.empty() : this.keyPairIds;
     }
 
     public DistributionTrustedSignerItemGetArgs(
-        @Nullable Input<String> awsAccountNumber,
-        @Nullable Input<List<String>> keyPairIds) {
+        @Nullable Output<String> awsAccountNumber,
+        @Nullable Output<List<String>> keyPairIds) {
         this.awsAccountNumber = awsAccountNumber;
         this.keyPairIds = keyPairIds;
     }
 
     private DistributionTrustedSignerItemGetArgs() {
-        this.awsAccountNumber = Input.empty();
-        this.keyPairIds = Input.empty();
+        this.awsAccountNumber = Output.empty();
+        this.keyPairIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> awsAccountNumber;
-        private @Nullable Input<List<String>> keyPairIds;
+        private @Nullable Output<String> awsAccountNumber;
+        private @Nullable Output<List<String>> keyPairIds;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
     	      this.keyPairIds = defaults.keyPairIds;
         }
 
-        public Builder awsAccountNumber(@Nullable Input<String> awsAccountNumber) {
+        public Builder awsAccountNumber(@Nullable Output<String> awsAccountNumber) {
             this.awsAccountNumber = awsAccountNumber;
             return this;
         }
 
         public Builder awsAccountNumber(@Nullable String awsAccountNumber) {
-            this.awsAccountNumber = Input.ofNullable(awsAccountNumber);
+            this.awsAccountNumber = Output.ofNullable(awsAccountNumber);
             return this;
         }
 
-        public Builder keyPairIds(@Nullable Input<List<String>> keyPairIds) {
+        public Builder keyPairIds(@Nullable Output<List<String>> keyPairIds) {
             this.keyPairIds = keyPairIds;
             return this;
         }
 
         public Builder keyPairIds(@Nullable List<String> keyPairIds) {
-            this.keyPairIds = Input.ofNullable(keyPairIds);
+            this.keyPairIds = Output.ofNullable(keyPairIds);
             return this;
         }
         public DistributionTrustedSignerItemGetArgs build() {

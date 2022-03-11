@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterArn")
-      private final @Nullable Input<String> clusterArn;
+      private final @Nullable Output<String> clusterArn;
 
-    public Input<String> getClusterArn() {
-        return this.clusterArn == null ? Input.empty() : this.clusterArn;
+    public Output<String> getClusterArn() {
+        return this.clusterArn == null ? Output.empty() : this.clusterArn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultControlPanel")
-      private final @Nullable Input<Boolean> defaultControlPanel;
+      private final @Nullable Output<Boolean> defaultControlPanel;
 
-    public Input<Boolean> getDefaultControlPanel() {
-        return this.defaultControlPanel == null ? Input.empty() : this.defaultControlPanel;
+    public Output<Boolean> getDefaultControlPanel() {
+        return this.defaultControlPanel == null ? Output.empty() : this.defaultControlPanel;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingControlCount")
-      private final @Nullable Input<Integer> routingControlCount;
+      private final @Nullable Output<Integer> routingControlCount;
 
-    public Input<Integer> getRoutingControlCount() {
-        return this.routingControlCount == null ? Input.empty() : this.routingControlCount;
+    public Output<Integer> getRoutingControlCount() {
+        return this.routingControlCount == null ? Output.empty() : this.routingControlCount;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public ControlPanelState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> clusterArn,
-        @Nullable Input<Boolean> defaultControlPanel,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> routingControlCount,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> clusterArn,
+        @Nullable Output<Boolean> defaultControlPanel,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> routingControlCount,
+        @Nullable Output<String> status) {
         this.arn = arn;
         this.clusterArn = clusterArn;
         this.defaultControlPanel = defaultControlPanel;
@@ -98,12 +98,12 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ControlPanelState() {
-        this.arn = Input.empty();
-        this.clusterArn = Input.empty();
-        this.defaultControlPanel = Input.empty();
-        this.name = Input.empty();
-        this.routingControlCount = Input.empty();
-        this.status = Input.empty();
+        this.arn = Output.empty();
+        this.clusterArn = Output.empty();
+        this.defaultControlPanel = Output.empty();
+        this.name = Output.empty();
+        this.routingControlCount = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> clusterArn;
-        private @Nullable Input<Boolean> defaultControlPanel;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> routingControlCount;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> clusterArn;
+        private @Nullable Output<Boolean> defaultControlPanel;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> routingControlCount;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder clusterArn(@Nullable Input<String> clusterArn) {
+        public Builder clusterArn(@Nullable Output<String> clusterArn) {
             this.clusterArn = clusterArn;
             return this;
         }
 
         public Builder clusterArn(@Nullable String clusterArn) {
-            this.clusterArn = Input.ofNullable(clusterArn);
+            this.clusterArn = Output.ofNullable(clusterArn);
             return this;
         }
 
-        public Builder defaultControlPanel(@Nullable Input<Boolean> defaultControlPanel) {
+        public Builder defaultControlPanel(@Nullable Output<Boolean> defaultControlPanel) {
             this.defaultControlPanel = defaultControlPanel;
             return this;
         }
 
         public Builder defaultControlPanel(@Nullable Boolean defaultControlPanel) {
-            this.defaultControlPanel = Input.ofNullable(defaultControlPanel);
+            this.defaultControlPanel = Output.ofNullable(defaultControlPanel);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder routingControlCount(@Nullable Input<Integer> routingControlCount) {
+        public Builder routingControlCount(@Nullable Output<Integer> routingControlCount) {
             this.routingControlCount = routingControlCount;
             return this;
         }
 
         public Builder routingControlCount(@Nullable Integer routingControlCount) {
-            this.routingControlCount = Input.ofNullable(routingControlCount);
+            this.routingControlCount = Output.ofNullable(routingControlCount);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public ControlPanelState build() {

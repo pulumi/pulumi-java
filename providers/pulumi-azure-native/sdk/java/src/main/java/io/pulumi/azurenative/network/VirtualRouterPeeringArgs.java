@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="peerAsn")
-      private final @Nullable Input<Double> peerAsn;
+      private final @Nullable Output<Double> peerAsn;
 
-    public Input<Double> getPeerAsn() {
-        return this.peerAsn == null ? Input.empty() : this.peerAsn;
+    public Output<Double> getPeerAsn() {
+        return this.peerAsn == null ? Output.empty() : this.peerAsn;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="peerIp")
-      private final @Nullable Input<String> peerIp;
+      private final @Nullable Output<String> peerIp;
 
-    public Input<String> getPeerIp() {
-        return this.peerIp == null ? Input.empty() : this.peerIp;
+    public Output<String> getPeerIp() {
+        return this.peerIp == null ? Output.empty() : this.peerIp;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="peeringName")
-      private final @Nullable Input<String> peeringName;
+      private final @Nullable Output<String> peeringName;
 
-    public Input<String> getPeeringName() {
-        return this.peeringName == null ? Input.empty() : this.peeringName;
+    public Output<String> getPeeringName() {
+        return this.peeringName == null ? Output.empty() : this.peeringName;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -86,20 +86,20 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="virtualRouterName", required=true)
-      private final Input<String> virtualRouterName;
+      private final Output<String> virtualRouterName;
 
-    public Input<String> getVirtualRouterName() {
+    public Output<String> getVirtualRouterName() {
         return this.virtualRouterName;
     }
 
     public VirtualRouterPeeringArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<Double> peerAsn,
-        @Nullable Input<String> peerIp,
-        @Nullable Input<String> peeringName,
-        Input<String> resourceGroupName,
-        Input<String> virtualRouterName) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<Double> peerAsn,
+        @Nullable Output<String> peerIp,
+        @Nullable Output<String> peeringName,
+        Output<String> resourceGroupName,
+        Output<String> virtualRouterName) {
         this.id = id;
         this.name = name;
         this.peerAsn = peerAsn;
@@ -110,13 +110,13 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     }
 
     private VirtualRouterPeeringArgs() {
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.peerAsn = Input.empty();
-        this.peerIp = Input.empty();
-        this.peeringName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.virtualRouterName = Input.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.peerAsn = Output.empty();
+        this.peerIp = Output.empty();
+        this.peeringName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.virtualRouterName = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Double> peerAsn;
-        private @Nullable Input<String> peerIp;
-        private @Nullable Input<String> peeringName;
-        private Input<String> resourceGroupName;
-        private Input<String> virtualRouterName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Double> peerAsn;
+        private @Nullable Output<String> peerIp;
+        private @Nullable Output<String> peeringName;
+        private Output<String> resourceGroupName;
+        private Output<String> virtualRouterName;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     	      this.virtualRouterName = defaults.virtualRouterName;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder peerAsn(@Nullable Input<Double> peerAsn) {
+        public Builder peerAsn(@Nullable Output<Double> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
         public Builder peerAsn(@Nullable Double peerAsn) {
-            this.peerAsn = Input.ofNullable(peerAsn);
+            this.peerAsn = Output.ofNullable(peerAsn);
             return this;
         }
 
-        public Builder peerIp(@Nullable Input<String> peerIp) {
+        public Builder peerIp(@Nullable Output<String> peerIp) {
             this.peerIp = peerIp;
             return this;
         }
 
         public Builder peerIp(@Nullable String peerIp) {
-            this.peerIp = Input.ofNullable(peerIp);
+            this.peerIp = Output.ofNullable(peerIp);
             return this;
         }
 
-        public Builder peeringName(@Nullable Input<String> peeringName) {
+        public Builder peeringName(@Nullable Output<String> peeringName) {
             this.peeringName = peeringName;
             return this;
         }
 
         public Builder peeringName(@Nullable String peeringName) {
-            this.peeringName = Input.ofNullable(peeringName);
+            this.peeringName = Output.ofNullable(peeringName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder virtualRouterName(Input<String> virtualRouterName) {
+        public Builder virtualRouterName(Output<String> virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }
 
         public Builder virtualRouterName(String virtualRouterName) {
-            this.virtualRouterName = Input.of(Objects.requireNonNull(virtualRouterName));
+            this.virtualRouterName = Output.of(Objects.requireNonNull(virtualRouterName));
             return this;
         }
         public VirtualRouterPeeringArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.codegurureviewer;
 
 import io.pulumi.awsnative.codegurureviewer.enums.RepositoryAssociationType;
 import io.pulumi.awsnative.codegurureviewer.inputs.RepositoryAssociationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bucketName")
-      private final @Nullable Input<String> bucketName;
+      private final @Nullable Output<String> bucketName;
 
-    public Input<String> getBucketName() {
-        return this.bucketName == null ? Input.empty() : this.bucketName;
+    public Output<String> getBucketName() {
+        return this.bucketName == null ? Output.empty() : this.bucketName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionArn")
-      private final @Nullable Input<String> connectionArn;
+      private final @Nullable Output<String> connectionArn;
 
-    public Input<String> getConnectionArn() {
-        return this.connectionArn == null ? Input.empty() : this.connectionArn;
+    public Output<String> getConnectionArn() {
+        return this.connectionArn == null ? Output.empty() : this.connectionArn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<RepositoryAssociationTagArgs>> tags;
+      private final @Nullable Output<List<RepositoryAssociationTagArgs>> tags;
 
-    public Input<List<RepositoryAssociationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<RepositoryAssociationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<RepositoryAssociationType> type;
+      private final Output<RepositoryAssociationType> type;
 
-    public Input<RepositoryAssociationType> getType() {
+    public Output<RepositoryAssociationType> getType() {
         return this.type;
     }
 
     public RepositoryAssociationArgs(
-        @Nullable Input<String> bucketName,
-        @Nullable Input<String> connectionArn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> owner,
-        @Nullable Input<List<RepositoryAssociationTagArgs>> tags,
-        Input<RepositoryAssociationType> type) {
+        @Nullable Output<String> bucketName,
+        @Nullable Output<String> connectionArn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> owner,
+        @Nullable Output<List<RepositoryAssociationTagArgs>> tags,
+        Output<RepositoryAssociationType> type) {
         this.bucketName = bucketName;
         this.connectionArn = connectionArn;
         this.name = name;
@@ -99,12 +99,12 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     private RepositoryAssociationArgs() {
-        this.bucketName = Input.empty();
-        this.connectionArn = Input.empty();
-        this.name = Input.empty();
-        this.owner = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.bucketName = Output.empty();
+        this.connectionArn = Output.empty();
+        this.name = Output.empty();
+        this.owner = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketName;
-        private @Nullable Input<String> connectionArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<List<RepositoryAssociationTagArgs>> tags;
-        private Input<RepositoryAssociationType> type;
+        private @Nullable Output<String> bucketName;
+        private @Nullable Output<String> connectionArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<List<RepositoryAssociationTagArgs>> tags;
+        private Output<RepositoryAssociationType> type;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder bucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Output<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Input.ofNullable(bucketName);
+            this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
 
-        public Builder connectionArn(@Nullable Input<String> connectionArn) {
+        public Builder connectionArn(@Nullable Output<String> connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
 
         public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Input.ofNullable(connectionArn);
+            this.connectionArn = Output.ofNullable(connectionArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<RepositoryAssociationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<RepositoryAssociationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<RepositoryAssociationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<RepositoryAssociationType> type) {
+        public Builder type(Output<RepositoryAssociationType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(RepositoryAssociationType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RepositoryAssociationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.aws.servicecatalog.inputs.ServiceActionDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition", required=true)
-      private final Input<ServiceActionDefinitionArgs> definition;
+      private final Output<ServiceActionDefinitionArgs> definition;
 
-    public Input<ServiceActionDefinitionArgs> getDefinition() {
+    public Output<ServiceActionDefinitionArgs> getDefinition() {
         return this.definition;
     }
 
@@ -42,10 +42,10 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ServiceActionArgs(
-        @Nullable Input<String> acceptLanguage,
-        Input<ServiceActionDefinitionArgs> definition,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> acceptLanguage,
+        Output<ServiceActionDefinitionArgs> definition,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name) {
         this.acceptLanguage = acceptLanguage;
         this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
         this.description = description;
@@ -71,10 +71,10 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceActionArgs() {
-        this.acceptLanguage = Input.empty();
-        this.definition = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.definition = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private Input<ServiceActionDefinitionArgs> definition;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> acceptLanguage;
+        private Output<ServiceActionDefinitionArgs> definition;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder definition(Input<ServiceActionDefinitionArgs> definition) {
+        public Builder definition(Output<ServiceActionDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
         public Builder definition(ServiceActionDefinitionArgs definition) {
-            this.definition = Input.of(Objects.requireNonNull(definition));
+            this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ServiceActionArgs build() {

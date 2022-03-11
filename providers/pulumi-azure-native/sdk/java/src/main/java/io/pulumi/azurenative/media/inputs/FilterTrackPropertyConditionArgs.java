@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.FilterTrackPropertyCompareOperation;
 import io.pulumi.azurenative.media.enums.FilterTrackPropertyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="operation", required=true)
-      private final Input<Either<String,FilterTrackPropertyCompareOperation>> operation;
+      private final Output<Either<String,FilterTrackPropertyCompareOperation>> operation;
 
-    public Input<Either<String,FilterTrackPropertyCompareOperation>> getOperation() {
+    public Output<Either<String,FilterTrackPropertyCompareOperation>> getOperation() {
         return this.operation;
     }
 
@@ -36,9 +36,9 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="property", required=true)
-      private final Input<Either<String,FilterTrackPropertyType>> property;
+      private final Output<Either<String,FilterTrackPropertyType>> property;
 
-    public Input<Either<String,FilterTrackPropertyType>> getProperty() {
+    public Output<Either<String,FilterTrackPropertyType>> getProperty() {
         return this.property;
     }
 
@@ -47,25 +47,25 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public FilterTrackPropertyConditionArgs(
-        Input<Either<String,FilterTrackPropertyCompareOperation>> operation,
-        Input<Either<String,FilterTrackPropertyType>> property,
-        Input<String> value) {
+        Output<Either<String,FilterTrackPropertyCompareOperation>> operation,
+        Output<Either<String,FilterTrackPropertyType>> property,
+        Output<String> value) {
         this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
         this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private FilterTrackPropertyConditionArgs() {
-        this.operation = Input.empty();
-        this.property = Input.empty();
-        this.value = Input.empty();
+        this.operation = Output.empty();
+        this.property = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Either<String,FilterTrackPropertyCompareOperation>> operation;
-        private Input<Either<String,FilterTrackPropertyType>> property;
-        private Input<String> value;
+        private Output<Either<String,FilterTrackPropertyCompareOperation>> operation;
+        private Output<Either<String,FilterTrackPropertyType>> property;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder operation(Input<Either<String,FilterTrackPropertyCompareOperation>> operation) {
+        public Builder operation(Output<Either<String,FilterTrackPropertyCompareOperation>> operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
         public Builder operation(Either<String,FilterTrackPropertyCompareOperation> operation) {
-            this.operation = Input.of(Objects.requireNonNull(operation));
+            this.operation = Output.of(Objects.requireNonNull(operation));
             return this;
         }
 
-        public Builder property(Input<Either<String,FilterTrackPropertyType>> property) {
+        public Builder property(Output<Either<String,FilterTrackPropertyType>> property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
         public Builder property(Either<String,FilterTrackPropertyType> property) {
-            this.property = Input.of(Objects.requireNonNull(property));
+            this.property = Output.of(Objects.requireNonNull(property));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public FilterTrackPropertyConditionArgs build() {

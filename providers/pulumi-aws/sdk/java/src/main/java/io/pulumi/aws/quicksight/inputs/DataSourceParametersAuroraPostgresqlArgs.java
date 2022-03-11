@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class DataSourceParametersAuroraPostgresqlArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<String> database;
+      private final Output<String> database;
 
-    public Input<String> getDatabase() {
+    public Output<String> getDatabase() {
         return this.database;
     }
 
@@ -30,9 +30,9 @@ public final class DataSourceParametersAuroraPostgresqlArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
@@ -41,25 +41,25 @@ public final class DataSourceParametersAuroraPostgresqlArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
     public DataSourceParametersAuroraPostgresqlArgs(
-        Input<String> database,
-        Input<String> host,
-        Input<Integer> port) {
+        Output<String> database,
+        Output<String> host,
+        Output<Integer> port) {
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private DataSourceParametersAuroraPostgresqlArgs() {
-        this.database = Input.empty();
-        this.host = Input.empty();
-        this.port = Input.empty();
+        this.database = Output.empty();
+        this.host = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DataSourceParametersAuroraPostgresqlArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> database;
-        private Input<String> host;
-        private Input<Integer> port;
+        private Output<String> database;
+        private Output<String> host;
+        private Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DataSourceParametersAuroraPostgresqlArgs extends io.pulumi.re
     	      this.port = defaults.port;
         }
 
-        public Builder database(Input<String> database) {
+        public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(String database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public DataSourceParametersAuroraPostgresqlArgs build() {

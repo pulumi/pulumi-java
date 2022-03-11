@@ -3,7 +3,7 @@
 
 package io.pulumi.docker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.Utilities;
 import io.pulumi.docker.inputs.ProviderRegistryAuthArgs;
@@ -22,10 +22,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caMaterial")
-      private final @Nullable Input<String> caMaterial;
+      private final @Nullable Output<String> caMaterial;
 
-    public Input<String> getCaMaterial() {
-        return this.caMaterial == null ? Input.empty() : this.caMaterial;
+    public Output<String> getCaMaterial() {
+        return this.caMaterial == null ? Output.empty() : this.caMaterial;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certMaterial")
-      private final @Nullable Input<String> certMaterial;
+      private final @Nullable Output<String> certMaterial;
 
-    public Input<String> getCertMaterial() {
-        return this.certMaterial == null ? Input.empty() : this.certMaterial;
+    public Output<String> getCertMaterial() {
+        return this.certMaterial == null ? Output.empty() : this.certMaterial;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certPath")
-      private final @Nullable Input<String> certPath;
+      private final @Nullable Output<String> certPath;
 
-    public Input<String> getCertPath() {
-        return this.certPath == null ? Input.empty() : this.certPath;
+    public Output<String> getCertPath() {
+        return this.certPath == null ? Output.empty() : this.certPath;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -66,41 +66,41 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyMaterial")
-      private final @Nullable Input<String> keyMaterial;
+      private final @Nullable Output<String> keyMaterial;
 
-    public Input<String> getKeyMaterial() {
-        return this.keyMaterial == null ? Input.empty() : this.keyMaterial;
+    public Output<String> getKeyMaterial() {
+        return this.keyMaterial == null ? Output.empty() : this.keyMaterial;
     }
 
     @InputImport(name="registryAuth", json=true)
-      private final @Nullable Input<List<ProviderRegistryAuthArgs>> registryAuth;
+      private final @Nullable Output<List<ProviderRegistryAuthArgs>> registryAuth;
 
-    public Input<List<ProviderRegistryAuthArgs>> getRegistryAuth() {
-        return this.registryAuth == null ? Input.empty() : this.registryAuth;
+    public Output<List<ProviderRegistryAuthArgs>> getRegistryAuth() {
+        return this.registryAuth == null ? Output.empty() : this.registryAuth;
     }
 
     public ProviderArgs(
-        @Nullable Input<String> caMaterial,
-        @Nullable Input<String> certMaterial,
-        @Nullable Input<String> certPath,
-        @Nullable Input<String> host,
-        @Nullable Input<String> keyMaterial,
-        @Nullable Input<List<ProviderRegistryAuthArgs>> registryAuth) {
+        @Nullable Output<String> caMaterial,
+        @Nullable Output<String> certMaterial,
+        @Nullable Output<String> certPath,
+        @Nullable Output<String> host,
+        @Nullable Output<String> keyMaterial,
+        @Nullable Output<List<ProviderRegistryAuthArgs>> registryAuth) {
         this.caMaterial = caMaterial;
         this.certMaterial = certMaterial;
         this.certPath = certPath;
-        this.host = host == null ? Input.ofNullable(Utilities.getEnv("DOCKER_HOST").orElse(null) == null ? "unix:///var/run/docker.sock" : Utilities.getEnv("DOCKER_HOST").orElse(null)) : host;
+        this.host = host == null ? Output.ofNullable(Utilities.getEnv("DOCKER_HOST").orElse(null) == null ? "unix:///var/run/docker.sock" : Utilities.getEnv("DOCKER_HOST").orElse(null)) : host;
         this.keyMaterial = keyMaterial;
         this.registryAuth = registryAuth;
     }
 
     private ProviderArgs() {
-        this.caMaterial = Input.empty();
-        this.certMaterial = Input.empty();
-        this.certPath = Input.empty();
-        this.host = Input.empty();
-        this.keyMaterial = Input.empty();
-        this.registryAuth = Input.empty();
+        this.caMaterial = Output.empty();
+        this.certMaterial = Output.empty();
+        this.certPath = Output.empty();
+        this.host = Output.empty();
+        this.keyMaterial = Output.empty();
+        this.registryAuth = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,12 +112,12 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> caMaterial;
-        private @Nullable Input<String> certMaterial;
-        private @Nullable Input<String> certPath;
-        private @Nullable Input<String> host;
-        private @Nullable Input<String> keyMaterial;
-        private @Nullable Input<List<ProviderRegistryAuthArgs>> registryAuth;
+        private @Nullable Output<String> caMaterial;
+        private @Nullable Output<String> certMaterial;
+        private @Nullable Output<String> certPath;
+        private @Nullable Output<String> host;
+        private @Nullable Output<String> keyMaterial;
+        private @Nullable Output<List<ProviderRegistryAuthArgs>> registryAuth;
 
         public Builder() {
     	      // Empty
@@ -133,63 +133,63 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registryAuth = defaults.registryAuth;
         }
 
-        public Builder caMaterial(@Nullable Input<String> caMaterial) {
+        public Builder caMaterial(@Nullable Output<String> caMaterial) {
             this.caMaterial = caMaterial;
             return this;
         }
 
         public Builder caMaterial(@Nullable String caMaterial) {
-            this.caMaterial = Input.ofNullable(caMaterial);
+            this.caMaterial = Output.ofNullable(caMaterial);
             return this;
         }
 
-        public Builder certMaterial(@Nullable Input<String> certMaterial) {
+        public Builder certMaterial(@Nullable Output<String> certMaterial) {
             this.certMaterial = certMaterial;
             return this;
         }
 
         public Builder certMaterial(@Nullable String certMaterial) {
-            this.certMaterial = Input.ofNullable(certMaterial);
+            this.certMaterial = Output.ofNullable(certMaterial);
             return this;
         }
 
-        public Builder certPath(@Nullable Input<String> certPath) {
+        public Builder certPath(@Nullable Output<String> certPath) {
             this.certPath = certPath;
             return this;
         }
 
         public Builder certPath(@Nullable String certPath) {
-            this.certPath = Input.ofNullable(certPath);
+            this.certPath = Output.ofNullable(certPath);
             return this;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder keyMaterial(@Nullable Input<String> keyMaterial) {
+        public Builder keyMaterial(@Nullable Output<String> keyMaterial) {
             this.keyMaterial = keyMaterial;
             return this;
         }
 
         public Builder keyMaterial(@Nullable String keyMaterial) {
-            this.keyMaterial = Input.ofNullable(keyMaterial);
+            this.keyMaterial = Output.ofNullable(keyMaterial);
             return this;
         }
 
-        public Builder registryAuth(@Nullable Input<List<ProviderRegistryAuthArgs>> registryAuth) {
+        public Builder registryAuth(@Nullable Output<List<ProviderRegistryAuthArgs>> registryAuth) {
             this.registryAuth = registryAuth;
             return this;
         }
 
         public Builder registryAuth(@Nullable List<ProviderRegistryAuthArgs> registryAuth) {
-            this.registryAuth = Input.ofNullable(registryAuth);
+            this.registryAuth = Output.ofNullable(registryAuth);
             return this;
         }
         public ProviderArgs build() {

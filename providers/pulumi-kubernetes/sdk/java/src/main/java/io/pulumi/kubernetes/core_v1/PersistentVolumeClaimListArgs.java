@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
@@ -22,10 +22,10 @@ public final class PersistentVolumeClaimListArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class PersistentVolumeClaimListArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="items", required=true)
-      private final Input<List<PersistentVolumeClaimArgs>> items;
+      private final Output<List<PersistentVolumeClaimArgs>> items;
 
-    public Input<List<PersistentVolumeClaimArgs>> getItems() {
+    public Output<List<PersistentVolumeClaimArgs>> getItems() {
         return this.items;
     }
 
@@ -44,10 +44,10 @@ public final class PersistentVolumeClaimListArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class PersistentVolumeClaimListArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ListMetaArgs> metadata;
+      private final @Nullable Output<ListMetaArgs> metadata;
 
-    public Input<ListMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ListMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     public PersistentVolumeClaimListArgs(
-        @Nullable Input<String> apiVersion,
-        Input<List<PersistentVolumeClaimArgs>> items,
-        @Nullable Input<String> kind,
-        @Nullable Input<ListMetaArgs> metadata) {
+        @Nullable Output<String> apiVersion,
+        Output<List<PersistentVolumeClaimArgs>> items,
+        @Nullable Output<String> kind,
+        @Nullable Output<ListMetaArgs> metadata) {
         this.apiVersion = apiVersion;
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
         this.kind = kind;
@@ -73,10 +73,10 @@ public final class PersistentVolumeClaimListArgs extends io.pulumi.resources.Res
     }
 
     private PersistentVolumeClaimListArgs() {
-        this.apiVersion = Input.empty();
-        this.items = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
+        this.apiVersion = Output.empty();
+        this.items = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class PersistentVolumeClaimListArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private Input<List<PersistentVolumeClaimArgs>> items;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ListMetaArgs> metadata;
+        private @Nullable Output<String> apiVersion;
+        private Output<List<PersistentVolumeClaimArgs>> items;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ListMetaArgs> metadata;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class PersistentVolumeClaimListArgs extends io.pulumi.resources.Res
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder items(Input<List<PersistentVolumeClaimArgs>> items) {
+        public Builder items(Output<List<PersistentVolumeClaimArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(List<PersistentVolumeClaimArgs> items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ListMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ListMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
         public PersistentVolumeClaimListArgs build() {

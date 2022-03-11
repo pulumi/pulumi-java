@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.ContainerNetworkInterfaceConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerNetworkInterfaceConfigurations")
-      private final @Nullable Input<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
+      private final @Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
 
-    public Input<List<ContainerNetworkInterfaceConfigurationArgs>> getContainerNetworkInterfaceConfigurations() {
-        return this.containerNetworkInterfaceConfigurations == null ? Input.empty() : this.containerNetworkInterfaceConfigurations;
+    public Output<List<ContainerNetworkInterfaceConfigurationArgs>> getContainerNetworkInterfaceConfigurations() {
+        return this.containerNetworkInterfaceConfigurations == null ? Output.empty() : this.containerNetworkInterfaceConfigurations;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfileName")
-      private final @Nullable Input<String> networkProfileName;
+      private final @Nullable Output<String> networkProfileName;
 
-    public Input<String> getNetworkProfileName() {
-        return this.networkProfileName == null ? Input.empty() : this.networkProfileName;
+    public Output<String> getNetworkProfileName() {
+        return this.networkProfileName == null ? Output.empty() : this.networkProfileName;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,19 +77,19 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NetworkProfileArgs(
-        @Nullable Input<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<String> networkProfileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<String> networkProfileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.containerNetworkInterfaceConfigurations = containerNetworkInterfaceConfigurations;
         this.id = id;
         this.location = location;
@@ -99,12 +99,12 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkProfileArgs() {
-        this.containerNetworkInterfaceConfigurations = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.networkProfileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.containerNetworkInterfaceConfigurations = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.networkProfileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> networkProfileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> networkProfileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder containerNetworkInterfaceConfigurations(@Nullable Input<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations) {
+        public Builder containerNetworkInterfaceConfigurations(@Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations) {
             this.containerNetworkInterfaceConfigurations = containerNetworkInterfaceConfigurations;
             return this;
         }
 
         public Builder containerNetworkInterfaceConfigurations(@Nullable List<ContainerNetworkInterfaceConfigurationArgs> containerNetworkInterfaceConfigurations) {
-            this.containerNetworkInterfaceConfigurations = Input.ofNullable(containerNetworkInterfaceConfigurations);
+            this.containerNetworkInterfaceConfigurations = Output.ofNullable(containerNetworkInterfaceConfigurations);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkProfileName(@Nullable Input<String> networkProfileName) {
+        public Builder networkProfileName(@Nullable Output<String> networkProfileName) {
             this.networkProfileName = networkProfileName;
             return this;
         }
 
         public Builder networkProfileName(@Nullable String networkProfileName) {
-            this.networkProfileName = Input.ofNullable(networkProfileName);
+            this.networkProfileName = Output.ofNullable(networkProfileName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NetworkProfileArgs build() {

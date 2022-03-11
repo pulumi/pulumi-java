@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteTableArgs;
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteTableV2Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -26,10 +26,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressPrefix")
-      private final @Nullable Input<String> addressPrefix;
+      private final @Nullable Output<String> addressPrefix;
 
-    public Input<String> getAddressPrefix() {
-        return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
+    public Output<String> getAddressPrefix() {
+        return this.addressPrefix == null ? Output.empty() : this.addressPrefix;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowBranchToBranchTraffic")
-      private final @Nullable Input<Boolean> allowBranchToBranchTraffic;
+      private final @Nullable Output<Boolean> allowBranchToBranchTraffic;
 
-    public Input<Boolean> getAllowBranchToBranchTraffic() {
-        return this.allowBranchToBranchTraffic == null ? Input.empty() : this.allowBranchToBranchTraffic;
+    public Output<Boolean> getAllowBranchToBranchTraffic() {
+        return this.allowBranchToBranchTraffic == null ? Output.empty() : this.allowBranchToBranchTraffic;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureFirewall")
-      private final @Nullable Input<SubResourceArgs> azureFirewall;
+      private final @Nullable Output<SubResourceArgs> azureFirewall;
 
-    public Input<SubResourceArgs> getAzureFirewall() {
-        return this.azureFirewall == null ? Input.empty() : this.azureFirewall;
+    public Output<SubResourceArgs> getAzureFirewall() {
+        return this.azureFirewall == null ? Output.empty() : this.azureFirewall;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expressRouteGateway")
-      private final @Nullable Input<SubResourceArgs> expressRouteGateway;
+      private final @Nullable Output<SubResourceArgs> expressRouteGateway;
 
-    public Input<SubResourceArgs> getExpressRouteGateway() {
-        return this.expressRouteGateway == null ? Input.empty() : this.expressRouteGateway;
+    public Output<SubResourceArgs> getExpressRouteGateway() {
+        return this.expressRouteGateway == null ? Output.empty() : this.expressRouteGateway;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="p2SVpnGateway")
-      private final @Nullable Input<SubResourceArgs> p2SVpnGateway;
+      private final @Nullable Output<SubResourceArgs> p2SVpnGateway;
 
-    public Input<SubResourceArgs> getP2SVpnGateway() {
-        return this.p2SVpnGateway == null ? Input.empty() : this.p2SVpnGateway;
+    public Output<SubResourceArgs> getP2SVpnGateway() {
+        return this.p2SVpnGateway == null ? Output.empty() : this.p2SVpnGateway;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,10 +114,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeTable")
-      private final @Nullable Input<VirtualHubRouteTableArgs> routeTable;
+      private final @Nullable Output<VirtualHubRouteTableArgs> routeTable;
 
-    public Input<VirtualHubRouteTableArgs> getRouteTable() {
-        return this.routeTable == null ? Input.empty() : this.routeTable;
+    public Output<VirtualHubRouteTableArgs> getRouteTable() {
+        return this.routeTable == null ? Output.empty() : this.routeTable;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityPartnerProvider")
-      private final @Nullable Input<SubResourceArgs> securityPartnerProvider;
+      private final @Nullable Output<SubResourceArgs> securityPartnerProvider;
 
-    public Input<SubResourceArgs> getSecurityPartnerProvider() {
-        return this.securityPartnerProvider == null ? Input.empty() : this.securityPartnerProvider;
+    public Output<SubResourceArgs> getSecurityPartnerProvider() {
+        return this.securityPartnerProvider == null ? Output.empty() : this.securityPartnerProvider;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityProviderName")
-      private final @Nullable Input<String> securityProviderName;
+      private final @Nullable Output<String> securityProviderName;
 
-    public Input<String> getSecurityProviderName() {
-        return this.securityProviderName == null ? Input.empty() : this.securityProviderName;
+    public Output<String> getSecurityProviderName() {
+        return this.securityProviderName == null ? Output.empty() : this.securityProviderName;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<String> sku;
+      private final @Nullable Output<String> sku;
 
-    public Input<String> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<String> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualHubName")
-      private final @Nullable Input<String> virtualHubName;
+      private final @Nullable Output<String> virtualHubName;
 
-    public Input<String> getVirtualHubName() {
-        return this.virtualHubName == null ? Input.empty() : this.virtualHubName;
+    public Output<String> getVirtualHubName() {
+        return this.virtualHubName == null ? Output.empty() : this.virtualHubName;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualHubRouteTableV2s")
-      private final @Nullable Input<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s;
+      private final @Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s;
 
-    public Input<List<VirtualHubRouteTableV2Args>> getVirtualHubRouteTableV2s() {
-        return this.virtualHubRouteTableV2s == null ? Input.empty() : this.virtualHubRouteTableV2s;
+    public Output<List<VirtualHubRouteTableV2Args>> getVirtualHubRouteTableV2s() {
+        return this.virtualHubRouteTableV2s == null ? Output.empty() : this.virtualHubRouteTableV2s;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualRouterAsn")
-      private final @Nullable Input<Double> virtualRouterAsn;
+      private final @Nullable Output<Double> virtualRouterAsn;
 
-    public Input<Double> getVirtualRouterAsn() {
-        return this.virtualRouterAsn == null ? Input.empty() : this.virtualRouterAsn;
+    public Output<Double> getVirtualRouterAsn() {
+        return this.virtualRouterAsn == null ? Output.empty() : this.virtualRouterAsn;
     }
 
     /**
@@ -202,10 +202,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualRouterIps")
-      private final @Nullable Input<List<String>> virtualRouterIps;
+      private final @Nullable Output<List<String>> virtualRouterIps;
 
-    public Input<List<String>> getVirtualRouterIps() {
-        return this.virtualRouterIps == null ? Input.empty() : this.virtualRouterIps;
+    public Output<List<String>> getVirtualRouterIps() {
+        return this.virtualRouterIps == null ? Output.empty() : this.virtualRouterIps;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualWan")
-      private final @Nullable Input<SubResourceArgs> virtualWan;
+      private final @Nullable Output<SubResourceArgs> virtualWan;
 
-    public Input<SubResourceArgs> getVirtualWan() {
-        return this.virtualWan == null ? Input.empty() : this.virtualWan;
+    public Output<SubResourceArgs> getVirtualWan() {
+        return this.virtualWan == null ? Output.empty() : this.virtualWan;
     }
 
     /**
@@ -224,32 +224,32 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnGateway")
-      private final @Nullable Input<SubResourceArgs> vpnGateway;
+      private final @Nullable Output<SubResourceArgs> vpnGateway;
 
-    public Input<SubResourceArgs> getVpnGateway() {
-        return this.vpnGateway == null ? Input.empty() : this.vpnGateway;
+    public Output<SubResourceArgs> getVpnGateway() {
+        return this.vpnGateway == null ? Output.empty() : this.vpnGateway;
     }
 
     public VirtualHubArgs(
-        @Nullable Input<String> addressPrefix,
-        @Nullable Input<Boolean> allowBranchToBranchTraffic,
-        @Nullable Input<SubResourceArgs> azureFirewall,
-        @Nullable Input<SubResourceArgs> expressRouteGateway,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<SubResourceArgs> p2SVpnGateway,
-        Input<String> resourceGroupName,
-        @Nullable Input<VirtualHubRouteTableArgs> routeTable,
-        @Nullable Input<SubResourceArgs> securityPartnerProvider,
-        @Nullable Input<String> securityProviderName,
-        @Nullable Input<String> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> virtualHubName,
-        @Nullable Input<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s,
-        @Nullable Input<Double> virtualRouterAsn,
-        @Nullable Input<List<String>> virtualRouterIps,
-        @Nullable Input<SubResourceArgs> virtualWan,
-        @Nullable Input<SubResourceArgs> vpnGateway) {
+        @Nullable Output<String> addressPrefix,
+        @Nullable Output<Boolean> allowBranchToBranchTraffic,
+        @Nullable Output<SubResourceArgs> azureFirewall,
+        @Nullable Output<SubResourceArgs> expressRouteGateway,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<SubResourceArgs> p2SVpnGateway,
+        Output<String> resourceGroupName,
+        @Nullable Output<VirtualHubRouteTableArgs> routeTable,
+        @Nullable Output<SubResourceArgs> securityPartnerProvider,
+        @Nullable Output<String> securityProviderName,
+        @Nullable Output<String> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> virtualHubName,
+        @Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s,
+        @Nullable Output<Double> virtualRouterAsn,
+        @Nullable Output<List<String>> virtualRouterIps,
+        @Nullable Output<SubResourceArgs> virtualWan,
+        @Nullable Output<SubResourceArgs> vpnGateway) {
         this.addressPrefix = addressPrefix;
         this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
         this.azureFirewall = azureFirewall;
@@ -272,25 +272,25 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualHubArgs() {
-        this.addressPrefix = Input.empty();
-        this.allowBranchToBranchTraffic = Input.empty();
-        this.azureFirewall = Input.empty();
-        this.expressRouteGateway = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.p2SVpnGateway = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.routeTable = Input.empty();
-        this.securityPartnerProvider = Input.empty();
-        this.securityProviderName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.virtualHubName = Input.empty();
-        this.virtualHubRouteTableV2s = Input.empty();
-        this.virtualRouterAsn = Input.empty();
-        this.virtualRouterIps = Input.empty();
-        this.virtualWan = Input.empty();
-        this.vpnGateway = Input.empty();
+        this.addressPrefix = Output.empty();
+        this.allowBranchToBranchTraffic = Output.empty();
+        this.azureFirewall = Output.empty();
+        this.expressRouteGateway = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.p2SVpnGateway = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.routeTable = Output.empty();
+        this.securityPartnerProvider = Output.empty();
+        this.securityProviderName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.virtualHubName = Output.empty();
+        this.virtualHubRouteTableV2s = Output.empty();
+        this.virtualRouterAsn = Output.empty();
+        this.virtualRouterIps = Output.empty();
+        this.virtualWan = Output.empty();
+        this.vpnGateway = Output.empty();
     }
 
     public static Builder builder() {
@@ -302,25 +302,25 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressPrefix;
-        private @Nullable Input<Boolean> allowBranchToBranchTraffic;
-        private @Nullable Input<SubResourceArgs> azureFirewall;
-        private @Nullable Input<SubResourceArgs> expressRouteGateway;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<SubResourceArgs> p2SVpnGateway;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<VirtualHubRouteTableArgs> routeTable;
-        private @Nullable Input<SubResourceArgs> securityPartnerProvider;
-        private @Nullable Input<String> securityProviderName;
-        private @Nullable Input<String> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> virtualHubName;
-        private @Nullable Input<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s;
-        private @Nullable Input<Double> virtualRouterAsn;
-        private @Nullable Input<List<String>> virtualRouterIps;
-        private @Nullable Input<SubResourceArgs> virtualWan;
-        private @Nullable Input<SubResourceArgs> vpnGateway;
+        private @Nullable Output<String> addressPrefix;
+        private @Nullable Output<Boolean> allowBranchToBranchTraffic;
+        private @Nullable Output<SubResourceArgs> azureFirewall;
+        private @Nullable Output<SubResourceArgs> expressRouteGateway;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<SubResourceArgs> p2SVpnGateway;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<VirtualHubRouteTableArgs> routeTable;
+        private @Nullable Output<SubResourceArgs> securityPartnerProvider;
+        private @Nullable Output<String> securityProviderName;
+        private @Nullable Output<String> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> virtualHubName;
+        private @Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s;
+        private @Nullable Output<Double> virtualRouterAsn;
+        private @Nullable Output<List<String>> virtualRouterIps;
+        private @Nullable Output<SubResourceArgs> virtualWan;
+        private @Nullable Output<SubResourceArgs> vpnGateway;
 
         public Builder() {
     	      // Empty
@@ -349,193 +349,193 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpnGateway = defaults.vpnGateway;
         }
 
-        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Input.ofNullable(addressPrefix);
+            this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder allowBranchToBranchTraffic(@Nullable Input<Boolean> allowBranchToBranchTraffic) {
+        public Builder allowBranchToBranchTraffic(@Nullable Output<Boolean> allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
 
         public Builder allowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
-            this.allowBranchToBranchTraffic = Input.ofNullable(allowBranchToBranchTraffic);
+            this.allowBranchToBranchTraffic = Output.ofNullable(allowBranchToBranchTraffic);
             return this;
         }
 
-        public Builder azureFirewall(@Nullable Input<SubResourceArgs> azureFirewall) {
+        public Builder azureFirewall(@Nullable Output<SubResourceArgs> azureFirewall) {
             this.azureFirewall = azureFirewall;
             return this;
         }
 
         public Builder azureFirewall(@Nullable SubResourceArgs azureFirewall) {
-            this.azureFirewall = Input.ofNullable(azureFirewall);
+            this.azureFirewall = Output.ofNullable(azureFirewall);
             return this;
         }
 
-        public Builder expressRouteGateway(@Nullable Input<SubResourceArgs> expressRouteGateway) {
+        public Builder expressRouteGateway(@Nullable Output<SubResourceArgs> expressRouteGateway) {
             this.expressRouteGateway = expressRouteGateway;
             return this;
         }
 
         public Builder expressRouteGateway(@Nullable SubResourceArgs expressRouteGateway) {
-            this.expressRouteGateway = Input.ofNullable(expressRouteGateway);
+            this.expressRouteGateway = Output.ofNullable(expressRouteGateway);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder p2SVpnGateway(@Nullable Input<SubResourceArgs> p2SVpnGateway) {
+        public Builder p2SVpnGateway(@Nullable Output<SubResourceArgs> p2SVpnGateway) {
             this.p2SVpnGateway = p2SVpnGateway;
             return this;
         }
 
         public Builder p2SVpnGateway(@Nullable SubResourceArgs p2SVpnGateway) {
-            this.p2SVpnGateway = Input.ofNullable(p2SVpnGateway);
+            this.p2SVpnGateway = Output.ofNullable(p2SVpnGateway);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder routeTable(@Nullable Input<VirtualHubRouteTableArgs> routeTable) {
+        public Builder routeTable(@Nullable Output<VirtualHubRouteTableArgs> routeTable) {
             this.routeTable = routeTable;
             return this;
         }
 
         public Builder routeTable(@Nullable VirtualHubRouteTableArgs routeTable) {
-            this.routeTable = Input.ofNullable(routeTable);
+            this.routeTable = Output.ofNullable(routeTable);
             return this;
         }
 
-        public Builder securityPartnerProvider(@Nullable Input<SubResourceArgs> securityPartnerProvider) {
+        public Builder securityPartnerProvider(@Nullable Output<SubResourceArgs> securityPartnerProvider) {
             this.securityPartnerProvider = securityPartnerProvider;
             return this;
         }
 
         public Builder securityPartnerProvider(@Nullable SubResourceArgs securityPartnerProvider) {
-            this.securityPartnerProvider = Input.ofNullable(securityPartnerProvider);
+            this.securityPartnerProvider = Output.ofNullable(securityPartnerProvider);
             return this;
         }
 
-        public Builder securityProviderName(@Nullable Input<String> securityProviderName) {
+        public Builder securityProviderName(@Nullable Output<String> securityProviderName) {
             this.securityProviderName = securityProviderName;
             return this;
         }
 
         public Builder securityProviderName(@Nullable String securityProviderName) {
-            this.securityProviderName = Input.ofNullable(securityProviderName);
+            this.securityProviderName = Output.ofNullable(securityProviderName);
             return this;
         }
 
-        public Builder sku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable String sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualHubName(@Nullable Input<String> virtualHubName) {
+        public Builder virtualHubName(@Nullable Output<String> virtualHubName) {
             this.virtualHubName = virtualHubName;
             return this;
         }
 
         public Builder virtualHubName(@Nullable String virtualHubName) {
-            this.virtualHubName = Input.ofNullable(virtualHubName);
+            this.virtualHubName = Output.ofNullable(virtualHubName);
             return this;
         }
 
-        public Builder virtualHubRouteTableV2s(@Nullable Input<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s) {
+        public Builder virtualHubRouteTableV2s(@Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s) {
             this.virtualHubRouteTableV2s = virtualHubRouteTableV2s;
             return this;
         }
 
         public Builder virtualHubRouteTableV2s(@Nullable List<VirtualHubRouteTableV2Args> virtualHubRouteTableV2s) {
-            this.virtualHubRouteTableV2s = Input.ofNullable(virtualHubRouteTableV2s);
+            this.virtualHubRouteTableV2s = Output.ofNullable(virtualHubRouteTableV2s);
             return this;
         }
 
-        public Builder virtualRouterAsn(@Nullable Input<Double> virtualRouterAsn) {
+        public Builder virtualRouterAsn(@Nullable Output<Double> virtualRouterAsn) {
             this.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
 
         public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
-            this.virtualRouterAsn = Input.ofNullable(virtualRouterAsn);
+            this.virtualRouterAsn = Output.ofNullable(virtualRouterAsn);
             return this;
         }
 
-        public Builder virtualRouterIps(@Nullable Input<List<String>> virtualRouterIps) {
+        public Builder virtualRouterIps(@Nullable Output<List<String>> virtualRouterIps) {
             this.virtualRouterIps = virtualRouterIps;
             return this;
         }
 
         public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
-            this.virtualRouterIps = Input.ofNullable(virtualRouterIps);
+            this.virtualRouterIps = Output.ofNullable(virtualRouterIps);
             return this;
         }
 
-        public Builder virtualWan(@Nullable Input<SubResourceArgs> virtualWan) {
+        public Builder virtualWan(@Nullable Output<SubResourceArgs> virtualWan) {
             this.virtualWan = virtualWan;
             return this;
         }
 
         public Builder virtualWan(@Nullable SubResourceArgs virtualWan) {
-            this.virtualWan = Input.ofNullable(virtualWan);
+            this.virtualWan = Output.ofNullable(virtualWan);
             return this;
         }
 
-        public Builder vpnGateway(@Nullable Input<SubResourceArgs> vpnGateway) {
+        public Builder vpnGateway(@Nullable Output<SubResourceArgs> vpnGateway) {
             this.vpnGateway = vpnGateway;
             return this;
         }
 
         public Builder vpnGateway(@Nullable SubResourceArgs vpnGateway) {
-            this.vpnGateway = Input.ofNullable(vpnGateway);
+            this.vpnGateway = Output.ofNullable(vpnGateway);
             return this;
         }
         public VirtualHubArgs build() {

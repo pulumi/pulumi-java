@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionClusterConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ModelBiasJobDefinitionMonitoringResourcesArgs extends io.pulu
     public static final ModelBiasJobDefinitionMonitoringResourcesArgs Empty = new ModelBiasJobDefinitionMonitoringResourcesArgs();
 
     @InputImport(name="clusterConfig", required=true)
-      private final Input<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
+      private final Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
 
-    public Input<ModelBiasJobDefinitionClusterConfigArgs> getClusterConfig() {
+    public Output<ModelBiasJobDefinitionClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig;
     }
 
-    public ModelBiasJobDefinitionMonitoringResourcesArgs(Input<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig) {
+    public ModelBiasJobDefinitionMonitoringResourcesArgs(Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig) {
         this.clusterConfig = Objects.requireNonNull(clusterConfig, "expected parameter 'clusterConfig' to be non-null");
     }
 
     private ModelBiasJobDefinitionMonitoringResourcesArgs() {
-        this.clusterConfig = Input.empty();
+        this.clusterConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ModelBiasJobDefinitionMonitoringResourcesArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
+        private Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ModelBiasJobDefinitionMonitoringResourcesArgs extends io.pulu
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder clusterConfig(Input<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
 
         public Builder clusterConfig(ModelBiasJobDefinitionClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
+            this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
             return this;
         }
         public ModelBiasJobDefinitionMonitoringResourcesArgs build() {

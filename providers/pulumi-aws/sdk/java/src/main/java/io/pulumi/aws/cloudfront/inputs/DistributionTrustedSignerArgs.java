@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.DistributionTrustedSignerItemArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class DistributionTrustedSignerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class DistributionTrustedSignerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="items")
-      private final @Nullable Input<List<DistributionTrustedSignerItemArgs>> items;
+      private final @Nullable Output<List<DistributionTrustedSignerItemArgs>> items;
 
-    public Input<List<DistributionTrustedSignerItemArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<DistributionTrustedSignerItemArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
     public DistributionTrustedSignerArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<DistributionTrustedSignerItemArgs>> items) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<DistributionTrustedSignerItemArgs>> items) {
         this.enabled = enabled;
         this.items = items;
     }
 
     private DistributionTrustedSignerArgs() {
-        this.enabled = Input.empty();
-        this.items = Input.empty();
+        this.enabled = Output.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class DistributionTrustedSignerArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<DistributionTrustedSignerItemArgs>> items;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<DistributionTrustedSignerItemArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class DistributionTrustedSignerArgs extends io.pulumi.resources.Res
     	      this.items = defaults.items;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder items(@Nullable Input<List<DistributionTrustedSignerItemArgs>> items) {
+        public Builder items(@Nullable Output<List<DistributionTrustedSignerItemArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<DistributionTrustedSignerItemArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
         public DistributionTrustedSignerArgs build() {

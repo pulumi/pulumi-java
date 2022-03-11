@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -30,10 +30,10 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hotCachePeriod")
-      private final @Nullable Input<String> hotCachePeriod;
+      private final @Nullable Output<String> hotCachePeriod;
 
-    public Input<String> getHotCachePeriod() {
-        return this.hotCachePeriod == null ? Input.empty() : this.hotCachePeriod;
+    public Output<String> getHotCachePeriod() {
+        return this.hotCachePeriod == null ? Output.empty() : this.hotCachePeriod;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -64,10 +64,10 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -86,20 +86,20 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="softDeletePeriod")
-      private final @Nullable Input<String> softDeletePeriod;
+      private final @Nullable Output<String> softDeletePeriod;
 
-    public Input<String> getSoftDeletePeriod() {
-        return this.softDeletePeriod == null ? Input.empty() : this.softDeletePeriod;
+    public Output<String> getSoftDeletePeriod() {
+        return this.softDeletePeriod == null ? Output.empty() : this.softDeletePeriod;
     }
 
     public ReadWriteDatabaseArgs(
-        Input<String> clusterName,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<String> hotCachePeriod,
-        Input<String> kind,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> softDeletePeriod) {
+        Output<String> clusterName,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<String> hotCachePeriod,
+        Output<String> kind,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> softDeletePeriod) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.databaseName = databaseName;
         this.hotCachePeriod = hotCachePeriod;
@@ -110,13 +110,13 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ReadWriteDatabaseArgs() {
-        this.clusterName = Input.empty();
-        this.databaseName = Input.empty();
-        this.hotCachePeriod = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.softDeletePeriod = Input.empty();
+        this.clusterName = Output.empty();
+        this.databaseName = Output.empty();
+        this.hotCachePeriod = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.softDeletePeriod = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<String> hotCachePeriod;
-        private Input<String> kind;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> softDeletePeriod;
+        private Output<String> clusterName;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<String> hotCachePeriod;
+        private Output<String> kind;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> softDeletePeriod;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     	      this.softDeletePeriod = defaults.softDeletePeriod;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder hotCachePeriod(@Nullable Input<String> hotCachePeriod) {
+        public Builder hotCachePeriod(@Nullable Output<String> hotCachePeriod) {
             this.hotCachePeriod = hotCachePeriod;
             return this;
         }
 
         public Builder hotCachePeriod(@Nullable String hotCachePeriod) {
-            this.hotCachePeriod = Input.ofNullable(hotCachePeriod);
+            this.hotCachePeriod = Output.ofNullable(hotCachePeriod);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder softDeletePeriod(@Nullable Input<String> softDeletePeriod) {
+        public Builder softDeletePeriod(@Nullable Output<String> softDeletePeriod) {
             this.softDeletePeriod = softDeletePeriod;
             return this;
         }
 
         public Builder softDeletePeriod(@Nullable String softDeletePeriod) {
-            this.softDeletePeriod = Input.ofNullable(softDeletePeriod);
+            this.softDeletePeriod = Output.ofNullable(softDeletePeriod);
             return this;
         }
         public ReadWriteDatabaseArgs build() {

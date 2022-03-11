@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs;
 import java.lang.Boolean;
@@ -23,17 +23,17 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="critical")
-      private final @Nullable Input<Boolean> critical;
+      private final @Nullable Output<Boolean> critical;
 
-    public Input<Boolean> getCritical() {
-        return this.critical == null ? Input.empty() : this.critical;
+    public Output<Boolean> getCritical() {
+        return this.critical == null ? Output.empty() : this.critical;
     }
 
     @InputImport(name="obectIds")
-      private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds;
+      private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds;
 
-    public Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> getObectIds() {
-        return this.obectIds == null ? Input.empty() : this.obectIds;
+    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> getObectIds() {
+        return this.obectIds == null ? Output.empty() : this.obectIds;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs(
-        @Nullable Input<Boolean> critical,
-        @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds,
-        @Nullable Input<String> value) {
+        @Nullable Output<Boolean> critical,
+        @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds,
+        @Nullable Output<String> value) {
         this.critical = critical;
         this.obectIds = obectIds;
         this.value = value;
     }
 
     private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs() {
-        this.critical = Input.empty();
-        this.obectIds = Input.empty();
-        this.value = Input.empty();
+        this.critical = Output.empty();
+        this.obectIds = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> critical;
-        private @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds;
-        private @Nullable Input<String> value;
+        private @Nullable Output<Boolean> critical;
+        private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     	      this.value = defaults.value;
         }
 
-        public Builder critical(@Nullable Input<Boolean> critical) {
+        public Builder critical(@Nullable Output<Boolean> critical) {
             this.critical = critical;
             return this;
         }
 
         public Builder critical(@Nullable Boolean critical) {
-            this.critical = Input.ofNullable(critical);
+            this.critical = Output.ofNullable(critical);
             return this;
         }
 
-        public Builder obectIds(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds) {
+        public Builder obectIds(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds) {
             this.obectIds = obectIds;
             return this;
         }
 
         public Builder obectIds(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs> obectIds) {
-            this.obectIds = Input.ofNullable(obectIds);
+            this.obectIds = Output.ofNullable(obectIds);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanArgs build() {

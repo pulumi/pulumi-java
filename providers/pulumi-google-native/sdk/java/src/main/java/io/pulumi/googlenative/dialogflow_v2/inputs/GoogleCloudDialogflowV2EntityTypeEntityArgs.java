@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class GoogleCloudDialogflowV2EntityTypeEntityArgs extends io.pulumi
      * 
      */
     @InputImport(name="synonyms", required=true)
-      private final Input<List<String>> synonyms;
+      private final Output<List<String>> synonyms;
 
-    public Input<List<String>> getSynonyms() {
+    public Output<List<String>> getSynonyms() {
         return this.synonyms;
     }
 
@@ -34,22 +34,22 @@ public final class GoogleCloudDialogflowV2EntityTypeEntityArgs extends io.pulumi
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public GoogleCloudDialogflowV2EntityTypeEntityArgs(
-        Input<List<String>> synonyms,
-        Input<String> value) {
+        Output<List<String>> synonyms,
+        Output<String> value) {
         this.synonyms = Objects.requireNonNull(synonyms, "expected parameter 'synonyms' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private GoogleCloudDialogflowV2EntityTypeEntityArgs() {
-        this.synonyms = Input.empty();
-        this.value = Input.empty();
+        this.synonyms = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDialogflowV2EntityTypeEntityArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<List<String>> synonyms;
-        private Input<String> value;
+        private Output<List<String>> synonyms;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDialogflowV2EntityTypeEntityArgs extends io.pulumi
     	      this.value = defaults.value;
         }
 
-        public Builder synonyms(Input<List<String>> synonyms) {
+        public Builder synonyms(Output<List<String>> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
 
         public Builder synonyms(List<String> synonyms) {
-            this.synonyms = Input.of(Objects.requireNonNull(synonyms));
+            this.synonyms = Output.of(Objects.requireNonNull(synonyms));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public GoogleCloudDialogflowV2EntityTypeEntityArgs build() {

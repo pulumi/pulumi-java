@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="obb", required=true)
-      private final Input<FileReferenceArgs> obb;
+      private final Output<FileReferenceArgs> obb;
 
-    public Input<FileReferenceArgs> getObb() {
+    public Output<FileReferenceArgs> getObb() {
         return this.obb;
     }
 
@@ -34,22 +34,22 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="obbFileName", required=true)
-      private final Input<String> obbFileName;
+      private final Output<String> obbFileName;
 
-    public Input<String> getObbFileName() {
+    public Output<String> getObbFileName() {
         return this.obbFileName;
     }
 
     public ObbFileArgs(
-        Input<FileReferenceArgs> obb,
-        Input<String> obbFileName) {
+        Output<FileReferenceArgs> obb,
+        Output<String> obbFileName) {
         this.obb = Objects.requireNonNull(obb, "expected parameter 'obb' to be non-null");
         this.obbFileName = Objects.requireNonNull(obbFileName, "expected parameter 'obbFileName' to be non-null");
     }
 
     private ObbFileArgs() {
-        this.obb = Input.empty();
-        this.obbFileName = Input.empty();
+        this.obb = Output.empty();
+        this.obbFileName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<FileReferenceArgs> obb;
-        private Input<String> obbFileName;
+        private Output<FileReferenceArgs> obb;
+        private Output<String> obbFileName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.obbFileName = defaults.obbFileName;
         }
 
-        public Builder obb(Input<FileReferenceArgs> obb) {
+        public Builder obb(Output<FileReferenceArgs> obb) {
             this.obb = Objects.requireNonNull(obb);
             return this;
         }
 
         public Builder obb(FileReferenceArgs obb) {
-            this.obb = Input.of(Objects.requireNonNull(obb));
+            this.obb = Output.of(Objects.requireNonNull(obb));
             return this;
         }
 
-        public Builder obbFileName(Input<String> obbFileName) {
+        public Builder obbFileName(Output<String> obbFileName) {
             this.obbFileName = Objects.requireNonNull(obbFileName);
             return this;
         }
 
         public Builder obbFileName(String obbFileName) {
-            this.obbFileName = Input.of(Objects.requireNonNull(obbFileName));
+            this.obbFileName = Output.of(Objects.requireNonNull(obbFileName));
             return this;
         }
         public ObbFileArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="samlOptions")
-      private final @Nullable Input<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
+      private final @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
 
-    public Input<DomainSamlOptionsSamlOptionsGetArgs> getSamlOptions() {
-        return this.samlOptions == null ? Input.empty() : this.samlOptions;
+    public Output<DomainSamlOptionsSamlOptionsGetArgs> getSamlOptions() {
+        return this.samlOptions == null ? Output.empty() : this.samlOptions;
     }
 
     public DomainSamlOptionsState(
-        @Nullable Input<String> domainName,
-        @Nullable Input<DomainSamlOptionsSamlOptionsGetArgs> samlOptions) {
+        @Nullable Output<String> domainName,
+        @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions) {
         this.domainName = domainName;
         this.samlOptions = samlOptions;
     }
 
     private DomainSamlOptionsState() {
-        this.domainName = Input.empty();
-        this.samlOptions = Input.empty();
+        this.domainName = Output.empty();
+        this.samlOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
     	      this.samlOptions = defaults.samlOptions;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder samlOptions(@Nullable Input<DomainSamlOptionsSamlOptionsGetArgs> samlOptions) {
+        public Builder samlOptions(@Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions) {
             this.samlOptions = samlOptions;
             return this;
         }
 
         public Builder samlOptions(@Nullable DomainSamlOptionsSamlOptionsGetArgs samlOptions) {
-            this.samlOptions = Input.ofNullable(samlOptions);
+            this.samlOptions = Output.ofNullable(samlOptions);
             return this;
         }
         public DomainSamlOptionsState build() {

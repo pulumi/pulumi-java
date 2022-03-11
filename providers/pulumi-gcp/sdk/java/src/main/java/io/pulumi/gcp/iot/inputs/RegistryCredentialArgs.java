@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -20,18 +20,18 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicKeyCertificate", required=true)
-      private final Input<Map<String,Object>> publicKeyCertificate;
+      private final Output<Map<String,Object>> publicKeyCertificate;
 
-    public Input<Map<String,Object>> getPublicKeyCertificate() {
+    public Output<Map<String,Object>> getPublicKeyCertificate() {
         return this.publicKeyCertificate;
     }
 
-    public RegistryCredentialArgs(Input<Map<String,Object>> publicKeyCertificate) {
+    public RegistryCredentialArgs(Output<Map<String,Object>> publicKeyCertificate) {
         this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate, "expected parameter 'publicKeyCertificate' to be non-null");
     }
 
     private RegistryCredentialArgs() {
-        this.publicKeyCertificate = Input.empty();
+        this.publicKeyCertificate = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<Map<String,Object>> publicKeyCertificate;
+        private Output<Map<String,Object>> publicKeyCertificate;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
     	      this.publicKeyCertificate = defaults.publicKeyCertificate;
         }
 
-        public Builder publicKeyCertificate(Input<Map<String,Object>> publicKeyCertificate) {
+        public Builder publicKeyCertificate(Output<Map<String,Object>> publicKeyCertificate) {
             this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
             return this;
         }
 
         public Builder publicKeyCertificate(Map<String,Object> publicKeyCertificate) {
-            this.publicKeyCertificate = Input.of(Objects.requireNonNull(publicKeyCertificate));
+            this.publicKeyCertificate = Output.of(Objects.requireNonNull(publicKeyCertificate));
             return this;
         }
         public RegistryCredentialArgs build() {

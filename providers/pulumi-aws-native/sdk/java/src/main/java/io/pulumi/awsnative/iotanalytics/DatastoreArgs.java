@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatastorePartitionsArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreRetentionPeriodArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,54 +21,54 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final DatastoreArgs Empty = new DatastoreArgs();
 
     @InputImport(name="datastoreName")
-      private final @Nullable Input<String> datastoreName;
+      private final @Nullable Output<String> datastoreName;
 
-    public Input<String> getDatastoreName() {
-        return this.datastoreName == null ? Input.empty() : this.datastoreName;
+    public Output<String> getDatastoreName() {
+        return this.datastoreName == null ? Output.empty() : this.datastoreName;
     }
 
     @InputImport(name="datastorePartitions")
-      private final @Nullable Input<DatastorePartitionsArgs> datastorePartitions;
+      private final @Nullable Output<DatastorePartitionsArgs> datastorePartitions;
 
-    public Input<DatastorePartitionsArgs> getDatastorePartitions() {
-        return this.datastorePartitions == null ? Input.empty() : this.datastorePartitions;
+    public Output<DatastorePartitionsArgs> getDatastorePartitions() {
+        return this.datastorePartitions == null ? Output.empty() : this.datastorePartitions;
     }
 
     @InputImport(name="datastoreStorage")
-      private final @Nullable Input<DatastoreStorageArgs> datastoreStorage;
+      private final @Nullable Output<DatastoreStorageArgs> datastoreStorage;
 
-    public Input<DatastoreStorageArgs> getDatastoreStorage() {
-        return this.datastoreStorage == null ? Input.empty() : this.datastoreStorage;
+    public Output<DatastoreStorageArgs> getDatastoreStorage() {
+        return this.datastoreStorage == null ? Output.empty() : this.datastoreStorage;
     }
 
     @InputImport(name="fileFormatConfiguration")
-      private final @Nullable Input<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
+      private final @Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
 
-    public Input<DatastoreFileFormatConfigurationArgs> getFileFormatConfiguration() {
-        return this.fileFormatConfiguration == null ? Input.empty() : this.fileFormatConfiguration;
+    public Output<DatastoreFileFormatConfigurationArgs> getFileFormatConfiguration() {
+        return this.fileFormatConfiguration == null ? Output.empty() : this.fileFormatConfiguration;
     }
 
     @InputImport(name="retentionPeriod")
-      private final @Nullable Input<DatastoreRetentionPeriodArgs> retentionPeriod;
+      private final @Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod;
 
-    public Input<DatastoreRetentionPeriodArgs> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
+    public Output<DatastoreRetentionPeriodArgs> getRetentionPeriod() {
+        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<DatastoreTagArgs>> tags;
+      private final @Nullable Output<List<DatastoreTagArgs>> tags;
 
-    public Input<List<DatastoreTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DatastoreTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DatastoreArgs(
-        @Nullable Input<String> datastoreName,
-        @Nullable Input<DatastorePartitionsArgs> datastorePartitions,
-        @Nullable Input<DatastoreStorageArgs> datastoreStorage,
-        @Nullable Input<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration,
-        @Nullable Input<DatastoreRetentionPeriodArgs> retentionPeriod,
-        @Nullable Input<List<DatastoreTagArgs>> tags) {
+        @Nullable Output<String> datastoreName,
+        @Nullable Output<DatastorePartitionsArgs> datastorePartitions,
+        @Nullable Output<DatastoreStorageArgs> datastoreStorage,
+        @Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration,
+        @Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod,
+        @Nullable Output<List<DatastoreTagArgs>> tags) {
         this.datastoreName = datastoreName;
         this.datastorePartitions = datastorePartitions;
         this.datastoreStorage = datastoreStorage;
@@ -78,12 +78,12 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatastoreArgs() {
-        this.datastoreName = Input.empty();
-        this.datastorePartitions = Input.empty();
-        this.datastoreStorage = Input.empty();
-        this.fileFormatConfiguration = Input.empty();
-        this.retentionPeriod = Input.empty();
-        this.tags = Input.empty();
+        this.datastoreName = Output.empty();
+        this.datastorePartitions = Output.empty();
+        this.datastoreStorage = Output.empty();
+        this.fileFormatConfiguration = Output.empty();
+        this.retentionPeriod = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,12 +95,12 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datastoreName;
-        private @Nullable Input<DatastorePartitionsArgs> datastorePartitions;
-        private @Nullable Input<DatastoreStorageArgs> datastoreStorage;
-        private @Nullable Input<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
-        private @Nullable Input<DatastoreRetentionPeriodArgs> retentionPeriod;
-        private @Nullable Input<List<DatastoreTagArgs>> tags;
+        private @Nullable Output<String> datastoreName;
+        private @Nullable Output<DatastorePartitionsArgs> datastorePartitions;
+        private @Nullable Output<DatastoreStorageArgs> datastoreStorage;
+        private @Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
+        private @Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod;
+        private @Nullable Output<List<DatastoreTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -116,63 +116,63 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder datastoreName(@Nullable Input<String> datastoreName) {
+        public Builder datastoreName(@Nullable Output<String> datastoreName) {
             this.datastoreName = datastoreName;
             return this;
         }
 
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Input.ofNullable(datastoreName);
+            this.datastoreName = Output.ofNullable(datastoreName);
             return this;
         }
 
-        public Builder datastorePartitions(@Nullable Input<DatastorePartitionsArgs> datastorePartitions) {
+        public Builder datastorePartitions(@Nullable Output<DatastorePartitionsArgs> datastorePartitions) {
             this.datastorePartitions = datastorePartitions;
             return this;
         }
 
         public Builder datastorePartitions(@Nullable DatastorePartitionsArgs datastorePartitions) {
-            this.datastorePartitions = Input.ofNullable(datastorePartitions);
+            this.datastorePartitions = Output.ofNullable(datastorePartitions);
             return this;
         }
 
-        public Builder datastoreStorage(@Nullable Input<DatastoreStorageArgs> datastoreStorage) {
+        public Builder datastoreStorage(@Nullable Output<DatastoreStorageArgs> datastoreStorage) {
             this.datastoreStorage = datastoreStorage;
             return this;
         }
 
         public Builder datastoreStorage(@Nullable DatastoreStorageArgs datastoreStorage) {
-            this.datastoreStorage = Input.ofNullable(datastoreStorage);
+            this.datastoreStorage = Output.ofNullable(datastoreStorage);
             return this;
         }
 
-        public Builder fileFormatConfiguration(@Nullable Input<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration) {
+        public Builder fileFormatConfiguration(@Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration) {
             this.fileFormatConfiguration = fileFormatConfiguration;
             return this;
         }
 
         public Builder fileFormatConfiguration(@Nullable DatastoreFileFormatConfigurationArgs fileFormatConfiguration) {
-            this.fileFormatConfiguration = Input.ofNullable(fileFormatConfiguration);
+            this.fileFormatConfiguration = Output.ofNullable(fileFormatConfiguration);
             return this;
         }
 
-        public Builder retentionPeriod(@Nullable Input<DatastoreRetentionPeriodArgs> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
         public Builder retentionPeriod(@Nullable DatastoreRetentionPeriodArgs retentionPeriod) {
-            this.retentionPeriod = Input.ofNullable(retentionPeriod);
+            this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DatastoreTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DatastoreTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DatastoreTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DatastoreArgs build() {

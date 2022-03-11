@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="networkServices")
-      private final @Nullable Input<List<String>> networkServices;
+      private final @Nullable Output<List<String>> networkServices;
 
-    public Input<List<String>> getNetworkServices() {
-        return this.networkServices == null ? Input.empty() : this.networkServices;
+    public Output<List<String>> getNetworkServices() {
+        return this.networkServices == null ? Output.empty() : this.networkServices;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public TrafficMirrorFilterArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> networkServices,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> networkServices,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.networkServices = networkServices;
         this.tags = tags;
     }
 
     private TrafficMirrorFilterArgs() {
-        this.description = Input.empty();
-        this.networkServices = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.networkServices = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> networkServices;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> networkServices;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder networkServices(@Nullable Input<List<String>> networkServices) {
+        public Builder networkServices(@Nullable Output<List<String>> networkServices) {
             this.networkServices = networkServices;
             return this;
         }
 
         public Builder networkServices(@Nullable List<String> networkServices) {
-            this.networkServices = Input.ofNullable(networkServices);
+            this.networkServices = Output.ofNullable(networkServices);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public TrafficMirrorFilterArgs build() {

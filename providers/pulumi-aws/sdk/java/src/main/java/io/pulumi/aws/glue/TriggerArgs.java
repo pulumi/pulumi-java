@@ -5,7 +5,7 @@ package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.TriggerActionArgs;
 import io.pulumi.aws.glue.inputs.TriggerPredicateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-      private final Input<List<TriggerActionArgs>> actions;
+      private final Output<List<TriggerActionArgs>> actions;
 
-    public Input<List<TriggerActionArgs>> getActions() {
+    public Output<List<TriggerActionArgs>> getActions() {
         return this.actions;
     }
 
@@ -35,10 +35,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predicate")
-      private final @Nullable Input<TriggerPredicateArgs> predicate;
+      private final @Nullable Output<TriggerPredicateArgs> predicate;
 
-    public Input<TriggerPredicateArgs> getPredicate() {
-        return this.predicate == null ? Input.empty() : this.predicate;
+    public Output<TriggerPredicateArgs> getPredicate() {
+        return this.predicate == null ? Output.empty() : this.predicate;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<String> schedule;
+      private final @Nullable Output<String> schedule;
 
-    public Input<String> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<String> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startOnCreation")
-      private final @Nullable Input<Boolean> startOnCreation;
+      private final @Nullable Output<Boolean> startOnCreation;
 
-    public Input<Boolean> getStartOnCreation() {
-        return this.startOnCreation == null ? Input.empty() : this.startOnCreation;
+    public Output<Boolean> getStartOnCreation() {
+        return this.startOnCreation == null ? Output.empty() : this.startOnCreation;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,9 +112,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -123,23 +123,23 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workflowName")
-      private final @Nullable Input<String> workflowName;
+      private final @Nullable Output<String> workflowName;
 
-    public Input<String> getWorkflowName() {
-        return this.workflowName == null ? Input.empty() : this.workflowName;
+    public Output<String> getWorkflowName() {
+        return this.workflowName == null ? Output.empty() : this.workflowName;
     }
 
     public TriggerArgs(
-        Input<List<TriggerActionArgs>> actions,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> name,
-        @Nullable Input<TriggerPredicateArgs> predicate,
-        @Nullable Input<String> schedule,
-        @Nullable Input<Boolean> startOnCreation,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> type,
-        @Nullable Input<String> workflowName) {
+        Output<List<TriggerActionArgs>> actions,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> name,
+        @Nullable Output<TriggerPredicateArgs> predicate,
+        @Nullable Output<String> schedule,
+        @Nullable Output<Boolean> startOnCreation,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> type,
+        @Nullable Output<String> workflowName) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.description = description;
         this.enabled = enabled;
@@ -153,16 +153,16 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerArgs() {
-        this.actions = Input.empty();
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.name = Input.empty();
-        this.predicate = Input.empty();
-        this.schedule = Input.empty();
-        this.startOnCreation = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
-        this.workflowName = Input.empty();
+        this.actions = Output.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.name = Output.empty();
+        this.predicate = Output.empty();
+        this.schedule = Output.empty();
+        this.startOnCreation = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
+        this.workflowName = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<TriggerActionArgs>> actions;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> name;
-        private @Nullable Input<TriggerPredicateArgs> predicate;
-        private @Nullable Input<String> schedule;
-        private @Nullable Input<Boolean> startOnCreation;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> type;
-        private @Nullable Input<String> workflowName;
+        private Output<List<TriggerActionArgs>> actions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> name;
+        private @Nullable Output<TriggerPredicateArgs> predicate;
+        private @Nullable Output<String> schedule;
+        private @Nullable Output<Boolean> startOnCreation;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> type;
+        private @Nullable Output<String> workflowName;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workflowName = defaults.workflowName;
         }
 
-        public Builder actions(Input<List<TriggerActionArgs>> actions) {
+        public Builder actions(Output<List<TriggerActionArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<TriggerActionArgs> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder predicate(@Nullable Input<TriggerPredicateArgs> predicate) {
+        public Builder predicate(@Nullable Output<TriggerPredicateArgs> predicate) {
             this.predicate = predicate;
             return this;
         }
 
         public Builder predicate(@Nullable TriggerPredicateArgs predicate) {
-            this.predicate = Input.ofNullable(predicate);
+            this.predicate = Output.ofNullable(predicate);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder startOnCreation(@Nullable Input<Boolean> startOnCreation) {
+        public Builder startOnCreation(@Nullable Output<Boolean> startOnCreation) {
             this.startOnCreation = startOnCreation;
             return this;
         }
 
         public Builder startOnCreation(@Nullable Boolean startOnCreation) {
-            this.startOnCreation = Input.ofNullable(startOnCreation);
+            this.startOnCreation = Output.ofNullable(startOnCreation);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder workflowName(@Nullable Input<String> workflowName) {
+        public Builder workflowName(@Nullable Output<String> workflowName) {
             this.workflowName = workflowName;
             return this;
         }
 
         public Builder workflowName(@Nullable String workflowName) {
-            this.workflowName = Input.ofNullable(workflowName);
+            this.workflowName = Output.ofNullable(workflowName);
             return this;
         }
         public TriggerArgs build() {

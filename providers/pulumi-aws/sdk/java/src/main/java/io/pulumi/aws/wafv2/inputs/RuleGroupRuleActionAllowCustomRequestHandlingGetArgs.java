@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class RuleGroupRuleActionAllowCustomRequestHandlingGetArgs extends 
      * 
      */
     @InputImport(name="insertHeaders", required=true)
-      private final Input<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
+      private final Output<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
 
-    public Input<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> getInsertHeaders() {
+    public Output<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> getInsertHeaders() {
         return this.insertHeaders;
     }
 
-    public RuleGroupRuleActionAllowCustomRequestHandlingGetArgs(Input<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
+    public RuleGroupRuleActionAllowCustomRequestHandlingGetArgs(Output<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
         this.insertHeaders = Objects.requireNonNull(insertHeaders, "expected parameter 'insertHeaders' to be non-null");
     }
 
     private RuleGroupRuleActionAllowCustomRequestHandlingGetArgs() {
-        this.insertHeaders = Input.empty();
+        this.insertHeaders = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class RuleGroupRuleActionAllowCustomRequestHandlingGetArgs extends 
     }
 
     public static final class Builder {
-        private Input<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
+        private Output<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class RuleGroupRuleActionAllowCustomRequestHandlingGetArgs extends 
     	      this.insertHeaders = defaults.insertHeaders;
         }
 
-        public Builder insertHeaders(Input<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
+        public Builder insertHeaders(Output<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
 
         public Builder insertHeaders(List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs> insertHeaders) {
-            this.insertHeaders = Input.of(Objects.requireNonNull(insertHeaders));
+            this.insertHeaders = Output.of(Objects.requireNonNull(insertHeaders));
             return this;
         }
         public RuleGroupRuleActionAllowCustomRequestHandlingGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,9 +30,9 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="sizeGb", required=true)
-      private final Input<Integer> sizeGb;
+      private final Output<Integer> sizeGb;
 
-    public Input<Integer> getSizeGb() {
+    public Output<Integer> getSizeGb() {
         return this.sizeGb;
     }
 
@@ -41,25 +41,25 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="volumeType", required=true)
-      private final Input<String> volumeType;
+      private final Output<String> volumeType;
 
-    public Input<String> getVolumeType() {
+    public Output<String> getVolumeType() {
         return this.volumeType;
     }
 
     public FlexibleAppVersionResourcesVolumeGetArgs(
-        Input<String> name,
-        Input<Integer> sizeGb,
-        Input<String> volumeType) {
+        Output<String> name,
+        Output<Integer> sizeGb,
+        Output<String> volumeType) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.sizeGb = Objects.requireNonNull(sizeGb, "expected parameter 'sizeGb' to be non-null");
         this.volumeType = Objects.requireNonNull(volumeType, "expected parameter 'volumeType' to be non-null");
     }
 
     private FlexibleAppVersionResourcesVolumeGetArgs() {
-        this.name = Input.empty();
-        this.sizeGb = Input.empty();
-        this.volumeType = Input.empty();
+        this.name = Output.empty();
+        this.sizeGb = Output.empty();
+        this.volumeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<Integer> sizeGb;
-        private Input<String> volumeType;
+        private Output<String> name;
+        private Output<Integer> sizeGb;
+        private Output<String> volumeType;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder sizeGb(Input<Integer> sizeGb) {
+        public Builder sizeGb(Output<Integer> sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
 
         public Builder sizeGb(Integer sizeGb) {
-            this.sizeGb = Input.of(Objects.requireNonNull(sizeGb));
+            this.sizeGb = Output.of(Objects.requireNonNull(sizeGb));
             return this;
         }
 
-        public Builder volumeType(Input<String> volumeType) {
+        public Builder volumeType(Output<String> volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
 
         public Builder volumeType(String volumeType) {
-            this.volumeType = Input.of(Objects.requireNonNull(volumeType));
+            this.volumeType = Output.of(Objects.requireNonNull(volumeType));
             return this;
         }
         public FlexibleAppVersionResourcesVolumeGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.JobCopyArgs;
 import io.pulumi.gcp.bigquery.inputs.JobExtractArgs;
@@ -25,10 +25,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copy")
-      private final @Nullable Input<JobCopyArgs> copy;
+      private final @Nullable Output<JobCopyArgs> copy;
 
-    public Input<JobCopyArgs> getCopy() {
-        return this.copy == null ? Input.empty() : this.copy;
+    public Output<JobCopyArgs> getCopy() {
+        return this.copy == null ? Output.empty() : this.copy;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extract")
-      private final @Nullable Input<JobExtractArgs> extract;
+      private final @Nullable Output<JobExtractArgs> extract;
 
-    public Input<JobExtractArgs> getExtract() {
-        return this.extract == null ? Input.empty() : this.extract;
+    public Output<JobExtractArgs> getExtract() {
+        return this.extract == null ? Output.empty() : this.extract;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobId", required=true)
-      private final Input<String> jobId;
+      private final Output<String> jobId;
 
-    public Input<String> getJobId() {
+    public Output<String> getJobId() {
         return this.jobId;
     }
 
@@ -59,10 +59,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobTimeoutMs")
-      private final @Nullable Input<String> jobTimeoutMs;
+      private final @Nullable Output<String> jobTimeoutMs;
 
-    public Input<String> getJobTimeoutMs() {
-        return this.jobTimeoutMs == null ? Input.empty() : this.jobTimeoutMs;
+    public Output<String> getJobTimeoutMs() {
+        return this.jobTimeoutMs == null ? Output.empty() : this.jobTimeoutMs;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="load")
-      private final @Nullable Input<JobLoadArgs> load;
+      private final @Nullable Output<JobLoadArgs> load;
 
-    public Input<JobLoadArgs> getLoad() {
-        return this.load == null ? Input.empty() : this.load;
+    public Output<JobLoadArgs> getLoad() {
+        return this.load == null ? Output.empty() : this.load;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -117,22 +117,22 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<JobQueryArgs> query;
+      private final @Nullable Output<JobQueryArgs> query;
 
-    public Input<JobQueryArgs> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<JobQueryArgs> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     public JobArgs(
-        @Nullable Input<JobCopyArgs> copy,
-        @Nullable Input<JobExtractArgs> extract,
-        Input<String> jobId,
-        @Nullable Input<String> jobTimeoutMs,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<JobLoadArgs> load,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<JobQueryArgs> query) {
+        @Nullable Output<JobCopyArgs> copy,
+        @Nullable Output<JobExtractArgs> extract,
+        Output<String> jobId,
+        @Nullable Output<String> jobTimeoutMs,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<JobLoadArgs> load,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<JobQueryArgs> query) {
         this.copy = copy;
         this.extract = extract;
         this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
@@ -145,15 +145,15 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.copy = Input.empty();
-        this.extract = Input.empty();
-        this.jobId = Input.empty();
-        this.jobTimeoutMs = Input.empty();
-        this.labels = Input.empty();
-        this.load = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.query = Input.empty();
+        this.copy = Output.empty();
+        this.extract = Output.empty();
+        this.jobId = Output.empty();
+        this.jobTimeoutMs = Output.empty();
+        this.labels = Output.empty();
+        this.load = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.query = Output.empty();
     }
 
     public static Builder builder() {
@@ -165,15 +165,15 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<JobCopyArgs> copy;
-        private @Nullable Input<JobExtractArgs> extract;
-        private Input<String> jobId;
-        private @Nullable Input<String> jobTimeoutMs;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<JobLoadArgs> load;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<JobQueryArgs> query;
+        private @Nullable Output<JobCopyArgs> copy;
+        private @Nullable Output<JobExtractArgs> extract;
+        private Output<String> jobId;
+        private @Nullable Output<String> jobTimeoutMs;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<JobLoadArgs> load;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<JobQueryArgs> query;
 
         public Builder() {
     	      // Empty
@@ -192,93 +192,93 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.query = defaults.query;
         }
 
-        public Builder copy(@Nullable Input<JobCopyArgs> copy) {
+        public Builder copy(@Nullable Output<JobCopyArgs> copy) {
             this.copy = copy;
             return this;
         }
 
         public Builder copy(@Nullable JobCopyArgs copy) {
-            this.copy = Input.ofNullable(copy);
+            this.copy = Output.ofNullable(copy);
             return this;
         }
 
-        public Builder extract(@Nullable Input<JobExtractArgs> extract) {
+        public Builder extract(@Nullable Output<JobExtractArgs> extract) {
             this.extract = extract;
             return this;
         }
 
         public Builder extract(@Nullable JobExtractArgs extract) {
-            this.extract = Input.ofNullable(extract);
+            this.extract = Output.ofNullable(extract);
             return this;
         }
 
-        public Builder jobId(Input<String> jobId) {
+        public Builder jobId(Output<String> jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
 
         public Builder jobId(String jobId) {
-            this.jobId = Input.of(Objects.requireNonNull(jobId));
+            this.jobId = Output.of(Objects.requireNonNull(jobId));
             return this;
         }
 
-        public Builder jobTimeoutMs(@Nullable Input<String> jobTimeoutMs) {
+        public Builder jobTimeoutMs(@Nullable Output<String> jobTimeoutMs) {
             this.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
 
         public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
-            this.jobTimeoutMs = Input.ofNullable(jobTimeoutMs);
+            this.jobTimeoutMs = Output.ofNullable(jobTimeoutMs);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder load(@Nullable Input<JobLoadArgs> load) {
+        public Builder load(@Nullable Output<JobLoadArgs> load) {
             this.load = load;
             return this;
         }
 
         public Builder load(@Nullable JobLoadArgs load) {
-            this.load = Input.ofNullable(load);
+            this.load = Output.ofNullable(load);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder query(@Nullable Input<JobQueryArgs> query) {
+        public Builder query(@Nullable Output<JobQueryArgs> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable JobQueryArgs query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
         public JobArgs build() {

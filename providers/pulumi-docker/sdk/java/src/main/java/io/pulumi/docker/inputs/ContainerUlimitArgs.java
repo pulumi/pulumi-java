@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,39 +15,39 @@ public final class ContainerUlimitArgs extends io.pulumi.resources.ResourceArgs 
     public static final ContainerUlimitArgs Empty = new ContainerUlimitArgs();
 
     @InputImport(name="hard", required=true)
-      private final Input<Integer> hard;
+      private final Output<Integer> hard;
 
-    public Input<Integer> getHard() {
+    public Output<Integer> getHard() {
         return this.hard;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="soft", required=true)
-      private final Input<Integer> soft;
+      private final Output<Integer> soft;
 
-    public Input<Integer> getSoft() {
+    public Output<Integer> getSoft() {
         return this.soft;
     }
 
     public ContainerUlimitArgs(
-        Input<Integer> hard,
-        Input<String> name,
-        Input<Integer> soft) {
+        Output<Integer> hard,
+        Output<String> name,
+        Output<Integer> soft) {
         this.hard = Objects.requireNonNull(hard, "expected parameter 'hard' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.soft = Objects.requireNonNull(soft, "expected parameter 'soft' to be non-null");
     }
 
     private ContainerUlimitArgs() {
-        this.hard = Input.empty();
-        this.name = Input.empty();
-        this.soft = Input.empty();
+        this.hard = Output.empty();
+        this.name = Output.empty();
+        this.soft = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class ContainerUlimitArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<Integer> hard;
-        private Input<String> name;
-        private Input<Integer> soft;
+        private Output<Integer> hard;
+        private Output<String> name;
+        private Output<Integer> soft;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class ContainerUlimitArgs extends io.pulumi.resources.ResourceArgs 
     	      this.soft = defaults.soft;
         }
 
-        public Builder hard(Input<Integer> hard) {
+        public Builder hard(Output<Integer> hard) {
             this.hard = Objects.requireNonNull(hard);
             return this;
         }
 
         public Builder hard(Integer hard) {
-            this.hard = Input.of(Objects.requireNonNull(hard));
+            this.hard = Output.of(Objects.requireNonNull(hard));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder soft(Input<Integer> soft) {
+        public Builder soft(Output<Integer> soft) {
             this.soft = Objects.requireNonNull(soft);
             return this;
         }
 
         public Builder soft(Integer soft) {
-            this.soft = Input.of(Objects.requireNonNull(soft));
+            this.soft = Output.of(Objects.requireNonNull(soft));
             return this;
         }
         public ContainerUlimitArgs build() {

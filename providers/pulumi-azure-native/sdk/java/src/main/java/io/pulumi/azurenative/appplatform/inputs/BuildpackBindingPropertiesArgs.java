@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.enums.BindingType;
 import io.pulumi.azurenative.appplatform.inputs.BuildpackBindingLaunchPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bindingType")
-      private final @Nullable Input<Either<String,BindingType>> bindingType;
+      private final @Nullable Output<Either<String,BindingType>> bindingType;
 
-    public Input<Either<String,BindingType>> getBindingType() {
-        return this.bindingType == null ? Input.empty() : this.bindingType;
+    public Output<Either<String,BindingType>> getBindingType() {
+        return this.bindingType == null ? Output.empty() : this.bindingType;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="launchProperties")
-      private final @Nullable Input<BuildpackBindingLaunchPropertiesArgs> launchProperties;
+      private final @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties;
 
-    public Input<BuildpackBindingLaunchPropertiesArgs> getLaunchProperties() {
-        return this.launchProperties == null ? Input.empty() : this.launchProperties;
+    public Output<BuildpackBindingLaunchPropertiesArgs> getLaunchProperties() {
+        return this.launchProperties == null ? Output.empty() : this.launchProperties;
     }
 
     public BuildpackBindingPropertiesArgs(
-        @Nullable Input<Either<String,BindingType>> bindingType,
-        @Nullable Input<BuildpackBindingLaunchPropertiesArgs> launchProperties) {
+        @Nullable Output<Either<String,BindingType>> bindingType,
+        @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties) {
         this.bindingType = bindingType;
         this.launchProperties = launchProperties;
     }
 
     private BuildpackBindingPropertiesArgs() {
-        this.bindingType = Input.empty();
-        this.launchProperties = Input.empty();
+        this.bindingType = Output.empty();
+        this.launchProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BindingType>> bindingType;
-        private @Nullable Input<BuildpackBindingLaunchPropertiesArgs> launchProperties;
+        private @Nullable Output<Either<String,BindingType>> bindingType;
+        private @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
     	      this.launchProperties = defaults.launchProperties;
         }
 
-        public Builder bindingType(@Nullable Input<Either<String,BindingType>> bindingType) {
+        public Builder bindingType(@Nullable Output<Either<String,BindingType>> bindingType) {
             this.bindingType = bindingType;
             return this;
         }
 
         public Builder bindingType(@Nullable Either<String,BindingType> bindingType) {
-            this.bindingType = Input.ofNullable(bindingType);
+            this.bindingType = Output.ofNullable(bindingType);
             return this;
         }
 
-        public Builder launchProperties(@Nullable Input<BuildpackBindingLaunchPropertiesArgs> launchProperties) {
+        public Builder launchProperties(@Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties) {
             this.launchProperties = launchProperties;
             return this;
         }
 
         public Builder launchProperties(@Nullable BuildpackBindingLaunchPropertiesArgs launchProperties) {
-            this.launchProperties = Input.ofNullable(launchProperties);
+            this.launchProperties = Output.ofNullable(launchProperties);
             return this;
         }
         public BuildpackBindingPropertiesArgs build() {

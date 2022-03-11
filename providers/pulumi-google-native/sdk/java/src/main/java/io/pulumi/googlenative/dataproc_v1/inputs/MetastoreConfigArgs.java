@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class MetastoreConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataprocMetastoreService", required=true)
-      private final Input<String> dataprocMetastoreService;
+      private final Output<String> dataprocMetastoreService;
 
-    public Input<String> getDataprocMetastoreService() {
+    public Output<String> getDataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }
 
-    public MetastoreConfigArgs(Input<String> dataprocMetastoreService) {
+    public MetastoreConfigArgs(Output<String> dataprocMetastoreService) {
         this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService, "expected parameter 'dataprocMetastoreService' to be non-null");
     }
 
     private MetastoreConfigArgs() {
-        this.dataprocMetastoreService = Input.empty();
+        this.dataprocMetastoreService = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class MetastoreConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> dataprocMetastoreService;
+        private Output<String> dataprocMetastoreService;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class MetastoreConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.dataprocMetastoreService = defaults.dataprocMetastoreService;
         }
 
-        public Builder dataprocMetastoreService(Input<String> dataprocMetastoreService) {
+        public Builder dataprocMetastoreService(Output<String> dataprocMetastoreService) {
             this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
             return this;
         }
 
         public Builder dataprocMetastoreService(String dataprocMetastoreService) {
-            this.dataprocMetastoreService = Input.of(Objects.requireNonNull(dataprocMetastoreService));
+            this.dataprocMetastoreService = Output.of(Objects.requireNonNull(dataprocMetastoreService));
             return this;
         }
         public MetastoreConfigArgs build() {

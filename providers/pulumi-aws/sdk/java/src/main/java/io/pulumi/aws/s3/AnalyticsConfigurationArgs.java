@@ -5,7 +5,7 @@ package io.pulumi.aws.s3;
 
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationFilterArgs;
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -32,10 +32,10 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<AnalyticsConfigurationFilterArgs> filter;
+      private final @Nullable Output<AnalyticsConfigurationFilterArgs> filter;
 
-    public Input<AnalyticsConfigurationFilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<AnalyticsConfigurationFilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="storageClassAnalysis")
-      private final @Nullable Input<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis;
+      private final @Nullable Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis;
 
-    public Input<AnalyticsConfigurationStorageClassAnalysisArgs> getStorageClassAnalysis() {
-        return this.storageClassAnalysis == null ? Input.empty() : this.storageClassAnalysis;
+    public Output<AnalyticsConfigurationStorageClassAnalysisArgs> getStorageClassAnalysis() {
+        return this.storageClassAnalysis == null ? Output.empty() : this.storageClassAnalysis;
     }
 
     public AnalyticsConfigurationArgs(
-        Input<String> bucket,
-        @Nullable Input<AnalyticsConfigurationFilterArgs> filter,
-        @Nullable Input<String> name,
-        @Nullable Input<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis) {
+        Output<String> bucket,
+        @Nullable Output<AnalyticsConfigurationFilterArgs> filter,
+        @Nullable Output<String> name,
+        @Nullable Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.filter = filter;
         this.name = name;
@@ -72,10 +72,10 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private AnalyticsConfigurationArgs() {
-        this.bucket = Input.empty();
-        this.filter = Input.empty();
-        this.name = Input.empty();
-        this.storageClassAnalysis = Input.empty();
+        this.bucket = Output.empty();
+        this.filter = Output.empty();
+        this.name = Output.empty();
+        this.storageClassAnalysis = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<AnalyticsConfigurationFilterArgs> filter;
-        private @Nullable Input<String> name;
-        private @Nullable Input<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis;
+        private Output<String> bucket;
+        private @Nullable Output<AnalyticsConfigurationFilterArgs> filter;
+        private @Nullable Output<String> name;
+        private @Nullable Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
     	      this.storageClassAnalysis = defaults.storageClassAnalysis;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder filter(@Nullable Input<AnalyticsConfigurationFilterArgs> filter) {
+        public Builder filter(@Nullable Output<AnalyticsConfigurationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable AnalyticsConfigurationFilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder storageClassAnalysis(@Nullable Input<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis) {
+        public Builder storageClassAnalysis(@Nullable Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis) {
             this.storageClassAnalysis = storageClassAnalysis;
             return this;
         }
 
         public Builder storageClassAnalysis(@Nullable AnalyticsConfigurationStorageClassAnalysisArgs storageClassAnalysis) {
-            this.storageClassAnalysis = Input.ofNullable(storageClassAnalysis);
+            this.storageClassAnalysis = Output.ofNullable(storageClassAnalysis);
             return this;
         }
         public AnalyticsConfigurationArgs build() {

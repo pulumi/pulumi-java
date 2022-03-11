@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lightsail.InstancePublicPortsArgs;
 import io.pulumi.aws.lightsail.inputs.InstancePublicPortsState;
 import io.pulumi.aws.lightsail.outputs.InstancePublicPortsPortInfo;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -94,14 +93,14 @@ public class InstancePublicPorts extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstancePublicPorts(String name, InstancePublicPortsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lightsail/instancePublicPorts:InstancePublicPorts", name, args == null ? InstancePublicPortsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:lightsail/instancePublicPorts:InstancePublicPorts", name, args == null ? InstancePublicPortsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private InstancePublicPorts(String name, Input<String> id, @Nullable InstancePublicPortsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private InstancePublicPorts(String name, Output<String> id, @Nullable InstancePublicPortsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:lightsail/instancePublicPorts:InstancePublicPorts", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -117,7 +116,7 @@ public class InstancePublicPorts extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InstancePublicPorts get(String name, Input<String> id, @Nullable InstancePublicPortsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static InstancePublicPorts get(String name, Output<String> id, @Nullable InstancePublicPortsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InstancePublicPorts(name, id, state, options);
     }
 }

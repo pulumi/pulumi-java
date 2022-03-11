@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.HumanTaskUIUiTemplateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="humanTaskUiName", required=true)
-      private final Input<String> humanTaskUiName;
+      private final Output<String> humanTaskUiName;
 
-    public Input<String> getHumanTaskUiName() {
+    public Output<String> getHumanTaskUiName() {
         return this.humanTaskUiName;
     }
 
@@ -32,10 +32,10 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uiTemplate", required=true)
-      private final Input<HumanTaskUIUiTemplateArgs> uiTemplate;
+      private final Output<HumanTaskUIUiTemplateArgs> uiTemplate;
 
-    public Input<HumanTaskUIUiTemplateArgs> getUiTemplate() {
+    public Output<HumanTaskUIUiTemplateArgs> getUiTemplate() {
         return this.uiTemplate;
     }
 
     public HumanTaskUIArgs(
-        Input<String> humanTaskUiName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<HumanTaskUIUiTemplateArgs> uiTemplate) {
+        Output<String> humanTaskUiName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<HumanTaskUIUiTemplateArgs> uiTemplate) {
         this.humanTaskUiName = Objects.requireNonNull(humanTaskUiName, "expected parameter 'humanTaskUiName' to be non-null");
         this.tags = tags;
         this.uiTemplate = Objects.requireNonNull(uiTemplate, "expected parameter 'uiTemplate' to be non-null");
     }
 
     private HumanTaskUIArgs() {
-        this.humanTaskUiName = Input.empty();
-        this.tags = Input.empty();
-        this.uiTemplate = Input.empty();
+        this.humanTaskUiName = Output.empty();
+        this.tags = Output.empty();
+        this.uiTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> humanTaskUiName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<HumanTaskUIUiTemplateArgs> uiTemplate;
+        private Output<String> humanTaskUiName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<HumanTaskUIUiTemplateArgs> uiTemplate;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uiTemplate = defaults.uiTemplate;
         }
 
-        public Builder humanTaskUiName(Input<String> humanTaskUiName) {
+        public Builder humanTaskUiName(Output<String> humanTaskUiName) {
             this.humanTaskUiName = Objects.requireNonNull(humanTaskUiName);
             return this;
         }
 
         public Builder humanTaskUiName(String humanTaskUiName) {
-            this.humanTaskUiName = Input.of(Objects.requireNonNull(humanTaskUiName));
+            this.humanTaskUiName = Output.of(Objects.requireNonNull(humanTaskUiName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder uiTemplate(Input<HumanTaskUIUiTemplateArgs> uiTemplate) {
+        public Builder uiTemplate(Output<HumanTaskUIUiTemplateArgs> uiTemplate) {
             this.uiTemplate = Objects.requireNonNull(uiTemplate);
             return this;
         }
 
         public Builder uiTemplate(HumanTaskUIUiTemplateArgs uiTemplate) {
-            this.uiTemplate = Input.of(Objects.requireNonNull(uiTemplate));
+            this.uiTemplate = Output.of(Objects.requireNonNull(uiTemplate));
             return this;
         }
         public HumanTaskUIArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ApiOperationArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operations")
-      private final @Nullable Input<List<ApiOperationArgs>> operations;
+      private final @Nullable Output<List<ApiOperationArgs>> operations;
 
-    public Input<List<ApiOperationArgs>> getOperations() {
-        return this.operations == null ? Input.empty() : this.operations;
+    public Output<List<ApiOperationArgs>> getOperations() {
+        return this.operations == null ? Output.empty() : this.operations;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<List<String>> resources;
+      private final @Nullable Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<String>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     public IngressToArgs(
-        @Nullable Input<List<ApiOperationArgs>> operations,
-        @Nullable Input<List<String>> resources) {
+        @Nullable Output<List<ApiOperationArgs>> operations,
+        @Nullable Output<List<String>> resources) {
         this.operations = operations;
         this.resources = resources;
     }
 
     private IngressToArgs() {
-        this.operations = Input.empty();
-        this.resources = Input.empty();
+        this.operations = Output.empty();
+        this.resources = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ApiOperationArgs>> operations;
-        private @Nullable Input<List<String>> resources;
+        private @Nullable Output<List<ApiOperationArgs>> operations;
+        private @Nullable Output<List<String>> resources;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resources = defaults.resources;
         }
 
-        public Builder operations(@Nullable Input<List<ApiOperationArgs>> operations) {
+        public Builder operations(@Nullable Output<List<ApiOperationArgs>> operations) {
             this.operations = operations;
             return this;
         }
 
         public Builder operations(@Nullable List<ApiOperationArgs> operations) {
-            this.operations = Input.ofNullable(operations);
+            this.operations = Output.ofNullable(operations);
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
         public IngressToArgs build() {

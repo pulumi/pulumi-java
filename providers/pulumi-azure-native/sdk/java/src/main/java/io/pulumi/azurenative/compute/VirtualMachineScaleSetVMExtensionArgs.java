@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineExtensionInstanceViewArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -22,10 +22,10 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Input<Boolean> getAutoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
+    public Output<Boolean> getAutoUpgradeMinorVersion() {
+        return this.autoUpgradeMinorVersion == null ? Output.empty() : this.autoUpgradeMinorVersion;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="enableAutomaticUpgrade")
-      private final @Nullable Input<Boolean> enableAutomaticUpgrade;
+      private final @Nullable Output<Boolean> enableAutomaticUpgrade;
 
-    public Input<Boolean> getEnableAutomaticUpgrade() {
-        return this.enableAutomaticUpgrade == null ? Input.empty() : this.enableAutomaticUpgrade;
+    public Output<Boolean> getEnableAutomaticUpgrade() {
+        return this.enableAutomaticUpgrade == null ? Output.empty() : this.enableAutomaticUpgrade;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="forceUpdateTag")
-      private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Output<String> forceUpdateTag;
 
-    public Input<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
+    public Output<String> getForceUpdateTag() {
+        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -66,10 +66,10 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="instanceView")
-      private final @Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView;
+      private final @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView;
 
-    public Input<VirtualMachineExtensionInstanceViewArgs> getInstanceView() {
-        return this.instanceView == null ? Input.empty() : this.instanceView;
+    public Output<VirtualMachineExtensionInstanceViewArgs> getInstanceView() {
+        return this.instanceView == null ? Output.empty() : this.instanceView;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="protectedSettings")
-      private final @Nullable Input<Object> protectedSettings;
+      private final @Nullable Output<Object> protectedSettings;
 
-    public Input<Object> getProtectedSettings() {
-        return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
+    public Output<Object> getProtectedSettings() {
+        return this.protectedSettings == null ? Output.empty() : this.protectedSettings;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="publisher")
-      private final @Nullable Input<String> publisher;
+      private final @Nullable Output<String> publisher;
 
-    public Input<String> getPublisher() {
-        return this.publisher == null ? Input.empty() : this.publisher;
+    public Output<String> getPublisher() {
+        return this.publisher == null ? Output.empty() : this.publisher;
     }
 
     /**
@@ -99,9 +99,9 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -110,10 +110,10 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<Object> settings;
+      private final @Nullable Output<Object> settings;
 
-    public Input<Object> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<Object> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="typeHandlerVersion")
-      private final @Nullable Input<String> typeHandlerVersion;
+      private final @Nullable Output<String> typeHandlerVersion;
 
-    public Input<String> getTypeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
+    public Output<String> getTypeHandlerVersion() {
+        return this.typeHandlerVersion == null ? Output.empty() : this.typeHandlerVersion;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="vmExtensionName")
-      private final @Nullable Input<String> vmExtensionName;
+      private final @Nullable Output<String> vmExtensionName;
 
-    public Input<String> getVmExtensionName() {
-        return this.vmExtensionName == null ? Input.empty() : this.vmExtensionName;
+    public Output<String> getVmExtensionName() {
+        return this.vmExtensionName == null ? Output.empty() : this.vmExtensionName;
     }
 
     /**
@@ -154,26 +154,26 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="vmScaleSetName", required=true)
-      private final Input<String> vmScaleSetName;
+      private final Output<String> vmScaleSetName;
 
-    public Input<String> getVmScaleSetName() {
+    public Output<String> getVmScaleSetName() {
         return this.vmScaleSetName;
     }
 
     public VirtualMachineScaleSetVMExtensionArgs(
-        @Nullable Input<Boolean> autoUpgradeMinorVersion,
-        @Nullable Input<Boolean> enableAutomaticUpgrade,
-        @Nullable Input<String> forceUpdateTag,
-        Input<String> instanceId,
-        @Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView,
-        @Nullable Input<Object> protectedSettings,
-        @Nullable Input<String> publisher,
-        Input<String> resourceGroupName,
-        @Nullable Input<Object> settings,
-        @Nullable Input<String> type,
-        @Nullable Input<String> typeHandlerVersion,
-        @Nullable Input<String> vmExtensionName,
-        Input<String> vmScaleSetName) {
+        @Nullable Output<Boolean> autoUpgradeMinorVersion,
+        @Nullable Output<Boolean> enableAutomaticUpgrade,
+        @Nullable Output<String> forceUpdateTag,
+        Output<String> instanceId,
+        @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView,
+        @Nullable Output<Object> protectedSettings,
+        @Nullable Output<String> publisher,
+        Output<String> resourceGroupName,
+        @Nullable Output<Object> settings,
+        @Nullable Output<String> type,
+        @Nullable Output<String> typeHandlerVersion,
+        @Nullable Output<String> vmExtensionName,
+        Output<String> vmScaleSetName) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.enableAutomaticUpgrade = enableAutomaticUpgrade;
         this.forceUpdateTag = forceUpdateTag;
@@ -190,19 +190,19 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     }
 
     private VirtualMachineScaleSetVMExtensionArgs() {
-        this.autoUpgradeMinorVersion = Input.empty();
-        this.enableAutomaticUpgrade = Input.empty();
-        this.forceUpdateTag = Input.empty();
-        this.instanceId = Input.empty();
-        this.instanceView = Input.empty();
-        this.protectedSettings = Input.empty();
-        this.publisher = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.settings = Input.empty();
-        this.type = Input.empty();
-        this.typeHandlerVersion = Input.empty();
-        this.vmExtensionName = Input.empty();
-        this.vmScaleSetName = Input.empty();
+        this.autoUpgradeMinorVersion = Output.empty();
+        this.enableAutomaticUpgrade = Output.empty();
+        this.forceUpdateTag = Output.empty();
+        this.instanceId = Output.empty();
+        this.instanceView = Output.empty();
+        this.protectedSettings = Output.empty();
+        this.publisher = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.settings = Output.empty();
+        this.type = Output.empty();
+        this.typeHandlerVersion = Output.empty();
+        this.vmExtensionName = Output.empty();
+        this.vmScaleSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -214,19 +214,19 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoUpgradeMinorVersion;
-        private @Nullable Input<Boolean> enableAutomaticUpgrade;
-        private @Nullable Input<String> forceUpdateTag;
-        private Input<String> instanceId;
-        private @Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView;
-        private @Nullable Input<Object> protectedSettings;
-        private @Nullable Input<String> publisher;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Object> settings;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> typeHandlerVersion;
-        private @Nullable Input<String> vmExtensionName;
-        private Input<String> vmScaleSetName;
+        private @Nullable Output<Boolean> autoUpgradeMinorVersion;
+        private @Nullable Output<Boolean> enableAutomaticUpgrade;
+        private @Nullable Output<String> forceUpdateTag;
+        private Output<String> instanceId;
+        private @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView;
+        private @Nullable Output<Object> protectedSettings;
+        private @Nullable Output<String> publisher;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Object> settings;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> typeHandlerVersion;
+        private @Nullable Output<String> vmExtensionName;
+        private Output<String> vmScaleSetName;
 
         public Builder() {
     	      // Empty
@@ -249,133 +249,133 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     	      this.vmScaleSetName = defaults.vmScaleSetName;
         }
 
-        public Builder autoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Input.ofNullable(autoUpgradeMinorVersion);
+            this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
 
-        public Builder enableAutomaticUpgrade(@Nullable Input<Boolean> enableAutomaticUpgrade) {
+        public Builder enableAutomaticUpgrade(@Nullable Output<Boolean> enableAutomaticUpgrade) {
             this.enableAutomaticUpgrade = enableAutomaticUpgrade;
             return this;
         }
 
         public Builder enableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
-            this.enableAutomaticUpgrade = Input.ofNullable(enableAutomaticUpgrade);
+            this.enableAutomaticUpgrade = Output.ofNullable(enableAutomaticUpgrade);
             return this;
         }
 
-        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder instanceView(@Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView) {
+        public Builder instanceView(@Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView) {
             this.instanceView = instanceView;
             return this;
         }
 
         public Builder instanceView(@Nullable VirtualMachineExtensionInstanceViewArgs instanceView) {
-            this.instanceView = Input.ofNullable(instanceView);
+            this.instanceView = Output.ofNullable(instanceView);
             return this;
         }
 
-        public Builder protectedSettings(@Nullable Input<Object> protectedSettings) {
+        public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
         public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Input.ofNullable(protectedSettings);
+            this.protectedSettings = Output.ofNullable(protectedSettings);
             return this;
         }
 
-        public Builder publisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Input.ofNullable(publisher);
+            this.publisher = Output.ofNullable(publisher);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder settings(@Nullable Input<Object> settings) {
+        public Builder settings(@Nullable Output<Object> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable Object settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder typeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
+            this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
         }
 
-        public Builder vmExtensionName(@Nullable Input<String> vmExtensionName) {
+        public Builder vmExtensionName(@Nullable Output<String> vmExtensionName) {
             this.vmExtensionName = vmExtensionName;
             return this;
         }
 
         public Builder vmExtensionName(@Nullable String vmExtensionName) {
-            this.vmExtensionName = Input.ofNullable(vmExtensionName);
+            this.vmExtensionName = Output.ofNullable(vmExtensionName);
             return this;
         }
 
-        public Builder vmScaleSetName(Input<String> vmScaleSetName) {
+        public Builder vmScaleSetName(Output<String> vmScaleSetName) {
             this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
             return this;
         }
 
         public Builder vmScaleSetName(String vmScaleSetName) {
-            this.vmScaleSetName = Input.of(Objects.requireNonNull(vmScaleSetName));
+            this.vmScaleSetName = Output.of(Objects.requireNonNull(vmScaleSetName));
             return this;
         }
         public VirtualMachineScaleSetVMExtensionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cassandra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,29 +18,29 @@ public final class TableProvisionedThroughputArgs extends io.pulumi.resources.Re
     public static final TableProvisionedThroughputArgs Empty = new TableProvisionedThroughputArgs();
 
     @InputImport(name="readCapacityUnits", required=true)
-      private final Input<Integer> readCapacityUnits;
+      private final Output<Integer> readCapacityUnits;
 
-    public Input<Integer> getReadCapacityUnits() {
+    public Output<Integer> getReadCapacityUnits() {
         return this.readCapacityUnits;
     }
 
     @InputImport(name="writeCapacityUnits", required=true)
-      private final Input<Integer> writeCapacityUnits;
+      private final Output<Integer> writeCapacityUnits;
 
-    public Input<Integer> getWriteCapacityUnits() {
+    public Output<Integer> getWriteCapacityUnits() {
         return this.writeCapacityUnits;
     }
 
     public TableProvisionedThroughputArgs(
-        Input<Integer> readCapacityUnits,
-        Input<Integer> writeCapacityUnits) {
+        Output<Integer> readCapacityUnits,
+        Output<Integer> writeCapacityUnits) {
         this.readCapacityUnits = Objects.requireNonNull(readCapacityUnits, "expected parameter 'readCapacityUnits' to be non-null");
         this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits, "expected parameter 'writeCapacityUnits' to be non-null");
     }
 
     private TableProvisionedThroughputArgs() {
-        this.readCapacityUnits = Input.empty();
-        this.writeCapacityUnits = Input.empty();
+        this.readCapacityUnits = Output.empty();
+        this.writeCapacityUnits = Output.empty();
     }
 
     public static Builder builder() {
@@ -52,8 +52,8 @@ public final class TableProvisionedThroughputArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<Integer> readCapacityUnits;
-        private Input<Integer> writeCapacityUnits;
+        private Output<Integer> readCapacityUnits;
+        private Output<Integer> writeCapacityUnits;
 
         public Builder() {
     	      // Empty
@@ -65,23 +65,23 @@ public final class TableProvisionedThroughputArgs extends io.pulumi.resources.Re
     	      this.writeCapacityUnits = defaults.writeCapacityUnits;
         }
 
-        public Builder readCapacityUnits(Input<Integer> readCapacityUnits) {
+        public Builder readCapacityUnits(Output<Integer> readCapacityUnits) {
             this.readCapacityUnits = Objects.requireNonNull(readCapacityUnits);
             return this;
         }
 
         public Builder readCapacityUnits(Integer readCapacityUnits) {
-            this.readCapacityUnits = Input.of(Objects.requireNonNull(readCapacityUnits));
+            this.readCapacityUnits = Output.of(Objects.requireNonNull(readCapacityUnits));
             return this;
         }
 
-        public Builder writeCapacityUnits(Input<Integer> writeCapacityUnits) {
+        public Builder writeCapacityUnits(Output<Integer> writeCapacityUnits) {
             this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits);
             return this;
         }
 
         public Builder writeCapacityUnits(Integer writeCapacityUnits) {
-            this.writeCapacityUnits = Input.of(Objects.requireNonNull(writeCapacityUnits));
+            this.writeCapacityUnits = Output.of(Objects.requireNonNull(writeCapacityUnits));
             return this;
         }
         public TableProvisionedThroughputArgs build() {

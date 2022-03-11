@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.InfrastructureEncryptionStat
 import io.pulumi.azurenative.recoveryservices.inputs.CmkKekIdentityArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.CmkKeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="infrastructureEncryption")
-      private final @Nullable Input<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
+      private final @Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
 
-    public Input<Either<String,InfrastructureEncryptionState>> getInfrastructureEncryption() {
-        return this.infrastructureEncryption == null ? Input.empty() : this.infrastructureEncryption;
+    public Output<Either<String,InfrastructureEncryptionState>> getInfrastructureEncryption() {
+        return this.infrastructureEncryption == null ? Output.empty() : this.infrastructureEncryption;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kekIdentity")
-      private final @Nullable Input<CmkKekIdentityArgs> kekIdentity;
+      private final @Nullable Output<CmkKekIdentityArgs> kekIdentity;
 
-    public Input<CmkKekIdentityArgs> getKekIdentity() {
-        return this.kekIdentity == null ? Input.empty() : this.kekIdentity;
+    public Output<CmkKekIdentityArgs> getKekIdentity() {
+        return this.kekIdentity == null ? Output.empty() : this.kekIdentity;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="keyVaultProperties")
-      private final @Nullable Input<CmkKeyVaultPropertiesArgs> keyVaultProperties;
+      private final @Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Input<CmkKeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
+    public Output<CmkKeyVaultPropertiesArgs> getKeyVaultProperties() {
+        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
     }
 
     public VaultPropertiesEncryptionArgs(
-        @Nullable Input<Either<String,InfrastructureEncryptionState>> infrastructureEncryption,
-        @Nullable Input<CmkKekIdentityArgs> kekIdentity,
-        @Nullable Input<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
+        @Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption,
+        @Nullable Output<CmkKekIdentityArgs> kekIdentity,
+        @Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
         this.infrastructureEncryption = infrastructureEncryption;
         this.kekIdentity = kekIdentity;
         this.keyVaultProperties = keyVaultProperties;
     }
 
     private VaultPropertiesEncryptionArgs() {
-        this.infrastructureEncryption = Input.empty();
-        this.kekIdentity = Input.empty();
-        this.keyVaultProperties = Input.empty();
+        this.infrastructureEncryption = Output.empty();
+        this.kekIdentity = Output.empty();
+        this.keyVaultProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
-        private @Nullable Input<CmkKekIdentityArgs> kekIdentity;
-        private @Nullable Input<CmkKeyVaultPropertiesArgs> keyVaultProperties;
+        private @Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
+        private @Nullable Output<CmkKekIdentityArgs> kekIdentity;
+        private @Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
     	      this.keyVaultProperties = defaults.keyVaultProperties;
         }
 
-        public Builder infrastructureEncryption(@Nullable Input<Either<String,InfrastructureEncryptionState>> infrastructureEncryption) {
+        public Builder infrastructureEncryption(@Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption) {
             this.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
 
         public Builder infrastructureEncryption(@Nullable Either<String,InfrastructureEncryptionState> infrastructureEncryption) {
-            this.infrastructureEncryption = Input.ofNullable(infrastructureEncryption);
+            this.infrastructureEncryption = Output.ofNullable(infrastructureEncryption);
             return this;
         }
 
-        public Builder kekIdentity(@Nullable Input<CmkKekIdentityArgs> kekIdentity) {
+        public Builder kekIdentity(@Nullable Output<CmkKekIdentityArgs> kekIdentity) {
             this.kekIdentity = kekIdentity;
             return this;
         }
 
         public Builder kekIdentity(@Nullable CmkKekIdentityArgs kekIdentity) {
-            this.kekIdentity = Input.ofNullable(kekIdentity);
+            this.kekIdentity = Output.ofNullable(kekIdentity);
             return this;
         }
 
-        public Builder keyVaultProperties(@Nullable Input<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
         public Builder keyVaultProperties(@Nullable CmkKeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
         public VaultPropertiesEncryptionArgs build() {

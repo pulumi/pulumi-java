@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -24,10 +24,10 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expires")
-      private final @Nullable Input<Double> expires;
+      private final @Nullable Output<Double> expires;
 
-    public Input<Double> getExpires() {
-        return this.expires == null ? Input.empty() : this.expires;
+    public Output<Double> getExpires() {
+        return this.expires == null ? Output.empty() : this.expires;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notBefore")
-      private final @Nullable Input<Double> notBefore;
+      private final @Nullable Output<Double> notBefore;
 
-    public Input<Double> getNotBefore() {
-        return this.notBefore == null ? Input.empty() : this.notBefore;
+    public Output<Double> getNotBefore() {
+        return this.notBefore == null ? Output.empty() : this.notBefore;
     }
 
     public KeyAttributesArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Double> expires,
-        @Nullable Input<Double> notBefore) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Double> expires,
+        @Nullable Output<Double> notBefore) {
         this.enabled = enabled;
         this.expires = expires;
         this.notBefore = notBefore;
     }
 
     private KeyAttributesArgs() {
-        this.enabled = Input.empty();
-        this.expires = Input.empty();
-        this.notBefore = Input.empty();
+        this.enabled = Output.empty();
+        this.expires = Output.empty();
+        this.notBefore = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Double> expires;
-        private @Nullable Input<Double> notBefore;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Double> expires;
+        private @Nullable Output<Double> notBefore;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.notBefore = defaults.notBefore;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder expires(@Nullable Input<Double> expires) {
+        public Builder expires(@Nullable Output<Double> expires) {
             this.expires = expires;
             return this;
         }
 
         public Builder expires(@Nullable Double expires) {
-            this.expires = Input.ofNullable(expires);
+            this.expires = Output.ofNullable(expires);
             return this;
         }
 
-        public Builder notBefore(@Nullable Input<Double> notBefore) {
+        public Builder notBefore(@Nullable Output<Double> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
         public Builder notBefore(@Nullable Double notBefore) {
-            this.notBefore = Input.ofNullable(notBefore);
+            this.notBefore = Output.ofNullable(notBefore);
             return this;
         }
         public KeyAttributesArgs build() {

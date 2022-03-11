@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -22,10 +22,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRunProperties")
-      private final @Nullable Input<Map<String,Object>> defaultRunProperties;
+      private final @Nullable Output<Map<String,Object>> defaultRunProperties;
 
-    public Input<Map<String,Object>> getDefaultRunProperties() {
-        return this.defaultRunProperties == null ? Input.empty() : this.defaultRunProperties;
+    public Output<Map<String,Object>> getDefaultRunProperties() {
+        return this.defaultRunProperties == null ? Output.empty() : this.defaultRunProperties;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentRuns")
-      private final @Nullable Input<Integer> maxConcurrentRuns;
+      private final @Nullable Output<Integer> maxConcurrentRuns;
 
-    public Input<Integer> getMaxConcurrentRuns() {
-        return this.maxConcurrentRuns == null ? Input.empty() : this.maxConcurrentRuns;
+    public Output<Integer> getMaxConcurrentRuns() {
+        return this.maxConcurrentRuns == null ? Output.empty() : this.maxConcurrentRuns;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public WorkflowArgs(
-        @Nullable Input<Map<String,Object>> defaultRunProperties,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> maxConcurrentRuns,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Map<String,Object>> defaultRunProperties,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> maxConcurrentRuns,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.defaultRunProperties = defaultRunProperties;
         this.description = description;
         this.maxConcurrentRuns = maxConcurrentRuns;
@@ -86,11 +86,11 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkflowArgs() {
-        this.defaultRunProperties = Input.empty();
-        this.description = Input.empty();
-        this.maxConcurrentRuns = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.defaultRunProperties = Output.empty();
+        this.description = Output.empty();
+        this.maxConcurrentRuns = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> defaultRunProperties;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> maxConcurrentRuns;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Map<String,Object>> defaultRunProperties;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> maxConcurrentRuns;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder defaultRunProperties(@Nullable Input<Map<String,Object>> defaultRunProperties) {
+        public Builder defaultRunProperties(@Nullable Output<Map<String,Object>> defaultRunProperties) {
             this.defaultRunProperties = defaultRunProperties;
             return this;
         }
 
         public Builder defaultRunProperties(@Nullable Map<String,Object> defaultRunProperties) {
-            this.defaultRunProperties = Input.ofNullable(defaultRunProperties);
+            this.defaultRunProperties = Output.ofNullable(defaultRunProperties);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder maxConcurrentRuns(@Nullable Input<Integer> maxConcurrentRuns) {
+        public Builder maxConcurrentRuns(@Nullable Output<Integer> maxConcurrentRuns) {
             this.maxConcurrentRuns = maxConcurrentRuns;
             return this;
         }
 
         public Builder maxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
-            this.maxConcurrentRuns = Input.ofNullable(maxConcurrentRuns);
+            this.maxConcurrentRuns = Output.ofNullable(maxConcurrentRuns);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public WorkflowArgs build() {

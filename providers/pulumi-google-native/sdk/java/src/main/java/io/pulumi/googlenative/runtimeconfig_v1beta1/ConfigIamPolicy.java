@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -104,14 +103,14 @@ public class ConfigIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigIamPolicy(String name, ConfigIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:runtimeconfig/v1beta1:ConfigIamPolicy", name, args == null ? ConfigIamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:runtimeconfig/v1beta1:ConfigIamPolicy", name, args == null ? ConfigIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConfigIamPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConfigIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:runtimeconfig/v1beta1:ConfigIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -126,7 +125,7 @@ public class ConfigIamPolicy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigIamPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigIamPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfigIamPolicy(name, id, options);
     }
 }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.AutoscaleNotificationArgs;
 import io.pulumi.azurenative.insights.inputs.AutoscaleProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoscaleSettingName")
-      private final @Nullable Input<String> autoscaleSettingName;
+      private final @Nullable Output<String> autoscaleSettingName;
 
-    public Input<String> getAutoscaleSettingName() {
-        return this.autoscaleSettingName == null ? Input.empty() : this.autoscaleSettingName;
+    public Output<String> getAutoscaleSettingName() {
+        return this.autoscaleSettingName == null ? Output.empty() : this.autoscaleSettingName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notifications")
-      private final @Nullable Input<List<AutoscaleNotificationArgs>> notifications;
+      private final @Nullable Output<List<AutoscaleNotificationArgs>> notifications;
 
-    public Input<List<AutoscaleNotificationArgs>> getNotifications() {
-        return this.notifications == null ? Input.empty() : this.notifications;
+    public Output<List<AutoscaleNotificationArgs>> getNotifications() {
+        return this.notifications == null ? Output.empty() : this.notifications;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="profiles", required=true)
-      private final Input<List<AutoscaleProfileArgs>> profiles;
+      private final Output<List<AutoscaleProfileArgs>> profiles;
 
-    public Input<List<AutoscaleProfileArgs>> getProfiles() {
+    public Output<List<AutoscaleProfileArgs>> getProfiles() {
         return this.profiles;
     }
 
@@ -90,9 +90,9 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,10 +101,10 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetResourceLocation")
-      private final @Nullable Input<String> targetResourceLocation;
+      private final @Nullable Output<String> targetResourceLocation;
 
-    public Input<String> getTargetResourceLocation() {
-        return this.targetResourceLocation == null ? Input.empty() : this.targetResourceLocation;
+    public Output<String> getTargetResourceLocation() {
+        return this.targetResourceLocation == null ? Output.empty() : this.targetResourceLocation;
     }
 
     /**
@@ -123,25 +123,25 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetResourceUri")
-      private final @Nullable Input<String> targetResourceUri;
+      private final @Nullable Output<String> targetResourceUri;
 
-    public Input<String> getTargetResourceUri() {
-        return this.targetResourceUri == null ? Input.empty() : this.targetResourceUri;
+    public Output<String> getTargetResourceUri() {
+        return this.targetResourceUri == null ? Output.empty() : this.targetResourceUri;
     }
 
     public AutoscaleSettingArgs(
-        @Nullable Input<String> autoscaleSettingName,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<List<AutoscaleNotificationArgs>> notifications,
-        Input<List<AutoscaleProfileArgs>> profiles,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> targetResourceLocation,
-        @Nullable Input<String> targetResourceUri) {
+        @Nullable Output<String> autoscaleSettingName,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<List<AutoscaleNotificationArgs>> notifications,
+        Output<List<AutoscaleProfileArgs>> profiles,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> targetResourceLocation,
+        @Nullable Output<String> targetResourceUri) {
         this.autoscaleSettingName = autoscaleSettingName;
-        this.enabled = enabled == null ? Input.ofNullable(true) : enabled;
+        this.enabled = enabled == null ? Output.ofNullable(true) : enabled;
         this.location = location;
         this.name = name;
         this.notifications = notifications;
@@ -153,16 +153,16 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AutoscaleSettingArgs() {
-        this.autoscaleSettingName = Input.empty();
-        this.enabled = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.notifications = Input.empty();
-        this.profiles = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.targetResourceLocation = Input.empty();
-        this.targetResourceUri = Input.empty();
+        this.autoscaleSettingName = Output.empty();
+        this.enabled = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.notifications = Output.empty();
+        this.profiles = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.targetResourceLocation = Output.empty();
+        this.targetResourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> autoscaleSettingName;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<AutoscaleNotificationArgs>> notifications;
-        private Input<List<AutoscaleProfileArgs>> profiles;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> targetResourceLocation;
-        private @Nullable Input<String> targetResourceUri;
+        private @Nullable Output<String> autoscaleSettingName;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<AutoscaleNotificationArgs>> notifications;
+        private Output<List<AutoscaleProfileArgs>> profiles;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> targetResourceLocation;
+        private @Nullable Output<String> targetResourceUri;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetResourceUri = defaults.targetResourceUri;
         }
 
-        public Builder autoscaleSettingName(@Nullable Input<String> autoscaleSettingName) {
+        public Builder autoscaleSettingName(@Nullable Output<String> autoscaleSettingName) {
             this.autoscaleSettingName = autoscaleSettingName;
             return this;
         }
 
         public Builder autoscaleSettingName(@Nullable String autoscaleSettingName) {
-            this.autoscaleSettingName = Input.ofNullable(autoscaleSettingName);
+            this.autoscaleSettingName = Output.ofNullable(autoscaleSettingName);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notifications(@Nullable Input<List<AutoscaleNotificationArgs>> notifications) {
+        public Builder notifications(@Nullable Output<List<AutoscaleNotificationArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
 
         public Builder notifications(@Nullable List<AutoscaleNotificationArgs> notifications) {
-            this.notifications = Input.ofNullable(notifications);
+            this.notifications = Output.ofNullable(notifications);
             return this;
         }
 
-        public Builder profiles(Input<List<AutoscaleProfileArgs>> profiles) {
+        public Builder profiles(Output<List<AutoscaleProfileArgs>> profiles) {
             this.profiles = Objects.requireNonNull(profiles);
             return this;
         }
 
         public Builder profiles(List<AutoscaleProfileArgs> profiles) {
-            this.profiles = Input.of(Objects.requireNonNull(profiles));
+            this.profiles = Output.of(Objects.requireNonNull(profiles));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetResourceLocation(@Nullable Input<String> targetResourceLocation) {
+        public Builder targetResourceLocation(@Nullable Output<String> targetResourceLocation) {
             this.targetResourceLocation = targetResourceLocation;
             return this;
         }
 
         public Builder targetResourceLocation(@Nullable String targetResourceLocation) {
-            this.targetResourceLocation = Input.ofNullable(targetResourceLocation);
+            this.targetResourceLocation = Output.ofNullable(targetResourceLocation);
             return this;
         }
 
-        public Builder targetResourceUri(@Nullable Input<String> targetResourceUri) {
+        public Builder targetResourceUri(@Nullable Output<String> targetResourceUri) {
             this.targetResourceUri = targetResourceUri;
             return this;
         }
 
         public Builder targetResourceUri(@Nullable String targetResourceUri) {
-            this.targetResourceUri = Input.ofNullable(targetResourceUri);
+            this.targetResourceUri = Output.ofNullable(targetResourceUri);
             return this;
         }
         public AutoscaleSettingArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
      * 
      */
     @InputImport(name="timeoutSec")
-      private final @Nullable Input<Integer> timeoutSec;
+      private final @Nullable Output<Integer> timeoutSec;
 
-    public Input<Integer> getTimeoutSec() {
-        return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
+    public Output<Integer> getTimeoutSec() {
+        return this.timeoutSec == null ? Output.empty() : this.timeoutSec;
     }
 
-    public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(@Nullable Input<Integer> timeoutSec) {
+    public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(@Nullable Output<Integer> timeoutSec) {
         this.timeoutSec = timeoutSec;
     }
 
     private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs() {
-        this.timeoutSec = Input.empty();
+        this.timeoutSec = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> timeoutSec;
+        private @Nullable Output<Integer> timeoutSec;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder timeoutSec(@Nullable Input<Integer> timeoutSec) {
+        public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
 
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Input.ofNullable(timeoutSec);
+            this.timeoutSec = Output.ofNullable(timeoutSec);
             return this;
         }
         public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs build() {

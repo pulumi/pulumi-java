@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketDefaultRetentionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class BucketObjectLockRuleArgs extends io.pulumi.resources.Resource
     public static final BucketObjectLockRuleArgs Empty = new BucketObjectLockRuleArgs();
 
     @InputImport(name="defaultRetention")
-      private final @Nullable Input<BucketDefaultRetentionArgs> defaultRetention;
+      private final @Nullable Output<BucketDefaultRetentionArgs> defaultRetention;
 
-    public Input<BucketDefaultRetentionArgs> getDefaultRetention() {
-        return this.defaultRetention == null ? Input.empty() : this.defaultRetention;
+    public Output<BucketDefaultRetentionArgs> getDefaultRetention() {
+        return this.defaultRetention == null ? Output.empty() : this.defaultRetention;
     }
 
-    public BucketObjectLockRuleArgs(@Nullable Input<BucketDefaultRetentionArgs> defaultRetention) {
+    public BucketObjectLockRuleArgs(@Nullable Output<BucketDefaultRetentionArgs> defaultRetention) {
         this.defaultRetention = defaultRetention;
     }
 
     private BucketObjectLockRuleArgs() {
-        this.defaultRetention = Input.empty();
+        this.defaultRetention = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class BucketObjectLockRuleArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<BucketDefaultRetentionArgs> defaultRetention;
+        private @Nullable Output<BucketDefaultRetentionArgs> defaultRetention;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class BucketObjectLockRuleArgs extends io.pulumi.resources.Resource
     	      this.defaultRetention = defaults.defaultRetention;
         }
 
-        public Builder defaultRetention(@Nullable Input<BucketDefaultRetentionArgs> defaultRetention) {
+        public Builder defaultRetention(@Nullable Output<BucketDefaultRetentionArgs> defaultRetention) {
             this.defaultRetention = defaultRetention;
             return this;
         }
 
         public Builder defaultRetention(@Nullable BucketDefaultRetentionArgs defaultRetention) {
-            this.defaultRetention = Input.ofNullable(defaultRetention);
+            this.defaultRetention = Output.ofNullable(defaultRetention);
             return this;
         }
         public BucketObjectLockRuleArgs build() {

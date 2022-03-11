@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rawDer", required=true)
-      private final Input<String> rawDer;
+      private final Output<String> rawDer;
 
-    public Input<String> getRawDer() {
+    public Output<String> getRawDer() {
         return this.rawDer;
     }
 
-    public CertificateArgs(Input<String> rawDer) {
+    public CertificateArgs(Output<String> rawDer) {
         this.rawDer = Objects.requireNonNull(rawDer, "expected parameter 'rawDer' to be non-null");
     }
 
     private CertificateArgs() {
-        this.rawDer = Input.empty();
+        this.rawDer = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> rawDer;
+        private Output<String> rawDer;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rawDer = defaults.rawDer;
         }
 
-        public Builder rawDer(Input<String> rawDer) {
+        public Builder rawDer(Output<String> rawDer) {
             this.rawDer = Objects.requireNonNull(rawDer);
             return this;
         }
 
         public Builder rawDer(String rawDer) {
-            this.rawDer = Input.of(Objects.requireNonNull(rawDer));
+            this.rawDer = Output.of(Objects.requireNonNull(rawDer));
             return this;
         }
         public CertificateArgs build() {

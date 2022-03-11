@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.PolicyContentFormat;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<Either<String,PolicyContentFormat>> format;
+      private final @Nullable Output<Either<String,PolicyContentFormat>> format;
 
-    public Input<Either<String,PolicyContentFormat>> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<Either<String,PolicyContentFormat>> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,9 +54,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -65,19 +65,19 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public PolicyArgs(
-        @Nullable Input<Either<String,PolicyContentFormat>> format,
-        @Nullable Input<String> policyId,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        Input<String> value) {
-        this.format = format == null ? Input.ofLeft("xml") : format;
+        @Nullable Output<Either<String,PolicyContentFormat>> format,
+        @Nullable Output<String> policyId,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        Output<String> value) {
+        this.format = format == null ? Output.ofLeft("xml") : format;
         this.policyId = policyId;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
@@ -85,11 +85,11 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.format = Input.empty();
-        this.policyId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.value = Input.empty();
+        this.format = Output.empty();
+        this.policyId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,PolicyContentFormat>> format;
-        private @Nullable Input<String> policyId;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private Input<String> value;
+        private @Nullable Output<Either<String,PolicyContentFormat>> format;
+        private @Nullable Output<String> policyId;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder format(@Nullable Input<Either<String,PolicyContentFormat>> format) {
+        public Builder format(@Nullable Output<Either<String,PolicyContentFormat>> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable Either<String,PolicyContentFormat> format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public PolicyArgs build() {

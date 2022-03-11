@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.TransportProtocol;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,9 +28,9 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPort", required=true)
-      private final Input<Integer> backendPort;
+      private final Output<Integer> backendPort;
 
-    public Input<Integer> getBackendPort() {
+    public Output<Integer> getBackendPort() {
         return this.backendPort;
     }
 
@@ -39,10 +39,10 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFloatingIP")
-      private final @Nullable Input<Boolean> enableFloatingIP;
+      private final @Nullable Output<Boolean> enableFloatingIP;
 
-    public Input<Boolean> getEnableFloatingIP() {
-        return this.enableFloatingIP == null ? Input.empty() : this.enableFloatingIP;
+    public Output<Boolean> getEnableFloatingIP() {
+        return this.enableFloatingIP == null ? Output.empty() : this.enableFloatingIP;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableTcpReset")
-      private final @Nullable Input<Boolean> enableTcpReset;
+      private final @Nullable Output<Boolean> enableTcpReset;
 
-    public Input<Boolean> getEnableTcpReset() {
-        return this.enableTcpReset == null ? Input.empty() : this.enableTcpReset;
+    public Output<Boolean> getEnableTcpReset() {
+        return this.enableTcpReset == null ? Output.empty() : this.enableTcpReset;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendIPConfiguration")
-      private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
+      private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
-    public Input<SubResourceArgs> getFrontendIPConfiguration() {
-        return this.frontendIPConfiguration == null ? Input.empty() : this.frontendIPConfiguration;
+    public Output<SubResourceArgs> getFrontendIPConfiguration() {
+        return this.frontendIPConfiguration == null ? Output.empty() : this.frontendIPConfiguration;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPortRangeEnd", required=true)
-      private final Input<Integer> frontendPortRangeEnd;
+      private final Output<Integer> frontendPortRangeEnd;
 
-    public Input<Integer> getFrontendPortRangeEnd() {
+    public Output<Integer> getFrontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
     }
 
@@ -83,9 +83,9 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPortRangeStart", required=true)
-      private final Input<Integer> frontendPortRangeStart;
+      private final Output<Integer> frontendPortRangeStart;
 
-    public Input<Integer> getFrontendPortRangeStart() {
+    public Output<Integer> getFrontendPortRangeStart() {
         return this.frontendPortRangeStart;
     }
 
@@ -94,10 +94,10 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-      private final @Nullable Input<Integer> idleTimeoutInMinutes;
+      private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Input<Integer> getIdleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
+    public Output<Integer> getIdleTimeoutInMinutes() {
+        return this.idleTimeoutInMinutes == null ? Output.empty() : this.idleTimeoutInMinutes;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -127,23 +127,23 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<Either<String,TransportProtocol>> protocol;
+      private final Output<Either<String,TransportProtocol>> protocol;
 
-    public Input<Either<String,TransportProtocol>> getProtocol() {
+    public Output<Either<String,TransportProtocol>> getProtocol() {
         return this.protocol;
     }
 
     public InboundNatPoolArgs(
-        Input<Integer> backendPort,
-        @Nullable Input<Boolean> enableFloatingIP,
-        @Nullable Input<Boolean> enableTcpReset,
-        @Nullable Input<SubResourceArgs> frontendIPConfiguration,
-        Input<Integer> frontendPortRangeEnd,
-        Input<Integer> frontendPortRangeStart,
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> idleTimeoutInMinutes,
-        @Nullable Input<String> name,
-        Input<Either<String,TransportProtocol>> protocol) {
+        Output<Integer> backendPort,
+        @Nullable Output<Boolean> enableFloatingIP,
+        @Nullable Output<Boolean> enableTcpReset,
+        @Nullable Output<SubResourceArgs> frontendIPConfiguration,
+        Output<Integer> frontendPortRangeEnd,
+        Output<Integer> frontendPortRangeStart,
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> idleTimeoutInMinutes,
+        @Nullable Output<String> name,
+        Output<Either<String,TransportProtocol>> protocol) {
         this.backendPort = Objects.requireNonNull(backendPort, "expected parameter 'backendPort' to be non-null");
         this.enableFloatingIP = enableFloatingIP;
         this.enableTcpReset = enableTcpReset;
@@ -157,16 +157,16 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InboundNatPoolArgs() {
-        this.backendPort = Input.empty();
-        this.enableFloatingIP = Input.empty();
-        this.enableTcpReset = Input.empty();
-        this.frontendIPConfiguration = Input.empty();
-        this.frontendPortRangeEnd = Input.empty();
-        this.frontendPortRangeStart = Input.empty();
-        this.id = Input.empty();
-        this.idleTimeoutInMinutes = Input.empty();
-        this.name = Input.empty();
-        this.protocol = Input.empty();
+        this.backendPort = Output.empty();
+        this.enableFloatingIP = Output.empty();
+        this.enableTcpReset = Output.empty();
+        this.frontendIPConfiguration = Output.empty();
+        this.frontendPortRangeEnd = Output.empty();
+        this.frontendPortRangeStart = Output.empty();
+        this.id = Output.empty();
+        this.idleTimeoutInMinutes = Output.empty();
+        this.name = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -178,16 +178,16 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> backendPort;
-        private @Nullable Input<Boolean> enableFloatingIP;
-        private @Nullable Input<Boolean> enableTcpReset;
-        private @Nullable Input<SubResourceArgs> frontendIPConfiguration;
-        private Input<Integer> frontendPortRangeEnd;
-        private Input<Integer> frontendPortRangeStart;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> idleTimeoutInMinutes;
-        private @Nullable Input<String> name;
-        private Input<Either<String,TransportProtocol>> protocol;
+        private Output<Integer> backendPort;
+        private @Nullable Output<Boolean> enableFloatingIP;
+        private @Nullable Output<Boolean> enableTcpReset;
+        private @Nullable Output<SubResourceArgs> frontendIPConfiguration;
+        private Output<Integer> frontendPortRangeEnd;
+        private Output<Integer> frontendPortRangeStart;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> idleTimeoutInMinutes;
+        private @Nullable Output<String> name;
+        private Output<Either<String,TransportProtocol>> protocol;
 
         public Builder() {
     	      // Empty
@@ -207,103 +207,103 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder backendPort(Input<Integer> backendPort) {
+        public Builder backendPort(Output<Integer> backendPort) {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
 
         public Builder backendPort(Integer backendPort) {
-            this.backendPort = Input.of(Objects.requireNonNull(backendPort));
+            this.backendPort = Output.of(Objects.requireNonNull(backendPort));
             return this;
         }
 
-        public Builder enableFloatingIP(@Nullable Input<Boolean> enableFloatingIP) {
+        public Builder enableFloatingIP(@Nullable Output<Boolean> enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
 
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
-            this.enableFloatingIP = Input.ofNullable(enableFloatingIP);
+            this.enableFloatingIP = Output.ofNullable(enableFloatingIP);
             return this;
         }
 
-        public Builder enableTcpReset(@Nullable Input<Boolean> enableTcpReset) {
+        public Builder enableTcpReset(@Nullable Output<Boolean> enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
 
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
-            this.enableTcpReset = Input.ofNullable(enableTcpReset);
+            this.enableTcpReset = Output.ofNullable(enableTcpReset);
             return this;
         }
 
-        public Builder frontendIPConfiguration(@Nullable Input<SubResourceArgs> frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable Output<SubResourceArgs> frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
         public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
-            this.frontendIPConfiguration = Input.ofNullable(frontendIPConfiguration);
+            this.frontendIPConfiguration = Output.ofNullable(frontendIPConfiguration);
             return this;
         }
 
-        public Builder frontendPortRangeEnd(Input<Integer> frontendPortRangeEnd) {
+        public Builder frontendPortRangeEnd(Output<Integer> frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
             return this;
         }
 
         public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
-            this.frontendPortRangeEnd = Input.of(Objects.requireNonNull(frontendPortRangeEnd));
+            this.frontendPortRangeEnd = Output.of(Objects.requireNonNull(frontendPortRangeEnd));
             return this;
         }
 
-        public Builder frontendPortRangeStart(Input<Integer> frontendPortRangeStart) {
+        public Builder frontendPortRangeStart(Output<Integer> frontendPortRangeStart) {
             this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
             return this;
         }
 
         public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
-            this.frontendPortRangeStart = Input.of(Objects.requireNonNull(frontendPortRangeStart));
+            this.frontendPortRangeStart = Output.of(Objects.requireNonNull(frontendPortRangeStart));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder idleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Input.ofNullable(idleTimeoutInMinutes);
+            this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder protocol(Input<Either<String,TransportProtocol>> protocol) {
+        public Builder protocol(Output<Either<String,TransportProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(Either<String,TransportProtocol> protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
         public InboundNatPoolArgs build() {

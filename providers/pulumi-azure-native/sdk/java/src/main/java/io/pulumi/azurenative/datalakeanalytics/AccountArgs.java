@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datalakeanalytics.inputs.AddDataLakeStoreWithAccoun
 import io.pulumi.azurenative.datalakeanalytics.inputs.AddStorageAccountWithAccountParametersArgs;
 import io.pulumi.azurenative.datalakeanalytics.inputs.CreateComputePolicyWithAccountParametersArgs;
 import io.pulumi.azurenative.datalakeanalytics.inputs.CreateFirewallRuleWithAccountParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computePolicies")
-      private final @Nullable Input<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
+      private final @Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
 
-    public Input<List<CreateComputePolicyWithAccountParametersArgs>> getComputePolicies() {
-        return this.computePolicies == null ? Input.empty() : this.computePolicies;
+    public Output<List<CreateComputePolicyWithAccountParametersArgs>> getComputePolicies() {
+        return this.computePolicies == null ? Output.empty() : this.computePolicies;
     }
 
     /**
@@ -51,9 +51,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataLakeStoreAccounts", required=true)
-      private final Input<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
+      private final Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
 
-    public Input<List<AddDataLakeStoreWithAccountParametersArgs>> getDataLakeStoreAccounts() {
+    public Output<List<AddDataLakeStoreWithAccountParametersArgs>> getDataLakeStoreAccounts() {
         return this.dataLakeStoreAccounts;
     }
 
@@ -62,9 +62,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDataLakeStoreAccount", required=true)
-      private final Input<String> defaultDataLakeStoreAccount;
+      private final Output<String> defaultDataLakeStoreAccount;
 
-    public Input<String> getDefaultDataLakeStoreAccount() {
+    public Output<String> getDefaultDataLakeStoreAccount() {
         return this.defaultDataLakeStoreAccount;
     }
 
@@ -73,10 +73,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallAllowAzureIps")
-      private final @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps;
+      private final @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
-    public Input<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
-        return this.firewallAllowAzureIps == null ? Input.empty() : this.firewallAllowAzureIps;
+    public Output<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
+        return this.firewallAllowAzureIps == null ? Output.empty() : this.firewallAllowAzureIps;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallRules")
-      private final @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
+      private final @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
-    public Input<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
-        return this.firewallRules == null ? Input.empty() : this.firewallRules;
+    public Output<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
+        return this.firewallRules == null ? Output.empty() : this.firewallRules;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallState")
-      private final @Nullable Input<FirewallState> firewallState;
+      private final @Nullable Output<FirewallState> firewallState;
 
-    public Input<FirewallState> getFirewallState() {
-        return this.firewallState == null ? Input.empty() : this.firewallState;
+    public Output<FirewallState> getFirewallState() {
+        return this.firewallState == null ? Output.empty() : this.firewallState;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDegreeOfParallelism")
-      private final @Nullable Input<Integer> maxDegreeOfParallelism;
+      private final @Nullable Output<Integer> maxDegreeOfParallelism;
 
-    public Input<Integer> getMaxDegreeOfParallelism() {
-        return this.maxDegreeOfParallelism == null ? Input.empty() : this.maxDegreeOfParallelism;
+    public Output<Integer> getMaxDegreeOfParallelism() {
+        return this.maxDegreeOfParallelism == null ? Output.empty() : this.maxDegreeOfParallelism;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDegreeOfParallelismPerJob")
-      private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
+      private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
-    public Input<Integer> getMaxDegreeOfParallelismPerJob() {
-        return this.maxDegreeOfParallelismPerJob == null ? Input.empty() : this.maxDegreeOfParallelismPerJob;
+    public Output<Integer> getMaxDegreeOfParallelismPerJob() {
+        return this.maxDegreeOfParallelismPerJob == null ? Output.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxJobCount")
-      private final @Nullable Input<Integer> maxJobCount;
+      private final @Nullable Output<Integer> maxJobCount;
 
-    public Input<Integer> getMaxJobCount() {
-        return this.maxJobCount == null ? Input.empty() : this.maxJobCount;
+    public Output<Integer> getMaxJobCount() {
+        return this.maxJobCount == null ? Output.empty() : this.maxJobCount;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minPriorityPerJob")
-      private final @Nullable Input<Integer> minPriorityPerJob;
+      private final @Nullable Output<Integer> minPriorityPerJob;
 
-    public Input<Integer> getMinPriorityPerJob() {
-        return this.minPriorityPerJob == null ? Input.empty() : this.minPriorityPerJob;
+    public Output<Integer> getMinPriorityPerJob() {
+        return this.minPriorityPerJob == null ? Output.empty() : this.minPriorityPerJob;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="newTier")
-      private final @Nullable Input<TierType> newTier;
+      private final @Nullable Output<TierType> newTier;
 
-    public Input<TierType> getNewTier() {
-        return this.newTier == null ? Input.empty() : this.newTier;
+    public Output<TierType> getNewTier() {
+        return this.newTier == null ? Output.empty() : this.newTier;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStoreRetention")
-      private final @Nullable Input<Integer> queryStoreRetention;
+      private final @Nullable Output<Integer> queryStoreRetention;
 
-    public Input<Integer> getQueryStoreRetention() {
-        return this.queryStoreRetention == null ? Input.empty() : this.queryStoreRetention;
+    public Output<Integer> getQueryStoreRetention() {
+        return this.queryStoreRetention == null ? Output.empty() : this.queryStoreRetention;
     }
 
     /**
@@ -183,9 +183,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -194,10 +194,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccounts")
-      private final @Nullable Input<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
+      private final @Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
 
-    public Input<List<AddStorageAccountWithAccountParametersArgs>> getStorageAccounts() {
-        return this.storageAccounts == null ? Input.empty() : this.storageAccounts;
+    public Output<List<AddStorageAccountWithAccountParametersArgs>> getStorageAccounts() {
+        return this.storageAccounts == null ? Output.empty() : this.storageAccounts;
     }
 
     /**
@@ -205,67 +205,67 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AccountArgs(
-        @Nullable Input<String> accountName,
-        @Nullable Input<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies,
-        Input<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts,
-        Input<String> defaultDataLakeStoreAccount,
-        @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps,
-        @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules,
-        @Nullable Input<FirewallState> firewallState,
-        @Nullable Input<String> location,
-        @Nullable Input<Integer> maxDegreeOfParallelism,
-        @Nullable Input<Integer> maxDegreeOfParallelismPerJob,
-        @Nullable Input<Integer> maxJobCount,
-        @Nullable Input<Integer> minPriorityPerJob,
-        @Nullable Input<TierType> newTier,
-        @Nullable Input<Integer> queryStoreRetention,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> accountName,
+        @Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies,
+        Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts,
+        Output<String> defaultDataLakeStoreAccount,
+        @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps,
+        @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules,
+        @Nullable Output<FirewallState> firewallState,
+        @Nullable Output<String> location,
+        @Nullable Output<Integer> maxDegreeOfParallelism,
+        @Nullable Output<Integer> maxDegreeOfParallelismPerJob,
+        @Nullable Output<Integer> maxJobCount,
+        @Nullable Output<Integer> minPriorityPerJob,
+        @Nullable Output<TierType> newTier,
+        @Nullable Output<Integer> queryStoreRetention,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountName = accountName;
         this.computePolicies = computePolicies;
         this.dataLakeStoreAccounts = Objects.requireNonNull(dataLakeStoreAccounts, "expected parameter 'dataLakeStoreAccounts' to be non-null");
         this.defaultDataLakeStoreAccount = Objects.requireNonNull(defaultDataLakeStoreAccount, "expected parameter 'defaultDataLakeStoreAccount' to be non-null");
-        this.firewallAllowAzureIps = firewallAllowAzureIps == null ? Input.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.FirewallAllowAzureIpsState.Disabled) : firewallAllowAzureIps;
+        this.firewallAllowAzureIps = firewallAllowAzureIps == null ? Output.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.FirewallAllowAzureIpsState.Disabled) : firewallAllowAzureIps;
         this.firewallRules = firewallRules;
-        this.firewallState = firewallState == null ? Input.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.FirewallState.Disabled) : firewallState;
+        this.firewallState = firewallState == null ? Output.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.FirewallState.Disabled) : firewallState;
         this.location = location;
-        this.maxDegreeOfParallelism = maxDegreeOfParallelism == null ? Input.ofNullable(30) : maxDegreeOfParallelism;
-        this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob == null ? Input.ofNullable(32) : maxDegreeOfParallelismPerJob;
-        this.maxJobCount = maxJobCount == null ? Input.ofNullable(3) : maxJobCount;
+        this.maxDegreeOfParallelism = maxDegreeOfParallelism == null ? Output.ofNullable(30) : maxDegreeOfParallelism;
+        this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob == null ? Output.ofNullable(32) : maxDegreeOfParallelismPerJob;
+        this.maxJobCount = maxJobCount == null ? Output.ofNullable(3) : maxJobCount;
         this.minPriorityPerJob = minPriorityPerJob;
-        this.newTier = newTier == null ? Input.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.TierType.Consumption) : newTier;
-        this.queryStoreRetention = queryStoreRetention == null ? Input.ofNullable(30) : queryStoreRetention;
+        this.newTier = newTier == null ? Output.ofNullable(io.pulumi.azurenative.datalakeanalytics.enums.TierType.Consumption) : newTier;
+        this.queryStoreRetention = queryStoreRetention == null ? Output.ofNullable(30) : queryStoreRetention;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.storageAccounts = storageAccounts;
         this.tags = tags;
     }
 
     private AccountArgs() {
-        this.accountName = Input.empty();
-        this.computePolicies = Input.empty();
-        this.dataLakeStoreAccounts = Input.empty();
-        this.defaultDataLakeStoreAccount = Input.empty();
-        this.firewallAllowAzureIps = Input.empty();
-        this.firewallRules = Input.empty();
-        this.firewallState = Input.empty();
-        this.location = Input.empty();
-        this.maxDegreeOfParallelism = Input.empty();
-        this.maxDegreeOfParallelismPerJob = Input.empty();
-        this.maxJobCount = Input.empty();
-        this.minPriorityPerJob = Input.empty();
-        this.newTier = Input.empty();
-        this.queryStoreRetention = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccounts = Input.empty();
-        this.tags = Input.empty();
+        this.accountName = Output.empty();
+        this.computePolicies = Output.empty();
+        this.dataLakeStoreAccounts = Output.empty();
+        this.defaultDataLakeStoreAccount = Output.empty();
+        this.firewallAllowAzureIps = Output.empty();
+        this.firewallRules = Output.empty();
+        this.firewallState = Output.empty();
+        this.location = Output.empty();
+        this.maxDegreeOfParallelism = Output.empty();
+        this.maxDegreeOfParallelismPerJob = Output.empty();
+        this.maxJobCount = Output.empty();
+        this.minPriorityPerJob = Output.empty();
+        this.newTier = Output.empty();
+        this.queryStoreRetention = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccounts = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -277,23 +277,23 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
-        private Input<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
-        private Input<String> defaultDataLakeStoreAccount;
-        private @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps;
-        private @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
-        private @Nullable Input<FirewallState> firewallState;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Integer> maxDegreeOfParallelism;
-        private @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
-        private @Nullable Input<Integer> maxJobCount;
-        private @Nullable Input<Integer> minPriorityPerJob;
-        private @Nullable Input<TierType> newTier;
-        private @Nullable Input<Integer> queryStoreRetention;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
+        private Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
+        private Output<String> defaultDataLakeStoreAccount;
+        private @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
+        private @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
+        private @Nullable Output<FirewallState> firewallState;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Integer> maxDegreeOfParallelism;
+        private @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
+        private @Nullable Output<Integer> maxJobCount;
+        private @Nullable Output<Integer> minPriorityPerJob;
+        private @Nullable Output<TierType> newTier;
+        private @Nullable Output<Integer> queryStoreRetention;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -320,173 +320,173 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder computePolicies(@Nullable Input<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies) {
+        public Builder computePolicies(@Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies) {
             this.computePolicies = computePolicies;
             return this;
         }
 
         public Builder computePolicies(@Nullable List<CreateComputePolicyWithAccountParametersArgs> computePolicies) {
-            this.computePolicies = Input.ofNullable(computePolicies);
+            this.computePolicies = Output.ofNullable(computePolicies);
             return this;
         }
 
-        public Builder dataLakeStoreAccounts(Input<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts) {
+        public Builder dataLakeStoreAccounts(Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts) {
             this.dataLakeStoreAccounts = Objects.requireNonNull(dataLakeStoreAccounts);
             return this;
         }
 
         public Builder dataLakeStoreAccounts(List<AddDataLakeStoreWithAccountParametersArgs> dataLakeStoreAccounts) {
-            this.dataLakeStoreAccounts = Input.of(Objects.requireNonNull(dataLakeStoreAccounts));
+            this.dataLakeStoreAccounts = Output.of(Objects.requireNonNull(dataLakeStoreAccounts));
             return this;
         }
 
-        public Builder defaultDataLakeStoreAccount(Input<String> defaultDataLakeStoreAccount) {
+        public Builder defaultDataLakeStoreAccount(Output<String> defaultDataLakeStoreAccount) {
             this.defaultDataLakeStoreAccount = Objects.requireNonNull(defaultDataLakeStoreAccount);
             return this;
         }
 
         public Builder defaultDataLakeStoreAccount(String defaultDataLakeStoreAccount) {
-            this.defaultDataLakeStoreAccount = Input.of(Objects.requireNonNull(defaultDataLakeStoreAccount));
+            this.defaultDataLakeStoreAccount = Output.of(Objects.requireNonNull(defaultDataLakeStoreAccount));
             return this;
         }
 
-        public Builder firewallAllowAzureIps(@Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
+        public Builder firewallAllowAzureIps(@Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
             this.firewallAllowAzureIps = firewallAllowAzureIps;
             return this;
         }
 
         public Builder firewallAllowAzureIps(@Nullable FirewallAllowAzureIpsState firewallAllowAzureIps) {
-            this.firewallAllowAzureIps = Input.ofNullable(firewallAllowAzureIps);
+            this.firewallAllowAzureIps = Output.ofNullable(firewallAllowAzureIps);
             return this;
         }
 
-        public Builder firewallRules(@Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
+        public Builder firewallRules(@Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
         public Builder firewallRules(@Nullable List<CreateFirewallRuleWithAccountParametersArgs> firewallRules) {
-            this.firewallRules = Input.ofNullable(firewallRules);
+            this.firewallRules = Output.ofNullable(firewallRules);
             return this;
         }
 
-        public Builder firewallState(@Nullable Input<FirewallState> firewallState) {
+        public Builder firewallState(@Nullable Output<FirewallState> firewallState) {
             this.firewallState = firewallState;
             return this;
         }
 
         public Builder firewallState(@Nullable FirewallState firewallState) {
-            this.firewallState = Input.ofNullable(firewallState);
+            this.firewallState = Output.ofNullable(firewallState);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maxDegreeOfParallelism(@Nullable Input<Integer> maxDegreeOfParallelism) {
+        public Builder maxDegreeOfParallelism(@Nullable Output<Integer> maxDegreeOfParallelism) {
             this.maxDegreeOfParallelism = maxDegreeOfParallelism;
             return this;
         }
 
         public Builder maxDegreeOfParallelism(@Nullable Integer maxDegreeOfParallelism) {
-            this.maxDegreeOfParallelism = Input.ofNullable(maxDegreeOfParallelism);
+            this.maxDegreeOfParallelism = Output.ofNullable(maxDegreeOfParallelism);
             return this;
         }
 
-        public Builder maxDegreeOfParallelismPerJob(@Nullable Input<Integer> maxDegreeOfParallelismPerJob) {
+        public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
 
         public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = Input.ofNullable(maxDegreeOfParallelismPerJob);
+            this.maxDegreeOfParallelismPerJob = Output.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
 
-        public Builder maxJobCount(@Nullable Input<Integer> maxJobCount) {
+        public Builder maxJobCount(@Nullable Output<Integer> maxJobCount) {
             this.maxJobCount = maxJobCount;
             return this;
         }
 
         public Builder maxJobCount(@Nullable Integer maxJobCount) {
-            this.maxJobCount = Input.ofNullable(maxJobCount);
+            this.maxJobCount = Output.ofNullable(maxJobCount);
             return this;
         }
 
-        public Builder minPriorityPerJob(@Nullable Input<Integer> minPriorityPerJob) {
+        public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
             this.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
 
         public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
-            this.minPriorityPerJob = Input.ofNullable(minPriorityPerJob);
+            this.minPriorityPerJob = Output.ofNullable(minPriorityPerJob);
             return this;
         }
 
-        public Builder newTier(@Nullable Input<TierType> newTier) {
+        public Builder newTier(@Nullable Output<TierType> newTier) {
             this.newTier = newTier;
             return this;
         }
 
         public Builder newTier(@Nullable TierType newTier) {
-            this.newTier = Input.ofNullable(newTier);
+            this.newTier = Output.ofNullable(newTier);
             return this;
         }
 
-        public Builder queryStoreRetention(@Nullable Input<Integer> queryStoreRetention) {
+        public Builder queryStoreRetention(@Nullable Output<Integer> queryStoreRetention) {
             this.queryStoreRetention = queryStoreRetention;
             return this;
         }
 
         public Builder queryStoreRetention(@Nullable Integer queryStoreRetention) {
-            this.queryStoreRetention = Input.ofNullable(queryStoreRetention);
+            this.queryStoreRetention = Output.ofNullable(queryStoreRetention);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccounts(@Nullable Input<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts) {
+        public Builder storageAccounts(@Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
 
         public Builder storageAccounts(@Nullable List<AddStorageAccountWithAccountParametersArgs> storageAccounts) {
-            this.storageAccounts = Input.ofNullable(storageAccounts);
+            this.storageAccounts = Output.ofNullable(storageAccounts);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AccountArgs build() {

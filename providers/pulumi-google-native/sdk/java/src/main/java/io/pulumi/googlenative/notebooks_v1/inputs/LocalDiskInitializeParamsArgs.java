@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.LocalDiskInitializeParamsDiskType;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskName")
-      private final @Nullable Input<String> diskName;
+      private final @Nullable Output<String> diskName;
 
-    public Input<String> getDiskName() {
-        return this.diskName == null ? Input.empty() : this.diskName;
+    public Output<String> getDiskName() {
+        return this.diskName == null ? Output.empty() : this.diskName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Output<String> diskSizeGb;
 
-    public Input<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<String> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<LocalDiskInitializeParamsDiskType> diskType;
+      private final @Nullable Output<LocalDiskInitializeParamsDiskType> diskType;
 
-    public Input<LocalDiskInitializeParamsDiskType> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<LocalDiskInitializeParamsDiskType> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     public LocalDiskInitializeParamsArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> diskName,
-        @Nullable Input<String> diskSizeGb,
-        @Nullable Input<LocalDiskInitializeParamsDiskType> diskType,
-        @Nullable Input<Map<String,String>> labels) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> diskName,
+        @Nullable Output<String> diskSizeGb,
+        @Nullable Output<LocalDiskInitializeParamsDiskType> diskType,
+        @Nullable Output<Map<String,String>> labels) {
         this.description = description;
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;
@@ -89,11 +89,11 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
     }
 
     private LocalDiskInitializeParamsArgs() {
-        this.description = Input.empty();
-        this.diskName = Input.empty();
-        this.diskSizeGb = Input.empty();
-        this.diskType = Input.empty();
-        this.labels = Input.empty();
+        this.description = Output.empty();
+        this.diskName = Output.empty();
+        this.diskSizeGb = Output.empty();
+        this.diskType = Output.empty();
+        this.labels = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> diskName;
-        private @Nullable Input<String> diskSizeGb;
-        private @Nullable Input<LocalDiskInitializeParamsDiskType> diskType;
-        private @Nullable Input<Map<String,String>> labels;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> diskName;
+        private @Nullable Output<String> diskSizeGb;
+        private @Nullable Output<LocalDiskInitializeParamsDiskType> diskType;
+        private @Nullable Output<Map<String,String>> labels;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
     	      this.labels = defaults.labels;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Output<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Input.ofNullable(diskName);
+            this.diskName = Output.ofNullable(diskName);
             return this;
         }
 
-        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<LocalDiskInitializeParamsDiskType> diskType) {
+        public Builder diskType(@Nullable Output<LocalDiskInitializeParamsDiskType> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable LocalDiskInitializeParamsDiskType diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
         public LocalDiskInitializeParamsArgs build() {

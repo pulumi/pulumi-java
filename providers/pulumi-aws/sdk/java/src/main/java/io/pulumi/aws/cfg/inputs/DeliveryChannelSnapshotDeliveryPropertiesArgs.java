@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="deliveryFrequency")
-      private final @Nullable Input<String> deliveryFrequency;
+      private final @Nullable Output<String> deliveryFrequency;
 
-    public Input<String> getDeliveryFrequency() {
-        return this.deliveryFrequency == null ? Input.empty() : this.deliveryFrequency;
+    public Output<String> getDeliveryFrequency() {
+        return this.deliveryFrequency == null ? Output.empty() : this.deliveryFrequency;
     }
 
-    public DeliveryChannelSnapshotDeliveryPropertiesArgs(@Nullable Input<String> deliveryFrequency) {
+    public DeliveryChannelSnapshotDeliveryPropertiesArgs(@Nullable Output<String> deliveryFrequency) {
         this.deliveryFrequency = deliveryFrequency;
     }
 
     private DeliveryChannelSnapshotDeliveryPropertiesArgs() {
-        this.deliveryFrequency = Input.empty();
+        this.deliveryFrequency = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deliveryFrequency;
+        private @Nullable Output<String> deliveryFrequency;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesArgs extends io.pulu
     	      this.deliveryFrequency = defaults.deliveryFrequency;
         }
 
-        public Builder deliveryFrequency(@Nullable Input<String> deliveryFrequency) {
+        public Builder deliveryFrequency(@Nullable Output<String> deliveryFrequency) {
             this.deliveryFrequency = deliveryFrequency;
             return this;
         }
 
         public Builder deliveryFrequency(@Nullable String deliveryFrequency) {
-            this.deliveryFrequency = Input.ofNullable(deliveryFrequency);
+            this.deliveryFrequency = Output.ofNullable(deliveryFrequency);
             return this;
         }
         public DeliveryChannelSnapshotDeliveryPropertiesArgs build() {

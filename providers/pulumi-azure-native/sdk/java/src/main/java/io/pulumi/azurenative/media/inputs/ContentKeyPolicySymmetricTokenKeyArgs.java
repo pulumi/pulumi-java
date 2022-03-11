@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="keyValue", required=true)
-      private final Input<String> keyValue;
+      private final Output<String> keyValue;
 
-    public Input<String> getKeyValue() {
+    public Output<String> getKeyValue() {
         return this.keyValue;
     }
 
@@ -34,22 +34,22 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public ContentKeyPolicySymmetricTokenKeyArgs(
-        Input<String> keyValue,
-        Input<String> odataType) {
+        Output<String> keyValue,
+        Output<String> odataType) {
         this.keyValue = Objects.requireNonNull(keyValue, "expected parameter 'keyValue' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private ContentKeyPolicySymmetricTokenKeyArgs() {
-        this.keyValue = Input.empty();
-        this.odataType = Input.empty();
+        this.keyValue = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> keyValue;
-        private Input<String> odataType;
+        private Output<String> keyValue;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder keyValue(Input<String> keyValue) {
+        public Builder keyValue(Output<String> keyValue) {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
 
         public Builder keyValue(String keyValue) {
-            this.keyValue = Input.of(Objects.requireNonNull(keyValue));
+            this.keyValue = Output.of(Objects.requireNonNull(keyValue));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public ContentKeyPolicySymmetricTokenKeyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -22,10 +22,10 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="cacheDataEncrypted")
-      private final @Nullable Input<Boolean> cacheDataEncrypted;
+      private final @Nullable Output<Boolean> cacheDataEncrypted;
 
-    public Input<Boolean> getCacheDataEncrypted() {
-        return this.cacheDataEncrypted == null ? Input.empty() : this.cacheDataEncrypted;
+    public Output<Boolean> getCacheDataEncrypted() {
+        return this.cacheDataEncrypted == null ? Output.empty() : this.cacheDataEncrypted;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="cacheTtlInSeconds")
-      private final @Nullable Input<Integer> cacheTtlInSeconds;
+      private final @Nullable Output<Integer> cacheTtlInSeconds;
 
-    public Input<Integer> getCacheTtlInSeconds() {
-        return this.cacheTtlInSeconds == null ? Input.empty() : this.cacheTtlInSeconds;
+    public Output<Integer> getCacheTtlInSeconds() {
+        return this.cacheTtlInSeconds == null ? Output.empty() : this.cacheTtlInSeconds;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="cachingEnabled")
-      private final @Nullable Input<Boolean> cachingEnabled;
+      private final @Nullable Output<Boolean> cachingEnabled;
 
-    public Input<Boolean> getCachingEnabled() {
-        return this.cachingEnabled == null ? Input.empty() : this.cachingEnabled;
+    public Output<Boolean> getCachingEnabled() {
+        return this.cachingEnabled == null ? Output.empty() : this.cachingEnabled;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dataTraceEnabled")
-      private final @Nullable Input<Boolean> dataTraceEnabled;
+      private final @Nullable Output<Boolean> dataTraceEnabled;
 
-    public Input<Boolean> getDataTraceEnabled() {
-        return this.dataTraceEnabled == null ? Input.empty() : this.dataTraceEnabled;
+    public Output<Boolean> getDataTraceEnabled() {
+        return this.dataTraceEnabled == null ? Output.empty() : this.dataTraceEnabled;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loggingLevel")
-      private final @Nullable Input<String> loggingLevel;
+      private final @Nullable Output<String> loggingLevel;
 
-    public Input<String> getLoggingLevel() {
-        return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
+    public Output<String> getLoggingLevel() {
+        return this.loggingLevel == null ? Output.empty() : this.loggingLevel;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricsEnabled")
-      private final @Nullable Input<Boolean> metricsEnabled;
+      private final @Nullable Output<Boolean> metricsEnabled;
 
-    public Input<Boolean> getMetricsEnabled() {
-        return this.metricsEnabled == null ? Input.empty() : this.metricsEnabled;
+    public Output<Boolean> getMetricsEnabled() {
+        return this.metricsEnabled == null ? Output.empty() : this.metricsEnabled;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="requireAuthorizationForCacheControl")
-      private final @Nullable Input<Boolean> requireAuthorizationForCacheControl;
+      private final @Nullable Output<Boolean> requireAuthorizationForCacheControl;
 
-    public Input<Boolean> getRequireAuthorizationForCacheControl() {
-        return this.requireAuthorizationForCacheControl == null ? Input.empty() : this.requireAuthorizationForCacheControl;
+    public Output<Boolean> getRequireAuthorizationForCacheControl() {
+        return this.requireAuthorizationForCacheControl == null ? Output.empty() : this.requireAuthorizationForCacheControl;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="throttlingBurstLimit")
-      private final @Nullable Input<Integer> throttlingBurstLimit;
+      private final @Nullable Output<Integer> throttlingBurstLimit;
 
-    public Input<Integer> getThrottlingBurstLimit() {
-        return this.throttlingBurstLimit == null ? Input.empty() : this.throttlingBurstLimit;
+    public Output<Integer> getThrottlingBurstLimit() {
+        return this.throttlingBurstLimit == null ? Output.empty() : this.throttlingBurstLimit;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="throttlingRateLimit")
-      private final @Nullable Input<Double> throttlingRateLimit;
+      private final @Nullable Output<Double> throttlingRateLimit;
 
-    public Input<Double> getThrottlingRateLimit() {
-        return this.throttlingRateLimit == null ? Input.empty() : this.throttlingRateLimit;
+    public Output<Double> getThrottlingRateLimit() {
+        return this.throttlingRateLimit == null ? Output.empty() : this.throttlingRateLimit;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="unauthorizedCacheControlHeaderStrategy")
-      private final @Nullable Input<String> unauthorizedCacheControlHeaderStrategy;
+      private final @Nullable Output<String> unauthorizedCacheControlHeaderStrategy;
 
-    public Input<String> getUnauthorizedCacheControlHeaderStrategy() {
-        return this.unauthorizedCacheControlHeaderStrategy == null ? Input.empty() : this.unauthorizedCacheControlHeaderStrategy;
+    public Output<String> getUnauthorizedCacheControlHeaderStrategy() {
+        return this.unauthorizedCacheControlHeaderStrategy == null ? Output.empty() : this.unauthorizedCacheControlHeaderStrategy;
     }
 
     public MethodSettingsSettingsGetArgs(
-        @Nullable Input<Boolean> cacheDataEncrypted,
-        @Nullable Input<Integer> cacheTtlInSeconds,
-        @Nullable Input<Boolean> cachingEnabled,
-        @Nullable Input<Boolean> dataTraceEnabled,
-        @Nullable Input<String> loggingLevel,
-        @Nullable Input<Boolean> metricsEnabled,
-        @Nullable Input<Boolean> requireAuthorizationForCacheControl,
-        @Nullable Input<Integer> throttlingBurstLimit,
-        @Nullable Input<Double> throttlingRateLimit,
-        @Nullable Input<String> unauthorizedCacheControlHeaderStrategy) {
+        @Nullable Output<Boolean> cacheDataEncrypted,
+        @Nullable Output<Integer> cacheTtlInSeconds,
+        @Nullable Output<Boolean> cachingEnabled,
+        @Nullable Output<Boolean> dataTraceEnabled,
+        @Nullable Output<String> loggingLevel,
+        @Nullable Output<Boolean> metricsEnabled,
+        @Nullable Output<Boolean> requireAuthorizationForCacheControl,
+        @Nullable Output<Integer> throttlingBurstLimit,
+        @Nullable Output<Double> throttlingRateLimit,
+        @Nullable Output<String> unauthorizedCacheControlHeaderStrategy) {
         this.cacheDataEncrypted = cacheDataEncrypted;
         this.cacheTtlInSeconds = cacheTtlInSeconds;
         this.cachingEnabled = cachingEnabled;
@@ -151,16 +151,16 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     }
 
     private MethodSettingsSettingsGetArgs() {
-        this.cacheDataEncrypted = Input.empty();
-        this.cacheTtlInSeconds = Input.empty();
-        this.cachingEnabled = Input.empty();
-        this.dataTraceEnabled = Input.empty();
-        this.loggingLevel = Input.empty();
-        this.metricsEnabled = Input.empty();
-        this.requireAuthorizationForCacheControl = Input.empty();
-        this.throttlingBurstLimit = Input.empty();
-        this.throttlingRateLimit = Input.empty();
-        this.unauthorizedCacheControlHeaderStrategy = Input.empty();
+        this.cacheDataEncrypted = Output.empty();
+        this.cacheTtlInSeconds = Output.empty();
+        this.cachingEnabled = Output.empty();
+        this.dataTraceEnabled = Output.empty();
+        this.loggingLevel = Output.empty();
+        this.metricsEnabled = Output.empty();
+        this.requireAuthorizationForCacheControl = Output.empty();
+        this.throttlingBurstLimit = Output.empty();
+        this.throttlingRateLimit = Output.empty();
+        this.unauthorizedCacheControlHeaderStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> cacheDataEncrypted;
-        private @Nullable Input<Integer> cacheTtlInSeconds;
-        private @Nullable Input<Boolean> cachingEnabled;
-        private @Nullable Input<Boolean> dataTraceEnabled;
-        private @Nullable Input<String> loggingLevel;
-        private @Nullable Input<Boolean> metricsEnabled;
-        private @Nullable Input<Boolean> requireAuthorizationForCacheControl;
-        private @Nullable Input<Integer> throttlingBurstLimit;
-        private @Nullable Input<Double> throttlingRateLimit;
-        private @Nullable Input<String> unauthorizedCacheControlHeaderStrategy;
+        private @Nullable Output<Boolean> cacheDataEncrypted;
+        private @Nullable Output<Integer> cacheTtlInSeconds;
+        private @Nullable Output<Boolean> cachingEnabled;
+        private @Nullable Output<Boolean> dataTraceEnabled;
+        private @Nullable Output<String> loggingLevel;
+        private @Nullable Output<Boolean> metricsEnabled;
+        private @Nullable Output<Boolean> requireAuthorizationForCacheControl;
+        private @Nullable Output<Integer> throttlingBurstLimit;
+        private @Nullable Output<Double> throttlingRateLimit;
+        private @Nullable Output<String> unauthorizedCacheControlHeaderStrategy;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class MethodSettingsSettingsGetArgs extends io.pulumi.resources.Res
     	      this.unauthorizedCacheControlHeaderStrategy = defaults.unauthorizedCacheControlHeaderStrategy;
         }
 
-        public Builder cacheDataEncrypted(@Nullable Input<Boolean> cacheDataEncrypted) {
+        public Builder cacheDataEncrypted(@Nullable Output<Boolean> cacheDataEncrypted) {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
 
         public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
-            this.cacheDataEncrypted = Input.ofNullable(cacheDataEncrypted);
+            this.cacheDataEncrypted = Output.ofNullable(cacheDataEncrypted);
             return this;
         }
 
-        public Builder cacheTtlInSeconds(@Nullable Input<Integer> cacheTtlInSeconds) {
+        public Builder cacheTtlInSeconds(@Nullable Output<Integer> cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
 
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
-            this.cacheTtlInSeconds = Input.ofNullable(cacheTtlInSeconds);
+            this.cacheTtlInSeconds = Output.ofNullable(cacheTtlInSeconds);
             return this;
         }
 
-        public Builder cachingEnabled(@Nullable Input<Boolean> cachingEnabled) {
+        public Builder cachingEnabled(@Nullable Output<Boolean> cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
 
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
-            this.cachingEnabled = Input.ofNullable(cachingEnabled);
+            this.cachingEnabled = Output.ofNullable(cachingEnabled);
             return this;
         }
 
-        public Builder dataTraceEnabled(@Nullable Input<Boolean> dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
-            this.dataTraceEnabled = Input.ofNullable(dataTraceEnabled);
+            this.dataTraceEnabled = Output.ofNullable(dataTraceEnabled);
             return this;
         }
 
-        public Builder loggingLevel(@Nullable Input<String> loggingLevel) {
+        public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
         public Builder loggingLevel(@Nullable String loggingLevel) {
-            this.loggingLevel = Input.ofNullable(loggingLevel);
+            this.loggingLevel = Output.ofNullable(loggingLevel);
             return this;
         }
 
-        public Builder metricsEnabled(@Nullable Input<Boolean> metricsEnabled) {
+        public Builder metricsEnabled(@Nullable Output<Boolean> metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
 
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
-            this.metricsEnabled = Input.ofNullable(metricsEnabled);
+            this.metricsEnabled = Output.ofNullable(metricsEnabled);
             return this;
         }
 
-        public Builder requireAuthorizationForCacheControl(@Nullable Input<Boolean> requireAuthorizationForCacheControl) {
+        public Builder requireAuthorizationForCacheControl(@Nullable Output<Boolean> requireAuthorizationForCacheControl) {
             this.requireAuthorizationForCacheControl = requireAuthorizationForCacheControl;
             return this;
         }
 
         public Builder requireAuthorizationForCacheControl(@Nullable Boolean requireAuthorizationForCacheControl) {
-            this.requireAuthorizationForCacheControl = Input.ofNullable(requireAuthorizationForCacheControl);
+            this.requireAuthorizationForCacheControl = Output.ofNullable(requireAuthorizationForCacheControl);
             return this;
         }
 
-        public Builder throttlingBurstLimit(@Nullable Input<Integer> throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
-            this.throttlingBurstLimit = Input.ofNullable(throttlingBurstLimit);
+            this.throttlingBurstLimit = Output.ofNullable(throttlingBurstLimit);
             return this;
         }
 
-        public Builder throttlingRateLimit(@Nullable Input<Double> throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
 
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
-            this.throttlingRateLimit = Input.ofNullable(throttlingRateLimit);
+            this.throttlingRateLimit = Output.ofNullable(throttlingRateLimit);
             return this;
         }
 
-        public Builder unauthorizedCacheControlHeaderStrategy(@Nullable Input<String> unauthorizedCacheControlHeaderStrategy) {
+        public Builder unauthorizedCacheControlHeaderStrategy(@Nullable Output<String> unauthorizedCacheControlHeaderStrategy) {
             this.unauthorizedCacheControlHeaderStrategy = unauthorizedCacheControlHeaderStrategy;
             return this;
         }
 
         public Builder unauthorizedCacheControlHeaderStrategy(@Nullable String unauthorizedCacheControlHeaderStrategy) {
-            this.unauthorizedCacheControlHeaderStrategy = Input.ofNullable(unauthorizedCacheControlHeaderStrategy);
+            this.unauthorizedCacheControlHeaderStrategy = Output.ofNullable(unauthorizedCacheControlHeaderStrategy);
             return this;
         }
         public MethodSettingsSettingsGetArgs build() {

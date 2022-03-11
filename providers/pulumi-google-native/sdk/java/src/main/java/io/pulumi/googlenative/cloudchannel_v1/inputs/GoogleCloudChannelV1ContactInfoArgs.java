@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="firstName")
-      private final @Nullable Input<String> firstName;
+      private final @Nullable Output<String> firstName;
 
-    public Input<String> getFirstName() {
-        return this.firstName == null ? Input.empty() : this.firstName;
+    public Output<String> getFirstName() {
+        return this.firstName == null ? Output.empty() : this.firstName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="lastName")
-      private final @Nullable Input<String> lastName;
+      private final @Nullable Output<String> lastName;
 
-    public Input<String> getLastName() {
-        return this.lastName == null ? Input.empty() : this.lastName;
+    public Output<String> getLastName() {
+        return this.lastName == null ? Output.empty() : this.lastName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="phone")
-      private final @Nullable Input<String> phone;
+      private final @Nullable Output<String> phone;
 
-    public Input<String> getPhone() {
-        return this.phone == null ? Input.empty() : this.phone;
+    public Output<String> getPhone() {
+        return this.phone == null ? Output.empty() : this.phone;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public GoogleCloudChannelV1ContactInfoArgs(
-        @Nullable Input<String> email,
-        @Nullable Input<String> firstName,
-        @Nullable Input<String> lastName,
-        @Nullable Input<String> phone,
-        @Nullable Input<String> title) {
+        @Nullable Output<String> email,
+        @Nullable Output<String> firstName,
+        @Nullable Output<String> lastName,
+        @Nullable Output<String> phone,
+        @Nullable Output<String> title) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -87,11 +87,11 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudChannelV1ContactInfoArgs() {
-        this.email = Input.empty();
-        this.firstName = Input.empty();
-        this.lastName = Input.empty();
-        this.phone = Input.empty();
-        this.title = Input.empty();
+        this.email = Output.empty();
+        this.firstName = Output.empty();
+        this.lastName = Output.empty();
+        this.phone = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> firstName;
-        private @Nullable Input<String> lastName;
-        private @Nullable Input<String> phone;
-        private @Nullable Input<String> title;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> firstName;
+        private @Nullable Output<String> lastName;
+        private @Nullable Output<String> phone;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
     	      this.title = defaults.title;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder firstName(@Nullable Input<String> firstName) {
+        public Builder firstName(@Nullable Output<String> firstName) {
             this.firstName = firstName;
             return this;
         }
 
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = Input.ofNullable(firstName);
+            this.firstName = Output.ofNullable(firstName);
             return this;
         }
 
-        public Builder lastName(@Nullable Input<String> lastName) {
+        public Builder lastName(@Nullable Output<String> lastName) {
             this.lastName = lastName;
             return this;
         }
 
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = Input.ofNullable(lastName);
+            this.lastName = Output.ofNullable(lastName);
             return this;
         }
 
-        public Builder phone(@Nullable Input<String> phone) {
+        public Builder phone(@Nullable Output<String> phone) {
             this.phone = phone;
             return this;
         }
 
         public Builder phone(@Nullable String phone) {
-            this.phone = Input.ofNullable(phone);
+            this.phone = Output.ofNullable(phone);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public GoogleCloudChannelV1ContactInfoArgs build() {

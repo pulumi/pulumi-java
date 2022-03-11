@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.BotClarificationPromptMessageArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class BotClarificationPromptArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxAttempts", required=true)
-      private final Input<Integer> maxAttempts;
+      private final Output<Integer> maxAttempts;
 
-    public Input<Integer> getMaxAttempts() {
+    public Output<Integer> getMaxAttempts() {
         return this.maxAttempts;
     }
 
@@ -35,9 +35,9 @@ public final class BotClarificationPromptArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="messages", required=true)
-      private final Input<List<BotClarificationPromptMessageArgs>> messages;
+      private final Output<List<BotClarificationPromptMessageArgs>> messages;
 
-    public Input<List<BotClarificationPromptMessageArgs>> getMessages() {
+    public Output<List<BotClarificationPromptMessageArgs>> getMessages() {
         return this.messages;
     }
 
@@ -48,25 +48,25 @@ public final class BotClarificationPromptArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="responseCard")
-      private final @Nullable Input<String> responseCard;
+      private final @Nullable Output<String> responseCard;
 
-    public Input<String> getResponseCard() {
-        return this.responseCard == null ? Input.empty() : this.responseCard;
+    public Output<String> getResponseCard() {
+        return this.responseCard == null ? Output.empty() : this.responseCard;
     }
 
     public BotClarificationPromptArgs(
-        Input<Integer> maxAttempts,
-        Input<List<BotClarificationPromptMessageArgs>> messages,
-        @Nullable Input<String> responseCard) {
+        Output<Integer> maxAttempts,
+        Output<List<BotClarificationPromptMessageArgs>> messages,
+        @Nullable Output<String> responseCard) {
         this.maxAttempts = Objects.requireNonNull(maxAttempts, "expected parameter 'maxAttempts' to be non-null");
         this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
         this.responseCard = responseCard;
     }
 
     private BotClarificationPromptArgs() {
-        this.maxAttempts = Input.empty();
-        this.messages = Input.empty();
-        this.responseCard = Input.empty();
+        this.maxAttempts = Output.empty();
+        this.messages = Output.empty();
+        this.responseCard = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class BotClarificationPromptArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Integer> maxAttempts;
-        private Input<List<BotClarificationPromptMessageArgs>> messages;
-        private @Nullable Input<String> responseCard;
+        private Output<Integer> maxAttempts;
+        private Output<List<BotClarificationPromptMessageArgs>> messages;
+        private @Nullable Output<String> responseCard;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class BotClarificationPromptArgs extends io.pulumi.resources.Resour
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder maxAttempts(Input<Integer> maxAttempts) {
+        public Builder maxAttempts(Output<Integer> maxAttempts) {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
 
         public Builder maxAttempts(Integer maxAttempts) {
-            this.maxAttempts = Input.of(Objects.requireNonNull(maxAttempts));
+            this.maxAttempts = Output.of(Objects.requireNonNull(maxAttempts));
             return this;
         }
 
-        public Builder messages(Input<List<BotClarificationPromptMessageArgs>> messages) {
+        public Builder messages(Output<List<BotClarificationPromptMessageArgs>> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
         public Builder messages(List<BotClarificationPromptMessageArgs> messages) {
-            this.messages = Input.of(Objects.requireNonNull(messages));
+            this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
 
-        public Builder responseCard(@Nullable Input<String> responseCard) {
+        public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
 
         public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Input.ofNullable(responseCard);
+            this.responseCard = Output.ofNullable(responseCard);
             return this;
         }
         public BotClarificationPromptArgs build() {

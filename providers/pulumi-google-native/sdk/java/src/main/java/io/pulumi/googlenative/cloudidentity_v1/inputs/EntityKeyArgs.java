@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class EntityKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class EntityKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     public EntityKeyArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> namespace) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> namespace) {
         this.id = id;
         this.namespace = namespace;
     }
 
     private EntityKeyArgs() {
-        this.id = Input.empty();
-        this.namespace = Input.empty();
+        this.id = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class EntityKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> namespace;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class EntityKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
         public EntityKeyArgs build() {

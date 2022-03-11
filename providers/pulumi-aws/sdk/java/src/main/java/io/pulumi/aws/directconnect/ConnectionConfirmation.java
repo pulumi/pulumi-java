@@ -6,7 +6,6 @@ package io.pulumi.aws.directconnect;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.ConnectionConfirmationArgs;
 import io.pulumi.aws.directconnect.inputs.ConnectionConfirmationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -74,14 +73,14 @@ public class ConnectionConfirmation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectionConfirmation(String name, ConnectionConfirmationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/connectionConfirmation:ConnectionConfirmation", name, args == null ? ConnectionConfirmationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:directconnect/connectionConfirmation:ConnectionConfirmation", name, args == null ? ConnectionConfirmationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConnectionConfirmation(String name, Input<String> id, @Nullable ConnectionConfirmationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConnectionConfirmation(String name, Output<String> id, @Nullable ConnectionConfirmationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:directconnect/connectionConfirmation:ConnectionConfirmation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -97,7 +96,7 @@ public class ConnectionConfirmation extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConnectionConfirmation get(String name, Input<String> id, @Nullable ConnectionConfirmationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConnectionConfirmation get(String name, Output<String> id, @Nullable ConnectionConfirmationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConnectionConfirmation(name, id, state, options);
     }
 }

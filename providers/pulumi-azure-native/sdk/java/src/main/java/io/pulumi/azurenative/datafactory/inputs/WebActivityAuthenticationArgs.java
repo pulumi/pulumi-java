@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceArgs
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="credential")
-      private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Input<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Input.empty() : this.credential;
+    public Output<CredentialReferenceArgs> getCredential() {
+        return this.credential == null ? Output.empty() : this.credential;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="pfx")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPfx() {
-        return this.pfx == null ? Input.empty() : this.pfx;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPfx() {
+        return this.pfx == null ? Output.empty() : this.pfx;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resource")
-      private final @Nullable Input<Object> resource;
+      private final @Nullable Output<Object> resource;
 
-    public Input<Object> getResource() {
-        return this.resource == null ? Input.empty() : this.resource;
+    public Output<Object> getResource() {
+        return this.resource == null ? Output.empty() : this.resource;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userTenant")
-      private final @Nullable Input<Object> userTenant;
+      private final @Nullable Output<Object> userTenant;
 
-    public Input<Object> getUserTenant() {
-        return this.userTenant == null ? Input.empty() : this.userTenant;
+    public Output<Object> getUserTenant() {
+        return this.userTenant == null ? Output.empty() : this.userTenant;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<Object> username;
+      private final @Nullable Output<Object> username;
 
-    public Input<Object> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<Object> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public WebActivityAuthenticationArgs(
-        @Nullable Input<CredentialReferenceArgs> credential,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx,
-        @Nullable Input<Object> resource,
-        @Nullable Input<String> type,
-        @Nullable Input<Object> userTenant,
-        @Nullable Input<Object> username) {
+        @Nullable Output<CredentialReferenceArgs> credential,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx,
+        @Nullable Output<Object> resource,
+        @Nullable Output<String> type,
+        @Nullable Output<Object> userTenant,
+        @Nullable Output<Object> username) {
         this.credential = credential;
         this.password = password;
         this.pfx = pfx;
@@ -118,13 +118,13 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
     }
 
     private WebActivityAuthenticationArgs() {
-        this.credential = Input.empty();
-        this.password = Input.empty();
-        this.pfx = Input.empty();
-        this.resource = Input.empty();
-        this.type = Input.empty();
-        this.userTenant = Input.empty();
-        this.username = Input.empty();
+        this.credential = Output.empty();
+        this.password = Output.empty();
+        this.pfx = Output.empty();
+        this.resource = Output.empty();
+        this.type = Output.empty();
+        this.userTenant = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<CredentialReferenceArgs> credential;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
-        private @Nullable Input<Object> resource;
-        private @Nullable Input<String> type;
-        private @Nullable Input<Object> userTenant;
-        private @Nullable Input<Object> username;
+        private @Nullable Output<CredentialReferenceArgs> credential;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
+        private @Nullable Output<Object> resource;
+        private @Nullable Output<String> type;
+        private @Nullable Output<Object> userTenant;
+        private @Nullable Output<Object> username;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
     	      this.username = defaults.username;
         }
 
-        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Input.ofNullable(credential);
+            this.credential = Output.ofNullable(credential);
             return this;
         }
 
-        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder pfx(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
+        public Builder pfx(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
             this.pfx = pfx;
             return this;
         }
 
         public Builder pfx(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
-            this.pfx = Input.ofNullable(pfx);
+            this.pfx = Output.ofNullable(pfx);
             return this;
         }
 
-        public Builder resource(@Nullable Input<Object> resource) {
+        public Builder resource(@Nullable Output<Object> resource) {
             this.resource = resource;
             return this;
         }
 
         public Builder resource(@Nullable Object resource) {
-            this.resource = Input.ofNullable(resource);
+            this.resource = Output.ofNullable(resource);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder userTenant(@Nullable Input<Object> userTenant) {
+        public Builder userTenant(@Nullable Output<Object> userTenant) {
             this.userTenant = userTenant;
             return this;
         }
 
         public Builder userTenant(@Nullable Object userTenant) {
-            this.userTenant = Input.ofNullable(userTenant);
+            this.userTenant = Output.ofNullable(userTenant);
             return this;
         }
 
-        public Builder username(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable Object username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public WebActivityAuthenticationArgs build() {

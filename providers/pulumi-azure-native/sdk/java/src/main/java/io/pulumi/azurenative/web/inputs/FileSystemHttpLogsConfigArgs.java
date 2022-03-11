@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retentionInDays")
-      private final @Nullable Input<Integer> retentionInDays;
+      private final @Nullable Output<Integer> retentionInDays;
 
-    public Input<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
+    public Output<Integer> getRetentionInDays() {
+        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retentionInMb")
-      private final @Nullable Input<Integer> retentionInMb;
+      private final @Nullable Output<Integer> retentionInMb;
 
-    public Input<Integer> getRetentionInMb() {
-        return this.retentionInMb == null ? Input.empty() : this.retentionInMb;
+    public Output<Integer> getRetentionInMb() {
+        return this.retentionInMb == null ? Output.empty() : this.retentionInMb;
     }
 
     public FileSystemHttpLogsConfigArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Integer> retentionInDays,
-        @Nullable Input<Integer> retentionInMb) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Integer> retentionInDays,
+        @Nullable Output<Integer> retentionInMb) {
         this.enabled = enabled;
         this.retentionInDays = retentionInDays;
         this.retentionInMb = retentionInMb;
     }
 
     private FileSystemHttpLogsConfigArgs() {
-        this.enabled = Input.empty();
-        this.retentionInDays = Input.empty();
-        this.retentionInMb = Input.empty();
+        this.enabled = Output.empty();
+        this.retentionInDays = Output.empty();
+        this.retentionInMb = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Integer> retentionInDays;
-        private @Nullable Input<Integer> retentionInMb;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Integer> retentionInDays;
+        private @Nullable Output<Integer> retentionInMb;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
     	      this.retentionInMb = defaults.retentionInMb;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Input.ofNullable(retentionInDays);
+            this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder retentionInMb(@Nullable Input<Integer> retentionInMb) {
+        public Builder retentionInMb(@Nullable Output<Integer> retentionInMb) {
             this.retentionInMb = retentionInMb;
             return this;
         }
 
         public Builder retentionInMb(@Nullable Integer retentionInMb) {
-            this.retentionInMb = Input.ofNullable(retentionInMb);
+            this.retentionInMb = Output.ofNullable(retentionInMb);
             return this;
         }
         public FileSystemHttpLogsConfigArgs build() {

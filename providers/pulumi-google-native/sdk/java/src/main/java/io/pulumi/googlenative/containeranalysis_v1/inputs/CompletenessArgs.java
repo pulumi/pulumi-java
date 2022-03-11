@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CompletenessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-      private final @Nullable Input<Boolean> arguments;
+      private final @Nullable Output<Boolean> arguments;
 
-    public Input<Boolean> getArguments() {
-        return this.arguments == null ? Input.empty() : this.arguments;
+    public Output<Boolean> getArguments() {
+        return this.arguments == null ? Output.empty() : this.arguments;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CompletenessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<Boolean> environment;
+      private final @Nullable Output<Boolean> environment;
 
-    public Input<Boolean> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<Boolean> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class CompletenessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="materials")
-      private final @Nullable Input<Boolean> materials;
+      private final @Nullable Output<Boolean> materials;
 
-    public Input<Boolean> getMaterials() {
-        return this.materials == null ? Input.empty() : this.materials;
+    public Output<Boolean> getMaterials() {
+        return this.materials == null ? Output.empty() : this.materials;
     }
 
     public CompletenessArgs(
-        @Nullable Input<Boolean> arguments,
-        @Nullable Input<Boolean> environment,
-        @Nullable Input<Boolean> materials) {
+        @Nullable Output<Boolean> arguments,
+        @Nullable Output<Boolean> environment,
+        @Nullable Output<Boolean> materials) {
         this.arguments = arguments;
         this.environment = environment;
         this.materials = materials;
     }
 
     private CompletenessArgs() {
-        this.arguments = Input.empty();
-        this.environment = Input.empty();
-        this.materials = Input.empty();
+        this.arguments = Output.empty();
+        this.environment = Output.empty();
+        this.materials = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class CompletenessArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> arguments;
-        private @Nullable Input<Boolean> environment;
-        private @Nullable Input<Boolean> materials;
+        private @Nullable Output<Boolean> arguments;
+        private @Nullable Output<Boolean> environment;
+        private @Nullable Output<Boolean> materials;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class CompletenessArgs extends io.pulumi.resources.ResourceArgs {
     	      this.materials = defaults.materials;
         }
 
-        public Builder arguments(@Nullable Input<Boolean> arguments) {
+        public Builder arguments(@Nullable Output<Boolean> arguments) {
             this.arguments = arguments;
             return this;
         }
 
         public Builder arguments(@Nullable Boolean arguments) {
-            this.arguments = Input.ofNullable(arguments);
+            this.arguments = Output.ofNullable(arguments);
             return this;
         }
 
-        public Builder environment(@Nullable Input<Boolean> environment) {
+        public Builder environment(@Nullable Output<Boolean> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable Boolean environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder materials(@Nullable Input<Boolean> materials) {
+        public Builder materials(@Nullable Output<Boolean> materials) {
             this.materials = materials;
             return this;
         }
 
         public Builder materials(@Nullable Boolean materials) {
-            this.materials = Input.ofNullable(materials);
+            this.materials = Output.ofNullable(materials);
             return this;
         }
         public CompletenessArgs build() {

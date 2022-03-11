@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr;
 
 import io.pulumi.aws.emr.inputs.ManagedScalingPolicyComputeLimitArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class ManagedScalingPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clusterId", required=true)
-      private final Input<String> clusterId;
+      private final Output<String> clusterId;
 
-    public Input<String> getClusterId() {
+    public Output<String> getClusterId() {
         return this.clusterId;
     }
 
@@ -31,22 +31,22 @@ public final class ManagedScalingPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="computeLimits", required=true)
-      private final Input<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits;
+      private final Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits;
 
-    public Input<List<ManagedScalingPolicyComputeLimitArgs>> getComputeLimits() {
+    public Output<List<ManagedScalingPolicyComputeLimitArgs>> getComputeLimits() {
         return this.computeLimits;
     }
 
     public ManagedScalingPolicyArgs(
-        Input<String> clusterId,
-        Input<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits) {
+        Output<String> clusterId,
+        Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits) {
         this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
         this.computeLimits = Objects.requireNonNull(computeLimits, "expected parameter 'computeLimits' to be non-null");
     }
 
     private ManagedScalingPolicyArgs() {
-        this.clusterId = Input.empty();
-        this.computeLimits = Input.empty();
+        this.clusterId = Output.empty();
+        this.computeLimits = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ManagedScalingPolicyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> clusterId;
-        private Input<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits;
+        private Output<String> clusterId;
+        private Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ManagedScalingPolicyArgs extends io.pulumi.resources.Resource
     	      this.computeLimits = defaults.computeLimits;
         }
 
-        public Builder clusterId(Input<String> clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Input.of(Objects.requireNonNull(clusterId));
+            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder computeLimits(Input<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits) {
+        public Builder computeLimits(Output<List<ManagedScalingPolicyComputeLimitArgs>> computeLimits) {
             this.computeLimits = Objects.requireNonNull(computeLimits);
             return this;
         }
 
         public Builder computeLimits(List<ManagedScalingPolicyComputeLimitArgs> computeLimits) {
-            this.computeLimits = Input.of(Objects.requireNonNull(computeLimits));
+            this.computeLimits = Output.of(Objects.requireNonNull(computeLimits));
             return this;
         }
         public ManagedScalingPolicyArgs build() {

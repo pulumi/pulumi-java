@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="arraySize")
-      private final @Nullable Input<Integer> arraySize;
+      private final @Nullable Output<Integer> arraySize;
 
-    public Input<Integer> getArraySize() {
-        return this.arraySize == null ? Input.empty() : this.arraySize;
+    public Output<Integer> getArraySize() {
+        return this.arraySize == null ? Output.empty() : this.arraySize;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="jobAttempts")
-      private final @Nullable Input<Integer> jobAttempts;
+      private final @Nullable Output<Integer> jobAttempts;
 
-    public Input<Integer> getJobAttempts() {
-        return this.jobAttempts == null ? Input.empty() : this.jobAttempts;
+    public Output<Integer> getJobAttempts() {
+        return this.jobAttempts == null ? Output.empty() : this.jobAttempts;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="jobDefinition", required=true)
-      private final Input<String> jobDefinition;
+      private final Output<String> jobDefinition;
 
-    public Input<String> getJobDefinition() {
+    public Output<String> getJobDefinition() {
         return this.jobDefinition;
     }
 
@@ -53,17 +53,17 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="jobName", required=true)
-      private final Input<String> jobName;
+      private final Output<String> jobName;
 
-    public Input<String> getJobName() {
+    public Output<String> getJobName() {
         return this.jobName;
     }
 
     public EventTargetBatchTargetGetArgs(
-        @Nullable Input<Integer> arraySize,
-        @Nullable Input<Integer> jobAttempts,
-        Input<String> jobDefinition,
-        Input<String> jobName) {
+        @Nullable Output<Integer> arraySize,
+        @Nullable Output<Integer> jobAttempts,
+        Output<String> jobDefinition,
+        Output<String> jobName) {
         this.arraySize = arraySize;
         this.jobAttempts = jobAttempts;
         this.jobDefinition = Objects.requireNonNull(jobDefinition, "expected parameter 'jobDefinition' to be non-null");
@@ -71,10 +71,10 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
     }
 
     private EventTargetBatchTargetGetArgs() {
-        this.arraySize = Input.empty();
-        this.jobAttempts = Input.empty();
-        this.jobDefinition = Input.empty();
-        this.jobName = Input.empty();
+        this.arraySize = Output.empty();
+        this.jobAttempts = Output.empty();
+        this.jobDefinition = Output.empty();
+        this.jobName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> arraySize;
-        private @Nullable Input<Integer> jobAttempts;
-        private Input<String> jobDefinition;
-        private Input<String> jobName;
+        private @Nullable Output<Integer> arraySize;
+        private @Nullable Output<Integer> jobAttempts;
+        private Output<String> jobDefinition;
+        private Output<String> jobName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
     	      this.jobName = defaults.jobName;
         }
 
-        public Builder arraySize(@Nullable Input<Integer> arraySize) {
+        public Builder arraySize(@Nullable Output<Integer> arraySize) {
             this.arraySize = arraySize;
             return this;
         }
 
         public Builder arraySize(@Nullable Integer arraySize) {
-            this.arraySize = Input.ofNullable(arraySize);
+            this.arraySize = Output.ofNullable(arraySize);
             return this;
         }
 
-        public Builder jobAttempts(@Nullable Input<Integer> jobAttempts) {
+        public Builder jobAttempts(@Nullable Output<Integer> jobAttempts) {
             this.jobAttempts = jobAttempts;
             return this;
         }
 
         public Builder jobAttempts(@Nullable Integer jobAttempts) {
-            this.jobAttempts = Input.ofNullable(jobAttempts);
+            this.jobAttempts = Output.ofNullable(jobAttempts);
             return this;
         }
 
-        public Builder jobDefinition(Input<String> jobDefinition) {
+        public Builder jobDefinition(Output<String> jobDefinition) {
             this.jobDefinition = Objects.requireNonNull(jobDefinition);
             return this;
         }
 
         public Builder jobDefinition(String jobDefinition) {
-            this.jobDefinition = Input.of(Objects.requireNonNull(jobDefinition));
+            this.jobDefinition = Output.of(Objects.requireNonNull(jobDefinition));
             return this;
         }
 
-        public Builder jobName(Input<String> jobName) {
+        public Builder jobName(Output<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
         public Builder jobName(String jobName) {
-            this.jobName = Input.of(Objects.requireNonNull(jobName));
+            this.jobName = Output.of(Objects.requireNonNull(jobName));
             return this;
         }
         public EventTargetBatchTargetGetArgs build() {

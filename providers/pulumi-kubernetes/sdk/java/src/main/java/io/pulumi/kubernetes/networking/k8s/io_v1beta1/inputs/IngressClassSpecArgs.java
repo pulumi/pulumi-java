@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="controller")
-      private final @Nullable Input<String> controller;
+      private final @Nullable Output<String> controller;
 
-    public Input<String> getController() {
-        return this.controller == null ? Input.empty() : this.controller;
+    public Output<String> getController() {
+        return this.controller == null ? Output.empty() : this.controller;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<TypedLocalObjectReferenceArgs> parameters;
+      private final @Nullable Output<TypedLocalObjectReferenceArgs> parameters;
 
-    public Input<TypedLocalObjectReferenceArgs> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<TypedLocalObjectReferenceArgs> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public IngressClassSpecArgs(
-        @Nullable Input<String> controller,
-        @Nullable Input<TypedLocalObjectReferenceArgs> parameters) {
+        @Nullable Output<String> controller,
+        @Nullable Output<TypedLocalObjectReferenceArgs> parameters) {
         this.controller = controller;
         this.parameters = parameters;
     }
 
     private IngressClassSpecArgs() {
-        this.controller = Input.empty();
-        this.parameters = Input.empty();
+        this.controller = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> controller;
-        private @Nullable Input<TypedLocalObjectReferenceArgs> parameters;
+        private @Nullable Output<String> controller;
+        private @Nullable Output<TypedLocalObjectReferenceArgs> parameters;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder controller(@Nullable Input<String> controller) {
+        public Builder controller(@Nullable Output<String> controller) {
             this.controller = controller;
             return this;
         }
 
         public Builder controller(@Nullable String controller) {
-            this.controller = Input.ofNullable(controller);
+            this.controller = Output.ofNullable(controller);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<TypedLocalObjectReferenceArgs> parameters) {
+        public Builder parameters(@Nullable Output<TypedLocalObjectReferenceArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable TypedLocalObjectReferenceArgs parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public IngressClassSpecArgs build() {

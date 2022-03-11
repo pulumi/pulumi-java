@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayCommand")
-      private final @Nullable Input<String> displayCommand;
+      private final @Nullable Output<String> displayCommand;
 
-    public Input<String> getDisplayCommand() {
-        return this.displayCommand == null ? Input.empty() : this.displayCommand;
+    public Output<String> getDisplayCommand() {
+        return this.displayCommand == null ? Output.empty() : this.displayCommand;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reason")
-      private final @Nullable Input<String> reason;
+      private final @Nullable Output<String> reason;
 
-    public Input<String> getReason() {
-        return this.reason == null ? Input.empty() : this.reason;
+    public Output<String> getReason() {
+        return this.reason == null ? Output.empty() : this.reason;
     }
 
     public NonCompliantFileArgs(
-        @Nullable Input<String> displayCommand,
-        @Nullable Input<String> path,
-        @Nullable Input<String> reason) {
+        @Nullable Output<String> displayCommand,
+        @Nullable Output<String> path,
+        @Nullable Output<String> reason) {
         this.displayCommand = displayCommand;
         this.path = path;
         this.reason = reason;
     }
 
     private NonCompliantFileArgs() {
-        this.displayCommand = Input.empty();
-        this.path = Input.empty();
-        this.reason = Input.empty();
+        this.displayCommand = Output.empty();
+        this.path = Output.empty();
+        this.reason = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayCommand;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> reason;
+        private @Nullable Output<String> displayCommand;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> reason;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
     	      this.reason = defaults.reason;
         }
 
-        public Builder displayCommand(@Nullable Input<String> displayCommand) {
+        public Builder displayCommand(@Nullable Output<String> displayCommand) {
             this.displayCommand = displayCommand;
             return this;
         }
 
         public Builder displayCommand(@Nullable String displayCommand) {
-            this.displayCommand = Input.ofNullable(displayCommand);
+            this.displayCommand = Output.ofNullable(displayCommand);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder reason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Output<String> reason) {
             this.reason = reason;
             return this;
         }
 
         public Builder reason(@Nullable String reason) {
-            this.reason = Input.ofNullable(reason);
+            this.reason = Output.ofNullable(reason);
             return this;
         }
         public NonCompliantFileArgs build() {

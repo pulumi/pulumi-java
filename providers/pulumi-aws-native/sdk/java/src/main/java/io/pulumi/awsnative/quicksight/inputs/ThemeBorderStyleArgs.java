@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ThemeBorderStyleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="show")
-      private final @Nullable Input<Boolean> show;
+      private final @Nullable Output<Boolean> show;
 
-    public Input<Boolean> getShow() {
-        return this.show == null ? Input.empty() : this.show;
+    public Output<Boolean> getShow() {
+        return this.show == null ? Output.empty() : this.show;
     }
 
-    public ThemeBorderStyleArgs(@Nullable Input<Boolean> show) {
+    public ThemeBorderStyleArgs(@Nullable Output<Boolean> show) {
         this.show = show;
     }
 
     private ThemeBorderStyleArgs() {
-        this.show = Input.empty();
+        this.show = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ThemeBorderStyleArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> show;
+        private @Nullable Output<Boolean> show;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ThemeBorderStyleArgs extends io.pulumi.resources.ResourceArgs
     	      this.show = defaults.show;
         }
 
-        public Builder show(@Nullable Input<Boolean> show) {
+        public Builder show(@Nullable Output<Boolean> show) {
             this.show = show;
             return this;
         }
 
         public Builder show(@Nullable Boolean show) {
-            this.show = Input.ofNullable(show);
+            this.show = Output.ofNullable(show);
             return this;
         }
         public ThemeBorderStyleArgs build() {

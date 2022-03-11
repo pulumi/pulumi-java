@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.enums.DiskConfigurationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskConfigurationType")
-      private final @Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType;
+      private final @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
 
-    public Input<Either<String,DiskConfigurationType>> getDiskConfigurationType() {
-        return this.diskConfigurationType == null ? Input.empty() : this.diskConfigurationType;
+    public Output<Either<String,DiskConfigurationType>> getDiskConfigurationType() {
+        return this.diskConfigurationType == null ? Output.empty() : this.diskConfigurationType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskCount")
-      private final @Nullable Input<Integer> diskCount;
+      private final @Nullable Output<Integer> diskCount;
 
-    public Input<Integer> getDiskCount() {
-        return this.diskCount == null ? Input.empty() : this.diskCount;
+    public Output<Integer> getDiskCount() {
+        return this.diskCount == null ? Output.empty() : this.diskCount;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="startingDeviceId")
-      private final @Nullable Input<Integer> startingDeviceId;
+      private final @Nullable Output<Integer> startingDeviceId;
 
-    public Input<Integer> getStartingDeviceId() {
-        return this.startingDeviceId == null ? Input.empty() : this.startingDeviceId;
+    public Output<Integer> getStartingDeviceId() {
+        return this.startingDeviceId == null ? Output.empty() : this.startingDeviceId;
     }
 
     public SqlStorageUpdateSettingsArgs(
-        @Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType,
-        @Nullable Input<Integer> diskCount,
-        @Nullable Input<Integer> startingDeviceId) {
+        @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType,
+        @Nullable Output<Integer> diskCount,
+        @Nullable Output<Integer> startingDeviceId) {
         this.diskConfigurationType = diskConfigurationType;
         this.diskCount = diskCount;
         this.startingDeviceId = startingDeviceId;
     }
 
     private SqlStorageUpdateSettingsArgs() {
-        this.diskConfigurationType = Input.empty();
-        this.diskCount = Input.empty();
-        this.startingDeviceId = Input.empty();
+        this.diskConfigurationType = Output.empty();
+        this.diskCount = Output.empty();
+        this.startingDeviceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType;
-        private @Nullable Input<Integer> diskCount;
-        private @Nullable Input<Integer> startingDeviceId;
+        private @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
+        private @Nullable Output<Integer> diskCount;
+        private @Nullable Output<Integer> startingDeviceId;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
     	      this.startingDeviceId = defaults.startingDeviceId;
         }
 
-        public Builder diskConfigurationType(@Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType) {
+        public Builder diskConfigurationType(@Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType) {
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
         public Builder diskConfigurationType(@Nullable Either<String,DiskConfigurationType> diskConfigurationType) {
-            this.diskConfigurationType = Input.ofNullable(diskConfigurationType);
+            this.diskConfigurationType = Output.ofNullable(diskConfigurationType);
             return this;
         }
 
-        public Builder diskCount(@Nullable Input<Integer> diskCount) {
+        public Builder diskCount(@Nullable Output<Integer> diskCount) {
             this.diskCount = diskCount;
             return this;
         }
 
         public Builder diskCount(@Nullable Integer diskCount) {
-            this.diskCount = Input.ofNullable(diskCount);
+            this.diskCount = Output.ofNullable(diskCount);
             return this;
         }
 
-        public Builder startingDeviceId(@Nullable Input<Integer> startingDeviceId) {
+        public Builder startingDeviceId(@Nullable Output<Integer> startingDeviceId) {
             this.startingDeviceId = startingDeviceId;
             return this;
         }
 
         public Builder startingDeviceId(@Nullable Integer startingDeviceId) {
-            this.startingDeviceId = Input.ofNullable(startingDeviceId);
+            this.startingDeviceId = Output.ofNullable(startingDeviceId);
             return this;
         }
         public SqlStorageUpdateSettingsArgs build() {

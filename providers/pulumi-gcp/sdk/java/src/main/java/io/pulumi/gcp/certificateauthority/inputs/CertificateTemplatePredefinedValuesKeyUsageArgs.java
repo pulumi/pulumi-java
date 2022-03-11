@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs;
@@ -22,10 +22,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends io.pu
      * 
      */
     @InputImport(name="baseKeyUsage")
-      private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage;
+      private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage;
 
-    public Input<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> getBaseKeyUsage() {
-        return this.baseKeyUsage == null ? Input.empty() : this.baseKeyUsage;
+    public Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> getBaseKeyUsage() {
+        return this.baseKeyUsage == null ? Output.empty() : this.baseKeyUsage;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends io.pu
      * 
      */
     @InputImport(name="extendedKeyUsage")
-      private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
+      private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
 
-    public Input<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> getExtendedKeyUsage() {
-        return this.extendedKeyUsage == null ? Input.empty() : this.extendedKeyUsage;
+    public Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> getExtendedKeyUsage() {
+        return this.extendedKeyUsage == null ? Output.empty() : this.extendedKeyUsage;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends io.pu
      * 
      */
     @InputImport(name="unknownExtendedKeyUsages")
-      private final @Nullable Input<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
+      private final @Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
 
-    public Input<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> getUnknownExtendedKeyUsages() {
-        return this.unknownExtendedKeyUsages == null ? Input.empty() : this.unknownExtendedKeyUsages;
+    public Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> getUnknownExtendedKeyUsages() {
+        return this.unknownExtendedKeyUsages == null ? Output.empty() : this.unknownExtendedKeyUsages;
     }
 
     public CertificateTemplatePredefinedValuesKeyUsageArgs(
-        @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage,
-        @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage,
-        @Nullable Input<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
+        @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage,
+        @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage,
+        @Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
         this.baseKeyUsage = baseKeyUsage;
         this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
     }
 
     private CertificateTemplatePredefinedValuesKeyUsageArgs() {
-        this.baseKeyUsage = Input.empty();
-        this.extendedKeyUsage = Input.empty();
-        this.unknownExtendedKeyUsages = Input.empty();
+        this.baseKeyUsage = Output.empty();
+        this.extendedKeyUsage = Output.empty();
+        this.unknownExtendedKeyUsages = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage;
-        private @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
-        private @Nullable Input<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
+        private @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage;
+        private @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
+        private @Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends io.pu
     	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
         }
 
-        public Builder baseKeyUsage(@Nullable Input<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage) {
+        public Builder baseKeyUsage(@Nullable Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage) {
             this.baseKeyUsage = baseKeyUsage;
             return this;
         }
 
         public Builder baseKeyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs baseKeyUsage) {
-            this.baseKeyUsage = Input.ofNullable(baseKeyUsage);
+            this.baseKeyUsage = Output.ofNullable(baseKeyUsage);
             return this;
         }
 
-        public Builder extendedKeyUsage(@Nullable Input<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage) {
+        public Builder extendedKeyUsage(@Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
 
         public Builder extendedKeyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs extendedKeyUsage) {
-            this.extendedKeyUsage = Input.ofNullable(extendedKeyUsage);
+            this.extendedKeyUsage = Output.ofNullable(extendedKeyUsage);
             return this;
         }
 
-        public Builder unknownExtendedKeyUsages(@Nullable Input<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
 
         public Builder unknownExtendedKeyUsages(@Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
+            this.unknownExtendedKeyUsages = Output.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
         public CertificateTemplatePredefinedValuesKeyUsageArgs build() {

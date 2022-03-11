@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsEncryptionEncryptionMethod;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="constantInitializationVector")
-      private final @Nullable Input<String> constantInitializationVector;
+      private final @Nullable Output<String> constantInitializationVector;
 
-    public Input<String> getConstantInitializationVector() {
-        return this.constantInitializationVector == null ? Input.empty() : this.constantInitializationVector;
+    public Output<String> getConstantInitializationVector() {
+        return this.constantInitializationVector == null ? Output.empty() : this.constantInitializationVector;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="encryptionMethod")
-      private final @Nullable Input<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod;
+      private final @Nullable Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod;
 
-    public Input<OriginEndpointHlsEncryptionEncryptionMethod> getEncryptionMethod() {
-        return this.encryptionMethod == null ? Input.empty() : this.encryptionMethod;
+    public Output<OriginEndpointHlsEncryptionEncryptionMethod> getEncryptionMethod() {
+        return this.encryptionMethod == null ? Output.empty() : this.encryptionMethod;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="keyRotationIntervalSeconds")
-      private final @Nullable Input<Integer> keyRotationIntervalSeconds;
+      private final @Nullable Output<Integer> keyRotationIntervalSeconds;
 
-    public Input<Integer> getKeyRotationIntervalSeconds() {
-        return this.keyRotationIntervalSeconds == null ? Input.empty() : this.keyRotationIntervalSeconds;
+    public Output<Integer> getKeyRotationIntervalSeconds() {
+        return this.keyRotationIntervalSeconds == null ? Output.empty() : this.keyRotationIntervalSeconds;
     }
 
     /**
@@ -60,25 +60,25 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="repeatExtXKey")
-      private final @Nullable Input<Boolean> repeatExtXKey;
+      private final @Nullable Output<Boolean> repeatExtXKey;
 
-    public Input<Boolean> getRepeatExtXKey() {
-        return this.repeatExtXKey == null ? Input.empty() : this.repeatExtXKey;
+    public Output<Boolean> getRepeatExtXKey() {
+        return this.repeatExtXKey == null ? Output.empty() : this.repeatExtXKey;
     }
 
     @InputImport(name="spekeKeyProvider", required=true)
-      private final Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+      private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
-    public Input<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {
+    public Output<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
     public OriginEndpointHlsEncryptionArgs(
-        @Nullable Input<String> constantInitializationVector,
-        @Nullable Input<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod,
-        @Nullable Input<Integer> keyRotationIntervalSeconds,
-        @Nullable Input<Boolean> repeatExtXKey,
-        Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
+        @Nullable Output<String> constantInitializationVector,
+        @Nullable Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod,
+        @Nullable Output<Integer> keyRotationIntervalSeconds,
+        @Nullable Output<Boolean> repeatExtXKey,
+        Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.encryptionMethod = encryptionMethod;
         this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
@@ -87,11 +87,11 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
     }
 
     private OriginEndpointHlsEncryptionArgs() {
-        this.constantInitializationVector = Input.empty();
-        this.encryptionMethod = Input.empty();
-        this.keyRotationIntervalSeconds = Input.empty();
-        this.repeatExtXKey = Input.empty();
-        this.spekeKeyProvider = Input.empty();
+        this.constantInitializationVector = Output.empty();
+        this.encryptionMethod = Output.empty();
+        this.keyRotationIntervalSeconds = Output.empty();
+        this.repeatExtXKey = Output.empty();
+        this.spekeKeyProvider = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> constantInitializationVector;
-        private @Nullable Input<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod;
-        private @Nullable Input<Integer> keyRotationIntervalSeconds;
-        private @Nullable Input<Boolean> repeatExtXKey;
-        private Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
+        private @Nullable Output<String> constantInitializationVector;
+        private @Nullable Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod;
+        private @Nullable Output<Integer> keyRotationIntervalSeconds;
+        private @Nullable Output<Boolean> repeatExtXKey;
+        private Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder constantInitializationVector(@Nullable Input<String> constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable Output<String> constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = Input.ofNullable(constantInitializationVector);
+            this.constantInitializationVector = Output.ofNullable(constantInitializationVector);
             return this;
         }
 
-        public Builder encryptionMethod(@Nullable Input<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod) {
+        public Builder encryptionMethod(@Nullable Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
 
         public Builder encryptionMethod(@Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
-            this.encryptionMethod = Input.ofNullable(encryptionMethod);
+            this.encryptionMethod = Output.ofNullable(encryptionMethod);
             return this;
         }
 
-        public Builder keyRotationIntervalSeconds(@Nullable Input<Integer> keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Output<Integer> keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
         public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
-            this.keyRotationIntervalSeconds = Input.ofNullable(keyRotationIntervalSeconds);
+            this.keyRotationIntervalSeconds = Output.ofNullable(keyRotationIntervalSeconds);
             return this;
         }
 
-        public Builder repeatExtXKey(@Nullable Input<Boolean> repeatExtXKey) {
+        public Builder repeatExtXKey(@Nullable Output<Boolean> repeatExtXKey) {
             this.repeatExtXKey = repeatExtXKey;
             return this;
         }
 
         public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
-            this.repeatExtXKey = Input.ofNullable(repeatExtXKey);
+            this.repeatExtXKey = Output.ofNullable(repeatExtXKey);
             return this;
         }
 
-        public Builder spekeKeyProvider(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
+        public Builder spekeKeyProvider(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
 
         public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
-            this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
+            this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }
         public OriginEndpointHlsEncryptionArgs build() {

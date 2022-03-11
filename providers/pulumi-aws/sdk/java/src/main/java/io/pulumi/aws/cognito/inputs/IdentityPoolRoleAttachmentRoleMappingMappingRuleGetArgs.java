@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * 
      */
     @InputImport(name="claim", required=true)
-      private final Input<String> claim;
+      private final Output<String> claim;
 
-    public Input<String> getClaim() {
+    public Output<String> getClaim() {
         return this.claim;
     }
 
@@ -29,9 +29,9 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * 
      */
     @InputImport(name="matchType", required=true)
-      private final Input<String> matchType;
+      private final Output<String> matchType;
 
-    public Input<String> getMatchType() {
+    public Output<String> getMatchType() {
         return this.matchType;
     }
 
@@ -40,9 +40,9 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -51,17 +51,17 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs(
-        Input<String> claim,
-        Input<String> matchType,
-        Input<String> roleArn,
-        Input<String> value) {
+        Output<String> claim,
+        Output<String> matchType,
+        Output<String> roleArn,
+        Output<String> value) {
         this.claim = Objects.requireNonNull(claim, "expected parameter 'claim' to be non-null");
         this.matchType = Objects.requireNonNull(matchType, "expected parameter 'matchType' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
@@ -69,10 +69,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
     }
 
     private IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs() {
-        this.claim = Input.empty();
-        this.matchType = Input.empty();
-        this.roleArn = Input.empty();
-        this.value = Input.empty();
+        this.claim = Output.empty();
+        this.matchType = Output.empty();
+        this.roleArn = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
     }
 
     public static final class Builder {
-        private Input<String> claim;
-        private Input<String> matchType;
-        private Input<String> roleArn;
-        private Input<String> value;
+        private Output<String> claim;
+        private Output<String> matchType;
+        private Output<String> roleArn;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
     	      this.value = defaults.value;
         }
 
-        public Builder claim(Input<String> claim) {
+        public Builder claim(Output<String> claim) {
             this.claim = Objects.requireNonNull(claim);
             return this;
         }
 
         public Builder claim(String claim) {
-            this.claim = Input.of(Objects.requireNonNull(claim));
+            this.claim = Output.of(Objects.requireNonNull(claim));
             return this;
         }
 
-        public Builder matchType(Input<String> matchType) {
+        public Builder matchType(Output<String> matchType) {
             this.matchType = Objects.requireNonNull(matchType);
             return this;
         }
 
         public Builder matchType(String matchType) {
-            this.matchType = Input.of(Objects.requireNonNull(matchType));
+            this.matchType = Output.of(Objects.requireNonNull(matchType));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends io.p
      * 
      */
     @InputImport(name="natIp")
-      private final @Nullable Input<String> natIp;
+      private final @Nullable Output<String> natIp;
 
-    public Input<String> getNatIp() {
-        return this.natIp == null ? Input.empty() : this.natIp;
+    public Output<String> getNatIp() {
+        return this.natIp == null ? Output.empty() : this.natIp;
     }
 
     /**
@@ -32,32 +32,32 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends io.p
      * 
      */
     @InputImport(name="networkTier")
-      private final @Nullable Input<String> networkTier;
+      private final @Nullable Output<String> networkTier;
 
-    public Input<String> getNetworkTier() {
-        return this.networkTier == null ? Input.empty() : this.networkTier;
+    public Output<String> getNetworkTier() {
+        return this.networkTier == null ? Output.empty() : this.networkTier;
     }
 
     @InputImport(name="publicPtrDomainName")
-      private final @Nullable Input<String> publicPtrDomainName;
+      private final @Nullable Output<String> publicPtrDomainName;
 
-    public Input<String> getPublicPtrDomainName() {
-        return this.publicPtrDomainName == null ? Input.empty() : this.publicPtrDomainName;
+    public Output<String> getPublicPtrDomainName() {
+        return this.publicPtrDomainName == null ? Output.empty() : this.publicPtrDomainName;
     }
 
     public InstanceTemplateNetworkInterfaceAccessConfigArgs(
-        @Nullable Input<String> natIp,
-        @Nullable Input<String> networkTier,
-        @Nullable Input<String> publicPtrDomainName) {
+        @Nullable Output<String> natIp,
+        @Nullable Output<String> networkTier,
+        @Nullable Output<String> publicPtrDomainName) {
         this.natIp = natIp;
         this.networkTier = networkTier;
         this.publicPtrDomainName = publicPtrDomainName;
     }
 
     private InstanceTemplateNetworkInterfaceAccessConfigArgs() {
-        this.natIp = Input.empty();
-        this.networkTier = Input.empty();
-        this.publicPtrDomainName = Input.empty();
+        this.natIp = Output.empty();
+        this.networkTier = Output.empty();
+        this.publicPtrDomainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<String> natIp;
-        private @Nullable Input<String> networkTier;
-        private @Nullable Input<String> publicPtrDomainName;
+        private @Nullable Output<String> natIp;
+        private @Nullable Output<String> networkTier;
+        private @Nullable Output<String> publicPtrDomainName;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends io.p
     	      this.publicPtrDomainName = defaults.publicPtrDomainName;
         }
 
-        public Builder natIp(@Nullable Input<String> natIp) {
+        public Builder natIp(@Nullable Output<String> natIp) {
             this.natIp = natIp;
             return this;
         }
 
         public Builder natIp(@Nullable String natIp) {
-            this.natIp = Input.ofNullable(natIp);
+            this.natIp = Output.ofNullable(natIp);
             return this;
         }
 
-        public Builder networkTier(@Nullable Input<String> networkTier) {
+        public Builder networkTier(@Nullable Output<String> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
 
         public Builder networkTier(@Nullable String networkTier) {
-            this.networkTier = Input.ofNullable(networkTier);
+            this.networkTier = Output.ofNullable(networkTier);
             return this;
         }
 
-        public Builder publicPtrDomainName(@Nullable Input<String> publicPtrDomainName) {
+        public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
 
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
-            this.publicPtrDomainName = Input.ofNullable(publicPtrDomainName);
+            this.publicPtrDomainName = Output.ofNullable(publicPtrDomainName);
             return this;
         }
         public InstanceTemplateNetworkInterfaceAccessConfigArgs build() {

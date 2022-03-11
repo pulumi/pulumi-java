@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configmanagement", required=true)
-      private final Input<FeatureMembershipConfigmanagementArgs> configmanagement;
+      private final Output<FeatureMembershipConfigmanagementArgs> configmanagement;
 
-    public Input<FeatureMembershipConfigmanagementArgs> getConfigmanagement() {
+    public Output<FeatureMembershipConfigmanagementArgs> getConfigmanagement() {
         return this.configmanagement;
     }
 
@@ -31,9 +31,9 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="feature", required=true)
-      private final Input<String> feature;
+      private final Output<String> feature;
 
-    public Input<String> getFeature() {
+    public Output<String> getFeature() {
         return this.feature;
     }
 
@@ -42,9 +42,9 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -53,9 +53,9 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="membership", required=true)
-      private final Input<String> membership;
+      private final Output<String> membership;
 
-    public Input<String> getMembership() {
+    public Output<String> getMembership() {
         return this.membership;
     }
 
@@ -64,18 +64,18 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public FeatureMembershipArgs(
-        Input<FeatureMembershipConfigmanagementArgs> configmanagement,
-        Input<String> feature,
-        Input<String> location,
-        Input<String> membership,
-        @Nullable Input<String> project) {
+        Output<FeatureMembershipConfigmanagementArgs> configmanagement,
+        Output<String> feature,
+        Output<String> location,
+        Output<String> membership,
+        @Nullable Output<String> project) {
         this.configmanagement = Objects.requireNonNull(configmanagement, "expected parameter 'configmanagement' to be non-null");
         this.feature = Objects.requireNonNull(feature, "expected parameter 'feature' to be non-null");
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
@@ -84,11 +84,11 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FeatureMembershipArgs() {
-        this.configmanagement = Input.empty();
-        this.feature = Input.empty();
-        this.location = Input.empty();
-        this.membership = Input.empty();
-        this.project = Input.empty();
+        this.configmanagement = Output.empty();
+        this.feature = Output.empty();
+        this.location = Output.empty();
+        this.membership = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<FeatureMembershipConfigmanagementArgs> configmanagement;
-        private Input<String> feature;
-        private Input<String> location;
-        private Input<String> membership;
-        private @Nullable Input<String> project;
+        private Output<FeatureMembershipConfigmanagementArgs> configmanagement;
+        private Output<String> feature;
+        private Output<String> location;
+        private Output<String> membership;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     	      this.project = defaults.project;
         }
 
-        public Builder configmanagement(Input<FeatureMembershipConfigmanagementArgs> configmanagement) {
+        public Builder configmanagement(Output<FeatureMembershipConfigmanagementArgs> configmanagement) {
             this.configmanagement = Objects.requireNonNull(configmanagement);
             return this;
         }
 
         public Builder configmanagement(FeatureMembershipConfigmanagementArgs configmanagement) {
-            this.configmanagement = Input.of(Objects.requireNonNull(configmanagement));
+            this.configmanagement = Output.of(Objects.requireNonNull(configmanagement));
             return this;
         }
 
-        public Builder feature(Input<String> feature) {
+        public Builder feature(Output<String> feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
 
         public Builder feature(String feature) {
-            this.feature = Input.of(Objects.requireNonNull(feature));
+            this.feature = Output.of(Objects.requireNonNull(feature));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder membership(Input<String> membership) {
+        public Builder membership(Output<String> membership) {
             this.membership = Objects.requireNonNull(membership);
             return this;
         }
 
         public Builder membership(String membership) {
-            this.membership = Input.of(Objects.requireNonNull(membership));
+            this.membership = Output.of(Objects.requireNonNull(membership));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public FeatureMembershipArgs build() {

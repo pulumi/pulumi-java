@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class RolePolicyAttachmentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyArn", required=true)
-      private final Input<String> policyArn;
+      private final Output<String> policyArn;
 
-    public Input<String> getPolicyArn() {
+    public Output<String> getPolicyArn() {
         return this.policyArn;
     }
 
@@ -29,22 +29,22 @@ public final class RolePolicyAttachmentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public RolePolicyAttachmentArgs(
-        Input<String> policyArn,
-        Input<String> role) {
+        Output<String> policyArn,
+        Output<String> role) {
         this.policyArn = Objects.requireNonNull(policyArn, "expected parameter 'policyArn' to be non-null");
         this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
     }
 
     private RolePolicyAttachmentArgs() {
-        this.policyArn = Input.empty();
-        this.role = Input.empty();
+        this.policyArn = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class RolePolicyAttachmentArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> policyArn;
-        private Input<String> role;
+        private Output<String> policyArn;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -69,17 +69,17 @@ public final class RolePolicyAttachmentArgs extends io.pulumi.resources.Resource
     	      this.role = defaults.role;
         }
 
-        public Builder policyArn(Input<String> policyArn) {
+        public Builder policyArn(Output<String> policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
 
         public Builder policyArn(String policyArn) {
-            this.policyArn = Input.of(Objects.requireNonNull(policyArn));
+            this.policyArn = Output.of(Objects.requireNonNull(policyArn));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }

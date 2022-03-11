@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="operation")
-      private final @Nullable Input<String> operation;
+      private final @Nullable Output<String> operation;
 
-    public Input<String> getOperation() {
-        return this.operation == null ? Input.empty() : this.operation;
+    public Output<String> getOperation() {
+        return this.operation == null ? Output.empty() : this.operation;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="property")
-      private final @Nullable Input<String> property;
+      private final @Nullable Output<String> property;
 
-    public Input<String> getProperty() {
-        return this.property == null ? Input.empty() : this.property;
+    public Output<String> getProperty() {
+        return this.property == null ? Output.empty() : this.property;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public LiveEventInputTrackSelectionArgs(
-        @Nullable Input<String> operation,
-        @Nullable Input<String> property,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> operation,
+        @Nullable Output<String> property,
+        @Nullable Output<String> value) {
         this.operation = operation;
         this.property = property;
         this.value = value;
     }
 
     private LiveEventInputTrackSelectionArgs() {
-        this.operation = Input.empty();
-        this.property = Input.empty();
-        this.value = Input.empty();
+        this.operation = Output.empty();
+        this.property = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> operation;
-        private @Nullable Input<String> property;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> operation;
+        private @Nullable Output<String> property;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder operation(@Nullable Input<String> operation) {
+        public Builder operation(@Nullable Output<String> operation) {
             this.operation = operation;
             return this;
         }
 
         public Builder operation(@Nullable String operation) {
-            this.operation = Input.ofNullable(operation);
+            this.operation = Output.ofNullable(operation);
             return this;
         }
 
-        public Builder property(@Nullable Input<String> property) {
+        public Builder property(@Nullable Output<String> property) {
             this.property = property;
             return this;
         }
 
         public Builder property(@Nullable String property) {
-            this.property = Input.ofNullable(property);
+            this.property = Output.ofNullable(property);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public LiveEventInputTrackSelectionArgs build() {

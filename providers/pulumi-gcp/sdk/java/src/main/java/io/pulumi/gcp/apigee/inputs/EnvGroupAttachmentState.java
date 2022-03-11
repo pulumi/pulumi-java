@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="envgroupId")
-      private final @Nullable Input<String> envgroupId;
+      private final @Nullable Output<String> envgroupId;
 
-    public Input<String> getEnvgroupId() {
-        return this.envgroupId == null ? Input.empty() : this.envgroupId;
+    public Output<String> getEnvgroupId() {
+        return this.envgroupId == null ? Output.empty() : this.envgroupId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<String> environment;
+      private final @Nullable Output<String> environment;
 
-    public Input<String> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<String> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public EnvGroupAttachmentState(
-        @Nullable Input<String> envgroupId,
-        @Nullable Input<String> environment,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> envgroupId,
+        @Nullable Output<String> environment,
+        @Nullable Output<String> name) {
         this.envgroupId = envgroupId;
         this.environment = environment;
         this.name = name;
     }
 
     private EnvGroupAttachmentState() {
-        this.envgroupId = Input.empty();
-        this.environment = Input.empty();
-        this.name = Input.empty();
+        this.envgroupId = Output.empty();
+        this.environment = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> envgroupId;
-        private @Nullable Input<String> environment;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> envgroupId;
+        private @Nullable Output<String> environment;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder envgroupId(@Nullable Input<String> envgroupId) {
+        public Builder envgroupId(@Nullable Output<String> envgroupId) {
             this.envgroupId = envgroupId;
             return this;
         }
 
         public Builder envgroupId(@Nullable String envgroupId) {
-            this.envgroupId = Input.ofNullable(envgroupId);
+            this.envgroupId = Output.ofNullable(envgroupId);
             return this;
         }
 
-        public Builder environment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Output<String> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable String environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public EnvGroupAttachmentState build() {

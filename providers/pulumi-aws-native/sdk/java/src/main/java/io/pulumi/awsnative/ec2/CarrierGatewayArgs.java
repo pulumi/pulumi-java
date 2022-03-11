@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.CarrierGatewayTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class CarrierGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<CarrierGatewayTagArgs>> tags;
+      private final @Nullable Output<List<CarrierGatewayTagArgs>> tags;
 
-    public Input<List<CarrierGatewayTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<CarrierGatewayTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class CarrierGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public CarrierGatewayArgs(
-        @Nullable Input<List<CarrierGatewayTagArgs>> tags,
-        Input<String> vpcId) {
+        @Nullable Output<List<CarrierGatewayTagArgs>> tags,
+        Output<String> vpcId) {
         this.tags = tags;
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
     }
 
     private CarrierGatewayArgs() {
-        this.tags = Input.empty();
-        this.vpcId = Input.empty();
+        this.tags = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class CarrierGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CarrierGatewayTagArgs>> tags;
-        private Input<String> vpcId;
+        private @Nullable Output<List<CarrierGatewayTagArgs>> tags;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class CarrierGatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder tags(@Nullable Input<List<CarrierGatewayTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<CarrierGatewayTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<CarrierGatewayTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public CarrierGatewayArgs build() {

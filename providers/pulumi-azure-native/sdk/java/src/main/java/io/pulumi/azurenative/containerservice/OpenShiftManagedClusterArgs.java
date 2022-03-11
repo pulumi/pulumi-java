@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterAuth
 import io.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterMasterPoolProfileArgs;
 import io.pulumi.azurenative.containerservice.inputs.OpenShiftRouterProfileArgs;
 import io.pulumi.azurenative.containerservice.inputs.PurchasePlanArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="agentPoolProfiles")
-      private final @Nullable Input<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
+      private final @Nullable Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
-    public Input<List<OpenShiftManagedClusterAgentPoolProfileArgs>> getAgentPoolProfiles() {
-        return this.agentPoolProfiles == null ? Input.empty() : this.agentPoolProfiles;
+    public Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> getAgentPoolProfiles() {
+        return this.agentPoolProfiles == null ? Output.empty() : this.agentPoolProfiles;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="authProfile")
-      private final @Nullable Input<OpenShiftManagedClusterAuthProfileArgs> authProfile;
+      private final @Nullable Output<OpenShiftManagedClusterAuthProfileArgs> authProfile;
 
-    public Input<OpenShiftManagedClusterAuthProfileArgs> getAuthProfile() {
-        return this.authProfile == null ? Input.empty() : this.authProfile;
+    public Output<OpenShiftManagedClusterAuthProfileArgs> getAuthProfile() {
+        return this.authProfile == null ? Output.empty() : this.authProfile;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="masterPoolProfile")
-      private final @Nullable Input<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile;
+      private final @Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile;
 
-    public Input<OpenShiftManagedClusterMasterPoolProfileArgs> getMasterPoolProfile() {
-        return this.masterPoolProfile == null ? Input.empty() : this.masterPoolProfile;
+    public Output<OpenShiftManagedClusterMasterPoolProfileArgs> getMasterPoolProfile() {
+        return this.masterPoolProfile == null ? Output.empty() : this.masterPoolProfile;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Input<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<NetworkProfileArgs> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
     /**
@@ -82,9 +82,9 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="openShiftVersion", required=true)
-      private final Input<String> openShiftVersion;
+      private final Output<String> openShiftVersion;
 
-    public Input<String> getOpenShiftVersion() {
+    public Output<String> getOpenShiftVersion() {
         return this.openShiftVersion;
     }
 
@@ -93,10 +93,10 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="plan")
-      private final @Nullable Input<PurchasePlanArgs> plan;
+      private final @Nullable Output<PurchasePlanArgs> plan;
 
-    public Input<PurchasePlanArgs> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<PurchasePlanArgs> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     /**
@@ -104,9 +104,9 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -115,10 +115,10 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="routerProfiles")
-      private final @Nullable Input<List<OpenShiftRouterProfileArgs>> routerProfiles;
+      private final @Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles;
 
-    public Input<List<OpenShiftRouterProfileArgs>> getRouterProfiles() {
-        return this.routerProfiles == null ? Input.empty() : this.routerProfiles;
+    public Output<List<OpenShiftRouterProfileArgs>> getRouterProfiles() {
+        return this.routerProfiles == null ? Output.empty() : this.routerProfiles;
     }
 
     /**
@@ -137,24 +137,24 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public OpenShiftManagedClusterArgs(
-        @Nullable Input<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles,
-        @Nullable Input<OpenShiftManagedClusterAuthProfileArgs> authProfile,
-        @Nullable Input<String> location,
-        @Nullable Input<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile,
-        @Nullable Input<NetworkProfileArgs> networkProfile,
-        Input<String> openShiftVersion,
-        @Nullable Input<PurchasePlanArgs> plan,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<List<OpenShiftRouterProfileArgs>> routerProfiles,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles,
+        @Nullable Output<OpenShiftManagedClusterAuthProfileArgs> authProfile,
+        @Nullable Output<String> location,
+        @Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile,
+        @Nullable Output<NetworkProfileArgs> networkProfile,
+        Output<String> openShiftVersion,
+        @Nullable Output<PurchasePlanArgs> plan,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles,
+        @Nullable Output<Map<String,String>> tags) {
         this.agentPoolProfiles = agentPoolProfiles;
         this.authProfile = authProfile;
         this.location = location;
@@ -169,17 +169,17 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
     }
 
     private OpenShiftManagedClusterArgs() {
-        this.agentPoolProfiles = Input.empty();
-        this.authProfile = Input.empty();
-        this.location = Input.empty();
-        this.masterPoolProfile = Input.empty();
-        this.networkProfile = Input.empty();
-        this.openShiftVersion = Input.empty();
-        this.plan = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.routerProfiles = Input.empty();
-        this.tags = Input.empty();
+        this.agentPoolProfiles = Output.empty();
+        this.authProfile = Output.empty();
+        this.location = Output.empty();
+        this.masterPoolProfile = Output.empty();
+        this.networkProfile = Output.empty();
+        this.openShiftVersion = Output.empty();
+        this.plan = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.routerProfiles = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -191,17 +191,17 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
-        private @Nullable Input<OpenShiftManagedClusterAuthProfileArgs> authProfile;
-        private @Nullable Input<String> location;
-        private @Nullable Input<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile;
-        private @Nullable Input<NetworkProfileArgs> networkProfile;
-        private Input<String> openShiftVersion;
-        private @Nullable Input<PurchasePlanArgs> plan;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<List<OpenShiftRouterProfileArgs>> routerProfiles;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
+        private @Nullable Output<OpenShiftManagedClusterAuthProfileArgs> authProfile;
+        private @Nullable Output<String> location;
+        private @Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile;
+        private @Nullable Output<NetworkProfileArgs> networkProfile;
+        private Output<String> openShiftVersion;
+        private @Nullable Output<PurchasePlanArgs> plan;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -222,113 +222,113 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder agentPoolProfiles(@Nullable Input<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles) {
+        public Builder agentPoolProfiles(@Nullable Output<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles) {
             this.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
 
         public Builder agentPoolProfiles(@Nullable List<OpenShiftManagedClusterAgentPoolProfileArgs> agentPoolProfiles) {
-            this.agentPoolProfiles = Input.ofNullable(agentPoolProfiles);
+            this.agentPoolProfiles = Output.ofNullable(agentPoolProfiles);
             return this;
         }
 
-        public Builder authProfile(@Nullable Input<OpenShiftManagedClusterAuthProfileArgs> authProfile) {
+        public Builder authProfile(@Nullable Output<OpenShiftManagedClusterAuthProfileArgs> authProfile) {
             this.authProfile = authProfile;
             return this;
         }
 
         public Builder authProfile(@Nullable OpenShiftManagedClusterAuthProfileArgs authProfile) {
-            this.authProfile = Input.ofNullable(authProfile);
+            this.authProfile = Output.ofNullable(authProfile);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder masterPoolProfile(@Nullable Input<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile) {
+        public Builder masterPoolProfile(@Nullable Output<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile) {
             this.masterPoolProfile = masterPoolProfile;
             return this;
         }
 
         public Builder masterPoolProfile(@Nullable OpenShiftManagedClusterMasterPoolProfileArgs masterPoolProfile) {
-            this.masterPoolProfile = Input.ofNullable(masterPoolProfile);
+            this.masterPoolProfile = Output.ofNullable(masterPoolProfile);
             return this;
         }
 
-        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder openShiftVersion(Input<String> openShiftVersion) {
+        public Builder openShiftVersion(Output<String> openShiftVersion) {
             this.openShiftVersion = Objects.requireNonNull(openShiftVersion);
             return this;
         }
 
         public Builder openShiftVersion(String openShiftVersion) {
-            this.openShiftVersion = Input.of(Objects.requireNonNull(openShiftVersion));
+            this.openShiftVersion = Output.of(Objects.requireNonNull(openShiftVersion));
             return this;
         }
 
-        public Builder plan(@Nullable Input<PurchasePlanArgs> plan) {
+        public Builder plan(@Nullable Output<PurchasePlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable PurchasePlanArgs plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder routerProfiles(@Nullable Input<List<OpenShiftRouterProfileArgs>> routerProfiles) {
+        public Builder routerProfiles(@Nullable Output<List<OpenShiftRouterProfileArgs>> routerProfiles) {
             this.routerProfiles = routerProfiles;
             return this;
         }
 
         public Builder routerProfiles(@Nullable List<OpenShiftRouterProfileArgs> routerProfiles) {
-            this.routerProfiles = Input.ofNullable(routerProfiles);
+            this.routerProfiles = Output.ofNullable(routerProfiles);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public OpenShiftManagedClusterArgs build() {

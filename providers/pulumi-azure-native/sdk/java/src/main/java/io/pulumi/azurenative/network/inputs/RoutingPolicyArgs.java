@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinations", required=true)
-      private final Input<List<String>> destinations;
+      private final Output<List<String>> destinations;
 
-    public Input<List<String>> getDestinations() {
+    public Output<List<String>> getDestinations() {
         return this.destinations;
     }
 
@@ -34,9 +34,9 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -45,25 +45,25 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHop", required=true)
-      private final Input<String> nextHop;
+      private final Output<String> nextHop;
 
-    public Input<String> getNextHop() {
+    public Output<String> getNextHop() {
         return this.nextHop;
     }
 
     public RoutingPolicyArgs(
-        Input<List<String>> destinations,
-        Input<String> name,
-        Input<String> nextHop) {
+        Output<List<String>> destinations,
+        Output<String> name,
+        Output<String> nextHop) {
         this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.nextHop = Objects.requireNonNull(nextHop, "expected parameter 'nextHop' to be non-null");
     }
 
     private RoutingPolicyArgs() {
-        this.destinations = Input.empty();
-        this.name = Input.empty();
-        this.nextHop = Input.empty();
+        this.destinations = Output.empty();
+        this.name = Output.empty();
+        this.nextHop = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> destinations;
-        private Input<String> name;
-        private Input<String> nextHop;
+        private Output<List<String>> destinations;
+        private Output<String> name;
+        private Output<String> nextHop;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nextHop = defaults.nextHop;
         }
 
-        public Builder destinations(Input<List<String>> destinations) {
+        public Builder destinations(Output<List<String>> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
         public Builder destinations(List<String> destinations) {
-            this.destinations = Input.of(Objects.requireNonNull(destinations));
+            this.destinations = Output.of(Objects.requireNonNull(destinations));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder nextHop(Input<String> nextHop) {
+        public Builder nextHop(Output<String> nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
 
         public Builder nextHop(String nextHop) {
-            this.nextHop = Input.of(Objects.requireNonNull(nextHop));
+            this.nextHop = Output.of(Objects.requireNonNull(nextHop));
             return this;
         }
         public RoutingPolicyArgs build() {

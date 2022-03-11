@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -37,9 +37,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entity", required=true)
-      private final Input<String> entity;
+      private final Output<String> entity;
 
-    public Input<String> getEntity() {
+    public Output<String> getEntity() {
         return this.entity;
     }
 
@@ -48,9 +48,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="object", required=true)
-      private final Input<String> object;
+      private final Output<String> object;
 
-    public Input<String> getObject() {
+    public Output<String> getObject() {
         return this.object;
     }
 
@@ -60,17 +60,17 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public ObjectAccessControlArgs(
-        Input<String> bucket,
-        Input<String> entity,
-        Input<String> object,
-        Input<String> role) {
+        Output<String> bucket,
+        Output<String> entity,
+        Output<String> object,
+        Output<String> role) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.entity = Objects.requireNonNull(entity, "expected parameter 'entity' to be non-null");
         this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
@@ -78,10 +78,10 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
     }
 
     private ObjectAccessControlArgs() {
-        this.bucket = Input.empty();
-        this.entity = Input.empty();
-        this.object = Input.empty();
-        this.role = Input.empty();
+        this.bucket = Output.empty();
+        this.entity = Output.empty();
+        this.object = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private Input<String> entity;
-        private Input<String> object;
-        private Input<String> role;
+        private Output<String> bucket;
+        private Output<String> entity;
+        private Output<String> object;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder entity(Input<String> entity) {
+        public Builder entity(Output<String> entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
 
         public Builder entity(String entity) {
-            this.entity = Input.of(Objects.requireNonNull(entity));
+            this.entity = Output.of(Objects.requireNonNull(entity));
             return this;
         }
 
-        public Builder object(Input<String> object) {
+        public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
         public Builder object(String object) {
-            this.object = Input.of(Objects.requireNonNull(object));
+            this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public ObjectAccessControlArgs build() {

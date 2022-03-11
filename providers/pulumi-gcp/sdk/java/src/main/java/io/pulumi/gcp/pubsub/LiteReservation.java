@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.pubsub;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -149,14 +148,14 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LiteReservation(String name, LiteReservationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/liteReservation:LiteReservation", name, args == null ? LiteReservationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:pubsub/liteReservation:LiteReservation", name, args == null ? LiteReservationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LiteReservation(String name, Input<String> id, @Nullable LiteReservationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LiteReservation(String name, Output<String> id, @Nullable LiteReservationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:pubsub/liteReservation:LiteReservation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -172,7 +171,7 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LiteReservation get(String name, Input<String> id, @Nullable LiteReservationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LiteReservation get(String name, Output<String> id, @Nullable LiteReservationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LiteReservation(name, id, state, options);
     }
 }

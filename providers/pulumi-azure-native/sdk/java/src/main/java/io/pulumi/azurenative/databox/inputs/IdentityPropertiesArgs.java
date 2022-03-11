@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.UserAssignedPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="userAssigned")
-      private final @Nullable Input<UserAssignedPropertiesArgs> userAssigned;
+      private final @Nullable Output<UserAssignedPropertiesArgs> userAssigned;
 
-    public Input<UserAssignedPropertiesArgs> getUserAssigned() {
-        return this.userAssigned == null ? Input.empty() : this.userAssigned;
+    public Output<UserAssignedPropertiesArgs> getUserAssigned() {
+        return this.userAssigned == null ? Output.empty() : this.userAssigned;
     }
 
     public IdentityPropertiesArgs(
-        @Nullable Input<String> type,
-        @Nullable Input<UserAssignedPropertiesArgs> userAssigned) {
+        @Nullable Output<String> type,
+        @Nullable Output<UserAssignedPropertiesArgs> userAssigned) {
         this.type = type;
         this.userAssigned = userAssigned;
     }
 
     private IdentityPropertiesArgs() {
-        this.type = Input.empty();
-        this.userAssigned = Input.empty();
+        this.type = Output.empty();
+        this.userAssigned = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> type;
-        private @Nullable Input<UserAssignedPropertiesArgs> userAssigned;
+        private @Nullable Output<String> type;
+        private @Nullable Output<UserAssignedPropertiesArgs> userAssigned;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.userAssigned = defaults.userAssigned;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder userAssigned(@Nullable Input<UserAssignedPropertiesArgs> userAssigned) {
+        public Builder userAssigned(@Nullable Output<UserAssignedPropertiesArgs> userAssigned) {
             this.userAssigned = userAssigned;
             return this;
         }
 
         public Builder userAssigned(@Nullable UserAssignedPropertiesArgs userAssigned) {
-            this.userAssigned = Input.ofNullable(userAssigned);
+            this.userAssigned = Output.ofNullable(userAssigned);
             return this;
         }
         public IdentityPropertiesArgs build() {

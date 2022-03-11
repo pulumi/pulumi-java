@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
-    public AzureStaticWebAppsRegistrationArgs(@Nullable Input<String> clientId) {
+    public AzureStaticWebAppsRegistrationArgs(@Nullable Output<String> clientId) {
         this.clientId = clientId;
     }
 
     private AzureStaticWebAppsRegistrationArgs() {
-        this.clientId = Input.empty();
+        this.clientId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
+        private @Nullable Output<String> clientId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
     	      this.clientId = defaults.clientId;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
         public AzureStaticWebAppsRegistrationArgs build() {

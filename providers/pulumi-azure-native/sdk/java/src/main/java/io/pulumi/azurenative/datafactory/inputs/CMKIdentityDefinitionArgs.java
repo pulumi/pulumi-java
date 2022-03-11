@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userAssignedIdentity")
-      private final @Nullable Input<String> userAssignedIdentity;
+      private final @Nullable Output<String> userAssignedIdentity;
 
-    public Input<String> getUserAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;
+    public Output<String> getUserAssignedIdentity() {
+        return this.userAssignedIdentity == null ? Output.empty() : this.userAssignedIdentity;
     }
 
-    public CMKIdentityDefinitionArgs(@Nullable Input<String> userAssignedIdentity) {
+    public CMKIdentityDefinitionArgs(@Nullable Output<String> userAssignedIdentity) {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 
     private CMKIdentityDefinitionArgs() {
-        this.userAssignedIdentity = Input.empty();
+        this.userAssignedIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> userAssignedIdentity;
+        private @Nullable Output<String> userAssignedIdentity;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.Resourc
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder userAssignedIdentity(@Nullable Input<String> userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
+            this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
             return this;
         }
         public CMKIdentityDefinitionArgs build() {

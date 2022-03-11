@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsGetArgs;
 import io.pulumi.gcp.logging.inputs.MetricMetricDescriptorGetArgs;
@@ -24,10 +24,10 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketOptions")
-      private final @Nullable Input<MetricBucketOptionsGetArgs> bucketOptions;
+      private final @Nullable Output<MetricBucketOptionsGetArgs> bucketOptions;
 
-    public Input<MetricBucketOptionsGetArgs> getBucketOptions() {
-        return this.bucketOptions == null ? Input.empty() : this.bucketOptions;
+    public Output<MetricBucketOptionsGetArgs> getBucketOptions() {
+        return this.bucketOptions == null ? Output.empty() : this.bucketOptions;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labelExtractors")
-      private final @Nullable Input<Map<String,String>> labelExtractors;
+      private final @Nullable Output<Map<String,String>> labelExtractors;
 
-    public Input<Map<String,String>> getLabelExtractors() {
-        return this.labelExtractors == null ? Input.empty() : this.labelExtractors;
+    public Output<Map<String,String>> getLabelExtractors() {
+        return this.labelExtractors == null ? Output.empty() : this.labelExtractors;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricDescriptor")
-      private final @Nullable Input<MetricMetricDescriptorGetArgs> metricDescriptor;
+      private final @Nullable Output<MetricMetricDescriptorGetArgs> metricDescriptor;
 
-    public Input<MetricMetricDescriptorGetArgs> getMetricDescriptor() {
-        return this.metricDescriptor == null ? Input.empty() : this.metricDescriptor;
+    public Output<MetricMetricDescriptorGetArgs> getMetricDescriptor() {
+        return this.metricDescriptor == null ? Output.empty() : this.metricDescriptor;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -118,21 +118,21 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valueExtractor")
-      private final @Nullable Input<String> valueExtractor;
+      private final @Nullable Output<String> valueExtractor;
 
-    public Input<String> getValueExtractor() {
-        return this.valueExtractor == null ? Input.empty() : this.valueExtractor;
+    public Output<String> getValueExtractor() {
+        return this.valueExtractor == null ? Output.empty() : this.valueExtractor;
     }
 
     public MetricState(
-        @Nullable Input<MetricBucketOptionsGetArgs> bucketOptions,
-        @Nullable Input<String> description,
-        @Nullable Input<String> filter,
-        @Nullable Input<Map<String,String>> labelExtractors,
-        @Nullable Input<MetricMetricDescriptorGetArgs> metricDescriptor,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> valueExtractor) {
+        @Nullable Output<MetricBucketOptionsGetArgs> bucketOptions,
+        @Nullable Output<String> description,
+        @Nullable Output<String> filter,
+        @Nullable Output<Map<String,String>> labelExtractors,
+        @Nullable Output<MetricMetricDescriptorGetArgs> metricDescriptor,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> valueExtractor) {
         this.bucketOptions = bucketOptions;
         this.description = description;
         this.filter = filter;
@@ -144,14 +144,14 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricState() {
-        this.bucketOptions = Input.empty();
-        this.description = Input.empty();
-        this.filter = Input.empty();
-        this.labelExtractors = Input.empty();
-        this.metricDescriptor = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.valueExtractor = Input.empty();
+        this.bucketOptions = Output.empty();
+        this.description = Output.empty();
+        this.filter = Output.empty();
+        this.labelExtractors = Output.empty();
+        this.metricDescriptor = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.valueExtractor = Output.empty();
     }
 
     public static Builder builder() {
@@ -163,14 +163,14 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<MetricBucketOptionsGetArgs> bucketOptions;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<Map<String,String>> labelExtractors;
-        private @Nullable Input<MetricMetricDescriptorGetArgs> metricDescriptor;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> valueExtractor;
+        private @Nullable Output<MetricBucketOptionsGetArgs> bucketOptions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<Map<String,String>> labelExtractors;
+        private @Nullable Output<MetricMetricDescriptorGetArgs> metricDescriptor;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> valueExtractor;
 
         public Builder() {
     	      // Empty
@@ -188,83 +188,83 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     	      this.valueExtractor = defaults.valueExtractor;
         }
 
-        public Builder bucketOptions(@Nullable Input<MetricBucketOptionsGetArgs> bucketOptions) {
+        public Builder bucketOptions(@Nullable Output<MetricBucketOptionsGetArgs> bucketOptions) {
             this.bucketOptions = bucketOptions;
             return this;
         }
 
         public Builder bucketOptions(@Nullable MetricBucketOptionsGetArgs bucketOptions) {
-            this.bucketOptions = Input.ofNullable(bucketOptions);
+            this.bucketOptions = Output.ofNullable(bucketOptions);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder labelExtractors(@Nullable Input<Map<String,String>> labelExtractors) {
+        public Builder labelExtractors(@Nullable Output<Map<String,String>> labelExtractors) {
             this.labelExtractors = labelExtractors;
             return this;
         }
 
         public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
-            this.labelExtractors = Input.ofNullable(labelExtractors);
+            this.labelExtractors = Output.ofNullable(labelExtractors);
             return this;
         }
 
-        public Builder metricDescriptor(@Nullable Input<MetricMetricDescriptorGetArgs> metricDescriptor) {
+        public Builder metricDescriptor(@Nullable Output<MetricMetricDescriptorGetArgs> metricDescriptor) {
             this.metricDescriptor = metricDescriptor;
             return this;
         }
 
         public Builder metricDescriptor(@Nullable MetricMetricDescriptorGetArgs metricDescriptor) {
-            this.metricDescriptor = Input.ofNullable(metricDescriptor);
+            this.metricDescriptor = Output.ofNullable(metricDescriptor);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder valueExtractor(@Nullable Input<String> valueExtractor) {
+        public Builder valueExtractor(@Nullable Output<String> valueExtractor) {
             this.valueExtractor = valueExtractor;
             return this;
         }
 
         public Builder valueExtractor(@Nullable String valueExtractor) {
-            this.valueExtractor = Input.ofNullable(valueExtractor);
+            this.valueExtractor = Output.ofNullable(valueExtractor);
             return this;
         }
         public MetricState build() {

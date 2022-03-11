@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise;
 
 import io.pulumi.awsnative.iotsitewise.inputs.DashboardTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardDefinition", required=true)
-      private final Input<String> dashboardDefinition;
+      private final Output<String> dashboardDefinition;
 
-    public Input<String> getDashboardDefinition() {
+    public Output<String> getDashboardDefinition() {
         return this.dashboardDefinition;
     }
 
@@ -32,9 +32,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardDescription", required=true)
-      private final Input<String> dashboardDescription;
+      private final Output<String> dashboardDescription;
 
-    public Input<String> getDashboardDescription() {
+    public Output<String> getDashboardDescription() {
         return this.dashboardDescription;
     }
 
@@ -43,10 +43,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardName")
-      private final @Nullable Input<String> dashboardName;
+      private final @Nullable Output<String> dashboardName;
 
-    public Input<String> getDashboardName() {
-        return this.dashboardName == null ? Input.empty() : this.dashboardName;
+    public Output<String> getDashboardName() {
+        return this.dashboardName == null ? Output.empty() : this.dashboardName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId")
-      private final @Nullable Input<String> projectId;
+      private final @Nullable Output<String> projectId;
 
-    public Input<String> getProjectId() {
-        return this.projectId == null ? Input.empty() : this.projectId;
+    public Output<String> getProjectId() {
+        return this.projectId == null ? Output.empty() : this.projectId;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DashboardTagArgs>> tags;
+      private final @Nullable Output<List<DashboardTagArgs>> tags;
 
-    public Input<List<DashboardTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DashboardTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DashboardArgs(
-        Input<String> dashboardDefinition,
-        Input<String> dashboardDescription,
-        @Nullable Input<String> dashboardName,
-        @Nullable Input<String> projectId,
-        @Nullable Input<List<DashboardTagArgs>> tags) {
+        Output<String> dashboardDefinition,
+        Output<String> dashboardDescription,
+        @Nullable Output<String> dashboardName,
+        @Nullable Output<String> projectId,
+        @Nullable Output<List<DashboardTagArgs>> tags) {
         this.dashboardDefinition = Objects.requireNonNull(dashboardDefinition, "expected parameter 'dashboardDefinition' to be non-null");
         this.dashboardDescription = Objects.requireNonNull(dashboardDescription, "expected parameter 'dashboardDescription' to be non-null");
         this.dashboardName = dashboardName;
@@ -85,11 +85,11 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardArgs() {
-        this.dashboardDefinition = Input.empty();
-        this.dashboardDescription = Input.empty();
-        this.dashboardName = Input.empty();
-        this.projectId = Input.empty();
-        this.tags = Input.empty();
+        this.dashboardDefinition = Output.empty();
+        this.dashboardDescription = Output.empty();
+        this.dashboardName = Output.empty();
+        this.projectId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> dashboardDefinition;
-        private Input<String> dashboardDescription;
-        private @Nullable Input<String> dashboardName;
-        private @Nullable Input<String> projectId;
-        private @Nullable Input<List<DashboardTagArgs>> tags;
+        private Output<String> dashboardDefinition;
+        private Output<String> dashboardDescription;
+        private @Nullable Output<String> dashboardName;
+        private @Nullable Output<String> projectId;
+        private @Nullable Output<List<DashboardTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder dashboardDefinition(Input<String> dashboardDefinition) {
+        public Builder dashboardDefinition(Output<String> dashboardDefinition) {
             this.dashboardDefinition = Objects.requireNonNull(dashboardDefinition);
             return this;
         }
 
         public Builder dashboardDefinition(String dashboardDefinition) {
-            this.dashboardDefinition = Input.of(Objects.requireNonNull(dashboardDefinition));
+            this.dashboardDefinition = Output.of(Objects.requireNonNull(dashboardDefinition));
             return this;
         }
 
-        public Builder dashboardDescription(Input<String> dashboardDescription) {
+        public Builder dashboardDescription(Output<String> dashboardDescription) {
             this.dashboardDescription = Objects.requireNonNull(dashboardDescription);
             return this;
         }
 
         public Builder dashboardDescription(String dashboardDescription) {
-            this.dashboardDescription = Input.of(Objects.requireNonNull(dashboardDescription));
+            this.dashboardDescription = Output.of(Objects.requireNonNull(dashboardDescription));
             return this;
         }
 
-        public Builder dashboardName(@Nullable Input<String> dashboardName) {
+        public Builder dashboardName(@Nullable Output<String> dashboardName) {
             this.dashboardName = dashboardName;
             return this;
         }
 
         public Builder dashboardName(@Nullable String dashboardName) {
-            this.dashboardName = Input.ofNullable(dashboardName);
+            this.dashboardName = Output.ofNullable(dashboardName);
             return this;
         }
 
-        public Builder projectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Input.ofNullable(projectId);
+            this.projectId = Output.ofNullable(projectId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DashboardTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DashboardTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DashboardTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DashboardArgs build() {

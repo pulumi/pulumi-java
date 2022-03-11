@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hours", required=true)
-      private final Input<Integer> hours;
+      private final Output<Integer> hours;
 
-    public Input<Integer> getHours() {
+    public Output<Integer> getHours() {
         return this.hours;
     }
 
@@ -33,9 +33,9 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minutes", required=true)
-      private final Input<Integer> minutes;
+      private final Output<Integer> minutes;
 
-    public Input<Integer> getMinutes() {
+    public Output<Integer> getMinutes() {
         return this.minutes;
     }
 
@@ -44,25 +44,25 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="seconds", required=true)
-      private final Input<Integer> seconds;
+      private final Output<Integer> seconds;
 
-    public Input<Integer> getSeconds() {
+    public Output<Integer> getSeconds() {
         return this.seconds;
     }
 
     public TimeArgs(
-        Input<Integer> hours,
-        Input<Integer> minutes,
-        Input<Integer> seconds) {
+        Output<Integer> hours,
+        Output<Integer> minutes,
+        Output<Integer> seconds) {
         this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
         this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
         this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
     }
 
     private TimeArgs() {
-        this.hours = Input.empty();
-        this.minutes = Input.empty();
-        this.seconds = Input.empty();
+        this.hours = Output.empty();
+        this.minutes = Output.empty();
+        this.seconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> hours;
-        private Input<Integer> minutes;
-        private Input<Integer> seconds;
+        private Output<Integer> hours;
+        private Output<Integer> minutes;
+        private Output<Integer> seconds;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder hours(Input<Integer> hours) {
+        public Builder hours(Output<Integer> hours) {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
 
         public Builder hours(Integer hours) {
-            this.hours = Input.of(Objects.requireNonNull(hours));
+            this.hours = Output.of(Objects.requireNonNull(hours));
             return this;
         }
 
-        public Builder minutes(Input<Integer> minutes) {
+        public Builder minutes(Output<Integer> minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
 
         public Builder minutes(Integer minutes) {
-            this.minutes = Input.of(Objects.requireNonNull(minutes));
+            this.minutes = Output.of(Objects.requireNonNull(minutes));
             return this;
         }
 
-        public Builder seconds(Input<Integer> seconds) {
+        public Builder seconds(Output<Integer> seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
 
         public Builder seconds(Integer seconds) {
-            this.seconds = Input.of(Objects.requireNonNull(seconds));
+            this.seconds = Output.of(Objects.requireNonNull(seconds));
             return this;
         }
         public TimeArgs build() {

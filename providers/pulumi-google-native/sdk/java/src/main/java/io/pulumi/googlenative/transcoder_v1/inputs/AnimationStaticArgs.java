@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AnimationStaticArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startTimeOffset")
-      private final @Nullable Input<String> startTimeOffset;
+      private final @Nullable Output<String> startTimeOffset;
 
-    public Input<String> getStartTimeOffset() {
-        return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
+    public Output<String> getStartTimeOffset() {
+        return this.startTimeOffset == null ? Output.empty() : this.startTimeOffset;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AnimationStaticArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="xy")
-      private final @Nullable Input<NormalizedCoordinateArgs> xy;
+      private final @Nullable Output<NormalizedCoordinateArgs> xy;
 
-    public Input<NormalizedCoordinateArgs> getXy() {
-        return this.xy == null ? Input.empty() : this.xy;
+    public Output<NormalizedCoordinateArgs> getXy() {
+        return this.xy == null ? Output.empty() : this.xy;
     }
 
     public AnimationStaticArgs(
-        @Nullable Input<String> startTimeOffset,
-        @Nullable Input<NormalizedCoordinateArgs> xy) {
+        @Nullable Output<String> startTimeOffset,
+        @Nullable Output<NormalizedCoordinateArgs> xy) {
         this.startTimeOffset = startTimeOffset;
         this.xy = xy;
     }
 
     private AnimationStaticArgs() {
-        this.startTimeOffset = Input.empty();
-        this.xy = Input.empty();
+        this.startTimeOffset = Output.empty();
+        this.xy = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AnimationStaticArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> startTimeOffset;
-        private @Nullable Input<NormalizedCoordinateArgs> xy;
+        private @Nullable Output<String> startTimeOffset;
+        private @Nullable Output<NormalizedCoordinateArgs> xy;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AnimationStaticArgs extends io.pulumi.resources.ResourceArgs 
     	      this.xy = defaults.xy;
         }
 
-        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Input.ofNullable(startTimeOffset);
+            this.startTimeOffset = Output.ofNullable(startTimeOffset);
             return this;
         }
 
-        public Builder xy(@Nullable Input<NormalizedCoordinateArgs> xy) {
+        public Builder xy(@Nullable Output<NormalizedCoordinateArgs> xy) {
             this.xy = xy;
             return this;
         }
 
         public Builder xy(@Nullable NormalizedCoordinateArgs xy) {
-            this.xy = Input.ofNullable(xy);
+            this.xy = Output.ofNullable(xy);
             return this;
         }
         public AnimationStaticArgs build() {

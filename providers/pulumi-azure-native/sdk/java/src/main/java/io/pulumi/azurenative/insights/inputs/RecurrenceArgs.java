@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.RecurrenceFrequency;
 import io.pulumi.azurenative.insights.inputs.RecurrentScheduleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -23,9 +23,9 @@ public final class RecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequency", required=true)
-      private final Input<RecurrenceFrequency> frequency;
+      private final Output<RecurrenceFrequency> frequency;
 
-    public Input<RecurrenceFrequency> getFrequency() {
+    public Output<RecurrenceFrequency> getFrequency() {
         return this.frequency;
     }
 
@@ -34,22 +34,22 @@ public final class RecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<RecurrentScheduleArgs> schedule;
+      private final Output<RecurrentScheduleArgs> schedule;
 
-    public Input<RecurrentScheduleArgs> getSchedule() {
+    public Output<RecurrentScheduleArgs> getSchedule() {
         return this.schedule;
     }
 
     public RecurrenceArgs(
-        Input<RecurrenceFrequency> frequency,
-        Input<RecurrentScheduleArgs> schedule) {
+        Output<RecurrenceFrequency> frequency,
+        Output<RecurrentScheduleArgs> schedule) {
         this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
         this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
     }
 
     private RecurrenceArgs() {
-        this.frequency = Input.empty();
-        this.schedule = Input.empty();
+        this.frequency = Output.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RecurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<RecurrenceFrequency> frequency;
-        private Input<RecurrentScheduleArgs> schedule;
+        private Output<RecurrenceFrequency> frequency;
+        private Output<RecurrentScheduleArgs> schedule;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RecurrenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder frequency(Input<RecurrenceFrequency> frequency) {
+        public Builder frequency(Output<RecurrenceFrequency> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
         public Builder frequency(RecurrenceFrequency frequency) {
-            this.frequency = Input.of(Objects.requireNonNull(frequency));
+            this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
 
-        public Builder schedule(Input<RecurrentScheduleArgs> schedule) {
+        public Builder schedule(Output<RecurrentScheduleArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(RecurrentScheduleArgs schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
         public RecurrenceArgs build() {

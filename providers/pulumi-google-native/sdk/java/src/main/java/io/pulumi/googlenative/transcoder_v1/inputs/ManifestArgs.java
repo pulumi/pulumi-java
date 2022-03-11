@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.enums.ManifestType;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileName")
-      private final @Nullable Input<String> fileName;
+      private final @Nullable Output<String> fileName;
 
-    public Input<String> getFileName() {
-        return this.fileName == null ? Input.empty() : this.fileName;
+    public Output<String> getFileName() {
+        return this.fileName == null ? Output.empty() : this.fileName;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="muxStreams", required=true)
-      private final Input<List<String>> muxStreams;
+      private final Output<List<String>> muxStreams;
 
-    public Input<List<String>> getMuxStreams() {
+    public Output<List<String>> getMuxStreams() {
         return this.muxStreams;
     }
 
@@ -47,25 +47,25 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<ManifestType> type;
+      private final Output<ManifestType> type;
 
-    public Input<ManifestType> getType() {
+    public Output<ManifestType> getType() {
         return this.type;
     }
 
     public ManifestArgs(
-        @Nullable Input<String> fileName,
-        Input<List<String>> muxStreams,
-        Input<ManifestType> type) {
+        @Nullable Output<String> fileName,
+        Output<List<String>> muxStreams,
+        Output<ManifestType> type) {
         this.fileName = fileName;
         this.muxStreams = Objects.requireNonNull(muxStreams, "expected parameter 'muxStreams' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ManifestArgs() {
-        this.fileName = Input.empty();
-        this.muxStreams = Input.empty();
-        this.type = Input.empty();
+        this.fileName = Output.empty();
+        this.muxStreams = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fileName;
-        private Input<List<String>> muxStreams;
-        private Input<ManifestType> type;
+        private @Nullable Output<String> fileName;
+        private Output<List<String>> muxStreams;
+        private Output<ManifestType> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ManifestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder fileName(@Nullable Input<String> fileName) {
+        public Builder fileName(@Nullable Output<String> fileName) {
             this.fileName = fileName;
             return this;
         }
 
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = Input.ofNullable(fileName);
+            this.fileName = Output.ofNullable(fileName);
             return this;
         }
 
-        public Builder muxStreams(Input<List<String>> muxStreams) {
+        public Builder muxStreams(Output<List<String>> muxStreams) {
             this.muxStreams = Objects.requireNonNull(muxStreams);
             return this;
         }
 
         public Builder muxStreams(List<String> muxStreams) {
-            this.muxStreams = Input.of(Objects.requireNonNull(muxStreams));
+            this.muxStreams = Output.of(Objects.requireNonNull(muxStreams));
             return this;
         }
 
-        public Builder type(Input<ManifestType> type) {
+        public Builder type(Output<ManifestType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ManifestType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ManifestArgs build() {

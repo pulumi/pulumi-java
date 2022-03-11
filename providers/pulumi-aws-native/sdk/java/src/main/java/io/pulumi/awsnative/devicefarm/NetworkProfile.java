@@ -6,7 +6,6 @@ package io.pulumi.awsnative.devicefarm;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devicefarm.NetworkProfileArgs;
 import io.pulumi.awsnative.devicefarm.outputs.NetworkProfileTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -138,14 +137,14 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkProfile(String name, NetworkProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:devicefarm:NetworkProfile", name, args == null ? NetworkProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:devicefarm:NetworkProfile", name, args == null ? NetworkProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NetworkProfile(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NetworkProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:devicefarm:NetworkProfile", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -160,7 +159,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkProfile get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkProfile get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkProfile(name, id, options);
     }
 }

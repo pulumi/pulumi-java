@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1.inputs.MembershipRoleRestrictionEvaluationArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="memberRestrictionEvaluation")
-      private final @Nullable Input<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
+      private final @Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
 
-    public Input<MembershipRoleRestrictionEvaluationArgs> getMemberRestrictionEvaluation() {
-        return this.memberRestrictionEvaluation == null ? Input.empty() : this.memberRestrictionEvaluation;
+    public Output<MembershipRoleRestrictionEvaluationArgs> getMemberRestrictionEvaluation() {
+        return this.memberRestrictionEvaluation == null ? Output.empty() : this.memberRestrictionEvaluation;
     }
 
-    public RestrictionEvaluationsArgs(@Nullable Input<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation) {
+    public RestrictionEvaluationsArgs(@Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation) {
         this.memberRestrictionEvaluation = memberRestrictionEvaluation;
     }
 
     private RestrictionEvaluationsArgs() {
-        this.memberRestrictionEvaluation = Input.empty();
+        this.memberRestrictionEvaluation = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
+        private @Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
     	      this.memberRestrictionEvaluation = defaults.memberRestrictionEvaluation;
         }
 
-        public Builder memberRestrictionEvaluation(@Nullable Input<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation) {
+        public Builder memberRestrictionEvaluation(@Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation) {
             this.memberRestrictionEvaluation = memberRestrictionEvaluation;
             return this;
         }
 
         public Builder memberRestrictionEvaluation(@Nullable MembershipRoleRestrictionEvaluationArgs memberRestrictionEvaluation) {
-            this.memberRestrictionEvaluation = Input.ofNullable(memberRestrictionEvaluation);
+            this.memberRestrictionEvaluation = Output.ofNullable(memberRestrictionEvaluation);
             return this;
         }
         public RestrictionEvaluationsArgs build() {

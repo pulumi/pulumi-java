@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endIpAddress", required=true)
-      private final Input<String> endIpAddress;
+      private final Output<String> endIpAddress;
 
-    public Input<String> getEndIpAddress() {
+    public Output<String> getEndIpAddress() {
         return this.endIpAddress;
     }
 
@@ -30,10 +30,10 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallRuleName")
-      private final @Nullable Input<String> firewallRuleName;
+      private final @Nullable Output<String> firewallRuleName;
 
-    public Input<String> getFirewallRuleName() {
-        return this.firewallRuleName == null ? Input.empty() : this.firewallRuleName;
+    public Output<String> getFirewallRuleName() {
+        return this.firewallRuleName == null ? Output.empty() : this.firewallRuleName;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,9 +52,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -63,18 +63,18 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startIpAddress", required=true)
-      private final Input<String> startIpAddress;
+      private final Output<String> startIpAddress;
 
-    public Input<String> getStartIpAddress() {
+    public Output<String> getStartIpAddress() {
         return this.startIpAddress;
     }
 
     public FirewallRuleArgs(
-        Input<String> endIpAddress,
-        @Nullable Input<String> firewallRuleName,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        Input<String> startIpAddress) {
+        Output<String> endIpAddress,
+        @Nullable Output<String> firewallRuleName,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        Output<String> startIpAddress) {
         this.endIpAddress = Objects.requireNonNull(endIpAddress, "expected parameter 'endIpAddress' to be non-null");
         this.firewallRuleName = firewallRuleName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -83,11 +83,11 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallRuleArgs() {
-        this.endIpAddress = Input.empty();
-        this.firewallRuleName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.startIpAddress = Input.empty();
+        this.endIpAddress = Output.empty();
+        this.firewallRuleName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.startIpAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> endIpAddress;
-        private @Nullable Input<String> firewallRuleName;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private Input<String> startIpAddress;
+        private Output<String> endIpAddress;
+        private @Nullable Output<String> firewallRuleName;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private Output<String> startIpAddress;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startIpAddress = defaults.startIpAddress;
         }
 
-        public Builder endIpAddress(Input<String> endIpAddress) {
+        public Builder endIpAddress(Output<String> endIpAddress) {
             this.endIpAddress = Objects.requireNonNull(endIpAddress);
             return this;
         }
 
         public Builder endIpAddress(String endIpAddress) {
-            this.endIpAddress = Input.of(Objects.requireNonNull(endIpAddress));
+            this.endIpAddress = Output.of(Objects.requireNonNull(endIpAddress));
             return this;
         }
 
-        public Builder firewallRuleName(@Nullable Input<String> firewallRuleName) {
+        public Builder firewallRuleName(@Nullable Output<String> firewallRuleName) {
             this.firewallRuleName = firewallRuleName;
             return this;
         }
 
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
-            this.firewallRuleName = Input.ofNullable(firewallRuleName);
+            this.firewallRuleName = Output.ofNullable(firewallRuleName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder startIpAddress(Input<String> startIpAddress) {
+        public Builder startIpAddress(Output<String> startIpAddress) {
             this.startIpAddress = Objects.requireNonNull(startIpAddress);
             return this;
         }
 
         public Builder startIpAddress(String startIpAddress) {
-            this.startIpAddress = Input.of(Objects.requireNonNull(startIpAddress));
+            this.startIpAddress = Output.of(Objects.requireNonNull(startIpAddress));
             return this;
         }
         public FirewallRuleArgs build() {

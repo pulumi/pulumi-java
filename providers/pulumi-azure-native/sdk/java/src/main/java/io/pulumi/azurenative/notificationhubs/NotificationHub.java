@@ -14,7 +14,6 @@ import io.pulumi.azurenative.notificationhubs.outputs.SharedAccessAuthorizationR
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.WnsCredentialResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -261,20 +260,20 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationHub(String name, NotificationHubArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:notificationhubs:NotificationHub", name, args == null ? NotificationHubArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:notificationhubs:NotificationHub", name, args == null ? NotificationHubArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NotificationHub(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NotificationHub(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:notificationhubs:NotificationHub", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:notificationhubs/v20140901:NotificationHub").build()),
-                Input.of(Alias.builder().setType("azure-native:notificationhubs/v20160301:NotificationHub").build()),
-                Input.of(Alias.builder().setType("azure-native:notificationhubs/v20170401:NotificationHub").build())
+                Output.of(Alias.builder().setType("azure-native:notificationhubs/v20140901:NotificationHub").build()),
+                Output.of(Alias.builder().setType("azure-native:notificationhubs/v20160301:NotificationHub").build()),
+                Output.of(Alias.builder().setType("azure-native:notificationhubs/v20170401:NotificationHub").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -288,7 +287,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NotificationHub get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NotificationHub get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotificationHub(name, id, options);
     }
 }

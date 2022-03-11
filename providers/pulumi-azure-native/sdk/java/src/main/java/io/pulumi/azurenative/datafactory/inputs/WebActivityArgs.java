@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityAuthenticationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -34,10 +34,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-      private final @Nullable Input<WebActivityAuthenticationArgs> authentication;
+      private final @Nullable Output<WebActivityAuthenticationArgs> authentication;
 
-    public Input<WebActivityAuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Input.empty() : this.authentication;
+    public Output<WebActivityAuthenticationArgs> getAuthentication() {
+        return this.authentication == null ? Output.empty() : this.authentication;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<Object> body;
+      private final @Nullable Output<Object> body;
 
-    public Input<Object> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<Object> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasets")
-      private final @Nullable Input<List<DatasetReferenceArgs>> datasets;
+      private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
-    public Input<List<DatasetReferenceArgs>> getDatasets() {
-        return this.datasets == null ? Input.empty() : this.datasets;
+    public Output<List<DatasetReferenceArgs>> getDatasets() {
+        return this.datasets == null ? Output.empty() : this.datasets;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<Object> headers;
+      private final @Nullable Output<Object> headers;
 
-    public Input<Object> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<Object> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServices")
-      private final @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices;
+      private final @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
 
-    public Input<List<LinkedServiceReferenceArgs>> getLinkedServices() {
-        return this.linkedServices == null ? Input.empty() : this.linkedServices;
+    public Output<List<LinkedServiceReferenceArgs>> getLinkedServices() {
+        return this.linkedServices == null ? Output.empty() : this.linkedServices;
     }
 
     /**
@@ -133,9 +133,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="method", required=true)
-      private final Input<Either<String,WebActivityMethod>> method;
+      private final Output<Either<String,WebActivityMethod>> method;
 
-    public Input<Either<String,WebActivityMethod>> getMethod() {
+    public Output<Either<String,WebActivityMethod>> getMethod() {
         return this.method;
     }
 
@@ -144,9 +144,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -155,10 +155,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<ActivityPolicyArgs> policy;
+      private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Input<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<ActivityPolicyArgs> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -167,9 +167,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -178,9 +178,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<Object> url;
+      private final Output<Object> url;
 
-    public Input<Object> getUrl() {
+    public Output<Object> getUrl() {
         return this.url;
     }
 
@@ -189,28 +189,28 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public WebActivityArgs(
-        @Nullable Input<WebActivityAuthenticationArgs> authentication,
-        @Nullable Input<Object> body,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<List<DatasetReferenceArgs>> datasets,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> headers,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices,
-        Input<Either<String,WebActivityMethod>> method,
-        Input<String> name,
-        @Nullable Input<ActivityPolicyArgs> policy,
-        Input<String> type,
-        Input<Object> url,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<WebActivityAuthenticationArgs> authentication,
+        @Nullable Output<Object> body,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<List<DatasetReferenceArgs>> datasets,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> headers,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
+        @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices,
+        Output<Either<String,WebActivityMethod>> method,
+        Output<String> name,
+        @Nullable Output<ActivityPolicyArgs> policy,
+        Output<String> type,
+        Output<Object> url,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.authentication = authentication;
         this.body = body;
         this.connectVia = connectVia;
@@ -229,21 +229,21 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebActivityArgs() {
-        this.authentication = Input.empty();
-        this.body = Input.empty();
-        this.connectVia = Input.empty();
-        this.datasets = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.headers = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.linkedServices = Input.empty();
-        this.method = Input.empty();
-        this.name = Input.empty();
-        this.policy = Input.empty();
-        this.type = Input.empty();
-        this.url = Input.empty();
-        this.userProperties = Input.empty();
+        this.authentication = Output.empty();
+        this.body = Output.empty();
+        this.connectVia = Output.empty();
+        this.datasets = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.headers = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.linkedServices = Output.empty();
+        this.method = Output.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
+        this.type = Output.empty();
+        this.url = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -255,21 +255,21 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<WebActivityAuthenticationArgs> authentication;
-        private @Nullable Input<Object> body;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<List<DatasetReferenceArgs>> datasets;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> headers;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices;
-        private Input<Either<String,WebActivityMethod>> method;
-        private Input<String> name;
-        private @Nullable Input<ActivityPolicyArgs> policy;
-        private Input<String> type;
-        private Input<Object> url;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<WebActivityAuthenticationArgs> authentication;
+        private @Nullable Output<Object> body;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<List<DatasetReferenceArgs>> datasets;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> headers;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
+        private Output<Either<String,WebActivityMethod>> method;
+        private Output<String> name;
+        private @Nullable Output<ActivityPolicyArgs> policy;
+        private Output<String> type;
+        private Output<Object> url;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -294,153 +294,153 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder authentication(@Nullable Input<WebActivityAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Output<WebActivityAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
         public Builder authentication(@Nullable WebActivityAuthenticationArgs authentication) {
-            this.authentication = Input.ofNullable(authentication);
+            this.authentication = Output.ofNullable(authentication);
             return this;
         }
 
-        public Builder body(@Nullable Input<Object> body) {
+        public Builder body(@Nullable Output<Object> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable Object body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder datasets(@Nullable Input<List<DatasetReferenceArgs>> datasets) {
+        public Builder datasets(@Nullable Output<List<DatasetReferenceArgs>> datasets) {
             this.datasets = datasets;
             return this;
         }
 
         public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
-            this.datasets = Input.ofNullable(datasets);
+            this.datasets = Output.ofNullable(datasets);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder headers(@Nullable Input<Object> headers) {
+        public Builder headers(@Nullable Output<Object> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable Object headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.ofNullable(linkedServiceName);
+            this.linkedServiceName = Output.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder linkedServices(@Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices) {
+        public Builder linkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices) {
             this.linkedServices = linkedServices;
             return this;
         }
 
         public Builder linkedServices(@Nullable List<LinkedServiceReferenceArgs> linkedServices) {
-            this.linkedServices = Input.ofNullable(linkedServices);
+            this.linkedServices = Output.ofNullable(linkedServices);
             return this;
         }
 
-        public Builder method(Input<Either<String,WebActivityMethod>> method) {
+        public Builder method(Output<Either<String,WebActivityMethod>> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
         public Builder method(Either<String,WebActivityMethod> method) {
-            this.method = Input.of(Objects.requireNonNull(method));
+            this.method = Output.of(Objects.requireNonNull(method));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder url(Input<Object> url) {
+        public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(Object url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public WebActivityArgs build() {

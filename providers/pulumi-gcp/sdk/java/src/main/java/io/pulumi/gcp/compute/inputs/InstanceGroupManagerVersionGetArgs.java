@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerVersionTargetSizeGetArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class InstanceGroupManagerVersionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="instanceTemplate", required=true)
-      private final Input<String> instanceTemplate;
+      private final Output<String> instanceTemplate;
 
-    public Input<String> getInstanceTemplate() {
+    public Output<String> getInstanceTemplate() {
         return this.instanceTemplate;
     }
 
@@ -31,10 +31,10 @@ public final class InstanceGroupManagerVersionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class InstanceGroupManagerVersionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetSize")
-      private final @Nullable Input<InstanceGroupManagerVersionTargetSizeGetArgs> targetSize;
+      private final @Nullable Output<InstanceGroupManagerVersionTargetSizeGetArgs> targetSize;
 
-    public Input<InstanceGroupManagerVersionTargetSizeGetArgs> getTargetSize() {
-        return this.targetSize == null ? Input.empty() : this.targetSize;
+    public Output<InstanceGroupManagerVersionTargetSizeGetArgs> getTargetSize() {
+        return this.targetSize == null ? Output.empty() : this.targetSize;
     }
 
     public InstanceGroupManagerVersionGetArgs(
-        Input<String> instanceTemplate,
-        @Nullable Input<String> name,
-        @Nullable Input<InstanceGroupManagerVersionTargetSizeGetArgs> targetSize) {
+        Output<String> instanceTemplate,
+        @Nullable Output<String> name,
+        @Nullable Output<InstanceGroupManagerVersionTargetSizeGetArgs> targetSize) {
         this.instanceTemplate = Objects.requireNonNull(instanceTemplate, "expected parameter 'instanceTemplate' to be non-null");
         this.name = name;
         this.targetSize = targetSize;
     }
 
     private InstanceGroupManagerVersionGetArgs() {
-        this.instanceTemplate = Input.empty();
-        this.name = Input.empty();
-        this.targetSize = Input.empty();
+        this.instanceTemplate = Output.empty();
+        this.name = Output.empty();
+        this.targetSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class InstanceGroupManagerVersionGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> instanceTemplate;
-        private @Nullable Input<String> name;
-        private @Nullable Input<InstanceGroupManagerVersionTargetSizeGetArgs> targetSize;
+        private Output<String> instanceTemplate;
+        private @Nullable Output<String> name;
+        private @Nullable Output<InstanceGroupManagerVersionTargetSizeGetArgs> targetSize;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class InstanceGroupManagerVersionGetArgs extends io.pulumi.resource
     	      this.targetSize = defaults.targetSize;
         }
 
-        public Builder instanceTemplate(Input<String> instanceTemplate) {
+        public Builder instanceTemplate(Output<String> instanceTemplate) {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
 
         public Builder instanceTemplate(String instanceTemplate) {
-            this.instanceTemplate = Input.of(Objects.requireNonNull(instanceTemplate));
+            this.instanceTemplate = Output.of(Objects.requireNonNull(instanceTemplate));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder targetSize(@Nullable Input<InstanceGroupManagerVersionTargetSizeGetArgs> targetSize) {
+        public Builder targetSize(@Nullable Output<InstanceGroupManagerVersionTargetSizeGetArgs> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
 
         public Builder targetSize(@Nullable InstanceGroupManagerVersionTargetSizeGetArgs targetSize) {
-            this.targetSize = Input.ofNullable(targetSize);
+            this.targetSize = Output.ofNullable(targetSize);
             return this;
         }
         public InstanceGroupManagerVersionGetArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IpAddressRangeArgs;
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPoliciesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowedCallerIpAddresses")
-      private final @Nullable Input<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
+      private final @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
 
-    public Input<List<IpAddressRangeArgs>> getAllowedCallerIpAddresses() {
-        return this.allowedCallerIpAddresses == null ? Input.empty() : this.allowedCallerIpAddresses;
+    public Output<List<IpAddressRangeArgs>> getAllowedCallerIpAddresses() {
+        return this.allowedCallerIpAddresses == null ? Output.empty() : this.allowedCallerIpAddresses;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="openAuthenticationPolicies")
-      private final @Nullable Input<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
+      private final @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
 
-    public Input<OpenAuthenticationAccessPoliciesArgs> getOpenAuthenticationPolicies() {
-        return this.openAuthenticationPolicies == null ? Input.empty() : this.openAuthenticationPolicies;
+    public Output<OpenAuthenticationAccessPoliciesArgs> getOpenAuthenticationPolicies() {
+        return this.openAuthenticationPolicies == null ? Output.empty() : this.openAuthenticationPolicies;
     }
 
     public FlowAccessControlConfigurationPolicyArgs(
-        @Nullable Input<List<IpAddressRangeArgs>> allowedCallerIpAddresses,
-        @Nullable Input<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies) {
+        @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses,
+        @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies) {
         this.allowedCallerIpAddresses = allowedCallerIpAddresses;
         this.openAuthenticationPolicies = openAuthenticationPolicies;
     }
 
     private FlowAccessControlConfigurationPolicyArgs() {
-        this.allowedCallerIpAddresses = Input.empty();
-        this.openAuthenticationPolicies = Input.empty();
+        this.allowedCallerIpAddresses = Output.empty();
+        this.openAuthenticationPolicies = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
-        private @Nullable Input<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
+        private @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
+        private @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
     	      this.openAuthenticationPolicies = defaults.openAuthenticationPolicies;
         }
 
-        public Builder allowedCallerIpAddresses(@Nullable Input<List<IpAddressRangeArgs>> allowedCallerIpAddresses) {
+        public Builder allowedCallerIpAddresses(@Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses) {
             this.allowedCallerIpAddresses = allowedCallerIpAddresses;
             return this;
         }
 
         public Builder allowedCallerIpAddresses(@Nullable List<IpAddressRangeArgs> allowedCallerIpAddresses) {
-            this.allowedCallerIpAddresses = Input.ofNullable(allowedCallerIpAddresses);
+            this.allowedCallerIpAddresses = Output.ofNullable(allowedCallerIpAddresses);
             return this;
         }
 
-        public Builder openAuthenticationPolicies(@Nullable Input<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies) {
+        public Builder openAuthenticationPolicies(@Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies) {
             this.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
         }
 
         public Builder openAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesArgs openAuthenticationPolicies) {
-            this.openAuthenticationPolicies = Input.ofNullable(openAuthenticationPolicies);
+            this.openAuthenticationPolicies = Output.ofNullable(openAuthenticationPolicies);
             return this;
         }
         public FlowAccessControlConfigurationPolicyArgs build() {

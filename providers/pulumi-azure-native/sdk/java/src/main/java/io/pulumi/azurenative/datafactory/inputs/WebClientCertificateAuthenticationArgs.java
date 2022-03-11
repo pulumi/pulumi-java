@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="authenticationType", required=true)
-      private final Input<String> authenticationType;
+      private final Output<String> authenticationType;
 
-    public Input<String> getAuthenticationType() {
+    public Output<String> getAuthenticationType() {
         return this.authenticationType;
     }
 
@@ -38,9 +38,9 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password;
     }
 
@@ -49,9 +49,9 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="pfx", required=true)
-      private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
+      private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPfx() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPfx() {
         return this.pfx;
     }
 
@@ -60,17 +60,17 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<Object> url;
+      private final Output<Object> url;
 
-    public Input<Object> getUrl() {
+    public Output<Object> getUrl() {
         return this.url;
     }
 
     public WebClientCertificateAuthenticationArgs(
-        Input<String> authenticationType,
-        Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx,
-        Input<Object> url) {
+        Output<String> authenticationType,
+        Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
+        Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx,
+        Output<Object> url) {
         this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.pfx = Objects.requireNonNull(pfx, "expected parameter 'pfx' to be non-null");
@@ -78,10 +78,10 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
     }
 
     private WebClientCertificateAuthenticationArgs() {
-        this.authenticationType = Input.empty();
-        this.password = Input.empty();
-        this.pfx = Input.empty();
-        this.url = Input.empty();
+        this.authenticationType = Output.empty();
+        this.password = Output.empty();
+        this.pfx = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> authenticationType;
-        private Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
-        private Input<Object> url;
+        private Output<String> authenticationType;
+        private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
+        private Output<Object> url;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
     	      this.url = defaults.url;
         }
 
-        public Builder authenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Output<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
+            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder password(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder pfx(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
+        public Builder pfx(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
             this.pfx = Objects.requireNonNull(pfx);
             return this;
         }
 
         public Builder pfx(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
-            this.pfx = Input.of(Objects.requireNonNull(pfx));
+            this.pfx = Output.of(Objects.requireNonNull(pfx));
             return this;
         }
 
-        public Builder url(Input<Object> url) {
+        public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(Object url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public WebClientCertificateAuthenticationArgs build() {

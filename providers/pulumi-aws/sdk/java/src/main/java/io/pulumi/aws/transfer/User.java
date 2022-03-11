@@ -8,7 +8,6 @@ import io.pulumi.aws.transfer.UserArgs;
 import io.pulumi.aws.transfer.inputs.UserState;
 import io.pulumi.aws.transfer.outputs.UserHomeDirectoryMapping;
 import io.pulumi.aws.transfer.outputs.UserPosixProfile;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -226,14 +225,14 @@ public class User extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public User(String name, UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:transfer/user:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:transfer/user:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private User(String name, Input<String> id, @Nullable UserState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private User(String name, Output<String> id, @Nullable UserState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:transfer/user:User", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -249,7 +248,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static User get(String name, Input<String> id, @Nullable UserState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static User get(String name, Output<String> id, @Nullable UserState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new User(name, id, state, options);
     }
 }

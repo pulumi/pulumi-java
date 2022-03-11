@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SnapshotSnapshotEncryptionKeyArgs;
 import io.pulumi.gcp.compute.inputs.SnapshotSourceDiskEncryptionKeyArgs;
@@ -23,10 +23,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotEncryptionKey")
-      private final @Nullable Input<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey;
+      private final @Nullable Output<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey;
 
-    public Input<SnapshotSnapshotEncryptionKeyArgs> getSnapshotEncryptionKey() {
-        return this.snapshotEncryptionKey == null ? Input.empty() : this.snapshotEncryptionKey;
+    public Output<SnapshotSnapshotEncryptionKeyArgs> getSnapshotEncryptionKey() {
+        return this.snapshotEncryptionKey == null ? Output.empty() : this.snapshotEncryptionKey;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk", required=true)
-      private final Input<String> sourceDisk;
+      private final Output<String> sourceDisk;
 
-    public Input<String> getSourceDisk() {
+    public Output<String> getSourceDisk() {
         return this.sourceDisk;
     }
 
@@ -101,10 +101,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDiskEncryptionKey")
-      private final @Nullable Input<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey;
+      private final @Nullable Output<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey;
 
-    public Input<SnapshotSourceDiskEncryptionKeyArgs> getSourceDiskEncryptionKey() {
-        return this.sourceDiskEncryptionKey == null ? Input.empty() : this.sourceDiskEncryptionKey;
+    public Output<SnapshotSourceDiskEncryptionKeyArgs> getSourceDiskEncryptionKey() {
+        return this.sourceDiskEncryptionKey == null ? Output.empty() : this.sourceDiskEncryptionKey;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageLocations")
-      private final @Nullable Input<List<String>> storageLocations;
+      private final @Nullable Output<List<String>> storageLocations;
 
-    public Input<List<String>> getStorageLocations() {
-        return this.storageLocations == null ? Input.empty() : this.storageLocations;
+    public Output<List<String>> getStorageLocations() {
+        return this.storageLocations == null ? Output.empty() : this.storageLocations;
     }
 
     /**
@@ -123,22 +123,22 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public SnapshotArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey,
-        Input<String> sourceDisk,
-        @Nullable Input<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey,
-        @Nullable Input<List<String>> storageLocations,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey,
+        Output<String> sourceDisk,
+        @Nullable Output<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey,
+        @Nullable Output<List<String>> storageLocations,
+        @Nullable Output<String> zone) {
         this.description = description;
         this.labels = labels;
         this.name = name;
@@ -151,15 +151,15 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.snapshotEncryptionKey = Input.empty();
-        this.sourceDisk = Input.empty();
-        this.sourceDiskEncryptionKey = Input.empty();
-        this.storageLocations = Input.empty();
-        this.zone = Input.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.snapshotEncryptionKey = Output.empty();
+        this.sourceDisk = Output.empty();
+        this.sourceDiskEncryptionKey = Output.empty();
+        this.storageLocations = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,15 +171,15 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey;
-        private Input<String> sourceDisk;
-        private @Nullable Input<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey;
-        private @Nullable Input<List<String>> storageLocations;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey;
+        private Output<String> sourceDisk;
+        private @Nullable Output<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey;
+        private @Nullable Output<List<String>> storageLocations;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -198,93 +198,93 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder snapshotEncryptionKey(@Nullable Input<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey) {
+        public Builder snapshotEncryptionKey(@Nullable Output<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey) {
             this.snapshotEncryptionKey = snapshotEncryptionKey;
             return this;
         }
 
         public Builder snapshotEncryptionKey(@Nullable SnapshotSnapshotEncryptionKeyArgs snapshotEncryptionKey) {
-            this.snapshotEncryptionKey = Input.ofNullable(snapshotEncryptionKey);
+            this.snapshotEncryptionKey = Output.ofNullable(snapshotEncryptionKey);
             return this;
         }
 
-        public Builder sourceDisk(Input<String> sourceDisk) {
+        public Builder sourceDisk(Output<String> sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
 
         public Builder sourceDisk(String sourceDisk) {
-            this.sourceDisk = Input.of(Objects.requireNonNull(sourceDisk));
+            this.sourceDisk = Output.of(Objects.requireNonNull(sourceDisk));
             return this;
         }
 
-        public Builder sourceDiskEncryptionKey(@Nullable Input<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey) {
+        public Builder sourceDiskEncryptionKey(@Nullable Output<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
             return this;
         }
 
         public Builder sourceDiskEncryptionKey(@Nullable SnapshotSourceDiskEncryptionKeyArgs sourceDiskEncryptionKey) {
-            this.sourceDiskEncryptionKey = Input.ofNullable(sourceDiskEncryptionKey);
+            this.sourceDiskEncryptionKey = Output.ofNullable(sourceDiskEncryptionKey);
             return this;
         }
 
-        public Builder storageLocations(@Nullable Input<List<String>> storageLocations) {
+        public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
 
         public Builder storageLocations(@Nullable List<String> storageLocations) {
-            this.storageLocations = Input.ofNullable(storageLocations);
+            this.storageLocations = Output.ofNullable(storageLocations);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public SnapshotArgs build() {

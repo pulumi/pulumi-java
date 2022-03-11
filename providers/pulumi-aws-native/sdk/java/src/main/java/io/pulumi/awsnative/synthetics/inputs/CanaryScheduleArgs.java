@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class CanaryScheduleArgs extends io.pulumi.resources.ResourceArgs {
     public static final CanaryScheduleArgs Empty = new CanaryScheduleArgs();
 
     @InputImport(name="durationInSeconds")
-      private final @Nullable Input<String> durationInSeconds;
+      private final @Nullable Output<String> durationInSeconds;
 
-    public Input<String> getDurationInSeconds() {
-        return this.durationInSeconds == null ? Input.empty() : this.durationInSeconds;
+    public Output<String> getDurationInSeconds() {
+        return this.durationInSeconds == null ? Output.empty() : this.durationInSeconds;
     }
 
     @InputImport(name="expression", required=true)
-      private final Input<String> expression;
+      private final Output<String> expression;
 
-    public Input<String> getExpression() {
+    public Output<String> getExpression() {
         return this.expression;
     }
 
     public CanaryScheduleArgs(
-        @Nullable Input<String> durationInSeconds,
-        Input<String> expression) {
+        @Nullable Output<String> durationInSeconds,
+        Output<String> expression) {
         this.durationInSeconds = durationInSeconds;
         this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
     }
 
     private CanaryScheduleArgs() {
-        this.durationInSeconds = Input.empty();
-        this.expression = Input.empty();
+        this.durationInSeconds = Output.empty();
+        this.expression = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class CanaryScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> durationInSeconds;
-        private Input<String> expression;
+        private @Nullable Output<String> durationInSeconds;
+        private Output<String> expression;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class CanaryScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expression = defaults.expression;
         }
 
-        public Builder durationInSeconds(@Nullable Input<String> durationInSeconds) {
+        public Builder durationInSeconds(@Nullable Output<String> durationInSeconds) {
             this.durationInSeconds = durationInSeconds;
             return this;
         }
 
         public Builder durationInSeconds(@Nullable String durationInSeconds) {
-            this.durationInSeconds = Input.ofNullable(durationInSeconds);
+            this.durationInSeconds = Output.ofNullable(durationInSeconds);
             return this;
         }
 
-        public Builder expression(Input<String> expression) {
+        public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(String expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
         public CanaryScheduleArgs build() {

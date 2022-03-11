@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-      private final Input<String> orgId;
+      private final Output<String> orgId;
 
-    public Input<String> getOrgId() {
+    public Output<String> getOrgId() {
         return this.orgId;
     }
 
@@ -42,9 +42,9 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions", required=true)
-      private final Input<List<String>> permissions;
+      private final Output<List<String>> permissions;
 
-    public Input<List<String>> getPermissions() {
+    public Output<List<String>> getPermissions() {
         return this.permissions;
     }
 
@@ -53,9 +53,9 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleId", required=true)
-      private final Input<String> roleId;
+      private final Output<String> roleId;
 
-    public Input<String> getRoleId() {
+    public Output<String> getRoleId() {
         return this.roleId;
     }
 
@@ -66,10 +66,10 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stage")
-      private final @Nullable Input<String> stage;
+      private final @Nullable Output<String> stage;
 
-    public Input<String> getStage() {
-        return this.stage == null ? Input.empty() : this.stage;
+    public Output<String> getStage() {
+        return this.stage == null ? Output.empty() : this.stage;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
     public IAMCustomRoleArgs(
-        @Nullable Input<String> description,
-        Input<String> orgId,
-        Input<List<String>> permissions,
-        Input<String> roleId,
-        @Nullable Input<String> stage,
-        Input<String> title) {
+        @Nullable Output<String> description,
+        Output<String> orgId,
+        Output<List<String>> permissions,
+        Output<String> roleId,
+        @Nullable Output<String> stage,
+        Output<String> title) {
         this.description = description;
         this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
         this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
@@ -99,12 +99,12 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMCustomRoleArgs() {
-        this.description = Input.empty();
-        this.orgId = Input.empty();
-        this.permissions = Input.empty();
-        this.roleId = Input.empty();
-        this.stage = Input.empty();
-        this.title = Input.empty();
+        this.description = Output.empty();
+        this.orgId = Output.empty();
+        this.permissions = Output.empty();
+        this.roleId = Output.empty();
+        this.stage = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> orgId;
-        private Input<List<String>> permissions;
-        private Input<String> roleId;
-        private @Nullable Input<String> stage;
-        private Input<String> title;
+        private @Nullable Output<String> description;
+        private Output<String> orgId;
+        private Output<List<String>> permissions;
+        private Output<String> roleId;
+        private @Nullable Output<String> stage;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder orgId(Input<String> orgId) {
+        public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
         public Builder orgId(String orgId) {
-            this.orgId = Input.of(Objects.requireNonNull(orgId));
+            this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder permissions(Input<List<String>> permissions) {
+        public Builder permissions(Output<List<String>> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
         public Builder permissions(List<String> permissions) {
-            this.permissions = Input.of(Objects.requireNonNull(permissions));
+            this.permissions = Output.of(Objects.requireNonNull(permissions));
             return this;
         }
 
-        public Builder roleId(Input<String> roleId) {
+        public Builder roleId(Output<String> roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
 
         public Builder roleId(String roleId) {
-            this.roleId = Input.of(Objects.requireNonNull(roleId));
+            this.roleId = Output.of(Objects.requireNonNull(roleId));
             return this;
         }
 
-        public Builder stage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
 
         public Builder stage(@Nullable String stage) {
-            this.stage = Input.ofNullable(stage);
+            this.stage = Output.ofNullable(stage);
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public IAMCustomRoleArgs build() {

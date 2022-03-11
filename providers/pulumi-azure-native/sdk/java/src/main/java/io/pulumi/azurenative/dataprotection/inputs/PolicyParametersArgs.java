@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.AzureOperationalStoreParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataStoreParametersList")
-      private final @Nullable Input<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
+      private final @Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
 
-    public Input<List<AzureOperationalStoreParametersArgs>> getDataStoreParametersList() {
-        return this.dataStoreParametersList == null ? Input.empty() : this.dataStoreParametersList;
+    public Output<List<AzureOperationalStoreParametersArgs>> getDataStoreParametersList() {
+        return this.dataStoreParametersList == null ? Output.empty() : this.dataStoreParametersList;
     }
 
-    public PolicyParametersArgs(@Nullable Input<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList) {
+    public PolicyParametersArgs(@Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList) {
         this.dataStoreParametersList = dataStoreParametersList;
     }
 
     private PolicyParametersArgs() {
-        this.dataStoreParametersList = Input.empty();
+        this.dataStoreParametersList = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
+        private @Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs
     	      this.dataStoreParametersList = defaults.dataStoreParametersList;
         }
 
-        public Builder dataStoreParametersList(@Nullable Input<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList) {
+        public Builder dataStoreParametersList(@Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList) {
             this.dataStoreParametersList = dataStoreParametersList;
             return this;
         }
 
         public Builder dataStoreParametersList(@Nullable List<AzureOperationalStoreParametersArgs> dataStoreParametersList) {
-            this.dataStoreParametersList = Input.ofNullable(dataStoreParametersList);
+            this.dataStoreParametersList = Output.ofNullable(dataStoreParametersList);
             return this;
         }
         public PolicyParametersArgs build() {

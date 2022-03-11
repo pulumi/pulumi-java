@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -33,9 +33,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-      private final Input<String> filter;
+      private final Output<String> filter;
 
-    public Input<String> getFilter() {
+    public Output<String> getFilter() {
         return this.filter;
     }
 
@@ -46,10 +46,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCluster")
-      private final @Nullable Input<Boolean> isCluster;
+      private final @Nullable Output<Boolean> isCluster;
 
-    public Input<Boolean> getIsCluster() {
-        return this.isCluster == null ? Input.empty() : this.isCluster;
+    public Output<Boolean> getIsCluster() {
+        return this.isCluster == null ? Output.empty() : this.isCluster;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentName")
-      private final @Nullable Input<String> parentName;
+      private final @Nullable Output<String> parentName;
 
-    public Input<String> getParentName() {
-        return this.parentName == null ? Input.empty() : this.parentName;
+    public Output<String> getParentName() {
+        return this.parentName == null ? Output.empty() : this.parentName;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public GroupArgs(
-        Input<String> displayName,
-        Input<String> filter,
-        @Nullable Input<Boolean> isCluster,
-        @Nullable Input<String> parentName,
-        @Nullable Input<String> project) {
+        Output<String> displayName,
+        Output<String> filter,
+        @Nullable Output<Boolean> isCluster,
+        @Nullable Output<String> parentName,
+        @Nullable Output<String> project) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
         this.isCluster = isCluster;
@@ -91,11 +91,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.displayName = Input.empty();
-        this.filter = Input.empty();
-        this.isCluster = Input.empty();
-        this.parentName = Input.empty();
-        this.project = Input.empty();
+        this.displayName = Output.empty();
+        this.filter = Output.empty();
+        this.isCluster = Output.empty();
+        this.parentName = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private Input<String> filter;
-        private @Nullable Input<Boolean> isCluster;
-        private @Nullable Input<String> parentName;
-        private @Nullable Input<String> project;
+        private Output<String> displayName;
+        private Output<String> filter;
+        private @Nullable Output<Boolean> isCluster;
+        private @Nullable Output<String> parentName;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder filter(Input<String> filter) {
+        public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(String filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder isCluster(@Nullable Input<Boolean> isCluster) {
+        public Builder isCluster(@Nullable Output<Boolean> isCluster) {
             this.isCluster = isCluster;
             return this;
         }
 
         public Builder isCluster(@Nullable Boolean isCluster) {
-            this.isCluster = Input.ofNullable(isCluster);
+            this.isCluster = Output.ofNullable(isCluster);
             return this;
         }
 
-        public Builder parentName(@Nullable Input<String> parentName) {
+        public Builder parentName(@Nullable Output<String> parentName) {
             this.parentName = parentName;
             return this;
         }
 
         public Builder parentName(@Nullable String parentName) {
-            this.parentName = Input.ofNullable(parentName);
+            this.parentName = Output.ofNullable(parentName);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public GroupArgs build() {

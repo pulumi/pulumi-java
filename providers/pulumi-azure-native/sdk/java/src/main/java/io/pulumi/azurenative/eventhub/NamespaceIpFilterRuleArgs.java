@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.azurenative.eventhub.enums.IPAction;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<Either<String,IPAction>> action;
+      private final @Nullable Output<Either<String,IPAction>> action;
 
-    public Input<Either<String,IPAction>> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<Either<String,IPAction>> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filterName")
-      private final @Nullable Input<String> filterName;
+      private final @Nullable Output<String> filterName;
 
-    public Input<String> getFilterName() {
-        return this.filterName == null ? Input.empty() : this.filterName;
+    public Output<String> getFilterName() {
+        return this.filterName == null ? Output.empty() : this.filterName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ipFilterRuleName")
-      private final @Nullable Input<String> ipFilterRuleName;
+      private final @Nullable Output<String> ipFilterRuleName;
 
-    public Input<String> getIpFilterRuleName() {
-        return this.ipFilterRuleName == null ? Input.empty() : this.ipFilterRuleName;
+    public Output<String> getIpFilterRuleName() {
+        return this.ipFilterRuleName == null ? Output.empty() : this.ipFilterRuleName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ipMask")
-      private final @Nullable Input<String> ipMask;
+      private final @Nullable Output<String> ipMask;
 
-    public Input<String> getIpMask() {
-        return this.ipMask == null ? Input.empty() : this.ipMask;
+    public Output<String> getIpMask() {
+        return this.ipMask == null ? Output.empty() : this.ipMask;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -76,19 +76,19 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public NamespaceIpFilterRuleArgs(
-        @Nullable Input<Either<String,IPAction>> action,
-        @Nullable Input<String> filterName,
-        @Nullable Input<String> ipFilterRuleName,
-        @Nullable Input<String> ipMask,
-        Input<String> namespaceName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<Either<String,IPAction>> action,
+        @Nullable Output<String> filterName,
+        @Nullable Output<String> ipFilterRuleName,
+        @Nullable Output<String> ipMask,
+        Output<String> namespaceName,
+        Output<String> resourceGroupName) {
         this.action = action;
         this.filterName = filterName;
         this.ipFilterRuleName = ipFilterRuleName;
@@ -98,12 +98,12 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     }
 
     private NamespaceIpFilterRuleArgs() {
-        this.action = Input.empty();
-        this.filterName = Input.empty();
-        this.ipFilterRuleName = Input.empty();
-        this.ipMask = Input.empty();
-        this.namespaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.action = Output.empty();
+        this.filterName = Output.empty();
+        this.ipFilterRuleName = Output.empty();
+        this.ipMask = Output.empty();
+        this.namespaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,IPAction>> action;
-        private @Nullable Input<String> filterName;
-        private @Nullable Input<String> ipFilterRuleName;
-        private @Nullable Input<String> ipMask;
-        private Input<String> namespaceName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<Either<String,IPAction>> action;
+        private @Nullable Output<String> filterName;
+        private @Nullable Output<String> ipFilterRuleName;
+        private @Nullable Output<String> ipMask;
+        private Output<String> namespaceName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder action(@Nullable Input<Either<String,IPAction>> action) {
+        public Builder action(@Nullable Output<Either<String,IPAction>> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable Either<String,IPAction> action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder filterName(@Nullable Input<String> filterName) {
+        public Builder filterName(@Nullable Output<String> filterName) {
             this.filterName = filterName;
             return this;
         }
 
         public Builder filterName(@Nullable String filterName) {
-            this.filterName = Input.ofNullable(filterName);
+            this.filterName = Output.ofNullable(filterName);
             return this;
         }
 
-        public Builder ipFilterRuleName(@Nullable Input<String> ipFilterRuleName) {
+        public Builder ipFilterRuleName(@Nullable Output<String> ipFilterRuleName) {
             this.ipFilterRuleName = ipFilterRuleName;
             return this;
         }
 
         public Builder ipFilterRuleName(@Nullable String ipFilterRuleName) {
-            this.ipFilterRuleName = Input.ofNullable(ipFilterRuleName);
+            this.ipFilterRuleName = Output.ofNullable(ipFilterRuleName);
             return this;
         }
 
-        public Builder ipMask(@Nullable Input<String> ipMask) {
+        public Builder ipMask(@Nullable Output<String> ipMask) {
             this.ipMask = ipMask;
             return this;
         }
 
         public Builder ipMask(@Nullable String ipMask) {
-            this.ipMask = Input.ofNullable(ipMask);
+            this.ipMask = Output.ofNullable(ipMask);
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public NamespaceIpFilterRuleArgs build() {

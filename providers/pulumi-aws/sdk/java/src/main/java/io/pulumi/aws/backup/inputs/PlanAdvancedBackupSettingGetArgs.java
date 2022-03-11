@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -19,9 +19,9 @@ public final class PlanAdvancedBackupSettingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="backupOptions", required=true)
-      private final Input<Map<String,String>> backupOptions;
+      private final Output<Map<String,String>> backupOptions;
 
-    public Input<Map<String,String>> getBackupOptions() {
+    public Output<Map<String,String>> getBackupOptions() {
         return this.backupOptions;
     }
 
@@ -30,22 +30,22 @@ public final class PlanAdvancedBackupSettingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
     public PlanAdvancedBackupSettingGetArgs(
-        Input<Map<String,String>> backupOptions,
-        Input<String> resourceType) {
+        Output<Map<String,String>> backupOptions,
+        Output<String> resourceType) {
         this.backupOptions = Objects.requireNonNull(backupOptions, "expected parameter 'backupOptions' to be non-null");
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
     }
 
     private PlanAdvancedBackupSettingGetArgs() {
-        this.backupOptions = Input.empty();
-        this.resourceType = Input.empty();
+        this.backupOptions = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PlanAdvancedBackupSettingGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> backupOptions;
-        private Input<String> resourceType;
+        private Output<Map<String,String>> backupOptions;
+        private Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PlanAdvancedBackupSettingGetArgs extends io.pulumi.resources.
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder backupOptions(Input<Map<String,String>> backupOptions) {
+        public Builder backupOptions(Output<Map<String,String>> backupOptions) {
             this.backupOptions = Objects.requireNonNull(backupOptions);
             return this;
         }
 
         public Builder backupOptions(Map<String,String> backupOptions) {
-            this.backupOptions = Input.of(Objects.requireNonNull(backupOptions));
+            this.backupOptions = Output.of(Objects.requireNonNull(backupOptions));
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
         public PlanAdvancedBackupSettingGetArgs build() {

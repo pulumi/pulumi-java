@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddresses")
-      private final @Nullable Input<List<String>> ipAddresses;
+      private final @Nullable Output<List<String>> ipAddresses;
 
-    public Input<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
+    public Output<List<String>> getIpAddresses() {
+        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipGroupsName")
-      private final @Nullable Input<String> ipGroupsName;
+      private final @Nullable Output<String> ipGroupsName;
 
-    public Input<String> getIpGroupsName() {
-        return this.ipGroupsName == null ? Input.empty() : this.ipGroupsName;
+    public Output<String> getIpGroupsName() {
+        return this.ipGroupsName == null ? Output.empty() : this.ipGroupsName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,19 +76,19 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IpGroupArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<List<String>> ipAddresses,
-        @Nullable Input<String> ipGroupsName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> id,
+        @Nullable Output<List<String>> ipAddresses,
+        @Nullable Output<String> ipGroupsName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.id = id;
         this.ipAddresses = ipAddresses;
         this.ipGroupsName = ipGroupsName;
@@ -98,12 +98,12 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpGroupArgs() {
-        this.id = Input.empty();
-        this.ipAddresses = Input.empty();
-        this.ipGroupsName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.id = Output.empty();
+        this.ipAddresses = Output.empty();
+        this.ipGroupsName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<String>> ipAddresses;
-        private @Nullable Input<String> ipGroupsName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<String>> ipAddresses;
+        private @Nullable Output<String> ipGroupsName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Input.ofNullable(ipAddresses);
+            this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder ipGroupsName(@Nullable Input<String> ipGroupsName) {
+        public Builder ipGroupsName(@Nullable Output<String> ipGroupsName) {
             this.ipGroupsName = ipGroupsName;
             return this;
         }
 
         public Builder ipGroupsName(@Nullable String ipGroupsName) {
-            this.ipGroupsName = Input.ofNullable(ipGroupsName);
+            this.ipGroupsName = Output.ofNullable(ipGroupsName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IpGroupArgs build() {

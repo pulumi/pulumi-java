@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.enums.H265VideoProfile;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adaptiveBFrame")
-      private final @Nullable Input<Boolean> adaptiveBFrame;
+      private final @Nullable Output<Boolean> adaptiveBFrame;
 
-    public Input<Boolean> getAdaptiveBFrame() {
-        return this.adaptiveBFrame == null ? Input.empty() : this.adaptiveBFrame;
+    public Output<Boolean> getAdaptiveBFrame() {
+        return this.adaptiveBFrame == null ? Output.empty() : this.adaptiveBFrame;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bFrames")
-      private final @Nullable Input<Integer> bFrames;
+      private final @Nullable Output<Integer> bFrames;
 
-    public Input<Integer> getBFrames() {
-        return this.bFrames == null ? Input.empty() : this.bFrames;
+    public Output<Integer> getBFrames() {
+        return this.bFrames == null ? Output.empty() : this.bFrames;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitrate", required=true)
-      private final Input<Integer> bitrate;
+      private final Output<Integer> bitrate;
 
-    public Input<Integer> getBitrate() {
+    public Output<Integer> getBitrate() {
         return this.bitrate;
     }
 
@@ -60,10 +60,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bufferWindow")
-      private final @Nullable Input<String> bufferWindow;
+      private final @Nullable Output<String> bufferWindow;
 
-    public Input<String> getBufferWindow() {
-        return this.bufferWindow == null ? Input.empty() : this.bufferWindow;
+    public Output<String> getBufferWindow() {
+        return this.bufferWindow == null ? Output.empty() : this.bufferWindow;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameRate")
-      private final @Nullable Input<String> frameRate;
+      private final @Nullable Output<String> frameRate;
 
-    public Input<String> getFrameRate() {
-        return this.frameRate == null ? Input.empty() : this.frameRate;
+    public Output<String> getFrameRate() {
+        return this.frameRate == null ? Output.empty() : this.frameRate;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="height")
-      private final @Nullable Input<String> height;
+      private final @Nullable Output<String> height;
 
-    public Input<String> getHeight() {
-        return this.height == null ? Input.empty() : this.height;
+    public Output<String> getHeight() {
+        return this.height == null ? Output.empty() : this.height;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="level")
-      private final @Nullable Input<String> level;
+      private final @Nullable Output<String> level;
 
-    public Input<String> getLevel() {
-        return this.level == null ? Input.empty() : this.level;
+    public Output<String> getLevel() {
+        return this.level == null ? Output.empty() : this.level;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxBitrate")
-      private final @Nullable Input<Integer> maxBitrate;
+      private final @Nullable Output<Integer> maxBitrate;
 
-    public Input<Integer> getMaxBitrate() {
-        return this.maxBitrate == null ? Input.empty() : this.maxBitrate;
+    public Output<Integer> getMaxBitrate() {
+        return this.maxBitrate == null ? Output.empty() : this.maxBitrate;
     }
 
     /**
@@ -127,9 +127,9 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -138,10 +138,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profile")
-      private final @Nullable Input<Either<String,H265VideoProfile>> profile;
+      private final @Nullable Output<Either<String,H265VideoProfile>> profile;
 
-    public Input<Either<String,H265VideoProfile>> getProfile() {
-        return this.profile == null ? Input.empty() : this.profile;
+    public Output<Either<String,H265VideoProfile>> getProfile() {
+        return this.profile == null ? Output.empty() : this.profile;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceFrames")
-      private final @Nullable Input<Integer> referenceFrames;
+      private final @Nullable Output<Integer> referenceFrames;
 
-    public Input<Integer> getReferenceFrames() {
-        return this.referenceFrames == null ? Input.empty() : this.referenceFrames;
+    public Output<Integer> getReferenceFrames() {
+        return this.referenceFrames == null ? Output.empty() : this.referenceFrames;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slices")
-      private final @Nullable Input<Integer> slices;
+      private final @Nullable Output<Integer> slices;
 
-    public Input<Integer> getSlices() {
-        return this.slices == null ? Input.empty() : this.slices;
+    public Output<Integer> getSlices() {
+        return this.slices == null ? Output.empty() : this.slices;
     }
 
     /**
@@ -171,27 +171,27 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="width")
-      private final @Nullable Input<String> width;
+      private final @Nullable Output<String> width;
 
-    public Input<String> getWidth() {
-        return this.width == null ? Input.empty() : this.width;
+    public Output<String> getWidth() {
+        return this.width == null ? Output.empty() : this.width;
     }
 
     public H265LayerArgs(
-        @Nullable Input<Boolean> adaptiveBFrame,
-        @Nullable Input<Integer> bFrames,
-        Input<Integer> bitrate,
-        @Nullable Input<String> bufferWindow,
-        @Nullable Input<String> frameRate,
-        @Nullable Input<String> height,
-        @Nullable Input<String> label,
-        @Nullable Input<String> level,
-        @Nullable Input<Integer> maxBitrate,
-        Input<String> odataType,
-        @Nullable Input<Either<String,H265VideoProfile>> profile,
-        @Nullable Input<Integer> referenceFrames,
-        @Nullable Input<Integer> slices,
-        @Nullable Input<String> width) {
+        @Nullable Output<Boolean> adaptiveBFrame,
+        @Nullable Output<Integer> bFrames,
+        Output<Integer> bitrate,
+        @Nullable Output<String> bufferWindow,
+        @Nullable Output<String> frameRate,
+        @Nullable Output<String> height,
+        @Nullable Output<String> label,
+        @Nullable Output<String> level,
+        @Nullable Output<Integer> maxBitrate,
+        Output<String> odataType,
+        @Nullable Output<Either<String,H265VideoProfile>> profile,
+        @Nullable Output<Integer> referenceFrames,
+        @Nullable Output<Integer> slices,
+        @Nullable Output<String> width) {
         this.adaptiveBFrame = adaptiveBFrame;
         this.bFrames = bFrames;
         this.bitrate = Objects.requireNonNull(bitrate, "expected parameter 'bitrate' to be non-null");
@@ -209,20 +209,20 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private H265LayerArgs() {
-        this.adaptiveBFrame = Input.empty();
-        this.bFrames = Input.empty();
-        this.bitrate = Input.empty();
-        this.bufferWindow = Input.empty();
-        this.frameRate = Input.empty();
-        this.height = Input.empty();
-        this.label = Input.empty();
-        this.level = Input.empty();
-        this.maxBitrate = Input.empty();
-        this.odataType = Input.empty();
-        this.profile = Input.empty();
-        this.referenceFrames = Input.empty();
-        this.slices = Input.empty();
-        this.width = Input.empty();
+        this.adaptiveBFrame = Output.empty();
+        this.bFrames = Output.empty();
+        this.bitrate = Output.empty();
+        this.bufferWindow = Output.empty();
+        this.frameRate = Output.empty();
+        this.height = Output.empty();
+        this.label = Output.empty();
+        this.level = Output.empty();
+        this.maxBitrate = Output.empty();
+        this.odataType = Output.empty();
+        this.profile = Output.empty();
+        this.referenceFrames = Output.empty();
+        this.slices = Output.empty();
+        this.width = Output.empty();
     }
 
     public static Builder builder() {
@@ -234,20 +234,20 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> adaptiveBFrame;
-        private @Nullable Input<Integer> bFrames;
-        private Input<Integer> bitrate;
-        private @Nullable Input<String> bufferWindow;
-        private @Nullable Input<String> frameRate;
-        private @Nullable Input<String> height;
-        private @Nullable Input<String> label;
-        private @Nullable Input<String> level;
-        private @Nullable Input<Integer> maxBitrate;
-        private Input<String> odataType;
-        private @Nullable Input<Either<String,H265VideoProfile>> profile;
-        private @Nullable Input<Integer> referenceFrames;
-        private @Nullable Input<Integer> slices;
-        private @Nullable Input<String> width;
+        private @Nullable Output<Boolean> adaptiveBFrame;
+        private @Nullable Output<Integer> bFrames;
+        private Output<Integer> bitrate;
+        private @Nullable Output<String> bufferWindow;
+        private @Nullable Output<String> frameRate;
+        private @Nullable Output<String> height;
+        private @Nullable Output<String> label;
+        private @Nullable Output<String> level;
+        private @Nullable Output<Integer> maxBitrate;
+        private Output<String> odataType;
+        private @Nullable Output<Either<String,H265VideoProfile>> profile;
+        private @Nullable Output<Integer> referenceFrames;
+        private @Nullable Output<Integer> slices;
+        private @Nullable Output<String> width;
 
         public Builder() {
     	      // Empty
@@ -271,143 +271,143 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.width = defaults.width;
         }
 
-        public Builder adaptiveBFrame(@Nullable Input<Boolean> adaptiveBFrame) {
+        public Builder adaptiveBFrame(@Nullable Output<Boolean> adaptiveBFrame) {
             this.adaptiveBFrame = adaptiveBFrame;
             return this;
         }
 
         public Builder adaptiveBFrame(@Nullable Boolean adaptiveBFrame) {
-            this.adaptiveBFrame = Input.ofNullable(adaptiveBFrame);
+            this.adaptiveBFrame = Output.ofNullable(adaptiveBFrame);
             return this;
         }
 
-        public Builder bFrames(@Nullable Input<Integer> bFrames) {
+        public Builder bFrames(@Nullable Output<Integer> bFrames) {
             this.bFrames = bFrames;
             return this;
         }
 
         public Builder bFrames(@Nullable Integer bFrames) {
-            this.bFrames = Input.ofNullable(bFrames);
+            this.bFrames = Output.ofNullable(bFrames);
             return this;
         }
 
-        public Builder bitrate(Input<Integer> bitrate) {
+        public Builder bitrate(Output<Integer> bitrate) {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }
 
         public Builder bitrate(Integer bitrate) {
-            this.bitrate = Input.of(Objects.requireNonNull(bitrate));
+            this.bitrate = Output.of(Objects.requireNonNull(bitrate));
             return this;
         }
 
-        public Builder bufferWindow(@Nullable Input<String> bufferWindow) {
+        public Builder bufferWindow(@Nullable Output<String> bufferWindow) {
             this.bufferWindow = bufferWindow;
             return this;
         }
 
         public Builder bufferWindow(@Nullable String bufferWindow) {
-            this.bufferWindow = Input.ofNullable(bufferWindow);
+            this.bufferWindow = Output.ofNullable(bufferWindow);
             return this;
         }
 
-        public Builder frameRate(@Nullable Input<String> frameRate) {
+        public Builder frameRate(@Nullable Output<String> frameRate) {
             this.frameRate = frameRate;
             return this;
         }
 
         public Builder frameRate(@Nullable String frameRate) {
-            this.frameRate = Input.ofNullable(frameRate);
+            this.frameRate = Output.ofNullable(frameRate);
             return this;
         }
 
-        public Builder height(@Nullable Input<String> height) {
+        public Builder height(@Nullable Output<String> height) {
             this.height = height;
             return this;
         }
 
         public Builder height(@Nullable String height) {
-            this.height = Input.ofNullable(height);
+            this.height = Output.ofNullable(height);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder level(@Nullable Input<String> level) {
+        public Builder level(@Nullable Output<String> level) {
             this.level = level;
             return this;
         }
 
         public Builder level(@Nullable String level) {
-            this.level = Input.ofNullable(level);
+            this.level = Output.ofNullable(level);
             return this;
         }
 
-        public Builder maxBitrate(@Nullable Input<Integer> maxBitrate) {
+        public Builder maxBitrate(@Nullable Output<Integer> maxBitrate) {
             this.maxBitrate = maxBitrate;
             return this;
         }
 
         public Builder maxBitrate(@Nullable Integer maxBitrate) {
-            this.maxBitrate = Input.ofNullable(maxBitrate);
+            this.maxBitrate = Output.ofNullable(maxBitrate);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder profile(@Nullable Input<Either<String,H265VideoProfile>> profile) {
+        public Builder profile(@Nullable Output<Either<String,H265VideoProfile>> profile) {
             this.profile = profile;
             return this;
         }
 
         public Builder profile(@Nullable Either<String,H265VideoProfile> profile) {
-            this.profile = Input.ofNullable(profile);
+            this.profile = Output.ofNullable(profile);
             return this;
         }
 
-        public Builder referenceFrames(@Nullable Input<Integer> referenceFrames) {
+        public Builder referenceFrames(@Nullable Output<Integer> referenceFrames) {
             this.referenceFrames = referenceFrames;
             return this;
         }
 
         public Builder referenceFrames(@Nullable Integer referenceFrames) {
-            this.referenceFrames = Input.ofNullable(referenceFrames);
+            this.referenceFrames = Output.ofNullable(referenceFrames);
             return this;
         }
 
-        public Builder slices(@Nullable Input<Integer> slices) {
+        public Builder slices(@Nullable Output<Integer> slices) {
             this.slices = slices;
             return this;
         }
 
         public Builder slices(@Nullable Integer slices) {
-            this.slices = Input.ofNullable(slices);
+            this.slices = Output.ofNullable(slices);
             return this;
         }
 
-        public Builder width(@Nullable Input<String> width) {
+        public Builder width(@Nullable Output<String> width) {
             this.width = width;
             return this;
         }
 
         public Builder width(@Nullable String width) {
-            this.width = Input.ofNullable(width);
+            this.width = Output.ofNullable(width);
             return this;
         }
         public H265LayerArgs build() {

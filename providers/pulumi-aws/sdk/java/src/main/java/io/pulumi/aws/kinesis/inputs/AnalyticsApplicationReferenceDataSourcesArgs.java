@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesS3Args;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
      * 
      */
     @InputImport(name="s3", required=true)
-      private final Input<AnalyticsApplicationReferenceDataSourcesS3Args> s3;
+      private final Output<AnalyticsApplicationReferenceDataSourcesS3Args> s3;
 
-    public Input<AnalyticsApplicationReferenceDataSourcesS3Args> getS3() {
+    public Output<AnalyticsApplicationReferenceDataSourcesS3Args> getS3() {
         return this.s3;
     }
 
@@ -43,9 +43,9 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
      * 
      */
     @InputImport(name="schema", required=true)
-      private final Input<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema;
+      private final Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema;
 
-    public Input<AnalyticsApplicationReferenceDataSourcesSchemaArgs> getSchema() {
+    public Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> getSchema() {
         return this.schema;
     }
 
@@ -54,17 +54,17 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public AnalyticsApplicationReferenceDataSourcesArgs(
-        @Nullable Input<String> id,
-        Input<AnalyticsApplicationReferenceDataSourcesS3Args> s3,
-        Input<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema,
-        Input<String> tableName) {
+        @Nullable Output<String> id,
+        Output<AnalyticsApplicationReferenceDataSourcesS3Args> s3,
+        Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema,
+        Output<String> tableName) {
         this.id = id;
         this.s3 = Objects.requireNonNull(s3, "expected parameter 's3' to be non-null");
         this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
@@ -72,10 +72,10 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
     }
 
     private AnalyticsApplicationReferenceDataSourcesArgs() {
-        this.id = Input.empty();
-        this.s3 = Input.empty();
-        this.schema = Input.empty();
-        this.tableName = Input.empty();
+        this.id = Output.empty();
+        this.s3 = Output.empty();
+        this.schema = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private Input<AnalyticsApplicationReferenceDataSourcesS3Args> s3;
-        private Input<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema;
-        private Input<String> tableName;
+        private @Nullable Output<String> id;
+        private Output<AnalyticsApplicationReferenceDataSourcesS3Args> s3;
+        private Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder s3(Input<AnalyticsApplicationReferenceDataSourcesS3Args> s3) {
+        public Builder s3(Output<AnalyticsApplicationReferenceDataSourcesS3Args> s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
 
         public Builder s3(AnalyticsApplicationReferenceDataSourcesS3Args s3) {
-            this.s3 = Input.of(Objects.requireNonNull(s3));
+            this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
         }
 
-        public Builder schema(Input<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema) {
+        public Builder schema(Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
         public Builder schema(AnalyticsApplicationReferenceDataSourcesSchemaArgs schema) {
-            this.schema = Input.of(Objects.requireNonNull(schema));
+            this.schema = Output.of(Objects.requireNonNull(schema));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public AnalyticsApplicationReferenceDataSourcesArgs build() {

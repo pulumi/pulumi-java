@@ -6,7 +6,6 @@ package io.pulumi.awsnative.detective;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.detective.GraphArgs;
 import io.pulumi.awsnative.detective.outputs.GraphTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -79,14 +78,14 @@ public class Graph extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Graph(String name, @Nullable GraphArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:detective:Graph", name, args == null ? GraphArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:detective:Graph", name, args == null ? GraphArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Graph(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Graph(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:detective:Graph", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -101,7 +100,7 @@ public class Graph extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Graph get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Graph get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Graph(name, id, options);
     }
 }

@@ -10,7 +10,6 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualApplianceNicPropertiesResponse;
 import io.pulumi.azurenative.network.outputs.VirtualApplianceSkuPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -314,28 +313,28 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkVirtualAppliance(String name, NetworkVirtualApplianceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:NetworkVirtualAppliance", name, args == null ? NetworkVirtualApplianceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:NetworkVirtualAppliance", name, args == null ? NetworkVirtualApplianceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NetworkVirtualAppliance(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NetworkVirtualAppliance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:NetworkVirtualAppliance", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:NetworkVirtualAppliance").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:NetworkVirtualAppliance").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:NetworkVirtualAppliance").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:NetworkVirtualAppliance").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:NetworkVirtualAppliance").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:NetworkVirtualAppliance").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:NetworkVirtualAppliance").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:NetworkVirtualAppliance").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:NetworkVirtualAppliance").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:NetworkVirtualAppliance").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:NetworkVirtualAppliance").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:NetworkVirtualAppliance").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:NetworkVirtualAppliance").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -349,7 +348,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkVirtualAppliance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkVirtualAppliance get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkVirtualAppliance(name, id, options);
     }
 }

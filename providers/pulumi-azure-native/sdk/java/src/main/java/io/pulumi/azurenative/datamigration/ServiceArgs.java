@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration;
 
 import io.pulumi.azurenative.datamigration.inputs.ServiceSkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-      private final Input<String> groupName;
+      private final Output<String> groupName;
 
-    public Input<String> getGroupName() {
+    public Output<String> getGroupName() {
         return this.groupName;
     }
 
@@ -32,10 +32,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<String> publicKey;
+      private final @Nullable Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<String> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ServiceSkuArgs> sku;
+      private final @Nullable Output<ServiceSkuArgs> sku;
 
-    public Input<ServiceSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ServiceSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualSubnetId", required=true)
-      private final Input<String> virtualSubnetId;
+      private final Output<String> virtualSubnetId;
 
-    public Input<String> getVirtualSubnetId() {
+    public Output<String> getVirtualSubnetId() {
         return this.virtualSubnetId;
     }
 
     public ServiceArgs(
-        Input<String> groupName,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> publicKey,
-        @Nullable Input<String> serviceName,
-        @Nullable Input<ServiceSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> virtualSubnetId) {
+        Output<String> groupName,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> publicKey,
+        @Nullable Output<String> serviceName,
+        @Nullable Output<ServiceSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> virtualSubnetId) {
         this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
         this.kind = kind;
         this.location = location;
@@ -124,14 +124,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.groupName = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.publicKey = Input.empty();
-        this.serviceName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.virtualSubnetId = Input.empty();
+        this.groupName = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.publicKey = Output.empty();
+        this.serviceName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.virtualSubnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> groupName;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> publicKey;
-        private @Nullable Input<String> serviceName;
-        private @Nullable Input<ServiceSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> virtualSubnetId;
+        private Output<String> groupName;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> publicKey;
+        private @Nullable Output<String> serviceName;
+        private @Nullable Output<ServiceSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> virtualSubnetId;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualSubnetId = defaults.virtualSubnetId;
         }
 
-        public Builder groupName(Input<String> groupName) {
+        public Builder groupName(Output<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
         public Builder groupName(String groupName) {
-            this.groupName = Input.of(Objects.requireNonNull(groupName));
+            this.groupName = Output.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
 
-        public Builder sku(@Nullable Input<ServiceSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ServiceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ServiceSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualSubnetId(Input<String> virtualSubnetId) {
+        public Builder virtualSubnetId(Output<String> virtualSubnetId) {
             this.virtualSubnetId = Objects.requireNonNull(virtualSubnetId);
             return this;
         }
 
         public Builder virtualSubnetId(String virtualSubnetId) {
-            this.virtualSubnetId = Input.of(Objects.requireNonNull(virtualSubnetId));
+            this.virtualSubnetId = Output.of(Objects.requireNonNull(virtualSubnetId));
             return this;
         }
         public ServiceArgs build() {

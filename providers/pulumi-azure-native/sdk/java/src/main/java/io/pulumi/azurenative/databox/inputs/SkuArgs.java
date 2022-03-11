@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.enums.SkuName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family")
-      private final @Nullable Input<String> family;
+      private final @Nullable Output<String> family;
 
-    public Input<String> getFamily() {
-        return this.family == null ? Input.empty() : this.family;
+    public Output<String> getFamily() {
+        return this.family == null ? Output.empty() : this.family;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,SkuName>> name;
+      private final Output<Either<String,SkuName>> name;
 
-    public Input<Either<String,SkuName>> getName() {
+    public Output<Either<String,SkuName>> getName() {
         return this.name;
     }
 
     public SkuArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> family,
-        Input<Either<String,SkuName>> name) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> family,
+        Output<Either<String,SkuName>> name) {
         this.displayName = displayName;
         this.family = family;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private SkuArgs() {
-        this.displayName = Input.empty();
-        this.family = Input.empty();
-        this.name = Input.empty();
+        this.displayName = Output.empty();
+        this.family = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> family;
-        private Input<Either<String,SkuName>> name;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> family;
+        private Output<Either<String,SkuName>> name;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder family(@Nullable Input<String> family) {
+        public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
 
         public Builder family(@Nullable String family) {
-            this.family = Input.ofNullable(family);
+            this.family = Output.ofNullable(family);
             return this;
         }
 
-        public Builder name(Input<Either<String,SkuName>> name) {
+        public Builder name(Output<Either<String,SkuName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,SkuName> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public SkuArgs build() {

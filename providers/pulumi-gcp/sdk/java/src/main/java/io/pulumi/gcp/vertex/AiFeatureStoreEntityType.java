@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.vertex;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -172,14 +171,14 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public AiFeatureStoreEntityType(String name, AiFeatureStoreEntityTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:vertex/aiFeatureStoreEntityType:AiFeatureStoreEntityType", name, args == null ? AiFeatureStoreEntityTypeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:vertex/aiFeatureStoreEntityType:AiFeatureStoreEntityType", name, args == null ? AiFeatureStoreEntityTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AiFeatureStoreEntityType(String name, Input<String> id, @Nullable AiFeatureStoreEntityTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AiFeatureStoreEntityType(String name, Output<String> id, @Nullable AiFeatureStoreEntityTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:vertex/aiFeatureStoreEntityType:AiFeatureStoreEntityType", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -195,7 +194,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AiFeatureStoreEntityType get(String name, Input<String> id, @Nullable AiFeatureStoreEntityTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AiFeatureStoreEntityType get(String name, Output<String> id, @Nullable AiFeatureStoreEntityTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AiFeatureStoreEntityType(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public ServiceIdentityState(
-        @Nullable Input<String> email,
-        @Nullable Input<String> project,
-        @Nullable Input<String> service) {
+        @Nullable Output<String> email,
+        @Nullable Output<String> project,
+        @Nullable Output<String> service) {
         this.email = email;
         this.project = project;
         this.service = service;
     }
 
     private ServiceIdentityState() {
-        this.email = Input.empty();
-        this.project = Input.empty();
-        this.service = Input.empty();
+        this.email = Output.empty();
+        this.project = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> service;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ServiceIdentityState extends io.pulumi.resources.ResourceArgs
     	      this.service = defaults.service;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public ServiceIdentityState build() {

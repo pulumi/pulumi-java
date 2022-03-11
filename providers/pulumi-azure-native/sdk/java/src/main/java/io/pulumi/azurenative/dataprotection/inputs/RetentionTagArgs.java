@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagName", required=true)
-      private final Input<String> tagName;
+      private final Output<String> tagName;
 
-    public Input<String> getTagName() {
+    public Output<String> getTagName() {
         return this.tagName;
     }
 
-    public RetentionTagArgs(Input<String> tagName) {
+    public RetentionTagArgs(Output<String> tagName) {
         this.tagName = Objects.requireNonNull(tagName, "expected parameter 'tagName' to be non-null");
     }
 
     private RetentionTagArgs() {
-        this.tagName = Input.empty();
+        this.tagName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> tagName;
+        private Output<String> tagName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagName = defaults.tagName;
         }
 
-        public Builder tagName(Input<String> tagName) {
+        public Builder tagName(Output<String> tagName) {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }
 
         public Builder tagName(String tagName) {
-            this.tagName = Input.of(Objects.requireNonNull(tagName));
+            this.tagName = Output.of(Objects.requireNonNull(tagName));
             return this;
         }
         public RetentionTagArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.LineRegistrationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class LineChannelPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lineRegistrations", required=true)
-      private final Input<List<LineRegistrationArgs>> lineRegistrations;
+      private final Output<List<LineRegistrationArgs>> lineRegistrations;
 
-    public Input<List<LineRegistrationArgs>> getLineRegistrations() {
+    public Output<List<LineRegistrationArgs>> getLineRegistrations() {
         return this.lineRegistrations;
     }
 
-    public LineChannelPropertiesArgs(Input<List<LineRegistrationArgs>> lineRegistrations) {
+    public LineChannelPropertiesArgs(Output<List<LineRegistrationArgs>> lineRegistrations) {
         this.lineRegistrations = Objects.requireNonNull(lineRegistrations, "expected parameter 'lineRegistrations' to be non-null");
     }
 
     private LineChannelPropertiesArgs() {
-        this.lineRegistrations = Input.empty();
+        this.lineRegistrations = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LineChannelPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<List<LineRegistrationArgs>> lineRegistrations;
+        private Output<List<LineRegistrationArgs>> lineRegistrations;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LineChannelPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.lineRegistrations = defaults.lineRegistrations;
         }
 
-        public Builder lineRegistrations(Input<List<LineRegistrationArgs>> lineRegistrations) {
+        public Builder lineRegistrations(Output<List<LineRegistrationArgs>> lineRegistrations) {
             this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
             return this;
         }
 
         public Builder lineRegistrations(List<LineRegistrationArgs> lineRegistrations) {
-            this.lineRegistrations = Input.of(Objects.requireNonNull(lineRegistrations));
+            this.lineRegistrations = Output.of(Objects.requireNonNull(lineRegistrations));
             return this;
         }
         public LineChannelPropertiesArgs build() {

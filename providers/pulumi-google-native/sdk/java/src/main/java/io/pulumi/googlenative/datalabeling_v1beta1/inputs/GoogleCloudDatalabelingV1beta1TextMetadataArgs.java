@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
      * 
      */
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
-    public GoogleCloudDatalabelingV1beta1TextMetadataArgs(@Nullable Input<String> languageCode) {
+    public GoogleCloudDatalabelingV1beta1TextMetadataArgs(@Nullable Output<String> languageCode) {
         this.languageCode = languageCode;
     }
 
     private GoogleCloudDatalabelingV1beta1TextMetadataArgs() {
-        this.languageCode = Input.empty();
+        this.languageCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> languageCode;
+        private @Nullable Output<String> languageCode;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pul
     	      this.languageCode = defaults.languageCode;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
         public GoogleCloudDatalabelingV1beta1TextMetadataArgs build() {

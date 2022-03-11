@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -17,16 +17,16 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConsentStoreArgs Empty = new ConsentStoreArgs();
 
     @InputImport(name="consentStoreId", required=true)
-      private final Input<String> consentStoreId;
+      private final Output<String> consentStoreId;
 
-    public Input<String> getConsentStoreId() {
+    public Output<String> getConsentStoreId() {
         return this.consentStoreId;
     }
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -35,10 +35,10 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultConsentTtl")
-      private final @Nullable Input<String> defaultConsentTtl;
+      private final @Nullable Output<String> defaultConsentTtl;
 
-    public Input<String> getDefaultConsentTtl() {
-        return this.defaultConsentTtl == null ? Input.empty() : this.defaultConsentTtl;
+    public Output<String> getDefaultConsentTtl() {
+        return this.defaultConsentTtl == null ? Output.empty() : this.defaultConsentTtl;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableConsentCreateOnUpdate")
-      private final @Nullable Input<Boolean> enableConsentCreateOnUpdate;
+      private final @Nullable Output<Boolean> enableConsentCreateOnUpdate;
 
-    public Input<Boolean> getEnableConsentCreateOnUpdate() {
-        return this.enableConsentCreateOnUpdate == null ? Input.empty() : this.enableConsentCreateOnUpdate;
+    public Output<Boolean> getEnableConsentCreateOnUpdate() {
+        return this.enableConsentCreateOnUpdate == null ? Output.empty() : this.enableConsentCreateOnUpdate;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -75,28 +75,28 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ConsentStoreArgs(
-        Input<String> consentStoreId,
-        Input<String> datasetId,
-        @Nullable Input<String> defaultConsentTtl,
-        @Nullable Input<Boolean> enableConsentCreateOnUpdate,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        Output<String> consentStoreId,
+        Output<String> datasetId,
+        @Nullable Output<String> defaultConsentTtl,
+        @Nullable Output<Boolean> enableConsentCreateOnUpdate,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.defaultConsentTtl = defaultConsentTtl;
@@ -108,14 +108,14 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConsentStoreArgs() {
-        this.consentStoreId = Input.empty();
-        this.datasetId = Input.empty();
-        this.defaultConsentTtl = Input.empty();
-        this.enableConsentCreateOnUpdate = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.consentStoreId = Output.empty();
+        this.datasetId = Output.empty();
+        this.defaultConsentTtl = Output.empty();
+        this.enableConsentCreateOnUpdate = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,14 +127,14 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> consentStoreId;
-        private Input<String> datasetId;
-        private @Nullable Input<String> defaultConsentTtl;
-        private @Nullable Input<Boolean> enableConsentCreateOnUpdate;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private Output<String> consentStoreId;
+        private Output<String> datasetId;
+        private @Nullable Output<String> defaultConsentTtl;
+        private @Nullable Output<Boolean> enableConsentCreateOnUpdate;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -152,83 +152,83 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder consentStoreId(Input<String> consentStoreId) {
+        public Builder consentStoreId(Output<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
 
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Input.of(Objects.requireNonNull(consentStoreId));
+            this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder defaultConsentTtl(@Nullable Input<String> defaultConsentTtl) {
+        public Builder defaultConsentTtl(@Nullable Output<String> defaultConsentTtl) {
             this.defaultConsentTtl = defaultConsentTtl;
             return this;
         }
 
         public Builder defaultConsentTtl(@Nullable String defaultConsentTtl) {
-            this.defaultConsentTtl = Input.ofNullable(defaultConsentTtl);
+            this.defaultConsentTtl = Output.ofNullable(defaultConsentTtl);
             return this;
         }
 
-        public Builder enableConsentCreateOnUpdate(@Nullable Input<Boolean> enableConsentCreateOnUpdate) {
+        public Builder enableConsentCreateOnUpdate(@Nullable Output<Boolean> enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
             return this;
         }
 
         public Builder enableConsentCreateOnUpdate(@Nullable Boolean enableConsentCreateOnUpdate) {
-            this.enableConsentCreateOnUpdate = Input.ofNullable(enableConsentCreateOnUpdate);
+            this.enableConsentCreateOnUpdate = Output.ofNullable(enableConsentCreateOnUpdate);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ConsentStoreArgs build() {

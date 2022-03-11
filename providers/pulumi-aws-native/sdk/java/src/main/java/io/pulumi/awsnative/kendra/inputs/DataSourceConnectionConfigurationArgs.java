@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,46 +15,46 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
     public static final DataSourceConnectionConfigurationArgs Empty = new DataSourceConnectionConfigurationArgs();
 
     @InputImport(name="databaseHost", required=true)
-      private final Input<String> databaseHost;
+      private final Output<String> databaseHost;
 
-    public Input<String> getDatabaseHost() {
+    public Output<String> getDatabaseHost() {
         return this.databaseHost;
     }
 
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="databasePort", required=true)
-      private final Input<Integer> databasePort;
+      private final Output<Integer> databasePort;
 
-    public Input<Integer> getDatabasePort() {
+    public Output<Integer> getDatabasePort() {
         return this.databasePort;
     }
 
     @InputImport(name="secretArn", required=true)
-      private final Input<String> secretArn;
+      private final Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
+    public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public DataSourceConnectionConfigurationArgs(
-        Input<String> databaseHost,
-        Input<String> databaseName,
-        Input<Integer> databasePort,
-        Input<String> secretArn,
-        Input<String> tableName) {
+        Output<String> databaseHost,
+        Output<String> databaseName,
+        Output<Integer> databasePort,
+        Output<String> secretArn,
+        Output<String> tableName) {
         this.databaseHost = Objects.requireNonNull(databaseHost, "expected parameter 'databaseHost' to be non-null");
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.databasePort = Objects.requireNonNull(databasePort, "expected parameter 'databasePort' to be non-null");
@@ -63,11 +63,11 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
     }
 
     private DataSourceConnectionConfigurationArgs() {
-        this.databaseHost = Input.empty();
-        this.databaseName = Input.empty();
-        this.databasePort = Input.empty();
-        this.secretArn = Input.empty();
-        this.tableName = Input.empty();
+        this.databaseHost = Output.empty();
+        this.databaseName = Output.empty();
+        this.databasePort = Output.empty();
+        this.secretArn = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,11 +79,11 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> databaseHost;
-        private Input<String> databaseName;
-        private Input<Integer> databasePort;
-        private Input<String> secretArn;
-        private Input<String> tableName;
+        private Output<String> databaseHost;
+        private Output<String> databaseName;
+        private Output<Integer> databasePort;
+        private Output<String> secretArn;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -98,53 +98,53 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder databaseHost(Input<String> databaseHost) {
+        public Builder databaseHost(Output<String> databaseHost) {
             this.databaseHost = Objects.requireNonNull(databaseHost);
             return this;
         }
 
         public Builder databaseHost(String databaseHost) {
-            this.databaseHost = Input.of(Objects.requireNonNull(databaseHost));
+            this.databaseHost = Output.of(Objects.requireNonNull(databaseHost));
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder databasePort(Input<Integer> databasePort) {
+        public Builder databasePort(Output<Integer> databasePort) {
             this.databasePort = Objects.requireNonNull(databasePort);
             return this;
         }
 
         public Builder databasePort(Integer databasePort) {
-            this.databasePort = Input.of(Objects.requireNonNull(databasePort));
+            this.databasePort = Output.of(Objects.requireNonNull(databasePort));
             return this;
         }
 
-        public Builder secretArn(Input<String> secretArn) {
+        public Builder secretArn(Output<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
         public Builder secretArn(String secretArn) {
-            this.secretArn = Input.of(Objects.requireNonNull(secretArn));
+            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public DataSourceConnectionConfigurationArgs build() {

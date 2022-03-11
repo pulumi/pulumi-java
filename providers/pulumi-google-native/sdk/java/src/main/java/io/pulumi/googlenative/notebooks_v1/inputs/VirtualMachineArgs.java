@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.inputs.VirtualMachineConfigArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachineConfig")
-      private final @Nullable Input<VirtualMachineConfigArgs> virtualMachineConfig;
+      private final @Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig;
 
-    public Input<VirtualMachineConfigArgs> getVirtualMachineConfig() {
-        return this.virtualMachineConfig == null ? Input.empty() : this.virtualMachineConfig;
+    public Output<VirtualMachineConfigArgs> getVirtualMachineConfig() {
+        return this.virtualMachineConfig == null ? Output.empty() : this.virtualMachineConfig;
     }
 
-    public VirtualMachineArgs(@Nullable Input<VirtualMachineConfigArgs> virtualMachineConfig) {
+    public VirtualMachineArgs(@Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig) {
         this.virtualMachineConfig = virtualMachineConfig;
     }
 
     private VirtualMachineArgs() {
-        this.virtualMachineConfig = Input.empty();
+        this.virtualMachineConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualMachineConfigArgs> virtualMachineConfig;
+        private @Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualMachineConfig = defaults.virtualMachineConfig;
         }
 
-        public Builder virtualMachineConfig(@Nullable Input<VirtualMachineConfigArgs> virtualMachineConfig) {
+        public Builder virtualMachineConfig(@Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig) {
             this.virtualMachineConfig = virtualMachineConfig;
             return this;
         }
 
         public Builder virtualMachineConfig(@Nullable VirtualMachineConfigArgs virtualMachineConfig) {
-            this.virtualMachineConfig = Input.ofNullable(virtualMachineConfig);
+            this.virtualMachineConfig = Output.ofNullable(virtualMachineConfig);
             return this;
         }
         public VirtualMachineArgs build() {

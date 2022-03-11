@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final CachePolicyArgs Empty = new CachePolicyArgs();
 
     @InputImport(name="cachePolicyConfig", required=true)
-      private final Input<CachePolicyConfigArgs> cachePolicyConfig;
+      private final Output<CachePolicyConfigArgs> cachePolicyConfig;
 
-    public Input<CachePolicyConfigArgs> getCachePolicyConfig() {
+    public Output<CachePolicyConfigArgs> getCachePolicyConfig() {
         return this.cachePolicyConfig;
     }
 
-    public CachePolicyArgs(Input<CachePolicyConfigArgs> cachePolicyConfig) {
+    public CachePolicyArgs(Output<CachePolicyConfigArgs> cachePolicyConfig) {
         this.cachePolicyConfig = Objects.requireNonNull(cachePolicyConfig, "expected parameter 'cachePolicyConfig' to be non-null");
     }
 
     private CachePolicyArgs() {
-        this.cachePolicyConfig = Input.empty();
+        this.cachePolicyConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<CachePolicyConfigArgs> cachePolicyConfig;
+        private Output<CachePolicyConfigArgs> cachePolicyConfig;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cachePolicyConfig = defaults.cachePolicyConfig;
         }
 
-        public Builder cachePolicyConfig(Input<CachePolicyConfigArgs> cachePolicyConfig) {
+        public Builder cachePolicyConfig(Output<CachePolicyConfigArgs> cachePolicyConfig) {
             this.cachePolicyConfig = Objects.requireNonNull(cachePolicyConfig);
             return this;
         }
 
         public Builder cachePolicyConfig(CachePolicyConfigArgs cachePolicyConfig) {
-            this.cachePolicyConfig = Input.of(Objects.requireNonNull(cachePolicyConfig));
+            this.cachePolicyConfig = Output.of(Objects.requireNonNull(cachePolicyConfig));
             return this;
         }
         public CachePolicyArgs build() {

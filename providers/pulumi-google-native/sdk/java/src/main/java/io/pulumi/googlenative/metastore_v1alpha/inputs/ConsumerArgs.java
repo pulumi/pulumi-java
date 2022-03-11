@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
-    public ConsumerArgs(@Nullable Input<String> subnetwork) {
+    public ConsumerArgs(@Nullable Output<String> subnetwork) {
         this.subnetwork = subnetwork;
     }
 
     private ConsumerArgs() {
-        this.subnetwork = Input.empty();
+        this.subnetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> subnetwork;
+        private @Nullable Output<String> subnetwork;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
         public ConsumerArgs build() {

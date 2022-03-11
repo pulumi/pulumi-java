@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.SqlResourceSqlTriggerArgs;
 import io.pulumi.azurenative.documentdb.outputs.SqlTriggerGetPropertiesResponseResource;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -134,33 +133,33 @@ public class SqlResourceSqlTrigger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlResourceSqlTrigger(String name, SqlResourceSqlTriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:SqlResourceSqlTrigger", name, args == null ? SqlResourceSqlTriggerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:documentdb:SqlResourceSqlTrigger", name, args == null ? SqlResourceSqlTriggerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlResourceSqlTrigger(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlResourceSqlTrigger(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:SqlResourceSqlTrigger", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20190801:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20191212:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200301:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200401:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200901:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210115:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210315:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210415:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210515:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210615:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015:SqlResourceSqlTrigger").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:SqlResourceSqlTrigger").build())
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:SqlResourceSqlTrigger").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -174,7 +173,7 @@ public class SqlResourceSqlTrigger extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlResourceSqlTrigger get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlResourceSqlTrigger get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlResourceSqlTrigger(name, id, options);
     }
 }

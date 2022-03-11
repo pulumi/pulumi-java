@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -30,9 +30,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,9 +41,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -52,17 +52,17 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagId")
-      private final @Nullable Input<String> tagId;
+      private final @Nullable Output<String> tagId;
 
-    public Input<String> getTagId() {
-        return this.tagId == null ? Input.empty() : this.tagId;
+    public Output<String> getTagId() {
+        return this.tagId == null ? Output.empty() : this.tagId;
     }
 
     public TagArgs(
-        Input<String> displayName,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        @Nullable Input<String> tagId) {
+        Output<String> displayName,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        @Nullable Output<String> tagId) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
@@ -70,10 +70,10 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagArgs() {
-        this.displayName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.tagId = Input.empty();
+        this.displayName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.tagId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private @Nullable Input<String> tagId;
+        private Output<String> displayName;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private @Nullable Output<String> tagId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagId = defaults.tagId;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder tagId(@Nullable Input<String> tagId) {
+        public Builder tagId(@Nullable Output<String> tagId) {
             this.tagId = tagId;
             return this;
         }
 
         public Builder tagId(@Nullable String tagId) {
-            this.tagId = Input.ofNullable(tagId);
+            this.tagId = Output.ofNullable(tagId);
             return this;
         }
         public TagArgs build() {

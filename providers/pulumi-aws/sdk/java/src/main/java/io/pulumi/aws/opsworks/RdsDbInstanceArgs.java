@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.opsworks;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbPassword", required=true)
-      private final Input<String> dbPassword;
+      private final Output<String> dbPassword;
 
-    public Input<String> getDbPassword() {
+    public Output<String> getDbPassword() {
         return this.dbPassword;
     }
 
@@ -29,9 +29,9 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbUser", required=true)
-      private final Input<String> dbUser;
+      private final Output<String> dbUser;
 
-    public Input<String> getDbUser() {
+    public Output<String> getDbUser() {
         return this.dbUser;
     }
 
@@ -40,9 +40,9 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rdsDbInstanceArn", required=true)
-      private final Input<String> rdsDbInstanceArn;
+      private final Output<String> rdsDbInstanceArn;
 
-    public Input<String> getRdsDbInstanceArn() {
+    public Output<String> getRdsDbInstanceArn() {
         return this.rdsDbInstanceArn;
     }
 
@@ -51,17 +51,17 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackId", required=true)
-      private final Input<String> stackId;
+      private final Output<String> stackId;
 
-    public Input<String> getStackId() {
+    public Output<String> getStackId() {
         return this.stackId;
     }
 
     public RdsDbInstanceArgs(
-        Input<String> dbPassword,
-        Input<String> dbUser,
-        Input<String> rdsDbInstanceArn,
-        Input<String> stackId) {
+        Output<String> dbPassword,
+        Output<String> dbUser,
+        Output<String> rdsDbInstanceArn,
+        Output<String> stackId) {
         this.dbPassword = Objects.requireNonNull(dbPassword, "expected parameter 'dbPassword' to be non-null");
         this.dbUser = Objects.requireNonNull(dbUser, "expected parameter 'dbUser' to be non-null");
         this.rdsDbInstanceArn = Objects.requireNonNull(rdsDbInstanceArn, "expected parameter 'rdsDbInstanceArn' to be non-null");
@@ -69,10 +69,10 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RdsDbInstanceArgs() {
-        this.dbPassword = Input.empty();
-        this.dbUser = Input.empty();
-        this.rdsDbInstanceArn = Input.empty();
-        this.stackId = Input.empty();
+        this.dbPassword = Output.empty();
+        this.dbUser = Output.empty();
+        this.rdsDbInstanceArn = Output.empty();
+        this.stackId = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> dbPassword;
-        private Input<String> dbUser;
-        private Input<String> rdsDbInstanceArn;
-        private Input<String> stackId;
+        private Output<String> dbPassword;
+        private Output<String> dbUser;
+        private Output<String> rdsDbInstanceArn;
+        private Output<String> stackId;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stackId = defaults.stackId;
         }
 
-        public Builder dbPassword(Input<String> dbPassword) {
+        public Builder dbPassword(Output<String> dbPassword) {
             this.dbPassword = Objects.requireNonNull(dbPassword);
             return this;
         }
 
         public Builder dbPassword(String dbPassword) {
-            this.dbPassword = Input.of(Objects.requireNonNull(dbPassword));
+            this.dbPassword = Output.of(Objects.requireNonNull(dbPassword));
             return this;
         }
 
-        public Builder dbUser(Input<String> dbUser) {
+        public Builder dbUser(Output<String> dbUser) {
             this.dbUser = Objects.requireNonNull(dbUser);
             return this;
         }
 
         public Builder dbUser(String dbUser) {
-            this.dbUser = Input.of(Objects.requireNonNull(dbUser));
+            this.dbUser = Output.of(Objects.requireNonNull(dbUser));
             return this;
         }
 
-        public Builder rdsDbInstanceArn(Input<String> rdsDbInstanceArn) {
+        public Builder rdsDbInstanceArn(Output<String> rdsDbInstanceArn) {
             this.rdsDbInstanceArn = Objects.requireNonNull(rdsDbInstanceArn);
             return this;
         }
 
         public Builder rdsDbInstanceArn(String rdsDbInstanceArn) {
-            this.rdsDbInstanceArn = Input.of(Objects.requireNonNull(rdsDbInstanceArn));
+            this.rdsDbInstanceArn = Output.of(Objects.requireNonNull(rdsDbInstanceArn));
             return this;
         }
 
-        public Builder stackId(Input<String> stackId) {
+        public Builder stackId(Output<String> stackId) {
             this.stackId = Objects.requireNonNull(stackId);
             return this;
         }
 
         public Builder stackId(String stackId) {
-            this.stackId = Input.of(Objects.requireNonNull(stackId));
+            this.stackId = Output.of(Objects.requireNonNull(stackId));
             return this;
         }
         public RdsDbInstanceArgs build() {

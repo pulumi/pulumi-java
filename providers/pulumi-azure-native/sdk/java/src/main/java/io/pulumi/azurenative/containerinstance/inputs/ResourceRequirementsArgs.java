@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.ResourceLimitsArgs;
 import io.pulumi.azurenative.containerinstance.inputs.ResourceRequestsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="limits")
-      private final @Nullable Input<ResourceLimitsArgs> limits;
+      private final @Nullable Output<ResourceLimitsArgs> limits;
 
-    public Input<ResourceLimitsArgs> getLimits() {
-        return this.limits == null ? Input.empty() : this.limits;
+    public Output<ResourceLimitsArgs> getLimits() {
+        return this.limits == null ? Output.empty() : this.limits;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="requests", required=true)
-      private final Input<ResourceRequestsArgs> requests;
+      private final Output<ResourceRequestsArgs> requests;
 
-    public Input<ResourceRequestsArgs> getRequests() {
+    public Output<ResourceRequestsArgs> getRequests() {
         return this.requests;
     }
 
     public ResourceRequirementsArgs(
-        @Nullable Input<ResourceLimitsArgs> limits,
-        Input<ResourceRequestsArgs> requests) {
+        @Nullable Output<ResourceLimitsArgs> limits,
+        Output<ResourceRequestsArgs> requests) {
         this.limits = limits;
         this.requests = Objects.requireNonNull(requests, "expected parameter 'requests' to be non-null");
     }
 
     private ResourceRequirementsArgs() {
-        this.limits = Input.empty();
-        this.requests = Input.empty();
+        this.limits = Output.empty();
+        this.requests = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourceLimitsArgs> limits;
-        private Input<ResourceRequestsArgs> requests;
+        private @Nullable Output<ResourceLimitsArgs> limits;
+        private Output<ResourceRequestsArgs> requests;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
     	      this.requests = defaults.requests;
         }
 
-        public Builder limits(@Nullable Input<ResourceLimitsArgs> limits) {
+        public Builder limits(@Nullable Output<ResourceLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
 
         public Builder limits(@Nullable ResourceLimitsArgs limits) {
-            this.limits = Input.ofNullable(limits);
+            this.limits = Output.ofNullable(limits);
             return this;
         }
 
-        public Builder requests(Input<ResourceRequestsArgs> requests) {
+        public Builder requests(Output<ResourceRequestsArgs> requests) {
             this.requests = Objects.requireNonNull(requests);
             return this;
         }
 
         public Builder requests(ResourceRequestsArgs requests) {
-            this.requests = Input.of(Objects.requireNonNull(requests));
+            this.requests = Output.of(Objects.requireNonNull(requests));
             return this;
         }
         public ResourceRequirementsArgs build() {

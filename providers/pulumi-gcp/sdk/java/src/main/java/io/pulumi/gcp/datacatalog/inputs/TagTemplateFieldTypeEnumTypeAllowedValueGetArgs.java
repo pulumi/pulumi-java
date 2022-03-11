@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueGetArgs extends io.pu
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
-    public TagTemplateFieldTypeEnumTypeAllowedValueGetArgs(Input<String> displayName) {
+    public TagTemplateFieldTypeEnumTypeAllowedValueGetArgs(Output<String> displayName) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
     }
 
     private TagTemplateFieldTypeEnumTypeAllowedValueGetArgs() {
-        this.displayName = Input.empty();
+        this.displayName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<String> displayName;
+        private Output<String> displayName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueGetArgs extends io.pu
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
         public TagTemplateFieldTypeEnumTypeAllowedValueGetArgs build() {

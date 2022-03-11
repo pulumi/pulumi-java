@@ -7,7 +7,7 @@ import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStateful
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionArgs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statefulDefaultActions")
-      private final @Nullable Input<List<String>> statefulDefaultActions;
+      private final @Nullable Output<List<String>> statefulDefaultActions;
 
-    public Input<List<String>> getStatefulDefaultActions() {
-        return this.statefulDefaultActions == null ? Input.empty() : this.statefulDefaultActions;
+    public Output<List<String>> getStatefulDefaultActions() {
+        return this.statefulDefaultActions == null ? Output.empty() : this.statefulDefaultActions;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statefulEngineOptions")
-      private final @Nullable Input<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions;
+      private final @Nullable Output<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions;
 
-    public Input<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> getStatefulEngineOptions() {
-        return this.statefulEngineOptions == null ? Input.empty() : this.statefulEngineOptions;
+    public Output<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> getStatefulEngineOptions() {
+        return this.statefulEngineOptions == null ? Output.empty() : this.statefulEngineOptions;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statefulRuleGroupReferences")
-      private final @Nullable Input<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences;
+      private final @Nullable Output<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences;
 
-    public Input<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> getStatefulRuleGroupReferences() {
-        return this.statefulRuleGroupReferences == null ? Input.empty() : this.statefulRuleGroupReferences;
+    public Output<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> getStatefulRuleGroupReferences() {
+        return this.statefulRuleGroupReferences == null ? Output.empty() : this.statefulRuleGroupReferences;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statelessCustomActions")
-      private final @Nullable Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> statelessCustomActions;
+      private final @Nullable Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> statelessCustomActions;
 
-    public Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> getStatelessCustomActions() {
-        return this.statelessCustomActions == null ? Input.empty() : this.statelessCustomActions;
+    public Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> getStatelessCustomActions() {
+        return this.statelessCustomActions == null ? Output.empty() : this.statelessCustomActions;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statelessDefaultActions", required=true)
-      private final Input<List<String>> statelessDefaultActions;
+      private final Output<List<String>> statelessDefaultActions;
 
-    public Input<List<String>> getStatelessDefaultActions() {
+    public Output<List<String>> getStatelessDefaultActions() {
         return this.statelessDefaultActions;
     }
 
@@ -81,9 +81,9 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statelessFragmentDefaultActions", required=true)
-      private final Input<List<String>> statelessFragmentDefaultActions;
+      private final Output<List<String>> statelessFragmentDefaultActions;
 
-    public Input<List<String>> getStatelessFragmentDefaultActions() {
+    public Output<List<String>> getStatelessFragmentDefaultActions() {
         return this.statelessFragmentDefaultActions;
     }
 
@@ -92,20 +92,20 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statelessRuleGroupReferences")
-      private final @Nullable Input<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences;
+      private final @Nullable Output<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences;
 
-    public Input<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> getStatelessRuleGroupReferences() {
-        return this.statelessRuleGroupReferences == null ? Input.empty() : this.statelessRuleGroupReferences;
+    public Output<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> getStatelessRuleGroupReferences() {
+        return this.statelessRuleGroupReferences == null ? Output.empty() : this.statelessRuleGroupReferences;
     }
 
     public FirewallPolicyFirewallPolicyArgs(
-        @Nullable Input<List<String>> statefulDefaultActions,
-        @Nullable Input<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions,
-        @Nullable Input<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences,
-        @Nullable Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> statelessCustomActions,
-        Input<List<String>> statelessDefaultActions,
-        Input<List<String>> statelessFragmentDefaultActions,
-        @Nullable Input<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences) {
+        @Nullable Output<List<String>> statefulDefaultActions,
+        @Nullable Output<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions,
+        @Nullable Output<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences,
+        @Nullable Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> statelessCustomActions,
+        Output<List<String>> statelessDefaultActions,
+        Output<List<String>> statelessFragmentDefaultActions,
+        @Nullable Output<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences) {
         this.statefulDefaultActions = statefulDefaultActions;
         this.statefulEngineOptions = statefulEngineOptions;
         this.statefulRuleGroupReferences = statefulRuleGroupReferences;
@@ -116,13 +116,13 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
     }
 
     private FirewallPolicyFirewallPolicyArgs() {
-        this.statefulDefaultActions = Input.empty();
-        this.statefulEngineOptions = Input.empty();
-        this.statefulRuleGroupReferences = Input.empty();
-        this.statelessCustomActions = Input.empty();
-        this.statelessDefaultActions = Input.empty();
-        this.statelessFragmentDefaultActions = Input.empty();
-        this.statelessRuleGroupReferences = Input.empty();
+        this.statefulDefaultActions = Output.empty();
+        this.statefulEngineOptions = Output.empty();
+        this.statefulRuleGroupReferences = Output.empty();
+        this.statelessCustomActions = Output.empty();
+        this.statelessDefaultActions = Output.empty();
+        this.statelessFragmentDefaultActions = Output.empty();
+        this.statelessRuleGroupReferences = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> statefulDefaultActions;
-        private @Nullable Input<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions;
-        private @Nullable Input<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences;
-        private @Nullable Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> statelessCustomActions;
-        private Input<List<String>> statelessDefaultActions;
-        private Input<List<String>> statelessFragmentDefaultActions;
-        private @Nullable Input<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences;
+        private @Nullable Output<List<String>> statefulDefaultActions;
+        private @Nullable Output<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions;
+        private @Nullable Output<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences;
+        private @Nullable Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> statelessCustomActions;
+        private Output<List<String>> statelessDefaultActions;
+        private Output<List<String>> statelessFragmentDefaultActions;
+        private @Nullable Output<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
     	      this.statelessRuleGroupReferences = defaults.statelessRuleGroupReferences;
         }
 
-        public Builder statefulDefaultActions(@Nullable Input<List<String>> statefulDefaultActions) {
+        public Builder statefulDefaultActions(@Nullable Output<List<String>> statefulDefaultActions) {
             this.statefulDefaultActions = statefulDefaultActions;
             return this;
         }
 
         public Builder statefulDefaultActions(@Nullable List<String> statefulDefaultActions) {
-            this.statefulDefaultActions = Input.ofNullable(statefulDefaultActions);
+            this.statefulDefaultActions = Output.ofNullable(statefulDefaultActions);
             return this;
         }
 
-        public Builder statefulEngineOptions(@Nullable Input<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions) {
+        public Builder statefulEngineOptions(@Nullable Output<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions) {
             this.statefulEngineOptions = statefulEngineOptions;
             return this;
         }
 
         public Builder statefulEngineOptions(@Nullable FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs statefulEngineOptions) {
-            this.statefulEngineOptions = Input.ofNullable(statefulEngineOptions);
+            this.statefulEngineOptions = Output.ofNullable(statefulEngineOptions);
             return this;
         }
 
-        public Builder statefulRuleGroupReferences(@Nullable Input<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences) {
+        public Builder statefulRuleGroupReferences(@Nullable Output<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences) {
             this.statefulRuleGroupReferences = statefulRuleGroupReferences;
             return this;
         }
 
         public Builder statefulRuleGroupReferences(@Nullable List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs> statefulRuleGroupReferences) {
-            this.statefulRuleGroupReferences = Input.ofNullable(statefulRuleGroupReferences);
+            this.statefulRuleGroupReferences = Output.ofNullable(statefulRuleGroupReferences);
             return this;
         }
 
-        public Builder statelessCustomActions(@Nullable Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> statelessCustomActions) {
+        public Builder statelessCustomActions(@Nullable Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> statelessCustomActions) {
             this.statelessCustomActions = statelessCustomActions;
             return this;
         }
 
         public Builder statelessCustomActions(@Nullable List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs> statelessCustomActions) {
-            this.statelessCustomActions = Input.ofNullable(statelessCustomActions);
+            this.statelessCustomActions = Output.ofNullable(statelessCustomActions);
             return this;
         }
 
-        public Builder statelessDefaultActions(Input<List<String>> statelessDefaultActions) {
+        public Builder statelessDefaultActions(Output<List<String>> statelessDefaultActions) {
             this.statelessDefaultActions = Objects.requireNonNull(statelessDefaultActions);
             return this;
         }
 
         public Builder statelessDefaultActions(List<String> statelessDefaultActions) {
-            this.statelessDefaultActions = Input.of(Objects.requireNonNull(statelessDefaultActions));
+            this.statelessDefaultActions = Output.of(Objects.requireNonNull(statelessDefaultActions));
             return this;
         }
 
-        public Builder statelessFragmentDefaultActions(Input<List<String>> statelessFragmentDefaultActions) {
+        public Builder statelessFragmentDefaultActions(Output<List<String>> statelessFragmentDefaultActions) {
             this.statelessFragmentDefaultActions = Objects.requireNonNull(statelessFragmentDefaultActions);
             return this;
         }
 
         public Builder statelessFragmentDefaultActions(List<String> statelessFragmentDefaultActions) {
-            this.statelessFragmentDefaultActions = Input.of(Objects.requireNonNull(statelessFragmentDefaultActions));
+            this.statelessFragmentDefaultActions = Output.of(Objects.requireNonNull(statelessFragmentDefaultActions));
             return this;
         }
 
-        public Builder statelessRuleGroupReferences(@Nullable Input<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences) {
+        public Builder statelessRuleGroupReferences(@Nullable Output<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences) {
             this.statelessRuleGroupReferences = statelessRuleGroupReferences;
             return this;
         }
 
         public Builder statelessRuleGroupReferences(@Nullable List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs> statelessRuleGroupReferences) {
-            this.statelessRuleGroupReferences = Input.ofNullable(statelessRuleGroupReferences);
+            this.statelessRuleGroupReferences = Output.ofNullable(statelessRuleGroupReferences);
             return this;
         }
         public FirewallPolicyFirewallPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs extends 
      * 
      */
     @InputImport(name="agent", required=true)
-      private final Input<String> agent;
+      private final Output<String> agent;
 
-    public Input<String> getAgent() {
+    public Output<String> getAgent() {
         return this.agent;
     }
 
-    public GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs(Input<String> agent) {
+    public GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs(Output<String> agent) {
         this.agent = Objects.requireNonNull(agent, "expected parameter 'agent' to be non-null");
     }
 
     private GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs() {
-        this.agent = Input.empty();
+        this.agent = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs extends 
     }
 
     public static final class Builder {
-        private Input<String> agent;
+        private Output<String> agent;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs extends 
     	      this.agent = defaults.agent;
         }
 
-        public Builder agent(Input<String> agent) {
+        public Builder agent(Output<String> agent) {
             this.agent = Objects.requireNonNull(agent);
             return this;
         }
 
         public Builder agent(String agent) {
-            this.agent = Input.of(Objects.requireNonNull(agent));
+            this.agent = Output.of(Objects.requireNonNull(agent));
             return this;
         }
         public GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs build() {

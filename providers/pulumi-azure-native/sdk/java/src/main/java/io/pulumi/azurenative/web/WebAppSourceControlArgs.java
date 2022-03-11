@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.GitHubActionConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="branch")
-      private final @Nullable Input<String> branch;
+      private final @Nullable Output<String> branch;
 
-    public Input<String> getBranch() {
-        return this.branch == null ? Input.empty() : this.branch;
+    public Output<String> getBranch() {
+        return this.branch == null ? Output.empty() : this.branch;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deploymentRollbackEnabled")
-      private final @Nullable Input<Boolean> deploymentRollbackEnabled;
+      private final @Nullable Output<Boolean> deploymentRollbackEnabled;
 
-    public Input<Boolean> getDeploymentRollbackEnabled() {
-        return this.deploymentRollbackEnabled == null ? Input.empty() : this.deploymentRollbackEnabled;
+    public Output<Boolean> getDeploymentRollbackEnabled() {
+        return this.deploymentRollbackEnabled == null ? Output.empty() : this.deploymentRollbackEnabled;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gitHubActionConfiguration")
-      private final @Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration;
+      private final @Nullable Output<GitHubActionConfigurationArgs> gitHubActionConfiguration;
 
-    public Input<GitHubActionConfigurationArgs> getGitHubActionConfiguration() {
-        return this.gitHubActionConfiguration == null ? Input.empty() : this.gitHubActionConfiguration;
+    public Output<GitHubActionConfigurationArgs> getGitHubActionConfiguration() {
+        return this.gitHubActionConfiguration == null ? Output.empty() : this.gitHubActionConfiguration;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isGitHubAction")
-      private final @Nullable Input<Boolean> isGitHubAction;
+      private final @Nullable Output<Boolean> isGitHubAction;
 
-    public Input<Boolean> getIsGitHubAction() {
-        return this.isGitHubAction == null ? Input.empty() : this.isGitHubAction;
+    public Output<Boolean> getIsGitHubAction() {
+        return this.isGitHubAction == null ? Output.empty() : this.isGitHubAction;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isManualIntegration")
-      private final @Nullable Input<Boolean> isManualIntegration;
+      private final @Nullable Output<Boolean> isManualIntegration;
 
-    public Input<Boolean> getIsManualIntegration() {
-        return this.isManualIntegration == null ? Input.empty() : this.isManualIntegration;
+    public Output<Boolean> getIsManualIntegration() {
+        return this.isManualIntegration == null ? Output.empty() : this.isManualIntegration;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isMercurial")
-      private final @Nullable Input<Boolean> isMercurial;
+      private final @Nullable Output<Boolean> isMercurial;
 
-    public Input<Boolean> getIsMercurial() {
-        return this.isMercurial == null ? Input.empty() : this.isMercurial;
+    public Output<Boolean> getIsMercurial() {
+        return this.isMercurial == null ? Output.empty() : this.isMercurial;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -98,9 +98,9 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -109,10 +109,10 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="repoUrl")
-      private final @Nullable Input<String> repoUrl;
+      private final @Nullable Output<String> repoUrl;
 
-    public Input<String> getRepoUrl() {
-        return this.repoUrl == null ? Input.empty() : this.repoUrl;
+    public Output<String> getRepoUrl() {
+        return this.repoUrl == null ? Output.empty() : this.repoUrl;
     }
 
     /**
@@ -120,23 +120,23 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public WebAppSourceControlArgs(
-        @Nullable Input<String> branch,
-        @Nullable Input<Boolean> deploymentRollbackEnabled,
-        @Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration,
-        @Nullable Input<Boolean> isGitHubAction,
-        @Nullable Input<Boolean> isManualIntegration,
-        @Nullable Input<Boolean> isMercurial,
-        @Nullable Input<String> kind,
-        Input<String> name,
-        @Nullable Input<String> repoUrl,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> branch,
+        @Nullable Output<Boolean> deploymentRollbackEnabled,
+        @Nullable Output<GitHubActionConfigurationArgs> gitHubActionConfiguration,
+        @Nullable Output<Boolean> isGitHubAction,
+        @Nullable Output<Boolean> isManualIntegration,
+        @Nullable Output<Boolean> isMercurial,
+        @Nullable Output<String> kind,
+        Output<String> name,
+        @Nullable Output<String> repoUrl,
+        Output<String> resourceGroupName) {
         this.branch = branch;
         this.deploymentRollbackEnabled = deploymentRollbackEnabled;
         this.gitHubActionConfiguration = gitHubActionConfiguration;
@@ -150,16 +150,16 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
     }
 
     private WebAppSourceControlArgs() {
-        this.branch = Input.empty();
-        this.deploymentRollbackEnabled = Input.empty();
-        this.gitHubActionConfiguration = Input.empty();
-        this.isGitHubAction = Input.empty();
-        this.isManualIntegration = Input.empty();
-        this.isMercurial = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.repoUrl = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.branch = Output.empty();
+        this.deploymentRollbackEnabled = Output.empty();
+        this.gitHubActionConfiguration = Output.empty();
+        this.isGitHubAction = Output.empty();
+        this.isManualIntegration = Output.empty();
+        this.isMercurial = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.repoUrl = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> branch;
-        private @Nullable Input<Boolean> deploymentRollbackEnabled;
-        private @Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration;
-        private @Nullable Input<Boolean> isGitHubAction;
-        private @Nullable Input<Boolean> isManualIntegration;
-        private @Nullable Input<Boolean> isMercurial;
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private @Nullable Input<String> repoUrl;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> branch;
+        private @Nullable Output<Boolean> deploymentRollbackEnabled;
+        private @Nullable Output<GitHubActionConfigurationArgs> gitHubActionConfiguration;
+        private @Nullable Output<Boolean> isGitHubAction;
+        private @Nullable Output<Boolean> isManualIntegration;
+        private @Nullable Output<Boolean> isMercurial;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private @Nullable Output<String> repoUrl;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder branch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = Input.ofNullable(branch);
+            this.branch = Output.ofNullable(branch);
             return this;
         }
 
-        public Builder deploymentRollbackEnabled(@Nullable Input<Boolean> deploymentRollbackEnabled) {
+        public Builder deploymentRollbackEnabled(@Nullable Output<Boolean> deploymentRollbackEnabled) {
             this.deploymentRollbackEnabled = deploymentRollbackEnabled;
             return this;
         }
 
         public Builder deploymentRollbackEnabled(@Nullable Boolean deploymentRollbackEnabled) {
-            this.deploymentRollbackEnabled = Input.ofNullable(deploymentRollbackEnabled);
+            this.deploymentRollbackEnabled = Output.ofNullable(deploymentRollbackEnabled);
             return this;
         }
 
-        public Builder gitHubActionConfiguration(@Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration) {
+        public Builder gitHubActionConfiguration(@Nullable Output<GitHubActionConfigurationArgs> gitHubActionConfiguration) {
             this.gitHubActionConfiguration = gitHubActionConfiguration;
             return this;
         }
 
         public Builder gitHubActionConfiguration(@Nullable GitHubActionConfigurationArgs gitHubActionConfiguration) {
-            this.gitHubActionConfiguration = Input.ofNullable(gitHubActionConfiguration);
+            this.gitHubActionConfiguration = Output.ofNullable(gitHubActionConfiguration);
             return this;
         }
 
-        public Builder isGitHubAction(@Nullable Input<Boolean> isGitHubAction) {
+        public Builder isGitHubAction(@Nullable Output<Boolean> isGitHubAction) {
             this.isGitHubAction = isGitHubAction;
             return this;
         }
 
         public Builder isGitHubAction(@Nullable Boolean isGitHubAction) {
-            this.isGitHubAction = Input.ofNullable(isGitHubAction);
+            this.isGitHubAction = Output.ofNullable(isGitHubAction);
             return this;
         }
 
-        public Builder isManualIntegration(@Nullable Input<Boolean> isManualIntegration) {
+        public Builder isManualIntegration(@Nullable Output<Boolean> isManualIntegration) {
             this.isManualIntegration = isManualIntegration;
             return this;
         }
 
         public Builder isManualIntegration(@Nullable Boolean isManualIntegration) {
-            this.isManualIntegration = Input.ofNullable(isManualIntegration);
+            this.isManualIntegration = Output.ofNullable(isManualIntegration);
             return this;
         }
 
-        public Builder isMercurial(@Nullable Input<Boolean> isMercurial) {
+        public Builder isMercurial(@Nullable Output<Boolean> isMercurial) {
             this.isMercurial = isMercurial;
             return this;
         }
 
         public Builder isMercurial(@Nullable Boolean isMercurial) {
-            this.isMercurial = Input.ofNullable(isMercurial);
+            this.isMercurial = Output.ofNullable(isMercurial);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder repoUrl(@Nullable Input<String> repoUrl) {
+        public Builder repoUrl(@Nullable Output<String> repoUrl) {
             this.repoUrl = repoUrl;
             return this;
         }
 
         public Builder repoUrl(@Nullable String repoUrl) {
-            this.repoUrl = Input.ofNullable(repoUrl);
+            this.repoUrl = Output.ofNullable(repoUrl);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public WebAppSourceControlArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.forecast.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class EncryptionConfigPropertiesArgs extends io.pulumi.resources.Re
     public static final EncryptionConfigPropertiesArgs Empty = new EncryptionConfigPropertiesArgs();
 
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public EncryptionConfigPropertiesArgs(
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<String> roleArn) {
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<String> roleArn) {
         this.kmsKeyArn = kmsKeyArn;
         this.roleArn = roleArn;
     }
 
     private EncryptionConfigPropertiesArgs() {
-        this.kmsKeyArn = Input.empty();
-        this.roleArn = Input.empty();
+        this.kmsKeyArn = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class EncryptionConfigPropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<String> roleArn;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class EncryptionConfigPropertiesArgs extends io.pulumi.resources.Re
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public EncryptionConfigPropertiesArgs build() {

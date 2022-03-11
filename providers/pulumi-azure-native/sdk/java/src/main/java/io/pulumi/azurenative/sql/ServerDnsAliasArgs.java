@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsAliasName")
-      private final @Nullable Input<String> dnsAliasName;
+      private final @Nullable Output<String> dnsAliasName;
 
-    public Input<String> getDnsAliasName() {
-        return this.dnsAliasName == null ? Input.empty() : this.dnsAliasName;
+    public Output<String> getDnsAliasName() {
+        return this.dnsAliasName == null ? Output.empty() : this.dnsAliasName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,25 +41,25 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
     public ServerDnsAliasArgs(
-        @Nullable Input<String> dnsAliasName,
-        Input<String> resourceGroupName,
-        Input<String> serverName) {
+        @Nullable Output<String> dnsAliasName,
+        Output<String> resourceGroupName,
+        Output<String> serverName) {
         this.dnsAliasName = dnsAliasName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
     }
 
     private ServerDnsAliasArgs() {
-        this.dnsAliasName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
+        this.dnsAliasName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dnsAliasName;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
+        private @Nullable Output<String> dnsAliasName;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder dnsAliasName(@Nullable Input<String> dnsAliasName) {
+        public Builder dnsAliasName(@Nullable Output<String> dnsAliasName) {
             this.dnsAliasName = dnsAliasName;
             return this;
         }
 
         public Builder dnsAliasName(@Nullable String dnsAliasName) {
-            this.dnsAliasName = Input.ofNullable(dnsAliasName);
+            this.dnsAliasName = Output.ofNullable(dnsAliasName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
         public ServerDnsAliasArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretName", required=true)
-      private final Input<Object> secretName;
+      private final Output<Object> secretName;
 
-    public Input<Object> getSecretName() {
+    public Output<Object> getSecretName() {
         return this.secretName;
     }
 
@@ -36,10 +36,10 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretVersion")
-      private final @Nullable Input<Object> secretVersion;
+      private final @Nullable Output<Object> secretVersion;
 
-    public Input<Object> getSecretVersion() {
-        return this.secretVersion == null ? Input.empty() : this.secretVersion;
+    public Output<Object> getSecretVersion() {
+        return this.secretVersion == null ? Output.empty() : this.secretVersion;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="store", required=true)
-      private final Input<LinkedServiceReferenceArgs> store;
+      private final Output<LinkedServiceReferenceArgs> store;
 
-    public Input<LinkedServiceReferenceArgs> getStore() {
+    public Output<LinkedServiceReferenceArgs> getStore() {
         return this.store;
     }
 
@@ -59,17 +59,17 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureKeyVaultSecretReferenceArgs(
-        Input<Object> secretName,
-        @Nullable Input<Object> secretVersion,
-        Input<LinkedServiceReferenceArgs> store,
-        Input<String> type) {
+        Output<Object> secretName,
+        @Nullable Output<Object> secretVersion,
+        Output<LinkedServiceReferenceArgs> store,
+        Output<String> type) {
         this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
         this.secretVersion = secretVersion;
         this.store = Objects.requireNonNull(store, "expected parameter 'store' to be non-null");
@@ -77,10 +77,10 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
     }
 
     private AzureKeyVaultSecretReferenceArgs() {
-        this.secretName = Input.empty();
-        this.secretVersion = Input.empty();
-        this.store = Input.empty();
-        this.type = Input.empty();
+        this.secretName = Output.empty();
+        this.secretVersion = Output.empty();
+        this.store = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Object> secretName;
-        private @Nullable Input<Object> secretVersion;
-        private Input<LinkedServiceReferenceArgs> store;
-        private Input<String> type;
+        private Output<Object> secretName;
+        private @Nullable Output<Object> secretVersion;
+        private Output<LinkedServiceReferenceArgs> store;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder secretName(Input<Object> secretName) {
+        public Builder secretName(Output<Object> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
         public Builder secretName(Object secretName) {
-            this.secretName = Input.of(Objects.requireNonNull(secretName));
+            this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
         }
 
-        public Builder secretVersion(@Nullable Input<Object> secretVersion) {
+        public Builder secretVersion(@Nullable Output<Object> secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
         public Builder secretVersion(@Nullable Object secretVersion) {
-            this.secretVersion = Input.ofNullable(secretVersion);
+            this.secretVersion = Output.ofNullable(secretVersion);
             return this;
         }
 
-        public Builder store(Input<LinkedServiceReferenceArgs> store) {
+        public Builder store(Output<LinkedServiceReferenceArgs> store) {
             this.store = Objects.requireNonNull(store);
             return this;
         }
 
         public Builder store(LinkedServiceReferenceArgs store) {
-            this.store = Input.of(Objects.requireNonNull(store));
+            this.store = Output.of(Objects.requireNonNull(store));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureKeyVaultSecretReferenceArgs build() {

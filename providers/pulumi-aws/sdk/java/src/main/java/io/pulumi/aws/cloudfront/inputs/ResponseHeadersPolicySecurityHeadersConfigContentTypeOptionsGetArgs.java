@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsG
      * 
      */
     @InputImport(name="override", required=true)
-      private final Input<Boolean> override;
+      private final Output<Boolean> override;
 
-    public Input<Boolean> getOverride() {
+    public Output<Boolean> getOverride() {
         return this.override;
     }
 
-    public ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs(Input<Boolean> override) {
+    public ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs(Output<Boolean> override) {
         this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
     }
 
     private ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs() {
-        this.override = Input.empty();
+        this.override = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsG
     }
 
     public static final class Builder {
-        private Input<Boolean> override;
+        private Output<Boolean> override;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsG
     	      this.override = defaults.override;
         }
 
-        public Builder override(Input<Boolean> override) {
+        public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
         public Builder override(Boolean override) {
-            this.override = Input.of(Objects.requireNonNull(override));
+            this.override = Output.of(Objects.requireNonNull(override));
             return this;
         }
         public ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs build() {

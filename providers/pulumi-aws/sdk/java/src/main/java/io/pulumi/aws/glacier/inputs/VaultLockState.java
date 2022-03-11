@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glacier.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completeLock")
-      private final @Nullable Input<Boolean> completeLock;
+      private final @Nullable Output<Boolean> completeLock;
 
-    public Input<Boolean> getCompleteLock() {
-        return this.completeLock == null ? Input.empty() : this.completeLock;
+    public Output<Boolean> getCompleteLock() {
+        return this.completeLock == null ? Output.empty() : this.completeLock;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreDeletionError")
-      private final @Nullable Input<Boolean> ignoreDeletionError;
+      private final @Nullable Output<Boolean> ignoreDeletionError;
 
-    public Input<Boolean> getIgnoreDeletionError() {
-        return this.ignoreDeletionError == null ? Input.empty() : this.ignoreDeletionError;
+    public Output<Boolean> getIgnoreDeletionError() {
+        return this.ignoreDeletionError == null ? Output.empty() : this.ignoreDeletionError;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vaultName")
-      private final @Nullable Input<String> vaultName;
+      private final @Nullable Output<String> vaultName;
 
-    public Input<String> getVaultName() {
-        return this.vaultName == null ? Input.empty() : this.vaultName;
+    public Output<String> getVaultName() {
+        return this.vaultName == null ? Output.empty() : this.vaultName;
     }
 
     public VaultLockState(
-        @Nullable Input<Boolean> completeLock,
-        @Nullable Input<Boolean> ignoreDeletionError,
-        @Nullable Input<String> policy,
-        @Nullable Input<String> vaultName) {
+        @Nullable Output<Boolean> completeLock,
+        @Nullable Output<Boolean> ignoreDeletionError,
+        @Nullable Output<String> policy,
+        @Nullable Output<String> vaultName) {
         this.completeLock = completeLock;
         this.ignoreDeletionError = ignoreDeletionError;
         this.policy = policy;
@@ -71,10 +71,10 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VaultLockState() {
-        this.completeLock = Input.empty();
-        this.ignoreDeletionError = Input.empty();
-        this.policy = Input.empty();
-        this.vaultName = Input.empty();
+        this.completeLock = Output.empty();
+        this.ignoreDeletionError = Output.empty();
+        this.policy = Output.empty();
+        this.vaultName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> completeLock;
-        private @Nullable Input<Boolean> ignoreDeletionError;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<String> vaultName;
+        private @Nullable Output<Boolean> completeLock;
+        private @Nullable Output<Boolean> ignoreDeletionError;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<String> vaultName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder completeLock(@Nullable Input<Boolean> completeLock) {
+        public Builder completeLock(@Nullable Output<Boolean> completeLock) {
             this.completeLock = completeLock;
             return this;
         }
 
         public Builder completeLock(@Nullable Boolean completeLock) {
-            this.completeLock = Input.ofNullable(completeLock);
+            this.completeLock = Output.ofNullable(completeLock);
             return this;
         }
 
-        public Builder ignoreDeletionError(@Nullable Input<Boolean> ignoreDeletionError) {
+        public Builder ignoreDeletionError(@Nullable Output<Boolean> ignoreDeletionError) {
             this.ignoreDeletionError = ignoreDeletionError;
             return this;
         }
 
         public Builder ignoreDeletionError(@Nullable Boolean ignoreDeletionError) {
-            this.ignoreDeletionError = Input.ofNullable(ignoreDeletionError);
+            this.ignoreDeletionError = Output.ofNullable(ignoreDeletionError);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder vaultName(@Nullable Input<String> vaultName) {
+        public Builder vaultName(@Nullable Output<String> vaultName) {
             this.vaultName = vaultName;
             return this;
         }
 
         public Builder vaultName(@Nullable String vaultName) {
-            this.vaultName = Input.ofNullable(vaultName);
+            this.vaultName = Output.ofNullable(vaultName);
             return this;
         }
         public VaultLockState build() {

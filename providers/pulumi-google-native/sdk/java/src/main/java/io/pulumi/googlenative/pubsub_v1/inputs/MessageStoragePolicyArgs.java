@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowedPersistenceRegions")
-      private final @Nullable Input<List<String>> allowedPersistenceRegions;
+      private final @Nullable Output<List<String>> allowedPersistenceRegions;
 
-    public Input<List<String>> getAllowedPersistenceRegions() {
-        return this.allowedPersistenceRegions == null ? Input.empty() : this.allowedPersistenceRegions;
+    public Output<List<String>> getAllowedPersistenceRegions() {
+        return this.allowedPersistenceRegions == null ? Output.empty() : this.allowedPersistenceRegions;
     }
 
-    public MessageStoragePolicyArgs(@Nullable Input<List<String>> allowedPersistenceRegions) {
+    public MessageStoragePolicyArgs(@Nullable Output<List<String>> allowedPersistenceRegions) {
         this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 
     private MessageStoragePolicyArgs() {
-        this.allowedPersistenceRegions = Input.empty();
+        this.allowedPersistenceRegions = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedPersistenceRegions;
+        private @Nullable Output<List<String>> allowedPersistenceRegions;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class MessageStoragePolicyArgs extends io.pulumi.resources.Resource
     	      this.allowedPersistenceRegions = defaults.allowedPersistenceRegions;
         }
 
-        public Builder allowedPersistenceRegions(@Nullable Input<List<String>> allowedPersistenceRegions) {
+        public Builder allowedPersistenceRegions(@Nullable Output<List<String>> allowedPersistenceRegions) {
             this.allowedPersistenceRegions = allowedPersistenceRegions;
             return this;
         }
 
         public Builder allowedPersistenceRegions(@Nullable List<String> allowedPersistenceRegions) {
-            this.allowedPersistenceRegions = Input.ofNullable(allowedPersistenceRegions);
+            this.allowedPersistenceRegions = Output.ofNullable(allowedPersistenceRegions);
             return this;
         }
         public MessageStoragePolicyArgs build() {

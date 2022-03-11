@@ -11,7 +11,7 @@ import io.pulumi.azurenative.sql.inputs.ManagedInstanceExternalAdministratorArgs
 import io.pulumi.azurenative.sql.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,10 +30,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="administratorLogin")
-      private final @Nullable Input<String> administratorLogin;
+      private final @Nullable Output<String> administratorLogin;
 
-    public Input<String> getAdministratorLogin() {
-        return this.administratorLogin == null ? Input.empty() : this.administratorLogin;
+    public Output<String> getAdministratorLogin() {
+        return this.administratorLogin == null ? Output.empty() : this.administratorLogin;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="administratorLoginPassword")
-      private final @Nullable Input<String> administratorLoginPassword;
+      private final @Nullable Output<String> administratorLoginPassword;
 
-    public Input<String> getAdministratorLoginPassword() {
-        return this.administratorLoginPassword == null ? Input.empty() : this.administratorLoginPassword;
+    public Output<String> getAdministratorLoginPassword() {
+        return this.administratorLoginPassword == null ? Output.empty() : this.administratorLoginPassword;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="administrators")
-      private final @Nullable Input<ManagedInstanceExternalAdministratorArgs> administrators;
+      private final @Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators;
 
-    public Input<ManagedInstanceExternalAdministratorArgs> getAdministrators() {
-        return this.administrators == null ? Input.empty() : this.administrators;
+    public Output<ManagedInstanceExternalAdministratorArgs> getAdministrators() {
+        return this.administrators == null ? Output.empty() : this.administrators;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="collation")
-      private final @Nullable Input<String> collation;
+      private final @Nullable Output<String> collation;
 
-    public Input<String> getCollation() {
-        return this.collation == null ? Input.empty() : this.collation;
+    public Output<String> getCollation() {
+        return this.collation == null ? Output.empty() : this.collation;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dnsZonePartner")
-      private final @Nullable Input<String> dnsZonePartner;
+      private final @Nullable Output<String> dnsZonePartner;
 
-    public Input<String> getDnsZonePartner() {
-        return this.dnsZonePartner == null ? Input.empty() : this.dnsZonePartner;
+    public Output<String> getDnsZonePartner() {
+        return this.dnsZonePartner == null ? Output.empty() : this.dnsZonePartner;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ResourceIdentityArgs> identity;
+      private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Input<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ResourceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instancePoolId")
-      private final @Nullable Input<String> instancePoolId;
+      private final @Nullable Output<String> instancePoolId;
 
-    public Input<String> getInstancePoolId() {
-        return this.instancePoolId == null ? Input.empty() : this.instancePoolId;
+    public Output<String> getInstancePoolId() {
+        return this.instancePoolId == null ? Output.empty() : this.instancePoolId;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="licenseType")
-      private final @Nullable Input<Either<String,ManagedInstanceLicenseType>> licenseType;
+      private final @Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType;
 
-    public Input<Either<String,ManagedInstanceLicenseType>> getLicenseType() {
-        return this.licenseType == null ? Input.empty() : this.licenseType;
+    public Output<Either<String,ManagedInstanceLicenseType>> getLicenseType() {
+        return this.licenseType == null ? Output.empty() : this.licenseType;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maintenanceConfigurationId")
-      private final @Nullable Input<String> maintenanceConfigurationId;
+      private final @Nullable Output<String> maintenanceConfigurationId;
 
-    public Input<String> getMaintenanceConfigurationId() {
-        return this.maintenanceConfigurationId == null ? Input.empty() : this.maintenanceConfigurationId;
+    public Output<String> getMaintenanceConfigurationId() {
+        return this.maintenanceConfigurationId == null ? Output.empty() : this.maintenanceConfigurationId;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="managedInstanceCreateMode")
-      private final @Nullable Input<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
+      private final @Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
 
-    public Input<Either<String,ManagedServerCreateMode>> getManagedInstanceCreateMode() {
-        return this.managedInstanceCreateMode == null ? Input.empty() : this.managedInstanceCreateMode;
+    public Output<Either<String,ManagedServerCreateMode>> getManagedInstanceCreateMode() {
+        return this.managedInstanceCreateMode == null ? Output.empty() : this.managedInstanceCreateMode;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="managedInstanceName")
-      private final @Nullable Input<String> managedInstanceName;
+      private final @Nullable Output<String> managedInstanceName;
 
-    public Input<String> getManagedInstanceName() {
-        return this.managedInstanceName == null ? Input.empty() : this.managedInstanceName;
+    public Output<String> getManagedInstanceName() {
+        return this.managedInstanceName == null ? Output.empty() : this.managedInstanceName;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minimalTlsVersion")
-      private final @Nullable Input<String> minimalTlsVersion;
+      private final @Nullable Output<String> minimalTlsVersion;
 
-    public Input<String> getMinimalTlsVersion() {
-        return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
+    public Output<String> getMinimalTlsVersion() {
+        return this.minimalTlsVersion == null ? Output.empty() : this.minimalTlsVersion;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="primaryUserAssignedIdentityId")
-      private final @Nullable Input<String> primaryUserAssignedIdentityId;
+      private final @Nullable Output<String> primaryUserAssignedIdentityId;
 
-    public Input<String> getPrimaryUserAssignedIdentityId() {
-        return this.primaryUserAssignedIdentityId == null ? Input.empty() : this.primaryUserAssignedIdentityId;
+    public Output<String> getPrimaryUserAssignedIdentityId() {
+        return this.primaryUserAssignedIdentityId == null ? Output.empty() : this.primaryUserAssignedIdentityId;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyOverride")
-      private final @Nullable Input<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
+      private final @Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
 
-    public Input<Either<String,ManagedInstanceProxyOverride>> getProxyOverride() {
-        return this.proxyOverride == null ? Input.empty() : this.proxyOverride;
+    public Output<Either<String,ManagedInstanceProxyOverride>> getProxyOverride() {
+        return this.proxyOverride == null ? Output.empty() : this.proxyOverride;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicDataEndpointEnabled")
-      private final @Nullable Input<Boolean> publicDataEndpointEnabled;
+      private final @Nullable Output<Boolean> publicDataEndpointEnabled;
 
-    public Input<Boolean> getPublicDataEndpointEnabled() {
-        return this.publicDataEndpointEnabled == null ? Input.empty() : this.publicDataEndpointEnabled;
+    public Output<Boolean> getPublicDataEndpointEnabled() {
+        return this.publicDataEndpointEnabled == null ? Output.empty() : this.publicDataEndpointEnabled;
     }
 
     /**
@@ -221,9 +221,9 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -232,10 +232,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restorePointInTime")
-      private final @Nullable Input<String> restorePointInTime;
+      private final @Nullable Output<String> restorePointInTime;
 
-    public Input<String> getRestorePointInTime() {
-        return this.restorePointInTime == null ? Input.empty() : this.restorePointInTime;
+    public Output<String> getRestorePointInTime() {
+        return this.restorePointInTime == null ? Output.empty() : this.restorePointInTime;
     }
 
     /**
@@ -243,10 +243,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -254,10 +254,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceManagedInstanceId")
-      private final @Nullable Input<String> sourceManagedInstanceId;
+      private final @Nullable Output<String> sourceManagedInstanceId;
 
-    public Input<String> getSourceManagedInstanceId() {
-        return this.sourceManagedInstanceId == null ? Input.empty() : this.sourceManagedInstanceId;
+    public Output<String> getSourceManagedInstanceId() {
+        return this.sourceManagedInstanceId == null ? Output.empty() : this.sourceManagedInstanceId;
     }
 
     /**
@@ -265,10 +265,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageAccountType")
-      private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
+      private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Input<Either<String,StorageAccountType>> getStorageAccountType() {
-        return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
+    public Output<Either<String,StorageAccountType>> getStorageAccountType() {
+        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
     }
 
     /**
@@ -276,10 +276,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageSizeInGB")
-      private final @Nullable Input<Integer> storageSizeInGB;
+      private final @Nullable Output<Integer> storageSizeInGB;
 
-    public Input<Integer> getStorageSizeInGB() {
-        return this.storageSizeInGB == null ? Input.empty() : this.storageSizeInGB;
+    public Output<Integer> getStorageSizeInGB() {
+        return this.storageSizeInGB == null ? Output.empty() : this.storageSizeInGB;
     }
 
     /**
@@ -287,10 +287,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -298,10 +298,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -314,10 +314,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timezoneId")
-      private final @Nullable Input<String> timezoneId;
+      private final @Nullable Output<String> timezoneId;
 
-    public Input<String> getTimezoneId() {
-        return this.timezoneId == null ? Input.empty() : this.timezoneId;
+    public Output<String> getTimezoneId() {
+        return this.timezoneId == null ? Output.empty() : this.timezoneId;
     }
 
     /**
@@ -325,10 +325,10 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vCores")
-      private final @Nullable Input<Integer> vCores;
+      private final @Nullable Output<Integer> vCores;
 
-    public Input<Integer> getVCores() {
-        return this.vCores == null ? Input.empty() : this.vCores;
+    public Output<Integer> getVCores() {
+        return this.vCores == null ? Output.empty() : this.vCores;
     }
 
     /**
@@ -336,41 +336,41 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="zoneRedundant")
-      private final @Nullable Input<Boolean> zoneRedundant;
+      private final @Nullable Output<Boolean> zoneRedundant;
 
-    public Input<Boolean> getZoneRedundant() {
-        return this.zoneRedundant == null ? Input.empty() : this.zoneRedundant;
+    public Output<Boolean> getZoneRedundant() {
+        return this.zoneRedundant == null ? Output.empty() : this.zoneRedundant;
     }
 
     public ManagedInstanceArgs(
-        @Nullable Input<String> administratorLogin,
-        @Nullable Input<String> administratorLoginPassword,
-        @Nullable Input<ManagedInstanceExternalAdministratorArgs> administrators,
-        @Nullable Input<String> collation,
-        @Nullable Input<String> dnsZonePartner,
-        @Nullable Input<ResourceIdentityArgs> identity,
-        @Nullable Input<String> instancePoolId,
-        @Nullable Input<String> keyId,
-        @Nullable Input<Either<String,ManagedInstanceLicenseType>> licenseType,
-        @Nullable Input<String> location,
-        @Nullable Input<String> maintenanceConfigurationId,
-        @Nullable Input<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode,
-        @Nullable Input<String> managedInstanceName,
-        @Nullable Input<String> minimalTlsVersion,
-        @Nullable Input<String> primaryUserAssignedIdentityId,
-        @Nullable Input<Either<String,ManagedInstanceProxyOverride>> proxyOverride,
-        @Nullable Input<Boolean> publicDataEndpointEnabled,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> restorePointInTime,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<String> sourceManagedInstanceId,
-        @Nullable Input<Either<String,StorageAccountType>> storageAccountType,
-        @Nullable Input<Integer> storageSizeInGB,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> timezoneId,
-        @Nullable Input<Integer> vCores,
-        @Nullable Input<Boolean> zoneRedundant) {
+        @Nullable Output<String> administratorLogin,
+        @Nullable Output<String> administratorLoginPassword,
+        @Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators,
+        @Nullable Output<String> collation,
+        @Nullable Output<String> dnsZonePartner,
+        @Nullable Output<ResourceIdentityArgs> identity,
+        @Nullable Output<String> instancePoolId,
+        @Nullable Output<String> keyId,
+        @Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType,
+        @Nullable Output<String> location,
+        @Nullable Output<String> maintenanceConfigurationId,
+        @Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode,
+        @Nullable Output<String> managedInstanceName,
+        @Nullable Output<String> minimalTlsVersion,
+        @Nullable Output<String> primaryUserAssignedIdentityId,
+        @Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride,
+        @Nullable Output<Boolean> publicDataEndpointEnabled,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> restorePointInTime,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<String> sourceManagedInstanceId,
+        @Nullable Output<Either<String,StorageAccountType>> storageAccountType,
+        @Nullable Output<Integer> storageSizeInGB,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> timezoneId,
+        @Nullable Output<Integer> vCores,
+        @Nullable Output<Boolean> zoneRedundant) {
         this.administratorLogin = administratorLogin;
         this.administratorLoginPassword = administratorLoginPassword;
         this.administrators = administrators;
@@ -402,34 +402,34 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ManagedInstanceArgs() {
-        this.administratorLogin = Input.empty();
-        this.administratorLoginPassword = Input.empty();
-        this.administrators = Input.empty();
-        this.collation = Input.empty();
-        this.dnsZonePartner = Input.empty();
-        this.identity = Input.empty();
-        this.instancePoolId = Input.empty();
-        this.keyId = Input.empty();
-        this.licenseType = Input.empty();
-        this.location = Input.empty();
-        this.maintenanceConfigurationId = Input.empty();
-        this.managedInstanceCreateMode = Input.empty();
-        this.managedInstanceName = Input.empty();
-        this.minimalTlsVersion = Input.empty();
-        this.primaryUserAssignedIdentityId = Input.empty();
-        this.proxyOverride = Input.empty();
-        this.publicDataEndpointEnabled = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.restorePointInTime = Input.empty();
-        this.sku = Input.empty();
-        this.sourceManagedInstanceId = Input.empty();
-        this.storageAccountType = Input.empty();
-        this.storageSizeInGB = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
-        this.timezoneId = Input.empty();
-        this.vCores = Input.empty();
-        this.zoneRedundant = Input.empty();
+        this.administratorLogin = Output.empty();
+        this.administratorLoginPassword = Output.empty();
+        this.administrators = Output.empty();
+        this.collation = Output.empty();
+        this.dnsZonePartner = Output.empty();
+        this.identity = Output.empty();
+        this.instancePoolId = Output.empty();
+        this.keyId = Output.empty();
+        this.licenseType = Output.empty();
+        this.location = Output.empty();
+        this.maintenanceConfigurationId = Output.empty();
+        this.managedInstanceCreateMode = Output.empty();
+        this.managedInstanceName = Output.empty();
+        this.minimalTlsVersion = Output.empty();
+        this.primaryUserAssignedIdentityId = Output.empty();
+        this.proxyOverride = Output.empty();
+        this.publicDataEndpointEnabled = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.restorePointInTime = Output.empty();
+        this.sku = Output.empty();
+        this.sourceManagedInstanceId = Output.empty();
+        this.storageAccountType = Output.empty();
+        this.storageSizeInGB = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
+        this.timezoneId = Output.empty();
+        this.vCores = Output.empty();
+        this.zoneRedundant = Output.empty();
     }
 
     public static Builder builder() {
@@ -441,34 +441,34 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> administratorLogin;
-        private @Nullable Input<String> administratorLoginPassword;
-        private @Nullable Input<ManagedInstanceExternalAdministratorArgs> administrators;
-        private @Nullable Input<String> collation;
-        private @Nullable Input<String> dnsZonePartner;
-        private @Nullable Input<ResourceIdentityArgs> identity;
-        private @Nullable Input<String> instancePoolId;
-        private @Nullable Input<String> keyId;
-        private @Nullable Input<Either<String,ManagedInstanceLicenseType>> licenseType;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> maintenanceConfigurationId;
-        private @Nullable Input<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
-        private @Nullable Input<String> managedInstanceName;
-        private @Nullable Input<String> minimalTlsVersion;
-        private @Nullable Input<String> primaryUserAssignedIdentityId;
-        private @Nullable Input<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
-        private @Nullable Input<Boolean> publicDataEndpointEnabled;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> restorePointInTime;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<String> sourceManagedInstanceId;
-        private @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
-        private @Nullable Input<Integer> storageSizeInGB;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> timezoneId;
-        private @Nullable Input<Integer> vCores;
-        private @Nullable Input<Boolean> zoneRedundant;
+        private @Nullable Output<String> administratorLogin;
+        private @Nullable Output<String> administratorLoginPassword;
+        private @Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators;
+        private @Nullable Output<String> collation;
+        private @Nullable Output<String> dnsZonePartner;
+        private @Nullable Output<ResourceIdentityArgs> identity;
+        private @Nullable Output<String> instancePoolId;
+        private @Nullable Output<String> keyId;
+        private @Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> maintenanceConfigurationId;
+        private @Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
+        private @Nullable Output<String> managedInstanceName;
+        private @Nullable Output<String> minimalTlsVersion;
+        private @Nullable Output<String> primaryUserAssignedIdentityId;
+        private @Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
+        private @Nullable Output<Boolean> publicDataEndpointEnabled;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> restorePointInTime;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<String> sourceManagedInstanceId;
+        private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
+        private @Nullable Output<Integer> storageSizeInGB;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> timezoneId;
+        private @Nullable Output<Integer> vCores;
+        private @Nullable Output<Boolean> zoneRedundant;
 
         public Builder() {
     	      // Empty
@@ -506,283 +506,283 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder administratorLogin(@Nullable Input<String> administratorLogin) {
+        public Builder administratorLogin(@Nullable Output<String> administratorLogin) {
             this.administratorLogin = administratorLogin;
             return this;
         }
 
         public Builder administratorLogin(@Nullable String administratorLogin) {
-            this.administratorLogin = Input.ofNullable(administratorLogin);
+            this.administratorLogin = Output.ofNullable(administratorLogin);
             return this;
         }
 
-        public Builder administratorLoginPassword(@Nullable Input<String> administratorLoginPassword) {
+        public Builder administratorLoginPassword(@Nullable Output<String> administratorLoginPassword) {
             this.administratorLoginPassword = administratorLoginPassword;
             return this;
         }
 
         public Builder administratorLoginPassword(@Nullable String administratorLoginPassword) {
-            this.administratorLoginPassword = Input.ofNullable(administratorLoginPassword);
+            this.administratorLoginPassword = Output.ofNullable(administratorLoginPassword);
             return this;
         }
 
-        public Builder administrators(@Nullable Input<ManagedInstanceExternalAdministratorArgs> administrators) {
+        public Builder administrators(@Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators) {
             this.administrators = administrators;
             return this;
         }
 
         public Builder administrators(@Nullable ManagedInstanceExternalAdministratorArgs administrators) {
-            this.administrators = Input.ofNullable(administrators);
+            this.administrators = Output.ofNullable(administrators);
             return this;
         }
 
-        public Builder collation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
 
         public Builder collation(@Nullable String collation) {
-            this.collation = Input.ofNullable(collation);
+            this.collation = Output.ofNullable(collation);
             return this;
         }
 
-        public Builder dnsZonePartner(@Nullable Input<String> dnsZonePartner) {
+        public Builder dnsZonePartner(@Nullable Output<String> dnsZonePartner) {
             this.dnsZonePartner = dnsZonePartner;
             return this;
         }
 
         public Builder dnsZonePartner(@Nullable String dnsZonePartner) {
-            this.dnsZonePartner = Input.ofNullable(dnsZonePartner);
+            this.dnsZonePartner = Output.ofNullable(dnsZonePartner);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder instancePoolId(@Nullable Input<String> instancePoolId) {
+        public Builder instancePoolId(@Nullable Output<String> instancePoolId) {
             this.instancePoolId = instancePoolId;
             return this;
         }
 
         public Builder instancePoolId(@Nullable String instancePoolId) {
-            this.instancePoolId = Input.ofNullable(instancePoolId);
+            this.instancePoolId = Output.ofNullable(instancePoolId);
             return this;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
 
-        public Builder licenseType(@Nullable Input<Either<String,ManagedInstanceLicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
         public Builder licenseType(@Nullable Either<String,ManagedInstanceLicenseType> licenseType) {
-            this.licenseType = Input.ofNullable(licenseType);
+            this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = Input.ofNullable(maintenanceConfigurationId);
+            this.maintenanceConfigurationId = Output.ofNullable(maintenanceConfigurationId);
             return this;
         }
 
-        public Builder managedInstanceCreateMode(@Nullable Input<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode) {
+        public Builder managedInstanceCreateMode(@Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode) {
             this.managedInstanceCreateMode = managedInstanceCreateMode;
             return this;
         }
 
         public Builder managedInstanceCreateMode(@Nullable Either<String,ManagedServerCreateMode> managedInstanceCreateMode) {
-            this.managedInstanceCreateMode = Input.ofNullable(managedInstanceCreateMode);
+            this.managedInstanceCreateMode = Output.ofNullable(managedInstanceCreateMode);
             return this;
         }
 
-        public Builder managedInstanceName(@Nullable Input<String> managedInstanceName) {
+        public Builder managedInstanceName(@Nullable Output<String> managedInstanceName) {
             this.managedInstanceName = managedInstanceName;
             return this;
         }
 
         public Builder managedInstanceName(@Nullable String managedInstanceName) {
-            this.managedInstanceName = Input.ofNullable(managedInstanceName);
+            this.managedInstanceName = Output.ofNullable(managedInstanceName);
             return this;
         }
 
-        public Builder minimalTlsVersion(@Nullable Input<String> minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable Output<String> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
         public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
-            this.minimalTlsVersion = Input.ofNullable(minimalTlsVersion);
+            this.minimalTlsVersion = Output.ofNullable(minimalTlsVersion);
             return this;
         }
 
-        public Builder primaryUserAssignedIdentityId(@Nullable Input<String> primaryUserAssignedIdentityId) {
+        public Builder primaryUserAssignedIdentityId(@Nullable Output<String> primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
 
         public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
-            this.primaryUserAssignedIdentityId = Input.ofNullable(primaryUserAssignedIdentityId);
+            this.primaryUserAssignedIdentityId = Output.ofNullable(primaryUserAssignedIdentityId);
             return this;
         }
 
-        public Builder proxyOverride(@Nullable Input<Either<String,ManagedInstanceProxyOverride>> proxyOverride) {
+        public Builder proxyOverride(@Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride) {
             this.proxyOverride = proxyOverride;
             return this;
         }
 
         public Builder proxyOverride(@Nullable Either<String,ManagedInstanceProxyOverride> proxyOverride) {
-            this.proxyOverride = Input.ofNullable(proxyOverride);
+            this.proxyOverride = Output.ofNullable(proxyOverride);
             return this;
         }
 
-        public Builder publicDataEndpointEnabled(@Nullable Input<Boolean> publicDataEndpointEnabled) {
+        public Builder publicDataEndpointEnabled(@Nullable Output<Boolean> publicDataEndpointEnabled) {
             this.publicDataEndpointEnabled = publicDataEndpointEnabled;
             return this;
         }
 
         public Builder publicDataEndpointEnabled(@Nullable Boolean publicDataEndpointEnabled) {
-            this.publicDataEndpointEnabled = Input.ofNullable(publicDataEndpointEnabled);
+            this.publicDataEndpointEnabled = Output.ofNullable(publicDataEndpointEnabled);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder restorePointInTime(@Nullable Input<String> restorePointInTime) {
+        public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
 
         public Builder restorePointInTime(@Nullable String restorePointInTime) {
-            this.restorePointInTime = Input.ofNullable(restorePointInTime);
+            this.restorePointInTime = Output.ofNullable(restorePointInTime);
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder sourceManagedInstanceId(@Nullable Input<String> sourceManagedInstanceId) {
+        public Builder sourceManagedInstanceId(@Nullable Output<String> sourceManagedInstanceId) {
             this.sourceManagedInstanceId = sourceManagedInstanceId;
             return this;
         }
 
         public Builder sourceManagedInstanceId(@Nullable String sourceManagedInstanceId) {
-            this.sourceManagedInstanceId = Input.ofNullable(sourceManagedInstanceId);
+            this.sourceManagedInstanceId = Output.ofNullable(sourceManagedInstanceId);
             return this;
         }
 
-        public Builder storageAccountType(@Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
+        public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
         public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Input.ofNullable(storageAccountType);
+            this.storageAccountType = Output.ofNullable(storageAccountType);
             return this;
         }
 
-        public Builder storageSizeInGB(@Nullable Input<Integer> storageSizeInGB) {
+        public Builder storageSizeInGB(@Nullable Output<Integer> storageSizeInGB) {
             this.storageSizeInGB = storageSizeInGB;
             return this;
         }
 
         public Builder storageSizeInGB(@Nullable Integer storageSizeInGB) {
-            this.storageSizeInGB = Input.ofNullable(storageSizeInGB);
+            this.storageSizeInGB = Output.ofNullable(storageSizeInGB);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timezoneId(@Nullable Input<String> timezoneId) {
+        public Builder timezoneId(@Nullable Output<String> timezoneId) {
             this.timezoneId = timezoneId;
             return this;
         }
 
         public Builder timezoneId(@Nullable String timezoneId) {
-            this.timezoneId = Input.ofNullable(timezoneId);
+            this.timezoneId = Output.ofNullable(timezoneId);
             return this;
         }
 
-        public Builder vCores(@Nullable Input<Integer> vCores) {
+        public Builder vCores(@Nullable Output<Integer> vCores) {
             this.vCores = vCores;
             return this;
         }
 
         public Builder vCores(@Nullable Integer vCores) {
-            this.vCores = Input.ofNullable(vCores);
+            this.vCores = Output.ofNullable(vCores);
             return this;
         }
 
-        public Builder zoneRedundant(@Nullable Input<Boolean> zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Output<Boolean> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
 
         public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
-            this.zoneRedundant = Input.ofNullable(zoneRedundant);
+            this.zoneRedundant = Output.ofNullable(zoneRedundant);
             return this;
         }
         public ManagedInstanceArgs build() {

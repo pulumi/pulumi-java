@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amplify.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="basicAuthCredentials")
-      private final @Nullable Input<String> basicAuthCredentials;
+      private final @Nullable Output<String> basicAuthCredentials;
 
-    public Input<String> getBasicAuthCredentials() {
-        return this.basicAuthCredentials == null ? Input.empty() : this.basicAuthCredentials;
+    public Output<String> getBasicAuthCredentials() {
+        return this.basicAuthCredentials == null ? Output.empty() : this.basicAuthCredentials;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="buildSpec")
-      private final @Nullable Input<String> buildSpec;
+      private final @Nullable Output<String> buildSpec;
 
-    public Input<String> getBuildSpec() {
-        return this.buildSpec == null ? Input.empty() : this.buildSpec;
+    public Output<String> getBuildSpec() {
+        return this.buildSpec == null ? Output.empty() : this.buildSpec;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableAutoBuild")
-      private final @Nullable Input<Boolean> enableAutoBuild;
+      private final @Nullable Output<Boolean> enableAutoBuild;
 
-    public Input<Boolean> getEnableAutoBuild() {
-        return this.enableAutoBuild == null ? Input.empty() : this.enableAutoBuild;
+    public Output<Boolean> getEnableAutoBuild() {
+        return this.enableAutoBuild == null ? Output.empty() : this.enableAutoBuild;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableBasicAuth")
-      private final @Nullable Input<Boolean> enableBasicAuth;
+      private final @Nullable Output<Boolean> enableBasicAuth;
 
-    public Input<Boolean> getEnableBasicAuth() {
-        return this.enableBasicAuth == null ? Input.empty() : this.enableBasicAuth;
+    public Output<Boolean> getEnableBasicAuth() {
+        return this.enableBasicAuth == null ? Output.empty() : this.enableBasicAuth;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enablePerformanceMode")
-      private final @Nullable Input<Boolean> enablePerformanceMode;
+      private final @Nullable Output<Boolean> enablePerformanceMode;
 
-    public Input<Boolean> getEnablePerformanceMode() {
-        return this.enablePerformanceMode == null ? Input.empty() : this.enablePerformanceMode;
+    public Output<Boolean> getEnablePerformanceMode() {
+        return this.enablePerformanceMode == null ? Output.empty() : this.enablePerformanceMode;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enablePullRequestPreview")
-      private final @Nullable Input<Boolean> enablePullRequestPreview;
+      private final @Nullable Output<Boolean> enablePullRequestPreview;
 
-    public Input<Boolean> getEnablePullRequestPreview() {
-        return this.enablePullRequestPreview == null ? Input.empty() : this.enablePullRequestPreview;
+    public Output<Boolean> getEnablePullRequestPreview() {
+        return this.enablePullRequestPreview == null ? Output.empty() : this.enablePullRequestPreview;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="environmentVariables")
-      private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Input<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
+    public Output<Map<String,String>> getEnvironmentVariables() {
+        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="framework")
-      private final @Nullable Input<String> framework;
+      private final @Nullable Output<String> framework;
 
-    public Input<String> getFramework() {
-        return this.framework == null ? Input.empty() : this.framework;
+    public Output<String> getFramework() {
+        return this.framework == null ? Output.empty() : this.framework;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="pullRequestEnvironmentName")
-      private final @Nullable Input<String> pullRequestEnvironmentName;
+      private final @Nullable Output<String> pullRequestEnvironmentName;
 
-    public Input<String> getPullRequestEnvironmentName() {
-        return this.pullRequestEnvironmentName == null ? Input.empty() : this.pullRequestEnvironmentName;
+    public Output<String> getPullRequestEnvironmentName() {
+        return this.pullRequestEnvironmentName == null ? Output.empty() : this.pullRequestEnvironmentName;
     }
 
     /**
@@ -120,23 +120,23 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="stage")
-      private final @Nullable Input<String> stage;
+      private final @Nullable Output<String> stage;
 
-    public Input<String> getStage() {
-        return this.stage == null ? Input.empty() : this.stage;
+    public Output<String> getStage() {
+        return this.stage == null ? Output.empty() : this.stage;
     }
 
     public AppAutoBranchCreationConfigGetArgs(
-        @Nullable Input<String> basicAuthCredentials,
-        @Nullable Input<String> buildSpec,
-        @Nullable Input<Boolean> enableAutoBuild,
-        @Nullable Input<Boolean> enableBasicAuth,
-        @Nullable Input<Boolean> enablePerformanceMode,
-        @Nullable Input<Boolean> enablePullRequestPreview,
-        @Nullable Input<Map<String,String>> environmentVariables,
-        @Nullable Input<String> framework,
-        @Nullable Input<String> pullRequestEnvironmentName,
-        @Nullable Input<String> stage) {
+        @Nullable Output<String> basicAuthCredentials,
+        @Nullable Output<String> buildSpec,
+        @Nullable Output<Boolean> enableAutoBuild,
+        @Nullable Output<Boolean> enableBasicAuth,
+        @Nullable Output<Boolean> enablePerformanceMode,
+        @Nullable Output<Boolean> enablePullRequestPreview,
+        @Nullable Output<Map<String,String>> environmentVariables,
+        @Nullable Output<String> framework,
+        @Nullable Output<String> pullRequestEnvironmentName,
+        @Nullable Output<String> stage) {
         this.basicAuthCredentials = basicAuthCredentials;
         this.buildSpec = buildSpec;
         this.enableAutoBuild = enableAutoBuild;
@@ -150,16 +150,16 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
     }
 
     private AppAutoBranchCreationConfigGetArgs() {
-        this.basicAuthCredentials = Input.empty();
-        this.buildSpec = Input.empty();
-        this.enableAutoBuild = Input.empty();
-        this.enableBasicAuth = Input.empty();
-        this.enablePerformanceMode = Input.empty();
-        this.enablePullRequestPreview = Input.empty();
-        this.environmentVariables = Input.empty();
-        this.framework = Input.empty();
-        this.pullRequestEnvironmentName = Input.empty();
-        this.stage = Input.empty();
+        this.basicAuthCredentials = Output.empty();
+        this.buildSpec = Output.empty();
+        this.enableAutoBuild = Output.empty();
+        this.enableBasicAuth = Output.empty();
+        this.enablePerformanceMode = Output.empty();
+        this.enablePullRequestPreview = Output.empty();
+        this.environmentVariables = Output.empty();
+        this.framework = Output.empty();
+        this.pullRequestEnvironmentName = Output.empty();
+        this.stage = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> basicAuthCredentials;
-        private @Nullable Input<String> buildSpec;
-        private @Nullable Input<Boolean> enableAutoBuild;
-        private @Nullable Input<Boolean> enableBasicAuth;
-        private @Nullable Input<Boolean> enablePerformanceMode;
-        private @Nullable Input<Boolean> enablePullRequestPreview;
-        private @Nullable Input<Map<String,String>> environmentVariables;
-        private @Nullable Input<String> framework;
-        private @Nullable Input<String> pullRequestEnvironmentName;
-        private @Nullable Input<String> stage;
+        private @Nullable Output<String> basicAuthCredentials;
+        private @Nullable Output<String> buildSpec;
+        private @Nullable Output<Boolean> enableAutoBuild;
+        private @Nullable Output<Boolean> enableBasicAuth;
+        private @Nullable Output<Boolean> enablePerformanceMode;
+        private @Nullable Output<Boolean> enablePullRequestPreview;
+        private @Nullable Output<Map<String,String>> environmentVariables;
+        private @Nullable Output<String> framework;
+        private @Nullable Output<String> pullRequestEnvironmentName;
+        private @Nullable Output<String> stage;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
     	      this.stage = defaults.stage;
         }
 
-        public Builder basicAuthCredentials(@Nullable Input<String> basicAuthCredentials) {
+        public Builder basicAuthCredentials(@Nullable Output<String> basicAuthCredentials) {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
 
         public Builder basicAuthCredentials(@Nullable String basicAuthCredentials) {
-            this.basicAuthCredentials = Input.ofNullable(basicAuthCredentials);
+            this.basicAuthCredentials = Output.ofNullable(basicAuthCredentials);
             return this;
         }
 
-        public Builder buildSpec(@Nullable Input<String> buildSpec) {
+        public Builder buildSpec(@Nullable Output<String> buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
         public Builder buildSpec(@Nullable String buildSpec) {
-            this.buildSpec = Input.ofNullable(buildSpec);
+            this.buildSpec = Output.ofNullable(buildSpec);
             return this;
         }
 
-        public Builder enableAutoBuild(@Nullable Input<Boolean> enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Output<Boolean> enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
 
         public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
-            this.enableAutoBuild = Input.ofNullable(enableAutoBuild);
+            this.enableAutoBuild = Output.ofNullable(enableAutoBuild);
             return this;
         }
 
-        public Builder enableBasicAuth(@Nullable Input<Boolean> enableBasicAuth) {
+        public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
 
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Input.ofNullable(enableBasicAuth);
+            this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
             return this;
         }
 
-        public Builder enablePerformanceMode(@Nullable Input<Boolean> enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Output<Boolean> enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
 
         public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
-            this.enablePerformanceMode = Input.ofNullable(enablePerformanceMode);
+            this.enablePerformanceMode = Output.ofNullable(enablePerformanceMode);
             return this;
         }
 
-        public Builder enablePullRequestPreview(@Nullable Input<Boolean> enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Output<Boolean> enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
 
         public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
-            this.enablePullRequestPreview = Input.ofNullable(enablePullRequestPreview);
+            this.enablePullRequestPreview = Output.ofNullable(enablePullRequestPreview);
             return this;
         }
 
-        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Input.ofNullable(environmentVariables);
+            this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder framework(@Nullable Input<String> framework) {
+        public Builder framework(@Nullable Output<String> framework) {
             this.framework = framework;
             return this;
         }
 
         public Builder framework(@Nullable String framework) {
-            this.framework = Input.ofNullable(framework);
+            this.framework = Output.ofNullable(framework);
             return this;
         }
 
-        public Builder pullRequestEnvironmentName(@Nullable Input<String> pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable Output<String> pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
 
         public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
-            this.pullRequestEnvironmentName = Input.ofNullable(pullRequestEnvironmentName);
+            this.pullRequestEnvironmentName = Output.ofNullable(pullRequestEnvironmentName);
             return this;
         }
 
-        public Builder stage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
 
         public Builder stage(@Nullable String stage) {
-            this.stage = Input.ofNullable(stage);
+            this.stage = Output.ofNullable(stage);
             return this;
         }
         public AppAutoBranchCreationConfigGetArgs build() {

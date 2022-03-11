@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<String> schedule;
+      private final Output<String> schedule;
 
-    public Input<String> getSchedule() {
+    public Output<String> getSchedule() {
         return this.schedule;
     }
 
@@ -34,9 +34,9 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
@@ -45,25 +45,25 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public PeriodicTimerSourceInfoArgs(
-        Input<String> schedule,
-        Input<String> startTime,
-        @Nullable Input<String> topic) {
+        Output<String> schedule,
+        Output<String> startTime,
+        @Nullable Output<String> topic) {
         this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
         this.topic = topic;
     }
 
     private PeriodicTimerSourceInfoArgs() {
-        this.schedule = Input.empty();
-        this.startTime = Input.empty();
-        this.topic = Input.empty();
+        this.schedule = Output.empty();
+        this.startTime = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> schedule;
-        private Input<String> startTime;
-        private @Nullable Input<String> topic;
+        private Output<String> schedule;
+        private Output<String> startTime;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
     	      this.topic = defaults.topic;
         }
 
-        public Builder schedule(Input<String> schedule) {
+        public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public PeriodicTimerSourceInfoArgs build() {

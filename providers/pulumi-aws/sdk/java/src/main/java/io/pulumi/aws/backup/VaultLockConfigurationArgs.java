@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backupVaultName", required=true)
-      private final Input<String> backupVaultName;
+      private final Output<String> backupVaultName;
 
-    public Input<String> getBackupVaultName() {
+    public Output<String> getBackupVaultName() {
         return this.backupVaultName;
     }
 
@@ -31,10 +31,10 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="changeableForDays")
-      private final @Nullable Input<Integer> changeableForDays;
+      private final @Nullable Output<Integer> changeableForDays;
 
-    public Input<Integer> getChangeableForDays() {
-        return this.changeableForDays == null ? Input.empty() : this.changeableForDays;
+    public Output<Integer> getChangeableForDays() {
+        return this.changeableForDays == null ? Output.empty() : this.changeableForDays;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxRetentionDays")
-      private final @Nullable Input<Integer> maxRetentionDays;
+      private final @Nullable Output<Integer> maxRetentionDays;
 
-    public Input<Integer> getMaxRetentionDays() {
-        return this.maxRetentionDays == null ? Input.empty() : this.maxRetentionDays;
+    public Output<Integer> getMaxRetentionDays() {
+        return this.maxRetentionDays == null ? Output.empty() : this.maxRetentionDays;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="minRetentionDays")
-      private final @Nullable Input<Integer> minRetentionDays;
+      private final @Nullable Output<Integer> minRetentionDays;
 
-    public Input<Integer> getMinRetentionDays() {
-        return this.minRetentionDays == null ? Input.empty() : this.minRetentionDays;
+    public Output<Integer> getMinRetentionDays() {
+        return this.minRetentionDays == null ? Output.empty() : this.minRetentionDays;
     }
 
     public VaultLockConfigurationArgs(
-        Input<String> backupVaultName,
-        @Nullable Input<Integer> changeableForDays,
-        @Nullable Input<Integer> maxRetentionDays,
-        @Nullable Input<Integer> minRetentionDays) {
+        Output<String> backupVaultName,
+        @Nullable Output<Integer> changeableForDays,
+        @Nullable Output<Integer> maxRetentionDays,
+        @Nullable Output<Integer> minRetentionDays) {
         this.backupVaultName = Objects.requireNonNull(backupVaultName, "expected parameter 'backupVaultName' to be non-null");
         this.changeableForDays = changeableForDays;
         this.maxRetentionDays = maxRetentionDays;
@@ -71,10 +71,10 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private VaultLockConfigurationArgs() {
-        this.backupVaultName = Input.empty();
-        this.changeableForDays = Input.empty();
-        this.maxRetentionDays = Input.empty();
-        this.minRetentionDays = Input.empty();
+        this.backupVaultName = Output.empty();
+        this.changeableForDays = Output.empty();
+        this.maxRetentionDays = Output.empty();
+        this.minRetentionDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> backupVaultName;
-        private @Nullable Input<Integer> changeableForDays;
-        private @Nullable Input<Integer> maxRetentionDays;
-        private @Nullable Input<Integer> minRetentionDays;
+        private Output<String> backupVaultName;
+        private @Nullable Output<Integer> changeableForDays;
+        private @Nullable Output<Integer> maxRetentionDays;
+        private @Nullable Output<Integer> minRetentionDays;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
     	      this.minRetentionDays = defaults.minRetentionDays;
         }
 
-        public Builder backupVaultName(Input<String> backupVaultName) {
+        public Builder backupVaultName(Output<String> backupVaultName) {
             this.backupVaultName = Objects.requireNonNull(backupVaultName);
             return this;
         }
 
         public Builder backupVaultName(String backupVaultName) {
-            this.backupVaultName = Input.of(Objects.requireNonNull(backupVaultName));
+            this.backupVaultName = Output.of(Objects.requireNonNull(backupVaultName));
             return this;
         }
 
-        public Builder changeableForDays(@Nullable Input<Integer> changeableForDays) {
+        public Builder changeableForDays(@Nullable Output<Integer> changeableForDays) {
             this.changeableForDays = changeableForDays;
             return this;
         }
 
         public Builder changeableForDays(@Nullable Integer changeableForDays) {
-            this.changeableForDays = Input.ofNullable(changeableForDays);
+            this.changeableForDays = Output.ofNullable(changeableForDays);
             return this;
         }
 
-        public Builder maxRetentionDays(@Nullable Input<Integer> maxRetentionDays) {
+        public Builder maxRetentionDays(@Nullable Output<Integer> maxRetentionDays) {
             this.maxRetentionDays = maxRetentionDays;
             return this;
         }
 
         public Builder maxRetentionDays(@Nullable Integer maxRetentionDays) {
-            this.maxRetentionDays = Input.ofNullable(maxRetentionDays);
+            this.maxRetentionDays = Output.ofNullable(maxRetentionDays);
             return this;
         }
 
-        public Builder minRetentionDays(@Nullable Input<Integer> minRetentionDays) {
+        public Builder minRetentionDays(@Nullable Output<Integer> minRetentionDays) {
             this.minRetentionDays = minRetentionDays;
             return this;
         }
 
         public Builder minRetentionDays(@Nullable Integer minRetentionDays) {
-            this.minRetentionDays = Input.ofNullable(minRetentionDays);
+            this.minRetentionDays = Output.ofNullable(minRetentionDays);
             return this;
         }
         public VaultLockConfigurationArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.datashare.enums.RecurrenceInterval;
 import io.pulumi.azurenative.datashare.enums.SynchronizationMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -34,9 +34,9 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -45,9 +45,9 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="recurrenceInterval", required=true)
-      private final Input<Either<String,RecurrenceInterval>> recurrenceInterval;
+      private final Output<Either<String,RecurrenceInterval>> recurrenceInterval;
 
-    public Input<Either<String,RecurrenceInterval>> getRecurrenceInterval() {
+    public Output<Either<String,RecurrenceInterval>> getRecurrenceInterval() {
         return this.recurrenceInterval;
     }
 
@@ -56,9 +56,9 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,9 +67,9 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-      private final Input<String> shareSubscriptionName;
+      private final Output<String> shareSubscriptionName;
 
-    public Input<String> getShareSubscriptionName() {
+    public Output<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -78,10 +78,10 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="synchronizationMode")
-      private final @Nullable Input<Either<String,SynchronizationMode>> synchronizationMode;
+      private final @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode;
 
-    public Input<Either<String,SynchronizationMode>> getSynchronizationMode() {
-        return this.synchronizationMode == null ? Input.empty() : this.synchronizationMode;
+    public Output<Either<String,SynchronizationMode>> getSynchronizationMode() {
+        return this.synchronizationMode == null ? Output.empty() : this.synchronizationMode;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="synchronizationTime", required=true)
-      private final Input<String> synchronizationTime;
+      private final Output<String> synchronizationTime;
 
-    public Input<String> getSynchronizationTime() {
+    public Output<String> getSynchronizationTime() {
         return this.synchronizationTime;
     }
 
@@ -100,21 +100,21 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="triggerName")
-      private final @Nullable Input<String> triggerName;
+      private final @Nullable Output<String> triggerName;
 
-    public Input<String> getTriggerName() {
-        return this.triggerName == null ? Input.empty() : this.triggerName;
+    public Output<String> getTriggerName() {
+        return this.triggerName == null ? Output.empty() : this.triggerName;
     }
 
     public ScheduledTriggerArgs(
-        Input<String> accountName,
-        Input<String> kind,
-        Input<Either<String,RecurrenceInterval>> recurrenceInterval,
-        Input<String> resourceGroupName,
-        Input<String> shareSubscriptionName,
-        @Nullable Input<Either<String,SynchronizationMode>> synchronizationMode,
-        Input<String> synchronizationTime,
-        @Nullable Input<String> triggerName) {
+        Output<String> accountName,
+        Output<String> kind,
+        Output<Either<String,RecurrenceInterval>> recurrenceInterval,
+        Output<String> resourceGroupName,
+        Output<String> shareSubscriptionName,
+        @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode,
+        Output<String> synchronizationTime,
+        @Nullable Output<String> triggerName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval, "expected parameter 'recurrenceInterval' to be non-null");
@@ -126,14 +126,14 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ScheduledTriggerArgs() {
-        this.accountName = Input.empty();
-        this.kind = Input.empty();
-        this.recurrenceInterval = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareSubscriptionName = Input.empty();
-        this.synchronizationMode = Input.empty();
-        this.synchronizationTime = Input.empty();
-        this.triggerName = Input.empty();
+        this.accountName = Output.empty();
+        this.kind = Output.empty();
+        this.recurrenceInterval = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareSubscriptionName = Output.empty();
+        this.synchronizationMode = Output.empty();
+        this.synchronizationTime = Output.empty();
+        this.triggerName = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> kind;
-        private Input<Either<String,RecurrenceInterval>> recurrenceInterval;
-        private Input<String> resourceGroupName;
-        private Input<String> shareSubscriptionName;
-        private @Nullable Input<Either<String,SynchronizationMode>> synchronizationMode;
-        private Input<String> synchronizationTime;
-        private @Nullable Input<String> triggerName;
+        private Output<String> accountName;
+        private Output<String> kind;
+        private Output<Either<String,RecurrenceInterval>> recurrenceInterval;
+        private Output<String> resourceGroupName;
+        private Output<String> shareSubscriptionName;
+        private @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode;
+        private Output<String> synchronizationTime;
+        private @Nullable Output<String> triggerName;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     	      this.triggerName = defaults.triggerName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder recurrenceInterval(Input<Either<String,RecurrenceInterval>> recurrenceInterval) {
+        public Builder recurrenceInterval(Output<Either<String,RecurrenceInterval>> recurrenceInterval) {
             this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
             return this;
         }
 
         public Builder recurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
-            this.recurrenceInterval = Input.of(Objects.requireNonNull(recurrenceInterval));
+            this.recurrenceInterval = Output.of(Objects.requireNonNull(recurrenceInterval));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareSubscriptionName(Input<String> shareSubscriptionName) {
+        public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
 
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Input.of(Objects.requireNonNull(shareSubscriptionName));
+            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
 
-        public Builder synchronizationMode(@Nullable Input<Either<String,SynchronizationMode>> synchronizationMode) {
+        public Builder synchronizationMode(@Nullable Output<Either<String,SynchronizationMode>> synchronizationMode) {
             this.synchronizationMode = synchronizationMode;
             return this;
         }
 
         public Builder synchronizationMode(@Nullable Either<String,SynchronizationMode> synchronizationMode) {
-            this.synchronizationMode = Input.ofNullable(synchronizationMode);
+            this.synchronizationMode = Output.ofNullable(synchronizationMode);
             return this;
         }
 
-        public Builder synchronizationTime(Input<String> synchronizationTime) {
+        public Builder synchronizationTime(Output<String> synchronizationTime) {
             this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
             return this;
         }
 
         public Builder synchronizationTime(String synchronizationTime) {
-            this.synchronizationTime = Input.of(Objects.requireNonNull(synchronizationTime));
+            this.synchronizationTime = Output.of(Objects.requireNonNull(synchronizationTime));
             return this;
         }
 
-        public Builder triggerName(@Nullable Input<String> triggerName) {
+        public Builder triggerName(@Nullable Output<String> triggerName) {
             this.triggerName = triggerName;
             return this;
         }
 
         public Builder triggerName(@Nullable String triggerName) {
-            this.triggerName = Input.ofNullable(triggerName);
+            this.triggerName = Output.ofNullable(triggerName);
             return this;
         }
         public ScheduledTriggerArgs build() {

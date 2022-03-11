@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="imageVersion")
-      private final @Nullable Input<String> imageVersion;
+      private final @Nullable Output<String> imageVersion;
 
-    public Input<String> getImageVersion() {
-        return this.imageVersion == null ? Input.empty() : this.imageVersion;
+    public Output<String> getImageVersion() {
+        return this.imageVersion == null ? Output.empty() : this.imageVersion;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="optionalComponents")
-      private final @Nullable Input<List<String>> optionalComponents;
+      private final @Nullable Output<List<String>> optionalComponents;
 
-    public Input<List<String>> getOptionalComponents() {
-        return this.optionalComponents == null ? Input.empty() : this.optionalComponents;
+    public Output<List<String>> getOptionalComponents() {
+        return this.optionalComponents == null ? Output.empty() : this.optionalComponents;
     }
 
     /**
@@ -63,24 +63,24 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="overrideProperties")
-      private final @Nullable Input<Map<String,String>> overrideProperties;
+      private final @Nullable Output<Map<String,String>> overrideProperties;
 
-    public Input<Map<String,String>> getOverrideProperties() {
-        return this.overrideProperties == null ? Input.empty() : this.overrideProperties;
+    public Output<Map<String,String>> getOverrideProperties() {
+        return this.overrideProperties == null ? Output.empty() : this.overrideProperties;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,Object>> properties;
+      private final @Nullable Output<Map<String,Object>> properties;
 
-    public Input<Map<String,Object>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,Object>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public ClusterClusterConfigSoftwareConfigGetArgs(
-        @Nullable Input<String> imageVersion,
-        @Nullable Input<List<String>> optionalComponents,
-        @Nullable Input<Map<String,String>> overrideProperties,
-        @Nullable Input<Map<String,Object>> properties) {
+        @Nullable Output<String> imageVersion,
+        @Nullable Output<List<String>> optionalComponents,
+        @Nullable Output<Map<String,String>> overrideProperties,
+        @Nullable Output<Map<String,Object>> properties) {
         this.imageVersion = imageVersion;
         this.optionalComponents = optionalComponents;
         this.overrideProperties = overrideProperties;
@@ -88,10 +88,10 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
     }
 
     private ClusterClusterConfigSoftwareConfigGetArgs() {
-        this.imageVersion = Input.empty();
-        this.optionalComponents = Input.empty();
-        this.overrideProperties = Input.empty();
-        this.properties = Input.empty();
+        this.imageVersion = Output.empty();
+        this.optionalComponents = Output.empty();
+        this.overrideProperties = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,10 +103,10 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> imageVersion;
-        private @Nullable Input<List<String>> optionalComponents;
-        private @Nullable Input<Map<String,String>> overrideProperties;
-        private @Nullable Input<Map<String,Object>> properties;
+        private @Nullable Output<String> imageVersion;
+        private @Nullable Output<List<String>> optionalComponents;
+        private @Nullable Output<Map<String,String>> overrideProperties;
+        private @Nullable Output<Map<String,Object>> properties;
 
         public Builder() {
     	      // Empty
@@ -120,43 +120,43 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
     	      this.properties = defaults.properties;
         }
 
-        public Builder imageVersion(@Nullable Input<String> imageVersion) {
+        public Builder imageVersion(@Nullable Output<String> imageVersion) {
             this.imageVersion = imageVersion;
             return this;
         }
 
         public Builder imageVersion(@Nullable String imageVersion) {
-            this.imageVersion = Input.ofNullable(imageVersion);
+            this.imageVersion = Output.ofNullable(imageVersion);
             return this;
         }
 
-        public Builder optionalComponents(@Nullable Input<List<String>> optionalComponents) {
+        public Builder optionalComponents(@Nullable Output<List<String>> optionalComponents) {
             this.optionalComponents = optionalComponents;
             return this;
         }
 
         public Builder optionalComponents(@Nullable List<String> optionalComponents) {
-            this.optionalComponents = Input.ofNullable(optionalComponents);
+            this.optionalComponents = Output.ofNullable(optionalComponents);
             return this;
         }
 
-        public Builder overrideProperties(@Nullable Input<Map<String,String>> overrideProperties) {
+        public Builder overrideProperties(@Nullable Output<Map<String,String>> overrideProperties) {
             this.overrideProperties = overrideProperties;
             return this;
         }
 
         public Builder overrideProperties(@Nullable Map<String,String> overrideProperties) {
-            this.overrideProperties = Input.ofNullable(overrideProperties);
+            this.overrideProperties = Output.ofNullable(overrideProperties);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,Object>> properties) {
+        public Builder properties(@Nullable Output<Map<String,Object>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,Object> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public ClusterClusterConfigSoftwareConfigGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.RouterNatRuleActionArgs;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<RouterNatRuleActionArgs> action;
+      private final @Nullable Output<RouterNatRuleActionArgs> action;
 
-    public Input<RouterNatRuleActionArgs> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<RouterNatRuleActionArgs> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="match")
-      private final @Nullable Input<String> match;
+      private final @Nullable Output<String> match;
 
-    public Input<String> getMatch() {
-        return this.match == null ? Input.empty() : this.match;
+    public Output<String> getMatch() {
+        return this.match == null ? Output.empty() : this.match;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleNumber")
-      private final @Nullable Input<Integer> ruleNumber;
+      private final @Nullable Output<Integer> ruleNumber;
 
-    public Input<Integer> getRuleNumber() {
-        return this.ruleNumber == null ? Input.empty() : this.ruleNumber;
+    public Output<Integer> getRuleNumber() {
+        return this.ruleNumber == null ? Output.empty() : this.ruleNumber;
     }
 
     public RouterNatRuleArgs(
-        @Nullable Input<RouterNatRuleActionArgs> action,
-        @Nullable Input<String> description,
-        @Nullable Input<String> match,
-        @Nullable Input<Integer> ruleNumber) {
+        @Nullable Output<RouterNatRuleActionArgs> action,
+        @Nullable Output<String> description,
+        @Nullable Output<String> match,
+        @Nullable Output<Integer> ruleNumber) {
         this.action = action;
         this.description = description;
         this.match = match;
@@ -72,10 +72,10 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterNatRuleArgs() {
-        this.action = Input.empty();
-        this.description = Input.empty();
-        this.match = Input.empty();
-        this.ruleNumber = Input.empty();
+        this.action = Output.empty();
+        this.description = Output.empty();
+        this.match = Output.empty();
+        this.ruleNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RouterNatRuleActionArgs> action;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> match;
-        private @Nullable Input<Integer> ruleNumber;
+        private @Nullable Output<RouterNatRuleActionArgs> action;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> match;
+        private @Nullable Output<Integer> ruleNumber;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleNumber = defaults.ruleNumber;
         }
 
-        public Builder action(@Nullable Input<RouterNatRuleActionArgs> action) {
+        public Builder action(@Nullable Output<RouterNatRuleActionArgs> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable RouterNatRuleActionArgs action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder match(@Nullable Input<String> match) {
+        public Builder match(@Nullable Output<String> match) {
             this.match = match;
             return this;
         }
 
         public Builder match(@Nullable String match) {
-            this.match = Input.ofNullable(match);
+            this.match = Output.ofNullable(match);
             return this;
         }
 
-        public Builder ruleNumber(@Nullable Input<Integer> ruleNumber) {
+        public Builder ruleNumber(@Nullable Output<Integer> ruleNumber) {
             this.ruleNumber = ruleNumber;
             return this;
         }
 
         public Builder ruleNumber(@Nullable Integer ruleNumber) {
-            this.ruleNumber = Input.ofNullable(ruleNumber);
+            this.ruleNumber = Output.ofNullable(ruleNumber);
             return this;
         }
         public RouterNatRuleArgs build() {

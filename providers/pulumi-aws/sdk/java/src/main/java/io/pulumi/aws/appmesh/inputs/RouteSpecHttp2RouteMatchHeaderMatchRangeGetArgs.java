@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs extends io.pu
      * 
      */
     @InputImport(name="end", required=true)
-      private final Input<Integer> end;
+      private final Output<Integer> end;
 
-    public Input<Integer> getEnd() {
+    public Output<Integer> getEnd() {
         return this.end;
     }
 
@@ -29,22 +29,22 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs extends io.pu
      * 
      */
     @InputImport(name="start", required=true)
-      private final Input<Integer> start;
+      private final Output<Integer> start;
 
-    public Input<Integer> getStart() {
+    public Output<Integer> getStart() {
         return this.start;
     }
 
     public RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs(
-        Input<Integer> end,
-        Input<Integer> start) {
+        Output<Integer> end,
+        Output<Integer> start) {
         this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
         this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
     }
 
     private RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs() {
-        this.end = Input.empty();
-        this.start = Input.empty();
+        this.end = Output.empty();
+        this.start = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<Integer> end;
-        private Input<Integer> start;
+        private Output<Integer> end;
+        private Output<Integer> start;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs extends io.pu
     	      this.start = defaults.start;
         }
 
-        public Builder end(Input<Integer> end) {
+        public Builder end(Output<Integer> end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
         public Builder end(Integer end) {
-            this.end = Input.of(Objects.requireNonNull(end));
+            this.end = Output.of(Objects.requireNonNull(end));
             return this;
         }
 
-        public Builder start(Input<Integer> start) {
+        public Builder start(Output<Integer> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
         public Builder start(Integer start) {
-            this.start = Input.of(Objects.requireNonNull(start));
+            this.start = Output.of(Objects.requireNonNull(start));
             return this;
         }
         public RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs build() {

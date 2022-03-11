@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceAccessControlListConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceDocumentsMetadataConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,54 +22,54 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
     public static final DataSourceS3DataSourceConfigurationArgs Empty = new DataSourceS3DataSourceConfigurationArgs();
 
     @InputImport(name="accessControlListConfiguration")
-      private final @Nullable Input<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration;
+      private final @Nullable Output<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration;
 
-    public Input<DataSourceAccessControlListConfigurationArgs> getAccessControlListConfiguration() {
-        return this.accessControlListConfiguration == null ? Input.empty() : this.accessControlListConfiguration;
+    public Output<DataSourceAccessControlListConfigurationArgs> getAccessControlListConfiguration() {
+        return this.accessControlListConfiguration == null ? Output.empty() : this.accessControlListConfiguration;
     }
 
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="documentsMetadataConfiguration")
-      private final @Nullable Input<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration;
+      private final @Nullable Output<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration;
 
-    public Input<DataSourceDocumentsMetadataConfigurationArgs> getDocumentsMetadataConfiguration() {
-        return this.documentsMetadataConfiguration == null ? Input.empty() : this.documentsMetadataConfiguration;
+    public Output<DataSourceDocumentsMetadataConfigurationArgs> getDocumentsMetadataConfiguration() {
+        return this.documentsMetadataConfiguration == null ? Output.empty() : this.documentsMetadataConfiguration;
     }
 
     @InputImport(name="exclusionPatterns")
-      private final @Nullable Input<List<String>> exclusionPatterns;
+      private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Input<List<String>> getExclusionPatterns() {
-        return this.exclusionPatterns == null ? Input.empty() : this.exclusionPatterns;
+    public Output<List<String>> getExclusionPatterns() {
+        return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
     }
 
     @InputImport(name="inclusionPatterns")
-      private final @Nullable Input<List<String>> inclusionPatterns;
+      private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Input<List<String>> getInclusionPatterns() {
-        return this.inclusionPatterns == null ? Input.empty() : this.inclusionPatterns;
+    public Output<List<String>> getInclusionPatterns() {
+        return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
     }
 
     @InputImport(name="inclusionPrefixes")
-      private final @Nullable Input<List<String>> inclusionPrefixes;
+      private final @Nullable Output<List<String>> inclusionPrefixes;
 
-    public Input<List<String>> getInclusionPrefixes() {
-        return this.inclusionPrefixes == null ? Input.empty() : this.inclusionPrefixes;
+    public Output<List<String>> getInclusionPrefixes() {
+        return this.inclusionPrefixes == null ? Output.empty() : this.inclusionPrefixes;
     }
 
     public DataSourceS3DataSourceConfigurationArgs(
-        @Nullable Input<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration,
-        Input<String> bucketName,
-        @Nullable Input<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration,
-        @Nullable Input<List<String>> exclusionPatterns,
-        @Nullable Input<List<String>> inclusionPatterns,
-        @Nullable Input<List<String>> inclusionPrefixes) {
+        @Nullable Output<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration,
+        Output<String> bucketName,
+        @Nullable Output<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration,
+        @Nullable Output<List<String>> exclusionPatterns,
+        @Nullable Output<List<String>> inclusionPatterns,
+        @Nullable Output<List<String>> inclusionPrefixes) {
         this.accessControlListConfiguration = accessControlListConfiguration;
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.documentsMetadataConfiguration = documentsMetadataConfiguration;
@@ -79,12 +79,12 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
     }
 
     private DataSourceS3DataSourceConfigurationArgs() {
-        this.accessControlListConfiguration = Input.empty();
-        this.bucketName = Input.empty();
-        this.documentsMetadataConfiguration = Input.empty();
-        this.exclusionPatterns = Input.empty();
-        this.inclusionPatterns = Input.empty();
-        this.inclusionPrefixes = Input.empty();
+        this.accessControlListConfiguration = Output.empty();
+        this.bucketName = Output.empty();
+        this.documentsMetadataConfiguration = Output.empty();
+        this.exclusionPatterns = Output.empty();
+        this.inclusionPatterns = Output.empty();
+        this.inclusionPrefixes = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,12 +96,12 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration;
-        private Input<String> bucketName;
-        private @Nullable Input<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration;
-        private @Nullable Input<List<String>> exclusionPatterns;
-        private @Nullable Input<List<String>> inclusionPatterns;
-        private @Nullable Input<List<String>> inclusionPrefixes;
+        private @Nullable Output<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration;
+        private Output<String> bucketName;
+        private @Nullable Output<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration;
+        private @Nullable Output<List<String>> exclusionPatterns;
+        private @Nullable Output<List<String>> inclusionPatterns;
+        private @Nullable Output<List<String>> inclusionPrefixes;
 
         public Builder() {
     	      // Empty
@@ -117,63 +117,63 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
     	      this.inclusionPrefixes = defaults.inclusionPrefixes;
         }
 
-        public Builder accessControlListConfiguration(@Nullable Input<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration) {
+        public Builder accessControlListConfiguration(@Nullable Output<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration) {
             this.accessControlListConfiguration = accessControlListConfiguration;
             return this;
         }
 
         public Builder accessControlListConfiguration(@Nullable DataSourceAccessControlListConfigurationArgs accessControlListConfiguration) {
-            this.accessControlListConfiguration = Input.ofNullable(accessControlListConfiguration);
+            this.accessControlListConfiguration = Output.ofNullable(accessControlListConfiguration);
             return this;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder documentsMetadataConfiguration(@Nullable Input<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration) {
+        public Builder documentsMetadataConfiguration(@Nullable Output<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration) {
             this.documentsMetadataConfiguration = documentsMetadataConfiguration;
             return this;
         }
 
         public Builder documentsMetadataConfiguration(@Nullable DataSourceDocumentsMetadataConfigurationArgs documentsMetadataConfiguration) {
-            this.documentsMetadataConfiguration = Input.ofNullable(documentsMetadataConfiguration);
+            this.documentsMetadataConfiguration = Output.ofNullable(documentsMetadataConfiguration);
             return this;
         }
 
-        public Builder exclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = Input.ofNullable(exclusionPatterns);
+            this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
             return this;
         }
 
-        public Builder inclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable Output<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = Input.ofNullable(inclusionPatterns);
+            this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
             return this;
         }
 
-        public Builder inclusionPrefixes(@Nullable Input<List<String>> inclusionPrefixes) {
+        public Builder inclusionPrefixes(@Nullable Output<List<String>> inclusionPrefixes) {
             this.inclusionPrefixes = inclusionPrefixes;
             return this;
         }
 
         public Builder inclusionPrefixes(@Nullable List<String> inclusionPrefixes) {
-            this.inclusionPrefixes = Input.ofNullable(inclusionPrefixes);
+            this.inclusionPrefixes = Output.ofNullable(inclusionPrefixes);
             return this;
         }
         public DataSourceS3DataSourceConfigurationArgs build() {

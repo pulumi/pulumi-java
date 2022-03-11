@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.GpuResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<Double> cpu;
+      private final @Nullable Output<Double> cpu;
 
-    public Input<Double> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Double> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gpu")
-      private final @Nullable Input<GpuResourceArgs> gpu;
+      private final @Nullable Output<GpuResourceArgs> gpu;
 
-    public Input<GpuResourceArgs> getGpu() {
-        return this.gpu == null ? Input.empty() : this.gpu;
+    public Output<GpuResourceArgs> getGpu() {
+        return this.gpu == null ? Output.empty() : this.gpu;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memoryInGB")
-      private final @Nullable Input<Double> memoryInGB;
+      private final @Nullable Output<Double> memoryInGB;
 
-    public Input<Double> getMemoryInGB() {
-        return this.memoryInGB == null ? Input.empty() : this.memoryInGB;
+    public Output<Double> getMemoryInGB() {
+        return this.memoryInGB == null ? Output.empty() : this.memoryInGB;
     }
 
     public ResourceLimitsArgs(
-        @Nullable Input<Double> cpu,
-        @Nullable Input<GpuResourceArgs> gpu,
-        @Nullable Input<Double> memoryInGB) {
+        @Nullable Output<Double> cpu,
+        @Nullable Output<GpuResourceArgs> gpu,
+        @Nullable Output<Double> memoryInGB) {
         this.cpu = cpu;
         this.gpu = gpu;
         this.memoryInGB = memoryInGB;
     }
 
     private ResourceLimitsArgs() {
-        this.cpu = Input.empty();
-        this.gpu = Input.empty();
-        this.memoryInGB = Input.empty();
+        this.cpu = Output.empty();
+        this.gpu = Output.empty();
+        this.memoryInGB = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> cpu;
-        private @Nullable Input<GpuResourceArgs> gpu;
-        private @Nullable Input<Double> memoryInGB;
+        private @Nullable Output<Double> cpu;
+        private @Nullable Output<GpuResourceArgs> gpu;
+        private @Nullable Output<Double> memoryInGB;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.memoryInGB = defaults.memoryInGB;
         }
 
-        public Builder cpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Output<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder gpu(@Nullable Input<GpuResourceArgs> gpu) {
+        public Builder gpu(@Nullable Output<GpuResourceArgs> gpu) {
             this.gpu = gpu;
             return this;
         }
 
         public Builder gpu(@Nullable GpuResourceArgs gpu) {
-            this.gpu = Input.ofNullable(gpu);
+            this.gpu = Output.ofNullable(gpu);
             return this;
         }
 
-        public Builder memoryInGB(@Nullable Input<Double> memoryInGB) {
+        public Builder memoryInGB(@Nullable Output<Double> memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
 
         public Builder memoryInGB(@Nullable Double memoryInGB) {
-            this.memoryInGB = Input.ofNullable(memoryInGB);
+            this.memoryInGB = Output.ofNullable(memoryInGB);
             return this;
         }
         public ResourceLimitsArgs build() {

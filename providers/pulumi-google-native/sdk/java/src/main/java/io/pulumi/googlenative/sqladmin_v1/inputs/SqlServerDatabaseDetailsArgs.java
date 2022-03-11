@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="compatibilityLevel")
-      private final @Nullable Input<Integer> compatibilityLevel;
+      private final @Nullable Output<Integer> compatibilityLevel;
 
-    public Input<Integer> getCompatibilityLevel() {
-        return this.compatibilityLevel == null ? Input.empty() : this.compatibilityLevel;
+    public Output<Integer> getCompatibilityLevel() {
+        return this.compatibilityLevel == null ? Output.empty() : this.compatibilityLevel;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recoveryModel")
-      private final @Nullable Input<String> recoveryModel;
+      private final @Nullable Output<String> recoveryModel;
 
-    public Input<String> getRecoveryModel() {
-        return this.recoveryModel == null ? Input.empty() : this.recoveryModel;
+    public Output<String> getRecoveryModel() {
+        return this.recoveryModel == null ? Output.empty() : this.recoveryModel;
     }
 
     public SqlServerDatabaseDetailsArgs(
-        @Nullable Input<Integer> compatibilityLevel,
-        @Nullable Input<String> recoveryModel) {
+        @Nullable Output<Integer> compatibilityLevel,
+        @Nullable Output<String> recoveryModel) {
         this.compatibilityLevel = compatibilityLevel;
         this.recoveryModel = recoveryModel;
     }
 
     private SqlServerDatabaseDetailsArgs() {
-        this.compatibilityLevel = Input.empty();
-        this.recoveryModel = Input.empty();
+        this.compatibilityLevel = Output.empty();
+        this.recoveryModel = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> compatibilityLevel;
-        private @Nullable Input<String> recoveryModel;
+        private @Nullable Output<Integer> compatibilityLevel;
+        private @Nullable Output<String> recoveryModel;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
     	      this.recoveryModel = defaults.recoveryModel;
         }
 
-        public Builder compatibilityLevel(@Nullable Input<Integer> compatibilityLevel) {
+        public Builder compatibilityLevel(@Nullable Output<Integer> compatibilityLevel) {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
         public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
-            this.compatibilityLevel = Input.ofNullable(compatibilityLevel);
+            this.compatibilityLevel = Output.ofNullable(compatibilityLevel);
             return this;
         }
 
-        public Builder recoveryModel(@Nullable Input<String> recoveryModel) {
+        public Builder recoveryModel(@Nullable Output<String> recoveryModel) {
             this.recoveryModel = recoveryModel;
             return this;
         }
 
         public Builder recoveryModel(@Nullable String recoveryModel) {
-            this.recoveryModel = Input.ofNullable(recoveryModel);
+            this.recoveryModel = Output.ofNullable(recoveryModel);
             return this;
         }
         public SqlServerDatabaseDetailsArgs build() {

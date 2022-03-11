@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     public static final ResourcePolicyState Empty = new ResourcePolicyState();
 
     @InputImport(name="enableHybrid")
-      private final @Nullable Input<String> enableHybrid;
+      private final @Nullable Output<String> enableHybrid;
 
-    public Input<String> getEnableHybrid() {
-        return this.enableHybrid == null ? Input.empty() : this.enableHybrid;
+    public Output<String> getEnableHybrid() {
+        return this.enableHybrid == null ? Output.empty() : this.enableHybrid;
     }
 
     /**
@@ -26,22 +26,22 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public ResourcePolicyState(
-        @Nullable Input<String> enableHybrid,
-        @Nullable Input<String> policy) {
+        @Nullable Output<String> enableHybrid,
+        @Nullable Output<String> policy) {
         this.enableHybrid = enableHybrid;
         this.policy = policy;
     }
 
     private ResourcePolicyState() {
-        this.enableHybrid = Input.empty();
-        this.policy = Input.empty();
+        this.enableHybrid = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> enableHybrid;
-        private @Nullable Input<String> policy;
+        private @Nullable Output<String> enableHybrid;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.policy = defaults.policy;
         }
 
-        public Builder enableHybrid(@Nullable Input<String> enableHybrid) {
+        public Builder enableHybrid(@Nullable Output<String> enableHybrid) {
             this.enableHybrid = enableHybrid;
             return this;
         }
 
         public Builder enableHybrid(@Nullable String enableHybrid) {
-            this.enableHybrid = Input.ofNullable(enableHybrid);
+            this.enableHybrid = Output.ofNullable(enableHybrid);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public ResourcePolicyState build() {

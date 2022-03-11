@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="cost")
-      private final @Nullable Input<Double> cost;
+      private final @Nullable Output<Double> cost;
 
-    public Input<Double> getCost() {
-        return this.cost == null ? Input.empty() : this.cost;
+    public Output<Double> getCost() {
+        return this.cost == null ? Output.empty() : this.cost;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="currencyCode")
-      private final @Nullable Input<String> currencyCode;
+      private final @Nullable Output<String> currencyCode;
 
-    public Input<String> getCurrencyCode() {
-        return this.currencyCode == null ? Input.empty() : this.currencyCode;
+    public Output<String> getCurrencyCode() {
+        return this.currencyCode == null ? Output.empty() : this.currencyCode;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="originalPrice")
-      private final @Nullable Input<Double> originalPrice;
+      private final @Nullable Output<Double> originalPrice;
 
-    public Input<Double> getOriginalPrice() {
-        return this.originalPrice == null ? Input.empty() : this.originalPrice;
+    public Output<Double> getOriginalPrice() {
+        return this.originalPrice == null ? Output.empty() : this.originalPrice;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="price")
-      private final @Nullable Input<Double> price;
+      private final @Nullable Output<Double> price;
 
-    public Input<Double> getPrice() {
-        return this.price == null ? Input.empty() : this.price;
+    public Output<Double> getPrice() {
+        return this.price == null ? Output.empty() : this.price;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="priceEffectiveTime")
-      private final @Nullable Input<String> priceEffectiveTime;
+      private final @Nullable Output<String> priceEffectiveTime;
 
-    public Input<String> getPriceEffectiveTime() {
-        return this.priceEffectiveTime == null ? Input.empty() : this.priceEffectiveTime;
+    public Output<String> getPriceEffectiveTime() {
+        return this.priceEffectiveTime == null ? Output.empty() : this.priceEffectiveTime;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="priceExpireTime")
-      private final @Nullable Input<String> priceExpireTime;
+      private final @Nullable Output<String> priceExpireTime;
 
-    public Input<String> getPriceExpireTime() {
-        return this.priceExpireTime == null ? Input.empty() : this.priceExpireTime;
+    public Output<String> getPriceExpireTime() {
+        return this.priceExpireTime == null ? Output.empty() : this.priceExpireTime;
     }
 
     public GoogleCloudRetailV2alphaPriceInfoArgs(
-        @Nullable Input<Double> cost,
-        @Nullable Input<String> currencyCode,
-        @Nullable Input<Double> originalPrice,
-        @Nullable Input<Double> price,
-        @Nullable Input<String> priceEffectiveTime,
-        @Nullable Input<String> priceExpireTime) {
+        @Nullable Output<Double> cost,
+        @Nullable Output<String> currencyCode,
+        @Nullable Output<Double> originalPrice,
+        @Nullable Output<Double> price,
+        @Nullable Output<String> priceEffectiveTime,
+        @Nullable Output<String> priceExpireTime) {
         this.cost = cost;
         this.currencyCode = currencyCode;
         this.originalPrice = originalPrice;
@@ -101,12 +101,12 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
     }
 
     private GoogleCloudRetailV2alphaPriceInfoArgs() {
-        this.cost = Input.empty();
-        this.currencyCode = Input.empty();
-        this.originalPrice = Input.empty();
-        this.price = Input.empty();
-        this.priceEffectiveTime = Input.empty();
-        this.priceExpireTime = Input.empty();
+        this.cost = Output.empty();
+        this.currencyCode = Output.empty();
+        this.originalPrice = Output.empty();
+        this.price = Output.empty();
+        this.priceEffectiveTime = Output.empty();
+        this.priceExpireTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> cost;
-        private @Nullable Input<String> currencyCode;
-        private @Nullable Input<Double> originalPrice;
-        private @Nullable Input<Double> price;
-        private @Nullable Input<String> priceEffectiveTime;
-        private @Nullable Input<String> priceExpireTime;
+        private @Nullable Output<Double> cost;
+        private @Nullable Output<String> currencyCode;
+        private @Nullable Output<Double> originalPrice;
+        private @Nullable Output<Double> price;
+        private @Nullable Output<String> priceEffectiveTime;
+        private @Nullable Output<String> priceExpireTime;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
     	      this.priceExpireTime = defaults.priceExpireTime;
         }
 
-        public Builder cost(@Nullable Input<Double> cost) {
+        public Builder cost(@Nullable Output<Double> cost) {
             this.cost = cost;
             return this;
         }
 
         public Builder cost(@Nullable Double cost) {
-            this.cost = Input.ofNullable(cost);
+            this.cost = Output.ofNullable(cost);
             return this;
         }
 
-        public Builder currencyCode(@Nullable Input<String> currencyCode) {
+        public Builder currencyCode(@Nullable Output<String> currencyCode) {
             this.currencyCode = currencyCode;
             return this;
         }
 
         public Builder currencyCode(@Nullable String currencyCode) {
-            this.currencyCode = Input.ofNullable(currencyCode);
+            this.currencyCode = Output.ofNullable(currencyCode);
             return this;
         }
 
-        public Builder originalPrice(@Nullable Input<Double> originalPrice) {
+        public Builder originalPrice(@Nullable Output<Double> originalPrice) {
             this.originalPrice = originalPrice;
             return this;
         }
 
         public Builder originalPrice(@Nullable Double originalPrice) {
-            this.originalPrice = Input.ofNullable(originalPrice);
+            this.originalPrice = Output.ofNullable(originalPrice);
             return this;
         }
 
-        public Builder price(@Nullable Input<Double> price) {
+        public Builder price(@Nullable Output<Double> price) {
             this.price = price;
             return this;
         }
 
         public Builder price(@Nullable Double price) {
-            this.price = Input.ofNullable(price);
+            this.price = Output.ofNullable(price);
             return this;
         }
 
-        public Builder priceEffectiveTime(@Nullable Input<String> priceEffectiveTime) {
+        public Builder priceEffectiveTime(@Nullable Output<String> priceEffectiveTime) {
             this.priceEffectiveTime = priceEffectiveTime;
             return this;
         }
 
         public Builder priceEffectiveTime(@Nullable String priceEffectiveTime) {
-            this.priceEffectiveTime = Input.ofNullable(priceEffectiveTime);
+            this.priceEffectiveTime = Output.ofNullable(priceEffectiveTime);
             return this;
         }
 
-        public Builder priceExpireTime(@Nullable Input<String> priceExpireTime) {
+        public Builder priceExpireTime(@Nullable Output<String> priceExpireTime) {
             this.priceExpireTime = priceExpireTime;
             return this;
         }
 
         public Builder priceExpireTime(@Nullable String priceExpireTime) {
-            this.priceExpireTime = Input.ofNullable(priceExpireTime);
+            this.priceExpireTime = Output.ofNullable(priceExpireTime);
             return this;
         }
         public GoogleCloudRetailV2alphaPriceInfoArgs build() {

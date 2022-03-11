@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ARecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv4Address")
-      private final @Nullable Input<String> ipv4Address;
+      private final @Nullable Output<String> ipv4Address;
 
-    public Input<String> getIpv4Address() {
-        return this.ipv4Address == null ? Input.empty() : this.ipv4Address;
+    public Output<String> getIpv4Address() {
+        return this.ipv4Address == null ? Output.empty() : this.ipv4Address;
     }
 
-    public ARecordArgs(@Nullable Input<String> ipv4Address) {
+    public ARecordArgs(@Nullable Output<String> ipv4Address) {
         this.ipv4Address = ipv4Address;
     }
 
     private ARecordArgs() {
-        this.ipv4Address = Input.empty();
+        this.ipv4Address = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ARecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipv4Address;
+        private @Nullable Output<String> ipv4Address;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ARecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ipv4Address = defaults.ipv4Address;
         }
 
-        public Builder ipv4Address(@Nullable Input<String> ipv4Address) {
+        public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
         }
 
         public Builder ipv4Address(@Nullable String ipv4Address) {
-            this.ipv4Address = Input.ofNullable(ipv4Address);
+            this.ipv4Address = Output.ofNullable(ipv4Address);
             return this;
         }
         public ARecordArgs build() {

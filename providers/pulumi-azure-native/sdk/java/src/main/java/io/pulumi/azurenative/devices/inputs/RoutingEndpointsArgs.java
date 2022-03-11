@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.inputs.RoutingEventHubPropertiesArgs;
 import io.pulumi.azurenative.devices.inputs.RoutingServiceBusQueueEndpointPropertiesArgs;
 import io.pulumi.azurenative.devices.inputs.RoutingServiceBusTopicEndpointPropertiesArgs;
 import io.pulumi.azurenative.devices.inputs.RoutingStorageContainerPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventHubs")
-      private final @Nullable Input<List<RoutingEventHubPropertiesArgs>> eventHubs;
+      private final @Nullable Output<List<RoutingEventHubPropertiesArgs>> eventHubs;
 
-    public Input<List<RoutingEventHubPropertiesArgs>> getEventHubs() {
-        return this.eventHubs == null ? Input.empty() : this.eventHubs;
+    public Output<List<RoutingEventHubPropertiesArgs>> getEventHubs() {
+        return this.eventHubs == null ? Output.empty() : this.eventHubs;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceBusQueues")
-      private final @Nullable Input<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues;
+      private final @Nullable Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues;
 
-    public Input<List<RoutingServiceBusQueueEndpointPropertiesArgs>> getServiceBusQueues() {
-        return this.serviceBusQueues == null ? Input.empty() : this.serviceBusQueues;
+    public Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> getServiceBusQueues() {
+        return this.serviceBusQueues == null ? Output.empty() : this.serviceBusQueues;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceBusTopics")
-      private final @Nullable Input<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics;
+      private final @Nullable Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics;
 
-    public Input<List<RoutingServiceBusTopicEndpointPropertiesArgs>> getServiceBusTopics() {
-        return this.serviceBusTopics == null ? Input.empty() : this.serviceBusTopics;
+    public Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> getServiceBusTopics() {
+        return this.serviceBusTopics == null ? Output.empty() : this.serviceBusTopics;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storageContainers")
-      private final @Nullable Input<List<RoutingStorageContainerPropertiesArgs>> storageContainers;
+      private final @Nullable Output<List<RoutingStorageContainerPropertiesArgs>> storageContainers;
 
-    public Input<List<RoutingStorageContainerPropertiesArgs>> getStorageContainers() {
-        return this.storageContainers == null ? Input.empty() : this.storageContainers;
+    public Output<List<RoutingStorageContainerPropertiesArgs>> getStorageContainers() {
+        return this.storageContainers == null ? Output.empty() : this.storageContainers;
     }
 
     public RoutingEndpointsArgs(
-        @Nullable Input<List<RoutingEventHubPropertiesArgs>> eventHubs,
-        @Nullable Input<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues,
-        @Nullable Input<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics,
-        @Nullable Input<List<RoutingStorageContainerPropertiesArgs>> storageContainers) {
+        @Nullable Output<List<RoutingEventHubPropertiesArgs>> eventHubs,
+        @Nullable Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues,
+        @Nullable Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics,
+        @Nullable Output<List<RoutingStorageContainerPropertiesArgs>> storageContainers) {
         this.eventHubs = eventHubs;
         this.serviceBusQueues = serviceBusQueues;
         this.serviceBusTopics = serviceBusTopics;
@@ -78,10 +78,10 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RoutingEndpointsArgs() {
-        this.eventHubs = Input.empty();
-        this.serviceBusQueues = Input.empty();
-        this.serviceBusTopics = Input.empty();
-        this.storageContainers = Input.empty();
+        this.eventHubs = Output.empty();
+        this.serviceBusQueues = Output.empty();
+        this.serviceBusTopics = Output.empty();
+        this.storageContainers = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RoutingEventHubPropertiesArgs>> eventHubs;
-        private @Nullable Input<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues;
-        private @Nullable Input<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics;
-        private @Nullable Input<List<RoutingStorageContainerPropertiesArgs>> storageContainers;
+        private @Nullable Output<List<RoutingEventHubPropertiesArgs>> eventHubs;
+        private @Nullable Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues;
+        private @Nullable Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics;
+        private @Nullable Output<List<RoutingStorageContainerPropertiesArgs>> storageContainers;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
     	      this.storageContainers = defaults.storageContainers;
         }
 
-        public Builder eventHubs(@Nullable Input<List<RoutingEventHubPropertiesArgs>> eventHubs) {
+        public Builder eventHubs(@Nullable Output<List<RoutingEventHubPropertiesArgs>> eventHubs) {
             this.eventHubs = eventHubs;
             return this;
         }
 
         public Builder eventHubs(@Nullable List<RoutingEventHubPropertiesArgs> eventHubs) {
-            this.eventHubs = Input.ofNullable(eventHubs);
+            this.eventHubs = Output.ofNullable(eventHubs);
             return this;
         }
 
-        public Builder serviceBusQueues(@Nullable Input<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues) {
+        public Builder serviceBusQueues(@Nullable Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues) {
             this.serviceBusQueues = serviceBusQueues;
             return this;
         }
 
         public Builder serviceBusQueues(@Nullable List<RoutingServiceBusQueueEndpointPropertiesArgs> serviceBusQueues) {
-            this.serviceBusQueues = Input.ofNullable(serviceBusQueues);
+            this.serviceBusQueues = Output.ofNullable(serviceBusQueues);
             return this;
         }
 
-        public Builder serviceBusTopics(@Nullable Input<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics) {
+        public Builder serviceBusTopics(@Nullable Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics) {
             this.serviceBusTopics = serviceBusTopics;
             return this;
         }
 
         public Builder serviceBusTopics(@Nullable List<RoutingServiceBusTopicEndpointPropertiesArgs> serviceBusTopics) {
-            this.serviceBusTopics = Input.ofNullable(serviceBusTopics);
+            this.serviceBusTopics = Output.ofNullable(serviceBusTopics);
             return this;
         }
 
-        public Builder storageContainers(@Nullable Input<List<RoutingStorageContainerPropertiesArgs>> storageContainers) {
+        public Builder storageContainers(@Nullable Output<List<RoutingStorageContainerPropertiesArgs>> storageContainers) {
             this.storageContainers = storageContainers;
             return this;
         }
 
         public Builder storageContainers(@Nullable List<RoutingStorageContainerPropertiesArgs> storageContainers) {
-            this.storageContainers = Input.ofNullable(storageContainers);
+            this.storageContainers = Output.ofNullable(storageContainers);
             return this;
         }
         public RoutingEndpointsArgs build() {

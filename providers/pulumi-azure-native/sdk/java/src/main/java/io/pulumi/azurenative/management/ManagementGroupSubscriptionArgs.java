@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.management;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="groupId", required=true)
-      private final Input<String> groupId;
+      private final Output<String> groupId;
 
-    public Input<String> getGroupId() {
+    public Output<String> getGroupId() {
         return this.groupId;
     }
 
@@ -30,22 +30,22 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     public ManagementGroupSubscriptionArgs(
-        Input<String> groupId,
-        @Nullable Input<String> subscriptionId) {
+        Output<String> groupId,
+        @Nullable Output<String> subscriptionId) {
         this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
         this.subscriptionId = subscriptionId;
     }
 
     private ManagementGroupSubscriptionArgs() {
-        this.groupId = Input.empty();
-        this.subscriptionId = Input.empty();
+        this.groupId = Output.empty();
+        this.subscriptionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> groupId;
-        private @Nullable Input<String> subscriptionId;
+        private Output<String> groupId;
+        private @Nullable Output<String> subscriptionId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder groupId(Input<String> groupId) {
+        public Builder groupId(Output<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Input.of(Objects.requireNonNull(groupId));
+            this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
         public ManagementGroupSubscriptionArgs build() {

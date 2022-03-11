@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PermissionsDatabaseGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class PermissionsDatabaseGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public PermissionsDatabaseGetArgs(
-        @Nullable Input<String> catalogId,
-        Input<String> name) {
+        @Nullable Output<String> catalogId,
+        Output<String> name) {
         this.catalogId = catalogId;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private PermissionsDatabaseGetArgs() {
-        this.catalogId = Input.empty();
-        this.name = Input.empty();
+        this.catalogId = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PermissionsDatabaseGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private Input<String> name;
+        private @Nullable Output<String> catalogId;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PermissionsDatabaseGetArgs extends io.pulumi.resources.Resour
     	      this.name = defaults.name;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public PermissionsDatabaseGetArgs build() {

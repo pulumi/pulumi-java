@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class AwsClusterControlPlaneSshConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ec2KeyPair", required=true)
-      private final Input<String> ec2KeyPair;
+      private final Output<String> ec2KeyPair;
 
-    public Input<String> getEc2KeyPair() {
+    public Output<String> getEc2KeyPair() {
         return this.ec2KeyPair;
     }
 
-    public AwsClusterControlPlaneSshConfigGetArgs(Input<String> ec2KeyPair) {
+    public AwsClusterControlPlaneSshConfigGetArgs(Output<String> ec2KeyPair) {
         this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair, "expected parameter 'ec2KeyPair' to be non-null");
     }
 
     private AwsClusterControlPlaneSshConfigGetArgs() {
-        this.ec2KeyPair = Input.empty();
+        this.ec2KeyPair = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AwsClusterControlPlaneSshConfigGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> ec2KeyPair;
+        private Output<String> ec2KeyPair;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AwsClusterControlPlaneSshConfigGetArgs extends io.pulumi.reso
     	      this.ec2KeyPair = defaults.ec2KeyPair;
         }
 
-        public Builder ec2KeyPair(Input<String> ec2KeyPair) {
+        public Builder ec2KeyPair(Output<String> ec2KeyPair) {
             this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair);
             return this;
         }
 
         public Builder ec2KeyPair(String ec2KeyPair) {
-            this.ec2KeyPair = Input.of(Objects.requireNonNull(ec2KeyPair));
+            this.ec2KeyPair = Output.of(Objects.requireNonNull(ec2KeyPair));
             return this;
         }
         public AwsClusterControlPlaneSshConfigGetArgs build() {

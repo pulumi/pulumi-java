@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.DataCatalogConfigArgs;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.DataplexConfigArgs;
@@ -24,10 +24,10 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataCatalogConfig")
-      private final @Nullable Input<DataCatalogConfigArgs> dataCatalogConfig;
+      private final @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig;
 
-    public Input<DataCatalogConfigArgs> getDataCatalogConfig() {
-        return this.dataCatalogConfig == null ? Input.empty() : this.dataCatalogConfig;
+    public Output<DataCatalogConfigArgs> getDataCatalogConfig() {
+        return this.dataCatalogConfig == null ? Output.empty() : this.dataCatalogConfig;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataplexConfig")
-      private final @Nullable Input<DataplexConfigArgs> dataplexConfig;
+      private final @Nullable Output<DataplexConfigArgs> dataplexConfig;
 
-    public Input<DataplexConfigArgs> getDataplexConfig() {
-        return this.dataplexConfig == null ? Input.empty() : this.dataplexConfig;
+    public Output<DataplexConfigArgs> getDataplexConfig() {
+        return this.dataplexConfig == null ? Output.empty() : this.dataplexConfig;
     }
 
     public MetadataIntegrationArgs(
-        @Nullable Input<DataCatalogConfigArgs> dataCatalogConfig,
-        @Nullable Input<DataplexConfigArgs> dataplexConfig) {
+        @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig,
+        @Nullable Output<DataplexConfigArgs> dataplexConfig) {
         this.dataCatalogConfig = dataCatalogConfig;
         this.dataplexConfig = dataplexConfig;
     }
 
     private MetadataIntegrationArgs() {
-        this.dataCatalogConfig = Input.empty();
-        this.dataplexConfig = Input.empty();
+        this.dataCatalogConfig = Output.empty();
+        this.dataplexConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<DataCatalogConfigArgs> dataCatalogConfig;
-        private @Nullable Input<DataplexConfigArgs> dataplexConfig;
+        private @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig;
+        private @Nullable Output<DataplexConfigArgs> dataplexConfig;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
     	      this.dataplexConfig = defaults.dataplexConfig;
         }
 
-        public Builder dataCatalogConfig(@Nullable Input<DataCatalogConfigArgs> dataCatalogConfig) {
+        public Builder dataCatalogConfig(@Nullable Output<DataCatalogConfigArgs> dataCatalogConfig) {
             this.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
 
         public Builder dataCatalogConfig(@Nullable DataCatalogConfigArgs dataCatalogConfig) {
-            this.dataCatalogConfig = Input.ofNullable(dataCatalogConfig);
+            this.dataCatalogConfig = Output.ofNullable(dataCatalogConfig);
             return this;
         }
 
-        public Builder dataplexConfig(@Nullable Input<DataplexConfigArgs> dataplexConfig) {
+        public Builder dataplexConfig(@Nullable Output<DataplexConfigArgs> dataplexConfig) {
             this.dataplexConfig = dataplexConfig;
             return this;
         }
 
         public Builder dataplexConfig(@Nullable DataplexConfigArgs dataplexConfig) {
-            this.dataplexConfig = Input.ofNullable(dataplexConfig);
+            this.dataplexConfig = Output.ofNullable(dataplexConfig);
             return this;
         }
         public MetadataIntegrationArgs build() {

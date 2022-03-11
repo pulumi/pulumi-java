@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="encryptionUserAssignedIdentity")
-      private final @Nullable Input<String> encryptionUserAssignedIdentity;
+      private final @Nullable Output<String> encryptionUserAssignedIdentity;
 
-    public Input<String> getEncryptionUserAssignedIdentity() {
-        return this.encryptionUserAssignedIdentity == null ? Input.empty() : this.encryptionUserAssignedIdentity;
+    public Output<String> getEncryptionUserAssignedIdentity() {
+        return this.encryptionUserAssignedIdentity == null ? Output.empty() : this.encryptionUserAssignedIdentity;
     }
 
-    public EncryptionIdentityArgs(@Nullable Input<String> encryptionUserAssignedIdentity) {
+    public EncryptionIdentityArgs(@Nullable Output<String> encryptionUserAssignedIdentity) {
         this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
     }
 
     private EncryptionIdentityArgs() {
-        this.encryptionUserAssignedIdentity = Input.empty();
+        this.encryptionUserAssignedIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> encryptionUserAssignedIdentity;
+        private @Nullable Output<String> encryptionUserAssignedIdentity;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
     	      this.encryptionUserAssignedIdentity = defaults.encryptionUserAssignedIdentity;
         }
 
-        public Builder encryptionUserAssignedIdentity(@Nullable Input<String> encryptionUserAssignedIdentity) {
+        public Builder encryptionUserAssignedIdentity(@Nullable Output<String> encryptionUserAssignedIdentity) {
             this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;
         }
 
         public Builder encryptionUserAssignedIdentity(@Nullable String encryptionUserAssignedIdentity) {
-            this.encryptionUserAssignedIdentity = Input.ofNullable(encryptionUserAssignedIdentity);
+            this.encryptionUserAssignedIdentity = Output.ofNullable(encryptionUserAssignedIdentity);
             return this;
         }
         public EncryptionIdentityArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="domains")
-      private final @Nullable Input<List<String>> domains;
+      private final @Nullable Output<List<String>> domains;
 
-    public Input<List<String>> getDomains() {
-        return this.domains == null ? Input.empty() : this.domains;
+    public Output<List<String>> getDomains() {
+        return this.domains == null ? Output.empty() : this.domains;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="verticals")
-      private final @Nullable Input<List<String>> verticals;
+      private final @Nullable Output<List<String>> verticals;
 
-    public Input<List<String>> getVerticals() {
-        return this.verticals == null ? Input.empty() : this.verticals;
+    public Output<List<String>> getVerticals() {
+        return this.verticals == null ? Output.empty() : this.verticals;
     }
 
     public MetadataCategoriesArgs(
-        @Nullable Input<List<String>> domains,
-        @Nullable Input<List<String>> verticals) {
+        @Nullable Output<List<String>> domains,
+        @Nullable Output<List<String>> verticals) {
         this.domains = domains;
         this.verticals = verticals;
     }
 
     private MetadataCategoriesArgs() {
-        this.domains = Input.empty();
-        this.verticals = Input.empty();
+        this.domains = Output.empty();
+        this.verticals = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> domains;
-        private @Nullable Input<List<String>> verticals;
+        private @Nullable Output<List<String>> domains;
+        private @Nullable Output<List<String>> verticals;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
     	      this.verticals = defaults.verticals;
         }
 
-        public Builder domains(@Nullable Input<List<String>> domains) {
+        public Builder domains(@Nullable Output<List<String>> domains) {
             this.domains = domains;
             return this;
         }
 
         public Builder domains(@Nullable List<String> domains) {
-            this.domains = Input.ofNullable(domains);
+            this.domains = Output.ofNullable(domains);
             return this;
         }
 
-        public Builder verticals(@Nullable Input<List<String>> verticals) {
+        public Builder verticals(@Nullable Output<List<String>> verticals) {
             this.verticals = verticals;
             return this;
         }
 
         public Builder verticals(@Nullable List<String> verticals) {
-            this.verticals = Input.ofNullable(verticals);
+            this.verticals = Output.ofNullable(verticals);
             return this;
         }
         public MetadataCategoriesArgs build() {

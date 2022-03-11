@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabric.enums.RollingUpgradeMode;
 import io.pulumi.azurenative.servicefabric.inputs.ArmApplicationHealthPolicyArgs;
 import io.pulumi.azurenative.servicefabric.inputs.ArmRollingUpgradeMonitoringPolicyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="applicationHealthPolicy")
-      private final @Nullable Input<ArmApplicationHealthPolicyArgs> applicationHealthPolicy;
+      private final @Nullable Output<ArmApplicationHealthPolicyArgs> applicationHealthPolicy;
 
-    public Input<ArmApplicationHealthPolicyArgs> getApplicationHealthPolicy() {
-        return this.applicationHealthPolicy == null ? Input.empty() : this.applicationHealthPolicy;
+    public Output<ArmApplicationHealthPolicyArgs> getApplicationHealthPolicy() {
+        return this.applicationHealthPolicy == null ? Output.empty() : this.applicationHealthPolicy;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="forceRestart")
-      private final @Nullable Input<Boolean> forceRestart;
+      private final @Nullable Output<Boolean> forceRestart;
 
-    public Input<Boolean> getForceRestart() {
-        return this.forceRestart == null ? Input.empty() : this.forceRestart;
+    public Output<Boolean> getForceRestart() {
+        return this.forceRestart == null ? Output.empty() : this.forceRestart;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="recreateApplication")
-      private final @Nullable Input<Boolean> recreateApplication;
+      private final @Nullable Output<Boolean> recreateApplication;
 
-    public Input<Boolean> getRecreateApplication() {
-        return this.recreateApplication == null ? Input.empty() : this.recreateApplication;
+    public Output<Boolean> getRecreateApplication() {
+        return this.recreateApplication == null ? Output.empty() : this.recreateApplication;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rollingUpgradeMonitoringPolicy")
-      private final @Nullable Input<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy;
+      private final @Nullable Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy;
 
-    public Input<ArmRollingUpgradeMonitoringPolicyArgs> getRollingUpgradeMonitoringPolicy() {
-        return this.rollingUpgradeMonitoringPolicy == null ? Input.empty() : this.rollingUpgradeMonitoringPolicy;
+    public Output<ArmRollingUpgradeMonitoringPolicyArgs> getRollingUpgradeMonitoringPolicy() {
+        return this.rollingUpgradeMonitoringPolicy == null ? Output.empty() : this.rollingUpgradeMonitoringPolicy;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="upgradeMode")
-      private final @Nullable Input<Either<String,RollingUpgradeMode>> upgradeMode;
+      private final @Nullable Output<Either<String,RollingUpgradeMode>> upgradeMode;
 
-    public Input<Either<String,RollingUpgradeMode>> getUpgradeMode() {
-        return this.upgradeMode == null ? Input.empty() : this.upgradeMode;
+    public Output<Either<String,RollingUpgradeMode>> getUpgradeMode() {
+        return this.upgradeMode == null ? Output.empty() : this.upgradeMode;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="upgradeReplicaSetCheckTimeout")
-      private final @Nullable Input<String> upgradeReplicaSetCheckTimeout;
+      private final @Nullable Output<String> upgradeReplicaSetCheckTimeout;
 
-    public Input<String> getUpgradeReplicaSetCheckTimeout() {
-        return this.upgradeReplicaSetCheckTimeout == null ? Input.empty() : this.upgradeReplicaSetCheckTimeout;
+    public Output<String> getUpgradeReplicaSetCheckTimeout() {
+        return this.upgradeReplicaSetCheckTimeout == null ? Output.empty() : this.upgradeReplicaSetCheckTimeout;
     }
 
     public ApplicationUpgradePolicyArgs(
-        @Nullable Input<ArmApplicationHealthPolicyArgs> applicationHealthPolicy,
-        @Nullable Input<Boolean> forceRestart,
-        @Nullable Input<Boolean> recreateApplication,
-        @Nullable Input<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy,
-        @Nullable Input<Either<String,RollingUpgradeMode>> upgradeMode,
-        @Nullable Input<String> upgradeReplicaSetCheckTimeout) {
+        @Nullable Output<ArmApplicationHealthPolicyArgs> applicationHealthPolicy,
+        @Nullable Output<Boolean> forceRestart,
+        @Nullable Output<Boolean> recreateApplication,
+        @Nullable Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy,
+        @Nullable Output<Either<String,RollingUpgradeMode>> upgradeMode,
+        @Nullable Output<String> upgradeReplicaSetCheckTimeout) {
         this.applicationHealthPolicy = applicationHealthPolicy;
         this.forceRestart = forceRestart;
         this.recreateApplication = recreateApplication;
@@ -105,12 +105,12 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     }
 
     private ApplicationUpgradePolicyArgs() {
-        this.applicationHealthPolicy = Input.empty();
-        this.forceRestart = Input.empty();
-        this.recreateApplication = Input.empty();
-        this.rollingUpgradeMonitoringPolicy = Input.empty();
-        this.upgradeMode = Input.empty();
-        this.upgradeReplicaSetCheckTimeout = Input.empty();
+        this.applicationHealthPolicy = Output.empty();
+        this.forceRestart = Output.empty();
+        this.recreateApplication = Output.empty();
+        this.rollingUpgradeMonitoringPolicy = Output.empty();
+        this.upgradeMode = Output.empty();
+        this.upgradeReplicaSetCheckTimeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<ArmApplicationHealthPolicyArgs> applicationHealthPolicy;
-        private @Nullable Input<Boolean> forceRestart;
-        private @Nullable Input<Boolean> recreateApplication;
-        private @Nullable Input<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy;
-        private @Nullable Input<Either<String,RollingUpgradeMode>> upgradeMode;
-        private @Nullable Input<String> upgradeReplicaSetCheckTimeout;
+        private @Nullable Output<ArmApplicationHealthPolicyArgs> applicationHealthPolicy;
+        private @Nullable Output<Boolean> forceRestart;
+        private @Nullable Output<Boolean> recreateApplication;
+        private @Nullable Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy;
+        private @Nullable Output<Either<String,RollingUpgradeMode>> upgradeMode;
+        private @Nullable Output<String> upgradeReplicaSetCheckTimeout;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     	      this.upgradeReplicaSetCheckTimeout = defaults.upgradeReplicaSetCheckTimeout;
         }
 
-        public Builder applicationHealthPolicy(@Nullable Input<ArmApplicationHealthPolicyArgs> applicationHealthPolicy) {
+        public Builder applicationHealthPolicy(@Nullable Output<ArmApplicationHealthPolicyArgs> applicationHealthPolicy) {
             this.applicationHealthPolicy = applicationHealthPolicy;
             return this;
         }
 
         public Builder applicationHealthPolicy(@Nullable ArmApplicationHealthPolicyArgs applicationHealthPolicy) {
-            this.applicationHealthPolicy = Input.ofNullable(applicationHealthPolicy);
+            this.applicationHealthPolicy = Output.ofNullable(applicationHealthPolicy);
             return this;
         }
 
-        public Builder forceRestart(@Nullable Input<Boolean> forceRestart) {
+        public Builder forceRestart(@Nullable Output<Boolean> forceRestart) {
             this.forceRestart = forceRestart;
             return this;
         }
 
         public Builder forceRestart(@Nullable Boolean forceRestart) {
-            this.forceRestart = Input.ofNullable(forceRestart);
+            this.forceRestart = Output.ofNullable(forceRestart);
             return this;
         }
 
-        public Builder recreateApplication(@Nullable Input<Boolean> recreateApplication) {
+        public Builder recreateApplication(@Nullable Output<Boolean> recreateApplication) {
             this.recreateApplication = recreateApplication;
             return this;
         }
 
         public Builder recreateApplication(@Nullable Boolean recreateApplication) {
-            this.recreateApplication = Input.ofNullable(recreateApplication);
+            this.recreateApplication = Output.ofNullable(recreateApplication);
             return this;
         }
 
-        public Builder rollingUpgradeMonitoringPolicy(@Nullable Input<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy) {
+        public Builder rollingUpgradeMonitoringPolicy(@Nullable Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy) {
             this.rollingUpgradeMonitoringPolicy = rollingUpgradeMonitoringPolicy;
             return this;
         }
 
         public Builder rollingUpgradeMonitoringPolicy(@Nullable ArmRollingUpgradeMonitoringPolicyArgs rollingUpgradeMonitoringPolicy) {
-            this.rollingUpgradeMonitoringPolicy = Input.ofNullable(rollingUpgradeMonitoringPolicy);
+            this.rollingUpgradeMonitoringPolicy = Output.ofNullable(rollingUpgradeMonitoringPolicy);
             return this;
         }
 
-        public Builder upgradeMode(@Nullable Input<Either<String,RollingUpgradeMode>> upgradeMode) {
+        public Builder upgradeMode(@Nullable Output<Either<String,RollingUpgradeMode>> upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
 
         public Builder upgradeMode(@Nullable Either<String,RollingUpgradeMode> upgradeMode) {
-            this.upgradeMode = Input.ofNullable(upgradeMode);
+            this.upgradeMode = Output.ofNullable(upgradeMode);
             return this;
         }
 
-        public Builder upgradeReplicaSetCheckTimeout(@Nullable Input<String> upgradeReplicaSetCheckTimeout) {
+        public Builder upgradeReplicaSetCheckTimeout(@Nullable Output<String> upgradeReplicaSetCheckTimeout) {
             this.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
         }
 
         public Builder upgradeReplicaSetCheckTimeout(@Nullable String upgradeReplicaSetCheckTimeout) {
-            this.upgradeReplicaSetCheckTimeout = Input.ofNullable(upgradeReplicaSetCheckTimeout);
+            this.upgradeReplicaSetCheckTimeout = Output.ofNullable(upgradeReplicaSetCheckTimeout);
             return this;
         }
         public ApplicationUpgradePolicyArgs build() {

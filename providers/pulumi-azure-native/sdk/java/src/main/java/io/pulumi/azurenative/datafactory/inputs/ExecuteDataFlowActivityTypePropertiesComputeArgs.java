@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
      * 
      */
     @InputImport(name="computeType")
-      private final @Nullable Input<Object> computeType;
+      private final @Nullable Output<Object> computeType;
 
-    public Input<Object> getComputeType() {
-        return this.computeType == null ? Input.empty() : this.computeType;
+    public Output<Object> getComputeType() {
+        return this.computeType == null ? Output.empty() : this.computeType;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
      * 
      */
     @InputImport(name="coreCount")
-      private final @Nullable Input<Object> coreCount;
+      private final @Nullable Output<Object> coreCount;
 
-    public Input<Object> getCoreCount() {
-        return this.coreCount == null ? Input.empty() : this.coreCount;
+    public Output<Object> getCoreCount() {
+        return this.coreCount == null ? Output.empty() : this.coreCount;
     }
 
     public ExecuteDataFlowActivityTypePropertiesComputeArgs(
-        @Nullable Input<Object> computeType,
-        @Nullable Input<Object> coreCount) {
+        @Nullable Output<Object> computeType,
+        @Nullable Output<Object> coreCount) {
         this.computeType = computeType;
         this.coreCount = coreCount;
     }
 
     private ExecuteDataFlowActivityTypePropertiesComputeArgs() {
-        this.computeType = Input.empty();
-        this.coreCount = Input.empty();
+        this.computeType = Output.empty();
+        this.coreCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> computeType;
-        private @Nullable Input<Object> coreCount;
+        private @Nullable Output<Object> computeType;
+        private @Nullable Output<Object> coreCount;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
     	      this.coreCount = defaults.coreCount;
         }
 
-        public Builder computeType(@Nullable Input<Object> computeType) {
+        public Builder computeType(@Nullable Output<Object> computeType) {
             this.computeType = computeType;
             return this;
         }
 
         public Builder computeType(@Nullable Object computeType) {
-            this.computeType = Input.ofNullable(computeType);
+            this.computeType = Output.ofNullable(computeType);
             return this;
         }
 
-        public Builder coreCount(@Nullable Input<Object> coreCount) {
+        public Builder coreCount(@Nullable Output<Object> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
         public Builder coreCount(@Nullable Object coreCount) {
-            this.coreCount = Input.ofNullable(coreCount);
+            this.coreCount = Output.ofNullable(coreCount);
             return this;
         }
         public ExecuteDataFlowActivityTypePropertiesComputeArgs build() {

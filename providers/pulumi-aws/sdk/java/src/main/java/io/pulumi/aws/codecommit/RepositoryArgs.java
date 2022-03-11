@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codecommit;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultBranch")
-      private final @Nullable Input<String> defaultBranch;
+      private final @Nullable Output<String> defaultBranch;
 
-    public Input<String> getDefaultBranch() {
-        return this.defaultBranch == null ? Input.empty() : this.defaultBranch;
+    public Output<String> getDefaultBranch() {
+        return this.defaultBranch == null ? Output.empty() : this.defaultBranch;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName", required=true)
-      private final Input<String> repositoryName;
+      private final Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
+    public Output<String> getRepositoryName() {
         return this.repositoryName;
     }
 
@@ -53,17 +53,17 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RepositoryArgs(
-        @Nullable Input<String> defaultBranch,
-        @Nullable Input<String> description,
-        Input<String> repositoryName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> defaultBranch,
+        @Nullable Output<String> description,
+        Output<String> repositoryName,
+        @Nullable Output<Map<String,String>> tags) {
         this.defaultBranch = defaultBranch;
         this.description = description;
         this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
@@ -71,10 +71,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.defaultBranch = Input.empty();
-        this.description = Input.empty();
-        this.repositoryName = Input.empty();
-        this.tags = Input.empty();
+        this.defaultBranch = Output.empty();
+        this.description = Output.empty();
+        this.repositoryName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultBranch;
-        private @Nullable Input<String> description;
-        private Input<String> repositoryName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> defaultBranch;
+        private @Nullable Output<String> description;
+        private Output<String> repositoryName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder defaultBranch(@Nullable Input<String> defaultBranch) {
+        public Builder defaultBranch(@Nullable Output<String> defaultBranch) {
             this.defaultBranch = defaultBranch;
             return this;
         }
 
         public Builder defaultBranch(@Nullable String defaultBranch) {
-            this.defaultBranch = Input.ofNullable(defaultBranch);
+            this.defaultBranch = Output.ofNullable(defaultBranch);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder repositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
+            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RepositoryArgs build() {

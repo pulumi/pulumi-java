@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.CertificateStoreLocation;
 import io.pulumi.azurenative.batch.enums.CertificateVisibility;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,9 +18,9 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     public static final CertificateReferenceArgs Empty = new CertificateReferenceArgs();
 
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -29,10 +29,10 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storeLocation")
-      private final @Nullable Input<CertificateStoreLocation> storeLocation;
+      private final @Nullable Output<CertificateStoreLocation> storeLocation;
 
-    public Input<CertificateStoreLocation> getStoreLocation() {
-        return this.storeLocation == null ? Input.empty() : this.storeLocation;
+    public Output<CertificateStoreLocation> getStoreLocation() {
+        return this.storeLocation == null ? Output.empty() : this.storeLocation;
     }
 
     /**
@@ -40,24 +40,24 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storeName")
-      private final @Nullable Input<String> storeName;
+      private final @Nullable Output<String> storeName;
 
-    public Input<String> getStoreName() {
-        return this.storeName == null ? Input.empty() : this.storeName;
+    public Output<String> getStoreName() {
+        return this.storeName == null ? Output.empty() : this.storeName;
     }
 
     @InputImport(name="visibility")
-      private final @Nullable Input<List<CertificateVisibility>> visibility;
+      private final @Nullable Output<List<CertificateVisibility>> visibility;
 
-    public Input<List<CertificateVisibility>> getVisibility() {
-        return this.visibility == null ? Input.empty() : this.visibility;
+    public Output<List<CertificateVisibility>> getVisibility() {
+        return this.visibility == null ? Output.empty() : this.visibility;
     }
 
     public CertificateReferenceArgs(
-        Input<String> id,
-        @Nullable Input<CertificateStoreLocation> storeLocation,
-        @Nullable Input<String> storeName,
-        @Nullable Input<List<CertificateVisibility>> visibility) {
+        Output<String> id,
+        @Nullable Output<CertificateStoreLocation> storeLocation,
+        @Nullable Output<String> storeName,
+        @Nullable Output<List<CertificateVisibility>> visibility) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.storeLocation = storeLocation;
         this.storeName = storeName;
@@ -65,10 +65,10 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     }
 
     private CertificateReferenceArgs() {
-        this.id = Input.empty();
-        this.storeLocation = Input.empty();
-        this.storeName = Input.empty();
-        this.visibility = Input.empty();
+        this.id = Output.empty();
+        this.storeLocation = Output.empty();
+        this.storeName = Output.empty();
+        this.visibility = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private @Nullable Input<CertificateStoreLocation> storeLocation;
-        private @Nullable Input<String> storeName;
-        private @Nullable Input<List<CertificateVisibility>> visibility;
+        private Output<String> id;
+        private @Nullable Output<CertificateStoreLocation> storeLocation;
+        private @Nullable Output<String> storeName;
+        private @Nullable Output<List<CertificateVisibility>> visibility;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder storeLocation(@Nullable Input<CertificateStoreLocation> storeLocation) {
+        public Builder storeLocation(@Nullable Output<CertificateStoreLocation> storeLocation) {
             this.storeLocation = storeLocation;
             return this;
         }
 
         public Builder storeLocation(@Nullable CertificateStoreLocation storeLocation) {
-            this.storeLocation = Input.ofNullable(storeLocation);
+            this.storeLocation = Output.ofNullable(storeLocation);
             return this;
         }
 
-        public Builder storeName(@Nullable Input<String> storeName) {
+        public Builder storeName(@Nullable Output<String> storeName) {
             this.storeName = storeName;
             return this;
         }
 
         public Builder storeName(@Nullable String storeName) {
-            this.storeName = Input.ofNullable(storeName);
+            this.storeName = Output.ofNullable(storeName);
             return this;
         }
 
-        public Builder visibility(@Nullable Input<List<CertificateVisibility>> visibility) {
+        public Builder visibility(@Nullable Output<List<CertificateVisibility>> visibility) {
             this.visibility = visibility;
             return this;
         }
 
         public Builder visibility(@Nullable List<CertificateVisibility> visibility) {
-            this.visibility = Input.ofNullable(visibility);
+            this.visibility = Output.ofNullable(visibility);
             return this;
         }
         public CertificateReferenceArgs build() {

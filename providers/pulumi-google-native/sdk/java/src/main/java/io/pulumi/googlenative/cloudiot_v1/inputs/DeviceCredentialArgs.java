@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCredentialArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expirationTime")
-      private final @Nullable Input<String> expirationTime;
+      private final @Nullable Output<String> expirationTime;
 
-    public Input<String> getExpirationTime() {
-        return this.expirationTime == null ? Input.empty() : this.expirationTime;
+    public Output<String> getExpirationTime() {
+        return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<PublicKeyCredentialArgs> publicKey;
+      private final @Nullable Output<PublicKeyCredentialArgs> publicKey;
 
-    public Input<PublicKeyCredentialArgs> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<PublicKeyCredentialArgs> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     public DeviceCredentialArgs(
-        @Nullable Input<String> expirationTime,
-        @Nullable Input<PublicKeyCredentialArgs> publicKey) {
+        @Nullable Output<String> expirationTime,
+        @Nullable Output<PublicKeyCredentialArgs> publicKey) {
         this.expirationTime = expirationTime;
         this.publicKey = publicKey;
     }
 
     private DeviceCredentialArgs() {
-        this.expirationTime = Input.empty();
-        this.publicKey = Input.empty();
+        this.expirationTime = Output.empty();
+        this.publicKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expirationTime;
-        private @Nullable Input<PublicKeyCredentialArgs> publicKey;
+        private @Nullable Output<String> expirationTime;
+        private @Nullable Output<PublicKeyCredentialArgs> publicKey;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder expirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Input.ofNullable(expirationTime);
+            this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<PublicKeyCredentialArgs> publicKey) {
+        public Builder publicKey(@Nullable Output<PublicKeyCredentialArgs> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable PublicKeyCredentialArgs publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
         public DeviceCredentialArgs build() {

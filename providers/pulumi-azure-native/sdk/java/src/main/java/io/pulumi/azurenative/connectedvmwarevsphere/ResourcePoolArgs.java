@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.ExtendedLocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inventoryItemId")
-      private final @Nullable Input<String> inventoryItemId;
+      private final @Nullable Output<String> inventoryItemId;
 
-    public Input<String> getInventoryItemId() {
-        return this.inventoryItemId == null ? Input.empty() : this.inventoryItemId;
+    public Output<String> getInventoryItemId() {
+        return this.inventoryItemId == null ? Output.empty() : this.inventoryItemId;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moRefId")
-      private final @Nullable Input<String> moRefId;
+      private final @Nullable Output<String> moRefId;
 
-    public Input<String> getMoRefId() {
-        return this.moRefId == null ? Input.empty() : this.moRefId;
+    public Output<String> getMoRefId() {
+        return this.moRefId == null ? Output.empty() : this.moRefId;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,10 +87,10 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePoolName")
-      private final @Nullable Input<String> resourcePoolName;
+      private final @Nullable Output<String> resourcePoolName;
 
-    public Input<String> getResourcePoolName() {
-        return this.resourcePoolName == null ? Input.empty() : this.resourcePoolName;
+    public Output<String> getResourcePoolName() {
+        return this.resourcePoolName == null ? Output.empty() : this.resourcePoolName;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vCenterId")
-      private final @Nullable Input<String> vCenterId;
+      private final @Nullable Output<String> vCenterId;
 
-    public Input<String> getVCenterId() {
-        return this.vCenterId == null ? Input.empty() : this.vCenterId;
+    public Output<String> getVCenterId() {
+        return this.vCenterId == null ? Output.empty() : this.vCenterId;
     }
 
     public ResourcePoolArgs(
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<String> inventoryItemId,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> moRefId,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourcePoolName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> vCenterId) {
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<String> inventoryItemId,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> moRefId,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourcePoolName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> vCenterId) {
         this.extendedLocation = extendedLocation;
         this.inventoryItemId = inventoryItemId;
         this.kind = kind;
@@ -137,15 +137,15 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourcePoolArgs() {
-        this.extendedLocation = Input.empty();
-        this.inventoryItemId = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.moRefId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourcePoolName = Input.empty();
-        this.tags = Input.empty();
-        this.vCenterId = Input.empty();
+        this.extendedLocation = Output.empty();
+        this.inventoryItemId = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.moRefId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourcePoolName = Output.empty();
+        this.tags = Output.empty();
+        this.vCenterId = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<String> inventoryItemId;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> moRefId;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourcePoolName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> vCenterId;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<String> inventoryItemId;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> moRefId;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourcePoolName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> vCenterId;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vCenterId = defaults.vCenterId;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder inventoryItemId(@Nullable Input<String> inventoryItemId) {
+        public Builder inventoryItemId(@Nullable Output<String> inventoryItemId) {
             this.inventoryItemId = inventoryItemId;
             return this;
         }
 
         public Builder inventoryItemId(@Nullable String inventoryItemId) {
-            this.inventoryItemId = Input.ofNullable(inventoryItemId);
+            this.inventoryItemId = Output.ofNullable(inventoryItemId);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder moRefId(@Nullable Input<String> moRefId) {
+        public Builder moRefId(@Nullable Output<String> moRefId) {
             this.moRefId = moRefId;
             return this;
         }
 
         public Builder moRefId(@Nullable String moRefId) {
-            this.moRefId = Input.ofNullable(moRefId);
+            this.moRefId = Output.ofNullable(moRefId);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourcePoolName(@Nullable Input<String> resourcePoolName) {
+        public Builder resourcePoolName(@Nullable Output<String> resourcePoolName) {
             this.resourcePoolName = resourcePoolName;
             return this;
         }
 
         public Builder resourcePoolName(@Nullable String resourcePoolName) {
-            this.resourcePoolName = Input.ofNullable(resourcePoolName);
+            this.resourcePoolName = Output.ofNullable(resourcePoolName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vCenterId(@Nullable Input<String> vCenterId) {
+        public Builder vCenterId(@Nullable Output<String> vCenterId) {
             this.vCenterId = vCenterId;
             return this;
         }
 
         public Builder vCenterId(@Nullable String vCenterId) {
-            this.vCenterId = Input.ofNullable(vCenterId);
+            this.vCenterId = Output.ofNullable(vCenterId);
             return this;
         }
         public ResourcePoolArgs build() {

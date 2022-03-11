@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.LinuxConfigurationArgs;
 import io.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import io.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminPassword")
-      private final @Nullable Input<String> adminPassword;
+      private final @Nullable Output<String> adminPassword;
 
-    public Input<String> getAdminPassword() {
-        return this.adminPassword == null ? Input.empty() : this.adminPassword;
+    public Output<String> getAdminPassword() {
+        return this.adminPassword == null ? Output.empty() : this.adminPassword;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUsername")
-      private final @Nullable Input<String> adminUsername;
+      private final @Nullable Output<String> adminUsername;
 
-    public Input<String> getAdminUsername() {
-        return this.adminUsername == null ? Input.empty() : this.adminUsername;
+    public Output<String> getAdminUsername() {
+        return this.adminUsername == null ? Output.empty() : this.adminUsername;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowExtensionOperations")
-      private final @Nullable Input<Boolean> allowExtensionOperations;
+      private final @Nullable Output<Boolean> allowExtensionOperations;
 
-    public Input<Boolean> getAllowExtensionOperations() {
-        return this.allowExtensionOperations == null ? Input.empty() : this.allowExtensionOperations;
+    public Output<Boolean> getAllowExtensionOperations() {
+        return this.allowExtensionOperations == null ? Output.empty() : this.allowExtensionOperations;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computerName")
-      private final @Nullable Input<String> computerName;
+      private final @Nullable Output<String> computerName;
 
-    public Input<String> getComputerName() {
-        return this.computerName == null ? Input.empty() : this.computerName;
+    public Output<String> getComputerName() {
+        return this.computerName == null ? Output.empty() : this.computerName;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customData")
-      private final @Nullable Input<String> customData;
+      private final @Nullable Output<String> customData;
 
-    public Input<String> getCustomData() {
-        return this.customData == null ? Input.empty() : this.customData;
+    public Output<String> getCustomData() {
+        return this.customData == null ? Output.empty() : this.customData;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxConfiguration")
-      private final @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
+      private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
-    public Input<LinuxConfigurationArgs> getLinuxConfiguration() {
-        return this.linuxConfiguration == null ? Input.empty() : this.linuxConfiguration;
+    public Output<LinuxConfigurationArgs> getLinuxConfiguration() {
+        return this.linuxConfiguration == null ? Output.empty() : this.linuxConfiguration;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireGuestProvisionSignal")
-      private final @Nullable Input<Boolean> requireGuestProvisionSignal;
+      private final @Nullable Output<Boolean> requireGuestProvisionSignal;
 
-    public Input<Boolean> getRequireGuestProvisionSignal() {
-        return this.requireGuestProvisionSignal == null ? Input.empty() : this.requireGuestProvisionSignal;
+    public Output<Boolean> getRequireGuestProvisionSignal() {
+        return this.requireGuestProvisionSignal == null ? Output.empty() : this.requireGuestProvisionSignal;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secrets")
-      private final @Nullable Input<List<VaultSecretGroupArgs>> secrets;
+      private final @Nullable Output<List<VaultSecretGroupArgs>> secrets;
 
-    public Input<List<VaultSecretGroupArgs>> getSecrets() {
-        return this.secrets == null ? Input.empty() : this.secrets;
+    public Output<List<VaultSecretGroupArgs>> getSecrets() {
+        return this.secrets == null ? Output.empty() : this.secrets;
     }
 
     /**
@@ -116,22 +116,22 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsConfiguration")
-      private final @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
+      private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
-    public Input<WindowsConfigurationArgs> getWindowsConfiguration() {
-        return this.windowsConfiguration == null ? Input.empty() : this.windowsConfiguration;
+    public Output<WindowsConfigurationArgs> getWindowsConfiguration() {
+        return this.windowsConfiguration == null ? Output.empty() : this.windowsConfiguration;
     }
 
     public OSProfileArgs(
-        @Nullable Input<String> adminPassword,
-        @Nullable Input<String> adminUsername,
-        @Nullable Input<Boolean> allowExtensionOperations,
-        @Nullable Input<String> computerName,
-        @Nullable Input<String> customData,
-        @Nullable Input<LinuxConfigurationArgs> linuxConfiguration,
-        @Nullable Input<Boolean> requireGuestProvisionSignal,
-        @Nullable Input<List<VaultSecretGroupArgs>> secrets,
-        @Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
+        @Nullable Output<String> adminPassword,
+        @Nullable Output<String> adminUsername,
+        @Nullable Output<Boolean> allowExtensionOperations,
+        @Nullable Output<String> computerName,
+        @Nullable Output<String> customData,
+        @Nullable Output<LinuxConfigurationArgs> linuxConfiguration,
+        @Nullable Output<Boolean> requireGuestProvisionSignal,
+        @Nullable Output<List<VaultSecretGroupArgs>> secrets,
+        @Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
         this.adminPassword = adminPassword;
         this.adminUsername = adminUsername;
         this.allowExtensionOperations = allowExtensionOperations;
@@ -144,15 +144,15 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OSProfileArgs() {
-        this.adminPassword = Input.empty();
-        this.adminUsername = Input.empty();
-        this.allowExtensionOperations = Input.empty();
-        this.computerName = Input.empty();
-        this.customData = Input.empty();
-        this.linuxConfiguration = Input.empty();
-        this.requireGuestProvisionSignal = Input.empty();
-        this.secrets = Input.empty();
-        this.windowsConfiguration = Input.empty();
+        this.adminPassword = Output.empty();
+        this.adminUsername = Output.empty();
+        this.allowExtensionOperations = Output.empty();
+        this.computerName = Output.empty();
+        this.customData = Output.empty();
+        this.linuxConfiguration = Output.empty();
+        this.requireGuestProvisionSignal = Output.empty();
+        this.secrets = Output.empty();
+        this.windowsConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -164,15 +164,15 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> adminPassword;
-        private @Nullable Input<String> adminUsername;
-        private @Nullable Input<Boolean> allowExtensionOperations;
-        private @Nullable Input<String> computerName;
-        private @Nullable Input<String> customData;
-        private @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
-        private @Nullable Input<Boolean> requireGuestProvisionSignal;
-        private @Nullable Input<List<VaultSecretGroupArgs>> secrets;
-        private @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
+        private @Nullable Output<String> adminPassword;
+        private @Nullable Output<String> adminUsername;
+        private @Nullable Output<Boolean> allowExtensionOperations;
+        private @Nullable Output<String> computerName;
+        private @Nullable Output<String> customData;
+        private @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
+        private @Nullable Output<Boolean> requireGuestProvisionSignal;
+        private @Nullable Output<List<VaultSecretGroupArgs>> secrets;
+        private @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
         public Builder() {
     	      // Empty
@@ -191,93 +191,93 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowsConfiguration = defaults.windowsConfiguration;
         }
 
-        public Builder adminPassword(@Nullable Input<String> adminPassword) {
+        public Builder adminPassword(@Nullable Output<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Input.ofNullable(adminPassword);
+            this.adminPassword = Output.ofNullable(adminPassword);
             return this;
         }
 
-        public Builder adminUsername(@Nullable Input<String> adminUsername) {
+        public Builder adminUsername(@Nullable Output<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Input.ofNullable(adminUsername);
+            this.adminUsername = Output.ofNullable(adminUsername);
             return this;
         }
 
-        public Builder allowExtensionOperations(@Nullable Input<Boolean> allowExtensionOperations) {
+        public Builder allowExtensionOperations(@Nullable Output<Boolean> allowExtensionOperations) {
             this.allowExtensionOperations = allowExtensionOperations;
             return this;
         }
 
         public Builder allowExtensionOperations(@Nullable Boolean allowExtensionOperations) {
-            this.allowExtensionOperations = Input.ofNullable(allowExtensionOperations);
+            this.allowExtensionOperations = Output.ofNullable(allowExtensionOperations);
             return this;
         }
 
-        public Builder computerName(@Nullable Input<String> computerName) {
+        public Builder computerName(@Nullable Output<String> computerName) {
             this.computerName = computerName;
             return this;
         }
 
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = Input.ofNullable(computerName);
+            this.computerName = Output.ofNullable(computerName);
             return this;
         }
 
-        public Builder customData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Output<String> customData) {
             this.customData = customData;
             return this;
         }
 
         public Builder customData(@Nullable String customData) {
-            this.customData = Input.ofNullable(customData);
+            this.customData = Output.ofNullable(customData);
             return this;
         }
 
-        public Builder linuxConfiguration(@Nullable Input<LinuxConfigurationArgs> linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
 
         public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
-            this.linuxConfiguration = Input.ofNullable(linuxConfiguration);
+            this.linuxConfiguration = Output.ofNullable(linuxConfiguration);
             return this;
         }
 
-        public Builder requireGuestProvisionSignal(@Nullable Input<Boolean> requireGuestProvisionSignal) {
+        public Builder requireGuestProvisionSignal(@Nullable Output<Boolean> requireGuestProvisionSignal) {
             this.requireGuestProvisionSignal = requireGuestProvisionSignal;
             return this;
         }
 
         public Builder requireGuestProvisionSignal(@Nullable Boolean requireGuestProvisionSignal) {
-            this.requireGuestProvisionSignal = Input.ofNullable(requireGuestProvisionSignal);
+            this.requireGuestProvisionSignal = Output.ofNullable(requireGuestProvisionSignal);
             return this;
         }
 
-        public Builder secrets(@Nullable Input<List<VaultSecretGroupArgs>> secrets) {
+        public Builder secrets(@Nullable Output<List<VaultSecretGroupArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
         public Builder secrets(@Nullable List<VaultSecretGroupArgs> secrets) {
-            this.secrets = Input.ofNullable(secrets);
+            this.secrets = Output.ofNullable(secrets);
             return this;
         }
 
-        public Builder windowsConfiguration(@Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
 
         public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
-            this.windowsConfiguration = Input.ofNullable(windowsConfiguration);
+            this.windowsConfiguration = Output.ofNullable(windowsConfiguration);
             return this;
         }
         public OSProfileArgs build() {

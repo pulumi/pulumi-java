@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.NodeManagementArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.ShieldedInstanceConfigArgs;
@@ -28,10 +28,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="bootDiskKmsKey")
-      private final @Nullable Input<String> bootDiskKmsKey;
+      private final @Nullable Output<String> bootDiskKmsKey;
 
-    public Input<String> getBootDiskKmsKey() {
-        return this.bootDiskKmsKey == null ? Input.empty() : this.bootDiskKmsKey;
+    public Output<String> getBootDiskKmsKey() {
+        return this.bootDiskKmsKey == null ? Output.empty() : this.bootDiskKmsKey;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Output<Integer> diskSizeGb;
 
-    public Input<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<Integer> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<String> diskType;
+      private final @Nullable Output<String> diskType;
 
-    public Input<String> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<String> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="imageType")
-      private final @Nullable Input<String> imageType;
+      private final @Nullable Output<String> imageType;
 
-    public Input<String> getImageType() {
-        return this.imageType == null ? Input.empty() : this.imageType;
+    public Output<String> getImageType() {
+        return this.imageType == null ? Output.empty() : this.imageType;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="management")
-      private final @Nullable Input<NodeManagementArgs> management;
+      private final @Nullable Output<NodeManagementArgs> management;
 
-    public Input<NodeManagementArgs> getManagement() {
-        return this.management == null ? Input.empty() : this.management;
+    public Output<NodeManagementArgs> getManagement() {
+        return this.management == null ? Output.empty() : this.management;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minCpuPlatform")
-      private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Output<String> minCpuPlatform;
 
-    public Input<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
+    public Output<String> getMinCpuPlatform() {
+        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="oauthScopes")
-      private final @Nullable Input<List<String>> oauthScopes;
+      private final @Nullable Output<List<String>> oauthScopes;
 
-    public Input<List<String>> getOauthScopes() {
-        return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
+    public Output<List<String>> getOauthScopes() {
+        return this.oauthScopes == null ? Output.empty() : this.oauthScopes;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-      private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Input<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
+    public Output<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -127,23 +127,23 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="upgradeSettings")
-      private final @Nullable Input<UpgradeSettingsArgs> upgradeSettings;
+      private final @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
 
-    public Input<UpgradeSettingsArgs> getUpgradeSettings() {
-        return this.upgradeSettings == null ? Input.empty() : this.upgradeSettings;
+    public Output<UpgradeSettingsArgs> getUpgradeSettings() {
+        return this.upgradeSettings == null ? Output.empty() : this.upgradeSettings;
     }
 
     public AutoprovisioningNodePoolDefaultsArgs(
-        @Nullable Input<String> bootDiskKmsKey,
-        @Nullable Input<Integer> diskSizeGb,
-        @Nullable Input<String> diskType,
-        @Nullable Input<String> imageType,
-        @Nullable Input<NodeManagementArgs> management,
-        @Nullable Input<String> minCpuPlatform,
-        @Nullable Input<List<String>> oauthScopes,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Input<UpgradeSettingsArgs> upgradeSettings) {
+        @Nullable Output<String> bootDiskKmsKey,
+        @Nullable Output<Integer> diskSizeGb,
+        @Nullable Output<String> diskType,
+        @Nullable Output<String> imageType,
+        @Nullable Output<NodeManagementArgs> management,
+        @Nullable Output<String> minCpuPlatform,
+        @Nullable Output<List<String>> oauthScopes,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig,
+        @Nullable Output<UpgradeSettingsArgs> upgradeSettings) {
         this.bootDiskKmsKey = bootDiskKmsKey;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;
@@ -157,16 +157,16 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     }
 
     private AutoprovisioningNodePoolDefaultsArgs() {
-        this.bootDiskKmsKey = Input.empty();
-        this.diskSizeGb = Input.empty();
-        this.diskType = Input.empty();
-        this.imageType = Input.empty();
-        this.management = Input.empty();
-        this.minCpuPlatform = Input.empty();
-        this.oauthScopes = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.shieldedInstanceConfig = Input.empty();
-        this.upgradeSettings = Input.empty();
+        this.bootDiskKmsKey = Output.empty();
+        this.diskSizeGb = Output.empty();
+        this.diskType = Output.empty();
+        this.imageType = Output.empty();
+        this.management = Output.empty();
+        this.minCpuPlatform = Output.empty();
+        this.oauthScopes = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.shieldedInstanceConfig = Output.empty();
+        this.upgradeSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -178,16 +178,16 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bootDiskKmsKey;
-        private @Nullable Input<Integer> diskSizeGb;
-        private @Nullable Input<String> diskType;
-        private @Nullable Input<String> imageType;
-        private @Nullable Input<NodeManagementArgs> management;
-        private @Nullable Input<String> minCpuPlatform;
-        private @Nullable Input<List<String>> oauthScopes;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Input<UpgradeSettingsArgs> upgradeSettings;
+        private @Nullable Output<String> bootDiskKmsKey;
+        private @Nullable Output<Integer> diskSizeGb;
+        private @Nullable Output<String> diskType;
+        private @Nullable Output<String> imageType;
+        private @Nullable Output<NodeManagementArgs> management;
+        private @Nullable Output<String> minCpuPlatform;
+        private @Nullable Output<List<String>> oauthScopes;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+        private @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
 
         public Builder() {
     	      // Empty
@@ -207,103 +207,103 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     	      this.upgradeSettings = defaults.upgradeSettings;
         }
 
-        public Builder bootDiskKmsKey(@Nullable Input<String> bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(@Nullable Output<String> bootDiskKmsKey) {
             this.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
 
         public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
-            this.bootDiskKmsKey = Input.ofNullable(bootDiskKmsKey);
+            this.bootDiskKmsKey = Output.ofNullable(bootDiskKmsKey);
             return this;
         }
 
-        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder imageType(@Nullable Input<String> imageType) {
+        public Builder imageType(@Nullable Output<String> imageType) {
             this.imageType = imageType;
             return this;
         }
 
         public Builder imageType(@Nullable String imageType) {
-            this.imageType = Input.ofNullable(imageType);
+            this.imageType = Output.ofNullable(imageType);
             return this;
         }
 
-        public Builder management(@Nullable Input<NodeManagementArgs> management) {
+        public Builder management(@Nullable Output<NodeManagementArgs> management) {
             this.management = management;
             return this;
         }
 
         public Builder management(@Nullable NodeManagementArgs management) {
-            this.management = Input.ofNullable(management);
+            this.management = Output.ofNullable(management);
             return this;
         }
 
-        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder oauthScopes(@Nullable Input<List<String>> oauthScopes) {
+        public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Input.ofNullable(oauthScopes);
+            this.oauthScopes = Output.ofNullable(oauthScopes);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder shieldedInstanceConfig(@Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
         public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder upgradeSettings(@Nullable Input<UpgradeSettingsArgs> upgradeSettings) {
+        public Builder upgradeSettings(@Nullable Output<UpgradeSettingsArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
 
         public Builder upgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Input.ofNullable(upgradeSettings);
+            this.upgradeSettings = Output.ofNullable(upgradeSettings);
             return this;
         }
         public AutoprovisioningNodePoolDefaultsArgs build() {

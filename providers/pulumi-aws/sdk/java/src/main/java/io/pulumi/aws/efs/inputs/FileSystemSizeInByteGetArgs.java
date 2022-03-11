@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FileSystemSizeInByteGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Integer> value;
+      private final @Nullable Output<Integer> value;
 
-    public Input<Integer> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Integer> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class FileSystemSizeInByteGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="valueInIa")
-      private final @Nullable Input<Integer> valueInIa;
+      private final @Nullable Output<Integer> valueInIa;
 
-    public Input<Integer> getValueInIa() {
-        return this.valueInIa == null ? Input.empty() : this.valueInIa;
+    public Output<Integer> getValueInIa() {
+        return this.valueInIa == null ? Output.empty() : this.valueInIa;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class FileSystemSizeInByteGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="valueInStandard")
-      private final @Nullable Input<Integer> valueInStandard;
+      private final @Nullable Output<Integer> valueInStandard;
 
-    public Input<Integer> getValueInStandard() {
-        return this.valueInStandard == null ? Input.empty() : this.valueInStandard;
+    public Output<Integer> getValueInStandard() {
+        return this.valueInStandard == null ? Output.empty() : this.valueInStandard;
     }
 
     public FileSystemSizeInByteGetArgs(
-        @Nullable Input<Integer> value,
-        @Nullable Input<Integer> valueInIa,
-        @Nullable Input<Integer> valueInStandard) {
+        @Nullable Output<Integer> value,
+        @Nullable Output<Integer> valueInIa,
+        @Nullable Output<Integer> valueInStandard) {
         this.value = value;
         this.valueInIa = valueInIa;
         this.valueInStandard = valueInStandard;
     }
 
     private FileSystemSizeInByteGetArgs() {
-        this.value = Input.empty();
-        this.valueInIa = Input.empty();
-        this.valueInStandard = Input.empty();
+        this.value = Output.empty();
+        this.valueInIa = Output.empty();
+        this.valueInStandard = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class FileSystemSizeInByteGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> value;
-        private @Nullable Input<Integer> valueInIa;
-        private @Nullable Input<Integer> valueInStandard;
+        private @Nullable Output<Integer> value;
+        private @Nullable Output<Integer> valueInIa;
+        private @Nullable Output<Integer> valueInStandard;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class FileSystemSizeInByteGetArgs extends io.pulumi.resources.Resou
     	      this.valueInStandard = defaults.valueInStandard;
         }
 
-        public Builder value(@Nullable Input<Integer> value) {
+        public Builder value(@Nullable Output<Integer> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Integer value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
 
-        public Builder valueInIa(@Nullable Input<Integer> valueInIa) {
+        public Builder valueInIa(@Nullable Output<Integer> valueInIa) {
             this.valueInIa = valueInIa;
             return this;
         }
 
         public Builder valueInIa(@Nullable Integer valueInIa) {
-            this.valueInIa = Input.ofNullable(valueInIa);
+            this.valueInIa = Output.ofNullable(valueInIa);
             return this;
         }
 
-        public Builder valueInStandard(@Nullable Input<Integer> valueInStandard) {
+        public Builder valueInStandard(@Nullable Output<Integer> valueInStandard) {
             this.valueInStandard = valueInStandard;
             return this;
         }
 
         public Builder valueInStandard(@Nullable Integer valueInStandard) {
-            this.valueInStandard = Input.ofNullable(valueInStandard);
+            this.valueInStandard = Output.ofNullable(valueInStandard);
             return this;
         }
         public FileSystemSizeInByteGetArgs build() {

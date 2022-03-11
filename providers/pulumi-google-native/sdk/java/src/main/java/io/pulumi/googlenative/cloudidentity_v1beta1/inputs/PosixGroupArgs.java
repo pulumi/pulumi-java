@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gid")
-      private final @Nullable Input<String> gid;
+      private final @Nullable Output<String> gid;
 
-    public Input<String> getGid() {
-        return this.gid == null ? Input.empty() : this.gid;
+    public Output<String> getGid() {
+        return this.gid == null ? Output.empty() : this.gid;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemId")
-      private final @Nullable Input<String> systemId;
+      private final @Nullable Output<String> systemId;
 
-    public Input<String> getSystemId() {
-        return this.systemId == null ? Input.empty() : this.systemId;
+    public Output<String> getSystemId() {
+        return this.systemId == null ? Output.empty() : this.systemId;
     }
 
     public PosixGroupArgs(
-        @Nullable Input<String> gid,
-        @Nullable Input<String> name,
-        @Nullable Input<String> systemId) {
+        @Nullable Output<String> gid,
+        @Nullable Output<String> name,
+        @Nullable Output<String> systemId) {
         this.gid = gid;
         this.name = name;
         this.systemId = systemId;
     }
 
     private PosixGroupArgs() {
-        this.gid = Input.empty();
-        this.name = Input.empty();
-        this.systemId = Input.empty();
+        this.gid = Output.empty();
+        this.name = Output.empty();
+        this.systemId = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gid;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> systemId;
+        private @Nullable Output<String> gid;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> systemId;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.systemId = defaults.systemId;
         }
 
-        public Builder gid(@Nullable Input<String> gid) {
+        public Builder gid(@Nullable Output<String> gid) {
             this.gid = gid;
             return this;
         }
 
         public Builder gid(@Nullable String gid) {
-            this.gid = Input.ofNullable(gid);
+            this.gid = Output.ofNullable(gid);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder systemId(@Nullable Input<String> systemId) {
+        public Builder systemId(@Nullable Output<String> systemId) {
             this.systemId = systemId;
             return this;
         }
 
         public Builder systemId(@Nullable String systemId) {
-            this.systemId = Input.ofNullable(systemId);
+            this.systemId = Output.ofNullable(systemId);
             return this;
         }
         public PosixGroupArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ScopeClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseNamespace")
-      private final @Nullable Input<String> releaseNamespace;
+      private final @Nullable Output<String> releaseNamespace;
 
-    public Input<String> getReleaseNamespace() {
-        return this.releaseNamespace == null ? Input.empty() : this.releaseNamespace;
+    public Output<String> getReleaseNamespace() {
+        return this.releaseNamespace == null ? Output.empty() : this.releaseNamespace;
     }
 
-    public ScopeClusterArgs(@Nullable Input<String> releaseNamespace) {
+    public ScopeClusterArgs(@Nullable Output<String> releaseNamespace) {
         this.releaseNamespace = releaseNamespace;
     }
 
     private ScopeClusterArgs() {
-        this.releaseNamespace = Input.empty();
+        this.releaseNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ScopeClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> releaseNamespace;
+        private @Nullable Output<String> releaseNamespace;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ScopeClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.releaseNamespace = defaults.releaseNamespace;
         }
 
-        public Builder releaseNamespace(@Nullable Input<String> releaseNamespace) {
+        public Builder releaseNamespace(@Nullable Output<String> releaseNamespace) {
             this.releaseNamespace = releaseNamespace;
             return this;
         }
 
         public Builder releaseNamespace(@Nullable String releaseNamespace) {
-            this.releaseNamespace = Input.ofNullable(releaseNamespace);
+            this.releaseNamespace = Output.ofNullable(releaseNamespace);
             return this;
         }
         public ScopeClusterArgs build() {

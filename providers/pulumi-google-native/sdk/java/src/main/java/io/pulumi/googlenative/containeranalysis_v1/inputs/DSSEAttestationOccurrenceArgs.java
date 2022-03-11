@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.EnvelopeArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.InTotoStatementArgs;
@@ -24,29 +24,29 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="envelope")
-      private final @Nullable Input<EnvelopeArgs> envelope;
+      private final @Nullable Output<EnvelopeArgs> envelope;
 
-    public Input<EnvelopeArgs> getEnvelope() {
-        return this.envelope == null ? Input.empty() : this.envelope;
+    public Output<EnvelopeArgs> getEnvelope() {
+        return this.envelope == null ? Output.empty() : this.envelope;
     }
 
     @InputImport(name="statement")
-      private final @Nullable Input<InTotoStatementArgs> statement;
+      private final @Nullable Output<InTotoStatementArgs> statement;
 
-    public Input<InTotoStatementArgs> getStatement() {
-        return this.statement == null ? Input.empty() : this.statement;
+    public Output<InTotoStatementArgs> getStatement() {
+        return this.statement == null ? Output.empty() : this.statement;
     }
 
     public DSSEAttestationOccurrenceArgs(
-        @Nullable Input<EnvelopeArgs> envelope,
-        @Nullable Input<InTotoStatementArgs> statement) {
+        @Nullable Output<EnvelopeArgs> envelope,
+        @Nullable Output<InTotoStatementArgs> statement) {
         this.envelope = envelope;
         this.statement = statement;
     }
 
     private DSSEAttestationOccurrenceArgs() {
-        this.envelope = Input.empty();
-        this.statement = Input.empty();
+        this.envelope = Output.empty();
+        this.statement = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<EnvelopeArgs> envelope;
-        private @Nullable Input<InTotoStatementArgs> statement;
+        private @Nullable Output<EnvelopeArgs> envelope;
+        private @Nullable Output<InTotoStatementArgs> statement;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
     	      this.statement = defaults.statement;
         }
 
-        public Builder envelope(@Nullable Input<EnvelopeArgs> envelope) {
+        public Builder envelope(@Nullable Output<EnvelopeArgs> envelope) {
             this.envelope = envelope;
             return this;
         }
 
         public Builder envelope(@Nullable EnvelopeArgs envelope) {
-            this.envelope = Input.ofNullable(envelope);
+            this.envelope = Output.ofNullable(envelope);
             return this;
         }
 
-        public Builder statement(@Nullable Input<InTotoStatementArgs> statement) {
+        public Builder statement(@Nullable Output<InTotoStatementArgs> statement) {
             this.statement = statement;
             return this;
         }
 
         public Builder statement(@Nullable InTotoStatementArgs statement) {
-            this.statement = Input.ofNullable(statement);
+            this.statement = Output.ofNullable(statement);
             return this;
         }
         public DSSEAttestationOccurrenceArgs build() {

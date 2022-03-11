@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configurationStatus")
-      private final @Nullable Input<String> configurationStatus;
+      private final @Nullable Output<String> configurationStatus;
 
-    public Input<String> getConfigurationStatus() {
-        return this.configurationStatus == null ? Input.empty() : this.configurationStatus;
+    public Output<String> getConfigurationStatus() {
+        return this.configurationStatus == null ? Output.empty() : this.configurationStatus;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enforcementSupport")
-      private final @Nullable Input<String> enforcementSupport;
+      private final @Nullable Output<String> enforcementSupport;
 
-    public Input<String> getEnforcementSupport() {
-        return this.enforcementSupport == null ? Input.empty() : this.enforcementSupport;
+    public Output<String> getEnforcementSupport() {
+        return this.enforcementSupport == null ? Output.empty() : this.enforcementSupport;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="recommendationAction")
-      private final @Nullable Input<String> recommendationAction;
+      private final @Nullable Output<String> recommendationAction;
 
-    public Input<String> getRecommendationAction() {
-        return this.recommendationAction == null ? Input.empty() : this.recommendationAction;
+    public Output<String> getRecommendationAction() {
+        return this.recommendationAction == null ? Output.empty() : this.recommendationAction;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     public VmRecommendationArgs(
-        @Nullable Input<String> configurationStatus,
-        @Nullable Input<String> enforcementSupport,
-        @Nullable Input<String> recommendationAction,
-        @Nullable Input<String> resourceId) {
+        @Nullable Output<String> configurationStatus,
+        @Nullable Output<String> enforcementSupport,
+        @Nullable Output<String> recommendationAction,
+        @Nullable Output<String> resourceId) {
         this.configurationStatus = configurationStatus;
         this.enforcementSupport = enforcementSupport;
         this.recommendationAction = recommendationAction;
@@ -74,10 +74,10 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VmRecommendationArgs() {
-        this.configurationStatus = Input.empty();
-        this.enforcementSupport = Input.empty();
-        this.recommendationAction = Input.empty();
-        this.resourceId = Input.empty();
+        this.configurationStatus = Output.empty();
+        this.enforcementSupport = Output.empty();
+        this.recommendationAction = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configurationStatus;
-        private @Nullable Input<String> enforcementSupport;
-        private @Nullable Input<String> recommendationAction;
-        private @Nullable Input<String> resourceId;
+        private @Nullable Output<String> configurationStatus;
+        private @Nullable Output<String> enforcementSupport;
+        private @Nullable Output<String> recommendationAction;
+        private @Nullable Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder configurationStatus(@Nullable Input<String> configurationStatus) {
+        public Builder configurationStatus(@Nullable Output<String> configurationStatus) {
             this.configurationStatus = configurationStatus;
             return this;
         }
 
         public Builder configurationStatus(@Nullable String configurationStatus) {
-            this.configurationStatus = Input.ofNullable(configurationStatus);
+            this.configurationStatus = Output.ofNullable(configurationStatus);
             return this;
         }
 
-        public Builder enforcementSupport(@Nullable Input<String> enforcementSupport) {
+        public Builder enforcementSupport(@Nullable Output<String> enforcementSupport) {
             this.enforcementSupport = enforcementSupport;
             return this;
         }
 
         public Builder enforcementSupport(@Nullable String enforcementSupport) {
-            this.enforcementSupport = Input.ofNullable(enforcementSupport);
+            this.enforcementSupport = Output.ofNullable(enforcementSupport);
             return this;
         }
 
-        public Builder recommendationAction(@Nullable Input<String> recommendationAction) {
+        public Builder recommendationAction(@Nullable Output<String> recommendationAction) {
             this.recommendationAction = recommendationAction;
             return this;
         }
 
         public Builder recommendationAction(@Nullable String recommendationAction) {
-            this.recommendationAction = Input.ofNullable(recommendationAction);
+            this.recommendationAction = Output.ofNullable(recommendationAction);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
         public VmRecommendationArgs build() {

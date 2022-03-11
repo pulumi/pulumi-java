@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.inputs;
 
 import io.pulumi.azurenative.orbital.inputs.EndPointArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bandwidthMHz", required=true)
-      private final Input<Double> bandwidthMHz;
+      private final Output<Double> bandwidthMHz;
 
-    public Input<Double> getBandwidthMHz() {
+    public Output<Double> getBandwidthMHz() {
         return this.bandwidthMHz;
     }
 
@@ -36,9 +36,9 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="centerFrequencyMHz", required=true)
-      private final Input<Double> centerFrequencyMHz;
+      private final Output<Double> centerFrequencyMHz;
 
-    public Input<Double> getCenterFrequencyMHz() {
+    public Output<Double> getCenterFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
 
@@ -47,10 +47,10 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="decodingConfiguration")
-      private final @Nullable Input<String> decodingConfiguration;
+      private final @Nullable Output<String> decodingConfiguration;
 
-    public Input<String> getDecodingConfiguration() {
-        return this.decodingConfiguration == null ? Input.empty() : this.decodingConfiguration;
+    public Output<String> getDecodingConfiguration() {
+        return this.decodingConfiguration == null ? Output.empty() : this.decodingConfiguration;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="demodulationConfiguration")
-      private final @Nullable Input<String> demodulationConfiguration;
+      private final @Nullable Output<String> demodulationConfiguration;
 
-    public Input<String> getDemodulationConfiguration() {
-        return this.demodulationConfiguration == null ? Input.empty() : this.demodulationConfiguration;
+    public Output<String> getDemodulationConfiguration() {
+        return this.demodulationConfiguration == null ? Output.empty() : this.demodulationConfiguration;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="encodingConfiguration")
-      private final @Nullable Input<String> encodingConfiguration;
+      private final @Nullable Output<String> encodingConfiguration;
 
-    public Input<String> getEncodingConfiguration() {
-        return this.encodingConfiguration == null ? Input.empty() : this.encodingConfiguration;
+    public Output<String> getEncodingConfiguration() {
+        return this.encodingConfiguration == null ? Output.empty() : this.encodingConfiguration;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="endPoint", required=true)
-      private final Input<EndPointArgs> endPoint;
+      private final Output<EndPointArgs> endPoint;
 
-    public Input<EndPointArgs> getEndPoint() {
+    public Output<EndPointArgs> getEndPoint() {
         return this.endPoint;
     }
 
@@ -91,20 +91,20 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="modulationConfiguration")
-      private final @Nullable Input<String> modulationConfiguration;
+      private final @Nullable Output<String> modulationConfiguration;
 
-    public Input<String> getModulationConfiguration() {
-        return this.modulationConfiguration == null ? Input.empty() : this.modulationConfiguration;
+    public Output<String> getModulationConfiguration() {
+        return this.modulationConfiguration == null ? Output.empty() : this.modulationConfiguration;
     }
 
     public ContactProfileLinkChannelArgs(
-        Input<Double> bandwidthMHz,
-        Input<Double> centerFrequencyMHz,
-        @Nullable Input<String> decodingConfiguration,
-        @Nullable Input<String> demodulationConfiguration,
-        @Nullable Input<String> encodingConfiguration,
-        Input<EndPointArgs> endPoint,
-        @Nullable Input<String> modulationConfiguration) {
+        Output<Double> bandwidthMHz,
+        Output<Double> centerFrequencyMHz,
+        @Nullable Output<String> decodingConfiguration,
+        @Nullable Output<String> demodulationConfiguration,
+        @Nullable Output<String> encodingConfiguration,
+        Output<EndPointArgs> endPoint,
+        @Nullable Output<String> modulationConfiguration) {
         this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz, "expected parameter 'bandwidthMHz' to be non-null");
         this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz, "expected parameter 'centerFrequencyMHz' to be non-null");
         this.decodingConfiguration = decodingConfiguration;
@@ -115,13 +115,13 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
     }
 
     private ContactProfileLinkChannelArgs() {
-        this.bandwidthMHz = Input.empty();
-        this.centerFrequencyMHz = Input.empty();
-        this.decodingConfiguration = Input.empty();
-        this.demodulationConfiguration = Input.empty();
-        this.encodingConfiguration = Input.empty();
-        this.endPoint = Input.empty();
-        this.modulationConfiguration = Input.empty();
+        this.bandwidthMHz = Output.empty();
+        this.centerFrequencyMHz = Output.empty();
+        this.decodingConfiguration = Output.empty();
+        this.demodulationConfiguration = Output.empty();
+        this.encodingConfiguration = Output.empty();
+        this.endPoint = Output.empty();
+        this.modulationConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<Double> bandwidthMHz;
-        private Input<Double> centerFrequencyMHz;
-        private @Nullable Input<String> decodingConfiguration;
-        private @Nullable Input<String> demodulationConfiguration;
-        private @Nullable Input<String> encodingConfiguration;
-        private Input<EndPointArgs> endPoint;
-        private @Nullable Input<String> modulationConfiguration;
+        private Output<Double> bandwidthMHz;
+        private Output<Double> centerFrequencyMHz;
+        private @Nullable Output<String> decodingConfiguration;
+        private @Nullable Output<String> demodulationConfiguration;
+        private @Nullable Output<String> encodingConfiguration;
+        private Output<EndPointArgs> endPoint;
+        private @Nullable Output<String> modulationConfiguration;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
     	      this.modulationConfiguration = defaults.modulationConfiguration;
         }
 
-        public Builder bandwidthMHz(Input<Double> bandwidthMHz) {
+        public Builder bandwidthMHz(Output<Double> bandwidthMHz) {
             this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
             return this;
         }
 
         public Builder bandwidthMHz(Double bandwidthMHz) {
-            this.bandwidthMHz = Input.of(Objects.requireNonNull(bandwidthMHz));
+            this.bandwidthMHz = Output.of(Objects.requireNonNull(bandwidthMHz));
             return this;
         }
 
-        public Builder centerFrequencyMHz(Input<Double> centerFrequencyMHz) {
+        public Builder centerFrequencyMHz(Output<Double> centerFrequencyMHz) {
             this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
             return this;
         }
 
         public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
-            this.centerFrequencyMHz = Input.of(Objects.requireNonNull(centerFrequencyMHz));
+            this.centerFrequencyMHz = Output.of(Objects.requireNonNull(centerFrequencyMHz));
             return this;
         }
 
-        public Builder decodingConfiguration(@Nullable Input<String> decodingConfiguration) {
+        public Builder decodingConfiguration(@Nullable Output<String> decodingConfiguration) {
             this.decodingConfiguration = decodingConfiguration;
             return this;
         }
 
         public Builder decodingConfiguration(@Nullable String decodingConfiguration) {
-            this.decodingConfiguration = Input.ofNullable(decodingConfiguration);
+            this.decodingConfiguration = Output.ofNullable(decodingConfiguration);
             return this;
         }
 
-        public Builder demodulationConfiguration(@Nullable Input<String> demodulationConfiguration) {
+        public Builder demodulationConfiguration(@Nullable Output<String> demodulationConfiguration) {
             this.demodulationConfiguration = demodulationConfiguration;
             return this;
         }
 
         public Builder demodulationConfiguration(@Nullable String demodulationConfiguration) {
-            this.demodulationConfiguration = Input.ofNullable(demodulationConfiguration);
+            this.demodulationConfiguration = Output.ofNullable(demodulationConfiguration);
             return this;
         }
 
-        public Builder encodingConfiguration(@Nullable Input<String> encodingConfiguration) {
+        public Builder encodingConfiguration(@Nullable Output<String> encodingConfiguration) {
             this.encodingConfiguration = encodingConfiguration;
             return this;
         }
 
         public Builder encodingConfiguration(@Nullable String encodingConfiguration) {
-            this.encodingConfiguration = Input.ofNullable(encodingConfiguration);
+            this.encodingConfiguration = Output.ofNullable(encodingConfiguration);
             return this;
         }
 
-        public Builder endPoint(Input<EndPointArgs> endPoint) {
+        public Builder endPoint(Output<EndPointArgs> endPoint) {
             this.endPoint = Objects.requireNonNull(endPoint);
             return this;
         }
 
         public Builder endPoint(EndPointArgs endPoint) {
-            this.endPoint = Input.of(Objects.requireNonNull(endPoint));
+            this.endPoint = Output.of(Objects.requireNonNull(endPoint));
             return this;
         }
 
-        public Builder modulationConfiguration(@Nullable Input<String> modulationConfiguration) {
+        public Builder modulationConfiguration(@Nullable Output<String> modulationConfiguration) {
             this.modulationConfiguration = modulationConfiguration;
             return this;
         }
 
         public Builder modulationConfiguration(@Nullable String modulationConfiguration) {
-            this.modulationConfiguration = Input.ofNullable(modulationConfiguration);
+            this.modulationConfiguration = Output.ofNullable(modulationConfiguration);
             return this;
         }
         public ContactProfileLinkChannelArgs build() {

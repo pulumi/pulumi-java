@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleArgs;
@@ -21,9 +21,9 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
      * 
      */
     @InputImport(name="infoTypes", required=true)
-      private final Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes;
+      private final Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes;
 
-    public Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> getInfoTypes() {
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> getInfoTypes() {
         return this.infoTypes;
     }
 
@@ -33,22 +33,22 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules;
+      private final Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules;
 
-    public Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> getRules() {
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> getRules() {
         return this.rules;
     }
 
     public PreventionInspectTemplateInspectConfigRuleSetArgs(
-        Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes,
-        Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules) {
+        Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes,
+        Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules) {
         this.infoTypes = Objects.requireNonNull(infoTypes, "expected parameter 'infoTypes' to be non-null");
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetArgs() {
-        this.infoTypes = Input.empty();
-        this.rules = Input.empty();
+        this.infoTypes = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
     }
 
     public static final class Builder {
-        private Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes;
-        private Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules;
+        private Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes;
+        private Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
     	      this.rules = defaults.rules;
         }
 
-        public Builder infoTypes(Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes) {
+        public Builder infoTypes(Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
 
         public Builder infoTypes(List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs> infoTypes) {
-            this.infoTypes = Input.of(Objects.requireNonNull(infoTypes));
+            this.infoTypes = Output.of(Objects.requireNonNull(infoTypes));
             return this;
         }
 
-        public Builder rules(Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules) {
+        public Builder rules(Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
         public PreventionInspectTemplateInspectConfigRuleSetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class AssetHierarchyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="childAssetId", required=true)
-      private final Input<String> childAssetId;
+      private final Output<String> childAssetId;
 
-    public Input<String> getChildAssetId() {
+    public Output<String> getChildAssetId() {
         return this.childAssetId;
     }
 
@@ -33,22 +33,22 @@ public final class AssetHierarchyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logicalId", required=true)
-      private final Input<String> logicalId;
+      private final Output<String> logicalId;
 
-    public Input<String> getLogicalId() {
+    public Output<String> getLogicalId() {
         return this.logicalId;
     }
 
     public AssetHierarchyArgs(
-        Input<String> childAssetId,
-        Input<String> logicalId) {
+        Output<String> childAssetId,
+        Output<String> logicalId) {
         this.childAssetId = Objects.requireNonNull(childAssetId, "expected parameter 'childAssetId' to be non-null");
         this.logicalId = Objects.requireNonNull(logicalId, "expected parameter 'logicalId' to be non-null");
     }
 
     private AssetHierarchyArgs() {
-        this.childAssetId = Input.empty();
-        this.logicalId = Input.empty();
+        this.childAssetId = Output.empty();
+        this.logicalId = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AssetHierarchyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> childAssetId;
-        private Input<String> logicalId;
+        private Output<String> childAssetId;
+        private Output<String> logicalId;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AssetHierarchyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.logicalId = defaults.logicalId;
         }
 
-        public Builder childAssetId(Input<String> childAssetId) {
+        public Builder childAssetId(Output<String> childAssetId) {
             this.childAssetId = Objects.requireNonNull(childAssetId);
             return this;
         }
 
         public Builder childAssetId(String childAssetId) {
-            this.childAssetId = Input.of(Objects.requireNonNull(childAssetId));
+            this.childAssetId = Output.of(Objects.requireNonNull(childAssetId));
             return this;
         }
 
-        public Builder logicalId(Input<String> logicalId) {
+        public Builder logicalId(Output<String> logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
 
         public Builder logicalId(String logicalId) {
-            this.logicalId = Input.of(Objects.requireNonNull(logicalId));
+            this.logicalId = Output.of(Objects.requireNonNull(logicalId));
             return this;
         }
         public AssetHierarchyArgs build() {

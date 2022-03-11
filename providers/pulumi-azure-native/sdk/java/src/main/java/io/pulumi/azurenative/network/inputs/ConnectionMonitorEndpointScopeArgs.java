@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointScopeItemArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="exclude")
-      private final @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
+      private final @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
 
-    public Input<List<ConnectionMonitorEndpointScopeItemArgs>> getExclude() {
-        return this.exclude == null ? Input.empty() : this.exclude;
+    public Output<List<ConnectionMonitorEndpointScopeItemArgs>> getExclude() {
+        return this.exclude == null ? Output.empty() : this.exclude;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="include")
-      private final @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> include;
+      private final @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include;
 
-    public Input<List<ConnectionMonitorEndpointScopeItemArgs>> getInclude() {
-        return this.include == null ? Input.empty() : this.include;
+    public Output<List<ConnectionMonitorEndpointScopeItemArgs>> getInclude() {
+        return this.include == null ? Output.empty() : this.include;
     }
 
     public ConnectionMonitorEndpointScopeArgs(
-        @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> exclude,
-        @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> include) {
+        @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude,
+        @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include) {
         this.exclude = exclude;
         this.include = include;
     }
 
     private ConnectionMonitorEndpointScopeArgs() {
-        this.exclude = Input.empty();
-        this.include = Input.empty();
+        this.exclude = Output.empty();
+        this.include = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
-        private @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> include;
+        private @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
+        private @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
     	      this.include = defaults.include;
         }
 
-        public Builder exclude(@Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> exclude) {
+        public Builder exclude(@Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude) {
             this.exclude = exclude;
             return this;
         }
 
         public Builder exclude(@Nullable List<ConnectionMonitorEndpointScopeItemArgs> exclude) {
-            this.exclude = Input.ofNullable(exclude);
+            this.exclude = Output.ofNullable(exclude);
             return this;
         }
 
-        public Builder include(@Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> include) {
+        public Builder include(@Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include) {
             this.include = include;
             return this;
         }
 
         public Builder include(@Nullable List<ConnectionMonitorEndpointScopeItemArgs> include) {
-            this.include = Input.ofNullable(include);
+            this.include = Output.ofNullable(include);
             return this;
         }
         public ConnectionMonitorEndpointScopeArgs build() {

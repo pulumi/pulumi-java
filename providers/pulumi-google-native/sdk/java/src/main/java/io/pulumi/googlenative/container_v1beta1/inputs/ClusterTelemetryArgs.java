@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.ClusterTelemetryType;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<ClusterTelemetryType> type;
+      private final @Nullable Output<ClusterTelemetryType> type;
 
-    public Input<ClusterTelemetryType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ClusterTelemetryType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public ClusterTelemetryArgs(@Nullable Input<ClusterTelemetryType> type) {
+    public ClusterTelemetryArgs(@Nullable Output<ClusterTelemetryType> type) {
         this.type = type;
     }
 
     private ClusterTelemetryArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterTelemetryType> type;
+        private @Nullable Output<ClusterTelemetryType> type;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<ClusterTelemetryType> type) {
+        public Builder type(@Nullable Output<ClusterTelemetryType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ClusterTelemetryType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ClusterTelemetryArgs build() {

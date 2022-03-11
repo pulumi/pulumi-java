@@ -12,7 +12,7 @@ import io.pulumi.azurenative.databoxedge.inputs.ClientAccessRightArgs;
 import io.pulumi.azurenative.databoxedge.inputs.RefreshDetailsArgs;
 import io.pulumi.azurenative.databoxedge.inputs.UserAccessRightArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,9 +29,9 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessProtocol", required=true)
-      private final Input<Either<String,ShareAccessProtocol>> accessProtocol;
+      private final Output<Either<String,ShareAccessProtocol>> accessProtocol;
 
-    public Input<Either<String,ShareAccessProtocol>> getAccessProtocol() {
+    public Output<Either<String,ShareAccessProtocol>> getAccessProtocol() {
         return this.accessProtocol;
     }
 
@@ -40,10 +40,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureContainerInfo")
-      private final @Nullable Input<AzureContainerInfoArgs> azureContainerInfo;
+      private final @Nullable Output<AzureContainerInfoArgs> azureContainerInfo;
 
-    public Input<AzureContainerInfoArgs> getAzureContainerInfo() {
-        return this.azureContainerInfo == null ? Input.empty() : this.azureContainerInfo;
+    public Output<AzureContainerInfoArgs> getAzureContainerInfo() {
+        return this.azureContainerInfo == null ? Output.empty() : this.azureContainerInfo;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientAccessRights")
-      private final @Nullable Input<List<ClientAccessRightArgs>> clientAccessRights;
+      private final @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights;
 
-    public Input<List<ClientAccessRightArgs>> getClientAccessRights() {
-        return this.clientAccessRights == null ? Input.empty() : this.clientAccessRights;
+    public Output<List<ClientAccessRightArgs>> getClientAccessRights() {
+        return this.clientAccessRights == null ? Output.empty() : this.clientAccessRights;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataPolicy")
-      private final @Nullable Input<Either<String,DataPolicy>> dataPolicy;
+      private final @Nullable Output<Either<String,DataPolicy>> dataPolicy;
 
-    public Input<Either<String,DataPolicy>> getDataPolicy() {
-        return this.dataPolicy == null ? Input.empty() : this.dataPolicy;
+    public Output<Either<String,DataPolicy>> getDataPolicy() {
+        return this.dataPolicy == null ? Output.empty() : this.dataPolicy;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -84,9 +84,9 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -95,9 +95,9 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoringStatus", required=true)
-      private final Input<Either<String,MonitoringStatus>> monitoringStatus;
+      private final Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Input<Either<String,MonitoringStatus>> getMonitoringStatus() {
+    public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
         return this.monitoringStatus;
     }
 
@@ -106,10 +106,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refreshDetails")
-      private final @Nullable Input<RefreshDetailsArgs> refreshDetails;
+      private final @Nullable Output<RefreshDetailsArgs> refreshDetails;
 
-    public Input<RefreshDetailsArgs> getRefreshDetails() {
-        return this.refreshDetails == null ? Input.empty() : this.refreshDetails;
+    public Output<RefreshDetailsArgs> getRefreshDetails() {
+        return this.refreshDetails == null ? Output.empty() : this.refreshDetails;
     }
 
     /**
@@ -128,9 +128,9 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -139,9 +139,9 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareStatus", required=true)
-      private final Input<Either<String,ShareStatus>> shareStatus;
+      private final Output<Either<String,ShareStatus>> shareStatus;
 
-    public Input<Either<String,ShareStatus>> getShareStatus() {
+    public Output<Either<String,ShareStatus>> getShareStatus() {
         return this.shareStatus;
     }
 
@@ -150,25 +150,25 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAccessRights")
-      private final @Nullable Input<List<UserAccessRightArgs>> userAccessRights;
+      private final @Nullable Output<List<UserAccessRightArgs>> userAccessRights;
 
-    public Input<List<UserAccessRightArgs>> getUserAccessRights() {
-        return this.userAccessRights == null ? Input.empty() : this.userAccessRights;
+    public Output<List<UserAccessRightArgs>> getUserAccessRights() {
+        return this.userAccessRights == null ? Output.empty() : this.userAccessRights;
     }
 
     public ShareArgs(
-        Input<Either<String,ShareAccessProtocol>> accessProtocol,
-        @Nullable Input<AzureContainerInfoArgs> azureContainerInfo,
-        @Nullable Input<List<ClientAccessRightArgs>> clientAccessRights,
-        @Nullable Input<Either<String,DataPolicy>> dataPolicy,
-        @Nullable Input<String> description,
-        Input<String> deviceName,
-        Input<Either<String,MonitoringStatus>> monitoringStatus,
-        @Nullable Input<String> name,
-        @Nullable Input<RefreshDetailsArgs> refreshDetails,
-        Input<String> resourceGroupName,
-        Input<Either<String,ShareStatus>> shareStatus,
-        @Nullable Input<List<UserAccessRightArgs>> userAccessRights) {
+        Output<Either<String,ShareAccessProtocol>> accessProtocol,
+        @Nullable Output<AzureContainerInfoArgs> azureContainerInfo,
+        @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights,
+        @Nullable Output<Either<String,DataPolicy>> dataPolicy,
+        @Nullable Output<String> description,
+        Output<String> deviceName,
+        Output<Either<String,MonitoringStatus>> monitoringStatus,
+        @Nullable Output<String> name,
+        @Nullable Output<RefreshDetailsArgs> refreshDetails,
+        Output<String> resourceGroupName,
+        Output<Either<String,ShareStatus>> shareStatus,
+        @Nullable Output<List<UserAccessRightArgs>> userAccessRights) {
         this.accessProtocol = Objects.requireNonNull(accessProtocol, "expected parameter 'accessProtocol' to be non-null");
         this.azureContainerInfo = azureContainerInfo;
         this.clientAccessRights = clientAccessRights;
@@ -184,18 +184,18 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ShareArgs() {
-        this.accessProtocol = Input.empty();
-        this.azureContainerInfo = Input.empty();
-        this.clientAccessRights = Input.empty();
-        this.dataPolicy = Input.empty();
-        this.description = Input.empty();
-        this.deviceName = Input.empty();
-        this.monitoringStatus = Input.empty();
-        this.name = Input.empty();
-        this.refreshDetails = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareStatus = Input.empty();
-        this.userAccessRights = Input.empty();
+        this.accessProtocol = Output.empty();
+        this.azureContainerInfo = Output.empty();
+        this.clientAccessRights = Output.empty();
+        this.dataPolicy = Output.empty();
+        this.description = Output.empty();
+        this.deviceName = Output.empty();
+        this.monitoringStatus = Output.empty();
+        this.name = Output.empty();
+        this.refreshDetails = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareStatus = Output.empty();
+        this.userAccessRights = Output.empty();
     }
 
     public static Builder builder() {
@@ -207,18 +207,18 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,ShareAccessProtocol>> accessProtocol;
-        private @Nullable Input<AzureContainerInfoArgs> azureContainerInfo;
-        private @Nullable Input<List<ClientAccessRightArgs>> clientAccessRights;
-        private @Nullable Input<Either<String,DataPolicy>> dataPolicy;
-        private @Nullable Input<String> description;
-        private Input<String> deviceName;
-        private Input<Either<String,MonitoringStatus>> monitoringStatus;
-        private @Nullable Input<String> name;
-        private @Nullable Input<RefreshDetailsArgs> refreshDetails;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,ShareStatus>> shareStatus;
-        private @Nullable Input<List<UserAccessRightArgs>> userAccessRights;
+        private Output<Either<String,ShareAccessProtocol>> accessProtocol;
+        private @Nullable Output<AzureContainerInfoArgs> azureContainerInfo;
+        private @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights;
+        private @Nullable Output<Either<String,DataPolicy>> dataPolicy;
+        private @Nullable Output<String> description;
+        private Output<String> deviceName;
+        private Output<Either<String,MonitoringStatus>> monitoringStatus;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RefreshDetailsArgs> refreshDetails;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,ShareStatus>> shareStatus;
+        private @Nullable Output<List<UserAccessRightArgs>> userAccessRights;
 
         public Builder() {
     	      // Empty
@@ -240,123 +240,123 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userAccessRights = defaults.userAccessRights;
         }
 
-        public Builder accessProtocol(Input<Either<String,ShareAccessProtocol>> accessProtocol) {
+        public Builder accessProtocol(Output<Either<String,ShareAccessProtocol>> accessProtocol) {
             this.accessProtocol = Objects.requireNonNull(accessProtocol);
             return this;
         }
 
         public Builder accessProtocol(Either<String,ShareAccessProtocol> accessProtocol) {
-            this.accessProtocol = Input.of(Objects.requireNonNull(accessProtocol));
+            this.accessProtocol = Output.of(Objects.requireNonNull(accessProtocol));
             return this;
         }
 
-        public Builder azureContainerInfo(@Nullable Input<AzureContainerInfoArgs> azureContainerInfo) {
+        public Builder azureContainerInfo(@Nullable Output<AzureContainerInfoArgs> azureContainerInfo) {
             this.azureContainerInfo = azureContainerInfo;
             return this;
         }
 
         public Builder azureContainerInfo(@Nullable AzureContainerInfoArgs azureContainerInfo) {
-            this.azureContainerInfo = Input.ofNullable(azureContainerInfo);
+            this.azureContainerInfo = Output.ofNullable(azureContainerInfo);
             return this;
         }
 
-        public Builder clientAccessRights(@Nullable Input<List<ClientAccessRightArgs>> clientAccessRights) {
+        public Builder clientAccessRights(@Nullable Output<List<ClientAccessRightArgs>> clientAccessRights) {
             this.clientAccessRights = clientAccessRights;
             return this;
         }
 
         public Builder clientAccessRights(@Nullable List<ClientAccessRightArgs> clientAccessRights) {
-            this.clientAccessRights = Input.ofNullable(clientAccessRights);
+            this.clientAccessRights = Output.ofNullable(clientAccessRights);
             return this;
         }
 
-        public Builder dataPolicy(@Nullable Input<Either<String,DataPolicy>> dataPolicy) {
+        public Builder dataPolicy(@Nullable Output<Either<String,DataPolicy>> dataPolicy) {
             this.dataPolicy = dataPolicy;
             return this;
         }
 
         public Builder dataPolicy(@Nullable Either<String,DataPolicy> dataPolicy) {
-            this.dataPolicy = Input.ofNullable(dataPolicy);
+            this.dataPolicy = Output.ofNullable(dataPolicy);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder monitoringStatus(Input<Either<String,MonitoringStatus>> monitoringStatus) {
+        public Builder monitoringStatus(Output<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
 
         public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
-            this.monitoringStatus = Input.of(Objects.requireNonNull(monitoringStatus));
+            this.monitoringStatus = Output.of(Objects.requireNonNull(monitoringStatus));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder refreshDetails(@Nullable Input<RefreshDetailsArgs> refreshDetails) {
+        public Builder refreshDetails(@Nullable Output<RefreshDetailsArgs> refreshDetails) {
             this.refreshDetails = refreshDetails;
             return this;
         }
 
         public Builder refreshDetails(@Nullable RefreshDetailsArgs refreshDetails) {
-            this.refreshDetails = Input.ofNullable(refreshDetails);
+            this.refreshDetails = Output.ofNullable(refreshDetails);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareStatus(Input<Either<String,ShareStatus>> shareStatus) {
+        public Builder shareStatus(Output<Either<String,ShareStatus>> shareStatus) {
             this.shareStatus = Objects.requireNonNull(shareStatus);
             return this;
         }
 
         public Builder shareStatus(Either<String,ShareStatus> shareStatus) {
-            this.shareStatus = Input.of(Objects.requireNonNull(shareStatus));
+            this.shareStatus = Output.of(Objects.requireNonNull(shareStatus));
             return this;
         }
 
-        public Builder userAccessRights(@Nullable Input<List<UserAccessRightArgs>> userAccessRights) {
+        public Builder userAccessRights(@Nullable Output<List<UserAccessRightArgs>> userAccessRights) {
             this.userAccessRights = userAccessRights;
             return this;
         }
 
         public Builder userAccessRights(@Nullable List<UserAccessRightArgs> userAccessRights) {
-            this.userAccessRights = Input.ofNullable(userAccessRights);
+            this.userAccessRights = Output.ofNullable(userAccessRights);
             return this;
         }
         public ShareArgs build() {

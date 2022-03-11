@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptionsArgs extends io.pu
      * 
      */
     @InputImport(name="isCa")
-      private final @Nullable Input<Boolean> isCa;
+      private final @Nullable Output<Boolean> isCa;
 
-    public Input<Boolean> getIsCa() {
-        return this.isCa == null ? Input.empty() : this.isCa;
+    public Output<Boolean> getIsCa() {
+        return this.isCa == null ? Output.empty() : this.isCa;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptionsArgs extends io.pu
      * 
      */
     @InputImport(name="maxIssuerPathLength")
-      private final @Nullable Input<Integer> maxIssuerPathLength;
+      private final @Nullable Output<Integer> maxIssuerPathLength;
 
-    public Input<Integer> getMaxIssuerPathLength() {
-        return this.maxIssuerPathLength == null ? Input.empty() : this.maxIssuerPathLength;
+    public Output<Integer> getMaxIssuerPathLength() {
+        return this.maxIssuerPathLength == null ? Output.empty() : this.maxIssuerPathLength;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptionsArgs extends io.pu
      * 
      */
     @InputImport(name="nonCa")
-      private final @Nullable Input<Boolean> nonCa;
+      private final @Nullable Output<Boolean> nonCa;
 
-    public Input<Boolean> getNonCa() {
-        return this.nonCa == null ? Input.empty() : this.nonCa;
+    public Output<Boolean> getNonCa() {
+        return this.nonCa == null ? Output.empty() : this.nonCa;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptionsArgs extends io.pu
      * 
      */
     @InputImport(name="zeroMaxIssuerPathLength")
-      private final @Nullable Input<Boolean> zeroMaxIssuerPathLength;
+      private final @Nullable Output<Boolean> zeroMaxIssuerPathLength;
 
-    public Input<Boolean> getZeroMaxIssuerPathLength() {
-        return this.zeroMaxIssuerPathLength == null ? Input.empty() : this.zeroMaxIssuerPathLength;
+    public Output<Boolean> getZeroMaxIssuerPathLength() {
+        return this.zeroMaxIssuerPathLength == null ? Output.empty() : this.zeroMaxIssuerPathLength;
     }
 
     public CaPoolIssuancePolicyBaselineValuesCaOptionsArgs(
-        @Nullable Input<Boolean> isCa,
-        @Nullable Input<Integer> maxIssuerPathLength,
-        @Nullable Input<Boolean> nonCa,
-        @Nullable Input<Boolean> zeroMaxIssuerPathLength) {
+        @Nullable Output<Boolean> isCa,
+        @Nullable Output<Integer> maxIssuerPathLength,
+        @Nullable Output<Boolean> nonCa,
+        @Nullable Output<Boolean> zeroMaxIssuerPathLength) {
         this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
         this.nonCa = nonCa;
@@ -75,10 +75,10 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptionsArgs extends io.pu
     }
 
     private CaPoolIssuancePolicyBaselineValuesCaOptionsArgs() {
-        this.isCa = Input.empty();
-        this.maxIssuerPathLength = Input.empty();
-        this.nonCa = Input.empty();
-        this.zeroMaxIssuerPathLength = Input.empty();
+        this.isCa = Output.empty();
+        this.maxIssuerPathLength = Output.empty();
+        this.nonCa = Output.empty();
+        this.zeroMaxIssuerPathLength = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptionsArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isCa;
-        private @Nullable Input<Integer> maxIssuerPathLength;
-        private @Nullable Input<Boolean> nonCa;
-        private @Nullable Input<Boolean> zeroMaxIssuerPathLength;
+        private @Nullable Output<Boolean> isCa;
+        private @Nullable Output<Integer> maxIssuerPathLength;
+        private @Nullable Output<Boolean> nonCa;
+        private @Nullable Output<Boolean> zeroMaxIssuerPathLength;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class CaPoolIssuancePolicyBaselineValuesCaOptionsArgs extends io.pu
     	      this.zeroMaxIssuerPathLength = defaults.zeroMaxIssuerPathLength;
         }
 
-        public Builder isCa(@Nullable Input<Boolean> isCa) {
+        public Builder isCa(@Nullable Output<Boolean> isCa) {
             this.isCa = isCa;
             return this;
         }
 
         public Builder isCa(@Nullable Boolean isCa) {
-            this.isCa = Input.ofNullable(isCa);
+            this.isCa = Output.ofNullable(isCa);
             return this;
         }
 
-        public Builder maxIssuerPathLength(@Nullable Input<Integer> maxIssuerPathLength) {
+        public Builder maxIssuerPathLength(@Nullable Output<Integer> maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
 
         public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
-            this.maxIssuerPathLength = Input.ofNullable(maxIssuerPathLength);
+            this.maxIssuerPathLength = Output.ofNullable(maxIssuerPathLength);
             return this;
         }
 
-        public Builder nonCa(@Nullable Input<Boolean> nonCa) {
+        public Builder nonCa(@Nullable Output<Boolean> nonCa) {
             this.nonCa = nonCa;
             return this;
         }
 
         public Builder nonCa(@Nullable Boolean nonCa) {
-            this.nonCa = Input.ofNullable(nonCa);
+            this.nonCa = Output.ofNullable(nonCa);
             return this;
         }
 
-        public Builder zeroMaxIssuerPathLength(@Nullable Input<Boolean> zeroMaxIssuerPathLength) {
+        public Builder zeroMaxIssuerPathLength(@Nullable Output<Boolean> zeroMaxIssuerPathLength) {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }
 
         public Builder zeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
-            this.zeroMaxIssuerPathLength = Input.ofNullable(zeroMaxIssuerPathLength);
+            this.zeroMaxIssuerPathLength = Output.ofNullable(zeroMaxIssuerPathLength);
             return this;
         }
         public CaPoolIssuancePolicyBaselineValuesCaOptionsArgs build() {

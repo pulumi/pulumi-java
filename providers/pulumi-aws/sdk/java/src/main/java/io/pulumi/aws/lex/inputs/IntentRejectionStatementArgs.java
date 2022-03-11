@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentRejectionStatementMessageArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class IntentRejectionStatementArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="messages", required=true)
-      private final Input<List<IntentRejectionStatementMessageArgs>> messages;
+      private final Output<List<IntentRejectionStatementMessageArgs>> messages;
 
-    public Input<List<IntentRejectionStatementMessageArgs>> getMessages() {
+    public Output<List<IntentRejectionStatementMessageArgs>> getMessages() {
         return this.messages;
     }
 
@@ -36,22 +36,22 @@ public final class IntentRejectionStatementArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="responseCard")
-      private final @Nullable Input<String> responseCard;
+      private final @Nullable Output<String> responseCard;
 
-    public Input<String> getResponseCard() {
-        return this.responseCard == null ? Input.empty() : this.responseCard;
+    public Output<String> getResponseCard() {
+        return this.responseCard == null ? Output.empty() : this.responseCard;
     }
 
     public IntentRejectionStatementArgs(
-        Input<List<IntentRejectionStatementMessageArgs>> messages,
-        @Nullable Input<String> responseCard) {
+        Output<List<IntentRejectionStatementMessageArgs>> messages,
+        @Nullable Output<String> responseCard) {
         this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
         this.responseCard = responseCard;
     }
 
     private IntentRejectionStatementArgs() {
-        this.messages = Input.empty();
-        this.responseCard = Input.empty();
+        this.messages = Output.empty();
+        this.responseCard = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class IntentRejectionStatementArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<List<IntentRejectionStatementMessageArgs>> messages;
-        private @Nullable Input<String> responseCard;
+        private Output<List<IntentRejectionStatementMessageArgs>> messages;
+        private @Nullable Output<String> responseCard;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class IntentRejectionStatementArgs extends io.pulumi.resources.Reso
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder messages(Input<List<IntentRejectionStatementMessageArgs>> messages) {
+        public Builder messages(Output<List<IntentRejectionStatementMessageArgs>> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
         public Builder messages(List<IntentRejectionStatementMessageArgs> messages) {
-            this.messages = Input.of(Objects.requireNonNull(messages));
+            this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
 
-        public Builder responseCard(@Nullable Input<String> responseCard) {
+        public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
 
         public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Input.ofNullable(responseCard);
+            this.responseCard = Output.ofNullable(responseCard);
             return this;
         }
         public IntentRejectionStatementArgs build() {

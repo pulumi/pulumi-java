@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterGetArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="servicePerimeters")
-      private final @Nullable Input<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters;
+      private final @Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters;
 
-    public Input<List<ServicePerimetersServicePerimeterGetArgs>> getServicePerimeters() {
-        return this.servicePerimeters == null ? Input.empty() : this.servicePerimeters;
+    public Output<List<ServicePerimetersServicePerimeterGetArgs>> getServicePerimeters() {
+        return this.servicePerimeters == null ? Output.empty() : this.servicePerimeters;
     }
 
     public ServicePerimetersState(
-        @Nullable Input<String> parent,
-        @Nullable Input<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters) {
+        @Nullable Output<String> parent,
+        @Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters) {
         this.parent = parent;
         this.servicePerimeters = servicePerimeters;
     }
 
     private ServicePerimetersState() {
-        this.parent = Input.empty();
-        this.servicePerimeters = Input.empty();
+        this.parent = Output.empty();
+        this.servicePerimeters = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> parent;
-        private @Nullable Input<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
     	      this.servicePerimeters = defaults.servicePerimeters;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder servicePerimeters(@Nullable Input<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters) {
+        public Builder servicePerimeters(@Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters) {
             this.servicePerimeters = servicePerimeters;
             return this;
         }
 
         public Builder servicePerimeters(@Nullable List<ServicePerimetersServicePerimeterGetArgs> servicePerimeters) {
-            this.servicePerimeters = Input.ofNullable(servicePerimeters);
+            this.servicePerimeters = Output.ofNullable(servicePerimeters);
             return this;
         }
         public ServicePerimetersState build() {

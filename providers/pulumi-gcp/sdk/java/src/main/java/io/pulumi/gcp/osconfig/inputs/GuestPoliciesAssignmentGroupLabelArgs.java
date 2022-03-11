@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -19,18 +19,18 @@ public final class GuestPoliciesAssignmentGroupLabelArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="labels", required=true)
-      private final Input<Map<String,String>> labels;
+      private final Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
 
-    public GuestPoliciesAssignmentGroupLabelArgs(Input<Map<String,String>> labels) {
+    public GuestPoliciesAssignmentGroupLabelArgs(Output<Map<String,String>> labels) {
         this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
     }
 
     private GuestPoliciesAssignmentGroupLabelArgs() {
-        this.labels = Input.empty();
+        this.labels = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class GuestPoliciesAssignmentGroupLabelArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> labels;
+        private Output<Map<String,String>> labels;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class GuestPoliciesAssignmentGroupLabelArgs extends io.pulumi.resou
     	      this.labels = defaults.labels;
         }
 
-        public Builder labels(Input<Map<String,String>> labels) {
+        public Builder labels(Output<Map<String,String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
         public Builder labels(Map<String,String> labels) {
-            this.labels = Input.of(Objects.requireNonNull(labels));
+            this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
         public GuestPoliciesAssignmentGroupLabelArgs build() {

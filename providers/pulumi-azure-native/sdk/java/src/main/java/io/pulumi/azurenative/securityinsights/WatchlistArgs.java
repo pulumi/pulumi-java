@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.enums.Source;
 import io.pulumi.azurenative.securityinsights.inputs.WatchlistUserInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="created")
-      private final @Nullable Input<String> created;
+      private final @Nullable Output<String> created;
 
-    public Input<String> getCreated() {
-        return this.created == null ? Input.empty() : this.created;
+    public Output<String> getCreated() {
+        return this.created == null ? Output.empty() : this.created;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-      private final @Nullable Input<WatchlistUserInfoArgs> createdBy;
+      private final @Nullable Output<WatchlistUserInfoArgs> createdBy;
 
-    public Input<WatchlistUserInfoArgs> getCreatedBy() {
-        return this.createdBy == null ? Input.empty() : this.createdBy;
+    public Output<WatchlistUserInfoArgs> getCreatedBy() {
+        return this.createdBy == null ? Output.empty() : this.createdBy;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDuration")
-      private final @Nullable Input<String> defaultDuration;
+      private final @Nullable Output<String> defaultDuration;
 
-    public Input<String> getDefaultDuration() {
-        return this.defaultDuration == null ? Input.empty() : this.defaultDuration;
+    public Output<String> getDefaultDuration() {
+        return this.defaultDuration == null ? Output.empty() : this.defaultDuration;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -91,10 +91,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDeleted")
-      private final @Nullable Input<Boolean> isDeleted;
+      private final @Nullable Output<Boolean> isDeleted;
 
-    public Input<Boolean> getIsDeleted() {
-        return this.isDeleted == null ? Input.empty() : this.isDeleted;
+    public Output<Boolean> getIsDeleted() {
+        return this.isDeleted == null ? Output.empty() : this.isDeleted;
     }
 
     /**
@@ -102,9 +102,9 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="itemsSearchKey", required=true)
-      private final Input<String> itemsSearchKey;
+      private final Output<String> itemsSearchKey;
 
-    public Input<String> getItemsSearchKey() {
+    public Output<String> getItemsSearchKey() {
         return this.itemsSearchKey;
     }
 
@@ -113,10 +113,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<String>> labels;
+      private final @Nullable Output<List<String>> labels;
 
-    public Input<List<String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfLinesToSkip")
-      private final @Nullable Input<Integer> numberOfLinesToSkip;
+      private final @Nullable Output<Integer> numberOfLinesToSkip;
 
-    public Input<Integer> getNumberOfLinesToSkip() {
-        return this.numberOfLinesToSkip == null ? Input.empty() : this.numberOfLinesToSkip;
+    public Output<Integer> getNumberOfLinesToSkip() {
+        return this.numberOfLinesToSkip == null ? Output.empty() : this.numberOfLinesToSkip;
     }
 
     /**
@@ -135,9 +135,9 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-      private final Input<String> operationalInsightsResourceProvider;
+      private final Output<String> operationalInsightsResourceProvider;
 
-    public Input<String> getOperationalInsightsResourceProvider() {
+    public Output<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -146,9 +146,9 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provider", required=true)
-      private final Input<String> provider;
+      private final Output<String> provider;
 
-    public Input<String> getProvider() {
+    public Output<String> getProvider() {
         return this.provider;
     }
 
@@ -157,10 +157,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rawContent")
-      private final @Nullable Input<String> rawContent;
+      private final @Nullable Output<String> rawContent;
 
-    public Input<String> getRawContent() {
-        return this.rawContent == null ? Input.empty() : this.rawContent;
+    public Output<String> getRawContent() {
+        return this.rawContent == null ? Output.empty() : this.rawContent;
     }
 
     /**
@@ -168,9 +168,9 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -179,9 +179,9 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<Either<String,Source>> source;
+      private final Output<Either<String,Source>> source;
 
-    public Input<Either<String,Source>> getSource() {
+    public Output<Either<String,Source>> getSource() {
         return this.source;
     }
 
@@ -190,10 +190,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updated")
-      private final @Nullable Input<String> updated;
+      private final @Nullable Output<String> updated;
 
-    public Input<String> getUpdated() {
-        return this.updated == null ? Input.empty() : this.updated;
+    public Output<String> getUpdated() {
+        return this.updated == null ? Output.empty() : this.updated;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedBy")
-      private final @Nullable Input<WatchlistUserInfoArgs> updatedBy;
+      private final @Nullable Output<WatchlistUserInfoArgs> updatedBy;
 
-    public Input<WatchlistUserInfoArgs> getUpdatedBy() {
-        return this.updatedBy == null ? Input.empty() : this.updatedBy;
+    public Output<WatchlistUserInfoArgs> getUpdatedBy() {
+        return this.updatedBy == null ? Output.empty() : this.updatedBy;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uploadStatus")
-      private final @Nullable Input<String> uploadStatus;
+      private final @Nullable Output<String> uploadStatus;
 
-    public Input<String> getUploadStatus() {
-        return this.uploadStatus == null ? Input.empty() : this.uploadStatus;
+    public Output<String> getUploadStatus() {
+        return this.uploadStatus == null ? Output.empty() : this.uploadStatus;
     }
 
     /**
@@ -234,10 +234,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistAlias")
-      private final @Nullable Input<String> watchlistAlias;
+      private final @Nullable Output<String> watchlistAlias;
 
-    public Input<String> getWatchlistAlias() {
-        return this.watchlistAlias == null ? Input.empty() : this.watchlistAlias;
+    public Output<String> getWatchlistAlias() {
+        return this.watchlistAlias == null ? Output.empty() : this.watchlistAlias;
     }
 
     /**
@@ -245,10 +245,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistId")
-      private final @Nullable Input<String> watchlistId;
+      private final @Nullable Output<String> watchlistId;
 
-    public Input<String> getWatchlistId() {
-        return this.watchlistId == null ? Input.empty() : this.watchlistId;
+    public Output<String> getWatchlistId() {
+        return this.watchlistId == null ? Output.empty() : this.watchlistId;
     }
 
     /**
@@ -256,10 +256,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistItemsCount")
-      private final @Nullable Input<Integer> watchlistItemsCount;
+      private final @Nullable Output<Integer> watchlistItemsCount;
 
-    public Input<Integer> getWatchlistItemsCount() {
-        return this.watchlistItemsCount == null ? Input.empty() : this.watchlistItemsCount;
+    public Output<Integer> getWatchlistItemsCount() {
+        return this.watchlistItemsCount == null ? Output.empty() : this.watchlistItemsCount;
     }
 
     /**
@@ -267,10 +267,10 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistType")
-      private final @Nullable Input<String> watchlistType;
+      private final @Nullable Output<String> watchlistType;
 
-    public Input<String> getWatchlistType() {
-        return this.watchlistType == null ? Input.empty() : this.watchlistType;
+    public Output<String> getWatchlistType() {
+        return this.watchlistType == null ? Output.empty() : this.watchlistType;
     }
 
     /**
@@ -278,37 +278,37 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public WatchlistArgs(
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> created,
-        @Nullable Input<WatchlistUserInfoArgs> createdBy,
-        @Nullable Input<String> defaultDuration,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        @Nullable Input<Boolean> isDeleted,
-        Input<String> itemsSearchKey,
-        @Nullable Input<List<String>> labels,
-        @Nullable Input<Integer> numberOfLinesToSkip,
-        Input<String> operationalInsightsResourceProvider,
-        Input<String> provider,
-        @Nullable Input<String> rawContent,
-        Input<String> resourceGroupName,
-        Input<Either<String,Source>> source,
-        @Nullable Input<String> tenantId,
-        @Nullable Input<String> updated,
-        @Nullable Input<WatchlistUserInfoArgs> updatedBy,
-        @Nullable Input<String> uploadStatus,
-        @Nullable Input<String> watchlistAlias,
-        @Nullable Input<String> watchlistId,
-        @Nullable Input<Integer> watchlistItemsCount,
-        @Nullable Input<String> watchlistType,
-        Input<String> workspaceName) {
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> created,
+        @Nullable Output<WatchlistUserInfoArgs> createdBy,
+        @Nullable Output<String> defaultDuration,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        @Nullable Output<Boolean> isDeleted,
+        Output<String> itemsSearchKey,
+        @Nullable Output<List<String>> labels,
+        @Nullable Output<Integer> numberOfLinesToSkip,
+        Output<String> operationalInsightsResourceProvider,
+        Output<String> provider,
+        @Nullable Output<String> rawContent,
+        Output<String> resourceGroupName,
+        Output<Either<String,Source>> source,
+        @Nullable Output<String> tenantId,
+        @Nullable Output<String> updated,
+        @Nullable Output<WatchlistUserInfoArgs> updatedBy,
+        @Nullable Output<String> uploadStatus,
+        @Nullable Output<String> watchlistAlias,
+        @Nullable Output<String> watchlistId,
+        @Nullable Output<Integer> watchlistItemsCount,
+        @Nullable Output<String> watchlistType,
+        Output<String> workspaceName) {
         this.contentType = contentType;
         this.created = created;
         this.createdBy = createdBy;
@@ -336,30 +336,30 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WatchlistArgs() {
-        this.contentType = Input.empty();
-        this.created = Input.empty();
-        this.createdBy = Input.empty();
-        this.defaultDuration = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.isDeleted = Input.empty();
-        this.itemsSearchKey = Input.empty();
-        this.labels = Input.empty();
-        this.numberOfLinesToSkip = Input.empty();
-        this.operationalInsightsResourceProvider = Input.empty();
-        this.provider = Input.empty();
-        this.rawContent = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.source = Input.empty();
-        this.tenantId = Input.empty();
-        this.updated = Input.empty();
-        this.updatedBy = Input.empty();
-        this.uploadStatus = Input.empty();
-        this.watchlistAlias = Input.empty();
-        this.watchlistId = Input.empty();
-        this.watchlistItemsCount = Input.empty();
-        this.watchlistType = Input.empty();
-        this.workspaceName = Input.empty();
+        this.contentType = Output.empty();
+        this.created = Output.empty();
+        this.createdBy = Output.empty();
+        this.defaultDuration = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.isDeleted = Output.empty();
+        this.itemsSearchKey = Output.empty();
+        this.labels = Output.empty();
+        this.numberOfLinesToSkip = Output.empty();
+        this.operationalInsightsResourceProvider = Output.empty();
+        this.provider = Output.empty();
+        this.rawContent = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.source = Output.empty();
+        this.tenantId = Output.empty();
+        this.updated = Output.empty();
+        this.updatedBy = Output.empty();
+        this.uploadStatus = Output.empty();
+        this.watchlistAlias = Output.empty();
+        this.watchlistId = Output.empty();
+        this.watchlistItemsCount = Output.empty();
+        this.watchlistType = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -371,30 +371,30 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> created;
-        private @Nullable Input<WatchlistUserInfoArgs> createdBy;
-        private @Nullable Input<String> defaultDuration;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> isDeleted;
-        private Input<String> itemsSearchKey;
-        private @Nullable Input<List<String>> labels;
-        private @Nullable Input<Integer> numberOfLinesToSkip;
-        private Input<String> operationalInsightsResourceProvider;
-        private Input<String> provider;
-        private @Nullable Input<String> rawContent;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,Source>> source;
-        private @Nullable Input<String> tenantId;
-        private @Nullable Input<String> updated;
-        private @Nullable Input<WatchlistUserInfoArgs> updatedBy;
-        private @Nullable Input<String> uploadStatus;
-        private @Nullable Input<String> watchlistAlias;
-        private @Nullable Input<String> watchlistId;
-        private @Nullable Input<Integer> watchlistItemsCount;
-        private @Nullable Input<String> watchlistType;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> created;
+        private @Nullable Output<WatchlistUserInfoArgs> createdBy;
+        private @Nullable Output<String> defaultDuration;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> isDeleted;
+        private Output<String> itemsSearchKey;
+        private @Nullable Output<List<String>> labels;
+        private @Nullable Output<Integer> numberOfLinesToSkip;
+        private Output<String> operationalInsightsResourceProvider;
+        private Output<String> provider;
+        private @Nullable Output<String> rawContent;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,Source>> source;
+        private @Nullable Output<String> tenantId;
+        private @Nullable Output<String> updated;
+        private @Nullable Output<WatchlistUserInfoArgs> updatedBy;
+        private @Nullable Output<String> uploadStatus;
+        private @Nullable Output<String> watchlistAlias;
+        private @Nullable Output<String> watchlistId;
+        private @Nullable Output<Integer> watchlistItemsCount;
+        private @Nullable Output<String> watchlistType;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -428,243 +428,243 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder created(@Nullable Input<String> created) {
+        public Builder created(@Nullable Output<String> created) {
             this.created = created;
             return this;
         }
 
         public Builder created(@Nullable String created) {
-            this.created = Input.ofNullable(created);
+            this.created = Output.ofNullable(created);
             return this;
         }
 
-        public Builder createdBy(@Nullable Input<WatchlistUserInfoArgs> createdBy) {
+        public Builder createdBy(@Nullable Output<WatchlistUserInfoArgs> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
         public Builder createdBy(@Nullable WatchlistUserInfoArgs createdBy) {
-            this.createdBy = Input.ofNullable(createdBy);
+            this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
 
-        public Builder defaultDuration(@Nullable Input<String> defaultDuration) {
+        public Builder defaultDuration(@Nullable Output<String> defaultDuration) {
             this.defaultDuration = defaultDuration;
             return this;
         }
 
         public Builder defaultDuration(@Nullable String defaultDuration) {
-            this.defaultDuration = Input.ofNullable(defaultDuration);
+            this.defaultDuration = Output.ofNullable(defaultDuration);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder isDeleted(@Nullable Input<Boolean> isDeleted) {
+        public Builder isDeleted(@Nullable Output<Boolean> isDeleted) {
             this.isDeleted = isDeleted;
             return this;
         }
 
         public Builder isDeleted(@Nullable Boolean isDeleted) {
-            this.isDeleted = Input.ofNullable(isDeleted);
+            this.isDeleted = Output.ofNullable(isDeleted);
             return this;
         }
 
-        public Builder itemsSearchKey(Input<String> itemsSearchKey) {
+        public Builder itemsSearchKey(Output<String> itemsSearchKey) {
             this.itemsSearchKey = Objects.requireNonNull(itemsSearchKey);
             return this;
         }
 
         public Builder itemsSearchKey(String itemsSearchKey) {
-            this.itemsSearchKey = Input.of(Objects.requireNonNull(itemsSearchKey));
+            this.itemsSearchKey = Output.of(Objects.requireNonNull(itemsSearchKey));
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<String>> labels) {
+        public Builder labels(@Nullable Output<List<String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder numberOfLinesToSkip(@Nullable Input<Integer> numberOfLinesToSkip) {
+        public Builder numberOfLinesToSkip(@Nullable Output<Integer> numberOfLinesToSkip) {
             this.numberOfLinesToSkip = numberOfLinesToSkip;
             return this;
         }
 
         public Builder numberOfLinesToSkip(@Nullable Integer numberOfLinesToSkip) {
-            this.numberOfLinesToSkip = Input.ofNullable(numberOfLinesToSkip);
+            this.numberOfLinesToSkip = Output.ofNullable(numberOfLinesToSkip);
             return this;
         }
 
-        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
+            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder provider(Input<String> provider) {
+        public Builder provider(Output<String> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
         public Builder provider(String provider) {
-            this.provider = Input.of(Objects.requireNonNull(provider));
+            this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
 
-        public Builder rawContent(@Nullable Input<String> rawContent) {
+        public Builder rawContent(@Nullable Output<String> rawContent) {
             this.rawContent = rawContent;
             return this;
         }
 
         public Builder rawContent(@Nullable String rawContent) {
-            this.rawContent = Input.ofNullable(rawContent);
+            this.rawContent = Output.ofNullable(rawContent);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder source(Input<Either<String,Source>> source) {
+        public Builder source(Output<Either<String,Source>> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(Either<String,Source> source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
 
-        public Builder updated(@Nullable Input<String> updated) {
+        public Builder updated(@Nullable Output<String> updated) {
             this.updated = updated;
             return this;
         }
 
         public Builder updated(@Nullable String updated) {
-            this.updated = Input.ofNullable(updated);
+            this.updated = Output.ofNullable(updated);
             return this;
         }
 
-        public Builder updatedBy(@Nullable Input<WatchlistUserInfoArgs> updatedBy) {
+        public Builder updatedBy(@Nullable Output<WatchlistUserInfoArgs> updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
 
         public Builder updatedBy(@Nullable WatchlistUserInfoArgs updatedBy) {
-            this.updatedBy = Input.ofNullable(updatedBy);
+            this.updatedBy = Output.ofNullable(updatedBy);
             return this;
         }
 
-        public Builder uploadStatus(@Nullable Input<String> uploadStatus) {
+        public Builder uploadStatus(@Nullable Output<String> uploadStatus) {
             this.uploadStatus = uploadStatus;
             return this;
         }
 
         public Builder uploadStatus(@Nullable String uploadStatus) {
-            this.uploadStatus = Input.ofNullable(uploadStatus);
+            this.uploadStatus = Output.ofNullable(uploadStatus);
             return this;
         }
 
-        public Builder watchlistAlias(@Nullable Input<String> watchlistAlias) {
+        public Builder watchlistAlias(@Nullable Output<String> watchlistAlias) {
             this.watchlistAlias = watchlistAlias;
             return this;
         }
 
         public Builder watchlistAlias(@Nullable String watchlistAlias) {
-            this.watchlistAlias = Input.ofNullable(watchlistAlias);
+            this.watchlistAlias = Output.ofNullable(watchlistAlias);
             return this;
         }
 
-        public Builder watchlistId(@Nullable Input<String> watchlistId) {
+        public Builder watchlistId(@Nullable Output<String> watchlistId) {
             this.watchlistId = watchlistId;
             return this;
         }
 
         public Builder watchlistId(@Nullable String watchlistId) {
-            this.watchlistId = Input.ofNullable(watchlistId);
+            this.watchlistId = Output.ofNullable(watchlistId);
             return this;
         }
 
-        public Builder watchlistItemsCount(@Nullable Input<Integer> watchlistItemsCount) {
+        public Builder watchlistItemsCount(@Nullable Output<Integer> watchlistItemsCount) {
             this.watchlistItemsCount = watchlistItemsCount;
             return this;
         }
 
         public Builder watchlistItemsCount(@Nullable Integer watchlistItemsCount) {
-            this.watchlistItemsCount = Input.ofNullable(watchlistItemsCount);
+            this.watchlistItemsCount = Output.ofNullable(watchlistItemsCount);
             return this;
         }
 
-        public Builder watchlistType(@Nullable Input<String> watchlistType) {
+        public Builder watchlistType(@Nullable Output<String> watchlistType) {
             this.watchlistType = watchlistType;
             return this;
         }
 
         public Builder watchlistType(@Nullable String watchlistType) {
-            this.watchlistType = Input.ofNullable(watchlistType);
+            this.watchlistType = Output.ofNullable(watchlistType);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public WatchlistArgs build() {

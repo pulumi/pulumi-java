@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-      private final @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
+      private final @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
-    public Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> getNetworkInterfaceConfigurations() {
-        return this.networkInterfaceConfigurations == null ? Input.empty() : this.networkInterfaceConfigurations;
+    public Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> getNetworkInterfaceConfigurations() {
+        return this.networkInterfaceConfigurations == null ? Output.empty() : this.networkInterfaceConfigurations;
     }
 
-    public VirtualMachineScaleSetVMNetworkProfileConfigurationArgs(@Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
+    public VirtualMachineScaleSetVMNetworkProfileConfigurationArgs(@Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
     }
 
     private VirtualMachineScaleSetVMNetworkProfileConfigurationArgs() {
-        this.networkInterfaceConfigurations = Input.empty();
+        this.networkInterfaceConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
+        private @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
     	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
         }
 
-        public Builder networkInterfaceConfigurations(@Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = Input.ofNullable(networkInterfaceConfigurations);
+            this.networkInterfaceConfigurations = Output.ofNullable(networkInterfaceConfigurations);
             return this;
         }
         public VirtualMachineScaleSetVMNetworkProfileConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.docdb.inputs;
 
 import io.pulumi.aws.docdb.inputs.GlobalClusterGlobalClusterMemberGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -44,17 +44,17 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionProtection")
-      private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Output<Boolean> deletionProtection;
 
-    public Input<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
+    public Output<Boolean> getDeletionProtection() {
+        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalClusterIdentifier")
-      private final @Nullable Input<String> globalClusterIdentifier;
+      private final @Nullable Output<String> globalClusterIdentifier;
 
-    public Input<String> getGlobalClusterIdentifier() {
-        return this.globalClusterIdentifier == null ? Input.empty() : this.globalClusterIdentifier;
+    public Output<String> getGlobalClusterIdentifier() {
+        return this.globalClusterIdentifier == null ? Output.empty() : this.globalClusterIdentifier;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalClusterMembers")
-      private final @Nullable Input<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
+      private final @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
 
-    public Input<List<GlobalClusterGlobalClusterMemberGetArgs>> getGlobalClusterMembers() {
-        return this.globalClusterMembers == null ? Input.empty() : this.globalClusterMembers;
+    public Output<List<GlobalClusterGlobalClusterMemberGetArgs>> getGlobalClusterMembers() {
+        return this.globalClusterMembers == null ? Output.empty() : this.globalClusterMembers;
     }
 
     /**
@@ -96,45 +96,45 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalClusterResourceId")
-      private final @Nullable Input<String> globalClusterResourceId;
+      private final @Nullable Output<String> globalClusterResourceId;
 
-    public Input<String> getGlobalClusterResourceId() {
-        return this.globalClusterResourceId == null ? Input.empty() : this.globalClusterResourceId;
+    public Output<String> getGlobalClusterResourceId() {
+        return this.globalClusterResourceId == null ? Output.empty() : this.globalClusterResourceId;
     }
 
     @InputImport(name="sourceDbClusterIdentifier")
-      private final @Nullable Input<String> sourceDbClusterIdentifier;
+      private final @Nullable Output<String> sourceDbClusterIdentifier;
 
-    public Input<String> getSourceDbClusterIdentifier() {
-        return this.sourceDbClusterIdentifier == null ? Input.empty() : this.sourceDbClusterIdentifier;
+    public Output<String> getSourceDbClusterIdentifier() {
+        return this.sourceDbClusterIdentifier == null ? Output.empty() : this.sourceDbClusterIdentifier;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     @InputImport(name="storageEncrypted")
-      private final @Nullable Input<Boolean> storageEncrypted;
+      private final @Nullable Output<Boolean> storageEncrypted;
 
-    public Input<Boolean> getStorageEncrypted() {
-        return this.storageEncrypted == null ? Input.empty() : this.storageEncrypted;
+    public Output<Boolean> getStorageEncrypted() {
+        return this.storageEncrypted == null ? Output.empty() : this.storageEncrypted;
     }
 
     public GlobalClusterState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<Boolean> deletionProtection,
-        @Nullable Input<String> engine,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<String> globalClusterIdentifier,
-        @Nullable Input<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers,
-        @Nullable Input<String> globalClusterResourceId,
-        @Nullable Input<String> sourceDbClusterIdentifier,
-        @Nullable Input<String> status,
-        @Nullable Input<Boolean> storageEncrypted) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<Boolean> deletionProtection,
+        @Nullable Output<String> engine,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<String> globalClusterIdentifier,
+        @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers,
+        @Nullable Output<String> globalClusterResourceId,
+        @Nullable Output<String> sourceDbClusterIdentifier,
+        @Nullable Output<String> status,
+        @Nullable Output<Boolean> storageEncrypted) {
         this.arn = arn;
         this.databaseName = databaseName;
         this.deletionProtection = deletionProtection;
@@ -149,17 +149,17 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlobalClusterState() {
-        this.arn = Input.empty();
-        this.databaseName = Input.empty();
-        this.deletionProtection = Input.empty();
-        this.engine = Input.empty();
-        this.engineVersion = Input.empty();
-        this.globalClusterIdentifier = Input.empty();
-        this.globalClusterMembers = Input.empty();
-        this.globalClusterResourceId = Input.empty();
-        this.sourceDbClusterIdentifier = Input.empty();
-        this.status = Input.empty();
-        this.storageEncrypted = Input.empty();
+        this.arn = Output.empty();
+        this.databaseName = Output.empty();
+        this.deletionProtection = Output.empty();
+        this.engine = Output.empty();
+        this.engineVersion = Output.empty();
+        this.globalClusterIdentifier = Output.empty();
+        this.globalClusterMembers = Output.empty();
+        this.globalClusterResourceId = Output.empty();
+        this.sourceDbClusterIdentifier = Output.empty();
+        this.status = Output.empty();
+        this.storageEncrypted = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,17 +171,17 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<Boolean> deletionProtection;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<String> globalClusterIdentifier;
-        private @Nullable Input<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
-        private @Nullable Input<String> globalClusterResourceId;
-        private @Nullable Input<String> sourceDbClusterIdentifier;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Boolean> storageEncrypted;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<Boolean> deletionProtection;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<String> globalClusterIdentifier;
+        private @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
+        private @Nullable Output<String> globalClusterResourceId;
+        private @Nullable Output<String> sourceDbClusterIdentifier;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Boolean> storageEncrypted;
 
         public Builder() {
     	      // Empty
@@ -202,113 +202,113 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.storageEncrypted = defaults.storageEncrypted;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Input.ofNullable(deletionProtection);
+            this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder globalClusterIdentifier(@Nullable Input<String> globalClusterIdentifier) {
+        public Builder globalClusterIdentifier(@Nullable Output<String> globalClusterIdentifier) {
             this.globalClusterIdentifier = globalClusterIdentifier;
             return this;
         }
 
         public Builder globalClusterIdentifier(@Nullable String globalClusterIdentifier) {
-            this.globalClusterIdentifier = Input.ofNullable(globalClusterIdentifier);
+            this.globalClusterIdentifier = Output.ofNullable(globalClusterIdentifier);
             return this;
         }
 
-        public Builder globalClusterMembers(@Nullable Input<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers) {
+        public Builder globalClusterMembers(@Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers) {
             this.globalClusterMembers = globalClusterMembers;
             return this;
         }
 
         public Builder globalClusterMembers(@Nullable List<GlobalClusterGlobalClusterMemberGetArgs> globalClusterMembers) {
-            this.globalClusterMembers = Input.ofNullable(globalClusterMembers);
+            this.globalClusterMembers = Output.ofNullable(globalClusterMembers);
             return this;
         }
 
-        public Builder globalClusterResourceId(@Nullable Input<String> globalClusterResourceId) {
+        public Builder globalClusterResourceId(@Nullable Output<String> globalClusterResourceId) {
             this.globalClusterResourceId = globalClusterResourceId;
             return this;
         }
 
         public Builder globalClusterResourceId(@Nullable String globalClusterResourceId) {
-            this.globalClusterResourceId = Input.ofNullable(globalClusterResourceId);
+            this.globalClusterResourceId = Output.ofNullable(globalClusterResourceId);
             return this;
         }
 
-        public Builder sourceDbClusterIdentifier(@Nullable Input<String> sourceDbClusterIdentifier) {
+        public Builder sourceDbClusterIdentifier(@Nullable Output<String> sourceDbClusterIdentifier) {
             this.sourceDbClusterIdentifier = sourceDbClusterIdentifier;
             return this;
         }
 
         public Builder sourceDbClusterIdentifier(@Nullable String sourceDbClusterIdentifier) {
-            this.sourceDbClusterIdentifier = Input.ofNullable(sourceDbClusterIdentifier);
+            this.sourceDbClusterIdentifier = Output.ofNullable(sourceDbClusterIdentifier);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder storageEncrypted(@Nullable Input<Boolean> storageEncrypted) {
+        public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
 
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
-            this.storageEncrypted = Input.ofNullable(storageEncrypted);
+            this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
         }
         public GlobalClusterState build() {

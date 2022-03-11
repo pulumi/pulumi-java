@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="messageId", required=true)
-      private final Input<String> messageId;
+      private final Output<String> messageId;
 
-    public Input<String> getMessageId() {
+    public Output<String> getMessageId() {
         return this.messageId;
     }
 
@@ -34,9 +34,9 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schemaName", required=true)
-      private final Input<String> schemaName;
+      private final Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
+    public Output<String> getSchemaName() {
         return this.schemaName;
     }
 
@@ -45,9 +45,9 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schemaVersion", required=true)
-      private final Input<String> schemaVersion;
+      private final Output<String> schemaVersion;
 
-    public Input<String> getSchemaVersion() {
+    public Output<String> getSchemaVersion() {
         return this.schemaVersion;
     }
 
@@ -56,17 +56,17 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="senderApplicationId")
-      private final @Nullable Input<String> senderApplicationId;
+      private final @Nullable Output<String> senderApplicationId;
 
-    public Input<String> getSenderApplicationId() {
-        return this.senderApplicationId == null ? Input.empty() : this.senderApplicationId;
+    public Output<String> getSenderApplicationId() {
+        return this.senderApplicationId == null ? Output.empty() : this.senderApplicationId;
     }
 
     public X12SchemaReferenceArgs(
-        Input<String> messageId,
-        Input<String> schemaName,
-        Input<String> schemaVersion,
-        @Nullable Input<String> senderApplicationId) {
+        Output<String> messageId,
+        Output<String> schemaName,
+        Output<String> schemaVersion,
+        @Nullable Output<String> senderApplicationId) {
         this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
         this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
         this.schemaVersion = Objects.requireNonNull(schemaVersion, "expected parameter 'schemaVersion' to be non-null");
@@ -74,10 +74,10 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private X12SchemaReferenceArgs() {
-        this.messageId = Input.empty();
-        this.schemaName = Input.empty();
-        this.schemaVersion = Input.empty();
-        this.senderApplicationId = Input.empty();
+        this.messageId = Output.empty();
+        this.schemaName = Output.empty();
+        this.schemaVersion = Output.empty();
+        this.senderApplicationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> messageId;
-        private Input<String> schemaName;
-        private Input<String> schemaVersion;
-        private @Nullable Input<String> senderApplicationId;
+        private Output<String> messageId;
+        private Output<String> schemaName;
+        private Output<String> schemaVersion;
+        private @Nullable Output<String> senderApplicationId;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
     	      this.senderApplicationId = defaults.senderApplicationId;
         }
 
-        public Builder messageId(Input<String> messageId) {
+        public Builder messageId(Output<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
         public Builder messageId(String messageId) {
-            this.messageId = Input.of(Objects.requireNonNull(messageId));
+            this.messageId = Output.of(Objects.requireNonNull(messageId));
             return this;
         }
 
-        public Builder schemaName(Input<String> schemaName) {
+        public Builder schemaName(Output<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
         public Builder schemaName(String schemaName) {
-            this.schemaName = Input.of(Objects.requireNonNull(schemaName));
+            this.schemaName = Output.of(Objects.requireNonNull(schemaName));
             return this;
         }
 
-        public Builder schemaVersion(Input<String> schemaVersion) {
+        public Builder schemaVersion(Output<String> schemaVersion) {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }
 
         public Builder schemaVersion(String schemaVersion) {
-            this.schemaVersion = Input.of(Objects.requireNonNull(schemaVersion));
+            this.schemaVersion = Output.of(Objects.requireNonNull(schemaVersion));
             return this;
         }
 
-        public Builder senderApplicationId(@Nullable Input<String> senderApplicationId) {
+        public Builder senderApplicationId(@Nullable Output<String> senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
 
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
-            this.senderApplicationId = Input.ofNullable(senderApplicationId);
+            this.senderApplicationId = Output.ofNullable(senderApplicationId);
             return this;
         }
         public X12SchemaReferenceArgs build() {

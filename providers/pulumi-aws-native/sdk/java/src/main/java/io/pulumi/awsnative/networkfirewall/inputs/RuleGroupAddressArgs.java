@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class RuleGroupAddressArgs extends io.pulumi.resources.ResourceArgs
     public static final RuleGroupAddressArgs Empty = new RuleGroupAddressArgs();
 
     @InputImport(name="addressDefinition", required=true)
-      private final Input<String> addressDefinition;
+      private final Output<String> addressDefinition;
 
-    public Input<String> getAddressDefinition() {
+    public Output<String> getAddressDefinition() {
         return this.addressDefinition;
     }
 
-    public RuleGroupAddressArgs(Input<String> addressDefinition) {
+    public RuleGroupAddressArgs(Output<String> addressDefinition) {
         this.addressDefinition = Objects.requireNonNull(addressDefinition, "expected parameter 'addressDefinition' to be non-null");
     }
 
     private RuleGroupAddressArgs() {
-        this.addressDefinition = Input.empty();
+        this.addressDefinition = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class RuleGroupAddressArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> addressDefinition;
+        private Output<String> addressDefinition;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class RuleGroupAddressArgs extends io.pulumi.resources.ResourceArgs
     	      this.addressDefinition = defaults.addressDefinition;
         }
 
-        public Builder addressDefinition(Input<String> addressDefinition) {
+        public Builder addressDefinition(Output<String> addressDefinition) {
             this.addressDefinition = Objects.requireNonNull(addressDefinition);
             return this;
         }
 
         public Builder addressDefinition(String addressDefinition) {
-            this.addressDefinition = Input.of(Objects.requireNonNull(addressDefinition));
+            this.addressDefinition = Output.of(Objects.requireNonNull(addressDefinition));
             return this;
         }
         public RuleGroupAddressArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class LaunchTemplateTagSpecificationGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class LaunchTemplateTagSpecificationGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LaunchTemplateTagSpecificationGetArgs(
-        @Nullable Input<String> resourceType,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> resourceType,
+        @Nullable Output<Map<String,String>> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }
 
     private LaunchTemplateTagSpecificationGetArgs() {
-        this.resourceType = Input.empty();
-        this.tags = Input.empty();
+        this.resourceType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class LaunchTemplateTagSpecificationGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceType;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> resourceType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class LaunchTemplateTagSpecificationGetArgs extends io.pulumi.resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LaunchTemplateTagSpecificationGetArgs build() {

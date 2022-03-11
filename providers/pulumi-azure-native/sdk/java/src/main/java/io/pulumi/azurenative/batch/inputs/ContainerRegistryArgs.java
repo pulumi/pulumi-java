@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
     public static final ContainerRegistryArgs Empty = new ContainerRegistryArgs();
 
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -26,32 +26,32 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="registryServer")
-      private final @Nullable Input<String> registryServer;
+      private final @Nullable Output<String> registryServer;
 
-    public Input<String> getRegistryServer() {
-        return this.registryServer == null ? Input.empty() : this.registryServer;
+    public Output<String> getRegistryServer() {
+        return this.registryServer == null ? Output.empty() : this.registryServer;
     }
 
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public ContainerRegistryArgs(
-        Input<String> password,
-        @Nullable Input<String> registryServer,
-        Input<String> userName) {
+        Output<String> password,
+        @Nullable Output<String> registryServer,
+        Output<String> userName) {
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.registryServer = registryServer;
         this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
     }
 
     private ContainerRegistryArgs() {
-        this.password = Input.empty();
-        this.registryServer = Input.empty();
-        this.userName = Input.empty();
+        this.password = Output.empty();
+        this.registryServer = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> password;
-        private @Nullable Input<String> registryServer;
-        private Input<String> userName;
+        private Output<String> password;
+        private @Nullable Output<String> registryServer;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
     	      this.userName = defaults.userName;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder registryServer(@Nullable Input<String> registryServer) {
+        public Builder registryServer(@Nullable Output<String> registryServer) {
             this.registryServer = registryServer;
             return this;
         }
 
         public Builder registryServer(@Nullable String registryServer) {
-            this.registryServer = Input.ofNullable(registryServer);
+            this.registryServer = Output.ofNullable(registryServer);
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public ContainerRegistryArgs build() {

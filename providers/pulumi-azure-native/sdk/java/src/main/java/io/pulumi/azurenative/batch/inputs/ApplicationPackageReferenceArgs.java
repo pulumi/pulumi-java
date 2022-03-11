@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
     public static final ApplicationPackageReferenceArgs Empty = new ApplicationPackageReferenceArgs();
 
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -26,22 +26,22 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ApplicationPackageReferenceArgs(
-        Input<String> id,
-        @Nullable Input<String> version) {
+        Output<String> id,
+        @Nullable Output<String> version) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.version = version;
     }
 
     private ApplicationPackageReferenceArgs() {
-        this.id = Input.empty();
-        this.version = Input.empty();
+        this.id = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private @Nullable Input<String> version;
+        private Output<String> id;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
     	      this.version = defaults.version;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ApplicationPackageReferenceArgs build() {

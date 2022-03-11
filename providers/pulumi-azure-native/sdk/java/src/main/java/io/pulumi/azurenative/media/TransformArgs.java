@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.media.inputs.TransformOutputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,10 +32,10 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputs", required=true)
-      private final Input<List<TransformOutputArgs>> outputs;
+      private final Output<List<TransformOutputArgs>> outputs;
 
-    public Input<List<TransformOutputArgs>> getOutputs() {
+    public Output<List<TransformOutputArgs>> getOutputs() {
         return this.outputs;
     }
 
@@ -54,9 +54,9 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transformName")
-      private final @Nullable Input<String> transformName;
+      private final @Nullable Output<String> transformName;
 
-    public Input<String> getTransformName() {
-        return this.transformName == null ? Input.empty() : this.transformName;
+    public Output<String> getTransformName() {
+        return this.transformName == null ? Output.empty() : this.transformName;
     }
 
     public TransformArgs(
-        Input<String> accountName,
-        @Nullable Input<String> description,
-        Input<List<TransformOutputArgs>> outputs,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> transformName) {
+        Output<String> accountName,
+        @Nullable Output<String> description,
+        Output<List<TransformOutputArgs>> outputs,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> transformName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.description = description;
         this.outputs = Objects.requireNonNull(outputs, "expected parameter 'outputs' to be non-null");
@@ -85,11 +85,11 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransformArgs() {
-        this.accountName = Input.empty();
-        this.description = Input.empty();
-        this.outputs = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.transformName = Input.empty();
+        this.accountName = Output.empty();
+        this.description = Output.empty();
+        this.outputs = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.transformName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> description;
-        private Input<List<TransformOutputArgs>> outputs;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> transformName;
+        private Output<String> accountName;
+        private @Nullable Output<String> description;
+        private Output<List<TransformOutputArgs>> outputs;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> transformName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transformName = defaults.transformName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder outputs(Input<List<TransformOutputArgs>> outputs) {
+        public Builder outputs(Output<List<TransformOutputArgs>> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
 
         public Builder outputs(List<TransformOutputArgs> outputs) {
-            this.outputs = Input.of(Objects.requireNonNull(outputs));
+            this.outputs = Output.of(Objects.requireNonNull(outputs));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder transformName(@Nullable Input<String> transformName) {
+        public Builder transformName(@Nullable Output<String> transformName) {
             this.transformName = transformName;
             return this;
         }
 
         public Builder transformName(@Nullable String transformName) {
-            this.transformName = Input.ofNullable(transformName);
+            this.transformName = Output.ofNullable(transformName);
             return this;
         }
         public TransformArgs build() {

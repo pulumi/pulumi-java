@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersArgs ext
      * 
      */
     @InputImport(name="bodies")
-      private final @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs>> bodies;
+      private final @Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs>> bodies;
 
-    public Input<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs>> getBodies() {
-        return this.bodies == null ? Input.empty() : this.bodies;
+    public Output<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs>> getBodies() {
+        return this.bodies == null ? Output.empty() : this.bodies;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersArgs ext
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs>> headers;
+      private final @Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs>> headers;
 
-    public Input<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersArgs ext
      * 
      */
     @InputImport(name="queryStrings")
-      private final @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs>> queryStrings;
+      private final @Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs>> queryStrings;
 
-    public Input<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs>> getQueryStrings() {
-        return this.queryStrings == null ? Input.empty() : this.queryStrings;
+    public Output<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs>> getQueryStrings() {
+        return this.queryStrings == null ? Output.empty() : this.queryStrings;
     }
 
     public EventConnectionAuthParametersOauthOauthHttpParametersArgs(
-        @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs>> bodies,
-        @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs>> headers,
-        @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs>> queryStrings) {
+        @Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs>> bodies,
+        @Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs>> headers,
+        @Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs>> queryStrings) {
         this.bodies = bodies;
         this.headers = headers;
         this.queryStrings = queryStrings;
     }
 
     private EventConnectionAuthParametersOauthOauthHttpParametersArgs() {
-        this.bodies = Input.empty();
-        this.headers = Input.empty();
-        this.queryStrings = Input.empty();
+        this.bodies = Output.empty();
+        this.headers = Output.empty();
+        this.queryStrings = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersArgs ext
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs>> bodies;
-        private @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs>> headers;
-        private @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs>> queryStrings;
+        private @Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs>> bodies;
+        private @Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs>> headers;
+        private @Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs>> queryStrings;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersArgs ext
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder bodies(@Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs>> bodies) {
+        public Builder bodies(@Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs>> bodies) {
             this.bodies = bodies;
             return this;
         }
 
         public Builder bodies(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs> bodies) {
-            this.bodies = Input.ofNullable(bodies);
+            this.bodies = Output.ofNullable(bodies);
             return this;
         }
 
-        public Builder headers(@Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs>> headers) {
+        public Builder headers(@Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderArgs> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder queryStrings(@Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs>> queryStrings) {
+        public Builder queryStrings(@Nullable Output<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs>> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
 
         public Builder queryStrings(@Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringArgs> queryStrings) {
-            this.queryStrings = Input.ofNullable(queryStrings);
+            this.queryStrings = Output.ofNullable(queryStrings);
             return this;
         }
         public EventConnectionAuthParametersOauthOauthHttpParametersArgs build() {

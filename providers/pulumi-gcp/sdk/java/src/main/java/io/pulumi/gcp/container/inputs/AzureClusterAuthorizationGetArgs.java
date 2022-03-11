@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AzureClusterAuthorizationAdminUserGetArgs;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class AzureClusterAuthorizationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adminUsers", required=true)
-      private final Input<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers;
+      private final Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers;
 
-    public Input<List<AzureClusterAuthorizationAdminUserGetArgs>> getAdminUsers() {
+    public Output<List<AzureClusterAuthorizationAdminUserGetArgs>> getAdminUsers() {
         return this.adminUsers;
     }
 
-    public AzureClusterAuthorizationGetArgs(Input<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers) {
+    public AzureClusterAuthorizationGetArgs(Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers) {
         this.adminUsers = Objects.requireNonNull(adminUsers, "expected parameter 'adminUsers' to be non-null");
     }
 
     private AzureClusterAuthorizationGetArgs() {
-        this.adminUsers = Input.empty();
+        this.adminUsers = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AzureClusterAuthorizationGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers;
+        private Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AzureClusterAuthorizationGetArgs extends io.pulumi.resources.
     	      this.adminUsers = defaults.adminUsers;
         }
 
-        public Builder adminUsers(Input<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers) {
+        public Builder adminUsers(Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers) {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }
 
         public Builder adminUsers(List<AzureClusterAuthorizationAdminUserGetArgs> adminUsers) {
-            this.adminUsers = Input.of(Objects.requireNonNull(adminUsers));
+            this.adminUsers = Output.of(Objects.requireNonNull(adminUsers));
             return this;
         }
         public AzureClusterAuthorizationGetArgs build() {

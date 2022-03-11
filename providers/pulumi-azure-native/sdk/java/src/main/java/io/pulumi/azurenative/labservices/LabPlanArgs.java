@@ -7,7 +7,7 @@ import io.pulumi.azurenative.labservices.inputs.AutoShutdownProfileArgs;
 import io.pulumi.azurenative.labservices.inputs.ConnectionProfileArgs;
 import io.pulumi.azurenative.labservices.inputs.LabPlanNetworkProfileArgs;
 import io.pulumi.azurenative.labservices.inputs.SupportInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedRegions")
-      private final @Nullable Input<List<String>> allowedRegions;
+      private final @Nullable Output<List<String>> allowedRegions;
 
-    public Input<List<String>> getAllowedRegions() {
-        return this.allowedRegions == null ? Input.empty() : this.allowedRegions;
+    public Output<List<String>> getAllowedRegions() {
+        return this.allowedRegions == null ? Output.empty() : this.allowedRegions;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAutoShutdownProfile")
-      private final @Nullable Input<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
+      private final @Nullable Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
 
-    public Input<AutoShutdownProfileArgs> getDefaultAutoShutdownProfile() {
-        return this.defaultAutoShutdownProfile == null ? Input.empty() : this.defaultAutoShutdownProfile;
+    public Output<AutoShutdownProfileArgs> getDefaultAutoShutdownProfile() {
+        return this.defaultAutoShutdownProfile == null ? Output.empty() : this.defaultAutoShutdownProfile;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultConnectionProfile")
-      private final @Nullable Input<ConnectionProfileArgs> defaultConnectionProfile;
+      private final @Nullable Output<ConnectionProfileArgs> defaultConnectionProfile;
 
-    public Input<ConnectionProfileArgs> getDefaultConnectionProfile() {
-        return this.defaultConnectionProfile == null ? Input.empty() : this.defaultConnectionProfile;
+    public Output<ConnectionProfileArgs> getDefaultConnectionProfile() {
+        return this.defaultConnectionProfile == null ? Output.empty() : this.defaultConnectionProfile;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultNetworkProfile")
-      private final @Nullable Input<LabPlanNetworkProfileArgs> defaultNetworkProfile;
+      private final @Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile;
 
-    public Input<LabPlanNetworkProfileArgs> getDefaultNetworkProfile() {
-        return this.defaultNetworkProfile == null ? Input.empty() : this.defaultNetworkProfile;
+    public Output<LabPlanNetworkProfileArgs> getDefaultNetworkProfile() {
+        return this.defaultNetworkProfile == null ? Output.empty() : this.defaultNetworkProfile;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labPlanName")
-      private final @Nullable Input<String> labPlanName;
+      private final @Nullable Output<String> labPlanName;
 
-    public Input<String> getLabPlanName() {
-        return this.labPlanName == null ? Input.empty() : this.labPlanName;
+    public Output<String> getLabPlanName() {
+        return this.labPlanName == null ? Output.empty() : this.labPlanName;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedLmsInstance")
-      private final @Nullable Input<String> linkedLmsInstance;
+      private final @Nullable Output<String> linkedLmsInstance;
 
-    public Input<String> getLinkedLmsInstance() {
-        return this.linkedLmsInstance == null ? Input.empty() : this.linkedLmsInstance;
+    public Output<String> getLinkedLmsInstance() {
+        return this.linkedLmsInstance == null ? Output.empty() : this.linkedLmsInstance;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -102,9 +102,9 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,10 +113,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharedGalleryId")
-      private final @Nullable Input<String> sharedGalleryId;
+      private final @Nullable Output<String> sharedGalleryId;
 
-    public Input<String> getSharedGalleryId() {
-        return this.sharedGalleryId == null ? Input.empty() : this.sharedGalleryId;
+    public Output<String> getSharedGalleryId() {
+        return this.sharedGalleryId == null ? Output.empty() : this.sharedGalleryId;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportInfo")
-      private final @Nullable Input<SupportInfoArgs> supportInfo;
+      private final @Nullable Output<SupportInfoArgs> supportInfo;
 
-    public Input<SupportInfoArgs> getSupportInfo() {
-        return this.supportInfo == null ? Input.empty() : this.supportInfo;
+    public Output<SupportInfoArgs> getSupportInfo() {
+        return this.supportInfo == null ? Output.empty() : this.supportInfo;
     }
 
     /**
@@ -135,24 +135,24 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LabPlanArgs(
-        @Nullable Input<List<String>> allowedRegions,
-        @Nullable Input<AutoShutdownProfileArgs> defaultAutoShutdownProfile,
-        @Nullable Input<ConnectionProfileArgs> defaultConnectionProfile,
-        @Nullable Input<LabPlanNetworkProfileArgs> defaultNetworkProfile,
-        @Nullable Input<String> labPlanName,
-        @Nullable Input<String> linkedLmsInstance,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sharedGalleryId,
-        @Nullable Input<SupportInfoArgs> supportInfo,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<String>> allowedRegions,
+        @Nullable Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile,
+        @Nullable Output<ConnectionProfileArgs> defaultConnectionProfile,
+        @Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile,
+        @Nullable Output<String> labPlanName,
+        @Nullable Output<String> linkedLmsInstance,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sharedGalleryId,
+        @Nullable Output<SupportInfoArgs> supportInfo,
+        @Nullable Output<Map<String,String>> tags) {
         this.allowedRegions = allowedRegions;
         this.defaultAutoShutdownProfile = defaultAutoShutdownProfile;
         this.defaultConnectionProfile = defaultConnectionProfile;
@@ -167,17 +167,17 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabPlanArgs() {
-        this.allowedRegions = Input.empty();
-        this.defaultAutoShutdownProfile = Input.empty();
-        this.defaultConnectionProfile = Input.empty();
-        this.defaultNetworkProfile = Input.empty();
-        this.labPlanName = Input.empty();
-        this.linkedLmsInstance = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sharedGalleryId = Input.empty();
-        this.supportInfo = Input.empty();
-        this.tags = Input.empty();
+        this.allowedRegions = Output.empty();
+        this.defaultAutoShutdownProfile = Output.empty();
+        this.defaultConnectionProfile = Output.empty();
+        this.defaultNetworkProfile = Output.empty();
+        this.labPlanName = Output.empty();
+        this.linkedLmsInstance = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sharedGalleryId = Output.empty();
+        this.supportInfo = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,17 +189,17 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedRegions;
-        private @Nullable Input<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
-        private @Nullable Input<ConnectionProfileArgs> defaultConnectionProfile;
-        private @Nullable Input<LabPlanNetworkProfileArgs> defaultNetworkProfile;
-        private @Nullable Input<String> labPlanName;
-        private @Nullable Input<String> linkedLmsInstance;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sharedGalleryId;
-        private @Nullable Input<SupportInfoArgs> supportInfo;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<String>> allowedRegions;
+        private @Nullable Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
+        private @Nullable Output<ConnectionProfileArgs> defaultConnectionProfile;
+        private @Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile;
+        private @Nullable Output<String> labPlanName;
+        private @Nullable Output<String> linkedLmsInstance;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sharedGalleryId;
+        private @Nullable Output<SupportInfoArgs> supportInfo;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -220,113 +220,113 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder allowedRegions(@Nullable Input<List<String>> allowedRegions) {
+        public Builder allowedRegions(@Nullable Output<List<String>> allowedRegions) {
             this.allowedRegions = allowedRegions;
             return this;
         }
 
         public Builder allowedRegions(@Nullable List<String> allowedRegions) {
-            this.allowedRegions = Input.ofNullable(allowedRegions);
+            this.allowedRegions = Output.ofNullable(allowedRegions);
             return this;
         }
 
-        public Builder defaultAutoShutdownProfile(@Nullable Input<AutoShutdownProfileArgs> defaultAutoShutdownProfile) {
+        public Builder defaultAutoShutdownProfile(@Nullable Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile) {
             this.defaultAutoShutdownProfile = defaultAutoShutdownProfile;
             return this;
         }
 
         public Builder defaultAutoShutdownProfile(@Nullable AutoShutdownProfileArgs defaultAutoShutdownProfile) {
-            this.defaultAutoShutdownProfile = Input.ofNullable(defaultAutoShutdownProfile);
+            this.defaultAutoShutdownProfile = Output.ofNullable(defaultAutoShutdownProfile);
             return this;
         }
 
-        public Builder defaultConnectionProfile(@Nullable Input<ConnectionProfileArgs> defaultConnectionProfile) {
+        public Builder defaultConnectionProfile(@Nullable Output<ConnectionProfileArgs> defaultConnectionProfile) {
             this.defaultConnectionProfile = defaultConnectionProfile;
             return this;
         }
 
         public Builder defaultConnectionProfile(@Nullable ConnectionProfileArgs defaultConnectionProfile) {
-            this.defaultConnectionProfile = Input.ofNullable(defaultConnectionProfile);
+            this.defaultConnectionProfile = Output.ofNullable(defaultConnectionProfile);
             return this;
         }
 
-        public Builder defaultNetworkProfile(@Nullable Input<LabPlanNetworkProfileArgs> defaultNetworkProfile) {
+        public Builder defaultNetworkProfile(@Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile) {
             this.defaultNetworkProfile = defaultNetworkProfile;
             return this;
         }
 
         public Builder defaultNetworkProfile(@Nullable LabPlanNetworkProfileArgs defaultNetworkProfile) {
-            this.defaultNetworkProfile = Input.ofNullable(defaultNetworkProfile);
+            this.defaultNetworkProfile = Output.ofNullable(defaultNetworkProfile);
             return this;
         }
 
-        public Builder labPlanName(@Nullable Input<String> labPlanName) {
+        public Builder labPlanName(@Nullable Output<String> labPlanName) {
             this.labPlanName = labPlanName;
             return this;
         }
 
         public Builder labPlanName(@Nullable String labPlanName) {
-            this.labPlanName = Input.ofNullable(labPlanName);
+            this.labPlanName = Output.ofNullable(labPlanName);
             return this;
         }
 
-        public Builder linkedLmsInstance(@Nullable Input<String> linkedLmsInstance) {
+        public Builder linkedLmsInstance(@Nullable Output<String> linkedLmsInstance) {
             this.linkedLmsInstance = linkedLmsInstance;
             return this;
         }
 
         public Builder linkedLmsInstance(@Nullable String linkedLmsInstance) {
-            this.linkedLmsInstance = Input.ofNullable(linkedLmsInstance);
+            this.linkedLmsInstance = Output.ofNullable(linkedLmsInstance);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sharedGalleryId(@Nullable Input<String> sharedGalleryId) {
+        public Builder sharedGalleryId(@Nullable Output<String> sharedGalleryId) {
             this.sharedGalleryId = sharedGalleryId;
             return this;
         }
 
         public Builder sharedGalleryId(@Nullable String sharedGalleryId) {
-            this.sharedGalleryId = Input.ofNullable(sharedGalleryId);
+            this.sharedGalleryId = Output.ofNullable(sharedGalleryId);
             return this;
         }
 
-        public Builder supportInfo(@Nullable Input<SupportInfoArgs> supportInfo) {
+        public Builder supportInfo(@Nullable Output<SupportInfoArgs> supportInfo) {
             this.supportInfo = supportInfo;
             return this;
         }
 
         public Builder supportInfo(@Nullable SupportInfoArgs supportInfo) {
-            this.supportInfo = Input.ofNullable(supportInfo);
+            this.supportInfo = Output.ofNullable(supportInfo);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LabPlanArgs build() {

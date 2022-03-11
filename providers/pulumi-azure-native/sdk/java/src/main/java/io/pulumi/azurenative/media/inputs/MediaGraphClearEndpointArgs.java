@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.MediaGraphUsernamePasswordCredentialsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials;
+      private final @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
 
-    public Input<MediaGraphUsernamePasswordCredentialsArgs> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<MediaGraphUsernamePasswordCredentialsArgs> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -47,25 +47,25 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public MediaGraphClearEndpointArgs(
-        @Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials,
-        Input<String> odataType,
-        Input<String> url) {
+        @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials,
+        Output<String> odataType,
+        Output<String> url) {
         this.credentials = credentials;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 
     private MediaGraphClearEndpointArgs() {
-        this.credentials = Input.empty();
-        this.odataType = Input.empty();
-        this.url = Input.empty();
+        this.credentials = Output.empty();
+        this.odataType = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials;
-        private Input<String> odataType;
-        private Input<String> url;
+        private @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
+        private Output<String> odataType;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
     	      this.url = defaults.url;
         }
 
-        public Builder credentials(@Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsArgs credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public MediaGraphClearEndpointArgs build() {

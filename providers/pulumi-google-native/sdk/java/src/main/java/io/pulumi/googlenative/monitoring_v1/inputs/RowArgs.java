@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-      private final @Nullable Input<String> weight;
+      private final @Nullable Output<String> weight;
 
-    public Input<String> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<String> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="widgets")
-      private final @Nullable Input<List<WidgetArgs>> widgets;
+      private final @Nullable Output<List<WidgetArgs>> widgets;
 
-    public Input<List<WidgetArgs>> getWidgets() {
-        return this.widgets == null ? Input.empty() : this.widgets;
+    public Output<List<WidgetArgs>> getWidgets() {
+        return this.widgets == null ? Output.empty() : this.widgets;
     }
 
     public RowArgs(
-        @Nullable Input<String> weight,
-        @Nullable Input<List<WidgetArgs>> widgets) {
+        @Nullable Output<String> weight,
+        @Nullable Output<List<WidgetArgs>> widgets) {
         this.weight = weight;
         this.widgets = widgets;
     }
 
     private RowArgs() {
-        this.weight = Input.empty();
-        this.widgets = Input.empty();
+        this.weight = Output.empty();
+        this.widgets = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> weight;
-        private @Nullable Input<List<WidgetArgs>> widgets;
+        private @Nullable Output<String> weight;
+        private @Nullable Output<List<WidgetArgs>> widgets;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.widgets = defaults.widgets;
         }
 
-        public Builder weight(@Nullable Input<String> weight) {
+        public Builder weight(@Nullable Output<String> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable String weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
 
-        public Builder widgets(@Nullable Input<List<WidgetArgs>> widgets) {
+        public Builder widgets(@Nullable Output<List<WidgetArgs>> widgets) {
             this.widgets = widgets;
             return this;
         }
 
         public Builder widgets(@Nullable List<WidgetArgs> widgets) {
-            this.widgets = Input.ofNullable(widgets);
+            this.widgets = Output.ofNullable(widgets);
             return this;
         }
         public RowArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.greengrassv2;
 
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaFunctionRecipeSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -17,39 +17,39 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
     public static final ComponentVersionArgs Empty = new ComponentVersionArgs();
 
     @InputImport(name="inlineRecipe")
-      private final @Nullable Input<String> inlineRecipe;
+      private final @Nullable Output<String> inlineRecipe;
 
-    public Input<String> getInlineRecipe() {
-        return this.inlineRecipe == null ? Input.empty() : this.inlineRecipe;
+    public Output<String> getInlineRecipe() {
+        return this.inlineRecipe == null ? Output.empty() : this.inlineRecipe;
     }
 
     @InputImport(name="lambdaFunction")
-      private final @Nullable Input<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
+      private final @Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
 
-    public Input<ComponentVersionLambdaFunctionRecipeSourceArgs> getLambdaFunction() {
-        return this.lambdaFunction == null ? Input.empty() : this.lambdaFunction;
+    public Output<ComponentVersionLambdaFunctionRecipeSourceArgs> getLambdaFunction() {
+        return this.lambdaFunction == null ? Output.empty() : this.lambdaFunction;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Object> tags;
+      private final @Nullable Output<Object> tags;
 
-    public Input<Object> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Object> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ComponentVersionArgs(
-        @Nullable Input<String> inlineRecipe,
-        @Nullable Input<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction,
-        @Nullable Input<Object> tags) {
+        @Nullable Output<String> inlineRecipe,
+        @Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction,
+        @Nullable Output<Object> tags) {
         this.inlineRecipe = inlineRecipe;
         this.lambdaFunction = lambdaFunction;
         this.tags = tags;
     }
 
     private ComponentVersionArgs() {
-        this.inlineRecipe = Input.empty();
-        this.lambdaFunction = Input.empty();
-        this.tags = Input.empty();
+        this.inlineRecipe = Output.empty();
+        this.lambdaFunction = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> inlineRecipe;
-        private @Nullable Input<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
-        private @Nullable Input<Object> tags;
+        private @Nullable Output<String> inlineRecipe;
+        private @Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
+        private @Nullable Output<Object> tags;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder inlineRecipe(@Nullable Input<String> inlineRecipe) {
+        public Builder inlineRecipe(@Nullable Output<String> inlineRecipe) {
             this.inlineRecipe = inlineRecipe;
             return this;
         }
 
         public Builder inlineRecipe(@Nullable String inlineRecipe) {
-            this.inlineRecipe = Input.ofNullable(inlineRecipe);
+            this.inlineRecipe = Output.ofNullable(inlineRecipe);
             return this;
         }
 
-        public Builder lambdaFunction(@Nullable Input<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction) {
+        public Builder lambdaFunction(@Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction) {
             this.lambdaFunction = lambdaFunction;
             return this;
         }
 
         public Builder lambdaFunction(@Nullable ComponentVersionLambdaFunctionRecipeSourceArgs lambdaFunction) {
-            this.lambdaFunction = Input.ofNullable(lambdaFunction);
+            this.lambdaFunction = Output.ofNullable(lambdaFunction);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Object tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ComponentVersionArgs build() {

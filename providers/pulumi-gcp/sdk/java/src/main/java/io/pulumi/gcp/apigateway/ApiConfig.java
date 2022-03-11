@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.apigateway;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -236,14 +235,14 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiConfig(String name, ApiConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/apiConfig:ApiConfig", name, args == null ? ApiConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:apigateway/apiConfig:ApiConfig", name, args == null ? ApiConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApiConfig(String name, Input<String> id, @Nullable ApiConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApiConfig(String name, Output<String> id, @Nullable ApiConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:apigateway/apiConfig:ApiConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -259,7 +258,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApiConfig get(String name, Input<String> id, @Nullable ApiConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApiConfig get(String name, Output<String> id, @Nullable ApiConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiConfig(name, id, state, options);
     }
 }

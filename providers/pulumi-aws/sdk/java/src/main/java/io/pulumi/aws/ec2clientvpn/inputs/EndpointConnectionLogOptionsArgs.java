@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2clientvpn.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudwatchLogGroup")
-      private final @Nullable Input<String> cloudwatchLogGroup;
+      private final @Nullable Output<String> cloudwatchLogGroup;
 
-    public Input<String> getCloudwatchLogGroup() {
-        return this.cloudwatchLogGroup == null ? Input.empty() : this.cloudwatchLogGroup;
+    public Output<String> getCloudwatchLogGroup() {
+        return this.cloudwatchLogGroup == null ? Output.empty() : this.cloudwatchLogGroup;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudwatchLogStream")
-      private final @Nullable Input<String> cloudwatchLogStream;
+      private final @Nullable Output<String> cloudwatchLogStream;
 
-    public Input<String> getCloudwatchLogStream() {
-        return this.cloudwatchLogStream == null ? Input.empty() : this.cloudwatchLogStream;
+    public Output<String> getCloudwatchLogStream() {
+        return this.cloudwatchLogStream == null ? Output.empty() : this.cloudwatchLogStream;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public EndpointConnectionLogOptionsArgs(
-        @Nullable Input<String> cloudwatchLogGroup,
-        @Nullable Input<String> cloudwatchLogStream,
-        Input<Boolean> enabled) {
+        @Nullable Output<String> cloudwatchLogGroup,
+        @Nullable Output<String> cloudwatchLogStream,
+        Output<Boolean> enabled) {
         this.cloudwatchLogGroup = cloudwatchLogGroup;
         this.cloudwatchLogStream = cloudwatchLogStream;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private EndpointConnectionLogOptionsArgs() {
-        this.cloudwatchLogGroup = Input.empty();
-        this.cloudwatchLogStream = Input.empty();
-        this.enabled = Input.empty();
+        this.cloudwatchLogGroup = Output.empty();
+        this.cloudwatchLogStream = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudwatchLogGroup;
-        private @Nullable Input<String> cloudwatchLogStream;
-        private Input<Boolean> enabled;
+        private @Nullable Output<String> cloudwatchLogGroup;
+        private @Nullable Output<String> cloudwatchLogStream;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder cloudwatchLogGroup(@Nullable Input<String> cloudwatchLogGroup) {
+        public Builder cloudwatchLogGroup(@Nullable Output<String> cloudwatchLogGroup) {
             this.cloudwatchLogGroup = cloudwatchLogGroup;
             return this;
         }
 
         public Builder cloudwatchLogGroup(@Nullable String cloudwatchLogGroup) {
-            this.cloudwatchLogGroup = Input.ofNullable(cloudwatchLogGroup);
+            this.cloudwatchLogGroup = Output.ofNullable(cloudwatchLogGroup);
             return this;
         }
 
-        public Builder cloudwatchLogStream(@Nullable Input<String> cloudwatchLogStream) {
+        public Builder cloudwatchLogStream(@Nullable Output<String> cloudwatchLogStream) {
             this.cloudwatchLogStream = cloudwatchLogStream;
             return this;
         }
 
         public Builder cloudwatchLogStream(@Nullable String cloudwatchLogStream) {
-            this.cloudwatchLogStream = Input.ofNullable(cloudwatchLogStream);
+            this.cloudwatchLogStream = Output.ofNullable(cloudwatchLogStream);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public EndpointConnectionLogOptionsArgs build() {

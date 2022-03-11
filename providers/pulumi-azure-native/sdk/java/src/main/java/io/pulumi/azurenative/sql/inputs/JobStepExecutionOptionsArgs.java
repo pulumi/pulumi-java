@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="initialRetryIntervalSeconds")
-      private final @Nullable Input<Integer> initialRetryIntervalSeconds;
+      private final @Nullable Output<Integer> initialRetryIntervalSeconds;
 
-    public Input<Integer> getInitialRetryIntervalSeconds() {
-        return this.initialRetryIntervalSeconds == null ? Input.empty() : this.initialRetryIntervalSeconds;
+    public Output<Integer> getInitialRetryIntervalSeconds() {
+        return this.initialRetryIntervalSeconds == null ? Output.empty() : this.initialRetryIntervalSeconds;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maximumRetryIntervalSeconds")
-      private final @Nullable Input<Integer> maximumRetryIntervalSeconds;
+      private final @Nullable Output<Integer> maximumRetryIntervalSeconds;
 
-    public Input<Integer> getMaximumRetryIntervalSeconds() {
-        return this.maximumRetryIntervalSeconds == null ? Input.empty() : this.maximumRetryIntervalSeconds;
+    public Output<Integer> getMaximumRetryIntervalSeconds() {
+        return this.maximumRetryIntervalSeconds == null ? Output.empty() : this.maximumRetryIntervalSeconds;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="retryAttempts")
-      private final @Nullable Input<Integer> retryAttempts;
+      private final @Nullable Output<Integer> retryAttempts;
 
-    public Input<Integer> getRetryAttempts() {
-        return this.retryAttempts == null ? Input.empty() : this.retryAttempts;
+    public Output<Integer> getRetryAttempts() {
+        return this.retryAttempts == null ? Output.empty() : this.retryAttempts;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="retryIntervalBackoffMultiplier")
-      private final @Nullable Input<Double> retryIntervalBackoffMultiplier;
+      private final @Nullable Output<Double> retryIntervalBackoffMultiplier;
 
-    public Input<Double> getRetryIntervalBackoffMultiplier() {
-        return this.retryIntervalBackoffMultiplier == null ? Input.empty() : this.retryIntervalBackoffMultiplier;
+    public Output<Double> getRetryIntervalBackoffMultiplier() {
+        return this.retryIntervalBackoffMultiplier == null ? Output.empty() : this.retryIntervalBackoffMultiplier;
     }
 
     /**
@@ -68,31 +68,31 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeoutSeconds")
-      private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Input<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
+    public Output<Integer> getTimeoutSeconds() {
+        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
     }
 
     public JobStepExecutionOptionsArgs(
-        @Nullable Input<Integer> initialRetryIntervalSeconds,
-        @Nullable Input<Integer> maximumRetryIntervalSeconds,
-        @Nullable Input<Integer> retryAttempts,
-        @Nullable Input<Double> retryIntervalBackoffMultiplier,
-        @Nullable Input<Integer> timeoutSeconds) {
-        this.initialRetryIntervalSeconds = initialRetryIntervalSeconds == null ? Input.ofNullable(1) : initialRetryIntervalSeconds;
-        this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds == null ? Input.ofNullable(120) : maximumRetryIntervalSeconds;
-        this.retryAttempts = retryAttempts == null ? Input.ofNullable(10) : retryAttempts;
-        this.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier == null ? Input.ofNullable(2e+00) : retryIntervalBackoffMultiplier;
-        this.timeoutSeconds = timeoutSeconds == null ? Input.ofNullable(43200) : timeoutSeconds;
+        @Nullable Output<Integer> initialRetryIntervalSeconds,
+        @Nullable Output<Integer> maximumRetryIntervalSeconds,
+        @Nullable Output<Integer> retryAttempts,
+        @Nullable Output<Double> retryIntervalBackoffMultiplier,
+        @Nullable Output<Integer> timeoutSeconds) {
+        this.initialRetryIntervalSeconds = initialRetryIntervalSeconds == null ? Output.ofNullable(1) : initialRetryIntervalSeconds;
+        this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds == null ? Output.ofNullable(120) : maximumRetryIntervalSeconds;
+        this.retryAttempts = retryAttempts == null ? Output.ofNullable(10) : retryAttempts;
+        this.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier == null ? Output.ofNullable(2e+00) : retryIntervalBackoffMultiplier;
+        this.timeoutSeconds = timeoutSeconds == null ? Output.ofNullable(43200) : timeoutSeconds;
     }
 
     private JobStepExecutionOptionsArgs() {
-        this.initialRetryIntervalSeconds = Input.empty();
-        this.maximumRetryIntervalSeconds = Input.empty();
-        this.retryAttempts = Input.empty();
-        this.retryIntervalBackoffMultiplier = Input.empty();
-        this.timeoutSeconds = Input.empty();
+        this.initialRetryIntervalSeconds = Output.empty();
+        this.maximumRetryIntervalSeconds = Output.empty();
+        this.retryAttempts = Output.empty();
+        this.retryIntervalBackoffMultiplier = Output.empty();
+        this.timeoutSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> initialRetryIntervalSeconds;
-        private @Nullable Input<Integer> maximumRetryIntervalSeconds;
-        private @Nullable Input<Integer> retryAttempts;
-        private @Nullable Input<Double> retryIntervalBackoffMultiplier;
-        private @Nullable Input<Integer> timeoutSeconds;
+        private @Nullable Output<Integer> initialRetryIntervalSeconds;
+        private @Nullable Output<Integer> maximumRetryIntervalSeconds;
+        private @Nullable Output<Integer> retryAttempts;
+        private @Nullable Output<Double> retryIntervalBackoffMultiplier;
+        private @Nullable Output<Integer> timeoutSeconds;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder initialRetryIntervalSeconds(@Nullable Input<Integer> initialRetryIntervalSeconds) {
+        public Builder initialRetryIntervalSeconds(@Nullable Output<Integer> initialRetryIntervalSeconds) {
             this.initialRetryIntervalSeconds = initialRetryIntervalSeconds;
             return this;
         }
 
         public Builder initialRetryIntervalSeconds(@Nullable Integer initialRetryIntervalSeconds) {
-            this.initialRetryIntervalSeconds = Input.ofNullable(initialRetryIntervalSeconds);
+            this.initialRetryIntervalSeconds = Output.ofNullable(initialRetryIntervalSeconds);
             return this;
         }
 
-        public Builder maximumRetryIntervalSeconds(@Nullable Input<Integer> maximumRetryIntervalSeconds) {
+        public Builder maximumRetryIntervalSeconds(@Nullable Output<Integer> maximumRetryIntervalSeconds) {
             this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds;
             return this;
         }
 
         public Builder maximumRetryIntervalSeconds(@Nullable Integer maximumRetryIntervalSeconds) {
-            this.maximumRetryIntervalSeconds = Input.ofNullable(maximumRetryIntervalSeconds);
+            this.maximumRetryIntervalSeconds = Output.ofNullable(maximumRetryIntervalSeconds);
             return this;
         }
 
-        public Builder retryAttempts(@Nullable Input<Integer> retryAttempts) {
+        public Builder retryAttempts(@Nullable Output<Integer> retryAttempts) {
             this.retryAttempts = retryAttempts;
             return this;
         }
 
         public Builder retryAttempts(@Nullable Integer retryAttempts) {
-            this.retryAttempts = Input.ofNullable(retryAttempts);
+            this.retryAttempts = Output.ofNullable(retryAttempts);
             return this;
         }
 
-        public Builder retryIntervalBackoffMultiplier(@Nullable Input<Double> retryIntervalBackoffMultiplier) {
+        public Builder retryIntervalBackoffMultiplier(@Nullable Output<Double> retryIntervalBackoffMultiplier) {
             this.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier;
             return this;
         }
 
         public Builder retryIntervalBackoffMultiplier(@Nullable Double retryIntervalBackoffMultiplier) {
-            this.retryIntervalBackoffMultiplier = Input.ofNullable(retryIntervalBackoffMultiplier);
+            this.retryIntervalBackoffMultiplier = Output.ofNullable(retryIntervalBackoffMultiplier);
             return this;
         }
 
-        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
         }
         public JobStepExecutionOptionsArgs build() {

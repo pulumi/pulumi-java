@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitStatsArgs;
 import io.pulumi.azurenative.network.inputs.Ipv6ExpressRouteCircuitPeeringConfigArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -34,10 +34,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="azureASN")
-      private final @Nullable Input<Integer> azureASN;
+      private final @Nullable Output<Integer> azureASN;
 
-    public Input<Integer> getAzureASN() {
-        return this.azureASN == null ? Input.empty() : this.azureASN;
+    public Output<Integer> getAzureASN() {
+        return this.azureASN == null ? Output.empty() : this.azureASN;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connections")
-      private final @Nullable Input<List<ExpressRouteCircuitConnectionArgs>> connections;
+      private final @Nullable Output<List<ExpressRouteCircuitConnectionArgs>> connections;
 
-    public Input<List<ExpressRouteCircuitConnectionArgs>> getConnections() {
-        return this.connections == null ? Input.empty() : this.connections;
+    public Output<List<ExpressRouteCircuitConnectionArgs>> getConnections() {
+        return this.connections == null ? Output.empty() : this.connections;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="gatewayManagerEtag")
-      private final @Nullable Input<String> gatewayManagerEtag;
+      private final @Nullable Output<String> gatewayManagerEtag;
 
-    public Input<String> getGatewayManagerEtag() {
-        return this.gatewayManagerEtag == null ? Input.empty() : this.gatewayManagerEtag;
+    public Output<String> getGatewayManagerEtag() {
+        return this.gatewayManagerEtag == null ? Output.empty() : this.gatewayManagerEtag;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ipv6PeeringConfig")
-      private final @Nullable Input<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
+      private final @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
 
-    public Input<Ipv6ExpressRouteCircuitPeeringConfigArgs> getIpv6PeeringConfig() {
-        return this.ipv6PeeringConfig == null ? Input.empty() : this.ipv6PeeringConfig;
+    public Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> getIpv6PeeringConfig() {
+        return this.ipv6PeeringConfig == null ? Output.empty() : this.ipv6PeeringConfig;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="microsoftPeeringConfig")
-      private final @Nullable Input<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
+      private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
-    public Input<ExpressRouteCircuitPeeringConfigArgs> getMicrosoftPeeringConfig() {
-        return this.microsoftPeeringConfig == null ? Input.empty() : this.microsoftPeeringConfig;
+    public Output<ExpressRouteCircuitPeeringConfigArgs> getMicrosoftPeeringConfig() {
+        return this.microsoftPeeringConfig == null ? Output.empty() : this.microsoftPeeringConfig;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="peerASN")
-      private final @Nullable Input<Double> peerASN;
+      private final @Nullable Output<Double> peerASN;
 
-    public Input<Double> getPeerASN() {
-        return this.peerASN == null ? Input.empty() : this.peerASN;
+    public Output<Double> getPeerASN() {
+        return this.peerASN == null ? Output.empty() : this.peerASN;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="peeringType")
-      private final @Nullable Input<Either<String,ExpressRoutePeeringType>> peeringType;
+      private final @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType;
 
-    public Input<Either<String,ExpressRoutePeeringType>> getPeeringType() {
-        return this.peeringType == null ? Input.empty() : this.peeringType;
+    public Output<Either<String,ExpressRoutePeeringType>> getPeeringType() {
+        return this.peeringType == null ? Output.empty() : this.peeringType;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="primaryAzurePort")
-      private final @Nullable Input<String> primaryAzurePort;
+      private final @Nullable Output<String> primaryAzurePort;
 
-    public Input<String> getPrimaryAzurePort() {
-        return this.primaryAzurePort == null ? Input.empty() : this.primaryAzurePort;
+    public Output<String> getPrimaryAzurePort() {
+        return this.primaryAzurePort == null ? Output.empty() : this.primaryAzurePort;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="primaryPeerAddressPrefix")
-      private final @Nullable Input<String> primaryPeerAddressPrefix;
+      private final @Nullable Output<String> primaryPeerAddressPrefix;
 
-    public Input<String> getPrimaryPeerAddressPrefix() {
-        return this.primaryPeerAddressPrefix == null ? Input.empty() : this.primaryPeerAddressPrefix;
+    public Output<String> getPrimaryPeerAddressPrefix() {
+        return this.primaryPeerAddressPrefix == null ? Output.empty() : this.primaryPeerAddressPrefix;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="routeFilter")
-      private final @Nullable Input<SubResourceArgs> routeFilter;
+      private final @Nullable Output<SubResourceArgs> routeFilter;
 
-    public Input<SubResourceArgs> getRouteFilter() {
-        return this.routeFilter == null ? Input.empty() : this.routeFilter;
+    public Output<SubResourceArgs> getRouteFilter() {
+        return this.routeFilter == null ? Output.empty() : this.routeFilter;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="secondaryAzurePort")
-      private final @Nullable Input<String> secondaryAzurePort;
+      private final @Nullable Output<String> secondaryAzurePort;
 
-    public Input<String> getSecondaryAzurePort() {
-        return this.secondaryAzurePort == null ? Input.empty() : this.secondaryAzurePort;
+    public Output<String> getSecondaryAzurePort() {
+        return this.secondaryAzurePort == null ? Output.empty() : this.secondaryAzurePort;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="secondaryPeerAddressPrefix")
-      private final @Nullable Input<String> secondaryPeerAddressPrefix;
+      private final @Nullable Output<String> secondaryPeerAddressPrefix;
 
-    public Input<String> getSecondaryPeerAddressPrefix() {
-        return this.secondaryPeerAddressPrefix == null ? Input.empty() : this.secondaryPeerAddressPrefix;
+    public Output<String> getSecondaryPeerAddressPrefix() {
+        return this.secondaryPeerAddressPrefix == null ? Output.empty() : this.secondaryPeerAddressPrefix;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sharedKey")
-      private final @Nullable Input<String> sharedKey;
+      private final @Nullable Output<String> sharedKey;
 
-    public Input<String> getSharedKey() {
-        return this.sharedKey == null ? Input.empty() : this.sharedKey;
+    public Output<String> getSharedKey() {
+        return this.sharedKey == null ? Output.empty() : this.sharedKey;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,ExpressRoutePeeringState>> state;
+      private final @Nullable Output<Either<String,ExpressRoutePeeringState>> state;
 
-    public Input<Either<String,ExpressRoutePeeringState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,ExpressRoutePeeringState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="stats")
-      private final @Nullable Input<ExpressRouteCircuitStatsArgs> stats;
+      private final @Nullable Output<ExpressRouteCircuitStatsArgs> stats;
 
-    public Input<ExpressRouteCircuitStatsArgs> getStats() {
-        return this.stats == null ? Input.empty() : this.stats;
+    public Output<ExpressRouteCircuitStatsArgs> getStats() {
+        return this.stats == null ? Output.empty() : this.stats;
     }
 
     /**
@@ -221,31 +221,31 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="vlanId")
-      private final @Nullable Input<Integer> vlanId;
+      private final @Nullable Output<Integer> vlanId;
 
-    public Input<Integer> getVlanId() {
-        return this.vlanId == null ? Input.empty() : this.vlanId;
+    public Output<Integer> getVlanId() {
+        return this.vlanId == null ? Output.empty() : this.vlanId;
     }
 
     public ExpressRouteCircuitPeeringArgs(
-        @Nullable Input<Integer> azureASN,
-        @Nullable Input<List<ExpressRouteCircuitConnectionArgs>> connections,
-        @Nullable Input<String> gatewayManagerEtag,
-        @Nullable Input<String> id,
-        @Nullable Input<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig,
-        @Nullable Input<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<Double> peerASN,
-        @Nullable Input<Either<String,ExpressRoutePeeringType>> peeringType,
-        @Nullable Input<String> primaryAzurePort,
-        @Nullable Input<String> primaryPeerAddressPrefix,
-        @Nullable Input<SubResourceArgs> routeFilter,
-        @Nullable Input<String> secondaryAzurePort,
-        @Nullable Input<String> secondaryPeerAddressPrefix,
-        @Nullable Input<String> sharedKey,
-        @Nullable Input<Either<String,ExpressRoutePeeringState>> state,
-        @Nullable Input<ExpressRouteCircuitStatsArgs> stats,
-        @Nullable Input<Integer> vlanId) {
+        @Nullable Output<Integer> azureASN,
+        @Nullable Output<List<ExpressRouteCircuitConnectionArgs>> connections,
+        @Nullable Output<String> gatewayManagerEtag,
+        @Nullable Output<String> id,
+        @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig,
+        @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<Double> peerASN,
+        @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType,
+        @Nullable Output<String> primaryAzurePort,
+        @Nullable Output<String> primaryPeerAddressPrefix,
+        @Nullable Output<SubResourceArgs> routeFilter,
+        @Nullable Output<String> secondaryAzurePort,
+        @Nullable Output<String> secondaryPeerAddressPrefix,
+        @Nullable Output<String> sharedKey,
+        @Nullable Output<Either<String,ExpressRoutePeeringState>> state,
+        @Nullable Output<ExpressRouteCircuitStatsArgs> stats,
+        @Nullable Output<Integer> vlanId) {
         this.azureASN = azureASN;
         this.connections = connections;
         this.gatewayManagerEtag = gatewayManagerEtag;
@@ -267,24 +267,24 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
     }
 
     private ExpressRouteCircuitPeeringArgs() {
-        this.azureASN = Input.empty();
-        this.connections = Input.empty();
-        this.gatewayManagerEtag = Input.empty();
-        this.id = Input.empty();
-        this.ipv6PeeringConfig = Input.empty();
-        this.microsoftPeeringConfig = Input.empty();
-        this.name = Input.empty();
-        this.peerASN = Input.empty();
-        this.peeringType = Input.empty();
-        this.primaryAzurePort = Input.empty();
-        this.primaryPeerAddressPrefix = Input.empty();
-        this.routeFilter = Input.empty();
-        this.secondaryAzurePort = Input.empty();
-        this.secondaryPeerAddressPrefix = Input.empty();
-        this.sharedKey = Input.empty();
-        this.state = Input.empty();
-        this.stats = Input.empty();
-        this.vlanId = Input.empty();
+        this.azureASN = Output.empty();
+        this.connections = Output.empty();
+        this.gatewayManagerEtag = Output.empty();
+        this.id = Output.empty();
+        this.ipv6PeeringConfig = Output.empty();
+        this.microsoftPeeringConfig = Output.empty();
+        this.name = Output.empty();
+        this.peerASN = Output.empty();
+        this.peeringType = Output.empty();
+        this.primaryAzurePort = Output.empty();
+        this.primaryPeerAddressPrefix = Output.empty();
+        this.routeFilter = Output.empty();
+        this.secondaryAzurePort = Output.empty();
+        this.secondaryPeerAddressPrefix = Output.empty();
+        this.sharedKey = Output.empty();
+        this.state = Output.empty();
+        this.stats = Output.empty();
+        this.vlanId = Output.empty();
     }
 
     public static Builder builder() {
@@ -296,24 +296,24 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> azureASN;
-        private @Nullable Input<List<ExpressRouteCircuitConnectionArgs>> connections;
-        private @Nullable Input<String> gatewayManagerEtag;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
-        private @Nullable Input<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Double> peerASN;
-        private @Nullable Input<Either<String,ExpressRoutePeeringType>> peeringType;
-        private @Nullable Input<String> primaryAzurePort;
-        private @Nullable Input<String> primaryPeerAddressPrefix;
-        private @Nullable Input<SubResourceArgs> routeFilter;
-        private @Nullable Input<String> secondaryAzurePort;
-        private @Nullable Input<String> secondaryPeerAddressPrefix;
-        private @Nullable Input<String> sharedKey;
-        private @Nullable Input<Either<String,ExpressRoutePeeringState>> state;
-        private @Nullable Input<ExpressRouteCircuitStatsArgs> stats;
-        private @Nullable Input<Integer> vlanId;
+        private @Nullable Output<Integer> azureASN;
+        private @Nullable Output<List<ExpressRouteCircuitConnectionArgs>> connections;
+        private @Nullable Output<String> gatewayManagerEtag;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
+        private @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Double> peerASN;
+        private @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType;
+        private @Nullable Output<String> primaryAzurePort;
+        private @Nullable Output<String> primaryPeerAddressPrefix;
+        private @Nullable Output<SubResourceArgs> routeFilter;
+        private @Nullable Output<String> secondaryAzurePort;
+        private @Nullable Output<String> secondaryPeerAddressPrefix;
+        private @Nullable Output<String> sharedKey;
+        private @Nullable Output<Either<String,ExpressRoutePeeringState>> state;
+        private @Nullable Output<ExpressRouteCircuitStatsArgs> stats;
+        private @Nullable Output<Integer> vlanId;
 
         public Builder() {
     	      // Empty
@@ -341,183 +341,183 @@ public final class ExpressRouteCircuitPeeringArgs extends io.pulumi.resources.Re
     	      this.vlanId = defaults.vlanId;
         }
 
-        public Builder azureASN(@Nullable Input<Integer> azureASN) {
+        public Builder azureASN(@Nullable Output<Integer> azureASN) {
             this.azureASN = azureASN;
             return this;
         }
 
         public Builder azureASN(@Nullable Integer azureASN) {
-            this.azureASN = Input.ofNullable(azureASN);
+            this.azureASN = Output.ofNullable(azureASN);
             return this;
         }
 
-        public Builder connections(@Nullable Input<List<ExpressRouteCircuitConnectionArgs>> connections) {
+        public Builder connections(@Nullable Output<List<ExpressRouteCircuitConnectionArgs>> connections) {
             this.connections = connections;
             return this;
         }
 
         public Builder connections(@Nullable List<ExpressRouteCircuitConnectionArgs> connections) {
-            this.connections = Input.ofNullable(connections);
+            this.connections = Output.ofNullable(connections);
             return this;
         }
 
-        public Builder gatewayManagerEtag(@Nullable Input<String> gatewayManagerEtag) {
+        public Builder gatewayManagerEtag(@Nullable Output<String> gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
 
         public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
-            this.gatewayManagerEtag = Input.ofNullable(gatewayManagerEtag);
+            this.gatewayManagerEtag = Output.ofNullable(gatewayManagerEtag);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipv6PeeringConfig(@Nullable Input<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig) {
+        public Builder ipv6PeeringConfig(@Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig) {
             this.ipv6PeeringConfig = ipv6PeeringConfig;
             return this;
         }
 
         public Builder ipv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigArgs ipv6PeeringConfig) {
-            this.ipv6PeeringConfig = Input.ofNullable(ipv6PeeringConfig);
+            this.ipv6PeeringConfig = Output.ofNullable(ipv6PeeringConfig);
             return this;
         }
 
-        public Builder microsoftPeeringConfig(@Nullable Input<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig) {
+        public Builder microsoftPeeringConfig(@Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig) {
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
 
         public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
-            this.microsoftPeeringConfig = Input.ofNullable(microsoftPeeringConfig);
+            this.microsoftPeeringConfig = Output.ofNullable(microsoftPeeringConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder peerASN(@Nullable Input<Double> peerASN) {
+        public Builder peerASN(@Nullable Output<Double> peerASN) {
             this.peerASN = peerASN;
             return this;
         }
 
         public Builder peerASN(@Nullable Double peerASN) {
-            this.peerASN = Input.ofNullable(peerASN);
+            this.peerASN = Output.ofNullable(peerASN);
             return this;
         }
 
-        public Builder peeringType(@Nullable Input<Either<String,ExpressRoutePeeringType>> peeringType) {
+        public Builder peeringType(@Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType) {
             this.peeringType = peeringType;
             return this;
         }
 
         public Builder peeringType(@Nullable Either<String,ExpressRoutePeeringType> peeringType) {
-            this.peeringType = Input.ofNullable(peeringType);
+            this.peeringType = Output.ofNullable(peeringType);
             return this;
         }
 
-        public Builder primaryAzurePort(@Nullable Input<String> primaryAzurePort) {
+        public Builder primaryAzurePort(@Nullable Output<String> primaryAzurePort) {
             this.primaryAzurePort = primaryAzurePort;
             return this;
         }
 
         public Builder primaryAzurePort(@Nullable String primaryAzurePort) {
-            this.primaryAzurePort = Input.ofNullable(primaryAzurePort);
+            this.primaryAzurePort = Output.ofNullable(primaryAzurePort);
             return this;
         }
 
-        public Builder primaryPeerAddressPrefix(@Nullable Input<String> primaryPeerAddressPrefix) {
+        public Builder primaryPeerAddressPrefix(@Nullable Output<String> primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
 
         public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
-            this.primaryPeerAddressPrefix = Input.ofNullable(primaryPeerAddressPrefix);
+            this.primaryPeerAddressPrefix = Output.ofNullable(primaryPeerAddressPrefix);
             return this;
         }
 
-        public Builder routeFilter(@Nullable Input<SubResourceArgs> routeFilter) {
+        public Builder routeFilter(@Nullable Output<SubResourceArgs> routeFilter) {
             this.routeFilter = routeFilter;
             return this;
         }
 
         public Builder routeFilter(@Nullable SubResourceArgs routeFilter) {
-            this.routeFilter = Input.ofNullable(routeFilter);
+            this.routeFilter = Output.ofNullable(routeFilter);
             return this;
         }
 
-        public Builder secondaryAzurePort(@Nullable Input<String> secondaryAzurePort) {
+        public Builder secondaryAzurePort(@Nullable Output<String> secondaryAzurePort) {
             this.secondaryAzurePort = secondaryAzurePort;
             return this;
         }
 
         public Builder secondaryAzurePort(@Nullable String secondaryAzurePort) {
-            this.secondaryAzurePort = Input.ofNullable(secondaryAzurePort);
+            this.secondaryAzurePort = Output.ofNullable(secondaryAzurePort);
             return this;
         }
 
-        public Builder secondaryPeerAddressPrefix(@Nullable Input<String> secondaryPeerAddressPrefix) {
+        public Builder secondaryPeerAddressPrefix(@Nullable Output<String> secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
 
         public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
-            this.secondaryPeerAddressPrefix = Input.ofNullable(secondaryPeerAddressPrefix);
+            this.secondaryPeerAddressPrefix = Output.ofNullable(secondaryPeerAddressPrefix);
             return this;
         }
 
-        public Builder sharedKey(@Nullable Input<String> sharedKey) {
+        public Builder sharedKey(@Nullable Output<String> sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
 
         public Builder sharedKey(@Nullable String sharedKey) {
-            this.sharedKey = Input.ofNullable(sharedKey);
+            this.sharedKey = Output.ofNullable(sharedKey);
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,ExpressRoutePeeringState>> state) {
+        public Builder state(@Nullable Output<Either<String,ExpressRoutePeeringState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,ExpressRoutePeeringState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder stats(@Nullable Input<ExpressRouteCircuitStatsArgs> stats) {
+        public Builder stats(@Nullable Output<ExpressRouteCircuitStatsArgs> stats) {
             this.stats = stats;
             return this;
         }
 
         public Builder stats(@Nullable ExpressRouteCircuitStatsArgs stats) {
-            this.stats = Input.ofNullable(stats);
+            this.stats = Output.ofNullable(stats);
             return this;
         }
 
-        public Builder vlanId(@Nullable Input<Integer> vlanId) {
+        public Builder vlanId(@Nullable Output<Integer> vlanId) {
             this.vlanId = vlanId;
             return this;
         }
 
         public Builder vlanId(@Nullable Integer vlanId) {
-            this.vlanId = Input.ofNullable(vlanId);
+            this.vlanId = Output.ofNullable(vlanId);
             return this;
         }
         public ExpressRouteCircuitPeeringArgs build() {

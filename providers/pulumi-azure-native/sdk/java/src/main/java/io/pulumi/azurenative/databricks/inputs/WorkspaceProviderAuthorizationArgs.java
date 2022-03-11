@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class WorkspaceProviderAuthorizationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="principalId", required=true)
-      private final Input<String> principalId;
+      private final Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
+    public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
@@ -33,22 +33,22 @@ public final class WorkspaceProviderAuthorizationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-      private final Input<String> roleDefinitionId;
+      private final Output<String> roleDefinitionId;
 
-    public Input<String> getRoleDefinitionId() {
+    public Output<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
 
     public WorkspaceProviderAuthorizationArgs(
-        Input<String> principalId,
-        Input<String> roleDefinitionId) {
+        Output<String> principalId,
+        Output<String> roleDefinitionId) {
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
         this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
     }
 
     private WorkspaceProviderAuthorizationArgs() {
-        this.principalId = Input.empty();
-        this.roleDefinitionId = Input.empty();
+        this.principalId = Output.empty();
+        this.roleDefinitionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class WorkspaceProviderAuthorizationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> principalId;
-        private Input<String> roleDefinitionId;
+        private Output<String> principalId;
+        private Output<String> roleDefinitionId;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class WorkspaceProviderAuthorizationArgs extends io.pulumi.resource
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder principalId(Input<String> principalId) {
+        public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Input.of(Objects.requireNonNull(principalId));
+            this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder roleDefinitionId(Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
 
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Input.of(Objects.requireNonNull(roleDefinitionId));
+            this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
             return this;
         }
         public WorkspaceProviderAuthorizationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerTriggerFulfillmentMessageArgs;
 import java.lang.Boolean;
@@ -23,10 +23,10 @@ public final class CxFlowEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="messages")
-      private final @Nullable Input<List<CxFlowEventHandlerTriggerFulfillmentMessageArgs>> messages;
+      private final @Nullable Output<List<CxFlowEventHandlerTriggerFulfillmentMessageArgs>> messages;
 
-    public Input<List<CxFlowEventHandlerTriggerFulfillmentMessageArgs>> getMessages() {
-        return this.messages == null ? Input.empty() : this.messages;
+    public Output<List<CxFlowEventHandlerTriggerFulfillmentMessageArgs>> getMessages() {
+        return this.messages == null ? Output.empty() : this.messages;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CxFlowEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="returnPartialResponses")
-      private final @Nullable Input<Boolean> returnPartialResponses;
+      private final @Nullable Output<Boolean> returnPartialResponses;
 
-    public Input<Boolean> getReturnPartialResponses() {
-        return this.returnPartialResponses == null ? Input.empty() : this.returnPartialResponses;
+    public Output<Boolean> getReturnPartialResponses() {
+        return this.returnPartialResponses == null ? Output.empty() : this.returnPartialResponses;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CxFlowEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class CxFlowEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="webhook")
-      private final @Nullable Input<String> webhook;
+      private final @Nullable Output<String> webhook;
 
-    public Input<String> getWebhook() {
-        return this.webhook == null ? Input.empty() : this.webhook;
+    public Output<String> getWebhook() {
+        return this.webhook == null ? Output.empty() : this.webhook;
     }
 
     public CxFlowEventHandlerTriggerFulfillmentArgs(
-        @Nullable Input<List<CxFlowEventHandlerTriggerFulfillmentMessageArgs>> messages,
-        @Nullable Input<Boolean> returnPartialResponses,
-        @Nullable Input<String> tag,
-        @Nullable Input<String> webhook) {
+        @Nullable Output<List<CxFlowEventHandlerTriggerFulfillmentMessageArgs>> messages,
+        @Nullable Output<Boolean> returnPartialResponses,
+        @Nullable Output<String> tag,
+        @Nullable Output<String> webhook) {
         this.messages = messages;
         this.returnPartialResponses = returnPartialResponses;
         this.tag = tag;
@@ -74,10 +74,10 @@ public final class CxFlowEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
     }
 
     private CxFlowEventHandlerTriggerFulfillmentArgs() {
-        this.messages = Input.empty();
-        this.returnPartialResponses = Input.empty();
-        this.tag = Input.empty();
-        this.webhook = Input.empty();
+        this.messages = Output.empty();
+        this.returnPartialResponses = Output.empty();
+        this.tag = Output.empty();
+        this.webhook = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class CxFlowEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CxFlowEventHandlerTriggerFulfillmentMessageArgs>> messages;
-        private @Nullable Input<Boolean> returnPartialResponses;
-        private @Nullable Input<String> tag;
-        private @Nullable Input<String> webhook;
+        private @Nullable Output<List<CxFlowEventHandlerTriggerFulfillmentMessageArgs>> messages;
+        private @Nullable Output<Boolean> returnPartialResponses;
+        private @Nullable Output<String> tag;
+        private @Nullable Output<String> webhook;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class CxFlowEventHandlerTriggerFulfillmentArgs extends io.pulumi.re
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder messages(@Nullable Input<List<CxFlowEventHandlerTriggerFulfillmentMessageArgs>> messages) {
+        public Builder messages(@Nullable Output<List<CxFlowEventHandlerTriggerFulfillmentMessageArgs>> messages) {
             this.messages = messages;
             return this;
         }
 
         public Builder messages(@Nullable List<CxFlowEventHandlerTriggerFulfillmentMessageArgs> messages) {
-            this.messages = Input.ofNullable(messages);
+            this.messages = Output.ofNullable(messages);
             return this;
         }
 
-        public Builder returnPartialResponses(@Nullable Input<Boolean> returnPartialResponses) {
+        public Builder returnPartialResponses(@Nullable Output<Boolean> returnPartialResponses) {
             this.returnPartialResponses = returnPartialResponses;
             return this;
         }
 
         public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
-            this.returnPartialResponses = Input.ofNullable(returnPartialResponses);
+            this.returnPartialResponses = Output.ofNullable(returnPartialResponses);
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
 
-        public Builder webhook(@Nullable Input<String> webhook) {
+        public Builder webhook(@Nullable Output<String> webhook) {
             this.webhook = webhook;
             return this;
         }
 
         public Builder webhook(@Nullable String webhook) {
-            this.webhook = Input.ofNullable(webhook);
+            this.webhook = Output.ofNullable(webhook);
             return this;
         }
         public CxFlowEventHandlerTriggerFulfillmentArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.enums.InventoryRuleType;
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyRuleArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<String> destination;
+      private final Output<String> destination;
 
-    public Input<String> getDestination() {
+    public Output<String> getDestination() {
         return this.destination;
     }
 
@@ -38,9 +38,9 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -49,9 +49,9 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<BlobInventoryPolicyRuleArgs>> rules;
+      private final Output<List<BlobInventoryPolicyRuleArgs>> rules;
 
-    public Input<List<BlobInventoryPolicyRuleArgs>> getRules() {
+    public Output<List<BlobInventoryPolicyRuleArgs>> getRules() {
         return this.rules;
     }
 
@@ -60,17 +60,17 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,InventoryRuleType>> type;
+      private final Output<Either<String,InventoryRuleType>> type;
 
-    public Input<Either<String,InventoryRuleType>> getType() {
+    public Output<Either<String,InventoryRuleType>> getType() {
         return this.type;
     }
 
     public BlobInventoryPolicySchemaArgs(
-        Input<String> destination,
-        Input<Boolean> enabled,
-        Input<List<BlobInventoryPolicyRuleArgs>> rules,
-        Input<Either<String,InventoryRuleType>> type) {
+        Output<String> destination,
+        Output<Boolean> enabled,
+        Output<List<BlobInventoryPolicyRuleArgs>> rules,
+        Output<Either<String,InventoryRuleType>> type) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
@@ -78,10 +78,10 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
     }
 
     private BlobInventoryPolicySchemaArgs() {
-        this.destination = Input.empty();
-        this.enabled = Input.empty();
-        this.rules = Input.empty();
-        this.type = Input.empty();
+        this.destination = Output.empty();
+        this.enabled = Output.empty();
+        this.rules = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> destination;
-        private Input<Boolean> enabled;
-        private Input<List<BlobInventoryPolicyRuleArgs>> rules;
-        private Input<Either<String,InventoryRuleType>> type;
+        private Output<String> destination;
+        private Output<Boolean> enabled;
+        private Output<List<BlobInventoryPolicyRuleArgs>> rules;
+        private Output<Either<String,InventoryRuleType>> type;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder destination(Input<String> destination) {
+        public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(String destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder rules(Input<List<BlobInventoryPolicyRuleArgs>> rules) {
+        public Builder rules(Output<List<BlobInventoryPolicyRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<BlobInventoryPolicyRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder type(Input<Either<String,InventoryRuleType>> type) {
+        public Builder type(Output<Either<String,InventoryRuleType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,InventoryRuleType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public BlobInventoryPolicySchemaArgs build() {

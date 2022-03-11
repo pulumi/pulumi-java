@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.enums.TargetAvailabilityZone;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -37,10 +37,10 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetAvailabilitySetId")
-      private final @Nullable Input<String> targetAvailabilitySetId;
+      private final @Nullable Output<String> targetAvailabilitySetId;
 
-    public Input<String> getTargetAvailabilitySetId() {
-        return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
+    public Output<String> getTargetAvailabilitySetId() {
+        return this.targetAvailabilitySetId == null ? Output.empty() : this.targetAvailabilitySetId;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetAvailabilityZone")
-      private final @Nullable Input<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
+      private final @Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
 
-    public Input<Either<String,TargetAvailabilityZone>> getTargetAvailabilityZone() {
-        return this.targetAvailabilityZone == null ? Input.empty() : this.targetAvailabilityZone;
+    public Output<Either<String,TargetAvailabilityZone>> getTargetAvailabilityZone() {
+        return this.targetAvailabilityZone == null ? Output.empty() : this.targetAvailabilityZone;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-      private final Input<String> targetResourceName;
+      private final Output<String> targetResourceName;
 
-    public Input<String> getTargetResourceName() {
+    public Output<String> getTargetResourceName() {
         return this.targetResourceName;
     }
 
@@ -70,18 +70,18 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetVmSize")
-      private final @Nullable Input<String> targetVmSize;
+      private final @Nullable Output<String> targetVmSize;
 
-    public Input<String> getTargetVmSize() {
-        return this.targetVmSize == null ? Input.empty() : this.targetVmSize;
+    public Output<String> getTargetVmSize() {
+        return this.targetVmSize == null ? Output.empty() : this.targetVmSize;
     }
 
     public VirtualMachineResourceSettingsArgs(
-        Input<String> resourceType,
-        @Nullable Input<String> targetAvailabilitySetId,
-        @Nullable Input<Either<String,TargetAvailabilityZone>> targetAvailabilityZone,
-        Input<String> targetResourceName,
-        @Nullable Input<String> targetVmSize) {
+        Output<String> resourceType,
+        @Nullable Output<String> targetAvailabilitySetId,
+        @Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone,
+        Output<String> targetResourceName,
+        @Nullable Output<String> targetVmSize) {
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
         this.targetAvailabilitySetId = targetAvailabilitySetId;
         this.targetAvailabilityZone = targetAvailabilityZone;
@@ -90,11 +90,11 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
     }
 
     private VirtualMachineResourceSettingsArgs() {
-        this.resourceType = Input.empty();
-        this.targetAvailabilitySetId = Input.empty();
-        this.targetAvailabilityZone = Input.empty();
-        this.targetResourceName = Input.empty();
-        this.targetVmSize = Input.empty();
+        this.resourceType = Output.empty();
+        this.targetAvailabilitySetId = Output.empty();
+        this.targetAvailabilityZone = Output.empty();
+        this.targetResourceName = Output.empty();
+        this.targetVmSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> resourceType;
-        private @Nullable Input<String> targetAvailabilitySetId;
-        private @Nullable Input<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
-        private Input<String> targetResourceName;
-        private @Nullable Input<String> targetVmSize;
+        private Output<String> resourceType;
+        private @Nullable Output<String> targetAvailabilitySetId;
+        private @Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
+        private Output<String> targetResourceName;
+        private @Nullable Output<String> targetVmSize;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
     	      this.targetVmSize = defaults.targetVmSize;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder targetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = Input.ofNullable(targetAvailabilitySetId);
+            this.targetAvailabilitySetId = Output.ofNullable(targetAvailabilitySetId);
             return this;
         }
 
-        public Builder targetAvailabilityZone(@Nullable Input<Either<String,TargetAvailabilityZone>> targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
         public Builder targetAvailabilityZone(@Nullable Either<String,TargetAvailabilityZone> targetAvailabilityZone) {
-            this.targetAvailabilityZone = Input.ofNullable(targetAvailabilityZone);
+            this.targetAvailabilityZone = Output.ofNullable(targetAvailabilityZone);
             return this;
         }
 
-        public Builder targetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Output<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
+            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
 
-        public Builder targetVmSize(@Nullable Input<String> targetVmSize) {
+        public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
 
         public Builder targetVmSize(@Nullable String targetVmSize) {
-            this.targetVmSize = Input.ofNullable(targetVmSize);
+            this.targetVmSize = Output.ofNullable(targetVmSize);
             return this;
         }
         public VirtualMachineResourceSettingsArgs build() {

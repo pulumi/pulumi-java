@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.redshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class SnapshotCopyGrantState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SnapshotCopyGrantState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SnapshotCopyGrantState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="snapshotCopyGrantName")
-      private final @Nullable Input<String> snapshotCopyGrantName;
+      private final @Nullable Output<String> snapshotCopyGrantName;
 
-    public Input<String> getSnapshotCopyGrantName() {
-        return this.snapshotCopyGrantName == null ? Input.empty() : this.snapshotCopyGrantName;
+    public Output<String> getSnapshotCopyGrantName() {
+        return this.snapshotCopyGrantName == null ? Output.empty() : this.snapshotCopyGrantName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SnapshotCopyGrantState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class SnapshotCopyGrantState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public SnapshotCopyGrantState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> snapshotCopyGrantName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> snapshotCopyGrantName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.kmsKeyId = kmsKeyId;
         this.snapshotCopyGrantName = snapshotCopyGrantName;
@@ -84,11 +84,11 @@ public final class SnapshotCopyGrantState extends io.pulumi.resources.ResourceAr
     }
 
     private SnapshotCopyGrantState() {
-        this.arn = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.snapshotCopyGrantName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.snapshotCopyGrantName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class SnapshotCopyGrantState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> snapshotCopyGrantName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> snapshotCopyGrantName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class SnapshotCopyGrantState extends io.pulumi.resources.ResourceAr
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder snapshotCopyGrantName(@Nullable Input<String> snapshotCopyGrantName) {
+        public Builder snapshotCopyGrantName(@Nullable Output<String> snapshotCopyGrantName) {
             this.snapshotCopyGrantName = snapshotCopyGrantName;
             return this;
         }
 
         public Builder snapshotCopyGrantName(@Nullable String snapshotCopyGrantName) {
-            this.snapshotCopyGrantName = Input.ofNullable(snapshotCopyGrantName);
+            this.snapshotCopyGrantName = Output.ofNullable(snapshotCopyGrantName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public SnapshotCopyGrantState build() {

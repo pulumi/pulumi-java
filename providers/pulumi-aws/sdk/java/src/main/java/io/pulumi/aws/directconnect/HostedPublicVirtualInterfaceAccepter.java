@@ -6,7 +6,6 @@ package io.pulumi.aws.directconnect;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.HostedPublicVirtualInterfaceAccepterArgs;
 import io.pulumi.aws.directconnect.inputs.HostedPublicVirtualInterfaceAccepterState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -126,14 +125,14 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public HostedPublicVirtualInterfaceAccepter(String name, HostedPublicVirtualInterfaceAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/hostedPublicVirtualInterfaceAccepter:HostedPublicVirtualInterfaceAccepter", name, args == null ? HostedPublicVirtualInterfaceAccepterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:directconnect/hostedPublicVirtualInterfaceAccepter:HostedPublicVirtualInterfaceAccepter", name, args == null ? HostedPublicVirtualInterfaceAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HostedPublicVirtualInterfaceAccepter(String name, Input<String> id, @Nullable HostedPublicVirtualInterfaceAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HostedPublicVirtualInterfaceAccepter(String name, Output<String> id, @Nullable HostedPublicVirtualInterfaceAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:directconnect/hostedPublicVirtualInterfaceAccepter:HostedPublicVirtualInterfaceAccepter", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -149,7 +148,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HostedPublicVirtualInterfaceAccepter get(String name, Input<String> id, @Nullable HostedPublicVirtualInterfaceAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HostedPublicVirtualInterfaceAccepter get(String name, Output<String> id, @Nullable HostedPublicVirtualInterfaceAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HostedPublicVirtualInterfaceAccepter(name, id, state, options);
     }
 }

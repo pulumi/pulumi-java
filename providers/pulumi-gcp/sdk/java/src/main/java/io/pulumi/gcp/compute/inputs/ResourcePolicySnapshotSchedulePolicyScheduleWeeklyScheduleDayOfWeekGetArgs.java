@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * 
      */
     @InputImport(name="day", required=true)
-      private final Input<String> day;
+      private final Output<String> day;
 
-    public Input<String> getDay() {
+    public Output<String> getDay() {
         return this.day;
     }
 
@@ -30,22 +30,22 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
     public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs(
-        Input<String> day,
-        Input<String> startTime) {
+        Output<String> day,
+        Output<String> startTime) {
         this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
     }
 
     private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs() {
-        this.day = Input.empty();
-        this.startTime = Input.empty();
+        this.day = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
     }
 
     public static final class Builder {
-        private Input<String> day;
-        private Input<String> startTime;
+        private Output<String> day;
+        private Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder day(Input<String> day) {
+        public Builder day(Output<String> day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
         public Builder day(String day) {
-            this.day = Input.of(Objects.requireNonNull(day));
+            this.day = Output.of(Objects.requireNonNull(day));
             return this;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs build() {

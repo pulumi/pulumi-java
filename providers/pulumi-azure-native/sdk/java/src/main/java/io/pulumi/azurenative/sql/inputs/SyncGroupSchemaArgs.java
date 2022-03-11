@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.inputs.SyncGroupSchemaTableArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="masterSyncMemberName")
-      private final @Nullable Input<String> masterSyncMemberName;
+      private final @Nullable Output<String> masterSyncMemberName;
 
-    public Input<String> getMasterSyncMemberName() {
-        return this.masterSyncMemberName == null ? Input.empty() : this.masterSyncMemberName;
+    public Output<String> getMasterSyncMemberName() {
+        return this.masterSyncMemberName == null ? Output.empty() : this.masterSyncMemberName;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tables")
-      private final @Nullable Input<List<SyncGroupSchemaTableArgs>> tables;
+      private final @Nullable Output<List<SyncGroupSchemaTableArgs>> tables;
 
-    public Input<List<SyncGroupSchemaTableArgs>> getTables() {
-        return this.tables == null ? Input.empty() : this.tables;
+    public Output<List<SyncGroupSchemaTableArgs>> getTables() {
+        return this.tables == null ? Output.empty() : this.tables;
     }
 
     public SyncGroupSchemaArgs(
-        @Nullable Input<String> masterSyncMemberName,
-        @Nullable Input<List<SyncGroupSchemaTableArgs>> tables) {
+        @Nullable Output<String> masterSyncMemberName,
+        @Nullable Output<List<SyncGroupSchemaTableArgs>> tables) {
         this.masterSyncMemberName = masterSyncMemberName;
         this.tables = tables;
     }
 
     private SyncGroupSchemaArgs() {
-        this.masterSyncMemberName = Input.empty();
-        this.tables = Input.empty();
+        this.masterSyncMemberName = Output.empty();
+        this.tables = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> masterSyncMemberName;
-        private @Nullable Input<List<SyncGroupSchemaTableArgs>> tables;
+        private @Nullable Output<String> masterSyncMemberName;
+        private @Nullable Output<List<SyncGroupSchemaTableArgs>> tables;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tables = defaults.tables;
         }
 
-        public Builder masterSyncMemberName(@Nullable Input<String> masterSyncMemberName) {
+        public Builder masterSyncMemberName(@Nullable Output<String> masterSyncMemberName) {
             this.masterSyncMemberName = masterSyncMemberName;
             return this;
         }
 
         public Builder masterSyncMemberName(@Nullable String masterSyncMemberName) {
-            this.masterSyncMemberName = Input.ofNullable(masterSyncMemberName);
+            this.masterSyncMemberName = Output.ofNullable(masterSyncMemberName);
             return this;
         }
 
-        public Builder tables(@Nullable Input<List<SyncGroupSchemaTableArgs>> tables) {
+        public Builder tables(@Nullable Output<List<SyncGroupSchemaTableArgs>> tables) {
             this.tables = tables;
             return this;
         }
 
         public Builder tables(@Nullable List<SyncGroupSchemaTableArgs> tables) {
-            this.tables = Input.ofNullable(tables);
+            this.tables = Output.ofNullable(tables);
             return this;
         }
         public SyncGroupSchemaArgs build() {

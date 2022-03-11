@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.kusto.enums.ClusterPrincipalRole;
 import io.pulumi.azurenative.kusto.enums.PrincipalType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -33,10 +33,10 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="principalAssignmentName")
-      private final @Nullable Input<String> principalAssignmentName;
+      private final @Nullable Output<String> principalAssignmentName;
 
-    public Input<String> getPrincipalAssignmentName() {
-        return this.principalAssignmentName == null ? Input.empty() : this.principalAssignmentName;
+    public Output<String> getPrincipalAssignmentName() {
+        return this.principalAssignmentName == null ? Output.empty() : this.principalAssignmentName;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="principalId", required=true)
-      private final Input<String> principalId;
+      private final Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
+    public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
@@ -55,9 +55,9 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="principalType", required=true)
-      private final Input<Either<String,PrincipalType>> principalType;
+      private final Output<Either<String,PrincipalType>> principalType;
 
-    public Input<Either<String,PrincipalType>> getPrincipalType() {
+    public Output<Either<String,PrincipalType>> getPrincipalType() {
         return this.principalType;
     }
 
@@ -66,9 +66,9 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,9 +77,9 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<Either<String,ClusterPrincipalRole>> role;
+      private final Output<Either<String,ClusterPrincipalRole>> role;
 
-    public Input<Either<String,ClusterPrincipalRole>> getRole() {
+    public Output<Either<String,ClusterPrincipalRole>> getRole() {
         return this.role;
     }
 
@@ -88,20 +88,20 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     public ClusterPrincipalAssignmentArgs(
-        Input<String> clusterName,
-        @Nullable Input<String> principalAssignmentName,
-        Input<String> principalId,
-        Input<Either<String,PrincipalType>> principalType,
-        Input<String> resourceGroupName,
-        Input<Either<String,ClusterPrincipalRole>> role,
-        @Nullable Input<String> tenantId) {
+        Output<String> clusterName,
+        @Nullable Output<String> principalAssignmentName,
+        Output<String> principalId,
+        Output<Either<String,PrincipalType>> principalType,
+        Output<String> resourceGroupName,
+        Output<Either<String,ClusterPrincipalRole>> role,
+        @Nullable Output<String> tenantId) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.principalAssignmentName = principalAssignmentName;
         this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
@@ -112,13 +112,13 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
     }
 
     private ClusterPrincipalAssignmentArgs() {
-        this.clusterName = Input.empty();
-        this.principalAssignmentName = Input.empty();
-        this.principalId = Input.empty();
-        this.principalType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.role = Input.empty();
-        this.tenantId = Input.empty();
+        this.clusterName = Output.empty();
+        this.principalAssignmentName = Output.empty();
+        this.principalId = Output.empty();
+        this.principalType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.role = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private @Nullable Input<String> principalAssignmentName;
-        private Input<String> principalId;
-        private Input<Either<String,PrincipalType>> principalType;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,ClusterPrincipalRole>> role;
-        private @Nullable Input<String> tenantId;
+        private Output<String> clusterName;
+        private @Nullable Output<String> principalAssignmentName;
+        private Output<String> principalId;
+        private Output<Either<String,PrincipalType>> principalType;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,ClusterPrincipalRole>> role;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder principalAssignmentName(@Nullable Input<String> principalAssignmentName) {
+        public Builder principalAssignmentName(@Nullable Output<String> principalAssignmentName) {
             this.principalAssignmentName = principalAssignmentName;
             return this;
         }
 
         public Builder principalAssignmentName(@Nullable String principalAssignmentName) {
-            this.principalAssignmentName = Input.ofNullable(principalAssignmentName);
+            this.principalAssignmentName = Output.ofNullable(principalAssignmentName);
             return this;
         }
 
-        public Builder principalId(Input<String> principalId) {
+        public Builder principalId(Output<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Input.of(Objects.requireNonNull(principalId));
+            this.principalId = Output.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder principalType(Input<Either<String,PrincipalType>> principalType) {
+        public Builder principalType(Output<Either<String,PrincipalType>> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
         public Builder principalType(Either<String,PrincipalType> principalType) {
-            this.principalType = Input.of(Objects.requireNonNull(principalType));
+            this.principalType = Output.of(Objects.requireNonNull(principalType));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder role(Input<Either<String,ClusterPrincipalRole>> role) {
+        public Builder role(Output<Either<String,ClusterPrincipalRole>> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(Either<String,ClusterPrincipalRole> role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public ClusterPrincipalAssignmentArgs build() {

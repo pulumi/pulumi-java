@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -31,10 +31,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueName")
-      private final @Nullable Input<String> queueName;
+      private final @Nullable Output<String> queueName;
 
-    public Input<String> getQueueName() {
-        return this.queueName == null ? Input.empty() : this.queueName;
+    public Output<String> getQueueName() {
+        return this.queueName == null ? Output.empty() : this.queueName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public QueueArgs(
-        Input<String> accountName,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> queueName,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> queueName,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.metadata = metadata;
         this.queueName = queueName;
@@ -71,10 +71,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueueArgs() {
-        this.accountName = Input.empty();
-        this.metadata = Input.empty();
-        this.queueName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.metadata = Output.empty();
+        this.queueName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> queueName;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> queueName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder queueName(@Nullable Input<String> queueName) {
+        public Builder queueName(@Nullable Output<String> queueName) {
             this.queueName = queueName;
             return this;
         }
 
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = Input.ofNullable(queueName);
+            this.queueName = Output.ofNullable(queueName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public QueueArgs build() {

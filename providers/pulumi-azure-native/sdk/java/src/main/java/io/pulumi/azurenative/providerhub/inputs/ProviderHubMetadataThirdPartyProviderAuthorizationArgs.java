@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.LightHouseAuthorizationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
     public static final ProviderHubMetadataThirdPartyProviderAuthorizationArgs Empty = new ProviderHubMetadataThirdPartyProviderAuthorizationArgs();
 
     @InputImport(name="authorizations")
-      private final @Nullable Input<List<LightHouseAuthorizationArgs>> authorizations;
+      private final @Nullable Output<List<LightHouseAuthorizationArgs>> authorizations;
 
-    public Input<List<LightHouseAuthorizationArgs>> getAuthorizations() {
-        return this.authorizations == null ? Input.empty() : this.authorizations;
+    public Output<List<LightHouseAuthorizationArgs>> getAuthorizations() {
+        return this.authorizations == null ? Output.empty() : this.authorizations;
     }
 
     @InputImport(name="managedByTenantId")
-      private final @Nullable Input<String> managedByTenantId;
+      private final @Nullable Output<String> managedByTenantId;
 
-    public Input<String> getManagedByTenantId() {
-        return this.managedByTenantId == null ? Input.empty() : this.managedByTenantId;
+    public Output<String> getManagedByTenantId() {
+        return this.managedByTenantId == null ? Output.empty() : this.managedByTenantId;
     }
 
     public ProviderHubMetadataThirdPartyProviderAuthorizationArgs(
-        @Nullable Input<List<LightHouseAuthorizationArgs>> authorizations,
-        @Nullable Input<String> managedByTenantId) {
+        @Nullable Output<List<LightHouseAuthorizationArgs>> authorizations,
+        @Nullable Output<String> managedByTenantId) {
         this.authorizations = authorizations;
         this.managedByTenantId = managedByTenantId;
     }
 
     private ProviderHubMetadataThirdPartyProviderAuthorizationArgs() {
-        this.authorizations = Input.empty();
-        this.managedByTenantId = Input.empty();
+        this.authorizations = Output.empty();
+        this.managedByTenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<List<LightHouseAuthorizationArgs>> authorizations;
-        private @Nullable Input<String> managedByTenantId;
+        private @Nullable Output<List<LightHouseAuthorizationArgs>> authorizations;
+        private @Nullable Output<String> managedByTenantId;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
     	      this.managedByTenantId = defaults.managedByTenantId;
         }
 
-        public Builder authorizations(@Nullable Input<List<LightHouseAuthorizationArgs>> authorizations) {
+        public Builder authorizations(@Nullable Output<List<LightHouseAuthorizationArgs>> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
         public Builder authorizations(@Nullable List<LightHouseAuthorizationArgs> authorizations) {
-            this.authorizations = Input.ofNullable(authorizations);
+            this.authorizations = Output.ofNullable(authorizations);
             return this;
         }
 
-        public Builder managedByTenantId(@Nullable Input<String> managedByTenantId) {
+        public Builder managedByTenantId(@Nullable Output<String> managedByTenantId) {
             this.managedByTenantId = managedByTenantId;
             return this;
         }
 
         public Builder managedByTenantId(@Nullable String managedByTenantId) {
-            this.managedByTenantId = Input.ofNullable(managedByTenantId);
+            this.managedByTenantId = Output.ofNullable(managedByTenantId);
             return this;
         }
         public ProviderHubMetadataThirdPartyProviderAuthorizationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,9 +22,9 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
      * 
      */
     @InputImport(name="logDestination", required=true)
-      private final Input<Map<String,String>> logDestination;
+      private final Output<Map<String,String>> logDestination;
 
-    public Input<Map<String,String>> getLogDestination() {
+    public Output<Map<String,String>> getLogDestination() {
         return this.logDestination;
     }
 
@@ -33,9 +33,9 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
      * 
      */
     @InputImport(name="logDestinationType", required=true)
-      private final Input<String> logDestinationType;
+      private final Output<String> logDestinationType;
 
-    public Input<String> getLogDestinationType() {
+    public Output<String> getLogDestinationType() {
         return this.logDestinationType;
     }
 
@@ -44,25 +44,25 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
      * 
      */
     @InputImport(name="logType", required=true)
-      private final Input<String> logType;
+      private final Output<String> logType;
 
-    public Input<String> getLogType() {
+    public Output<String> getLogType() {
         return this.logType;
     }
 
     public LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs(
-        Input<Map<String,String>> logDestination,
-        Input<String> logDestinationType,
-        Input<String> logType) {
+        Output<Map<String,String>> logDestination,
+        Output<String> logDestinationType,
+        Output<String> logType) {
         this.logDestination = Objects.requireNonNull(logDestination, "expected parameter 'logDestination' to be non-null");
         this.logDestinationType = Objects.requireNonNull(logDestinationType, "expected parameter 'logDestinationType' to be non-null");
         this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
     }
 
     private LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs() {
-        this.logDestination = Input.empty();
-        this.logDestinationType = Input.empty();
-        this.logType = Input.empty();
+        this.logDestination = Output.empty();
+        this.logDestinationType = Output.empty();
+        this.logType = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> logDestination;
-        private Input<String> logDestinationType;
-        private Input<String> logType;
+        private Output<Map<String,String>> logDestination;
+        private Output<String> logDestinationType;
+        private Output<String> logType;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
     	      this.logType = defaults.logType;
         }
 
-        public Builder logDestination(Input<Map<String,String>> logDestination) {
+        public Builder logDestination(Output<Map<String,String>> logDestination) {
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
 
         public Builder logDestination(Map<String,String> logDestination) {
-            this.logDestination = Input.of(Objects.requireNonNull(logDestination));
+            this.logDestination = Output.of(Objects.requireNonNull(logDestination));
             return this;
         }
 
-        public Builder logDestinationType(Input<String> logDestinationType) {
+        public Builder logDestinationType(Output<String> logDestinationType) {
             this.logDestinationType = Objects.requireNonNull(logDestinationType);
             return this;
         }
 
         public Builder logDestinationType(String logDestinationType) {
-            this.logDestinationType = Input.of(Objects.requireNonNull(logDestinationType));
+            this.logDestinationType = Output.of(Objects.requireNonNull(logDestinationType));
             return this;
         }
 
-        public Builder logType(Input<String> logType) {
+        public Builder logType(Output<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
         public Builder logType(String logType) {
-            this.logType = Input.of(Objects.requireNonNull(logType));
+            this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
         }
         public LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs build() {

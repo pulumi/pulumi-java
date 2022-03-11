@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<Double> cpu;
+      private final @Nullable Output<Double> cpu;
 
-    public Input<Double> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Double> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="memoryGb")
-      private final @Nullable Input<Double> memoryGb;
+      private final @Nullable Output<Double> memoryGb;
 
-    public Input<Double> getMemoryGb() {
-        return this.memoryGb == null ? Input.empty() : this.memoryGb;
+    public Output<Double> getMemoryGb() {
+        return this.memoryGb == null ? Output.empty() : this.memoryGb;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageGb")
-      private final @Nullable Input<Double> storageGb;
+      private final @Nullable Output<Double> storageGb;
 
-    public Input<Double> getStorageGb() {
-        return this.storageGb == null ? Input.empty() : this.storageGb;
+    public Output<Double> getStorageGb() {
+        return this.storageGb == null ? Output.empty() : this.storageGb;
     }
 
     public WebServerResourceArgs(
-        @Nullable Input<Double> cpu,
-        @Nullable Input<Double> memoryGb,
-        @Nullable Input<Double> storageGb) {
+        @Nullable Output<Double> cpu,
+        @Nullable Output<Double> memoryGb,
+        @Nullable Output<Double> storageGb) {
         this.cpu = cpu;
         this.memoryGb = memoryGb;
         this.storageGb = storageGb;
     }
 
     private WebServerResourceArgs() {
-        this.cpu = Input.empty();
-        this.memoryGb = Input.empty();
-        this.storageGb = Input.empty();
+        this.cpu = Output.empty();
+        this.memoryGb = Output.empty();
+        this.storageGb = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> cpu;
-        private @Nullable Input<Double> memoryGb;
-        private @Nullable Input<Double> storageGb;
+        private @Nullable Output<Double> cpu;
+        private @Nullable Output<Double> memoryGb;
+        private @Nullable Output<Double> storageGb;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
     	      this.storageGb = defaults.storageGb;
         }
 
-        public Builder cpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Output<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder memoryGb(@Nullable Input<Double> memoryGb) {
+        public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
         public Builder memoryGb(@Nullable Double memoryGb) {
-            this.memoryGb = Input.ofNullable(memoryGb);
+            this.memoryGb = Output.ofNullable(memoryGb);
             return this;
         }
 
-        public Builder storageGb(@Nullable Input<Double> storageGb) {
+        public Builder storageGb(@Nullable Output<Double> storageGb) {
             this.storageGb = storageGb;
             return this;
         }
 
         public Builder storageGb(@Nullable Double storageGb) {
-            this.storageGb = Input.ofNullable(storageGb);
+            this.storageGb = Output.ofNullable(storageGb);
             return this;
         }
         public WebServerResourceArgs build() {

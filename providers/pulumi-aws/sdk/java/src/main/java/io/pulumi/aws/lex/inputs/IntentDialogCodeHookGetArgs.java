@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class IntentDialogCodeHookGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageVersion", required=true)
-      private final Input<String> messageVersion;
+      private final Output<String> messageVersion;
 
-    public Input<String> getMessageVersion() {
+    public Output<String> getMessageVersion() {
         return this.messageVersion;
     }
 
@@ -31,22 +31,22 @@ public final class IntentDialogCodeHookGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public IntentDialogCodeHookGetArgs(
-        Input<String> messageVersion,
-        Input<String> uri) {
+        Output<String> messageVersion,
+        Output<String> uri) {
         this.messageVersion = Objects.requireNonNull(messageVersion, "expected parameter 'messageVersion' to be non-null");
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private IntentDialogCodeHookGetArgs() {
-        this.messageVersion = Input.empty();
-        this.uri = Input.empty();
+        this.messageVersion = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class IntentDialogCodeHookGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> messageVersion;
-        private Input<String> uri;
+        private Output<String> messageVersion;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class IntentDialogCodeHookGetArgs extends io.pulumi.resources.Resou
     	      this.uri = defaults.uri;
         }
 
-        public Builder messageVersion(Input<String> messageVersion) {
+        public Builder messageVersion(Output<String> messageVersion) {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
 
         public Builder messageVersion(String messageVersion) {
-            this.messageVersion = Input.of(Objects.requireNonNull(messageVersion));
+            this.messageVersion = Output.of(Objects.requireNonNull(messageVersion));
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public IntentDialogCodeHookGetArgs build() {

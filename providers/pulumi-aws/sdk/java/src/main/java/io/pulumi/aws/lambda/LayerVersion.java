@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lambda.LayerVersionArgs;
 import io.pulumi.aws.lambda.inputs.LayerVersionState;
 import io.pulumi.core.Archive;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -316,14 +315,14 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LayerVersion(String name, LayerVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lambda/layerVersion:LayerVersion", name, args == null ? LayerVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:lambda/layerVersion:LayerVersion", name, args == null ? LayerVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LayerVersion(String name, Input<String> id, @Nullable LayerVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LayerVersion(String name, Output<String> id, @Nullable LayerVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:lambda/layerVersion:LayerVersion", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -339,7 +338,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LayerVersion get(String name, Input<String> id, @Nullable LayerVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LayerVersion get(String name, Output<String> id, @Nullable LayerVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LayerVersion(name, id, state, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.enums.JobScheduleDay;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
      * 
      */
     @InputImport(name="day")
-      private final @Nullable Input<JobScheduleDay> day;
+      private final @Nullable Output<JobScheduleDay> day;
 
-    public Input<JobScheduleDay> getDay() {
-        return this.day == null ? Input.empty() : this.day;
+    public Output<JobScheduleDay> getDay() {
+        return this.day == null ? Output.empty() : this.day;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
      * 
      */
     @InputImport(name="occurrence")
-      private final @Nullable Input<Integer> occurrence;
+      private final @Nullable Output<Integer> occurrence;
 
-    public Input<Integer> getOccurrence() {
-        return this.occurrence == null ? Input.empty() : this.occurrence;
+    public Output<Integer> getOccurrence() {
+        return this.occurrence == null ? Output.empty() : this.occurrence;
     }
 
     public JobRecurrenceScheduleMonthlyOccurrenceArgs(
-        @Nullable Input<JobScheduleDay> day,
-        @Nullable Input<Integer> occurrence) {
+        @Nullable Output<JobScheduleDay> day,
+        @Nullable Output<Integer> occurrence) {
         this.day = day;
         this.occurrence = occurrence;
     }
 
     private JobRecurrenceScheduleMonthlyOccurrenceArgs() {
-        this.day = Input.empty();
-        this.occurrence = Input.empty();
+        this.day = Output.empty();
+        this.occurrence = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<JobScheduleDay> day;
-        private @Nullable Input<Integer> occurrence;
+        private @Nullable Output<JobScheduleDay> day;
+        private @Nullable Output<Integer> occurrence;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
     	      this.occurrence = defaults.occurrence;
         }
 
-        public Builder day(@Nullable Input<JobScheduleDay> day) {
+        public Builder day(@Nullable Output<JobScheduleDay> day) {
             this.day = day;
             return this;
         }
 
         public Builder day(@Nullable JobScheduleDay day) {
-            this.day = Input.ofNullable(day);
+            this.day = Output.ofNullable(day);
             return this;
         }
 
-        public Builder occurrence(@Nullable Input<Integer> occurrence) {
+        public Builder occurrence(@Nullable Output<Integer> occurrence) {
             this.occurrence = occurrence;
             return this;
         }
 
         public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = Input.ofNullable(occurrence);
+            this.occurrence = Output.ofNullable(occurrence);
             return this;
         }
         public JobRecurrenceScheduleMonthlyOccurrenceArgs build() {

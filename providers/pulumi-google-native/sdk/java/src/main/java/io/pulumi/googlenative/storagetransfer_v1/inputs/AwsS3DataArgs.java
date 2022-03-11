@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AwsAccessKeyArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsAccessKey")
-      private final @Nullable Input<AwsAccessKeyArgs> awsAccessKey;
+      private final @Nullable Output<AwsAccessKeyArgs> awsAccessKey;
 
-    public Input<AwsAccessKeyArgs> getAwsAccessKey() {
-        return this.awsAccessKey == null ? Input.empty() : this.awsAccessKey;
+    public Output<AwsAccessKeyArgs> getAwsAccessKey() {
+        return this.awsAccessKey == null ? Output.empty() : this.awsAccessKey;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
@@ -46,10 +46,10 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public AwsS3DataArgs(
-        @Nullable Input<AwsAccessKeyArgs> awsAccessKey,
-        Input<String> bucketName,
-        @Nullable Input<String> path,
-        @Nullable Input<String> roleArn) {
+        @Nullable Output<AwsAccessKeyArgs> awsAccessKey,
+        Output<String> bucketName,
+        @Nullable Output<String> path,
+        @Nullable Output<String> roleArn) {
         this.awsAccessKey = awsAccessKey;
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.path = path;
@@ -75,10 +75,10 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AwsS3DataArgs() {
-        this.awsAccessKey = Input.empty();
-        this.bucketName = Input.empty();
-        this.path = Input.empty();
-        this.roleArn = Input.empty();
+        this.awsAccessKey = Output.empty();
+        this.bucketName = Output.empty();
+        this.path = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AwsAccessKeyArgs> awsAccessKey;
-        private Input<String> bucketName;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> roleArn;
+        private @Nullable Output<AwsAccessKeyArgs> awsAccessKey;
+        private Output<String> bucketName;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder awsAccessKey(@Nullable Input<AwsAccessKeyArgs> awsAccessKey) {
+        public Builder awsAccessKey(@Nullable Output<AwsAccessKeyArgs> awsAccessKey) {
             this.awsAccessKey = awsAccessKey;
             return this;
         }
 
         public Builder awsAccessKey(@Nullable AwsAccessKeyArgs awsAccessKey) {
-            this.awsAccessKey = Input.ofNullable(awsAccessKey);
+            this.awsAccessKey = Output.ofNullable(awsAccessKey);
             return this;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public AwsS3DataArgs build() {

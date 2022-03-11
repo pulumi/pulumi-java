@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="end", required=true)
-      private final Input<Integer> end;
+      private final Output<Integer> end;
 
-    public Input<Integer> getEnd() {
+    public Output<Integer> getEnd() {
         return this.end;
     }
 
@@ -29,9 +29,9 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="interval", required=true)
-      private final Input<Integer> interval;
+      private final Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
+    public Output<Integer> getInterval() {
         return this.interval;
     }
 
@@ -40,25 +40,25 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="start", required=true)
-      private final Input<Integer> start;
+      private final Output<Integer> start;
 
-    public Input<Integer> getStart() {
+    public Output<Integer> getStart() {
         return this.start;
     }
 
     public TableRangePartitioningRangeGetArgs(
-        Input<Integer> end,
-        Input<Integer> interval,
-        Input<Integer> start) {
+        Output<Integer> end,
+        Output<Integer> interval,
+        Output<Integer> start) {
         this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
         this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
         this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
     }
 
     private TableRangePartitioningRangeGetArgs() {
-        this.end = Input.empty();
-        this.interval = Input.empty();
-        this.start = Input.empty();
+        this.end = Output.empty();
+        this.interval = Output.empty();
+        this.start = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<Integer> end;
-        private Input<Integer> interval;
-        private Input<Integer> start;
+        private Output<Integer> end;
+        private Output<Integer> interval;
+        private Output<Integer> start;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
     	      this.start = defaults.start;
         }
 
-        public Builder end(Input<Integer> end) {
+        public Builder end(Output<Integer> end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
         public Builder end(Integer end) {
-            this.end = Input.of(Objects.requireNonNull(end));
+            this.end = Output.of(Objects.requireNonNull(end));
             return this;
         }
 
-        public Builder interval(Input<Integer> interval) {
+        public Builder interval(Output<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
         public Builder interval(Integer interval) {
-            this.interval = Input.of(Objects.requireNonNull(interval));
+            this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder start(Input<Integer> start) {
+        public Builder start(Output<Integer> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
         public Builder start(Integer start) {
-            this.start = Input.of(Objects.requireNonNull(start));
+            this.start = Output.of(Objects.requireNonNull(start));
             return this;
         }
         public TableRangePartitioningRangeGetArgs build() {

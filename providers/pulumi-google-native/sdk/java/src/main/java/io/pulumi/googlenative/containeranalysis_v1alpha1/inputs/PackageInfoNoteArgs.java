@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ExternalRefArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LicenseArgs;
@@ -27,10 +27,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="analyzed")
-      private final @Nullable Input<Boolean> analyzed;
+      private final @Nullable Output<Boolean> analyzed;
 
-    public Input<Boolean> getAnalyzed() {
-        return this.analyzed == null ? Input.empty() : this.analyzed;
+    public Output<Boolean> getAnalyzed() {
+        return this.analyzed == null ? Output.empty() : this.analyzed;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="attribution")
-      private final @Nullable Input<String> attribution;
+      private final @Nullable Output<String> attribution;
 
-    public Input<String> getAttribution() {
-        return this.attribution == null ? Input.empty() : this.attribution;
+    public Output<String> getAttribution() {
+        return this.attribution == null ? Output.empty() : this.attribution;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="checksum")
-      private final @Nullable Input<String> checksum;
+      private final @Nullable Output<String> checksum;
 
-    public Input<String> getChecksum() {
-        return this.checksum == null ? Input.empty() : this.checksum;
+    public Output<String> getChecksum() {
+        return this.checksum == null ? Output.empty() : this.checksum;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="copyright")
-      private final @Nullable Input<String> copyright;
+      private final @Nullable Output<String> copyright;
 
-    public Input<String> getCopyright() {
-        return this.copyright == null ? Input.empty() : this.copyright;
+    public Output<String> getCopyright() {
+        return this.copyright == null ? Output.empty() : this.copyright;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="detailedDescription")
-      private final @Nullable Input<String> detailedDescription;
+      private final @Nullable Output<String> detailedDescription;
 
-    public Input<String> getDetailedDescription() {
-        return this.detailedDescription == null ? Input.empty() : this.detailedDescription;
+    public Output<String> getDetailedDescription() {
+        return this.detailedDescription == null ? Output.empty() : this.detailedDescription;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="downloadLocation")
-      private final @Nullable Input<String> downloadLocation;
+      private final @Nullable Output<String> downloadLocation;
 
-    public Input<String> getDownloadLocation() {
-        return this.downloadLocation == null ? Input.empty() : this.downloadLocation;
+    public Output<String> getDownloadLocation() {
+        return this.downloadLocation == null ? Output.empty() : this.downloadLocation;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="externalRefs")
-      private final @Nullable Input<List<ExternalRefArgs>> externalRefs;
+      private final @Nullable Output<List<ExternalRefArgs>> externalRefs;
 
-    public Input<List<ExternalRefArgs>> getExternalRefs() {
-        return this.externalRefs == null ? Input.empty() : this.externalRefs;
+    public Output<List<ExternalRefArgs>> getExternalRefs() {
+        return this.externalRefs == null ? Output.empty() : this.externalRefs;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="filesLicenseInfo")
-      private final @Nullable Input<List<String>> filesLicenseInfo;
+      private final @Nullable Output<List<String>> filesLicenseInfo;
 
-    public Input<List<String>> getFilesLicenseInfo() {
-        return this.filesLicenseInfo == null ? Input.empty() : this.filesLicenseInfo;
+    public Output<List<String>> getFilesLicenseInfo() {
+        return this.filesLicenseInfo == null ? Output.empty() : this.filesLicenseInfo;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="homePage")
-      private final @Nullable Input<String> homePage;
+      private final @Nullable Output<String> homePage;
 
-    public Input<String> getHomePage() {
-        return this.homePage == null ? Input.empty() : this.homePage;
+    public Output<String> getHomePage() {
+        return this.homePage == null ? Output.empty() : this.homePage;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="licenseDeclared")
-      private final @Nullable Input<LicenseArgs> licenseDeclared;
+      private final @Nullable Output<LicenseArgs> licenseDeclared;
 
-    public Input<LicenseArgs> getLicenseDeclared() {
-        return this.licenseDeclared == null ? Input.empty() : this.licenseDeclared;
+    public Output<LicenseArgs> getLicenseDeclared() {
+        return this.licenseDeclared == null ? Output.empty() : this.licenseDeclared;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="originator")
-      private final @Nullable Input<String> originator;
+      private final @Nullable Output<String> originator;
 
-    public Input<String> getOriginator() {
-        return this.originator == null ? Input.empty() : this.originator;
+    public Output<String> getOriginator() {
+        return this.originator == null ? Output.empty() : this.originator;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="packageType")
-      private final @Nullable Input<String> packageType;
+      private final @Nullable Output<String> packageType;
 
-    public Input<String> getPackageType() {
-        return this.packageType == null ? Input.empty() : this.packageType;
+    public Output<String> getPackageType() {
+        return this.packageType == null ? Output.empty() : this.packageType;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="summaryDescription")
-      private final @Nullable Input<String> summaryDescription;
+      private final @Nullable Output<String> summaryDescription;
 
-    public Input<String> getSummaryDescription() {
-        return this.summaryDescription == null ? Input.empty() : this.summaryDescription;
+    public Output<String> getSummaryDescription() {
+        return this.summaryDescription == null ? Output.empty() : this.summaryDescription;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="supplier")
-      private final @Nullable Input<String> supplier;
+      private final @Nullable Output<String> supplier;
 
-    public Input<String> getSupplier() {
-        return this.supplier == null ? Input.empty() : this.supplier;
+    public Output<String> getSupplier() {
+        return this.supplier == null ? Output.empty() : this.supplier;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="verificationCode")
-      private final @Nullable Input<String> verificationCode;
+      private final @Nullable Output<String> verificationCode;
 
-    public Input<String> getVerificationCode() {
-        return this.verificationCode == null ? Input.empty() : this.verificationCode;
+    public Output<String> getVerificationCode() {
+        return this.verificationCode == null ? Output.empty() : this.verificationCode;
     }
 
     /**
@@ -203,30 +203,30 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public PackageInfoNoteArgs(
-        @Nullable Input<Boolean> analyzed,
-        @Nullable Input<String> attribution,
-        @Nullable Input<String> checksum,
-        @Nullable Input<String> copyright,
-        @Nullable Input<String> detailedDescription,
-        @Nullable Input<String> downloadLocation,
-        @Nullable Input<List<ExternalRefArgs>> externalRefs,
-        @Nullable Input<List<String>> filesLicenseInfo,
-        @Nullable Input<String> homePage,
-        @Nullable Input<LicenseArgs> licenseDeclared,
-        @Nullable Input<String> originator,
-        @Nullable Input<String> packageType,
-        @Nullable Input<String> summaryDescription,
-        @Nullable Input<String> supplier,
-        @Nullable Input<String> title,
-        @Nullable Input<String> verificationCode,
-        @Nullable Input<String> version) {
+        @Nullable Output<Boolean> analyzed,
+        @Nullable Output<String> attribution,
+        @Nullable Output<String> checksum,
+        @Nullable Output<String> copyright,
+        @Nullable Output<String> detailedDescription,
+        @Nullable Output<String> downloadLocation,
+        @Nullable Output<List<ExternalRefArgs>> externalRefs,
+        @Nullable Output<List<String>> filesLicenseInfo,
+        @Nullable Output<String> homePage,
+        @Nullable Output<LicenseArgs> licenseDeclared,
+        @Nullable Output<String> originator,
+        @Nullable Output<String> packageType,
+        @Nullable Output<String> summaryDescription,
+        @Nullable Output<String> supplier,
+        @Nullable Output<String> title,
+        @Nullable Output<String> verificationCode,
+        @Nullable Output<String> version) {
         this.analyzed = analyzed;
         this.attribution = attribution;
         this.checksum = checksum;
@@ -247,23 +247,23 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PackageInfoNoteArgs() {
-        this.analyzed = Input.empty();
-        this.attribution = Input.empty();
-        this.checksum = Input.empty();
-        this.copyright = Input.empty();
-        this.detailedDescription = Input.empty();
-        this.downloadLocation = Input.empty();
-        this.externalRefs = Input.empty();
-        this.filesLicenseInfo = Input.empty();
-        this.homePage = Input.empty();
-        this.licenseDeclared = Input.empty();
-        this.originator = Input.empty();
-        this.packageType = Input.empty();
-        this.summaryDescription = Input.empty();
-        this.supplier = Input.empty();
-        this.title = Input.empty();
-        this.verificationCode = Input.empty();
-        this.version = Input.empty();
+        this.analyzed = Output.empty();
+        this.attribution = Output.empty();
+        this.checksum = Output.empty();
+        this.copyright = Output.empty();
+        this.detailedDescription = Output.empty();
+        this.downloadLocation = Output.empty();
+        this.externalRefs = Output.empty();
+        this.filesLicenseInfo = Output.empty();
+        this.homePage = Output.empty();
+        this.licenseDeclared = Output.empty();
+        this.originator = Output.empty();
+        this.packageType = Output.empty();
+        this.summaryDescription = Output.empty();
+        this.supplier = Output.empty();
+        this.title = Output.empty();
+        this.verificationCode = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -275,23 +275,23 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> analyzed;
-        private @Nullable Input<String> attribution;
-        private @Nullable Input<String> checksum;
-        private @Nullable Input<String> copyright;
-        private @Nullable Input<String> detailedDescription;
-        private @Nullable Input<String> downloadLocation;
-        private @Nullable Input<List<ExternalRefArgs>> externalRefs;
-        private @Nullable Input<List<String>> filesLicenseInfo;
-        private @Nullable Input<String> homePage;
-        private @Nullable Input<LicenseArgs> licenseDeclared;
-        private @Nullable Input<String> originator;
-        private @Nullable Input<String> packageType;
-        private @Nullable Input<String> summaryDescription;
-        private @Nullable Input<String> supplier;
-        private @Nullable Input<String> title;
-        private @Nullable Input<String> verificationCode;
-        private @Nullable Input<String> version;
+        private @Nullable Output<Boolean> analyzed;
+        private @Nullable Output<String> attribution;
+        private @Nullable Output<String> checksum;
+        private @Nullable Output<String> copyright;
+        private @Nullable Output<String> detailedDescription;
+        private @Nullable Output<String> downloadLocation;
+        private @Nullable Output<List<ExternalRefArgs>> externalRefs;
+        private @Nullable Output<List<String>> filesLicenseInfo;
+        private @Nullable Output<String> homePage;
+        private @Nullable Output<LicenseArgs> licenseDeclared;
+        private @Nullable Output<String> originator;
+        private @Nullable Output<String> packageType;
+        private @Nullable Output<String> summaryDescription;
+        private @Nullable Output<String> supplier;
+        private @Nullable Output<String> title;
+        private @Nullable Output<String> verificationCode;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -318,173 +318,173 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder analyzed(@Nullable Input<Boolean> analyzed) {
+        public Builder analyzed(@Nullable Output<Boolean> analyzed) {
             this.analyzed = analyzed;
             return this;
         }
 
         public Builder analyzed(@Nullable Boolean analyzed) {
-            this.analyzed = Input.ofNullable(analyzed);
+            this.analyzed = Output.ofNullable(analyzed);
             return this;
         }
 
-        public Builder attribution(@Nullable Input<String> attribution) {
+        public Builder attribution(@Nullable Output<String> attribution) {
             this.attribution = attribution;
             return this;
         }
 
         public Builder attribution(@Nullable String attribution) {
-            this.attribution = Input.ofNullable(attribution);
+            this.attribution = Output.ofNullable(attribution);
             return this;
         }
 
-        public Builder checksum(@Nullable Input<String> checksum) {
+        public Builder checksum(@Nullable Output<String> checksum) {
             this.checksum = checksum;
             return this;
         }
 
         public Builder checksum(@Nullable String checksum) {
-            this.checksum = Input.ofNullable(checksum);
+            this.checksum = Output.ofNullable(checksum);
             return this;
         }
 
-        public Builder copyright(@Nullable Input<String> copyright) {
+        public Builder copyright(@Nullable Output<String> copyright) {
             this.copyright = copyright;
             return this;
         }
 
         public Builder copyright(@Nullable String copyright) {
-            this.copyright = Input.ofNullable(copyright);
+            this.copyright = Output.ofNullable(copyright);
             return this;
         }
 
-        public Builder detailedDescription(@Nullable Input<String> detailedDescription) {
+        public Builder detailedDescription(@Nullable Output<String> detailedDescription) {
             this.detailedDescription = detailedDescription;
             return this;
         }
 
         public Builder detailedDescription(@Nullable String detailedDescription) {
-            this.detailedDescription = Input.ofNullable(detailedDescription);
+            this.detailedDescription = Output.ofNullable(detailedDescription);
             return this;
         }
 
-        public Builder downloadLocation(@Nullable Input<String> downloadLocation) {
+        public Builder downloadLocation(@Nullable Output<String> downloadLocation) {
             this.downloadLocation = downloadLocation;
             return this;
         }
 
         public Builder downloadLocation(@Nullable String downloadLocation) {
-            this.downloadLocation = Input.ofNullable(downloadLocation);
+            this.downloadLocation = Output.ofNullable(downloadLocation);
             return this;
         }
 
-        public Builder externalRefs(@Nullable Input<List<ExternalRefArgs>> externalRefs) {
+        public Builder externalRefs(@Nullable Output<List<ExternalRefArgs>> externalRefs) {
             this.externalRefs = externalRefs;
             return this;
         }
 
         public Builder externalRefs(@Nullable List<ExternalRefArgs> externalRefs) {
-            this.externalRefs = Input.ofNullable(externalRefs);
+            this.externalRefs = Output.ofNullable(externalRefs);
             return this;
         }
 
-        public Builder filesLicenseInfo(@Nullable Input<List<String>> filesLicenseInfo) {
+        public Builder filesLicenseInfo(@Nullable Output<List<String>> filesLicenseInfo) {
             this.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
 
         public Builder filesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
-            this.filesLicenseInfo = Input.ofNullable(filesLicenseInfo);
+            this.filesLicenseInfo = Output.ofNullable(filesLicenseInfo);
             return this;
         }
 
-        public Builder homePage(@Nullable Input<String> homePage) {
+        public Builder homePage(@Nullable Output<String> homePage) {
             this.homePage = homePage;
             return this;
         }
 
         public Builder homePage(@Nullable String homePage) {
-            this.homePage = Input.ofNullable(homePage);
+            this.homePage = Output.ofNullable(homePage);
             return this;
         }
 
-        public Builder licenseDeclared(@Nullable Input<LicenseArgs> licenseDeclared) {
+        public Builder licenseDeclared(@Nullable Output<LicenseArgs> licenseDeclared) {
             this.licenseDeclared = licenseDeclared;
             return this;
         }
 
         public Builder licenseDeclared(@Nullable LicenseArgs licenseDeclared) {
-            this.licenseDeclared = Input.ofNullable(licenseDeclared);
+            this.licenseDeclared = Output.ofNullable(licenseDeclared);
             return this;
         }
 
-        public Builder originator(@Nullable Input<String> originator) {
+        public Builder originator(@Nullable Output<String> originator) {
             this.originator = originator;
             return this;
         }
 
         public Builder originator(@Nullable String originator) {
-            this.originator = Input.ofNullable(originator);
+            this.originator = Output.ofNullable(originator);
             return this;
         }
 
-        public Builder packageType(@Nullable Input<String> packageType) {
+        public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
 
         public Builder packageType(@Nullable String packageType) {
-            this.packageType = Input.ofNullable(packageType);
+            this.packageType = Output.ofNullable(packageType);
             return this;
         }
 
-        public Builder summaryDescription(@Nullable Input<String> summaryDescription) {
+        public Builder summaryDescription(@Nullable Output<String> summaryDescription) {
             this.summaryDescription = summaryDescription;
             return this;
         }
 
         public Builder summaryDescription(@Nullable String summaryDescription) {
-            this.summaryDescription = Input.ofNullable(summaryDescription);
+            this.summaryDescription = Output.ofNullable(summaryDescription);
             return this;
         }
 
-        public Builder supplier(@Nullable Input<String> supplier) {
+        public Builder supplier(@Nullable Output<String> supplier) {
             this.supplier = supplier;
             return this;
         }
 
         public Builder supplier(@Nullable String supplier) {
-            this.supplier = Input.ofNullable(supplier);
+            this.supplier = Output.ofNullable(supplier);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder verificationCode(@Nullable Input<String> verificationCode) {
+        public Builder verificationCode(@Nullable Output<String> verificationCode) {
             this.verificationCode = verificationCode;
             return this;
         }
 
         public Builder verificationCode(@Nullable String verificationCode) {
-            this.verificationCode = Input.ofNullable(verificationCode);
+            this.verificationCode = Output.ofNullable(verificationCode);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public PackageInfoNoteArgs build() {

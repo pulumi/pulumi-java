@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetHierarchyArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetPropertyArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,10 +19,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     public static final AssetArgs Empty = new AssetArgs();
 
     @InputImport(name="assetHierarchies")
-      private final @Nullable Input<List<AssetHierarchyArgs>> assetHierarchies;
+      private final @Nullable Output<List<AssetHierarchyArgs>> assetHierarchies;
 
-    public Input<List<AssetHierarchyArgs>> getAssetHierarchies() {
-        return this.assetHierarchies == null ? Input.empty() : this.assetHierarchies;
+    public Output<List<AssetHierarchyArgs>> getAssetHierarchies() {
+        return this.assetHierarchies == null ? Output.empty() : this.assetHierarchies;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetModelId", required=true)
-      private final Input<String> assetModelId;
+      private final Output<String> assetModelId;
 
-    public Input<String> getAssetModelId() {
+    public Output<String> getAssetModelId() {
         return this.assetModelId;
     }
 
@@ -41,17 +41,17 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetName")
-      private final @Nullable Input<String> assetName;
+      private final @Nullable Output<String> assetName;
 
-    public Input<String> getAssetName() {
-        return this.assetName == null ? Input.empty() : this.assetName;
+    public Output<String> getAssetName() {
+        return this.assetName == null ? Output.empty() : this.assetName;
     }
 
     @InputImport(name="assetProperties")
-      private final @Nullable Input<List<AssetPropertyArgs>> assetProperties;
+      private final @Nullable Output<List<AssetPropertyArgs>> assetProperties;
 
-    public Input<List<AssetPropertyArgs>> getAssetProperties() {
-        return this.assetProperties == null ? Input.empty() : this.assetProperties;
+    public Output<List<AssetPropertyArgs>> getAssetProperties() {
+        return this.assetProperties == null ? Output.empty() : this.assetProperties;
     }
 
     /**
@@ -59,18 +59,18 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<AssetTagArgs>> tags;
+      private final @Nullable Output<List<AssetTagArgs>> tags;
 
-    public Input<List<AssetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AssetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AssetArgs(
-        @Nullable Input<List<AssetHierarchyArgs>> assetHierarchies,
-        Input<String> assetModelId,
-        @Nullable Input<String> assetName,
-        @Nullable Input<List<AssetPropertyArgs>> assetProperties,
-        @Nullable Input<List<AssetTagArgs>> tags) {
+        @Nullable Output<List<AssetHierarchyArgs>> assetHierarchies,
+        Output<String> assetModelId,
+        @Nullable Output<String> assetName,
+        @Nullable Output<List<AssetPropertyArgs>> assetProperties,
+        @Nullable Output<List<AssetTagArgs>> tags) {
         this.assetHierarchies = assetHierarchies;
         this.assetModelId = Objects.requireNonNull(assetModelId, "expected parameter 'assetModelId' to be non-null");
         this.assetName = assetName;
@@ -79,11 +79,11 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssetArgs() {
-        this.assetHierarchies = Input.empty();
-        this.assetModelId = Input.empty();
-        this.assetName = Input.empty();
-        this.assetProperties = Input.empty();
-        this.tags = Input.empty();
+        this.assetHierarchies = Output.empty();
+        this.assetModelId = Output.empty();
+        this.assetName = Output.empty();
+        this.assetProperties = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,11 +95,11 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AssetHierarchyArgs>> assetHierarchies;
-        private Input<String> assetModelId;
-        private @Nullable Input<String> assetName;
-        private @Nullable Input<List<AssetPropertyArgs>> assetProperties;
-        private @Nullable Input<List<AssetTagArgs>> tags;
+        private @Nullable Output<List<AssetHierarchyArgs>> assetHierarchies;
+        private Output<String> assetModelId;
+        private @Nullable Output<String> assetName;
+        private @Nullable Output<List<AssetPropertyArgs>> assetProperties;
+        private @Nullable Output<List<AssetTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -114,53 +114,53 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder assetHierarchies(@Nullable Input<List<AssetHierarchyArgs>> assetHierarchies) {
+        public Builder assetHierarchies(@Nullable Output<List<AssetHierarchyArgs>> assetHierarchies) {
             this.assetHierarchies = assetHierarchies;
             return this;
         }
 
         public Builder assetHierarchies(@Nullable List<AssetHierarchyArgs> assetHierarchies) {
-            this.assetHierarchies = Input.ofNullable(assetHierarchies);
+            this.assetHierarchies = Output.ofNullable(assetHierarchies);
             return this;
         }
 
-        public Builder assetModelId(Input<String> assetModelId) {
+        public Builder assetModelId(Output<String> assetModelId) {
             this.assetModelId = Objects.requireNonNull(assetModelId);
             return this;
         }
 
         public Builder assetModelId(String assetModelId) {
-            this.assetModelId = Input.of(Objects.requireNonNull(assetModelId));
+            this.assetModelId = Output.of(Objects.requireNonNull(assetModelId));
             return this;
         }
 
-        public Builder assetName(@Nullable Input<String> assetName) {
+        public Builder assetName(@Nullable Output<String> assetName) {
             this.assetName = assetName;
             return this;
         }
 
         public Builder assetName(@Nullable String assetName) {
-            this.assetName = Input.ofNullable(assetName);
+            this.assetName = Output.ofNullable(assetName);
             return this;
         }
 
-        public Builder assetProperties(@Nullable Input<List<AssetPropertyArgs>> assetProperties) {
+        public Builder assetProperties(@Nullable Output<List<AssetPropertyArgs>> assetProperties) {
             this.assetProperties = assetProperties;
             return this;
         }
 
         public Builder assetProperties(@Nullable List<AssetPropertyArgs> assetProperties) {
-            this.assetProperties = Input.ofNullable(assetProperties);
+            this.assetProperties = Output.ofNullable(assetProperties);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AssetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AssetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AssetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AssetArgs build() {

@@ -6,7 +6,7 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import io.pulumi.Log;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.Either;
 import io.pulumi.plant.inputs.*;
 import io.pulumi.plant.enums.*;
@@ -33,17 +33,17 @@ class InputTests {
         assertThat(map).containsKey("material");
         assertThat(map).containsKey("size");
 
-        assertThat(waitFor((Input) map.get("brightness").get())).isEqualTo(waitFor(Input.empty()));
-        assertThat(waitFor((Input) map.get("color").get())).isEqualTo(waitFor(Input.empty()));
-        assertThat(waitFor((Input) map.get("material").get())).isEqualTo(waitFor(Input.empty()));
-        assertThat(waitFor((Input) map.get("size").get())).isEqualTo(waitFor(Input.empty()));
+        assertThat(waitFor((Output) map.get("brightness").get())).isEqualTo(waitFor(Output.empty()));
+        assertThat(waitFor((Output) map.get("color").get())).isEqualTo(waitFor(Output.empty()));
+        assertThat(waitFor((Output) map.get("material").get())).isEqualTo(waitFor(Output.empty()));
+        assertThat(waitFor((Output) map.get("size").get())).isEqualTo(waitFor(Output.empty()));
     }
 
     @Test
     void testContainerArgs_simpleValues() {
         var args = ContainerArgs.builder()
                 .brightness(ContainerBrightness.ZeroPointOne)
-                .color(Input.of(Either.ofLeft(ContainerColor.Red)))
+                .color(Output.of(Either.ofLeft(ContainerColor.Red)))
                 .material("glass")
                 .size(ContainerSize.FourInch)
                 .build();
@@ -55,9 +55,9 @@ class InputTests {
         assertThat(map).containsKey("material");
         assertThat(map).containsKey("size");
 
-        assertThat(waitFor((Input) map.get("brightness").get())).isEqualTo(waitFor(Input.of(ContainerBrightness.ZeroPointOne)));
-        assertThat(waitFor((Input) map.get("color").get())).isEqualTo(waitFor(Input.ofLeft(ContainerColor.Red)));
-        assertThat(waitFor((Input) map.get("material").get())).isEqualTo(waitFor(Input.of("glass")));
-        assertThat(waitFor((Input) map.get("size").get())).isEqualTo(waitFor(Input.of(ContainerSize.FourInch)));
+        assertThat(waitFor((Output) map.get("brightness").get())).isEqualTo(waitFor(Output.of(ContainerBrightness.ZeroPointOne)));
+        assertThat(waitFor((Output) map.get("color").get())).isEqualTo(waitFor(Output.ofLeft(ContainerColor.Red)));
+        assertThat(waitFor((Output) map.get("material").get())).isEqualTo(waitFor(Output.of("glass")));
+        assertThat(waitFor((Output) map.get("size").get())).isEqualTo(waitFor(Output.of(ContainerSize.FourInch)));
     }
 }

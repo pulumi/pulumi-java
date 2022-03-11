@@ -6,7 +6,6 @@ package io.pulumi.aws.pinpoint;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.pinpoint.ApnsChannelArgs;
 import io.pulumi.aws.pinpoint.inputs.ApnsChannelState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -201,14 +200,14 @@ public class ApnsChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApnsChannel(String name, ApnsChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:pinpoint/apnsChannel:ApnsChannel", name, args == null ? ApnsChannelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:pinpoint/apnsChannel:ApnsChannel", name, args == null ? ApnsChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApnsChannel(String name, Input<String> id, @Nullable ApnsChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApnsChannel(String name, Output<String> id, @Nullable ApnsChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:pinpoint/apnsChannel:ApnsChannel", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -224,7 +223,7 @@ public class ApnsChannel extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApnsChannel get(String name, Input<String> id, @Nullable ApnsChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApnsChannel get(String name, Output<String> id, @Nullable ApnsChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApnsChannel(name, id, state, options);
     }
 }

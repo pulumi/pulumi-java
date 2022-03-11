@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.docdb;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="applyImmediately")
-      private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Output<Boolean> applyImmediately;
 
-    public Input<Boolean> getApplyImmediately() {
-        return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
+    public Output<Boolean> getApplyImmediately() {
+        return this.applyImmediately == null ? Output.empty() : this.applyImmediately;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Input<Boolean> getAutoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
+    public Output<Boolean> getAutoMinorVersionUpgrade() {
+        return this.autoMinorVersionUpgrade == null ? Output.empty() : this.autoMinorVersionUpgrade;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="caCertIdentifier")
-      private final @Nullable Input<String> caCertIdentifier;
+      private final @Nullable Output<String> caCertIdentifier;
 
-    public Input<String> getCaCertIdentifier() {
-        return this.caCertIdentifier == null ? Input.empty() : this.caCertIdentifier;
+    public Output<String> getCaCertIdentifier() {
+        return this.caCertIdentifier == null ? Output.empty() : this.caCertIdentifier;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterIdentifier", required=true)
-      private final Input<String> clusterIdentifier;
+      private final Output<String> clusterIdentifier;
 
-    public Input<String> getClusterIdentifier() {
+    public Output<String> getClusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -78,10 +78,10 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identifier")
-      private final @Nullable Input<String> identifier;
+      private final @Nullable Output<String> identifier;
 
-    public Input<String> getIdentifier() {
-        return this.identifier == null ? Input.empty() : this.identifier;
+    public Output<String> getIdentifier() {
+        return this.identifier == null ? Output.empty() : this.identifier;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identifierPrefix")
-      private final @Nullable Input<String> identifierPrefix;
+      private final @Nullable Output<String> identifierPrefix;
 
-    public Input<String> getIdentifierPrefix() {
-        return this.identifierPrefix == null ? Input.empty() : this.identifierPrefix;
+    public Output<String> getIdentifierPrefix() {
+        return this.identifierPrefix == null ? Output.empty() : this.identifierPrefix;
     }
 
     /**
@@ -125,9 +125,9 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceClass", required=true)
-      private final Input<String> instanceClass;
+      private final Output<String> instanceClass;
 
-    public Input<String> getInstanceClass() {
+    public Output<String> getInstanceClass() {
         return this.instanceClass;
     }
 
@@ -137,10 +137,10 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="preferredMaintenanceWindow")
-      private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Input<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
+    public Output<String> getPreferredMaintenanceWindow() {
+        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="promotionTier")
-      private final @Nullable Input<Integer> promotionTier;
+      private final @Nullable Output<Integer> promotionTier;
 
-    public Input<Integer> getPromotionTier() {
-        return this.promotionTier == null ? Input.empty() : this.promotionTier;
+    public Output<Integer> getPromotionTier() {
+        return this.promotionTier == null ? Output.empty() : this.promotionTier;
     }
 
     /**
@@ -159,25 +159,25 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClusterInstanceArgs(
-        @Nullable Input<Boolean> applyImmediately,
-        @Nullable Input<Boolean> autoMinorVersionUpgrade,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> caCertIdentifier,
-        Input<String> clusterIdentifier,
-        @Nullable Input<String> engine,
-        @Nullable Input<String> identifier,
-        @Nullable Input<String> identifierPrefix,
-        Input<String> instanceClass,
-        @Nullable Input<String> preferredMaintenanceWindow,
-        @Nullable Input<Integer> promotionTier,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> applyImmediately,
+        @Nullable Output<Boolean> autoMinorVersionUpgrade,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> caCertIdentifier,
+        Output<String> clusterIdentifier,
+        @Nullable Output<String> engine,
+        @Nullable Output<String> identifier,
+        @Nullable Output<String> identifierPrefix,
+        Output<String> instanceClass,
+        @Nullable Output<String> preferredMaintenanceWindow,
+        @Nullable Output<Integer> promotionTier,
+        @Nullable Output<Map<String,String>> tags) {
         this.applyImmediately = applyImmediately;
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         this.availabilityZone = availabilityZone;
@@ -193,18 +193,18 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterInstanceArgs() {
-        this.applyImmediately = Input.empty();
-        this.autoMinorVersionUpgrade = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.caCertIdentifier = Input.empty();
-        this.clusterIdentifier = Input.empty();
-        this.engine = Input.empty();
-        this.identifier = Input.empty();
-        this.identifierPrefix = Input.empty();
-        this.instanceClass = Input.empty();
-        this.preferredMaintenanceWindow = Input.empty();
-        this.promotionTier = Input.empty();
-        this.tags = Input.empty();
+        this.applyImmediately = Output.empty();
+        this.autoMinorVersionUpgrade = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.caCertIdentifier = Output.empty();
+        this.clusterIdentifier = Output.empty();
+        this.engine = Output.empty();
+        this.identifier = Output.empty();
+        this.identifierPrefix = Output.empty();
+        this.instanceClass = Output.empty();
+        this.preferredMaintenanceWindow = Output.empty();
+        this.promotionTier = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -216,18 +216,18 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> applyImmediately;
-        private @Nullable Input<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> caCertIdentifier;
-        private Input<String> clusterIdentifier;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<String> identifier;
-        private @Nullable Input<String> identifierPrefix;
-        private Input<String> instanceClass;
-        private @Nullable Input<String> preferredMaintenanceWindow;
-        private @Nullable Input<Integer> promotionTier;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> applyImmediately;
+        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> caCertIdentifier;
+        private Output<String> clusterIdentifier;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<String> identifier;
+        private @Nullable Output<String> identifierPrefix;
+        private Output<String> instanceClass;
+        private @Nullable Output<String> preferredMaintenanceWindow;
+        private @Nullable Output<Integer> promotionTier;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -249,123 +249,123 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Input.ofNullable(applyImmediately);
+            this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
+            this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder caCertIdentifier(@Nullable Input<String> caCertIdentifier) {
+        public Builder caCertIdentifier(@Nullable Output<String> caCertIdentifier) {
             this.caCertIdentifier = caCertIdentifier;
             return this;
         }
 
         public Builder caCertIdentifier(@Nullable String caCertIdentifier) {
-            this.caCertIdentifier = Input.ofNullable(caCertIdentifier);
+            this.caCertIdentifier = Output.ofNullable(caCertIdentifier);
             return this;
         }
 
-        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
+            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder identifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Input.ofNullable(identifier);
+            this.identifier = Output.ofNullable(identifier);
             return this;
         }
 
-        public Builder identifierPrefix(@Nullable Input<String> identifierPrefix) {
+        public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
             this.identifierPrefix = identifierPrefix;
             return this;
         }
 
         public Builder identifierPrefix(@Nullable String identifierPrefix) {
-            this.identifierPrefix = Input.ofNullable(identifierPrefix);
+            this.identifierPrefix = Output.ofNullable(identifierPrefix);
             return this;
         }
 
-        public Builder instanceClass(Input<String> instanceClass) {
+        public Builder instanceClass(Output<String> instanceClass) {
             this.instanceClass = Objects.requireNonNull(instanceClass);
             return this;
         }
 
         public Builder instanceClass(String instanceClass) {
-            this.instanceClass = Input.of(Objects.requireNonNull(instanceClass));
+            this.instanceClass = Output.of(Objects.requireNonNull(instanceClass));
             return this;
         }
 
-        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder promotionTier(@Nullable Input<Integer> promotionTier) {
+        public Builder promotionTier(@Nullable Output<Integer> promotionTier) {
             this.promotionTier = promotionTier;
             return this;
         }
 
         public Builder promotionTier(@Nullable Integer promotionTier) {
-            this.promotionTier = Input.ofNullable(promotionTier);
+            this.promotionTier = Output.ofNullable(promotionTier);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClusterInstanceArgs build() {

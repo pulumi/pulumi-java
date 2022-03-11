@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateId", required=true)
-      private final Input<String> certificateId;
+      private final Output<String> certificateId;
 
-    public Input<String> getCertificateId() {
+    public Output<String> getCertificateId() {
         return this.certificateId;
     }
 
@@ -31,10 +31,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificatePem")
-      private final @Nullable Input<String> certificatePem;
+      private final @Nullable Output<String> certificatePem;
 
-    public Input<String> getCertificatePem() {
-        return this.certificatePem == null ? Input.empty() : this.certificatePem;
+    public Output<String> getCertificatePem() {
+        return this.certificatePem == null ? Output.empty() : this.certificatePem;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateWallet")
-      private final @Nullable Input<String> certificateWallet;
+      private final @Nullable Output<String> certificateWallet;
 
-    public Input<String> getCertificateWallet() {
-        return this.certificateWallet == null ? Input.empty() : this.certificateWallet;
+    public Output<String> getCertificateWallet() {
+        return this.certificateWallet == null ? Output.empty() : this.certificateWallet;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CertificateArgs(
-        Input<String> certificateId,
-        @Nullable Input<String> certificatePem,
-        @Nullable Input<String> certificateWallet,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> certificateId,
+        @Nullable Output<String> certificatePem,
+        @Nullable Output<String> certificateWallet,
+        @Nullable Output<Map<String,String>> tags) {
         this.certificateId = Objects.requireNonNull(certificateId, "expected parameter 'certificateId' to be non-null");
         this.certificatePem = certificatePem;
         this.certificateWallet = certificateWallet;
@@ -71,10 +71,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.certificateId = Input.empty();
-        this.certificatePem = Input.empty();
-        this.certificateWallet = Input.empty();
-        this.tags = Input.empty();
+        this.certificateId = Output.empty();
+        this.certificatePem = Output.empty();
+        this.certificateWallet = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> certificateId;
-        private @Nullable Input<String> certificatePem;
-        private @Nullable Input<String> certificateWallet;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> certificateId;
+        private @Nullable Output<String> certificatePem;
+        private @Nullable Output<String> certificateWallet;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder certificateId(Input<String> certificateId) {
+        public Builder certificateId(Output<String> certificateId) {
             this.certificateId = Objects.requireNonNull(certificateId);
             return this;
         }
 
         public Builder certificateId(String certificateId) {
-            this.certificateId = Input.of(Objects.requireNonNull(certificateId));
+            this.certificateId = Output.of(Objects.requireNonNull(certificateId));
             return this;
         }
 
-        public Builder certificatePem(@Nullable Input<String> certificatePem) {
+        public Builder certificatePem(@Nullable Output<String> certificatePem) {
             this.certificatePem = certificatePem;
             return this;
         }
 
         public Builder certificatePem(@Nullable String certificatePem) {
-            this.certificatePem = Input.ofNullable(certificatePem);
+            this.certificatePem = Output.ofNullable(certificatePem);
             return this;
         }
 
-        public Builder certificateWallet(@Nullable Input<String> certificateWallet) {
+        public Builder certificateWallet(@Nullable Output<String> certificateWallet) {
             this.certificateWallet = certificateWallet;
             return this;
         }
 
         public Builder certificateWallet(@Nullable String certificateWallet) {
-            this.certificateWallet = Input.ofNullable(certificateWallet);
+            this.certificateWallet = Output.ofNullable(certificateWallet);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CertificateArgs build() {

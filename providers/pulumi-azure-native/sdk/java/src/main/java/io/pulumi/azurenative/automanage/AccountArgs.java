@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automanage;
 
 import io.pulumi.azurenative.automanage.inputs.AccountIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<AccountIdentityArgs> identity;
+      private final @Nullable Output<AccountIdentityArgs> identity;
 
-    public Input<AccountIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<AccountIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AccountArgs(
-        @Nullable Input<String> accountName,
-        @Nullable Input<AccountIdentityArgs> identity,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> accountName,
+        @Nullable Output<AccountIdentityArgs> identity,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountName = accountName;
         this.identity = identity;
         this.location = location;
@@ -85,11 +85,11 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.accountName = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.accountName = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<AccountIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<AccountIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<AccountIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<AccountIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable AccountIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AccountArgs build() {

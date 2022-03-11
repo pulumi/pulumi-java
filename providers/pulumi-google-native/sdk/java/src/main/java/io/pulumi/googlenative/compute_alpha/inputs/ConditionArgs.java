@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.ConditionIam;
 import io.pulumi.googlenative.compute_alpha.enums.ConditionOp;
@@ -27,10 +27,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iam")
-      private final @Nullable Input<ConditionIam> iam;
+      private final @Nullable Output<ConditionIam> iam;
 
-    public Input<ConditionIam> getIam() {
-        return this.iam == null ? Input.empty() : this.iam;
+    public Output<ConditionIam> getIam() {
+        return this.iam == null ? Output.empty() : this.iam;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="op")
-      private final @Nullable Input<ConditionOp> op;
+      private final @Nullable Output<ConditionOp> op;
 
-    public Input<ConditionOp> getOp() {
-        return this.op == null ? Input.empty() : this.op;
+    public Output<ConditionOp> getOp() {
+        return this.op == null ? Output.empty() : this.op;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="svc")
-      private final @Nullable Input<String> svc;
+      private final @Nullable Output<String> svc;
 
-    public Input<String> getSvc() {
-        return this.svc == null ? Input.empty() : this.svc;
+    public Output<String> getSvc() {
+        return this.svc == null ? Output.empty() : this.svc;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sys")
-      private final @Nullable Input<ConditionSys> sys;
+      private final @Nullable Output<ConditionSys> sys;
 
-    public Input<ConditionSys> getSys() {
-        return this.sys == null ? Input.empty() : this.sys;
+    public Output<ConditionSys> getSys() {
+        return this.sys == null ? Output.empty() : this.sys;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public ConditionArgs(
-        @Nullable Input<ConditionIam> iam,
-        @Nullable Input<ConditionOp> op,
-        @Nullable Input<String> svc,
-        @Nullable Input<ConditionSys> sys,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<ConditionIam> iam,
+        @Nullable Output<ConditionOp> op,
+        @Nullable Output<String> svc,
+        @Nullable Output<ConditionSys> sys,
+        @Nullable Output<List<String>> values) {
         this.iam = iam;
         this.op = op;
         this.svc = svc;
@@ -91,11 +91,11 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConditionArgs() {
-        this.iam = Input.empty();
-        this.op = Input.empty();
-        this.svc = Input.empty();
-        this.sys = Input.empty();
-        this.values = Input.empty();
+        this.iam = Output.empty();
+        this.op = Output.empty();
+        this.svc = Output.empty();
+        this.sys = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ConditionIam> iam;
-        private @Nullable Input<ConditionOp> op;
-        private @Nullable Input<String> svc;
-        private @Nullable Input<ConditionSys> sys;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<ConditionIam> iam;
+        private @Nullable Output<ConditionOp> op;
+        private @Nullable Output<String> svc;
+        private @Nullable Output<ConditionSys> sys;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder iam(@Nullable Input<ConditionIam> iam) {
+        public Builder iam(@Nullable Output<ConditionIam> iam) {
             this.iam = iam;
             return this;
         }
 
         public Builder iam(@Nullable ConditionIam iam) {
-            this.iam = Input.ofNullable(iam);
+            this.iam = Output.ofNullable(iam);
             return this;
         }
 
-        public Builder op(@Nullable Input<ConditionOp> op) {
+        public Builder op(@Nullable Output<ConditionOp> op) {
             this.op = op;
             return this;
         }
 
         public Builder op(@Nullable ConditionOp op) {
-            this.op = Input.ofNullable(op);
+            this.op = Output.ofNullable(op);
             return this;
         }
 
-        public Builder svc(@Nullable Input<String> svc) {
+        public Builder svc(@Nullable Output<String> svc) {
             this.svc = svc;
             return this;
         }
 
         public Builder svc(@Nullable String svc) {
-            this.svc = Input.ofNullable(svc);
+            this.svc = Output.ofNullable(svc);
             return this;
         }
 
-        public Builder sys(@Nullable Input<ConditionSys> sys) {
+        public Builder sys(@Nullable Output<ConditionSys> sys) {
             this.sys = sys;
             return this;
         }
 
         public Builder sys(@Nullable ConditionSys sys) {
-            this.sys = Input.ofNullable(sys);
+            this.sys = Output.ofNullable(sys);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ConditionArgs build() {

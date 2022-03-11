@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appstream;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class ApplicationFleetAssociationArgs extends io.pulumi.resources.R
     public static final ApplicationFleetAssociationArgs Empty = new ApplicationFleetAssociationArgs();
 
     @InputImport(name="applicationArn", required=true)
-      private final Input<String> applicationArn;
+      private final Output<String> applicationArn;
 
-    public Input<String> getApplicationArn() {
+    public Output<String> getApplicationArn() {
         return this.applicationArn;
     }
 
     @InputImport(name="fleetName", required=true)
-      private final Input<String> fleetName;
+      private final Output<String> fleetName;
 
-    public Input<String> getFleetName() {
+    public Output<String> getFleetName() {
         return this.fleetName;
     }
 
     public ApplicationFleetAssociationArgs(
-        Input<String> applicationArn,
-        Input<String> fleetName) {
+        Output<String> applicationArn,
+        Output<String> fleetName) {
         this.applicationArn = Objects.requireNonNull(applicationArn, "expected parameter 'applicationArn' to be non-null");
         this.fleetName = Objects.requireNonNull(fleetName, "expected parameter 'fleetName' to be non-null");
     }
 
     private ApplicationFleetAssociationArgs() {
-        this.applicationArn = Input.empty();
-        this.fleetName = Input.empty();
+        this.applicationArn = Output.empty();
+        this.fleetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class ApplicationFleetAssociationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> applicationArn;
-        private Input<String> fleetName;
+        private Output<String> applicationArn;
+        private Output<String> fleetName;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class ApplicationFleetAssociationArgs extends io.pulumi.resources.R
     	      this.fleetName = defaults.fleetName;
         }
 
-        public Builder applicationArn(Input<String> applicationArn) {
+        public Builder applicationArn(Output<String> applicationArn) {
             this.applicationArn = Objects.requireNonNull(applicationArn);
             return this;
         }
 
         public Builder applicationArn(String applicationArn) {
-            this.applicationArn = Input.of(Objects.requireNonNull(applicationArn));
+            this.applicationArn = Output.of(Objects.requireNonNull(applicationArn));
             return this;
         }
 
-        public Builder fleetName(Input<String> fleetName) {
+        public Builder fleetName(Output<String> fleetName) {
             this.fleetName = Objects.requireNonNull(fleetName);
             return this;
         }
 
         public Builder fleetName(String fleetName) {
-            this.fleetName = Input.of(Objects.requireNonNull(fleetName));
+            this.fleetName = Output.of(Objects.requireNonNull(fleetName));
             return this;
         }
         public ApplicationFleetAssociationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.enums.JobScheduleType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<String> interval;
+      private final @Nullable Output<String> interval;
 
-    public Input<String> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<String> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -69,31 +69,31 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<JobScheduleType> type;
+      private final @Nullable Output<JobScheduleType> type;
 
-    public Input<JobScheduleType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<JobScheduleType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public JobScheduleArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> interval,
-        @Nullable Input<String> startTime,
-        @Nullable Input<JobScheduleType> type) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> interval,
+        @Nullable Output<String> startTime,
+        @Nullable Output<JobScheduleType> type) {
         this.enabled = enabled;
-        this.endTime = endTime == null ? Input.ofNullable("9999-12-31T11:59:59+00:00") : endTime;
+        this.endTime = endTime == null ? Output.ofNullable("9999-12-31T11:59:59+00:00") : endTime;
         this.interval = interval;
-        this.startTime = startTime == null ? Input.ofNullable("0001-01-01T00:00:00+00:00") : startTime;
-        this.type = type == null ? Input.ofNullable(io.pulumi.azurenative.sql.enums.JobScheduleType.Once) : type;
+        this.startTime = startTime == null ? Output.ofNullable("0001-01-01T00:00:00+00:00") : startTime;
+        this.type = type == null ? Output.ofNullable(io.pulumi.azurenative.sql.enums.JobScheduleType.Once) : type;
     }
 
     private JobScheduleArgs() {
-        this.enabled = Input.empty();
-        this.endTime = Input.empty();
-        this.interval = Input.empty();
-        this.startTime = Input.empty();
-        this.type = Input.empty();
+        this.enabled = Output.empty();
+        this.endTime = Output.empty();
+        this.interval = Output.empty();
+        this.startTime = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> interval;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<JobScheduleType> type;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> interval;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<JobScheduleType> type;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder interval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Output<String> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable String interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder type(@Nullable Input<JobScheduleType> type) {
+        public Builder type(@Nullable Output<JobScheduleType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable JobScheduleType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public JobScheduleArgs build() {

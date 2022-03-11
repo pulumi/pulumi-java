@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="connectVersion")
-      private final @Nullable Input<String> connectVersion;
+      private final @Nullable Output<String> connectVersion;
 
-    public Input<String> getConnectVersion() {
-        return this.connectVersion == null ? Input.empty() : this.connectVersion;
+    public Output<String> getConnectVersion() {
+        return this.connectVersion == null ? Output.empty() : this.connectVersion;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="k8sVersion")
-      private final @Nullable Input<String> k8sVersion;
+      private final @Nullable Output<String> k8sVersion;
 
-    public Input<String> getK8sVersion() {
-        return this.k8sVersion == null ? Input.empty() : this.k8sVersion;
+    public Output<String> getK8sVersion() {
+        return this.k8sVersion == null ? Output.empty() : this.k8sVersion;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="v1beta1Crd")
-      private final @Nullable Input<Boolean> v1beta1Crd;
+      private final @Nullable Output<Boolean> v1beta1Crd;
 
-    public Input<Boolean> getV1beta1Crd() {
-        return this.v1beta1Crd == null ? Input.empty() : this.v1beta1Crd;
+    public Output<Boolean> getV1beta1Crd() {
+        return this.v1beta1Crd == null ? Output.empty() : this.v1beta1Crd;
     }
 
     public ResourceOptionsArgs(
-        @Nullable Input<String> connectVersion,
-        @Nullable Input<String> k8sVersion,
-        @Nullable Input<Boolean> v1beta1Crd) {
+        @Nullable Output<String> connectVersion,
+        @Nullable Output<String> k8sVersion,
+        @Nullable Output<Boolean> v1beta1Crd) {
         this.connectVersion = connectVersion;
         this.k8sVersion = k8sVersion;
         this.v1beta1Crd = v1beta1Crd;
     }
 
     private ResourceOptionsArgs() {
-        this.connectVersion = Input.empty();
-        this.k8sVersion = Input.empty();
-        this.v1beta1Crd = Input.empty();
+        this.connectVersion = Output.empty();
+        this.k8sVersion = Output.empty();
+        this.v1beta1Crd = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectVersion;
-        private @Nullable Input<String> k8sVersion;
-        private @Nullable Input<Boolean> v1beta1Crd;
+        private @Nullable Output<String> connectVersion;
+        private @Nullable Output<String> k8sVersion;
+        private @Nullable Output<Boolean> v1beta1Crd;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.v1beta1Crd = defaults.v1beta1Crd;
         }
 
-        public Builder connectVersion(@Nullable Input<String> connectVersion) {
+        public Builder connectVersion(@Nullable Output<String> connectVersion) {
             this.connectVersion = connectVersion;
             return this;
         }
 
         public Builder connectVersion(@Nullable String connectVersion) {
-            this.connectVersion = Input.ofNullable(connectVersion);
+            this.connectVersion = Output.ofNullable(connectVersion);
             return this;
         }
 
-        public Builder k8sVersion(@Nullable Input<String> k8sVersion) {
+        public Builder k8sVersion(@Nullable Output<String> k8sVersion) {
             this.k8sVersion = k8sVersion;
             return this;
         }
 
         public Builder k8sVersion(@Nullable String k8sVersion) {
-            this.k8sVersion = Input.ofNullable(k8sVersion);
+            this.k8sVersion = Output.ofNullable(k8sVersion);
             return this;
         }
 
-        public Builder v1beta1Crd(@Nullable Input<Boolean> v1beta1Crd) {
+        public Builder v1beta1Crd(@Nullable Output<Boolean> v1beta1Crd) {
             this.v1beta1Crd = v1beta1Crd;
             return this;
         }
 
         public Builder v1beta1Crd(@Nullable Boolean v1beta1Crd) {
-            this.v1beta1Crd = Input.ofNullable(v1beta1Crd);
+            this.v1beta1Crd = Output.ofNullable(v1beta1Crd);
             return this;
         }
         public ResourceOptionsArgs build() {

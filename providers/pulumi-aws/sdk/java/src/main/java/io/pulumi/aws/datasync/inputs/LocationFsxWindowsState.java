@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.datasync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<String> creationTime;
+      private final @Nullable Output<String> creationTime;
 
-    public Input<String> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<String> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fsxFilesystemArn")
-      private final @Nullable Input<String> fsxFilesystemArn;
+      private final @Nullable Output<String> fsxFilesystemArn;
 
-    public Input<String> getFsxFilesystemArn() {
-        return this.fsxFilesystemArn == null ? Input.empty() : this.fsxFilesystemArn;
+    public Output<String> getFsxFilesystemArn() {
+        return this.fsxFilesystemArn == null ? Output.empty() : this.fsxFilesystemArn;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityGroupArns")
-      private final @Nullable Input<List<String>> securityGroupArns;
+      private final @Nullable Output<List<String>> securityGroupArns;
 
-    public Input<List<String>> getSecurityGroupArns() {
-        return this.securityGroupArns == null ? Input.empty() : this.securityGroupArns;
+    public Output<List<String>> getSecurityGroupArns() {
+        return this.securityGroupArns == null ? Output.empty() : this.securityGroupArns;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subdirectory")
-      private final @Nullable Input<String> subdirectory;
+      private final @Nullable Output<String> subdirectory;
 
-    public Input<String> getSubdirectory() {
-        return this.subdirectory == null ? Input.empty() : this.subdirectory;
+    public Output<String> getSubdirectory() {
+        return this.subdirectory == null ? Output.empty() : this.subdirectory;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     /**
@@ -131,24 +131,24 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public LocationFsxWindowsState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> creationTime,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> fsxFilesystemArn,
-        @Nullable Input<String> password,
-        @Nullable Input<List<String>> securityGroupArns,
-        @Nullable Input<String> subdirectory,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> uri,
-        @Nullable Input<String> user) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> creationTime,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> fsxFilesystemArn,
+        @Nullable Output<String> password,
+        @Nullable Output<List<String>> securityGroupArns,
+        @Nullable Output<String> subdirectory,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> uri,
+        @Nullable Output<String> user) {
         this.arn = arn;
         this.creationTime = creationTime;
         this.domain = domain;
@@ -163,17 +163,17 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     }
 
     private LocationFsxWindowsState() {
-        this.arn = Input.empty();
-        this.creationTime = Input.empty();
-        this.domain = Input.empty();
-        this.fsxFilesystemArn = Input.empty();
-        this.password = Input.empty();
-        this.securityGroupArns = Input.empty();
-        this.subdirectory = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.uri = Input.empty();
-        this.user = Input.empty();
+        this.arn = Output.empty();
+        this.creationTime = Output.empty();
+        this.domain = Output.empty();
+        this.fsxFilesystemArn = Output.empty();
+        this.password = Output.empty();
+        this.securityGroupArns = Output.empty();
+        this.subdirectory = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.uri = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,17 +185,17 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> creationTime;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> fsxFilesystemArn;
-        private @Nullable Input<String> password;
-        private @Nullable Input<List<String>> securityGroupArns;
-        private @Nullable Input<String> subdirectory;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> uri;
-        private @Nullable Input<String> user;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> creationTime;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> fsxFilesystemArn;
+        private @Nullable Output<String> password;
+        private @Nullable Output<List<String>> securityGroupArns;
+        private @Nullable Output<String> subdirectory;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> uri;
+        private @Nullable Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -216,113 +216,113 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
     	      this.user = defaults.user;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder creationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder fsxFilesystemArn(@Nullable Input<String> fsxFilesystemArn) {
+        public Builder fsxFilesystemArn(@Nullable Output<String> fsxFilesystemArn) {
             this.fsxFilesystemArn = fsxFilesystemArn;
             return this;
         }
 
         public Builder fsxFilesystemArn(@Nullable String fsxFilesystemArn) {
-            this.fsxFilesystemArn = Input.ofNullable(fsxFilesystemArn);
+            this.fsxFilesystemArn = Output.ofNullable(fsxFilesystemArn);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder securityGroupArns(@Nullable Input<List<String>> securityGroupArns) {
+        public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
             this.securityGroupArns = securityGroupArns;
             return this;
         }
 
         public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
-            this.securityGroupArns = Input.ofNullable(securityGroupArns);
+            this.securityGroupArns = Output.ofNullable(securityGroupArns);
             return this;
         }
 
-        public Builder subdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Input.ofNullable(subdirectory);
+            this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public LocationFsxWindowsState build() {

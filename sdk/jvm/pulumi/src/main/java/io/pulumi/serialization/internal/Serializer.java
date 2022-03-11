@@ -63,7 +63,6 @@ public class Serializer {
      * <br/>
      * These complex objects include:
      * <ul>
-     * <li>@see {@link io.pulumi.core.Input}. As long as they are an Input of a serializable type.</li>
      * <li>@see {@link io.pulumi.core.Output}. As long as they are an Output of a serializable type.</li>
      * <li>@see {@link java.util.List}. As long as all elements in the list are serializable.</li>
      * <li>@see {@link java.util.Map}. As long as the key of the dictionary are {@code String} and as long as the value are all serializable.</li>

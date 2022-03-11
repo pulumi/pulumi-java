@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentId")
-      private final @Nullable Input<String> parentId;
+      private final @Nullable Output<String> parentId;
 
-    public Input<String> getParentId() {
-        return this.parentId == null ? Input.empty() : this.parentId;
+    public Output<String> getParentId() {
+        return this.parentId == null ? Output.empty() : this.parentId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathPart")
-      private final @Nullable Input<String> pathPart;
+      private final @Nullable Output<String> pathPart;
 
-    public Input<String> getPathPart() {
-        return this.pathPart == null ? Input.empty() : this.pathPart;
+    public Output<String> getPathPart() {
+        return this.pathPart == null ? Output.empty() : this.pathPart;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi")
-      private final @Nullable Input<String> restApi;
+      private final @Nullable Output<String> restApi;
 
-    public Input<String> getRestApi() {
-        return this.restApi == null ? Input.empty() : this.restApi;
+    public Output<String> getRestApi() {
+        return this.restApi == null ? Output.empty() : this.restApi;
     }
 
     public ResourceState(
-        @Nullable Input<String> parentId,
-        @Nullable Input<String> path,
-        @Nullable Input<String> pathPart,
-        @Nullable Input<String> restApi) {
+        @Nullable Output<String> parentId,
+        @Nullable Output<String> path,
+        @Nullable Output<String> pathPart,
+        @Nullable Output<String> restApi) {
         this.parentId = parentId;
         this.path = path;
         this.pathPart = pathPart;
@@ -70,10 +70,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceState() {
-        this.parentId = Input.empty();
-        this.path = Input.empty();
-        this.pathPart = Input.empty();
-        this.restApi = Input.empty();
+        this.parentId = Output.empty();
+        this.path = Output.empty();
+        this.pathPart = Output.empty();
+        this.restApi = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> parentId;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> pathPart;
-        private @Nullable Input<String> restApi;
+        private @Nullable Output<String> parentId;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> pathPart;
+        private @Nullable Output<String> restApi;
 
         public Builder() {
     	      // Empty
@@ -102,37 +102,37 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     	      this.restApi = defaults.restApi;
         }
 
-        public Builder parentId(@Nullable Input<String> parentId) {
+        public Builder parentId(@Nullable Output<String> parentId) {
             this.parentId = parentId;
             return this;
         }
 
         public Builder parentId(@Nullable String parentId) {
-            this.parentId = Input.ofNullable(parentId);
+            this.parentId = Output.ofNullable(parentId);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder pathPart(@Nullable Input<String> pathPart) {
+        public Builder pathPart(@Nullable Output<String> pathPart) {
             this.pathPart = pathPart;
             return this;
         }
 
         public Builder pathPart(@Nullable String pathPart) {
-            this.pathPart = Input.ofNullable(pathPart);
+            this.pathPart = Output.ofNullable(pathPart);
             return this;
         }
 
-        public Builder restApi(@Nullable Input<String> restApi) {
+        public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class IndexCapacityUnitsConfigurationArgs extends io.pulumi.resourc
     public static final IndexCapacityUnitsConfigurationArgs Empty = new IndexCapacityUnitsConfigurationArgs();
 
     @InputImport(name="queryCapacityUnits", required=true)
-      private final Input<Integer> queryCapacityUnits;
+      private final Output<Integer> queryCapacityUnits;
 
-    public Input<Integer> getQueryCapacityUnits() {
+    public Output<Integer> getQueryCapacityUnits() {
         return this.queryCapacityUnits;
     }
 
     @InputImport(name="storageCapacityUnits", required=true)
-      private final Input<Integer> storageCapacityUnits;
+      private final Output<Integer> storageCapacityUnits;
 
-    public Input<Integer> getStorageCapacityUnits() {
+    public Output<Integer> getStorageCapacityUnits() {
         return this.storageCapacityUnits;
     }
 
     public IndexCapacityUnitsConfigurationArgs(
-        Input<Integer> queryCapacityUnits,
-        Input<Integer> storageCapacityUnits) {
+        Output<Integer> queryCapacityUnits,
+        Output<Integer> storageCapacityUnits) {
         this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits, "expected parameter 'queryCapacityUnits' to be non-null");
         this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits, "expected parameter 'storageCapacityUnits' to be non-null");
     }
 
     private IndexCapacityUnitsConfigurationArgs() {
-        this.queryCapacityUnits = Input.empty();
-        this.storageCapacityUnits = Input.empty();
+        this.queryCapacityUnits = Output.empty();
+        this.storageCapacityUnits = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class IndexCapacityUnitsConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Integer> queryCapacityUnits;
-        private Input<Integer> storageCapacityUnits;
+        private Output<Integer> queryCapacityUnits;
+        private Output<Integer> storageCapacityUnits;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class IndexCapacityUnitsConfigurationArgs extends io.pulumi.resourc
     	      this.storageCapacityUnits = defaults.storageCapacityUnits;
         }
 
-        public Builder queryCapacityUnits(Input<Integer> queryCapacityUnits) {
+        public Builder queryCapacityUnits(Output<Integer> queryCapacityUnits) {
             this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits);
             return this;
         }
 
         public Builder queryCapacityUnits(Integer queryCapacityUnits) {
-            this.queryCapacityUnits = Input.of(Objects.requireNonNull(queryCapacityUnits));
+            this.queryCapacityUnits = Output.of(Objects.requireNonNull(queryCapacityUnits));
             return this;
         }
 
-        public Builder storageCapacityUnits(Input<Integer> storageCapacityUnits) {
+        public Builder storageCapacityUnits(Output<Integer> storageCapacityUnits) {
             this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
             return this;
         }
 
         public Builder storageCapacityUnits(Integer storageCapacityUnits) {
-            this.storageCapacityUnits = Input.of(Objects.requireNonNull(storageCapacityUnits));
+            this.storageCapacityUnits = Output.of(Objects.requireNonNull(storageCapacityUnits));
             return this;
         }
         public IndexCapacityUnitsConfigurationArgs build() {

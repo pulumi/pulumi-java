@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="booleanValue")
-      private final @Nullable Input<String> booleanValue;
+      private final @Nullable Output<String> booleanValue;
 
-    public Input<String> getBooleanValue() {
-        return this.booleanValue == null ? Input.empty() : this.booleanValue;
+    public Output<String> getBooleanValue() {
+        return this.booleanValue == null ? Output.empty() : this.booleanValue;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="doubleValue")
-      private final @Nullable Input<String> doubleValue;
+      private final @Nullable Output<String> doubleValue;
 
-    public Input<String> getDoubleValue() {
-        return this.doubleValue == null ? Input.empty() : this.doubleValue;
+    public Output<String> getDoubleValue() {
+        return this.doubleValue == null ? Output.empty() : this.doubleValue;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="integerValue")
-      private final @Nullable Input<String> integerValue;
+      private final @Nullable Output<String> integerValue;
 
-    public Input<String> getIntegerValue() {
-        return this.integerValue == null ? Input.empty() : this.integerValue;
+    public Output<String> getIntegerValue() {
+        return this.integerValue == null ? Output.empty() : this.integerValue;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="stringValue")
-      private final @Nullable Input<String> stringValue;
+      private final @Nullable Output<String> stringValue;
 
-    public Input<String> getStringValue() {
-        return this.stringValue == null ? Input.empty() : this.stringValue;
+    public Output<String> getStringValue() {
+        return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
     public DetectorModelAssetPropertyVariantArgs(
-        @Nullable Input<String> booleanValue,
-        @Nullable Input<String> doubleValue,
-        @Nullable Input<String> integerValue,
-        @Nullable Input<String> stringValue) {
+        @Nullable Output<String> booleanValue,
+        @Nullable Output<String> doubleValue,
+        @Nullable Output<String> integerValue,
+        @Nullable Output<String> stringValue) {
         this.booleanValue = booleanValue;
         this.doubleValue = doubleValue;
         this.integerValue = integerValue;
@@ -74,10 +74,10 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
     }
 
     private DetectorModelAssetPropertyVariantArgs() {
-        this.booleanValue = Input.empty();
-        this.doubleValue = Input.empty();
-        this.integerValue = Input.empty();
-        this.stringValue = Input.empty();
+        this.booleanValue = Output.empty();
+        this.doubleValue = Output.empty();
+        this.integerValue = Output.empty();
+        this.stringValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> booleanValue;
-        private @Nullable Input<String> doubleValue;
-        private @Nullable Input<String> integerValue;
-        private @Nullable Input<String> stringValue;
+        private @Nullable Output<String> booleanValue;
+        private @Nullable Output<String> doubleValue;
+        private @Nullable Output<String> integerValue;
+        private @Nullable Output<String> stringValue;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder booleanValue(@Nullable Input<String> booleanValue) {
+        public Builder booleanValue(@Nullable Output<String> booleanValue) {
             this.booleanValue = booleanValue;
             return this;
         }
 
         public Builder booleanValue(@Nullable String booleanValue) {
-            this.booleanValue = Input.ofNullable(booleanValue);
+            this.booleanValue = Output.ofNullable(booleanValue);
             return this;
         }
 
-        public Builder doubleValue(@Nullable Input<String> doubleValue) {
+        public Builder doubleValue(@Nullable Output<String> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
         public Builder doubleValue(@Nullable String doubleValue) {
-            this.doubleValue = Input.ofNullable(doubleValue);
+            this.doubleValue = Output.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder integerValue(@Nullable Input<String> integerValue) {
+        public Builder integerValue(@Nullable Output<String> integerValue) {
             this.integerValue = integerValue;
             return this;
         }
 
         public Builder integerValue(@Nullable String integerValue) {
-            this.integerValue = Input.ofNullable(integerValue);
+            this.integerValue = Output.ofNullable(integerValue);
             return this;
         }
 
-        public Builder stringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Input.ofNullable(stringValue);
+            this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
         public DetectorModelAssetPropertyVariantArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.InboundNatPoolArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PoolEndpointConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="inboundNatPools", required=true)
-      private final Input<List<InboundNatPoolArgs>> inboundNatPools;
+      private final Output<List<InboundNatPoolArgs>> inboundNatPools;
 
-    public Input<List<InboundNatPoolArgs>> getInboundNatPools() {
+    public Output<List<InboundNatPoolArgs>> getInboundNatPools() {
         return this.inboundNatPools;
     }
 
-    public PoolEndpointConfigurationArgs(Input<List<InboundNatPoolArgs>> inboundNatPools) {
+    public PoolEndpointConfigurationArgs(Output<List<InboundNatPoolArgs>> inboundNatPools) {
         this.inboundNatPools = Objects.requireNonNull(inboundNatPools, "expected parameter 'inboundNatPools' to be non-null");
     }
 
     private PoolEndpointConfigurationArgs() {
-        this.inboundNatPools = Input.empty();
+        this.inboundNatPools = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PoolEndpointConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<List<InboundNatPoolArgs>> inboundNatPools;
+        private Output<List<InboundNatPoolArgs>> inboundNatPools;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PoolEndpointConfigurationArgs extends io.pulumi.resources.Res
     	      this.inboundNatPools = defaults.inboundNatPools;
         }
 
-        public Builder inboundNatPools(Input<List<InboundNatPoolArgs>> inboundNatPools) {
+        public Builder inboundNatPools(Output<List<InboundNatPoolArgs>> inboundNatPools) {
             this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
             return this;
         }
 
         public Builder inboundNatPools(List<InboundNatPoolArgs> inboundNatPools) {
-            this.inboundNatPools = Input.of(Objects.requireNonNull(inboundNatPools));
+            this.inboundNatPools = Output.of(Objects.requireNonNull(inboundNatPools));
             return this;
         }
         public PoolEndpointConfigurationArgs build() {

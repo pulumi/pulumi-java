@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicedirectory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.servicedirectory.inputs.ServiceIamMemberConditionGetArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     public static final ServiceIamMemberState Empty = new ServiceIamMemberState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<ServiceIamMemberConditionGetArgs> condition;
+      private final @Nullable Output<ServiceIamMemberConditionGetArgs> condition;
 
-    public Input<ServiceIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<ServiceIamMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,17 +27,17 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,18 +58,18 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public ServiceIamMemberState(
-        @Nullable Input<ServiceIamMemberConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> member,
-        @Nullable Input<String> name,
-        @Nullable Input<String> role) {
+        @Nullable Output<ServiceIamMemberConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> member,
+        @Nullable Output<String> name,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.etag = etag;
         this.member = member;
@@ -78,11 +78,11 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     }
 
     private ServiceIamMemberState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.member = Input.empty();
-        this.name = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.member = Output.empty();
+        this.name = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,11 +94,11 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceIamMemberConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> role;
+        private @Nullable Output<ServiceIamMemberConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -113,53 +113,53 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<ServiceIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<ServiceIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable ServiceIamMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public ServiceIamMemberState build() {

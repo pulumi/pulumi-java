@@ -3,7 +3,7 @@
 
 package io.pulumi.docker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ContainerCapabilitiesArgs;
 import io.pulumi.docker.inputs.ContainerDeviceArgs;
@@ -35,10 +35,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attach")
-      private final @Nullable Input<Boolean> attach;
+      private final @Nullable Output<Boolean> attach;
 
-    public Input<Boolean> getAttach() {
-        return this.attach == null ? Input.empty() : this.attach;
+    public Output<Boolean> getAttach() {
+        return this.attach == null ? Output.empty() : this.attach;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capabilities")
-      private final @Nullable Input<ContainerCapabilitiesArgs> capabilities;
+      private final @Nullable Output<ContainerCapabilitiesArgs> capabilities;
 
-    public Input<ContainerCapabilitiesArgs> getCapabilities() {
-        return this.capabilities == null ? Input.empty() : this.capabilities;
+    public Output<ContainerCapabilitiesArgs> getCapabilities() {
+        return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command")
-      private final @Nullable Input<List<String>> command;
+      private final @Nullable Output<List<String>> command;
 
-    public Input<List<String>> getCommand() {
-        return this.command == null ? Input.empty() : this.command;
+    public Output<List<String>> getCommand() {
+        return this.command == null ? Output.empty() : this.command;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpuSet")
-      private final @Nullable Input<String> cpuSet;
+      private final @Nullable Output<String> cpuSet;
 
-    public Input<String> getCpuSet() {
-        return this.cpuSet == null ? Input.empty() : this.cpuSet;
+    public Output<String> getCpuSet() {
+        return this.cpuSet == null ? Output.empty() : this.cpuSet;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpuShares")
-      private final @Nullable Input<Integer> cpuShares;
+      private final @Nullable Output<Integer> cpuShares;
 
-    public Input<Integer> getCpuShares() {
-        return this.cpuShares == null ? Input.empty() : this.cpuShares;
+    public Output<Integer> getCpuShares() {
+        return this.cpuShares == null ? Output.empty() : this.cpuShares;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destroyGraceSeconds")
-      private final @Nullable Input<Integer> destroyGraceSeconds;
+      private final @Nullable Output<Integer> destroyGraceSeconds;
 
-    public Input<Integer> getDestroyGraceSeconds() {
-        return this.destroyGraceSeconds == null ? Input.empty() : this.destroyGraceSeconds;
+    public Output<Integer> getDestroyGraceSeconds() {
+        return this.destroyGraceSeconds == null ? Output.empty() : this.destroyGraceSeconds;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="devices")
-      private final @Nullable Input<List<ContainerDeviceArgs>> devices;
+      private final @Nullable Output<List<ContainerDeviceArgs>> devices;
 
-    public Input<List<ContainerDeviceArgs>> getDevices() {
-        return this.devices == null ? Input.empty() : this.devices;
+    public Output<List<ContainerDeviceArgs>> getDevices() {
+        return this.devices == null ? Output.empty() : this.devices;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dns")
-      private final @Nullable Input<List<String>> dns;
+      private final @Nullable Output<List<String>> dns;
 
-    public Input<List<String>> getDns() {
-        return this.dns == null ? Input.empty() : this.dns;
+    public Output<List<String>> getDns() {
+        return this.dns == null ? Output.empty() : this.dns;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsOpts")
-      private final @Nullable Input<List<String>> dnsOpts;
+      private final @Nullable Output<List<String>> dnsOpts;
 
-    public Input<List<String>> getDnsOpts() {
-        return this.dnsOpts == null ? Input.empty() : this.dnsOpts;
+    public Output<List<String>> getDnsOpts() {
+        return this.dnsOpts == null ? Output.empty() : this.dnsOpts;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsSearches")
-      private final @Nullable Input<List<String>> dnsSearches;
+      private final @Nullable Output<List<String>> dnsSearches;
 
-    public Input<List<String>> getDnsSearches() {
-        return this.dnsSearches == null ? Input.empty() : this.dnsSearches;
+    public Output<List<String>> getDnsSearches() {
+        return this.dnsSearches == null ? Output.empty() : this.dnsSearches;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainname")
-      private final @Nullable Input<String> domainname;
+      private final @Nullable Output<String> domainname;
 
-    public Input<String> getDomainname() {
-        return this.domainname == null ? Input.empty() : this.domainname;
+    public Output<String> getDomainname() {
+        return this.domainname == null ? Output.empty() : this.domainname;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entrypoints")
-      private final @Nullable Input<List<String>> entrypoints;
+      private final @Nullable Output<List<String>> entrypoints;
 
-    public Input<List<String>> getEntrypoints() {
-        return this.entrypoints == null ? Input.empty() : this.entrypoints;
+    public Output<List<String>> getEntrypoints() {
+        return this.entrypoints == null ? Output.empty() : this.entrypoints;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envs")
-      private final @Nullable Input<List<String>> envs;
+      private final @Nullable Output<List<String>> envs;
 
-    public Input<List<String>> getEnvs() {
-        return this.envs == null ? Input.empty() : this.envs;
+    public Output<List<String>> getEnvs() {
+        return this.envs == null ? Output.empty() : this.envs;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupAdds")
-      private final @Nullable Input<List<String>> groupAdds;
+      private final @Nullable Output<List<String>> groupAdds;
 
-    public Input<List<String>> getGroupAdds() {
-        return this.groupAdds == null ? Input.empty() : this.groupAdds;
+    public Output<List<String>> getGroupAdds() {
+        return this.groupAdds == null ? Output.empty() : this.groupAdds;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthcheck")
-      private final @Nullable Input<ContainerHealthcheckArgs> healthcheck;
+      private final @Nullable Output<ContainerHealthcheckArgs> healthcheck;
 
-    public Input<ContainerHealthcheckArgs> getHealthcheck() {
-        return this.healthcheck == null ? Input.empty() : this.healthcheck;
+    public Output<ContainerHealthcheckArgs> getHealthcheck() {
+        return this.healthcheck == null ? Output.empty() : this.healthcheck;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostname")
-      private final @Nullable Input<String> hostname;
+      private final @Nullable Output<String> hostname;
 
-    public Input<String> getHostname() {
-        return this.hostname == null ? Input.empty() : this.hostname;
+    public Output<String> getHostname() {
+        return this.hostname == null ? Output.empty() : this.hostname;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts")
-      private final @Nullable Input<List<ContainerHostArgs>> hosts;
+      private final @Nullable Output<List<ContainerHostArgs>> hosts;
 
-    public Input<List<ContainerHostArgs>> getHosts() {
-        return this.hosts == null ? Input.empty() : this.hosts;
+    public Output<List<ContainerHostArgs>> getHosts() {
+        return this.hosts == null ? Output.empty() : this.hosts;
     }
 
     /**
@@ -227,9 +227,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image", required=true)
-      private final Input<String> image;
+      private final Output<String> image;
 
-    public Input<String> getImage() {
+    public Output<String> getImage() {
         return this.image;
     }
 
@@ -239,10 +239,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="init")
-      private final @Nullable Input<Boolean> init;
+      private final @Nullable Output<Boolean> init;
 
-    public Input<Boolean> getInit() {
-        return this.init == null ? Input.empty() : this.init;
+    public Output<Boolean> getInit() {
+        return this.init == null ? Output.empty() : this.init;
     }
 
     /**
@@ -251,10 +251,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipcMode")
-      private final @Nullable Input<String> ipcMode;
+      private final @Nullable Output<String> ipcMode;
 
-    public Input<String> getIpcMode() {
-        return this.ipcMode == null ? Input.empty() : this.ipcMode;
+    public Output<String> getIpcMode() {
+        return this.ipcMode == null ? Output.empty() : this.ipcMode;
     }
 
     /**
@@ -262,10 +262,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<ContainerLabelArgs>> labels;
+      private final @Nullable Output<List<ContainerLabelArgs>> labels;
 
-    public Input<List<ContainerLabelArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<ContainerLabelArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -277,11 +277,11 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
     @InputImport(name="links")
-      private final @Nullable Input<List<String>> links;
+      private final @Nullable Output<List<String>> links;
 
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
-    public Input<List<String>> getLinks() {
-        return this.links == null ? Input.empty() : this.links;
+    public Output<List<String>> getLinks() {
+        return this.links == null ? Output.empty() : this.links;
     }
 
     /**
@@ -289,10 +289,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logDriver")
-      private final @Nullable Input<String> logDriver;
+      private final @Nullable Output<String> logDriver;
 
-    public Input<String> getLogDriver() {
-        return this.logDriver == null ? Input.empty() : this.logDriver;
+    public Output<String> getLogDriver() {
+        return this.logDriver == null ? Output.empty() : this.logDriver;
     }
 
     /**
@@ -300,10 +300,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logOpts")
-      private final @Nullable Input<Map<String,Object>> logOpts;
+      private final @Nullable Output<Map<String,Object>> logOpts;
 
-    public Input<Map<String,Object>> getLogOpts() {
-        return this.logOpts == null ? Input.empty() : this.logOpts;
+    public Output<Map<String,Object>> getLogOpts() {
+        return this.logOpts == null ? Output.empty() : this.logOpts;
     }
 
     /**
@@ -311,10 +311,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logs")
-      private final @Nullable Input<Boolean> logs;
+      private final @Nullable Output<Boolean> logs;
 
-    public Input<Boolean> getLogs() {
-        return this.logs == null ? Input.empty() : this.logs;
+    public Output<Boolean> getLogs() {
+        return this.logs == null ? Output.empty() : this.logs;
     }
 
     /**
@@ -322,10 +322,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRetryCount")
-      private final @Nullable Input<Integer> maxRetryCount;
+      private final @Nullable Output<Integer> maxRetryCount;
 
-    public Input<Integer> getMaxRetryCount() {
-        return this.maxRetryCount == null ? Input.empty() : this.maxRetryCount;
+    public Output<Integer> getMaxRetryCount() {
+        return this.maxRetryCount == null ? Output.empty() : this.maxRetryCount;
     }
 
     /**
@@ -333,10 +333,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memory")
-      private final @Nullable Input<Integer> memory;
+      private final @Nullable Output<Integer> memory;
 
-    public Input<Integer> getMemory() {
-        return this.memory == null ? Input.empty() : this.memory;
+    public Output<Integer> getMemory() {
+        return this.memory == null ? Output.empty() : this.memory;
     }
 
     /**
@@ -345,10 +345,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memorySwap")
-      private final @Nullable Input<Integer> memorySwap;
+      private final @Nullable Output<Integer> memorySwap;
 
-    public Input<Integer> getMemorySwap() {
-        return this.memorySwap == null ? Input.empty() : this.memorySwap;
+    public Output<Integer> getMemorySwap() {
+        return this.memorySwap == null ? Output.empty() : this.memorySwap;
     }
 
     /**
@@ -356,10 +356,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mounts")
-      private final @Nullable Input<List<ContainerMountArgs>> mounts;
+      private final @Nullable Output<List<ContainerMountArgs>> mounts;
 
-    public Input<List<ContainerMountArgs>> getMounts() {
-        return this.mounts == null ? Input.empty() : this.mounts;
+    public Output<List<ContainerMountArgs>> getMounts() {
+        return this.mounts == null ? Output.empty() : this.mounts;
     }
 
     /**
@@ -368,10 +368,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mustRun")
-      private final @Nullable Input<Boolean> mustRun;
+      private final @Nullable Output<Boolean> mustRun;
 
-    public Input<Boolean> getMustRun() {
-        return this.mustRun == null ? Input.empty() : this.mustRun;
+    public Output<Boolean> getMustRun() {
+        return this.mustRun == null ? Output.empty() : this.mustRun;
     }
 
     /**
@@ -379,10 +379,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -394,11 +394,11 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
     @InputImport(name="networkAliases")
-      private final @Nullable Input<List<String>> networkAliases;
+      private final @Nullable Output<List<String>> networkAliases;
 
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
-    public Input<List<String>> getNetworkAliases() {
-        return this.networkAliases == null ? Input.empty() : this.networkAliases;
+    public Output<List<String>> getNetworkAliases() {
+        return this.networkAliases == null ? Output.empty() : this.networkAliases;
     }
 
     /**
@@ -406,10 +406,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkMode")
-      private final @Nullable Input<String> networkMode;
+      private final @Nullable Output<String> networkMode;
 
-    public Input<String> getNetworkMode() {
-        return this.networkMode == null ? Input.empty() : this.networkMode;
+    public Output<String> getNetworkMode() {
+        return this.networkMode == null ? Output.empty() : this.networkMode;
     }
 
     /**
@@ -421,11 +421,11 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
     @InputImport(name="networks")
-      private final @Nullable Input<List<String>> networks;
+      private final @Nullable Output<List<String>> networks;
 
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
-    public Input<List<String>> getNetworks() {
-        return this.networks == null ? Input.empty() : this.networks;
+    public Output<List<String>> getNetworks() {
+        return this.networks == null ? Output.empty() : this.networks;
     }
 
     /**
@@ -433,10 +433,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networksAdvanced")
-      private final @Nullable Input<List<ContainerNetworksAdvancedArgs>> networksAdvanced;
+      private final @Nullable Output<List<ContainerNetworksAdvancedArgs>> networksAdvanced;
 
-    public Input<List<ContainerNetworksAdvancedArgs>> getNetworksAdvanced() {
-        return this.networksAdvanced == null ? Input.empty() : this.networksAdvanced;
+    public Output<List<ContainerNetworksAdvancedArgs>> getNetworksAdvanced() {
+        return this.networksAdvanced == null ? Output.empty() : this.networksAdvanced;
     }
 
     /**
@@ -444,10 +444,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pidMode")
-      private final @Nullable Input<String> pidMode;
+      private final @Nullable Output<String> pidMode;
 
-    public Input<String> getPidMode() {
-        return this.pidMode == null ? Input.empty() : this.pidMode;
+    public Output<String> getPidMode() {
+        return this.pidMode == null ? Output.empty() : this.pidMode;
     }
 
     /**
@@ -455,10 +455,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<ContainerPortArgs>> ports;
+      private final @Nullable Output<List<ContainerPortArgs>> ports;
 
-    public Input<List<ContainerPortArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<ContainerPortArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     /**
@@ -466,10 +466,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privileged")
-      private final @Nullable Input<Boolean> privileged;
+      private final @Nullable Output<Boolean> privileged;
 
-    public Input<Boolean> getPrivileged() {
-        return this.privileged == null ? Input.empty() : this.privileged;
+    public Output<Boolean> getPrivileged() {
+        return this.privileged == null ? Output.empty() : this.privileged;
     }
 
     /**
@@ -477,10 +477,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishAllPorts")
-      private final @Nullable Input<Boolean> publishAllPorts;
+      private final @Nullable Output<Boolean> publishAllPorts;
 
-    public Input<Boolean> getPublishAllPorts() {
-        return this.publishAllPorts == null ? Input.empty() : this.publishAllPorts;
+    public Output<Boolean> getPublishAllPorts() {
+        return this.publishAllPorts == null ? Output.empty() : this.publishAllPorts;
     }
 
     /**
@@ -488,10 +488,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -499,10 +499,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="removeVolumes")
-      private final @Nullable Input<Boolean> removeVolumes;
+      private final @Nullable Output<Boolean> removeVolumes;
 
-    public Input<Boolean> getRemoveVolumes() {
-        return this.removeVolumes == null ? Input.empty() : this.removeVolumes;
+    public Output<Boolean> getRemoveVolumes() {
+        return this.removeVolumes == null ? Output.empty() : this.removeVolumes;
     }
 
     /**
@@ -510,10 +510,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restart")
-      private final @Nullable Input<String> restart;
+      private final @Nullable Output<String> restart;
 
-    public Input<String> getRestart() {
-        return this.restart == null ? Input.empty() : this.restart;
+    public Output<String> getRestart() {
+        return this.restart == null ? Output.empty() : this.restart;
     }
 
     /**
@@ -522,10 +522,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rm")
-      private final @Nullable Input<Boolean> rm;
+      private final @Nullable Output<Boolean> rm;
 
-    public Input<Boolean> getRm() {
-        return this.rm == null ? Input.empty() : this.rm;
+    public Output<Boolean> getRm() {
+        return this.rm == null ? Output.empty() : this.rm;
     }
 
     /**
@@ -534,10 +534,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityOpts")
-      private final @Nullable Input<List<String>> securityOpts;
+      private final @Nullable Output<List<String>> securityOpts;
 
-    public Input<List<String>> getSecurityOpts() {
-        return this.securityOpts == null ? Input.empty() : this.securityOpts;
+    public Output<List<String>> getSecurityOpts() {
+        return this.securityOpts == null ? Output.empty() : this.securityOpts;
     }
 
     /**
@@ -545,10 +545,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shmSize")
-      private final @Nullable Input<Integer> shmSize;
+      private final @Nullable Output<Integer> shmSize;
 
-    public Input<Integer> getShmSize() {
-        return this.shmSize == null ? Input.empty() : this.shmSize;
+    public Output<Integer> getShmSize() {
+        return this.shmSize == null ? Output.empty() : this.shmSize;
     }
 
     /**
@@ -557,10 +557,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start")
-      private final @Nullable Input<Boolean> start;
+      private final @Nullable Output<Boolean> start;
 
-    public Input<Boolean> getStart() {
-        return this.start == null ? Input.empty() : this.start;
+    public Output<Boolean> getStart() {
+        return this.start == null ? Output.empty() : this.start;
     }
 
     /**
@@ -568,10 +568,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stdinOpen")
-      private final @Nullable Input<Boolean> stdinOpen;
+      private final @Nullable Output<Boolean> stdinOpen;
 
-    public Input<Boolean> getStdinOpen() {
-        return this.stdinOpen == null ? Input.empty() : this.stdinOpen;
+    public Output<Boolean> getStdinOpen() {
+        return this.stdinOpen == null ? Output.empty() : this.stdinOpen;
     }
 
     /**
@@ -579,10 +579,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageOpts")
-      private final @Nullable Input<Map<String,Object>> storageOpts;
+      private final @Nullable Output<Map<String,Object>> storageOpts;
 
-    public Input<Map<String,Object>> getStorageOpts() {
-        return this.storageOpts == null ? Input.empty() : this.storageOpts;
+    public Output<Map<String,Object>> getStorageOpts() {
+        return this.storageOpts == null ? Output.empty() : this.storageOpts;
     }
 
     /**
@@ -590,10 +590,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sysctls")
-      private final @Nullable Input<Map<String,Object>> sysctls;
+      private final @Nullable Output<Map<String,Object>> sysctls;
 
-    public Input<Map<String,Object>> getSysctls() {
-        return this.sysctls == null ? Input.empty() : this.sysctls;
+    public Output<Map<String,Object>> getSysctls() {
+        return this.sysctls == null ? Output.empty() : this.sysctls;
     }
 
     /**
@@ -601,10 +601,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tmpfs")
-      private final @Nullable Input<Map<String,Object>> tmpfs;
+      private final @Nullable Output<Map<String,Object>> tmpfs;
 
-    public Input<Map<String,Object>> getTmpfs() {
-        return this.tmpfs == null ? Input.empty() : this.tmpfs;
+    public Output<Map<String,Object>> getTmpfs() {
+        return this.tmpfs == null ? Output.empty() : this.tmpfs;
     }
 
     /**
@@ -612,10 +612,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tty")
-      private final @Nullable Input<Boolean> tty;
+      private final @Nullable Output<Boolean> tty;
 
-    public Input<Boolean> getTty() {
-        return this.tty == null ? Input.empty() : this.tty;
+    public Output<Boolean> getTty() {
+        return this.tty == null ? Output.empty() : this.tty;
     }
 
     /**
@@ -623,10 +623,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ulimits")
-      private final @Nullable Input<List<ContainerUlimitArgs>> ulimits;
+      private final @Nullable Output<List<ContainerUlimitArgs>> ulimits;
 
-    public Input<List<ContainerUlimitArgs>> getUlimits() {
-        return this.ulimits == null ? Input.empty() : this.ulimits;
+    public Output<List<ContainerUlimitArgs>> getUlimits() {
+        return this.ulimits == null ? Output.empty() : this.ulimits;
     }
 
     /**
@@ -635,10 +635,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uploads")
-      private final @Nullable Input<List<ContainerUploadArgs>> uploads;
+      private final @Nullable Output<List<ContainerUploadArgs>> uploads;
 
-    public Input<List<ContainerUploadArgs>> getUploads() {
-        return this.uploads == null ? Input.empty() : this.uploads;
+    public Output<List<ContainerUploadArgs>> getUploads() {
+        return this.uploads == null ? Output.empty() : this.uploads;
     }
 
     /**
@@ -647,10 +647,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     /**
@@ -658,10 +658,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usernsMode")
-      private final @Nullable Input<String> usernsMode;
+      private final @Nullable Output<String> usernsMode;
 
-    public Input<String> getUsernsMode() {
-        return this.usernsMode == null ? Input.empty() : this.usernsMode;
+    public Output<String> getUsernsMode() {
+        return this.usernsMode == null ? Output.empty() : this.usernsMode;
     }
 
     /**
@@ -669,10 +669,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<ContainerVolumeArgs>> volumes;
+      private final @Nullable Output<List<ContainerVolumeArgs>> volumes;
 
-    public Input<List<ContainerVolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<ContainerVolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     /**
@@ -680,70 +680,70 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workingDir")
-      private final @Nullable Input<String> workingDir;
+      private final @Nullable Output<String> workingDir;
 
-    public Input<String> getWorkingDir() {
-        return this.workingDir == null ? Input.empty() : this.workingDir;
+    public Output<String> getWorkingDir() {
+        return this.workingDir == null ? Output.empty() : this.workingDir;
     }
 
     public ContainerArgs(
-        @Nullable Input<Boolean> attach,
-        @Nullable Input<ContainerCapabilitiesArgs> capabilities,
-        @Nullable Input<List<String>> command,
-        @Nullable Input<String> cpuSet,
-        @Nullable Input<Integer> cpuShares,
-        @Nullable Input<Integer> destroyGraceSeconds,
-        @Nullable Input<List<ContainerDeviceArgs>> devices,
-        @Nullable Input<List<String>> dns,
-        @Nullable Input<List<String>> dnsOpts,
-        @Nullable Input<List<String>> dnsSearches,
-        @Nullable Input<String> domainname,
-        @Nullable Input<List<String>> entrypoints,
-        @Nullable Input<List<String>> envs,
-        @Nullable Input<List<String>> groupAdds,
-        @Nullable Input<ContainerHealthcheckArgs> healthcheck,
-        @Nullable Input<String> hostname,
-        @Nullable Input<List<ContainerHostArgs>> hosts,
-        Input<String> image,
-        @Nullable Input<Boolean> init,
-        @Nullable Input<String> ipcMode,
-        @Nullable Input<List<ContainerLabelArgs>> labels,
-        @Nullable Input<List<String>> links,
-        @Nullable Input<String> logDriver,
-        @Nullable Input<Map<String,Object>> logOpts,
-        @Nullable Input<Boolean> logs,
-        @Nullable Input<Integer> maxRetryCount,
-        @Nullable Input<Integer> memory,
-        @Nullable Input<Integer> memorySwap,
-        @Nullable Input<List<ContainerMountArgs>> mounts,
-        @Nullable Input<Boolean> mustRun,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> networkAliases,
-        @Nullable Input<String> networkMode,
-        @Nullable Input<List<String>> networks,
-        @Nullable Input<List<ContainerNetworksAdvancedArgs>> networksAdvanced,
-        @Nullable Input<String> pidMode,
-        @Nullable Input<List<ContainerPortArgs>> ports,
-        @Nullable Input<Boolean> privileged,
-        @Nullable Input<Boolean> publishAllPorts,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<Boolean> removeVolumes,
-        @Nullable Input<String> restart,
-        @Nullable Input<Boolean> rm,
-        @Nullable Input<List<String>> securityOpts,
-        @Nullable Input<Integer> shmSize,
-        @Nullable Input<Boolean> start,
-        @Nullable Input<Boolean> stdinOpen,
-        @Nullable Input<Map<String,Object>> storageOpts,
-        @Nullable Input<Map<String,Object>> sysctls,
-        @Nullable Input<Map<String,Object>> tmpfs,
-        @Nullable Input<Boolean> tty,
-        @Nullable Input<List<ContainerUlimitArgs>> ulimits,
-        @Nullable Input<List<ContainerUploadArgs>> uploads,
-        @Nullable Input<String> user,
-        @Nullable Input<String> usernsMode,
-        @Nullable Input<List<ContainerVolumeArgs>> volumes,
-        @Nullable Input<String> workingDir) {
+        @Nullable Output<Boolean> attach,
+        @Nullable Output<ContainerCapabilitiesArgs> capabilities,
+        @Nullable Output<List<String>> command,
+        @Nullable Output<String> cpuSet,
+        @Nullable Output<Integer> cpuShares,
+        @Nullable Output<Integer> destroyGraceSeconds,
+        @Nullable Output<List<ContainerDeviceArgs>> devices,
+        @Nullable Output<List<String>> dns,
+        @Nullable Output<List<String>> dnsOpts,
+        @Nullable Output<List<String>> dnsSearches,
+        @Nullable Output<String> domainname,
+        @Nullable Output<List<String>> entrypoints,
+        @Nullable Output<List<String>> envs,
+        @Nullable Output<List<String>> groupAdds,
+        @Nullable Output<ContainerHealthcheckArgs> healthcheck,
+        @Nullable Output<String> hostname,
+        @Nullable Output<List<ContainerHostArgs>> hosts,
+        Output<String> image,
+        @Nullable Output<Boolean> init,
+        @Nullable Output<String> ipcMode,
+        @Nullable Output<List<ContainerLabelArgs>> labels,
+        @Nullable Output<List<String>> links,
+        @Nullable Output<String> logDriver,
+        @Nullable Output<Map<String,Object>> logOpts,
+        @Nullable Output<Boolean> logs,
+        @Nullable Output<Integer> maxRetryCount,
+        @Nullable Output<Integer> memory,
+        @Nullable Output<Integer> memorySwap,
+        @Nullable Output<List<ContainerMountArgs>> mounts,
+        @Nullable Output<Boolean> mustRun,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> networkAliases,
+        @Nullable Output<String> networkMode,
+        @Nullable Output<List<String>> networks,
+        @Nullable Output<List<ContainerNetworksAdvancedArgs>> networksAdvanced,
+        @Nullable Output<String> pidMode,
+        @Nullable Output<List<ContainerPortArgs>> ports,
+        @Nullable Output<Boolean> privileged,
+        @Nullable Output<Boolean> publishAllPorts,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<Boolean> removeVolumes,
+        @Nullable Output<String> restart,
+        @Nullable Output<Boolean> rm,
+        @Nullable Output<List<String>> securityOpts,
+        @Nullable Output<Integer> shmSize,
+        @Nullable Output<Boolean> start,
+        @Nullable Output<Boolean> stdinOpen,
+        @Nullable Output<Map<String,Object>> storageOpts,
+        @Nullable Output<Map<String,Object>> sysctls,
+        @Nullable Output<Map<String,Object>> tmpfs,
+        @Nullable Output<Boolean> tty,
+        @Nullable Output<List<ContainerUlimitArgs>> ulimits,
+        @Nullable Output<List<ContainerUploadArgs>> uploads,
+        @Nullable Output<String> user,
+        @Nullable Output<String> usernsMode,
+        @Nullable Output<List<ContainerVolumeArgs>> volumes,
+        @Nullable Output<String> workingDir) {
         this.attach = attach;
         this.capabilities = capabilities;
         this.command = command;
@@ -804,63 +804,63 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.attach = Input.empty();
-        this.capabilities = Input.empty();
-        this.command = Input.empty();
-        this.cpuSet = Input.empty();
-        this.cpuShares = Input.empty();
-        this.destroyGraceSeconds = Input.empty();
-        this.devices = Input.empty();
-        this.dns = Input.empty();
-        this.dnsOpts = Input.empty();
-        this.dnsSearches = Input.empty();
-        this.domainname = Input.empty();
-        this.entrypoints = Input.empty();
-        this.envs = Input.empty();
-        this.groupAdds = Input.empty();
-        this.healthcheck = Input.empty();
-        this.hostname = Input.empty();
-        this.hosts = Input.empty();
-        this.image = Input.empty();
-        this.init = Input.empty();
-        this.ipcMode = Input.empty();
-        this.labels = Input.empty();
-        this.links = Input.empty();
-        this.logDriver = Input.empty();
-        this.logOpts = Input.empty();
-        this.logs = Input.empty();
-        this.maxRetryCount = Input.empty();
-        this.memory = Input.empty();
-        this.memorySwap = Input.empty();
-        this.mounts = Input.empty();
-        this.mustRun = Input.empty();
-        this.name = Input.empty();
-        this.networkAliases = Input.empty();
-        this.networkMode = Input.empty();
-        this.networks = Input.empty();
-        this.networksAdvanced = Input.empty();
-        this.pidMode = Input.empty();
-        this.ports = Input.empty();
-        this.privileged = Input.empty();
-        this.publishAllPorts = Input.empty();
-        this.readOnly = Input.empty();
-        this.removeVolumes = Input.empty();
-        this.restart = Input.empty();
-        this.rm = Input.empty();
-        this.securityOpts = Input.empty();
-        this.shmSize = Input.empty();
-        this.start = Input.empty();
-        this.stdinOpen = Input.empty();
-        this.storageOpts = Input.empty();
-        this.sysctls = Input.empty();
-        this.tmpfs = Input.empty();
-        this.tty = Input.empty();
-        this.ulimits = Input.empty();
-        this.uploads = Input.empty();
-        this.user = Input.empty();
-        this.usernsMode = Input.empty();
-        this.volumes = Input.empty();
-        this.workingDir = Input.empty();
+        this.attach = Output.empty();
+        this.capabilities = Output.empty();
+        this.command = Output.empty();
+        this.cpuSet = Output.empty();
+        this.cpuShares = Output.empty();
+        this.destroyGraceSeconds = Output.empty();
+        this.devices = Output.empty();
+        this.dns = Output.empty();
+        this.dnsOpts = Output.empty();
+        this.dnsSearches = Output.empty();
+        this.domainname = Output.empty();
+        this.entrypoints = Output.empty();
+        this.envs = Output.empty();
+        this.groupAdds = Output.empty();
+        this.healthcheck = Output.empty();
+        this.hostname = Output.empty();
+        this.hosts = Output.empty();
+        this.image = Output.empty();
+        this.init = Output.empty();
+        this.ipcMode = Output.empty();
+        this.labels = Output.empty();
+        this.links = Output.empty();
+        this.logDriver = Output.empty();
+        this.logOpts = Output.empty();
+        this.logs = Output.empty();
+        this.maxRetryCount = Output.empty();
+        this.memory = Output.empty();
+        this.memorySwap = Output.empty();
+        this.mounts = Output.empty();
+        this.mustRun = Output.empty();
+        this.name = Output.empty();
+        this.networkAliases = Output.empty();
+        this.networkMode = Output.empty();
+        this.networks = Output.empty();
+        this.networksAdvanced = Output.empty();
+        this.pidMode = Output.empty();
+        this.ports = Output.empty();
+        this.privileged = Output.empty();
+        this.publishAllPorts = Output.empty();
+        this.readOnly = Output.empty();
+        this.removeVolumes = Output.empty();
+        this.restart = Output.empty();
+        this.rm = Output.empty();
+        this.securityOpts = Output.empty();
+        this.shmSize = Output.empty();
+        this.start = Output.empty();
+        this.stdinOpen = Output.empty();
+        this.storageOpts = Output.empty();
+        this.sysctls = Output.empty();
+        this.tmpfs = Output.empty();
+        this.tty = Output.empty();
+        this.ulimits = Output.empty();
+        this.uploads = Output.empty();
+        this.user = Output.empty();
+        this.usernsMode = Output.empty();
+        this.volumes = Output.empty();
+        this.workingDir = Output.empty();
     }
 
     public static Builder builder() {
@@ -872,63 +872,63 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> attach;
-        private @Nullable Input<ContainerCapabilitiesArgs> capabilities;
-        private @Nullable Input<List<String>> command;
-        private @Nullable Input<String> cpuSet;
-        private @Nullable Input<Integer> cpuShares;
-        private @Nullable Input<Integer> destroyGraceSeconds;
-        private @Nullable Input<List<ContainerDeviceArgs>> devices;
-        private @Nullable Input<List<String>> dns;
-        private @Nullable Input<List<String>> dnsOpts;
-        private @Nullable Input<List<String>> dnsSearches;
-        private @Nullable Input<String> domainname;
-        private @Nullable Input<List<String>> entrypoints;
-        private @Nullable Input<List<String>> envs;
-        private @Nullable Input<List<String>> groupAdds;
-        private @Nullable Input<ContainerHealthcheckArgs> healthcheck;
-        private @Nullable Input<String> hostname;
-        private @Nullable Input<List<ContainerHostArgs>> hosts;
-        private Input<String> image;
-        private @Nullable Input<Boolean> init;
-        private @Nullable Input<String> ipcMode;
-        private @Nullable Input<List<ContainerLabelArgs>> labels;
-        private @Nullable Input<List<String>> links;
-        private @Nullable Input<String> logDriver;
-        private @Nullable Input<Map<String,Object>> logOpts;
-        private @Nullable Input<Boolean> logs;
-        private @Nullable Input<Integer> maxRetryCount;
-        private @Nullable Input<Integer> memory;
-        private @Nullable Input<Integer> memorySwap;
-        private @Nullable Input<List<ContainerMountArgs>> mounts;
-        private @Nullable Input<Boolean> mustRun;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> networkAliases;
-        private @Nullable Input<String> networkMode;
-        private @Nullable Input<List<String>> networks;
-        private @Nullable Input<List<ContainerNetworksAdvancedArgs>> networksAdvanced;
-        private @Nullable Input<String> pidMode;
-        private @Nullable Input<List<ContainerPortArgs>> ports;
-        private @Nullable Input<Boolean> privileged;
-        private @Nullable Input<Boolean> publishAllPorts;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<Boolean> removeVolumes;
-        private @Nullable Input<String> restart;
-        private @Nullable Input<Boolean> rm;
-        private @Nullable Input<List<String>> securityOpts;
-        private @Nullable Input<Integer> shmSize;
-        private @Nullable Input<Boolean> start;
-        private @Nullable Input<Boolean> stdinOpen;
-        private @Nullable Input<Map<String,Object>> storageOpts;
-        private @Nullable Input<Map<String,Object>> sysctls;
-        private @Nullable Input<Map<String,Object>> tmpfs;
-        private @Nullable Input<Boolean> tty;
-        private @Nullable Input<List<ContainerUlimitArgs>> ulimits;
-        private @Nullable Input<List<ContainerUploadArgs>> uploads;
-        private @Nullable Input<String> user;
-        private @Nullable Input<String> usernsMode;
-        private @Nullable Input<List<ContainerVolumeArgs>> volumes;
-        private @Nullable Input<String> workingDir;
+        private @Nullable Output<Boolean> attach;
+        private @Nullable Output<ContainerCapabilitiesArgs> capabilities;
+        private @Nullable Output<List<String>> command;
+        private @Nullable Output<String> cpuSet;
+        private @Nullable Output<Integer> cpuShares;
+        private @Nullable Output<Integer> destroyGraceSeconds;
+        private @Nullable Output<List<ContainerDeviceArgs>> devices;
+        private @Nullable Output<List<String>> dns;
+        private @Nullable Output<List<String>> dnsOpts;
+        private @Nullable Output<List<String>> dnsSearches;
+        private @Nullable Output<String> domainname;
+        private @Nullable Output<List<String>> entrypoints;
+        private @Nullable Output<List<String>> envs;
+        private @Nullable Output<List<String>> groupAdds;
+        private @Nullable Output<ContainerHealthcheckArgs> healthcheck;
+        private @Nullable Output<String> hostname;
+        private @Nullable Output<List<ContainerHostArgs>> hosts;
+        private Output<String> image;
+        private @Nullable Output<Boolean> init;
+        private @Nullable Output<String> ipcMode;
+        private @Nullable Output<List<ContainerLabelArgs>> labels;
+        private @Nullable Output<List<String>> links;
+        private @Nullable Output<String> logDriver;
+        private @Nullable Output<Map<String,Object>> logOpts;
+        private @Nullable Output<Boolean> logs;
+        private @Nullable Output<Integer> maxRetryCount;
+        private @Nullable Output<Integer> memory;
+        private @Nullable Output<Integer> memorySwap;
+        private @Nullable Output<List<ContainerMountArgs>> mounts;
+        private @Nullable Output<Boolean> mustRun;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> networkAliases;
+        private @Nullable Output<String> networkMode;
+        private @Nullable Output<List<String>> networks;
+        private @Nullable Output<List<ContainerNetworksAdvancedArgs>> networksAdvanced;
+        private @Nullable Output<String> pidMode;
+        private @Nullable Output<List<ContainerPortArgs>> ports;
+        private @Nullable Output<Boolean> privileged;
+        private @Nullable Output<Boolean> publishAllPorts;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<Boolean> removeVolumes;
+        private @Nullable Output<String> restart;
+        private @Nullable Output<Boolean> rm;
+        private @Nullable Output<List<String>> securityOpts;
+        private @Nullable Output<Integer> shmSize;
+        private @Nullable Output<Boolean> start;
+        private @Nullable Output<Boolean> stdinOpen;
+        private @Nullable Output<Map<String,Object>> storageOpts;
+        private @Nullable Output<Map<String,Object>> sysctls;
+        private @Nullable Output<Map<String,Object>> tmpfs;
+        private @Nullable Output<Boolean> tty;
+        private @Nullable Output<List<ContainerUlimitArgs>> ulimits;
+        private @Nullable Output<List<ContainerUploadArgs>> uploads;
+        private @Nullable Output<String> user;
+        private @Nullable Output<String> usernsMode;
+        private @Nullable Output<List<ContainerVolumeArgs>> volumes;
+        private @Nullable Output<String> workingDir;
 
         public Builder() {
     	      // Empty
@@ -995,573 +995,573 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workingDir = defaults.workingDir;
         }
 
-        public Builder attach(@Nullable Input<Boolean> attach) {
+        public Builder attach(@Nullable Output<Boolean> attach) {
             this.attach = attach;
             return this;
         }
 
         public Builder attach(@Nullable Boolean attach) {
-            this.attach = Input.ofNullable(attach);
+            this.attach = Output.ofNullable(attach);
             return this;
         }
 
-        public Builder capabilities(@Nullable Input<ContainerCapabilitiesArgs> capabilities) {
+        public Builder capabilities(@Nullable Output<ContainerCapabilitiesArgs> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
         public Builder capabilities(@Nullable ContainerCapabilitiesArgs capabilities) {
-            this.capabilities = Input.ofNullable(capabilities);
+            this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
 
-        public Builder command(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = Input.ofNullable(command);
+            this.command = Output.ofNullable(command);
             return this;
         }
 
-        public Builder cpuSet(@Nullable Input<String> cpuSet) {
+        public Builder cpuSet(@Nullable Output<String> cpuSet) {
             this.cpuSet = cpuSet;
             return this;
         }
 
         public Builder cpuSet(@Nullable String cpuSet) {
-            this.cpuSet = Input.ofNullable(cpuSet);
+            this.cpuSet = Output.ofNullable(cpuSet);
             return this;
         }
 
-        public Builder cpuShares(@Nullable Input<Integer> cpuShares) {
+        public Builder cpuShares(@Nullable Output<Integer> cpuShares) {
             this.cpuShares = cpuShares;
             return this;
         }
 
         public Builder cpuShares(@Nullable Integer cpuShares) {
-            this.cpuShares = Input.ofNullable(cpuShares);
+            this.cpuShares = Output.ofNullable(cpuShares);
             return this;
         }
 
-        public Builder destroyGraceSeconds(@Nullable Input<Integer> destroyGraceSeconds) {
+        public Builder destroyGraceSeconds(@Nullable Output<Integer> destroyGraceSeconds) {
             this.destroyGraceSeconds = destroyGraceSeconds;
             return this;
         }
 
         public Builder destroyGraceSeconds(@Nullable Integer destroyGraceSeconds) {
-            this.destroyGraceSeconds = Input.ofNullable(destroyGraceSeconds);
+            this.destroyGraceSeconds = Output.ofNullable(destroyGraceSeconds);
             return this;
         }
 
-        public Builder devices(@Nullable Input<List<ContainerDeviceArgs>> devices) {
+        public Builder devices(@Nullable Output<List<ContainerDeviceArgs>> devices) {
             this.devices = devices;
             return this;
         }
 
         public Builder devices(@Nullable List<ContainerDeviceArgs> devices) {
-            this.devices = Input.ofNullable(devices);
+            this.devices = Output.ofNullable(devices);
             return this;
         }
 
-        public Builder dns(@Nullable Input<List<String>> dns) {
+        public Builder dns(@Nullable Output<List<String>> dns) {
             this.dns = dns;
             return this;
         }
 
         public Builder dns(@Nullable List<String> dns) {
-            this.dns = Input.ofNullable(dns);
+            this.dns = Output.ofNullable(dns);
             return this;
         }
 
-        public Builder dnsOpts(@Nullable Input<List<String>> dnsOpts) {
+        public Builder dnsOpts(@Nullable Output<List<String>> dnsOpts) {
             this.dnsOpts = dnsOpts;
             return this;
         }
 
         public Builder dnsOpts(@Nullable List<String> dnsOpts) {
-            this.dnsOpts = Input.ofNullable(dnsOpts);
+            this.dnsOpts = Output.ofNullable(dnsOpts);
             return this;
         }
 
-        public Builder dnsSearches(@Nullable Input<List<String>> dnsSearches) {
+        public Builder dnsSearches(@Nullable Output<List<String>> dnsSearches) {
             this.dnsSearches = dnsSearches;
             return this;
         }
 
         public Builder dnsSearches(@Nullable List<String> dnsSearches) {
-            this.dnsSearches = Input.ofNullable(dnsSearches);
+            this.dnsSearches = Output.ofNullable(dnsSearches);
             return this;
         }
 
-        public Builder domainname(@Nullable Input<String> domainname) {
+        public Builder domainname(@Nullable Output<String> domainname) {
             this.domainname = domainname;
             return this;
         }
 
         public Builder domainname(@Nullable String domainname) {
-            this.domainname = Input.ofNullable(domainname);
+            this.domainname = Output.ofNullable(domainname);
             return this;
         }
 
-        public Builder entrypoints(@Nullable Input<List<String>> entrypoints) {
+        public Builder entrypoints(@Nullable Output<List<String>> entrypoints) {
             this.entrypoints = entrypoints;
             return this;
         }
 
         public Builder entrypoints(@Nullable List<String> entrypoints) {
-            this.entrypoints = Input.ofNullable(entrypoints);
+            this.entrypoints = Output.ofNullable(entrypoints);
             return this;
         }
 
-        public Builder envs(@Nullable Input<List<String>> envs) {
+        public Builder envs(@Nullable Output<List<String>> envs) {
             this.envs = envs;
             return this;
         }
 
         public Builder envs(@Nullable List<String> envs) {
-            this.envs = Input.ofNullable(envs);
+            this.envs = Output.ofNullable(envs);
             return this;
         }
 
-        public Builder groupAdds(@Nullable Input<List<String>> groupAdds) {
+        public Builder groupAdds(@Nullable Output<List<String>> groupAdds) {
             this.groupAdds = groupAdds;
             return this;
         }
 
         public Builder groupAdds(@Nullable List<String> groupAdds) {
-            this.groupAdds = Input.ofNullable(groupAdds);
+            this.groupAdds = Output.ofNullable(groupAdds);
             return this;
         }
 
-        public Builder healthcheck(@Nullable Input<ContainerHealthcheckArgs> healthcheck) {
+        public Builder healthcheck(@Nullable Output<ContainerHealthcheckArgs> healthcheck) {
             this.healthcheck = healthcheck;
             return this;
         }
 
         public Builder healthcheck(@Nullable ContainerHealthcheckArgs healthcheck) {
-            this.healthcheck = Input.ofNullable(healthcheck);
+            this.healthcheck = Output.ofNullable(healthcheck);
             return this;
         }
 
-        public Builder hostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Input.ofNullable(hostname);
+            this.hostname = Output.ofNullable(hostname);
             return this;
         }
 
-        public Builder hosts(@Nullable Input<List<ContainerHostArgs>> hosts) {
+        public Builder hosts(@Nullable Output<List<ContainerHostArgs>> hosts) {
             this.hosts = hosts;
             return this;
         }
 
         public Builder hosts(@Nullable List<ContainerHostArgs> hosts) {
-            this.hosts = Input.ofNullable(hosts);
+            this.hosts = Output.ofNullable(hosts);
             return this;
         }
 
-        public Builder image(Input<String> image) {
+        public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
         public Builder image(String image) {
-            this.image = Input.of(Objects.requireNonNull(image));
+            this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder init(@Nullable Input<Boolean> init) {
+        public Builder init(@Nullable Output<Boolean> init) {
             this.init = init;
             return this;
         }
 
         public Builder init(@Nullable Boolean init) {
-            this.init = Input.ofNullable(init);
+            this.init = Output.ofNullable(init);
             return this;
         }
 
-        public Builder ipcMode(@Nullable Input<String> ipcMode) {
+        public Builder ipcMode(@Nullable Output<String> ipcMode) {
             this.ipcMode = ipcMode;
             return this;
         }
 
         public Builder ipcMode(@Nullable String ipcMode) {
-            this.ipcMode = Input.ofNullable(ipcMode);
+            this.ipcMode = Output.ofNullable(ipcMode);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<ContainerLabelArgs>> labels) {
+        public Builder labels(@Nullable Output<List<ContainerLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<ContainerLabelArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder links(@Nullable Input<List<String>> links) {
+        public Builder links(@Nullable Output<List<String>> links) {
             this.links = links;
             return this;
         }
 
         public Builder links(@Nullable List<String> links) {
-            this.links = Input.ofNullable(links);
+            this.links = Output.ofNullable(links);
             return this;
         }
 
-        public Builder logDriver(@Nullable Input<String> logDriver) {
+        public Builder logDriver(@Nullable Output<String> logDriver) {
             this.logDriver = logDriver;
             return this;
         }
 
         public Builder logDriver(@Nullable String logDriver) {
-            this.logDriver = Input.ofNullable(logDriver);
+            this.logDriver = Output.ofNullable(logDriver);
             return this;
         }
 
-        public Builder logOpts(@Nullable Input<Map<String,Object>> logOpts) {
+        public Builder logOpts(@Nullable Output<Map<String,Object>> logOpts) {
             this.logOpts = logOpts;
             return this;
         }
 
         public Builder logOpts(@Nullable Map<String,Object> logOpts) {
-            this.logOpts = Input.ofNullable(logOpts);
+            this.logOpts = Output.ofNullable(logOpts);
             return this;
         }
 
-        public Builder logs(@Nullable Input<Boolean> logs) {
+        public Builder logs(@Nullable Output<Boolean> logs) {
             this.logs = logs;
             return this;
         }
 
         public Builder logs(@Nullable Boolean logs) {
-            this.logs = Input.ofNullable(logs);
+            this.logs = Output.ofNullable(logs);
             return this;
         }
 
-        public Builder maxRetryCount(@Nullable Input<Integer> maxRetryCount) {
+        public Builder maxRetryCount(@Nullable Output<Integer> maxRetryCount) {
             this.maxRetryCount = maxRetryCount;
             return this;
         }
 
         public Builder maxRetryCount(@Nullable Integer maxRetryCount) {
-            this.maxRetryCount = Input.ofNullable(maxRetryCount);
+            this.maxRetryCount = Output.ofNullable(maxRetryCount);
             return this;
         }
 
-        public Builder memory(@Nullable Input<Integer> memory) {
+        public Builder memory(@Nullable Output<Integer> memory) {
             this.memory = memory;
             return this;
         }
 
         public Builder memory(@Nullable Integer memory) {
-            this.memory = Input.ofNullable(memory);
+            this.memory = Output.ofNullable(memory);
             return this;
         }
 
-        public Builder memorySwap(@Nullable Input<Integer> memorySwap) {
+        public Builder memorySwap(@Nullable Output<Integer> memorySwap) {
             this.memorySwap = memorySwap;
             return this;
         }
 
         public Builder memorySwap(@Nullable Integer memorySwap) {
-            this.memorySwap = Input.ofNullable(memorySwap);
+            this.memorySwap = Output.ofNullable(memorySwap);
             return this;
         }
 
-        public Builder mounts(@Nullable Input<List<ContainerMountArgs>> mounts) {
+        public Builder mounts(@Nullable Output<List<ContainerMountArgs>> mounts) {
             this.mounts = mounts;
             return this;
         }
 
         public Builder mounts(@Nullable List<ContainerMountArgs> mounts) {
-            this.mounts = Input.ofNullable(mounts);
+            this.mounts = Output.ofNullable(mounts);
             return this;
         }
 
-        public Builder mustRun(@Nullable Input<Boolean> mustRun) {
+        public Builder mustRun(@Nullable Output<Boolean> mustRun) {
             this.mustRun = mustRun;
             return this;
         }
 
         public Builder mustRun(@Nullable Boolean mustRun) {
-            this.mustRun = Input.ofNullable(mustRun);
+            this.mustRun = Output.ofNullable(mustRun);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkAliases(@Nullable Input<List<String>> networkAliases) {
+        public Builder networkAliases(@Nullable Output<List<String>> networkAliases) {
             this.networkAliases = networkAliases;
             return this;
         }
 
         public Builder networkAliases(@Nullable List<String> networkAliases) {
-            this.networkAliases = Input.ofNullable(networkAliases);
+            this.networkAliases = Output.ofNullable(networkAliases);
             return this;
         }
 
-        public Builder networkMode(@Nullable Input<String> networkMode) {
+        public Builder networkMode(@Nullable Output<String> networkMode) {
             this.networkMode = networkMode;
             return this;
         }
 
         public Builder networkMode(@Nullable String networkMode) {
-            this.networkMode = Input.ofNullable(networkMode);
+            this.networkMode = Output.ofNullable(networkMode);
             return this;
         }
 
-        public Builder networks(@Nullable Input<List<String>> networks) {
+        public Builder networks(@Nullable Output<List<String>> networks) {
             this.networks = networks;
             return this;
         }
 
         public Builder networks(@Nullable List<String> networks) {
-            this.networks = Input.ofNullable(networks);
+            this.networks = Output.ofNullable(networks);
             return this;
         }
 
-        public Builder networksAdvanced(@Nullable Input<List<ContainerNetworksAdvancedArgs>> networksAdvanced) {
+        public Builder networksAdvanced(@Nullable Output<List<ContainerNetworksAdvancedArgs>> networksAdvanced) {
             this.networksAdvanced = networksAdvanced;
             return this;
         }
 
         public Builder networksAdvanced(@Nullable List<ContainerNetworksAdvancedArgs> networksAdvanced) {
-            this.networksAdvanced = Input.ofNullable(networksAdvanced);
+            this.networksAdvanced = Output.ofNullable(networksAdvanced);
             return this;
         }
 
-        public Builder pidMode(@Nullable Input<String> pidMode) {
+        public Builder pidMode(@Nullable Output<String> pidMode) {
             this.pidMode = pidMode;
             return this;
         }
 
         public Builder pidMode(@Nullable String pidMode) {
-            this.pidMode = Input.ofNullable(pidMode);
+            this.pidMode = Output.ofNullable(pidMode);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<ContainerPortArgs>> ports) {
+        public Builder ports(@Nullable Output<List<ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<ContainerPortArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
 
-        public Builder privileged(@Nullable Input<Boolean> privileged) {
+        public Builder privileged(@Nullable Output<Boolean> privileged) {
             this.privileged = privileged;
             return this;
         }
 
         public Builder privileged(@Nullable Boolean privileged) {
-            this.privileged = Input.ofNullable(privileged);
+            this.privileged = Output.ofNullable(privileged);
             return this;
         }
 
-        public Builder publishAllPorts(@Nullable Input<Boolean> publishAllPorts) {
+        public Builder publishAllPorts(@Nullable Output<Boolean> publishAllPorts) {
             this.publishAllPorts = publishAllPorts;
             return this;
         }
 
         public Builder publishAllPorts(@Nullable Boolean publishAllPorts) {
-            this.publishAllPorts = Input.ofNullable(publishAllPorts);
+            this.publishAllPorts = Output.ofNullable(publishAllPorts);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder removeVolumes(@Nullable Input<Boolean> removeVolumes) {
+        public Builder removeVolumes(@Nullable Output<Boolean> removeVolumes) {
             this.removeVolumes = removeVolumes;
             return this;
         }
 
         public Builder removeVolumes(@Nullable Boolean removeVolumes) {
-            this.removeVolumes = Input.ofNullable(removeVolumes);
+            this.removeVolumes = Output.ofNullable(removeVolumes);
             return this;
         }
 
-        public Builder restart(@Nullable Input<String> restart) {
+        public Builder restart(@Nullable Output<String> restart) {
             this.restart = restart;
             return this;
         }
 
         public Builder restart(@Nullable String restart) {
-            this.restart = Input.ofNullable(restart);
+            this.restart = Output.ofNullable(restart);
             return this;
         }
 
-        public Builder rm(@Nullable Input<Boolean> rm) {
+        public Builder rm(@Nullable Output<Boolean> rm) {
             this.rm = rm;
             return this;
         }
 
         public Builder rm(@Nullable Boolean rm) {
-            this.rm = Input.ofNullable(rm);
+            this.rm = Output.ofNullable(rm);
             return this;
         }
 
-        public Builder securityOpts(@Nullable Input<List<String>> securityOpts) {
+        public Builder securityOpts(@Nullable Output<List<String>> securityOpts) {
             this.securityOpts = securityOpts;
             return this;
         }
 
         public Builder securityOpts(@Nullable List<String> securityOpts) {
-            this.securityOpts = Input.ofNullable(securityOpts);
+            this.securityOpts = Output.ofNullable(securityOpts);
             return this;
         }
 
-        public Builder shmSize(@Nullable Input<Integer> shmSize) {
+        public Builder shmSize(@Nullable Output<Integer> shmSize) {
             this.shmSize = shmSize;
             return this;
         }
 
         public Builder shmSize(@Nullable Integer shmSize) {
-            this.shmSize = Input.ofNullable(shmSize);
+            this.shmSize = Output.ofNullable(shmSize);
             return this;
         }
 
-        public Builder start(@Nullable Input<Boolean> start) {
+        public Builder start(@Nullable Output<Boolean> start) {
             this.start = start;
             return this;
         }
 
         public Builder start(@Nullable Boolean start) {
-            this.start = Input.ofNullable(start);
+            this.start = Output.ofNullable(start);
             return this;
         }
 
-        public Builder stdinOpen(@Nullable Input<Boolean> stdinOpen) {
+        public Builder stdinOpen(@Nullable Output<Boolean> stdinOpen) {
             this.stdinOpen = stdinOpen;
             return this;
         }
 
         public Builder stdinOpen(@Nullable Boolean stdinOpen) {
-            this.stdinOpen = Input.ofNullable(stdinOpen);
+            this.stdinOpen = Output.ofNullable(stdinOpen);
             return this;
         }
 
-        public Builder storageOpts(@Nullable Input<Map<String,Object>> storageOpts) {
+        public Builder storageOpts(@Nullable Output<Map<String,Object>> storageOpts) {
             this.storageOpts = storageOpts;
             return this;
         }
 
         public Builder storageOpts(@Nullable Map<String,Object> storageOpts) {
-            this.storageOpts = Input.ofNullable(storageOpts);
+            this.storageOpts = Output.ofNullable(storageOpts);
             return this;
         }
 
-        public Builder sysctls(@Nullable Input<Map<String,Object>> sysctls) {
+        public Builder sysctls(@Nullable Output<Map<String,Object>> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
 
         public Builder sysctls(@Nullable Map<String,Object> sysctls) {
-            this.sysctls = Input.ofNullable(sysctls);
+            this.sysctls = Output.ofNullable(sysctls);
             return this;
         }
 
-        public Builder tmpfs(@Nullable Input<Map<String,Object>> tmpfs) {
+        public Builder tmpfs(@Nullable Output<Map<String,Object>> tmpfs) {
             this.tmpfs = tmpfs;
             return this;
         }
 
         public Builder tmpfs(@Nullable Map<String,Object> tmpfs) {
-            this.tmpfs = Input.ofNullable(tmpfs);
+            this.tmpfs = Output.ofNullable(tmpfs);
             return this;
         }
 
-        public Builder tty(@Nullable Input<Boolean> tty) {
+        public Builder tty(@Nullable Output<Boolean> tty) {
             this.tty = tty;
             return this;
         }
 
         public Builder tty(@Nullable Boolean tty) {
-            this.tty = Input.ofNullable(tty);
+            this.tty = Output.ofNullable(tty);
             return this;
         }
 
-        public Builder ulimits(@Nullable Input<List<ContainerUlimitArgs>> ulimits) {
+        public Builder ulimits(@Nullable Output<List<ContainerUlimitArgs>> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
 
         public Builder ulimits(@Nullable List<ContainerUlimitArgs> ulimits) {
-            this.ulimits = Input.ofNullable(ulimits);
+            this.ulimits = Output.ofNullable(ulimits);
             return this;
         }
 
-        public Builder uploads(@Nullable Input<List<ContainerUploadArgs>> uploads) {
+        public Builder uploads(@Nullable Output<List<ContainerUploadArgs>> uploads) {
             this.uploads = uploads;
             return this;
         }
 
         public Builder uploads(@Nullable List<ContainerUploadArgs> uploads) {
-            this.uploads = Input.ofNullable(uploads);
+            this.uploads = Output.ofNullable(uploads);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
 
-        public Builder usernsMode(@Nullable Input<String> usernsMode) {
+        public Builder usernsMode(@Nullable Output<String> usernsMode) {
             this.usernsMode = usernsMode;
             return this;
         }
 
         public Builder usernsMode(@Nullable String usernsMode) {
-            this.usernsMode = Input.ofNullable(usernsMode);
+            this.usernsMode = Output.ofNullable(usernsMode);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<ContainerVolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<ContainerVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<ContainerVolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
 
-        public Builder workingDir(@Nullable Input<String> workingDir) {
+        public Builder workingDir(@Nullable Output<String> workingDir) {
             this.workingDir = workingDir;
             return this;
         }
 
         public Builder workingDir(@Nullable String workingDir) {
-            this.workingDir = Input.ofNullable(workingDir);
+            this.workingDir = Output.ofNullable(workingDir);
             return this;
         }
         public ContainerArgs build() {

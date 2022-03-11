@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.HTTP2HealthCheckPortSpecification;
 import io.pulumi.googlenative.compute_v1.enums.HTTP2HealthCheckProxyHeader;
@@ -22,10 +22,10 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="portName")
-      private final @Nullable Input<String> portName;
+      private final @Nullable Output<String> portName;
 
-    public Input<String> getPortName() {
-        return this.portName == null ? Input.empty() : this.portName;
+    public Output<String> getPortName() {
+        return this.portName == null ? Output.empty() : this.portName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="portSpecification")
-      private final @Nullable Input<HTTP2HealthCheckPortSpecification> portSpecification;
+      private final @Nullable Output<HTTP2HealthCheckPortSpecification> portSpecification;
 
-    public Input<HTTP2HealthCheckPortSpecification> getPortSpecification() {
-        return this.portSpecification == null ? Input.empty() : this.portSpecification;
+    public Output<HTTP2HealthCheckPortSpecification> getPortSpecification() {
+        return this.portSpecification == null ? Output.empty() : this.portSpecification;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="proxyHeader")
-      private final @Nullable Input<HTTP2HealthCheckProxyHeader> proxyHeader;
+      private final @Nullable Output<HTTP2HealthCheckProxyHeader> proxyHeader;
 
-    public Input<HTTP2HealthCheckProxyHeader> getProxyHeader() {
-        return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
+    public Output<HTTP2HealthCheckProxyHeader> getProxyHeader() {
+        return this.proxyHeader == null ? Output.empty() : this.proxyHeader;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requestPath")
-      private final @Nullable Input<String> requestPath;
+      private final @Nullable Output<String> requestPath;
 
-    public Input<String> getRequestPath() {
-        return this.requestPath == null ? Input.empty() : this.requestPath;
+    public Output<String> getRequestPath() {
+        return this.requestPath == null ? Output.empty() : this.requestPath;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="response")
-      private final @Nullable Input<String> response;
+      private final @Nullable Output<String> response;
 
-    public Input<String> getResponse() {
-        return this.response == null ? Input.empty() : this.response;
+    public Output<String> getResponse() {
+        return this.response == null ? Output.empty() : this.response;
     }
 
     public HTTP2HealthCheckArgs(
-        @Nullable Input<String> host,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> portName,
-        @Nullable Input<HTTP2HealthCheckPortSpecification> portSpecification,
-        @Nullable Input<HTTP2HealthCheckProxyHeader> proxyHeader,
-        @Nullable Input<String> requestPath,
-        @Nullable Input<String> response) {
+        @Nullable Output<String> host,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> portName,
+        @Nullable Output<HTTP2HealthCheckPortSpecification> portSpecification,
+        @Nullable Output<HTTP2HealthCheckProxyHeader> proxyHeader,
+        @Nullable Output<String> requestPath,
+        @Nullable Output<String> response) {
         this.host = host;
         this.port = port;
         this.portName = portName;
@@ -112,13 +112,13 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HTTP2HealthCheckArgs() {
-        this.host = Input.empty();
-        this.port = Input.empty();
-        this.portName = Input.empty();
-        this.portSpecification = Input.empty();
-        this.proxyHeader = Input.empty();
-        this.requestPath = Input.empty();
-        this.response = Input.empty();
+        this.host = Output.empty();
+        this.port = Output.empty();
+        this.portName = Output.empty();
+        this.portSpecification = Output.empty();
+        this.proxyHeader = Output.empty();
+        this.requestPath = Output.empty();
+        this.response = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> host;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> portName;
-        private @Nullable Input<HTTP2HealthCheckPortSpecification> portSpecification;
-        private @Nullable Input<HTTP2HealthCheckProxyHeader> proxyHeader;
-        private @Nullable Input<String> requestPath;
-        private @Nullable Input<String> response;
+        private @Nullable Output<String> host;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> portName;
+        private @Nullable Output<HTTP2HealthCheckPortSpecification> portSpecification;
+        private @Nullable Output<HTTP2HealthCheckProxyHeader> proxyHeader;
+        private @Nullable Output<String> requestPath;
+        private @Nullable Output<String> response;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
     	      this.response = defaults.response;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder portName(@Nullable Input<String> portName) {
+        public Builder portName(@Nullable Output<String> portName) {
             this.portName = portName;
             return this;
         }
 
         public Builder portName(@Nullable String portName) {
-            this.portName = Input.ofNullable(portName);
+            this.portName = Output.ofNullable(portName);
             return this;
         }
 
-        public Builder portSpecification(@Nullable Input<HTTP2HealthCheckPortSpecification> portSpecification) {
+        public Builder portSpecification(@Nullable Output<HTTP2HealthCheckPortSpecification> portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
 
         public Builder portSpecification(@Nullable HTTP2HealthCheckPortSpecification portSpecification) {
-            this.portSpecification = Input.ofNullable(portSpecification);
+            this.portSpecification = Output.ofNullable(portSpecification);
             return this;
         }
 
-        public Builder proxyHeader(@Nullable Input<HTTP2HealthCheckProxyHeader> proxyHeader) {
+        public Builder proxyHeader(@Nullable Output<HTTP2HealthCheckProxyHeader> proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
 
         public Builder proxyHeader(@Nullable HTTP2HealthCheckProxyHeader proxyHeader) {
-            this.proxyHeader = Input.ofNullable(proxyHeader);
+            this.proxyHeader = Output.ofNullable(proxyHeader);
             return this;
         }
 
-        public Builder requestPath(@Nullable Input<String> requestPath) {
+        public Builder requestPath(@Nullable Output<String> requestPath) {
             this.requestPath = requestPath;
             return this;
         }
 
         public Builder requestPath(@Nullable String requestPath) {
-            this.requestPath = Input.ofNullable(requestPath);
+            this.requestPath = Output.ofNullable(requestPath);
             return this;
         }
 
-        public Builder response(@Nullable Input<String> response) {
+        public Builder response(@Nullable Output<String> response) {
             this.response = response;
             return this;
         }
 
         public Builder response(@Nullable String response) {
-            this.response = Input.ofNullable(response);
+            this.response = Output.ofNullable(response);
             return this;
         }
         public HTTP2HealthCheckArgs build() {

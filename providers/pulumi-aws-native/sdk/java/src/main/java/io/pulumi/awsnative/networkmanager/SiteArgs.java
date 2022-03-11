@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.awsnative.networkmanager.inputs.SiteLocationArgs;
 import io.pulumi.awsnative.networkmanager.inputs.SiteTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-      private final Input<String> globalNetworkId;
+      private final Output<String> globalNetworkId;
 
-    public Input<String> getGlobalNetworkId() {
+    public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -44,10 +44,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<SiteLocationArgs> location;
+      private final @Nullable Output<SiteLocationArgs> location;
 
-    public Input<SiteLocationArgs> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<SiteLocationArgs> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<SiteTagArgs>> tags;
+      private final @Nullable Output<List<SiteTagArgs>> tags;
 
-    public Input<List<SiteTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<SiteTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SiteArgs(
-        @Nullable Input<String> description,
-        Input<String> globalNetworkId,
-        @Nullable Input<SiteLocationArgs> location,
-        @Nullable Input<List<SiteTagArgs>> tags) {
+        @Nullable Output<String> description,
+        Output<String> globalNetworkId,
+        @Nullable Output<SiteLocationArgs> location,
+        @Nullable Output<List<SiteTagArgs>> tags) {
         this.description = description;
         this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
         this.location = location;
@@ -73,10 +73,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SiteArgs() {
-        this.description = Input.empty();
-        this.globalNetworkId = Input.empty();
-        this.location = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.globalNetworkId = Output.empty();
+        this.location = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> globalNetworkId;
-        private @Nullable Input<SiteLocationArgs> location;
-        private @Nullable Input<List<SiteTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private Output<String> globalNetworkId;
+        private @Nullable Output<SiteLocationArgs> location;
+        private @Nullable Output<List<SiteTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder globalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
+            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder location(@Nullable Input<SiteLocationArgs> location) {
+        public Builder location(@Nullable Output<SiteLocationArgs> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable SiteLocationArgs location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<SiteTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<SiteTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<SiteTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SiteArgs build() {

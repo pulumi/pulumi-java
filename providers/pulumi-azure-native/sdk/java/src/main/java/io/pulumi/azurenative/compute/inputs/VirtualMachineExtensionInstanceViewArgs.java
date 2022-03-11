@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="statuses")
-      private final @Nullable Input<List<InstanceViewStatusArgs>> statuses;
+      private final @Nullable Output<List<InstanceViewStatusArgs>> statuses;
 
-    public Input<List<InstanceViewStatusArgs>> getStatuses() {
-        return this.statuses == null ? Input.empty() : this.statuses;
+    public Output<List<InstanceViewStatusArgs>> getStatuses() {
+        return this.statuses == null ? Output.empty() : this.statuses;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="substatuses")
-      private final @Nullable Input<List<InstanceViewStatusArgs>> substatuses;
+      private final @Nullable Output<List<InstanceViewStatusArgs>> substatuses;
 
-    public Input<List<InstanceViewStatusArgs>> getSubstatuses() {
-        return this.substatuses == null ? Input.empty() : this.substatuses;
+    public Output<List<InstanceViewStatusArgs>> getSubstatuses() {
+        return this.substatuses == null ? Output.empty() : this.substatuses;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="typeHandlerVersion")
-      private final @Nullable Input<String> typeHandlerVersion;
+      private final @Nullable Output<String> typeHandlerVersion;
 
-    public Input<String> getTypeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
+    public Output<String> getTypeHandlerVersion() {
+        return this.typeHandlerVersion == null ? Output.empty() : this.typeHandlerVersion;
     }
 
     public VirtualMachineExtensionInstanceViewArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<InstanceViewStatusArgs>> statuses,
-        @Nullable Input<List<InstanceViewStatusArgs>> substatuses,
-        @Nullable Input<String> type,
-        @Nullable Input<String> typeHandlerVersion) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<InstanceViewStatusArgs>> statuses,
+        @Nullable Output<List<InstanceViewStatusArgs>> substatuses,
+        @Nullable Output<String> type,
+        @Nullable Output<String> typeHandlerVersion) {
         this.name = name;
         this.statuses = statuses;
         this.substatuses = substatuses;
@@ -89,11 +89,11 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
     }
 
     private VirtualMachineExtensionInstanceViewArgs() {
-        this.name = Input.empty();
-        this.statuses = Input.empty();
-        this.substatuses = Input.empty();
-        this.type = Input.empty();
-        this.typeHandlerVersion = Input.empty();
+        this.name = Output.empty();
+        this.statuses = Output.empty();
+        this.substatuses = Output.empty();
+        this.type = Output.empty();
+        this.typeHandlerVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<InstanceViewStatusArgs>> statuses;
-        private @Nullable Input<List<InstanceViewStatusArgs>> substatuses;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> typeHandlerVersion;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<InstanceViewStatusArgs>> statuses;
+        private @Nullable Output<List<InstanceViewStatusArgs>> substatuses;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> typeHandlerVersion;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder statuses(@Nullable Input<List<InstanceViewStatusArgs>> statuses) {
+        public Builder statuses(@Nullable Output<List<InstanceViewStatusArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
         public Builder statuses(@Nullable List<InstanceViewStatusArgs> statuses) {
-            this.statuses = Input.ofNullable(statuses);
+            this.statuses = Output.ofNullable(statuses);
             return this;
         }
 
-        public Builder substatuses(@Nullable Input<List<InstanceViewStatusArgs>> substatuses) {
+        public Builder substatuses(@Nullable Output<List<InstanceViewStatusArgs>> substatuses) {
             this.substatuses = substatuses;
             return this;
         }
 
         public Builder substatuses(@Nullable List<InstanceViewStatusArgs> substatuses) {
-            this.substatuses = Input.ofNullable(substatuses);
+            this.substatuses = Output.ofNullable(substatuses);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder typeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
+            this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
         }
         public VirtualMachineExtensionInstanceViewArgs build() {

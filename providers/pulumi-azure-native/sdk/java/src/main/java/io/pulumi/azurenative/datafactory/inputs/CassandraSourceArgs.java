@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.CassandraSourceReadConsistencyLevels;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="additionalColumns")
-      private final @Nullable Input<Object> additionalColumns;
+      private final @Nullable Output<Object> additionalColumns;
 
-    public Input<Object> getAdditionalColumns() {
-        return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
+    public Output<Object> getAdditionalColumns() {
+        return this.additionalColumns == null ? Output.empty() : this.additionalColumns;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="consistencyLevel")
-      private final @Nullable Input<Either<String,CassandraSourceReadConsistencyLevels>> consistencyLevel;
+      private final @Nullable Output<Either<String,CassandraSourceReadConsistencyLevels>> consistencyLevel;
 
-    public Input<Either<String,CassandraSourceReadConsistencyLevels>> getConsistencyLevel() {
-        return this.consistencyLevel == null ? Input.empty() : this.consistencyLevel;
+    public Output<Either<String,CassandraSourceReadConsistencyLevels>> getConsistencyLevel() {
+        return this.consistencyLevel == null ? Output.empty() : this.consistencyLevel;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="disableMetricsCollection")
-      private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Input<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
+    public Output<Object> getDisableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Input<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Object> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<Object> query;
+      private final @Nullable Output<Object> query;
 
-    public Input<Object> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<Object> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="queryTimeout")
-      private final @Nullable Input<Object> queryTimeout;
+      private final @Nullable Output<Object> queryTimeout;
 
-    public Input<Object> getQueryTimeout() {
-        return this.queryTimeout == null ? Input.empty() : this.queryTimeout;
+    public Output<Object> getQueryTimeout() {
+        return this.queryTimeout == null ? Output.empty() : this.queryTimeout;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceRetryCount")
-      private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Output<Object> sourceRetryCount;
 
-    public Input<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
+    public Output<Object> getSourceRetryCount() {
+        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceRetryWait")
-      private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Output<Object> sourceRetryWait;
 
-    public Input<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
+    public Output<Object> getSourceRetryWait() {
+        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -115,22 +115,22 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public CassandraSourceArgs(
-        @Nullable Input<Object> additionalColumns,
-        @Nullable Input<Either<String,CassandraSourceReadConsistencyLevels>> consistencyLevel,
-        @Nullable Input<Object> disableMetricsCollection,
-        @Nullable Input<Object> maxConcurrentConnections,
-        @Nullable Input<Object> query,
-        @Nullable Input<Object> queryTimeout,
-        @Nullable Input<Object> sourceRetryCount,
-        @Nullable Input<Object> sourceRetryWait,
-        Input<String> type) {
+        @Nullable Output<Object> additionalColumns,
+        @Nullable Output<Either<String,CassandraSourceReadConsistencyLevels>> consistencyLevel,
+        @Nullable Output<Object> disableMetricsCollection,
+        @Nullable Output<Object> maxConcurrentConnections,
+        @Nullable Output<Object> query,
+        @Nullable Output<Object> queryTimeout,
+        @Nullable Output<Object> sourceRetryCount,
+        @Nullable Output<Object> sourceRetryWait,
+        Output<String> type) {
         this.additionalColumns = additionalColumns;
         this.consistencyLevel = consistencyLevel;
         this.disableMetricsCollection = disableMetricsCollection;
@@ -143,15 +143,15 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CassandraSourceArgs() {
-        this.additionalColumns = Input.empty();
-        this.consistencyLevel = Input.empty();
-        this.disableMetricsCollection = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.query = Input.empty();
-        this.queryTimeout = Input.empty();
-        this.sourceRetryCount = Input.empty();
-        this.sourceRetryWait = Input.empty();
-        this.type = Input.empty();
+        this.additionalColumns = Output.empty();
+        this.consistencyLevel = Output.empty();
+        this.disableMetricsCollection = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.query = Output.empty();
+        this.queryTimeout = Output.empty();
+        this.sourceRetryCount = Output.empty();
+        this.sourceRetryWait = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -163,15 +163,15 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> additionalColumns;
-        private @Nullable Input<Either<String,CassandraSourceReadConsistencyLevels>> consistencyLevel;
-        private @Nullable Input<Object> disableMetricsCollection;
-        private @Nullable Input<Object> maxConcurrentConnections;
-        private @Nullable Input<Object> query;
-        private @Nullable Input<Object> queryTimeout;
-        private @Nullable Input<Object> sourceRetryCount;
-        private @Nullable Input<Object> sourceRetryWait;
-        private Input<String> type;
+        private @Nullable Output<Object> additionalColumns;
+        private @Nullable Output<Either<String,CassandraSourceReadConsistencyLevels>> consistencyLevel;
+        private @Nullable Output<Object> disableMetricsCollection;
+        private @Nullable Output<Object> maxConcurrentConnections;
+        private @Nullable Output<Object> query;
+        private @Nullable Output<Object> queryTimeout;
+        private @Nullable Output<Object> sourceRetryCount;
+        private @Nullable Output<Object> sourceRetryWait;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -190,93 +190,93 @@ public final class CassandraSourceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder additionalColumns(@Nullable Input<Object> additionalColumns) {
+        public Builder additionalColumns(@Nullable Output<Object> additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Input.ofNullable(additionalColumns);
+            this.additionalColumns = Output.ofNullable(additionalColumns);
             return this;
         }
 
-        public Builder consistencyLevel(@Nullable Input<Either<String,CassandraSourceReadConsistencyLevels>> consistencyLevel) {
+        public Builder consistencyLevel(@Nullable Output<Either<String,CassandraSourceReadConsistencyLevels>> consistencyLevel) {
             this.consistencyLevel = consistencyLevel;
             return this;
         }
 
         public Builder consistencyLevel(@Nullable Either<String,CassandraSourceReadConsistencyLevels> consistencyLevel) {
-            this.consistencyLevel = Input.ofNullable(consistencyLevel);
+            this.consistencyLevel = Output.ofNullable(consistencyLevel);
             return this;
         }
 
-        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder query(@Nullable Input<Object> query) {
+        public Builder query(@Nullable Output<Object> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable Object query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder queryTimeout(@Nullable Input<Object> queryTimeout) {
+        public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
 
         public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = Input.ofNullable(queryTimeout);
+            this.queryTimeout = Output.ofNullable(queryTimeout);
             return this;
         }
 
-        public Builder sourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Input.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
 
-        public Builder sourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Input.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public CassandraSourceArgs build() {

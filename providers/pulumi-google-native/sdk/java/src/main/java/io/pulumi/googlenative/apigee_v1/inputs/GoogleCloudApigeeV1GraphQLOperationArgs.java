@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="operation")
-      private final @Nullable Input<String> operation;
+      private final @Nullable Output<String> operation;
 
-    public Input<String> getOperation() {
-        return this.operation == null ? Input.empty() : this.operation;
+    public Output<String> getOperation() {
+        return this.operation == null ? Output.empty() : this.operation;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="operationTypes", required=true)
-      private final Input<List<String>> operationTypes;
+      private final Output<List<String>> operationTypes;
 
-    public Input<List<String>> getOperationTypes() {
+    public Output<List<String>> getOperationTypes() {
         return this.operationTypes;
     }
 
     public GoogleCloudApigeeV1GraphQLOperationArgs(
-        @Nullable Input<String> operation,
-        Input<List<String>> operationTypes) {
+        @Nullable Output<String> operation,
+        Output<List<String>> operationTypes) {
         this.operation = operation;
         this.operationTypes = Objects.requireNonNull(operationTypes, "expected parameter 'operationTypes' to be non-null");
     }
 
     private GoogleCloudApigeeV1GraphQLOperationArgs() {
-        this.operation = Input.empty();
-        this.operationTypes = Input.empty();
+        this.operation = Output.empty();
+        this.operationTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> operation;
-        private Input<List<String>> operationTypes;
+        private @Nullable Output<String> operation;
+        private Output<List<String>> operationTypes;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
     	      this.operationTypes = defaults.operationTypes;
         }
 
-        public Builder operation(@Nullable Input<String> operation) {
+        public Builder operation(@Nullable Output<String> operation) {
             this.operation = operation;
             return this;
         }
 
         public Builder operation(@Nullable String operation) {
-            this.operation = Input.ofNullable(operation);
+            this.operation = Output.ofNullable(operation);
             return this;
         }
 
-        public Builder operationTypes(Input<List<String>> operationTypes) {
+        public Builder operationTypes(Output<List<String>> operationTypes) {
             this.operationTypes = Objects.requireNonNull(operationTypes);
             return this;
         }
 
         public Builder operationTypes(List<String> operationTypes) {
-            this.operationTypes = Input.of(Objects.requireNonNull(operationTypes));
+            this.operationTypes = Output.of(Objects.requireNonNull(operationTypes));
             return this;
         }
         public GoogleCloudApigeeV1GraphQLOperationArgs build() {

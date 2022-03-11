@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -32,32 +32,32 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="secretId", required=true)
-      private final Input<String> secretId;
+      private final Output<String> secretId;
 
-    public Input<String> getSecretId() {
+    public Output<String> getSecretId() {
         return this.secretId;
     }
 
     public SecretIamPolicyArgs(
-        Input<String> policyData,
-        @Nullable Input<String> project,
-        Input<String> secretId) {
+        Output<String> policyData,
+        @Nullable Output<String> project,
+        Output<String> secretId) {
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
         this.secretId = Objects.requireNonNull(secretId, "expected parameter 'secretId' to be non-null");
     }
 
     private SecretIamPolicyArgs() {
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.secretId = Input.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.secretId = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
-        private Input<String> secretId;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
+        private Output<String> secretId;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.secretId = defaults.secretId;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder secretId(Input<String> secretId) {
+        public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
         public Builder secretId(String secretId) {
-            this.secretId = Input.of(Objects.requireNonNull(secretId));
+            this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
         }
         public SecretIamPolicyArgs build() {

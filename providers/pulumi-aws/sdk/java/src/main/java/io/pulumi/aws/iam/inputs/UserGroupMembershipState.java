@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class UserGroupMembershipState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="groups")
-      private final @Nullable Input<List<String>> groups;
+      private final @Nullable Output<List<String>> groups;
 
-    public Input<List<String>> getGroups() {
-        return this.groups == null ? Input.empty() : this.groups;
+    public Output<List<String>> getGroups() {
+        return this.groups == null ? Output.empty() : this.groups;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class UserGroupMembershipState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public UserGroupMembershipState(
-        @Nullable Input<List<String>> groups,
-        @Nullable Input<String> user) {
+        @Nullable Output<List<String>> groups,
+        @Nullable Output<String> user) {
         this.groups = groups;
         this.user = user;
     }
 
     private UserGroupMembershipState() {
-        this.groups = Input.empty();
-        this.user = Input.empty();
+        this.groups = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class UserGroupMembershipState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> groups;
-        private @Nullable Input<String> user;
+        private @Nullable Output<List<String>> groups;
+        private @Nullable Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class UserGroupMembershipState extends io.pulumi.resources.Resource
     	      this.user = defaults.user;
         }
 
-        public Builder groups(@Nullable Input<List<String>> groups) {
+        public Builder groups(@Nullable Output<List<String>> groups) {
             this.groups = groups;
             return this;
         }
 
         public Builder groups(@Nullable List<String> groups) {
-            this.groups = Input.ofNullable(groups);
+            this.groups = Output.ofNullable(groups);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public UserGroupMembershipState build() {

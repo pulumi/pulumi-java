@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="pubsubTopicName", required=true)
-      private final Input<String> pubsubTopicName;
+      private final Output<String> pubsubTopicName;
 
-    public Input<String> getPubsubTopicName() {
+    public Output<String> getPubsubTopicName() {
         return this.pubsubTopicName;
     }
 
@@ -34,22 +34,22 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="subfolderMatches")
-      private final @Nullable Input<String> subfolderMatches;
+      private final @Nullable Output<String> subfolderMatches;
 
-    public Input<String> getSubfolderMatches() {
-        return this.subfolderMatches == null ? Input.empty() : this.subfolderMatches;
+    public Output<String> getSubfolderMatches() {
+        return this.subfolderMatches == null ? Output.empty() : this.subfolderMatches;
     }
 
     public RegistryEventNotificationConfigItemArgs(
-        Input<String> pubsubTopicName,
-        @Nullable Input<String> subfolderMatches) {
+        Output<String> pubsubTopicName,
+        @Nullable Output<String> subfolderMatches) {
         this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName, "expected parameter 'pubsubTopicName' to be non-null");
         this.subfolderMatches = subfolderMatches;
     }
 
     private RegistryEventNotificationConfigItemArgs() {
-        this.pubsubTopicName = Input.empty();
-        this.subfolderMatches = Input.empty();
+        this.pubsubTopicName = Output.empty();
+        this.subfolderMatches = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> pubsubTopicName;
-        private @Nullable Input<String> subfolderMatches;
+        private Output<String> pubsubTopicName;
+        private @Nullable Output<String> subfolderMatches;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
     	      this.subfolderMatches = defaults.subfolderMatches;
         }
 
-        public Builder pubsubTopicName(Input<String> pubsubTopicName) {
+        public Builder pubsubTopicName(Output<String> pubsubTopicName) {
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
         }
 
         public Builder pubsubTopicName(String pubsubTopicName) {
-            this.pubsubTopicName = Input.of(Objects.requireNonNull(pubsubTopicName));
+            this.pubsubTopicName = Output.of(Objects.requireNonNull(pubsubTopicName));
             return this;
         }
 
-        public Builder subfolderMatches(@Nullable Input<String> subfolderMatches) {
+        public Builder subfolderMatches(@Nullable Output<String> subfolderMatches) {
             this.subfolderMatches = subfolderMatches;
             return this;
         }
 
         public Builder subfolderMatches(@Nullable String subfolderMatches) {
-            this.subfolderMatches = Input.ofNullable(subfolderMatches);
+            this.subfolderMatches = Output.ofNullable(subfolderMatches);
             return this;
         }
         public RegistryEventNotificationConfigItemArgs build() {

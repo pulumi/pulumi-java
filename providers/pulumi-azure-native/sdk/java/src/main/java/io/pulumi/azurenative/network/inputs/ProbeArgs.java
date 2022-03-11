@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.ProbeProtocol;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intervalInSeconds")
-      private final @Nullable Input<Integer> intervalInSeconds;
+      private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Input<Integer> getIntervalInSeconds() {
-        return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
+    public Output<Integer> getIntervalInSeconds() {
+        return this.intervalInSeconds == null ? Output.empty() : this.intervalInSeconds;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfProbes")
-      private final @Nullable Input<Integer> numberOfProbes;
+      private final @Nullable Output<Integer> numberOfProbes;
 
-    public Input<Integer> getNumberOfProbes() {
-        return this.numberOfProbes == null ? Input.empty() : this.numberOfProbes;
+    public Output<Integer> getNumberOfProbes() {
+        return this.numberOfProbes == null ? Output.empty() : this.numberOfProbes;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
@@ -81,9 +81,9 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<Either<String,ProbeProtocol>> protocol;
+      private final Output<Either<String,ProbeProtocol>> protocol;
 
-    public Input<Either<String,ProbeProtocol>> getProtocol() {
+    public Output<Either<String,ProbeProtocol>> getProtocol() {
         return this.protocol;
     }
 
@@ -92,20 +92,20 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestPath")
-      private final @Nullable Input<String> requestPath;
+      private final @Nullable Output<String> requestPath;
 
-    public Input<String> getRequestPath() {
-        return this.requestPath == null ? Input.empty() : this.requestPath;
+    public Output<String> getRequestPath() {
+        return this.requestPath == null ? Output.empty() : this.requestPath;
     }
 
     public ProbeArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> intervalInSeconds,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> numberOfProbes,
-        Input<Integer> port,
-        Input<Either<String,ProbeProtocol>> protocol,
-        @Nullable Input<String> requestPath) {
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> intervalInSeconds,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> numberOfProbes,
+        Output<Integer> port,
+        Output<Either<String,ProbeProtocol>> protocol,
+        @Nullable Output<String> requestPath) {
         this.id = id;
         this.intervalInSeconds = intervalInSeconds;
         this.name = name;
@@ -116,13 +116,13 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProbeArgs() {
-        this.id = Input.empty();
-        this.intervalInSeconds = Input.empty();
-        this.name = Input.empty();
-        this.numberOfProbes = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
-        this.requestPath = Input.empty();
+        this.id = Output.empty();
+        this.intervalInSeconds = Output.empty();
+        this.name = Output.empty();
+        this.numberOfProbes = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
+        this.requestPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> intervalInSeconds;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> numberOfProbes;
-        private Input<Integer> port;
-        private Input<Either<String,ProbeProtocol>> protocol;
-        private @Nullable Input<String> requestPath;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> intervalInSeconds;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> numberOfProbes;
+        private Output<Integer> port;
+        private Output<Either<String,ProbeProtocol>> protocol;
+        private @Nullable Output<String> requestPath;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestPath = defaults.requestPath;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder intervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Input.ofNullable(intervalInSeconds);
+            this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder numberOfProbes(@Nullable Input<Integer> numberOfProbes) {
+        public Builder numberOfProbes(@Nullable Output<Integer> numberOfProbes) {
             this.numberOfProbes = numberOfProbes;
             return this;
         }
 
         public Builder numberOfProbes(@Nullable Integer numberOfProbes) {
-            this.numberOfProbes = Input.ofNullable(numberOfProbes);
+            this.numberOfProbes = Output.ofNullable(numberOfProbes);
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder protocol(Input<Either<String,ProbeProtocol>> protocol) {
+        public Builder protocol(Output<Either<String,ProbeProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(Either<String,ProbeProtocol> protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder requestPath(@Nullable Input<String> requestPath) {
+        public Builder requestPath(@Nullable Output<String> requestPath) {
             this.requestPath = requestPath;
             return this;
         }
 
         public Builder requestPath(@Nullable String requestPath) {
-            this.requestPath = Input.ofNullable(requestPath);
+            this.requestPath = Output.ofNullable(requestPath);
             return this;
         }
         public ProbeArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.AutoUserSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUser")
-      private final @Nullable Input<AutoUserSpecificationArgs> autoUser;
+      private final @Nullable Output<AutoUserSpecificationArgs> autoUser;
 
-    public Input<AutoUserSpecificationArgs> getAutoUser() {
-        return this.autoUser == null ? Input.empty() : this.autoUser;
+    public Output<AutoUserSpecificationArgs> getAutoUser() {
+        return this.autoUser == null ? Output.empty() : this.autoUser;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public UserIdentityArgs(
-        @Nullable Input<AutoUserSpecificationArgs> autoUser,
-        @Nullable Input<String> userName) {
+        @Nullable Output<AutoUserSpecificationArgs> autoUser,
+        @Nullable Output<String> userName) {
         this.autoUser = autoUser;
         this.userName = userName;
     }
 
     private UserIdentityArgs() {
-        this.autoUser = Input.empty();
-        this.userName = Input.empty();
+        this.autoUser = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoUserSpecificationArgs> autoUser;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<AutoUserSpecificationArgs> autoUser;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder autoUser(@Nullable Input<AutoUserSpecificationArgs> autoUser) {
+        public Builder autoUser(@Nullable Output<AutoUserSpecificationArgs> autoUser) {
             this.autoUser = autoUser;
             return this;
         }
 
         public Builder autoUser(@Nullable AutoUserSpecificationArgs autoUser) {
-            this.autoUser = Input.ofNullable(autoUser);
+            this.autoUser = Output.ofNullable(autoUser);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public UserIdentityArgs build() {

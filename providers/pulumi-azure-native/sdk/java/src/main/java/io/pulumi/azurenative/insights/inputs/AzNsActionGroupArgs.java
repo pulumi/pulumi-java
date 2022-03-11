@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="actionGroup")
-      private final @Nullable Input<List<String>> actionGroup;
+      private final @Nullable Output<List<String>> actionGroup;
 
-    public Input<List<String>> getActionGroup() {
-        return this.actionGroup == null ? Input.empty() : this.actionGroup;
+    public Output<List<String>> getActionGroup() {
+        return this.actionGroup == null ? Output.empty() : this.actionGroup;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customWebhookPayload")
-      private final @Nullable Input<String> customWebhookPayload;
+      private final @Nullable Output<String> customWebhookPayload;
 
-    public Input<String> getCustomWebhookPayload() {
-        return this.customWebhookPayload == null ? Input.empty() : this.customWebhookPayload;
+    public Output<String> getCustomWebhookPayload() {
+        return this.customWebhookPayload == null ? Output.empty() : this.customWebhookPayload;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="emailSubject")
-      private final @Nullable Input<String> emailSubject;
+      private final @Nullable Output<String> emailSubject;
 
-    public Input<String> getEmailSubject() {
-        return this.emailSubject == null ? Input.empty() : this.emailSubject;
+    public Output<String> getEmailSubject() {
+        return this.emailSubject == null ? Output.empty() : this.emailSubject;
     }
 
     public AzNsActionGroupArgs(
-        @Nullable Input<List<String>> actionGroup,
-        @Nullable Input<String> customWebhookPayload,
-        @Nullable Input<String> emailSubject) {
+        @Nullable Output<List<String>> actionGroup,
+        @Nullable Output<String> customWebhookPayload,
+        @Nullable Output<String> emailSubject) {
         this.actionGroup = actionGroup;
         this.customWebhookPayload = customWebhookPayload;
         this.emailSubject = emailSubject;
     }
 
     private AzNsActionGroupArgs() {
-        this.actionGroup = Input.empty();
-        this.customWebhookPayload = Input.empty();
-        this.emailSubject = Input.empty();
+        this.actionGroup = Output.empty();
+        this.customWebhookPayload = Output.empty();
+        this.emailSubject = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> actionGroup;
-        private @Nullable Input<String> customWebhookPayload;
-        private @Nullable Input<String> emailSubject;
+        private @Nullable Output<List<String>> actionGroup;
+        private @Nullable Output<String> customWebhookPayload;
+        private @Nullable Output<String> emailSubject;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
     	      this.emailSubject = defaults.emailSubject;
         }
 
-        public Builder actionGroup(@Nullable Input<List<String>> actionGroup) {
+        public Builder actionGroup(@Nullable Output<List<String>> actionGroup) {
             this.actionGroup = actionGroup;
             return this;
         }
 
         public Builder actionGroup(@Nullable List<String> actionGroup) {
-            this.actionGroup = Input.ofNullable(actionGroup);
+            this.actionGroup = Output.ofNullable(actionGroup);
             return this;
         }
 
-        public Builder customWebhookPayload(@Nullable Input<String> customWebhookPayload) {
+        public Builder customWebhookPayload(@Nullable Output<String> customWebhookPayload) {
             this.customWebhookPayload = customWebhookPayload;
             return this;
         }
 
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
-            this.customWebhookPayload = Input.ofNullable(customWebhookPayload);
+            this.customWebhookPayload = Output.ofNullable(customWebhookPayload);
             return this;
         }
 
-        public Builder emailSubject(@Nullable Input<String> emailSubject) {
+        public Builder emailSubject(@Nullable Output<String> emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
 
         public Builder emailSubject(@Nullable String emailSubject) {
-            this.emailSubject = Input.ofNullable(emailSubject);
+            this.emailSubject = Output.ofNullable(emailSubject);
             return this;
         }
         public AzNsActionGroupArgs build() {

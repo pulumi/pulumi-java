@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="env")
-      private final @Nullable Input<String> env;
+      private final @Nullable Output<String> env;
 
-    public Input<String> getEnv() {
-        return this.env == null ? Input.empty() : this.env;
+    public Output<String> getEnv() {
+        return this.env == null ? Output.empty() : this.env;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="versionName")
-      private final @Nullable Input<String> versionName;
+      private final @Nullable Output<String> versionName;
 
-    public Input<String> getVersionName() {
-        return this.versionName == null ? Input.empty() : this.versionName;
+    public Output<String> getVersionName() {
+        return this.versionName == null ? Output.empty() : this.versionName;
     }
 
     public SecretManagerSecretArgs(
-        @Nullable Input<String> env,
-        @Nullable Input<String> versionName) {
+        @Nullable Output<String> env,
+        @Nullable Output<String> versionName) {
         this.env = env;
         this.versionName = versionName;
     }
 
     private SecretManagerSecretArgs() {
-        this.env = Input.empty();
-        this.versionName = Input.empty();
+        this.env = Output.empty();
+        this.versionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> env;
-        private @Nullable Input<String> versionName;
+        private @Nullable Output<String> env;
+        private @Nullable Output<String> versionName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder env(@Nullable Input<String> env) {
+        public Builder env(@Nullable Output<String> env) {
             this.env = env;
             return this;
         }
 
         public Builder env(@Nullable String env) {
-            this.env = Input.ofNullable(env);
+            this.env = Output.ofNullable(env);
             return this;
         }
 
-        public Builder versionName(@Nullable Input<String> versionName) {
+        public Builder versionName(@Nullable Output<String> versionName) {
             this.versionName = versionName;
             return this;
         }
 
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Input.ofNullable(versionName);
+            this.versionName = Output.ofNullable(versionName);
             return this;
         }
         public SecretManagerSecretArgs build() {

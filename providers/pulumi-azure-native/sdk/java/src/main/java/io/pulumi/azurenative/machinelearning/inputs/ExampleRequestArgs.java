@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalParameters")
-      private final @Nullable Input<Map<String,Object>> globalParameters;
+      private final @Nullable Output<Map<String,Object>> globalParameters;
 
-    public Input<Map<String,Object>> getGlobalParameters() {
-        return this.globalParameters == null ? Input.empty() : this.globalParameters;
+    public Output<Map<String,Object>> getGlobalParameters() {
+        return this.globalParameters == null ? Output.empty() : this.globalParameters;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-      private final @Nullable Input<Map<String,List<List<Object>>>> inputs;
+      private final @Nullable Output<Map<String,List<List<Object>>>> inputs;
 
-    public Input<Map<String,List<List<Object>>>> getInputs() {
-        return this.inputs == null ? Input.empty() : this.inputs;
+    public Output<Map<String,List<List<Object>>>> getInputs() {
+        return this.inputs == null ? Output.empty() : this.inputs;
     }
 
     public ExampleRequestArgs(
-        @Nullable Input<Map<String,Object>> globalParameters,
-        @Nullable Input<Map<String,List<List<Object>>>> inputs) {
+        @Nullable Output<Map<String,Object>> globalParameters,
+        @Nullable Output<Map<String,List<List<Object>>>> inputs) {
         this.globalParameters = globalParameters;
         this.inputs = inputs;
     }
 
     private ExampleRequestArgs() {
-        this.globalParameters = Input.empty();
-        this.inputs = Input.empty();
+        this.globalParameters = Output.empty();
+        this.inputs = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> globalParameters;
-        private @Nullable Input<Map<String,List<List<Object>>>> inputs;
+        private @Nullable Output<Map<String,Object>> globalParameters;
+        private @Nullable Output<Map<String,List<List<Object>>>> inputs;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.inputs = defaults.inputs;
         }
 
-        public Builder globalParameters(@Nullable Input<Map<String,Object>> globalParameters) {
+        public Builder globalParameters(@Nullable Output<Map<String,Object>> globalParameters) {
             this.globalParameters = globalParameters;
             return this;
         }
 
         public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
-            this.globalParameters = Input.ofNullable(globalParameters);
+            this.globalParameters = Output.ofNullable(globalParameters);
             return this;
         }
 
-        public Builder inputs(@Nullable Input<Map<String,List<List<Object>>>> inputs) {
+        public Builder inputs(@Nullable Output<Map<String,List<List<Object>>>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
         public Builder inputs(@Nullable Map<String,List<List<Object>>> inputs) {
-            this.inputs = Input.ofNullable(inputs);
+            this.inputs = Output.ofNullable(inputs);
             return this;
         }
         public ExampleRequestArgs build() {

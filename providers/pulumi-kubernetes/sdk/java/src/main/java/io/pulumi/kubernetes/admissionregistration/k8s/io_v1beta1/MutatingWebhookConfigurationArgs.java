@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs.MutatingWebhookArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -22,10 +22,10 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="webhooks")
-      private final @Nullable Input<List<MutatingWebhookArgs>> webhooks;
+      private final @Nullable Output<List<MutatingWebhookArgs>> webhooks;
 
-    public Input<List<MutatingWebhookArgs>> getWebhooks() {
-        return this.webhooks == null ? Input.empty() : this.webhooks;
+    public Output<List<MutatingWebhookArgs>> getWebhooks() {
+        return this.webhooks == null ? Output.empty() : this.webhooks;
     }
 
     public MutatingWebhookConfigurationArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> kind,
-        @Nullable Input<ObjectMetaArgs> metadata,
-        @Nullable Input<List<MutatingWebhookArgs>> webhooks) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> kind,
+        @Nullable Output<ObjectMetaArgs> metadata,
+        @Nullable Output<List<MutatingWebhookArgs>> webhooks) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
@@ -73,10 +73,10 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
     }
 
     private MutatingWebhookConfigurationArgs() {
-        this.apiVersion = Input.empty();
-        this.kind = Input.empty();
-        this.metadata = Input.empty();
-        this.webhooks = Input.empty();
+        this.apiVersion = Output.empty();
+        this.kind = Output.empty();
+        this.metadata = Output.empty();
+        this.webhooks = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private @Nullable Input<List<MutatingWebhookArgs>> webhooks;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private @Nullable Output<List<MutatingWebhookArgs>> webhooks;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
     	      this.webhooks = defaults.webhooks;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder webhooks(@Nullable Input<List<MutatingWebhookArgs>> webhooks) {
+        public Builder webhooks(@Nullable Output<List<MutatingWebhookArgs>> webhooks) {
             this.webhooks = webhooks;
             return this;
         }
 
         public Builder webhooks(@Nullable List<MutatingWebhookArgs> webhooks) {
-            this.webhooks = Input.ofNullable(webhooks);
+            this.webhooks = Output.ofNullable(webhooks);
             return this;
         }
         public MutatingWebhookConfigurationArgs build() {

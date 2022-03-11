@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowedBundleIds")
-      private final @Nullable Input<List<String>> allowedBundleIds;
+      private final @Nullable Output<List<String>> allowedBundleIds;
 
-    public Input<List<String>> getAllowedBundleIds() {
-        return this.allowedBundleIds == null ? Input.empty() : this.allowedBundleIds;
+    public Output<List<String>> getAllowedBundleIds() {
+        return this.allowedBundleIds == null ? Output.empty() : this.allowedBundleIds;
     }
 
-    public V2IosKeyRestrictionsArgs(@Nullable Input<List<String>> allowedBundleIds) {
+    public V2IosKeyRestrictionsArgs(@Nullable Output<List<String>> allowedBundleIds) {
         this.allowedBundleIds = allowedBundleIds;
     }
 
     private V2IosKeyRestrictionsArgs() {
-        this.allowedBundleIds = Input.empty();
+        this.allowedBundleIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedBundleIds;
+        private @Nullable Output<List<String>> allowedBundleIds;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
     	      this.allowedBundleIds = defaults.allowedBundleIds;
         }
 
-        public Builder allowedBundleIds(@Nullable Input<List<String>> allowedBundleIds) {
+        public Builder allowedBundleIds(@Nullable Output<List<String>> allowedBundleIds) {
             this.allowedBundleIds = allowedBundleIds;
             return this;
         }
 
         public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
-            this.allowedBundleIds = Input.ofNullable(allowedBundleIds);
+            this.allowedBundleIds = Output.ofNullable(allowedBundleIds);
             return this;
         }
         public V2IosKeyRestrictionsArgs build() {

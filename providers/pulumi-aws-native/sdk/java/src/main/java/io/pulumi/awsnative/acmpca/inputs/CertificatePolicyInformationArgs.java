@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.awsnative.acmpca.inputs.CertificatePolicyQualifierInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,29 +21,29 @@ public final class CertificatePolicyInformationArgs extends io.pulumi.resources.
     public static final CertificatePolicyInformationArgs Empty = new CertificatePolicyInformationArgs();
 
     @InputImport(name="certPolicyId", required=true)
-      private final Input<String> certPolicyId;
+      private final Output<String> certPolicyId;
 
-    public Input<String> getCertPolicyId() {
+    public Output<String> getCertPolicyId() {
         return this.certPolicyId;
     }
 
     @InputImport(name="policyQualifiers")
-      private final @Nullable Input<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
+      private final @Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
 
-    public Input<List<CertificatePolicyQualifierInfoArgs>> getPolicyQualifiers() {
-        return this.policyQualifiers == null ? Input.empty() : this.policyQualifiers;
+    public Output<List<CertificatePolicyQualifierInfoArgs>> getPolicyQualifiers() {
+        return this.policyQualifiers == null ? Output.empty() : this.policyQualifiers;
     }
 
     public CertificatePolicyInformationArgs(
-        Input<String> certPolicyId,
-        @Nullable Input<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers) {
+        Output<String> certPolicyId,
+        @Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers) {
         this.certPolicyId = Objects.requireNonNull(certPolicyId, "expected parameter 'certPolicyId' to be non-null");
         this.policyQualifiers = policyQualifiers;
     }
 
     private CertificatePolicyInformationArgs() {
-        this.certPolicyId = Input.empty();
-        this.policyQualifiers = Input.empty();
+        this.certPolicyId = Output.empty();
+        this.policyQualifiers = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class CertificatePolicyInformationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> certPolicyId;
-        private @Nullable Input<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
+        private Output<String> certPolicyId;
+        private @Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class CertificatePolicyInformationArgs extends io.pulumi.resources.
     	      this.policyQualifiers = defaults.policyQualifiers;
         }
 
-        public Builder certPolicyId(Input<String> certPolicyId) {
+        public Builder certPolicyId(Output<String> certPolicyId) {
             this.certPolicyId = Objects.requireNonNull(certPolicyId);
             return this;
         }
 
         public Builder certPolicyId(String certPolicyId) {
-            this.certPolicyId = Input.of(Objects.requireNonNull(certPolicyId));
+            this.certPolicyId = Output.of(Objects.requireNonNull(certPolicyId));
             return this;
         }
 
-        public Builder policyQualifiers(@Nullable Input<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers) {
+        public Builder policyQualifiers(@Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers) {
             this.policyQualifiers = policyQualifiers;
             return this;
         }
 
         public Builder policyQualifiers(@Nullable List<CertificatePolicyQualifierInfoArgs> policyQualifiers) {
-            this.policyQualifiers = Input.ofNullable(policyQualifiers);
+            this.policyQualifiers = Output.ofNullable(policyQualifiers);
             return this;
         }
         public CertificatePolicyInformationArgs build() {

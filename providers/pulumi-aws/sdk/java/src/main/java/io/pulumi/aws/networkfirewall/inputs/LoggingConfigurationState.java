@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="firewallArn")
-      private final @Nullable Input<String> firewallArn;
+      private final @Nullable Output<String> firewallArn;
 
-    public Input<String> getFirewallArn() {
-        return this.firewallArn == null ? Input.empty() : this.firewallArn;
+    public Output<String> getFirewallArn() {
+        return this.firewallArn == null ? Output.empty() : this.firewallArn;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="loggingConfiguration")
-      private final @Nullable Input<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
+      private final @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
 
-    public Input<LoggingConfigurationLoggingConfigurationGetArgs> getLoggingConfiguration() {
-        return this.loggingConfiguration == null ? Input.empty() : this.loggingConfiguration;
+    public Output<LoggingConfigurationLoggingConfigurationGetArgs> getLoggingConfiguration() {
+        return this.loggingConfiguration == null ? Output.empty() : this.loggingConfiguration;
     }
 
     public LoggingConfigurationState(
-        @Nullable Input<String> firewallArn,
-        @Nullable Input<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration) {
+        @Nullable Output<String> firewallArn,
+        @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration) {
         this.firewallArn = firewallArn;
         this.loggingConfiguration = loggingConfiguration;
     }
 
     private LoggingConfigurationState() {
-        this.firewallArn = Input.empty();
-        this.loggingConfiguration = Input.empty();
+        this.firewallArn = Output.empty();
+        this.loggingConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> firewallArn;
-        private @Nullable Input<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
+        private @Nullable Output<String> firewallArn;
+        private @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class LoggingConfigurationState extends io.pulumi.resources.Resourc
     	      this.loggingConfiguration = defaults.loggingConfiguration;
         }
 
-        public Builder firewallArn(@Nullable Input<String> firewallArn) {
+        public Builder firewallArn(@Nullable Output<String> firewallArn) {
             this.firewallArn = firewallArn;
             return this;
         }
 
         public Builder firewallArn(@Nullable String firewallArn) {
-            this.firewallArn = Input.ofNullable(firewallArn);
+            this.firewallArn = Output.ofNullable(firewallArn);
             return this;
         }
 
-        public Builder loggingConfiguration(@Nullable Input<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
         public Builder loggingConfiguration(@Nullable LoggingConfigurationLoggingConfigurationGetArgs loggingConfiguration) {
-            this.loggingConfiguration = Input.ofNullable(loggingConfiguration);
+            this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
             return this;
         }
         public LoggingConfigurationState build() {

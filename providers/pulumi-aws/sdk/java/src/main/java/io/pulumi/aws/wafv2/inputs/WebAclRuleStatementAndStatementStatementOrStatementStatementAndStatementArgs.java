@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementA
      * 
      */
     @InputImport(name="statements", required=true)
-      private final Input<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs>> statements;
+      private final Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs>> statements;
 
-    public Input<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs>> getStatements() {
+    public Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs>> getStatements() {
         return this.statements;
     }
 
-    public WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementArgs(Input<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs>> statements) {
+    public WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementArgs(Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs>> statements) {
         this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
     }
 
     private WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementArgs() {
-        this.statements = Input.empty();
+        this.statements = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementA
     }
 
     public static final class Builder {
-        private Input<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs>> statements;
+        private Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs>> statements;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementA
     	      this.statements = defaults.statements;
         }
 
-        public Builder statements(Input<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs>> statements) {
+        public Builder statements(Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
         public Builder statements(List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementArgs> statements) {
-            this.statements = Input.of(Objects.requireNonNull(statements));
+            this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
         public WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class ClassificationJobScheduleFrequencyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dailySchedule")
-      private final @Nullable Input<Boolean> dailySchedule;
+      private final @Nullable Output<Boolean> dailySchedule;
 
-    public Input<Boolean> getDailySchedule() {
-        return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
+    public Output<Boolean> getDailySchedule() {
+        return this.dailySchedule == null ? Output.empty() : this.dailySchedule;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ClassificationJobScheduleFrequencyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="monthlySchedule")
-      private final @Nullable Input<Integer> monthlySchedule;
+      private final @Nullable Output<Integer> monthlySchedule;
 
-    public Input<Integer> getMonthlySchedule() {
-        return this.monthlySchedule == null ? Input.empty() : this.monthlySchedule;
+    public Output<Integer> getMonthlySchedule() {
+        return this.monthlySchedule == null ? Output.empty() : this.monthlySchedule;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class ClassificationJobScheduleFrequencyArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="weeklySchedule")
-      private final @Nullable Input<String> weeklySchedule;
+      private final @Nullable Output<String> weeklySchedule;
 
-    public Input<String> getWeeklySchedule() {
-        return this.weeklySchedule == null ? Input.empty() : this.weeklySchedule;
+    public Output<String> getWeeklySchedule() {
+        return this.weeklySchedule == null ? Output.empty() : this.weeklySchedule;
     }
 
     public ClassificationJobScheduleFrequencyArgs(
-        @Nullable Input<Boolean> dailySchedule,
-        @Nullable Input<Integer> monthlySchedule,
-        @Nullable Input<String> weeklySchedule) {
+        @Nullable Output<Boolean> dailySchedule,
+        @Nullable Output<Integer> monthlySchedule,
+        @Nullable Output<String> weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.monthlySchedule = monthlySchedule;
         this.weeklySchedule = weeklySchedule;
     }
 
     private ClassificationJobScheduleFrequencyArgs() {
-        this.dailySchedule = Input.empty();
-        this.monthlySchedule = Input.empty();
-        this.weeklySchedule = Input.empty();
+        this.dailySchedule = Output.empty();
+        this.monthlySchedule = Output.empty();
+        this.weeklySchedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ClassificationJobScheduleFrequencyArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> dailySchedule;
-        private @Nullable Input<Integer> monthlySchedule;
-        private @Nullable Input<String> weeklySchedule;
+        private @Nullable Output<Boolean> dailySchedule;
+        private @Nullable Output<Integer> monthlySchedule;
+        private @Nullable Output<String> weeklySchedule;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ClassificationJobScheduleFrequencyArgs extends io.pulumi.reso
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder dailySchedule(@Nullable Input<Boolean> dailySchedule) {
+        public Builder dailySchedule(@Nullable Output<Boolean> dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
         public Builder dailySchedule(@Nullable Boolean dailySchedule) {
-            this.dailySchedule = Input.ofNullable(dailySchedule);
+            this.dailySchedule = Output.ofNullable(dailySchedule);
             return this;
         }
 
-        public Builder monthlySchedule(@Nullable Input<Integer> monthlySchedule) {
+        public Builder monthlySchedule(@Nullable Output<Integer> monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
 
         public Builder monthlySchedule(@Nullable Integer monthlySchedule) {
-            this.monthlySchedule = Input.ofNullable(monthlySchedule);
+            this.monthlySchedule = Output.ofNullable(monthlySchedule);
             return this;
         }
 
-        public Builder weeklySchedule(@Nullable Input<String> weeklySchedule) {
+        public Builder weeklySchedule(@Nullable Output<String> weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
 
         public Builder weeklySchedule(@Nullable String weeklySchedule) {
-            this.weeklySchedule = Input.ofNullable(weeklySchedule);
+            this.weeklySchedule = Output.ofNullable(weeklySchedule);
             return this;
         }
         public ClassificationJobScheduleFrequencyArgs build() {

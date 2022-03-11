@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="streamArn")
-      private final @Nullable Input<String> streamArn;
+      private final @Nullable Output<String> streamArn;
 
-    public Input<String> getStreamArn() {
-        return this.streamArn == null ? Input.empty() : this.streamArn;
+    public Output<String> getStreamArn() {
+        return this.streamArn == null ? Output.empty() : this.streamArn;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     public KinesisStreamingDestinationState(
-        @Nullable Input<String> streamArn,
-        @Nullable Input<String> tableName) {
+        @Nullable Output<String> streamArn,
+        @Nullable Output<String> tableName) {
         this.streamArn = streamArn;
         this.tableName = tableName;
     }
 
     private KinesisStreamingDestinationState() {
-        this.streamArn = Input.empty();
-        this.tableName = Input.empty();
+        this.streamArn = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> streamArn;
-        private @Nullable Input<String> tableName;
+        private @Nullable Output<String> streamArn;
+        private @Nullable Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder streamArn(@Nullable Input<String> streamArn) {
+        public Builder streamArn(@Nullable Output<String> streamArn) {
             this.streamArn = streamArn;
             return this;
         }
 
         public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Input.ofNullable(streamArn);
+            this.streamArn = Output.ofNullable(streamArn);
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
         public KinesisStreamingDestinationState build() {

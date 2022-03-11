@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.MaintenanceExclusionOptionsArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceExclusionOptions")
-      private final @Nullable Input<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions;
+      private final @Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions;
 
-    public Input<MaintenanceExclusionOptionsArgs> getMaintenanceExclusionOptions() {
-        return this.maintenanceExclusionOptions == null ? Input.empty() : this.maintenanceExclusionOptions;
+    public Output<MaintenanceExclusionOptionsArgs> getMaintenanceExclusionOptions() {
+        return this.maintenanceExclusionOptions == null ? Output.empty() : this.maintenanceExclusionOptions;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     public TimeWindowArgs(
-        @Nullable Input<String> endTime,
-        @Nullable Input<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions,
-        @Nullable Input<String> startTime) {
+        @Nullable Output<String> endTime,
+        @Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions,
+        @Nullable Output<String> startTime) {
         this.endTime = endTime;
         this.maintenanceExclusionOptions = maintenanceExclusionOptions;
         this.startTime = startTime;
     }
 
     private TimeWindowArgs() {
-        this.endTime = Input.empty();
-        this.maintenanceExclusionOptions = Input.empty();
-        this.startTime = Input.empty();
+        this.endTime = Output.empty();
+        this.maintenanceExclusionOptions = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions;
-        private @Nullable Input<String> startTime;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder maintenanceExclusionOptions(@Nullable Input<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions) {
+        public Builder maintenanceExclusionOptions(@Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions) {
             this.maintenanceExclusionOptions = maintenanceExclusionOptions;
             return this;
         }
 
         public Builder maintenanceExclusionOptions(@Nullable MaintenanceExclusionOptionsArgs maintenanceExclusionOptions) {
-            this.maintenanceExclusionOptions = Input.ofNullable(maintenanceExclusionOptions);
+            this.maintenanceExclusionOptions = Output.ofNullable(maintenanceExclusionOptions);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public TimeWindowArgs build() {

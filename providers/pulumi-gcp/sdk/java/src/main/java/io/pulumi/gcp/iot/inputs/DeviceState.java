@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iot.inputs.DeviceConfigGetArgs;
 import io.pulumi.gcp.iot.inputs.DeviceCredentialGetArgs;
@@ -27,10 +27,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blocked")
-      private final @Nullable Input<Boolean> blocked;
+      private final @Nullable Output<Boolean> blocked;
 
-    public Input<Boolean> getBlocked() {
-        return this.blocked == null ? Input.empty() : this.blocked;
+    public Output<Boolean> getBlocked() {
+        return this.blocked == null ? Output.empty() : this.blocked;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configs")
-      private final @Nullable Input<List<DeviceConfigGetArgs>> configs;
+      private final @Nullable Output<List<DeviceConfigGetArgs>> configs;
 
-    public Input<List<DeviceConfigGetArgs>> getConfigs() {
-        return this.configs == null ? Input.empty() : this.configs;
+    public Output<List<DeviceConfigGetArgs>> getConfigs() {
+        return this.configs == null ? Output.empty() : this.configs;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<List<DeviceCredentialGetArgs>> credentials;
+      private final @Nullable Output<List<DeviceCredentialGetArgs>> credentials;
 
-    public Input<List<DeviceCredentialGetArgs>> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<List<DeviceCredentialGetArgs>> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayConfig")
-      private final @Nullable Input<DeviceGatewayConfigGetArgs> gatewayConfig;
+      private final @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig;
 
-    public Input<DeviceGatewayConfigGetArgs> getGatewayConfig() {
-        return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
+    public Output<DeviceGatewayConfigGetArgs> getGatewayConfig() {
+        return this.gatewayConfig == null ? Output.empty() : this.gatewayConfig;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastConfigAckTime")
-      private final @Nullable Input<String> lastConfigAckTime;
+      private final @Nullable Output<String> lastConfigAckTime;
 
-    public Input<String> getLastConfigAckTime() {
-        return this.lastConfigAckTime == null ? Input.empty() : this.lastConfigAckTime;
+    public Output<String> getLastConfigAckTime() {
+        return this.lastConfigAckTime == null ? Output.empty() : this.lastConfigAckTime;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastConfigSendTime")
-      private final @Nullable Input<String> lastConfigSendTime;
+      private final @Nullable Output<String> lastConfigSendTime;
 
-    public Input<String> getLastConfigSendTime() {
-        return this.lastConfigSendTime == null ? Input.empty() : this.lastConfigSendTime;
+    public Output<String> getLastConfigSendTime() {
+        return this.lastConfigSendTime == null ? Output.empty() : this.lastConfigSendTime;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastErrorStatuses")
-      private final @Nullable Input<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
+      private final @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
 
-    public Input<List<DeviceLastErrorStatusGetArgs>> getLastErrorStatuses() {
-        return this.lastErrorStatuses == null ? Input.empty() : this.lastErrorStatuses;
+    public Output<List<DeviceLastErrorStatusGetArgs>> getLastErrorStatuses() {
+        return this.lastErrorStatuses == null ? Output.empty() : this.lastErrorStatuses;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastErrorTime")
-      private final @Nullable Input<String> lastErrorTime;
+      private final @Nullable Output<String> lastErrorTime;
 
-    public Input<String> getLastErrorTime() {
-        return this.lastErrorTime == null ? Input.empty() : this.lastErrorTime;
+    public Output<String> getLastErrorTime() {
+        return this.lastErrorTime == null ? Output.empty() : this.lastErrorTime;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastEventTime")
-      private final @Nullable Input<String> lastEventTime;
+      private final @Nullable Output<String> lastEventTime;
 
-    public Input<String> getLastEventTime() {
-        return this.lastEventTime == null ? Input.empty() : this.lastEventTime;
+    public Output<String> getLastEventTime() {
+        return this.lastEventTime == null ? Output.empty() : this.lastEventTime;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastHeartbeatTime")
-      private final @Nullable Input<String> lastHeartbeatTime;
+      private final @Nullable Output<String> lastHeartbeatTime;
 
-    public Input<String> getLastHeartbeatTime() {
-        return this.lastHeartbeatTime == null ? Input.empty() : this.lastHeartbeatTime;
+    public Output<String> getLastHeartbeatTime() {
+        return this.lastHeartbeatTime == null ? Output.empty() : this.lastHeartbeatTime;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastStateTime")
-      private final @Nullable Input<String> lastStateTime;
+      private final @Nullable Output<String> lastStateTime;
 
-    public Input<String> getLastStateTime() {
-        return this.lastStateTime == null ? Input.empty() : this.lastStateTime;
+    public Output<String> getLastStateTime() {
+        return this.lastStateTime == null ? Output.empty() : this.lastStateTime;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-      private final @Nullable Input<String> logLevel;
+      private final @Nullable Output<String> logLevel;
 
-    public Input<String> getLogLevel() {
-        return this.logLevel == null ? Input.empty() : this.logLevel;
+    public Output<String> getLogLevel() {
+        return this.logLevel == null ? Output.empty() : this.logLevel;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numId")
-      private final @Nullable Input<String> numId;
+      private final @Nullable Output<String> numId;
 
-    public Input<String> getNumId() {
-        return this.numId == null ? Input.empty() : this.numId;
+    public Output<String> getNumId() {
+        return this.numId == null ? Output.empty() : this.numId;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registry")
-      private final @Nullable Input<String> registry;
+      private final @Nullable Output<String> registry;
 
-    public Input<String> getRegistry() {
-        return this.registry == null ? Input.empty() : this.registry;
+    public Output<String> getRegistry() {
+        return this.registry == null ? Output.empty() : this.registry;
     }
 
     /**
@@ -207,30 +207,30 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="states")
-      private final @Nullable Input<List<DeviceStateGetArgs>> states;
+      private final @Nullable Output<List<DeviceStateGetArgs>> states;
 
-    public Input<List<DeviceStateGetArgs>> getStates() {
-        return this.states == null ? Input.empty() : this.states;
+    public Output<List<DeviceStateGetArgs>> getStates() {
+        return this.states == null ? Output.empty() : this.states;
     }
 
     public DeviceState(
-        @Nullable Input<Boolean> blocked,
-        @Nullable Input<List<DeviceConfigGetArgs>> configs,
-        @Nullable Input<List<DeviceCredentialGetArgs>> credentials,
-        @Nullable Input<DeviceGatewayConfigGetArgs> gatewayConfig,
-        @Nullable Input<String> lastConfigAckTime,
-        @Nullable Input<String> lastConfigSendTime,
-        @Nullable Input<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses,
-        @Nullable Input<String> lastErrorTime,
-        @Nullable Input<String> lastEventTime,
-        @Nullable Input<String> lastHeartbeatTime,
-        @Nullable Input<String> lastStateTime,
-        @Nullable Input<String> logLevel,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> name,
-        @Nullable Input<String> numId,
-        @Nullable Input<String> registry,
-        @Nullable Input<List<DeviceStateGetArgs>> states) {
+        @Nullable Output<Boolean> blocked,
+        @Nullable Output<List<DeviceConfigGetArgs>> configs,
+        @Nullable Output<List<DeviceCredentialGetArgs>> credentials,
+        @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig,
+        @Nullable Output<String> lastConfigAckTime,
+        @Nullable Output<String> lastConfigSendTime,
+        @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses,
+        @Nullable Output<String> lastErrorTime,
+        @Nullable Output<String> lastEventTime,
+        @Nullable Output<String> lastHeartbeatTime,
+        @Nullable Output<String> lastStateTime,
+        @Nullable Output<String> logLevel,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> name,
+        @Nullable Output<String> numId,
+        @Nullable Output<String> registry,
+        @Nullable Output<List<DeviceStateGetArgs>> states) {
         this.blocked = blocked;
         this.configs = configs;
         this.credentials = credentials;
@@ -251,23 +251,23 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceState() {
-        this.blocked = Input.empty();
-        this.configs = Input.empty();
-        this.credentials = Input.empty();
-        this.gatewayConfig = Input.empty();
-        this.lastConfigAckTime = Input.empty();
-        this.lastConfigSendTime = Input.empty();
-        this.lastErrorStatuses = Input.empty();
-        this.lastErrorTime = Input.empty();
-        this.lastEventTime = Input.empty();
-        this.lastHeartbeatTime = Input.empty();
-        this.lastStateTime = Input.empty();
-        this.logLevel = Input.empty();
-        this.metadata = Input.empty();
-        this.name = Input.empty();
-        this.numId = Input.empty();
-        this.registry = Input.empty();
-        this.states = Input.empty();
+        this.blocked = Output.empty();
+        this.configs = Output.empty();
+        this.credentials = Output.empty();
+        this.gatewayConfig = Output.empty();
+        this.lastConfigAckTime = Output.empty();
+        this.lastConfigSendTime = Output.empty();
+        this.lastErrorStatuses = Output.empty();
+        this.lastErrorTime = Output.empty();
+        this.lastEventTime = Output.empty();
+        this.lastHeartbeatTime = Output.empty();
+        this.lastStateTime = Output.empty();
+        this.logLevel = Output.empty();
+        this.metadata = Output.empty();
+        this.name = Output.empty();
+        this.numId = Output.empty();
+        this.registry = Output.empty();
+        this.states = Output.empty();
     }
 
     public static Builder builder() {
@@ -279,23 +279,23 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> blocked;
-        private @Nullable Input<List<DeviceConfigGetArgs>> configs;
-        private @Nullable Input<List<DeviceCredentialGetArgs>> credentials;
-        private @Nullable Input<DeviceGatewayConfigGetArgs> gatewayConfig;
-        private @Nullable Input<String> lastConfigAckTime;
-        private @Nullable Input<String> lastConfigSendTime;
-        private @Nullable Input<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
-        private @Nullable Input<String> lastErrorTime;
-        private @Nullable Input<String> lastEventTime;
-        private @Nullable Input<String> lastHeartbeatTime;
-        private @Nullable Input<String> lastStateTime;
-        private @Nullable Input<String> logLevel;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> numId;
-        private @Nullable Input<String> registry;
-        private @Nullable Input<List<DeviceStateGetArgs>> states;
+        private @Nullable Output<Boolean> blocked;
+        private @Nullable Output<List<DeviceConfigGetArgs>> configs;
+        private @Nullable Output<List<DeviceCredentialGetArgs>> credentials;
+        private @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig;
+        private @Nullable Output<String> lastConfigAckTime;
+        private @Nullable Output<String> lastConfigSendTime;
+        private @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
+        private @Nullable Output<String> lastErrorTime;
+        private @Nullable Output<String> lastEventTime;
+        private @Nullable Output<String> lastHeartbeatTime;
+        private @Nullable Output<String> lastStateTime;
+        private @Nullable Output<String> logLevel;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> numId;
+        private @Nullable Output<String> registry;
+        private @Nullable Output<List<DeviceStateGetArgs>> states;
 
         public Builder() {
     	      // Empty
@@ -322,173 +322,173 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     	      this.states = defaults.states;
         }
 
-        public Builder blocked(@Nullable Input<Boolean> blocked) {
+        public Builder blocked(@Nullable Output<Boolean> blocked) {
             this.blocked = blocked;
             return this;
         }
 
         public Builder blocked(@Nullable Boolean blocked) {
-            this.blocked = Input.ofNullable(blocked);
+            this.blocked = Output.ofNullable(blocked);
             return this;
         }
 
-        public Builder configs(@Nullable Input<List<DeviceConfigGetArgs>> configs) {
+        public Builder configs(@Nullable Output<List<DeviceConfigGetArgs>> configs) {
             this.configs = configs;
             return this;
         }
 
         public Builder configs(@Nullable List<DeviceConfigGetArgs> configs) {
-            this.configs = Input.ofNullable(configs);
+            this.configs = Output.ofNullable(configs);
             return this;
         }
 
-        public Builder credentials(@Nullable Input<List<DeviceCredentialGetArgs>> credentials) {
+        public Builder credentials(@Nullable Output<List<DeviceCredentialGetArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable List<DeviceCredentialGetArgs> credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder gatewayConfig(@Nullable Input<DeviceGatewayConfigGetArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
 
         public Builder gatewayConfig(@Nullable DeviceGatewayConfigGetArgs gatewayConfig) {
-            this.gatewayConfig = Input.ofNullable(gatewayConfig);
+            this.gatewayConfig = Output.ofNullable(gatewayConfig);
             return this;
         }
 
-        public Builder lastConfigAckTime(@Nullable Input<String> lastConfigAckTime) {
+        public Builder lastConfigAckTime(@Nullable Output<String> lastConfigAckTime) {
             this.lastConfigAckTime = lastConfigAckTime;
             return this;
         }
 
         public Builder lastConfigAckTime(@Nullable String lastConfigAckTime) {
-            this.lastConfigAckTime = Input.ofNullable(lastConfigAckTime);
+            this.lastConfigAckTime = Output.ofNullable(lastConfigAckTime);
             return this;
         }
 
-        public Builder lastConfigSendTime(@Nullable Input<String> lastConfigSendTime) {
+        public Builder lastConfigSendTime(@Nullable Output<String> lastConfigSendTime) {
             this.lastConfigSendTime = lastConfigSendTime;
             return this;
         }
 
         public Builder lastConfigSendTime(@Nullable String lastConfigSendTime) {
-            this.lastConfigSendTime = Input.ofNullable(lastConfigSendTime);
+            this.lastConfigSendTime = Output.ofNullable(lastConfigSendTime);
             return this;
         }
 
-        public Builder lastErrorStatuses(@Nullable Input<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses) {
+        public Builder lastErrorStatuses(@Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses) {
             this.lastErrorStatuses = lastErrorStatuses;
             return this;
         }
 
         public Builder lastErrorStatuses(@Nullable List<DeviceLastErrorStatusGetArgs> lastErrorStatuses) {
-            this.lastErrorStatuses = Input.ofNullable(lastErrorStatuses);
+            this.lastErrorStatuses = Output.ofNullable(lastErrorStatuses);
             return this;
         }
 
-        public Builder lastErrorTime(@Nullable Input<String> lastErrorTime) {
+        public Builder lastErrorTime(@Nullable Output<String> lastErrorTime) {
             this.lastErrorTime = lastErrorTime;
             return this;
         }
 
         public Builder lastErrorTime(@Nullable String lastErrorTime) {
-            this.lastErrorTime = Input.ofNullable(lastErrorTime);
+            this.lastErrorTime = Output.ofNullable(lastErrorTime);
             return this;
         }
 
-        public Builder lastEventTime(@Nullable Input<String> lastEventTime) {
+        public Builder lastEventTime(@Nullable Output<String> lastEventTime) {
             this.lastEventTime = lastEventTime;
             return this;
         }
 
         public Builder lastEventTime(@Nullable String lastEventTime) {
-            this.lastEventTime = Input.ofNullable(lastEventTime);
+            this.lastEventTime = Output.ofNullable(lastEventTime);
             return this;
         }
 
-        public Builder lastHeartbeatTime(@Nullable Input<String> lastHeartbeatTime) {
+        public Builder lastHeartbeatTime(@Nullable Output<String> lastHeartbeatTime) {
             this.lastHeartbeatTime = lastHeartbeatTime;
             return this;
         }
 
         public Builder lastHeartbeatTime(@Nullable String lastHeartbeatTime) {
-            this.lastHeartbeatTime = Input.ofNullable(lastHeartbeatTime);
+            this.lastHeartbeatTime = Output.ofNullable(lastHeartbeatTime);
             return this;
         }
 
-        public Builder lastStateTime(@Nullable Input<String> lastStateTime) {
+        public Builder lastStateTime(@Nullable Output<String> lastStateTime) {
             this.lastStateTime = lastStateTime;
             return this;
         }
 
         public Builder lastStateTime(@Nullable String lastStateTime) {
-            this.lastStateTime = Input.ofNullable(lastStateTime);
+            this.lastStateTime = Output.ofNullable(lastStateTime);
             return this;
         }
 
-        public Builder logLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Output<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
         public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Input.ofNullable(logLevel);
+            this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder numId(@Nullable Input<String> numId) {
+        public Builder numId(@Nullable Output<String> numId) {
             this.numId = numId;
             return this;
         }
 
         public Builder numId(@Nullable String numId) {
-            this.numId = Input.ofNullable(numId);
+            this.numId = Output.ofNullable(numId);
             return this;
         }
 
-        public Builder registry(@Nullable Input<String> registry) {
+        public Builder registry(@Nullable Output<String> registry) {
             this.registry = registry;
             return this;
         }
 
         public Builder registry(@Nullable String registry) {
-            this.registry = Input.ofNullable(registry);
+            this.registry = Output.ofNullable(registry);
             return this;
         }
 
-        public Builder states(@Nullable Input<List<DeviceStateGetArgs>> states) {
+        public Builder states(@Nullable Output<List<DeviceStateGetArgs>> states) {
             this.states = states;
             return this;
         }
 
         public Builder states(@Nullable List<DeviceStateGetArgs> states) {
-            this.states = Input.ofNullable(states);
+            this.states = Output.ofNullable(states);
             return this;
         }
         public DeviceState build() {

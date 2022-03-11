@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsGetArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TriggerBuildArtifactsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="images")
-      private final @Nullable Input<List<String>> images;
+      private final @Nullable Output<List<String>> images;
 
-    public Input<List<String>> getImages() {
-        return this.images == null ? Input.empty() : this.images;
+    public Output<List<String>> getImages() {
+        return this.images == null ? Output.empty() : this.images;
     }
 
     /**
@@ -40,22 +40,22 @@ public final class TriggerBuildArtifactsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="objects")
-      private final @Nullable Input<TriggerBuildArtifactsObjectsGetArgs> objects;
+      private final @Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects;
 
-    public Input<TriggerBuildArtifactsObjectsGetArgs> getObjects() {
-        return this.objects == null ? Input.empty() : this.objects;
+    public Output<TriggerBuildArtifactsObjectsGetArgs> getObjects() {
+        return this.objects == null ? Output.empty() : this.objects;
     }
 
     public TriggerBuildArtifactsGetArgs(
-        @Nullable Input<List<String>> images,
-        @Nullable Input<TriggerBuildArtifactsObjectsGetArgs> objects) {
+        @Nullable Output<List<String>> images,
+        @Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects) {
         this.images = images;
         this.objects = objects;
     }
 
     private TriggerBuildArtifactsGetArgs() {
-        this.images = Input.empty();
-        this.objects = Input.empty();
+        this.images = Output.empty();
+        this.objects = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,8 +67,8 @@ public final class TriggerBuildArtifactsGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> images;
-        private @Nullable Input<TriggerBuildArtifactsObjectsGetArgs> objects;
+        private @Nullable Output<List<String>> images;
+        private @Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects;
 
         public Builder() {
     	      // Empty
@@ -80,23 +80,23 @@ public final class TriggerBuildArtifactsGetArgs extends io.pulumi.resources.Reso
     	      this.objects = defaults.objects;
         }
 
-        public Builder images(@Nullable Input<List<String>> images) {
+        public Builder images(@Nullable Output<List<String>> images) {
             this.images = images;
             return this;
         }
 
         public Builder images(@Nullable List<String> images) {
-            this.images = Input.ofNullable(images);
+            this.images = Output.ofNullable(images);
             return this;
         }
 
-        public Builder objects(@Nullable Input<TriggerBuildArtifactsObjectsGetArgs> objects) {
+        public Builder objects(@Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects) {
             this.objects = objects;
             return this;
         }
 
         public Builder objects(@Nullable TriggerBuildArtifactsObjectsGetArgs objects) {
-            this.objects = Input.ofNullable(objects);
+            this.objects = Output.ofNullable(objects);
             return this;
         }
         public TriggerBuildArtifactsGetArgs build() {

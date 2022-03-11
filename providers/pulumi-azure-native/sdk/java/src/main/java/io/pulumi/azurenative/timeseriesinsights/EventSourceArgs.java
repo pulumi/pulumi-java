@@ -6,7 +6,7 @@ package io.pulumi.azurenative.timeseriesinsights;
 import io.pulumi.azurenative.timeseriesinsights.enums.EventSourceKind;
 import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,9 +23,9 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentName", required=true)
-      private final Input<String> environmentName;
+      private final Output<String> environmentName;
 
-    public Input<String> getEnvironmentName() {
+    public Output<String> getEnvironmentName() {
         return this.environmentName;
     }
 
@@ -34,10 +34,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventSourceName")
-      private final @Nullable Input<String> eventSourceName;
+      private final @Nullable Output<String> eventSourceName;
 
-    public Input<String> getEventSourceName() {
-        return this.eventSourceName == null ? Input.empty() : this.eventSourceName;
+    public Output<String> getEventSourceName() {
+        return this.eventSourceName == null ? Output.empty() : this.eventSourceName;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,EventSourceKind>> kind;
+      private final Output<Either<String,EventSourceKind>> kind;
 
-    public Input<Either<String,EventSourceKind>> getKind() {
+    public Output<Either<String,EventSourceKind>> getKind() {
         return this.kind;
     }
 
@@ -56,10 +56,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localTimestamp")
-      private final @Nullable Input<LocalTimestampArgs> localTimestamp;
+      private final @Nullable Output<LocalTimestampArgs> localTimestamp;
 
-    public Input<LocalTimestampArgs> getLocalTimestamp() {
-        return this.localTimestamp == null ? Input.empty() : this.localTimestamp;
+    public Output<LocalTimestampArgs> getLocalTimestamp() {
+        return this.localTimestamp == null ? Output.empty() : this.localTimestamp;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,20 +89,20 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EventSourceArgs(
-        Input<String> environmentName,
-        @Nullable Input<String> eventSourceName,
-        Input<Either<String,EventSourceKind>> kind,
-        @Nullable Input<LocalTimestampArgs> localTimestamp,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> environmentName,
+        @Nullable Output<String> eventSourceName,
+        Output<Either<String,EventSourceKind>> kind,
+        @Nullable Output<LocalTimestampArgs> localTimestamp,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
         this.eventSourceName = eventSourceName;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -113,13 +113,13 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventSourceArgs() {
-        this.environmentName = Input.empty();
-        this.eventSourceName = Input.empty();
-        this.kind = Input.empty();
-        this.localTimestamp = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.environmentName = Output.empty();
+        this.eventSourceName = Output.empty();
+        this.kind = Output.empty();
+        this.localTimestamp = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> environmentName;
-        private @Nullable Input<String> eventSourceName;
-        private Input<Either<String,EventSourceKind>> kind;
-        private @Nullable Input<LocalTimestampArgs> localTimestamp;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> environmentName;
+        private @Nullable Output<String> eventSourceName;
+        private Output<Either<String,EventSourceKind>> kind;
+        private @Nullable Output<LocalTimestampArgs> localTimestamp;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder environmentName(Input<String> environmentName) {
+        public Builder environmentName(Output<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
 
         public Builder environmentName(String environmentName) {
-            this.environmentName = Input.of(Objects.requireNonNull(environmentName));
+            this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
 
-        public Builder eventSourceName(@Nullable Input<String> eventSourceName) {
+        public Builder eventSourceName(@Nullable Output<String> eventSourceName) {
             this.eventSourceName = eventSourceName;
             return this;
         }
 
         public Builder eventSourceName(@Nullable String eventSourceName) {
-            this.eventSourceName = Input.ofNullable(eventSourceName);
+            this.eventSourceName = Output.ofNullable(eventSourceName);
             return this;
         }
 
-        public Builder kind(Input<Either<String,EventSourceKind>> kind) {
+        public Builder kind(Output<Either<String,EventSourceKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,EventSourceKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder localTimestamp(@Nullable Input<LocalTimestampArgs> localTimestamp) {
+        public Builder localTimestamp(@Nullable Output<LocalTimestampArgs> localTimestamp) {
             this.localTimestamp = localTimestamp;
             return this;
         }
 
         public Builder localTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
-            this.localTimestamp = Input.ofNullable(localTimestamp);
+            this.localTimestamp = Output.ofNullable(localTimestamp);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EventSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class TopicRuleLambdaActionArgs extends io.pulumi.resources.Resourc
     public static final TopicRuleLambdaActionArgs Empty = new TopicRuleLambdaActionArgs();
 
     @InputImport(name="functionArn")
-      private final @Nullable Input<String> functionArn;
+      private final @Nullable Output<String> functionArn;
 
-    public Input<String> getFunctionArn() {
-        return this.functionArn == null ? Input.empty() : this.functionArn;
+    public Output<String> getFunctionArn() {
+        return this.functionArn == null ? Output.empty() : this.functionArn;
     }
 
-    public TopicRuleLambdaActionArgs(@Nullable Input<String> functionArn) {
+    public TopicRuleLambdaActionArgs(@Nullable Output<String> functionArn) {
         this.functionArn = functionArn;
     }
 
     private TopicRuleLambdaActionArgs() {
-        this.functionArn = Input.empty();
+        this.functionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class TopicRuleLambdaActionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> functionArn;
+        private @Nullable Output<String> functionArn;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class TopicRuleLambdaActionArgs extends io.pulumi.resources.Resourc
     	      this.functionArn = defaults.functionArn;
         }
 
-        public Builder functionArn(@Nullable Input<String> functionArn) {
+        public Builder functionArn(@Nullable Output<String> functionArn) {
             this.functionArn = functionArn;
             return this;
         }
 
         public Builder functionArn(@Nullable String functionArn) {
-            this.functionArn = Input.ofNullable(functionArn);
+            this.functionArn = Output.ofNullable(functionArn);
             return this;
         }
         public TopicRuleLambdaActionArgs build() {

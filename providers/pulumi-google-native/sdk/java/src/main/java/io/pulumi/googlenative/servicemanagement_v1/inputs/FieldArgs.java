@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.FieldCardinality;
 import io.pulumi.googlenative.servicemanagement_v1.enums.FieldKind;
@@ -29,10 +29,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cardinality")
-      private final @Nullable Input<FieldCardinality> cardinality;
+      private final @Nullable Output<FieldCardinality> cardinality;
 
-    public Input<FieldCardinality> getCardinality() {
-        return this.cardinality == null ? Input.empty() : this.cardinality;
+    public Output<FieldCardinality> getCardinality() {
+        return this.cardinality == null ? Output.empty() : this.cardinality;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<String> defaultValue;
+      private final @Nullable Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<String> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jsonName")
-      private final @Nullable Input<String> jsonName;
+      private final @Nullable Output<String> jsonName;
 
-    public Input<String> getJsonName() {
-        return this.jsonName == null ? Input.empty() : this.jsonName;
+    public Output<String> getJsonName() {
+        return this.jsonName == null ? Output.empty() : this.jsonName;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<FieldKind> kind;
+      private final @Nullable Output<FieldKind> kind;
 
-    public Input<FieldKind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<FieldKind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="number")
-      private final @Nullable Input<Integer> number;
+      private final @Nullable Output<Integer> number;
 
-    public Input<Integer> getNumber() {
-        return this.number == null ? Input.empty() : this.number;
+    public Output<Integer> getNumber() {
+        return this.number == null ? Output.empty() : this.number;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oneofIndex")
-      private final @Nullable Input<Integer> oneofIndex;
+      private final @Nullable Output<Integer> oneofIndex;
 
-    public Input<Integer> getOneofIndex() {
-        return this.oneofIndex == null ? Input.empty() : this.oneofIndex;
+    public Output<Integer> getOneofIndex() {
+        return this.oneofIndex == null ? Output.empty() : this.oneofIndex;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Output<List<OptionArgs>> options;
 
-    public Input<List<OptionArgs>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<OptionArgs>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packed")
-      private final @Nullable Input<Boolean> packed;
+      private final @Nullable Output<Boolean> packed;
 
-    public Input<Boolean> getPacked() {
-        return this.packed == null ? Input.empty() : this.packed;
+    public Output<Boolean> getPacked() {
+        return this.packed == null ? Output.empty() : this.packed;
     }
 
     /**
@@ -128,23 +128,23 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeUrl")
-      private final @Nullable Input<String> typeUrl;
+      private final @Nullable Output<String> typeUrl;
 
-    public Input<String> getTypeUrl() {
-        return this.typeUrl == null ? Input.empty() : this.typeUrl;
+    public Output<String> getTypeUrl() {
+        return this.typeUrl == null ? Output.empty() : this.typeUrl;
     }
 
     public FieldArgs(
-        @Nullable Input<FieldCardinality> cardinality,
-        @Nullable Input<String> defaultValue,
-        @Nullable Input<String> jsonName,
-        @Nullable Input<FieldKind> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> number,
-        @Nullable Input<Integer> oneofIndex,
-        @Nullable Input<List<OptionArgs>> options,
-        @Nullable Input<Boolean> packed,
-        @Nullable Input<String> typeUrl) {
+        @Nullable Output<FieldCardinality> cardinality,
+        @Nullable Output<String> defaultValue,
+        @Nullable Output<String> jsonName,
+        @Nullable Output<FieldKind> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> number,
+        @Nullable Output<Integer> oneofIndex,
+        @Nullable Output<List<OptionArgs>> options,
+        @Nullable Output<Boolean> packed,
+        @Nullable Output<String> typeUrl) {
         this.cardinality = cardinality;
         this.defaultValue = defaultValue;
         this.jsonName = jsonName;
@@ -158,16 +158,16 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FieldArgs() {
-        this.cardinality = Input.empty();
-        this.defaultValue = Input.empty();
-        this.jsonName = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.number = Input.empty();
-        this.oneofIndex = Input.empty();
-        this.options = Input.empty();
-        this.packed = Input.empty();
-        this.typeUrl = Input.empty();
+        this.cardinality = Output.empty();
+        this.defaultValue = Output.empty();
+        this.jsonName = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.number = Output.empty();
+        this.oneofIndex = Output.empty();
+        this.options = Output.empty();
+        this.packed = Output.empty();
+        this.typeUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -179,16 +179,16 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<FieldCardinality> cardinality;
-        private @Nullable Input<String> defaultValue;
-        private @Nullable Input<String> jsonName;
-        private @Nullable Input<FieldKind> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> number;
-        private @Nullable Input<Integer> oneofIndex;
-        private @Nullable Input<List<OptionArgs>> options;
-        private @Nullable Input<Boolean> packed;
-        private @Nullable Input<String> typeUrl;
+        private @Nullable Output<FieldCardinality> cardinality;
+        private @Nullable Output<String> defaultValue;
+        private @Nullable Output<String> jsonName;
+        private @Nullable Output<FieldKind> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> number;
+        private @Nullable Output<Integer> oneofIndex;
+        private @Nullable Output<List<OptionArgs>> options;
+        private @Nullable Output<Boolean> packed;
+        private @Nullable Output<String> typeUrl;
 
         public Builder() {
     	      // Empty
@@ -208,103 +208,103 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeUrl = defaults.typeUrl;
         }
 
-        public Builder cardinality(@Nullable Input<FieldCardinality> cardinality) {
+        public Builder cardinality(@Nullable Output<FieldCardinality> cardinality) {
             this.cardinality = cardinality;
             return this;
         }
 
         public Builder cardinality(@Nullable FieldCardinality cardinality) {
-            this.cardinality = Input.ofNullable(cardinality);
+            this.cardinality = Output.ofNullable(cardinality);
             return this;
         }
 
-        public Builder defaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder jsonName(@Nullable Input<String> jsonName) {
+        public Builder jsonName(@Nullable Output<String> jsonName) {
             this.jsonName = jsonName;
             return this;
         }
 
         public Builder jsonName(@Nullable String jsonName) {
-            this.jsonName = Input.ofNullable(jsonName);
+            this.jsonName = Output.ofNullable(jsonName);
             return this;
         }
 
-        public Builder kind(@Nullable Input<FieldKind> kind) {
+        public Builder kind(@Nullable Output<FieldKind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable FieldKind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder number(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Output<Integer> number) {
             this.number = number;
             return this;
         }
 
         public Builder number(@Nullable Integer number) {
-            this.number = Input.ofNullable(number);
+            this.number = Output.ofNullable(number);
             return this;
         }
 
-        public Builder oneofIndex(@Nullable Input<Integer> oneofIndex) {
+        public Builder oneofIndex(@Nullable Output<Integer> oneofIndex) {
             this.oneofIndex = oneofIndex;
             return this;
         }
 
         public Builder oneofIndex(@Nullable Integer oneofIndex) {
-            this.oneofIndex = Input.ofNullable(oneofIndex);
+            this.oneofIndex = Output.ofNullable(oneofIndex);
             return this;
         }
 
-        public Builder options(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder packed(@Nullable Input<Boolean> packed) {
+        public Builder packed(@Nullable Output<Boolean> packed) {
             this.packed = packed;
             return this;
         }
 
         public Builder packed(@Nullable Boolean packed) {
-            this.packed = Input.ofNullable(packed);
+            this.packed = Output.ofNullable(packed);
             return this;
         }
 
-        public Builder typeUrl(@Nullable Input<String> typeUrl) {
+        public Builder typeUrl(@Nullable Output<String> typeUrl) {
             this.typeUrl = typeUrl;
             return this;
         }
 
         public Builder typeUrl(@Nullable String typeUrl) {
-            this.typeUrl = Input.ofNullable(typeUrl);
+            this.typeUrl = Output.ofNullable(typeUrl);
             return this;
         }
         public FieldArgs build() {

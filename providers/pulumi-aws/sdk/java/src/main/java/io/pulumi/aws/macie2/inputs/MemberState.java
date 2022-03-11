@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administratorAccountId")
-      private final @Nullable Input<String> administratorAccountId;
+      private final @Nullable Output<String> administratorAccountId;
 
-    public Input<String> getAdministratorAccountId() {
-        return this.administratorAccountId == null ? Input.empty() : this.administratorAccountId;
+    public Output<String> getAdministratorAccountId() {
+        return this.administratorAccountId == null ? Output.empty() : this.administratorAccountId;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitationDisableEmailNotification")
-      private final @Nullable Input<String> invitationDisableEmailNotification;
+      private final @Nullable Output<String> invitationDisableEmailNotification;
 
-    public Input<String> getInvitationDisableEmailNotification() {
-        return this.invitationDisableEmailNotification == null ? Input.empty() : this.invitationDisableEmailNotification;
+    public Output<String> getInvitationDisableEmailNotification() {
+        return this.invitationDisableEmailNotification == null ? Output.empty() : this.invitationDisableEmailNotification;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitationMessage")
-      private final @Nullable Input<String> invitationMessage;
+      private final @Nullable Output<String> invitationMessage;
 
-    public Input<String> getInvitationMessage() {
-        return this.invitationMessage == null ? Input.empty() : this.invitationMessage;
+    public Output<String> getInvitationMessage() {
+        return this.invitationMessage == null ? Output.empty() : this.invitationMessage;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invite")
-      private final @Nullable Input<Boolean> invite;
+      private final @Nullable Output<Boolean> invite;
 
-    public Input<Boolean> getInvite() {
-        return this.invite == null ? Input.empty() : this.invite;
+    public Output<Boolean> getInvite() {
+        return this.invite == null ? Output.empty() : this.invite;
     }
 
     /**
@@ -98,17 +98,17 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitedAt")
-      private final @Nullable Input<String> invitedAt;
+      private final @Nullable Output<String> invitedAt;
 
-    public Input<String> getInvitedAt() {
-        return this.invitedAt == null ? Input.empty() : this.invitedAt;
+    public Output<String> getInvitedAt() {
+        return this.invitedAt == null ? Output.empty() : this.invitedAt;
     }
 
     @InputImport(name="masterAccountId")
-      private final @Nullable Input<String> masterAccountId;
+      private final @Nullable Output<String> masterAccountId;
 
-    public Input<String> getMasterAccountId() {
-        return this.masterAccountId == null ? Input.empty() : this.masterAccountId;
+    public Output<String> getMasterAccountId() {
+        return this.masterAccountId == null ? Output.empty() : this.masterAccountId;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationshipStatus")
-      private final @Nullable Input<String> relationshipStatus;
+      private final @Nullable Output<String> relationshipStatus;
 
-    public Input<String> getRelationshipStatus() {
-        return this.relationshipStatus == null ? Input.empty() : this.relationshipStatus;
+    public Output<String> getRelationshipStatus() {
+        return this.relationshipStatus == null ? Output.empty() : this.relationshipStatus;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -138,17 +138,17 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -156,27 +156,27 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedAt")
-      private final @Nullable Input<String> updatedAt;
+      private final @Nullable Output<String> updatedAt;
 
-    public Input<String> getUpdatedAt() {
-        return this.updatedAt == null ? Input.empty() : this.updatedAt;
+    public Output<String> getUpdatedAt() {
+        return this.updatedAt == null ? Output.empty() : this.updatedAt;
     }
 
     public MemberState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> administratorAccountId,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> email,
-        @Nullable Input<String> invitationDisableEmailNotification,
-        @Nullable Input<String> invitationMessage,
-        @Nullable Input<Boolean> invite,
-        @Nullable Input<String> invitedAt,
-        @Nullable Input<String> masterAccountId,
-        @Nullable Input<String> relationshipStatus,
-        @Nullable Input<String> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> updatedAt) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> administratorAccountId,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> email,
+        @Nullable Output<String> invitationDisableEmailNotification,
+        @Nullable Output<String> invitationMessage,
+        @Nullable Output<Boolean> invite,
+        @Nullable Output<String> invitedAt,
+        @Nullable Output<String> masterAccountId,
+        @Nullable Output<String> relationshipStatus,
+        @Nullable Output<String> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> updatedAt) {
         this.accountId = accountId;
         this.administratorAccountId = administratorAccountId;
         this.arn = arn;
@@ -194,20 +194,20 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberState() {
-        this.accountId = Input.empty();
-        this.administratorAccountId = Input.empty();
-        this.arn = Input.empty();
-        this.email = Input.empty();
-        this.invitationDisableEmailNotification = Input.empty();
-        this.invitationMessage = Input.empty();
-        this.invite = Input.empty();
-        this.invitedAt = Input.empty();
-        this.masterAccountId = Input.empty();
-        this.relationshipStatus = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.updatedAt = Input.empty();
+        this.accountId = Output.empty();
+        this.administratorAccountId = Output.empty();
+        this.arn = Output.empty();
+        this.email = Output.empty();
+        this.invitationDisableEmailNotification = Output.empty();
+        this.invitationMessage = Output.empty();
+        this.invite = Output.empty();
+        this.invitedAt = Output.empty();
+        this.masterAccountId = Output.empty();
+        this.relationshipStatus = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.updatedAt = Output.empty();
     }
 
     public static Builder builder() {
@@ -219,20 +219,20 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> administratorAccountId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> invitationDisableEmailNotification;
-        private @Nullable Input<String> invitationMessage;
-        private @Nullable Input<Boolean> invite;
-        private @Nullable Input<String> invitedAt;
-        private @Nullable Input<String> masterAccountId;
-        private @Nullable Input<String> relationshipStatus;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> updatedAt;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> administratorAccountId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> invitationDisableEmailNotification;
+        private @Nullable Output<String> invitationMessage;
+        private @Nullable Output<Boolean> invite;
+        private @Nullable Output<String> invitedAt;
+        private @Nullable Output<String> masterAccountId;
+        private @Nullable Output<String> relationshipStatus;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> updatedAt;
 
         public Builder() {
     	      // Empty
@@ -256,143 +256,143 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder administratorAccountId(@Nullable Input<String> administratorAccountId) {
+        public Builder administratorAccountId(@Nullable Output<String> administratorAccountId) {
             this.administratorAccountId = administratorAccountId;
             return this;
         }
 
         public Builder administratorAccountId(@Nullable String administratorAccountId) {
-            this.administratorAccountId = Input.ofNullable(administratorAccountId);
+            this.administratorAccountId = Output.ofNullable(administratorAccountId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder invitationDisableEmailNotification(@Nullable Input<String> invitationDisableEmailNotification) {
+        public Builder invitationDisableEmailNotification(@Nullable Output<String> invitationDisableEmailNotification) {
             this.invitationDisableEmailNotification = invitationDisableEmailNotification;
             return this;
         }
 
         public Builder invitationDisableEmailNotification(@Nullable String invitationDisableEmailNotification) {
-            this.invitationDisableEmailNotification = Input.ofNullable(invitationDisableEmailNotification);
+            this.invitationDisableEmailNotification = Output.ofNullable(invitationDisableEmailNotification);
             return this;
         }
 
-        public Builder invitationMessage(@Nullable Input<String> invitationMessage) {
+        public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
             this.invitationMessage = invitationMessage;
             return this;
         }
 
         public Builder invitationMessage(@Nullable String invitationMessage) {
-            this.invitationMessage = Input.ofNullable(invitationMessage);
+            this.invitationMessage = Output.ofNullable(invitationMessage);
             return this;
         }
 
-        public Builder invite(@Nullable Input<Boolean> invite) {
+        public Builder invite(@Nullable Output<Boolean> invite) {
             this.invite = invite;
             return this;
         }
 
         public Builder invite(@Nullable Boolean invite) {
-            this.invite = Input.ofNullable(invite);
+            this.invite = Output.ofNullable(invite);
             return this;
         }
 
-        public Builder invitedAt(@Nullable Input<String> invitedAt) {
+        public Builder invitedAt(@Nullable Output<String> invitedAt) {
             this.invitedAt = invitedAt;
             return this;
         }
 
         public Builder invitedAt(@Nullable String invitedAt) {
-            this.invitedAt = Input.ofNullable(invitedAt);
+            this.invitedAt = Output.ofNullable(invitedAt);
             return this;
         }
 
-        public Builder masterAccountId(@Nullable Input<String> masterAccountId) {
+        public Builder masterAccountId(@Nullable Output<String> masterAccountId) {
             this.masterAccountId = masterAccountId;
             return this;
         }
 
         public Builder masterAccountId(@Nullable String masterAccountId) {
-            this.masterAccountId = Input.ofNullable(masterAccountId);
+            this.masterAccountId = Output.ofNullable(masterAccountId);
             return this;
         }
 
-        public Builder relationshipStatus(@Nullable Input<String> relationshipStatus) {
+        public Builder relationshipStatus(@Nullable Output<String> relationshipStatus) {
             this.relationshipStatus = relationshipStatus;
             return this;
         }
 
         public Builder relationshipStatus(@Nullable String relationshipStatus) {
-            this.relationshipStatus = Input.ofNullable(relationshipStatus);
+            this.relationshipStatus = Output.ofNullable(relationshipStatus);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder updatedAt(@Nullable Input<String> updatedAt) {
+        public Builder updatedAt(@Nullable Output<String> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public Builder updatedAt(@Nullable String updatedAt) {
-            this.updatedAt = Input.ofNullable(updatedAt);
+            this.updatedAt = Output.ofNullable(updatedAt);
             return this;
         }
         public MemberState build() {

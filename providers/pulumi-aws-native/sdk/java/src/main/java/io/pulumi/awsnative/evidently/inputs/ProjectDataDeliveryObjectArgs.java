@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.awsnative.evidently.inputs.ProjectS3DestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class ProjectDataDeliveryObjectArgs extends io.pulumi.resources.Res
     public static final ProjectDataDeliveryObjectArgs Empty = new ProjectDataDeliveryObjectArgs();
 
     @InputImport(name="logGroup")
-      private final @Nullable Input<String> logGroup;
+      private final @Nullable Output<String> logGroup;
 
-    public Input<String> getLogGroup() {
-        return this.logGroup == null ? Input.empty() : this.logGroup;
+    public Output<String> getLogGroup() {
+        return this.logGroup == null ? Output.empty() : this.logGroup;
     }
 
     @InputImport(name="s3")
-      private final @Nullable Input<ProjectS3DestinationArgs> s3;
+      private final @Nullable Output<ProjectS3DestinationArgs> s3;
 
-    public Input<ProjectS3DestinationArgs> getS3() {
-        return this.s3 == null ? Input.empty() : this.s3;
+    public Output<ProjectS3DestinationArgs> getS3() {
+        return this.s3 == null ? Output.empty() : this.s3;
     }
 
     public ProjectDataDeliveryObjectArgs(
-        @Nullable Input<String> logGroup,
-        @Nullable Input<ProjectS3DestinationArgs> s3) {
+        @Nullable Output<String> logGroup,
+        @Nullable Output<ProjectS3DestinationArgs> s3) {
         this.logGroup = logGroup;
         this.s3 = s3;
     }
 
     private ProjectDataDeliveryObjectArgs() {
-        this.logGroup = Input.empty();
-        this.s3 = Input.empty();
+        this.logGroup = Output.empty();
+        this.s3 = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ProjectDataDeliveryObjectArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> logGroup;
-        private @Nullable Input<ProjectS3DestinationArgs> s3;
+        private @Nullable Output<String> logGroup;
+        private @Nullable Output<ProjectS3DestinationArgs> s3;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ProjectDataDeliveryObjectArgs extends io.pulumi.resources.Res
     	      this.s3 = defaults.s3;
         }
 
-        public Builder logGroup(@Nullable Input<String> logGroup) {
+        public Builder logGroup(@Nullable Output<String> logGroup) {
             this.logGroup = logGroup;
             return this;
         }
 
         public Builder logGroup(@Nullable String logGroup) {
-            this.logGroup = Input.ofNullable(logGroup);
+            this.logGroup = Output.ofNullable(logGroup);
             return this;
         }
 
-        public Builder s3(@Nullable Input<ProjectS3DestinationArgs> s3) {
+        public Builder s3(@Nullable Output<ProjectS3DestinationArgs> s3) {
             this.s3 = s3;
             return this;
         }
 
         public Builder s3(@Nullable ProjectS3DestinationArgs s3) {
-            this.s3 = Input.ofNullable(s3);
+            this.s3 = Output.ofNullable(s3);
             return this;
         }
         public ProjectDataDeliveryObjectArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustFileArgs extends 
      * 
      */
     @InputImport(name="certificateChain", required=true)
-      private final Input<String> certificateChain;
+      private final Output<String> certificateChain;
 
-    public Input<String> getCertificateChain() {
+    public Output<String> getCertificateChain() {
         return this.certificateChain;
     }
 
-    public VirtualGatewaySpecListenerTlsValidationTrustFileArgs(Input<String> certificateChain) {
+    public VirtualGatewaySpecListenerTlsValidationTrustFileArgs(Output<String> certificateChain) {
         this.certificateChain = Objects.requireNonNull(certificateChain, "expected parameter 'certificateChain' to be non-null");
     }
 
     private VirtualGatewaySpecListenerTlsValidationTrustFileArgs() {
-        this.certificateChain = Input.empty();
+        this.certificateChain = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustFileArgs extends 
     }
 
     public static final class Builder {
-        private Input<String> certificateChain;
+        private Output<String> certificateChain;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustFileArgs extends 
     	      this.certificateChain = defaults.certificateChain;
         }
 
-        public Builder certificateChain(Input<String> certificateChain) {
+        public Builder certificateChain(Output<String> certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
 
         public Builder certificateChain(String certificateChain) {
-            this.certificateChain = Input.of(Objects.requireNonNull(certificateChain));
+            this.certificateChain = Output.of(Objects.requireNonNull(certificateChain));
             return this;
         }
         public VirtualGatewaySpecListenerTlsValidationTrustFileArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileUri")
-      private final @Nullable Input<String> fileUri;
+      private final @Nullable Output<String> fileUri;
 
-    public Input<String> getFileUri() {
-        return this.fileUri == null ? Input.empty() : this.fileUri;
+    public Output<String> getFileUri() {
+        return this.fileUri == null ? Output.empty() : this.fileUri;
     }
 
-    public FileReferenceArgs(@Nullable Input<String> fileUri) {
+    public FileReferenceArgs(@Nullable Output<String> fileUri) {
         this.fileUri = fileUri;
     }
 
     private FileReferenceArgs() {
-        this.fileUri = Input.empty();
+        this.fileUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fileUri;
+        private @Nullable Output<String> fileUri;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fileUri = defaults.fileUri;
         }
 
-        public Builder fileUri(@Nullable Input<String> fileUri) {
+        public Builder fileUri(@Nullable Output<String> fileUri) {
             this.fileUri = fileUri;
             return this;
         }
 
         public Builder fileUri(@Nullable String fileUri) {
-            this.fileUri = Input.ofNullable(fileUri);
+            this.fileUri = Output.ofNullable(fileUri);
             return this;
         }
         public FileReferenceArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.enums.ZoneType;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationVirtualNetworks")
-      private final @Nullable Input<List<SubResourceArgs>> registrationVirtualNetworks;
+      private final @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks;
 
-    public Input<List<SubResourceArgs>> getRegistrationVirtualNetworks() {
-        return this.registrationVirtualNetworks == null ? Input.empty() : this.registrationVirtualNetworks;
+    public Output<List<SubResourceArgs>> getRegistrationVirtualNetworks() {
+        return this.registrationVirtualNetworks == null ? Output.empty() : this.registrationVirtualNetworks;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolutionVirtualNetworks")
-      private final @Nullable Input<List<SubResourceArgs>> resolutionVirtualNetworks;
+      private final @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks;
 
-    public Input<List<SubResourceArgs>> getResolutionVirtualNetworks() {
-        return this.resolutionVirtualNetworks == null ? Input.empty() : this.resolutionVirtualNetworks;
+    public Output<List<SubResourceArgs>> getResolutionVirtualNetworks() {
+        return this.resolutionVirtualNetworks == null ? Output.empty() : this.resolutionVirtualNetworks;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,10 +67,10 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneName")
-      private final @Nullable Input<String> zoneName;
+      private final @Nullable Output<String> zoneName;
 
-    public Input<String> getZoneName() {
-        return this.zoneName == null ? Input.empty() : this.zoneName;
+    public Output<String> getZoneName() {
+        return this.zoneName == null ? Output.empty() : this.zoneName;
     }
 
     /**
@@ -89,37 +89,37 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneType")
-      private final @Nullable Input<ZoneType> zoneType;
+      private final @Nullable Output<ZoneType> zoneType;
 
-    public Input<ZoneType> getZoneType() {
-        return this.zoneType == null ? Input.empty() : this.zoneType;
+    public Output<ZoneType> getZoneType() {
+        return this.zoneType == null ? Output.empty() : this.zoneType;
     }
 
     public ZoneArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<List<SubResourceArgs>> registrationVirtualNetworks,
-        @Nullable Input<List<SubResourceArgs>> resolutionVirtualNetworks,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> zoneName,
-        @Nullable Input<ZoneType> zoneType) {
+        @Nullable Output<String> location,
+        @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks,
+        @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> zoneName,
+        @Nullable Output<ZoneType> zoneType) {
         this.location = location;
         this.registrationVirtualNetworks = registrationVirtualNetworks;
         this.resolutionVirtualNetworks = resolutionVirtualNetworks;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;
         this.zoneName = zoneName;
-        this.zoneType = zoneType == null ? Input.ofNullable(io.pulumi.azurenative.network.enums.ZoneType.Public) : zoneType;
+        this.zoneType = zoneType == null ? Output.ofNullable(io.pulumi.azurenative.network.enums.ZoneType.Public) : zoneType;
     }
 
     private ZoneArgs() {
-        this.location = Input.empty();
-        this.registrationVirtualNetworks = Input.empty();
-        this.resolutionVirtualNetworks = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.zoneName = Input.empty();
-        this.zoneType = Input.empty();
+        this.location = Output.empty();
+        this.registrationVirtualNetworks = Output.empty();
+        this.resolutionVirtualNetworks = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.zoneName = Output.empty();
+        this.zoneType = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<SubResourceArgs>> registrationVirtualNetworks;
-        private @Nullable Input<List<SubResourceArgs>> resolutionVirtualNetworks;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> zoneName;
-        private @Nullable Input<ZoneType> zoneType;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks;
+        private @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> zoneName;
+        private @Nullable Output<ZoneType> zoneType;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zoneType = defaults.zoneType;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder registrationVirtualNetworks(@Nullable Input<List<SubResourceArgs>> registrationVirtualNetworks) {
+        public Builder registrationVirtualNetworks(@Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks) {
             this.registrationVirtualNetworks = registrationVirtualNetworks;
             return this;
         }
 
         public Builder registrationVirtualNetworks(@Nullable List<SubResourceArgs> registrationVirtualNetworks) {
-            this.registrationVirtualNetworks = Input.ofNullable(registrationVirtualNetworks);
+            this.registrationVirtualNetworks = Output.ofNullable(registrationVirtualNetworks);
             return this;
         }
 
-        public Builder resolutionVirtualNetworks(@Nullable Input<List<SubResourceArgs>> resolutionVirtualNetworks) {
+        public Builder resolutionVirtualNetworks(@Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks) {
             this.resolutionVirtualNetworks = resolutionVirtualNetworks;
             return this;
         }
 
         public Builder resolutionVirtualNetworks(@Nullable List<SubResourceArgs> resolutionVirtualNetworks) {
-            this.resolutionVirtualNetworks = Input.ofNullable(resolutionVirtualNetworks);
+            this.resolutionVirtualNetworks = Output.ofNullable(resolutionVirtualNetworks);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zoneName(@Nullable Input<String> zoneName) {
+        public Builder zoneName(@Nullable Output<String> zoneName) {
             this.zoneName = zoneName;
             return this;
         }
 
         public Builder zoneName(@Nullable String zoneName) {
-            this.zoneName = Input.ofNullable(zoneName);
+            this.zoneName = Output.ofNullable(zoneName);
             return this;
         }
 
-        public Builder zoneType(@Nullable Input<ZoneType> zoneType) {
+        public Builder zoneType(@Nullable Output<ZoneType> zoneType) {
             this.zoneType = zoneType;
             return this;
         }
 
         public Builder zoneType(@Nullable ZoneType zoneType) {
-            this.zoneType = Input.ofNullable(zoneType);
+            this.zoneType = Output.ofNullable(zoneType);
             return this;
         }
         public ZoneArgs build() {

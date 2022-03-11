@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asn")
-      private final @Nullable Input<Integer> asn;
+      private final @Nullable Output<Integer> asn;
 
-    public Input<Integer> getAsn() {
-        return this.asn == null ? Input.empty() : this.asn;
+    public Output<Integer> getAsn() {
+        return this.asn == null ? Output.empty() : this.asn;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringName", required=true)
-      private final Input<String> peeringName;
+      private final Output<String> peeringName;
 
-    public Input<String> getPeeringName() {
+    public Output<String> getPeeringName() {
         return this.peeringName;
     }
 
@@ -42,10 +42,10 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registeredAsnName")
-      private final @Nullable Input<String> registeredAsnName;
+      private final @Nullable Output<String> registeredAsnName;
 
-    public Input<String> getRegisteredAsnName() {
-        return this.registeredAsnName == null ? Input.empty() : this.registeredAsnName;
+    public Output<String> getRegisteredAsnName() {
+        return this.registeredAsnName == null ? Output.empty() : this.registeredAsnName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public RegisteredAsnArgs(
-        @Nullable Input<Integer> asn,
-        Input<String> peeringName,
-        @Nullable Input<String> registeredAsnName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<Integer> asn,
+        Output<String> peeringName,
+        @Nullable Output<String> registeredAsnName,
+        Output<String> resourceGroupName) {
         this.asn = asn;
         this.peeringName = Objects.requireNonNull(peeringName, "expected parameter 'peeringName' to be non-null");
         this.registeredAsnName = registeredAsnName;
@@ -71,10 +71,10 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegisteredAsnArgs() {
-        this.asn = Input.empty();
-        this.peeringName = Input.empty();
-        this.registeredAsnName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.asn = Output.empty();
+        this.peeringName = Output.empty();
+        this.registeredAsnName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> asn;
-        private Input<String> peeringName;
-        private @Nullable Input<String> registeredAsnName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<Integer> asn;
+        private Output<String> peeringName;
+        private @Nullable Output<String> registeredAsnName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder asn(@Nullable Input<Integer> asn) {
+        public Builder asn(@Nullable Output<Integer> asn) {
             this.asn = asn;
             return this;
         }
 
         public Builder asn(@Nullable Integer asn) {
-            this.asn = Input.ofNullable(asn);
+            this.asn = Output.ofNullable(asn);
             return this;
         }
 
-        public Builder peeringName(Input<String> peeringName) {
+        public Builder peeringName(Output<String> peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
         public Builder peeringName(String peeringName) {
-            this.peeringName = Input.of(Objects.requireNonNull(peeringName));
+            this.peeringName = Output.of(Objects.requireNonNull(peeringName));
             return this;
         }
 
-        public Builder registeredAsnName(@Nullable Input<String> registeredAsnName) {
+        public Builder registeredAsnName(@Nullable Output<String> registeredAsnName) {
             this.registeredAsnName = registeredAsnName;
             return this;
         }
 
         public Builder registeredAsnName(@Nullable String registeredAsnName) {
-            this.registeredAsnName = Input.ofNullable(registeredAsnName);
+            this.registeredAsnName = Output.ofNullable(registeredAsnName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public RegisteredAsnArgs build() {

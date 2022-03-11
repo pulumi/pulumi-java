@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
      * 
      */
     @InputImport(name="customData")
-      private final @Nullable Input<String> customData;
+      private final @Nullable Output<String> customData;
 
-    public Input<String> getCustomData() {
-        return this.customData == null ? Input.empty() : this.customData;
+    public Output<String> getCustomData() {
+        return this.customData == null ? Output.empty() : this.customData;
     }
 
-    public NetworkFunctionUserConfigurationOsProfileArgs(@Nullable Input<String> customData) {
+    public NetworkFunctionUserConfigurationOsProfileArgs(@Nullable Output<String> customData) {
         this.customData = customData;
     }
 
     private NetworkFunctionUserConfigurationOsProfileArgs() {
-        this.customData = Input.empty();
+        this.customData = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customData;
+        private @Nullable Output<String> customData;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
     	      this.customData = defaults.customData;
         }
 
-        public Builder customData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Output<String> customData) {
             this.customData = customData;
             return this;
         }
 
         public Builder customData(@Nullable String customData) {
-            this.customData = Input.ofNullable(customData);
+            this.customData = Output.ofNullable(customData);
             return this;
         }
         public NetworkFunctionUserConfigurationOsProfileArgs build() {

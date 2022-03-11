@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.K8sOnlineDeploymentA
 import io.pulumi.azurenative.machinelearningservices.inputs.ManagedOnlineDeploymentArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.ResourceIdentityArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deploymentName")
-      private final @Nullable Input<String> deploymentName;
+      private final @Nullable Output<String> deploymentName;
 
-    public Input<String> getDeploymentName() {
-        return this.deploymentName == null ? Input.empty() : this.deploymentName;
+    public Output<String> getDeploymentName() {
+        return this.deploymentName == null ? Output.empty() : this.deploymentName;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endpointName", required=true)
-      private final Input<String> endpointName;
+      private final Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
+    public Output<String> getEndpointName() {
         return this.endpointName;
     }
 
@@ -46,10 +46,10 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ResourceIdentityArgs> identity;
+      private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Input<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ResourceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties;
+      private final Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties;
 
-    public Input<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> getProperties() {
+    public Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> getProperties() {
         return this.properties;
     }
 
@@ -90,9 +90,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,10 +101,10 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public OnlineDeploymentArgs(
-        @Nullable Input<String> deploymentName,
-        Input<String> endpointName,
-        @Nullable Input<ResourceIdentityArgs> identity,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        Input<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> workspaceName) {
+        @Nullable Output<String> deploymentName,
+        Output<String> endpointName,
+        @Nullable Output<ResourceIdentityArgs> identity,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> workspaceName) {
         this.deploymentName = deploymentName;
         this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
         this.identity = identity;
@@ -140,15 +140,15 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OnlineDeploymentArgs() {
-        this.deploymentName = Input.empty();
-        this.endpointName = Input.empty();
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceName = Input.empty();
+        this.deploymentName = Output.empty();
+        this.endpointName = Output.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deploymentName;
-        private Input<String> endpointName;
-        private @Nullable Input<ResourceIdentityArgs> identity;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private Input<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> deploymentName;
+        private Output<String> endpointName;
+        private @Nullable Output<ResourceIdentityArgs> identity;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder deploymentName(@Nullable Input<String> deploymentName) {
+        public Builder deploymentName(@Nullable Output<String> deploymentName) {
             this.deploymentName = deploymentName;
             return this;
         }
 
         public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Input.ofNullable(deploymentName);
+            this.deploymentName = Output.ofNullable(deploymentName);
             return this;
         }
 
-        public Builder endpointName(Input<String> endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Input.of(Objects.requireNonNull(endpointName));
+            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(Input<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties) {
+        public Builder properties(Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs> properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public OnlineDeploymentArgs build() {

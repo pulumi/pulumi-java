@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="active")
-      private final @Nullable Input<Boolean> active;
+      private final @Nullable Output<Boolean> active;
 
-    public Input<Boolean> getActive() {
-        return this.active == null ? Input.empty() : this.active;
+    public Output<Boolean> getActive() {
+        return this.active == null ? Output.empty() : this.active;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="disableTemplateValidation")
-      private final @Nullable Input<Boolean> disableTemplateValidation;
+      private final @Nullable Output<Boolean> disableTemplateValidation;
 
-    public Input<Boolean> getDisableTemplateValidation() {
-        return this.disableTemplateValidation == null ? Input.empty() : this.disableTemplateValidation;
+    public Output<Boolean> getDisableTemplateValidation() {
+        return this.disableTemplateValidation == null ? Output.empty() : this.disableTemplateValidation;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="guidance")
-      private final @Nullable Input<String> guidance;
+      private final @Nullable Output<String> guidance;
 
-    public Input<String> getGuidance() {
-        return this.guidance == null ? Input.empty() : this.guidance;
+    public Output<String> getGuidance() {
+        return this.guidance == null ? Output.empty() : this.guidance;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="productId")
-      private final @Nullable Input<String> productId;
+      private final @Nullable Output<String> productId;
 
-    public Input<String> getProductId() {
-        return this.productId == null ? Input.empty() : this.productId;
+    public Output<String> getProductId() {
+        return this.productId == null ? Output.empty() : this.productId;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="templatePhysicalId")
-      private final @Nullable Input<String> templatePhysicalId;
+      private final @Nullable Output<String> templatePhysicalId;
 
-    public Input<String> getTemplatePhysicalId() {
-        return this.templatePhysicalId == null ? Input.empty() : this.templatePhysicalId;
+    public Output<String> getTemplatePhysicalId() {
+        return this.templatePhysicalId == null ? Output.empty() : this.templatePhysicalId;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="templateUrl")
-      private final @Nullable Input<String> templateUrl;
+      private final @Nullable Output<String> templateUrl;
 
-    public Input<String> getTemplateUrl() {
-        return this.templateUrl == null ? Input.empty() : this.templateUrl;
+    public Output<String> getTemplateUrl() {
+        return this.templateUrl == null ? Output.empty() : this.templateUrl;
     }
 
     /**
@@ -130,24 +130,24 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ProvisioningArtifactState(
-        @Nullable Input<String> acceptLanguage,
-        @Nullable Input<Boolean> active,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disableTemplateValidation,
-        @Nullable Input<String> guidance,
-        @Nullable Input<String> name,
-        @Nullable Input<String> productId,
-        @Nullable Input<String> templatePhysicalId,
-        @Nullable Input<String> templateUrl,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> acceptLanguage,
+        @Nullable Output<Boolean> active,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disableTemplateValidation,
+        @Nullable Output<String> guidance,
+        @Nullable Output<String> name,
+        @Nullable Output<String> productId,
+        @Nullable Output<String> templatePhysicalId,
+        @Nullable Output<String> templateUrl,
+        @Nullable Output<String> type) {
         this.acceptLanguage = acceptLanguage;
         this.active = active;
         this.createdTime = createdTime;
@@ -162,17 +162,17 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     }
 
     private ProvisioningArtifactState() {
-        this.acceptLanguage = Input.empty();
-        this.active = Input.empty();
-        this.createdTime = Input.empty();
-        this.description = Input.empty();
-        this.disableTemplateValidation = Input.empty();
-        this.guidance = Input.empty();
-        this.name = Input.empty();
-        this.productId = Input.empty();
-        this.templatePhysicalId = Input.empty();
-        this.templateUrl = Input.empty();
-        this.type = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.active = Output.empty();
+        this.createdTime = Output.empty();
+        this.description = Output.empty();
+        this.disableTemplateValidation = Output.empty();
+        this.guidance = Output.empty();
+        this.name = Output.empty();
+        this.productId = Output.empty();
+        this.templatePhysicalId = Output.empty();
+        this.templateUrl = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -184,17 +184,17 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private @Nullable Input<Boolean> active;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disableTemplateValidation;
-        private @Nullable Input<String> guidance;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> productId;
-        private @Nullable Input<String> templatePhysicalId;
-        private @Nullable Input<String> templateUrl;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> acceptLanguage;
+        private @Nullable Output<Boolean> active;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disableTemplateValidation;
+        private @Nullable Output<String> guidance;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> productId;
+        private @Nullable Output<String> templatePhysicalId;
+        private @Nullable Output<String> templateUrl;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -215,113 +215,113 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder active(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Output<Boolean> active) {
             this.active = active;
             return this;
         }
 
         public Builder active(@Nullable Boolean active) {
-            this.active = Input.ofNullable(active);
+            this.active = Output.ofNullable(active);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disableTemplateValidation(@Nullable Input<Boolean> disableTemplateValidation) {
+        public Builder disableTemplateValidation(@Nullable Output<Boolean> disableTemplateValidation) {
             this.disableTemplateValidation = disableTemplateValidation;
             return this;
         }
 
         public Builder disableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
-            this.disableTemplateValidation = Input.ofNullable(disableTemplateValidation);
+            this.disableTemplateValidation = Output.ofNullable(disableTemplateValidation);
             return this;
         }
 
-        public Builder guidance(@Nullable Input<String> guidance) {
+        public Builder guidance(@Nullable Output<String> guidance) {
             this.guidance = guidance;
             return this;
         }
 
         public Builder guidance(@Nullable String guidance) {
-            this.guidance = Input.ofNullable(guidance);
+            this.guidance = Output.ofNullable(guidance);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder productId(@Nullable Input<String> productId) {
+        public Builder productId(@Nullable Output<String> productId) {
             this.productId = productId;
             return this;
         }
 
         public Builder productId(@Nullable String productId) {
-            this.productId = Input.ofNullable(productId);
+            this.productId = Output.ofNullable(productId);
             return this;
         }
 
-        public Builder templatePhysicalId(@Nullable Input<String> templatePhysicalId) {
+        public Builder templatePhysicalId(@Nullable Output<String> templatePhysicalId) {
             this.templatePhysicalId = templatePhysicalId;
             return this;
         }
 
         public Builder templatePhysicalId(@Nullable String templatePhysicalId) {
-            this.templatePhysicalId = Input.ofNullable(templatePhysicalId);
+            this.templatePhysicalId = Output.ofNullable(templatePhysicalId);
             return this;
         }
 
-        public Builder templateUrl(@Nullable Input<String> templateUrl) {
+        public Builder templateUrl(@Nullable Output<String> templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
 
         public Builder templateUrl(@Nullable String templateUrl) {
-            this.templateUrl = Input.ofNullable(templateUrl);
+            this.templateUrl = Output.ofNullable(templateUrl);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ProvisioningArtifactState build() {

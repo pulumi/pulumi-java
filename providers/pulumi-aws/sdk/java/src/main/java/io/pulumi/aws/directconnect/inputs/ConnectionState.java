@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsDevice")
-      private final @Nullable Input<String> awsDevice;
+      private final @Nullable Output<String> awsDevice;
 
-    public Input<String> getAwsDevice() {
-        return this.awsDevice == null ? Input.empty() : this.awsDevice;
+    public Output<String> getAwsDevice() {
+        return this.awsDevice == null ? Output.empty() : this.awsDevice;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bandwidth")
-      private final @Nullable Input<String> bandwidth;
+      private final @Nullable Output<String> bandwidth;
 
-    public Input<String> getBandwidth() {
-        return this.bandwidth == null ? Input.empty() : this.bandwidth;
+    public Output<String> getBandwidth() {
+        return this.bandwidth == null ? Output.empty() : this.bandwidth;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasLogicalRedundancy")
-      private final @Nullable Input<String> hasLogicalRedundancy;
+      private final @Nullable Output<String> hasLogicalRedundancy;
 
-    public Input<String> getHasLogicalRedundancy() {
-        return this.hasLogicalRedundancy == null ? Input.empty() : this.hasLogicalRedundancy;
+    public Output<String> getHasLogicalRedundancy() {
+        return this.hasLogicalRedundancy == null ? Output.empty() : this.hasLogicalRedundancy;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jumboFrameCapable")
-      private final @Nullable Input<Boolean> jumboFrameCapable;
+      private final @Nullable Output<Boolean> jumboFrameCapable;
 
-    public Input<Boolean> getJumboFrameCapable() {
-        return this.jumboFrameCapable == null ? Input.empty() : this.jumboFrameCapable;
+    public Output<Boolean> getJumboFrameCapable() {
+        return this.jumboFrameCapable == null ? Output.empty() : this.jumboFrameCapable;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerAccountId")
-      private final @Nullable Input<String> ownerAccountId;
+      private final @Nullable Output<String> ownerAccountId;
 
-    public Input<String> getOwnerAccountId() {
-        return this.ownerAccountId == null ? Input.empty() : this.ownerAccountId;
+    public Output<String> getOwnerAccountId() {
+        return this.ownerAccountId == null ? Output.empty() : this.ownerAccountId;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerName")
-      private final @Nullable Input<String> providerName;
+      private final @Nullable Output<String> providerName;
 
-    public Input<String> getProviderName() {
-        return this.providerName == null ? Input.empty() : this.providerName;
+    public Output<String> getProviderName() {
+        return this.providerName == null ? Output.empty() : this.providerName;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -131,24 +131,24 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ConnectionState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> awsDevice,
-        @Nullable Input<String> bandwidth,
-        @Nullable Input<String> hasLogicalRedundancy,
-        @Nullable Input<Boolean> jumboFrameCapable,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ownerAccountId,
-        @Nullable Input<String> providerName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> awsDevice,
+        @Nullable Output<String> bandwidth,
+        @Nullable Output<String> hasLogicalRedundancy,
+        @Nullable Output<Boolean> jumboFrameCapable,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ownerAccountId,
+        @Nullable Output<String> providerName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.awsDevice = awsDevice;
         this.bandwidth = bandwidth;
@@ -163,17 +163,17 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionState() {
-        this.arn = Input.empty();
-        this.awsDevice = Input.empty();
-        this.bandwidth = Input.empty();
-        this.hasLogicalRedundancy = Input.empty();
-        this.jumboFrameCapable = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.ownerAccountId = Input.empty();
-        this.providerName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.awsDevice = Output.empty();
+        this.bandwidth = Output.empty();
+        this.hasLogicalRedundancy = Output.empty();
+        this.jumboFrameCapable = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.ownerAccountId = Output.empty();
+        this.providerName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,17 +185,17 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> awsDevice;
-        private @Nullable Input<String> bandwidth;
-        private @Nullable Input<String> hasLogicalRedundancy;
-        private @Nullable Input<Boolean> jumboFrameCapable;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ownerAccountId;
-        private @Nullable Input<String> providerName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> awsDevice;
+        private @Nullable Output<String> bandwidth;
+        private @Nullable Output<String> hasLogicalRedundancy;
+        private @Nullable Output<Boolean> jumboFrameCapable;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ownerAccountId;
+        private @Nullable Output<String> providerName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -216,113 +216,113 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder awsDevice(@Nullable Input<String> awsDevice) {
+        public Builder awsDevice(@Nullable Output<String> awsDevice) {
             this.awsDevice = awsDevice;
             return this;
         }
 
         public Builder awsDevice(@Nullable String awsDevice) {
-            this.awsDevice = Input.ofNullable(awsDevice);
+            this.awsDevice = Output.ofNullable(awsDevice);
             return this;
         }
 
-        public Builder bandwidth(@Nullable Input<String> bandwidth) {
+        public Builder bandwidth(@Nullable Output<String> bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
 
         public Builder bandwidth(@Nullable String bandwidth) {
-            this.bandwidth = Input.ofNullable(bandwidth);
+            this.bandwidth = Output.ofNullable(bandwidth);
             return this;
         }
 
-        public Builder hasLogicalRedundancy(@Nullable Input<String> hasLogicalRedundancy) {
+        public Builder hasLogicalRedundancy(@Nullable Output<String> hasLogicalRedundancy) {
             this.hasLogicalRedundancy = hasLogicalRedundancy;
             return this;
         }
 
         public Builder hasLogicalRedundancy(@Nullable String hasLogicalRedundancy) {
-            this.hasLogicalRedundancy = Input.ofNullable(hasLogicalRedundancy);
+            this.hasLogicalRedundancy = Output.ofNullable(hasLogicalRedundancy);
             return this;
         }
 
-        public Builder jumboFrameCapable(@Nullable Input<Boolean> jumboFrameCapable) {
+        public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
             this.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
 
         public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
-            this.jumboFrameCapable = Input.ofNullable(jumboFrameCapable);
+            this.jumboFrameCapable = Output.ofNullable(jumboFrameCapable);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerAccountId(@Nullable Input<String> ownerAccountId) {
+        public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
 
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
-            this.ownerAccountId = Input.ofNullable(ownerAccountId);
+            this.ownerAccountId = Output.ofNullable(ownerAccountId);
             return this;
         }
 
-        public Builder providerName(@Nullable Input<String> providerName) {
+        public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
 
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Input.ofNullable(providerName);
+            this.providerName = Output.ofNullable(providerName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ConnectionState build() {

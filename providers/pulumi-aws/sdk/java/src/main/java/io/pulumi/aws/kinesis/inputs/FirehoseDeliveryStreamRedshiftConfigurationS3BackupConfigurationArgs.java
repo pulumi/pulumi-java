@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      * 
      */
     @InputImport(name="bucketArn", required=true)
-      private final Input<String> bucketArn;
+      private final Output<String> bucketArn;
 
-    public Input<String> getBucketArn() {
+    public Output<String> getBucketArn() {
         return this.bucketArn;
     }
 
@@ -32,10 +32,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      * 
      */
     @InputImport(name="bufferInterval")
-      private final @Nullable Input<Integer> bufferInterval;
+      private final @Nullable Output<Integer> bufferInterval;
 
-    public Input<Integer> getBufferInterval() {
-        return this.bufferInterval == null ? Input.empty() : this.bufferInterval;
+    public Output<Integer> getBufferInterval() {
+        return this.bufferInterval == null ? Output.empty() : this.bufferInterval;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      * 
      */
     @InputImport(name="bufferSize")
-      private final @Nullable Input<Integer> bufferSize;
+      private final @Nullable Output<Integer> bufferSize;
 
-    public Input<Integer> getBufferSize() {
-        return this.bufferSize == null ? Input.empty() : this.bufferSize;
+    public Output<Integer> getBufferSize() {
+        return this.bufferSize == null ? Output.empty() : this.bufferSize;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-      private final @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+      private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
-    public Input<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
+    public Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
+        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      * 
      */
     @InputImport(name="compressionFormat")
-      private final @Nullable Input<String> compressionFormat;
+      private final @Nullable Output<String> compressionFormat;
 
-    public Input<String> getCompressionFormat() {
-        return this.compressionFormat == null ? Input.empty() : this.compressionFormat;
+    public Output<String> getCompressionFormat() {
+        return this.compressionFormat == null ? Output.empty() : this.compressionFormat;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      * 
      */
     @InputImport(name="errorOutputPrefix")
-      private final @Nullable Input<String> errorOutputPrefix;
+      private final @Nullable Output<String> errorOutputPrefix;
 
-    public Input<String> getErrorOutputPrefix() {
-        return this.errorOutputPrefix == null ? Input.empty() : this.errorOutputPrefix;
+    public Output<String> getErrorOutputPrefix() {
+        return this.errorOutputPrefix == null ? Output.empty() : this.errorOutputPrefix;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs(
-        Input<String> bucketArn,
-        @Nullable Input<Integer> bufferInterval,
-        @Nullable Input<Integer> bufferSize,
-        @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
-        @Nullable Input<String> compressionFormat,
-        @Nullable Input<String> errorOutputPrefix,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<String> prefix,
-        Input<String> roleArn) {
+        Output<String> bucketArn,
+        @Nullable Output<Integer> bufferInterval,
+        @Nullable Output<Integer> bufferSize,
+        @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
+        @Nullable Output<String> compressionFormat,
+        @Nullable Output<String> errorOutputPrefix,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<String> prefix,
+        Output<String> roleArn) {
         this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
         this.bufferInterval = bufferInterval;
         this.bufferSize = bufferSize;
@@ -139,15 +139,15 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     }
 
     private FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs() {
-        this.bucketArn = Input.empty();
-        this.bufferInterval = Input.empty();
-        this.bufferSize = Input.empty();
-        this.cloudwatchLoggingOptions = Input.empty();
-        this.compressionFormat = Input.empty();
-        this.errorOutputPrefix = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.prefix = Input.empty();
-        this.roleArn = Input.empty();
+        this.bucketArn = Output.empty();
+        this.bufferInterval = Output.empty();
+        this.bufferSize = Output.empty();
+        this.cloudwatchLoggingOptions = Output.empty();
+        this.compressionFormat = Output.empty();
+        this.errorOutputPrefix = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.prefix = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     }
 
     public static final class Builder {
-        private Input<String> bucketArn;
-        private @Nullable Input<Integer> bufferInterval;
-        private @Nullable Input<Integer> bufferSize;
-        private @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
-        private @Nullable Input<String> compressionFormat;
-        private @Nullable Input<String> errorOutputPrefix;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<String> prefix;
-        private Input<String> roleArn;
+        private Output<String> bucketArn;
+        private @Nullable Output<Integer> bufferInterval;
+        private @Nullable Output<Integer> bufferSize;
+        private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+        private @Nullable Output<String> compressionFormat;
+        private @Nullable Output<String> errorOutputPrefix;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<String> prefix;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder bucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Output<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
+            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder bufferInterval(@Nullable Input<Integer> bufferInterval) {
+        public Builder bufferInterval(@Nullable Output<Integer> bufferInterval) {
             this.bufferInterval = bufferInterval;
             return this;
         }
 
         public Builder bufferInterval(@Nullable Integer bufferInterval) {
-            this.bufferInterval = Input.ofNullable(bufferInterval);
+            this.bufferInterval = Output.ofNullable(bufferInterval);
             return this;
         }
 
-        public Builder bufferSize(@Nullable Input<Integer> bufferSize) {
+        public Builder bufferSize(@Nullable Output<Integer> bufferSize) {
             this.bufferSize = bufferSize;
             return this;
         }
 
         public Builder bufferSize(@Nullable Integer bufferSize) {
-            this.bufferSize = Input.ofNullable(bufferSize);
+            this.bufferSize = Output.ofNullable(bufferSize);
             return this;
         }
 
-        public Builder cloudwatchLoggingOptions(@Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder compressionFormat(@Nullable Input<String> compressionFormat) {
+        public Builder compressionFormat(@Nullable Output<String> compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
         public Builder compressionFormat(@Nullable String compressionFormat) {
-            this.compressionFormat = Input.ofNullable(compressionFormat);
+            this.compressionFormat = Output.ofNullable(compressionFormat);
             return this;
         }
 
-        public Builder errorOutputPrefix(@Nullable Input<String> errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable Output<String> errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
         public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
-            this.errorOutputPrefix = Input.ofNullable(errorOutputPrefix);
+            this.errorOutputPrefix = Output.ofNullable(errorOutputPrefix);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs build() {

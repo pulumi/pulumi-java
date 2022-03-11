@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="toolExecution")
-      private final @Nullable Input<ToolExecutionArgs> toolExecution;
+      private final @Nullable Output<ToolExecutionArgs> toolExecution;
 
-    public Input<ToolExecutionArgs> getToolExecution() {
-        return this.toolExecution == null ? Input.empty() : this.toolExecution;
+    public Output<ToolExecutionArgs> getToolExecution() {
+        return this.toolExecution == null ? Output.empty() : this.toolExecution;
     }
 
-    public ToolExecutionStepArgs(@Nullable Input<ToolExecutionArgs> toolExecution) {
+    public ToolExecutionStepArgs(@Nullable Output<ToolExecutionArgs> toolExecution) {
         this.toolExecution = toolExecution;
     }
 
     private ToolExecutionStepArgs() {
-        this.toolExecution = Input.empty();
+        this.toolExecution = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<ToolExecutionArgs> toolExecution;
+        private @Nullable Output<ToolExecutionArgs> toolExecution;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
     	      this.toolExecution = defaults.toolExecution;
         }
 
-        public Builder toolExecution(@Nullable Input<ToolExecutionArgs> toolExecution) {
+        public Builder toolExecution(@Nullable Output<ToolExecutionArgs> toolExecution) {
             this.toolExecution = toolExecution;
             return this;
         }
 
         public Builder toolExecution(@Nullable ToolExecutionArgs toolExecution) {
-            this.toolExecution = Input.ofNullable(toolExecution);
+            this.toolExecution = Output.ofNullable(toolExecution);
             return this;
         }
         public ToolExecutionStepArgs build() {

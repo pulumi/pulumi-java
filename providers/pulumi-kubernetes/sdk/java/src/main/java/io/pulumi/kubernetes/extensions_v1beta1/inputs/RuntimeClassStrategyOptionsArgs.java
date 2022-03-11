@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowedRuntimeClassNames", required=true)
-      private final Input<List<String>> allowedRuntimeClassNames;
+      private final Output<List<String>> allowedRuntimeClassNames;
 
-    public Input<List<String>> getAllowedRuntimeClassNames() {
+    public Output<List<String>> getAllowedRuntimeClassNames() {
         return this.allowedRuntimeClassNames;
     }
 
@@ -35,22 +35,22 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="defaultRuntimeClassName")
-      private final @Nullable Input<String> defaultRuntimeClassName;
+      private final @Nullable Output<String> defaultRuntimeClassName;
 
-    public Input<String> getDefaultRuntimeClassName() {
-        return this.defaultRuntimeClassName == null ? Input.empty() : this.defaultRuntimeClassName;
+    public Output<String> getDefaultRuntimeClassName() {
+        return this.defaultRuntimeClassName == null ? Output.empty() : this.defaultRuntimeClassName;
     }
 
     public RuntimeClassStrategyOptionsArgs(
-        Input<List<String>> allowedRuntimeClassNames,
-        @Nullable Input<String> defaultRuntimeClassName) {
+        Output<List<String>> allowedRuntimeClassNames,
+        @Nullable Output<String> defaultRuntimeClassName) {
         this.allowedRuntimeClassNames = Objects.requireNonNull(allowedRuntimeClassNames, "expected parameter 'allowedRuntimeClassNames' to be non-null");
         this.defaultRuntimeClassName = defaultRuntimeClassName;
     }
 
     private RuntimeClassStrategyOptionsArgs() {
-        this.allowedRuntimeClassNames = Input.empty();
-        this.defaultRuntimeClassName = Input.empty();
+        this.allowedRuntimeClassNames = Output.empty();
+        this.defaultRuntimeClassName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<List<String>> allowedRuntimeClassNames;
-        private @Nullable Input<String> defaultRuntimeClassName;
+        private Output<List<String>> allowedRuntimeClassNames;
+        private @Nullable Output<String> defaultRuntimeClassName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
     	      this.defaultRuntimeClassName = defaults.defaultRuntimeClassName;
         }
 
-        public Builder allowedRuntimeClassNames(Input<List<String>> allowedRuntimeClassNames) {
+        public Builder allowedRuntimeClassNames(Output<List<String>> allowedRuntimeClassNames) {
             this.allowedRuntimeClassNames = Objects.requireNonNull(allowedRuntimeClassNames);
             return this;
         }
 
         public Builder allowedRuntimeClassNames(List<String> allowedRuntimeClassNames) {
-            this.allowedRuntimeClassNames = Input.of(Objects.requireNonNull(allowedRuntimeClassNames));
+            this.allowedRuntimeClassNames = Output.of(Objects.requireNonNull(allowedRuntimeClassNames));
             return this;
         }
 
-        public Builder defaultRuntimeClassName(@Nullable Input<String> defaultRuntimeClassName) {
+        public Builder defaultRuntimeClassName(@Nullable Output<String> defaultRuntimeClassName) {
             this.defaultRuntimeClassName = defaultRuntimeClassName;
             return this;
         }
 
         public Builder defaultRuntimeClassName(@Nullable String defaultRuntimeClassName) {
-            this.defaultRuntimeClassName = Input.ofNullable(defaultRuntimeClassName);
+            this.defaultRuntimeClassName = Output.ofNullable(defaultRuntimeClassName);
             return this;
         }
         public RuntimeClassStrategyOptionsArgs build() {

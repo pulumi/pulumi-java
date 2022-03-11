@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="apiGroup")
-      private final @Nullable Input<String> apiGroup;
+      private final @Nullable Output<String> apiGroup;
 
-    public Input<String> getApiGroup() {
-        return this.apiGroup == null ? Input.empty() : this.apiGroup;
+    public Output<String> getApiGroup() {
+        return this.apiGroup == null ? Output.empty() : this.apiGroup;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -45,9 +45,9 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -56,10 +56,10 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<String> scope;
+      private final @Nullable Output<String> scope;
 
-    public Input<String> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<String> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     public IngressClassParametersReferenceArgs(
-        @Nullable Input<String> apiGroup,
-        Input<String> kind,
-        Input<String> name,
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> scope) {
+        @Nullable Output<String> apiGroup,
+        Output<String> kind,
+        Output<String> name,
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> scope) {
         this.apiGroup = apiGroup;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -87,11 +87,11 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     }
 
     private IngressClassParametersReferenceArgs() {
-        this.apiGroup = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.scope = Input.empty();
+        this.apiGroup = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiGroup;
-        private Input<String> kind;
-        private Input<String> name;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> scope;
+        private @Nullable Output<String> apiGroup;
+        private Output<String> kind;
+        private Output<String> name;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     	      this.scope = defaults.scope;
         }
 
-        public Builder apiGroup(@Nullable Input<String> apiGroup) {
+        public Builder apiGroup(@Nullable Output<String> apiGroup) {
             this.apiGroup = apiGroup;
             return this;
         }
 
         public Builder apiGroup(@Nullable String apiGroup) {
-            this.apiGroup = Input.ofNullable(apiGroup);
+            this.apiGroup = Output.ofNullable(apiGroup);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder scope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable String scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
         public IngressClassParametersReferenceArgs build() {

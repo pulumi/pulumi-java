@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsublite_v1.inputs.PartitionConfigArgs;
 import io.pulumi.googlenative.pubsublite_v1.inputs.ReservationConfigArgs;
@@ -18,10 +18,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     public static final TopicArgs Empty = new TopicArgs();
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -29,10 +29,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -40,17 +40,17 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionConfig")
-      private final @Nullable Input<PartitionConfigArgs> partitionConfig;
+      private final @Nullable Output<PartitionConfigArgs> partitionConfig;
 
-    public Input<PartitionConfigArgs> getPartitionConfig() {
-        return this.partitionConfig == null ? Input.empty() : this.partitionConfig;
+    public Output<PartitionConfigArgs> getPartitionConfig() {
+        return this.partitionConfig == null ? Output.empty() : this.partitionConfig;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservationConfig")
-      private final @Nullable Input<ReservationConfigArgs> reservationConfig;
+      private final @Nullable Output<ReservationConfigArgs> reservationConfig;
 
-    public Input<ReservationConfigArgs> getReservationConfig() {
-        return this.reservationConfig == null ? Input.empty() : this.reservationConfig;
+    public Output<ReservationConfigArgs> getReservationConfig() {
+        return this.reservationConfig == null ? Output.empty() : this.reservationConfig;
     }
 
     /**
@@ -69,27 +69,27 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionConfig")
-      private final @Nullable Input<RetentionConfigArgs> retentionConfig;
+      private final @Nullable Output<RetentionConfigArgs> retentionConfig;
 
-    public Input<RetentionConfigArgs> getRetentionConfig() {
-        return this.retentionConfig == null ? Input.empty() : this.retentionConfig;
+    public Output<RetentionConfigArgs> getRetentionConfig() {
+        return this.retentionConfig == null ? Output.empty() : this.retentionConfig;
     }
 
     @InputImport(name="topicId", required=true)
-      private final Input<String> topicId;
+      private final Output<String> topicId;
 
-    public Input<String> getTopicId() {
+    public Output<String> getTopicId() {
         return this.topicId;
     }
 
     public TopicArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<PartitionConfigArgs> partitionConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<ReservationConfigArgs> reservationConfig,
-        @Nullable Input<RetentionConfigArgs> retentionConfig,
-        Input<String> topicId) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<PartitionConfigArgs> partitionConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<ReservationConfigArgs> reservationConfig,
+        @Nullable Output<RetentionConfigArgs> retentionConfig,
+        Output<String> topicId) {
         this.location = location;
         this.name = name;
         this.partitionConfig = partitionConfig;
@@ -100,13 +100,13 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopicArgs() {
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.partitionConfig = Input.empty();
-        this.project = Input.empty();
-        this.reservationConfig = Input.empty();
-        this.retentionConfig = Input.empty();
-        this.topicId = Input.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.partitionConfig = Output.empty();
+        this.project = Output.empty();
+        this.reservationConfig = Output.empty();
+        this.retentionConfig = Output.empty();
+        this.topicId = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,13 +118,13 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<PartitionConfigArgs> partitionConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<ReservationConfigArgs> reservationConfig;
-        private @Nullable Input<RetentionConfigArgs> retentionConfig;
-        private Input<String> topicId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<PartitionConfigArgs> partitionConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<ReservationConfigArgs> reservationConfig;
+        private @Nullable Output<RetentionConfigArgs> retentionConfig;
+        private Output<String> topicId;
 
         public Builder() {
     	      // Empty
@@ -141,73 +141,73 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicId = defaults.topicId;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder partitionConfig(@Nullable Input<PartitionConfigArgs> partitionConfig) {
+        public Builder partitionConfig(@Nullable Output<PartitionConfigArgs> partitionConfig) {
             this.partitionConfig = partitionConfig;
             return this;
         }
 
         public Builder partitionConfig(@Nullable PartitionConfigArgs partitionConfig) {
-            this.partitionConfig = Input.ofNullable(partitionConfig);
+            this.partitionConfig = Output.ofNullable(partitionConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder reservationConfig(@Nullable Input<ReservationConfigArgs> reservationConfig) {
+        public Builder reservationConfig(@Nullable Output<ReservationConfigArgs> reservationConfig) {
             this.reservationConfig = reservationConfig;
             return this;
         }
 
         public Builder reservationConfig(@Nullable ReservationConfigArgs reservationConfig) {
-            this.reservationConfig = Input.ofNullable(reservationConfig);
+            this.reservationConfig = Output.ofNullable(reservationConfig);
             return this;
         }
 
-        public Builder retentionConfig(@Nullable Input<RetentionConfigArgs> retentionConfig) {
+        public Builder retentionConfig(@Nullable Output<RetentionConfigArgs> retentionConfig) {
             this.retentionConfig = retentionConfig;
             return this;
         }
 
         public Builder retentionConfig(@Nullable RetentionConfigArgs retentionConfig) {
-            this.retentionConfig = Input.ofNullable(retentionConfig);
+            this.retentionConfig = Output.ofNullable(retentionConfig);
             return this;
         }
 
-        public Builder topicId(Input<String> topicId) {
+        public Builder topicId(Output<String> topicId) {
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }
 
         public Builder topicId(String topicId) {
-            this.topicId = Input.of(Objects.requireNonNull(topicId));
+            this.topicId = Output.of(Objects.requireNonNull(topicId));
             return this;
         }
         public TopicArgs build() {

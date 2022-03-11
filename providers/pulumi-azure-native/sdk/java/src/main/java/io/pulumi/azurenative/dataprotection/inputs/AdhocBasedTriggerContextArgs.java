@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.AdhocBasedTaggingCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<String> objectType;
+      private final Output<String> objectType;
 
-    public Input<String> getObjectType() {
+    public Output<String> getObjectType() {
         return this.objectType;
     }
 
@@ -35,22 +35,22 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="taggingCriteria", required=true)
-      private final Input<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
+      private final Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
 
-    public Input<AdhocBasedTaggingCriteriaArgs> getTaggingCriteria() {
+    public Output<AdhocBasedTaggingCriteriaArgs> getTaggingCriteria() {
         return this.taggingCriteria;
     }
 
     public AdhocBasedTriggerContextArgs(
-        Input<String> objectType,
-        Input<AdhocBasedTaggingCriteriaArgs> taggingCriteria) {
+        Output<String> objectType,
+        Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria) {
         this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
         this.taggingCriteria = Objects.requireNonNull(taggingCriteria, "expected parameter 'taggingCriteria' to be non-null");
     }
 
     private AdhocBasedTriggerContextArgs() {
-        this.objectType = Input.empty();
-        this.taggingCriteria = Input.empty();
+        this.objectType = Output.empty();
+        this.taggingCriteria = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> objectType;
-        private Input<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
+        private Output<String> objectType;
+        private Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
     	      this.taggingCriteria = defaults.taggingCriteria;
         }
 
-        public Builder objectType(Input<String> objectType) {
+        public Builder objectType(Output<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(String objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder taggingCriteria(Input<AdhocBasedTaggingCriteriaArgs> taggingCriteria) {
+        public Builder taggingCriteria(Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria) {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
 
         public Builder taggingCriteria(AdhocBasedTaggingCriteriaArgs taggingCriteria) {
-            this.taggingCriteria = Input.of(Objects.requireNonNull(taggingCriteria));
+            this.taggingCriteria = Output.of(Objects.requireNonNull(taggingCriteria));
             return this;
         }
         public AdhocBasedTriggerContextArgs build() {

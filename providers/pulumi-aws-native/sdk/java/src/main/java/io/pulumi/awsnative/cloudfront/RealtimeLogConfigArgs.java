@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.RealtimeLogConfigEndPointArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -18,38 +18,38 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
     public static final RealtimeLogConfigArgs Empty = new RealtimeLogConfigArgs();
 
     @InputImport(name="endPoints", required=true)
-      private final Input<List<RealtimeLogConfigEndPointArgs>> endPoints;
+      private final Output<List<RealtimeLogConfigEndPointArgs>> endPoints;
 
-    public Input<List<RealtimeLogConfigEndPointArgs>> getEndPoints() {
+    public Output<List<RealtimeLogConfigEndPointArgs>> getEndPoints() {
         return this.endPoints;
     }
 
     @InputImport(name="fields", required=true)
-      private final Input<List<String>> fields;
+      private final Output<List<String>> fields;
 
-    public Input<List<String>> getFields() {
+    public Output<List<String>> getFields() {
         return this.fields;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="samplingRate", required=true)
-      private final Input<Double> samplingRate;
+      private final Output<Double> samplingRate;
 
-    public Input<Double> getSamplingRate() {
+    public Output<Double> getSamplingRate() {
         return this.samplingRate;
     }
 
     public RealtimeLogConfigArgs(
-        Input<List<RealtimeLogConfigEndPointArgs>> endPoints,
-        Input<List<String>> fields,
-        @Nullable Input<String> name,
-        Input<Double> samplingRate) {
+        Output<List<RealtimeLogConfigEndPointArgs>> endPoints,
+        Output<List<String>> fields,
+        @Nullable Output<String> name,
+        Output<Double> samplingRate) {
         this.endPoints = Objects.requireNonNull(endPoints, "expected parameter 'endPoints' to be non-null");
         this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
         this.name = name;
@@ -57,10 +57,10 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RealtimeLogConfigArgs() {
-        this.endPoints = Input.empty();
-        this.fields = Input.empty();
-        this.name = Input.empty();
-        this.samplingRate = Input.empty();
+        this.endPoints = Output.empty();
+        this.fields = Output.empty();
+        this.name = Output.empty();
+        this.samplingRate = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<List<RealtimeLogConfigEndPointArgs>> endPoints;
-        private Input<List<String>> fields;
-        private @Nullable Input<String> name;
-        private Input<Double> samplingRate;
+        private Output<List<RealtimeLogConfigEndPointArgs>> endPoints;
+        private Output<List<String>> fields;
+        private @Nullable Output<String> name;
+        private Output<Double> samplingRate;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder endPoints(Input<List<RealtimeLogConfigEndPointArgs>> endPoints) {
+        public Builder endPoints(Output<List<RealtimeLogConfigEndPointArgs>> endPoints) {
             this.endPoints = Objects.requireNonNull(endPoints);
             return this;
         }
 
         public Builder endPoints(List<RealtimeLogConfigEndPointArgs> endPoints) {
-            this.endPoints = Input.of(Objects.requireNonNull(endPoints));
+            this.endPoints = Output.of(Objects.requireNonNull(endPoints));
             return this;
         }
 
-        public Builder fields(Input<List<String>> fields) {
+        public Builder fields(Output<List<String>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
         public Builder fields(List<String> fields) {
-            this.fields = Input.of(Objects.requireNonNull(fields));
+            this.fields = Output.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder samplingRate(Input<Double> samplingRate) {
+        public Builder samplingRate(Output<Double> samplingRate) {
             this.samplingRate = Objects.requireNonNull(samplingRate);
             return this;
         }
 
         public Builder samplingRate(Double samplingRate) {
-            this.samplingRate = Input.of(Objects.requireNonNull(samplingRate));
+            this.samplingRate = Output.of(Objects.requireNonNull(samplingRate));
             return this;
         }
         public RealtimeLogConfigArgs build() {

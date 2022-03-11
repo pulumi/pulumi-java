@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dax.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public SubnetGroupState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<String> vpcId) {
         this.description = description;
         this.name = name;
         this.subnetIds = subnetIds;
@@ -71,10 +71,10 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetGroupState() {
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.subnetIds = Input.empty();
-        this.vpcId = Input.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.subnetIds = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public SubnetGroupState build() {

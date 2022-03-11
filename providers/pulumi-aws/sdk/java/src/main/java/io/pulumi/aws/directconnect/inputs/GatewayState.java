@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amazonSideAsn")
-      private final @Nullable Input<String> amazonSideAsn;
+      private final @Nullable Output<String> amazonSideAsn;
 
-    public Input<String> getAmazonSideAsn() {
-        return this.amazonSideAsn == null ? Input.empty() : this.amazonSideAsn;
+    public Output<String> getAmazonSideAsn() {
+        return this.amazonSideAsn == null ? Output.empty() : this.amazonSideAsn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerAccountId")
-      private final @Nullable Input<String> ownerAccountId;
+      private final @Nullable Output<String> ownerAccountId;
 
-    public Input<String> getOwnerAccountId() {
-        return this.ownerAccountId == null ? Input.empty() : this.ownerAccountId;
+    public Output<String> getOwnerAccountId() {
+        return this.ownerAccountId == null ? Output.empty() : this.ownerAccountId;
     }
 
     public GatewayState(
-        @Nullable Input<String> amazonSideAsn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ownerAccountId) {
+        @Nullable Output<String> amazonSideAsn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ownerAccountId) {
         this.amazonSideAsn = amazonSideAsn;
         this.name = name;
         this.ownerAccountId = ownerAccountId;
     }
 
     private GatewayState() {
-        this.amazonSideAsn = Input.empty();
-        this.name = Input.empty();
-        this.ownerAccountId = Input.empty();
+        this.amazonSideAsn = Output.empty();
+        this.name = Output.empty();
+        this.ownerAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> amazonSideAsn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ownerAccountId;
+        private @Nullable Output<String> amazonSideAsn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ownerAccountId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     	      this.ownerAccountId = defaults.ownerAccountId;
         }
 
-        public Builder amazonSideAsn(@Nullable Input<String> amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Output<String> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
 
         public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
-            this.amazonSideAsn = Input.ofNullable(amazonSideAsn);
+            this.amazonSideAsn = Output.ofNullable(amazonSideAsn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerAccountId(@Nullable Input<String> ownerAccountId) {
+        public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
 
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
-            this.ownerAccountId = Input.ofNullable(ownerAccountId);
+            this.ownerAccountId = Output.ofNullable(ownerAccountId);
             return this;
         }
         public GatewayState build() {

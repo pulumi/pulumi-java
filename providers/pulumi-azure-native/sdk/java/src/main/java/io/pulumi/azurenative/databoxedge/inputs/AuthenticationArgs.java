@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.SymmetricKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="symmetricKey")
-      private final @Nullable Input<SymmetricKeyArgs> symmetricKey;
+      private final @Nullable Output<SymmetricKeyArgs> symmetricKey;
 
-    public Input<SymmetricKeyArgs> getSymmetricKey() {
-        return this.symmetricKey == null ? Input.empty() : this.symmetricKey;
+    public Output<SymmetricKeyArgs> getSymmetricKey() {
+        return this.symmetricKey == null ? Output.empty() : this.symmetricKey;
     }
 
-    public AuthenticationArgs(@Nullable Input<SymmetricKeyArgs> symmetricKey) {
+    public AuthenticationArgs(@Nullable Output<SymmetricKeyArgs> symmetricKey) {
         this.symmetricKey = symmetricKey;
     }
 
     private AuthenticationArgs() {
-        this.symmetricKey = Input.empty();
+        this.symmetricKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SymmetricKeyArgs> symmetricKey;
+        private @Nullable Output<SymmetricKeyArgs> symmetricKey;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.symmetricKey = defaults.symmetricKey;
         }
 
-        public Builder symmetricKey(@Nullable Input<SymmetricKeyArgs> symmetricKey) {
+        public Builder symmetricKey(@Nullable Output<SymmetricKeyArgs> symmetricKey) {
             this.symmetricKey = symmetricKey;
             return this;
         }
 
         public Builder symmetricKey(@Nullable SymmetricKeyArgs symmetricKey) {
-            this.symmetricKey = Input.ofNullable(symmetricKey);
+            this.symmetricKey = Output.ofNullable(symmetricKey);
             return this;
         }
         public AuthenticationArgs build() {

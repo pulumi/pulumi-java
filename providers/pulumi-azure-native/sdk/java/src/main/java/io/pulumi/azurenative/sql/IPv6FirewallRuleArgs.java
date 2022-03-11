@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endIPv6Address")
-      private final @Nullable Input<String> endIPv6Address;
+      private final @Nullable Output<String> endIPv6Address;
 
-    public Input<String> getEndIPv6Address() {
-        return this.endIPv6Address == null ? Input.empty() : this.endIPv6Address;
+    public Output<String> getEndIPv6Address() {
+        return this.endIPv6Address == null ? Output.empty() : this.endIPv6Address;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="firewallRuleName")
-      private final @Nullable Input<String> firewallRuleName;
+      private final @Nullable Output<String> firewallRuleName;
 
-    public Input<String> getFirewallRuleName() {
-        return this.firewallRuleName == null ? Input.empty() : this.firewallRuleName;
+    public Output<String> getFirewallRuleName() {
+        return this.firewallRuleName == null ? Output.empty() : this.firewallRuleName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,9 +63,9 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -74,19 +74,19 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startIPv6Address")
-      private final @Nullable Input<String> startIPv6Address;
+      private final @Nullable Output<String> startIPv6Address;
 
-    public Input<String> getStartIPv6Address() {
-        return this.startIPv6Address == null ? Input.empty() : this.startIPv6Address;
+    public Output<String> getStartIPv6Address() {
+        return this.startIPv6Address == null ? Output.empty() : this.startIPv6Address;
     }
 
     public IPv6FirewallRuleArgs(
-        @Nullable Input<String> endIPv6Address,
-        @Nullable Input<String> firewallRuleName,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<String> startIPv6Address) {
+        @Nullable Output<String> endIPv6Address,
+        @Nullable Output<String> firewallRuleName,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<String> startIPv6Address) {
         this.endIPv6Address = endIPv6Address;
         this.firewallRuleName = firewallRuleName;
         this.name = name;
@@ -96,12 +96,12 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IPv6FirewallRuleArgs() {
-        this.endIPv6Address = Input.empty();
-        this.firewallRuleName = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.startIPv6Address = Input.empty();
+        this.endIPv6Address = Output.empty();
+        this.firewallRuleName = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.startIPv6Address = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endIPv6Address;
-        private @Nullable Input<String> firewallRuleName;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<String> startIPv6Address;
+        private @Nullable Output<String> endIPv6Address;
+        private @Nullable Output<String> firewallRuleName;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<String> startIPv6Address;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     	      this.startIPv6Address = defaults.startIPv6Address;
         }
 
-        public Builder endIPv6Address(@Nullable Input<String> endIPv6Address) {
+        public Builder endIPv6Address(@Nullable Output<String> endIPv6Address) {
             this.endIPv6Address = endIPv6Address;
             return this;
         }
 
         public Builder endIPv6Address(@Nullable String endIPv6Address) {
-            this.endIPv6Address = Input.ofNullable(endIPv6Address);
+            this.endIPv6Address = Output.ofNullable(endIPv6Address);
             return this;
         }
 
-        public Builder firewallRuleName(@Nullable Input<String> firewallRuleName) {
+        public Builder firewallRuleName(@Nullable Output<String> firewallRuleName) {
             this.firewallRuleName = firewallRuleName;
             return this;
         }
 
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
-            this.firewallRuleName = Input.ofNullable(firewallRuleName);
+            this.firewallRuleName = Output.ofNullable(firewallRuleName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder startIPv6Address(@Nullable Input<String> startIPv6Address) {
+        public Builder startIPv6Address(@Nullable Output<String> startIPv6Address) {
             this.startIPv6Address = startIPv6Address;
             return this;
         }
 
         public Builder startIPv6Address(@Nullable String startIPv6Address) {
-            this.startIPv6Address = Input.ofNullable(startIPv6Address);
+            this.startIPv6Address = Output.ofNullable(startIPv6Address);
             return this;
         }
         public IPv6FirewallRuleArgs build() {

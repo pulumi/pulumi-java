@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableCustomerAnalytics")
-      private final @Nullable Input<Boolean> enableCustomerAnalytics;
+      private final @Nullable Output<Boolean> enableCustomerAnalytics;
 
-    public Input<Boolean> getEnableCustomerAnalytics() {
-        return this.enableCustomerAnalytics == null ? Input.empty() : this.enableCustomerAnalytics;
+    public Output<Boolean> getEnableCustomerAnalytics() {
+        return this.enableCustomerAnalytics == null ? Output.empty() : this.enableCustomerAnalytics;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logAnalyticsWorkspaceArmId")
-      private final @Nullable Input<String> logAnalyticsWorkspaceArmId;
+      private final @Nullable Output<String> logAnalyticsWorkspaceArmId;
 
-    public Input<String> getLogAnalyticsWorkspaceArmId() {
-        return this.logAnalyticsWorkspaceArmId == null ? Input.empty() : this.logAnalyticsWorkspaceArmId;
+    public Output<String> getLogAnalyticsWorkspaceArmId() {
+        return this.logAnalyticsWorkspaceArmId == null ? Output.empty() : this.logAnalyticsWorkspaceArmId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logAnalyticsWorkspaceId")
-      private final @Nullable Input<String> logAnalyticsWorkspaceId;
+      private final @Nullable Output<String> logAnalyticsWorkspaceId;
 
-    public Input<String> getLogAnalyticsWorkspaceId() {
-        return this.logAnalyticsWorkspaceId == null ? Input.empty() : this.logAnalyticsWorkspaceId;
+    public Output<String> getLogAnalyticsWorkspaceId() {
+        return this.logAnalyticsWorkspaceId == null ? Output.empty() : this.logAnalyticsWorkspaceId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logAnalyticsWorkspaceSharedKey")
-      private final @Nullable Input<String> logAnalyticsWorkspaceSharedKey;
+      private final @Nullable Output<String> logAnalyticsWorkspaceSharedKey;
 
-    public Input<String> getLogAnalyticsWorkspaceSharedKey() {
-        return this.logAnalyticsWorkspaceSharedKey == null ? Input.empty() : this.logAnalyticsWorkspaceSharedKey;
+    public Output<String> getLogAnalyticsWorkspaceSharedKey() {
+        return this.logAnalyticsWorkspaceSharedKey == null ? Output.empty() : this.logAnalyticsWorkspaceSharedKey;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorSubnet")
-      private final @Nullable Input<String> monitorSubnet;
+      private final @Nullable Output<String> monitorSubnet;
 
-    public Input<String> getMonitorSubnet() {
-        return this.monitorSubnet == null ? Input.empty() : this.monitorSubnet;
+    public Output<String> getMonitorSubnet() {
+        return this.monitorSubnet == null ? Output.empty() : this.monitorSubnet;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -98,10 +98,10 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sapMonitorName")
-      private final @Nullable Input<String> sapMonitorName;
+      private final @Nullable Output<String> sapMonitorName;
 
-    public Input<String> getSapMonitorName() {
-        return this.sapMonitorName == null ? Input.empty() : this.sapMonitorName;
+    public Output<String> getSapMonitorName() {
+        return this.sapMonitorName == null ? Output.empty() : this.sapMonitorName;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SapMonitorArgs(
-        @Nullable Input<Boolean> enableCustomerAnalytics,
-        @Nullable Input<String> location,
-        @Nullable Input<String> logAnalyticsWorkspaceArmId,
-        @Nullable Input<String> logAnalyticsWorkspaceId,
-        @Nullable Input<String> logAnalyticsWorkspaceSharedKey,
-        @Nullable Input<String> monitorSubnet,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sapMonitorName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> enableCustomerAnalytics,
+        @Nullable Output<String> location,
+        @Nullable Output<String> logAnalyticsWorkspaceArmId,
+        @Nullable Output<String> logAnalyticsWorkspaceId,
+        @Nullable Output<String> logAnalyticsWorkspaceSharedKey,
+        @Nullable Output<String> monitorSubnet,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sapMonitorName,
+        @Nullable Output<Map<String,String>> tags) {
         this.enableCustomerAnalytics = enableCustomerAnalytics;
         this.location = location;
         this.logAnalyticsWorkspaceArmId = logAnalyticsWorkspaceArmId;
@@ -137,15 +137,15 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SapMonitorArgs() {
-        this.enableCustomerAnalytics = Input.empty();
-        this.location = Input.empty();
-        this.logAnalyticsWorkspaceArmId = Input.empty();
-        this.logAnalyticsWorkspaceId = Input.empty();
-        this.logAnalyticsWorkspaceSharedKey = Input.empty();
-        this.monitorSubnet = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sapMonitorName = Input.empty();
-        this.tags = Input.empty();
+        this.enableCustomerAnalytics = Output.empty();
+        this.location = Output.empty();
+        this.logAnalyticsWorkspaceArmId = Output.empty();
+        this.logAnalyticsWorkspaceId = Output.empty();
+        this.logAnalyticsWorkspaceSharedKey = Output.empty();
+        this.monitorSubnet = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sapMonitorName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableCustomerAnalytics;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> logAnalyticsWorkspaceArmId;
-        private @Nullable Input<String> logAnalyticsWorkspaceId;
-        private @Nullable Input<String> logAnalyticsWorkspaceSharedKey;
-        private @Nullable Input<String> monitorSubnet;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sapMonitorName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> enableCustomerAnalytics;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> logAnalyticsWorkspaceArmId;
+        private @Nullable Output<String> logAnalyticsWorkspaceId;
+        private @Nullable Output<String> logAnalyticsWorkspaceSharedKey;
+        private @Nullable Output<String> monitorSubnet;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sapMonitorName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder enableCustomerAnalytics(@Nullable Input<Boolean> enableCustomerAnalytics) {
+        public Builder enableCustomerAnalytics(@Nullable Output<Boolean> enableCustomerAnalytics) {
             this.enableCustomerAnalytics = enableCustomerAnalytics;
             return this;
         }
 
         public Builder enableCustomerAnalytics(@Nullable Boolean enableCustomerAnalytics) {
-            this.enableCustomerAnalytics = Input.ofNullable(enableCustomerAnalytics);
+            this.enableCustomerAnalytics = Output.ofNullable(enableCustomerAnalytics);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder logAnalyticsWorkspaceArmId(@Nullable Input<String> logAnalyticsWorkspaceArmId) {
+        public Builder logAnalyticsWorkspaceArmId(@Nullable Output<String> logAnalyticsWorkspaceArmId) {
             this.logAnalyticsWorkspaceArmId = logAnalyticsWorkspaceArmId;
             return this;
         }
 
         public Builder logAnalyticsWorkspaceArmId(@Nullable String logAnalyticsWorkspaceArmId) {
-            this.logAnalyticsWorkspaceArmId = Input.ofNullable(logAnalyticsWorkspaceArmId);
+            this.logAnalyticsWorkspaceArmId = Output.ofNullable(logAnalyticsWorkspaceArmId);
             return this;
         }
 
-        public Builder logAnalyticsWorkspaceId(@Nullable Input<String> logAnalyticsWorkspaceId) {
+        public Builder logAnalyticsWorkspaceId(@Nullable Output<String> logAnalyticsWorkspaceId) {
             this.logAnalyticsWorkspaceId = logAnalyticsWorkspaceId;
             return this;
         }
 
         public Builder logAnalyticsWorkspaceId(@Nullable String logAnalyticsWorkspaceId) {
-            this.logAnalyticsWorkspaceId = Input.ofNullable(logAnalyticsWorkspaceId);
+            this.logAnalyticsWorkspaceId = Output.ofNullable(logAnalyticsWorkspaceId);
             return this;
         }
 
-        public Builder logAnalyticsWorkspaceSharedKey(@Nullable Input<String> logAnalyticsWorkspaceSharedKey) {
+        public Builder logAnalyticsWorkspaceSharedKey(@Nullable Output<String> logAnalyticsWorkspaceSharedKey) {
             this.logAnalyticsWorkspaceSharedKey = logAnalyticsWorkspaceSharedKey;
             return this;
         }
 
         public Builder logAnalyticsWorkspaceSharedKey(@Nullable String logAnalyticsWorkspaceSharedKey) {
-            this.logAnalyticsWorkspaceSharedKey = Input.ofNullable(logAnalyticsWorkspaceSharedKey);
+            this.logAnalyticsWorkspaceSharedKey = Output.ofNullable(logAnalyticsWorkspaceSharedKey);
             return this;
         }
 
-        public Builder monitorSubnet(@Nullable Input<String> monitorSubnet) {
+        public Builder monitorSubnet(@Nullable Output<String> monitorSubnet) {
             this.monitorSubnet = monitorSubnet;
             return this;
         }
 
         public Builder monitorSubnet(@Nullable String monitorSubnet) {
-            this.monitorSubnet = Input.ofNullable(monitorSubnet);
+            this.monitorSubnet = Output.ofNullable(monitorSubnet);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sapMonitorName(@Nullable Input<String> sapMonitorName) {
+        public Builder sapMonitorName(@Nullable Output<String> sapMonitorName) {
             this.sapMonitorName = sapMonitorName;
             return this;
         }
 
         public Builder sapMonitorName(@Nullable String sapMonitorName) {
-            this.sapMonitorName = Input.ofNullable(sapMonitorName);
+            this.sapMonitorName = Output.ofNullable(sapMonitorName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SapMonitorArgs build() {

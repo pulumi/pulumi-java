@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elastictranscoder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="aspectRatio")
-      private final @Nullable Input<String> aspectRatio;
+      private final @Nullable Output<String> aspectRatio;
 
-    public Input<String> getAspectRatio() {
-        return this.aspectRatio == null ? Input.empty() : this.aspectRatio;
+    public Output<String> getAspectRatio() {
+        return this.aspectRatio == null ? Output.empty() : this.aspectRatio;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<String> interval;
+      private final @Nullable Output<String> interval;
 
-    public Input<String> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<String> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxHeight")
-      private final @Nullable Input<String> maxHeight;
+      private final @Nullable Output<String> maxHeight;
 
-    public Input<String> getMaxHeight() {
-        return this.maxHeight == null ? Input.empty() : this.maxHeight;
+    public Output<String> getMaxHeight() {
+        return this.maxHeight == null ? Output.empty() : this.maxHeight;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxWidth")
-      private final @Nullable Input<String> maxWidth;
+      private final @Nullable Output<String> maxWidth;
 
-    public Input<String> getMaxWidth() {
-        return this.maxWidth == null ? Input.empty() : this.maxWidth;
+    public Output<String> getMaxWidth() {
+        return this.maxWidth == null ? Output.empty() : this.maxWidth;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="paddingPolicy")
-      private final @Nullable Input<String> paddingPolicy;
+      private final @Nullable Output<String> paddingPolicy;
 
-    public Input<String> getPaddingPolicy() {
-        return this.paddingPolicy == null ? Input.empty() : this.paddingPolicy;
+    public Output<String> getPaddingPolicy() {
+        return this.paddingPolicy == null ? Output.empty() : this.paddingPolicy;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resolution")
-      private final @Nullable Input<String> resolution;
+      private final @Nullable Output<String> resolution;
 
-    public Input<String> getResolution() {
-        return this.resolution == null ? Input.empty() : this.resolution;
+    public Output<String> getResolution() {
+        return this.resolution == null ? Output.empty() : this.resolution;
     }
 
     /**
@@ -96,21 +96,21 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sizingPolicy")
-      private final @Nullable Input<String> sizingPolicy;
+      private final @Nullable Output<String> sizingPolicy;
 
-    public Input<String> getSizingPolicy() {
-        return this.sizingPolicy == null ? Input.empty() : this.sizingPolicy;
+    public Output<String> getSizingPolicy() {
+        return this.sizingPolicy == null ? Output.empty() : this.sizingPolicy;
     }
 
     public PresetThumbnailsArgs(
-        @Nullable Input<String> aspectRatio,
-        @Nullable Input<String> format,
-        @Nullable Input<String> interval,
-        @Nullable Input<String> maxHeight,
-        @Nullable Input<String> maxWidth,
-        @Nullable Input<String> paddingPolicy,
-        @Nullable Input<String> resolution,
-        @Nullable Input<String> sizingPolicy) {
+        @Nullable Output<String> aspectRatio,
+        @Nullable Output<String> format,
+        @Nullable Output<String> interval,
+        @Nullable Output<String> maxHeight,
+        @Nullable Output<String> maxWidth,
+        @Nullable Output<String> paddingPolicy,
+        @Nullable Output<String> resolution,
+        @Nullable Output<String> sizingPolicy) {
         this.aspectRatio = aspectRatio;
         this.format = format;
         this.interval = interval;
@@ -122,14 +122,14 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PresetThumbnailsArgs() {
-        this.aspectRatio = Input.empty();
-        this.format = Input.empty();
-        this.interval = Input.empty();
-        this.maxHeight = Input.empty();
-        this.maxWidth = Input.empty();
-        this.paddingPolicy = Input.empty();
-        this.resolution = Input.empty();
-        this.sizingPolicy = Input.empty();
+        this.aspectRatio = Output.empty();
+        this.format = Output.empty();
+        this.interval = Output.empty();
+        this.maxHeight = Output.empty();
+        this.maxWidth = Output.empty();
+        this.paddingPolicy = Output.empty();
+        this.resolution = Output.empty();
+        this.sizingPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aspectRatio;
-        private @Nullable Input<String> format;
-        private @Nullable Input<String> interval;
-        private @Nullable Input<String> maxHeight;
-        private @Nullable Input<String> maxWidth;
-        private @Nullable Input<String> paddingPolicy;
-        private @Nullable Input<String> resolution;
-        private @Nullable Input<String> sizingPolicy;
+        private @Nullable Output<String> aspectRatio;
+        private @Nullable Output<String> format;
+        private @Nullable Output<String> interval;
+        private @Nullable Output<String> maxHeight;
+        private @Nullable Output<String> maxWidth;
+        private @Nullable Output<String> paddingPolicy;
+        private @Nullable Output<String> resolution;
+        private @Nullable Output<String> sizingPolicy;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class PresetThumbnailsArgs extends io.pulumi.resources.ResourceArgs
     	      this.sizingPolicy = defaults.sizingPolicy;
         }
 
-        public Builder aspectRatio(@Nullable Input<String> aspectRatio) {
+        public Builder aspectRatio(@Nullable Output<String> aspectRatio) {
             this.aspectRatio = aspectRatio;
             return this;
         }
 
         public Builder aspectRatio(@Nullable String aspectRatio) {
-            this.aspectRatio = Input.ofNullable(aspectRatio);
+            this.aspectRatio = Output.ofNullable(aspectRatio);
             return this;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder interval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Output<String> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable String interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder maxHeight(@Nullable Input<String> maxHeight) {
+        public Builder maxHeight(@Nullable Output<String> maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
 
         public Builder maxHeight(@Nullable String maxHeight) {
-            this.maxHeight = Input.ofNullable(maxHeight);
+            this.maxHeight = Output.ofNullable(maxHeight);
             return this;
         }
 
-        public Builder maxWidth(@Nullable Input<String> maxWidth) {
+        public Builder maxWidth(@Nullable Output<String> maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
 
         public Builder maxWidth(@Nullable String maxWidth) {
-            this.maxWidth = Input.ofNullable(maxWidth);
+            this.maxWidth = Output.ofNullable(maxWidth);
             return this;
         }
 
-        public Builder paddingPolicy(@Nullable Input<String> paddingPolicy) {
+        public Builder paddingPolicy(@Nullable Output<String> paddingPolicy) {
             this.paddingPolicy = paddingPolicy;
             return this;
         }
 
         public Builder paddingPolicy(@Nullable String paddingPolicy) {
-            this.paddingPolicy = Input.ofNullable(paddingPolicy);
+            this.paddingPolicy = Output.ofNullable(paddingPolicy);
             return this;
         }
 
-        public Builder resolution(@Nullable Input<String> resolution) {
+        public Builder resolution(@Nullable Output<String> resolution) {
             this.resolution = resolution;
             return this;
         }
 
         public Builder resolution(@Nullable String resolution) {
-            this.resolution = Input.ofNullable(resolution);
+            this.resolution = Output.ofNullable(resolution);
             return this;
         }
 
-        public Builder sizingPolicy(@Nullable Input<String> sizingPolicy) {
+        public Builder sizingPolicy(@Nullable Output<String> sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }
 
         public Builder sizingPolicy(@Nullable String sizingPolicy) {
-            this.sizingPolicy = Input.ofNullable(sizingPolicy);
+            this.sizingPolicy = Output.ofNullable(sizingPolicy);
             return this;
         }
         public PresetThumbnailsArgs build() {

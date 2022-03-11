@@ -12,7 +12,7 @@ import io.pulumi.azurenative.compute.inputs.GalleryImageIdentifierArgs;
 import io.pulumi.azurenative.compute.inputs.ImagePurchasePlanArgs;
 import io.pulumi.azurenative.compute.inputs.RecommendedMachineConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -30,10 +30,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disallowed")
-      private final @Nullable Input<DisallowedArgs> disallowed;
+      private final @Nullable Output<DisallowedArgs> disallowed;
 
-    public Input<DisallowedArgs> getDisallowed() {
-        return this.disallowed == null ? Input.empty() : this.disallowed;
+    public Output<DisallowedArgs> getDisallowed() {
+        return this.disallowed == null ? Output.empty() : this.disallowed;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endOfLifeDate")
-      private final @Nullable Input<String> endOfLifeDate;
+      private final @Nullable Output<String> endOfLifeDate;
 
-    public Input<String> getEndOfLifeDate() {
-        return this.endOfLifeDate == null ? Input.empty() : this.endOfLifeDate;
+    public Output<String> getEndOfLifeDate() {
+        return this.endOfLifeDate == null ? Output.empty() : this.endOfLifeDate;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eula")
-      private final @Nullable Input<String> eula;
+      private final @Nullable Output<String> eula;
 
-    public Input<String> getEula() {
-        return this.eula == null ? Input.empty() : this.eula;
+    public Output<String> getEula() {
+        return this.eula == null ? Output.empty() : this.eula;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="features")
-      private final @Nullable Input<List<GalleryImageFeatureArgs>> features;
+      private final @Nullable Output<List<GalleryImageFeatureArgs>> features;
 
-    public Input<List<GalleryImageFeatureArgs>> getFeatures() {
-        return this.features == null ? Input.empty() : this.features;
+    public Output<List<GalleryImageFeatureArgs>> getFeatures() {
+        return this.features == null ? Output.empty() : this.features;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="galleryImageName")
-      private final @Nullable Input<String> galleryImageName;
+      private final @Nullable Output<String> galleryImageName;
 
-    public Input<String> getGalleryImageName() {
-        return this.galleryImageName == null ? Input.empty() : this.galleryImageName;
+    public Output<String> getGalleryImageName() {
+        return this.galleryImageName == null ? Output.empty() : this.galleryImageName;
     }
 
     /**
@@ -96,9 +96,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="galleryName", required=true)
-      private final Input<String> galleryName;
+      private final Output<String> galleryName;
 
-    public Input<String> getGalleryName() {
+    public Output<String> getGalleryName() {
         return this.galleryName;
     }
 
@@ -107,10 +107,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperVGeneration")
-      private final @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
+      private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
-    public Input<Either<String,HyperVGeneration>> getHyperVGeneration() {
-        return this.hyperVGeneration == null ? Input.empty() : this.hyperVGeneration;
+    public Output<Either<String,HyperVGeneration>> getHyperVGeneration() {
+        return this.hyperVGeneration == null ? Output.empty() : this.hyperVGeneration;
     }
 
     /**
@@ -118,9 +118,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identifier", required=true)
-      private final Input<GalleryImageIdentifierArgs> identifier;
+      private final Output<GalleryImageIdentifierArgs> identifier;
 
-    public Input<GalleryImageIdentifierArgs> getIdentifier() {
+    public Output<GalleryImageIdentifierArgs> getIdentifier() {
         return this.identifier;
     }
 
@@ -129,10 +129,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -140,9 +140,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osState", required=true)
-      private final Input<OperatingSystemStateTypes> osState;
+      private final Output<OperatingSystemStateTypes> osState;
 
-    public Input<OperatingSystemStateTypes> getOsState() {
+    public Output<OperatingSystemStateTypes> getOsState() {
         return this.osState;
     }
 
@@ -151,9 +151,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType", required=true)
-      private final Input<OperatingSystemTypes> osType;
+      private final Output<OperatingSystemTypes> osType;
 
-    public Input<OperatingSystemTypes> getOsType() {
+    public Output<OperatingSystemTypes> getOsType() {
         return this.osType;
     }
 
@@ -162,10 +162,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privacyStatementUri")
-      private final @Nullable Input<String> privacyStatementUri;
+      private final @Nullable Output<String> privacyStatementUri;
 
-    public Input<String> getPrivacyStatementUri() {
-        return this.privacyStatementUri == null ? Input.empty() : this.privacyStatementUri;
+    public Output<String> getPrivacyStatementUri() {
+        return this.privacyStatementUri == null ? Output.empty() : this.privacyStatementUri;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purchasePlan")
-      private final @Nullable Input<ImagePurchasePlanArgs> purchasePlan;
+      private final @Nullable Output<ImagePurchasePlanArgs> purchasePlan;
 
-    public Input<ImagePurchasePlanArgs> getPurchasePlan() {
-        return this.purchasePlan == null ? Input.empty() : this.purchasePlan;
+    public Output<ImagePurchasePlanArgs> getPurchasePlan() {
+        return this.purchasePlan == null ? Output.empty() : this.purchasePlan;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recommended")
-      private final @Nullable Input<RecommendedMachineConfigurationArgs> recommended;
+      private final @Nullable Output<RecommendedMachineConfigurationArgs> recommended;
 
-    public Input<RecommendedMachineConfigurationArgs> getRecommended() {
-        return this.recommended == null ? Input.empty() : this.recommended;
+    public Output<RecommendedMachineConfigurationArgs> getRecommended() {
+        return this.recommended == null ? Output.empty() : this.recommended;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseNoteUri")
-      private final @Nullable Input<String> releaseNoteUri;
+      private final @Nullable Output<String> releaseNoteUri;
 
-    public Input<String> getReleaseNoteUri() {
-        return this.releaseNoteUri == null ? Input.empty() : this.releaseNoteUri;
+    public Output<String> getReleaseNoteUri() {
+        return this.releaseNoteUri == null ? Output.empty() : this.releaseNoteUri;
     }
 
     /**
@@ -206,9 +206,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -217,31 +217,31 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GalleryImageArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<DisallowedArgs> disallowed,
-        @Nullable Input<String> endOfLifeDate,
-        @Nullable Input<String> eula,
-        @Nullable Input<List<GalleryImageFeatureArgs>> features,
-        @Nullable Input<String> galleryImageName,
-        Input<String> galleryName,
-        @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration,
-        Input<GalleryImageIdentifierArgs> identifier,
-        @Nullable Input<String> location,
-        Input<OperatingSystemStateTypes> osState,
-        Input<OperatingSystemTypes> osType,
-        @Nullable Input<String> privacyStatementUri,
-        @Nullable Input<ImagePurchasePlanArgs> purchasePlan,
-        @Nullable Input<RecommendedMachineConfigurationArgs> recommended,
-        @Nullable Input<String> releaseNoteUri,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<DisallowedArgs> disallowed,
+        @Nullable Output<String> endOfLifeDate,
+        @Nullable Output<String> eula,
+        @Nullable Output<List<GalleryImageFeatureArgs>> features,
+        @Nullable Output<String> galleryImageName,
+        Output<String> galleryName,
+        @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration,
+        Output<GalleryImageIdentifierArgs> identifier,
+        @Nullable Output<String> location,
+        Output<OperatingSystemStateTypes> osState,
+        Output<OperatingSystemTypes> osType,
+        @Nullable Output<String> privacyStatementUri,
+        @Nullable Output<ImagePurchasePlanArgs> purchasePlan,
+        @Nullable Output<RecommendedMachineConfigurationArgs> recommended,
+        @Nullable Output<String> releaseNoteUri,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.disallowed = disallowed;
         this.endOfLifeDate = endOfLifeDate;
@@ -263,24 +263,24 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GalleryImageArgs() {
-        this.description = Input.empty();
-        this.disallowed = Input.empty();
-        this.endOfLifeDate = Input.empty();
-        this.eula = Input.empty();
-        this.features = Input.empty();
-        this.galleryImageName = Input.empty();
-        this.galleryName = Input.empty();
-        this.hyperVGeneration = Input.empty();
-        this.identifier = Input.empty();
-        this.location = Input.empty();
-        this.osState = Input.empty();
-        this.osType = Input.empty();
-        this.privacyStatementUri = Input.empty();
-        this.purchasePlan = Input.empty();
-        this.recommended = Input.empty();
-        this.releaseNoteUri = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.disallowed = Output.empty();
+        this.endOfLifeDate = Output.empty();
+        this.eula = Output.empty();
+        this.features = Output.empty();
+        this.galleryImageName = Output.empty();
+        this.galleryName = Output.empty();
+        this.hyperVGeneration = Output.empty();
+        this.identifier = Output.empty();
+        this.location = Output.empty();
+        this.osState = Output.empty();
+        this.osType = Output.empty();
+        this.privacyStatementUri = Output.empty();
+        this.purchasePlan = Output.empty();
+        this.recommended = Output.empty();
+        this.releaseNoteUri = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -292,24 +292,24 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<DisallowedArgs> disallowed;
-        private @Nullable Input<String> endOfLifeDate;
-        private @Nullable Input<String> eula;
-        private @Nullable Input<List<GalleryImageFeatureArgs>> features;
-        private @Nullable Input<String> galleryImageName;
-        private Input<String> galleryName;
-        private @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
-        private Input<GalleryImageIdentifierArgs> identifier;
-        private @Nullable Input<String> location;
-        private Input<OperatingSystemStateTypes> osState;
-        private Input<OperatingSystemTypes> osType;
-        private @Nullable Input<String> privacyStatementUri;
-        private @Nullable Input<ImagePurchasePlanArgs> purchasePlan;
-        private @Nullable Input<RecommendedMachineConfigurationArgs> recommended;
-        private @Nullable Input<String> releaseNoteUri;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DisallowedArgs> disallowed;
+        private @Nullable Output<String> endOfLifeDate;
+        private @Nullable Output<String> eula;
+        private @Nullable Output<List<GalleryImageFeatureArgs>> features;
+        private @Nullable Output<String> galleryImageName;
+        private Output<String> galleryName;
+        private @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
+        private Output<GalleryImageIdentifierArgs> identifier;
+        private @Nullable Output<String> location;
+        private Output<OperatingSystemStateTypes> osState;
+        private Output<OperatingSystemTypes> osType;
+        private @Nullable Output<String> privacyStatementUri;
+        private @Nullable Output<ImagePurchasePlanArgs> purchasePlan;
+        private @Nullable Output<RecommendedMachineConfigurationArgs> recommended;
+        private @Nullable Output<String> releaseNoteUri;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -337,183 +337,183 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disallowed(@Nullable Input<DisallowedArgs> disallowed) {
+        public Builder disallowed(@Nullable Output<DisallowedArgs> disallowed) {
             this.disallowed = disallowed;
             return this;
         }
 
         public Builder disallowed(@Nullable DisallowedArgs disallowed) {
-            this.disallowed = Input.ofNullable(disallowed);
+            this.disallowed = Output.ofNullable(disallowed);
             return this;
         }
 
-        public Builder endOfLifeDate(@Nullable Input<String> endOfLifeDate) {
+        public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
-            this.endOfLifeDate = Input.ofNullable(endOfLifeDate);
+            this.endOfLifeDate = Output.ofNullable(endOfLifeDate);
             return this;
         }
 
-        public Builder eula(@Nullable Input<String> eula) {
+        public Builder eula(@Nullable Output<String> eula) {
             this.eula = eula;
             return this;
         }
 
         public Builder eula(@Nullable String eula) {
-            this.eula = Input.ofNullable(eula);
+            this.eula = Output.ofNullable(eula);
             return this;
         }
 
-        public Builder features(@Nullable Input<List<GalleryImageFeatureArgs>> features) {
+        public Builder features(@Nullable Output<List<GalleryImageFeatureArgs>> features) {
             this.features = features;
             return this;
         }
 
         public Builder features(@Nullable List<GalleryImageFeatureArgs> features) {
-            this.features = Input.ofNullable(features);
+            this.features = Output.ofNullable(features);
             return this;
         }
 
-        public Builder galleryImageName(@Nullable Input<String> galleryImageName) {
+        public Builder galleryImageName(@Nullable Output<String> galleryImageName) {
             this.galleryImageName = galleryImageName;
             return this;
         }
 
         public Builder galleryImageName(@Nullable String galleryImageName) {
-            this.galleryImageName = Input.ofNullable(galleryImageName);
+            this.galleryImageName = Output.ofNullable(galleryImageName);
             return this;
         }
 
-        public Builder galleryName(Input<String> galleryName) {
+        public Builder galleryName(Output<String> galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
 
         public Builder galleryName(String galleryName) {
-            this.galleryName = Input.of(Objects.requireNonNull(galleryName));
+            this.galleryName = Output.of(Objects.requireNonNull(galleryName));
             return this;
         }
 
-        public Builder hyperVGeneration(@Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
         public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
-            this.hyperVGeneration = Input.ofNullable(hyperVGeneration);
+            this.hyperVGeneration = Output.ofNullable(hyperVGeneration);
             return this;
         }
 
-        public Builder identifier(Input<GalleryImageIdentifierArgs> identifier) {
+        public Builder identifier(Output<GalleryImageIdentifierArgs> identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
         public Builder identifier(GalleryImageIdentifierArgs identifier) {
-            this.identifier = Input.of(Objects.requireNonNull(identifier));
+            this.identifier = Output.of(Objects.requireNonNull(identifier));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder osState(Input<OperatingSystemStateTypes> osState) {
+        public Builder osState(Output<OperatingSystemStateTypes> osState) {
             this.osState = Objects.requireNonNull(osState);
             return this;
         }
 
         public Builder osState(OperatingSystemStateTypes osState) {
-            this.osState = Input.of(Objects.requireNonNull(osState));
+            this.osState = Output.of(Objects.requireNonNull(osState));
             return this;
         }
 
-        public Builder osType(Input<OperatingSystemTypes> osType) {
+        public Builder osType(Output<OperatingSystemTypes> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
         public Builder osType(OperatingSystemTypes osType) {
-            this.osType = Input.of(Objects.requireNonNull(osType));
+            this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder privacyStatementUri(@Nullable Input<String> privacyStatementUri) {
+        public Builder privacyStatementUri(@Nullable Output<String> privacyStatementUri) {
             this.privacyStatementUri = privacyStatementUri;
             return this;
         }
 
         public Builder privacyStatementUri(@Nullable String privacyStatementUri) {
-            this.privacyStatementUri = Input.ofNullable(privacyStatementUri);
+            this.privacyStatementUri = Output.ofNullable(privacyStatementUri);
             return this;
         }
 
-        public Builder purchasePlan(@Nullable Input<ImagePurchasePlanArgs> purchasePlan) {
+        public Builder purchasePlan(@Nullable Output<ImagePurchasePlanArgs> purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
 
         public Builder purchasePlan(@Nullable ImagePurchasePlanArgs purchasePlan) {
-            this.purchasePlan = Input.ofNullable(purchasePlan);
+            this.purchasePlan = Output.ofNullable(purchasePlan);
             return this;
         }
 
-        public Builder recommended(@Nullable Input<RecommendedMachineConfigurationArgs> recommended) {
+        public Builder recommended(@Nullable Output<RecommendedMachineConfigurationArgs> recommended) {
             this.recommended = recommended;
             return this;
         }
 
         public Builder recommended(@Nullable RecommendedMachineConfigurationArgs recommended) {
-            this.recommended = Input.ofNullable(recommended);
+            this.recommended = Output.ofNullable(recommended);
             return this;
         }
 
-        public Builder releaseNoteUri(@Nullable Input<String> releaseNoteUri) {
+        public Builder releaseNoteUri(@Nullable Output<String> releaseNoteUri) {
             this.releaseNoteUri = releaseNoteUri;
             return this;
         }
 
         public Builder releaseNoteUri(@Nullable String releaseNoteUri) {
-            this.releaseNoteUri = Input.ofNullable(releaseNoteUri);
+            this.releaseNoteUri = Output.ofNullable(releaseNoteUri);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GalleryImageArgs build() {

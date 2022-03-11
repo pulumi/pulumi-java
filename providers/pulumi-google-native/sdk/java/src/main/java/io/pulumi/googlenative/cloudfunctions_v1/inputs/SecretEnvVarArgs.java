@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<String> secret;
+      private final @Nullable Output<String> secret;
 
-    public Input<String> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<String> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public SecretEnvVarArgs(
-        @Nullable Input<String> key,
-        @Nullable Input<String> project,
-        @Nullable Input<String> secret,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> key,
+        @Nullable Output<String> project,
+        @Nullable Output<String> secret,
+        @Nullable Output<String> version) {
         this.key = key;
         this.project = project;
         this.secret = secret;
@@ -74,10 +74,10 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretEnvVarArgs() {
-        this.key = Input.empty();
-        this.project = Input.empty();
-        this.secret = Input.empty();
-        this.version = Input.empty();
+        this.key = Output.empty();
+        this.project = Output.empty();
+        this.secret = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> secret;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> secret;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder secret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable String secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public SecretEnvVarArgs build() {

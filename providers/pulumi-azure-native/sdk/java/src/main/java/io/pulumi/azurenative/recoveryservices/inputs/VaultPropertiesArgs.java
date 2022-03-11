@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.VaultPropertiesEncryptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<VaultPropertiesEncryptionArgs> encryption;
+      private final @Nullable Output<VaultPropertiesEncryptionArgs> encryption;
 
-    public Input<VaultPropertiesEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<VaultPropertiesEncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
-    public VaultPropertiesArgs(@Nullable Input<VaultPropertiesEncryptionArgs> encryption) {
+    public VaultPropertiesArgs(@Nullable Output<VaultPropertiesEncryptionArgs> encryption) {
         this.encryption = encryption;
     }
 
     private VaultPropertiesArgs() {
-        this.encryption = Input.empty();
+        this.encryption = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<VaultPropertiesEncryptionArgs> encryption;
+        private @Nullable Output<VaultPropertiesEncryptionArgs> encryption;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.encryption = defaults.encryption;
         }
 
-        public Builder encryption(@Nullable Input<VaultPropertiesEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<VaultPropertiesEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable VaultPropertiesEncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
         public VaultPropertiesArgs build() {

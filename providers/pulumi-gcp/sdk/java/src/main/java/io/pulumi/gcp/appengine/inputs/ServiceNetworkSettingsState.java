@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsNetworkSettingsGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="networkSettings")
-      private final @Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
+      private final @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
 
-    public Input<ServiceNetworkSettingsNetworkSettingsGetArgs> getNetworkSettings() {
-        return this.networkSettings == null ? Input.empty() : this.networkSettings;
+    public Output<ServiceNetworkSettingsNetworkSettingsGetArgs> getNetworkSettings() {
+        return this.networkSettings == null ? Output.empty() : this.networkSettings;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public ServiceNetworkSettingsState(
-        @Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings,
-        @Nullable Input<String> project,
-        @Nullable Input<String> service) {
+        @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings,
+        @Nullable Output<String> project,
+        @Nullable Output<String> service) {
         this.networkSettings = networkSettings;
         this.project = project;
         this.service = service;
     }
 
     private ServiceNetworkSettingsState() {
-        this.networkSettings = Input.empty();
-        this.project = Input.empty();
-        this.service = Input.empty();
+        this.networkSettings = Output.empty();
+        this.project = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> service;
+        private @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
     	      this.service = defaults.service;
         }
 
-        public Builder networkSettings(@Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings) {
+        public Builder networkSettings(@Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings) {
             this.networkSettings = networkSettings;
             return this;
         }
 
         public Builder networkSettings(@Nullable ServiceNetworkSettingsNetworkSettingsGetArgs networkSettings) {
-            this.networkSettings = Input.ofNullable(networkSettings);
+            this.networkSettings = Output.ofNullable(networkSettings);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public ServiceNetworkSettingsState build() {

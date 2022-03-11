@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.enums.ParamIndicator;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="paramIndicator", required=true)
-      private final Input<Either<String,ParamIndicator>> paramIndicator;
+      private final Output<Either<String,ParamIndicator>> paramIndicator;
 
-    public Input<Either<String,ParamIndicator>> getParamIndicator() {
+    public Output<Either<String,ParamIndicator>> getParamIndicator() {
         return this.paramIndicator;
     }
 
@@ -35,22 +35,22 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="paramName", required=true)
-      private final Input<String> paramName;
+      private final Output<String> paramName;
 
-    public Input<String> getParamName() {
+    public Output<String> getParamName() {
         return this.paramName;
     }
 
     public UrlSigningParamIdentifierArgs(
-        Input<Either<String,ParamIndicator>> paramIndicator,
-        Input<String> paramName) {
+        Output<Either<String,ParamIndicator>> paramIndicator,
+        Output<String> paramName) {
         this.paramIndicator = Objects.requireNonNull(paramIndicator, "expected parameter 'paramIndicator' to be non-null");
         this.paramName = Objects.requireNonNull(paramName, "expected parameter 'paramName' to be non-null");
     }
 
     private UrlSigningParamIdentifierArgs() {
-        this.paramIndicator = Input.empty();
-        this.paramName = Input.empty();
+        this.paramIndicator = Output.empty();
+        this.paramName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<Either<String,ParamIndicator>> paramIndicator;
-        private Input<String> paramName;
+        private Output<Either<String,ParamIndicator>> paramIndicator;
+        private Output<String> paramName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
     	      this.paramName = defaults.paramName;
         }
 
-        public Builder paramIndicator(Input<Either<String,ParamIndicator>> paramIndicator) {
+        public Builder paramIndicator(Output<Either<String,ParamIndicator>> paramIndicator) {
             this.paramIndicator = Objects.requireNonNull(paramIndicator);
             return this;
         }
 
         public Builder paramIndicator(Either<String,ParamIndicator> paramIndicator) {
-            this.paramIndicator = Input.of(Objects.requireNonNull(paramIndicator));
+            this.paramIndicator = Output.of(Objects.requireNonNull(paramIndicator));
             return this;
         }
 
-        public Builder paramName(Input<String> paramName) {
+        public Builder paramName(Output<String> paramName) {
             this.paramName = Objects.requireNonNull(paramName);
             return this;
         }
 
         public Builder paramName(String paramName) {
-            this.paramName = Input.of(Objects.requireNonNull(paramName));
+            this.paramName = Output.of(Objects.requireNonNull(paramName));
             return this;
         }
         public UrlSigningParamIdentifierArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigSecurityConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="enableOnlineStore")
-      private final @Nullable Input<Boolean> enableOnlineStore;
+      private final @Nullable Output<Boolean> enableOnlineStore;
 
-    public Input<Boolean> getEnableOnlineStore() {
-        return this.enableOnlineStore == null ? Input.empty() : this.enableOnlineStore;
+    public Output<Boolean> getEnableOnlineStore() {
+        return this.enableOnlineStore == null ? Output.empty() : this.enableOnlineStore;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="securityConfig")
-      private final @Nullable Input<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig;
+      private final @Nullable Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig;
 
-    public Input<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> getSecurityConfig() {
-        return this.securityConfig == null ? Input.empty() : this.securityConfig;
+    public Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> getSecurityConfig() {
+        return this.securityConfig == null ? Output.empty() : this.securityConfig;
     }
 
     public FeatureGroupOnlineStoreConfigGetArgs(
-        @Nullable Input<Boolean> enableOnlineStore,
-        @Nullable Input<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig) {
+        @Nullable Output<Boolean> enableOnlineStore,
+        @Nullable Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig) {
         this.enableOnlineStore = enableOnlineStore;
         this.securityConfig = securityConfig;
     }
 
     private FeatureGroupOnlineStoreConfigGetArgs() {
-        this.enableOnlineStore = Input.empty();
-        this.securityConfig = Input.empty();
+        this.enableOnlineStore = Output.empty();
+        this.securityConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableOnlineStore;
-        private @Nullable Input<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig;
+        private @Nullable Output<Boolean> enableOnlineStore;
+        private @Nullable Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends io.pulumi.resour
     	      this.securityConfig = defaults.securityConfig;
         }
 
-        public Builder enableOnlineStore(@Nullable Input<Boolean> enableOnlineStore) {
+        public Builder enableOnlineStore(@Nullable Output<Boolean> enableOnlineStore) {
             this.enableOnlineStore = enableOnlineStore;
             return this;
         }
 
         public Builder enableOnlineStore(@Nullable Boolean enableOnlineStore) {
-            this.enableOnlineStore = Input.ofNullable(enableOnlineStore);
+            this.enableOnlineStore = Output.ofNullable(enableOnlineStore);
             return this;
         }
 
-        public Builder securityConfig(@Nullable Input<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig) {
+        public Builder securityConfig(@Nullable Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig) {
             this.securityConfig = securityConfig;
             return this;
         }
 
         public Builder securityConfig(@Nullable FeatureGroupOnlineStoreConfigSecurityConfigGetArgs securityConfig) {
-            this.securityConfig = Input.ofNullable(securityConfig);
+            this.securityConfig = Output.ofNullable(securityConfig);
             return this;
         }
         public FeatureGroupOnlineStoreConfigGetArgs build() {

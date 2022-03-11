@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.JobTemplateRetryCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class JobExecutionsRetryConfigPropertiesArgs extends io.pulumi.reso
     public static final JobExecutionsRetryConfigPropertiesArgs Empty = new JobExecutionsRetryConfigPropertiesArgs();
 
     @InputImport(name="retryCriteriaList")
-      private final @Nullable Input<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList;
+      private final @Nullable Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList;
 
-    public Input<List<JobTemplateRetryCriteriaArgs>> getRetryCriteriaList() {
-        return this.retryCriteriaList == null ? Input.empty() : this.retryCriteriaList;
+    public Output<List<JobTemplateRetryCriteriaArgs>> getRetryCriteriaList() {
+        return this.retryCriteriaList == null ? Output.empty() : this.retryCriteriaList;
     }
 
-    public JobExecutionsRetryConfigPropertiesArgs(@Nullable Input<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList) {
+    public JobExecutionsRetryConfigPropertiesArgs(@Nullable Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList) {
         this.retryCriteriaList = retryCriteriaList;
     }
 
     private JobExecutionsRetryConfigPropertiesArgs() {
-        this.retryCriteriaList = Input.empty();
+        this.retryCriteriaList = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class JobExecutionsRetryConfigPropertiesArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList;
+        private @Nullable Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class JobExecutionsRetryConfigPropertiesArgs extends io.pulumi.reso
     	      this.retryCriteriaList = defaults.retryCriteriaList;
         }
 
-        public Builder retryCriteriaList(@Nullable Input<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList) {
+        public Builder retryCriteriaList(@Nullable Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList) {
             this.retryCriteriaList = retryCriteriaList;
             return this;
         }
 
         public Builder retryCriteriaList(@Nullable List<JobTemplateRetryCriteriaArgs> retryCriteriaList) {
-            this.retryCriteriaList = Input.ofNullable(retryCriteriaList);
+            this.retryCriteriaList = Output.ofNullable(retryCriteriaList);
             return this;
         }
         public JobExecutionsRetryConfigPropertiesArgs build() {

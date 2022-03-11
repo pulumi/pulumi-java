@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketAccessControlArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketAutoclassArgs;
@@ -36,10 +36,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acl")
-      private final @Nullable Input<List<BucketAccessControlArgs>> acl;
+      private final @Nullable Output<List<BucketAccessControlArgs>> acl;
 
-    public Input<List<BucketAccessControlArgs>> getAcl() {
-        return this.acl == null ? Input.empty() : this.acl;
+    public Output<List<BucketAccessControlArgs>> getAcl() {
+        return this.acl == null ? Output.empty() : this.acl;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoclass")
-      private final @Nullable Input<BucketAutoclassArgs> autoclass;
+      private final @Nullable Output<BucketAutoclassArgs> autoclass;
 
-    public Input<BucketAutoclassArgs> getAutoclass() {
-        return this.autoclass == null ? Input.empty() : this.autoclass;
+    public Output<BucketAutoclassArgs> getAutoclass() {
+        return this.autoclass == null ? Output.empty() : this.autoclass;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billing")
-      private final @Nullable Input<BucketBillingArgs> billing;
+      private final @Nullable Output<BucketBillingArgs> billing;
 
-    public Input<BucketBillingArgs> getBilling() {
-        return this.billing == null ? Input.empty() : this.billing;
+    public Output<BucketBillingArgs> getBilling() {
+        return this.billing == null ? Output.empty() : this.billing;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cors")
-      private final @Nullable Input<List<BucketCorsItemArgs>> cors;
+      private final @Nullable Output<List<BucketCorsItemArgs>> cors;
 
-    public Input<List<BucketCorsItemArgs>> getCors() {
-        return this.cors == null ? Input.empty() : this.cors;
+    public Output<List<BucketCorsItemArgs>> getCors() {
+        return this.cors == null ? Output.empty() : this.cors;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customPlacementConfig")
-      private final @Nullable Input<BucketCustomPlacementConfigArgs> customPlacementConfig;
+      private final @Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig;
 
-    public Input<BucketCustomPlacementConfigArgs> getCustomPlacementConfig() {
-        return this.customPlacementConfig == null ? Input.empty() : this.customPlacementConfig;
+    public Output<BucketCustomPlacementConfigArgs> getCustomPlacementConfig() {
+        return this.customPlacementConfig == null ? Output.empty() : this.customPlacementConfig;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultEventBasedHold")
-      private final @Nullable Input<Boolean> defaultEventBasedHold;
+      private final @Nullable Output<Boolean> defaultEventBasedHold;
 
-    public Input<Boolean> getDefaultEventBasedHold() {
-        return this.defaultEventBasedHold == null ? Input.empty() : this.defaultEventBasedHold;
+    public Output<Boolean> getDefaultEventBasedHold() {
+        return this.defaultEventBasedHold == null ? Output.empty() : this.defaultEventBasedHold;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultObjectAcl")
-      private final @Nullable Input<List<ObjectAccessControlArgs>> defaultObjectAcl;
+      private final @Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl;
 
-    public Input<List<ObjectAccessControlArgs>> getDefaultObjectAcl() {
-        return this.defaultObjectAcl == null ? Input.empty() : this.defaultObjectAcl;
+    public Output<List<ObjectAccessControlArgs>> getDefaultObjectAcl() {
+        return this.defaultObjectAcl == null ? Output.empty() : this.defaultObjectAcl;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<BucketEncryptionArgs> encryption;
+      private final @Nullable Output<BucketEncryptionArgs> encryption;
 
-    public Input<BucketEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<BucketEncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamConfiguration")
-      private final @Nullable Input<BucketIamConfigurationArgs> iamConfiguration;
+      private final @Nullable Output<BucketIamConfigurationArgs> iamConfiguration;
 
-    public Input<BucketIamConfigurationArgs> getIamConfiguration() {
-        return this.iamConfiguration == null ? Input.empty() : this.iamConfiguration;
+    public Output<BucketIamConfigurationArgs> getIamConfiguration() {
+        return this.iamConfiguration == null ? Output.empty() : this.iamConfiguration;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycle")
-      private final @Nullable Input<BucketLifecycleArgs> lifecycle;
+      private final @Nullable Output<BucketLifecycleArgs> lifecycle;
 
-    public Input<BucketLifecycleArgs> getLifecycle() {
-        return this.lifecycle == null ? Input.empty() : this.lifecycle;
+    public Output<BucketLifecycleArgs> getLifecycle() {
+        return this.lifecycle == null ? Output.empty() : this.lifecycle;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationType")
-      private final @Nullable Input<String> locationType;
+      private final @Nullable Output<String> locationType;
 
-    public Input<String> getLocationType() {
-        return this.locationType == null ? Input.empty() : this.locationType;
+    public Output<String> getLocationType() {
+        return this.locationType == null ? Output.empty() : this.locationType;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logging")
-      private final @Nullable Input<BucketLoggingArgs> logging;
+      private final @Nullable Output<BucketLoggingArgs> logging;
 
-    public Input<BucketLoggingArgs> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<BucketLoggingArgs> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metageneration")
-      private final @Nullable Input<String> metageneration;
+      private final @Nullable Output<String> metageneration;
 
-    public Input<String> getMetageneration() {
-        return this.metageneration == null ? Input.empty() : this.metageneration;
+    public Output<String> getMetageneration() {
+        return this.metageneration == null ? Output.empty() : this.metageneration;
     }
 
     /**
@@ -234,10 +234,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -245,31 +245,31 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<BucketOwnerArgs> owner;
+      private final @Nullable Output<BucketOwnerArgs> owner;
 
-    public Input<BucketOwnerArgs> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<BucketOwnerArgs> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     @InputImport(name="predefinedAcl")
-      private final @Nullable Input<String> predefinedAcl;
+      private final @Nullable Output<String> predefinedAcl;
 
-    public Input<String> getPredefinedAcl() {
-        return this.predefinedAcl == null ? Input.empty() : this.predefinedAcl;
+    public Output<String> getPredefinedAcl() {
+        return this.predefinedAcl == null ? Output.empty() : this.predefinedAcl;
     }
 
     @InputImport(name="predefinedDefaultObjectAcl")
-      private final @Nullable Input<String> predefinedDefaultObjectAcl;
+      private final @Nullable Output<String> predefinedDefaultObjectAcl;
 
-    public Input<String> getPredefinedDefaultObjectAcl() {
-        return this.predefinedDefaultObjectAcl == null ? Input.empty() : this.predefinedDefaultObjectAcl;
+    public Output<String> getPredefinedDefaultObjectAcl() {
+        return this.predefinedDefaultObjectAcl == null ? Output.empty() : this.predefinedDefaultObjectAcl;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -277,24 +277,24 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectNumber")
-      private final @Nullable Input<String> projectNumber;
+      private final @Nullable Output<String> projectNumber;
 
-    public Input<String> getProjectNumber() {
-        return this.projectNumber == null ? Input.empty() : this.projectNumber;
+    public Output<String> getProjectNumber() {
+        return this.projectNumber == null ? Output.empty() : this.projectNumber;
     }
 
     @InputImport(name="projection")
-      private final @Nullable Input<String> projection;
+      private final @Nullable Output<String> projection;
 
-    public Input<String> getProjection() {
-        return this.projection == null ? Input.empty() : this.projection;
+    public Output<String> getProjection() {
+        return this.projection == null ? Output.empty() : this.projection;
     }
 
     @InputImport(name="provisionalUserProject")
-      private final @Nullable Input<String> provisionalUserProject;
+      private final @Nullable Output<String> provisionalUserProject;
 
-    public Input<String> getProvisionalUserProject() {
-        return this.provisionalUserProject == null ? Input.empty() : this.provisionalUserProject;
+    public Output<String> getProvisionalUserProject() {
+        return this.provisionalUserProject == null ? Output.empty() : this.provisionalUserProject;
     }
 
     /**
@@ -302,10 +302,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-      private final @Nullable Input<BucketRetentionPolicyArgs> retentionPolicy;
+      private final @Nullable Output<BucketRetentionPolicyArgs> retentionPolicy;
 
-    public Input<BucketRetentionPolicyArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
+    public Output<BucketRetentionPolicyArgs> getRetentionPolicy() {
+        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
     }
 
     /**
@@ -313,10 +313,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rpo")
-      private final @Nullable Input<String> rpo;
+      private final @Nullable Output<String> rpo;
 
-    public Input<String> getRpo() {
-        return this.rpo == null ? Input.empty() : this.rpo;
+    public Output<String> getRpo() {
+        return this.rpo == null ? Output.empty() : this.rpo;
     }
 
     /**
@@ -324,10 +324,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="satisfiesPZS")
-      private final @Nullable Input<Boolean> satisfiesPZS;
+      private final @Nullable Output<Boolean> satisfiesPZS;
 
-    public Input<Boolean> getSatisfiesPZS() {
-        return this.satisfiesPZS == null ? Input.empty() : this.satisfiesPZS;
+    public Output<Boolean> getSatisfiesPZS() {
+        return this.satisfiesPZS == null ? Output.empty() : this.satisfiesPZS;
     }
 
     /**
@@ -335,10 +335,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -346,10 +346,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageClass")
-      private final @Nullable Input<String> storageClass;
+      private final @Nullable Output<String> storageClass;
 
-    public Input<String> getStorageClass() {
-        return this.storageClass == null ? Input.empty() : this.storageClass;
+    public Output<String> getStorageClass() {
+        return this.storageClass == null ? Output.empty() : this.storageClass;
     }
 
     /**
@@ -357,10 +357,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeCreated")
-      private final @Nullable Input<String> timeCreated;
+      private final @Nullable Output<String> timeCreated;
 
-    public Input<String> getTimeCreated() {
-        return this.timeCreated == null ? Input.empty() : this.timeCreated;
+    public Output<String> getTimeCreated() {
+        return this.timeCreated == null ? Output.empty() : this.timeCreated;
     }
 
     /**
@@ -368,17 +368,17 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updated")
-      private final @Nullable Input<String> updated;
+      private final @Nullable Output<String> updated;
 
-    public Input<String> getUpdated() {
-        return this.updated == null ? Input.empty() : this.updated;
+    public Output<String> getUpdated() {
+        return this.updated == null ? Output.empty() : this.updated;
     }
 
     @InputImport(name="userProject")
-      private final @Nullable Input<String> userProject;
+      private final @Nullable Output<String> userProject;
 
-    public Input<String> getUserProject() {
-        return this.userProject == null ? Input.empty() : this.userProject;
+    public Output<String> getUserProject() {
+        return this.userProject == null ? Output.empty() : this.userProject;
     }
 
     /**
@@ -386,10 +386,10 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versioning")
-      private final @Nullable Input<BucketVersioningArgs> versioning;
+      private final @Nullable Output<BucketVersioningArgs> versioning;
 
-    public Input<BucketVersioningArgs> getVersioning() {
-        return this.versioning == null ? Input.empty() : this.versioning;
+    public Output<BucketVersioningArgs> getVersioning() {
+        return this.versioning == null ? Output.empty() : this.versioning;
     }
 
     /**
@@ -397,49 +397,49 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="website")
-      private final @Nullable Input<BucketWebsiteArgs> website;
+      private final @Nullable Output<BucketWebsiteArgs> website;
 
-    public Input<BucketWebsiteArgs> getWebsite() {
-        return this.website == null ? Input.empty() : this.website;
+    public Output<BucketWebsiteArgs> getWebsite() {
+        return this.website == null ? Output.empty() : this.website;
     }
 
     public BucketArgs(
-        @Nullable Input<List<BucketAccessControlArgs>> acl,
-        @Nullable Input<BucketAutoclassArgs> autoclass,
-        @Nullable Input<BucketBillingArgs> billing,
-        @Nullable Input<List<BucketCorsItemArgs>> cors,
-        @Nullable Input<BucketCustomPlacementConfigArgs> customPlacementConfig,
-        @Nullable Input<Boolean> defaultEventBasedHold,
-        @Nullable Input<List<ObjectAccessControlArgs>> defaultObjectAcl,
-        @Nullable Input<BucketEncryptionArgs> encryption,
-        @Nullable Input<String> etag,
-        @Nullable Input<BucketIamConfigurationArgs> iamConfiguration,
-        @Nullable Input<String> id,
-        @Nullable Input<String> kind,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<BucketLifecycleArgs> lifecycle,
-        @Nullable Input<String> location,
-        @Nullable Input<String> locationType,
-        @Nullable Input<BucketLoggingArgs> logging,
-        @Nullable Input<String> metageneration,
-        @Nullable Input<String> name,
-        @Nullable Input<BucketOwnerArgs> owner,
-        @Nullable Input<String> predefinedAcl,
-        @Nullable Input<String> predefinedDefaultObjectAcl,
-        @Nullable Input<String> project,
-        @Nullable Input<String> projectNumber,
-        @Nullable Input<String> projection,
-        @Nullable Input<String> provisionalUserProject,
-        @Nullable Input<BucketRetentionPolicyArgs> retentionPolicy,
-        @Nullable Input<String> rpo,
-        @Nullable Input<Boolean> satisfiesPZS,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> storageClass,
-        @Nullable Input<String> timeCreated,
-        @Nullable Input<String> updated,
-        @Nullable Input<String> userProject,
-        @Nullable Input<BucketVersioningArgs> versioning,
-        @Nullable Input<BucketWebsiteArgs> website) {
+        @Nullable Output<List<BucketAccessControlArgs>> acl,
+        @Nullable Output<BucketAutoclassArgs> autoclass,
+        @Nullable Output<BucketBillingArgs> billing,
+        @Nullable Output<List<BucketCorsItemArgs>> cors,
+        @Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig,
+        @Nullable Output<Boolean> defaultEventBasedHold,
+        @Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl,
+        @Nullable Output<BucketEncryptionArgs> encryption,
+        @Nullable Output<String> etag,
+        @Nullable Output<BucketIamConfigurationArgs> iamConfiguration,
+        @Nullable Output<String> id,
+        @Nullable Output<String> kind,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<BucketLifecycleArgs> lifecycle,
+        @Nullable Output<String> location,
+        @Nullable Output<String> locationType,
+        @Nullable Output<BucketLoggingArgs> logging,
+        @Nullable Output<String> metageneration,
+        @Nullable Output<String> name,
+        @Nullable Output<BucketOwnerArgs> owner,
+        @Nullable Output<String> predefinedAcl,
+        @Nullable Output<String> predefinedDefaultObjectAcl,
+        @Nullable Output<String> project,
+        @Nullable Output<String> projectNumber,
+        @Nullable Output<String> projection,
+        @Nullable Output<String> provisionalUserProject,
+        @Nullable Output<BucketRetentionPolicyArgs> retentionPolicy,
+        @Nullable Output<String> rpo,
+        @Nullable Output<Boolean> satisfiesPZS,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> storageClass,
+        @Nullable Output<String> timeCreated,
+        @Nullable Output<String> updated,
+        @Nullable Output<String> userProject,
+        @Nullable Output<BucketVersioningArgs> versioning,
+        @Nullable Output<BucketWebsiteArgs> website) {
         this.acl = acl;
         this.autoclass = autoclass;
         this.billing = billing;
@@ -479,42 +479,42 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketArgs() {
-        this.acl = Input.empty();
-        this.autoclass = Input.empty();
-        this.billing = Input.empty();
-        this.cors = Input.empty();
-        this.customPlacementConfig = Input.empty();
-        this.defaultEventBasedHold = Input.empty();
-        this.defaultObjectAcl = Input.empty();
-        this.encryption = Input.empty();
-        this.etag = Input.empty();
-        this.iamConfiguration = Input.empty();
-        this.id = Input.empty();
-        this.kind = Input.empty();
-        this.labels = Input.empty();
-        this.lifecycle = Input.empty();
-        this.location = Input.empty();
-        this.locationType = Input.empty();
-        this.logging = Input.empty();
-        this.metageneration = Input.empty();
-        this.name = Input.empty();
-        this.owner = Input.empty();
-        this.predefinedAcl = Input.empty();
-        this.predefinedDefaultObjectAcl = Input.empty();
-        this.project = Input.empty();
-        this.projectNumber = Input.empty();
-        this.projection = Input.empty();
-        this.provisionalUserProject = Input.empty();
-        this.retentionPolicy = Input.empty();
-        this.rpo = Input.empty();
-        this.satisfiesPZS = Input.empty();
-        this.selfLink = Input.empty();
-        this.storageClass = Input.empty();
-        this.timeCreated = Input.empty();
-        this.updated = Input.empty();
-        this.userProject = Input.empty();
-        this.versioning = Input.empty();
-        this.website = Input.empty();
+        this.acl = Output.empty();
+        this.autoclass = Output.empty();
+        this.billing = Output.empty();
+        this.cors = Output.empty();
+        this.customPlacementConfig = Output.empty();
+        this.defaultEventBasedHold = Output.empty();
+        this.defaultObjectAcl = Output.empty();
+        this.encryption = Output.empty();
+        this.etag = Output.empty();
+        this.iamConfiguration = Output.empty();
+        this.id = Output.empty();
+        this.kind = Output.empty();
+        this.labels = Output.empty();
+        this.lifecycle = Output.empty();
+        this.location = Output.empty();
+        this.locationType = Output.empty();
+        this.logging = Output.empty();
+        this.metageneration = Output.empty();
+        this.name = Output.empty();
+        this.owner = Output.empty();
+        this.predefinedAcl = Output.empty();
+        this.predefinedDefaultObjectAcl = Output.empty();
+        this.project = Output.empty();
+        this.projectNumber = Output.empty();
+        this.projection = Output.empty();
+        this.provisionalUserProject = Output.empty();
+        this.retentionPolicy = Output.empty();
+        this.rpo = Output.empty();
+        this.satisfiesPZS = Output.empty();
+        this.selfLink = Output.empty();
+        this.storageClass = Output.empty();
+        this.timeCreated = Output.empty();
+        this.updated = Output.empty();
+        this.userProject = Output.empty();
+        this.versioning = Output.empty();
+        this.website = Output.empty();
     }
 
     public static Builder builder() {
@@ -526,42 +526,42 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BucketAccessControlArgs>> acl;
-        private @Nullable Input<BucketAutoclassArgs> autoclass;
-        private @Nullable Input<BucketBillingArgs> billing;
-        private @Nullable Input<List<BucketCorsItemArgs>> cors;
-        private @Nullable Input<BucketCustomPlacementConfigArgs> customPlacementConfig;
-        private @Nullable Input<Boolean> defaultEventBasedHold;
-        private @Nullable Input<List<ObjectAccessControlArgs>> defaultObjectAcl;
-        private @Nullable Input<BucketEncryptionArgs> encryption;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<BucketIamConfigurationArgs> iamConfiguration;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<BucketLifecycleArgs> lifecycle;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> locationType;
-        private @Nullable Input<BucketLoggingArgs> logging;
-        private @Nullable Input<String> metageneration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<BucketOwnerArgs> owner;
-        private @Nullable Input<String> predefinedAcl;
-        private @Nullable Input<String> predefinedDefaultObjectAcl;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> projectNumber;
-        private @Nullable Input<String> projection;
-        private @Nullable Input<String> provisionalUserProject;
-        private @Nullable Input<BucketRetentionPolicyArgs> retentionPolicy;
-        private @Nullable Input<String> rpo;
-        private @Nullable Input<Boolean> satisfiesPZS;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> storageClass;
-        private @Nullable Input<String> timeCreated;
-        private @Nullable Input<String> updated;
-        private @Nullable Input<String> userProject;
-        private @Nullable Input<BucketVersioningArgs> versioning;
-        private @Nullable Input<BucketWebsiteArgs> website;
+        private @Nullable Output<List<BucketAccessControlArgs>> acl;
+        private @Nullable Output<BucketAutoclassArgs> autoclass;
+        private @Nullable Output<BucketBillingArgs> billing;
+        private @Nullable Output<List<BucketCorsItemArgs>> cors;
+        private @Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig;
+        private @Nullable Output<Boolean> defaultEventBasedHold;
+        private @Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl;
+        private @Nullable Output<BucketEncryptionArgs> encryption;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<BucketIamConfigurationArgs> iamConfiguration;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<BucketLifecycleArgs> lifecycle;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> locationType;
+        private @Nullable Output<BucketLoggingArgs> logging;
+        private @Nullable Output<String> metageneration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<BucketOwnerArgs> owner;
+        private @Nullable Output<String> predefinedAcl;
+        private @Nullable Output<String> predefinedDefaultObjectAcl;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> projectNumber;
+        private @Nullable Output<String> projection;
+        private @Nullable Output<String> provisionalUserProject;
+        private @Nullable Output<BucketRetentionPolicyArgs> retentionPolicy;
+        private @Nullable Output<String> rpo;
+        private @Nullable Output<Boolean> satisfiesPZS;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> storageClass;
+        private @Nullable Output<String> timeCreated;
+        private @Nullable Output<String> updated;
+        private @Nullable Output<String> userProject;
+        private @Nullable Output<BucketVersioningArgs> versioning;
+        private @Nullable Output<BucketWebsiteArgs> website;
 
         public Builder() {
     	      // Empty
@@ -607,363 +607,363 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.website = defaults.website;
         }
 
-        public Builder acl(@Nullable Input<List<BucketAccessControlArgs>> acl) {
+        public Builder acl(@Nullable Output<List<BucketAccessControlArgs>> acl) {
             this.acl = acl;
             return this;
         }
 
         public Builder acl(@Nullable List<BucketAccessControlArgs> acl) {
-            this.acl = Input.ofNullable(acl);
+            this.acl = Output.ofNullable(acl);
             return this;
         }
 
-        public Builder autoclass(@Nullable Input<BucketAutoclassArgs> autoclass) {
+        public Builder autoclass(@Nullable Output<BucketAutoclassArgs> autoclass) {
             this.autoclass = autoclass;
             return this;
         }
 
         public Builder autoclass(@Nullable BucketAutoclassArgs autoclass) {
-            this.autoclass = Input.ofNullable(autoclass);
+            this.autoclass = Output.ofNullable(autoclass);
             return this;
         }
 
-        public Builder billing(@Nullable Input<BucketBillingArgs> billing) {
+        public Builder billing(@Nullable Output<BucketBillingArgs> billing) {
             this.billing = billing;
             return this;
         }
 
         public Builder billing(@Nullable BucketBillingArgs billing) {
-            this.billing = Input.ofNullable(billing);
+            this.billing = Output.ofNullable(billing);
             return this;
         }
 
-        public Builder cors(@Nullable Input<List<BucketCorsItemArgs>> cors) {
+        public Builder cors(@Nullable Output<List<BucketCorsItemArgs>> cors) {
             this.cors = cors;
             return this;
         }
 
         public Builder cors(@Nullable List<BucketCorsItemArgs> cors) {
-            this.cors = Input.ofNullable(cors);
+            this.cors = Output.ofNullable(cors);
             return this;
         }
 
-        public Builder customPlacementConfig(@Nullable Input<BucketCustomPlacementConfigArgs> customPlacementConfig) {
+        public Builder customPlacementConfig(@Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig) {
             this.customPlacementConfig = customPlacementConfig;
             return this;
         }
 
         public Builder customPlacementConfig(@Nullable BucketCustomPlacementConfigArgs customPlacementConfig) {
-            this.customPlacementConfig = Input.ofNullable(customPlacementConfig);
+            this.customPlacementConfig = Output.ofNullable(customPlacementConfig);
             return this;
         }
 
-        public Builder defaultEventBasedHold(@Nullable Input<Boolean> defaultEventBasedHold) {
+        public Builder defaultEventBasedHold(@Nullable Output<Boolean> defaultEventBasedHold) {
             this.defaultEventBasedHold = defaultEventBasedHold;
             return this;
         }
 
         public Builder defaultEventBasedHold(@Nullable Boolean defaultEventBasedHold) {
-            this.defaultEventBasedHold = Input.ofNullable(defaultEventBasedHold);
+            this.defaultEventBasedHold = Output.ofNullable(defaultEventBasedHold);
             return this;
         }
 
-        public Builder defaultObjectAcl(@Nullable Input<List<ObjectAccessControlArgs>> defaultObjectAcl) {
+        public Builder defaultObjectAcl(@Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl) {
             this.defaultObjectAcl = defaultObjectAcl;
             return this;
         }
 
         public Builder defaultObjectAcl(@Nullable List<ObjectAccessControlArgs> defaultObjectAcl) {
-            this.defaultObjectAcl = Input.ofNullable(defaultObjectAcl);
+            this.defaultObjectAcl = Output.ofNullable(defaultObjectAcl);
             return this;
         }
 
-        public Builder encryption(@Nullable Input<BucketEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<BucketEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable BucketEncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder iamConfiguration(@Nullable Input<BucketIamConfigurationArgs> iamConfiguration) {
+        public Builder iamConfiguration(@Nullable Output<BucketIamConfigurationArgs> iamConfiguration) {
             this.iamConfiguration = iamConfiguration;
             return this;
         }
 
         public Builder iamConfiguration(@Nullable BucketIamConfigurationArgs iamConfiguration) {
-            this.iamConfiguration = Input.ofNullable(iamConfiguration);
+            this.iamConfiguration = Output.ofNullable(iamConfiguration);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lifecycle(@Nullable Input<BucketLifecycleArgs> lifecycle) {
+        public Builder lifecycle(@Nullable Output<BucketLifecycleArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
         public Builder lifecycle(@Nullable BucketLifecycleArgs lifecycle) {
-            this.lifecycle = Input.ofNullable(lifecycle);
+            this.lifecycle = Output.ofNullable(lifecycle);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder locationType(@Nullable Input<String> locationType) {
+        public Builder locationType(@Nullable Output<String> locationType) {
             this.locationType = locationType;
             return this;
         }
 
         public Builder locationType(@Nullable String locationType) {
-            this.locationType = Input.ofNullable(locationType);
+            this.locationType = Output.ofNullable(locationType);
             return this;
         }
 
-        public Builder logging(@Nullable Input<BucketLoggingArgs> logging) {
+        public Builder logging(@Nullable Output<BucketLoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable BucketLoggingArgs logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
 
-        public Builder metageneration(@Nullable Input<String> metageneration) {
+        public Builder metageneration(@Nullable Output<String> metageneration) {
             this.metageneration = metageneration;
             return this;
         }
 
         public Builder metageneration(@Nullable String metageneration) {
-            this.metageneration = Input.ofNullable(metageneration);
+            this.metageneration = Output.ofNullable(metageneration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder owner(@Nullable Input<BucketOwnerArgs> owner) {
+        public Builder owner(@Nullable Output<BucketOwnerArgs> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable BucketOwnerArgs owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder predefinedAcl(@Nullable Input<String> predefinedAcl) {
+        public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
             this.predefinedAcl = predefinedAcl;
             return this;
         }
 
         public Builder predefinedAcl(@Nullable String predefinedAcl) {
-            this.predefinedAcl = Input.ofNullable(predefinedAcl);
+            this.predefinedAcl = Output.ofNullable(predefinedAcl);
             return this;
         }
 
-        public Builder predefinedDefaultObjectAcl(@Nullable Input<String> predefinedDefaultObjectAcl) {
+        public Builder predefinedDefaultObjectAcl(@Nullable Output<String> predefinedDefaultObjectAcl) {
             this.predefinedDefaultObjectAcl = predefinedDefaultObjectAcl;
             return this;
         }
 
         public Builder predefinedDefaultObjectAcl(@Nullable String predefinedDefaultObjectAcl) {
-            this.predefinedDefaultObjectAcl = Input.ofNullable(predefinedDefaultObjectAcl);
+            this.predefinedDefaultObjectAcl = Output.ofNullable(predefinedDefaultObjectAcl);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder projectNumber(@Nullable Input<String> projectNumber) {
+        public Builder projectNumber(@Nullable Output<String> projectNumber) {
             this.projectNumber = projectNumber;
             return this;
         }
 
         public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Input.ofNullable(projectNumber);
+            this.projectNumber = Output.ofNullable(projectNumber);
             return this;
         }
 
-        public Builder projection(@Nullable Input<String> projection) {
+        public Builder projection(@Nullable Output<String> projection) {
             this.projection = projection;
             return this;
         }
 
         public Builder projection(@Nullable String projection) {
-            this.projection = Input.ofNullable(projection);
+            this.projection = Output.ofNullable(projection);
             return this;
         }
 
-        public Builder provisionalUserProject(@Nullable Input<String> provisionalUserProject) {
+        public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
 
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = Input.ofNullable(provisionalUserProject);
+            this.provisionalUserProject = Output.ofNullable(provisionalUserProject);
             return this;
         }
 
-        public Builder retentionPolicy(@Nullable Input<BucketRetentionPolicyArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<BucketRetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
         public Builder retentionPolicy(@Nullable BucketRetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Input.ofNullable(retentionPolicy);
+            this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder rpo(@Nullable Input<String> rpo) {
+        public Builder rpo(@Nullable Output<String> rpo) {
             this.rpo = rpo;
             return this;
         }
 
         public Builder rpo(@Nullable String rpo) {
-            this.rpo = Input.ofNullable(rpo);
+            this.rpo = Output.ofNullable(rpo);
             return this;
         }
 
-        public Builder satisfiesPZS(@Nullable Input<Boolean> satisfiesPZS) {
+        public Builder satisfiesPZS(@Nullable Output<Boolean> satisfiesPZS) {
             this.satisfiesPZS = satisfiesPZS;
             return this;
         }
 
         public Builder satisfiesPZS(@Nullable Boolean satisfiesPZS) {
-            this.satisfiesPZS = Input.ofNullable(satisfiesPZS);
+            this.satisfiesPZS = Output.ofNullable(satisfiesPZS);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder storageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Input.ofNullable(storageClass);
+            this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
 
-        public Builder timeCreated(@Nullable Input<String> timeCreated) {
+        public Builder timeCreated(@Nullable Output<String> timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
 
         public Builder timeCreated(@Nullable String timeCreated) {
-            this.timeCreated = Input.ofNullable(timeCreated);
+            this.timeCreated = Output.ofNullable(timeCreated);
             return this;
         }
 
-        public Builder updated(@Nullable Input<String> updated) {
+        public Builder updated(@Nullable Output<String> updated) {
             this.updated = updated;
             return this;
         }
 
         public Builder updated(@Nullable String updated) {
-            this.updated = Input.ofNullable(updated);
+            this.updated = Output.ofNullable(updated);
             return this;
         }
 
-        public Builder userProject(@Nullable Input<String> userProject) {
+        public Builder userProject(@Nullable Output<String> userProject) {
             this.userProject = userProject;
             return this;
         }
 
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = Input.ofNullable(userProject);
+            this.userProject = Output.ofNullable(userProject);
             return this;
         }
 
-        public Builder versioning(@Nullable Input<BucketVersioningArgs> versioning) {
+        public Builder versioning(@Nullable Output<BucketVersioningArgs> versioning) {
             this.versioning = versioning;
             return this;
         }
 
         public Builder versioning(@Nullable BucketVersioningArgs versioning) {
-            this.versioning = Input.ofNullable(versioning);
+            this.versioning = Output.ofNullable(versioning);
             return this;
         }
 
-        public Builder website(@Nullable Input<BucketWebsiteArgs> website) {
+        public Builder website(@Nullable Output<BucketWebsiteArgs> website) {
             this.website = website;
             return this;
         }
 
         public Builder website(@Nullable BucketWebsiteArgs website) {
-            this.website = Input.ofNullable(website);
+            this.website = Output.ofNullable(website);
             return this;
         }
         public BucketArgs build() {

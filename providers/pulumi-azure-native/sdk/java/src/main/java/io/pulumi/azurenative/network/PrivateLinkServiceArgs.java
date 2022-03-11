@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.FrontendIPConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceIpConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesAutoApprovalArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesVisibilityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="autoApproval")
-      private final @Nullable Input<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
+      private final @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
 
-    public Input<PrivateLinkServicePropertiesAutoApprovalArgs> getAutoApproval() {
-        return this.autoApproval == null ? Input.empty() : this.autoApproval;
+    public Output<PrivateLinkServicePropertiesAutoApprovalArgs> getAutoApproval() {
+        return this.autoApproval == null ? Output.empty() : this.autoApproval;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableProxyProtocol")
-      private final @Nullable Input<Boolean> enableProxyProtocol;
+      private final @Nullable Output<Boolean> enableProxyProtocol;
 
-    public Input<Boolean> getEnableProxyProtocol() {
-        return this.enableProxyProtocol == null ? Input.empty() : this.enableProxyProtocol;
+    public Output<Boolean> getEnableProxyProtocol() {
+        return this.enableProxyProtocol == null ? Output.empty() : this.enableProxyProtocol;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fqdns")
-      private final @Nullable Input<List<String>> fqdns;
+      private final @Nullable Output<List<String>> fqdns;
 
-    public Input<List<String>> getFqdns() {
-        return this.fqdns == null ? Input.empty() : this.fqdns;
+    public Output<List<String>> getFqdns() {
+        return this.fqdns == null ? Output.empty() : this.fqdns;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ipConfigurations")
-      private final @Nullable Input<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
+      private final @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
 
-    public Input<List<PrivateLinkServiceIpConfigurationArgs>> getIpConfigurations() {
-        return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
+    public Output<List<PrivateLinkServiceIpConfigurationArgs>> getIpConfigurations() {
+        return this.ipConfigurations == null ? Output.empty() : this.ipConfigurations;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="loadBalancerFrontendIpConfigurations")
-      private final @Nullable Input<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
+      private final @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
 
-    public Input<List<FrontendIPConfigurationArgs>> getLoadBalancerFrontendIpConfigurations() {
-        return this.loadBalancerFrontendIpConfigurations == null ? Input.empty() : this.loadBalancerFrontendIpConfigurations;
+    public Output<List<FrontendIPConfigurationArgs>> getLoadBalancerFrontendIpConfigurations() {
+        return this.loadBalancerFrontendIpConfigurations == null ? Output.empty() : this.loadBalancerFrontendIpConfigurations;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -115,9 +115,9 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -126,10 +126,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -148,25 +148,25 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="visibility")
-      private final @Nullable Input<PrivateLinkServicePropertiesVisibilityArgs> visibility;
+      private final @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility;
 
-    public Input<PrivateLinkServicePropertiesVisibilityArgs> getVisibility() {
-        return this.visibility == null ? Input.empty() : this.visibility;
+    public Output<PrivateLinkServicePropertiesVisibilityArgs> getVisibility() {
+        return this.visibility == null ? Output.empty() : this.visibility;
     }
 
     public PrivateLinkServiceArgs(
-        @Nullable Input<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval,
-        @Nullable Input<Boolean> enableProxyProtocol,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<List<String>> fqdns,
-        @Nullable Input<String> id,
-        @Nullable Input<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations,
-        @Nullable Input<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> serviceName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<PrivateLinkServicePropertiesVisibilityArgs> visibility) {
+        @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval,
+        @Nullable Output<Boolean> enableProxyProtocol,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<List<String>> fqdns,
+        @Nullable Output<String> id,
+        @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations,
+        @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> serviceName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility) {
         this.autoApproval = autoApproval;
         this.enableProxyProtocol = enableProxyProtocol;
         this.extendedLocation = extendedLocation;
@@ -182,18 +182,18 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PrivateLinkServiceArgs() {
-        this.autoApproval = Input.empty();
-        this.enableProxyProtocol = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.fqdns = Input.empty();
-        this.id = Input.empty();
-        this.ipConfigurations = Input.empty();
-        this.loadBalancerFrontendIpConfigurations = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.tags = Input.empty();
-        this.visibility = Input.empty();
+        this.autoApproval = Output.empty();
+        this.enableProxyProtocol = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.fqdns = Output.empty();
+        this.id = Output.empty();
+        this.ipConfigurations = Output.empty();
+        this.loadBalancerFrontendIpConfigurations = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.tags = Output.empty();
+        this.visibility = Output.empty();
     }
 
     public static Builder builder() {
@@ -205,18 +205,18 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
-        private @Nullable Input<Boolean> enableProxyProtocol;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<List<String>> fqdns;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
-        private @Nullable Input<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> serviceName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<PrivateLinkServicePropertiesVisibilityArgs> visibility;
+        private @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
+        private @Nullable Output<Boolean> enableProxyProtocol;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<List<String>> fqdns;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
+        private @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> serviceName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility;
 
         public Builder() {
     	      // Empty
@@ -238,123 +238,123 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder autoApproval(@Nullable Input<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval) {
+        public Builder autoApproval(@Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval) {
             this.autoApproval = autoApproval;
             return this;
         }
 
         public Builder autoApproval(@Nullable PrivateLinkServicePropertiesAutoApprovalArgs autoApproval) {
-            this.autoApproval = Input.ofNullable(autoApproval);
+            this.autoApproval = Output.ofNullable(autoApproval);
             return this;
         }
 
-        public Builder enableProxyProtocol(@Nullable Input<Boolean> enableProxyProtocol) {
+        public Builder enableProxyProtocol(@Nullable Output<Boolean> enableProxyProtocol) {
             this.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
 
         public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
-            this.enableProxyProtocol = Input.ofNullable(enableProxyProtocol);
+            this.enableProxyProtocol = Output.ofNullable(enableProxyProtocol);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder fqdns(@Nullable Input<List<String>> fqdns) {
+        public Builder fqdns(@Nullable Output<List<String>> fqdns) {
             this.fqdns = fqdns;
             return this;
         }
 
         public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = Input.ofNullable(fqdns);
+            this.fqdns = Output.ofNullable(fqdns);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ipConfigurations(@Nullable Input<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
         public Builder ipConfigurations(@Nullable List<PrivateLinkServiceIpConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Input.ofNullable(ipConfigurations);
+            this.ipConfigurations = Output.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder loadBalancerFrontendIpConfigurations(@Nullable Input<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations) {
+        public Builder loadBalancerFrontendIpConfigurations(@Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations) {
             this.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
             return this;
         }
 
         public Builder loadBalancerFrontendIpConfigurations(@Nullable List<FrontendIPConfigurationArgs> loadBalancerFrontendIpConfigurations) {
-            this.loadBalancerFrontendIpConfigurations = Input.ofNullable(loadBalancerFrontendIpConfigurations);
+            this.loadBalancerFrontendIpConfigurations = Output.ofNullable(loadBalancerFrontendIpConfigurations);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder visibility(@Nullable Input<PrivateLinkServicePropertiesVisibilityArgs> visibility) {
+        public Builder visibility(@Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility) {
             this.visibility = visibility;
             return this;
         }
 
         public Builder visibility(@Nullable PrivateLinkServicePropertiesVisibilityArgs visibility) {
-            this.visibility = Input.ofNullable(visibility);
+            this.visibility = Output.ofNullable(visibility);
             return this;
         }
         public PrivateLinkServiceArgs build() {

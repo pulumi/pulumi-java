@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.UpgradeDistributionArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
@@ -26,10 +26,10 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributions")
-      private final @Nullable Input<List<UpgradeDistributionArgs>> distributions;
+      private final @Nullable Output<List<UpgradeDistributionArgs>> distributions;
 
-    public Input<List<UpgradeDistributionArgs>> getDistributions() {
-        return this.distributions == null ? Input.empty() : this.distributions;
+    public Output<List<UpgradeDistributionArgs>> getDistributions() {
+        return this.distributions == null ? Output.empty() : this.distributions;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="package")
-      private final @Nullable Input<String> $package;
+      private final @Nullable Output<String> $package;
 
-    public Input<String> get$package() {
-        return this.$package == null ? Input.empty() : this.$package;
+    public Output<String> get$package() {
+        return this.$package == null ? Output.empty() : this.$package;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<VersionArgs> version;
+      private final @Nullable Output<VersionArgs> version;
 
-    public Input<VersionArgs> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<VersionArgs> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public UpgradeNoteArgs(
-        @Nullable Input<List<UpgradeDistributionArgs>> distributions,
-        @Nullable Input<String> $package,
-        @Nullable Input<VersionArgs> version) {
+        @Nullable Output<List<UpgradeDistributionArgs>> distributions,
+        @Nullable Output<String> $package,
+        @Nullable Output<VersionArgs> version) {
         this.distributions = distributions;
         this.$package = $package;
         this.version = version;
     }
 
     private UpgradeNoteArgs() {
-        this.distributions = Input.empty();
-        this.$package = Input.empty();
-        this.version = Input.empty();
+        this.distributions = Output.empty();
+        this.$package = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<UpgradeDistributionArgs>> distributions;
-        private @Nullable Input<String> $package;
-        private @Nullable Input<VersionArgs> version;
+        private @Nullable Output<List<UpgradeDistributionArgs>> distributions;
+        private @Nullable Output<String> $package;
+        private @Nullable Output<VersionArgs> version;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder distributions(@Nullable Input<List<UpgradeDistributionArgs>> distributions) {
+        public Builder distributions(@Nullable Output<List<UpgradeDistributionArgs>> distributions) {
             this.distributions = distributions;
             return this;
         }
 
         public Builder distributions(@Nullable List<UpgradeDistributionArgs> distributions) {
-            this.distributions = Input.ofNullable(distributions);
+            this.distributions = Output.ofNullable(distributions);
             return this;
         }
 
-        public Builder $package(@Nullable Input<String> $package) {
+        public Builder $package(@Nullable Output<String> $package) {
             this.$package = $package;
             return this;
         }
 
         public Builder $package(@Nullable String $package) {
-            this.$package = Input.ofNullable($package);
+            this.$package = Output.ofNullable($package);
             return this;
         }
 
-        public Builder version(@Nullable Input<VersionArgs> version) {
+        public Builder version(@Nullable Output<VersionArgs> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable VersionArgs version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public UpgradeNoteArgs build() {

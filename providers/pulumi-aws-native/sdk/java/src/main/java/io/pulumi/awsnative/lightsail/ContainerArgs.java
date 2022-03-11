@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.lightsail.inputs.ContainerPublicDomainNameArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerServiceDeploymentArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerServiceDeployment")
-      private final @Nullable Input<ContainerServiceDeploymentArgs> containerServiceDeployment;
+      private final @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment;
 
-    public Input<ContainerServiceDeploymentArgs> getContainerServiceDeployment() {
-        return this.containerServiceDeployment == null ? Input.empty() : this.containerServiceDeployment;
+    public Output<ContainerServiceDeploymentArgs> getContainerServiceDeployment() {
+        return this.containerServiceDeployment == null ? Output.empty() : this.containerServiceDeployment;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDisabled")
-      private final @Nullable Input<Boolean> isDisabled;
+      private final @Nullable Output<Boolean> isDisabled;
 
-    public Input<Boolean> getIsDisabled() {
-        return this.isDisabled == null ? Input.empty() : this.isDisabled;
+    public Output<Boolean> getIsDisabled() {
+        return this.isDisabled == null ? Output.empty() : this.isDisabled;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="power", required=true)
-      private final Input<String> power;
+      private final Output<String> power;
 
-    public Input<String> getPower() {
+    public Output<String> getPower() {
         return this.power;
     }
 
@@ -58,10 +58,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicDomainNames")
-      private final @Nullable Input<List<ContainerPublicDomainNameArgs>> publicDomainNames;
+      private final @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames;
 
-    public Input<List<ContainerPublicDomainNameArgs>> getPublicDomainNames() {
-        return this.publicDomainNames == null ? Input.empty() : this.publicDomainNames;
+    public Output<List<ContainerPublicDomainNameArgs>> getPublicDomainNames() {
+        return this.publicDomainNames == null ? Output.empty() : this.publicDomainNames;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scale", required=true)
-      private final Input<Integer> scale;
+      private final Output<Integer> scale;
 
-    public Input<Integer> getScale() {
+    public Output<Integer> getScale() {
         return this.scale;
     }
 
@@ -80,9 +80,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -91,20 +91,20 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ContainerTagArgs>> tags;
+      private final @Nullable Output<List<ContainerTagArgs>> tags;
 
-    public Input<List<ContainerTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ContainerTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ContainerArgs(
-        @Nullable Input<ContainerServiceDeploymentArgs> containerServiceDeployment,
-        @Nullable Input<Boolean> isDisabled,
-        Input<String> power,
-        @Nullable Input<List<ContainerPublicDomainNameArgs>> publicDomainNames,
-        Input<Integer> scale,
-        Input<String> serviceName,
-        @Nullable Input<List<ContainerTagArgs>> tags) {
+        @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment,
+        @Nullable Output<Boolean> isDisabled,
+        Output<String> power,
+        @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames,
+        Output<Integer> scale,
+        Output<String> serviceName,
+        @Nullable Output<List<ContainerTagArgs>> tags) {
         this.containerServiceDeployment = containerServiceDeployment;
         this.isDisabled = isDisabled;
         this.power = Objects.requireNonNull(power, "expected parameter 'power' to be non-null");
@@ -115,13 +115,13 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.containerServiceDeployment = Input.empty();
-        this.isDisabled = Input.empty();
-        this.power = Input.empty();
-        this.publicDomainNames = Input.empty();
-        this.scale = Input.empty();
-        this.serviceName = Input.empty();
-        this.tags = Input.empty();
+        this.containerServiceDeployment = Output.empty();
+        this.isDisabled = Output.empty();
+        this.power = Output.empty();
+        this.publicDomainNames = Output.empty();
+        this.scale = Output.empty();
+        this.serviceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ContainerServiceDeploymentArgs> containerServiceDeployment;
-        private @Nullable Input<Boolean> isDisabled;
-        private Input<String> power;
-        private @Nullable Input<List<ContainerPublicDomainNameArgs>> publicDomainNames;
-        private Input<Integer> scale;
-        private Input<String> serviceName;
-        private @Nullable Input<List<ContainerTagArgs>> tags;
+        private @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment;
+        private @Nullable Output<Boolean> isDisabled;
+        private Output<String> power;
+        private @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames;
+        private Output<Integer> scale;
+        private Output<String> serviceName;
+        private @Nullable Output<List<ContainerTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder containerServiceDeployment(@Nullable Input<ContainerServiceDeploymentArgs> containerServiceDeployment) {
+        public Builder containerServiceDeployment(@Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment) {
             this.containerServiceDeployment = containerServiceDeployment;
             return this;
         }
 
         public Builder containerServiceDeployment(@Nullable ContainerServiceDeploymentArgs containerServiceDeployment) {
-            this.containerServiceDeployment = Input.ofNullable(containerServiceDeployment);
+            this.containerServiceDeployment = Output.ofNullable(containerServiceDeployment);
             return this;
         }
 
-        public Builder isDisabled(@Nullable Input<Boolean> isDisabled) {
+        public Builder isDisabled(@Nullable Output<Boolean> isDisabled) {
             this.isDisabled = isDisabled;
             return this;
         }
 
         public Builder isDisabled(@Nullable Boolean isDisabled) {
-            this.isDisabled = Input.ofNullable(isDisabled);
+            this.isDisabled = Output.ofNullable(isDisabled);
             return this;
         }
 
-        public Builder power(Input<String> power) {
+        public Builder power(Output<String> power) {
             this.power = Objects.requireNonNull(power);
             return this;
         }
 
         public Builder power(String power) {
-            this.power = Input.of(Objects.requireNonNull(power));
+            this.power = Output.of(Objects.requireNonNull(power));
             return this;
         }
 
-        public Builder publicDomainNames(@Nullable Input<List<ContainerPublicDomainNameArgs>> publicDomainNames) {
+        public Builder publicDomainNames(@Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames) {
             this.publicDomainNames = publicDomainNames;
             return this;
         }
 
         public Builder publicDomainNames(@Nullable List<ContainerPublicDomainNameArgs> publicDomainNames) {
-            this.publicDomainNames = Input.ofNullable(publicDomainNames);
+            this.publicDomainNames = Output.ofNullable(publicDomainNames);
             return this;
         }
 
-        public Builder scale(Input<Integer> scale) {
+        public Builder scale(Output<Integer> scale) {
             this.scale = Objects.requireNonNull(scale);
             return this;
         }
 
         public Builder scale(Integer scale) {
-            this.scale = Input.of(Objects.requireNonNull(scale));
+            this.scale = Output.of(Objects.requireNonNull(scale));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ContainerTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ContainerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ContainerTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ContainerArgs build() {

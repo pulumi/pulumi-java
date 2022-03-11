@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.enums.DnsServiceLogLevelEnum;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="defaultDnsZone")
-      private final @Nullable Input<String> defaultDnsZone;
+      private final @Nullable Output<String> defaultDnsZone;
 
-    public Input<String> getDefaultDnsZone() {
-        return this.defaultDnsZone == null ? Input.empty() : this.defaultDnsZone;
+    public Output<String> getDefaultDnsZone() {
+        return this.defaultDnsZone == null ? Output.empty() : this.defaultDnsZone;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dnsServiceId")
-      private final @Nullable Input<String> dnsServiceId;
+      private final @Nullable Output<String> dnsServiceId;
 
-    public Input<String> getDnsServiceId() {
-        return this.dnsServiceId == null ? Input.empty() : this.dnsServiceId;
+    public Output<String> getDnsServiceId() {
+        return this.dnsServiceId == null ? Output.empty() : this.dnsServiceId;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dnsServiceIp")
-      private final @Nullable Input<String> dnsServiceIp;
+      private final @Nullable Output<String> dnsServiceIp;
 
-    public Input<String> getDnsServiceIp() {
-        return this.dnsServiceIp == null ? Input.empty() : this.dnsServiceIp;
+    public Output<String> getDnsServiceIp() {
+        return this.dnsServiceIp == null ? Output.empty() : this.dnsServiceIp;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fqdnZones")
-      private final @Nullable Input<List<String>> fqdnZones;
+      private final @Nullable Output<List<String>> fqdnZones;
 
-    public Input<List<String>> getFqdnZones() {
-        return this.fqdnZones == null ? Input.empty() : this.fqdnZones;
+    public Output<List<String>> getFqdnZones() {
+        return this.fqdnZones == null ? Output.empty() : this.fqdnZones;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="logLevel")
-      private final @Nullable Input<Either<String,DnsServiceLogLevelEnum>> logLevel;
+      private final @Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel;
 
-    public Input<Either<String,DnsServiceLogLevelEnum>> getLogLevel() {
-        return this.logLevel == null ? Input.empty() : this.logLevel;
+    public Output<Either<String,DnsServiceLogLevelEnum>> getLogLevel() {
+        return this.logLevel == null ? Output.empty() : this.logLevel;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -100,9 +100,9 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,22 +111,22 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<Double> revision;
+      private final @Nullable Output<Double> revision;
 
-    public Input<Double> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<Double> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     public WorkloadNetworkDnsServiceArgs(
-        @Nullable Input<String> defaultDnsZone,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> dnsServiceId,
-        @Nullable Input<String> dnsServiceIp,
-        @Nullable Input<List<String>> fqdnZones,
-        @Nullable Input<Either<String,DnsServiceLogLevelEnum>> logLevel,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Double> revision) {
+        @Nullable Output<String> defaultDnsZone,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> dnsServiceId,
+        @Nullable Output<String> dnsServiceIp,
+        @Nullable Output<List<String>> fqdnZones,
+        @Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Double> revision) {
         this.defaultDnsZone = defaultDnsZone;
         this.displayName = displayName;
         this.dnsServiceId = dnsServiceId;
@@ -139,15 +139,15 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     }
 
     private WorkloadNetworkDnsServiceArgs() {
-        this.defaultDnsZone = Input.empty();
-        this.displayName = Input.empty();
-        this.dnsServiceId = Input.empty();
-        this.dnsServiceIp = Input.empty();
-        this.fqdnZones = Input.empty();
-        this.logLevel = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.revision = Input.empty();
+        this.defaultDnsZone = Output.empty();
+        this.displayName = Output.empty();
+        this.dnsServiceId = Output.empty();
+        this.dnsServiceIp = Output.empty();
+        this.fqdnZones = Output.empty();
+        this.logLevel = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.revision = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultDnsZone;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> dnsServiceId;
-        private @Nullable Input<String> dnsServiceIp;
-        private @Nullable Input<List<String>> fqdnZones;
-        private @Nullable Input<Either<String,DnsServiceLogLevelEnum>> logLevel;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Double> revision;
+        private @Nullable Output<String> defaultDnsZone;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> dnsServiceId;
+        private @Nullable Output<String> dnsServiceIp;
+        private @Nullable Output<List<String>> fqdnZones;
+        private @Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Double> revision;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     	      this.revision = defaults.revision;
         }
 
-        public Builder defaultDnsZone(@Nullable Input<String> defaultDnsZone) {
+        public Builder defaultDnsZone(@Nullable Output<String> defaultDnsZone) {
             this.defaultDnsZone = defaultDnsZone;
             return this;
         }
 
         public Builder defaultDnsZone(@Nullable String defaultDnsZone) {
-            this.defaultDnsZone = Input.ofNullable(defaultDnsZone);
+            this.defaultDnsZone = Output.ofNullable(defaultDnsZone);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder dnsServiceId(@Nullable Input<String> dnsServiceId) {
+        public Builder dnsServiceId(@Nullable Output<String> dnsServiceId) {
             this.dnsServiceId = dnsServiceId;
             return this;
         }
 
         public Builder dnsServiceId(@Nullable String dnsServiceId) {
-            this.dnsServiceId = Input.ofNullable(dnsServiceId);
+            this.dnsServiceId = Output.ofNullable(dnsServiceId);
             return this;
         }
 
-        public Builder dnsServiceIp(@Nullable Input<String> dnsServiceIp) {
+        public Builder dnsServiceIp(@Nullable Output<String> dnsServiceIp) {
             this.dnsServiceIp = dnsServiceIp;
             return this;
         }
 
         public Builder dnsServiceIp(@Nullable String dnsServiceIp) {
-            this.dnsServiceIp = Input.ofNullable(dnsServiceIp);
+            this.dnsServiceIp = Output.ofNullable(dnsServiceIp);
             return this;
         }
 
-        public Builder fqdnZones(@Nullable Input<List<String>> fqdnZones) {
+        public Builder fqdnZones(@Nullable Output<List<String>> fqdnZones) {
             this.fqdnZones = fqdnZones;
             return this;
         }
 
         public Builder fqdnZones(@Nullable List<String> fqdnZones) {
-            this.fqdnZones = Input.ofNullable(fqdnZones);
+            this.fqdnZones = Output.ofNullable(fqdnZones);
             return this;
         }
 
-        public Builder logLevel(@Nullable Input<Either<String,DnsServiceLogLevelEnum>> logLevel) {
+        public Builder logLevel(@Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
         public Builder logLevel(@Nullable Either<String,DnsServiceLogLevelEnum> logLevel) {
-            this.logLevel = Input.ofNullable(logLevel);
+            this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder revision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Output<Double> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable Double revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
         public WorkloadNetworkDnsServiceArgs build() {

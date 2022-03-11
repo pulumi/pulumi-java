@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
@@ -30,22 +30,22 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public ResourceArgs(
-        Input<String> arn,
-        @Nullable Input<String> roleArn) {
+        Output<String> arn,
+        @Nullable Output<String> roleArn) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.roleArn = roleArn;
     }
 
     private ResourceArgs() {
-        this.arn = Input.empty();
-        this.roleArn = Input.empty();
+        this.arn = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private @Nullable Input<String> roleArn;
+        private Output<String> arn;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public ResourceArgs build() {

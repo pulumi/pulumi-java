@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastTransitionTime", required=true)
-      private final Input<String> lastTransitionTime;
+      private final Output<String> lastTransitionTime;
 
-    public Input<String> getLastTransitionTime() {
+    public Output<String> getLastTransitionTime() {
         return this.lastTransitionTime;
     }
 
@@ -35,9 +35,9 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message", required=true)
-      private final Input<String> message;
+      private final Output<String> message;
 
-    public Input<String> getMessage() {
+    public Output<String> getMessage() {
         return this.message;
     }
 
@@ -46,10 +46,10 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason", required=true)
-      private final Input<String> reason;
+      private final Output<String> reason;
 
-    public Input<String> getReason() {
+    public Output<String> getReason() {
         return this.reason;
     }
 
@@ -68,9 +68,9 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<String> status;
+      private final Output<String> status;
 
-    public Input<String> getStatus() {
+    public Output<String> getStatus() {
         return this.status;
     }
 
@@ -79,19 +79,19 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ConditionArgs(
-        Input<String> lastTransitionTime,
-        Input<String> message,
-        @Nullable Input<Integer> observedGeneration,
-        Input<String> reason,
-        Input<String> status,
-        Input<String> type) {
+        Output<String> lastTransitionTime,
+        Output<String> message,
+        @Nullable Output<Integer> observedGeneration,
+        Output<String> reason,
+        Output<String> status,
+        Output<String> type) {
         this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime, "expected parameter 'lastTransitionTime' to be non-null");
         this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
         this.observedGeneration = observedGeneration;
@@ -101,12 +101,12 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConditionArgs() {
-        this.lastTransitionTime = Input.empty();
-        this.message = Input.empty();
-        this.observedGeneration = Input.empty();
-        this.reason = Input.empty();
-        this.status = Input.empty();
-        this.type = Input.empty();
+        this.lastTransitionTime = Output.empty();
+        this.message = Output.empty();
+        this.observedGeneration = Output.empty();
+        this.reason = Output.empty();
+        this.status = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> lastTransitionTime;
-        private Input<String> message;
-        private @Nullable Input<Integer> observedGeneration;
-        private Input<String> reason;
-        private Input<String> status;
-        private Input<String> type;
+        private Output<String> lastTransitionTime;
+        private Output<String> message;
+        private @Nullable Output<Integer> observedGeneration;
+        private Output<String> reason;
+        private Output<String> status;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder lastTransitionTime(Input<String> lastTransitionTime) {
+        public Builder lastTransitionTime(Output<String> lastTransitionTime) {
             this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
             return this;
         }
 
         public Builder lastTransitionTime(String lastTransitionTime) {
-            this.lastTransitionTime = Input.of(Objects.requireNonNull(lastTransitionTime));
+            this.lastTransitionTime = Output.of(Objects.requireNonNull(lastTransitionTime));
             return this;
         }
 
-        public Builder message(Input<String> message) {
+        public Builder message(Output<String> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
         public Builder message(String message) {
-            this.message = Input.of(Objects.requireNonNull(message));
+            this.message = Output.of(Objects.requireNonNull(message));
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder reason(Input<String> reason) {
+        public Builder reason(Output<String> reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
         public Builder reason(String reason) {
-            this.reason = Input.of(Objects.requireNonNull(reason));
+            this.reason = Output.of(Objects.requireNonNull(reason));
             return this;
         }
 
-        public Builder status(Input<String> status) {
+        public Builder status(Output<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(String status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ConditionArgs build() {

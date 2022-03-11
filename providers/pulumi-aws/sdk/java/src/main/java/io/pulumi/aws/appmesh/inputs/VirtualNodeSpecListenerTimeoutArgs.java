@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutGrpcArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttp2Args;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttpArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutTcpArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,10 +22,10 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="grpc")
-      private final @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc;
+      private final @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc;
 
-    public Input<VirtualNodeSpecListenerTimeoutGrpcArgs> getGrpc() {
-        return this.grpc == null ? Input.empty() : this.grpc;
+    public Output<VirtualNodeSpecListenerTimeoutGrpcArgs> getGrpc() {
+        return this.grpc == null ? Output.empty() : this.grpc;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="http")
-      private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttpArgs> http;
+      private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttpArgs> http;
 
-    public Input<VirtualNodeSpecListenerTimeoutHttpArgs> getHttp() {
-        return this.http == null ? Input.empty() : this.http;
+    public Output<VirtualNodeSpecListenerTimeoutHttpArgs> getHttp() {
+        return this.http == null ? Output.empty() : this.http;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="http2")
-      private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2Args> http2;
+      private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2Args> http2;
 
-    public Input<VirtualNodeSpecListenerTimeoutHttp2Args> getHttp2() {
-        return this.http2 == null ? Input.empty() : this.http2;
+    public Output<VirtualNodeSpecListenerTimeoutHttp2Args> getHttp2() {
+        return this.http2 == null ? Output.empty() : this.http2;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tcp")
-      private final @Nullable Input<VirtualNodeSpecListenerTimeoutTcpArgs> tcp;
+      private final @Nullable Output<VirtualNodeSpecListenerTimeoutTcpArgs> tcp;
 
-    public Input<VirtualNodeSpecListenerTimeoutTcpArgs> getTcp() {
-        return this.tcp == null ? Input.empty() : this.tcp;
+    public Output<VirtualNodeSpecListenerTimeoutTcpArgs> getTcp() {
+        return this.tcp == null ? Output.empty() : this.tcp;
     }
 
     public VirtualNodeSpecListenerTimeoutArgs(
-        @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc,
-        @Nullable Input<VirtualNodeSpecListenerTimeoutHttpArgs> http,
-        @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2Args> http2,
-        @Nullable Input<VirtualNodeSpecListenerTimeoutTcpArgs> tcp) {
+        @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc,
+        @Nullable Output<VirtualNodeSpecListenerTimeoutHttpArgs> http,
+        @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2Args> http2,
+        @Nullable Output<VirtualNodeSpecListenerTimeoutTcpArgs> tcp) {
         this.grpc = grpc;
         this.http = http;
         this.http2 = http2;
@@ -73,10 +73,10 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
     }
 
     private VirtualNodeSpecListenerTimeoutArgs() {
-        this.grpc = Input.empty();
-        this.http = Input.empty();
-        this.http2 = Input.empty();
-        this.tcp = Input.empty();
+        this.grpc = Output.empty();
+        this.http = Output.empty();
+        this.http2 = Output.empty();
+        this.tcp = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc;
-        private @Nullable Input<VirtualNodeSpecListenerTimeoutHttpArgs> http;
-        private @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2Args> http2;
-        private @Nullable Input<VirtualNodeSpecListenerTimeoutTcpArgs> tcp;
+        private @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc;
+        private @Nullable Output<VirtualNodeSpecListenerTimeoutHttpArgs> http;
+        private @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2Args> http2;
+        private @Nullable Output<VirtualNodeSpecListenerTimeoutTcpArgs> tcp;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
     	      this.tcp = defaults.tcp;
         }
 
-        public Builder grpc(@Nullable Input<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc) {
+        public Builder grpc(@Nullable Output<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc) {
             this.grpc = grpc;
             return this;
         }
 
         public Builder grpc(@Nullable VirtualNodeSpecListenerTimeoutGrpcArgs grpc) {
-            this.grpc = Input.ofNullable(grpc);
+            this.grpc = Output.ofNullable(grpc);
             return this;
         }
 
-        public Builder http(@Nullable Input<VirtualNodeSpecListenerTimeoutHttpArgs> http) {
+        public Builder http(@Nullable Output<VirtualNodeSpecListenerTimeoutHttpArgs> http) {
             this.http = http;
             return this;
         }
 
         public Builder http(@Nullable VirtualNodeSpecListenerTimeoutHttpArgs http) {
-            this.http = Input.ofNullable(http);
+            this.http = Output.ofNullable(http);
             return this;
         }
 
-        public Builder http2(@Nullable Input<VirtualNodeSpecListenerTimeoutHttp2Args> http2) {
+        public Builder http2(@Nullable Output<VirtualNodeSpecListenerTimeoutHttp2Args> http2) {
             this.http2 = http2;
             return this;
         }
 
         public Builder http2(@Nullable VirtualNodeSpecListenerTimeoutHttp2Args http2) {
-            this.http2 = Input.ofNullable(http2);
+            this.http2 = Output.ofNullable(http2);
             return this;
         }
 
-        public Builder tcp(@Nullable Input<VirtualNodeSpecListenerTimeoutTcpArgs> tcp) {
+        public Builder tcp(@Nullable Output<VirtualNodeSpecListenerTimeoutTcpArgs> tcp) {
             this.tcp = tcp;
             return this;
         }
 
         public Builder tcp(@Nullable VirtualNodeSpecListenerTimeoutTcpArgs tcp) {
-            this.tcp = Input.ofNullable(tcp);
+            this.tcp = Output.ofNullable(tcp);
             return this;
         }
         public VirtualNodeSpecListenerTimeoutArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import io.pulumi.googlenative.testing_v1.inputs.IosDeviceFileArgs;
@@ -26,10 +26,10 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalIpas")
-      private final @Nullable Input<List<FileReferenceArgs>> additionalIpas;
+      private final @Nullable Output<List<FileReferenceArgs>> additionalIpas;
 
-    public Input<List<FileReferenceArgs>> getAdditionalIpas() {
-        return this.additionalIpas == null ? Input.empty() : this.additionalIpas;
+    public Output<List<FileReferenceArgs>> getAdditionalIpas() {
+        return this.additionalIpas == null ? Output.empty() : this.additionalIpas;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<String> networkProfile;
+      private final @Nullable Output<String> networkProfile;
 
-    public Input<String> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<String> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pullDirectories")
-      private final @Nullable Input<List<IosDeviceFileArgs>> pullDirectories;
+      private final @Nullable Output<List<IosDeviceFileArgs>> pullDirectories;
 
-    public Input<List<IosDeviceFileArgs>> getPullDirectories() {
-        return this.pullDirectories == null ? Input.empty() : this.pullDirectories;
+    public Output<List<IosDeviceFileArgs>> getPullDirectories() {
+        return this.pullDirectories == null ? Output.empty() : this.pullDirectories;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pushFiles")
-      private final @Nullable Input<List<IosDeviceFileArgs>> pushFiles;
+      private final @Nullable Output<List<IosDeviceFileArgs>> pushFiles;
 
-    public Input<List<IosDeviceFileArgs>> getPushFiles() {
-        return this.pushFiles == null ? Input.empty() : this.pushFiles;
+    public Output<List<IosDeviceFileArgs>> getPushFiles() {
+        return this.pushFiles == null ? Output.empty() : this.pushFiles;
     }
 
     public IosTestSetupArgs(
-        @Nullable Input<List<FileReferenceArgs>> additionalIpas,
-        @Nullable Input<String> networkProfile,
-        @Nullable Input<List<IosDeviceFileArgs>> pullDirectories,
-        @Nullable Input<List<IosDeviceFileArgs>> pushFiles) {
+        @Nullable Output<List<FileReferenceArgs>> additionalIpas,
+        @Nullable Output<String> networkProfile,
+        @Nullable Output<List<IosDeviceFileArgs>> pullDirectories,
+        @Nullable Output<List<IosDeviceFileArgs>> pushFiles) {
         this.additionalIpas = additionalIpas;
         this.networkProfile = networkProfile;
         this.pullDirectories = pullDirectories;
@@ -77,10 +77,10 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosTestSetupArgs() {
-        this.additionalIpas = Input.empty();
-        this.networkProfile = Input.empty();
-        this.pullDirectories = Input.empty();
-        this.pushFiles = Input.empty();
+        this.additionalIpas = Output.empty();
+        this.networkProfile = Output.empty();
+        this.pullDirectories = Output.empty();
+        this.pushFiles = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FileReferenceArgs>> additionalIpas;
-        private @Nullable Input<String> networkProfile;
-        private @Nullable Input<List<IosDeviceFileArgs>> pullDirectories;
-        private @Nullable Input<List<IosDeviceFileArgs>> pushFiles;
+        private @Nullable Output<List<FileReferenceArgs>> additionalIpas;
+        private @Nullable Output<String> networkProfile;
+        private @Nullable Output<List<IosDeviceFileArgs>> pullDirectories;
+        private @Nullable Output<List<IosDeviceFileArgs>> pushFiles;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pushFiles = defaults.pushFiles;
         }
 
-        public Builder additionalIpas(@Nullable Input<List<FileReferenceArgs>> additionalIpas) {
+        public Builder additionalIpas(@Nullable Output<List<FileReferenceArgs>> additionalIpas) {
             this.additionalIpas = additionalIpas;
             return this;
         }
 
         public Builder additionalIpas(@Nullable List<FileReferenceArgs> additionalIpas) {
-            this.additionalIpas = Input.ofNullable(additionalIpas);
+            this.additionalIpas = Output.ofNullable(additionalIpas);
             return this;
         }
 
-        public Builder networkProfile(@Nullable Input<String> networkProfile) {
+        public Builder networkProfile(@Nullable Output<String> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable String networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder pullDirectories(@Nullable Input<List<IosDeviceFileArgs>> pullDirectories) {
+        public Builder pullDirectories(@Nullable Output<List<IosDeviceFileArgs>> pullDirectories) {
             this.pullDirectories = pullDirectories;
             return this;
         }
 
         public Builder pullDirectories(@Nullable List<IosDeviceFileArgs> pullDirectories) {
-            this.pullDirectories = Input.ofNullable(pullDirectories);
+            this.pullDirectories = Output.ofNullable(pullDirectories);
             return this;
         }
 
-        public Builder pushFiles(@Nullable Input<List<IosDeviceFileArgs>> pushFiles) {
+        public Builder pushFiles(@Nullable Output<List<IosDeviceFileArgs>> pushFiles) {
             this.pushFiles = pushFiles;
             return this;
         }
 
         public Builder pushFiles(@Nullable List<IosDeviceFileArgs> pushFiles) {
-            this.pushFiles = Input.ofNullable(pushFiles);
+            this.pushFiles = Output.ofNullable(pushFiles);
             return this;
         }
         public IosTestSetupArgs build() {

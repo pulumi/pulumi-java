@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mwaa.inputs;
 
 import io.pulumi.awsnative.mwaa.enums.EnvironmentLoggingLevel;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,39 +21,39 @@ public final class EnvironmentModuleLoggingConfigurationArgs extends io.pulumi.r
     public static final EnvironmentModuleLoggingConfigurationArgs Empty = new EnvironmentModuleLoggingConfigurationArgs();
 
     @InputImport(name="cloudWatchLogGroupArn")
-      private final @Nullable Input<String> cloudWatchLogGroupArn;
+      private final @Nullable Output<String> cloudWatchLogGroupArn;
 
-    public Input<String> getCloudWatchLogGroupArn() {
-        return this.cloudWatchLogGroupArn == null ? Input.empty() : this.cloudWatchLogGroupArn;
+    public Output<String> getCloudWatchLogGroupArn() {
+        return this.cloudWatchLogGroupArn == null ? Output.empty() : this.cloudWatchLogGroupArn;
     }
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     @InputImport(name="logLevel")
-      private final @Nullable Input<EnvironmentLoggingLevel> logLevel;
+      private final @Nullable Output<EnvironmentLoggingLevel> logLevel;
 
-    public Input<EnvironmentLoggingLevel> getLogLevel() {
-        return this.logLevel == null ? Input.empty() : this.logLevel;
+    public Output<EnvironmentLoggingLevel> getLogLevel() {
+        return this.logLevel == null ? Output.empty() : this.logLevel;
     }
 
     public EnvironmentModuleLoggingConfigurationArgs(
-        @Nullable Input<String> cloudWatchLogGroupArn,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<EnvironmentLoggingLevel> logLevel) {
+        @Nullable Output<String> cloudWatchLogGroupArn,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<EnvironmentLoggingLevel> logLevel) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         this.enabled = enabled;
         this.logLevel = logLevel;
     }
 
     private EnvironmentModuleLoggingConfigurationArgs() {
-        this.cloudWatchLogGroupArn = Input.empty();
-        this.enabled = Input.empty();
-        this.logLevel = Input.empty();
+        this.cloudWatchLogGroupArn = Output.empty();
+        this.enabled = Output.empty();
+        this.logLevel = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,9 +65,9 @@ public final class EnvironmentModuleLoggingConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudWatchLogGroupArn;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<EnvironmentLoggingLevel> logLevel;
+        private @Nullable Output<String> cloudWatchLogGroupArn;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<EnvironmentLoggingLevel> logLevel;
 
         public Builder() {
     	      // Empty
@@ -80,33 +80,33 @@ public final class EnvironmentModuleLoggingConfigurationArgs extends io.pulumi.r
     	      this.logLevel = defaults.logLevel;
         }
 
-        public Builder cloudWatchLogGroupArn(@Nullable Input<String> cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(@Nullable Output<String> cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
 
         public Builder cloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
-            this.cloudWatchLogGroupArn = Input.ofNullable(cloudWatchLogGroupArn);
+            this.cloudWatchLogGroupArn = Output.ofNullable(cloudWatchLogGroupArn);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder logLevel(@Nullable Input<EnvironmentLoggingLevel> logLevel) {
+        public Builder logLevel(@Nullable Output<EnvironmentLoggingLevel> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
         public Builder logLevel(@Nullable EnvironmentLoggingLevel logLevel) {
-            this.logLevel = Input.ofNullable(logLevel);
+            this.logLevel = Output.ofNullable(logLevel);
             return this;
         }
         public EnvironmentModuleLoggingConfigurationArgs build() {

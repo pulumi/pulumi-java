@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociationArgs exten
      * 
      */
     @InputImport(name="eventType", required=true)
-      private final Input<String> eventType;
+      private final Output<String> eventType;
 
-    public Input<String> getEventType() {
+    public Output<String> getEventType() {
         return this.eventType;
     }
 
@@ -30,22 +30,22 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociationArgs exten
      * 
      */
     @InputImport(name="functionArn", required=true)
-      private final Input<String> functionArn;
+      private final Output<String> functionArn;
 
-    public Input<String> getFunctionArn() {
+    public Output<String> getFunctionArn() {
         return this.functionArn;
     }
 
     public DistributionOrderedCacheBehaviorFunctionAssociationArgs(
-        Input<String> eventType,
-        Input<String> functionArn) {
+        Output<String> eventType,
+        Output<String> functionArn) {
         this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
         this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
     }
 
     private DistributionOrderedCacheBehaviorFunctionAssociationArgs() {
-        this.eventType = Input.empty();
-        this.functionArn = Input.empty();
+        this.eventType = Output.empty();
+        this.functionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociationArgs exten
     }
 
     public static final class Builder {
-        private Input<String> eventType;
-        private Input<String> functionArn;
+        private Output<String> eventType;
+        private Output<String> functionArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociationArgs exten
     	      this.functionArn = defaults.functionArn;
         }
 
-        public Builder eventType(Input<String> eventType) {
+        public Builder eventType(Output<String> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
         public Builder eventType(String eventType) {
-            this.eventType = Input.of(Objects.requireNonNull(eventType));
+            this.eventType = Output.of(Objects.requireNonNull(eventType));
             return this;
         }
 
-        public Builder functionArn(Input<String> functionArn) {
+        public Builder functionArn(Output<String> functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
         public Builder functionArn(String functionArn) {
-            this.functionArn = Input.of(Objects.requireNonNull(functionArn));
+            this.functionArn = Output.of(Objects.requireNonNull(functionArn));
             return this;
         }
         public DistributionOrderedCacheBehaviorFunctionAssociationArgs build() {

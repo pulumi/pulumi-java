@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.CaOptionsArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.KeyUsageArgs;
@@ -28,10 +28,10 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="additionalExtensions")
-      private final @Nullable Input<List<X509ExtensionArgs>> additionalExtensions;
+      private final @Nullable Output<List<X509ExtensionArgs>> additionalExtensions;
 
-    public Input<List<X509ExtensionArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
+    public Output<List<X509ExtensionArgs>> getAdditionalExtensions() {
+        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="aiaOcspServers")
-      private final @Nullable Input<List<String>> aiaOcspServers;
+      private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Input<List<String>> getAiaOcspServers() {
-        return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
+    public Output<List<String>> getAiaOcspServers() {
+        return this.aiaOcspServers == null ? Output.empty() : this.aiaOcspServers;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="caOptions")
-      private final @Nullable Input<CaOptionsArgs> caOptions;
+      private final @Nullable Output<CaOptionsArgs> caOptions;
 
-    public Input<CaOptionsArgs> getCaOptions() {
-        return this.caOptions == null ? Input.empty() : this.caOptions;
+    public Output<CaOptionsArgs> getCaOptions() {
+        return this.caOptions == null ? Output.empty() : this.caOptions;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyUsage")
-      private final @Nullable Input<KeyUsageArgs> keyUsage;
+      private final @Nullable Output<KeyUsageArgs> keyUsage;
 
-    public Input<KeyUsageArgs> getKeyUsage() {
-        return this.keyUsage == null ? Input.empty() : this.keyUsage;
+    public Output<KeyUsageArgs> getKeyUsage() {
+        return this.keyUsage == null ? Output.empty() : this.keyUsage;
     }
 
     /**
@@ -72,18 +72,18 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyIds")
-      private final @Nullable Input<List<ObjectIdArgs>> policyIds;
+      private final @Nullable Output<List<ObjectIdArgs>> policyIds;
 
-    public Input<List<ObjectIdArgs>> getPolicyIds() {
-        return this.policyIds == null ? Input.empty() : this.policyIds;
+    public Output<List<ObjectIdArgs>> getPolicyIds() {
+        return this.policyIds == null ? Output.empty() : this.policyIds;
     }
 
     public ReusableConfigValuesArgs(
-        @Nullable Input<List<X509ExtensionArgs>> additionalExtensions,
-        @Nullable Input<List<String>> aiaOcspServers,
-        @Nullable Input<CaOptionsArgs> caOptions,
-        @Nullable Input<KeyUsageArgs> keyUsage,
-        @Nullable Input<List<ObjectIdArgs>> policyIds) {
+        @Nullable Output<List<X509ExtensionArgs>> additionalExtensions,
+        @Nullable Output<List<String>> aiaOcspServers,
+        @Nullable Output<CaOptionsArgs> caOptions,
+        @Nullable Output<KeyUsageArgs> keyUsage,
+        @Nullable Output<List<ObjectIdArgs>> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;
@@ -92,11 +92,11 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
     }
 
     private ReusableConfigValuesArgs() {
-        this.additionalExtensions = Input.empty();
-        this.aiaOcspServers = Input.empty();
-        this.caOptions = Input.empty();
-        this.keyUsage = Input.empty();
-        this.policyIds = Input.empty();
+        this.additionalExtensions = Output.empty();
+        this.aiaOcspServers = Output.empty();
+        this.caOptions = Output.empty();
+        this.keyUsage = Output.empty();
+        this.policyIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<X509ExtensionArgs>> additionalExtensions;
-        private @Nullable Input<List<String>> aiaOcspServers;
-        private @Nullable Input<CaOptionsArgs> caOptions;
-        private @Nullable Input<KeyUsageArgs> keyUsage;
-        private @Nullable Input<List<ObjectIdArgs>> policyIds;
+        private @Nullable Output<List<X509ExtensionArgs>> additionalExtensions;
+        private @Nullable Output<List<String>> aiaOcspServers;
+        private @Nullable Output<CaOptionsArgs> caOptions;
+        private @Nullable Output<KeyUsageArgs> keyUsage;
+        private @Nullable Output<List<ObjectIdArgs>> policyIds;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder additionalExtensions(@Nullable Input<List<X509ExtensionArgs>> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable Output<List<X509ExtensionArgs>> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
         public Builder additionalExtensions(@Nullable List<X509ExtensionArgs> additionalExtensions) {
-            this.additionalExtensions = Input.ofNullable(additionalExtensions);
+            this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
 
-        public Builder aiaOcspServers(@Nullable Input<List<String>> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Input.ofNullable(aiaOcspServers);
+            this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
             return this;
         }
 
-        public Builder caOptions(@Nullable Input<CaOptionsArgs> caOptions) {
+        public Builder caOptions(@Nullable Output<CaOptionsArgs> caOptions) {
             this.caOptions = caOptions;
             return this;
         }
 
         public Builder caOptions(@Nullable CaOptionsArgs caOptions) {
-            this.caOptions = Input.ofNullable(caOptions);
+            this.caOptions = Output.ofNullable(caOptions);
             return this;
         }
 
-        public Builder keyUsage(@Nullable Input<KeyUsageArgs> keyUsage) {
+        public Builder keyUsage(@Nullable Output<KeyUsageArgs> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
         public Builder keyUsage(@Nullable KeyUsageArgs keyUsage) {
-            this.keyUsage = Input.ofNullable(keyUsage);
+            this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder policyIds(@Nullable Input<List<ObjectIdArgs>> policyIds) {
+        public Builder policyIds(@Nullable Output<List<ObjectIdArgs>> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
 
         public Builder policyIds(@Nullable List<ObjectIdArgs> policyIds) {
-            this.policyIds = Input.ofNullable(policyIds);
+            this.policyIds = Output.ofNullable(policyIds);
             return this;
         }
         public ReusableConfigValuesArgs build() {

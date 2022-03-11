@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class MemberAccountAssociationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="memberAccountId", required=true)
-      private final Input<String> memberAccountId;
+      private final Output<String> memberAccountId;
 
-    public Input<String> getMemberAccountId() {
+    public Output<String> getMemberAccountId() {
         return this.memberAccountId;
     }
 
-    public MemberAccountAssociationArgs(Input<String> memberAccountId) {
+    public MemberAccountAssociationArgs(Output<String> memberAccountId) {
         this.memberAccountId = Objects.requireNonNull(memberAccountId, "expected parameter 'memberAccountId' to be non-null");
     }
 
     private MemberAccountAssociationArgs() {
-        this.memberAccountId = Input.empty();
+        this.memberAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class MemberAccountAssociationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> memberAccountId;
+        private Output<String> memberAccountId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class MemberAccountAssociationArgs extends io.pulumi.resources.Reso
     	      this.memberAccountId = defaults.memberAccountId;
         }
 
-        public Builder memberAccountId(Input<String> memberAccountId) {
+        public Builder memberAccountId(Output<String> memberAccountId) {
             this.memberAccountId = Objects.requireNonNull(memberAccountId);
             return this;
         }
 
         public Builder memberAccountId(String memberAccountId) {
-            this.memberAccountId = Input.of(Objects.requireNonNull(memberAccountId));
+            this.memberAccountId = Output.of(Objects.requireNonNull(memberAccountId));
             return this;
         }
         public MemberAccountAssociationArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.MetricAlertActionArgs;
 import io.pulumi.azurenative.insights.inputs.MetricAlertMultipleResourceMultipleMetricCriteriaArgs;
 import io.pulumi.azurenative.insights.inputs.MetricAlertSingleResourceMultipleMetricCriteriaArgs;
 import io.pulumi.azurenative.insights.inputs.WebtestLocationAvailabilityCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,10 +28,10 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<MetricAlertActionArgs>> actions;
+      private final @Nullable Output<List<MetricAlertActionArgs>> actions;
 
-    public Input<List<MetricAlertActionArgs>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<MetricAlertActionArgs>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoMitigate")
-      private final @Nullable Input<Boolean> autoMitigate;
+      private final @Nullable Output<Boolean> autoMitigate;
 
-    public Input<Boolean> getAutoMitigate() {
-        return this.autoMitigate == null ? Input.empty() : this.autoMitigate;
+    public Output<Boolean> getAutoMitigate() {
+        return this.autoMitigate == null ? Output.empty() : this.autoMitigate;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="criteria", required=true)
-      private final Input<Object> criteria;
+      private final Output<Object> criteria;
 
-    public Input<Object> getCriteria() {
+    public Output<Object> getCriteria() {
         return this.criteria;
     }
 
@@ -61,10 +61,10 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -83,9 +83,9 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluationFrequency", required=true)
-      private final Input<String> evaluationFrequency;
+      private final Output<String> evaluationFrequency;
 
-    public Input<String> getEvaluationFrequency() {
+    public Output<String> getEvaluationFrequency() {
         return this.evaluationFrequency;
     }
 
@@ -94,10 +94,10 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -105,9 +105,9 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -116,10 +116,10 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     /**
@@ -127,9 +127,9 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes", required=true)
-      private final Input<List<String>> scopes;
+      private final Output<List<String>> scopes;
 
-    public Input<List<String>> getScopes() {
+    public Output<List<String>> getScopes() {
         return this.scopes;
     }
 
@@ -138,9 +138,9 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-      private final Input<Integer> severity;
+      private final Output<Integer> severity;
 
-    public Input<Integer> getSeverity() {
+    public Output<Integer> getSeverity() {
         return this.severity;
     }
 
@@ -149,10 +149,10 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceRegion")
-      private final @Nullable Input<String> targetResourceRegion;
+      private final @Nullable Output<String> targetResourceRegion;
 
-    public Input<String> getTargetResourceRegion() {
-        return this.targetResourceRegion == null ? Input.empty() : this.targetResourceRegion;
+    public Output<String> getTargetResourceRegion() {
+        return this.targetResourceRegion == null ? Output.empty() : this.targetResourceRegion;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceType")
-      private final @Nullable Input<String> targetResourceType;
+      private final @Nullable Output<String> targetResourceType;
 
-    public Input<String> getTargetResourceType() {
-        return this.targetResourceType == null ? Input.empty() : this.targetResourceType;
+    public Output<String> getTargetResourceType() {
+        return this.targetResourceType == null ? Output.empty() : this.targetResourceType;
     }
 
     /**
@@ -182,28 +182,28 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowSize", required=true)
-      private final Input<String> windowSize;
+      private final Output<String> windowSize;
 
-    public Input<String> getWindowSize() {
+    public Output<String> getWindowSize() {
         return this.windowSize;
     }
 
     public MetricAlertArgs(
-        @Nullable Input<List<MetricAlertActionArgs>> actions,
-        @Nullable Input<Boolean> autoMitigate,
-        Input<Object> criteria,
-        @Nullable Input<String> description,
-        Input<Boolean> enabled,
-        Input<String> evaluationFrequency,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> ruleName,
-        Input<List<String>> scopes,
-        Input<Integer> severity,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> targetResourceRegion,
-        @Nullable Input<String> targetResourceType,
-        Input<String> windowSize) {
+        @Nullable Output<List<MetricAlertActionArgs>> actions,
+        @Nullable Output<Boolean> autoMitigate,
+        Output<Object> criteria,
+        @Nullable Output<String> description,
+        Output<Boolean> enabled,
+        Output<String> evaluationFrequency,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> ruleName,
+        Output<List<String>> scopes,
+        Output<Integer> severity,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> targetResourceRegion,
+        @Nullable Output<String> targetResourceType,
+        Output<String> windowSize) {
         this.actions = actions;
         this.autoMitigate = autoMitigate;
         this.criteria = Objects.requireNonNull(criteria, "expected parameter 'criteria' to be non-null");
@@ -222,21 +222,21 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricAlertArgs() {
-        this.actions = Input.empty();
-        this.autoMitigate = Input.empty();
-        this.criteria = Input.empty();
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.evaluationFrequency = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleName = Input.empty();
-        this.scopes = Input.empty();
-        this.severity = Input.empty();
-        this.tags = Input.empty();
-        this.targetResourceRegion = Input.empty();
-        this.targetResourceType = Input.empty();
-        this.windowSize = Input.empty();
+        this.actions = Output.empty();
+        this.autoMitigate = Output.empty();
+        this.criteria = Output.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.evaluationFrequency = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleName = Output.empty();
+        this.scopes = Output.empty();
+        this.severity = Output.empty();
+        this.tags = Output.empty();
+        this.targetResourceRegion = Output.empty();
+        this.targetResourceType = Output.empty();
+        this.windowSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -248,21 +248,21 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MetricAlertActionArgs>> actions;
-        private @Nullable Input<Boolean> autoMitigate;
-        private Input<Object> criteria;
-        private @Nullable Input<String> description;
-        private Input<Boolean> enabled;
-        private Input<String> evaluationFrequency;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> ruleName;
-        private Input<List<String>> scopes;
-        private Input<Integer> severity;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> targetResourceRegion;
-        private @Nullable Input<String> targetResourceType;
-        private Input<String> windowSize;
+        private @Nullable Output<List<MetricAlertActionArgs>> actions;
+        private @Nullable Output<Boolean> autoMitigate;
+        private Output<Object> criteria;
+        private @Nullable Output<String> description;
+        private Output<Boolean> enabled;
+        private Output<String> evaluationFrequency;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> ruleName;
+        private Output<List<String>> scopes;
+        private Output<Integer> severity;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> targetResourceRegion;
+        private @Nullable Output<String> targetResourceType;
+        private Output<String> windowSize;
 
         public Builder() {
     	      // Empty
@@ -287,153 +287,153 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder actions(@Nullable Input<List<MetricAlertActionArgs>> actions) {
+        public Builder actions(@Nullable Output<List<MetricAlertActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<MetricAlertActionArgs> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder autoMitigate(@Nullable Input<Boolean> autoMitigate) {
+        public Builder autoMitigate(@Nullable Output<Boolean> autoMitigate) {
             this.autoMitigate = autoMitigate;
             return this;
         }
 
         public Builder autoMitigate(@Nullable Boolean autoMitigate) {
-            this.autoMitigate = Input.ofNullable(autoMitigate);
+            this.autoMitigate = Output.ofNullable(autoMitigate);
             return this;
         }
 
-        public Builder criteria(Input<Object> criteria) {
+        public Builder criteria(Output<Object> criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
 
         public Builder criteria(Object criteria) {
-            this.criteria = Input.of(Objects.requireNonNull(criteria));
+            this.criteria = Output.of(Objects.requireNonNull(criteria));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder evaluationFrequency(Input<String> evaluationFrequency) {
+        public Builder evaluationFrequency(Output<String> evaluationFrequency) {
             this.evaluationFrequency = Objects.requireNonNull(evaluationFrequency);
             return this;
         }
 
         public Builder evaluationFrequency(String evaluationFrequency) {
-            this.evaluationFrequency = Input.of(Objects.requireNonNull(evaluationFrequency));
+            this.evaluationFrequency = Output.of(Objects.requireNonNull(evaluationFrequency));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
 
-        public Builder scopes(Input<List<String>> scopes) {
+        public Builder scopes(Output<List<String>> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
         public Builder scopes(List<String> scopes) {
-            this.scopes = Input.of(Objects.requireNonNull(scopes));
+            this.scopes = Output.of(Objects.requireNonNull(scopes));
             return this;
         }
 
-        public Builder severity(Input<Integer> severity) {
+        public Builder severity(Output<Integer> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
         public Builder severity(Integer severity) {
-            this.severity = Input.of(Objects.requireNonNull(severity));
+            this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetResourceRegion(@Nullable Input<String> targetResourceRegion) {
+        public Builder targetResourceRegion(@Nullable Output<String> targetResourceRegion) {
             this.targetResourceRegion = targetResourceRegion;
             return this;
         }
 
         public Builder targetResourceRegion(@Nullable String targetResourceRegion) {
-            this.targetResourceRegion = Input.ofNullable(targetResourceRegion);
+            this.targetResourceRegion = Output.ofNullable(targetResourceRegion);
             return this;
         }
 
-        public Builder targetResourceType(@Nullable Input<String> targetResourceType) {
+        public Builder targetResourceType(@Nullable Output<String> targetResourceType) {
             this.targetResourceType = targetResourceType;
             return this;
         }
 
         public Builder targetResourceType(@Nullable String targetResourceType) {
-            this.targetResourceType = Input.ofNullable(targetResourceType);
+            this.targetResourceType = Output.ofNullable(targetResourceType);
             return this;
         }
 
-        public Builder windowSize(Input<String> windowSize) {
+        public Builder windowSize(Output<String> windowSize) {
             this.windowSize = Objects.requireNonNull(windowSize);
             return this;
         }
 
         public Builder windowSize(String windowSize) {
-            this.windowSize = Input.of(Objects.requireNonNull(windowSize));
+            this.windowSize = Output.of(Objects.requireNonNull(windowSize));
             return this;
         }
         public MetricAlertArgs build() {

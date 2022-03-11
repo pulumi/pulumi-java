@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RouterBgpAdvertisedIpRangeArgs;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertiseMode")
-      private final @Nullable Input<String> advertiseMode;
+      private final @Nullable Output<String> advertiseMode;
 
-    public Input<String> getAdvertiseMode() {
-        return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
+    public Output<String> getAdvertiseMode() {
+        return this.advertiseMode == null ? Output.empty() : this.advertiseMode;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedGroups")
-      private final @Nullable Input<List<String>> advertisedGroups;
+      private final @Nullable Output<List<String>> advertisedGroups;
 
-    public Input<List<String>> getAdvertisedGroups() {
-        return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
+    public Output<List<String>> getAdvertisedGroups() {
+        return this.advertisedGroups == null ? Output.empty() : this.advertisedGroups;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedIpRanges")
-      private final @Nullable Input<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges;
+      private final @Nullable Output<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges;
 
-    public Input<List<RouterBgpAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
-        return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
+    public Output<List<RouterBgpAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
+        return this.advertisedIpRanges == null ? Output.empty() : this.advertisedIpRanges;
     }
 
     /**
@@ -70,17 +70,17 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asn", required=true)
-      private final Input<Integer> asn;
+      private final Output<Integer> asn;
 
-    public Input<Integer> getAsn() {
+    public Output<Integer> getAsn() {
         return this.asn;
     }
 
     public RouterBgpArgs(
-        @Nullable Input<String> advertiseMode,
-        @Nullable Input<List<String>> advertisedGroups,
-        @Nullable Input<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges,
-        Input<Integer> asn) {
+        @Nullable Output<String> advertiseMode,
+        @Nullable Output<List<String>> advertisedGroups,
+        @Nullable Output<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges,
+        Output<Integer> asn) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;
@@ -88,10 +88,10 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterBgpArgs() {
-        this.advertiseMode = Input.empty();
-        this.advertisedGroups = Input.empty();
-        this.advertisedIpRanges = Input.empty();
-        this.asn = Input.empty();
+        this.advertiseMode = Output.empty();
+        this.advertisedGroups = Output.empty();
+        this.advertisedIpRanges = Output.empty();
+        this.asn = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,10 +103,10 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> advertiseMode;
-        private @Nullable Input<List<String>> advertisedGroups;
-        private @Nullable Input<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges;
-        private Input<Integer> asn;
+        private @Nullable Output<String> advertiseMode;
+        private @Nullable Output<List<String>> advertisedGroups;
+        private @Nullable Output<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges;
+        private Output<Integer> asn;
 
         public Builder() {
     	      // Empty
@@ -120,43 +120,43 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     	      this.asn = defaults.asn;
         }
 
-        public Builder advertiseMode(@Nullable Input<String> advertiseMode) {
+        public Builder advertiseMode(@Nullable Output<String> advertiseMode) {
             this.advertiseMode = advertiseMode;
             return this;
         }
 
         public Builder advertiseMode(@Nullable String advertiseMode) {
-            this.advertiseMode = Input.ofNullable(advertiseMode);
+            this.advertiseMode = Output.ofNullable(advertiseMode);
             return this;
         }
 
-        public Builder advertisedGroups(@Nullable Input<List<String>> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable Output<List<String>> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
 
         public Builder advertisedGroups(@Nullable List<String> advertisedGroups) {
-            this.advertisedGroups = Input.ofNullable(advertisedGroups);
+            this.advertisedGroups = Output.ofNullable(advertisedGroups);
             return this;
         }
 
-        public Builder advertisedIpRanges(@Nullable Input<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable Output<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
         public Builder advertisedIpRanges(@Nullable List<RouterBgpAdvertisedIpRangeArgs> advertisedIpRanges) {
-            this.advertisedIpRanges = Input.ofNullable(advertisedIpRanges);
+            this.advertisedIpRanges = Output.ofNullable(advertisedIpRanges);
             return this;
         }
 
-        public Builder asn(Input<Integer> asn) {
+        public Builder asn(Output<Integer> asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }
 
         public Builder asn(Integer asn) {
-            this.asn = Input.of(Objects.requireNonNull(asn));
+            this.asn = Output.of(Objects.requireNonNull(asn));
             return this;
         }
         public RouterBgpArgs build() {

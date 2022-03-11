@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="canonicalScopes")
-      private final @Nullable Input<String> canonicalScopes;
+      private final @Nullable Output<String> canonicalScopes;
 
-    public Input<String> getCanonicalScopes() {
-        return this.canonicalScopes == null ? Input.empty() : this.canonicalScopes;
+    public Output<String> getCanonicalScopes() {
+        return this.canonicalScopes == null ? Output.empty() : this.canonicalScopes;
     }
 
-    public OAuthRequirementsArgs(@Nullable Input<String> canonicalScopes) {
+    public OAuthRequirementsArgs(@Nullable Output<String> canonicalScopes) {
         this.canonicalScopes = canonicalScopes;
     }
 
     private OAuthRequirementsArgs() {
-        this.canonicalScopes = Input.empty();
+        this.canonicalScopes = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> canonicalScopes;
+        private @Nullable Output<String> canonicalScopes;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
     	      this.canonicalScopes = defaults.canonicalScopes;
         }
 
-        public Builder canonicalScopes(@Nullable Input<String> canonicalScopes) {
+        public Builder canonicalScopes(@Nullable Output<String> canonicalScopes) {
             this.canonicalScopes = canonicalScopes;
             return this;
         }
 
         public Builder canonicalScopes(@Nullable String canonicalScopes) {
-            this.canonicalScopes = Input.ofNullable(canonicalScopes);
+            this.canonicalScopes = Output.ofNullable(canonicalScopes);
             return this;
         }
         public OAuthRequirementsArgs build() {

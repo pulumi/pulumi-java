@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="previewSubscription")
-      private final @Nullable Input<String> previewSubscription;
+      private final @Nullable Output<String> previewSubscription;
 
-    public Input<String> getPreviewSubscription() {
-        return this.previewSubscription == null ? Input.empty() : this.previewSubscription;
+    public Output<String> getPreviewSubscription() {
+        return this.previewSubscription == null ? Output.empty() : this.previewSubscription;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="skuName", required=true)
-      private final Input<String> skuName;
+      private final Output<String> skuName;
 
-    public Input<String> getSkuName() {
+    public Output<String> getSkuName() {
         return this.skuName;
     }
 
@@ -41,25 +41,25 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vendorName", required=true)
-      private final Input<String> vendorName;
+      private final Output<String> vendorName;
 
-    public Input<String> getVendorName() {
+    public Output<String> getVendorName() {
         return this.vendorName;
     }
 
     public VendorSkuPreviewArgs(
-        @Nullable Input<String> previewSubscription,
-        Input<String> skuName,
-        Input<String> vendorName) {
+        @Nullable Output<String> previewSubscription,
+        Output<String> skuName,
+        Output<String> vendorName) {
         this.previewSubscription = previewSubscription;
         this.skuName = Objects.requireNonNull(skuName, "expected parameter 'skuName' to be non-null");
         this.vendorName = Objects.requireNonNull(vendorName, "expected parameter 'vendorName' to be non-null");
     }
 
     private VendorSkuPreviewArgs() {
-        this.previewSubscription = Input.empty();
-        this.skuName = Input.empty();
-        this.vendorName = Input.empty();
+        this.previewSubscription = Output.empty();
+        this.skuName = Output.empty();
+        this.vendorName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> previewSubscription;
-        private Input<String> skuName;
-        private Input<String> vendorName;
+        private @Nullable Output<String> previewSubscription;
+        private Output<String> skuName;
+        private Output<String> vendorName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder previewSubscription(@Nullable Input<String> previewSubscription) {
+        public Builder previewSubscription(@Nullable Output<String> previewSubscription) {
             this.previewSubscription = previewSubscription;
             return this;
         }
 
         public Builder previewSubscription(@Nullable String previewSubscription) {
-            this.previewSubscription = Input.ofNullable(previewSubscription);
+            this.previewSubscription = Output.ofNullable(previewSubscription);
             return this;
         }
 
-        public Builder skuName(Input<String> skuName) {
+        public Builder skuName(Output<String> skuName) {
             this.skuName = Objects.requireNonNull(skuName);
             return this;
         }
 
         public Builder skuName(String skuName) {
-            this.skuName = Input.of(Objects.requireNonNull(skuName));
+            this.skuName = Output.of(Objects.requireNonNull(skuName));
             return this;
         }
 
-        public Builder vendorName(Input<String> vendorName) {
+        public Builder vendorName(Output<String> vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
 
         public Builder vendorName(String vendorName) {
-            this.vendorName = Input.of(Objects.requireNonNull(vendorName));
+            this.vendorName = Output.of(Objects.requireNonNull(vendorName));
             return this;
         }
         public VendorSkuPreviewArgs build() {

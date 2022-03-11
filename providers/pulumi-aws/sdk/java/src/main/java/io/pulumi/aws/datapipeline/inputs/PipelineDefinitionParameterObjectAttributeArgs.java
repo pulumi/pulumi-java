@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.datapipeline.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PipelineDefinitionParameterObjectAttributeArgs extends io.pul
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -29,22 +29,22 @@ public final class PipelineDefinitionParameterObjectAttributeArgs extends io.pul
      * 
      */
     @InputImport(name="stringValue", required=true)
-      private final Input<String> stringValue;
+      private final Output<String> stringValue;
 
-    public Input<String> getStringValue() {
+    public Output<String> getStringValue() {
         return this.stringValue;
     }
 
     public PipelineDefinitionParameterObjectAttributeArgs(
-        Input<String> key,
-        Input<String> stringValue) {
+        Output<String> key,
+        Output<String> stringValue) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
     }
 
     private PipelineDefinitionParameterObjectAttributeArgs() {
-        this.key = Input.empty();
-        this.stringValue = Input.empty();
+        this.key = Output.empty();
+        this.stringValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class PipelineDefinitionParameterObjectAttributeArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private Input<String> stringValue;
+        private Output<String> key;
+        private Output<String> stringValue;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class PipelineDefinitionParameterObjectAttributeArgs extends io.pul
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder stringValue(Input<String> stringValue) {
+        public Builder stringValue(Output<String> stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
 
         public Builder stringValue(String stringValue) {
-            this.stringValue = Input.of(Objects.requireNonNull(stringValue));
+            this.stringValue = Output.of(Objects.requireNonNull(stringValue));
             return this;
         }
         public PipelineDefinitionParameterObjectAttributeArgs build() {

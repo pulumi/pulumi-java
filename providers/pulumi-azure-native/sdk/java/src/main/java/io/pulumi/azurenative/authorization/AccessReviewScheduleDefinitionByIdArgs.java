@@ -8,7 +8,7 @@ import io.pulumi.azurenative.authorization.enums.DefaultDecisionType;
 import io.pulumi.azurenative.authorization.inputs.AccessReviewInstanceArgs;
 import io.pulumi.azurenative.authorization.inputs.AccessReviewReviewerArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="autoApplyDecisionsEnabled")
-      private final @Nullable Input<Boolean> autoApplyDecisionsEnabled;
+      private final @Nullable Output<Boolean> autoApplyDecisionsEnabled;
 
-    public Input<Boolean> getAutoApplyDecisionsEnabled() {
-        return this.autoApplyDecisionsEnabled == null ? Input.empty() : this.autoApplyDecisionsEnabled;
+    public Output<Boolean> getAutoApplyDecisionsEnabled() {
+        return this.autoApplyDecisionsEnabled == null ? Output.empty() : this.autoApplyDecisionsEnabled;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupReviewers")
-      private final @Nullable Input<List<AccessReviewReviewerArgs>> backupReviewers;
+      private final @Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers;
 
-    public Input<List<AccessReviewReviewerArgs>> getBackupReviewers() {
-        return this.backupReviewers == null ? Input.empty() : this.backupReviewers;
+    public Output<List<AccessReviewReviewerArgs>> getBackupReviewers() {
+        return this.backupReviewers == null ? Output.empty() : this.backupReviewers;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="defaultDecision")
-      private final @Nullable Input<Either<String,DefaultDecisionType>> defaultDecision;
+      private final @Nullable Output<Either<String,DefaultDecisionType>> defaultDecision;
 
-    public Input<Either<String,DefaultDecisionType>> getDefaultDecision() {
-        return this.defaultDecision == null ? Input.empty() : this.defaultDecision;
+    public Output<Either<String,DefaultDecisionType>> getDefaultDecision() {
+        return this.defaultDecision == null ? Output.empty() : this.defaultDecision;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="defaultDecisionEnabled")
-      private final @Nullable Input<Boolean> defaultDecisionEnabled;
+      private final @Nullable Output<Boolean> defaultDecisionEnabled;
 
-    public Input<Boolean> getDefaultDecisionEnabled() {
-        return this.defaultDecisionEnabled == null ? Input.empty() : this.defaultDecisionEnabled;
+    public Output<Boolean> getDefaultDecisionEnabled() {
+        return this.defaultDecisionEnabled == null ? Output.empty() : this.defaultDecisionEnabled;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="descriptionForAdmins")
-      private final @Nullable Input<String> descriptionForAdmins;
+      private final @Nullable Output<String> descriptionForAdmins;
 
-    public Input<String> getDescriptionForAdmins() {
-        return this.descriptionForAdmins == null ? Input.empty() : this.descriptionForAdmins;
+    public Output<String> getDescriptionForAdmins() {
+        return this.descriptionForAdmins == null ? Output.empty() : this.descriptionForAdmins;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="descriptionForReviewers")
-      private final @Nullable Input<String> descriptionForReviewers;
+      private final @Nullable Output<String> descriptionForReviewers;
 
-    public Input<String> getDescriptionForReviewers() {
-        return this.descriptionForReviewers == null ? Input.empty() : this.descriptionForReviewers;
+    public Output<String> getDescriptionForReviewers() {
+        return this.descriptionForReviewers == null ? Output.empty() : this.descriptionForReviewers;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="endDate")
-      private final @Nullable Input<String> endDate;
+      private final @Nullable Output<String> endDate;
 
-    public Input<String> getEndDate() {
-        return this.endDate == null ? Input.empty() : this.endDate;
+    public Output<String> getEndDate() {
+        return this.endDate == null ? Output.empty() : this.endDate;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="inactiveDuration")
-      private final @Nullable Input<String> inactiveDuration;
+      private final @Nullable Output<String> inactiveDuration;
 
-    public Input<String> getInactiveDuration() {
-        return this.inactiveDuration == null ? Input.empty() : this.inactiveDuration;
+    public Output<String> getInactiveDuration() {
+        return this.inactiveDuration == null ? Output.empty() : this.inactiveDuration;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instanceDurationInDays")
-      private final @Nullable Input<Integer> instanceDurationInDays;
+      private final @Nullable Output<Integer> instanceDurationInDays;
 
-    public Input<Integer> getInstanceDurationInDays() {
-        return this.instanceDurationInDays == null ? Input.empty() : this.instanceDurationInDays;
+    public Output<Integer> getInstanceDurationInDays() {
+        return this.instanceDurationInDays == null ? Output.empty() : this.instanceDurationInDays;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instances")
-      private final @Nullable Input<List<AccessReviewInstanceArgs>> instances;
+      private final @Nullable Output<List<AccessReviewInstanceArgs>> instances;
 
-    public Input<List<AccessReviewInstanceArgs>> getInstances() {
-        return this.instances == null ? Input.empty() : this.instances;
+    public Output<List<AccessReviewInstanceArgs>> getInstances() {
+        return this.instances == null ? Output.empty() : this.instances;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Integer> interval;
+      private final @Nullable Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Integer> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="justificationRequiredOnApproval")
-      private final @Nullable Input<Boolean> justificationRequiredOnApproval;
+      private final @Nullable Output<Boolean> justificationRequiredOnApproval;
 
-    public Input<Boolean> getJustificationRequiredOnApproval() {
-        return this.justificationRequiredOnApproval == null ? Input.empty() : this.justificationRequiredOnApproval;
+    public Output<Boolean> getJustificationRequiredOnApproval() {
+        return this.justificationRequiredOnApproval == null ? Output.empty() : this.justificationRequiredOnApproval;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="mailNotificationsEnabled")
-      private final @Nullable Input<Boolean> mailNotificationsEnabled;
+      private final @Nullable Output<Boolean> mailNotificationsEnabled;
 
-    public Input<Boolean> getMailNotificationsEnabled() {
-        return this.mailNotificationsEnabled == null ? Input.empty() : this.mailNotificationsEnabled;
+    public Output<Boolean> getMailNotificationsEnabled() {
+        return this.mailNotificationsEnabled == null ? Output.empty() : this.mailNotificationsEnabled;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="numberOfOccurrences")
-      private final @Nullable Input<Integer> numberOfOccurrences;
+      private final @Nullable Output<Integer> numberOfOccurrences;
 
-    public Input<Integer> getNumberOfOccurrences() {
-        return this.numberOfOccurrences == null ? Input.empty() : this.numberOfOccurrences;
+    public Output<Integer> getNumberOfOccurrences() {
+        return this.numberOfOccurrences == null ? Output.empty() : this.numberOfOccurrences;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="recommendationsEnabled")
-      private final @Nullable Input<Boolean> recommendationsEnabled;
+      private final @Nullable Output<Boolean> recommendationsEnabled;
 
-    public Input<Boolean> getRecommendationsEnabled() {
-        return this.recommendationsEnabled == null ? Input.empty() : this.recommendationsEnabled;
+    public Output<Boolean> getRecommendationsEnabled() {
+        return this.recommendationsEnabled == null ? Output.empty() : this.recommendationsEnabled;
     }
 
     /**
@@ -203,10 +203,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="reminderNotificationsEnabled")
-      private final @Nullable Input<Boolean> reminderNotificationsEnabled;
+      private final @Nullable Output<Boolean> reminderNotificationsEnabled;
 
-    public Input<Boolean> getReminderNotificationsEnabled() {
-        return this.reminderNotificationsEnabled == null ? Input.empty() : this.reminderNotificationsEnabled;
+    public Output<Boolean> getReminderNotificationsEnabled() {
+        return this.reminderNotificationsEnabled == null ? Output.empty() : this.reminderNotificationsEnabled;
     }
 
     /**
@@ -214,10 +214,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="reviewers")
-      private final @Nullable Input<List<AccessReviewReviewerArgs>> reviewers;
+      private final @Nullable Output<List<AccessReviewReviewerArgs>> reviewers;
 
-    public Input<List<AccessReviewReviewerArgs>> getReviewers() {
-        return this.reviewers == null ? Input.empty() : this.reviewers;
+    public Output<List<AccessReviewReviewerArgs>> getReviewers() {
+        return this.reviewers == null ? Output.empty() : this.reviewers;
     }
 
     /**
@@ -225,10 +225,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scheduleDefinitionId")
-      private final @Nullable Input<String> scheduleDefinitionId;
+      private final @Nullable Output<String> scheduleDefinitionId;
 
-    public Input<String> getScheduleDefinitionId() {
-        return this.scheduleDefinitionId == null ? Input.empty() : this.scheduleDefinitionId;
+    public Output<String> getScheduleDefinitionId() {
+        return this.scheduleDefinitionId == null ? Output.empty() : this.scheduleDefinitionId;
     }
 
     /**
@@ -236,10 +236,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="startDate")
-      private final @Nullable Input<String> startDate;
+      private final @Nullable Output<String> startDate;
 
-    public Input<String> getStartDate() {
-        return this.startDate == null ? Input.empty() : this.startDate;
+    public Output<String> getStartDate() {
+        return this.startDate == null ? Output.empty() : this.startDate;
     }
 
     /**
@@ -247,34 +247,34 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type;
+      private final @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
 
-    public Input<Either<String,AccessReviewRecurrenceRangeType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,AccessReviewRecurrenceRangeType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AccessReviewScheduleDefinitionByIdArgs(
-        @Nullable Input<Boolean> autoApplyDecisionsEnabled,
-        @Nullable Input<List<AccessReviewReviewerArgs>> backupReviewers,
-        @Nullable Input<Either<String,DefaultDecisionType>> defaultDecision,
-        @Nullable Input<Boolean> defaultDecisionEnabled,
-        @Nullable Input<String> descriptionForAdmins,
-        @Nullable Input<String> descriptionForReviewers,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> endDate,
-        @Nullable Input<String> inactiveDuration,
-        @Nullable Input<Integer> instanceDurationInDays,
-        @Nullable Input<List<AccessReviewInstanceArgs>> instances,
-        @Nullable Input<Integer> interval,
-        @Nullable Input<Boolean> justificationRequiredOnApproval,
-        @Nullable Input<Boolean> mailNotificationsEnabled,
-        @Nullable Input<Integer> numberOfOccurrences,
-        @Nullable Input<Boolean> recommendationsEnabled,
-        @Nullable Input<Boolean> reminderNotificationsEnabled,
-        @Nullable Input<List<AccessReviewReviewerArgs>> reviewers,
-        @Nullable Input<String> scheduleDefinitionId,
-        @Nullable Input<String> startDate,
-        @Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type) {
+        @Nullable Output<Boolean> autoApplyDecisionsEnabled,
+        @Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers,
+        @Nullable Output<Either<String,DefaultDecisionType>> defaultDecision,
+        @Nullable Output<Boolean> defaultDecisionEnabled,
+        @Nullable Output<String> descriptionForAdmins,
+        @Nullable Output<String> descriptionForReviewers,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> endDate,
+        @Nullable Output<String> inactiveDuration,
+        @Nullable Output<Integer> instanceDurationInDays,
+        @Nullable Output<List<AccessReviewInstanceArgs>> instances,
+        @Nullable Output<Integer> interval,
+        @Nullable Output<Boolean> justificationRequiredOnApproval,
+        @Nullable Output<Boolean> mailNotificationsEnabled,
+        @Nullable Output<Integer> numberOfOccurrences,
+        @Nullable Output<Boolean> recommendationsEnabled,
+        @Nullable Output<Boolean> reminderNotificationsEnabled,
+        @Nullable Output<List<AccessReviewReviewerArgs>> reviewers,
+        @Nullable Output<String> scheduleDefinitionId,
+        @Nullable Output<String> startDate,
+        @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
         this.autoApplyDecisionsEnabled = autoApplyDecisionsEnabled;
         this.backupReviewers = backupReviewers;
         this.defaultDecision = defaultDecision;
@@ -299,27 +299,27 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     }
 
     private AccessReviewScheduleDefinitionByIdArgs() {
-        this.autoApplyDecisionsEnabled = Input.empty();
-        this.backupReviewers = Input.empty();
-        this.defaultDecision = Input.empty();
-        this.defaultDecisionEnabled = Input.empty();
-        this.descriptionForAdmins = Input.empty();
-        this.descriptionForReviewers = Input.empty();
-        this.displayName = Input.empty();
-        this.endDate = Input.empty();
-        this.inactiveDuration = Input.empty();
-        this.instanceDurationInDays = Input.empty();
-        this.instances = Input.empty();
-        this.interval = Input.empty();
-        this.justificationRequiredOnApproval = Input.empty();
-        this.mailNotificationsEnabled = Input.empty();
-        this.numberOfOccurrences = Input.empty();
-        this.recommendationsEnabled = Input.empty();
-        this.reminderNotificationsEnabled = Input.empty();
-        this.reviewers = Input.empty();
-        this.scheduleDefinitionId = Input.empty();
-        this.startDate = Input.empty();
-        this.type = Input.empty();
+        this.autoApplyDecisionsEnabled = Output.empty();
+        this.backupReviewers = Output.empty();
+        this.defaultDecision = Output.empty();
+        this.defaultDecisionEnabled = Output.empty();
+        this.descriptionForAdmins = Output.empty();
+        this.descriptionForReviewers = Output.empty();
+        this.displayName = Output.empty();
+        this.endDate = Output.empty();
+        this.inactiveDuration = Output.empty();
+        this.instanceDurationInDays = Output.empty();
+        this.instances = Output.empty();
+        this.interval = Output.empty();
+        this.justificationRequiredOnApproval = Output.empty();
+        this.mailNotificationsEnabled = Output.empty();
+        this.numberOfOccurrences = Output.empty();
+        this.recommendationsEnabled = Output.empty();
+        this.reminderNotificationsEnabled = Output.empty();
+        this.reviewers = Output.empty();
+        this.scheduleDefinitionId = Output.empty();
+        this.startDate = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -331,27 +331,27 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoApplyDecisionsEnabled;
-        private @Nullable Input<List<AccessReviewReviewerArgs>> backupReviewers;
-        private @Nullable Input<Either<String,DefaultDecisionType>> defaultDecision;
-        private @Nullable Input<Boolean> defaultDecisionEnabled;
-        private @Nullable Input<String> descriptionForAdmins;
-        private @Nullable Input<String> descriptionForReviewers;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> endDate;
-        private @Nullable Input<String> inactiveDuration;
-        private @Nullable Input<Integer> instanceDurationInDays;
-        private @Nullable Input<List<AccessReviewInstanceArgs>> instances;
-        private @Nullable Input<Integer> interval;
-        private @Nullable Input<Boolean> justificationRequiredOnApproval;
-        private @Nullable Input<Boolean> mailNotificationsEnabled;
-        private @Nullable Input<Integer> numberOfOccurrences;
-        private @Nullable Input<Boolean> recommendationsEnabled;
-        private @Nullable Input<Boolean> reminderNotificationsEnabled;
-        private @Nullable Input<List<AccessReviewReviewerArgs>> reviewers;
-        private @Nullable Input<String> scheduleDefinitionId;
-        private @Nullable Input<String> startDate;
-        private @Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type;
+        private @Nullable Output<Boolean> autoApplyDecisionsEnabled;
+        private @Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers;
+        private @Nullable Output<Either<String,DefaultDecisionType>> defaultDecision;
+        private @Nullable Output<Boolean> defaultDecisionEnabled;
+        private @Nullable Output<String> descriptionForAdmins;
+        private @Nullable Output<String> descriptionForReviewers;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> endDate;
+        private @Nullable Output<String> inactiveDuration;
+        private @Nullable Output<Integer> instanceDurationInDays;
+        private @Nullable Output<List<AccessReviewInstanceArgs>> instances;
+        private @Nullable Output<Integer> interval;
+        private @Nullable Output<Boolean> justificationRequiredOnApproval;
+        private @Nullable Output<Boolean> mailNotificationsEnabled;
+        private @Nullable Output<Integer> numberOfOccurrences;
+        private @Nullable Output<Boolean> recommendationsEnabled;
+        private @Nullable Output<Boolean> reminderNotificationsEnabled;
+        private @Nullable Output<List<AccessReviewReviewerArgs>> reviewers;
+        private @Nullable Output<String> scheduleDefinitionId;
+        private @Nullable Output<String> startDate;
+        private @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
 
         public Builder() {
     	      // Empty
@@ -382,213 +382,213 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder autoApplyDecisionsEnabled(@Nullable Input<Boolean> autoApplyDecisionsEnabled) {
+        public Builder autoApplyDecisionsEnabled(@Nullable Output<Boolean> autoApplyDecisionsEnabled) {
             this.autoApplyDecisionsEnabled = autoApplyDecisionsEnabled;
             return this;
         }
 
         public Builder autoApplyDecisionsEnabled(@Nullable Boolean autoApplyDecisionsEnabled) {
-            this.autoApplyDecisionsEnabled = Input.ofNullable(autoApplyDecisionsEnabled);
+            this.autoApplyDecisionsEnabled = Output.ofNullable(autoApplyDecisionsEnabled);
             return this;
         }
 
-        public Builder backupReviewers(@Nullable Input<List<AccessReviewReviewerArgs>> backupReviewers) {
+        public Builder backupReviewers(@Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers) {
             this.backupReviewers = backupReviewers;
             return this;
         }
 
         public Builder backupReviewers(@Nullable List<AccessReviewReviewerArgs> backupReviewers) {
-            this.backupReviewers = Input.ofNullable(backupReviewers);
+            this.backupReviewers = Output.ofNullable(backupReviewers);
             return this;
         }
 
-        public Builder defaultDecision(@Nullable Input<Either<String,DefaultDecisionType>> defaultDecision) {
+        public Builder defaultDecision(@Nullable Output<Either<String,DefaultDecisionType>> defaultDecision) {
             this.defaultDecision = defaultDecision;
             return this;
         }
 
         public Builder defaultDecision(@Nullable Either<String,DefaultDecisionType> defaultDecision) {
-            this.defaultDecision = Input.ofNullable(defaultDecision);
+            this.defaultDecision = Output.ofNullable(defaultDecision);
             return this;
         }
 
-        public Builder defaultDecisionEnabled(@Nullable Input<Boolean> defaultDecisionEnabled) {
+        public Builder defaultDecisionEnabled(@Nullable Output<Boolean> defaultDecisionEnabled) {
             this.defaultDecisionEnabled = defaultDecisionEnabled;
             return this;
         }
 
         public Builder defaultDecisionEnabled(@Nullable Boolean defaultDecisionEnabled) {
-            this.defaultDecisionEnabled = Input.ofNullable(defaultDecisionEnabled);
+            this.defaultDecisionEnabled = Output.ofNullable(defaultDecisionEnabled);
             return this;
         }
 
-        public Builder descriptionForAdmins(@Nullable Input<String> descriptionForAdmins) {
+        public Builder descriptionForAdmins(@Nullable Output<String> descriptionForAdmins) {
             this.descriptionForAdmins = descriptionForAdmins;
             return this;
         }
 
         public Builder descriptionForAdmins(@Nullable String descriptionForAdmins) {
-            this.descriptionForAdmins = Input.ofNullable(descriptionForAdmins);
+            this.descriptionForAdmins = Output.ofNullable(descriptionForAdmins);
             return this;
         }
 
-        public Builder descriptionForReviewers(@Nullable Input<String> descriptionForReviewers) {
+        public Builder descriptionForReviewers(@Nullable Output<String> descriptionForReviewers) {
             this.descriptionForReviewers = descriptionForReviewers;
             return this;
         }
 
         public Builder descriptionForReviewers(@Nullable String descriptionForReviewers) {
-            this.descriptionForReviewers = Input.ofNullable(descriptionForReviewers);
+            this.descriptionForReviewers = Output.ofNullable(descriptionForReviewers);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder endDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Input.ofNullable(endDate);
+            this.endDate = Output.ofNullable(endDate);
             return this;
         }
 
-        public Builder inactiveDuration(@Nullable Input<String> inactiveDuration) {
+        public Builder inactiveDuration(@Nullable Output<String> inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
 
         public Builder inactiveDuration(@Nullable String inactiveDuration) {
-            this.inactiveDuration = Input.ofNullable(inactiveDuration);
+            this.inactiveDuration = Output.ofNullable(inactiveDuration);
             return this;
         }
 
-        public Builder instanceDurationInDays(@Nullable Input<Integer> instanceDurationInDays) {
+        public Builder instanceDurationInDays(@Nullable Output<Integer> instanceDurationInDays) {
             this.instanceDurationInDays = instanceDurationInDays;
             return this;
         }
 
         public Builder instanceDurationInDays(@Nullable Integer instanceDurationInDays) {
-            this.instanceDurationInDays = Input.ofNullable(instanceDurationInDays);
+            this.instanceDurationInDays = Output.ofNullable(instanceDurationInDays);
             return this;
         }
 
-        public Builder instances(@Nullable Input<List<AccessReviewInstanceArgs>> instances) {
+        public Builder instances(@Nullable Output<List<AccessReviewInstanceArgs>> instances) {
             this.instances = instances;
             return this;
         }
 
         public Builder instances(@Nullable List<AccessReviewInstanceArgs> instances) {
-            this.instances = Input.ofNullable(instances);
+            this.instances = Output.ofNullable(instances);
             return this;
         }
 
-        public Builder interval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
 
-        public Builder justificationRequiredOnApproval(@Nullable Input<Boolean> justificationRequiredOnApproval) {
+        public Builder justificationRequiredOnApproval(@Nullable Output<Boolean> justificationRequiredOnApproval) {
             this.justificationRequiredOnApproval = justificationRequiredOnApproval;
             return this;
         }
 
         public Builder justificationRequiredOnApproval(@Nullable Boolean justificationRequiredOnApproval) {
-            this.justificationRequiredOnApproval = Input.ofNullable(justificationRequiredOnApproval);
+            this.justificationRequiredOnApproval = Output.ofNullable(justificationRequiredOnApproval);
             return this;
         }
 
-        public Builder mailNotificationsEnabled(@Nullable Input<Boolean> mailNotificationsEnabled) {
+        public Builder mailNotificationsEnabled(@Nullable Output<Boolean> mailNotificationsEnabled) {
             this.mailNotificationsEnabled = mailNotificationsEnabled;
             return this;
         }
 
         public Builder mailNotificationsEnabled(@Nullable Boolean mailNotificationsEnabled) {
-            this.mailNotificationsEnabled = Input.ofNullable(mailNotificationsEnabled);
+            this.mailNotificationsEnabled = Output.ofNullable(mailNotificationsEnabled);
             return this;
         }
 
-        public Builder numberOfOccurrences(@Nullable Input<Integer> numberOfOccurrences) {
+        public Builder numberOfOccurrences(@Nullable Output<Integer> numberOfOccurrences) {
             this.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
 
         public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
-            this.numberOfOccurrences = Input.ofNullable(numberOfOccurrences);
+            this.numberOfOccurrences = Output.ofNullable(numberOfOccurrences);
             return this;
         }
 
-        public Builder recommendationsEnabled(@Nullable Input<Boolean> recommendationsEnabled) {
+        public Builder recommendationsEnabled(@Nullable Output<Boolean> recommendationsEnabled) {
             this.recommendationsEnabled = recommendationsEnabled;
             return this;
         }
 
         public Builder recommendationsEnabled(@Nullable Boolean recommendationsEnabled) {
-            this.recommendationsEnabled = Input.ofNullable(recommendationsEnabled);
+            this.recommendationsEnabled = Output.ofNullable(recommendationsEnabled);
             return this;
         }
 
-        public Builder reminderNotificationsEnabled(@Nullable Input<Boolean> reminderNotificationsEnabled) {
+        public Builder reminderNotificationsEnabled(@Nullable Output<Boolean> reminderNotificationsEnabled) {
             this.reminderNotificationsEnabled = reminderNotificationsEnabled;
             return this;
         }
 
         public Builder reminderNotificationsEnabled(@Nullable Boolean reminderNotificationsEnabled) {
-            this.reminderNotificationsEnabled = Input.ofNullable(reminderNotificationsEnabled);
+            this.reminderNotificationsEnabled = Output.ofNullable(reminderNotificationsEnabled);
             return this;
         }
 
-        public Builder reviewers(@Nullable Input<List<AccessReviewReviewerArgs>> reviewers) {
+        public Builder reviewers(@Nullable Output<List<AccessReviewReviewerArgs>> reviewers) {
             this.reviewers = reviewers;
             return this;
         }
 
         public Builder reviewers(@Nullable List<AccessReviewReviewerArgs> reviewers) {
-            this.reviewers = Input.ofNullable(reviewers);
+            this.reviewers = Output.ofNullable(reviewers);
             return this;
         }
 
-        public Builder scheduleDefinitionId(@Nullable Input<String> scheduleDefinitionId) {
+        public Builder scheduleDefinitionId(@Nullable Output<String> scheduleDefinitionId) {
             this.scheduleDefinitionId = scheduleDefinitionId;
             return this;
         }
 
         public Builder scheduleDefinitionId(@Nullable String scheduleDefinitionId) {
-            this.scheduleDefinitionId = Input.ofNullable(scheduleDefinitionId);
+            this.scheduleDefinitionId = Output.ofNullable(scheduleDefinitionId);
             return this;
         }
 
-        public Builder startDate(@Nullable Input<String> startDate) {
+        public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
 
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = Input.ofNullable(startDate);
+            this.startDate = Output.ofNullable(startDate);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type) {
+        public Builder type(@Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AccessReviewScheduleDefinitionByIdArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityAuthenticationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="authentication")
-      private final @Nullable Input<WebActivityAuthenticationArgs> authentication;
+      private final @Nullable Output<WebActivityAuthenticationArgs> authentication;
 
-    public Input<WebActivityAuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Input.empty() : this.authentication;
+    public Output<WebActivityAuthenticationArgs> getAuthentication() {
+        return this.authentication == null ? Output.empty() : this.authentication;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<Object> body;
+      private final @Nullable Output<Object> body;
 
-    public Input<Object> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<Object> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<Object> headers;
+      private final @Nullable Output<Object> headers;
 
-    public Input<Object> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<Object> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -85,9 +85,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="method", required=true)
-      private final Input<Either<String,WebHookActivityMethod>> method;
+      private final Output<Either<String,WebHookActivityMethod>> method;
 
-    public Input<Either<String,WebHookActivityMethod>> getMethod() {
+    public Output<Either<String,WebHookActivityMethod>> getMethod() {
         return this.method;
     }
 
@@ -96,9 +96,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -107,10 +107,10 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="reportStatusOnCallBack")
-      private final @Nullable Input<Object> reportStatusOnCallBack;
+      private final @Nullable Output<Object> reportStatusOnCallBack;
 
-    public Input<Object> getReportStatusOnCallBack() {
-        return this.reportStatusOnCallBack == null ? Input.empty() : this.reportStatusOnCallBack;
+    public Output<Object> getReportStatusOnCallBack() {
+        return this.reportStatusOnCallBack == null ? Output.empty() : this.reportStatusOnCallBack;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -130,9 +130,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -141,9 +141,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<Object> url;
+      private final Output<Object> url;
 
-    public Input<Object> getUrl() {
+    public Output<Object> getUrl() {
         return this.url;
     }
 
@@ -152,25 +152,25 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public WebHookActivityArgs(
-        @Nullable Input<WebActivityAuthenticationArgs> authentication,
-        @Nullable Input<Object> body,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> headers,
-        Input<Either<String,WebHookActivityMethod>> method,
-        Input<String> name,
-        @Nullable Input<Object> reportStatusOnCallBack,
-        @Nullable Input<String> timeout,
-        Input<String> type,
-        Input<Object> url,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        @Nullable Output<WebActivityAuthenticationArgs> authentication,
+        @Nullable Output<Object> body,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> headers,
+        Output<Either<String,WebHookActivityMethod>> method,
+        Output<String> name,
+        @Nullable Output<Object> reportStatusOnCallBack,
+        @Nullable Output<String> timeout,
+        Output<String> type,
+        Output<Object> url,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.authentication = authentication;
         this.body = body;
         this.dependsOn = dependsOn;
@@ -186,18 +186,18 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private WebHookActivityArgs() {
-        this.authentication = Input.empty();
-        this.body = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.headers = Input.empty();
-        this.method = Input.empty();
-        this.name = Input.empty();
-        this.reportStatusOnCallBack = Input.empty();
-        this.timeout = Input.empty();
-        this.type = Input.empty();
-        this.url = Input.empty();
-        this.userProperties = Input.empty();
+        this.authentication = Output.empty();
+        this.body = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.headers = Output.empty();
+        this.method = Output.empty();
+        this.name = Output.empty();
+        this.reportStatusOnCallBack = Output.empty();
+        this.timeout = Output.empty();
+        this.type = Output.empty();
+        this.url = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -209,18 +209,18 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<WebActivityAuthenticationArgs> authentication;
-        private @Nullable Input<Object> body;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> headers;
-        private Input<Either<String,WebHookActivityMethod>> method;
-        private Input<String> name;
-        private @Nullable Input<Object> reportStatusOnCallBack;
-        private @Nullable Input<String> timeout;
-        private Input<String> type;
-        private Input<Object> url;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<WebActivityAuthenticationArgs> authentication;
+        private @Nullable Output<Object> body;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> headers;
+        private Output<Either<String,WebHookActivityMethod>> method;
+        private Output<String> name;
+        private @Nullable Output<Object> reportStatusOnCallBack;
+        private @Nullable Output<String> timeout;
+        private Output<String> type;
+        private Output<Object> url;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -242,123 +242,123 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder authentication(@Nullable Input<WebActivityAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Output<WebActivityAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
         public Builder authentication(@Nullable WebActivityAuthenticationArgs authentication) {
-            this.authentication = Input.ofNullable(authentication);
+            this.authentication = Output.ofNullable(authentication);
             return this;
         }
 
-        public Builder body(@Nullable Input<Object> body) {
+        public Builder body(@Nullable Output<Object> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable Object body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder headers(@Nullable Input<Object> headers) {
+        public Builder headers(@Nullable Output<Object> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable Object headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder method(Input<Either<String,WebHookActivityMethod>> method) {
+        public Builder method(Output<Either<String,WebHookActivityMethod>> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
         public Builder method(Either<String,WebHookActivityMethod> method) {
-            this.method = Input.of(Objects.requireNonNull(method));
+            this.method = Output.of(Objects.requireNonNull(method));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder reportStatusOnCallBack(@Nullable Input<Object> reportStatusOnCallBack) {
+        public Builder reportStatusOnCallBack(@Nullable Output<Object> reportStatusOnCallBack) {
             this.reportStatusOnCallBack = reportStatusOnCallBack;
             return this;
         }
 
         public Builder reportStatusOnCallBack(@Nullable Object reportStatusOnCallBack) {
-            this.reportStatusOnCallBack = Input.ofNullable(reportStatusOnCallBack);
+            this.reportStatusOnCallBack = Output.ofNullable(reportStatusOnCallBack);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder url(Input<Object> url) {
+        public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(Object url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public WebHookActivityArgs build() {

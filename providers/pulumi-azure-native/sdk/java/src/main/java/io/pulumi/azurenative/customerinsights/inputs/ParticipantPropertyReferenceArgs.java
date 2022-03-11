@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourcePropertyName", required=true)
-      private final Input<String> sourcePropertyName;
+      private final Output<String> sourcePropertyName;
 
-    public Input<String> getSourcePropertyName() {
+    public Output<String> getSourcePropertyName() {
         return this.sourcePropertyName;
     }
 
@@ -33,22 +33,22 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetPropertyName", required=true)
-      private final Input<String> targetPropertyName;
+      private final Output<String> targetPropertyName;
 
-    public Input<String> getTargetPropertyName() {
+    public Output<String> getTargetPropertyName() {
         return this.targetPropertyName;
     }
 
     public ParticipantPropertyReferenceArgs(
-        Input<String> sourcePropertyName,
-        Input<String> targetPropertyName) {
+        Output<String> sourcePropertyName,
+        Output<String> targetPropertyName) {
         this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName, "expected parameter 'sourcePropertyName' to be non-null");
         this.targetPropertyName = Objects.requireNonNull(targetPropertyName, "expected parameter 'targetPropertyName' to be non-null");
     }
 
     private ParticipantPropertyReferenceArgs() {
-        this.sourcePropertyName = Input.empty();
-        this.targetPropertyName = Input.empty();
+        this.sourcePropertyName = Output.empty();
+        this.targetPropertyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> sourcePropertyName;
-        private Input<String> targetPropertyName;
+        private Output<String> sourcePropertyName;
+        private Output<String> targetPropertyName;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
     	      this.targetPropertyName = defaults.targetPropertyName;
         }
 
-        public Builder sourcePropertyName(Input<String> sourcePropertyName) {
+        public Builder sourcePropertyName(Output<String> sourcePropertyName) {
             this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
             return this;
         }
 
         public Builder sourcePropertyName(String sourcePropertyName) {
-            this.sourcePropertyName = Input.of(Objects.requireNonNull(sourcePropertyName));
+            this.sourcePropertyName = Output.of(Objects.requireNonNull(sourcePropertyName));
             return this;
         }
 
-        public Builder targetPropertyName(Input<String> targetPropertyName) {
+        public Builder targetPropertyName(Output<String> targetPropertyName) {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }
 
         public Builder targetPropertyName(String targetPropertyName) {
-            this.targetPropertyName = Input.of(Objects.requireNonNull(targetPropertyName));
+            this.targetPropertyName = Output.of(Objects.requireNonNull(targetPropertyName));
             return this;
         }
         public ParticipantPropertyReferenceArgs build() {

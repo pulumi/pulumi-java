@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * 
      */
     @InputImport(name="s3BucketDestination", required=true)
-      private final Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination;
+      private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination;
 
-    public Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> getS3BucketDestination() {
+    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> getS3BucketDestination() {
         return this.s3BucketDestination;
     }
 
-    public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs(Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination) {
+    public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs(Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination) {
         this.s3BucketDestination = Objects.requireNonNull(s3BucketDestination, "expected parameter 's3BucketDestination' to be non-null");
     }
 
     private AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs() {
-        this.s3BucketDestination = Input.empty();
+        this.s3BucketDestination = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     }
 
     public static final class Builder {
-        private Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination;
+        private Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     	      this.s3BucketDestination = defaults.s3BucketDestination;
         }
 
-        public Builder s3BucketDestination(Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination) {
+        public Builder s3BucketDestination(Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination) {
             this.s3BucketDestination = Objects.requireNonNull(s3BucketDestination);
             return this;
         }
 
         public Builder s3BucketDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs s3BucketDestination) {
-            this.s3BucketDestination = Input.of(Objects.requireNonNull(s3BucketDestination));
+            this.s3BucketDestination = Output.of(Objects.requireNonNull(s3BucketDestination));
             return this;
         }
         public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
      * 
      */
     @InputImport(name="recordColumns", required=true)
-      private final Input<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns;
+      private final Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns;
 
-    public Input<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> getRecordColumns() {
+    public Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> getRecordColumns() {
         return this.recordColumns;
     }
 
@@ -34,10 +34,10 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
      * 
      */
     @InputImport(name="recordEncoding")
-      private final @Nullable Input<String> recordEncoding;
+      private final @Nullable Output<String> recordEncoding;
 
-    public Input<String> getRecordEncoding() {
-        return this.recordEncoding == null ? Input.empty() : this.recordEncoding;
+    public Output<String> getRecordEncoding() {
+        return this.recordEncoding == null ? Output.empty() : this.recordEncoding;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
      * 
      */
     @InputImport(name="recordFormat", required=true)
-      private final Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat;
+      private final Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat;
 
-    public Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> getRecordFormat() {
+    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> getRecordFormat() {
         return this.recordFormat;
     }
 
     public AnalyticsApplicationReferenceDataSourcesSchemaGetArgs(
-        Input<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns,
-        @Nullable Input<String> recordEncoding,
-        Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat) {
+        Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns,
+        @Nullable Output<String> recordEncoding,
+        Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat) {
         this.recordColumns = Objects.requireNonNull(recordColumns, "expected parameter 'recordColumns' to be non-null");
         this.recordEncoding = recordEncoding;
         this.recordFormat = Objects.requireNonNull(recordFormat, "expected parameter 'recordFormat' to be non-null");
     }
 
     private AnalyticsApplicationReferenceDataSourcesSchemaGetArgs() {
-        this.recordColumns = Input.empty();
-        this.recordEncoding = Input.empty();
-        this.recordFormat = Input.empty();
+        this.recordColumns = Output.empty();
+        this.recordEncoding = Output.empty();
+        this.recordFormat = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
     }
 
     public static final class Builder {
-        private Input<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns;
-        private @Nullable Input<String> recordEncoding;
-        private Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat;
+        private Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns;
+        private @Nullable Output<String> recordEncoding;
+        private Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
     	      this.recordFormat = defaults.recordFormat;
         }
 
-        public Builder recordColumns(Input<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns) {
+        public Builder recordColumns(Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns) {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
 
         public Builder recordColumns(List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs> recordColumns) {
-            this.recordColumns = Input.of(Objects.requireNonNull(recordColumns));
+            this.recordColumns = Output.of(Objects.requireNonNull(recordColumns));
             return this;
         }
 
-        public Builder recordEncoding(@Nullable Input<String> recordEncoding) {
+        public Builder recordEncoding(@Nullable Output<String> recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
 
         public Builder recordEncoding(@Nullable String recordEncoding) {
-            this.recordEncoding = Input.ofNullable(recordEncoding);
+            this.recordEncoding = Output.ofNullable(recordEncoding);
             return this;
         }
 
-        public Builder recordFormat(Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat) {
+        public Builder recordFormat(Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }
 
         public Builder recordFormat(AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs recordFormat) {
-            this.recordFormat = Input.of(Objects.requireNonNull(recordFormat));
+            this.recordFormat = Output.of(Objects.requireNonNull(recordFormat));
             return this;
         }
         public AnalyticsApplicationReferenceDataSourcesSchemaGetArgs build() {

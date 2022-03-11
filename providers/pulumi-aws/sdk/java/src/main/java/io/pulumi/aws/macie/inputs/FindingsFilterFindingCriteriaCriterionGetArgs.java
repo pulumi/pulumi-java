@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
      * 
      */
     @InputImport(name="eqExactMatches")
-      private final @Nullable Input<List<String>> eqExactMatches;
+      private final @Nullable Output<List<String>> eqExactMatches;
 
-    public Input<List<String>> getEqExactMatches() {
-        return this.eqExactMatches == null ? Input.empty() : this.eqExactMatches;
+    public Output<List<String>> getEqExactMatches() {
+        return this.eqExactMatches == null ? Output.empty() : this.eqExactMatches;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
      * 
      */
     @InputImport(name="eqs")
-      private final @Nullable Input<List<String>> eqs;
+      private final @Nullable Output<List<String>> eqs;
 
-    public Input<List<String>> getEqs() {
-        return this.eqs == null ? Input.empty() : this.eqs;
+    public Output<List<String>> getEqs() {
+        return this.eqs == null ? Output.empty() : this.eqs;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
      * 
      */
     @InputImport(name="field", required=true)
-      private final Input<String> field;
+      private final Output<String> field;
 
-    public Input<String> getField() {
+    public Output<String> getField() {
         return this.field;
     }
 
@@ -53,10 +53,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
      * 
      */
     @InputImport(name="gt")
-      private final @Nullable Input<String> gt;
+      private final @Nullable Output<String> gt;
 
-    public Input<String> getGt() {
-        return this.gt == null ? Input.empty() : this.gt;
+    public Output<String> getGt() {
+        return this.gt == null ? Output.empty() : this.gt;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
      * 
      */
     @InputImport(name="gte")
-      private final @Nullable Input<String> gte;
+      private final @Nullable Output<String> gte;
 
-    public Input<String> getGte() {
-        return this.gte == null ? Input.empty() : this.gte;
+    public Output<String> getGte() {
+        return this.gte == null ? Output.empty() : this.gte;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
      * 
      */
     @InputImport(name="lt")
-      private final @Nullable Input<String> lt;
+      private final @Nullable Output<String> lt;
 
-    public Input<String> getLt() {
-        return this.lt == null ? Input.empty() : this.lt;
+    public Output<String> getLt() {
+        return this.lt == null ? Output.empty() : this.lt;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
      * 
      */
     @InputImport(name="lte")
-      private final @Nullable Input<String> lte;
+      private final @Nullable Output<String> lte;
 
-    public Input<String> getLte() {
-        return this.lte == null ? Input.empty() : this.lte;
+    public Output<String> getLte() {
+        return this.lte == null ? Output.empty() : this.lte;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
      * 
      */
     @InputImport(name="neqs")
-      private final @Nullable Input<List<String>> neqs;
+      private final @Nullable Output<List<String>> neqs;
 
-    public Input<List<String>> getNeqs() {
-        return this.neqs == null ? Input.empty() : this.neqs;
+    public Output<List<String>> getNeqs() {
+        return this.neqs == null ? Output.empty() : this.neqs;
     }
 
     public FindingsFilterFindingCriteriaCriterionGetArgs(
-        @Nullable Input<List<String>> eqExactMatches,
-        @Nullable Input<List<String>> eqs,
-        Input<String> field,
-        @Nullable Input<String> gt,
-        @Nullable Input<String> gte,
-        @Nullable Input<String> lt,
-        @Nullable Input<String> lte,
-        @Nullable Input<List<String>> neqs) {
+        @Nullable Output<List<String>> eqExactMatches,
+        @Nullable Output<List<String>> eqs,
+        Output<String> field,
+        @Nullable Output<String> gt,
+        @Nullable Output<String> gte,
+        @Nullable Output<String> lt,
+        @Nullable Output<String> lte,
+        @Nullable Output<List<String>> neqs) {
         this.eqExactMatches = eqExactMatches;
         this.eqs = eqs;
         this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
@@ -123,14 +123,14 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     }
 
     private FindingsFilterFindingCriteriaCriterionGetArgs() {
-        this.eqExactMatches = Input.empty();
-        this.eqs = Input.empty();
-        this.field = Input.empty();
-        this.gt = Input.empty();
-        this.gte = Input.empty();
-        this.lt = Input.empty();
-        this.lte = Input.empty();
-        this.neqs = Input.empty();
+        this.eqExactMatches = Output.empty();
+        this.eqs = Output.empty();
+        this.field = Output.empty();
+        this.gt = Output.empty();
+        this.gte = Output.empty();
+        this.lt = Output.empty();
+        this.lte = Output.empty();
+        this.neqs = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> eqExactMatches;
-        private @Nullable Input<List<String>> eqs;
-        private Input<String> field;
-        private @Nullable Input<String> gt;
-        private @Nullable Input<String> gte;
-        private @Nullable Input<String> lt;
-        private @Nullable Input<String> lte;
-        private @Nullable Input<List<String>> neqs;
+        private @Nullable Output<List<String>> eqExactMatches;
+        private @Nullable Output<List<String>> eqs;
+        private Output<String> field;
+        private @Nullable Output<String> gt;
+        private @Nullable Output<String> gte;
+        private @Nullable Output<String> lt;
+        private @Nullable Output<String> lte;
+        private @Nullable Output<List<String>> neqs;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     	      this.neqs = defaults.neqs;
         }
 
-        public Builder eqExactMatches(@Nullable Input<List<String>> eqExactMatches) {
+        public Builder eqExactMatches(@Nullable Output<List<String>> eqExactMatches) {
             this.eqExactMatches = eqExactMatches;
             return this;
         }
 
         public Builder eqExactMatches(@Nullable List<String> eqExactMatches) {
-            this.eqExactMatches = Input.ofNullable(eqExactMatches);
+            this.eqExactMatches = Output.ofNullable(eqExactMatches);
             return this;
         }
 
-        public Builder eqs(@Nullable Input<List<String>> eqs) {
+        public Builder eqs(@Nullable Output<List<String>> eqs) {
             this.eqs = eqs;
             return this;
         }
 
         public Builder eqs(@Nullable List<String> eqs) {
-            this.eqs = Input.ofNullable(eqs);
+            this.eqs = Output.ofNullable(eqs);
             return this;
         }
 
-        public Builder field(Input<String> field) {
+        public Builder field(Output<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
         public Builder field(String field) {
-            this.field = Input.of(Objects.requireNonNull(field));
+            this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder gt(@Nullable Input<String> gt) {
+        public Builder gt(@Nullable Output<String> gt) {
             this.gt = gt;
             return this;
         }
 
         public Builder gt(@Nullable String gt) {
-            this.gt = Input.ofNullable(gt);
+            this.gt = Output.ofNullable(gt);
             return this;
         }
 
-        public Builder gte(@Nullable Input<String> gte) {
+        public Builder gte(@Nullable Output<String> gte) {
             this.gte = gte;
             return this;
         }
 
         public Builder gte(@Nullable String gte) {
-            this.gte = Input.ofNullable(gte);
+            this.gte = Output.ofNullable(gte);
             return this;
         }
 
-        public Builder lt(@Nullable Input<String> lt) {
+        public Builder lt(@Nullable Output<String> lt) {
             this.lt = lt;
             return this;
         }
 
         public Builder lt(@Nullable String lt) {
-            this.lt = Input.ofNullable(lt);
+            this.lt = Output.ofNullable(lt);
             return this;
         }
 
-        public Builder lte(@Nullable Input<String> lte) {
+        public Builder lte(@Nullable Output<String> lte) {
             this.lte = lte;
             return this;
         }
 
         public Builder lte(@Nullable String lte) {
-            this.lte = Input.ofNullable(lte);
+            this.lte = Output.ofNullable(lte);
             return this;
         }
 
-        public Builder neqs(@Nullable Input<List<String>> neqs) {
+        public Builder neqs(@Nullable Output<List<String>> neqs) {
             this.neqs = neqs;
             return this;
         }
 
         public Builder neqs(@Nullable List<String> neqs) {
-            this.neqs = Input.ofNullable(neqs);
+            this.neqs = Output.ofNullable(neqs);
             return this;
         }
         public FindingsFilterFindingCriteriaCriterionGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class ClassificationJobUserPausedDetailGetArgs extends io.pulumi.re
     public static final ClassificationJobUserPausedDetailGetArgs Empty = new ClassificationJobUserPausedDetailGetArgs();
 
     @InputImport(name="jobExpiresAt")
-      private final @Nullable Input<String> jobExpiresAt;
+      private final @Nullable Output<String> jobExpiresAt;
 
-    public Input<String> getJobExpiresAt() {
-        return this.jobExpiresAt == null ? Input.empty() : this.jobExpiresAt;
+    public Output<String> getJobExpiresAt() {
+        return this.jobExpiresAt == null ? Output.empty() : this.jobExpiresAt;
     }
 
     @InputImport(name="jobImminentExpirationHealthEventArn")
-      private final @Nullable Input<String> jobImminentExpirationHealthEventArn;
+      private final @Nullable Output<String> jobImminentExpirationHealthEventArn;
 
-    public Input<String> getJobImminentExpirationHealthEventArn() {
-        return this.jobImminentExpirationHealthEventArn == null ? Input.empty() : this.jobImminentExpirationHealthEventArn;
+    public Output<String> getJobImminentExpirationHealthEventArn() {
+        return this.jobImminentExpirationHealthEventArn == null ? Output.empty() : this.jobImminentExpirationHealthEventArn;
     }
 
     @InputImport(name="jobPausedAt")
-      private final @Nullable Input<String> jobPausedAt;
+      private final @Nullable Output<String> jobPausedAt;
 
-    public Input<String> getJobPausedAt() {
-        return this.jobPausedAt == null ? Input.empty() : this.jobPausedAt;
+    public Output<String> getJobPausedAt() {
+        return this.jobPausedAt == null ? Output.empty() : this.jobPausedAt;
     }
 
     public ClassificationJobUserPausedDetailGetArgs(
-        @Nullable Input<String> jobExpiresAt,
-        @Nullable Input<String> jobImminentExpirationHealthEventArn,
-        @Nullable Input<String> jobPausedAt) {
+        @Nullable Output<String> jobExpiresAt,
+        @Nullable Output<String> jobImminentExpirationHealthEventArn,
+        @Nullable Output<String> jobPausedAt) {
         this.jobExpiresAt = jobExpiresAt;
         this.jobImminentExpirationHealthEventArn = jobImminentExpirationHealthEventArn;
         this.jobPausedAt = jobPausedAt;
     }
 
     private ClassificationJobUserPausedDetailGetArgs() {
-        this.jobExpiresAt = Input.empty();
-        this.jobImminentExpirationHealthEventArn = Input.empty();
-        this.jobPausedAt = Input.empty();
+        this.jobExpiresAt = Output.empty();
+        this.jobImminentExpirationHealthEventArn = Output.empty();
+        this.jobPausedAt = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class ClassificationJobUserPausedDetailGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> jobExpiresAt;
-        private @Nullable Input<String> jobImminentExpirationHealthEventArn;
-        private @Nullable Input<String> jobPausedAt;
+        private @Nullable Output<String> jobExpiresAt;
+        private @Nullable Output<String> jobImminentExpirationHealthEventArn;
+        private @Nullable Output<String> jobPausedAt;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class ClassificationJobUserPausedDetailGetArgs extends io.pulumi.re
     	      this.jobPausedAt = defaults.jobPausedAt;
         }
 
-        public Builder jobExpiresAt(@Nullable Input<String> jobExpiresAt) {
+        public Builder jobExpiresAt(@Nullable Output<String> jobExpiresAt) {
             this.jobExpiresAt = jobExpiresAt;
             return this;
         }
 
         public Builder jobExpiresAt(@Nullable String jobExpiresAt) {
-            this.jobExpiresAt = Input.ofNullable(jobExpiresAt);
+            this.jobExpiresAt = Output.ofNullable(jobExpiresAt);
             return this;
         }
 
-        public Builder jobImminentExpirationHealthEventArn(@Nullable Input<String> jobImminentExpirationHealthEventArn) {
+        public Builder jobImminentExpirationHealthEventArn(@Nullable Output<String> jobImminentExpirationHealthEventArn) {
             this.jobImminentExpirationHealthEventArn = jobImminentExpirationHealthEventArn;
             return this;
         }
 
         public Builder jobImminentExpirationHealthEventArn(@Nullable String jobImminentExpirationHealthEventArn) {
-            this.jobImminentExpirationHealthEventArn = Input.ofNullable(jobImminentExpirationHealthEventArn);
+            this.jobImminentExpirationHealthEventArn = Output.ofNullable(jobImminentExpirationHealthEventArn);
             return this;
         }
 
-        public Builder jobPausedAt(@Nullable Input<String> jobPausedAt) {
+        public Builder jobPausedAt(@Nullable Output<String> jobPausedAt) {
             this.jobPausedAt = jobPausedAt;
             return this;
         }
 
         public Builder jobPausedAt(@Nullable String jobPausedAt) {
-            this.jobPausedAt = Input.ofNullable(jobPausedAt);
+            this.jobPausedAt = Output.ofNullable(jobPausedAt);
             return this;
         }
         public ClassificationJobUserPausedDetailGetArgs build() {

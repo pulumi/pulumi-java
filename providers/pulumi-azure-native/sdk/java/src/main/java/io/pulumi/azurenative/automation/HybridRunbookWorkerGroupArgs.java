@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.RunAsCredentialAssociationPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -31,10 +31,10 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="credential")
-      private final @Nullable Input<RunAsCredentialAssociationPropertyArgs> credential;
+      private final @Nullable Output<RunAsCredentialAssociationPropertyArgs> credential;
 
-    public Input<RunAsCredentialAssociationPropertyArgs> getCredential() {
-        return this.credential == null ? Input.empty() : this.credential;
+    public Output<RunAsCredentialAssociationPropertyArgs> getCredential() {
+        return this.credential == null ? Output.empty() : this.credential;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hybridRunbookWorkerGroupName")
-      private final @Nullable Input<String> hybridRunbookWorkerGroupName;
+      private final @Nullable Output<String> hybridRunbookWorkerGroupName;
 
-    public Input<String> getHybridRunbookWorkerGroupName() {
-        return this.hybridRunbookWorkerGroupName == null ? Input.empty() : this.hybridRunbookWorkerGroupName;
+    public Output<String> getHybridRunbookWorkerGroupName() {
+        return this.hybridRunbookWorkerGroupName == null ? Output.empty() : this.hybridRunbookWorkerGroupName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public HybridRunbookWorkerGroupArgs(
-        Input<String> automationAccountName,
-        @Nullable Input<RunAsCredentialAssociationPropertyArgs> credential,
-        @Nullable Input<String> hybridRunbookWorkerGroupName,
-        Input<String> resourceGroupName) {
+        Output<String> automationAccountName,
+        @Nullable Output<RunAsCredentialAssociationPropertyArgs> credential,
+        @Nullable Output<String> hybridRunbookWorkerGroupName,
+        Output<String> resourceGroupName) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.credential = credential;
         this.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
@@ -71,10 +71,10 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
     }
 
     private HybridRunbookWorkerGroupArgs() {
-        this.automationAccountName = Input.empty();
-        this.credential = Input.empty();
-        this.hybridRunbookWorkerGroupName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.credential = Output.empty();
+        this.hybridRunbookWorkerGroupName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private @Nullable Input<RunAsCredentialAssociationPropertyArgs> credential;
-        private @Nullable Input<String> hybridRunbookWorkerGroupName;
-        private Input<String> resourceGroupName;
+        private Output<String> automationAccountName;
+        private @Nullable Output<RunAsCredentialAssociationPropertyArgs> credential;
+        private @Nullable Output<String> hybridRunbookWorkerGroupName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder credential(@Nullable Input<RunAsCredentialAssociationPropertyArgs> credential) {
+        public Builder credential(@Nullable Output<RunAsCredentialAssociationPropertyArgs> credential) {
             this.credential = credential;
             return this;
         }
 
         public Builder credential(@Nullable RunAsCredentialAssociationPropertyArgs credential) {
-            this.credential = Input.ofNullable(credential);
+            this.credential = Output.ofNullable(credential);
             return this;
         }
 
-        public Builder hybridRunbookWorkerGroupName(@Nullable Input<String> hybridRunbookWorkerGroupName) {
+        public Builder hybridRunbookWorkerGroupName(@Nullable Output<String> hybridRunbookWorkerGroupName) {
             this.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
             return this;
         }
 
         public Builder hybridRunbookWorkerGroupName(@Nullable String hybridRunbookWorkerGroupName) {
-            this.hybridRunbookWorkerGroupName = Input.ofNullable(hybridRunbookWorkerGroupName);
+            this.hybridRunbookWorkerGroupName = Output.ofNullable(hybridRunbookWorkerGroupName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public HybridRunbookWorkerGroupArgs build() {

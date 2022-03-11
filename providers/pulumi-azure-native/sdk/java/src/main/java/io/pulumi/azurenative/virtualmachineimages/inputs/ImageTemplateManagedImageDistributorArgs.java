@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="artifactTags")
-      private final @Nullable Input<Map<String,String>> artifactTags;
+      private final @Nullable Output<Map<String,String>> artifactTags;
 
-    public Input<Map<String,String>> getArtifactTags() {
-        return this.artifactTags == null ? Input.empty() : this.artifactTags;
+    public Output<Map<String,String>> getArtifactTags() {
+        return this.artifactTags == null ? Output.empty() : this.artifactTags;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="imageId", required=true)
-      private final Input<String> imageId;
+      private final Output<String> imageId;
 
-    public Input<String> getImageId() {
+    public Output<String> getImageId() {
         return this.imageId;
     }
 
@@ -46,9 +46,9 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -57,9 +57,9 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="runOutputName", required=true)
-      private final Input<String> runOutputName;
+      private final Output<String> runOutputName;
 
-    public Input<String> getRunOutputName() {
+    public Output<String> getRunOutputName() {
         return this.runOutputName;
     }
 
@@ -69,18 +69,18 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ImageTemplateManagedImageDistributorArgs(
-        @Nullable Input<Map<String,String>> artifactTags,
-        Input<String> imageId,
-        Input<String> location,
-        Input<String> runOutputName,
-        Input<String> type) {
+        @Nullable Output<Map<String,String>> artifactTags,
+        Output<String> imageId,
+        Output<String> location,
+        Output<String> runOutputName,
+        Output<String> type) {
         this.artifactTags = artifactTags;
         this.imageId = Objects.requireNonNull(imageId, "expected parameter 'imageId' to be non-null");
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
@@ -89,11 +89,11 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     }
 
     private ImageTemplateManagedImageDistributorArgs() {
-        this.artifactTags = Input.empty();
-        this.imageId = Input.empty();
-        this.location = Input.empty();
-        this.runOutputName = Input.empty();
-        this.type = Input.empty();
+        this.artifactTags = Output.empty();
+        this.imageId = Output.empty();
+        this.location = Output.empty();
+        this.runOutputName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> artifactTags;
-        private Input<String> imageId;
-        private Input<String> location;
-        private Input<String> runOutputName;
-        private Input<String> type;
+        private @Nullable Output<Map<String,String>> artifactTags;
+        private Output<String> imageId;
+        private Output<String> location;
+        private Output<String> runOutputName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ImageTemplateManagedImageDistributorArgs extends io.pulumi.re
     	      this.type = defaults.type;
         }
 
-        public Builder artifactTags(@Nullable Input<Map<String,String>> artifactTags) {
+        public Builder artifactTags(@Nullable Output<Map<String,String>> artifactTags) {
             this.artifactTags = artifactTags;
             return this;
         }
 
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
-            this.artifactTags = Input.ofNullable(artifactTags);
+            this.artifactTags = Output.ofNullable(artifactTags);
             return this;
         }
 
-        public Builder imageId(Input<String> imageId) {
+        public Builder imageId(Output<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
         public Builder imageId(String imageId) {
-            this.imageId = Input.of(Objects.requireNonNull(imageId));
+            this.imageId = Output.of(Objects.requireNonNull(imageId));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder runOutputName(Input<String> runOutputName) {
+        public Builder runOutputName(Output<String> runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
 
         public Builder runOutputName(String runOutputName) {
-            this.runOutputName = Input.of(Objects.requireNonNull(runOutputName));
+            this.runOutputName = Output.of(Objects.requireNonNull(runOutputName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ImageTemplateManagedImageDistributorArgs build() {

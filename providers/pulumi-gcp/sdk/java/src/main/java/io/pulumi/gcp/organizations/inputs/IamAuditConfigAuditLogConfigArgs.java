@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class IamAuditConfigAuditLogConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="exemptedMembers")
-      private final @Nullable Input<List<String>> exemptedMembers;
+      private final @Nullable Output<List<String>> exemptedMembers;
 
-    public Input<List<String>> getExemptedMembers() {
-        return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
+    public Output<List<String>> getExemptedMembers() {
+        return this.exemptedMembers == null ? Output.empty() : this.exemptedMembers;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class IamAuditConfigAuditLogConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logType", required=true)
-      private final Input<String> logType;
+      private final Output<String> logType;
 
-    public Input<String> getLogType() {
+    public Output<String> getLogType() {
         return this.logType;
     }
 
     public IamAuditConfigAuditLogConfigArgs(
-        @Nullable Input<List<String>> exemptedMembers,
-        Input<String> logType) {
+        @Nullable Output<List<String>> exemptedMembers,
+        Output<String> logType) {
         this.exemptedMembers = exemptedMembers;
         this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
     }
 
     private IamAuditConfigAuditLogConfigArgs() {
-        this.exemptedMembers = Input.empty();
-        this.logType = Input.empty();
+        this.exemptedMembers = Output.empty();
+        this.logType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class IamAuditConfigAuditLogConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> exemptedMembers;
-        private Input<String> logType;
+        private @Nullable Output<List<String>> exemptedMembers;
+        private Output<String> logType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class IamAuditConfigAuditLogConfigArgs extends io.pulumi.resources.
     	      this.logType = defaults.logType;
         }
 
-        public Builder exemptedMembers(@Nullable Input<List<String>> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
 
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Input.ofNullable(exemptedMembers);
+            this.exemptedMembers = Output.ofNullable(exemptedMembers);
             return this;
         }
 
-        public Builder logType(Input<String> logType) {
+        public Builder logType(Output<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
         public Builder logType(String logType) {
-            this.logType = Input.of(Objects.requireNonNull(logType));
+            this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
         }
         public IamAuditConfigAuditLogConfigArgs build() {

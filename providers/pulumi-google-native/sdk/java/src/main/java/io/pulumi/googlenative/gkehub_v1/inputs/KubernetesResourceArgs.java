@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1.inputs.ResourceOptionsArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="membershipCrManifest")
-      private final @Nullable Input<String> membershipCrManifest;
+      private final @Nullable Output<String> membershipCrManifest;
 
-    public Input<String> getMembershipCrManifest() {
-        return this.membershipCrManifest == null ? Input.empty() : this.membershipCrManifest;
+    public Output<String> getMembershipCrManifest() {
+        return this.membershipCrManifest == null ? Output.empty() : this.membershipCrManifest;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceOptions")
-      private final @Nullable Input<ResourceOptionsArgs> resourceOptions;
+      private final @Nullable Output<ResourceOptionsArgs> resourceOptions;
 
-    public Input<ResourceOptionsArgs> getResourceOptions() {
-        return this.resourceOptions == null ? Input.empty() : this.resourceOptions;
+    public Output<ResourceOptionsArgs> getResourceOptions() {
+        return this.resourceOptions == null ? Output.empty() : this.resourceOptions;
     }
 
     public KubernetesResourceArgs(
-        @Nullable Input<String> membershipCrManifest,
-        @Nullable Input<ResourceOptionsArgs> resourceOptions) {
+        @Nullable Output<String> membershipCrManifest,
+        @Nullable Output<ResourceOptionsArgs> resourceOptions) {
         this.membershipCrManifest = membershipCrManifest;
         this.resourceOptions = resourceOptions;
     }
 
     private KubernetesResourceArgs() {
-        this.membershipCrManifest = Input.empty();
-        this.resourceOptions = Input.empty();
+        this.membershipCrManifest = Output.empty();
+        this.resourceOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> membershipCrManifest;
-        private @Nullable Input<ResourceOptionsArgs> resourceOptions;
+        private @Nullable Output<String> membershipCrManifest;
+        private @Nullable Output<ResourceOptionsArgs> resourceOptions;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
     	      this.resourceOptions = defaults.resourceOptions;
         }
 
-        public Builder membershipCrManifest(@Nullable Input<String> membershipCrManifest) {
+        public Builder membershipCrManifest(@Nullable Output<String> membershipCrManifest) {
             this.membershipCrManifest = membershipCrManifest;
             return this;
         }
 
         public Builder membershipCrManifest(@Nullable String membershipCrManifest) {
-            this.membershipCrManifest = Input.ofNullable(membershipCrManifest);
+            this.membershipCrManifest = Output.ofNullable(membershipCrManifest);
             return this;
         }
 
-        public Builder resourceOptions(@Nullable Input<ResourceOptionsArgs> resourceOptions) {
+        public Builder resourceOptions(@Nullable Output<ResourceOptionsArgs> resourceOptions) {
             this.resourceOptions = resourceOptions;
             return this;
         }
 
         public Builder resourceOptions(@Nullable ResourceOptionsArgs resourceOptions) {
-            this.resourceOptions = Input.ofNullable(resourceOptions);
+            this.resourceOptions = Output.ofNullable(resourceOptions);
             return this;
         }
         public KubernetesResourceArgs build() {

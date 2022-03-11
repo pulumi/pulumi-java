@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,39 +19,39 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
     public static final ModelDockerSectionBaseImageRegistryArgs Empty = new ModelDockerSectionBaseImageRegistryArgs();
 
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public ModelDockerSectionBaseImageRegistryArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<String> password,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> address,
+        @Nullable Output<String> password,
+        @Nullable Output<String> username) {
         this.address = address;
         this.password = password;
         this.username = username;
     }
 
     private ModelDockerSectionBaseImageRegistryArgs() {
-        this.address = Input.empty();
-        this.password = Input.empty();
-        this.username = Input.empty();
+        this.address = Output.empty();
+        this.password = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> address;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
     	      this.username = defaults.username;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public ModelDockerSectionBaseImageRegistryArgs build() {

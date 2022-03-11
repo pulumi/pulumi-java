@@ -5,7 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringPrometheusJmxExporterGetArgs;
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringPrometheusNodeExporterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class ClusterOpenMonitoringPrometheusGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="jmxExporter")
-      private final @Nullable Input<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter;
+      private final @Nullable Output<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter;
 
-    public Input<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> getJmxExporter() {
-        return this.jmxExporter == null ? Input.empty() : this.jmxExporter;
+    public Output<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> getJmxExporter() {
+        return this.jmxExporter == null ? Output.empty() : this.jmxExporter;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ClusterOpenMonitoringPrometheusGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="nodeExporter")
-      private final @Nullable Input<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter;
+      private final @Nullable Output<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter;
 
-    public Input<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> getNodeExporter() {
-        return this.nodeExporter == null ? Input.empty() : this.nodeExporter;
+    public Output<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> getNodeExporter() {
+        return this.nodeExporter == null ? Output.empty() : this.nodeExporter;
     }
 
     public ClusterOpenMonitoringPrometheusGetArgs(
-        @Nullable Input<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter,
-        @Nullable Input<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter) {
+        @Nullable Output<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter,
+        @Nullable Output<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter) {
         this.jmxExporter = jmxExporter;
         this.nodeExporter = nodeExporter;
     }
 
     private ClusterOpenMonitoringPrometheusGetArgs() {
-        this.jmxExporter = Input.empty();
-        this.nodeExporter = Input.empty();
+        this.jmxExporter = Output.empty();
+        this.nodeExporter = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ClusterOpenMonitoringPrometheusGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter;
-        private @Nullable Input<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter;
+        private @Nullable Output<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter;
+        private @Nullable Output<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ClusterOpenMonitoringPrometheusGetArgs extends io.pulumi.reso
     	      this.nodeExporter = defaults.nodeExporter;
         }
 
-        public Builder jmxExporter(@Nullable Input<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter) {
+        public Builder jmxExporter(@Nullable Output<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter) {
             this.jmxExporter = jmxExporter;
             return this;
         }
 
         public Builder jmxExporter(@Nullable ClusterOpenMonitoringPrometheusJmxExporterGetArgs jmxExporter) {
-            this.jmxExporter = Input.ofNullable(jmxExporter);
+            this.jmxExporter = Output.ofNullable(jmxExporter);
             return this;
         }
 
-        public Builder nodeExporter(@Nullable Input<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter) {
+        public Builder nodeExporter(@Nullable Output<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter) {
             this.nodeExporter = nodeExporter;
             return this;
         }
 
         public Builder nodeExporter(@Nullable ClusterOpenMonitoringPrometheusNodeExporterGetArgs nodeExporter) {
-            this.nodeExporter = Input.ofNullable(nodeExporter);
+            this.nodeExporter = Output.ofNullable(nodeExporter);
             return this;
         }
         public ClusterOpenMonitoringPrometheusGetArgs build() {

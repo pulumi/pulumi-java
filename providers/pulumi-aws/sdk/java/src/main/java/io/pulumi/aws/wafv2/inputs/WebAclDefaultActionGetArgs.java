@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionAllowGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionBlockGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class WebAclDefaultActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allow")
-      private final @Nullable Input<WebAclDefaultActionAllowGetArgs> allow;
+      private final @Nullable Output<WebAclDefaultActionAllowGetArgs> allow;
 
-    public Input<WebAclDefaultActionAllowGetArgs> getAllow() {
-        return this.allow == null ? Input.empty() : this.allow;
+    public Output<WebAclDefaultActionAllowGetArgs> getAllow() {
+        return this.allow == null ? Output.empty() : this.allow;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class WebAclDefaultActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="block")
-      private final @Nullable Input<WebAclDefaultActionBlockGetArgs> block;
+      private final @Nullable Output<WebAclDefaultActionBlockGetArgs> block;
 
-    public Input<WebAclDefaultActionBlockGetArgs> getBlock() {
-        return this.block == null ? Input.empty() : this.block;
+    public Output<WebAclDefaultActionBlockGetArgs> getBlock() {
+        return this.block == null ? Output.empty() : this.block;
     }
 
     public WebAclDefaultActionGetArgs(
-        @Nullable Input<WebAclDefaultActionAllowGetArgs> allow,
-        @Nullable Input<WebAclDefaultActionBlockGetArgs> block) {
+        @Nullable Output<WebAclDefaultActionAllowGetArgs> allow,
+        @Nullable Output<WebAclDefaultActionBlockGetArgs> block) {
         this.allow = allow;
         this.block = block;
     }
 
     private WebAclDefaultActionGetArgs() {
-        this.allow = Input.empty();
-        this.block = Input.empty();
+        this.allow = Output.empty();
+        this.block = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class WebAclDefaultActionGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclDefaultActionAllowGetArgs> allow;
-        private @Nullable Input<WebAclDefaultActionBlockGetArgs> block;
+        private @Nullable Output<WebAclDefaultActionAllowGetArgs> allow;
+        private @Nullable Output<WebAclDefaultActionBlockGetArgs> block;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class WebAclDefaultActionGetArgs extends io.pulumi.resources.Resour
     	      this.block = defaults.block;
         }
 
-        public Builder allow(@Nullable Input<WebAclDefaultActionAllowGetArgs> allow) {
+        public Builder allow(@Nullable Output<WebAclDefaultActionAllowGetArgs> allow) {
             this.allow = allow;
             return this;
         }
 
         public Builder allow(@Nullable WebAclDefaultActionAllowGetArgs allow) {
-            this.allow = Input.ofNullable(allow);
+            this.allow = Output.ofNullable(allow);
             return this;
         }
 
-        public Builder block(@Nullable Input<WebAclDefaultActionBlockGetArgs> block) {
+        public Builder block(@Nullable Output<WebAclDefaultActionBlockGetArgs> block) {
             this.block = block;
             return this;
         }
 
         public Builder block(@Nullable WebAclDefaultActionBlockGetArgs block) {
-            this.block = Input.ofNullable(block);
+            this.block = Output.ofNullable(block);
             return this;
         }
         public WebAclDefaultActionGetArgs build() {

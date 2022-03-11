@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dataprotection.inputs.CopyOnExpiryOptionArgs;
 import io.pulumi.azurenative.dataprotection.inputs.CustomCopyOptionArgs;
 import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import io.pulumi.azurenative.dataprotection.inputs.ImmediateCopyOptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class TargetCopySettingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="copyAfter", required=true)
-      private final Input<Object> copyAfter;
+      private final Output<Object> copyAfter;
 
-    public Input<Object> getCopyAfter() {
+    public Output<Object> getCopyAfter() {
         return this.copyAfter;
     }
 
@@ -37,22 +37,22 @@ public final class TargetCopySettingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataStore", required=true)
-      private final Input<DataStoreInfoBaseArgs> dataStore;
+      private final Output<DataStoreInfoBaseArgs> dataStore;
 
-    public Input<DataStoreInfoBaseArgs> getDataStore() {
+    public Output<DataStoreInfoBaseArgs> getDataStore() {
         return this.dataStore;
     }
 
     public TargetCopySettingArgs(
-        Input<Object> copyAfter,
-        Input<DataStoreInfoBaseArgs> dataStore) {
+        Output<Object> copyAfter,
+        Output<DataStoreInfoBaseArgs> dataStore) {
         this.copyAfter = Objects.requireNonNull(copyAfter, "expected parameter 'copyAfter' to be non-null");
         this.dataStore = Objects.requireNonNull(dataStore, "expected parameter 'dataStore' to be non-null");
     }
 
     private TargetCopySettingArgs() {
-        this.copyAfter = Input.empty();
-        this.dataStore = Input.empty();
+        this.copyAfter = Output.empty();
+        this.dataStore = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class TargetCopySettingArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Object> copyAfter;
-        private Input<DataStoreInfoBaseArgs> dataStore;
+        private Output<Object> copyAfter;
+        private Output<DataStoreInfoBaseArgs> dataStore;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class TargetCopySettingArgs extends io.pulumi.resources.ResourceArg
     	      this.dataStore = defaults.dataStore;
         }
 
-        public Builder copyAfter(Input<Object> copyAfter) {
+        public Builder copyAfter(Output<Object> copyAfter) {
             this.copyAfter = Objects.requireNonNull(copyAfter);
             return this;
         }
 
         public Builder copyAfter(Object copyAfter) {
-            this.copyAfter = Input.of(Objects.requireNonNull(copyAfter));
+            this.copyAfter = Output.of(Objects.requireNonNull(copyAfter));
             return this;
         }
 
-        public Builder dataStore(Input<DataStoreInfoBaseArgs> dataStore) {
+        public Builder dataStore(Output<DataStoreInfoBaseArgs> dataStore) {
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
         }
 
         public Builder dataStore(DataStoreInfoBaseArgs dataStore) {
-            this.dataStore = Input.of(Objects.requireNonNull(dataStore));
+            this.dataStore = Output.of(Objects.requireNonNull(dataStore));
             return this;
         }
         public TargetCopySettingArgs build() {

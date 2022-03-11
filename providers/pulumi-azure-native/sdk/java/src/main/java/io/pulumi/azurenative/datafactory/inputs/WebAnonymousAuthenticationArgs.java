@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authenticationType", required=true)
-      private final Input<String> authenticationType;
+      private final Output<String> authenticationType;
 
-    public Input<String> getAuthenticationType() {
+    public Output<String> getAuthenticationType() {
         return this.authenticationType;
     }
 
@@ -35,22 +35,22 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<Object> url;
+      private final Output<Object> url;
 
-    public Input<Object> getUrl() {
+    public Output<Object> getUrl() {
         return this.url;
     }
 
     public WebAnonymousAuthenticationArgs(
-        Input<String> authenticationType,
-        Input<Object> url) {
+        Output<String> authenticationType,
+        Output<Object> url) {
         this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 
     private WebAnonymousAuthenticationArgs() {
-        this.authenticationType = Input.empty();
-        this.url = Input.empty();
+        this.authenticationType = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> authenticationType;
-        private Input<Object> url;
+        private Output<String> authenticationType;
+        private Output<Object> url;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
     	      this.url = defaults.url;
         }
 
-        public Builder authenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Output<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
+            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder url(Input<Object> url) {
+        public Builder url(Output<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(Object url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public WebAnonymousAuthenticationArgs build() {

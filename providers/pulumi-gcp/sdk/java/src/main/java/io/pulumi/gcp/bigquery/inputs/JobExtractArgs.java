@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.JobExtractSourceModelArgs;
 import io.pulumi.gcp.bigquery.inputs.JobExtractSourceTableArgs;
@@ -24,10 +24,10 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compression")
-      private final @Nullable Input<String> compression;
+      private final @Nullable Output<String> compression;
 
-    public Input<String> getCompression() {
-        return this.compression == null ? Input.empty() : this.compression;
+    public Output<String> getCompression() {
+        return this.compression == null ? Output.empty() : this.compression;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationFormat")
-      private final @Nullable Input<String> destinationFormat;
+      private final @Nullable Output<String> destinationFormat;
 
-    public Input<String> getDestinationFormat() {
-        return this.destinationFormat == null ? Input.empty() : this.destinationFormat;
+    public Output<String> getDestinationFormat() {
+        return this.destinationFormat == null ? Output.empty() : this.destinationFormat;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationUris", required=true)
-      private final Input<List<String>> destinationUris;
+      private final Output<List<String>> destinationUris;
 
-    public Input<List<String>> getDestinationUris() {
+    public Output<List<String>> getDestinationUris() {
         return this.destinationUris;
     }
 
@@ -60,10 +60,10 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldDelimiter")
-      private final @Nullable Input<String> fieldDelimiter;
+      private final @Nullable Output<String> fieldDelimiter;
 
-    public Input<String> getFieldDelimiter() {
-        return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
+    public Output<String> getFieldDelimiter() {
+        return this.fieldDelimiter == null ? Output.empty() : this.fieldDelimiter;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="printHeader")
-      private final @Nullable Input<Boolean> printHeader;
+      private final @Nullable Output<Boolean> printHeader;
 
-    public Input<Boolean> getPrintHeader() {
-        return this.printHeader == null ? Input.empty() : this.printHeader;
+    public Output<Boolean> getPrintHeader() {
+        return this.printHeader == null ? Output.empty() : this.printHeader;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceModel")
-      private final @Nullable Input<JobExtractSourceModelArgs> sourceModel;
+      private final @Nullable Output<JobExtractSourceModelArgs> sourceModel;
 
-    public Input<JobExtractSourceModelArgs> getSourceModel() {
-        return this.sourceModel == null ? Input.empty() : this.sourceModel;
+    public Output<JobExtractSourceModelArgs> getSourceModel() {
+        return this.sourceModel == null ? Output.empty() : this.sourceModel;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceTable")
-      private final @Nullable Input<JobExtractSourceTableArgs> sourceTable;
+      private final @Nullable Output<JobExtractSourceTableArgs> sourceTable;
 
-    public Input<JobExtractSourceTableArgs> getSourceTable() {
-        return this.sourceTable == null ? Input.empty() : this.sourceTable;
+    public Output<JobExtractSourceTableArgs> getSourceTable() {
+        return this.sourceTable == null ? Output.empty() : this.sourceTable;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useAvroLogicalTypes")
-      private final @Nullable Input<Boolean> useAvroLogicalTypes;
+      private final @Nullable Output<Boolean> useAvroLogicalTypes;
 
-    public Input<Boolean> getUseAvroLogicalTypes() {
-        return this.useAvroLogicalTypes == null ? Input.empty() : this.useAvroLogicalTypes;
+    public Output<Boolean> getUseAvroLogicalTypes() {
+        return this.useAvroLogicalTypes == null ? Output.empty() : this.useAvroLogicalTypes;
     }
 
     public JobExtractArgs(
-        @Nullable Input<String> compression,
-        @Nullable Input<String> destinationFormat,
-        Input<List<String>> destinationUris,
-        @Nullable Input<String> fieldDelimiter,
-        @Nullable Input<Boolean> printHeader,
-        @Nullable Input<JobExtractSourceModelArgs> sourceModel,
-        @Nullable Input<JobExtractSourceTableArgs> sourceTable,
-        @Nullable Input<Boolean> useAvroLogicalTypes) {
+        @Nullable Output<String> compression,
+        @Nullable Output<String> destinationFormat,
+        Output<List<String>> destinationUris,
+        @Nullable Output<String> fieldDelimiter,
+        @Nullable Output<Boolean> printHeader,
+        @Nullable Output<JobExtractSourceModelArgs> sourceModel,
+        @Nullable Output<JobExtractSourceTableArgs> sourceTable,
+        @Nullable Output<Boolean> useAvroLogicalTypes) {
         this.compression = compression;
         this.destinationFormat = destinationFormat;
         this.destinationUris = Objects.requireNonNull(destinationUris, "expected parameter 'destinationUris' to be non-null");
@@ -132,14 +132,14 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobExtractArgs() {
-        this.compression = Input.empty();
-        this.destinationFormat = Input.empty();
-        this.destinationUris = Input.empty();
-        this.fieldDelimiter = Input.empty();
-        this.printHeader = Input.empty();
-        this.sourceModel = Input.empty();
-        this.sourceTable = Input.empty();
-        this.useAvroLogicalTypes = Input.empty();
+        this.compression = Output.empty();
+        this.destinationFormat = Output.empty();
+        this.destinationUris = Output.empty();
+        this.fieldDelimiter = Output.empty();
+        this.printHeader = Output.empty();
+        this.sourceModel = Output.empty();
+        this.sourceTable = Output.empty();
+        this.useAvroLogicalTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> compression;
-        private @Nullable Input<String> destinationFormat;
-        private Input<List<String>> destinationUris;
-        private @Nullable Input<String> fieldDelimiter;
-        private @Nullable Input<Boolean> printHeader;
-        private @Nullable Input<JobExtractSourceModelArgs> sourceModel;
-        private @Nullable Input<JobExtractSourceTableArgs> sourceTable;
-        private @Nullable Input<Boolean> useAvroLogicalTypes;
+        private @Nullable Output<String> compression;
+        private @Nullable Output<String> destinationFormat;
+        private Output<List<String>> destinationUris;
+        private @Nullable Output<String> fieldDelimiter;
+        private @Nullable Output<Boolean> printHeader;
+        private @Nullable Output<JobExtractSourceModelArgs> sourceModel;
+        private @Nullable Output<JobExtractSourceTableArgs> sourceTable;
+        private @Nullable Output<Boolean> useAvroLogicalTypes;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class JobExtractArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
         }
 
-        public Builder compression(@Nullable Input<String> compression) {
+        public Builder compression(@Nullable Output<String> compression) {
             this.compression = compression;
             return this;
         }
 
         public Builder compression(@Nullable String compression) {
-            this.compression = Input.ofNullable(compression);
+            this.compression = Output.ofNullable(compression);
             return this;
         }
 
-        public Builder destinationFormat(@Nullable Input<String> destinationFormat) {
+        public Builder destinationFormat(@Nullable Output<String> destinationFormat) {
             this.destinationFormat = destinationFormat;
             return this;
         }
 
         public Builder destinationFormat(@Nullable String destinationFormat) {
-            this.destinationFormat = Input.ofNullable(destinationFormat);
+            this.destinationFormat = Output.ofNullable(destinationFormat);
             return this;
         }
 
-        public Builder destinationUris(Input<List<String>> destinationUris) {
+        public Builder destinationUris(Output<List<String>> destinationUris) {
             this.destinationUris = Objects.requireNonNull(destinationUris);
             return this;
         }
 
         public Builder destinationUris(List<String> destinationUris) {
-            this.destinationUris = Input.of(Objects.requireNonNull(destinationUris));
+            this.destinationUris = Output.of(Objects.requireNonNull(destinationUris));
             return this;
         }
 
-        public Builder fieldDelimiter(@Nullable Input<String> fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
-            this.fieldDelimiter = Input.ofNullable(fieldDelimiter);
+            this.fieldDelimiter = Output.ofNullable(fieldDelimiter);
             return this;
         }
 
-        public Builder printHeader(@Nullable Input<Boolean> printHeader) {
+        public Builder printHeader(@Nullable Output<Boolean> printHeader) {
             this.printHeader = printHeader;
             return this;
         }
 
         public Builder printHeader(@Nullable Boolean printHeader) {
-            this.printHeader = Input.ofNullable(printHeader);
+            this.printHeader = Output.ofNullable(printHeader);
             return this;
         }
 
-        public Builder sourceModel(@Nullable Input<JobExtractSourceModelArgs> sourceModel) {
+        public Builder sourceModel(@Nullable Output<JobExtractSourceModelArgs> sourceModel) {
             this.sourceModel = sourceModel;
             return this;
         }
 
         public Builder sourceModel(@Nullable JobExtractSourceModelArgs sourceModel) {
-            this.sourceModel = Input.ofNullable(sourceModel);
+            this.sourceModel = Output.ofNullable(sourceModel);
             return this;
         }
 
-        public Builder sourceTable(@Nullable Input<JobExtractSourceTableArgs> sourceTable) {
+        public Builder sourceTable(@Nullable Output<JobExtractSourceTableArgs> sourceTable) {
             this.sourceTable = sourceTable;
             return this;
         }
 
         public Builder sourceTable(@Nullable JobExtractSourceTableArgs sourceTable) {
-            this.sourceTable = Input.ofNullable(sourceTable);
+            this.sourceTable = Output.ofNullable(sourceTable);
             return this;
         }
 
-        public Builder useAvroLogicalTypes(@Nullable Input<Boolean> useAvroLogicalTypes) {
+        public Builder useAvroLogicalTypes(@Nullable Output<Boolean> useAvroLogicalTypes) {
             this.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
 
         public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = Input.ofNullable(useAvroLogicalTypes);
+            this.useAvroLogicalTypes = Output.ofNullable(useAvroLogicalTypes);
             return this;
         }
         public JobExtractArgs build() {

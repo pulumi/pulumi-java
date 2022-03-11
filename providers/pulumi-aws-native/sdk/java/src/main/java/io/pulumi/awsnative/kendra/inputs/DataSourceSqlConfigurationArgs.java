@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceQueryIdentifiersEnclosingOption;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class DataSourceSqlConfigurationArgs extends io.pulumi.resources.Re
     public static final DataSourceSqlConfigurationArgs Empty = new DataSourceSqlConfigurationArgs();
 
     @InputImport(name="queryIdentifiersEnclosingOption")
-      private final @Nullable Input<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption;
+      private final @Nullable Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption;
 
-    public Input<DataSourceQueryIdentifiersEnclosingOption> getQueryIdentifiersEnclosingOption() {
-        return this.queryIdentifiersEnclosingOption == null ? Input.empty() : this.queryIdentifiersEnclosingOption;
+    public Output<DataSourceQueryIdentifiersEnclosingOption> getQueryIdentifiersEnclosingOption() {
+        return this.queryIdentifiersEnclosingOption == null ? Output.empty() : this.queryIdentifiersEnclosingOption;
     }
 
-    public DataSourceSqlConfigurationArgs(@Nullable Input<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption) {
+    public DataSourceSqlConfigurationArgs(@Nullable Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption) {
         this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
     }
 
     private DataSourceSqlConfigurationArgs() {
-        this.queryIdentifiersEnclosingOption = Input.empty();
+        this.queryIdentifiersEnclosingOption = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DataSourceSqlConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption;
+        private @Nullable Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DataSourceSqlConfigurationArgs extends io.pulumi.resources.Re
     	      this.queryIdentifiersEnclosingOption = defaults.queryIdentifiersEnclosingOption;
         }
 
-        public Builder queryIdentifiersEnclosingOption(@Nullable Input<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption) {
+        public Builder queryIdentifiersEnclosingOption(@Nullable Output<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption) {
             this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
             return this;
         }
 
         public Builder queryIdentifiersEnclosingOption(@Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
-            this.queryIdentifiersEnclosingOption = Input.ofNullable(queryIdentifiersEnclosingOption);
+            this.queryIdentifiersEnclosingOption = Output.ofNullable(queryIdentifiersEnclosingOption);
             return this;
         }
         public DataSourceSqlConfigurationArgs build() {

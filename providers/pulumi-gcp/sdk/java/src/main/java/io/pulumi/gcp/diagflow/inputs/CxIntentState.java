@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxIntentParameterGetArgs;
 import io.pulumi.gcp.diagflow.inputs.CxIntentTrainingPhraseGetArgs;
@@ -25,10 +25,10 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isFallback")
-      private final @Nullable Input<Boolean> isFallback;
+      private final @Nullable Output<Boolean> isFallback;
 
-    public Input<Boolean> getIsFallback() {
-        return this.isFallback == null ? Input.empty() : this.isFallback;
+    public Output<Boolean> getIsFallback() {
+        return this.isFallback == null ? Output.empty() : this.isFallback;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<CxIntentParameterGetArgs>> parameters;
+      private final @Nullable Output<List<CxIntentParameterGetArgs>> parameters;
 
-    public Input<List<CxIntentParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<CxIntentParameterGetArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -135,23 +135,23 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trainingPhrases")
-      private final @Nullable Input<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases;
+      private final @Nullable Output<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases;
 
-    public Input<List<CxIntentTrainingPhraseGetArgs>> getTrainingPhrases() {
-        return this.trainingPhrases == null ? Input.empty() : this.trainingPhrases;
+    public Output<List<CxIntentTrainingPhraseGetArgs>> getTrainingPhrases() {
+        return this.trainingPhrases == null ? Output.empty() : this.trainingPhrases;
     }
 
     public CxIntentState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Boolean> isFallback,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> languageCode,
-        @Nullable Input<String> name,
-        @Nullable Input<List<CxIntentParameterGetArgs>> parameters,
-        @Nullable Input<String> parent,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Boolean> isFallback,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> languageCode,
+        @Nullable Output<String> name,
+        @Nullable Output<List<CxIntentParameterGetArgs>> parameters,
+        @Nullable Output<String> parent,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases) {
         this.description = description;
         this.displayName = displayName;
         this.isFallback = isFallback;
@@ -165,16 +165,16 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxIntentState() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.isFallback = Input.empty();
-        this.labels = Input.empty();
-        this.languageCode = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.parent = Input.empty();
-        this.priority = Input.empty();
-        this.trainingPhrases = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.isFallback = Output.empty();
+        this.labels = Output.empty();
+        this.languageCode = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.parent = Output.empty();
+        this.priority = Output.empty();
+        this.trainingPhrases = Output.empty();
     }
 
     public static Builder builder() {
@@ -186,16 +186,16 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Boolean> isFallback;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> languageCode;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<CxIntentParameterGetArgs>> parameters;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Boolean> isFallback;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> languageCode;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<CxIntentParameterGetArgs>> parameters;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases;
 
         public Builder() {
     	      // Empty
@@ -215,103 +215,103 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
     	      this.trainingPhrases = defaults.trainingPhrases;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder isFallback(@Nullable Input<Boolean> isFallback) {
+        public Builder isFallback(@Nullable Output<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
 
         public Builder isFallback(@Nullable Boolean isFallback) {
-            this.isFallback = Input.ofNullable(isFallback);
+            this.isFallback = Output.ofNullable(isFallback);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<CxIntentParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<CxIntentParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<CxIntentParameterGetArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder trainingPhrases(@Nullable Input<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases) {
+        public Builder trainingPhrases(@Nullable Output<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases) {
             this.trainingPhrases = trainingPhrases;
             return this;
         }
 
         public Builder trainingPhrases(@Nullable List<CxIntentTrainingPhraseGetArgs> trainingPhrases) {
-            this.trainingPhrases = Input.ofNullable(trainingPhrases);
+            this.trainingPhrases = Output.ofNullable(trainingPhrases);
             return this;
         }
         public CxIntentState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
+      private final @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
 
-    public Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
-    public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs(@Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text) {
+    public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs(@Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text) {
         this.text = text;
     }
 
     private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs() {
-        this.text = Input.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     }
 
     public static final class Builder {
-        private @Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
+        private @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     	      this.text = defaults.text;
         }
 
-        public Builder text(@Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text) {
+        public Builder text(@Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
         public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs build() {

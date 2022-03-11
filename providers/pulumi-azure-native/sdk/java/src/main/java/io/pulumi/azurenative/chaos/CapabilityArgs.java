@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.chaos;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capabilityName")
-      private final @Nullable Input<String> capabilityName;
+      private final @Nullable Output<String> capabilityName;
 
-    public Input<String> getCapabilityName() {
-        return this.capabilityName == null ? Input.empty() : this.capabilityName;
+    public Output<String> getCapabilityName() {
+        return this.capabilityName == null ? Output.empty() : this.capabilityName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentProviderNamespace", required=true)
-      private final Input<String> parentProviderNamespace;
+      private final Output<String> parentProviderNamespace;
 
-    public Input<String> getParentProviderNamespace() {
+    public Output<String> getParentProviderNamespace() {
         return this.parentProviderNamespace;
     }
 
@@ -41,9 +41,9 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResourceName", required=true)
-      private final Input<String> parentResourceName;
+      private final Output<String> parentResourceName;
 
-    public Input<String> getParentResourceName() {
+    public Output<String> getParentResourceName() {
         return this.parentResourceName;
     }
 
@@ -52,9 +52,9 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResourceType", required=true)
-      private final Input<String> parentResourceType;
+      private final Output<String> parentResourceType;
 
-    public Input<String> getParentResourceType() {
+    public Output<String> getParentResourceType() {
         return this.parentResourceType;
     }
 
@@ -63,9 +63,9 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -74,19 +74,19 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetName", required=true)
-      private final Input<String> targetName;
+      private final Output<String> targetName;
 
-    public Input<String> getTargetName() {
+    public Output<String> getTargetName() {
         return this.targetName;
     }
 
     public CapabilityArgs(
-        @Nullable Input<String> capabilityName,
-        Input<String> parentProviderNamespace,
-        Input<String> parentResourceName,
-        Input<String> parentResourceType,
-        Input<String> resourceGroupName,
-        Input<String> targetName) {
+        @Nullable Output<String> capabilityName,
+        Output<String> parentProviderNamespace,
+        Output<String> parentResourceName,
+        Output<String> parentResourceType,
+        Output<String> resourceGroupName,
+        Output<String> targetName) {
         this.capabilityName = capabilityName;
         this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace, "expected parameter 'parentProviderNamespace' to be non-null");
         this.parentResourceName = Objects.requireNonNull(parentResourceName, "expected parameter 'parentResourceName' to be non-null");
@@ -96,12 +96,12 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CapabilityArgs() {
-        this.capabilityName = Input.empty();
-        this.parentProviderNamespace = Input.empty();
-        this.parentResourceName = Input.empty();
-        this.parentResourceType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.targetName = Input.empty();
+        this.capabilityName = Output.empty();
+        this.parentProviderNamespace = Output.empty();
+        this.parentResourceName = Output.empty();
+        this.parentResourceType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.targetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> capabilityName;
-        private Input<String> parentProviderNamespace;
-        private Input<String> parentResourceName;
-        private Input<String> parentResourceType;
-        private Input<String> resourceGroupName;
-        private Input<String> targetName;
+        private @Nullable Output<String> capabilityName;
+        private Output<String> parentProviderNamespace;
+        private Output<String> parentResourceName;
+        private Output<String> parentResourceType;
+        private Output<String> resourceGroupName;
+        private Output<String> targetName;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetName = defaults.targetName;
         }
 
-        public Builder capabilityName(@Nullable Input<String> capabilityName) {
+        public Builder capabilityName(@Nullable Output<String> capabilityName) {
             this.capabilityName = capabilityName;
             return this;
         }
 
         public Builder capabilityName(@Nullable String capabilityName) {
-            this.capabilityName = Input.ofNullable(capabilityName);
+            this.capabilityName = Output.ofNullable(capabilityName);
             return this;
         }
 
-        public Builder parentProviderNamespace(Input<String> parentProviderNamespace) {
+        public Builder parentProviderNamespace(Output<String> parentProviderNamespace) {
             this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace);
             return this;
         }
 
         public Builder parentProviderNamespace(String parentProviderNamespace) {
-            this.parentProviderNamespace = Input.of(Objects.requireNonNull(parentProviderNamespace));
+            this.parentProviderNamespace = Output.of(Objects.requireNonNull(parentProviderNamespace));
             return this;
         }
 
-        public Builder parentResourceName(Input<String> parentResourceName) {
+        public Builder parentResourceName(Output<String> parentResourceName) {
             this.parentResourceName = Objects.requireNonNull(parentResourceName);
             return this;
         }
 
         public Builder parentResourceName(String parentResourceName) {
-            this.parentResourceName = Input.of(Objects.requireNonNull(parentResourceName));
+            this.parentResourceName = Output.of(Objects.requireNonNull(parentResourceName));
             return this;
         }
 
-        public Builder parentResourceType(Input<String> parentResourceType) {
+        public Builder parentResourceType(Output<String> parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
 
         public Builder parentResourceType(String parentResourceType) {
-            this.parentResourceType = Input.of(Objects.requireNonNull(parentResourceType));
+            this.parentResourceType = Output.of(Objects.requireNonNull(parentResourceType));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder targetName(Input<String> targetName) {
+        public Builder targetName(Output<String> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
 
         public Builder targetName(String targetName) {
-            this.targetName = Input.of(Objects.requireNonNull(targetName));
+            this.targetName = Output.of(Objects.requireNonNull(targetName));
             return this;
         }
         public CapabilityArgs build() {

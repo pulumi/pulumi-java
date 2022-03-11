@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigGetArgs;
@@ -24,10 +24,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthority")
-      private final @Nullable Input<String> certificateAuthority;
+      private final @Nullable Output<String> certificateAuthority;
 
-    public Input<String> getCertificateAuthority() {
-        return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;
+    public Output<String> getCertificateAuthority() {
+        return this.certificateAuthority == null ? Output.empty() : this.certificateAuthority;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateDescriptions")
-      private final @Nullable Input<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions;
+      private final @Nullable Output<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions;
 
-    public Input<List<CertificateCertificateDescriptionGetArgs>> getCertificateDescriptions() {
-        return this.certificateDescriptions == null ? Input.empty() : this.certificateDescriptions;
+    public Output<List<CertificateCertificateDescriptionGetArgs>> getCertificateDescriptions() {
+        return this.certificateDescriptions == null ? Output.empty() : this.certificateDescriptions;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateTemplate")
-      private final @Nullable Input<String> certificateTemplate;
+      private final @Nullable Output<String> certificateTemplate;
 
-    public Input<String> getCertificateTemplate() {
-        return this.certificateTemplate == null ? Input.empty() : this.certificateTemplate;
+    public Output<String> getCertificateTemplate() {
+        return this.certificateTemplate == null ? Output.empty() : this.certificateTemplate;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<CertificateConfigGetArgs> config;
+      private final @Nullable Output<CertificateConfigGetArgs> config;
 
-    public Input<CertificateConfigGetArgs> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<CertificateConfigGetArgs> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifetime")
-      private final @Nullable Input<String> lifetime;
+      private final @Nullable Output<String> lifetime;
 
-    public Input<String> getLifetime() {
-        return this.lifetime == null ? Input.empty() : this.lifetime;
+    public Output<String> getLifetime() {
+        return this.lifetime == null ? Output.empty() : this.lifetime;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pemCertificate")
-      private final @Nullable Input<String> pemCertificate;
+      private final @Nullable Output<String> pemCertificate;
 
-    public Input<String> getPemCertificate() {
-        return this.pemCertificate == null ? Input.empty() : this.pemCertificate;
+    public Output<String> getPemCertificate() {
+        return this.pemCertificate == null ? Output.empty() : this.pemCertificate;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pemCertificates")
-      private final @Nullable Input<List<String>> pemCertificates;
+      private final @Nullable Output<List<String>> pemCertificates;
 
-    public Input<List<String>> getPemCertificates() {
-        return this.pemCertificates == null ? Input.empty() : this.pemCertificates;
+    public Output<List<String>> getPemCertificates() {
+        return this.pemCertificates == null ? Output.empty() : this.pemCertificates;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pemCsr")
-      private final @Nullable Input<String> pemCsr;
+      private final @Nullable Output<String> pemCsr;
 
-    public Input<String> getPemCsr() {
-        return this.pemCsr == null ? Input.empty() : this.pemCsr;
+    public Output<String> getPemCsr() {
+        return this.pemCsr == null ? Output.empty() : this.pemCsr;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pool")
-      private final @Nullable Input<String> pool;
+      private final @Nullable Output<String> pool;
 
-    public Input<String> getPool() {
-        return this.pool == null ? Input.empty() : this.pool;
+    public Output<String> getPool() {
+        return this.pool == null ? Output.empty() : this.pool;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revocationDetails")
-      private final @Nullable Input<List<CertificateRevocationDetailGetArgs>> revocationDetails;
+      private final @Nullable Output<List<CertificateRevocationDetailGetArgs>> revocationDetails;
 
-    public Input<List<CertificateRevocationDetailGetArgs>> getRevocationDetails() {
-        return this.revocationDetails == null ? Input.empty() : this.revocationDetails;
+    public Output<List<CertificateRevocationDetailGetArgs>> getRevocationDetails() {
+        return this.revocationDetails == null ? Output.empty() : this.revocationDetails;
     }
 
     /**
@@ -200,29 +200,29 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public CertificateState(
-        @Nullable Input<String> certificateAuthority,
-        @Nullable Input<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions,
-        @Nullable Input<String> certificateTemplate,
-        @Nullable Input<CertificateConfigGetArgs> config,
-        @Nullable Input<String> createTime,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> lifetime,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> pemCertificate,
-        @Nullable Input<List<String>> pemCertificates,
-        @Nullable Input<String> pemCsr,
-        @Nullable Input<String> pool,
-        @Nullable Input<String> project,
-        @Nullable Input<List<CertificateRevocationDetailGetArgs>> revocationDetails,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> certificateAuthority,
+        @Nullable Output<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions,
+        @Nullable Output<String> certificateTemplate,
+        @Nullable Output<CertificateConfigGetArgs> config,
+        @Nullable Output<String> createTime,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> lifetime,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> pemCertificate,
+        @Nullable Output<List<String>> pemCertificates,
+        @Nullable Output<String> pemCsr,
+        @Nullable Output<String> pool,
+        @Nullable Output<String> project,
+        @Nullable Output<List<CertificateRevocationDetailGetArgs>> revocationDetails,
+        @Nullable Output<String> updateTime) {
         this.certificateAuthority = certificateAuthority;
         this.certificateDescriptions = certificateDescriptions;
         this.certificateTemplate = certificateTemplate;
@@ -242,22 +242,22 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateState() {
-        this.certificateAuthority = Input.empty();
-        this.certificateDescriptions = Input.empty();
-        this.certificateTemplate = Input.empty();
-        this.config = Input.empty();
-        this.createTime = Input.empty();
-        this.labels = Input.empty();
-        this.lifetime = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.pemCertificate = Input.empty();
-        this.pemCertificates = Input.empty();
-        this.pemCsr = Input.empty();
-        this.pool = Input.empty();
-        this.project = Input.empty();
-        this.revocationDetails = Input.empty();
-        this.updateTime = Input.empty();
+        this.certificateAuthority = Output.empty();
+        this.certificateDescriptions = Output.empty();
+        this.certificateTemplate = Output.empty();
+        this.config = Output.empty();
+        this.createTime = Output.empty();
+        this.labels = Output.empty();
+        this.lifetime = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.pemCertificate = Output.empty();
+        this.pemCertificates = Output.empty();
+        this.pemCsr = Output.empty();
+        this.pool = Output.empty();
+        this.project = Output.empty();
+        this.revocationDetails = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -269,22 +269,22 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateAuthority;
-        private @Nullable Input<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions;
-        private @Nullable Input<String> certificateTemplate;
-        private @Nullable Input<CertificateConfigGetArgs> config;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> lifetime;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> pemCertificate;
-        private @Nullable Input<List<String>> pemCertificates;
-        private @Nullable Input<String> pemCsr;
-        private @Nullable Input<String> pool;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<CertificateRevocationDetailGetArgs>> revocationDetails;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> certificateAuthority;
+        private @Nullable Output<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions;
+        private @Nullable Output<String> certificateTemplate;
+        private @Nullable Output<CertificateConfigGetArgs> config;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> lifetime;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> pemCertificate;
+        private @Nullable Output<List<String>> pemCertificates;
+        private @Nullable Output<String> pemCsr;
+        private @Nullable Output<String> pool;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<CertificateRevocationDetailGetArgs>> revocationDetails;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -310,163 +310,163 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder certificateAuthority(@Nullable Input<String> certificateAuthority) {
+        public Builder certificateAuthority(@Nullable Output<String> certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
 
         public Builder certificateAuthority(@Nullable String certificateAuthority) {
-            this.certificateAuthority = Input.ofNullable(certificateAuthority);
+            this.certificateAuthority = Output.ofNullable(certificateAuthority);
             return this;
         }
 
-        public Builder certificateDescriptions(@Nullable Input<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions) {
+        public Builder certificateDescriptions(@Nullable Output<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions) {
             this.certificateDescriptions = certificateDescriptions;
             return this;
         }
 
         public Builder certificateDescriptions(@Nullable List<CertificateCertificateDescriptionGetArgs> certificateDescriptions) {
-            this.certificateDescriptions = Input.ofNullable(certificateDescriptions);
+            this.certificateDescriptions = Output.ofNullable(certificateDescriptions);
             return this;
         }
 
-        public Builder certificateTemplate(@Nullable Input<String> certificateTemplate) {
+        public Builder certificateTemplate(@Nullable Output<String> certificateTemplate) {
             this.certificateTemplate = certificateTemplate;
             return this;
         }
 
         public Builder certificateTemplate(@Nullable String certificateTemplate) {
-            this.certificateTemplate = Input.ofNullable(certificateTemplate);
+            this.certificateTemplate = Output.ofNullable(certificateTemplate);
             return this;
         }
 
-        public Builder config(@Nullable Input<CertificateConfigGetArgs> config) {
+        public Builder config(@Nullable Output<CertificateConfigGetArgs> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable CertificateConfigGetArgs config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lifetime(@Nullable Input<String> lifetime) {
+        public Builder lifetime(@Nullable Output<String> lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
         public Builder lifetime(@Nullable String lifetime) {
-            this.lifetime = Input.ofNullable(lifetime);
+            this.lifetime = Output.ofNullable(lifetime);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pemCertificate(@Nullable Input<String> pemCertificate) {
+        public Builder pemCertificate(@Nullable Output<String> pemCertificate) {
             this.pemCertificate = pemCertificate;
             return this;
         }
 
         public Builder pemCertificate(@Nullable String pemCertificate) {
-            this.pemCertificate = Input.ofNullable(pemCertificate);
+            this.pemCertificate = Output.ofNullable(pemCertificate);
             return this;
         }
 
-        public Builder pemCertificates(@Nullable Input<List<String>> pemCertificates) {
+        public Builder pemCertificates(@Nullable Output<List<String>> pemCertificates) {
             this.pemCertificates = pemCertificates;
             return this;
         }
 
         public Builder pemCertificates(@Nullable List<String> pemCertificates) {
-            this.pemCertificates = Input.ofNullable(pemCertificates);
+            this.pemCertificates = Output.ofNullable(pemCertificates);
             return this;
         }
 
-        public Builder pemCsr(@Nullable Input<String> pemCsr) {
+        public Builder pemCsr(@Nullable Output<String> pemCsr) {
             this.pemCsr = pemCsr;
             return this;
         }
 
         public Builder pemCsr(@Nullable String pemCsr) {
-            this.pemCsr = Input.ofNullable(pemCsr);
+            this.pemCsr = Output.ofNullable(pemCsr);
             return this;
         }
 
-        public Builder pool(@Nullable Input<String> pool) {
+        public Builder pool(@Nullable Output<String> pool) {
             this.pool = pool;
             return this;
         }
 
         public Builder pool(@Nullable String pool) {
-            this.pool = Input.ofNullable(pool);
+            this.pool = Output.ofNullable(pool);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder revocationDetails(@Nullable Input<List<CertificateRevocationDetailGetArgs>> revocationDetails) {
+        public Builder revocationDetails(@Nullable Output<List<CertificateRevocationDetailGetArgs>> revocationDetails) {
             this.revocationDetails = revocationDetails;
             return this;
         }
 
         public Builder revocationDetails(@Nullable List<CertificateRevocationDetailGetArgs> revocationDetails) {
-            this.revocationDetails = Input.ofNullable(revocationDetails);
+            this.revocationDetails = Output.ofNullable(revocationDetails);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public CertificateState build() {

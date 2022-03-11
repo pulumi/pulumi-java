@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.enums.ResponsePlanSsmAutomationTargetAccount;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,9 +26,9 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="documentName", required=true)
-      private final Input<String> documentName;
+      private final Output<String> documentName;
 
-    public Input<String> getDocumentName() {
+    public Output<String> getDocumentName() {
         return this.documentName;
     }
 
@@ -37,10 +37,10 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="documentVersion")
-      private final @Nullable Input<String> documentVersion;
+      private final @Nullable Output<String> documentVersion;
 
-    public Input<String> getDocumentVersion() {
-        return this.documentVersion == null ? Input.empty() : this.documentVersion;
+    public Output<String> getDocumentVersion() {
+        return this.documentVersion == null ? Output.empty() : this.documentVersion;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<ResponsePlanSsmParameterArgs>> parameters;
+      private final @Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters;
 
-    public Input<List<ResponsePlanSsmParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<ResponsePlanSsmParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -70,18 +70,18 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="targetAccount")
-      private final @Nullable Input<ResponsePlanSsmAutomationTargetAccount> targetAccount;
+      private final @Nullable Output<ResponsePlanSsmAutomationTargetAccount> targetAccount;
 
-    public Input<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {
-        return this.targetAccount == null ? Input.empty() : this.targetAccount;
+    public Output<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {
+        return this.targetAccount == null ? Output.empty() : this.targetAccount;
     }
 
     public ResponsePlanSsmAutomationArgs(
-        Input<String> documentName,
-        @Nullable Input<String> documentVersion,
-        @Nullable Input<List<ResponsePlanSsmParameterArgs>> parameters,
-        Input<String> roleArn,
-        @Nullable Input<ResponsePlanSsmAutomationTargetAccount> targetAccount) {
+        Output<String> documentName,
+        @Nullable Output<String> documentVersion,
+        @Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters,
+        Output<String> roleArn,
+        @Nullable Output<ResponsePlanSsmAutomationTargetAccount> targetAccount) {
         this.documentName = Objects.requireNonNull(documentName, "expected parameter 'documentName' to be non-null");
         this.documentVersion = documentVersion;
         this.parameters = parameters;
@@ -90,11 +90,11 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
     }
 
     private ResponsePlanSsmAutomationArgs() {
-        this.documentName = Input.empty();
-        this.documentVersion = Input.empty();
-        this.parameters = Input.empty();
-        this.roleArn = Input.empty();
-        this.targetAccount = Input.empty();
+        this.documentName = Output.empty();
+        this.documentVersion = Output.empty();
+        this.parameters = Output.empty();
+        this.roleArn = Output.empty();
+        this.targetAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> documentName;
-        private @Nullable Input<String> documentVersion;
-        private @Nullable Input<List<ResponsePlanSsmParameterArgs>> parameters;
-        private Input<String> roleArn;
-        private @Nullable Input<ResponsePlanSsmAutomationTargetAccount> targetAccount;
+        private Output<String> documentName;
+        private @Nullable Output<String> documentVersion;
+        private @Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters;
+        private Output<String> roleArn;
+        private @Nullable Output<ResponsePlanSsmAutomationTargetAccount> targetAccount;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
     	      this.targetAccount = defaults.targetAccount;
         }
 
-        public Builder documentName(Input<String> documentName) {
+        public Builder documentName(Output<String> documentName) {
             this.documentName = Objects.requireNonNull(documentName);
             return this;
         }
 
         public Builder documentName(String documentName) {
-            this.documentName = Input.of(Objects.requireNonNull(documentName));
+            this.documentName = Output.of(Objects.requireNonNull(documentName));
             return this;
         }
 
-        public Builder documentVersion(@Nullable Input<String> documentVersion) {
+        public Builder documentVersion(@Nullable Output<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Input.ofNullable(documentVersion);
+            this.documentVersion = Output.ofNullable(documentVersion);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<ResponsePlanSsmParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<ResponsePlanSsmParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder targetAccount(@Nullable Input<ResponsePlanSsmAutomationTargetAccount> targetAccount) {
+        public Builder targetAccount(@Nullable Output<ResponsePlanSsmAutomationTargetAccount> targetAccount) {
             this.targetAccount = targetAccount;
             return this;
         }
 
         public Builder targetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
-            this.targetAccount = Input.ofNullable(targetAccount);
+            this.targetAccount = Output.ofNullable(targetAccount);
             return this;
         }
         public ResponsePlanSsmAutomationArgs build() {

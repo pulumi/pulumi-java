@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.aws.dynamodb.inputs.GlobalTableReplicaGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class GlobalTableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GlobalTableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class GlobalTableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas")
-      private final @Nullable Input<List<GlobalTableReplicaGetArgs>> replicas;
+      private final @Nullable Output<List<GlobalTableReplicaGetArgs>> replicas;
 
-    public Input<List<GlobalTableReplicaGetArgs>> getReplicas() {
-        return this.replicas == null ? Input.empty() : this.replicas;
+    public Output<List<GlobalTableReplicaGetArgs>> getReplicas() {
+        return this.replicas == null ? Output.empty() : this.replicas;
     }
 
     public GlobalTableState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> name,
-        @Nullable Input<List<GlobalTableReplicaGetArgs>> replicas) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> name,
+        @Nullable Output<List<GlobalTableReplicaGetArgs>> replicas) {
         this.arn = arn;
         this.name = name;
         this.replicas = replicas;
     }
 
     private GlobalTableState() {
-        this.arn = Input.empty();
-        this.name = Input.empty();
-        this.replicas = Input.empty();
+        this.arn = Output.empty();
+        this.name = Output.empty();
+        this.replicas = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class GlobalTableState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<GlobalTableReplicaGetArgs>> replicas;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<GlobalTableReplicaGetArgs>> replicas;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class GlobalTableState extends io.pulumi.resources.ResourceArgs {
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder replicas(@Nullable Input<List<GlobalTableReplicaGetArgs>> replicas) {
+        public Builder replicas(@Nullable Output<List<GlobalTableReplicaGetArgs>> replicas) {
             this.replicas = replicas;
             return this;
         }
 
         public Builder replicas(@Nullable List<GlobalTableReplicaGetArgs> replicas) {
-            this.replicas = Input.ofNullable(replicas);
+            this.replicas = Output.ofNullable(replicas);
             return this;
         }
         public GlobalTableState build() {

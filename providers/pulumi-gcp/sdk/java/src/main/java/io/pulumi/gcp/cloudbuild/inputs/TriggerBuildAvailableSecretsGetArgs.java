@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildAvailableSecretsSecretManagerGetArgs;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class TriggerBuildAvailableSecretsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="secretManagers", required=true)
-      private final Input<List<TriggerBuildAvailableSecretsSecretManagerGetArgs>> secretManagers;
+      private final Output<List<TriggerBuildAvailableSecretsSecretManagerGetArgs>> secretManagers;
 
-    public Input<List<TriggerBuildAvailableSecretsSecretManagerGetArgs>> getSecretManagers() {
+    public Output<List<TriggerBuildAvailableSecretsSecretManagerGetArgs>> getSecretManagers() {
         return this.secretManagers;
     }
 
-    public TriggerBuildAvailableSecretsGetArgs(Input<List<TriggerBuildAvailableSecretsSecretManagerGetArgs>> secretManagers) {
+    public TriggerBuildAvailableSecretsGetArgs(Output<List<TriggerBuildAvailableSecretsSecretManagerGetArgs>> secretManagers) {
         this.secretManagers = Objects.requireNonNull(secretManagers, "expected parameter 'secretManagers' to be non-null");
     }
 
     private TriggerBuildAvailableSecretsGetArgs() {
-        this.secretManagers = Input.empty();
+        this.secretManagers = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class TriggerBuildAvailableSecretsGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<List<TriggerBuildAvailableSecretsSecretManagerGetArgs>> secretManagers;
+        private Output<List<TriggerBuildAvailableSecretsSecretManagerGetArgs>> secretManagers;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class TriggerBuildAvailableSecretsGetArgs extends io.pulumi.resourc
     	      this.secretManagers = defaults.secretManagers;
         }
 
-        public Builder secretManagers(Input<List<TriggerBuildAvailableSecretsSecretManagerGetArgs>> secretManagers) {
+        public Builder secretManagers(Output<List<TriggerBuildAvailableSecretsSecretManagerGetArgs>> secretManagers) {
             this.secretManagers = Objects.requireNonNull(secretManagers);
             return this;
         }
 
         public Builder secretManagers(List<TriggerBuildAvailableSecretsSecretManagerGetArgs> secretManagers) {
-            this.secretManagers = Input.of(Objects.requireNonNull(secretManagers));
+            this.secretManagers = Output.of(Objects.requireNonNull(secretManagers));
             return this;
         }
         public TriggerBuildAvailableSecretsGetArgs build() {

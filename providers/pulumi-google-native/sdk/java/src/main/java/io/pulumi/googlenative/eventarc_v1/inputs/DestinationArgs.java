@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.eventarc_v1.inputs.CloudRunArgs;
 import io.pulumi.googlenative.eventarc_v1.inputs.GKEArgs;
@@ -25,10 +25,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudFunction")
-      private final @Nullable Input<String> cloudFunction;
+      private final @Nullable Output<String> cloudFunction;
 
-    public Input<String> getCloudFunction() {
-        return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
+    public Output<String> getCloudFunction() {
+        return this.cloudFunction == null ? Output.empty() : this.cloudFunction;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudRun")
-      private final @Nullable Input<CloudRunArgs> cloudRun;
+      private final @Nullable Output<CloudRunArgs> cloudRun;
 
-    public Input<CloudRunArgs> getCloudRun() {
-        return this.cloudRun == null ? Input.empty() : this.cloudRun;
+    public Output<CloudRunArgs> getCloudRun() {
+        return this.cloudRun == null ? Output.empty() : this.cloudRun;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gke")
-      private final @Nullable Input<GKEArgs> gke;
+      private final @Nullable Output<GKEArgs> gke;
 
-    public Input<GKEArgs> getGke() {
-        return this.gke == null ? Input.empty() : this.gke;
+    public Output<GKEArgs> getGke() {
+        return this.gke == null ? Output.empty() : this.gke;
     }
 
     public DestinationArgs(
-        @Nullable Input<String> cloudFunction,
-        @Nullable Input<CloudRunArgs> cloudRun,
-        @Nullable Input<GKEArgs> gke) {
+        @Nullable Output<String> cloudFunction,
+        @Nullable Output<CloudRunArgs> cloudRun,
+        @Nullable Output<GKEArgs> gke) {
         this.cloudFunction = cloudFunction;
         this.cloudRun = cloudRun;
         this.gke = gke;
     }
 
     private DestinationArgs() {
-        this.cloudFunction = Input.empty();
-        this.cloudRun = Input.empty();
-        this.gke = Input.empty();
+        this.cloudFunction = Output.empty();
+        this.cloudRun = Output.empty();
+        this.gke = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudFunction;
-        private @Nullable Input<CloudRunArgs> cloudRun;
-        private @Nullable Input<GKEArgs> gke;
+        private @Nullable Output<String> cloudFunction;
+        private @Nullable Output<CloudRunArgs> cloudRun;
+        private @Nullable Output<GKEArgs> gke;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.gke = defaults.gke;
         }
 
-        public Builder cloudFunction(@Nullable Input<String> cloudFunction) {
+        public Builder cloudFunction(@Nullable Output<String> cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
 
         public Builder cloudFunction(@Nullable String cloudFunction) {
-            this.cloudFunction = Input.ofNullable(cloudFunction);
+            this.cloudFunction = Output.ofNullable(cloudFunction);
             return this;
         }
 
-        public Builder cloudRun(@Nullable Input<CloudRunArgs> cloudRun) {
+        public Builder cloudRun(@Nullable Output<CloudRunArgs> cloudRun) {
             this.cloudRun = cloudRun;
             return this;
         }
 
         public Builder cloudRun(@Nullable CloudRunArgs cloudRun) {
-            this.cloudRun = Input.ofNullable(cloudRun);
+            this.cloudRun = Output.ofNullable(cloudRun);
             return this;
         }
 
-        public Builder gke(@Nullable Input<GKEArgs> gke) {
+        public Builder gke(@Nullable Output<GKEArgs> gke) {
             this.gke = gke;
             return this;
         }
 
         public Builder gke(@Nullable GKEArgs gke) {
-            this.gke = Input.ofNullable(gke);
+            this.gke = Output.ofNullable(gke);
             return this;
         }
         public DestinationArgs build() {

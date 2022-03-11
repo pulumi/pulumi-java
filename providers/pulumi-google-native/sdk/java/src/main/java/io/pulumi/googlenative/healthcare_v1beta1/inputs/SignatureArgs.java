@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ImageArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<ImageArgs> image;
+      private final @Nullable Output<ImageArgs> image;
 
-    public Input<ImageArgs> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<ImageArgs> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signatureTime")
-      private final @Nullable Input<String> signatureTime;
+      private final @Nullable Output<String> signatureTime;
 
-    public Input<String> getSignatureTime() {
-        return this.signatureTime == null ? Input.empty() : this.signatureTime;
+    public Output<String> getSignatureTime() {
+        return this.signatureTime == null ? Output.empty() : this.signatureTime;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId", required=true)
-      private final Input<String> userId;
+      private final Output<String> userId;
 
-    public Input<String> getUserId() {
+    public Output<String> getUserId() {
         return this.userId;
     }
 
     public SignatureArgs(
-        @Nullable Input<ImageArgs> image,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> signatureTime,
-        Input<String> userId) {
+        @Nullable Output<ImageArgs> image,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> signatureTime,
+        Output<String> userId) {
         this.image = image;
         this.metadata = metadata;
         this.signatureTime = signatureTime;
@@ -76,10 +76,10 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SignatureArgs() {
-        this.image = Input.empty();
-        this.metadata = Input.empty();
-        this.signatureTime = Input.empty();
-        this.userId = Input.empty();
+        this.image = Output.empty();
+        this.metadata = Output.empty();
+        this.signatureTime = Output.empty();
+        this.userId = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ImageArgs> image;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> signatureTime;
-        private Input<String> userId;
+        private @Nullable Output<ImageArgs> image;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> signatureTime;
+        private Output<String> userId;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder image(@Nullable Input<ImageArgs> image) {
+        public Builder image(@Nullable Output<ImageArgs> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable ImageArgs image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder signatureTime(@Nullable Input<String> signatureTime) {
+        public Builder signatureTime(@Nullable Output<String> signatureTime) {
             this.signatureTime = signatureTime;
             return this;
         }
 
         public Builder signatureTime(@Nullable String signatureTime) {
-            this.signatureTime = Input.ofNullable(signatureTime);
+            this.signatureTime = Output.ofNullable(signatureTime);
             return this;
         }
 
-        public Builder userId(Input<String> userId) {
+        public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
         public Builder userId(String userId) {
-            this.userId = Input.of(Objects.requireNonNull(userId));
+            this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
         public SignatureArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.cache.inputs.ScheduleEntryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="default")
-      private final @Nullable Input<String> $default;
+      private final @Nullable Output<String> $default;
 
-    public Input<String> get$default() {
-        return this.$default == null ? Input.empty() : this.$default;
+    public Output<String> get$default() {
+        return this.$default == null ? Output.empty() : this.$default;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -43,9 +43,9 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,17 +54,17 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleEntries", required=true)
-      private final Input<List<ScheduleEntryArgs>> scheduleEntries;
+      private final Output<List<ScheduleEntryArgs>> scheduleEntries;
 
-    public Input<List<ScheduleEntryArgs>> getScheduleEntries() {
+    public Output<List<ScheduleEntryArgs>> getScheduleEntries() {
         return this.scheduleEntries;
     }
 
     public PatchScheduleArgs(
-        @Nullable Input<String> $default,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        Input<List<ScheduleEntryArgs>> scheduleEntries) {
+        @Nullable Output<String> $default,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        Output<List<ScheduleEntryArgs>> scheduleEntries) {
         this.$default = $default;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -72,10 +72,10 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PatchScheduleArgs() {
-        this.$default = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scheduleEntries = Input.empty();
+        this.$default = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scheduleEntries = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> $default;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<List<ScheduleEntryArgs>> scheduleEntries;
+        private @Nullable Output<String> $default;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<List<ScheduleEntryArgs>> scheduleEntries;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scheduleEntries = defaults.scheduleEntries;
         }
 
-        public Builder $default(@Nullable Input<String> $default) {
+        public Builder $default(@Nullable Output<String> $default) {
             this.$default = $default;
             return this;
         }
 
         public Builder $default(@Nullable String $default) {
-            this.$default = Input.ofNullable($default);
+            this.$default = Output.ofNullable($default);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scheduleEntries(Input<List<ScheduleEntryArgs>> scheduleEntries) {
+        public Builder scheduleEntries(Output<List<ScheduleEntryArgs>> scheduleEntries) {
             this.scheduleEntries = Objects.requireNonNull(scheduleEntries);
             return this;
         }
 
         public Builder scheduleEntries(List<ScheduleEntryArgs> scheduleEntries) {
-            this.scheduleEntries = Input.of(Objects.requireNonNull(scheduleEntries));
+            this.scheduleEntries = Output.of(Objects.requireNonNull(scheduleEntries));
             return this;
         }
         public PatchScheduleArgs build() {

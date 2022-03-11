@@ -8,7 +8,7 @@ import io.pulumi.azurenative.keyvault.enums.KeyPermissions;
 import io.pulumi.azurenative.keyvault.enums.SecretPermissions;
 import io.pulumi.azurenative.keyvault.enums.StoragePermissions;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificates")
-      private final @Nullable Input<List<Either<String,CertificatePermissions>>> certificates;
+      private final @Nullable Output<List<Either<String,CertificatePermissions>>> certificates;
 
-    public Input<List<Either<String,CertificatePermissions>>> getCertificates() {
-        return this.certificates == null ? Input.empty() : this.certificates;
+    public Output<List<Either<String,CertificatePermissions>>> getCertificates() {
+        return this.certificates == null ? Output.empty() : this.certificates;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<List<Either<String,KeyPermissions>>> keys;
+      private final @Nullable Output<List<Either<String,KeyPermissions>>> keys;
 
-    public Input<List<Either<String,KeyPermissions>>> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<List<Either<String,KeyPermissions>>> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secrets")
-      private final @Nullable Input<List<Either<String,SecretPermissions>>> secrets;
+      private final @Nullable Output<List<Either<String,SecretPermissions>>> secrets;
 
-    public Input<List<Either<String,SecretPermissions>>> getSecrets() {
-        return this.secrets == null ? Input.empty() : this.secrets;
+    public Output<List<Either<String,SecretPermissions>>> getSecrets() {
+        return this.secrets == null ? Output.empty() : this.secrets;
     }
 
     /**
@@ -62,17 +62,17 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storage")
-      private final @Nullable Input<List<Either<String,StoragePermissions>>> storage;
+      private final @Nullable Output<List<Either<String,StoragePermissions>>> storage;
 
-    public Input<List<Either<String,StoragePermissions>>> getStorage() {
-        return this.storage == null ? Input.empty() : this.storage;
+    public Output<List<Either<String,StoragePermissions>>> getStorage() {
+        return this.storage == null ? Output.empty() : this.storage;
     }
 
     public PermissionsArgs(
-        @Nullable Input<List<Either<String,CertificatePermissions>>> certificates,
-        @Nullable Input<List<Either<String,KeyPermissions>>> keys,
-        @Nullable Input<List<Either<String,SecretPermissions>>> secrets,
-        @Nullable Input<List<Either<String,StoragePermissions>>> storage) {
+        @Nullable Output<List<Either<String,CertificatePermissions>>> certificates,
+        @Nullable Output<List<Either<String,KeyPermissions>>> keys,
+        @Nullable Output<List<Either<String,SecretPermissions>>> secrets,
+        @Nullable Output<List<Either<String,StoragePermissions>>> storage) {
         this.certificates = certificates;
         this.keys = keys;
         this.secrets = secrets;
@@ -80,10 +80,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionsArgs() {
-        this.certificates = Input.empty();
-        this.keys = Input.empty();
-        this.secrets = Input.empty();
-        this.storage = Input.empty();
+        this.certificates = Output.empty();
+        this.keys = Output.empty();
+        this.secrets = Output.empty();
+        this.storage = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,10 +95,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,CertificatePermissions>>> certificates;
-        private @Nullable Input<List<Either<String,KeyPermissions>>> keys;
-        private @Nullable Input<List<Either<String,SecretPermissions>>> secrets;
-        private @Nullable Input<List<Either<String,StoragePermissions>>> storage;
+        private @Nullable Output<List<Either<String,CertificatePermissions>>> certificates;
+        private @Nullable Output<List<Either<String,KeyPermissions>>> keys;
+        private @Nullable Output<List<Either<String,SecretPermissions>>> secrets;
+        private @Nullable Output<List<Either<String,StoragePermissions>>> storage;
 
         public Builder() {
     	      // Empty
@@ -112,43 +112,43 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storage = defaults.storage;
         }
 
-        public Builder certificates(@Nullable Input<List<Either<String,CertificatePermissions>>> certificates) {
+        public Builder certificates(@Nullable Output<List<Either<String,CertificatePermissions>>> certificates) {
             this.certificates = certificates;
             return this;
         }
 
         public Builder certificates(@Nullable List<Either<String,CertificatePermissions>> certificates) {
-            this.certificates = Input.ofNullable(certificates);
+            this.certificates = Output.ofNullable(certificates);
             return this;
         }
 
-        public Builder keys(@Nullable Input<List<Either<String,KeyPermissions>>> keys) {
+        public Builder keys(@Nullable Output<List<Either<String,KeyPermissions>>> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable List<Either<String,KeyPermissions>> keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
 
-        public Builder secrets(@Nullable Input<List<Either<String,SecretPermissions>>> secrets) {
+        public Builder secrets(@Nullable Output<List<Either<String,SecretPermissions>>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
         public Builder secrets(@Nullable List<Either<String,SecretPermissions>> secrets) {
-            this.secrets = Input.ofNullable(secrets);
+            this.secrets = Output.ofNullable(secrets);
             return this;
         }
 
-        public Builder storage(@Nullable Input<List<Either<String,StoragePermissions>>> storage) {
+        public Builder storage(@Nullable Output<List<Either<String,StoragePermissions>>> storage) {
             this.storage = storage;
             return this;
         }
 
         public Builder storage(@Nullable List<Either<String,StoragePermissions>> storage) {
-            this.storage = Input.ofNullable(storage);
+            this.storage = Output.ofNullable(storage);
             return this;
         }
         public PermissionsArgs build() {

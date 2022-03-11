@@ -3,18 +3,13 @@
 
 package io.pulumi.random;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.random.RandomIdArgs;
-import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomIdState;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
-import java.util.Map;
+
 import javax.annotation.Nullable;
+import java.util.Map;
 
 /**
  * The resource `random.RandomId` generates random numbers that are intended to be
@@ -186,14 +181,14 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RandomId(String name, RandomIdArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("random:index/randomId:RandomId", name, args == null ? RandomIdArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("random:index/randomId:RandomId", name, args == null ? RandomIdArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RandomId(String name, Input<String> id, @Nullable RandomIdState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RandomId(String name, Output<String> id, @Nullable RandomIdState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("random:index/randomId:RandomId", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -209,7 +204,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RandomId get(String name, Input<String> id, @Nullable RandomIdState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RandomId get(String name, Output<String> id, @Nullable RandomIdState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RandomId(name, id, state, options);
     }
 }

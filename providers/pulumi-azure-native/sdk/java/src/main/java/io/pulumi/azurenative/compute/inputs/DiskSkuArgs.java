@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.DiskStorageAccountTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class DiskSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<Either<String,DiskStorageAccountTypes>> name;
+      private final @Nullable Output<Either<String,DiskStorageAccountTypes>> name;
 
-    public Input<Either<String,DiskStorageAccountTypes>> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<Either<String,DiskStorageAccountTypes>> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
-    public DiskSkuArgs(@Nullable Input<Either<String,DiskStorageAccountTypes>> name) {
+    public DiskSkuArgs(@Nullable Output<Either<String,DiskStorageAccountTypes>> name) {
         this.name = name;
     }
 
     private DiskSkuArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class DiskSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DiskStorageAccountTypes>> name;
+        private @Nullable Output<Either<String,DiskStorageAccountTypes>> name;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class DiskSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder name(@Nullable Input<Either<String,DiskStorageAccountTypes>> name) {
+        public Builder name(@Nullable Output<Either<String,DiskStorageAccountTypes>> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable Either<String,DiskStorageAccountTypes> name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public DiskSkuArgs build() {

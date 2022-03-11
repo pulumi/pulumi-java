@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.inputs.AccountEncryptionArgs;
 import io.pulumi.azurenative.media.inputs.MediaServiceIdentityArgs;
 import io.pulumi.azurenative.media.inputs.StorageAccountArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<AccountEncryptionArgs> encryption;
+      private final @Nullable Output<AccountEncryptionArgs> encryption;
 
-    public Input<AccountEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<AccountEncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<MediaServiceIdentityArgs> identity;
+      private final @Nullable Output<MediaServiceIdentityArgs> identity;
 
-    public Input<MediaServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<MediaServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,17 +81,17 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccounts")
-      private final @Nullable Input<List<StorageAccountArgs>> storageAccounts;
+      private final @Nullable Output<List<StorageAccountArgs>> storageAccounts;
 
-    public Input<List<StorageAccountArgs>> getStorageAccounts() {
-        return this.storageAccounts == null ? Input.empty() : this.storageAccounts;
+    public Output<List<StorageAccountArgs>> getStorageAccounts() {
+        return this.storageAccounts == null ? Output.empty() : this.storageAccounts;
     }
 
     @InputImport(name="storageAuthentication")
-      private final @Nullable Input<Either<String,StorageAuthentication>> storageAuthentication;
+      private final @Nullable Output<Either<String,StorageAuthentication>> storageAuthentication;
 
-    public Input<Either<String,StorageAuthentication>> getStorageAuthentication() {
-        return this.storageAuthentication == null ? Input.empty() : this.storageAuthentication;
+    public Output<Either<String,StorageAuthentication>> getStorageAuthentication() {
+        return this.storageAuthentication == null ? Output.empty() : this.storageAuthentication;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MediaServiceArgs(
-        @Nullable Input<String> accountName,
-        @Nullable Input<AccountEncryptionArgs> encryption,
-        @Nullable Input<MediaServiceIdentityArgs> identity,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<StorageAccountArgs>> storageAccounts,
-        @Nullable Input<Either<String,StorageAuthentication>> storageAuthentication,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> accountName,
+        @Nullable Output<AccountEncryptionArgs> encryption,
+        @Nullable Output<MediaServiceIdentityArgs> identity,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<StorageAccountArgs>> storageAccounts,
+        @Nullable Output<Either<String,StorageAuthentication>> storageAuthentication,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountName = accountName;
         this.encryption = encryption;
         this.identity = identity;
@@ -125,14 +125,14 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MediaServiceArgs() {
-        this.accountName = Input.empty();
-        this.encryption = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccounts = Input.empty();
-        this.storageAuthentication = Input.empty();
-        this.tags = Input.empty();
+        this.accountName = Output.empty();
+        this.encryption = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccounts = Output.empty();
+        this.storageAuthentication = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<AccountEncryptionArgs> encryption;
-        private @Nullable Input<MediaServiceIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<StorageAccountArgs>> storageAccounts;
-        private @Nullable Input<Either<String,StorageAuthentication>> storageAuthentication;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<AccountEncryptionArgs> encryption;
+        private @Nullable Output<MediaServiceIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<StorageAccountArgs>> storageAccounts;
+        private @Nullable Output<Either<String,StorageAuthentication>> storageAuthentication;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder encryption(@Nullable Input<AccountEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<AccountEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable AccountEncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder identity(@Nullable Input<MediaServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<MediaServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable MediaServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccounts(@Nullable Input<List<StorageAccountArgs>> storageAccounts) {
+        public Builder storageAccounts(@Nullable Output<List<StorageAccountArgs>> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
 
         public Builder storageAccounts(@Nullable List<StorageAccountArgs> storageAccounts) {
-            this.storageAccounts = Input.ofNullable(storageAccounts);
+            this.storageAccounts = Output.ofNullable(storageAccounts);
             return this;
         }
 
-        public Builder storageAuthentication(@Nullable Input<Either<String,StorageAuthentication>> storageAuthentication) {
+        public Builder storageAuthentication(@Nullable Output<Either<String,StorageAuthentication>> storageAuthentication) {
             this.storageAuthentication = storageAuthentication;
             return this;
         }
 
         public Builder storageAuthentication(@Nullable Either<String,StorageAuthentication> storageAuthentication) {
-            this.storageAuthentication = Input.ofNullable(storageAuthentication);
+            this.storageAuthentication = Output.ofNullable(storageAuthentication);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MediaServiceArgs build() {

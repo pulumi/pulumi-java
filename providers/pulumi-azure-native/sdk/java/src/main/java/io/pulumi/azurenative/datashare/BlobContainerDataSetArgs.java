@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,9 +30,9 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="containerName", required=true)
-      private final Input<String> containerName;
+      private final Output<String> containerName;
 
-    public Input<String> getContainerName() {
+    public Output<String> getContainerName() {
         return this.containerName;
     }
 
@@ -41,10 +41,10 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dataSetName")
-      private final @Nullable Input<String> dataSetName;
+      private final @Nullable Output<String> dataSetName;
 
-    public Input<String> getDataSetName() {
-        return this.dataSetName == null ? Input.empty() : this.dataSetName;
+    public Output<String> getDataSetName() {
+        return this.dataSetName == null ? Output.empty() : this.dataSetName;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -64,9 +64,9 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-      private final Input<String> resourceGroup;
+      private final Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
+    public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
 
@@ -75,9 +75,9 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -86,9 +86,9 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="shareName", required=true)
-      private final Input<String> shareName;
+      private final Output<String> shareName;
 
-    public Input<String> getShareName() {
+    public Output<String> getShareName() {
         return this.shareName;
     }
 
@@ -97,9 +97,9 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storageAccountName", required=true)
-      private final Input<String> storageAccountName;
+      private final Output<String> storageAccountName;
 
-    public Input<String> getStorageAccountName() {
+    public Output<String> getStorageAccountName() {
         return this.storageAccountName;
     }
 
@@ -108,22 +108,22 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-      private final Input<String> subscriptionId;
+      private final Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
+    public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
 
     public BlobContainerDataSetArgs(
-        Input<String> accountName,
-        Input<String> containerName,
-        @Nullable Input<String> dataSetName,
-        Input<String> kind,
-        Input<String> resourceGroup,
-        Input<String> resourceGroupName,
-        Input<String> shareName,
-        Input<String> storageAccountName,
-        Input<String> subscriptionId) {
+        Output<String> accountName,
+        Output<String> containerName,
+        @Nullable Output<String> dataSetName,
+        Output<String> kind,
+        Output<String> resourceGroup,
+        Output<String> resourceGroupName,
+        Output<String> shareName,
+        Output<String> storageAccountName,
+        Output<String> subscriptionId) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
         this.dataSetName = dataSetName;
@@ -136,15 +136,15 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
     }
 
     private BlobContainerDataSetArgs() {
-        this.accountName = Input.empty();
-        this.containerName = Input.empty();
-        this.dataSetName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareName = Input.empty();
-        this.storageAccountName = Input.empty();
-        this.subscriptionId = Input.empty();
+        this.accountName = Output.empty();
+        this.containerName = Output.empty();
+        this.dataSetName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareName = Output.empty();
+        this.storageAccountName = Output.empty();
+        this.subscriptionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> containerName;
-        private @Nullable Input<String> dataSetName;
-        private Input<String> kind;
-        private Input<String> resourceGroup;
-        private Input<String> resourceGroupName;
-        private Input<String> shareName;
-        private Input<String> storageAccountName;
-        private Input<String> subscriptionId;
+        private Output<String> accountName;
+        private Output<String> containerName;
+        private @Nullable Output<String> dataSetName;
+        private Output<String> kind;
+        private Output<String> resourceGroup;
+        private Output<String> resourceGroupName;
+        private Output<String> shareName;
+        private Output<String> storageAccountName;
+        private Output<String> subscriptionId;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class BlobContainerDataSetArgs extends io.pulumi.resources.Resource
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder containerName(Input<String> containerName) {
+        public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Input.of(Objects.requireNonNull(containerName));
+            this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder dataSetName(@Nullable Input<String> dataSetName) {
+        public Builder dataSetName(@Nullable Output<String> dataSetName) {
             this.dataSetName = dataSetName;
             return this;
         }
 
         public Builder dataSetName(@Nullable String dataSetName) {
-            this.dataSetName = Input.ofNullable(dataSetName);
+            this.dataSetName = Output.ofNullable(dataSetName);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
+            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareName(Input<String> shareName) {
+        public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
         public Builder shareName(String shareName) {
-            this.shareName = Input.of(Objects.requireNonNull(shareName));
+            this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder storageAccountName(Input<String> storageAccountName) {
+        public Builder storageAccountName(Output<String> storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
 
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Input.of(Objects.requireNonNull(storageAccountName));
+            this.storageAccountName = Output.of(Objects.requireNonNull(storageAccountName));
             return this;
         }
 
-        public Builder subscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
+            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
         public BlobContainerDataSetArgs build() {

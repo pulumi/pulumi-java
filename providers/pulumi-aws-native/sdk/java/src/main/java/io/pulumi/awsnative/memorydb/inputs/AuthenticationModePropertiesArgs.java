@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.memorydb.inputs;
 
 import io.pulumi.awsnative.memorydb.enums.UserAuthenticationModePropertiesType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="passwords")
-      private final @Nullable Input<List<String>> passwords;
+      private final @Nullable Output<List<String>> passwords;
 
-    public Input<List<String>> getPasswords() {
-        return this.passwords == null ? Input.empty() : this.passwords;
+    public Output<List<String>> getPasswords() {
+        return this.passwords == null ? Output.empty() : this.passwords;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<UserAuthenticationModePropertiesType> type;
+      private final @Nullable Output<UserAuthenticationModePropertiesType> type;
 
-    public Input<UserAuthenticationModePropertiesType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<UserAuthenticationModePropertiesType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AuthenticationModePropertiesArgs(
-        @Nullable Input<List<String>> passwords,
-        @Nullable Input<UserAuthenticationModePropertiesType> type) {
+        @Nullable Output<List<String>> passwords,
+        @Nullable Output<UserAuthenticationModePropertiesType> type) {
         this.passwords = passwords;
         this.type = type;
     }
 
     private AuthenticationModePropertiesArgs() {
-        this.passwords = Input.empty();
-        this.type = Input.empty();
+        this.passwords = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> passwords;
-        private @Nullable Input<UserAuthenticationModePropertiesType> type;
+        private @Nullable Output<List<String>> passwords;
+        private @Nullable Output<UserAuthenticationModePropertiesType> type;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder passwords(@Nullable Input<List<String>> passwords) {
+        public Builder passwords(@Nullable Output<List<String>> passwords) {
             this.passwords = passwords;
             return this;
         }
 
         public Builder passwords(@Nullable List<String> passwords) {
-            this.passwords = Input.ofNullable(passwords);
+            this.passwords = Output.ofNullable(passwords);
             return this;
         }
 
-        public Builder type(@Nullable Input<UserAuthenticationModePropertiesType> type) {
+        public Builder type(@Nullable Output<UserAuthenticationModePropertiesType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable UserAuthenticationModePropertiesType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AuthenticationModePropertiesArgs build() {

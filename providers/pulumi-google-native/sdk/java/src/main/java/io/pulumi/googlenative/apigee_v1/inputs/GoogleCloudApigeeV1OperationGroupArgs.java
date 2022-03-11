@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1OperationConfigArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="operationConfigType")
-      private final @Nullable Input<String> operationConfigType;
+      private final @Nullable Output<String> operationConfigType;
 
-    public Input<String> getOperationConfigType() {
-        return this.operationConfigType == null ? Input.empty() : this.operationConfigType;
+    public Output<String> getOperationConfigType() {
+        return this.operationConfigType == null ? Output.empty() : this.operationConfigType;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="operationConfigs", required=true)
-      private final Input<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs;
+      private final Output<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs;
 
-    public Input<List<GoogleCloudApigeeV1OperationConfigArgs>> getOperationConfigs() {
+    public Output<List<GoogleCloudApigeeV1OperationConfigArgs>> getOperationConfigs() {
         return this.operationConfigs;
     }
 
     public GoogleCloudApigeeV1OperationGroupArgs(
-        @Nullable Input<String> operationConfigType,
-        Input<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs) {
+        @Nullable Output<String> operationConfigType,
+        Output<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs) {
         this.operationConfigType = operationConfigType;
         this.operationConfigs = Objects.requireNonNull(operationConfigs, "expected parameter 'operationConfigs' to be non-null");
     }
 
     private GoogleCloudApigeeV1OperationGroupArgs() {
-        this.operationConfigType = Input.empty();
-        this.operationConfigs = Input.empty();
+        this.operationConfigType = Output.empty();
+        this.operationConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> operationConfigType;
-        private Input<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs;
+        private @Nullable Output<String> operationConfigType;
+        private Output<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends io.pulumi.resou
     	      this.operationConfigs = defaults.operationConfigs;
         }
 
-        public Builder operationConfigType(@Nullable Input<String> operationConfigType) {
+        public Builder operationConfigType(@Nullable Output<String> operationConfigType) {
             this.operationConfigType = operationConfigType;
             return this;
         }
 
         public Builder operationConfigType(@Nullable String operationConfigType) {
-            this.operationConfigType = Input.ofNullable(operationConfigType);
+            this.operationConfigType = Output.ofNullable(operationConfigType);
             return this;
         }
 
-        public Builder operationConfigs(Input<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs) {
+        public Builder operationConfigs(Output<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs) {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
 
         public Builder operationConfigs(List<GoogleCloudApigeeV1OperationConfigArgs> operationConfigs) {
-            this.operationConfigs = Input.of(Objects.requireNonNull(operationConfigs));
+            this.operationConfigs = Output.of(Objects.requireNonNull(operationConfigs));
             return this;
         }
         public GoogleCloudApigeeV1OperationGroupArgs build() {

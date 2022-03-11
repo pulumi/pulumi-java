@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.EndpointAddressArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EndpointPortArgs;
@@ -32,10 +32,10 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addresses")
-      private final @Nullable Input<List<EndpointAddressArgs>> addresses;
+      private final @Nullable Output<List<EndpointAddressArgs>> addresses;
 
-    public Input<List<EndpointAddressArgs>> getAddresses() {
-        return this.addresses == null ? Input.empty() : this.addresses;
+    public Output<List<EndpointAddressArgs>> getAddresses() {
+        return this.addresses == null ? Output.empty() : this.addresses;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notReadyAddresses")
-      private final @Nullable Input<List<EndpointAddressArgs>> notReadyAddresses;
+      private final @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses;
 
-    public Input<List<EndpointAddressArgs>> getNotReadyAddresses() {
-        return this.notReadyAddresses == null ? Input.empty() : this.notReadyAddresses;
+    public Output<List<EndpointAddressArgs>> getNotReadyAddresses() {
+        return this.notReadyAddresses == null ? Output.empty() : this.notReadyAddresses;
     }
 
     /**
@@ -54,25 +54,25 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<EndpointPortArgs>> ports;
+      private final @Nullable Output<List<EndpointPortArgs>> ports;
 
-    public Input<List<EndpointPortArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<EndpointPortArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     public EndpointSubsetArgs(
-        @Nullable Input<List<EndpointAddressArgs>> addresses,
-        @Nullable Input<List<EndpointAddressArgs>> notReadyAddresses,
-        @Nullable Input<List<EndpointPortArgs>> ports) {
+        @Nullable Output<List<EndpointAddressArgs>> addresses,
+        @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses,
+        @Nullable Output<List<EndpointPortArgs>> ports) {
         this.addresses = addresses;
         this.notReadyAddresses = notReadyAddresses;
         this.ports = ports;
     }
 
     private EndpointSubsetArgs() {
-        this.addresses = Input.empty();
-        this.notReadyAddresses = Input.empty();
-        this.ports = Input.empty();
+        this.addresses = Output.empty();
+        this.notReadyAddresses = Output.empty();
+        this.ports = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,9 +84,9 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EndpointAddressArgs>> addresses;
-        private @Nullable Input<List<EndpointAddressArgs>> notReadyAddresses;
-        private @Nullable Input<List<EndpointPortArgs>> ports;
+        private @Nullable Output<List<EndpointAddressArgs>> addresses;
+        private @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses;
+        private @Nullable Output<List<EndpointPortArgs>> ports;
 
         public Builder() {
     	      // Empty
@@ -99,33 +99,33 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ports = defaults.ports;
         }
 
-        public Builder addresses(@Nullable Input<List<EndpointAddressArgs>> addresses) {
+        public Builder addresses(@Nullable Output<List<EndpointAddressArgs>> addresses) {
             this.addresses = addresses;
             return this;
         }
 
         public Builder addresses(@Nullable List<EndpointAddressArgs> addresses) {
-            this.addresses = Input.ofNullable(addresses);
+            this.addresses = Output.ofNullable(addresses);
             return this;
         }
 
-        public Builder notReadyAddresses(@Nullable Input<List<EndpointAddressArgs>> notReadyAddresses) {
+        public Builder notReadyAddresses(@Nullable Output<List<EndpointAddressArgs>> notReadyAddresses) {
             this.notReadyAddresses = notReadyAddresses;
             return this;
         }
 
         public Builder notReadyAddresses(@Nullable List<EndpointAddressArgs> notReadyAddresses) {
-            this.notReadyAddresses = Input.ofNullable(notReadyAddresses);
+            this.notReadyAddresses = Output.ofNullable(notReadyAddresses);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<EndpointPortArgs>> ports) {
+        public Builder ports(@Nullable Output<List<EndpointPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<EndpointPortArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
         public EndpointSubsetArgs build() {

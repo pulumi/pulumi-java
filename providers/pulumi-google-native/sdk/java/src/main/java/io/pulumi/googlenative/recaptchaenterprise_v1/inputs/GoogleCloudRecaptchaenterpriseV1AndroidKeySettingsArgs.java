@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extend
      * 
      */
     @InputImport(name="allowAllPackageNames")
-      private final @Nullable Input<Boolean> allowAllPackageNames;
+      private final @Nullable Output<Boolean> allowAllPackageNames;
 
-    public Input<Boolean> getAllowAllPackageNames() {
-        return this.allowAllPackageNames == null ? Input.empty() : this.allowAllPackageNames;
+    public Output<Boolean> getAllowAllPackageNames() {
+        return this.allowAllPackageNames == null ? Output.empty() : this.allowAllPackageNames;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extend
      * 
      */
     @InputImport(name="allowedPackageNames")
-      private final @Nullable Input<List<String>> allowedPackageNames;
+      private final @Nullable Output<List<String>> allowedPackageNames;
 
-    public Input<List<String>> getAllowedPackageNames() {
-        return this.allowedPackageNames == null ? Input.empty() : this.allowedPackageNames;
+    public Output<List<String>> getAllowedPackageNames() {
+        return this.allowedPackageNames == null ? Output.empty() : this.allowedPackageNames;
     }
 
     public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs(
-        @Nullable Input<Boolean> allowAllPackageNames,
-        @Nullable Input<List<String>> allowedPackageNames) {
+        @Nullable Output<Boolean> allowAllPackageNames,
+        @Nullable Output<List<String>> allowedPackageNames) {
         this.allowAllPackageNames = allowAllPackageNames;
         this.allowedPackageNames = allowedPackageNames;
     }
 
     private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs() {
-        this.allowAllPackageNames = Input.empty();
-        this.allowedPackageNames = Input.empty();
+        this.allowAllPackageNames = Output.empty();
+        this.allowedPackageNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowAllPackageNames;
-        private @Nullable Input<List<String>> allowedPackageNames;
+        private @Nullable Output<Boolean> allowAllPackageNames;
+        private @Nullable Output<List<String>> allowedPackageNames;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extend
     	      this.allowedPackageNames = defaults.allowedPackageNames;
         }
 
-        public Builder allowAllPackageNames(@Nullable Input<Boolean> allowAllPackageNames) {
+        public Builder allowAllPackageNames(@Nullable Output<Boolean> allowAllPackageNames) {
             this.allowAllPackageNames = allowAllPackageNames;
             return this;
         }
 
         public Builder allowAllPackageNames(@Nullable Boolean allowAllPackageNames) {
-            this.allowAllPackageNames = Input.ofNullable(allowAllPackageNames);
+            this.allowAllPackageNames = Output.ofNullable(allowAllPackageNames);
             return this;
         }
 
-        public Builder allowedPackageNames(@Nullable Input<List<String>> allowedPackageNames) {
+        public Builder allowedPackageNames(@Nullable Output<List<String>> allowedPackageNames) {
             this.allowedPackageNames = allowedPackageNames;
             return this;
         }
 
         public Builder allowedPackageNames(@Nullable List<String> allowedPackageNames) {
-            this.allowedPackageNames = Input.ofNullable(allowedPackageNames);
+            this.allowedPackageNames = Output.ofNullable(allowedPackageNames);
             return this;
         }
         public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs build() {

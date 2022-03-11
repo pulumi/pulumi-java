@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hashKey", required=true)
-      private final Input<String> hashKey;
+      private final Output<String> hashKey;
 
-    public Input<String> getHashKey() {
+    public Output<String> getHashKey() {
         return this.hashKey;
     }
 
@@ -31,9 +31,9 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="item", required=true)
-      private final Input<String> item;
+      private final Output<String> item;
 
-    public Input<String> getItem() {
+    public Output<String> getItem() {
         return this.item;
     }
 
@@ -42,10 +42,10 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rangeKey")
-      private final @Nullable Input<String> rangeKey;
+      private final @Nullable Output<String> rangeKey;
 
-    public Input<String> getRangeKey() {
-        return this.rangeKey == null ? Input.empty() : this.rangeKey;
+    public Output<String> getRangeKey() {
+        return this.rangeKey == null ? Output.empty() : this.rangeKey;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public TableItemArgs(
-        Input<String> hashKey,
-        Input<String> item,
-        @Nullable Input<String> rangeKey,
-        Input<String> tableName) {
+        Output<String> hashKey,
+        Output<String> item,
+        @Nullable Output<String> rangeKey,
+        Output<String> tableName) {
         this.hashKey = Objects.requireNonNull(hashKey, "expected parameter 'hashKey' to be non-null");
         this.item = Objects.requireNonNull(item, "expected parameter 'item' to be non-null");
         this.rangeKey = rangeKey;
@@ -71,10 +71,10 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableItemArgs() {
-        this.hashKey = Input.empty();
-        this.item = Input.empty();
-        this.rangeKey = Input.empty();
-        this.tableName = Input.empty();
+        this.hashKey = Output.empty();
+        this.item = Output.empty();
+        this.rangeKey = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> hashKey;
-        private Input<String> item;
-        private @Nullable Input<String> rangeKey;
-        private Input<String> tableName;
+        private Output<String> hashKey;
+        private Output<String> item;
+        private @Nullable Output<String> rangeKey;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder hashKey(Input<String> hashKey) {
+        public Builder hashKey(Output<String> hashKey) {
             this.hashKey = Objects.requireNonNull(hashKey);
             return this;
         }
 
         public Builder hashKey(String hashKey) {
-            this.hashKey = Input.of(Objects.requireNonNull(hashKey));
+            this.hashKey = Output.of(Objects.requireNonNull(hashKey));
             return this;
         }
 
-        public Builder item(Input<String> item) {
+        public Builder item(Output<String> item) {
             this.item = Objects.requireNonNull(item);
             return this;
         }
 
         public Builder item(String item) {
-            this.item = Input.of(Objects.requireNonNull(item));
+            this.item = Output.of(Objects.requireNonNull(item));
             return this;
         }
 
-        public Builder rangeKey(@Nullable Input<String> rangeKey) {
+        public Builder rangeKey(@Nullable Output<String> rangeKey) {
             this.rangeKey = rangeKey;
             return this;
         }
 
         public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Input.ofNullable(rangeKey);
+            this.rangeKey = Output.ofNullable(rangeKey);
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public TableItemArgs build() {

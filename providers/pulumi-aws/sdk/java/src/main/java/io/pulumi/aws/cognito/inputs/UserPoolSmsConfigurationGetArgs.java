@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class UserPoolSmsConfigurationGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="externalId", required=true)
-      private final Input<String> externalId;
+      private final Output<String> externalId;
 
-    public Input<String> getExternalId() {
+    public Output<String> getExternalId() {
         return this.externalId;
     }
 
@@ -29,22 +29,22 @@ public final class UserPoolSmsConfigurationGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="snsCallerArn", required=true)
-      private final Input<String> snsCallerArn;
+      private final Output<String> snsCallerArn;
 
-    public Input<String> getSnsCallerArn() {
+    public Output<String> getSnsCallerArn() {
         return this.snsCallerArn;
     }
 
     public UserPoolSmsConfigurationGetArgs(
-        Input<String> externalId,
-        Input<String> snsCallerArn) {
+        Output<String> externalId,
+        Output<String> snsCallerArn) {
         this.externalId = Objects.requireNonNull(externalId, "expected parameter 'externalId' to be non-null");
         this.snsCallerArn = Objects.requireNonNull(snsCallerArn, "expected parameter 'snsCallerArn' to be non-null");
     }
 
     private UserPoolSmsConfigurationGetArgs() {
-        this.externalId = Input.empty();
-        this.snsCallerArn = Input.empty();
+        this.externalId = Output.empty();
+        this.snsCallerArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class UserPoolSmsConfigurationGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> externalId;
-        private Input<String> snsCallerArn;
+        private Output<String> externalId;
+        private Output<String> snsCallerArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class UserPoolSmsConfigurationGetArgs extends io.pulumi.resources.R
     	      this.snsCallerArn = defaults.snsCallerArn;
         }
 
-        public Builder externalId(Input<String> externalId) {
+        public Builder externalId(Output<String> externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
         public Builder externalId(String externalId) {
-            this.externalId = Input.of(Objects.requireNonNull(externalId));
+            this.externalId = Output.of(Objects.requireNonNull(externalId));
             return this;
         }
 
-        public Builder snsCallerArn(Input<String> snsCallerArn) {
+        public Builder snsCallerArn(Output<String> snsCallerArn) {
             this.snsCallerArn = Objects.requireNonNull(snsCallerArn);
             return this;
         }
 
         public Builder snsCallerArn(String snsCallerArn) {
-            this.snsCallerArn = Input.of(Objects.requireNonNull(snsCallerArn));
+            this.snsCallerArn = Output.of(Objects.requireNonNull(snsCallerArn));
             return this;
         }
         public UserPoolSmsConfigurationGetArgs build() {

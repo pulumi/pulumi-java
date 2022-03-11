@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ConnectionAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="connectionId")
-      private final @Nullable Input<String> connectionId;
+      private final @Nullable Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
-        return this.connectionId == null ? Input.empty() : this.connectionId;
+    public Output<String> getConnectionId() {
+        return this.connectionId == null ? Output.empty() : this.connectionId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ConnectionAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lagId")
-      private final @Nullable Input<String> lagId;
+      private final @Nullable Output<String> lagId;
 
-    public Input<String> getLagId() {
-        return this.lagId == null ? Input.empty() : this.lagId;
+    public Output<String> getLagId() {
+        return this.lagId == null ? Output.empty() : this.lagId;
     }
 
     public ConnectionAssociationState(
-        @Nullable Input<String> connectionId,
-        @Nullable Input<String> lagId) {
+        @Nullable Output<String> connectionId,
+        @Nullable Output<String> lagId) {
         this.connectionId = connectionId;
         this.lagId = lagId;
     }
 
     private ConnectionAssociationState() {
-        this.connectionId = Input.empty();
-        this.lagId = Input.empty();
+        this.connectionId = Output.empty();
+        this.lagId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ConnectionAssociationState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectionId;
-        private @Nullable Input<String> lagId;
+        private @Nullable Output<String> connectionId;
+        private @Nullable Output<String> lagId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ConnectionAssociationState extends io.pulumi.resources.Resour
     	      this.lagId = defaults.lagId;
         }
 
-        public Builder connectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Output<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Input.ofNullable(connectionId);
+            this.connectionId = Output.ofNullable(connectionId);
             return this;
         }
 
-        public Builder lagId(@Nullable Input<String> lagId) {
+        public Builder lagId(@Nullable Output<String> lagId) {
             this.lagId = lagId;
             return this;
         }
 
         public Builder lagId(@Nullable String lagId) {
-            this.lagId = Input.ofNullable(lagId);
+            this.lagId = Output.ofNullable(lagId);
             return this;
         }
         public ConnectionAssociationState build() {

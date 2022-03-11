@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasAudioLogSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotAliasTextLogSettingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,29 +21,29 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
     public static final BotAliasConversationLogSettingsArgs Empty = new BotAliasConversationLogSettingsArgs();
 
     @InputImport(name="audioLogSettings")
-      private final @Nullable Input<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
+      private final @Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
 
-    public Input<List<BotAliasAudioLogSettingArgs>> getAudioLogSettings() {
-        return this.audioLogSettings == null ? Input.empty() : this.audioLogSettings;
+    public Output<List<BotAliasAudioLogSettingArgs>> getAudioLogSettings() {
+        return this.audioLogSettings == null ? Output.empty() : this.audioLogSettings;
     }
 
     @InputImport(name="textLogSettings")
-      private final @Nullable Input<List<BotAliasTextLogSettingArgs>> textLogSettings;
+      private final @Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings;
 
-    public Input<List<BotAliasTextLogSettingArgs>> getTextLogSettings() {
-        return this.textLogSettings == null ? Input.empty() : this.textLogSettings;
+    public Output<List<BotAliasTextLogSettingArgs>> getTextLogSettings() {
+        return this.textLogSettings == null ? Output.empty() : this.textLogSettings;
     }
 
     public BotAliasConversationLogSettingsArgs(
-        @Nullable Input<List<BotAliasAudioLogSettingArgs>> audioLogSettings,
-        @Nullable Input<List<BotAliasTextLogSettingArgs>> textLogSettings) {
+        @Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings,
+        @Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings) {
         this.audioLogSettings = audioLogSettings;
         this.textLogSettings = textLogSettings;
     }
 
     private BotAliasConversationLogSettingsArgs() {
-        this.audioLogSettings = Input.empty();
-        this.textLogSettings = Input.empty();
+        this.audioLogSettings = Output.empty();
+        this.textLogSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
-        private @Nullable Input<List<BotAliasTextLogSettingArgs>> textLogSettings;
+        private @Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
+        private @Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
     	      this.textLogSettings = defaults.textLogSettings;
         }
 
-        public Builder audioLogSettings(@Nullable Input<List<BotAliasAudioLogSettingArgs>> audioLogSettings) {
+        public Builder audioLogSettings(@Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings) {
             this.audioLogSettings = audioLogSettings;
             return this;
         }
 
         public Builder audioLogSettings(@Nullable List<BotAliasAudioLogSettingArgs> audioLogSettings) {
-            this.audioLogSettings = Input.ofNullable(audioLogSettings);
+            this.audioLogSettings = Output.ofNullable(audioLogSettings);
             return this;
         }
 
-        public Builder textLogSettings(@Nullable Input<List<BotAliasTextLogSettingArgs>> textLogSettings) {
+        public Builder textLogSettings(@Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings) {
             this.textLogSettings = textLogSettings;
             return this;
         }
 
         public Builder textLogSettings(@Nullable List<BotAliasTextLogSettingArgs> textLogSettings) {
-            this.textLogSettings = Input.ofNullable(textLogSettings);
+            this.textLogSettings = Output.ofNullable(textLogSettings);
             return this;
         }
         public BotAliasConversationLogSettingsArgs build() {

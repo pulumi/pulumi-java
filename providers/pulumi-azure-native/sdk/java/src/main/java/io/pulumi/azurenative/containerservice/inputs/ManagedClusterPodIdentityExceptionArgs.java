@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -19,9 +19,9 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,9 +30,9 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
@@ -41,25 +41,25 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="podLabels", required=true)
-      private final Input<Map<String,String>> podLabels;
+      private final Output<Map<String,String>> podLabels;
 
-    public Input<Map<String,String>> getPodLabels() {
+    public Output<Map<String,String>> getPodLabels() {
         return this.podLabels;
     }
 
     public ManagedClusterPodIdentityExceptionArgs(
-        Input<String> name,
-        Input<String> namespace,
-        Input<Map<String,String>> podLabels) {
+        Output<String> name,
+        Output<String> namespace,
+        Output<Map<String,String>> podLabels) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
         this.podLabels = Objects.requireNonNull(podLabels, "expected parameter 'podLabels' to be non-null");
     }
 
     private ManagedClusterPodIdentityExceptionArgs() {
-        this.name = Input.empty();
-        this.namespace = Input.empty();
-        this.podLabels = Input.empty();
+        this.name = Output.empty();
+        this.namespace = Output.empty();
+        this.podLabels = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> namespace;
-        private Input<Map<String,String>> podLabels;
+        private Output<String> name;
+        private Output<String> namespace;
+        private Output<Map<String,String>> podLabels;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
     	      this.podLabels = defaults.podLabels;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
 
-        public Builder podLabels(Input<Map<String,String>> podLabels) {
+        public Builder podLabels(Output<Map<String,String>> podLabels) {
             this.podLabels = Objects.requireNonNull(podLabels);
             return this;
         }
 
         public Builder podLabels(Map<String,String> podLabels) {
-            this.podLabels = Input.of(Objects.requireNonNull(podLabels));
+            this.podLabels = Output.of(Objects.requireNonNull(podLabels));
             return this;
         }
         public ManagedClusterPodIdentityExceptionArgs build() {

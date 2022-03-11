@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderDirection;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderProtocol;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,54 +16,54 @@ public final class RuleGroupHeaderArgs extends io.pulumi.resources.ResourceArgs 
     public static final RuleGroupHeaderArgs Empty = new RuleGroupHeaderArgs();
 
     @InputImport(name="destination", required=true)
-      private final Input<String> destination;
+      private final Output<String> destination;
 
-    public Input<String> getDestination() {
+    public Output<String> getDestination() {
         return this.destination;
     }
 
     @InputImport(name="destinationPort", required=true)
-      private final Input<String> destinationPort;
+      private final Output<String> destinationPort;
 
-    public Input<String> getDestinationPort() {
+    public Output<String> getDestinationPort() {
         return this.destinationPort;
     }
 
     @InputImport(name="direction", required=true)
-      private final Input<RuleGroupHeaderDirection> direction;
+      private final Output<RuleGroupHeaderDirection> direction;
 
-    public Input<RuleGroupHeaderDirection> getDirection() {
+    public Output<RuleGroupHeaderDirection> getDirection() {
         return this.direction;
     }
 
     @InputImport(name="protocol", required=true)
-      private final Input<RuleGroupHeaderProtocol> protocol;
+      private final Output<RuleGroupHeaderProtocol> protocol;
 
-    public Input<RuleGroupHeaderProtocol> getProtocol() {
+    public Output<RuleGroupHeaderProtocol> getProtocol() {
         return this.protocol;
     }
 
     @InputImport(name="source", required=true)
-      private final Input<String> source;
+      private final Output<String> source;
 
-    public Input<String> getSource() {
+    public Output<String> getSource() {
         return this.source;
     }
 
     @InputImport(name="sourcePort", required=true)
-      private final Input<String> sourcePort;
+      private final Output<String> sourcePort;
 
-    public Input<String> getSourcePort() {
+    public Output<String> getSourcePort() {
         return this.sourcePort;
     }
 
     public RuleGroupHeaderArgs(
-        Input<String> destination,
-        Input<String> destinationPort,
-        Input<RuleGroupHeaderDirection> direction,
-        Input<RuleGroupHeaderProtocol> protocol,
-        Input<String> source,
-        Input<String> sourcePort) {
+        Output<String> destination,
+        Output<String> destinationPort,
+        Output<RuleGroupHeaderDirection> direction,
+        Output<RuleGroupHeaderProtocol> protocol,
+        Output<String> source,
+        Output<String> sourcePort) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.destinationPort = Objects.requireNonNull(destinationPort, "expected parameter 'destinationPort' to be non-null");
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
@@ -73,12 +73,12 @@ public final class RuleGroupHeaderArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RuleGroupHeaderArgs() {
-        this.destination = Input.empty();
-        this.destinationPort = Input.empty();
-        this.direction = Input.empty();
-        this.protocol = Input.empty();
-        this.source = Input.empty();
-        this.sourcePort = Input.empty();
+        this.destination = Output.empty();
+        this.destinationPort = Output.empty();
+        this.direction = Output.empty();
+        this.protocol = Output.empty();
+        this.source = Output.empty();
+        this.sourcePort = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,12 +90,12 @@ public final class RuleGroupHeaderArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> destination;
-        private Input<String> destinationPort;
-        private Input<RuleGroupHeaderDirection> direction;
-        private Input<RuleGroupHeaderProtocol> protocol;
-        private Input<String> source;
-        private Input<String> sourcePort;
+        private Output<String> destination;
+        private Output<String> destinationPort;
+        private Output<RuleGroupHeaderDirection> direction;
+        private Output<RuleGroupHeaderProtocol> protocol;
+        private Output<String> source;
+        private Output<String> sourcePort;
 
         public Builder() {
     	      // Empty
@@ -111,63 +111,63 @@ public final class RuleGroupHeaderArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sourcePort = defaults.sourcePort;
         }
 
-        public Builder destination(Input<String> destination) {
+        public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(String destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder destinationPort(Input<String> destinationPort) {
+        public Builder destinationPort(Output<String> destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
 
         public Builder destinationPort(String destinationPort) {
-            this.destinationPort = Input.of(Objects.requireNonNull(destinationPort));
+            this.destinationPort = Output.of(Objects.requireNonNull(destinationPort));
             return this;
         }
 
-        public Builder direction(Input<RuleGroupHeaderDirection> direction) {
+        public Builder direction(Output<RuleGroupHeaderDirection> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
         public Builder direction(RuleGroupHeaderDirection direction) {
-            this.direction = Input.of(Objects.requireNonNull(direction));
+            this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder protocol(Input<RuleGroupHeaderProtocol> protocol) {
+        public Builder protocol(Output<RuleGroupHeaderProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(RuleGroupHeaderProtocol protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder source(Input<String> source) {
+        public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(String source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder sourcePort(Input<String> sourcePort) {
+        public Builder sourcePort(Output<String> sourcePort) {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }
 
         public Builder sourcePort(String sourcePort) {
-            this.sourcePort = Input.of(Objects.requireNonNull(sourcePort));
+            this.sourcePort = Output.of(Objects.requireNonNull(sourcePort));
             return this;
         }
         public RuleGroupHeaderArgs build() {

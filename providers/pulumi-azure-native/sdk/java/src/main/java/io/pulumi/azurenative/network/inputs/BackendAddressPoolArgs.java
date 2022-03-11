@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.LoadBalancerBackendAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="loadBalancerBackendAddresses")
-      private final @Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
+      private final @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
-    public Input<List<LoadBalancerBackendAddressArgs>> getLoadBalancerBackendAddresses() {
-        return this.loadBalancerBackendAddresses == null ? Input.empty() : this.loadBalancerBackendAddresses;
+    public Output<List<LoadBalancerBackendAddressArgs>> getLoadBalancerBackendAddresses() {
+        return this.loadBalancerBackendAddresses == null ? Output.empty() : this.loadBalancerBackendAddresses;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public BackendAddressPoolArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> id,
+        @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name) {
         this.id = id;
         this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
         this.location = location;
@@ -76,10 +76,10 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BackendAddressPoolArgs() {
-        this.id = Input.empty();
-        this.loadBalancerBackendAddresses = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
+        this.id = Output.empty();
+        this.loadBalancerBackendAddresses = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class BackendAddressPoolArgs extends io.pulumi.resources.ResourceAr
     	      this.name = defaults.name;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder loadBalancerBackendAddresses(@Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses) {
+        public Builder loadBalancerBackendAddresses(@Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses) {
             this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
             return this;
         }
 
         public Builder loadBalancerBackendAddresses(@Nullable List<LoadBalancerBackendAddressArgs> loadBalancerBackendAddresses) {
-            this.loadBalancerBackendAddresses = Input.ofNullable(loadBalancerBackendAddresses);
+            this.loadBalancerBackendAddresses = Output.ofNullable(loadBalancerBackendAddresses);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public BackendAddressPoolArgs build() {

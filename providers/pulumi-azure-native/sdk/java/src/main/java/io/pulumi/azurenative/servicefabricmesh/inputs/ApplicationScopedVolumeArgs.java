@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="creationParameters", required=true)
-      private final Input<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters;
+      private final Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters;
 
-    public Input<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> getCreationParameters() {
+    public Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> getCreationParameters() {
         return this.creationParameters;
     }
 
@@ -36,9 +36,9 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationPath", required=true)
-      private final Input<String> destinationPath;
+      private final Output<String> destinationPath;
 
-    public Input<String> getDestinationPath() {
+    public Output<String> getDestinationPath() {
         return this.destinationPath;
     }
 
@@ -47,9 +47,9 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -58,17 +58,17 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     public ApplicationScopedVolumeArgs(
-        Input<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters,
-        Input<String> destinationPath,
-        Input<String> name,
-        @Nullable Input<Boolean> readOnly) {
+        Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters,
+        Output<String> destinationPath,
+        Output<String> name,
+        @Nullable Output<Boolean> readOnly) {
         this.creationParameters = Objects.requireNonNull(creationParameters, "expected parameter 'creationParameters' to be non-null");
         this.destinationPath = Objects.requireNonNull(destinationPath, "expected parameter 'destinationPath' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -76,10 +76,10 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
     }
 
     private ApplicationScopedVolumeArgs() {
-        this.creationParameters = Input.empty();
-        this.destinationPath = Input.empty();
-        this.name = Input.empty();
-        this.readOnly = Input.empty();
+        this.creationParameters = Output.empty();
+        this.destinationPath = Output.empty();
+        this.name = Output.empty();
+        this.readOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters;
-        private Input<String> destinationPath;
-        private Input<String> name;
-        private @Nullable Input<Boolean> readOnly;
+        private Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters;
+        private Output<String> destinationPath;
+        private Output<String> name;
+        private @Nullable Output<Boolean> readOnly;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder creationParameters(Input<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters) {
+        public Builder creationParameters(Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters) {
             this.creationParameters = Objects.requireNonNull(creationParameters);
             return this;
         }
 
         public Builder creationParameters(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs creationParameters) {
-            this.creationParameters = Input.of(Objects.requireNonNull(creationParameters));
+            this.creationParameters = Output.of(Objects.requireNonNull(creationParameters));
             return this;
         }
 
-        public Builder destinationPath(Input<String> destinationPath) {
+        public Builder destinationPath(Output<String> destinationPath) {
             this.destinationPath = Objects.requireNonNull(destinationPath);
             return this;
         }
 
         public Builder destinationPath(String destinationPath) {
-            this.destinationPath = Input.of(Objects.requireNonNull(destinationPath));
+            this.destinationPath = Output.of(Objects.requireNonNull(destinationPath));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
         public ApplicationScopedVolumeArgs build() {

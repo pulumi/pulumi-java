@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtrace_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
-    public OutputConfigArgs(@Nullable Input<String> destination) {
+    public OutputConfigArgs(@Nullable Output<String> destination) {
         this.destination = destination;
     }
 
     private OutputConfigArgs() {
-        this.destination = Input.empty();
+        this.destination = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destination;
+        private @Nullable Output<String> destination;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.destination = defaults.destination;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
         public OutputConfigArgs build() {

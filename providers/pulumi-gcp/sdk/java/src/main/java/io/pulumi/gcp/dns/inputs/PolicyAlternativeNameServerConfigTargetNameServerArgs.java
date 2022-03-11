@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="forwardingPath")
-      private final @Nullable Input<String> forwardingPath;
+      private final @Nullable Output<String> forwardingPath;
 
-    public Input<String> getForwardingPath() {
-        return this.forwardingPath == null ? Input.empty() : this.forwardingPath;
+    public Output<String> getForwardingPath() {
+        return this.forwardingPath == null ? Output.empty() : this.forwardingPath;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @InputImport(name="ipv4Address", required=true)
-      private final Input<String> ipv4Address;
+      private final Output<String> ipv4Address;
 
-    public Input<String> getIpv4Address() {
+    public Output<String> getIpv4Address() {
         return this.ipv4Address;
     }
 
     public PolicyAlternativeNameServerConfigTargetNameServerArgs(
-        @Nullable Input<String> forwardingPath,
-        Input<String> ipv4Address) {
+        @Nullable Output<String> forwardingPath,
+        Output<String> ipv4Address) {
         this.forwardingPath = forwardingPath;
         this.ipv4Address = Objects.requireNonNull(ipv4Address, "expected parameter 'ipv4Address' to be non-null");
     }
 
     private PolicyAlternativeNameServerConfigTargetNameServerArgs() {
-        this.forwardingPath = Input.empty();
-        this.ipv4Address = Input.empty();
+        this.forwardingPath = Output.empty();
+        this.ipv4Address = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<String> forwardingPath;
-        private Input<String> ipv4Address;
+        private @Nullable Output<String> forwardingPath;
+        private Output<String> ipv4Address;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     	      this.ipv4Address = defaults.ipv4Address;
         }
 
-        public Builder forwardingPath(@Nullable Input<String> forwardingPath) {
+        public Builder forwardingPath(@Nullable Output<String> forwardingPath) {
             this.forwardingPath = forwardingPath;
             return this;
         }
 
         public Builder forwardingPath(@Nullable String forwardingPath) {
-            this.forwardingPath = Input.ofNullable(forwardingPath);
+            this.forwardingPath = Output.ofNullable(forwardingPath);
             return this;
         }
 
-        public Builder ipv4Address(Input<String> ipv4Address) {
+        public Builder ipv4Address(Output<String> ipv4Address) {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
         }
 
         public Builder ipv4Address(String ipv4Address) {
-            this.ipv4Address = Input.of(Objects.requireNonNull(ipv4Address));
+            this.ipv4Address = Output.of(Objects.requireNonNull(ipv4Address));
             return this;
         }
         public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {

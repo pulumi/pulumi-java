@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public OrganizationSecurityPolicyState(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> fingerprint,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> policyId,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> fingerprint,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> policyId,
+        @Nullable Output<String> type) {
         this.description = description;
         this.displayName = displayName;
         this.fingerprint = fingerprint;
@@ -101,12 +101,12 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
     }
 
     private OrganizationSecurityPolicyState() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.fingerprint = Input.empty();
-        this.parent = Input.empty();
-        this.policyId = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.fingerprint = Output.empty();
+        this.parent = Output.empty();
+        this.policyId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> fingerprint;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> policyId;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> fingerprint;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> policyId;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public OrganizationSecurityPolicyState build() {

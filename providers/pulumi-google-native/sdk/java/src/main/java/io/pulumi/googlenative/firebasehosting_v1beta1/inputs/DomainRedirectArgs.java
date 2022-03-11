@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebasehosting_v1beta1.enums.DomainRedirectType;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class DomainRedirectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -34,22 +34,22 @@ public final class DomainRedirectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<DomainRedirectType> type;
+      private final Output<DomainRedirectType> type;
 
-    public Input<DomainRedirectType> getType() {
+    public Output<DomainRedirectType> getType() {
         return this.type;
     }
 
     public DomainRedirectArgs(
-        Input<String> domainName,
-        Input<DomainRedirectType> type) {
+        Output<String> domainName,
+        Output<DomainRedirectType> type) {
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private DomainRedirectArgs() {
-        this.domainName = Input.empty();
-        this.type = Input.empty();
+        this.domainName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DomainRedirectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> domainName;
-        private Input<DomainRedirectType> type;
+        private Output<String> domainName;
+        private Output<DomainRedirectType> type;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DomainRedirectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder type(Input<DomainRedirectType> type) {
+        public Builder type(Output<DomainRedirectType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(DomainRedirectType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DomainRedirectArgs build() {

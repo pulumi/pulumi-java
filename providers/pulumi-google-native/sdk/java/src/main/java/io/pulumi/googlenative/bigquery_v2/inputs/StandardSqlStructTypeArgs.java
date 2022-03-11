@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlFieldArgs;
 import java.util.List;
@@ -16,18 +16,18 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
     public static final StandardSqlStructTypeArgs Empty = new StandardSqlStructTypeArgs();
 
     @InputImport(name="fields")
-      private final @Nullable Input<List<StandardSqlFieldArgs>> fields;
+      private final @Nullable Output<List<StandardSqlFieldArgs>> fields;
 
-    public Input<List<StandardSqlFieldArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<StandardSqlFieldArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
-    public StandardSqlStructTypeArgs(@Nullable Input<List<StandardSqlFieldArgs>> fields) {
+    public StandardSqlStructTypeArgs(@Nullable Output<List<StandardSqlFieldArgs>> fields) {
         this.fields = fields;
     }
 
     private StandardSqlStructTypeArgs() {
-        this.fields = Input.empty();
+        this.fields = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<StandardSqlFieldArgs>> fields;
+        private @Nullable Output<List<StandardSqlFieldArgs>> fields;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
     	      this.fields = defaults.fields;
         }
 
-        public Builder fields(@Nullable Input<List<StandardSqlFieldArgs>> fields) {
+        public Builder fields(@Nullable Output<List<StandardSqlFieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<StandardSqlFieldArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
         public StandardSqlStructTypeArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.datasync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class NfsLocationMountOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
-    public NfsLocationMountOptionsArgs(@Nullable Input<String> version) {
+    public NfsLocationMountOptionsArgs(@Nullable Output<String> version) {
         this.version = version;
     }
 
     private NfsLocationMountOptionsArgs() {
-        this.version = Input.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class NfsLocationMountOptionsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class NfsLocationMountOptionsArgs extends io.pulumi.resources.Resou
     	      this.version = defaults.version;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public NfsLocationMountOptionsArgs build() {

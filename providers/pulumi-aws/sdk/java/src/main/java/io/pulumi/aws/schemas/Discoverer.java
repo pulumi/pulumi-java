@@ -6,7 +6,6 @@ package io.pulumi.aws.schemas;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.schemas.DiscovererArgs;
 import io.pulumi.aws.schemas.inputs.DiscovererState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,14 +140,14 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Discoverer(String name, DiscovererArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:schemas/discoverer:Discoverer", name, args == null ? DiscovererArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:schemas/discoverer:Discoverer", name, args == null ? DiscovererArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Discoverer(String name, Input<String> id, @Nullable DiscovererState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Discoverer(String name, Output<String> id, @Nullable DiscovererState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:schemas/discoverer:Discoverer", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -164,7 +163,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Discoverer get(String name, Input<String> id, @Nullable DiscovererState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Discoverer get(String name, Output<String> id, @Nullable DiscovererState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Discoverer(name, id, state, options);
     }
 }

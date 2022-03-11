@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ProductSubscriptionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="productArn", required=true)
-      private final Input<String> productArn;
+      private final Output<String> productArn;
 
-    public Input<String> getProductArn() {
+    public Output<String> getProductArn() {
         return this.productArn;
     }
 
-    public ProductSubscriptionArgs(Input<String> productArn) {
+    public ProductSubscriptionArgs(Output<String> productArn) {
         this.productArn = Objects.requireNonNull(productArn, "expected parameter 'productArn' to be non-null");
     }
 
     private ProductSubscriptionArgs() {
-        this.productArn = Input.empty();
+        this.productArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ProductSubscriptionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> productArn;
+        private Output<String> productArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ProductSubscriptionArgs extends io.pulumi.resources.ResourceA
     	      this.productArn = defaults.productArn;
         }
 
-        public Builder productArn(Input<String> productArn) {
+        public Builder productArn(Output<String> productArn) {
             this.productArn = Objects.requireNonNull(productArn);
             return this;
         }
 
         public Builder productArn(String productArn) {
-            this.productArn = Input.of(Objects.requireNonNull(productArn));
+            this.productArn = Output.of(Objects.requireNonNull(productArn));
             return this;
         }
         public ProductSubscriptionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.UpstreamAuthSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auth")
-      private final @Nullable Input<UpstreamAuthSettingsArgs> auth;
+      private final @Nullable Output<UpstreamAuthSettingsArgs> auth;
 
-    public Input<UpstreamAuthSettingsArgs> getAuth() {
-        return this.auth == null ? Input.empty() : this.auth;
+    public Output<UpstreamAuthSettingsArgs> getAuth() {
+        return this.auth == null ? Output.empty() : this.auth;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemEvents")
-      private final @Nullable Input<List<String>> systemEvents;
+      private final @Nullable Output<List<String>> systemEvents;
 
-    public Input<List<String>> getSystemEvents() {
-        return this.systemEvents == null ? Input.empty() : this.systemEvents;
+    public Output<List<String>> getSystemEvents() {
+        return this.systemEvents == null ? Output.empty() : this.systemEvents;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlTemplate", required=true)
-      private final Input<String> urlTemplate;
+      private final Output<String> urlTemplate;
 
-    public Input<String> getUrlTemplate() {
+    public Output<String> getUrlTemplate() {
         return this.urlTemplate;
     }
 
@@ -63,17 +63,17 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userEventPattern")
-      private final @Nullable Input<String> userEventPattern;
+      private final @Nullable Output<String> userEventPattern;
 
-    public Input<String> getUserEventPattern() {
-        return this.userEventPattern == null ? Input.empty() : this.userEventPattern;
+    public Output<String> getUserEventPattern() {
+        return this.userEventPattern == null ? Output.empty() : this.userEventPattern;
     }
 
     public EventHandlerArgs(
-        @Nullable Input<UpstreamAuthSettingsArgs> auth,
-        @Nullable Input<List<String>> systemEvents,
-        Input<String> urlTemplate,
-        @Nullable Input<String> userEventPattern) {
+        @Nullable Output<UpstreamAuthSettingsArgs> auth,
+        @Nullable Output<List<String>> systemEvents,
+        Output<String> urlTemplate,
+        @Nullable Output<String> userEventPattern) {
         this.auth = auth;
         this.systemEvents = systemEvents;
         this.urlTemplate = Objects.requireNonNull(urlTemplate, "expected parameter 'urlTemplate' to be non-null");
@@ -81,10 +81,10 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventHandlerArgs() {
-        this.auth = Input.empty();
-        this.systemEvents = Input.empty();
-        this.urlTemplate = Input.empty();
-        this.userEventPattern = Input.empty();
+        this.auth = Output.empty();
+        this.systemEvents = Output.empty();
+        this.urlTemplate = Output.empty();
+        this.userEventPattern = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,10 +96,10 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<UpstreamAuthSettingsArgs> auth;
-        private @Nullable Input<List<String>> systemEvents;
-        private Input<String> urlTemplate;
-        private @Nullable Input<String> userEventPattern;
+        private @Nullable Output<UpstreamAuthSettingsArgs> auth;
+        private @Nullable Output<List<String>> systemEvents;
+        private Output<String> urlTemplate;
+        private @Nullable Output<String> userEventPattern;
 
         public Builder() {
     	      // Empty
@@ -113,43 +113,43 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userEventPattern = defaults.userEventPattern;
         }
 
-        public Builder auth(@Nullable Input<UpstreamAuthSettingsArgs> auth) {
+        public Builder auth(@Nullable Output<UpstreamAuthSettingsArgs> auth) {
             this.auth = auth;
             return this;
         }
 
         public Builder auth(@Nullable UpstreamAuthSettingsArgs auth) {
-            this.auth = Input.ofNullable(auth);
+            this.auth = Output.ofNullable(auth);
             return this;
         }
 
-        public Builder systemEvents(@Nullable Input<List<String>> systemEvents) {
+        public Builder systemEvents(@Nullable Output<List<String>> systemEvents) {
             this.systemEvents = systemEvents;
             return this;
         }
 
         public Builder systemEvents(@Nullable List<String> systemEvents) {
-            this.systemEvents = Input.ofNullable(systemEvents);
+            this.systemEvents = Output.ofNullable(systemEvents);
             return this;
         }
 
-        public Builder urlTemplate(Input<String> urlTemplate) {
+        public Builder urlTemplate(Output<String> urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
 
         public Builder urlTemplate(String urlTemplate) {
-            this.urlTemplate = Input.of(Objects.requireNonNull(urlTemplate));
+            this.urlTemplate = Output.of(Objects.requireNonNull(urlTemplate));
             return this;
         }
 
-        public Builder userEventPattern(@Nullable Input<String> userEventPattern) {
+        public Builder userEventPattern(@Nullable Output<String> userEventPattern) {
             this.userEventPattern = userEventPattern;
             return this;
         }
 
         public Builder userEventPattern(@Nullable String userEventPattern) {
-            this.userEventPattern = Input.ofNullable(userEventPattern);
+            this.userEventPattern = Output.ofNullable(userEventPattern);
             return this;
         }
         public EventHandlerArgs build() {

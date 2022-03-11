@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.ServerKeyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-      private final Input<String> managedInstanceName;
+      private final Output<String> managedInstanceName;
 
-    public Input<String> getManagedInstanceName() {
+    public Output<String> getManagedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -43,9 +43,9 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,9 +54,9 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serverKeyType", required=true)
-      private final Input<Either<String,ServerKeyType>> serverKeyType;
+      private final Output<Either<String,ServerKeyType>> serverKeyType;
 
-    public Input<Either<String,ServerKeyType>> getServerKeyType() {
+    public Output<Either<String,ServerKeyType>> getServerKeyType() {
         return this.serverKeyType;
     }
 
@@ -65,18 +65,18 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public ManagedInstanceKeyArgs(
-        @Nullable Input<String> keyName,
-        Input<String> managedInstanceName,
-        Input<String> resourceGroupName,
-        Input<Either<String,ServerKeyType>> serverKeyType,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> keyName,
+        Output<String> managedInstanceName,
+        Output<String> resourceGroupName,
+        Output<Either<String,ServerKeyType>> serverKeyType,
+        @Nullable Output<String> uri) {
         this.keyName = keyName;
         this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ManagedInstanceKeyArgs() {
-        this.keyName = Input.empty();
-        this.managedInstanceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverKeyType = Input.empty();
-        this.uri = Input.empty();
+        this.keyName = Output.empty();
+        this.managedInstanceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverKeyType = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyName;
-        private Input<String> managedInstanceName;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,ServerKeyType>> serverKeyType;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> keyName;
+        private Output<String> managedInstanceName;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,ServerKeyType>> serverKeyType;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
     	      this.uri = defaults.uri;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder managedInstanceName(Input<String> managedInstanceName) {
+        public Builder managedInstanceName(Output<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
 
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Input.of(Objects.requireNonNull(managedInstanceName));
+            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverKeyType(Input<Either<String,ServerKeyType>> serverKeyType) {
+        public Builder serverKeyType(Output<Either<String,ServerKeyType>> serverKeyType) {
             this.serverKeyType = Objects.requireNonNull(serverKeyType);
             return this;
         }
 
         public Builder serverKeyType(Either<String,ServerKeyType> serverKeyType) {
-            this.serverKeyType = Input.of(Objects.requireNonNull(serverKeyType));
+            this.serverKeyType = Output.of(Objects.requireNonNull(serverKeyType));
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public ManagedInstanceKeyArgs build() {

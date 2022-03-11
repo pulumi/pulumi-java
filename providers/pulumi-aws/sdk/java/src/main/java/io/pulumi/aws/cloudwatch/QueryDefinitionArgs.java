@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logGroupNames")
-      private final @Nullable Input<List<String>> logGroupNames;
+      private final @Nullable Output<List<String>> logGroupNames;
 
-    public Input<List<String>> getLogGroupNames() {
-        return this.logGroupNames == null ? Input.empty() : this.logGroupNames;
+    public Output<List<String>> getLogGroupNames() {
+        return this.logGroupNames == null ? Output.empty() : this.logGroupNames;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="queryString", required=true)
-      private final Input<String> queryString;
+      private final Output<String> queryString;
 
-    public Input<String> getQueryString() {
+    public Output<String> getQueryString() {
         return this.queryString;
     }
 
     public QueryDefinitionArgs(
-        @Nullable Input<List<String>> logGroupNames,
-        @Nullable Input<String> name,
-        Input<String> queryString) {
+        @Nullable Output<List<String>> logGroupNames,
+        @Nullable Output<String> name,
+        Output<String> queryString) {
         this.logGroupNames = logGroupNames;
         this.name = name;
         this.queryString = Objects.requireNonNull(queryString, "expected parameter 'queryString' to be non-null");
     }
 
     private QueryDefinitionArgs() {
-        this.logGroupNames = Input.empty();
-        this.name = Input.empty();
-        this.queryString = Input.empty();
+        this.logGroupNames = Output.empty();
+        this.name = Output.empty();
+        this.queryString = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> logGroupNames;
-        private @Nullable Input<String> name;
-        private Input<String> queryString;
+        private @Nullable Output<List<String>> logGroupNames;
+        private @Nullable Output<String> name;
+        private Output<String> queryString;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.queryString = defaults.queryString;
         }
 
-        public Builder logGroupNames(@Nullable Input<List<String>> logGroupNames) {
+        public Builder logGroupNames(@Nullable Output<List<String>> logGroupNames) {
             this.logGroupNames = logGroupNames;
             return this;
         }
 
         public Builder logGroupNames(@Nullable List<String> logGroupNames) {
-            this.logGroupNames = Input.ofNullable(logGroupNames);
+            this.logGroupNames = Output.ofNullable(logGroupNames);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder queryString(Input<String> queryString) {
+        public Builder queryString(Output<String> queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
 
         public Builder queryString(String queryString) {
-            this.queryString = Input.of(Objects.requireNonNull(queryString));
+            this.queryString = Output.of(Objects.requireNonNull(queryString));
             return this;
         }
         public QueryDefinitionArgs build() {

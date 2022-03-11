@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-      private final @Nullable Input<Boolean> active;
+      private final @Nullable Output<Boolean> active;
 
-    public Input<Boolean> getActive() {
-        return this.active == null ? Input.empty() : this.active;
+    public Output<Boolean> getActive() {
+        return this.active == null ? Output.empty() : this.active;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -42,25 +42,25 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public TagOptionArgs(
-        @Nullable Input<Boolean> active,
-        Input<String> key,
-        Input<String> value) {
+        @Nullable Output<Boolean> active,
+        Output<String> key,
+        Output<String> value) {
         this.active = active;
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private TagOptionArgs() {
-        this.active = Input.empty();
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.active = Output.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> active;
-        private Input<String> key;
-        private Input<String> value;
+        private @Nullable Output<Boolean> active;
+        private Output<String> key;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder active(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Output<Boolean> active) {
             this.active = active;
             return this;
         }
 
         public Builder active(@Nullable Boolean active) {
-            this.active = Input.ofNullable(active);
+            this.active = Output.ofNullable(active);
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public TagOptionArgs build() {

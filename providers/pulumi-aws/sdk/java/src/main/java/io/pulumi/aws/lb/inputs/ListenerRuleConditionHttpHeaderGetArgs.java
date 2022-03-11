@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpHeaderName", required=true)
-      private final Input<String> httpHeaderName;
+      private final Output<String> httpHeaderName;
 
-    public Input<String> getHttpHeaderName() {
+    public Output<String> getHttpHeaderName() {
         return this.httpHeaderName;
     }
 
@@ -30,22 +30,22 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<String>> values;
+      private final Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
+    public Output<List<String>> getValues() {
         return this.values;
     }
 
     public ListenerRuleConditionHttpHeaderGetArgs(
-        Input<String> httpHeaderName,
-        Input<List<String>> values) {
+        Output<String> httpHeaderName,
+        Output<List<String>> values) {
         this.httpHeaderName = Objects.requireNonNull(httpHeaderName, "expected parameter 'httpHeaderName' to be non-null");
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private ListenerRuleConditionHttpHeaderGetArgs() {
-        this.httpHeaderName = Input.empty();
-        this.values = Input.empty();
+        this.httpHeaderName = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> httpHeaderName;
-        private Input<List<String>> values;
+        private Output<String> httpHeaderName;
+        private Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends io.pulumi.reso
     	      this.values = defaults.values;
         }
 
-        public Builder httpHeaderName(Input<String> httpHeaderName) {
+        public Builder httpHeaderName(Output<String> httpHeaderName) {
             this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
             return this;
         }
 
         public Builder httpHeaderName(String httpHeaderName) {
-            this.httpHeaderName = Input.of(Objects.requireNonNull(httpHeaderName));
+            this.httpHeaderName = Output.of(Objects.requireNonNull(httpHeaderName));
             return this;
         }
 
-        public Builder values(Input<List<String>> values) {
+        public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<String> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public ListenerRuleConditionHttpHeaderGetArgs build() {

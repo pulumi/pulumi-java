@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.datashare.enums.ShareKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,10 +32,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareKind")
-      private final @Nullable Input<Either<String,ShareKind>> shareKind;
+      private final @Nullable Output<Either<String,ShareKind>> shareKind;
 
-    public Input<Either<String,ShareKind>> getShareKind() {
-        return this.shareKind == null ? Input.empty() : this.shareKind;
+    public Output<Either<String,ShareKind>> getShareKind() {
+        return this.shareKind == null ? Output.empty() : this.shareKind;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareName")
-      private final @Nullable Input<String> shareName;
+      private final @Nullable Output<String> shareName;
 
-    public Input<String> getShareName() {
-        return this.shareName == null ? Input.empty() : this.shareName;
+    public Output<String> getShareName() {
+        return this.shareName == null ? Output.empty() : this.shareName;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terms")
-      private final @Nullable Input<String> terms;
+      private final @Nullable Output<String> terms;
 
-    public Input<String> getTerms() {
-        return this.terms == null ? Input.empty() : this.terms;
+    public Output<String> getTerms() {
+        return this.terms == null ? Output.empty() : this.terms;
     }
 
     public ShareArgs(
-        Input<String> accountName,
-        @Nullable Input<String> description,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,ShareKind>> shareKind,
-        @Nullable Input<String> shareName,
-        @Nullable Input<String> terms) {
+        Output<String> accountName,
+        @Nullable Output<String> description,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,ShareKind>> shareKind,
+        @Nullable Output<String> shareName,
+        @Nullable Output<String> terms) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.description = description;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -98,12 +98,12 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ShareArgs() {
-        this.accountName = Input.empty();
-        this.description = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareKind = Input.empty();
-        this.shareName = Input.empty();
-        this.terms = Input.empty();
+        this.accountName = Output.empty();
+        this.description = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareKind = Output.empty();
+        this.shareName = Output.empty();
+        this.terms = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> description;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,ShareKind>> shareKind;
-        private @Nullable Input<String> shareName;
-        private @Nullable Input<String> terms;
+        private Output<String> accountName;
+        private @Nullable Output<String> description;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,ShareKind>> shareKind;
+        private @Nullable Output<String> shareName;
+        private @Nullable Output<String> terms;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.terms = defaults.terms;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareKind(@Nullable Input<Either<String,ShareKind>> shareKind) {
+        public Builder shareKind(@Nullable Output<Either<String,ShareKind>> shareKind) {
             this.shareKind = shareKind;
             return this;
         }
 
         public Builder shareKind(@Nullable Either<String,ShareKind> shareKind) {
-            this.shareKind = Input.ofNullable(shareKind);
+            this.shareKind = Output.ofNullable(shareKind);
             return this;
         }
 
-        public Builder shareName(@Nullable Input<String> shareName) {
+        public Builder shareName(@Nullable Output<String> shareName) {
             this.shareName = shareName;
             return this;
         }
 
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = Input.ofNullable(shareName);
+            this.shareName = Output.ofNullable(shareName);
             return this;
         }
 
-        public Builder terms(@Nullable Input<String> terms) {
+        public Builder terms(@Nullable Output<String> terms) {
             this.terms = terms;
             return this;
         }
 
         public Builder terms(@Nullable String terms) {
-            this.terms = Input.ofNullable(terms);
+            this.terms = Output.ofNullable(terms);
             return this;
         }
         public ShareArgs build() {

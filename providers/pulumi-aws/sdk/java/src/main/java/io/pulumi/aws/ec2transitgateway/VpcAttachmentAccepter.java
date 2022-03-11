@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2transitgateway;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2transitgateway.VpcAttachmentAccepterArgs;
 import io.pulumi.aws.ec2transitgateway.inputs.VpcAttachmentAccepterState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -245,14 +244,14 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcAttachmentAccepter(String name, VpcAttachmentAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter", name, args == null ? VpcAttachmentAccepterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter", name, args == null ? VpcAttachmentAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VpcAttachmentAccepter(String name, Input<String> id, @Nullable VpcAttachmentAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VpcAttachmentAccepter(String name, Output<String> id, @Nullable VpcAttachmentAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -268,7 +267,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpcAttachmentAccepter get(String name, Input<String> id, @Nullable VpcAttachmentAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VpcAttachmentAccepter get(String name, Output<String> id, @Nullable VpcAttachmentAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VpcAttachmentAccepter(name, id, state, options);
     }
 }

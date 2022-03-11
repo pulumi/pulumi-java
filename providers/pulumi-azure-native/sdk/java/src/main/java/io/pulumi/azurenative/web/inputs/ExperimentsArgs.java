@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.RampUpRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rampUpRules")
-      private final @Nullable Input<List<RampUpRuleArgs>> rampUpRules;
+      private final @Nullable Output<List<RampUpRuleArgs>> rampUpRules;
 
-    public Input<List<RampUpRuleArgs>> getRampUpRules() {
-        return this.rampUpRules == null ? Input.empty() : this.rampUpRules;
+    public Output<List<RampUpRuleArgs>> getRampUpRules() {
+        return this.rampUpRules == null ? Output.empty() : this.rampUpRules;
     }
 
-    public ExperimentsArgs(@Nullable Input<List<RampUpRuleArgs>> rampUpRules) {
+    public ExperimentsArgs(@Nullable Output<List<RampUpRuleArgs>> rampUpRules) {
         this.rampUpRules = rampUpRules;
     }
 
     private ExperimentsArgs() {
-        this.rampUpRules = Input.empty();
+        this.rampUpRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RampUpRuleArgs>> rampUpRules;
+        private @Nullable Output<List<RampUpRuleArgs>> rampUpRules;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rampUpRules = defaults.rampUpRules;
         }
 
-        public Builder rampUpRules(@Nullable Input<List<RampUpRuleArgs>> rampUpRules) {
+        public Builder rampUpRules(@Nullable Output<List<RampUpRuleArgs>> rampUpRules) {
             this.rampUpRules = rampUpRules;
             return this;
         }
 
         public Builder rampUpRules(@Nullable List<RampUpRuleArgs> rampUpRules) {
-            this.rampUpRules = Input.ofNullable(rampUpRules);
+            this.rampUpRules = Output.ofNullable(rampUpRules);
             return this;
         }
         public ExperimentsArgs build() {

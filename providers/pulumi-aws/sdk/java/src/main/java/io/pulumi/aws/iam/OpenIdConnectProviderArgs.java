@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientIdLists", required=true)
-      private final Input<List<String>> clientIdLists;
+      private final Output<List<String>> clientIdLists;
 
-    public Input<List<String>> getClientIdLists() {
+    public Output<List<String>> getClientIdLists() {
         return this.clientIdLists;
     }
 
@@ -32,10 +32,10 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="thumbprintLists", required=true)
-      private final Input<List<String>> thumbprintLists;
+      private final Output<List<String>> thumbprintLists;
 
-    public Input<List<String>> getThumbprintLists() {
+    public Output<List<String>> getThumbprintLists() {
         return this.thumbprintLists;
     }
 
@@ -54,17 +54,17 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
     public OpenIdConnectProviderArgs(
-        Input<List<String>> clientIdLists,
-        @Nullable Input<Map<String,String>> tags,
-        Input<List<String>> thumbprintLists,
-        Input<String> url) {
+        Output<List<String>> clientIdLists,
+        @Nullable Output<Map<String,String>> tags,
+        Output<List<String>> thumbprintLists,
+        Output<String> url) {
         this.clientIdLists = Objects.requireNonNull(clientIdLists, "expected parameter 'clientIdLists' to be non-null");
         this.tags = tags;
         this.thumbprintLists = Objects.requireNonNull(thumbprintLists, "expected parameter 'thumbprintLists' to be non-null");
@@ -72,10 +72,10 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     }
 
     private OpenIdConnectProviderArgs() {
-        this.clientIdLists = Input.empty();
-        this.tags = Input.empty();
-        this.thumbprintLists = Input.empty();
-        this.url = Input.empty();
+        this.clientIdLists = Output.empty();
+        this.tags = Output.empty();
+        this.thumbprintLists = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<List<String>> clientIdLists;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<List<String>> thumbprintLists;
-        private Input<String> url;
+        private Output<List<String>> clientIdLists;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<List<String>> thumbprintLists;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     	      this.url = defaults.url;
         }
 
-        public Builder clientIdLists(Input<List<String>> clientIdLists) {
+        public Builder clientIdLists(Output<List<String>> clientIdLists) {
             this.clientIdLists = Objects.requireNonNull(clientIdLists);
             return this;
         }
 
         public Builder clientIdLists(List<String> clientIdLists) {
-            this.clientIdLists = Input.of(Objects.requireNonNull(clientIdLists));
+            this.clientIdLists = Output.of(Objects.requireNonNull(clientIdLists));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder thumbprintLists(Input<List<String>> thumbprintLists) {
+        public Builder thumbprintLists(Output<List<String>> thumbprintLists) {
             this.thumbprintLists = Objects.requireNonNull(thumbprintLists);
             return this;
         }
 
         public Builder thumbprintLists(List<String> thumbprintLists) {
-            this.thumbprintLists = Input.of(Objects.requireNonNull(thumbprintLists));
+            this.thumbprintLists = Output.of(Objects.requireNonNull(thumbprintLists));
             return this;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public OpenIdConnectProviderArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="runtimeStack")
-      private final @Nullable Input<String> runtimeStack;
+      private final @Nullable Output<String> runtimeStack;
 
-    public Input<String> getRuntimeStack() {
-        return this.runtimeStack == null ? Input.empty() : this.runtimeStack;
+    public Output<String> getRuntimeStack() {
+        return this.runtimeStack == null ? Output.empty() : this.runtimeStack;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="runtimeVersion")
-      private final @Nullable Input<String> runtimeVersion;
+      private final @Nullable Output<String> runtimeVersion;
 
-    public Input<String> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
+    public Output<String> getRuntimeVersion() {
+        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
     }
 
     public GitHubActionCodeConfigurationArgs(
-        @Nullable Input<String> runtimeStack,
-        @Nullable Input<String> runtimeVersion) {
+        @Nullable Output<String> runtimeStack,
+        @Nullable Output<String> runtimeVersion) {
         this.runtimeStack = runtimeStack;
         this.runtimeVersion = runtimeVersion;
     }
 
     private GitHubActionCodeConfigurationArgs() {
-        this.runtimeStack = Input.empty();
-        this.runtimeVersion = Input.empty();
+        this.runtimeStack = Output.empty();
+        this.runtimeVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> runtimeStack;
-        private @Nullable Input<String> runtimeVersion;
+        private @Nullable Output<String> runtimeStack;
+        private @Nullable Output<String> runtimeVersion;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder runtimeStack(@Nullable Input<String> runtimeStack) {
+        public Builder runtimeStack(@Nullable Output<String> runtimeStack) {
             this.runtimeStack = runtimeStack;
             return this;
         }
 
         public Builder runtimeStack(@Nullable String runtimeStack) {
-            this.runtimeStack = Input.ofNullable(runtimeStack);
+            this.runtimeStack = Output.ofNullable(runtimeStack);
             return this;
         }
 
-        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Input.ofNullable(runtimeVersion);
+            this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
         }
         public GitHubActionCodeConfigurationArgs build() {

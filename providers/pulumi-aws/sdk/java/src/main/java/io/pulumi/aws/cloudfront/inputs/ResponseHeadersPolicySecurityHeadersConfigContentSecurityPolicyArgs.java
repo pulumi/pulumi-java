@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
      * 
      */
     @InputImport(name="contentSecurityPolicy", required=true)
-      private final Input<String> contentSecurityPolicy;
+      private final Output<String> contentSecurityPolicy;
 
-    public Input<String> getContentSecurityPolicy() {
+    public Output<String> getContentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
 
@@ -30,22 +30,22 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
      * 
      */
     @InputImport(name="override", required=true)
-      private final Input<Boolean> override;
+      private final Output<Boolean> override;
 
-    public Input<Boolean> getOverride() {
+    public Output<Boolean> getOverride() {
         return this.override;
     }
 
     public ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs(
-        Input<String> contentSecurityPolicy,
-        Input<Boolean> override) {
+        Output<String> contentSecurityPolicy,
+        Output<Boolean> override) {
         this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy, "expected parameter 'contentSecurityPolicy' to be non-null");
         this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
     }
 
     private ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs() {
-        this.contentSecurityPolicy = Input.empty();
-        this.override = Input.empty();
+        this.contentSecurityPolicy = Output.empty();
+        this.override = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
     }
 
     public static final class Builder {
-        private Input<String> contentSecurityPolicy;
-        private Input<Boolean> override;
+        private Output<String> contentSecurityPolicy;
+        private Output<Boolean> override;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
     	      this.override = defaults.override;
         }
 
-        public Builder contentSecurityPolicy(Input<String> contentSecurityPolicy) {
+        public Builder contentSecurityPolicy(Output<String> contentSecurityPolicy) {
             this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
             return this;
         }
 
         public Builder contentSecurityPolicy(String contentSecurityPolicy) {
-            this.contentSecurityPolicy = Input.of(Objects.requireNonNull(contentSecurityPolicy));
+            this.contentSecurityPolicy = Output.of(Objects.requireNonNull(contentSecurityPolicy));
             return this;
         }
 
-        public Builder override(Input<Boolean> override) {
+        public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
         public Builder override(Boolean override) {
-            this.override = Input.of(Objects.requireNonNull(override));
+            this.override = Output.of(Objects.requireNonNull(override));
             return this;
         }
         public ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.cdn.inputs.SecurityPolicyWebApplicationFirewallAssociationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
      * 
      */
     @InputImport(name="associations")
-      private final @Nullable Input<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
+      private final @Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
 
-    public Input<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> getAssociations() {
-        return this.associations == null ? Input.empty() : this.associations;
+    public Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> getAssociations() {
+        return this.associations == null ? Output.empty() : this.associations;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -49,25 +49,25 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
      * 
      */
     @InputImport(name="wafPolicy")
-      private final @Nullable Input<ResourceReferenceArgs> wafPolicy;
+      private final @Nullable Output<ResourceReferenceArgs> wafPolicy;
 
-    public Input<ResourceReferenceArgs> getWafPolicy() {
-        return this.wafPolicy == null ? Input.empty() : this.wafPolicy;
+    public Output<ResourceReferenceArgs> getWafPolicy() {
+        return this.wafPolicy == null ? Output.empty() : this.wafPolicy;
     }
 
     public SecurityPolicyWebApplicationFirewallParametersArgs(
-        @Nullable Input<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations,
-        Input<String> type,
-        @Nullable Input<ResourceReferenceArgs> wafPolicy) {
+        @Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations,
+        Output<String> type,
+        @Nullable Output<ResourceReferenceArgs> wafPolicy) {
         this.associations = associations;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.wafPolicy = wafPolicy;
     }
 
     private SecurityPolicyWebApplicationFirewallParametersArgs() {
-        this.associations = Input.empty();
-        this.type = Input.empty();
-        this.wafPolicy = Input.empty();
+        this.associations = Output.empty();
+        this.type = Output.empty();
+        this.wafPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
-        private Input<String> type;
-        private @Nullable Input<ResourceReferenceArgs> wafPolicy;
+        private @Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations;
+        private Output<String> type;
+        private @Nullable Output<ResourceReferenceArgs> wafPolicy;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
     	      this.wafPolicy = defaults.wafPolicy;
         }
 
-        public Builder associations(@Nullable Input<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations) {
+        public Builder associations(@Nullable Output<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations) {
             this.associations = associations;
             return this;
         }
 
         public Builder associations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationArgs> associations) {
-            this.associations = Input.ofNullable(associations);
+            this.associations = Output.ofNullable(associations);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder wafPolicy(@Nullable Input<ResourceReferenceArgs> wafPolicy) {
+        public Builder wafPolicy(@Nullable Output<ResourceReferenceArgs> wafPolicy) {
             this.wafPolicy = wafPolicy;
             return this;
         }
 
         public Builder wafPolicy(@Nullable ResourceReferenceArgs wafPolicy) {
-            this.wafPolicy = Input.ofNullable(wafPolicy);
+            this.wafPolicy = Output.ofNullable(wafPolicy);
             return this;
         }
         public SecurityPolicyWebApplicationFirewallParametersArgs build() {

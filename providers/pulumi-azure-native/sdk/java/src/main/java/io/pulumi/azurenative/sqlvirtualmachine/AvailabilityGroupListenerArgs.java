@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine;
 
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.LoadBalancerConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="availabilityGroupListenerName")
-      private final @Nullable Input<String> availabilityGroupListenerName;
+      private final @Nullable Output<String> availabilityGroupListenerName;
 
-    public Input<String> getAvailabilityGroupListenerName() {
-        return this.availabilityGroupListenerName == null ? Input.empty() : this.availabilityGroupListenerName;
+    public Output<String> getAvailabilityGroupListenerName() {
+        return this.availabilityGroupListenerName == null ? Output.empty() : this.availabilityGroupListenerName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="availabilityGroupName")
-      private final @Nullable Input<String> availabilityGroupName;
+      private final @Nullable Output<String> availabilityGroupName;
 
-    public Input<String> getAvailabilityGroupName() {
-        return this.availabilityGroupName == null ? Input.empty() : this.availabilityGroupName;
+    public Output<String> getAvailabilityGroupName() {
+        return this.availabilityGroupName == null ? Output.empty() : this.availabilityGroupName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="createDefaultAvailabilityGroupIfNotExist")
-      private final @Nullable Input<Boolean> createDefaultAvailabilityGroupIfNotExist;
+      private final @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist;
 
-    public Input<Boolean> getCreateDefaultAvailabilityGroupIfNotExist() {
-        return this.createDefaultAvailabilityGroupIfNotExist == null ? Input.empty() : this.createDefaultAvailabilityGroupIfNotExist;
+    public Output<Boolean> getCreateDefaultAvailabilityGroupIfNotExist() {
+        return this.createDefaultAvailabilityGroupIfNotExist == null ? Output.empty() : this.createDefaultAvailabilityGroupIfNotExist;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loadBalancerConfigurations")
-      private final @Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
+      private final @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
-    public Input<List<LoadBalancerConfigurationArgs>> getLoadBalancerConfigurations() {
-        return this.loadBalancerConfigurations == null ? Input.empty() : this.loadBalancerConfigurations;
+    public Output<List<LoadBalancerConfigurationArgs>> getLoadBalancerConfigurations() {
+        return this.loadBalancerConfigurations == null ? Output.empty() : this.loadBalancerConfigurations;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,20 +89,20 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sqlVirtualMachineGroupName", required=true)
-      private final Input<String> sqlVirtualMachineGroupName;
+      private final Output<String> sqlVirtualMachineGroupName;
 
-    public Input<String> getSqlVirtualMachineGroupName() {
+    public Output<String> getSqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
     }
 
     public AvailabilityGroupListenerArgs(
-        @Nullable Input<String> availabilityGroupListenerName,
-        @Nullable Input<String> availabilityGroupName,
-        @Nullable Input<Boolean> createDefaultAvailabilityGroupIfNotExist,
-        @Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations,
-        @Nullable Input<Integer> port,
-        Input<String> resourceGroupName,
-        Input<String> sqlVirtualMachineGroupName) {
+        @Nullable Output<String> availabilityGroupListenerName,
+        @Nullable Output<String> availabilityGroupName,
+        @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist,
+        @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations,
+        @Nullable Output<Integer> port,
+        Output<String> resourceGroupName,
+        Output<String> sqlVirtualMachineGroupName) {
         this.availabilityGroupListenerName = availabilityGroupListenerName;
         this.availabilityGroupName = availabilityGroupName;
         this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
@@ -113,13 +113,13 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     }
 
     private AvailabilityGroupListenerArgs() {
-        this.availabilityGroupListenerName = Input.empty();
-        this.availabilityGroupName = Input.empty();
-        this.createDefaultAvailabilityGroupIfNotExist = Input.empty();
-        this.loadBalancerConfigurations = Input.empty();
-        this.port = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sqlVirtualMachineGroupName = Input.empty();
+        this.availabilityGroupListenerName = Output.empty();
+        this.availabilityGroupName = Output.empty();
+        this.createDefaultAvailabilityGroupIfNotExist = Output.empty();
+        this.loadBalancerConfigurations = Output.empty();
+        this.port = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sqlVirtualMachineGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityGroupListenerName;
-        private @Nullable Input<String> availabilityGroupName;
-        private @Nullable Input<Boolean> createDefaultAvailabilityGroupIfNotExist;
-        private @Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
-        private @Nullable Input<Integer> port;
-        private Input<String> resourceGroupName;
-        private Input<String> sqlVirtualMachineGroupName;
+        private @Nullable Output<String> availabilityGroupListenerName;
+        private @Nullable Output<String> availabilityGroupName;
+        private @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist;
+        private @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
+        private @Nullable Output<Integer> port;
+        private Output<String> resourceGroupName;
+        private Output<String> sqlVirtualMachineGroupName;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     	      this.sqlVirtualMachineGroupName = defaults.sqlVirtualMachineGroupName;
         }
 
-        public Builder availabilityGroupListenerName(@Nullable Input<String> availabilityGroupListenerName) {
+        public Builder availabilityGroupListenerName(@Nullable Output<String> availabilityGroupListenerName) {
             this.availabilityGroupListenerName = availabilityGroupListenerName;
             return this;
         }
 
         public Builder availabilityGroupListenerName(@Nullable String availabilityGroupListenerName) {
-            this.availabilityGroupListenerName = Input.ofNullable(availabilityGroupListenerName);
+            this.availabilityGroupListenerName = Output.ofNullable(availabilityGroupListenerName);
             return this;
         }
 
-        public Builder availabilityGroupName(@Nullable Input<String> availabilityGroupName) {
+        public Builder availabilityGroupName(@Nullable Output<String> availabilityGroupName) {
             this.availabilityGroupName = availabilityGroupName;
             return this;
         }
 
         public Builder availabilityGroupName(@Nullable String availabilityGroupName) {
-            this.availabilityGroupName = Input.ofNullable(availabilityGroupName);
+            this.availabilityGroupName = Output.ofNullable(availabilityGroupName);
             return this;
         }
 
-        public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Input<Boolean> createDefaultAvailabilityGroupIfNotExist) {
+        public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist) {
             this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
             return this;
         }
 
         public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Boolean createDefaultAvailabilityGroupIfNotExist) {
-            this.createDefaultAvailabilityGroupIfNotExist = Input.ofNullable(createDefaultAvailabilityGroupIfNotExist);
+            this.createDefaultAvailabilityGroupIfNotExist = Output.ofNullable(createDefaultAvailabilityGroupIfNotExist);
             return this;
         }
 
-        public Builder loadBalancerConfigurations(@Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
+        public Builder loadBalancerConfigurations(@Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
             this.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
 
         public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
-            this.loadBalancerConfigurations = Input.ofNullable(loadBalancerConfigurations);
+            this.loadBalancerConfigurations = Output.ofNullable(loadBalancerConfigurations);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sqlVirtualMachineGroupName(Input<String> sqlVirtualMachineGroupName) {
+        public Builder sqlVirtualMachineGroupName(Output<String> sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName);
             return this;
         }
 
         public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
-            this.sqlVirtualMachineGroupName = Input.of(Objects.requireNonNull(sqlVirtualMachineGroupName));
+            this.sqlVirtualMachineGroupName = Output.of(Objects.requireNonNull(sqlVirtualMachineGroupName));
             return this;
         }
         public AvailabilityGroupListenerArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.FilterFindingCriteriaCriterionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class FilterFindingCriteriaArgs extends io.pulumi.resources.Resourc
     public static final FilterFindingCriteriaArgs Empty = new FilterFindingCriteriaArgs();
 
     @InputImport(name="criterions", required=true)
-      private final Input<List<FilterFindingCriteriaCriterionArgs>> criterions;
+      private final Output<List<FilterFindingCriteriaCriterionArgs>> criterions;
 
-    public Input<List<FilterFindingCriteriaCriterionArgs>> getCriterions() {
+    public Output<List<FilterFindingCriteriaCriterionArgs>> getCriterions() {
         return this.criterions;
     }
 
-    public FilterFindingCriteriaArgs(Input<List<FilterFindingCriteriaCriterionArgs>> criterions) {
+    public FilterFindingCriteriaArgs(Output<List<FilterFindingCriteriaCriterionArgs>> criterions) {
         this.criterions = Objects.requireNonNull(criterions, "expected parameter 'criterions' to be non-null");
     }
 
     private FilterFindingCriteriaArgs() {
-        this.criterions = Input.empty();
+        this.criterions = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class FilterFindingCriteriaArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<List<FilterFindingCriteriaCriterionArgs>> criterions;
+        private Output<List<FilterFindingCriteriaCriterionArgs>> criterions;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class FilterFindingCriteriaArgs extends io.pulumi.resources.Resourc
     	      this.criterions = defaults.criterions;
         }
 
-        public Builder criterions(Input<List<FilterFindingCriteriaCriterionArgs>> criterions) {
+        public Builder criterions(Output<List<FilterFindingCriteriaCriterionArgs>> criterions) {
             this.criterions = Objects.requireNonNull(criterions);
             return this;
         }
 
         public Builder criterions(List<FilterFindingCriteriaCriterionArgs> criterions) {
-            this.criterions = Input.of(Objects.requireNonNull(criterions));
+            this.criterions = Output.of(Objects.requireNonNull(criterions));
             return this;
         }
         public FilterFindingCriteriaArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SubnetworkIAMBindingConditionArgs;
 import java.lang.String;
@@ -22,16 +22,16 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<SubnetworkIAMBindingConditionArgs> condition;
+      private final @Nullable Output<SubnetworkIAMBindingConditionArgs> condition;
 
-    public Input<SubnetworkIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<SubnetworkIAMBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -41,10 +41,10 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -79,19 +79,19 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnetwork", required=true)
-      private final Input<String> subnetwork;
+      private final Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
+    public Output<String> getSubnetwork() {
         return this.subnetwork;
     }
 
     public SubnetworkIAMBindingArgs(
-        @Nullable Input<SubnetworkIAMBindingConditionArgs> condition,
-        Input<List<String>> members,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        Input<String> role,
-        Input<String> subnetwork) {
+        @Nullable Output<SubnetworkIAMBindingConditionArgs> condition,
+        Output<List<String>> members,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        Output<String> role,
+        Output<String> subnetwork) {
         this.condition = condition;
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
         this.project = project;
@@ -101,12 +101,12 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
     }
 
     private SubnetworkIAMBindingArgs() {
-        this.condition = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.role = Input.empty();
-        this.subnetwork = Input.empty();
+        this.condition = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.role = Output.empty();
+        this.subnetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<SubnetworkIAMBindingConditionArgs> condition;
-        private Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private Input<String> role;
-        private Input<String> subnetwork;
+        private @Nullable Output<SubnetworkIAMBindingConditionArgs> condition;
+        private Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private Output<String> role;
+        private Output<String> subnetwork;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class SubnetworkIAMBindingArgs extends io.pulumi.resources.Resource
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder condition(@Nullable Input<SubnetworkIAMBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<SubnetworkIAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable SubnetworkIAMBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder subnetwork(Input<String> subnetwork) {
+        public Builder subnetwork(Output<String> subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Input.of(Objects.requireNonNull(subnetwork));
+            this.subnetwork = Output.of(Objects.requireNonNull(subnetwork));
             return this;
         }
         public SubnetworkIAMBindingArgs build() {

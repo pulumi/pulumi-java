@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.AggregationArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.PickTimeSeriesFilterArgs;
@@ -25,10 +25,10 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="denominator")
-      private final @Nullable Input<RatioPartArgs> denominator;
+      private final @Nullable Output<RatioPartArgs> denominator;
 
-    public Input<RatioPartArgs> getDenominator() {
-        return this.denominator == null ? Input.empty() : this.denominator;
+    public Output<RatioPartArgs> getDenominator() {
+        return this.denominator == null ? Output.empty() : this.denominator;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="numerator")
-      private final @Nullable Input<RatioPartArgs> numerator;
+      private final @Nullable Output<RatioPartArgs> numerator;
 
-    public Input<RatioPartArgs> getNumerator() {
-        return this.numerator == null ? Input.empty() : this.numerator;
+    public Output<RatioPartArgs> getNumerator() {
+        return this.numerator == null ? Output.empty() : this.numerator;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="pickTimeSeriesFilter")
-      private final @Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
+      private final @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
 
-    public Input<PickTimeSeriesFilterArgs> getPickTimeSeriesFilter() {
-        return this.pickTimeSeriesFilter == null ? Input.empty() : this.pickTimeSeriesFilter;
+    public Output<PickTimeSeriesFilterArgs> getPickTimeSeriesFilter() {
+        return this.pickTimeSeriesFilter == null ? Output.empty() : this.pickTimeSeriesFilter;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secondaryAggregation")
-      private final @Nullable Input<AggregationArgs> secondaryAggregation;
+      private final @Nullable Output<AggregationArgs> secondaryAggregation;
 
-    public Input<AggregationArgs> getSecondaryAggregation() {
-        return this.secondaryAggregation == null ? Input.empty() : this.secondaryAggregation;
+    public Output<AggregationArgs> getSecondaryAggregation() {
+        return this.secondaryAggregation == null ? Output.empty() : this.secondaryAggregation;
     }
 
     public TimeSeriesFilterRatioArgs(
-        @Nullable Input<RatioPartArgs> denominator,
-        @Nullable Input<RatioPartArgs> numerator,
-        @Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter,
-        @Nullable Input<AggregationArgs> secondaryAggregation) {
+        @Nullable Output<RatioPartArgs> denominator,
+        @Nullable Output<RatioPartArgs> numerator,
+        @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter,
+        @Nullable Output<AggregationArgs> secondaryAggregation) {
         this.denominator = denominator;
         this.numerator = numerator;
         this.pickTimeSeriesFilter = pickTimeSeriesFilter;
@@ -76,10 +76,10 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
     }
 
     private TimeSeriesFilterRatioArgs() {
-        this.denominator = Input.empty();
-        this.numerator = Input.empty();
-        this.pickTimeSeriesFilter = Input.empty();
-        this.secondaryAggregation = Input.empty();
+        this.denominator = Output.empty();
+        this.numerator = Output.empty();
+        this.pickTimeSeriesFilter = Output.empty();
+        this.secondaryAggregation = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<RatioPartArgs> denominator;
-        private @Nullable Input<RatioPartArgs> numerator;
-        private @Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
-        private @Nullable Input<AggregationArgs> secondaryAggregation;
+        private @Nullable Output<RatioPartArgs> denominator;
+        private @Nullable Output<RatioPartArgs> numerator;
+        private @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
+        private @Nullable Output<AggregationArgs> secondaryAggregation;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
     	      this.secondaryAggregation = defaults.secondaryAggregation;
         }
 
-        public Builder denominator(@Nullable Input<RatioPartArgs> denominator) {
+        public Builder denominator(@Nullable Output<RatioPartArgs> denominator) {
             this.denominator = denominator;
             return this;
         }
 
         public Builder denominator(@Nullable RatioPartArgs denominator) {
-            this.denominator = Input.ofNullable(denominator);
+            this.denominator = Output.ofNullable(denominator);
             return this;
         }
 
-        public Builder numerator(@Nullable Input<RatioPartArgs> numerator) {
+        public Builder numerator(@Nullable Output<RatioPartArgs> numerator) {
             this.numerator = numerator;
             return this;
         }
 
         public Builder numerator(@Nullable RatioPartArgs numerator) {
-            this.numerator = Input.ofNullable(numerator);
+            this.numerator = Output.ofNullable(numerator);
             return this;
         }
 
-        public Builder pickTimeSeriesFilter(@Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter) {
+        public Builder pickTimeSeriesFilter(@Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
 
         public Builder pickTimeSeriesFilter(@Nullable PickTimeSeriesFilterArgs pickTimeSeriesFilter) {
-            this.pickTimeSeriesFilter = Input.ofNullable(pickTimeSeriesFilter);
+            this.pickTimeSeriesFilter = Output.ofNullable(pickTimeSeriesFilter);
             return this;
         }
 
-        public Builder secondaryAggregation(@Nullable Input<AggregationArgs> secondaryAggregation) {
+        public Builder secondaryAggregation(@Nullable Output<AggregationArgs> secondaryAggregation) {
             this.secondaryAggregation = secondaryAggregation;
             return this;
         }
 
         public Builder secondaryAggregation(@Nullable AggregationArgs secondaryAggregation) {
-            this.secondaryAggregation = Input.ofNullable(secondaryAggregation);
+            this.secondaryAggregation = Output.ofNullable(secondaryAggregation);
             return this;
         }
         public TimeSeriesFilterRatioArgs build() {

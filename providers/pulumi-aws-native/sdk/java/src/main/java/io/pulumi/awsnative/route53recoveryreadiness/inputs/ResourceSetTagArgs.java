@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,29 +15,29 @@ public final class ResourceSetTagArgs extends io.pulumi.resources.ResourceArgs {
     public static final ResourceSetTagArgs Empty = new ResourceSetTagArgs();
 
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<List<String>> value;
+      private final Output<List<String>> value;
 
-    public Input<List<String>> getValue() {
+    public Output<List<String>> getValue() {
         return this.value;
     }
 
     public ResourceSetTagArgs(
-        Input<String> key,
-        Input<List<String>> value) {
+        Output<String> key,
+        Output<List<String>> value) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ResourceSetTagArgs() {
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ResourceSetTagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private Input<List<String>> value;
+        private Output<String> key;
+        private Output<List<String>> value;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ResourceSetTagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder value(Input<List<String>> value) {
+        public Builder value(Output<List<String>> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(List<String> value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ResourceSetTagArgs build() {

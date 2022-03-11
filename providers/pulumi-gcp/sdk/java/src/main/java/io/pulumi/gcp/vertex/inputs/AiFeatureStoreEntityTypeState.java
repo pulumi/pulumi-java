@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigGetArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="featurestore")
-      private final @Nullable Input<String> featurestore;
+      private final @Nullable Output<String> featurestore;
 
-    public Input<String> getFeaturestore() {
-        return this.featurestore == null ? Input.empty() : this.featurestore;
+    public Output<String> getFeaturestore() {
+        return this.featurestore == null ? Output.empty() : this.featurestore;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="monitoringConfig")
-      private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
+      private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
 
-    public Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> getMonitoringConfig() {
-        return this.monitoringConfig == null ? Input.empty() : this.monitoringConfig;
+    public Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> getMonitoringConfig() {
+        return this.monitoringConfig == null ? Output.empty() : this.monitoringConfig;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public AiFeatureStoreEntityTypeState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> featurestore,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> featurestore,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> updateTime) {
         this.createTime = createTime;
         this.etag = etag;
         this.featurestore = featurestore;
@@ -115,13 +115,13 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     }
 
     private AiFeatureStoreEntityTypeState() {
-        this.createTime = Input.empty();
-        this.etag = Input.empty();
-        this.featurestore = Input.empty();
-        this.labels = Input.empty();
-        this.monitoringConfig = Input.empty();
-        this.name = Input.empty();
-        this.updateTime = Input.empty();
+        this.createTime = Output.empty();
+        this.etag = Output.empty();
+        this.featurestore = Output.empty();
+        this.labels = Output.empty();
+        this.monitoringConfig = Output.empty();
+        this.name = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> featurestore;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> featurestore;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder featurestore(@Nullable Input<String> featurestore) {
+        public Builder featurestore(@Nullable Output<String> featurestore) {
             this.featurestore = featurestore;
             return this;
         }
 
         public Builder featurestore(@Nullable String featurestore) {
-            this.featurestore = Input.ofNullable(featurestore);
+            this.featurestore = Output.ofNullable(featurestore);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder monitoringConfig(@Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig) {
+        public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig) {
             this.monitoringConfig = monitoringConfig;
             return this;
         }
 
         public Builder monitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigGetArgs monitoringConfig) {
-            this.monitoringConfig = Input.ofNullable(monitoringConfig);
+            this.monitoringConfig = Output.ofNullable(monitoringConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public AiFeatureStoreEntityTypeState build() {

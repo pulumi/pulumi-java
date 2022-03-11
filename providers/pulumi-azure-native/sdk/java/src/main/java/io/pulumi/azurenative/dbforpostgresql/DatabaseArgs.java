@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="charset")
-      private final @Nullable Input<String> charset;
+      private final @Nullable Output<String> charset;
 
-    public Input<String> getCharset() {
-        return this.charset == null ? Input.empty() : this.charset;
+    public Output<String> getCharset() {
+        return this.charset == null ? Output.empty() : this.charset;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collation")
-      private final @Nullable Input<String> collation;
+      private final @Nullable Output<String> collation;
 
-    public Input<String> getCollation() {
-        return this.collation == null ? Input.empty() : this.collation;
+    public Output<String> getCollation() {
+        return this.collation == null ? Output.empty() : this.collation;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,18 +63,18 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
     public DatabaseArgs(
-        @Nullable Input<String> charset,
-        @Nullable Input<String> collation,
-        @Nullable Input<String> databaseName,
-        Input<String> resourceGroupName,
-        Input<String> serverName) {
+        @Nullable Output<String> charset,
+        @Nullable Output<String> collation,
+        @Nullable Output<String> databaseName,
+        Output<String> resourceGroupName,
+        Output<String> serverName) {
         this.charset = charset;
         this.collation = collation;
         this.databaseName = databaseName;
@@ -83,11 +83,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.charset = Input.empty();
-        this.collation = Input.empty();
-        this.databaseName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
+        this.charset = Output.empty();
+        this.collation = Output.empty();
+        this.databaseName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> charset;
-        private @Nullable Input<String> collation;
-        private @Nullable Input<String> databaseName;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
+        private @Nullable Output<String> charset;
+        private @Nullable Output<String> collation;
+        private @Nullable Output<String> databaseName;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder charset(@Nullable Input<String> charset) {
+        public Builder charset(@Nullable Output<String> charset) {
             this.charset = charset;
             return this;
         }
 
         public Builder charset(@Nullable String charset) {
-            this.charset = Input.ofNullable(charset);
+            this.charset = Output.ofNullable(charset);
             return this;
         }
 
-        public Builder collation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
 
         public Builder collation(@Nullable String collation) {
-            this.collation = Input.ofNullable(collation);
+            this.collation = Output.ofNullable(collation);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
         public DatabaseArgs build() {

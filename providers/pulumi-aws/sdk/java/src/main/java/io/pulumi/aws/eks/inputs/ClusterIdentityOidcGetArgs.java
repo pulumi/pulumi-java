@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ClusterIdentityOidcGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="issuer")
-      private final @Nullable Input<String> issuer;
+      private final @Nullable Output<String> issuer;
 
-    public Input<String> getIssuer() {
-        return this.issuer == null ? Input.empty() : this.issuer;
+    public Output<String> getIssuer() {
+        return this.issuer == null ? Output.empty() : this.issuer;
     }
 
-    public ClusterIdentityOidcGetArgs(@Nullable Input<String> issuer) {
+    public ClusterIdentityOidcGetArgs(@Nullable Output<String> issuer) {
         this.issuer = issuer;
     }
 
     private ClusterIdentityOidcGetArgs() {
-        this.issuer = Input.empty();
+        this.issuer = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ClusterIdentityOidcGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> issuer;
+        private @Nullable Output<String> issuer;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ClusterIdentityOidcGetArgs extends io.pulumi.resources.Resour
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder issuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Input.ofNullable(issuer);
+            this.issuer = Output.ofNullable(issuer);
             return this;
         }
         public ClusterIdentityOidcGetArgs build() {

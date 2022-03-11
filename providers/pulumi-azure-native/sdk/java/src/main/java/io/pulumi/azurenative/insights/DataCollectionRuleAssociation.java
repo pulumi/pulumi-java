@@ -6,7 +6,6 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.DataCollectionRuleAssociationArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -154,19 +153,19 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public DataCollectionRuleAssociation(String name, DataCollectionRuleAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:DataCollectionRuleAssociation", name, args == null ? DataCollectionRuleAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:insights:DataCollectionRuleAssociation", name, args == null ? DataCollectionRuleAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DataCollectionRuleAssociation(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DataCollectionRuleAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:DataCollectionRuleAssociation", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:insights/v20191101preview:DataCollectionRuleAssociation").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20210401:DataCollectionRuleAssociation").build())
+                Output.of(Alias.builder().setType("azure-native:insights/v20191101preview:DataCollectionRuleAssociation").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20210401:DataCollectionRuleAssociation").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -180,7 +179,7 @@ public class DataCollectionRuleAssociation extends io.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DataCollectionRuleAssociation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DataCollectionRuleAssociation get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataCollectionRuleAssociation(name, id, options);
     }
 }

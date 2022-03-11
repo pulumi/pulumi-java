@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class ContainerDeviceGetArgs extends io.pulumi.resources.ResourceAr
     public static final ContainerDeviceGetArgs Empty = new ContainerDeviceGetArgs();
 
     @InputImport(name="containerPath")
-      private final @Nullable Input<String> containerPath;
+      private final @Nullable Output<String> containerPath;
 
-    public Input<String> getContainerPath() {
-        return this.containerPath == null ? Input.empty() : this.containerPath;
+    public Output<String> getContainerPath() {
+        return this.containerPath == null ? Output.empty() : this.containerPath;
     }
 
     @InputImport(name="hostPath", required=true)
-      private final Input<String> hostPath;
+      private final Output<String> hostPath;
 
-    public Input<String> getHostPath() {
+    public Output<String> getHostPath() {
         return this.hostPath;
     }
 
     @InputImport(name="permissions")
-      private final @Nullable Input<String> permissions;
+      private final @Nullable Output<String> permissions;
 
-    public Input<String> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<String> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     public ContainerDeviceGetArgs(
-        @Nullable Input<String> containerPath,
-        Input<String> hostPath,
-        @Nullable Input<String> permissions) {
+        @Nullable Output<String> containerPath,
+        Output<String> hostPath,
+        @Nullable Output<String> permissions) {
         this.containerPath = containerPath;
         this.hostPath = Objects.requireNonNull(hostPath, "expected parameter 'hostPath' to be non-null");
         this.permissions = permissions;
     }
 
     private ContainerDeviceGetArgs() {
-        this.containerPath = Input.empty();
-        this.hostPath = Input.empty();
-        this.permissions = Input.empty();
+        this.containerPath = Output.empty();
+        this.hostPath = Output.empty();
+        this.permissions = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class ContainerDeviceGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerPath;
-        private Input<String> hostPath;
-        private @Nullable Input<String> permissions;
+        private @Nullable Output<String> containerPath;
+        private Output<String> hostPath;
+        private @Nullable Output<String> permissions;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class ContainerDeviceGetArgs extends io.pulumi.resources.ResourceAr
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder containerPath(@Nullable Input<String> containerPath) {
+        public Builder containerPath(@Nullable Output<String> containerPath) {
             this.containerPath = containerPath;
             return this;
         }
 
         public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Input.ofNullable(containerPath);
+            this.containerPath = Output.ofNullable(containerPath);
             return this;
         }
 
-        public Builder hostPath(Input<String> hostPath) {
+        public Builder hostPath(Output<String> hostPath) {
             this.hostPath = Objects.requireNonNull(hostPath);
             return this;
         }
 
         public Builder hostPath(String hostPath) {
-            this.hostPath = Input.of(Objects.requireNonNull(hostPath));
+            this.hostPath = Output.of(Objects.requireNonNull(hostPath));
             return this;
         }
 
-        public Builder permissions(@Nullable Input<String> permissions) {
+        public Builder permissions(@Nullable Output<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
         public ContainerDeviceGetArgs build() {

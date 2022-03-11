@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cidrBlock", required=true)
-      private final Input<String> cidrBlock;
+      private final Output<String> cidrBlock;
 
-    public Input<String> getCidrBlock() {
+    public Output<String> getCidrBlock() {
         return this.cidrBlock;
     }
 
@@ -30,10 +30,10 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reservationType", required=true)
-      private final Input<String> reservationType;
+      private final Output<String> reservationType;
 
-    public Input<String> getReservationType() {
+    public Output<String> getReservationType() {
         return this.reservationType;
     }
 
@@ -52,17 +52,17 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public SubnetCidrReservationArgs(
-        Input<String> cidrBlock,
-        @Nullable Input<String> description,
-        Input<String> reservationType,
-        Input<String> subnetId) {
+        Output<String> cidrBlock,
+        @Nullable Output<String> description,
+        Output<String> reservationType,
+        Output<String> subnetId) {
         this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
         this.description = description;
         this.reservationType = Objects.requireNonNull(reservationType, "expected parameter 'reservationType' to be non-null");
@@ -70,10 +70,10 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
     }
 
     private SubnetCidrReservationArgs() {
-        this.cidrBlock = Input.empty();
-        this.description = Input.empty();
-        this.reservationType = Input.empty();
-        this.subnetId = Input.empty();
+        this.cidrBlock = Output.empty();
+        this.description = Output.empty();
+        this.reservationType = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> cidrBlock;
-        private @Nullable Input<String> description;
-        private Input<String> reservationType;
-        private Input<String> subnetId;
+        private Output<String> cidrBlock;
+        private @Nullable Output<String> description;
+        private Output<String> reservationType;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder cidrBlock(Input<String> cidrBlock) {
+        public Builder cidrBlock(Output<String> cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Input.of(Objects.requireNonNull(cidrBlock));
+            this.cidrBlock = Output.of(Objects.requireNonNull(cidrBlock));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder reservationType(Input<String> reservationType) {
+        public Builder reservationType(Output<String> reservationType) {
             this.reservationType = Objects.requireNonNull(reservationType);
             return this;
         }
 
         public Builder reservationType(String reservationType) {
-            this.reservationType = Input.of(Objects.requireNonNull(reservationType));
+            this.reservationType = Output.of(Objects.requireNonNull(reservationType));
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public SubnetCidrReservationArgs build() {

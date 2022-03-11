@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ExclusionRuleMatchingType;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryArgs;
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dictionary")
-      private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
+      private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
-    public Input<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
-        return this.dictionary == null ? Input.empty() : this.dictionary;
+    public Output<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
+        return this.dictionary == null ? Output.empty() : this.dictionary;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="excludeInfoTypes")
-      private final @Nullable Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
+      private final @Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
 
-    public Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> getExcludeInfoTypes() {
-        return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
+    public Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> getExcludeInfoTypes() {
+        return this.excludeInfoTypes == null ? Output.empty() : this.excludeInfoTypes;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="matchingType")
-      private final @Nullable Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
+      private final @Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
 
-    public Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> getMatchingType() {
-        return this.matchingType == null ? Input.empty() : this.matchingType;
+    public Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> getMatchingType() {
+        return this.matchingType == null ? Output.empty() : this.matchingType;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
+      private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
-    public Input<GooglePrivacyDlpV2RegexArgs> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<GooglePrivacyDlpV2RegexArgs> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     public GooglePrivacyDlpV2ExclusionRuleArgs(
-        @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary,
-        @Nullable Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes,
-        @Nullable Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType,
-        @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex) {
+        @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary,
+        @Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes,
+        @Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType,
+        @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
         this.dictionary = dictionary;
         this.excludeInfoTypes = excludeInfoTypes;
         this.matchingType = matchingType;
@@ -77,10 +77,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
     }
 
     private GooglePrivacyDlpV2ExclusionRuleArgs() {
-        this.dictionary = Input.empty();
-        this.excludeInfoTypes = Input.empty();
-        this.matchingType = Input.empty();
-        this.regex = Input.empty();
+        this.dictionary = Output.empty();
+        this.excludeInfoTypes = Output.empty();
+        this.matchingType = Output.empty();
+        this.regex = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
-        private @Nullable Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
-        private @Nullable Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
-        private @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
+        private @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
+        private @Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
+        private @Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
+        private @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
     	      this.regex = defaults.regex;
         }
 
-        public Builder dictionary(@Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
+        public Builder dictionary(@Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
         public Builder dictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
-            this.dictionary = Input.ofNullable(dictionary);
+            this.dictionary = Output.ofNullable(dictionary);
             return this;
         }
 
-        public Builder excludeInfoTypes(@Nullable Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
         public Builder excludeInfoTypes(@Nullable GooglePrivacyDlpV2ExcludeInfoTypesArgs excludeInfoTypes) {
-            this.excludeInfoTypes = Input.ofNullable(excludeInfoTypes);
+            this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
             return this;
         }
 
-        public Builder matchingType(@Nullable Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType) {
+        public Builder matchingType(@Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType) {
             this.matchingType = matchingType;
             return this;
         }
 
         public Builder matchingType(@Nullable GooglePrivacyDlpV2ExclusionRuleMatchingType matchingType) {
-            this.matchingType = Input.ofNullable(matchingType);
+            this.matchingType = Output.ofNullable(matchingType);
             return this;
         }
 
-        public Builder regex(@Nullable Input<GooglePrivacyDlpV2RegexArgs> regex) {
+        public Builder regex(@Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
         public GooglePrivacyDlpV2ExclusionRuleArgs build() {

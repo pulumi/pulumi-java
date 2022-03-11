@@ -6,7 +6,7 @@ package io.pulumi.aws.apprunner.inputs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationAuthenticationConfigurationGetArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryGetArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationImageRepositoryGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="authenticationConfiguration")
-      private final @Nullable Input<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration;
+      private final @Nullable Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration;
 
-    public Input<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> getAuthenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
+    public Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> getAuthenticationConfiguration() {
+        return this.authenticationConfiguration == null ? Output.empty() : this.authenticationConfiguration;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="autoDeploymentsEnabled")
-      private final @Nullable Input<Boolean> autoDeploymentsEnabled;
+      private final @Nullable Output<Boolean> autoDeploymentsEnabled;
 
-    public Input<Boolean> getAutoDeploymentsEnabled() {
-        return this.autoDeploymentsEnabled == null ? Input.empty() : this.autoDeploymentsEnabled;
+    public Output<Boolean> getAutoDeploymentsEnabled() {
+        return this.autoDeploymentsEnabled == null ? Output.empty() : this.autoDeploymentsEnabled;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="codeRepository")
-      private final @Nullable Input<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository;
+      private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository;
 
-    public Input<ServiceSourceConfigurationCodeRepositoryGetArgs> getCodeRepository() {
-        return this.codeRepository == null ? Input.empty() : this.codeRepository;
+    public Output<ServiceSourceConfigurationCodeRepositoryGetArgs> getCodeRepository() {
+        return this.codeRepository == null ? Output.empty() : this.codeRepository;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="imageRepository")
-      private final @Nullable Input<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository;
+      private final @Nullable Output<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository;
 
-    public Input<ServiceSourceConfigurationImageRepositoryGetArgs> getImageRepository() {
-        return this.imageRepository == null ? Input.empty() : this.imageRepository;
+    public Output<ServiceSourceConfigurationImageRepositoryGetArgs> getImageRepository() {
+        return this.imageRepository == null ? Output.empty() : this.imageRepository;
     }
 
     public ServiceSourceConfigurationGetArgs(
-        @Nullable Input<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration,
-        @Nullable Input<Boolean> autoDeploymentsEnabled,
-        @Nullable Input<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository,
-        @Nullable Input<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository) {
+        @Nullable Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration,
+        @Nullable Output<Boolean> autoDeploymentsEnabled,
+        @Nullable Output<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository,
+        @Nullable Output<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository) {
         this.authenticationConfiguration = authenticationConfiguration;
         this.autoDeploymentsEnabled = autoDeploymentsEnabled;
         this.codeRepository = codeRepository;
@@ -73,10 +73,10 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
     }
 
     private ServiceSourceConfigurationGetArgs() {
-        this.authenticationConfiguration = Input.empty();
-        this.autoDeploymentsEnabled = Input.empty();
-        this.codeRepository = Input.empty();
-        this.imageRepository = Input.empty();
+        this.authenticationConfiguration = Output.empty();
+        this.autoDeploymentsEnabled = Output.empty();
+        this.codeRepository = Output.empty();
+        this.imageRepository = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration;
-        private @Nullable Input<Boolean> autoDeploymentsEnabled;
-        private @Nullable Input<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository;
-        private @Nullable Input<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository;
+        private @Nullable Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration;
+        private @Nullable Output<Boolean> autoDeploymentsEnabled;
+        private @Nullable Output<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository;
+        private @Nullable Output<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
     	      this.imageRepository = defaults.imageRepository;
         }
 
-        public Builder authenticationConfiguration(@Nullable Input<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
         public Builder authenticationConfiguration(@Nullable ServiceSourceConfigurationAuthenticationConfigurationGetArgs authenticationConfiguration) {
-            this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
+            this.authenticationConfiguration = Output.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder autoDeploymentsEnabled(@Nullable Input<Boolean> autoDeploymentsEnabled) {
+        public Builder autoDeploymentsEnabled(@Nullable Output<Boolean> autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
 
         public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
-            this.autoDeploymentsEnabled = Input.ofNullable(autoDeploymentsEnabled);
+            this.autoDeploymentsEnabled = Output.ofNullable(autoDeploymentsEnabled);
             return this;
         }
 
-        public Builder codeRepository(@Nullable Input<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository) {
+        public Builder codeRepository(@Nullable Output<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository) {
             this.codeRepository = codeRepository;
             return this;
         }
 
         public Builder codeRepository(@Nullable ServiceSourceConfigurationCodeRepositoryGetArgs codeRepository) {
-            this.codeRepository = Input.ofNullable(codeRepository);
+            this.codeRepository = Output.ofNullable(codeRepository);
             return this;
         }
 
-        public Builder imageRepository(@Nullable Input<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository) {
+        public Builder imageRepository(@Nullable Output<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }
 
         public Builder imageRepository(@Nullable ServiceSourceConfigurationImageRepositoryGetArgs imageRepository) {
-            this.imageRepository = Input.ofNullable(imageRepository);
+            this.imageRepository = Output.ofNullable(imageRepository);
             return this;
         }
         public ServiceSourceConfigurationGetArgs build() {

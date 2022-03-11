@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class ResolverPipelineConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="functions")
-      private final @Nullable Input<List<String>> functions;
+      private final @Nullable Output<List<String>> functions;
 
-    public Input<List<String>> getFunctions() {
-        return this.functions == null ? Input.empty() : this.functions;
+    public Output<List<String>> getFunctions() {
+        return this.functions == null ? Output.empty() : this.functions;
     }
 
-    public ResolverPipelineConfigArgs(@Nullable Input<List<String>> functions) {
+    public ResolverPipelineConfigArgs(@Nullable Output<List<String>> functions) {
         this.functions = functions;
     }
 
     private ResolverPipelineConfigArgs() {
-        this.functions = Input.empty();
+        this.functions = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ResolverPipelineConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> functions;
+        private @Nullable Output<List<String>> functions;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ResolverPipelineConfigArgs extends io.pulumi.resources.Resour
     	      this.functions = defaults.functions;
         }
 
-        public Builder functions(@Nullable Input<List<String>> functions) {
+        public Builder functions(@Nullable Output<List<String>> functions) {
             this.functions = functions;
             return this;
         }
 
         public Builder functions(@Nullable List<String> functions) {
-            this.functions = Input.ofNullable(functions);
+            this.functions = Output.ofNullable(functions);
             return this;
         }
         public ResolverPipelineConfigArgs build() {

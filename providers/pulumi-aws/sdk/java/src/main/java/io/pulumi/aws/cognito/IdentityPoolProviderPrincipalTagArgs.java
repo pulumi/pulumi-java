@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="identityPoolId", required=true)
-      private final Input<String> identityPoolId;
+      private final Output<String> identityPoolId;
 
-    public Input<String> getIdentityPoolId() {
+    public Output<String> getIdentityPoolId() {
         return this.identityPoolId;
     }
 
@@ -34,31 +34,31 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="identityProviderName", required=true)
-      private final Input<String> identityProviderName;
+      private final Output<String> identityProviderName;
 
-    public Input<String> getIdentityProviderName() {
+    public Output<String> getIdentityProviderName() {
         return this.identityProviderName;
     }
 
     @InputImport(name="principalTags")
-      private final @Nullable Input<Map<String,String>> principalTags;
+      private final @Nullable Output<Map<String,String>> principalTags;
 
-    public Input<Map<String,String>> getPrincipalTags() {
-        return this.principalTags == null ? Input.empty() : this.principalTags;
+    public Output<Map<String,String>> getPrincipalTags() {
+        return this.principalTags == null ? Output.empty() : this.principalTags;
     }
 
     @InputImport(name="useDefaults")
-      private final @Nullable Input<Boolean> useDefaults;
+      private final @Nullable Output<Boolean> useDefaults;
 
-    public Input<Boolean> getUseDefaults() {
-        return this.useDefaults == null ? Input.empty() : this.useDefaults;
+    public Output<Boolean> getUseDefaults() {
+        return this.useDefaults == null ? Output.empty() : this.useDefaults;
     }
 
     public IdentityPoolProviderPrincipalTagArgs(
-        Input<String> identityPoolId,
-        Input<String> identityProviderName,
-        @Nullable Input<Map<String,String>> principalTags,
-        @Nullable Input<Boolean> useDefaults) {
+        Output<String> identityPoolId,
+        Output<String> identityProviderName,
+        @Nullable Output<Map<String,String>> principalTags,
+        @Nullable Output<Boolean> useDefaults) {
         this.identityPoolId = Objects.requireNonNull(identityPoolId, "expected parameter 'identityPoolId' to be non-null");
         this.identityProviderName = Objects.requireNonNull(identityProviderName, "expected parameter 'identityProviderName' to be non-null");
         this.principalTags = principalTags;
@@ -66,10 +66,10 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
     }
 
     private IdentityPoolProviderPrincipalTagArgs() {
-        this.identityPoolId = Input.empty();
-        this.identityProviderName = Input.empty();
-        this.principalTags = Input.empty();
-        this.useDefaults = Input.empty();
+        this.identityPoolId = Output.empty();
+        this.identityProviderName = Output.empty();
+        this.principalTags = Output.empty();
+        this.useDefaults = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,10 +81,10 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> identityPoolId;
-        private Input<String> identityProviderName;
-        private @Nullable Input<Map<String,String>> principalTags;
-        private @Nullable Input<Boolean> useDefaults;
+        private Output<String> identityPoolId;
+        private Output<String> identityProviderName;
+        private @Nullable Output<Map<String,String>> principalTags;
+        private @Nullable Output<Boolean> useDefaults;
 
         public Builder() {
     	      // Empty
@@ -98,43 +98,43 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
     	      this.useDefaults = defaults.useDefaults;
         }
 
-        public Builder identityPoolId(Input<String> identityPoolId) {
+        public Builder identityPoolId(Output<String> identityPoolId) {
             this.identityPoolId = Objects.requireNonNull(identityPoolId);
             return this;
         }
 
         public Builder identityPoolId(String identityPoolId) {
-            this.identityPoolId = Input.of(Objects.requireNonNull(identityPoolId));
+            this.identityPoolId = Output.of(Objects.requireNonNull(identityPoolId));
             return this;
         }
 
-        public Builder identityProviderName(Input<String> identityProviderName) {
+        public Builder identityProviderName(Output<String> identityProviderName) {
             this.identityProviderName = Objects.requireNonNull(identityProviderName);
             return this;
         }
 
         public Builder identityProviderName(String identityProviderName) {
-            this.identityProviderName = Input.of(Objects.requireNonNull(identityProviderName));
+            this.identityProviderName = Output.of(Objects.requireNonNull(identityProviderName));
             return this;
         }
 
-        public Builder principalTags(@Nullable Input<Map<String,String>> principalTags) {
+        public Builder principalTags(@Nullable Output<Map<String,String>> principalTags) {
             this.principalTags = principalTags;
             return this;
         }
 
         public Builder principalTags(@Nullable Map<String,String> principalTags) {
-            this.principalTags = Input.ofNullable(principalTags);
+            this.principalTags = Output.ofNullable(principalTags);
             return this;
         }
 
-        public Builder useDefaults(@Nullable Input<Boolean> useDefaults) {
+        public Builder useDefaults(@Nullable Output<Boolean> useDefaults) {
             this.useDefaults = useDefaults;
             return this;
         }
 
         public Builder useDefaults(@Nullable Boolean useDefaults) {
-            this.useDefaults = Input.ofNullable(useDefaults);
+            this.useDefaults = Output.ofNullable(useDefaults);
             return this;
         }
         public IdentityPoolProviderPrincipalTagArgs build() {

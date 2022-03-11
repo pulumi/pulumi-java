@@ -6,7 +6,7 @@ package io.pulumi.azurenative.chaos.inputs;
 import io.pulumi.azurenative.chaos.inputs.ContinuousActionArgs;
 import io.pulumi.azurenative.chaos.inputs.DelayActionArgs;
 import io.pulumi.azurenative.chaos.inputs.DiscreteActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-      private final Input<List<Object>> actions;
+      private final Output<List<Object>> actions;
 
-    public Input<List<Object>> getActions() {
+    public Output<List<Object>> getActions() {
         return this.actions;
     }
 
@@ -38,22 +38,22 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public BranchArgs(
-        Input<List<Object>> actions,
-        Input<String> name) {
+        Output<List<Object>> actions,
+        Output<String> name) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private BranchArgs() {
-        this.actions = Input.empty();
-        this.name = Input.empty();
+        this.actions = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<Object>> actions;
-        private Input<String> name;
+        private Output<List<Object>> actions;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder actions(Input<List<Object>> actions) {
+        public Builder actions(Output<List<Object>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<Object> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public BranchArgs build() {

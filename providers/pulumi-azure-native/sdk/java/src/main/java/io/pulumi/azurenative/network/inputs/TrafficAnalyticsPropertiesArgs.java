@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.TrafficAnalyticsConfigurationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkWatcherFlowAnalyticsConfiguration")
-      private final @Nullable Input<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
+      private final @Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
 
-    public Input<TrafficAnalyticsConfigurationPropertiesArgs> getNetworkWatcherFlowAnalyticsConfiguration() {
-        return this.networkWatcherFlowAnalyticsConfiguration == null ? Input.empty() : this.networkWatcherFlowAnalyticsConfiguration;
+    public Output<TrafficAnalyticsConfigurationPropertiesArgs> getNetworkWatcherFlowAnalyticsConfiguration() {
+        return this.networkWatcherFlowAnalyticsConfiguration == null ? Output.empty() : this.networkWatcherFlowAnalyticsConfiguration;
     }
 
-    public TrafficAnalyticsPropertiesArgs(@Nullable Input<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration) {
+    public TrafficAnalyticsPropertiesArgs(@Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration) {
         this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
     }
 
     private TrafficAnalyticsPropertiesArgs() {
-        this.networkWatcherFlowAnalyticsConfiguration = Input.empty();
+        this.networkWatcherFlowAnalyticsConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
+        private @Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
     	      this.networkWatcherFlowAnalyticsConfiguration = defaults.networkWatcherFlowAnalyticsConfiguration;
         }
 
-        public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable Input<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration) {
+        public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration) {
             this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
             return this;
         }
 
         public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsConfigurationPropertiesArgs networkWatcherFlowAnalyticsConfiguration) {
-            this.networkWatcherFlowAnalyticsConfiguration = Input.ofNullable(networkWatcherFlowAnalyticsConfiguration);
+            this.networkWatcherFlowAnalyticsConfiguration = Output.ofNullable(networkWatcherFlowAnalyticsConfiguration);
             return this;
         }
         public TrafficAnalyticsPropertiesArgs build() {

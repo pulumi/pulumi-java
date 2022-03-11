@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,29 +20,29 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digest")
-      private final @Nullable Input<Map<String,String>> digest;
+      private final @Nullable Output<Map<String,String>> digest;
 
-    public Input<Map<String,String>> getDigest() {
-        return this.digest == null ? Input.empty() : this.digest;
+    public Output<Map<String,String>> getDigest() {
+        return this.digest == null ? Output.empty() : this.digest;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public SubjectArgs(
-        @Nullable Input<Map<String,String>> digest,
-        @Nullable Input<String> name) {
+        @Nullable Output<Map<String,String>> digest,
+        @Nullable Output<String> name) {
         this.digest = digest;
         this.name = name;
     }
 
     private SubjectArgs() {
-        this.digest = Input.empty();
-        this.name = Input.empty();
+        this.digest = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> digest;
-        private @Nullable Input<String> name;
+        private @Nullable Output<Map<String,String>> digest;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder digest(@Nullable Input<Map<String,String>> digest) {
+        public Builder digest(@Nullable Output<Map<String,String>> digest) {
             this.digest = digest;
             return this;
         }
 
         public Builder digest(@Nullable Map<String,String> digest) {
-            this.digest = Input.ofNullable(digest);
+            this.digest = Output.ofNullable(digest);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public SubjectArgs build() {

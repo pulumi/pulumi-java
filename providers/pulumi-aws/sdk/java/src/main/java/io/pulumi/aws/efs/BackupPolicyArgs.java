@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs;
 
 import io.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPolicy", required=true)
-      private final Input<BackupPolicyBackupPolicyArgs> backupPolicy;
+      private final Output<BackupPolicyBackupPolicyArgs> backupPolicy;
 
-    public Input<BackupPolicyBackupPolicyArgs> getBackupPolicy() {
+    public Output<BackupPolicyBackupPolicyArgs> getBackupPolicy() {
         return this.backupPolicy;
     }
 
@@ -30,22 +30,22 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-      private final Input<String> fileSystemId;
+      private final Output<String> fileSystemId;
 
-    public Input<String> getFileSystemId() {
+    public Output<String> getFileSystemId() {
         return this.fileSystemId;
     }
 
     public BackupPolicyArgs(
-        Input<BackupPolicyBackupPolicyArgs> backupPolicy,
-        Input<String> fileSystemId) {
+        Output<BackupPolicyBackupPolicyArgs> backupPolicy,
+        Output<String> fileSystemId) {
         this.backupPolicy = Objects.requireNonNull(backupPolicy, "expected parameter 'backupPolicy' to be non-null");
         this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
     }
 
     private BackupPolicyArgs() {
-        this.backupPolicy = Input.empty();
-        this.fileSystemId = Input.empty();
+        this.backupPolicy = Output.empty();
+        this.fileSystemId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<BackupPolicyBackupPolicyArgs> backupPolicy;
-        private Input<String> fileSystemId;
+        private Output<BackupPolicyBackupPolicyArgs> backupPolicy;
+        private Output<String> fileSystemId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fileSystemId = defaults.fileSystemId;
         }
 
-        public Builder backupPolicy(Input<BackupPolicyBackupPolicyArgs> backupPolicy) {
+        public Builder backupPolicy(Output<BackupPolicyBackupPolicyArgs> backupPolicy) {
             this.backupPolicy = Objects.requireNonNull(backupPolicy);
             return this;
         }
 
         public Builder backupPolicy(BackupPolicyBackupPolicyArgs backupPolicy) {
-            this.backupPolicy = Input.of(Objects.requireNonNull(backupPolicy));
+            this.backupPolicy = Output.of(Objects.requireNonNull(backupPolicy));
             return this;
         }
 
-        public Builder fileSystemId(Input<String> fileSystemId) {
+        public Builder fileSystemId(Output<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Input.of(Objects.requireNonNull(fileSystemId));
+            this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
         public BackupPolicyArgs build() {

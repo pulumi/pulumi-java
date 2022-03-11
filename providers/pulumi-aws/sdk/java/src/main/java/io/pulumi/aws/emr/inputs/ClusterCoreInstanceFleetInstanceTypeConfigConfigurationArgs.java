@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs e
      * 
      */
     @InputImport(name="classification")
-      private final @Nullable Input<String> classification;
+      private final @Nullable Output<String> classification;
 
-    public Input<String> getClassification() {
-        return this.classification == null ? Input.empty() : this.classification;
+    public Output<String> getClassification() {
+        return this.classification == null ? Output.empty() : this.classification;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs e
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,Object>> properties;
+      private final @Nullable Output<Map<String,Object>> properties;
 
-    public Input<Map<String,Object>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,Object>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs(
-        @Nullable Input<String> classification,
-        @Nullable Input<Map<String,Object>> properties) {
+        @Nullable Output<String> classification,
+        @Nullable Output<Map<String,Object>> properties) {
         this.classification = classification;
         this.properties = properties;
     }
 
     private ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs() {
-        this.classification = Input.empty();
-        this.properties = Input.empty();
+        this.classification = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<String> classification;
-        private @Nullable Input<Map<String,Object>> properties;
+        private @Nullable Output<String> classification;
+        private @Nullable Output<Map<String,Object>> properties;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs e
     	      this.properties = defaults.properties;
         }
 
-        public Builder classification(@Nullable Input<String> classification) {
+        public Builder classification(@Nullable Output<String> classification) {
             this.classification = classification;
             return this;
         }
 
         public Builder classification(@Nullable String classification) {
-            this.classification = Input.ofNullable(classification);
+            this.classification = Output.ofNullable(classification);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,Object>> properties) {
+        public Builder properties(@Nullable Output<Map<String,Object>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,Object> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs build() {

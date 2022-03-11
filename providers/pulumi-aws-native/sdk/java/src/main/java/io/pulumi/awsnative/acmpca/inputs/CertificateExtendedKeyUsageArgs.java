@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
     public static final CertificateExtendedKeyUsageArgs Empty = new CertificateExtendedKeyUsageArgs();
 
     @InputImport(name="extendedKeyUsageObjectIdentifier")
-      private final @Nullable Input<String> extendedKeyUsageObjectIdentifier;
+      private final @Nullable Output<String> extendedKeyUsageObjectIdentifier;
 
-    public Input<String> getExtendedKeyUsageObjectIdentifier() {
-        return this.extendedKeyUsageObjectIdentifier == null ? Input.empty() : this.extendedKeyUsageObjectIdentifier;
+    public Output<String> getExtendedKeyUsageObjectIdentifier() {
+        return this.extendedKeyUsageObjectIdentifier == null ? Output.empty() : this.extendedKeyUsageObjectIdentifier;
     }
 
     @InputImport(name="extendedKeyUsageType")
-      private final @Nullable Input<String> extendedKeyUsageType;
+      private final @Nullable Output<String> extendedKeyUsageType;
 
-    public Input<String> getExtendedKeyUsageType() {
-        return this.extendedKeyUsageType == null ? Input.empty() : this.extendedKeyUsageType;
+    public Output<String> getExtendedKeyUsageType() {
+        return this.extendedKeyUsageType == null ? Output.empty() : this.extendedKeyUsageType;
     }
 
     public CertificateExtendedKeyUsageArgs(
-        @Nullable Input<String> extendedKeyUsageObjectIdentifier,
-        @Nullable Input<String> extendedKeyUsageType) {
+        @Nullable Output<String> extendedKeyUsageObjectIdentifier,
+        @Nullable Output<String> extendedKeyUsageType) {
         this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
         this.extendedKeyUsageType = extendedKeyUsageType;
     }
 
     private CertificateExtendedKeyUsageArgs() {
-        this.extendedKeyUsageObjectIdentifier = Input.empty();
-        this.extendedKeyUsageType = Input.empty();
+        this.extendedKeyUsageObjectIdentifier = Output.empty();
+        this.extendedKeyUsageType = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> extendedKeyUsageObjectIdentifier;
-        private @Nullable Input<String> extendedKeyUsageType;
+        private @Nullable Output<String> extendedKeyUsageObjectIdentifier;
+        private @Nullable Output<String> extendedKeyUsageType;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
     	      this.extendedKeyUsageType = defaults.extendedKeyUsageType;
         }
 
-        public Builder extendedKeyUsageObjectIdentifier(@Nullable Input<String> extendedKeyUsageObjectIdentifier) {
+        public Builder extendedKeyUsageObjectIdentifier(@Nullable Output<String> extendedKeyUsageObjectIdentifier) {
             this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
             return this;
         }
 
         public Builder extendedKeyUsageObjectIdentifier(@Nullable String extendedKeyUsageObjectIdentifier) {
-            this.extendedKeyUsageObjectIdentifier = Input.ofNullable(extendedKeyUsageObjectIdentifier);
+            this.extendedKeyUsageObjectIdentifier = Output.ofNullable(extendedKeyUsageObjectIdentifier);
             return this;
         }
 
-        public Builder extendedKeyUsageType(@Nullable Input<String> extendedKeyUsageType) {
+        public Builder extendedKeyUsageType(@Nullable Output<String> extendedKeyUsageType) {
             this.extendedKeyUsageType = extendedKeyUsageType;
             return this;
         }
 
         public Builder extendedKeyUsageType(@Nullable String extendedKeyUsageType) {
-            this.extendedKeyUsageType = Input.ofNullable(extendedKeyUsageType);
+            this.extendedKeyUsageType = Output.ofNullable(extendedKeyUsageType);
             return this;
         }
         public CertificateExtendedKeyUsageArgs build() {

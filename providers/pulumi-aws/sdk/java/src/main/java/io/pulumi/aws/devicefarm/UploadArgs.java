@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.devicefarm;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectArn", required=true)
-      private final Input<String> projectArn;
+      private final Output<String> projectArn;
 
-    public Input<String> getProjectArn() {
+    public Output<String> getProjectArn() {
         return this.projectArn;
     }
 
@@ -52,17 +52,17 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public UploadArgs(
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> name,
-        Input<String> projectArn,
-        Input<String> type) {
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> name,
+        Output<String> projectArn,
+        Output<String> type) {
         this.contentType = contentType;
         this.name = name;
         this.projectArn = Objects.requireNonNull(projectArn, "expected parameter 'projectArn' to be non-null");
@@ -70,10 +70,10 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UploadArgs() {
-        this.contentType = Input.empty();
-        this.name = Input.empty();
-        this.projectArn = Input.empty();
-        this.type = Input.empty();
+        this.contentType = Output.empty();
+        this.name = Output.empty();
+        this.projectArn = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> name;
-        private Input<String> projectArn;
-        private Input<String> type;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> name;
+        private Output<String> projectArn;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder projectArn(Input<String> projectArn) {
+        public Builder projectArn(Output<String> projectArn) {
             this.projectArn = Objects.requireNonNull(projectArn);
             return this;
         }
 
         public Builder projectArn(String projectArn) {
-            this.projectArn = Input.of(Objects.requireNonNull(projectArn));
+            this.projectArn = Output.of(Objects.requireNonNull(projectArn));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public UploadArgs build() {

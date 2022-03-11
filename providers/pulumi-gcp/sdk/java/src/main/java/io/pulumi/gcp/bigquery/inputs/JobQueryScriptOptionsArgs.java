@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyResultStatement")
-      private final @Nullable Input<String> keyResultStatement;
+      private final @Nullable Output<String> keyResultStatement;
 
-    public Input<String> getKeyResultStatement() {
-        return this.keyResultStatement == null ? Input.empty() : this.keyResultStatement;
+    public Output<String> getKeyResultStatement() {
+        return this.keyResultStatement == null ? Output.empty() : this.keyResultStatement;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="statementByteBudget")
-      private final @Nullable Input<String> statementByteBudget;
+      private final @Nullable Output<String> statementByteBudget;
 
-    public Input<String> getStatementByteBudget() {
-        return this.statementByteBudget == null ? Input.empty() : this.statementByteBudget;
+    public Output<String> getStatementByteBudget() {
+        return this.statementByteBudget == null ? Output.empty() : this.statementByteBudget;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="statementTimeoutMs")
-      private final @Nullable Input<String> statementTimeoutMs;
+      private final @Nullable Output<String> statementTimeoutMs;
 
-    public Input<String> getStatementTimeoutMs() {
-        return this.statementTimeoutMs == null ? Input.empty() : this.statementTimeoutMs;
+    public Output<String> getStatementTimeoutMs() {
+        return this.statementTimeoutMs == null ? Output.empty() : this.statementTimeoutMs;
     }
 
     public JobQueryScriptOptionsArgs(
-        @Nullable Input<String> keyResultStatement,
-        @Nullable Input<String> statementByteBudget,
-        @Nullable Input<String> statementTimeoutMs) {
+        @Nullable Output<String> keyResultStatement,
+        @Nullable Output<String> statementByteBudget,
+        @Nullable Output<String> statementTimeoutMs) {
         this.keyResultStatement = keyResultStatement;
         this.statementByteBudget = statementByteBudget;
         this.statementTimeoutMs = statementTimeoutMs;
     }
 
     private JobQueryScriptOptionsArgs() {
-        this.keyResultStatement = Input.empty();
-        this.statementByteBudget = Input.empty();
-        this.statementTimeoutMs = Input.empty();
+        this.keyResultStatement = Output.empty();
+        this.statementByteBudget = Output.empty();
+        this.statementTimeoutMs = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyResultStatement;
-        private @Nullable Input<String> statementByteBudget;
-        private @Nullable Input<String> statementTimeoutMs;
+        private @Nullable Output<String> keyResultStatement;
+        private @Nullable Output<String> statementByteBudget;
+        private @Nullable Output<String> statementTimeoutMs;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
     	      this.statementTimeoutMs = defaults.statementTimeoutMs;
         }
 
-        public Builder keyResultStatement(@Nullable Input<String> keyResultStatement) {
+        public Builder keyResultStatement(@Nullable Output<String> keyResultStatement) {
             this.keyResultStatement = keyResultStatement;
             return this;
         }
 
         public Builder keyResultStatement(@Nullable String keyResultStatement) {
-            this.keyResultStatement = Input.ofNullable(keyResultStatement);
+            this.keyResultStatement = Output.ofNullable(keyResultStatement);
             return this;
         }
 
-        public Builder statementByteBudget(@Nullable Input<String> statementByteBudget) {
+        public Builder statementByteBudget(@Nullable Output<String> statementByteBudget) {
             this.statementByteBudget = statementByteBudget;
             return this;
         }
 
         public Builder statementByteBudget(@Nullable String statementByteBudget) {
-            this.statementByteBudget = Input.ofNullable(statementByteBudget);
+            this.statementByteBudget = Output.ofNullable(statementByteBudget);
             return this;
         }
 
-        public Builder statementTimeoutMs(@Nullable Input<String> statementTimeoutMs) {
+        public Builder statementTimeoutMs(@Nullable Output<String> statementTimeoutMs) {
             this.statementTimeoutMs = statementTimeoutMs;
             return this;
         }
 
         public Builder statementTimeoutMs(@Nullable String statementTimeoutMs) {
-            this.statementTimeoutMs = Input.ofNullable(statementTimeoutMs);
+            this.statementTimeoutMs = Output.ofNullable(statementTimeoutMs);
             return this;
         }
         public JobQueryScriptOptionsArgs build() {

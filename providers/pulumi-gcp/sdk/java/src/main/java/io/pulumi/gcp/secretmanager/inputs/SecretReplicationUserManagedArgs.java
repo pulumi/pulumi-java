@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedReplicaArgs;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class SecretReplicationUserManagedArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="replicas", required=true)
-      private final Input<List<SecretReplicationUserManagedReplicaArgs>> replicas;
+      private final Output<List<SecretReplicationUserManagedReplicaArgs>> replicas;
 
-    public Input<List<SecretReplicationUserManagedReplicaArgs>> getReplicas() {
+    public Output<List<SecretReplicationUserManagedReplicaArgs>> getReplicas() {
         return this.replicas;
     }
 
-    public SecretReplicationUserManagedArgs(Input<List<SecretReplicationUserManagedReplicaArgs>> replicas) {
+    public SecretReplicationUserManagedArgs(Output<List<SecretReplicationUserManagedReplicaArgs>> replicas) {
         this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
     }
 
     private SecretReplicationUserManagedArgs() {
-        this.replicas = Input.empty();
+        this.replicas = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class SecretReplicationUserManagedArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<List<SecretReplicationUserManagedReplicaArgs>> replicas;
+        private Output<List<SecretReplicationUserManagedReplicaArgs>> replicas;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class SecretReplicationUserManagedArgs extends io.pulumi.resources.
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder replicas(Input<List<SecretReplicationUserManagedReplicaArgs>> replicas) {
+        public Builder replicas(Output<List<SecretReplicationUserManagedReplicaArgs>> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
 
         public Builder replicas(List<SecretReplicationUserManagedReplicaArgs> replicas) {
-            this.replicas = Input.of(Objects.requireNonNull(replicas));
+            this.replicas = Output.of(Objects.requireNonNull(replicas));
             return this;
         }
         public SecretReplicationUserManagedArgs build() {

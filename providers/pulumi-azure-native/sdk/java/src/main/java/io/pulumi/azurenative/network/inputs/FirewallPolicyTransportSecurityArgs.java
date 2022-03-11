@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyCertificateAuthorityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class FirewallPolicyTransportSecurityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificateAuthority")
-      private final @Nullable Input<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
+      private final @Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
 
-    public Input<FirewallPolicyCertificateAuthorityArgs> getCertificateAuthority() {
-        return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;
+    public Output<FirewallPolicyCertificateAuthorityArgs> getCertificateAuthority() {
+        return this.certificateAuthority == null ? Output.empty() : this.certificateAuthority;
     }
 
-    public FirewallPolicyTransportSecurityArgs(@Nullable Input<FirewallPolicyCertificateAuthorityArgs> certificateAuthority) {
+    public FirewallPolicyTransportSecurityArgs(@Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority) {
         this.certificateAuthority = certificateAuthority;
     }
 
     private FirewallPolicyTransportSecurityArgs() {
-        this.certificateAuthority = Input.empty();
+        this.certificateAuthority = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FirewallPolicyTransportSecurityArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
+        private @Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FirewallPolicyTransportSecurityArgs extends io.pulumi.resourc
     	      this.certificateAuthority = defaults.certificateAuthority;
         }
 
-        public Builder certificateAuthority(@Nullable Input<FirewallPolicyCertificateAuthorityArgs> certificateAuthority) {
+        public Builder certificateAuthority(@Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
 
         public Builder certificateAuthority(@Nullable FirewallPolicyCertificateAuthorityArgs certificateAuthority) {
-            this.certificateAuthority = Input.ofNullable(certificateAuthority);
+            this.certificateAuthority = Output.ofNullable(certificateAuthority);
             return this;
         }
         public FirewallPolicyTransportSecurityArgs build() {

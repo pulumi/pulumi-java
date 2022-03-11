@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elb;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class ListenerPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerName", required=true)
-      private final Input<String> loadBalancerName;
+      private final Output<String> loadBalancerName;
 
-    public Input<String> getLoadBalancerName() {
+    public Output<String> getLoadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -32,9 +32,9 @@ public final class ListenerPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerPort", required=true)
-      private final Input<Integer> loadBalancerPort;
+      private final Output<Integer> loadBalancerPort;
 
-    public Input<Integer> getLoadBalancerPort() {
+    public Output<Integer> getLoadBalancerPort() {
         return this.loadBalancerPort;
     }
 
@@ -43,25 +43,25 @@ public final class ListenerPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyNames")
-      private final @Nullable Input<List<String>> policyNames;
+      private final @Nullable Output<List<String>> policyNames;
 
-    public Input<List<String>> getPolicyNames() {
-        return this.policyNames == null ? Input.empty() : this.policyNames;
+    public Output<List<String>> getPolicyNames() {
+        return this.policyNames == null ? Output.empty() : this.policyNames;
     }
 
     public ListenerPolicyArgs(
-        Input<String> loadBalancerName,
-        Input<Integer> loadBalancerPort,
-        @Nullable Input<List<String>> policyNames) {
+        Output<String> loadBalancerName,
+        Output<Integer> loadBalancerPort,
+        @Nullable Output<List<String>> policyNames) {
         this.loadBalancerName = Objects.requireNonNull(loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
         this.loadBalancerPort = Objects.requireNonNull(loadBalancerPort, "expected parameter 'loadBalancerPort' to be non-null");
         this.policyNames = policyNames;
     }
 
     private ListenerPolicyArgs() {
-        this.loadBalancerName = Input.empty();
-        this.loadBalancerPort = Input.empty();
-        this.policyNames = Input.empty();
+        this.loadBalancerName = Output.empty();
+        this.loadBalancerPort = Output.empty();
+        this.policyNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ListenerPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> loadBalancerName;
-        private Input<Integer> loadBalancerPort;
-        private @Nullable Input<List<String>> policyNames;
+        private Output<String> loadBalancerName;
+        private Output<Integer> loadBalancerPort;
+        private @Nullable Output<List<String>> policyNames;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ListenerPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyNames = defaults.policyNames;
         }
 
-        public Builder loadBalancerName(Input<String> loadBalancerName) {
+        public Builder loadBalancerName(Output<String> loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
 
         public Builder loadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = Input.of(Objects.requireNonNull(loadBalancerName));
+            this.loadBalancerName = Output.of(Objects.requireNonNull(loadBalancerName));
             return this;
         }
 
-        public Builder loadBalancerPort(Input<Integer> loadBalancerPort) {
+        public Builder loadBalancerPort(Output<Integer> loadBalancerPort) {
             this.loadBalancerPort = Objects.requireNonNull(loadBalancerPort);
             return this;
         }
 
         public Builder loadBalancerPort(Integer loadBalancerPort) {
-            this.loadBalancerPort = Input.of(Objects.requireNonNull(loadBalancerPort));
+            this.loadBalancerPort = Output.of(Objects.requireNonNull(loadBalancerPort));
             return this;
         }
 
-        public Builder policyNames(@Nullable Input<List<String>> policyNames) {
+        public Builder policyNames(@Nullable Output<List<String>> policyNames) {
             this.policyNames = policyNames;
             return this;
         }
 
         public Builder policyNames(@Nullable List<String> policyNames) {
-            this.policyNames = Input.ofNullable(policyNames);
+            this.policyNames = Output.ofNullable(policyNames);
             return this;
         }
         public ListenerPolicyArgs build() {

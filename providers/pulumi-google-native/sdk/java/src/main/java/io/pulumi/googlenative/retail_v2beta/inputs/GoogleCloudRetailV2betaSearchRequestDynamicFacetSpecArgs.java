@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2beta.enums.GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs exte
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode;
+      private final @Nullable Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode;
 
-    public Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
-    public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs(@Nullable Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode) {
+    public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs(@Nullable Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode) {
         this.mode = mode;
     }
 
     private GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs() {
-        this.mode = Input.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode;
+        private @Nullable Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs exte
     	      this.mode = defaults.mode;
         }
 
-        public Builder mode(@Nullable Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode) {
+        public Builder mode(@Nullable Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs build() {

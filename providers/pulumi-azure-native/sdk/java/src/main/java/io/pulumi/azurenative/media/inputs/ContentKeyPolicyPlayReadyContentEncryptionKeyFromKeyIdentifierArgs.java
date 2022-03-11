@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
      * 
      */
     @InputImport(name="keyId", required=true)
-      private final Input<String> keyId;
+      private final Output<String> keyId;
 
-    public Input<String> getKeyId() {
+    public Output<String> getKeyId() {
         return this.keyId;
     }
 
@@ -34,22 +34,22 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs(
-        Input<String> keyId,
-        Input<String> odataType) {
+        Output<String> keyId,
+        Output<String> odataType) {
         this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs() {
-        this.keyId = Input.empty();
-        this.odataType = Input.empty();
+        this.keyId = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     }
 
     public static final class Builder {
-        private Input<String> keyId;
-        private Input<String> odataType;
+        private Output<String> keyId;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder keyId(Input<String> keyId) {
+        public Builder keyId(Output<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Input.of(Objects.requireNonNull(keyId));
+            this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs build() {

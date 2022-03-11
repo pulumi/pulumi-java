@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1.inputs.CustomDnsArgs;
 import io.pulumi.googlenative.domains_v1.inputs.GlueRecordArgs;
@@ -26,10 +26,10 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDns")
-      private final @Nullable Input<CustomDnsArgs> customDns;
+      private final @Nullable Output<CustomDnsArgs> customDns;
 
-    public Input<CustomDnsArgs> getCustomDns() {
-        return this.customDns == null ? Input.empty() : this.customDns;
+    public Output<CustomDnsArgs> getCustomDns() {
+        return this.customDns == null ? Output.empty() : this.customDns;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="glueRecords")
-      private final @Nullable Input<List<GlueRecordArgs>> glueRecords;
+      private final @Nullable Output<List<GlueRecordArgs>> glueRecords;
 
-    public Input<List<GlueRecordArgs>> getGlueRecords() {
-        return this.glueRecords == null ? Input.empty() : this.glueRecords;
+    public Output<List<GlueRecordArgs>> getGlueRecords() {
+        return this.glueRecords == null ? Output.empty() : this.glueRecords;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleDomainsDns")
-      private final @Nullable Input<GoogleDomainsDnsArgs> googleDomainsDns;
+      private final @Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns;
 
-    public Input<GoogleDomainsDnsArgs> getGoogleDomainsDns() {
-        return this.googleDomainsDns == null ? Input.empty() : this.googleDomainsDns;
+    public Output<GoogleDomainsDnsArgs> getGoogleDomainsDns() {
+        return this.googleDomainsDns == null ? Output.empty() : this.googleDomainsDns;
     }
 
     public DnsSettingsArgs(
-        @Nullable Input<CustomDnsArgs> customDns,
-        @Nullable Input<List<GlueRecordArgs>> glueRecords,
-        @Nullable Input<GoogleDomainsDnsArgs> googleDomainsDns) {
+        @Nullable Output<CustomDnsArgs> customDns,
+        @Nullable Output<List<GlueRecordArgs>> glueRecords,
+        @Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns) {
         this.customDns = customDns;
         this.glueRecords = glueRecords;
         this.googleDomainsDns = googleDomainsDns;
     }
 
     private DnsSettingsArgs() {
-        this.customDns = Input.empty();
-        this.glueRecords = Input.empty();
-        this.googleDomainsDns = Input.empty();
+        this.customDns = Output.empty();
+        this.glueRecords = Output.empty();
+        this.googleDomainsDns = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomDnsArgs> customDns;
-        private @Nullable Input<List<GlueRecordArgs>> glueRecords;
-        private @Nullable Input<GoogleDomainsDnsArgs> googleDomainsDns;
+        private @Nullable Output<CustomDnsArgs> customDns;
+        private @Nullable Output<List<GlueRecordArgs>> glueRecords;
+        private @Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.googleDomainsDns = defaults.googleDomainsDns;
         }
 
-        public Builder customDns(@Nullable Input<CustomDnsArgs> customDns) {
+        public Builder customDns(@Nullable Output<CustomDnsArgs> customDns) {
             this.customDns = customDns;
             return this;
         }
 
         public Builder customDns(@Nullable CustomDnsArgs customDns) {
-            this.customDns = Input.ofNullable(customDns);
+            this.customDns = Output.ofNullable(customDns);
             return this;
         }
 
-        public Builder glueRecords(@Nullable Input<List<GlueRecordArgs>> glueRecords) {
+        public Builder glueRecords(@Nullable Output<List<GlueRecordArgs>> glueRecords) {
             this.glueRecords = glueRecords;
             return this;
         }
 
         public Builder glueRecords(@Nullable List<GlueRecordArgs> glueRecords) {
-            this.glueRecords = Input.ofNullable(glueRecords);
+            this.glueRecords = Output.ofNullable(glueRecords);
             return this;
         }
 
-        public Builder googleDomainsDns(@Nullable Input<GoogleDomainsDnsArgs> googleDomainsDns) {
+        public Builder googleDomainsDns(@Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns) {
             this.googleDomainsDns = googleDomainsDns;
             return this;
         }
 
         public Builder googleDomainsDns(@Nullable GoogleDomainsDnsArgs googleDomainsDns) {
-            this.googleDomainsDns = Input.ofNullable(googleDomainsDns);
+            this.googleDomainsDns = Output.ofNullable(googleDomainsDns);
             return this;
         }
         public DnsSettingsArgs build() {

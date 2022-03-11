@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="canonicalUrl")
-      private final @Nullable Input<String> canonicalUrl;
+      private final @Nullable Output<String> canonicalUrl;
 
-    public Input<String> getCanonicalUrl() {
-        return this.canonicalUrl == null ? Input.empty() : this.canonicalUrl;
+    public Output<String> getCanonicalUrl() {
+        return this.canonicalUrl == null ? Output.empty() : this.canonicalUrl;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parameter")
-      private final @Nullable Input<String> parameter;
+      private final @Nullable Output<String> parameter;
 
-    public Input<String> getParameter() {
-        return this.parameter == null ? Input.empty() : this.parameter;
+    public Output<String> getParameter() {
+        return this.parameter == null ? Output.empty() : this.parameter;
     }
 
     public SearchParameterArgs(
-        @Nullable Input<String> canonicalUrl,
-        @Nullable Input<String> parameter) {
+        @Nullable Output<String> canonicalUrl,
+        @Nullable Output<String> parameter) {
         this.canonicalUrl = canonicalUrl;
         this.parameter = parameter;
     }
 
     private SearchParameterArgs() {
-        this.canonicalUrl = Input.empty();
-        this.parameter = Input.empty();
+        this.canonicalUrl = Output.empty();
+        this.parameter = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> canonicalUrl;
-        private @Nullable Input<String> parameter;
+        private @Nullable Output<String> canonicalUrl;
+        private @Nullable Output<String> parameter;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
     	      this.parameter = defaults.parameter;
         }
 
-        public Builder canonicalUrl(@Nullable Input<String> canonicalUrl) {
+        public Builder canonicalUrl(@Nullable Output<String> canonicalUrl) {
             this.canonicalUrl = canonicalUrl;
             return this;
         }
 
         public Builder canonicalUrl(@Nullable String canonicalUrl) {
-            this.canonicalUrl = Input.ofNullable(canonicalUrl);
+            this.canonicalUrl = Output.ofNullable(canonicalUrl);
             return this;
         }
 
-        public Builder parameter(@Nullable Input<String> parameter) {
+        public Builder parameter(@Nullable Output<String> parameter) {
             this.parameter = parameter;
             return this;
         }
 
         public Builder parameter(@Nullable String parameter) {
-            this.parameter = Input.ofNullable(parameter);
+            this.parameter = Output.ofNullable(parameter);
             return this;
         }
         public SearchParameterArgs build() {

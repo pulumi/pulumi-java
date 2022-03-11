@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetResourceConfigurationArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetVariableArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,38 +18,38 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
     public static final DatasetContainerActionArgs Empty = new DatasetContainerActionArgs();
 
     @InputImport(name="executionRoleArn", required=true)
-      private final Input<String> executionRoleArn;
+      private final Output<String> executionRoleArn;
 
-    public Input<String> getExecutionRoleArn() {
+    public Output<String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
 
     @InputImport(name="image", required=true)
-      private final Input<String> image;
+      private final Output<String> image;
 
-    public Input<String> getImage() {
+    public Output<String> getImage() {
         return this.image;
     }
 
     @InputImport(name="resourceConfiguration", required=true)
-      private final Input<DatasetResourceConfigurationArgs> resourceConfiguration;
+      private final Output<DatasetResourceConfigurationArgs> resourceConfiguration;
 
-    public Input<DatasetResourceConfigurationArgs> getResourceConfiguration() {
+    public Output<DatasetResourceConfigurationArgs> getResourceConfiguration() {
         return this.resourceConfiguration;
     }
 
     @InputImport(name="variables")
-      private final @Nullable Input<List<DatasetVariableArgs>> variables;
+      private final @Nullable Output<List<DatasetVariableArgs>> variables;
 
-    public Input<List<DatasetVariableArgs>> getVariables() {
-        return this.variables == null ? Input.empty() : this.variables;
+    public Output<List<DatasetVariableArgs>> getVariables() {
+        return this.variables == null ? Output.empty() : this.variables;
     }
 
     public DatasetContainerActionArgs(
-        Input<String> executionRoleArn,
-        Input<String> image,
-        Input<DatasetResourceConfigurationArgs> resourceConfiguration,
-        @Nullable Input<List<DatasetVariableArgs>> variables) {
+        Output<String> executionRoleArn,
+        Output<String> image,
+        Output<DatasetResourceConfigurationArgs> resourceConfiguration,
+        @Nullable Output<List<DatasetVariableArgs>> variables) {
         this.executionRoleArn = Objects.requireNonNull(executionRoleArn, "expected parameter 'executionRoleArn' to be non-null");
         this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
         this.resourceConfiguration = Objects.requireNonNull(resourceConfiguration, "expected parameter 'resourceConfiguration' to be non-null");
@@ -57,10 +57,10 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
     }
 
     private DatasetContainerActionArgs() {
-        this.executionRoleArn = Input.empty();
-        this.image = Input.empty();
-        this.resourceConfiguration = Input.empty();
-        this.variables = Input.empty();
+        this.executionRoleArn = Output.empty();
+        this.image = Output.empty();
+        this.resourceConfiguration = Output.empty();
+        this.variables = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,10 +72,10 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> executionRoleArn;
-        private Input<String> image;
-        private Input<DatasetResourceConfigurationArgs> resourceConfiguration;
-        private @Nullable Input<List<DatasetVariableArgs>> variables;
+        private Output<String> executionRoleArn;
+        private Output<String> image;
+        private Output<DatasetResourceConfigurationArgs> resourceConfiguration;
+        private @Nullable Output<List<DatasetVariableArgs>> variables;
 
         public Builder() {
     	      // Empty
@@ -89,43 +89,43 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
     	      this.variables = defaults.variables;
         }
 
-        public Builder executionRoleArn(Input<String> executionRoleArn) {
+        public Builder executionRoleArn(Output<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
 
         public Builder executionRoleArn(String executionRoleArn) {
-            this.executionRoleArn = Input.of(Objects.requireNonNull(executionRoleArn));
+            this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
 
-        public Builder image(Input<String> image) {
+        public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
         public Builder image(String image) {
-            this.image = Input.of(Objects.requireNonNull(image));
+            this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder resourceConfiguration(Input<DatasetResourceConfigurationArgs> resourceConfiguration) {
+        public Builder resourceConfiguration(Output<DatasetResourceConfigurationArgs> resourceConfiguration) {
             this.resourceConfiguration = Objects.requireNonNull(resourceConfiguration);
             return this;
         }
 
         public Builder resourceConfiguration(DatasetResourceConfigurationArgs resourceConfiguration) {
-            this.resourceConfiguration = Input.of(Objects.requireNonNull(resourceConfiguration));
+            this.resourceConfiguration = Output.of(Objects.requireNonNull(resourceConfiguration));
             return this;
         }
 
-        public Builder variables(@Nullable Input<List<DatasetVariableArgs>> variables) {
+        public Builder variables(@Nullable Output<List<DatasetVariableArgs>> variables) {
             this.variables = variables;
             return this;
         }
 
         public Builder variables(@Nullable List<DatasetVariableArgs> variables) {
-            this.variables = Input.ofNullable(variables);
+            this.variables = Output.ofNullable(variables);
             return this;
         }
         public DatasetContainerActionArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.StorageLensSelectionCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="isEnabled")
-      private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Input.empty() : this.isEnabled;
+    public Output<Boolean> getIsEnabled() {
+        return this.isEnabled == null ? Output.empty() : this.isEnabled;
     }
 
     @InputImport(name="selectionCriteria")
-      private final @Nullable Input<StorageLensSelectionCriteriaArgs> selectionCriteria;
+      private final @Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria;
 
-    public Input<StorageLensSelectionCriteriaArgs> getSelectionCriteria() {
-        return this.selectionCriteria == null ? Input.empty() : this.selectionCriteria;
+    public Output<StorageLensSelectionCriteriaArgs> getSelectionCriteria() {
+        return this.selectionCriteria == null ? Output.empty() : this.selectionCriteria;
     }
 
     public StorageLensPrefixLevelStorageMetricsArgs(
-        @Nullable Input<Boolean> isEnabled,
-        @Nullable Input<StorageLensSelectionCriteriaArgs> selectionCriteria) {
+        @Nullable Output<Boolean> isEnabled,
+        @Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria) {
         this.isEnabled = isEnabled;
         this.selectionCriteria = selectionCriteria;
     }
 
     private StorageLensPrefixLevelStorageMetricsArgs() {
-        this.isEnabled = Input.empty();
-        this.selectionCriteria = Input.empty();
+        this.isEnabled = Output.empty();
+        this.selectionCriteria = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isEnabled;
-        private @Nullable Input<StorageLensSelectionCriteriaArgs> selectionCriteria;
+        private @Nullable Output<Boolean> isEnabled;
+        private @Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
     	      this.selectionCriteria = defaults.selectionCriteria;
         }
 
-        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Input.ofNullable(isEnabled);
+            this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder selectionCriteria(@Nullable Input<StorageLensSelectionCriteriaArgs> selectionCriteria) {
+        public Builder selectionCriteria(@Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria) {
             this.selectionCriteria = selectionCriteria;
             return this;
         }
 
         public Builder selectionCriteria(@Nullable StorageLensSelectionCriteriaArgs selectionCriteria) {
-            this.selectionCriteria = Input.ofNullable(selectionCriteria);
+            this.selectionCriteria = Output.ofNullable(selectionCriteria);
             return this;
         }
         public StorageLensPrefixLevelStorageMetricsArgs build() {

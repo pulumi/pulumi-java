@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.xray.inputs;
 
 import io.pulumi.awsnative.xray.inputs.SamplingRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -31,32 +31,32 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="modifiedAt")
-      private final @Nullable Input<String> modifiedAt;
+      private final @Nullable Output<String> modifiedAt;
 
-    public Input<String> getModifiedAt() {
-        return this.modifiedAt == null ? Input.empty() : this.modifiedAt;
+    public Output<String> getModifiedAt() {
+        return this.modifiedAt == null ? Output.empty() : this.modifiedAt;
     }
 
     @InputImport(name="samplingRule")
-      private final @Nullable Input<SamplingRuleArgs> samplingRule;
+      private final @Nullable Output<SamplingRuleArgs> samplingRule;
 
-    public Input<SamplingRuleArgs> getSamplingRule() {
-        return this.samplingRule == null ? Input.empty() : this.samplingRule;
+    public Output<SamplingRuleArgs> getSamplingRule() {
+        return this.samplingRule == null ? Output.empty() : this.samplingRule;
     }
 
     public SamplingRuleRecordArgs(
-        @Nullable Input<String> createdAt,
-        @Nullable Input<String> modifiedAt,
-        @Nullable Input<SamplingRuleArgs> samplingRule) {
+        @Nullable Output<String> createdAt,
+        @Nullable Output<String> modifiedAt,
+        @Nullable Output<SamplingRuleArgs> samplingRule) {
         this.createdAt = createdAt;
         this.modifiedAt = modifiedAt;
         this.samplingRule = samplingRule;
     }
 
     private SamplingRuleRecordArgs() {
-        this.createdAt = Input.empty();
-        this.modifiedAt = Input.empty();
-        this.samplingRule = Input.empty();
+        this.createdAt = Output.empty();
+        this.modifiedAt = Output.empty();
+        this.samplingRule = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<String> modifiedAt;
-        private @Nullable Input<SamplingRuleArgs> samplingRule;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<String> modifiedAt;
+        private @Nullable Output<SamplingRuleArgs> samplingRule;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class SamplingRuleRecordArgs extends io.pulumi.resources.ResourceAr
     	      this.samplingRule = defaults.samplingRule;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder modifiedAt(@Nullable Input<String> modifiedAt) {
+        public Builder modifiedAt(@Nullable Output<String> modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
 
         public Builder modifiedAt(@Nullable String modifiedAt) {
-            this.modifiedAt = Input.ofNullable(modifiedAt);
+            this.modifiedAt = Output.ofNullable(modifiedAt);
             return this;
         }
 
-        public Builder samplingRule(@Nullable Input<SamplingRuleArgs> samplingRule) {
+        public Builder samplingRule(@Nullable Output<SamplingRuleArgs> samplingRule) {
             this.samplingRule = samplingRule;
             return this;
         }
 
         public Builder samplingRule(@Nullable SamplingRuleArgs samplingRule) {
-            this.samplingRule = Input.ofNullable(samplingRule);
+            this.samplingRule = Output.ofNullable(samplingRule);
             return this;
         }
         public SamplingRuleRecordArgs build() {

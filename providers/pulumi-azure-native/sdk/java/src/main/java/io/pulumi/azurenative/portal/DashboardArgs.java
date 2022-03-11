@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal;
 
 import io.pulumi.azurenative.portal.inputs.DashboardLensArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardName")
-      private final @Nullable Input<String> dashboardName;
+      private final @Nullable Output<String> dashboardName;
 
-    public Input<String> getDashboardName() {
-        return this.dashboardName == null ? Input.empty() : this.dashboardName;
+    public Output<String> getDashboardName() {
+        return this.dashboardName == null ? Output.empty() : this.dashboardName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lenses")
-      private final @Nullable Input<List<DashboardLensArgs>> lenses;
+      private final @Nullable Output<List<DashboardLensArgs>> lenses;
 
-    public Input<List<DashboardLensArgs>> getLenses() {
-        return this.lenses == null ? Input.empty() : this.lenses;
+    public Output<List<DashboardLensArgs>> getLenses() {
+        return this.lenses == null ? Output.empty() : this.lenses;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,Object>> metadata;
+      private final @Nullable Output<Map<String,Object>> metadata;
 
-    public Input<Map<String,Object>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,Object>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,19 +78,19 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DashboardArgs(
-        @Nullable Input<String> dashboardName,
-        @Nullable Input<List<DashboardLensArgs>> lenses,
-        @Nullable Input<String> location,
-        @Nullable Input<Map<String,Object>> metadata,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> dashboardName,
+        @Nullable Output<List<DashboardLensArgs>> lenses,
+        @Nullable Output<String> location,
+        @Nullable Output<Map<String,Object>> metadata,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.dashboardName = dashboardName;
         this.lenses = lenses;
         this.location = location;
@@ -100,12 +100,12 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardArgs() {
-        this.dashboardName = Input.empty();
-        this.lenses = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.dashboardName = Output.empty();
+        this.lenses = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dashboardName;
-        private @Nullable Input<List<DashboardLensArgs>> lenses;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Map<String,Object>> metadata;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> dashboardName;
+        private @Nullable Output<List<DashboardLensArgs>> lenses;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Map<String,Object>> metadata;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder dashboardName(@Nullable Input<String> dashboardName) {
+        public Builder dashboardName(@Nullable Output<String> dashboardName) {
             this.dashboardName = dashboardName;
             return this;
         }
 
         public Builder dashboardName(@Nullable String dashboardName) {
-            this.dashboardName = Input.ofNullable(dashboardName);
+            this.dashboardName = Output.ofNullable(dashboardName);
             return this;
         }
 
-        public Builder lenses(@Nullable Input<List<DashboardLensArgs>> lenses) {
+        public Builder lenses(@Nullable Output<List<DashboardLensArgs>> lenses) {
             this.lenses = lenses;
             return this;
         }
 
         public Builder lenses(@Nullable List<DashboardLensArgs> lenses) {
-            this.lenses = Input.ofNullable(lenses);
+            this.lenses = Output.ofNullable(lenses);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,Object>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,Object> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DashboardArgs build() {

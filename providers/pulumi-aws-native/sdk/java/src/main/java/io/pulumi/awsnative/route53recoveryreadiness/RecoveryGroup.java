@@ -6,7 +6,6 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoveryreadiness.RecoveryGroupArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.RecoveryGroupTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -115,14 +114,14 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RecoveryGroup(String name, @Nullable RecoveryGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoveryreadiness:RecoveryGroup", name, args == null ? RecoveryGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:route53recoveryreadiness:RecoveryGroup", name, args == null ? RecoveryGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RecoveryGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RecoveryGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53recoveryreadiness:RecoveryGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -137,7 +136,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RecoveryGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RecoveryGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RecoveryGroup(name, id, options);
     }
 }

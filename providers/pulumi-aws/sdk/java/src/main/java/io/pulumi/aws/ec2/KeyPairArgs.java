@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyNamePrefix")
-      private final @Nullable Input<String> keyNamePrefix;
+      private final @Nullable Output<String> keyNamePrefix;
 
-    public Input<String> getKeyNamePrefix() {
-        return this.keyNamePrefix == null ? Input.empty() : this.keyNamePrefix;
+    public Output<String> getKeyNamePrefix() {
+        return this.keyNamePrefix == null ? Output.empty() : this.keyNamePrefix;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey", required=true)
-      private final Input<String> publicKey;
+      private final Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
+    public Output<String> getPublicKey() {
         return this.publicKey;
     }
 
@@ -53,17 +53,17 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public KeyPairArgs(
-        @Nullable Input<String> keyName,
-        @Nullable Input<String> keyNamePrefix,
-        Input<String> publicKey,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> keyName,
+        @Nullable Output<String> keyNamePrefix,
+        Output<String> publicKey,
+        @Nullable Output<Map<String,String>> tags) {
         this.keyName = keyName;
         this.keyNamePrefix = keyNamePrefix;
         this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
@@ -71,10 +71,10 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyPairArgs() {
-        this.keyName = Input.empty();
-        this.keyNamePrefix = Input.empty();
-        this.publicKey = Input.empty();
-        this.tags = Input.empty();
+        this.keyName = Output.empty();
+        this.keyNamePrefix = Output.empty();
+        this.publicKey = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyName;
-        private @Nullable Input<String> keyNamePrefix;
-        private Input<String> publicKey;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> keyName;
+        private @Nullable Output<String> keyNamePrefix;
+        private Output<String> publicKey;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder keyNamePrefix(@Nullable Input<String> keyNamePrefix) {
+        public Builder keyNamePrefix(@Nullable Output<String> keyNamePrefix) {
             this.keyNamePrefix = keyNamePrefix;
             return this;
         }
 
         public Builder keyNamePrefix(@Nullable String keyNamePrefix) {
-            this.keyNamePrefix = Input.ofNullable(keyNamePrefix);
+            this.keyNamePrefix = Output.ofNullable(keyNamePrefix);
             return this;
         }
 
-        public Builder publicKey(Input<String> publicKey) {
+        public Builder publicKey(Output<String> publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
         public Builder publicKey(String publicKey) {
-            this.publicKey = Input.of(Objects.requireNonNull(publicKey));
+            this.publicKey = Output.of(Objects.requireNonNull(publicKey));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public KeyPairArgs build() {

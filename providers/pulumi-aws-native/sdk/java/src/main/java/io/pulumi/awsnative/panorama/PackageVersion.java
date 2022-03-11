@@ -6,7 +6,6 @@ package io.pulumi.awsnative.panorama;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.panorama.PackageVersionArgs;
 import io.pulumi.awsnative.panorama.enums.PackageVersionStatus;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -132,14 +131,14 @@ public class PackageVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PackageVersion(String name, PackageVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:panorama:PackageVersion", name, args == null ? PackageVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:panorama:PackageVersion", name, args == null ? PackageVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PackageVersion(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PackageVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:panorama:PackageVersion", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -154,7 +153,7 @@ public class PackageVersion extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PackageVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PackageVersion get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PackageVersion(name, id, options);
     }
 }

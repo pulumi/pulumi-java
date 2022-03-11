@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecr;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -13,18 +13,18 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     public static final ReplicationConfigurationArgs Empty = new ReplicationConfigurationArgs();
 
     @InputImport(name="replicationConfiguration", required=true)
-      private final Input<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
+      private final Output<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
 
-    public Input<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> getReplicationConfiguration() {
+    public Output<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> getReplicationConfiguration() {
         return this.replicationConfiguration;
     }
 
-    public ReplicationConfigurationArgs(Input<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration) {
+    public ReplicationConfigurationArgs(Output<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration) {
         this.replicationConfiguration = Objects.requireNonNull(replicationConfiguration, "expected parameter 'replicationConfiguration' to be non-null");
     }
 
     private ReplicationConfigurationArgs() {
-        this.replicationConfiguration = Input.empty();
+        this.replicationConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -36,7 +36,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
+        private Output<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
 
         public Builder() {
     	      // Empty
@@ -47,13 +47,13 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     	      this.replicationConfiguration = defaults.replicationConfiguration;
         }
 
-        public Builder replicationConfiguration(Input<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration) {
+        public Builder replicationConfiguration(Output<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration) {
             this.replicationConfiguration = Objects.requireNonNull(replicationConfiguration);
             return this;
         }
 
         public Builder replicationConfiguration(io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs replicationConfiguration) {
-            this.replicationConfiguration = Input.of(Objects.requireNonNull(replicationConfiguration));
+            this.replicationConfiguration = Output.of(Objects.requireNonNull(replicationConfiguration));
             return this;
         }
         public ReplicationConfigurationArgs build() {

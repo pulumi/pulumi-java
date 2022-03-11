@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="mimeType")
-      private final @Nullable Input<String> mimeType;
+      private final @Nullable Output<String> mimeType;
 
-    public Input<String> getMimeType() {
-        return this.mimeType == null ? Input.empty() : this.mimeType;
+    public Output<String> getMimeType() {
+        return this.mimeType == null ? Output.empty() : this.mimeType;
     }
 
     public AlertPolicyDocumentationGetArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> mimeType) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> mimeType) {
         this.content = content;
         this.mimeType = mimeType;
     }
 
     private AlertPolicyDocumentationGetArgs() {
-        this.content = Input.empty();
-        this.mimeType = Input.empty();
+        this.content = Output.empty();
+        this.mimeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> mimeType;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> mimeType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
     	      this.mimeType = defaults.mimeType;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder mimeType(@Nullable Input<String> mimeType) {
+        public Builder mimeType(@Nullable Output<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
 
         public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Input.ofNullable(mimeType);
+            this.mimeType = Output.ofNullable(mimeType);
             return this;
         }
         public AlertPolicyDocumentationGetArgs build() {

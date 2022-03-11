@@ -6,7 +6,7 @@ package io.pulumi.awsnative.connect;
 import io.pulumi.awsnative.connect.inputs.UserIdentityInfoArgs;
 import io.pulumi.awsnative.connect.inputs.UserPhoneConfigArgs;
 import io.pulumi.awsnative.connect.inputs.UserTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryUserId")
-      private final @Nullable Input<String> directoryUserId;
+      private final @Nullable Output<String> directoryUserId;
 
-    public Input<String> getDirectoryUserId() {
-        return this.directoryUserId == null ? Input.empty() : this.directoryUserId;
+    public Output<String> getDirectoryUserId() {
+        return this.directoryUserId == null ? Output.empty() : this.directoryUserId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hierarchyGroupArn")
-      private final @Nullable Input<String> hierarchyGroupArn;
+      private final @Nullable Output<String> hierarchyGroupArn;
 
-    public Input<String> getHierarchyGroupArn() {
-        return this.hierarchyGroupArn == null ? Input.empty() : this.hierarchyGroupArn;
+    public Output<String> getHierarchyGroupArn() {
+        return this.hierarchyGroupArn == null ? Output.empty() : this.hierarchyGroupArn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityInfo")
-      private final @Nullable Input<UserIdentityInfoArgs> identityInfo;
+      private final @Nullable Output<UserIdentityInfoArgs> identityInfo;
 
-    public Input<UserIdentityInfoArgs> getIdentityInfo() {
-        return this.identityInfo == null ? Input.empty() : this.identityInfo;
+    public Output<UserIdentityInfoArgs> getIdentityInfo() {
+        return this.identityInfo == null ? Output.empty() : this.identityInfo;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-      private final Input<String> instanceArn;
+      private final Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
+    public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
 
@@ -67,10 +67,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phoneConfig", required=true)
-      private final Input<UserPhoneConfigArgs> phoneConfig;
+      private final Output<UserPhoneConfigArgs> phoneConfig;
 
-    public Input<UserPhoneConfigArgs> getPhoneConfig() {
+    public Output<UserPhoneConfigArgs> getPhoneConfig() {
         return this.phoneConfig;
     }
 
@@ -89,9 +89,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingProfileArn", required=true)
-      private final Input<String> routingProfileArn;
+      private final Output<String> routingProfileArn;
 
-    public Input<String> getRoutingProfileArn() {
+    public Output<String> getRoutingProfileArn() {
         return this.routingProfileArn;
     }
 
@@ -100,9 +100,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityProfileArns", required=true)
-      private final Input<List<String>> securityProfileArns;
+      private final Output<List<String>> securityProfileArns;
 
-    public Input<List<String>> getSecurityProfileArns() {
+    public Output<List<String>> getSecurityProfileArns() {
         return this.securityProfileArns;
     }
 
@@ -111,10 +111,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<UserTagArgs>> tags;
+      private final @Nullable Output<List<UserTagArgs>> tags;
 
-    public Input<List<UserTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<UserTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -122,23 +122,23 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public UserArgs(
-        @Nullable Input<String> directoryUserId,
-        @Nullable Input<String> hierarchyGroupArn,
-        @Nullable Input<UserIdentityInfoArgs> identityInfo,
-        Input<String> instanceArn,
-        @Nullable Input<String> password,
-        Input<UserPhoneConfigArgs> phoneConfig,
-        Input<String> routingProfileArn,
-        Input<List<String>> securityProfileArns,
-        @Nullable Input<List<UserTagArgs>> tags,
-        Input<String> username) {
+        @Nullable Output<String> directoryUserId,
+        @Nullable Output<String> hierarchyGroupArn,
+        @Nullable Output<UserIdentityInfoArgs> identityInfo,
+        Output<String> instanceArn,
+        @Nullable Output<String> password,
+        Output<UserPhoneConfigArgs> phoneConfig,
+        Output<String> routingProfileArn,
+        Output<List<String>> securityProfileArns,
+        @Nullable Output<List<UserTagArgs>> tags,
+        Output<String> username) {
         this.directoryUserId = directoryUserId;
         this.hierarchyGroupArn = hierarchyGroupArn;
         this.identityInfo = identityInfo;
@@ -152,16 +152,16 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.directoryUserId = Input.empty();
-        this.hierarchyGroupArn = Input.empty();
-        this.identityInfo = Input.empty();
-        this.instanceArn = Input.empty();
-        this.password = Input.empty();
-        this.phoneConfig = Input.empty();
-        this.routingProfileArn = Input.empty();
-        this.securityProfileArns = Input.empty();
-        this.tags = Input.empty();
-        this.username = Input.empty();
+        this.directoryUserId = Output.empty();
+        this.hierarchyGroupArn = Output.empty();
+        this.identityInfo = Output.empty();
+        this.instanceArn = Output.empty();
+        this.password = Output.empty();
+        this.phoneConfig = Output.empty();
+        this.routingProfileArn = Output.empty();
+        this.securityProfileArns = Output.empty();
+        this.tags = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> directoryUserId;
-        private @Nullable Input<String> hierarchyGroupArn;
-        private @Nullable Input<UserIdentityInfoArgs> identityInfo;
-        private Input<String> instanceArn;
-        private @Nullable Input<String> password;
-        private Input<UserPhoneConfigArgs> phoneConfig;
-        private Input<String> routingProfileArn;
-        private Input<List<String>> securityProfileArns;
-        private @Nullable Input<List<UserTagArgs>> tags;
-        private Input<String> username;
+        private @Nullable Output<String> directoryUserId;
+        private @Nullable Output<String> hierarchyGroupArn;
+        private @Nullable Output<UserIdentityInfoArgs> identityInfo;
+        private Output<String> instanceArn;
+        private @Nullable Output<String> password;
+        private Output<UserPhoneConfigArgs> phoneConfig;
+        private Output<String> routingProfileArn;
+        private Output<List<String>> securityProfileArns;
+        private @Nullable Output<List<UserTagArgs>> tags;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder directoryUserId(@Nullable Input<String> directoryUserId) {
+        public Builder directoryUserId(@Nullable Output<String> directoryUserId) {
             this.directoryUserId = directoryUserId;
             return this;
         }
 
         public Builder directoryUserId(@Nullable String directoryUserId) {
-            this.directoryUserId = Input.ofNullable(directoryUserId);
+            this.directoryUserId = Output.ofNullable(directoryUserId);
             return this;
         }
 
-        public Builder hierarchyGroupArn(@Nullable Input<String> hierarchyGroupArn) {
+        public Builder hierarchyGroupArn(@Nullable Output<String> hierarchyGroupArn) {
             this.hierarchyGroupArn = hierarchyGroupArn;
             return this;
         }
 
         public Builder hierarchyGroupArn(@Nullable String hierarchyGroupArn) {
-            this.hierarchyGroupArn = Input.ofNullable(hierarchyGroupArn);
+            this.hierarchyGroupArn = Output.ofNullable(hierarchyGroupArn);
             return this;
         }
 
-        public Builder identityInfo(@Nullable Input<UserIdentityInfoArgs> identityInfo) {
+        public Builder identityInfo(@Nullable Output<UserIdentityInfoArgs> identityInfo) {
             this.identityInfo = identityInfo;
             return this;
         }
 
         public Builder identityInfo(@Nullable UserIdentityInfoArgs identityInfo) {
-            this.identityInfo = Input.ofNullable(identityInfo);
+            this.identityInfo = Output.ofNullable(identityInfo);
             return this;
         }
 
-        public Builder instanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
+            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder phoneConfig(Input<UserPhoneConfigArgs> phoneConfig) {
+        public Builder phoneConfig(Output<UserPhoneConfigArgs> phoneConfig) {
             this.phoneConfig = Objects.requireNonNull(phoneConfig);
             return this;
         }
 
         public Builder phoneConfig(UserPhoneConfigArgs phoneConfig) {
-            this.phoneConfig = Input.of(Objects.requireNonNull(phoneConfig));
+            this.phoneConfig = Output.of(Objects.requireNonNull(phoneConfig));
             return this;
         }
 
-        public Builder routingProfileArn(Input<String> routingProfileArn) {
+        public Builder routingProfileArn(Output<String> routingProfileArn) {
             this.routingProfileArn = Objects.requireNonNull(routingProfileArn);
             return this;
         }
 
         public Builder routingProfileArn(String routingProfileArn) {
-            this.routingProfileArn = Input.of(Objects.requireNonNull(routingProfileArn));
+            this.routingProfileArn = Output.of(Objects.requireNonNull(routingProfileArn));
             return this;
         }
 
-        public Builder securityProfileArns(Input<List<String>> securityProfileArns) {
+        public Builder securityProfileArns(Output<List<String>> securityProfileArns) {
             this.securityProfileArns = Objects.requireNonNull(securityProfileArns);
             return this;
         }
 
         public Builder securityProfileArns(List<String> securityProfileArns) {
-            this.securityProfileArns = Input.of(Objects.requireNonNull(securityProfileArns));
+            this.securityProfileArns = Output.of(Objects.requireNonNull(securityProfileArns));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<UserTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<UserTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<UserTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public UserArgs build() {

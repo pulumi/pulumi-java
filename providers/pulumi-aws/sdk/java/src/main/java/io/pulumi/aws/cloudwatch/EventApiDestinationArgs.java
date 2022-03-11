@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class EventApiDestinationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="connectionArn", required=true)
-      private final Input<String> connectionArn;
+      private final Output<String> connectionArn;
 
-    public Input<String> getConnectionArn() {
+    public Output<String> getConnectionArn() {
         return this.connectionArn;
     }
 
@@ -31,10 +31,10 @@ public final class EventApiDestinationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class EventApiDestinationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="httpMethod", required=true)
-      private final Input<String> httpMethod;
+      private final Output<String> httpMethod;
 
-    public Input<String> getHttpMethod() {
+    public Output<String> getHttpMethod() {
         return this.httpMethod;
     }
 
@@ -53,9 +53,9 @@ public final class EventApiDestinationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="invocationEndpoint", required=true)
-      private final Input<String> invocationEndpoint;
+      private final Output<String> invocationEndpoint;
 
-    public Input<String> getInvocationEndpoint() {
+    public Output<String> getInvocationEndpoint() {
         return this.invocationEndpoint;
     }
 
@@ -64,10 +64,10 @@ public final class EventApiDestinationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="invocationRateLimitPerSecond")
-      private final @Nullable Input<Integer> invocationRateLimitPerSecond;
+      private final @Nullable Output<Integer> invocationRateLimitPerSecond;
 
-    public Input<Integer> getInvocationRateLimitPerSecond() {
-        return this.invocationRateLimitPerSecond == null ? Input.empty() : this.invocationRateLimitPerSecond;
+    public Output<Integer> getInvocationRateLimitPerSecond() {
+        return this.invocationRateLimitPerSecond == null ? Output.empty() : this.invocationRateLimitPerSecond;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class EventApiDestinationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public EventApiDestinationArgs(
-        Input<String> connectionArn,
-        @Nullable Input<String> description,
-        Input<String> httpMethod,
-        Input<String> invocationEndpoint,
-        @Nullable Input<Integer> invocationRateLimitPerSecond,
-        @Nullable Input<String> name) {
+        Output<String> connectionArn,
+        @Nullable Output<String> description,
+        Output<String> httpMethod,
+        Output<String> invocationEndpoint,
+        @Nullable Output<Integer> invocationRateLimitPerSecond,
+        @Nullable Output<String> name) {
         this.connectionArn = Objects.requireNonNull(connectionArn, "expected parameter 'connectionArn' to be non-null");
         this.description = description;
         this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
@@ -97,12 +97,12 @@ public final class EventApiDestinationArgs extends io.pulumi.resources.ResourceA
     }
 
     private EventApiDestinationArgs() {
-        this.connectionArn = Input.empty();
-        this.description = Input.empty();
-        this.httpMethod = Input.empty();
-        this.invocationEndpoint = Input.empty();
-        this.invocationRateLimitPerSecond = Input.empty();
-        this.name = Input.empty();
+        this.connectionArn = Output.empty();
+        this.description = Output.empty();
+        this.httpMethod = Output.empty();
+        this.invocationEndpoint = Output.empty();
+        this.invocationRateLimitPerSecond = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class EventApiDestinationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> connectionArn;
-        private @Nullable Input<String> description;
-        private Input<String> httpMethod;
-        private Input<String> invocationEndpoint;
-        private @Nullable Input<Integer> invocationRateLimitPerSecond;
-        private @Nullable Input<String> name;
+        private Output<String> connectionArn;
+        private @Nullable Output<String> description;
+        private Output<String> httpMethod;
+        private Output<String> invocationEndpoint;
+        private @Nullable Output<Integer> invocationRateLimitPerSecond;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class EventApiDestinationArgs extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder connectionArn(Input<String> connectionArn) {
+        public Builder connectionArn(Output<String> connectionArn) {
             this.connectionArn = Objects.requireNonNull(connectionArn);
             return this;
         }
 
         public Builder connectionArn(String connectionArn) {
-            this.connectionArn = Input.of(Objects.requireNonNull(connectionArn));
+            this.connectionArn = Output.of(Objects.requireNonNull(connectionArn));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder httpMethod(Input<String> httpMethod) {
+        public Builder httpMethod(Output<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
+            this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder invocationEndpoint(Input<String> invocationEndpoint) {
+        public Builder invocationEndpoint(Output<String> invocationEndpoint) {
             this.invocationEndpoint = Objects.requireNonNull(invocationEndpoint);
             return this;
         }
 
         public Builder invocationEndpoint(String invocationEndpoint) {
-            this.invocationEndpoint = Input.of(Objects.requireNonNull(invocationEndpoint));
+            this.invocationEndpoint = Output.of(Objects.requireNonNull(invocationEndpoint));
             return this;
         }
 
-        public Builder invocationRateLimitPerSecond(@Nullable Input<Integer> invocationRateLimitPerSecond) {
+        public Builder invocationRateLimitPerSecond(@Nullable Output<Integer> invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
         }
 
         public Builder invocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
-            this.invocationRateLimitPerSecond = Input.ofNullable(invocationRateLimitPerSecond);
+            this.invocationRateLimitPerSecond = Output.ofNullable(invocationRateLimitPerSecond);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public EventApiDestinationArgs build() {

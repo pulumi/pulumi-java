@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class LogStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logGroupName", required=true)
-      private final Input<String> logGroupName;
+      private final Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
+    public Output<String> getLogGroupName() {
         return this.logGroupName;
     }
 
@@ -30,22 +30,22 @@ public final class LogStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public LogStreamArgs(
-        Input<String> logGroupName,
-        @Nullable Input<String> name) {
+        Output<String> logGroupName,
+        @Nullable Output<String> name) {
         this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
         this.name = name;
     }
 
     private LogStreamArgs() {
-        this.logGroupName = Input.empty();
-        this.name = Input.empty();
+        this.logGroupName = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class LogStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> logGroupName;
-        private @Nullable Input<String> name;
+        private Output<String> logGroupName;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class LogStreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder logGroupName(Input<String> logGroupName) {
+        public Builder logGroupName(Output<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Input.of(Objects.requireNonNull(logGroupName));
+            this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public LogStreamArgs build() {

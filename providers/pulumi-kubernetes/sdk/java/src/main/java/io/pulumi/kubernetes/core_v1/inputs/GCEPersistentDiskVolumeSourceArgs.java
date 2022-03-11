@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="fsType")
-      private final @Nullable Input<String> fsType;
+      private final @Nullable Output<String> fsType;
 
-    public Input<String> getFsType() {
-        return this.fsType == null ? Input.empty() : this.fsType;
+    public Output<String> getFsType() {
+        return this.fsType == null ? Output.empty() : this.fsType;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="partition")
-      private final @Nullable Input<Integer> partition;
+      private final @Nullable Output<Integer> partition;
 
-    public Input<Integer> getPartition() {
-        return this.partition == null ? Input.empty() : this.partition;
+    public Output<Integer> getPartition() {
+        return this.partition == null ? Output.empty() : this.partition;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="pdName", required=true)
-      private final Input<String> pdName;
+      private final Output<String> pdName;
 
-    public Input<String> getPdName() {
+    public Output<String> getPdName() {
         return this.pdName;
     }
 
@@ -60,17 +60,17 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     public GCEPersistentDiskVolumeSourceArgs(
-        @Nullable Input<String> fsType,
-        @Nullable Input<Integer> partition,
-        Input<String> pdName,
-        @Nullable Input<Boolean> readOnly) {
+        @Nullable Output<String> fsType,
+        @Nullable Output<Integer> partition,
+        Output<String> pdName,
+        @Nullable Output<Boolean> readOnly) {
         this.fsType = fsType;
         this.partition = partition;
         this.pdName = Objects.requireNonNull(pdName, "expected parameter 'pdName' to be non-null");
@@ -78,10 +78,10 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
     }
 
     private GCEPersistentDiskVolumeSourceArgs() {
-        this.fsType = Input.empty();
-        this.partition = Input.empty();
-        this.pdName = Input.empty();
-        this.readOnly = Input.empty();
+        this.fsType = Output.empty();
+        this.partition = Output.empty();
+        this.pdName = Output.empty();
+        this.readOnly = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fsType;
-        private @Nullable Input<Integer> partition;
-        private Input<String> pdName;
-        private @Nullable Input<Boolean> readOnly;
+        private @Nullable Output<String> fsType;
+        private @Nullable Output<Integer> partition;
+        private Output<String> pdName;
+        private @Nullable Output<Boolean> readOnly;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder fsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Input.ofNullable(fsType);
+            this.fsType = Output.ofNullable(fsType);
             return this;
         }
 
-        public Builder partition(@Nullable Input<Integer> partition) {
+        public Builder partition(@Nullable Output<Integer> partition) {
             this.partition = partition;
             return this;
         }
 
         public Builder partition(@Nullable Integer partition) {
-            this.partition = Input.ofNullable(partition);
+            this.partition = Output.ofNullable(partition);
             return this;
         }
 
-        public Builder pdName(Input<String> pdName) {
+        public Builder pdName(Output<String> pdName) {
             this.pdName = Objects.requireNonNull(pdName);
             return this;
         }
 
         public Builder pdName(String pdName) {
-            this.pdName = Input.of(Objects.requireNonNull(pdName));
+            this.pdName = Output.of(Objects.requireNonNull(pdName));
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
         public GCEPersistentDiskVolumeSourceArgs build() {

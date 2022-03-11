@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.enums.ProjectStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="assessmentSolutionId")
-      private final @Nullable Input<String> assessmentSolutionId;
+      private final @Nullable Output<String> assessmentSolutionId;
 
-    public Input<String> getAssessmentSolutionId() {
-        return this.assessmentSolutionId == null ? Input.empty() : this.assessmentSolutionId;
+    public Output<String> getAssessmentSolutionId() {
+        return this.assessmentSolutionId == null ? Output.empty() : this.assessmentSolutionId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customerStorageAccountArmId")
-      private final @Nullable Input<String> customerStorageAccountArmId;
+      private final @Nullable Output<String> customerStorageAccountArmId;
 
-    public Input<String> getCustomerStorageAccountArmId() {
-        return this.customerStorageAccountArmId == null ? Input.empty() : this.customerStorageAccountArmId;
+    public Output<String> getCustomerStorageAccountArmId() {
+        return this.customerStorageAccountArmId == null ? Output.empty() : this.customerStorageAccountArmId;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customerWorkspaceId")
-      private final @Nullable Input<String> customerWorkspaceId;
+      private final @Nullable Output<String> customerWorkspaceId;
 
-    public Input<String> getCustomerWorkspaceId() {
-        return this.customerWorkspaceId == null ? Input.empty() : this.customerWorkspaceId;
+    public Output<String> getCustomerWorkspaceId() {
+        return this.customerWorkspaceId == null ? Output.empty() : this.customerWorkspaceId;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customerWorkspaceLocation")
-      private final @Nullable Input<String> customerWorkspaceLocation;
+      private final @Nullable Output<String> customerWorkspaceLocation;
 
-    public Input<String> getCustomerWorkspaceLocation() {
-        return this.customerWorkspaceLocation == null ? Input.empty() : this.customerWorkspaceLocation;
+    public Output<String> getCustomerWorkspaceLocation() {
+        return this.customerWorkspaceLocation == null ? Output.empty() : this.customerWorkspaceLocation;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="projectStatus")
-      private final @Nullable Input<Either<String,ProjectStatus>> projectStatus;
+      private final @Nullable Output<Either<String,ProjectStatus>> projectStatus;
 
-    public Input<Either<String,ProjectStatus>> getProjectStatus() {
-        return this.projectStatus == null ? Input.empty() : this.projectStatus;
+    public Output<Either<String,ProjectStatus>> getProjectStatus() {
+        return this.projectStatus == null ? Output.empty() : this.projectStatus;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<String> publicNetworkAccess;
+      private final @Nullable Output<String> publicNetworkAccess;
 
-    public Input<String> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<String> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     public ProjectPropertiesArgs(
-        @Nullable Input<String> assessmentSolutionId,
-        @Nullable Input<String> customerStorageAccountArmId,
-        @Nullable Input<String> customerWorkspaceId,
-        @Nullable Input<String> customerWorkspaceLocation,
-        @Nullable Input<Either<String,ProjectStatus>> projectStatus,
-        @Nullable Input<String> publicNetworkAccess) {
+        @Nullable Output<String> assessmentSolutionId,
+        @Nullable Output<String> customerStorageAccountArmId,
+        @Nullable Output<String> customerWorkspaceId,
+        @Nullable Output<String> customerWorkspaceLocation,
+        @Nullable Output<Either<String,ProjectStatus>> projectStatus,
+        @Nullable Output<String> publicNetworkAccess) {
         this.assessmentSolutionId = assessmentSolutionId;
         this.customerStorageAccountArmId = customerStorageAccountArmId;
         this.customerWorkspaceId = customerWorkspaceId;
@@ -102,12 +102,12 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ProjectPropertiesArgs() {
-        this.assessmentSolutionId = Input.empty();
-        this.customerStorageAccountArmId = Input.empty();
-        this.customerWorkspaceId = Input.empty();
-        this.customerWorkspaceLocation = Input.empty();
-        this.projectStatus = Input.empty();
-        this.publicNetworkAccess = Input.empty();
+        this.assessmentSolutionId = Output.empty();
+        this.customerStorageAccountArmId = Output.empty();
+        this.customerWorkspaceId = Output.empty();
+        this.customerWorkspaceLocation = Output.empty();
+        this.projectStatus = Output.empty();
+        this.publicNetworkAccess = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assessmentSolutionId;
-        private @Nullable Input<String> customerStorageAccountArmId;
-        private @Nullable Input<String> customerWorkspaceId;
-        private @Nullable Input<String> customerWorkspaceLocation;
-        private @Nullable Input<Either<String,ProjectStatus>> projectStatus;
-        private @Nullable Input<String> publicNetworkAccess;
+        private @Nullable Output<String> assessmentSolutionId;
+        private @Nullable Output<String> customerStorageAccountArmId;
+        private @Nullable Output<String> customerWorkspaceId;
+        private @Nullable Output<String> customerWorkspaceLocation;
+        private @Nullable Output<Either<String,ProjectStatus>> projectStatus;
+        private @Nullable Output<String> publicNetworkAccess;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.publicNetworkAccess = defaults.publicNetworkAccess;
         }
 
-        public Builder assessmentSolutionId(@Nullable Input<String> assessmentSolutionId) {
+        public Builder assessmentSolutionId(@Nullable Output<String> assessmentSolutionId) {
             this.assessmentSolutionId = assessmentSolutionId;
             return this;
         }
 
         public Builder assessmentSolutionId(@Nullable String assessmentSolutionId) {
-            this.assessmentSolutionId = Input.ofNullable(assessmentSolutionId);
+            this.assessmentSolutionId = Output.ofNullable(assessmentSolutionId);
             return this;
         }
 
-        public Builder customerStorageAccountArmId(@Nullable Input<String> customerStorageAccountArmId) {
+        public Builder customerStorageAccountArmId(@Nullable Output<String> customerStorageAccountArmId) {
             this.customerStorageAccountArmId = customerStorageAccountArmId;
             return this;
         }
 
         public Builder customerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
-            this.customerStorageAccountArmId = Input.ofNullable(customerStorageAccountArmId);
+            this.customerStorageAccountArmId = Output.ofNullable(customerStorageAccountArmId);
             return this;
         }
 
-        public Builder customerWorkspaceId(@Nullable Input<String> customerWorkspaceId) {
+        public Builder customerWorkspaceId(@Nullable Output<String> customerWorkspaceId) {
             this.customerWorkspaceId = customerWorkspaceId;
             return this;
         }
 
         public Builder customerWorkspaceId(@Nullable String customerWorkspaceId) {
-            this.customerWorkspaceId = Input.ofNullable(customerWorkspaceId);
+            this.customerWorkspaceId = Output.ofNullable(customerWorkspaceId);
             return this;
         }
 
-        public Builder customerWorkspaceLocation(@Nullable Input<String> customerWorkspaceLocation) {
+        public Builder customerWorkspaceLocation(@Nullable Output<String> customerWorkspaceLocation) {
             this.customerWorkspaceLocation = customerWorkspaceLocation;
             return this;
         }
 
         public Builder customerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
-            this.customerWorkspaceLocation = Input.ofNullable(customerWorkspaceLocation);
+            this.customerWorkspaceLocation = Output.ofNullable(customerWorkspaceLocation);
             return this;
         }
 
-        public Builder projectStatus(@Nullable Input<Either<String,ProjectStatus>> projectStatus) {
+        public Builder projectStatus(@Nullable Output<Either<String,ProjectStatus>> projectStatus) {
             this.projectStatus = projectStatus;
             return this;
         }
 
         public Builder projectStatus(@Nullable Either<String,ProjectStatus> projectStatus) {
-            this.projectStatus = Input.ofNullable(projectStatus);
+            this.projectStatus = Output.ofNullable(projectStatus);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<String> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
         public ProjectPropertiesArgs build() {

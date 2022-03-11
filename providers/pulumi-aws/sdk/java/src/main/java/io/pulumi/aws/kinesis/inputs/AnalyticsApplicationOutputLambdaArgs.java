@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AnalyticsApplicationOutputLambdaArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceArn", required=true)
-      private final Input<String> resourceArn;
+      private final Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
+    public Output<String> getResourceArn() {
         return this.resourceArn;
     }
 
@@ -29,22 +29,22 @@ public final class AnalyticsApplicationOutputLambdaArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public AnalyticsApplicationOutputLambdaArgs(
-        Input<String> resourceArn,
-        Input<String> roleArn) {
+        Output<String> resourceArn,
+        Output<String> roleArn) {
         this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private AnalyticsApplicationOutputLambdaArgs() {
-        this.resourceArn = Input.empty();
-        this.roleArn = Input.empty();
+        this.resourceArn = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AnalyticsApplicationOutputLambdaArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> resourceArn;
-        private Input<String> roleArn;
+        private Output<String> resourceArn;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AnalyticsApplicationOutputLambdaArgs extends io.pulumi.resour
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder resourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
+            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public AnalyticsApplicationOutputLambdaArgs build() {

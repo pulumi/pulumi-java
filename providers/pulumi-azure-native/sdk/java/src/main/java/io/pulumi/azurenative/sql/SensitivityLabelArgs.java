@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.SensitivityLabelRank;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="columnName", required=true)
-      private final Input<String> columnName;
+      private final Output<String> columnName;
 
-    public Input<String> getColumnName() {
+    public Output<String> getColumnName() {
         return this.columnName;
     }
 
@@ -31,9 +31,9 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -42,10 +42,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="informationType")
-      private final @Nullable Input<String> informationType;
+      private final @Nullable Output<String> informationType;
 
-    public Input<String> getInformationType() {
-        return this.informationType == null ? Input.empty() : this.informationType;
+    public Output<String> getInformationType() {
+        return this.informationType == null ? Output.empty() : this.informationType;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="informationTypeId")
-      private final @Nullable Input<String> informationTypeId;
+      private final @Nullable Output<String> informationTypeId;
 
-    public Input<String> getInformationTypeId() {
-        return this.informationTypeId == null ? Input.empty() : this.informationTypeId;
+    public Output<String> getInformationTypeId() {
+        return this.informationTypeId == null ? Output.empty() : this.informationTypeId;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labelId")
-      private final @Nullable Input<String> labelId;
+      private final @Nullable Output<String> labelId;
 
-    public Input<String> getLabelId() {
-        return this.labelId == null ? Input.empty() : this.labelId;
+    public Output<String> getLabelId() {
+        return this.labelId == null ? Output.empty() : this.labelId;
     }
 
     /**
@@ -75,17 +75,17 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labelName")
-      private final @Nullable Input<String> labelName;
+      private final @Nullable Output<String> labelName;
 
-    public Input<String> getLabelName() {
-        return this.labelName == null ? Input.empty() : this.labelName;
+    public Output<String> getLabelName() {
+        return this.labelName == null ? Output.empty() : this.labelName;
     }
 
     @InputImport(name="rank")
-      private final @Nullable Input<SensitivityLabelRank> rank;
+      private final @Nullable Output<SensitivityLabelRank> rank;
 
-    public Input<SensitivityLabelRank> getRank() {
-        return this.rank == null ? Input.empty() : this.rank;
+    public Output<SensitivityLabelRank> getRank() {
+        return this.rank == null ? Output.empty() : this.rank;
     }
 
     /**
@@ -93,9 +93,9 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,9 +104,9 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="schemaName", required=true)
-      private final Input<String> schemaName;
+      private final Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
+    public Output<String> getSchemaName() {
         return this.schemaName;
     }
 
@@ -115,10 +115,10 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sensitivityLabelSource")
-      private final @Nullable Input<String> sensitivityLabelSource;
+      private final @Nullable Output<String> sensitivityLabelSource;
 
-    public Input<String> getSensitivityLabelSource() {
-        return this.sensitivityLabelSource == null ? Input.empty() : this.sensitivityLabelSource;
+    public Output<String> getSensitivityLabelSource() {
+        return this.sensitivityLabelSource == null ? Output.empty() : this.sensitivityLabelSource;
     }
 
     /**
@@ -126,9 +126,9 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -137,25 +137,25 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public SensitivityLabelArgs(
-        Input<String> columnName,
-        Input<String> databaseName,
-        @Nullable Input<String> informationType,
-        @Nullable Input<String> informationTypeId,
-        @Nullable Input<String> labelId,
-        @Nullable Input<String> labelName,
-        @Nullable Input<SensitivityLabelRank> rank,
-        Input<String> resourceGroupName,
-        Input<String> schemaName,
-        @Nullable Input<String> sensitivityLabelSource,
-        Input<String> serverName,
-        Input<String> tableName) {
+        Output<String> columnName,
+        Output<String> databaseName,
+        @Nullable Output<String> informationType,
+        @Nullable Output<String> informationTypeId,
+        @Nullable Output<String> labelId,
+        @Nullable Output<String> labelName,
+        @Nullable Output<SensitivityLabelRank> rank,
+        Output<String> resourceGroupName,
+        Output<String> schemaName,
+        @Nullable Output<String> sensitivityLabelSource,
+        Output<String> serverName,
+        Output<String> tableName) {
         this.columnName = Objects.requireNonNull(columnName, "expected parameter 'columnName' to be non-null");
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.informationType = informationType;
@@ -171,18 +171,18 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SensitivityLabelArgs() {
-        this.columnName = Input.empty();
-        this.databaseName = Input.empty();
-        this.informationType = Input.empty();
-        this.informationTypeId = Input.empty();
-        this.labelId = Input.empty();
-        this.labelName = Input.empty();
-        this.rank = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.schemaName = Input.empty();
-        this.sensitivityLabelSource = Input.empty();
-        this.serverName = Input.empty();
-        this.tableName = Input.empty();
+        this.columnName = Output.empty();
+        this.databaseName = Output.empty();
+        this.informationType = Output.empty();
+        this.informationTypeId = Output.empty();
+        this.labelId = Output.empty();
+        this.labelName = Output.empty();
+        this.rank = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.schemaName = Output.empty();
+        this.sensitivityLabelSource = Output.empty();
+        this.serverName = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -194,18 +194,18 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> columnName;
-        private Input<String> databaseName;
-        private @Nullable Input<String> informationType;
-        private @Nullable Input<String> informationTypeId;
-        private @Nullable Input<String> labelId;
-        private @Nullable Input<String> labelName;
-        private @Nullable Input<SensitivityLabelRank> rank;
-        private Input<String> resourceGroupName;
-        private Input<String> schemaName;
-        private @Nullable Input<String> sensitivityLabelSource;
-        private Input<String> serverName;
-        private Input<String> tableName;
+        private Output<String> columnName;
+        private Output<String> databaseName;
+        private @Nullable Output<String> informationType;
+        private @Nullable Output<String> informationTypeId;
+        private @Nullable Output<String> labelId;
+        private @Nullable Output<String> labelName;
+        private @Nullable Output<SensitivityLabelRank> rank;
+        private Output<String> resourceGroupName;
+        private Output<String> schemaName;
+        private @Nullable Output<String> sensitivityLabelSource;
+        private Output<String> serverName;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -227,123 +227,123 @@ public final class SensitivityLabelArgs extends io.pulumi.resources.ResourceArgs
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder columnName(Input<String> columnName) {
+        public Builder columnName(Output<String> columnName) {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
 
         public Builder columnName(String columnName) {
-            this.columnName = Input.of(Objects.requireNonNull(columnName));
+            this.columnName = Output.of(Objects.requireNonNull(columnName));
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder informationType(@Nullable Input<String> informationType) {
+        public Builder informationType(@Nullable Output<String> informationType) {
             this.informationType = informationType;
             return this;
         }
 
         public Builder informationType(@Nullable String informationType) {
-            this.informationType = Input.ofNullable(informationType);
+            this.informationType = Output.ofNullable(informationType);
             return this;
         }
 
-        public Builder informationTypeId(@Nullable Input<String> informationTypeId) {
+        public Builder informationTypeId(@Nullable Output<String> informationTypeId) {
             this.informationTypeId = informationTypeId;
             return this;
         }
 
         public Builder informationTypeId(@Nullable String informationTypeId) {
-            this.informationTypeId = Input.ofNullable(informationTypeId);
+            this.informationTypeId = Output.ofNullable(informationTypeId);
             return this;
         }
 
-        public Builder labelId(@Nullable Input<String> labelId) {
+        public Builder labelId(@Nullable Output<String> labelId) {
             this.labelId = labelId;
             return this;
         }
 
         public Builder labelId(@Nullable String labelId) {
-            this.labelId = Input.ofNullable(labelId);
+            this.labelId = Output.ofNullable(labelId);
             return this;
         }
 
-        public Builder labelName(@Nullable Input<String> labelName) {
+        public Builder labelName(@Nullable Output<String> labelName) {
             this.labelName = labelName;
             return this;
         }
 
         public Builder labelName(@Nullable String labelName) {
-            this.labelName = Input.ofNullable(labelName);
+            this.labelName = Output.ofNullable(labelName);
             return this;
         }
 
-        public Builder rank(@Nullable Input<SensitivityLabelRank> rank) {
+        public Builder rank(@Nullable Output<SensitivityLabelRank> rank) {
             this.rank = rank;
             return this;
         }
 
         public Builder rank(@Nullable SensitivityLabelRank rank) {
-            this.rank = Input.ofNullable(rank);
+            this.rank = Output.ofNullable(rank);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder schemaName(Input<String> schemaName) {
+        public Builder schemaName(Output<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
         public Builder schemaName(String schemaName) {
-            this.schemaName = Input.of(Objects.requireNonNull(schemaName));
+            this.schemaName = Output.of(Objects.requireNonNull(schemaName));
             return this;
         }
 
-        public Builder sensitivityLabelSource(@Nullable Input<String> sensitivityLabelSource) {
+        public Builder sensitivityLabelSource(@Nullable Output<String> sensitivityLabelSource) {
             this.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
 
         public Builder sensitivityLabelSource(@Nullable String sensitivityLabelSource) {
-            this.sensitivityLabelSource = Input.ofNullable(sensitivityLabelSource);
+            this.sensitivityLabelSource = Output.ofNullable(sensitivityLabelSource);
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public SensitivityLabelArgs build() {

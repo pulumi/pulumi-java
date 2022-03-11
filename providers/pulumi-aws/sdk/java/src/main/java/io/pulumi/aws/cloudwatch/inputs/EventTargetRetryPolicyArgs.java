@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class EventTargetRetryPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maximumEventAgeInSeconds")
-      private final @Nullable Input<Integer> maximumEventAgeInSeconds;
+      private final @Nullable Output<Integer> maximumEventAgeInSeconds;
 
-    public Input<Integer> getMaximumEventAgeInSeconds() {
-        return this.maximumEventAgeInSeconds == null ? Input.empty() : this.maximumEventAgeInSeconds;
+    public Output<Integer> getMaximumEventAgeInSeconds() {
+        return this.maximumEventAgeInSeconds == null ? Output.empty() : this.maximumEventAgeInSeconds;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class EventTargetRetryPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maximumRetryAttempts")
-      private final @Nullable Input<Integer> maximumRetryAttempts;
+      private final @Nullable Output<Integer> maximumRetryAttempts;
 
-    public Input<Integer> getMaximumRetryAttempts() {
-        return this.maximumRetryAttempts == null ? Input.empty() : this.maximumRetryAttempts;
+    public Output<Integer> getMaximumRetryAttempts() {
+        return this.maximumRetryAttempts == null ? Output.empty() : this.maximumRetryAttempts;
     }
 
     public EventTargetRetryPolicyArgs(
-        @Nullable Input<Integer> maximumEventAgeInSeconds,
-        @Nullable Input<Integer> maximumRetryAttempts) {
+        @Nullable Output<Integer> maximumEventAgeInSeconds,
+        @Nullable Output<Integer> maximumRetryAttempts) {
         this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
         this.maximumRetryAttempts = maximumRetryAttempts;
     }
 
     private EventTargetRetryPolicyArgs() {
-        this.maximumEventAgeInSeconds = Input.empty();
-        this.maximumRetryAttempts = Input.empty();
+        this.maximumEventAgeInSeconds = Output.empty();
+        this.maximumRetryAttempts = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class EventTargetRetryPolicyArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maximumEventAgeInSeconds;
-        private @Nullable Input<Integer> maximumRetryAttempts;
+        private @Nullable Output<Integer> maximumEventAgeInSeconds;
+        private @Nullable Output<Integer> maximumRetryAttempts;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class EventTargetRetryPolicyArgs extends io.pulumi.resources.Resour
     	      this.maximumRetryAttempts = defaults.maximumRetryAttempts;
         }
 
-        public Builder maximumEventAgeInSeconds(@Nullable Input<Integer> maximumEventAgeInSeconds) {
+        public Builder maximumEventAgeInSeconds(@Nullable Output<Integer> maximumEventAgeInSeconds) {
             this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
             return this;
         }
 
         public Builder maximumEventAgeInSeconds(@Nullable Integer maximumEventAgeInSeconds) {
-            this.maximumEventAgeInSeconds = Input.ofNullable(maximumEventAgeInSeconds);
+            this.maximumEventAgeInSeconds = Output.ofNullable(maximumEventAgeInSeconds);
             return this;
         }
 
-        public Builder maximumRetryAttempts(@Nullable Input<Integer> maximumRetryAttempts) {
+        public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
             this.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
 
         public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
-            this.maximumRetryAttempts = Input.ofNullable(maximumRetryAttempts);
+            this.maximumRetryAttempts = Output.ofNullable(maximumRetryAttempts);
             return this;
         }
         public EventTargetRetryPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageA
      * 
      */
     @InputImport(name="appImageConfigName", required=true)
-      private final Input<String> appImageConfigName;
+      private final Output<String> appImageConfigName;
 
-    public Input<String> getAppImageConfigName() {
+    public Output<String> getAppImageConfigName() {
         return this.appImageConfigName;
     }
 
@@ -31,9 +31,9 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageA
      * 
      */
     @InputImport(name="imageName", required=true)
-      private final Input<String> imageName;
+      private final Output<String> imageName;
 
-    public Input<String> getImageName() {
+    public Output<String> getImageName() {
         return this.imageName;
     }
 
@@ -42,25 +42,25 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageA
      * 
      */
     @InputImport(name="imageVersionNumber")
-      private final @Nullable Input<Integer> imageVersionNumber;
+      private final @Nullable Output<Integer> imageVersionNumber;
 
-    public Input<Integer> getImageVersionNumber() {
-        return this.imageVersionNumber == null ? Input.empty() : this.imageVersionNumber;
+    public Output<Integer> getImageVersionNumber() {
+        return this.imageVersionNumber == null ? Output.empty() : this.imageVersionNumber;
     }
 
     public DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs(
-        Input<String> appImageConfigName,
-        Input<String> imageName,
-        @Nullable Input<Integer> imageVersionNumber) {
+        Output<String> appImageConfigName,
+        Output<String> imageName,
+        @Nullable Output<Integer> imageVersionNumber) {
         this.appImageConfigName = Objects.requireNonNull(appImageConfigName, "expected parameter 'appImageConfigName' to be non-null");
         this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
         this.imageVersionNumber = imageVersionNumber;
     }
 
     private DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs() {
-        this.appImageConfigName = Input.empty();
-        this.imageName = Input.empty();
-        this.imageVersionNumber = Input.empty();
+        this.appImageConfigName = Output.empty();
+        this.imageName = Output.empty();
+        this.imageVersionNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageA
     }
 
     public static final class Builder {
-        private Input<String> appImageConfigName;
-        private Input<String> imageName;
-        private @Nullable Input<Integer> imageVersionNumber;
+        private Output<String> appImageConfigName;
+        private Output<String> imageName;
+        private @Nullable Output<Integer> imageVersionNumber;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageA
     	      this.imageVersionNumber = defaults.imageVersionNumber;
         }
 
-        public Builder appImageConfigName(Input<String> appImageConfigName) {
+        public Builder appImageConfigName(Output<String> appImageConfigName) {
             this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
             return this;
         }
 
         public Builder appImageConfigName(String appImageConfigName) {
-            this.appImageConfigName = Input.of(Objects.requireNonNull(appImageConfigName));
+            this.appImageConfigName = Output.of(Objects.requireNonNull(appImageConfigName));
             return this;
         }
 
-        public Builder imageName(Input<String> imageName) {
+        public Builder imageName(Output<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
         public Builder imageName(String imageName) {
-            this.imageName = Input.of(Objects.requireNonNull(imageName));
+            this.imageName = Output.of(Objects.requireNonNull(imageName));
             return this;
         }
 
-        public Builder imageVersionNumber(@Nullable Input<Integer> imageVersionNumber) {
+        public Builder imageVersionNumber(@Nullable Output<Integer> imageVersionNumber) {
             this.imageVersionNumber = imageVersionNumber;
             return this;
         }
 
         public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
-            this.imageVersionNumber = Input.ofNullable(imageVersionNumber);
+            this.imageVersionNumber = Output.ofNullable(imageVersionNumber);
             return this;
         }
         public DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs build() {

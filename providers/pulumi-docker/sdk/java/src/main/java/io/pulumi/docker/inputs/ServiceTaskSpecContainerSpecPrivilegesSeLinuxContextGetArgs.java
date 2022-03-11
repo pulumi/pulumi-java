@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,46 +16,46 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs e
     public static final ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs Empty = new ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs();
 
     @InputImport(name="disable")
-      private final @Nullable Input<Boolean> disable;
+      private final @Nullable Output<Boolean> disable;
 
-    public Input<Boolean> getDisable() {
-        return this.disable == null ? Input.empty() : this.disable;
+    public Output<Boolean> getDisable() {
+        return this.disable == null ? Output.empty() : this.disable;
     }
 
     @InputImport(name="level")
-      private final @Nullable Input<String> level;
+      private final @Nullable Output<String> level;
 
-    public Input<String> getLevel() {
-        return this.level == null ? Input.empty() : this.level;
+    public Output<String> getLevel() {
+        return this.level == null ? Output.empty() : this.level;
     }
 
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs(
-        @Nullable Input<Boolean> disable,
-        @Nullable Input<String> level,
-        @Nullable Input<String> role,
-        @Nullable Input<String> type,
-        @Nullable Input<String> user) {
+        @Nullable Output<Boolean> disable,
+        @Nullable Output<String> level,
+        @Nullable Output<String> role,
+        @Nullable Output<String> type,
+        @Nullable Output<String> user) {
         this.disable = disable;
         this.level = level;
         this.role = role;
@@ -64,11 +64,11 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs e
     }
 
     private ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs() {
-        this.disable = Input.empty();
-        this.level = Input.empty();
-        this.role = Input.empty();
-        this.type = Input.empty();
-        this.user = Input.empty();
+        this.disable = Output.empty();
+        this.level = Output.empty();
+        this.role = Output.empty();
+        this.type = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,11 +80,11 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disable;
-        private @Nullable Input<String> level;
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> user;
+        private @Nullable Output<Boolean> disable;
+        private @Nullable Output<String> level;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -99,53 +99,53 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs e
     	      this.user = defaults.user;
         }
 
-        public Builder disable(@Nullable Input<Boolean> disable) {
+        public Builder disable(@Nullable Output<Boolean> disable) {
             this.disable = disable;
             return this;
         }
 
         public Builder disable(@Nullable Boolean disable) {
-            this.disable = Input.ofNullable(disable);
+            this.disable = Output.ofNullable(disable);
             return this;
         }
 
-        public Builder level(@Nullable Input<String> level) {
+        public Builder level(@Nullable Output<String> level) {
             this.level = level;
             return this;
         }
 
         public Builder level(@Nullable String level) {
-            this.level = Input.ofNullable(level);
+            this.level = Output.ofNullable(level);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs build() {

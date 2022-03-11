@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.WorkspaceKeyDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<WorkspaceKeyDetailsArgs> key;
+      private final @Nullable Output<WorkspaceKeyDetailsArgs> key;
 
-    public Input<WorkspaceKeyDetailsArgs> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<WorkspaceKeyDetailsArgs> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
-    public CustomerManagedKeyDetailsArgs(@Nullable Input<WorkspaceKeyDetailsArgs> key) {
+    public CustomerManagedKeyDetailsArgs(@Nullable Output<WorkspaceKeyDetailsArgs> key) {
         this.key = key;
     }
 
     private CustomerManagedKeyDetailsArgs() {
-        this.key = Input.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkspaceKeyDetailsArgs> key;
+        private @Nullable Output<WorkspaceKeyDetailsArgs> key;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.Res
     	      this.key = defaults.key;
         }
 
-        public Builder key(@Nullable Input<WorkspaceKeyDetailsArgs> key) {
+        public Builder key(@Nullable Output<WorkspaceKeyDetailsArgs> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable WorkspaceKeyDetailsArgs key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
         public CustomerManagedKeyDetailsArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authParameters")
-      private final @Nullable Input<EventConnectionAuthParametersGetArgs> authParameters;
+      private final @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters;
 
-    public Input<EventConnectionAuthParametersGetArgs> getAuthParameters() {
-        return this.authParameters == null ? Input.empty() : this.authParameters;
+    public Output<EventConnectionAuthParametersGetArgs> getAuthParameters() {
+        return this.authParameters == null ? Output.empty() : this.authParameters;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authorizationType")
-      private final @Nullable Input<String> authorizationType;
+      private final @Nullable Output<String> authorizationType;
 
-    public Input<String> getAuthorizationType() {
-        return this.authorizationType == null ? Input.empty() : this.authorizationType;
+    public Output<String> getAuthorizationType() {
+        return this.authorizationType == null ? Output.empty() : this.authorizationType;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="secretArn")
-      private final @Nullable Input<String> secretArn;
+      private final @Nullable Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
-        return this.secretArn == null ? Input.empty() : this.secretArn;
+    public Output<String> getSecretArn() {
+        return this.secretArn == null ? Output.empty() : this.secretArn;
     }
 
     public EventConnectionState(
-        @Nullable Input<String> arn,
-        @Nullable Input<EventConnectionAuthParametersGetArgs> authParameters,
-        @Nullable Input<String> authorizationType,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> secretArn) {
+        @Nullable Output<String> arn,
+        @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters,
+        @Nullable Output<String> authorizationType,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> secretArn) {
         this.arn = arn;
         this.authParameters = authParameters;
         this.authorizationType = authorizationType;
@@ -97,12 +97,12 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     }
 
     private EventConnectionState() {
-        this.arn = Input.empty();
-        this.authParameters = Input.empty();
-        this.authorizationType = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.secretArn = Input.empty();
+        this.arn = Output.empty();
+        this.authParameters = Output.empty();
+        this.authorizationType = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.secretArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<EventConnectionAuthParametersGetArgs> authParameters;
-        private @Nullable Input<String> authorizationType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> secretArn;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters;
+        private @Nullable Output<String> authorizationType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> secretArn;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder authParameters(@Nullable Input<EventConnectionAuthParametersGetArgs> authParameters) {
+        public Builder authParameters(@Nullable Output<EventConnectionAuthParametersGetArgs> authParameters) {
             this.authParameters = authParameters;
             return this;
         }
 
         public Builder authParameters(@Nullable EventConnectionAuthParametersGetArgs authParameters) {
-            this.authParameters = Input.ofNullable(authParameters);
+            this.authParameters = Output.ofNullable(authParameters);
             return this;
         }
 
-        public Builder authorizationType(@Nullable Input<String> authorizationType) {
+        public Builder authorizationType(@Nullable Output<String> authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
 
         public Builder authorizationType(@Nullable String authorizationType) {
-            this.authorizationType = Input.ofNullable(authorizationType);
+            this.authorizationType = Output.ofNullable(authorizationType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder secretArn(@Nullable Input<String> secretArn) {
+        public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Input.ofNullable(secretArn);
+            this.secretArn = Output.ofNullable(secretArn);
             return this;
         }
         public EventConnectionState build() {

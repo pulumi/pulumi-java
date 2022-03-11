@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public LiveEventEndpointArgs(
-        @Nullable Input<String> protocol,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> protocol,
+        @Nullable Output<String> url) {
         this.protocol = protocol;
         this.url = url;
     }
 
     private LiveEventEndpointArgs() {
-        this.protocol = Input.empty();
-        this.url = Input.empty();
+        this.protocol = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
     	      this.url = defaults.url;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public LiveEventEndpointArgs build() {

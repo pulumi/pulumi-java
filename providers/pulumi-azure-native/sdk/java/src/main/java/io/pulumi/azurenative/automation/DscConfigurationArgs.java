@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.ContentSourceArgs;
 import io.pulumi.azurenative.automation.inputs.DscConfigurationParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -34,10 +34,10 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="configurationName")
-      private final @Nullable Input<String> configurationName;
+      private final @Nullable Output<String> configurationName;
 
-    public Input<String> getConfigurationName() {
-        return this.configurationName == null ? Input.empty() : this.configurationName;
+    public Output<String> getConfigurationName() {
+        return this.configurationName == null ? Output.empty() : this.configurationName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logProgress")
-      private final @Nullable Input<Boolean> logProgress;
+      private final @Nullable Output<Boolean> logProgress;
 
-    public Input<Boolean> getLogProgress() {
-        return this.logProgress == null ? Input.empty() : this.logProgress;
+    public Output<Boolean> getLogProgress() {
+        return this.logProgress == null ? Output.empty() : this.logProgress;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logVerbose")
-      private final @Nullable Input<Boolean> logVerbose;
+      private final @Nullable Output<Boolean> logVerbose;
 
-    public Input<Boolean> getLogVerbose() {
-        return this.logVerbose == null ? Input.empty() : this.logVerbose;
+    public Output<Boolean> getLogVerbose() {
+        return this.logVerbose == null ? Output.empty() : this.logVerbose;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,DscConfigurationParameterArgs>> parameters;
+      private final @Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters;
 
-    public Input<Map<String,DscConfigurationParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,DscConfigurationParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -111,9 +111,9 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -122,9 +122,9 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<ContentSourceArgs> source;
+      private final Output<ContentSourceArgs> source;
 
-    public Input<ContentSourceArgs> getSource() {
+    public Output<ContentSourceArgs> getSource() {
         return this.source;
     }
 
@@ -133,24 +133,24 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DscConfigurationArgs(
-        Input<String> automationAccountName,
-        @Nullable Input<String> configurationName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> location,
-        @Nullable Input<Boolean> logProgress,
-        @Nullable Input<Boolean> logVerbose,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,DscConfigurationParameterArgs>> parameters,
-        Input<String> resourceGroupName,
-        Input<ContentSourceArgs> source,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> automationAccountName,
+        @Nullable Output<String> configurationName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> location,
+        @Nullable Output<Boolean> logProgress,
+        @Nullable Output<Boolean> logVerbose,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters,
+        Output<String> resourceGroupName,
+        Output<ContentSourceArgs> source,
+        @Nullable Output<Map<String,String>> tags) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.configurationName = configurationName;
         this.description = description;
@@ -165,17 +165,17 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DscConfigurationArgs() {
-        this.automationAccountName = Input.empty();
-        this.configurationName = Input.empty();
-        this.description = Input.empty();
-        this.location = Input.empty();
-        this.logProgress = Input.empty();
-        this.logVerbose = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.source = Input.empty();
-        this.tags = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.configurationName = Output.empty();
+        this.description = Output.empty();
+        this.location = Output.empty();
+        this.logProgress = Output.empty();
+        this.logVerbose = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.source = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -187,17 +187,17 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private @Nullable Input<String> configurationName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Boolean> logProgress;
-        private @Nullable Input<Boolean> logVerbose;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,DscConfigurationParameterArgs>> parameters;
-        private Input<String> resourceGroupName;
-        private Input<ContentSourceArgs> source;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> automationAccountName;
+        private @Nullable Output<String> configurationName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Boolean> logProgress;
+        private @Nullable Output<Boolean> logVerbose;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters;
+        private Output<String> resourceGroupName;
+        private Output<ContentSourceArgs> source;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -218,113 +218,113 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder configurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Output<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Input.ofNullable(configurationName);
+            this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder logProgress(@Nullable Input<Boolean> logProgress) {
+        public Builder logProgress(@Nullable Output<Boolean> logProgress) {
             this.logProgress = logProgress;
             return this;
         }
 
         public Builder logProgress(@Nullable Boolean logProgress) {
-            this.logProgress = Input.ofNullable(logProgress);
+            this.logProgress = Output.ofNullable(logProgress);
             return this;
         }
 
-        public Builder logVerbose(@Nullable Input<Boolean> logVerbose) {
+        public Builder logVerbose(@Nullable Output<Boolean> logVerbose) {
             this.logVerbose = logVerbose;
             return this;
         }
 
         public Builder logVerbose(@Nullable Boolean logVerbose) {
-            this.logVerbose = Input.ofNullable(logVerbose);
+            this.logVerbose = Output.ofNullable(logVerbose);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,DscConfigurationParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,DscConfigurationParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder source(Input<ContentSourceArgs> source) {
+        public Builder source(Output<ContentSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(ContentSourceArgs source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DscConfigurationArgs build() {

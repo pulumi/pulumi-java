@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class InsightFiltersUserDefinedValueGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="comparison", required=true)
-      private final Input<String> comparison;
+      private final Output<String> comparison;
 
-    public Input<String> getComparison() {
+    public Output<String> getComparison() {
         return this.comparison;
     }
 
@@ -29,9 +29,9 @@ public final class InsightFiltersUserDefinedValueGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -40,25 +40,25 @@ public final class InsightFiltersUserDefinedValueGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public InsightFiltersUserDefinedValueGetArgs(
-        Input<String> comparison,
-        Input<String> key,
-        Input<String> value) {
+        Output<String> comparison,
+        Output<String> key,
+        Output<String> value) {
         this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private InsightFiltersUserDefinedValueGetArgs() {
-        this.comparison = Input.empty();
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.comparison = Output.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class InsightFiltersUserDefinedValueGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> comparison;
-        private Input<String> key;
-        private Input<String> value;
+        private Output<String> comparison;
+        private Output<String> key;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class InsightFiltersUserDefinedValueGetArgs extends io.pulumi.resou
     	      this.value = defaults.value;
         }
 
-        public Builder comparison(Input<String> comparison) {
+        public Builder comparison(Output<String> comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
         public Builder comparison(String comparison) {
-            this.comparison = Input.of(Objects.requireNonNull(comparison));
+            this.comparison = Output.of(Objects.requireNonNull(comparison));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public InsightFiltersUserDefinedValueGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.JobQueryDefaultDatasetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobQueryDestinationEncryptionConfigurationArgs;
@@ -29,10 +29,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowLargeResults")
-      private final @Nullable Input<Boolean> allowLargeResults;
+      private final @Nullable Output<Boolean> allowLargeResults;
 
-    public Input<Boolean> getAllowLargeResults() {
-        return this.allowLargeResults == null ? Input.empty() : this.allowLargeResults;
+    public Output<Boolean> getAllowLargeResults() {
+        return this.allowLargeResults == null ? Output.empty() : this.allowLargeResults;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createDisposition")
-      private final @Nullable Input<String> createDisposition;
+      private final @Nullable Output<String> createDisposition;
 
-    public Input<String> getCreateDisposition() {
-        return this.createDisposition == null ? Input.empty() : this.createDisposition;
+    public Output<String> getCreateDisposition() {
+        return this.createDisposition == null ? Output.empty() : this.createDisposition;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDataset")
-      private final @Nullable Input<JobQueryDefaultDatasetArgs> defaultDataset;
+      private final @Nullable Output<JobQueryDefaultDatasetArgs> defaultDataset;
 
-    public Input<JobQueryDefaultDatasetArgs> getDefaultDataset() {
-        return this.defaultDataset == null ? Input.empty() : this.defaultDataset;
+    public Output<JobQueryDefaultDatasetArgs> getDefaultDataset() {
+        return this.defaultDataset == null ? Output.empty() : this.defaultDataset;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationEncryptionConfiguration")
-      private final @Nullable Input<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration;
+      private final @Nullable Output<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
-    public Input<JobQueryDestinationEncryptionConfigurationArgs> getDestinationEncryptionConfiguration() {
-        return this.destinationEncryptionConfiguration == null ? Input.empty() : this.destinationEncryptionConfiguration;
+    public Output<JobQueryDestinationEncryptionConfigurationArgs> getDestinationEncryptionConfiguration() {
+        return this.destinationEncryptionConfiguration == null ? Output.empty() : this.destinationEncryptionConfiguration;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationTable")
-      private final @Nullable Input<JobQueryDestinationTableArgs> destinationTable;
+      private final @Nullable Output<JobQueryDestinationTableArgs> destinationTable;
 
-    public Input<JobQueryDestinationTableArgs> getDestinationTable() {
-        return this.destinationTable == null ? Input.empty() : this.destinationTable;
+    public Output<JobQueryDestinationTableArgs> getDestinationTable() {
+        return this.destinationTable == null ? Output.empty() : this.destinationTable;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flattenResults")
-      private final @Nullable Input<Boolean> flattenResults;
+      private final @Nullable Output<Boolean> flattenResults;
 
-    public Input<Boolean> getFlattenResults() {
-        return this.flattenResults == null ? Input.empty() : this.flattenResults;
+    public Output<Boolean> getFlattenResults() {
+        return this.flattenResults == null ? Output.empty() : this.flattenResults;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumBillingTier")
-      private final @Nullable Input<Integer> maximumBillingTier;
+      private final @Nullable Output<Integer> maximumBillingTier;
 
-    public Input<Integer> getMaximumBillingTier() {
-        return this.maximumBillingTier == null ? Input.empty() : this.maximumBillingTier;
+    public Output<Integer> getMaximumBillingTier() {
+        return this.maximumBillingTier == null ? Output.empty() : this.maximumBillingTier;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumBytesBilled")
-      private final @Nullable Input<String> maximumBytesBilled;
+      private final @Nullable Output<String> maximumBytesBilled;
 
-    public Input<String> getMaximumBytesBilled() {
-        return this.maximumBytesBilled == null ? Input.empty() : this.maximumBytesBilled;
+    public Output<String> getMaximumBytesBilled() {
+        return this.maximumBytesBilled == null ? Output.empty() : this.maximumBytesBilled;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterMode")
-      private final @Nullable Input<String> parameterMode;
+      private final @Nullable Output<String> parameterMode;
 
-    public Input<String> getParameterMode() {
-        return this.parameterMode == null ? Input.empty() : this.parameterMode;
+    public Output<String> getParameterMode() {
+        return this.parameterMode == null ? Output.empty() : this.parameterMode;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<String> priority;
+      private final @Nullable Output<String> priority;
 
-    public Input<String> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<String> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -153,9 +153,9 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query", required=true)
-      private final Input<String> query;
+      private final Output<String> query;
 
-    public Input<String> getQuery() {
+    public Output<String> getQuery() {
         return this.query;
     }
 
@@ -169,10 +169,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaUpdateOptions")
-      private final @Nullable Input<List<String>> schemaUpdateOptions;
+      private final @Nullable Output<List<String>> schemaUpdateOptions;
 
-    public Input<List<String>> getSchemaUpdateOptions() {
-        return this.schemaUpdateOptions == null ? Input.empty() : this.schemaUpdateOptions;
+    public Output<List<String>> getSchemaUpdateOptions() {
+        return this.schemaUpdateOptions == null ? Output.empty() : this.schemaUpdateOptions;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptOptions")
-      private final @Nullable Input<JobQueryScriptOptionsArgs> scriptOptions;
+      private final @Nullable Output<JobQueryScriptOptionsArgs> scriptOptions;
 
-    public Input<JobQueryScriptOptionsArgs> getScriptOptions() {
-        return this.scriptOptions == null ? Input.empty() : this.scriptOptions;
+    public Output<JobQueryScriptOptionsArgs> getScriptOptions() {
+        return this.scriptOptions == null ? Output.empty() : this.scriptOptions;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useLegacySql")
-      private final @Nullable Input<Boolean> useLegacySql;
+      private final @Nullable Output<Boolean> useLegacySql;
 
-    public Input<Boolean> getUseLegacySql() {
-        return this.useLegacySql == null ? Input.empty() : this.useLegacySql;
+    public Output<Boolean> getUseLegacySql() {
+        return this.useLegacySql == null ? Output.empty() : this.useLegacySql;
     }
 
     /**
@@ -206,10 +206,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useQueryCache")
-      private final @Nullable Input<Boolean> useQueryCache;
+      private final @Nullable Output<Boolean> useQueryCache;
 
-    public Input<Boolean> getUseQueryCache() {
-        return this.useQueryCache == null ? Input.empty() : this.useQueryCache;
+    public Output<Boolean> getUseQueryCache() {
+        return this.useQueryCache == null ? Output.empty() : this.useQueryCache;
     }
 
     /**
@@ -218,10 +218,10 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userDefinedFunctionResources")
-      private final @Nullable Input<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
+      private final @Nullable Output<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 
-    public Input<List<JobQueryUserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {
-        return this.userDefinedFunctionResources == null ? Input.empty() : this.userDefinedFunctionResources;
+    public Output<List<JobQueryUserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {
+        return this.userDefinedFunctionResources == null ? Output.empty() : this.userDefinedFunctionResources;
     }
 
     /**
@@ -236,30 +236,30 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeDisposition")
-      private final @Nullable Input<String> writeDisposition;
+      private final @Nullable Output<String> writeDisposition;
 
-    public Input<String> getWriteDisposition() {
-        return this.writeDisposition == null ? Input.empty() : this.writeDisposition;
+    public Output<String> getWriteDisposition() {
+        return this.writeDisposition == null ? Output.empty() : this.writeDisposition;
     }
 
     public JobQueryArgs(
-        @Nullable Input<Boolean> allowLargeResults,
-        @Nullable Input<String> createDisposition,
-        @Nullable Input<JobQueryDefaultDatasetArgs> defaultDataset,
-        @Nullable Input<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration,
-        @Nullable Input<JobQueryDestinationTableArgs> destinationTable,
-        @Nullable Input<Boolean> flattenResults,
-        @Nullable Input<Integer> maximumBillingTier,
-        @Nullable Input<String> maximumBytesBilled,
-        @Nullable Input<String> parameterMode,
-        @Nullable Input<String> priority,
-        Input<String> query,
-        @Nullable Input<List<String>> schemaUpdateOptions,
-        @Nullable Input<JobQueryScriptOptionsArgs> scriptOptions,
-        @Nullable Input<Boolean> useLegacySql,
-        @Nullable Input<Boolean> useQueryCache,
-        @Nullable Input<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources,
-        @Nullable Input<String> writeDisposition) {
+        @Nullable Output<Boolean> allowLargeResults,
+        @Nullable Output<String> createDisposition,
+        @Nullable Output<JobQueryDefaultDatasetArgs> defaultDataset,
+        @Nullable Output<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration,
+        @Nullable Output<JobQueryDestinationTableArgs> destinationTable,
+        @Nullable Output<Boolean> flattenResults,
+        @Nullable Output<Integer> maximumBillingTier,
+        @Nullable Output<String> maximumBytesBilled,
+        @Nullable Output<String> parameterMode,
+        @Nullable Output<String> priority,
+        Output<String> query,
+        @Nullable Output<List<String>> schemaUpdateOptions,
+        @Nullable Output<JobQueryScriptOptionsArgs> scriptOptions,
+        @Nullable Output<Boolean> useLegacySql,
+        @Nullable Output<Boolean> useQueryCache,
+        @Nullable Output<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources,
+        @Nullable Output<String> writeDisposition) {
         this.allowLargeResults = allowLargeResults;
         this.createDisposition = createDisposition;
         this.defaultDataset = defaultDataset;
@@ -280,23 +280,23 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobQueryArgs() {
-        this.allowLargeResults = Input.empty();
-        this.createDisposition = Input.empty();
-        this.defaultDataset = Input.empty();
-        this.destinationEncryptionConfiguration = Input.empty();
-        this.destinationTable = Input.empty();
-        this.flattenResults = Input.empty();
-        this.maximumBillingTier = Input.empty();
-        this.maximumBytesBilled = Input.empty();
-        this.parameterMode = Input.empty();
-        this.priority = Input.empty();
-        this.query = Input.empty();
-        this.schemaUpdateOptions = Input.empty();
-        this.scriptOptions = Input.empty();
-        this.useLegacySql = Input.empty();
-        this.useQueryCache = Input.empty();
-        this.userDefinedFunctionResources = Input.empty();
-        this.writeDisposition = Input.empty();
+        this.allowLargeResults = Output.empty();
+        this.createDisposition = Output.empty();
+        this.defaultDataset = Output.empty();
+        this.destinationEncryptionConfiguration = Output.empty();
+        this.destinationTable = Output.empty();
+        this.flattenResults = Output.empty();
+        this.maximumBillingTier = Output.empty();
+        this.maximumBytesBilled = Output.empty();
+        this.parameterMode = Output.empty();
+        this.priority = Output.empty();
+        this.query = Output.empty();
+        this.schemaUpdateOptions = Output.empty();
+        this.scriptOptions = Output.empty();
+        this.useLegacySql = Output.empty();
+        this.useQueryCache = Output.empty();
+        this.userDefinedFunctionResources = Output.empty();
+        this.writeDisposition = Output.empty();
     }
 
     public static Builder builder() {
@@ -308,23 +308,23 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowLargeResults;
-        private @Nullable Input<String> createDisposition;
-        private @Nullable Input<JobQueryDefaultDatasetArgs> defaultDataset;
-        private @Nullable Input<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration;
-        private @Nullable Input<JobQueryDestinationTableArgs> destinationTable;
-        private @Nullable Input<Boolean> flattenResults;
-        private @Nullable Input<Integer> maximumBillingTier;
-        private @Nullable Input<String> maximumBytesBilled;
-        private @Nullable Input<String> parameterMode;
-        private @Nullable Input<String> priority;
-        private Input<String> query;
-        private @Nullable Input<List<String>> schemaUpdateOptions;
-        private @Nullable Input<JobQueryScriptOptionsArgs> scriptOptions;
-        private @Nullable Input<Boolean> useLegacySql;
-        private @Nullable Input<Boolean> useQueryCache;
-        private @Nullable Input<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
-        private @Nullable Input<String> writeDisposition;
+        private @Nullable Output<Boolean> allowLargeResults;
+        private @Nullable Output<String> createDisposition;
+        private @Nullable Output<JobQueryDefaultDatasetArgs> defaultDataset;
+        private @Nullable Output<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration;
+        private @Nullable Output<JobQueryDestinationTableArgs> destinationTable;
+        private @Nullable Output<Boolean> flattenResults;
+        private @Nullable Output<Integer> maximumBillingTier;
+        private @Nullable Output<String> maximumBytesBilled;
+        private @Nullable Output<String> parameterMode;
+        private @Nullable Output<String> priority;
+        private Output<String> query;
+        private @Nullable Output<List<String>> schemaUpdateOptions;
+        private @Nullable Output<JobQueryScriptOptionsArgs> scriptOptions;
+        private @Nullable Output<Boolean> useLegacySql;
+        private @Nullable Output<Boolean> useQueryCache;
+        private @Nullable Output<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
+        private @Nullable Output<String> writeDisposition;
 
         public Builder() {
     	      // Empty
@@ -351,173 +351,173 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder allowLargeResults(@Nullable Input<Boolean> allowLargeResults) {
+        public Builder allowLargeResults(@Nullable Output<Boolean> allowLargeResults) {
             this.allowLargeResults = allowLargeResults;
             return this;
         }
 
         public Builder allowLargeResults(@Nullable Boolean allowLargeResults) {
-            this.allowLargeResults = Input.ofNullable(allowLargeResults);
+            this.allowLargeResults = Output.ofNullable(allowLargeResults);
             return this;
         }
 
-        public Builder createDisposition(@Nullable Input<String> createDisposition) {
+        public Builder createDisposition(@Nullable Output<String> createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
 
         public Builder createDisposition(@Nullable String createDisposition) {
-            this.createDisposition = Input.ofNullable(createDisposition);
+            this.createDisposition = Output.ofNullable(createDisposition);
             return this;
         }
 
-        public Builder defaultDataset(@Nullable Input<JobQueryDefaultDatasetArgs> defaultDataset) {
+        public Builder defaultDataset(@Nullable Output<JobQueryDefaultDatasetArgs> defaultDataset) {
             this.defaultDataset = defaultDataset;
             return this;
         }
 
         public Builder defaultDataset(@Nullable JobQueryDefaultDatasetArgs defaultDataset) {
-            this.defaultDataset = Input.ofNullable(defaultDataset);
+            this.defaultDataset = Output.ofNullable(defaultDataset);
             return this;
         }
 
-        public Builder destinationEncryptionConfiguration(@Nullable Input<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable Output<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
         public Builder destinationEncryptionConfiguration(@Nullable JobQueryDestinationEncryptionConfigurationArgs destinationEncryptionConfiguration) {
-            this.destinationEncryptionConfiguration = Input.ofNullable(destinationEncryptionConfiguration);
+            this.destinationEncryptionConfiguration = Output.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
 
-        public Builder destinationTable(@Nullable Input<JobQueryDestinationTableArgs> destinationTable) {
+        public Builder destinationTable(@Nullable Output<JobQueryDestinationTableArgs> destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
 
         public Builder destinationTable(@Nullable JobQueryDestinationTableArgs destinationTable) {
-            this.destinationTable = Input.ofNullable(destinationTable);
+            this.destinationTable = Output.ofNullable(destinationTable);
             return this;
         }
 
-        public Builder flattenResults(@Nullable Input<Boolean> flattenResults) {
+        public Builder flattenResults(@Nullable Output<Boolean> flattenResults) {
             this.flattenResults = flattenResults;
             return this;
         }
 
         public Builder flattenResults(@Nullable Boolean flattenResults) {
-            this.flattenResults = Input.ofNullable(flattenResults);
+            this.flattenResults = Output.ofNullable(flattenResults);
             return this;
         }
 
-        public Builder maximumBillingTier(@Nullable Input<Integer> maximumBillingTier) {
+        public Builder maximumBillingTier(@Nullable Output<Integer> maximumBillingTier) {
             this.maximumBillingTier = maximumBillingTier;
             return this;
         }
 
         public Builder maximumBillingTier(@Nullable Integer maximumBillingTier) {
-            this.maximumBillingTier = Input.ofNullable(maximumBillingTier);
+            this.maximumBillingTier = Output.ofNullable(maximumBillingTier);
             return this;
         }
 
-        public Builder maximumBytesBilled(@Nullable Input<String> maximumBytesBilled) {
+        public Builder maximumBytesBilled(@Nullable Output<String> maximumBytesBilled) {
             this.maximumBytesBilled = maximumBytesBilled;
             return this;
         }
 
         public Builder maximumBytesBilled(@Nullable String maximumBytesBilled) {
-            this.maximumBytesBilled = Input.ofNullable(maximumBytesBilled);
+            this.maximumBytesBilled = Output.ofNullable(maximumBytesBilled);
             return this;
         }
 
-        public Builder parameterMode(@Nullable Input<String> parameterMode) {
+        public Builder parameterMode(@Nullable Output<String> parameterMode) {
             this.parameterMode = parameterMode;
             return this;
         }
 
         public Builder parameterMode(@Nullable String parameterMode) {
-            this.parameterMode = Input.ofNullable(parameterMode);
+            this.parameterMode = Output.ofNullable(parameterMode);
             return this;
         }
 
-        public Builder priority(@Nullable Input<String> priority) {
+        public Builder priority(@Nullable Output<String> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable String priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder query(Input<String> query) {
+        public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
         public Builder query(String query) {
-            this.query = Input.of(Objects.requireNonNull(query));
+            this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder schemaUpdateOptions(@Nullable Input<List<String>> schemaUpdateOptions) {
+        public Builder schemaUpdateOptions(@Nullable Output<List<String>> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
 
         public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
-            this.schemaUpdateOptions = Input.ofNullable(schemaUpdateOptions);
+            this.schemaUpdateOptions = Output.ofNullable(schemaUpdateOptions);
             return this;
         }
 
-        public Builder scriptOptions(@Nullable Input<JobQueryScriptOptionsArgs> scriptOptions) {
+        public Builder scriptOptions(@Nullable Output<JobQueryScriptOptionsArgs> scriptOptions) {
             this.scriptOptions = scriptOptions;
             return this;
         }
 
         public Builder scriptOptions(@Nullable JobQueryScriptOptionsArgs scriptOptions) {
-            this.scriptOptions = Input.ofNullable(scriptOptions);
+            this.scriptOptions = Output.ofNullable(scriptOptions);
             return this;
         }
 
-        public Builder useLegacySql(@Nullable Input<Boolean> useLegacySql) {
+        public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
 
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
-            this.useLegacySql = Input.ofNullable(useLegacySql);
+            this.useLegacySql = Output.ofNullable(useLegacySql);
             return this;
         }
 
-        public Builder useQueryCache(@Nullable Input<Boolean> useQueryCache) {
+        public Builder useQueryCache(@Nullable Output<Boolean> useQueryCache) {
             this.useQueryCache = useQueryCache;
             return this;
         }
 
         public Builder useQueryCache(@Nullable Boolean useQueryCache) {
-            this.useQueryCache = Input.ofNullable(useQueryCache);
+            this.useQueryCache = Output.ofNullable(useQueryCache);
             return this;
         }
 
-        public Builder userDefinedFunctionResources(@Nullable Input<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(@Nullable Output<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
 
         public Builder userDefinedFunctionResources(@Nullable List<JobQueryUserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
-            this.userDefinedFunctionResources = Input.ofNullable(userDefinedFunctionResources);
+            this.userDefinedFunctionResources = Output.ofNullable(userDefinedFunctionResources);
             return this;
         }
 
-        public Builder writeDisposition(@Nullable Input<String> writeDisposition) {
+        public Builder writeDisposition(@Nullable Output<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
 
         public Builder writeDisposition(@Nullable String writeDisposition) {
-            this.writeDisposition = Input.ofNullable(writeDisposition);
+            this.writeDisposition = Output.ofNullable(writeDisposition);
             return this;
         }
         public JobQueryArgs build() {

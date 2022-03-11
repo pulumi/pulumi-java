@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class FlowDefinitionHumanLoopActivationConfigHumanLoopActivationCon
      * 
      */
     @InputImport(name="humanLoopActivationConditions", required=true)
-      private final Input<String> humanLoopActivationConditions;
+      private final Output<String> humanLoopActivationConditions;
 
-    public Input<String> getHumanLoopActivationConditions() {
+    public Output<String> getHumanLoopActivationConditions() {
         return this.humanLoopActivationConditions;
     }
 
-    public FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs(Input<String> humanLoopActivationConditions) {
+    public FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs(Output<String> humanLoopActivationConditions) {
         this.humanLoopActivationConditions = Objects.requireNonNull(humanLoopActivationConditions, "expected parameter 'humanLoopActivationConditions' to be non-null");
     }
 
     private FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs() {
-        this.humanLoopActivationConditions = Input.empty();
+        this.humanLoopActivationConditions = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FlowDefinitionHumanLoopActivationConfigHumanLoopActivationCon
     }
 
     public static final class Builder {
-        private Input<String> humanLoopActivationConditions;
+        private Output<String> humanLoopActivationConditions;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FlowDefinitionHumanLoopActivationConfigHumanLoopActivationCon
     	      this.humanLoopActivationConditions = defaults.humanLoopActivationConditions;
         }
 
-        public Builder humanLoopActivationConditions(Input<String> humanLoopActivationConditions) {
+        public Builder humanLoopActivationConditions(Output<String> humanLoopActivationConditions) {
             this.humanLoopActivationConditions = Objects.requireNonNull(humanLoopActivationConditions);
             return this;
         }
 
         public Builder humanLoopActivationConditions(String humanLoopActivationConditions) {
-            this.humanLoopActivationConditions = Input.of(Objects.requireNonNull(humanLoopActivationConditions));
+            this.humanLoopActivationConditions = Output.of(Objects.requireNonNull(humanLoopActivationConditions));
             return this;
         }
         public FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs build() {

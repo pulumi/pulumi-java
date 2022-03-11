@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keySource")
-      private final @Nullable Input<String> keySource;
+      private final @Nullable Output<String> keySource;
 
-    public Input<String> getKeySource() {
-        return this.keySource == null ? Input.empty() : this.keySource;
+    public Output<String> getKeySource() {
+        return this.keySource == null ? Output.empty() : this.keySource;
     }
 
-    public AccountEncryptionArgs(@Nullable Input<String> keySource) {
+    public AccountEncryptionArgs(@Nullable Output<String> keySource) {
         this.keySource = keySource;
     }
 
     private AccountEncryptionArgs() {
-        this.keySource = Input.empty();
+        this.keySource = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keySource;
+        private @Nullable Output<String> keySource;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     	      this.keySource = defaults.keySource;
         }
 
-        public Builder keySource(@Nullable Input<String> keySource) {
+        public Builder keySource(@Nullable Output<String> keySource) {
             this.keySource = keySource;
             return this;
         }
 
         public Builder keySource(@Nullable String keySource) {
-            this.keySource = Input.ofNullable(keySource);
+            this.keySource = Output.ofNullable(keySource);
             return this;
         }
         public AccountEncryptionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class IntegrationTlsConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="insecureSkipVerification")
-      private final @Nullable Input<Boolean> insecureSkipVerification;
+      private final @Nullable Output<Boolean> insecureSkipVerification;
 
-    public Input<Boolean> getInsecureSkipVerification() {
-        return this.insecureSkipVerification == null ? Input.empty() : this.insecureSkipVerification;
+    public Output<Boolean> getInsecureSkipVerification() {
+        return this.insecureSkipVerification == null ? Output.empty() : this.insecureSkipVerification;
     }
 
-    public IntegrationTlsConfigArgs(@Nullable Input<Boolean> insecureSkipVerification) {
+    public IntegrationTlsConfigArgs(@Nullable Output<Boolean> insecureSkipVerification) {
         this.insecureSkipVerification = insecureSkipVerification;
     }
 
     private IntegrationTlsConfigArgs() {
-        this.insecureSkipVerification = Input.empty();
+        this.insecureSkipVerification = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class IntegrationTlsConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> insecureSkipVerification;
+        private @Nullable Output<Boolean> insecureSkipVerification;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class IntegrationTlsConfigArgs extends io.pulumi.resources.Resource
     	      this.insecureSkipVerification = defaults.insecureSkipVerification;
         }
 
-        public Builder insecureSkipVerification(@Nullable Input<Boolean> insecureSkipVerification) {
+        public Builder insecureSkipVerification(@Nullable Output<Boolean> insecureSkipVerification) {
             this.insecureSkipVerification = insecureSkipVerification;
             return this;
         }
 
         public Builder insecureSkipVerification(@Nullable Boolean insecureSkipVerification) {
-            this.insecureSkipVerification = Input.ofNullable(insecureSkipVerification);
+            this.insecureSkipVerification = Output.ofNullable(insecureSkipVerification);
             return this;
         }
         public IntegrationTlsConfigArgs build() {

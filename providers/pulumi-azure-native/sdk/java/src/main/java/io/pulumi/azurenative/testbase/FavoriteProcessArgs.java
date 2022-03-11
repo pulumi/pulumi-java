@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="actualProcessName", required=true)
-      private final Input<String> actualProcessName;
+      private final Output<String> actualProcessName;
 
-    public Input<String> getActualProcessName() {
+    public Output<String> getActualProcessName() {
         return this.actualProcessName;
     }
 
@@ -30,10 +30,10 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="favoriteProcessResourceName")
-      private final @Nullable Input<String> favoriteProcessResourceName;
+      private final @Nullable Output<String> favoriteProcessResourceName;
 
-    public Input<String> getFavoriteProcessResourceName() {
-        return this.favoriteProcessResourceName == null ? Input.empty() : this.favoriteProcessResourceName;
+    public Output<String> getFavoriteProcessResourceName() {
+        return this.favoriteProcessResourceName == null ? Output.empty() : this.favoriteProcessResourceName;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="packageName", required=true)
-      private final Input<String> packageName;
+      private final Output<String> packageName;
 
-    public Input<String> getPackageName() {
+    public Output<String> getPackageName() {
         return this.packageName;
     }
 
@@ -52,9 +52,9 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,18 +63,18 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-      private final Input<String> testBaseAccountName;
+      private final Output<String> testBaseAccountName;
 
-    public Input<String> getTestBaseAccountName() {
+    public Output<String> getTestBaseAccountName() {
         return this.testBaseAccountName;
     }
 
     public FavoriteProcessArgs(
-        Input<String> actualProcessName,
-        @Nullable Input<String> favoriteProcessResourceName,
-        Input<String> packageName,
-        Input<String> resourceGroupName,
-        Input<String> testBaseAccountName) {
+        Output<String> actualProcessName,
+        @Nullable Output<String> favoriteProcessResourceName,
+        Output<String> packageName,
+        Output<String> resourceGroupName,
+        Output<String> testBaseAccountName) {
         this.actualProcessName = Objects.requireNonNull(actualProcessName, "expected parameter 'actualProcessName' to be non-null");
         this.favoriteProcessResourceName = favoriteProcessResourceName;
         this.packageName = Objects.requireNonNull(packageName, "expected parameter 'packageName' to be non-null");
@@ -83,11 +83,11 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private FavoriteProcessArgs() {
-        this.actualProcessName = Input.empty();
-        this.favoriteProcessResourceName = Input.empty();
-        this.packageName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.testBaseAccountName = Input.empty();
+        this.actualProcessName = Output.empty();
+        this.favoriteProcessResourceName = Output.empty();
+        this.packageName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.testBaseAccountName = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> actualProcessName;
-        private @Nullable Input<String> favoriteProcessResourceName;
-        private Input<String> packageName;
-        private Input<String> resourceGroupName;
-        private Input<String> testBaseAccountName;
+        private Output<String> actualProcessName;
+        private @Nullable Output<String> favoriteProcessResourceName;
+        private Output<String> packageName;
+        private Output<String> resourceGroupName;
+        private Output<String> testBaseAccountName;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
     	      this.testBaseAccountName = defaults.testBaseAccountName;
         }
 
-        public Builder actualProcessName(Input<String> actualProcessName) {
+        public Builder actualProcessName(Output<String> actualProcessName) {
             this.actualProcessName = Objects.requireNonNull(actualProcessName);
             return this;
         }
 
         public Builder actualProcessName(String actualProcessName) {
-            this.actualProcessName = Input.of(Objects.requireNonNull(actualProcessName));
+            this.actualProcessName = Output.of(Objects.requireNonNull(actualProcessName));
             return this;
         }
 
-        public Builder favoriteProcessResourceName(@Nullable Input<String> favoriteProcessResourceName) {
+        public Builder favoriteProcessResourceName(@Nullable Output<String> favoriteProcessResourceName) {
             this.favoriteProcessResourceName = favoriteProcessResourceName;
             return this;
         }
 
         public Builder favoriteProcessResourceName(@Nullable String favoriteProcessResourceName) {
-            this.favoriteProcessResourceName = Input.ofNullable(favoriteProcessResourceName);
+            this.favoriteProcessResourceName = Output.ofNullable(favoriteProcessResourceName);
             return this;
         }
 
-        public Builder packageName(Input<String> packageName) {
+        public Builder packageName(Output<String> packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
 
         public Builder packageName(String packageName) {
-            this.packageName = Input.of(Objects.requireNonNull(packageName));
+            this.packageName = Output.of(Objects.requireNonNull(packageName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder testBaseAccountName(Input<String> testBaseAccountName) {
+        public Builder testBaseAccountName(Output<String> testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
 
         public Builder testBaseAccountName(String testBaseAccountName) {
-            this.testBaseAccountName = Input.of(Objects.requireNonNull(testBaseAccountName));
+            this.testBaseAccountName = Output.of(Objects.requireNonNull(testBaseAccountName));
             return this;
         }
         public FavoriteProcessArgs build() {

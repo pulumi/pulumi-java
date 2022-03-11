@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class LocalTimestampTimeZoneOffsetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="propertyName")
-      private final @Nullable Input<String> propertyName;
+      private final @Nullable Output<String> propertyName;
 
-    public Input<String> getPropertyName() {
-        return this.propertyName == null ? Input.empty() : this.propertyName;
+    public Output<String> getPropertyName() {
+        return this.propertyName == null ? Output.empty() : this.propertyName;
     }
 
-    public LocalTimestampTimeZoneOffsetArgs(@Nullable Input<String> propertyName) {
+    public LocalTimestampTimeZoneOffsetArgs(@Nullable Output<String> propertyName) {
         this.propertyName = propertyName;
     }
 
     private LocalTimestampTimeZoneOffsetArgs() {
-        this.propertyName = Input.empty();
+        this.propertyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LocalTimestampTimeZoneOffsetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> propertyName;
+        private @Nullable Output<String> propertyName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LocalTimestampTimeZoneOffsetArgs extends io.pulumi.resources.
     	      this.propertyName = defaults.propertyName;
         }
 
-        public Builder propertyName(@Nullable Input<String> propertyName) {
+        public Builder propertyName(@Nullable Output<String> propertyName) {
             this.propertyName = propertyName;
             return this;
         }
 
         public Builder propertyName(@Nullable String propertyName) {
-            this.propertyName = Input.ofNullable(propertyName);
+            this.propertyName = Output.ofNullable(propertyName);
             return this;
         }
         public LocalTimestampTimeZoneOffsetArgs build() {

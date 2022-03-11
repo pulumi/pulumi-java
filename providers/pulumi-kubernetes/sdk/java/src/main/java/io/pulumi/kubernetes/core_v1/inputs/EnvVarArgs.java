@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.EnvVarSourceArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class EnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,10 +35,10 @@ public final class EnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class EnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valueFrom")
-      private final @Nullable Input<EnvVarSourceArgs> valueFrom;
+      private final @Nullable Output<EnvVarSourceArgs> valueFrom;
 
-    public Input<EnvVarSourceArgs> getValueFrom() {
-        return this.valueFrom == null ? Input.empty() : this.valueFrom;
+    public Output<EnvVarSourceArgs> getValueFrom() {
+        return this.valueFrom == null ? Output.empty() : this.valueFrom;
     }
 
     public EnvVarArgs(
-        Input<String> name,
-        @Nullable Input<String> value,
-        @Nullable Input<EnvVarSourceArgs> valueFrom) {
+        Output<String> name,
+        @Nullable Output<String> value,
+        @Nullable Output<EnvVarSourceArgs> valueFrom) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.value = value;
         this.valueFrom = valueFrom;
     }
 
     private EnvVarArgs() {
-        this.name = Input.empty();
-        this.value = Input.empty();
-        this.valueFrom = Input.empty();
+        this.name = Output.empty();
+        this.value = Output.empty();
+        this.valueFrom = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class EnvVarArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<String> value;
-        private @Nullable Input<EnvVarSourceArgs> valueFrom;
+        private Output<String> name;
+        private @Nullable Output<String> value;
+        private @Nullable Output<EnvVarSourceArgs> valueFrom;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class EnvVarArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueFrom = defaults.valueFrom;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
 
-        public Builder valueFrom(@Nullable Input<EnvVarSourceArgs> valueFrom) {
+        public Builder valueFrom(@Nullable Output<EnvVarSourceArgs> valueFrom) {
             this.valueFrom = valueFrom;
             return this;
         }
 
         public Builder valueFrom(@Nullable EnvVarSourceArgs valueFrom) {
-            this.valueFrom = Input.ofNullable(valueFrom);
+            this.valueFrom = Output.ofNullable(valueFrom);
             return this;
         }
         public EnvVarArgs build() {

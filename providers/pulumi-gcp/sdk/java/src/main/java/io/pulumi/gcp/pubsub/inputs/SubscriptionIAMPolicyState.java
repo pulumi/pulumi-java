@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subscription")
-      private final @Nullable Input<String> subscription;
+      private final @Nullable Output<String> subscription;
 
-    public Input<String> getSubscription() {
-        return this.subscription == null ? Input.empty() : this.subscription;
+    public Output<String> getSubscription() {
+        return this.subscription == null ? Output.empty() : this.subscription;
     }
 
     public SubscriptionIAMPolicyState(
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData,
-        @Nullable Input<String> project,
-        @Nullable Input<String> subscription) {
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData,
+        @Nullable Output<String> project,
+        @Nullable Output<String> subscription) {
         this.etag = etag;
         this.policyData = policyData;
         this.project = project;
@@ -72,10 +72,10 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     }
 
     private SubscriptionIAMPolicyState() {
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.subscription = Input.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.subscription = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> subscription;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> subscription;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     	      this.subscription = defaults.subscription;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder subscription(@Nullable Input<String> subscription) {
+        public Builder subscription(@Nullable Output<String> subscription) {
             this.subscription = subscription;
             return this;
         }
 
         public Builder subscription(@Nullable String subscription) {
-            this.subscription = Input.ofNullable(subscription);
+            this.subscription = Output.ofNullable(subscription);
             return this;
         }
         public SubscriptionIAMPolicyState build() {

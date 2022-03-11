@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class StackAccessEndpointArgs extends io.pulumi.resources.ResourceA
     public static final StackAccessEndpointArgs Empty = new StackAccessEndpointArgs();
 
     @InputImport(name="endpointType", required=true)
-      private final Input<String> endpointType;
+      private final Output<String> endpointType;
 
-    public Input<String> getEndpointType() {
+    public Output<String> getEndpointType() {
         return this.endpointType;
     }
 
     @InputImport(name="vpceId")
-      private final @Nullable Input<String> vpceId;
+      private final @Nullable Output<String> vpceId;
 
-    public Input<String> getVpceId() {
-        return this.vpceId == null ? Input.empty() : this.vpceId;
+    public Output<String> getVpceId() {
+        return this.vpceId == null ? Output.empty() : this.vpceId;
     }
 
     public StackAccessEndpointArgs(
-        Input<String> endpointType,
-        @Nullable Input<String> vpceId) {
+        Output<String> endpointType,
+        @Nullable Output<String> vpceId) {
         this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
         this.vpceId = vpceId;
     }
 
     private StackAccessEndpointArgs() {
-        this.endpointType = Input.empty();
-        this.vpceId = Input.empty();
+        this.endpointType = Output.empty();
+        this.vpceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class StackAccessEndpointArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> endpointType;
-        private @Nullable Input<String> vpceId;
+        private Output<String> endpointType;
+        private @Nullable Output<String> vpceId;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class StackAccessEndpointArgs extends io.pulumi.resources.ResourceA
     	      this.vpceId = defaults.vpceId;
         }
 
-        public Builder endpointType(Input<String> endpointType) {
+        public Builder endpointType(Output<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
         public Builder endpointType(String endpointType) {
-            this.endpointType = Input.of(Objects.requireNonNull(endpointType));
+            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder vpceId(@Nullable Input<String> vpceId) {
+        public Builder vpceId(@Nullable Output<String> vpceId) {
             this.vpceId = vpceId;
             return this;
         }
 
         public Builder vpceId(@Nullable String vpceId) {
-            this.vpceId = Input.ofNullable(vpceId);
+            this.vpceId = Output.ofNullable(vpceId);
             return this;
         }
         public StackAccessEndpointArgs build() {

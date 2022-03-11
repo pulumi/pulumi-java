@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<Double> cpu;
+      private final @Nullable Output<Double> cpu;
 
-    public Input<Double> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Double> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="cpuLimit")
-      private final @Nullable Input<Double> cpuLimit;
+      private final @Nullable Output<Double> cpuLimit;
 
-    public Input<Double> getCpuLimit() {
-        return this.cpuLimit == null ? Input.empty() : this.cpuLimit;
+    public Output<Double> getCpuLimit() {
+        return this.cpuLimit == null ? Output.empty() : this.cpuLimit;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="fpga")
-      private final @Nullable Input<Integer> fpga;
+      private final @Nullable Output<Integer> fpga;
 
-    public Input<Integer> getFpga() {
-        return this.fpga == null ? Input.empty() : this.fpga;
+    public Output<Integer> getFpga() {
+        return this.fpga == null ? Output.empty() : this.fpga;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="gpu")
-      private final @Nullable Input<Integer> gpu;
+      private final @Nullable Output<Integer> gpu;
 
-    public Input<Integer> getGpu() {
-        return this.gpu == null ? Input.empty() : this.gpu;
+    public Output<Integer> getGpu() {
+        return this.gpu == null ? Output.empty() : this.gpu;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="memoryInGB")
-      private final @Nullable Input<Double> memoryInGB;
+      private final @Nullable Output<Double> memoryInGB;
 
-    public Input<Double> getMemoryInGB() {
-        return this.memoryInGB == null ? Input.empty() : this.memoryInGB;
+    public Output<Double> getMemoryInGB() {
+        return this.memoryInGB == null ? Output.empty() : this.memoryInGB;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="memoryInGBLimit")
-      private final @Nullable Input<Double> memoryInGBLimit;
+      private final @Nullable Output<Double> memoryInGBLimit;
 
-    public Input<Double> getMemoryInGBLimit() {
-        return this.memoryInGBLimit == null ? Input.empty() : this.memoryInGBLimit;
+    public Output<Double> getMemoryInGBLimit() {
+        return this.memoryInGBLimit == null ? Output.empty() : this.memoryInGBLimit;
     }
 
     public ContainerResourceRequirementsArgs(
-        @Nullable Input<Double> cpu,
-        @Nullable Input<Double> cpuLimit,
-        @Nullable Input<Integer> fpga,
-        @Nullable Input<Integer> gpu,
-        @Nullable Input<Double> memoryInGB,
-        @Nullable Input<Double> memoryInGBLimit) {
+        @Nullable Output<Double> cpu,
+        @Nullable Output<Double> cpuLimit,
+        @Nullable Output<Integer> fpga,
+        @Nullable Output<Integer> gpu,
+        @Nullable Output<Double> memoryInGB,
+        @Nullable Output<Double> memoryInGBLimit) {
         this.cpu = cpu;
         this.cpuLimit = cpuLimit;
         this.fpga = fpga;
@@ -105,12 +105,12 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     }
 
     private ContainerResourceRequirementsArgs() {
-        this.cpu = Input.empty();
-        this.cpuLimit = Input.empty();
-        this.fpga = Input.empty();
-        this.gpu = Input.empty();
-        this.memoryInGB = Input.empty();
-        this.memoryInGBLimit = Input.empty();
+        this.cpu = Output.empty();
+        this.cpuLimit = Output.empty();
+        this.fpga = Output.empty();
+        this.gpu = Output.empty();
+        this.memoryInGB = Output.empty();
+        this.memoryInGBLimit = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> cpu;
-        private @Nullable Input<Double> cpuLimit;
-        private @Nullable Input<Integer> fpga;
-        private @Nullable Input<Integer> gpu;
-        private @Nullable Input<Double> memoryInGB;
-        private @Nullable Input<Double> memoryInGBLimit;
+        private @Nullable Output<Double> cpu;
+        private @Nullable Output<Double> cpuLimit;
+        private @Nullable Output<Integer> fpga;
+        private @Nullable Output<Integer> gpu;
+        private @Nullable Output<Double> memoryInGB;
+        private @Nullable Output<Double> memoryInGBLimit;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
     	      this.memoryInGBLimit = defaults.memoryInGBLimit;
         }
 
-        public Builder cpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Output<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder cpuLimit(@Nullable Input<Double> cpuLimit) {
+        public Builder cpuLimit(@Nullable Output<Double> cpuLimit) {
             this.cpuLimit = cpuLimit;
             return this;
         }
 
         public Builder cpuLimit(@Nullable Double cpuLimit) {
-            this.cpuLimit = Input.ofNullable(cpuLimit);
+            this.cpuLimit = Output.ofNullable(cpuLimit);
             return this;
         }
 
-        public Builder fpga(@Nullable Input<Integer> fpga) {
+        public Builder fpga(@Nullable Output<Integer> fpga) {
             this.fpga = fpga;
             return this;
         }
 
         public Builder fpga(@Nullable Integer fpga) {
-            this.fpga = Input.ofNullable(fpga);
+            this.fpga = Output.ofNullable(fpga);
             return this;
         }
 
-        public Builder gpu(@Nullable Input<Integer> gpu) {
+        public Builder gpu(@Nullable Output<Integer> gpu) {
             this.gpu = gpu;
             return this;
         }
 
         public Builder gpu(@Nullable Integer gpu) {
-            this.gpu = Input.ofNullable(gpu);
+            this.gpu = Output.ofNullable(gpu);
             return this;
         }
 
-        public Builder memoryInGB(@Nullable Input<Double> memoryInGB) {
+        public Builder memoryInGB(@Nullable Output<Double> memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
 
         public Builder memoryInGB(@Nullable Double memoryInGB) {
-            this.memoryInGB = Input.ofNullable(memoryInGB);
+            this.memoryInGB = Output.ofNullable(memoryInGB);
             return this;
         }
 
-        public Builder memoryInGBLimit(@Nullable Input<Double> memoryInGBLimit) {
+        public Builder memoryInGBLimit(@Nullable Output<Double> memoryInGBLimit) {
             this.memoryInGBLimit = memoryInGBLimit;
             return this;
         }
 
         public Builder memoryInGBLimit(@Nullable Double memoryInGBLimit) {
-            this.memoryInGBLimit = Input.ofNullable(memoryInGBLimit);
+            this.memoryInGBLimit = Output.ofNullable(memoryInGBLimit);
             return this;
         }
         public ContainerResourceRequirementsArgs build() {

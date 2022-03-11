@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="galleryImageName")
-      private final @Nullable Input<String> galleryImageName;
+      private final @Nullable Output<String> galleryImageName;
 
-    public Input<String> getGalleryImageName() {
-        return this.galleryImageName == null ? Input.empty() : this.galleryImageName;
+    public Output<String> getGalleryImageName() {
+        return this.galleryImageName == null ? Output.empty() : this.galleryImageName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled")
-      private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Input.empty() : this.isEnabled;
+    public Output<Boolean> getIsEnabled() {
+        return this.isEnabled == null ? Output.empty() : this.isEnabled;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isOverride")
-      private final @Nullable Input<Boolean> isOverride;
+      private final @Nullable Output<Boolean> isOverride;
 
-    public Input<Boolean> getIsOverride() {
-        return this.isOverride == null ? Input.empty() : this.isOverride;
+    public Output<Boolean> getIsOverride() {
+        return this.isOverride == null ? Output.empty() : this.isOverride;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isPlanAuthorized")
-      private final @Nullable Input<Boolean> isPlanAuthorized;
+      private final @Nullable Output<Boolean> isPlanAuthorized;
 
-    public Input<Boolean> getIsPlanAuthorized() {
-        return this.isPlanAuthorized == null ? Input.empty() : this.isPlanAuthorized;
+    public Output<Boolean> getIsPlanAuthorized() {
+        return this.isPlanAuthorized == null ? Output.empty() : this.isPlanAuthorized;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labAccountName", required=true)
-      private final Input<String> labAccountName;
+      private final Output<String> labAccountName;
 
-    public Input<String> getLabAccountName() {
+    public Output<String> getLabAccountName() {
         return this.labAccountName;
     }
 
@@ -76,10 +76,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -98,9 +98,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -109,10 +109,10 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -120,23 +120,23 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniqueIdentifier")
-      private final @Nullable Input<String> uniqueIdentifier;
+      private final @Nullable Output<String> uniqueIdentifier;
 
-    public Input<String> getUniqueIdentifier() {
-        return this.uniqueIdentifier == null ? Input.empty() : this.uniqueIdentifier;
+    public Output<String> getUniqueIdentifier() {
+        return this.uniqueIdentifier == null ? Output.empty() : this.uniqueIdentifier;
     }
 
     public GalleryImageArgs(
-        @Nullable Input<String> galleryImageName,
-        @Nullable Input<Boolean> isEnabled,
-        @Nullable Input<Boolean> isOverride,
-        @Nullable Input<Boolean> isPlanAuthorized,
-        Input<String> labAccountName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> provisioningState,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> uniqueIdentifier) {
+        @Nullable Output<String> galleryImageName,
+        @Nullable Output<Boolean> isEnabled,
+        @Nullable Output<Boolean> isOverride,
+        @Nullable Output<Boolean> isPlanAuthorized,
+        Output<String> labAccountName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> provisioningState,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> uniqueIdentifier) {
         this.galleryImageName = galleryImageName;
         this.isEnabled = isEnabled;
         this.isOverride = isOverride;
@@ -150,16 +150,16 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GalleryImageArgs() {
-        this.galleryImageName = Input.empty();
-        this.isEnabled = Input.empty();
-        this.isOverride = Input.empty();
-        this.isPlanAuthorized = Input.empty();
-        this.labAccountName = Input.empty();
-        this.location = Input.empty();
-        this.provisioningState = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.uniqueIdentifier = Input.empty();
+        this.galleryImageName = Output.empty();
+        this.isEnabled = Output.empty();
+        this.isOverride = Output.empty();
+        this.isPlanAuthorized = Output.empty();
+        this.labAccountName = Output.empty();
+        this.location = Output.empty();
+        this.provisioningState = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.uniqueIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> galleryImageName;
-        private @Nullable Input<Boolean> isEnabled;
-        private @Nullable Input<Boolean> isOverride;
-        private @Nullable Input<Boolean> isPlanAuthorized;
-        private Input<String> labAccountName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> provisioningState;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> uniqueIdentifier;
+        private @Nullable Output<String> galleryImageName;
+        private @Nullable Output<Boolean> isEnabled;
+        private @Nullable Output<Boolean> isOverride;
+        private @Nullable Output<Boolean> isPlanAuthorized;
+        private Output<String> labAccountName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> provisioningState;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> uniqueIdentifier;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder galleryImageName(@Nullable Input<String> galleryImageName) {
+        public Builder galleryImageName(@Nullable Output<String> galleryImageName) {
             this.galleryImageName = galleryImageName;
             return this;
         }
 
         public Builder galleryImageName(@Nullable String galleryImageName) {
-            this.galleryImageName = Input.ofNullable(galleryImageName);
+            this.galleryImageName = Output.ofNullable(galleryImageName);
             return this;
         }
 
-        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Input.ofNullable(isEnabled);
+            this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder isOverride(@Nullable Input<Boolean> isOverride) {
+        public Builder isOverride(@Nullable Output<Boolean> isOverride) {
             this.isOverride = isOverride;
             return this;
         }
 
         public Builder isOverride(@Nullable Boolean isOverride) {
-            this.isOverride = Input.ofNullable(isOverride);
+            this.isOverride = Output.ofNullable(isOverride);
             return this;
         }
 
-        public Builder isPlanAuthorized(@Nullable Input<Boolean> isPlanAuthorized) {
+        public Builder isPlanAuthorized(@Nullable Output<Boolean> isPlanAuthorized) {
             this.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
 
         public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
-            this.isPlanAuthorized = Input.ofNullable(isPlanAuthorized);
+            this.isPlanAuthorized = Output.ofNullable(isPlanAuthorized);
             return this;
         }
 
-        public Builder labAccountName(Input<String> labAccountName) {
+        public Builder labAccountName(Output<String> labAccountName) {
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
 
         public Builder labAccountName(String labAccountName) {
-            this.labAccountName = Input.of(Objects.requireNonNull(labAccountName));
+            this.labAccountName = Output.of(Objects.requireNonNull(labAccountName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder uniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
 
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
-            this.uniqueIdentifier = Input.ofNullable(uniqueIdentifier);
+            this.uniqueIdentifier = Output.ofNullable(uniqueIdentifier);
             return this;
         }
         public GalleryImageArgs build() {

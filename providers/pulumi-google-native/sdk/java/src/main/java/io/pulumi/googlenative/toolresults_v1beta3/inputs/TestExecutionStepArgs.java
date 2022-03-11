@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestIssueArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestSuiteOverviewArgs;
@@ -27,10 +27,10 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testIssues")
-      private final @Nullable Input<List<TestIssueArgs>> testIssues;
+      private final @Nullable Output<List<TestIssueArgs>> testIssues;
 
-    public Input<List<TestIssueArgs>> getTestIssues() {
-        return this.testIssues == null ? Input.empty() : this.testIssues;
+    public Output<List<TestIssueArgs>> getTestIssues() {
+        return this.testIssues == null ? Output.empty() : this.testIssues;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testSuiteOverviews")
-      private final @Nullable Input<List<TestSuiteOverviewArgs>> testSuiteOverviews;
+      private final @Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews;
 
-    public Input<List<TestSuiteOverviewArgs>> getTestSuiteOverviews() {
-        return this.testSuiteOverviews == null ? Input.empty() : this.testSuiteOverviews;
+    public Output<List<TestSuiteOverviewArgs>> getTestSuiteOverviews() {
+        return this.testSuiteOverviews == null ? Output.empty() : this.testSuiteOverviews;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="testTiming")
-      private final @Nullable Input<TestTimingArgs> testTiming;
+      private final @Nullable Output<TestTimingArgs> testTiming;
 
-    public Input<TestTimingArgs> getTestTiming() {
-        return this.testTiming == null ? Input.empty() : this.testTiming;
+    public Output<TestTimingArgs> getTestTiming() {
+        return this.testTiming == null ? Output.empty() : this.testTiming;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="toolExecution")
-      private final @Nullable Input<ToolExecutionArgs> toolExecution;
+      private final @Nullable Output<ToolExecutionArgs> toolExecution;
 
-    public Input<ToolExecutionArgs> getToolExecution() {
-        return this.toolExecution == null ? Input.empty() : this.toolExecution;
+    public Output<ToolExecutionArgs> getToolExecution() {
+        return this.toolExecution == null ? Output.empty() : this.toolExecution;
     }
 
     public TestExecutionStepArgs(
-        @Nullable Input<List<TestIssueArgs>> testIssues,
-        @Nullable Input<List<TestSuiteOverviewArgs>> testSuiteOverviews,
-        @Nullable Input<TestTimingArgs> testTiming,
-        @Nullable Input<ToolExecutionArgs> toolExecution) {
+        @Nullable Output<List<TestIssueArgs>> testIssues,
+        @Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews,
+        @Nullable Output<TestTimingArgs> testTiming,
+        @Nullable Output<ToolExecutionArgs> toolExecution) {
         this.testIssues = testIssues;
         this.testSuiteOverviews = testSuiteOverviews;
         this.testTiming = testTiming;
@@ -78,10 +78,10 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TestExecutionStepArgs() {
-        this.testIssues = Input.empty();
-        this.testSuiteOverviews = Input.empty();
-        this.testTiming = Input.empty();
-        this.toolExecution = Input.empty();
+        this.testIssues = Output.empty();
+        this.testSuiteOverviews = Output.empty();
+        this.testTiming = Output.empty();
+        this.toolExecution = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TestIssueArgs>> testIssues;
-        private @Nullable Input<List<TestSuiteOverviewArgs>> testSuiteOverviews;
-        private @Nullable Input<TestTimingArgs> testTiming;
-        private @Nullable Input<ToolExecutionArgs> toolExecution;
+        private @Nullable Output<List<TestIssueArgs>> testIssues;
+        private @Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews;
+        private @Nullable Output<TestTimingArgs> testTiming;
+        private @Nullable Output<ToolExecutionArgs> toolExecution;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
     	      this.toolExecution = defaults.toolExecution;
         }
 
-        public Builder testIssues(@Nullable Input<List<TestIssueArgs>> testIssues) {
+        public Builder testIssues(@Nullable Output<List<TestIssueArgs>> testIssues) {
             this.testIssues = testIssues;
             return this;
         }
 
         public Builder testIssues(@Nullable List<TestIssueArgs> testIssues) {
-            this.testIssues = Input.ofNullable(testIssues);
+            this.testIssues = Output.ofNullable(testIssues);
             return this;
         }
 
-        public Builder testSuiteOverviews(@Nullable Input<List<TestSuiteOverviewArgs>> testSuiteOverviews) {
+        public Builder testSuiteOverviews(@Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews) {
             this.testSuiteOverviews = testSuiteOverviews;
             return this;
         }
 
         public Builder testSuiteOverviews(@Nullable List<TestSuiteOverviewArgs> testSuiteOverviews) {
-            this.testSuiteOverviews = Input.ofNullable(testSuiteOverviews);
+            this.testSuiteOverviews = Output.ofNullable(testSuiteOverviews);
             return this;
         }
 
-        public Builder testTiming(@Nullable Input<TestTimingArgs> testTiming) {
+        public Builder testTiming(@Nullable Output<TestTimingArgs> testTiming) {
             this.testTiming = testTiming;
             return this;
         }
 
         public Builder testTiming(@Nullable TestTimingArgs testTiming) {
-            this.testTiming = Input.ofNullable(testTiming);
+            this.testTiming = Output.ofNullable(testTiming);
             return this;
         }
 
-        public Builder toolExecution(@Nullable Input<ToolExecutionArgs> toolExecution) {
+        public Builder toolExecution(@Nullable Output<ToolExecutionArgs> toolExecution) {
             this.toolExecution = toolExecution;
             return this;
         }
 
         public Builder toolExecution(@Nullable ToolExecutionArgs toolExecution) {
-            this.toolExecution = Input.ofNullable(toolExecution);
+            this.toolExecution = Output.ofNullable(toolExecution);
             return this;
         }
         public TestExecutionStepArgs build() {

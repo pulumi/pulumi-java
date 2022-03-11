@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.enums.StorageType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskName")
-      private final @Nullable Input<String> diskName;
+      private final @Nullable Output<String> diskName;
 
-    public Input<String> getDiskName() {
-        return this.diskName == null ? Input.empty() : this.diskName;
+    public Output<String> getDiskName() {
+        return this.diskName == null ? Output.empty() : this.diskName;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskSizeGiB")
-      private final @Nullable Input<Integer> diskSizeGiB;
+      private final @Nullable Output<Integer> diskSizeGiB;
 
-    public Input<Integer> getDiskSizeGiB() {
-        return this.diskSizeGiB == null ? Input.empty() : this.diskSizeGiB;
+    public Output<Integer> getDiskSizeGiB() {
+        return this.diskSizeGiB == null ? Output.empty() : this.diskSizeGiB;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<Either<String,StorageType>> diskType;
+      private final @Nullable Output<Either<String,StorageType>> diskType;
 
-    public Input<Either<String,StorageType>> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<Either<String,StorageType>> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     public AttachNewDataDiskOptionsArgs(
-        @Nullable Input<String> diskName,
-        @Nullable Input<Integer> diskSizeGiB,
-        @Nullable Input<Either<String,StorageType>> diskType) {
+        @Nullable Output<String> diskName,
+        @Nullable Output<Integer> diskSizeGiB,
+        @Nullable Output<Either<String,StorageType>> diskType) {
         this.diskName = diskName;
         this.diskSizeGiB = diskSizeGiB;
         this.diskType = diskType;
     }
 
     private AttachNewDataDiskOptionsArgs() {
-        this.diskName = Input.empty();
-        this.diskSizeGiB = Input.empty();
-        this.diskType = Input.empty();
+        this.diskName = Output.empty();
+        this.diskSizeGiB = Output.empty();
+        this.diskType = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskName;
-        private @Nullable Input<Integer> diskSizeGiB;
-        private @Nullable Input<Either<String,StorageType>> diskType;
+        private @Nullable Output<String> diskName;
+        private @Nullable Output<Integer> diskSizeGiB;
+        private @Nullable Output<Either<String,StorageType>> diskType;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
     	      this.diskType = defaults.diskType;
         }
 
-        public Builder diskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Output<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Input.ofNullable(diskName);
+            this.diskName = Output.ofNullable(diskName);
             return this;
         }
 
-        public Builder diskSizeGiB(@Nullable Input<Integer> diskSizeGiB) {
+        public Builder diskSizeGiB(@Nullable Output<Integer> diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
-            this.diskSizeGiB = Input.ofNullable(diskSizeGiB);
+            this.diskSizeGiB = Output.ofNullable(diskSizeGiB);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<Either<String,StorageType>> diskType) {
+        public Builder diskType(@Nullable Output<Either<String,StorageType>> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable Either<String,StorageType> diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
         public AttachNewDataDiskOptionsArgs build() {

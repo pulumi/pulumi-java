@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.emrcontainers.inputs;
 
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterEksInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class VirtualClusterContainerInfoArgs extends io.pulumi.resources.R
     public static final VirtualClusterContainerInfoArgs Empty = new VirtualClusterContainerInfoArgs();
 
     @InputImport(name="eksInfo", required=true)
-      private final Input<VirtualClusterEksInfoArgs> eksInfo;
+      private final Output<VirtualClusterEksInfoArgs> eksInfo;
 
-    public Input<VirtualClusterEksInfoArgs> getEksInfo() {
+    public Output<VirtualClusterEksInfoArgs> getEksInfo() {
         return this.eksInfo;
     }
 
-    public VirtualClusterContainerInfoArgs(Input<VirtualClusterEksInfoArgs> eksInfo) {
+    public VirtualClusterContainerInfoArgs(Output<VirtualClusterEksInfoArgs> eksInfo) {
         this.eksInfo = Objects.requireNonNull(eksInfo, "expected parameter 'eksInfo' to be non-null");
     }
 
     private VirtualClusterContainerInfoArgs() {
-        this.eksInfo = Input.empty();
+        this.eksInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class VirtualClusterContainerInfoArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<VirtualClusterEksInfoArgs> eksInfo;
+        private Output<VirtualClusterEksInfoArgs> eksInfo;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class VirtualClusterContainerInfoArgs extends io.pulumi.resources.R
     	      this.eksInfo = defaults.eksInfo;
         }
 
-        public Builder eksInfo(Input<VirtualClusterEksInfoArgs> eksInfo) {
+        public Builder eksInfo(Output<VirtualClusterEksInfoArgs> eksInfo) {
             this.eksInfo = Objects.requireNonNull(eksInfo);
             return this;
         }
 
         public Builder eksInfo(VirtualClusterEksInfoArgs eksInfo) {
-            this.eksInfo = Input.of(Objects.requireNonNull(eksInfo));
+            this.eksInfo = Output.of(Objects.requireNonNull(eksInfo));
             return this;
         }
         public VirtualClusterContainerInfoArgs build() {

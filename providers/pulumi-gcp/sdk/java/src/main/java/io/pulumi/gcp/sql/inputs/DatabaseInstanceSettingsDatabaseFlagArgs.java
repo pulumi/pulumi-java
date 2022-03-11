@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DatabaseInstanceSettingsDatabaseFlagArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -31,22 +31,22 @@ public final class DatabaseInstanceSettingsDatabaseFlagArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public DatabaseInstanceSettingsDatabaseFlagArgs(
-        Input<String> name,
-        Input<String> value) {
+        Output<String> name,
+        Output<String> value) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private DatabaseInstanceSettingsDatabaseFlagArgs() {
-        this.name = Input.empty();
-        this.value = Input.empty();
+        this.name = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DatabaseInstanceSettingsDatabaseFlagArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> value;
+        private Output<String> name;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DatabaseInstanceSettingsDatabaseFlagArgs extends io.pulumi.re
     	      this.value = defaults.value;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public DatabaseInstanceSettingsDatabaseFlagArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.RealtimeLogConfigKinesisStreamConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class RealtimeLogConfigEndPointArgs extends io.pulumi.resources.Res
     public static final RealtimeLogConfigEndPointArgs Empty = new RealtimeLogConfigEndPointArgs();
 
     @InputImport(name="kinesisStreamConfig", required=true)
-      private final Input<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig;
+      private final Output<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig;
 
-    public Input<RealtimeLogConfigKinesisStreamConfigArgs> getKinesisStreamConfig() {
+    public Output<RealtimeLogConfigKinesisStreamConfigArgs> getKinesisStreamConfig() {
         return this.kinesisStreamConfig;
     }
 
     @InputImport(name="streamType", required=true)
-      private final Input<String> streamType;
+      private final Output<String> streamType;
 
-    public Input<String> getStreamType() {
+    public Output<String> getStreamType() {
         return this.streamType;
     }
 
     public RealtimeLogConfigEndPointArgs(
-        Input<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig,
-        Input<String> streamType) {
+        Output<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig,
+        Output<String> streamType) {
         this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig, "expected parameter 'kinesisStreamConfig' to be non-null");
         this.streamType = Objects.requireNonNull(streamType, "expected parameter 'streamType' to be non-null");
     }
 
     private RealtimeLogConfigEndPointArgs() {
-        this.kinesisStreamConfig = Input.empty();
-        this.streamType = Input.empty();
+        this.kinesisStreamConfig = Output.empty();
+        this.streamType = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class RealtimeLogConfigEndPointArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig;
-        private Input<String> streamType;
+        private Output<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig;
+        private Output<String> streamType;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class RealtimeLogConfigEndPointArgs extends io.pulumi.resources.Res
     	      this.streamType = defaults.streamType;
         }
 
-        public Builder kinesisStreamConfig(Input<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig) {
+        public Builder kinesisStreamConfig(Output<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig) {
             this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig);
             return this;
         }
 
         public Builder kinesisStreamConfig(RealtimeLogConfigKinesisStreamConfigArgs kinesisStreamConfig) {
-            this.kinesisStreamConfig = Input.of(Objects.requireNonNull(kinesisStreamConfig));
+            this.kinesisStreamConfig = Output.of(Objects.requireNonNull(kinesisStreamConfig));
             return this;
         }
 
-        public Builder streamType(Input<String> streamType) {
+        public Builder streamType(Output<String> streamType) {
             this.streamType = Objects.requireNonNull(streamType);
             return this;
         }
 
         public Builder streamType(String streamType) {
-            this.streamType = Input.of(Objects.requireNonNull(streamType));
+            this.streamType = Output.of(Objects.requireNonNull(streamType));
             return this;
         }
         public RealtimeLogConfigEndPointArgs build() {

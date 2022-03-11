@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs.NonResourceAttributesArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs.ResourceAttributesArgs;
@@ -24,10 +24,10 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nonResourceAttributes")
-      private final @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
+      private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
-    public Input<NonResourceAttributesArgs> getNonResourceAttributes() {
-        return this.nonResourceAttributes == null ? Input.empty() : this.nonResourceAttributes;
+    public Output<NonResourceAttributesArgs> getNonResourceAttributes() {
+        return this.nonResourceAttributes == null ? Output.empty() : this.nonResourceAttributes;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceAttributes")
-      private final @Nullable Input<ResourceAttributesArgs> resourceAttributes;
+      private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
-    public Input<ResourceAttributesArgs> getResourceAttributes() {
-        return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;
+    public Output<ResourceAttributesArgs> getResourceAttributes() {
+        return this.resourceAttributes == null ? Output.empty() : this.resourceAttributes;
     }
 
     public SelfSubjectAccessReviewSpecArgs(
-        @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes,
-        @Nullable Input<ResourceAttributesArgs> resourceAttributes) {
+        @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes,
+        @Nullable Output<ResourceAttributesArgs> resourceAttributes) {
         this.nonResourceAttributes = nonResourceAttributes;
         this.resourceAttributes = resourceAttributes;
     }
 
     private SelfSubjectAccessReviewSpecArgs() {
-        this.nonResourceAttributes = Input.empty();
-        this.resourceAttributes = Input.empty();
+        this.nonResourceAttributes = Output.empty();
+        this.resourceAttributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
-        private @Nullable Input<ResourceAttributesArgs> resourceAttributes;
+        private @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
+        private @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
     	      this.resourceAttributes = defaults.resourceAttributes;
         }
 
-        public Builder nonResourceAttributes(@Nullable Input<NonResourceAttributesArgs> nonResourceAttributes) {
+        public Builder nonResourceAttributes(@Nullable Output<NonResourceAttributesArgs> nonResourceAttributes) {
             this.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
 
         public Builder nonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
-            this.nonResourceAttributes = Input.ofNullable(nonResourceAttributes);
+            this.nonResourceAttributes = Output.ofNullable(nonResourceAttributes);
             return this;
         }
 
-        public Builder resourceAttributes(@Nullable Input<ResourceAttributesArgs> resourceAttributes) {
+        public Builder resourceAttributes(@Nullable Output<ResourceAttributesArgs> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
 
         public Builder resourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
-            this.resourceAttributes = Input.ofNullable(resourceAttributes);
+            this.resourceAttributes = Output.ofNullable(resourceAttributes);
             return this;
         }
         public SelfSubjectAccessReviewSpecArgs build() {

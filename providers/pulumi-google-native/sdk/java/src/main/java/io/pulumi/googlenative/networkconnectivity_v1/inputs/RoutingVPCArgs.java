@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class RoutingVPCArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
-    public RoutingVPCArgs(@Nullable Input<String> uri) {
+    public RoutingVPCArgs(@Nullable Output<String> uri) {
         this.uri = uri;
     }
 
     private RoutingVPCArgs() {
-        this.uri = Input.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RoutingVPCArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RoutingVPCArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public RoutingVPCArgs build() {

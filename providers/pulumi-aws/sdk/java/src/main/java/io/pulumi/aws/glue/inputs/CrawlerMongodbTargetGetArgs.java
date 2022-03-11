@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectionName", required=true)
-      private final Input<String> connectionName;
+      private final Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
+    public Output<String> getConnectionName() {
         return this.connectionName;
     }
 
@@ -31,9 +31,9 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -42,25 +42,25 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="scanAll")
-      private final @Nullable Input<Boolean> scanAll;
+      private final @Nullable Output<Boolean> scanAll;
 
-    public Input<Boolean> getScanAll() {
-        return this.scanAll == null ? Input.empty() : this.scanAll;
+    public Output<Boolean> getScanAll() {
+        return this.scanAll == null ? Output.empty() : this.scanAll;
     }
 
     public CrawlerMongodbTargetGetArgs(
-        Input<String> connectionName,
-        Input<String> path,
-        @Nullable Input<Boolean> scanAll) {
+        Output<String> connectionName,
+        Output<String> path,
+        @Nullable Output<Boolean> scanAll) {
         this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
         this.scanAll = scanAll;
     }
 
     private CrawlerMongodbTargetGetArgs() {
-        this.connectionName = Input.empty();
-        this.path = Input.empty();
-        this.scanAll = Input.empty();
+        this.connectionName = Output.empty();
+        this.path = Output.empty();
+        this.scanAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> connectionName;
-        private Input<String> path;
-        private @Nullable Input<Boolean> scanAll;
+        private Output<String> connectionName;
+        private Output<String> path;
+        private @Nullable Output<Boolean> scanAll;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
     	      this.scanAll = defaults.scanAll;
         }
 
-        public Builder connectionName(Input<String> connectionName) {
+        public Builder connectionName(Output<String> connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Input.of(Objects.requireNonNull(connectionName));
+            this.connectionName = Output.of(Objects.requireNonNull(connectionName));
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder scanAll(@Nullable Input<Boolean> scanAll) {
+        public Builder scanAll(@Nullable Output<Boolean> scanAll) {
             this.scanAll = scanAll;
             return this;
         }
 
         public Builder scanAll(@Nullable Boolean scanAll) {
-            this.scanAll = Input.ofNullable(scanAll);
+            this.scanAll = Output.ofNullable(scanAll);
             return this;
         }
         public CrawlerMongodbTargetGetArgs build() {

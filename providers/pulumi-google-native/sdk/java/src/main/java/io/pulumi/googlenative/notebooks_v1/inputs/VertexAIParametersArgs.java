@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="env")
-      private final @Nullable Input<Map<String,String>> env;
+      private final @Nullable Output<Map<String,String>> env;
 
-    public Input<Map<String,String>> getEnv() {
-        return this.env == null ? Input.empty() : this.env;
+    public Output<Map<String,String>> getEnv() {
+        return this.env == null ? Output.empty() : this.env;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     public VertexAIParametersArgs(
-        @Nullable Input<Map<String,String>> env,
-        @Nullable Input<String> network) {
+        @Nullable Output<Map<String,String>> env,
+        @Nullable Output<String> network) {
         this.env = env;
         this.network = network;
     }
 
     private VertexAIParametersArgs() {
-        this.env = Input.empty();
-        this.network = Input.empty();
+        this.env = Output.empty();
+        this.network = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> env;
-        private @Nullable Input<String> network;
+        private @Nullable Output<Map<String,String>> env;
+        private @Nullable Output<String> network;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
     	      this.network = defaults.network;
         }
 
-        public Builder env(@Nullable Input<Map<String,String>> env) {
+        public Builder env(@Nullable Output<Map<String,String>> env) {
             this.env = env;
             return this;
         }
 
         public Builder env(@Nullable Map<String,String> env) {
-            this.env = Input.ofNullable(env);
+            this.env = Output.ofNullable(env);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
         public VertexAIParametersArgs build() {

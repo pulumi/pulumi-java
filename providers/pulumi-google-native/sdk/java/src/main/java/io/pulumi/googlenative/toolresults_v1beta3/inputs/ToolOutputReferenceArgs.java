@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestCaseReferenceArgs;
@@ -25,10 +25,10 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<TimestampArgs> creationTime;
+      private final @Nullable Output<TimestampArgs> creationTime;
 
-    public Input<TimestampArgs> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<TimestampArgs> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="output")
-      private final @Nullable Input<FileReferenceArgs> output;
+      private final @Nullable Output<FileReferenceArgs> output;
 
-    public Input<FileReferenceArgs> getOutput() {
-        return this.output == null ? Input.empty() : this.output;
+    public Output<FileReferenceArgs> getOutput() {
+        return this.output == null ? Output.empty() : this.output;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="testCase")
-      private final @Nullable Input<TestCaseReferenceArgs> testCase;
+      private final @Nullable Output<TestCaseReferenceArgs> testCase;
 
-    public Input<TestCaseReferenceArgs> getTestCase() {
-        return this.testCase == null ? Input.empty() : this.testCase;
+    public Output<TestCaseReferenceArgs> getTestCase() {
+        return this.testCase == null ? Output.empty() : this.testCase;
     }
 
     public ToolOutputReferenceArgs(
-        @Nullable Input<TimestampArgs> creationTime,
-        @Nullable Input<FileReferenceArgs> output,
-        @Nullable Input<TestCaseReferenceArgs> testCase) {
+        @Nullable Output<TimestampArgs> creationTime,
+        @Nullable Output<FileReferenceArgs> output,
+        @Nullable Output<TestCaseReferenceArgs> testCase) {
         this.creationTime = creationTime;
         this.output = output;
         this.testCase = testCase;
     }
 
     private ToolOutputReferenceArgs() {
-        this.creationTime = Input.empty();
-        this.output = Input.empty();
-        this.testCase = Input.empty();
+        this.creationTime = Output.empty();
+        this.output = Output.empty();
+        this.testCase = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<TimestampArgs> creationTime;
-        private @Nullable Input<FileReferenceArgs> output;
-        private @Nullable Input<TestCaseReferenceArgs> testCase;
+        private @Nullable Output<TimestampArgs> creationTime;
+        private @Nullable Output<FileReferenceArgs> output;
+        private @Nullable Output<TestCaseReferenceArgs> testCase;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
     	      this.testCase = defaults.testCase;
         }
 
-        public Builder creationTime(@Nullable Input<TimestampArgs> creationTime) {
+        public Builder creationTime(@Nullable Output<TimestampArgs> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable TimestampArgs creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder output(@Nullable Input<FileReferenceArgs> output) {
+        public Builder output(@Nullable Output<FileReferenceArgs> output) {
             this.output = output;
             return this;
         }
 
         public Builder output(@Nullable FileReferenceArgs output) {
-            this.output = Input.ofNullable(output);
+            this.output = Output.ofNullable(output);
             return this;
         }
 
-        public Builder testCase(@Nullable Input<TestCaseReferenceArgs> testCase) {
+        public Builder testCase(@Nullable Output<TestCaseReferenceArgs> testCase) {
             this.testCase = testCase;
             return this;
         }
 
         public Builder testCase(@Nullable TestCaseReferenceArgs testCase) {
-            this.testCase = Input.ofNullable(testCase);
+            this.testCase = Output.ofNullable(testCase);
             return this;
         }
         public ToolOutputReferenceArgs build() {

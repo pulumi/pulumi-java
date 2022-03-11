@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sso.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,18 +15,18 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     public static final InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs Empty = new InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs();
 
     @InputImport(name="source", required=true)
-      private final Input<List<String>> source;
+      private final Output<List<String>> source;
 
-    public Input<List<String>> getSource() {
+    public Output<List<String>> getSource() {
         return this.source;
     }
 
-    public InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs(Input<List<String>> source) {
+    public InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs(Output<List<String>> source) {
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
     }
 
     private InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs() {
-        this.source = Input.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     }
 
     public static final class Builder {
-        private Input<List<String>> source;
+        private Output<List<String>> source;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     	      this.source = defaults.source;
         }
 
-        public Builder source(Input<List<String>> source) {
+        public Builder source(Output<List<String>> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(List<String> source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
         public InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs build() {

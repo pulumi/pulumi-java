@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.memorydb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ClusterShardNodeEndpointArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ClusterShardNodeEndpointArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public ClusterShardNodeEndpointArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<Integer> port) {
+        @Nullable Output<String> address,
+        @Nullable Output<Integer> port) {
         this.address = address;
         this.port = port;
     }
 
     private ClusterShardNodeEndpointArgs() {
-        this.address = Input.empty();
-        this.port = Input.empty();
+        this.address = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ClusterShardNodeEndpointArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<Integer> port;
+        private @Nullable Output<String> address;
+        private @Nullable Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ClusterShardNodeEndpointArgs extends io.pulumi.resources.Reso
     	      this.port = defaults.port;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public ClusterShardNodeEndpointArgs build() {

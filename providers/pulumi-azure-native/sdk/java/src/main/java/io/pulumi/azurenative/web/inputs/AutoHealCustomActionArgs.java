@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="exe")
-      private final @Nullable Input<String> exe;
+      private final @Nullable Output<String> exe;
 
-    public Input<String> getExe() {
-        return this.exe == null ? Input.empty() : this.exe;
+    public Output<String> getExe() {
+        return this.exe == null ? Output.empty() : this.exe;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<String> parameters;
+      private final @Nullable Output<String> parameters;
 
-    public Input<String> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<String> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public AutoHealCustomActionArgs(
-        @Nullable Input<String> exe,
-        @Nullable Input<String> parameters) {
+        @Nullable Output<String> exe,
+        @Nullable Output<String> parameters) {
         this.exe = exe;
         this.parameters = parameters;
     }
 
     private AutoHealCustomActionArgs() {
-        this.exe = Input.empty();
-        this.parameters = Input.empty();
+        this.exe = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> exe;
-        private @Nullable Input<String> parameters;
+        private @Nullable Output<String> exe;
+        private @Nullable Output<String> parameters;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder exe(@Nullable Input<String> exe) {
+        public Builder exe(@Nullable Output<String> exe) {
             this.exe = exe;
             return this;
         }
 
         public Builder exe(@Nullable String exe) {
-            this.exe = Input.ofNullable(exe);
+            this.exe = Output.ofNullable(exe);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<String> parameters) {
+        public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public AutoHealCustomActionArgs build() {

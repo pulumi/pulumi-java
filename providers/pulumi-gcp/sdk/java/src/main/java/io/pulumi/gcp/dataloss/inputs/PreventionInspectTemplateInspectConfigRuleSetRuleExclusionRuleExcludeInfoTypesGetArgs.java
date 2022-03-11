@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * 
      */
     @InputImport(name="infoTypes", required=true)
-      private final Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes;
+      private final Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes;
 
-    public Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> getInfoTypes() {
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> getInfoTypes() {
         return this.infoTypes;
     }
 
-    public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs(Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes) {
+    public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs(Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes) {
         this.infoTypes = Objects.requireNonNull(infoTypes, "expected parameter 'infoTypes' to be non-null");
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs() {
-        this.infoTypes = Input.empty();
+        this.infoTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     }
 
     public static final class Builder {
-        private Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes;
+        private Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     	      this.infoTypes = defaults.infoTypes;
         }
 
-        public Builder infoTypes(Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes) {
+        public Builder infoTypes(Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
 
         public Builder infoTypes(List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs> infoTypes) {
-            this.infoTypes = Input.of(Objects.requireNonNull(infoTypes));
+            this.infoTypes = Output.of(Objects.requireNonNull(infoTypes));
             return this;
         }
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs build() {

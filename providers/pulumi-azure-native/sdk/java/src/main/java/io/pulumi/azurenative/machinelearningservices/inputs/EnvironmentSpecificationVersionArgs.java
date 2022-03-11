@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.DockerBuildArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImageArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.InferenceContainerPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="condaFile")
-      private final @Nullable Input<String> condaFile;
+      private final @Nullable Output<String> condaFile;
 
-    public Input<String> getCondaFile() {
-        return this.condaFile == null ? Input.empty() : this.condaFile;
+    public Output<String> getCondaFile() {
+        return this.condaFile == null ? Output.empty() : this.condaFile;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="docker")
-      private final @Nullable Input<Either<DockerBuildArgs,DockerImageArgs>> docker;
+      private final @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker;
 
-    public Input<Either<DockerBuildArgs,DockerImageArgs>> getDocker() {
-        return this.docker == null ? Input.empty() : this.docker;
+    public Output<Either<DockerBuildArgs,DockerImageArgs>> getDocker() {
+        return this.docker == null ? Output.empty() : this.docker;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="inferenceContainerProperties")
-      private final @Nullable Input<InferenceContainerPropertiesArgs> inferenceContainerProperties;
+      private final @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties;
 
-    public Input<InferenceContainerPropertiesArgs> getInferenceContainerProperties() {
-        return this.inferenceContainerProperties == null ? Input.empty() : this.inferenceContainerProperties;
+    public Output<InferenceContainerPropertiesArgs> getInferenceContainerProperties() {
+        return this.inferenceContainerProperties == null ? Output.empty() : this.inferenceContainerProperties;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isAnonymous")
-      private final @Nullable Input<Boolean> isAnonymous;
+      private final @Nullable Output<Boolean> isAnonymous;
 
-    public Input<Boolean> getIsAnonymous() {
-        return this.isAnonymous == null ? Input.empty() : this.isAnonymous;
+    public Output<Boolean> getIsAnonymous() {
+        return this.isAnonymous == null ? Output.empty() : this.isAnonymous;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -97,20 +97,20 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EnvironmentSpecificationVersionArgs(
-        @Nullable Input<String> condaFile,
-        @Nullable Input<String> description,
-        @Nullable Input<Either<DockerBuildArgs,DockerImageArgs>> docker,
-        @Nullable Input<InferenceContainerPropertiesArgs> inferenceContainerProperties,
-        @Nullable Input<Boolean> isAnonymous,
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> condaFile,
+        @Nullable Output<String> description,
+        @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker,
+        @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties,
+        @Nullable Output<Boolean> isAnonymous,
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<Map<String,String>> tags) {
         this.condaFile = condaFile;
         this.description = description;
         this.docker = docker;
@@ -121,13 +121,13 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     }
 
     private EnvironmentSpecificationVersionArgs() {
-        this.condaFile = Input.empty();
-        this.description = Input.empty();
-        this.docker = Input.empty();
-        this.inferenceContainerProperties = Input.empty();
-        this.isAnonymous = Input.empty();
-        this.properties = Input.empty();
-        this.tags = Input.empty();
+        this.condaFile = Output.empty();
+        this.description = Output.empty();
+        this.docker = Output.empty();
+        this.inferenceContainerProperties = Output.empty();
+        this.isAnonymous = Output.empty();
+        this.properties = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -139,13 +139,13 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> condaFile;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Either<DockerBuildArgs,DockerImageArgs>> docker;
-        private @Nullable Input<InferenceContainerPropertiesArgs> inferenceContainerProperties;
-        private @Nullable Input<Boolean> isAnonymous;
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> condaFile;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker;
+        private @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties;
+        private @Nullable Output<Boolean> isAnonymous;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -162,73 +162,73 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder condaFile(@Nullable Input<String> condaFile) {
+        public Builder condaFile(@Nullable Output<String> condaFile) {
             this.condaFile = condaFile;
             return this;
         }
 
         public Builder condaFile(@Nullable String condaFile) {
-            this.condaFile = Input.ofNullable(condaFile);
+            this.condaFile = Output.ofNullable(condaFile);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder docker(@Nullable Input<Either<DockerBuildArgs,DockerImageArgs>> docker) {
+        public Builder docker(@Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker) {
             this.docker = docker;
             return this;
         }
 
         public Builder docker(@Nullable Either<DockerBuildArgs,DockerImageArgs> docker) {
-            this.docker = Input.ofNullable(docker);
+            this.docker = Output.ofNullable(docker);
             return this;
         }
 
-        public Builder inferenceContainerProperties(@Nullable Input<InferenceContainerPropertiesArgs> inferenceContainerProperties) {
+        public Builder inferenceContainerProperties(@Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties) {
             this.inferenceContainerProperties = inferenceContainerProperties;
             return this;
         }
 
         public Builder inferenceContainerProperties(@Nullable InferenceContainerPropertiesArgs inferenceContainerProperties) {
-            this.inferenceContainerProperties = Input.ofNullable(inferenceContainerProperties);
+            this.inferenceContainerProperties = Output.ofNullable(inferenceContainerProperties);
             return this;
         }
 
-        public Builder isAnonymous(@Nullable Input<Boolean> isAnonymous) {
+        public Builder isAnonymous(@Nullable Output<Boolean> isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
 
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
-            this.isAnonymous = Input.ofNullable(isAnonymous);
+            this.isAnonymous = Output.ofNullable(isAnonymous);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EnvironmentSpecificationVersionArgs build() {

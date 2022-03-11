@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.enums.UpgradeChannel;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="upgradeChannel")
-      private final @Nullable Input<Either<String,UpgradeChannel>> upgradeChannel;
+      private final @Nullable Output<Either<String,UpgradeChannel>> upgradeChannel;
 
-    public Input<Either<String,UpgradeChannel>> getUpgradeChannel() {
-        return this.upgradeChannel == null ? Input.empty() : this.upgradeChannel;
+    public Output<Either<String,UpgradeChannel>> getUpgradeChannel() {
+        return this.upgradeChannel == null ? Output.empty() : this.upgradeChannel;
     }
 
-    public ManagedClusterAutoUpgradeProfileArgs(@Nullable Input<Either<String,UpgradeChannel>> upgradeChannel) {
+    public ManagedClusterAutoUpgradeProfileArgs(@Nullable Output<Either<String,UpgradeChannel>> upgradeChannel) {
         this.upgradeChannel = upgradeChannel;
     }
 
     private ManagedClusterAutoUpgradeProfileArgs() {
-        this.upgradeChannel = Input.empty();
+        this.upgradeChannel = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,UpgradeChannel>> upgradeChannel;
+        private @Nullable Output<Either<String,UpgradeChannel>> upgradeChannel;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
     	      this.upgradeChannel = defaults.upgradeChannel;
         }
 
-        public Builder upgradeChannel(@Nullable Input<Either<String,UpgradeChannel>> upgradeChannel) {
+        public Builder upgradeChannel(@Nullable Output<Either<String,UpgradeChannel>> upgradeChannel) {
             this.upgradeChannel = upgradeChannel;
             return this;
         }
 
         public Builder upgradeChannel(@Nullable Either<String,UpgradeChannel> upgradeChannel) {
-            this.upgradeChannel = Input.ofNullable(upgradeChannel);
+            this.upgradeChannel = Output.ofNullable(upgradeChannel);
             return this;
         }
         public ManagedClusterAutoUpgradeProfileArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.awsnative.iam;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iam.ServerCertificateArgs;
 import io.pulumi.awsnative.iam.outputs.ServerCertificateTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -109,14 +108,14 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerCertificate(String name, @Nullable ServerCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iam:ServerCertificate", name, args == null ? ServerCertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:iam:ServerCertificate", name, args == null ? ServerCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServerCertificate(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServerCertificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iam:ServerCertificate", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -131,7 +130,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServerCertificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServerCertificate get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServerCertificate(name, id, options);
     }
 }

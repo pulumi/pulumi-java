@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.enums.KnownDataCollectionEndpointResourceKind;
 import io.pulumi.azurenative.insights.inputs.DataCollectionEndpointNetworkAclsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataCollectionEndpointName")
-      private final @Nullable Input<String> dataCollectionEndpointName;
+      private final @Nullable Output<String> dataCollectionEndpointName;
 
-    public Input<String> getDataCollectionEndpointName() {
-        return this.dataCollectionEndpointName == null ? Input.empty() : this.dataCollectionEndpointName;
+    public Output<String> getDataCollectionEndpointName() {
+        return this.dataCollectionEndpointName == null ? Output.empty() : this.dataCollectionEndpointName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="immutableId")
-      private final @Nullable Input<String> immutableId;
+      private final @Nullable Output<String> immutableId;
 
-    public Input<String> getImmutableId() {
-        return this.immutableId == null ? Input.empty() : this.immutableId;
+    public Output<String> getImmutableId() {
+        return this.immutableId == null ? Output.empty() : this.immutableId;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
+      private final @Nullable Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
 
-    public Input<Either<String,KnownDataCollectionEndpointResourceKind>> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Either<String,KnownDataCollectionEndpointResourceKind>> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="networkAcls")
-      private final @Nullable Input<DataCollectionEndpointNetworkAclsArgs> networkAcls;
+      private final @Nullable Output<DataCollectionEndpointNetworkAclsArgs> networkAcls;
 
-    public Input<DataCollectionEndpointNetworkAclsArgs> getNetworkAcls() {
-        return this.networkAcls == null ? Input.empty() : this.networkAcls;
+    public Output<DataCollectionEndpointNetworkAclsArgs> getNetworkAcls() {
+        return this.networkAcls == null ? Output.empty() : this.networkAcls;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,21 +100,21 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DataCollectionEndpointArgs(
-        @Nullable Input<String> dataCollectionEndpointName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> immutableId,
-        @Nullable Input<Either<String,KnownDataCollectionEndpointResourceKind>> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<DataCollectionEndpointNetworkAclsArgs> networkAcls,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> dataCollectionEndpointName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> immutableId,
+        @Nullable Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<DataCollectionEndpointNetworkAclsArgs> networkAcls,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.dataCollectionEndpointName = dataCollectionEndpointName;
         this.description = description;
         this.immutableId = immutableId;
@@ -126,14 +126,14 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
     }
 
     private DataCollectionEndpointArgs() {
-        this.dataCollectionEndpointName = Input.empty();
-        this.description = Input.empty();
-        this.immutableId = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.networkAcls = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.dataCollectionEndpointName = Output.empty();
+        this.description = Output.empty();
+        this.immutableId = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.networkAcls = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataCollectionEndpointName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> immutableId;
-        private @Nullable Input<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<DataCollectionEndpointNetworkAclsArgs> networkAcls;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> dataCollectionEndpointName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> immutableId;
+        private @Nullable Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<DataCollectionEndpointNetworkAclsArgs> networkAcls;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder dataCollectionEndpointName(@Nullable Input<String> dataCollectionEndpointName) {
+        public Builder dataCollectionEndpointName(@Nullable Output<String> dataCollectionEndpointName) {
             this.dataCollectionEndpointName = dataCollectionEndpointName;
             return this;
         }
 
         public Builder dataCollectionEndpointName(@Nullable String dataCollectionEndpointName) {
-            this.dataCollectionEndpointName = Input.ofNullable(dataCollectionEndpointName);
+            this.dataCollectionEndpointName = Output.ofNullable(dataCollectionEndpointName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder immutableId(@Nullable Input<String> immutableId) {
+        public Builder immutableId(@Nullable Output<String> immutableId) {
             this.immutableId = immutableId;
             return this;
         }
 
         public Builder immutableId(@Nullable String immutableId) {
-            this.immutableId = Input.ofNullable(immutableId);
+            this.immutableId = Output.ofNullable(immutableId);
             return this;
         }
 
-        public Builder kind(@Nullable Input<Either<String,KnownDataCollectionEndpointResourceKind>> kind) {
+        public Builder kind(@Nullable Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Either<String,KnownDataCollectionEndpointResourceKind> kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkAcls(@Nullable Input<DataCollectionEndpointNetworkAclsArgs> networkAcls) {
+        public Builder networkAcls(@Nullable Output<DataCollectionEndpointNetworkAclsArgs> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
         public Builder networkAcls(@Nullable DataCollectionEndpointNetworkAclsArgs networkAcls) {
-            this.networkAcls = Input.ofNullable(networkAcls);
+            this.networkAcls = Output.ofNullable(networkAcls);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DataCollectionEndpointArgs build() {

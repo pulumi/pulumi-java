@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.TypeArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.VersionSourceArgs;
@@ -25,10 +25,10 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<List<TypeArgs>> type;
+      private final @Nullable Output<List<TypeArgs>> type;
 
-    public Input<List<TypeArgs>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<List<TypeArgs>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<List<VersionSourceArgs>> version;
+      private final @Nullable Output<List<VersionSourceArgs>> version;
 
-    public Input<List<VersionSourceArgs>> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<List<VersionSourceArgs>> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public Hl7TypesConfigArgs(
-        @Nullable Input<List<TypeArgs>> type,
-        @Nullable Input<List<VersionSourceArgs>> version) {
+        @Nullable Output<List<TypeArgs>> type,
+        @Nullable Output<List<VersionSourceArgs>> version) {
         this.type = type;
         this.version = version;
     }
 
     private Hl7TypesConfigArgs() {
-        this.type = Input.empty();
-        this.version = Input.empty();
+        this.type = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TypeArgs>> type;
-        private @Nullable Input<List<VersionSourceArgs>> version;
+        private @Nullable Output<List<TypeArgs>> type;
+        private @Nullable Output<List<VersionSourceArgs>> version;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder type(@Nullable Input<List<TypeArgs>> type) {
+        public Builder type(@Nullable Output<List<TypeArgs>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable List<TypeArgs> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder version(@Nullable Input<List<VersionSourceArgs>> version) {
+        public Builder version(@Nullable Output<List<VersionSourceArgs>> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable List<VersionSourceArgs> version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public Hl7TypesConfigArgs build() {

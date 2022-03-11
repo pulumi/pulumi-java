@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class TableTtlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributeName", required=true)
-      private final Input<String> attributeName;
+      private final Output<String> attributeName;
 
-    public Input<String> getAttributeName() {
+    public Output<String> getAttributeName() {
         return this.attributeName;
     }
 
@@ -31,22 +31,22 @@ public final class TableTtlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     public TableTtlArgs(
-        Input<String> attributeName,
-        @Nullable Input<Boolean> enabled) {
+        Output<String> attributeName,
+        @Nullable Output<Boolean> enabled) {
         this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
         this.enabled = enabled;
     }
 
     private TableTtlArgs() {
-        this.attributeName = Input.empty();
-        this.enabled = Input.empty();
+        this.attributeName = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class TableTtlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> attributeName;
-        private @Nullable Input<Boolean> enabled;
+        private Output<String> attributeName;
+        private @Nullable Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class TableTtlArgs extends io.pulumi.resources.ResourceArgs {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder attributeName(Input<String> attributeName) {
+        public Builder attributeName(Output<String> attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
         public Builder attributeName(String attributeName) {
-            this.attributeName = Input.of(Objects.requireNonNull(attributeName));
+            this.attributeName = Output.of(Objects.requireNonNull(attributeName));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
         public TableTtlArgs build() {

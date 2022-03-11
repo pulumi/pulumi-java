@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.CorsRulesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -31,10 +31,10 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cors")
-      private final @Nullable Input<CorsRulesArgs> cors;
+      private final @Nullable Output<CorsRulesArgs> cors;
 
-    public Input<CorsRulesArgs> getCors() {
-        return this.cors == null ? Input.empty() : this.cors;
+    public Output<CorsRulesArgs> getCors() {
+        return this.cors == null ? Output.empty() : this.cors;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tableServiceName")
-      private final @Nullable Input<String> tableServiceName;
+      private final @Nullable Output<String> tableServiceName;
 
-    public Input<String> getTableServiceName() {
-        return this.tableServiceName == null ? Input.empty() : this.tableServiceName;
+    public Output<String> getTableServiceName() {
+        return this.tableServiceName == null ? Output.empty() : this.tableServiceName;
     }
 
     public TableServicePropertiesArgs(
-        Input<String> accountName,
-        @Nullable Input<CorsRulesArgs> cors,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> tableServiceName) {
+        Output<String> accountName,
+        @Nullable Output<CorsRulesArgs> cors,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> tableServiceName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.cors = cors;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private TableServicePropertiesArgs() {
-        this.accountName = Input.empty();
-        this.cors = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tableServiceName = Input.empty();
+        this.accountName = Output.empty();
+        this.cors = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tableServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<CorsRulesArgs> cors;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> tableServiceName;
+        private Output<String> accountName;
+        private @Nullable Output<CorsRulesArgs> cors;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> tableServiceName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     	      this.tableServiceName = defaults.tableServiceName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder cors(@Nullable Input<CorsRulesArgs> cors) {
+        public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
             this.cors = cors;
             return this;
         }
 
         public Builder cors(@Nullable CorsRulesArgs cors) {
-            this.cors = Input.ofNullable(cors);
+            this.cors = Output.ofNullable(cors);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tableServiceName(@Nullable Input<String> tableServiceName) {
+        public Builder tableServiceName(@Nullable Output<String> tableServiceName) {
             this.tableServiceName = tableServiceName;
             return this;
         }
 
         public Builder tableServiceName(@Nullable String tableServiceName) {
-            this.tableServiceName = Input.ofNullable(tableServiceName);
+            this.tableServiceName = Output.ofNullable(tableServiceName);
             return this;
         }
         public TableServicePropertiesArgs build() {

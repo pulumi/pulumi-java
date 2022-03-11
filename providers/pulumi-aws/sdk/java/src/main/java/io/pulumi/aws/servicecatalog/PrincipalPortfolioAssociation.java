@@ -6,7 +6,6 @@ package io.pulumi.aws.servicecatalog;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.PrincipalPortfolioAssociationArgs;
 import io.pulumi.aws.servicecatalog.inputs.PrincipalPortfolioAssociationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -124,14 +123,14 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public PrincipalPortfolioAssociation(String name, PrincipalPortfolioAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/principalPortfolioAssociation:PrincipalPortfolioAssociation", name, args == null ? PrincipalPortfolioAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:servicecatalog/principalPortfolioAssociation:PrincipalPortfolioAssociation", name, args == null ? PrincipalPortfolioAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PrincipalPortfolioAssociation(String name, Input<String> id, @Nullable PrincipalPortfolioAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PrincipalPortfolioAssociation(String name, Output<String> id, @Nullable PrincipalPortfolioAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:servicecatalog/principalPortfolioAssociation:PrincipalPortfolioAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -147,7 +146,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrincipalPortfolioAssociation get(String name, Input<String> id, @Nullable PrincipalPortfolioAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PrincipalPortfolioAssociation get(String name, Output<String> id, @Nullable PrincipalPortfolioAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrincipalPortfolioAssociation(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="acceptLanguage")
-      private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Output<String> acceptLanguage;
 
-    public Input<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
+    public Output<String> getAcceptLanguage() {
+        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="portfolioId", required=true)
-      private final Input<String> portfolioId;
+      private final Output<String> portfolioId;
 
-    public Input<String> getPortfolioId() {
+    public Output<String> getPortfolioId() {
         return this.portfolioId;
     }
 
@@ -41,9 +41,9 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="principalArn", required=true)
-      private final Input<String> principalArn;
+      private final Output<String> principalArn;
 
-    public Input<String> getPrincipalArn() {
+    public Output<String> getPrincipalArn() {
         return this.principalArn;
     }
 
@@ -52,17 +52,17 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="principalType")
-      private final @Nullable Input<String> principalType;
+      private final @Nullable Output<String> principalType;
 
-    public Input<String> getPrincipalType() {
-        return this.principalType == null ? Input.empty() : this.principalType;
+    public Output<String> getPrincipalType() {
+        return this.principalType == null ? Output.empty() : this.principalType;
     }
 
     public PrincipalPortfolioAssociationArgs(
-        @Nullable Input<String> acceptLanguage,
-        Input<String> portfolioId,
-        Input<String> principalArn,
-        @Nullable Input<String> principalType) {
+        @Nullable Output<String> acceptLanguage,
+        Output<String> portfolioId,
+        Output<String> principalArn,
+        @Nullable Output<String> principalType) {
         this.acceptLanguage = acceptLanguage;
         this.portfolioId = Objects.requireNonNull(portfolioId, "expected parameter 'portfolioId' to be non-null");
         this.principalArn = Objects.requireNonNull(principalArn, "expected parameter 'principalArn' to be non-null");
@@ -70,10 +70,10 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
     }
 
     private PrincipalPortfolioAssociationArgs() {
-        this.acceptLanguage = Input.empty();
-        this.portfolioId = Input.empty();
-        this.principalArn = Input.empty();
-        this.principalType = Input.empty();
+        this.acceptLanguage = Output.empty();
+        this.portfolioId = Output.empty();
+        this.principalArn = Output.empty();
+        this.principalType = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> acceptLanguage;
-        private Input<String> portfolioId;
-        private Input<String> principalArn;
-        private @Nullable Input<String> principalType;
+        private @Nullable Output<String> acceptLanguage;
+        private Output<String> portfolioId;
+        private Output<String> principalArn;
+        private @Nullable Output<String> principalType;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
     	      this.principalType = defaults.principalType;
         }
 
-        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Input.ofNullable(acceptLanguage);
+            this.acceptLanguage = Output.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder portfolioId(Input<String> portfolioId) {
+        public Builder portfolioId(Output<String> portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
 
         public Builder portfolioId(String portfolioId) {
-            this.portfolioId = Input.of(Objects.requireNonNull(portfolioId));
+            this.portfolioId = Output.of(Objects.requireNonNull(portfolioId));
             return this;
         }
 
-        public Builder principalArn(Input<String> principalArn) {
+        public Builder principalArn(Output<String> principalArn) {
             this.principalArn = Objects.requireNonNull(principalArn);
             return this;
         }
 
         public Builder principalArn(String principalArn) {
-            this.principalArn = Input.of(Objects.requireNonNull(principalArn));
+            this.principalArn = Output.of(Objects.requireNonNull(principalArn));
             return this;
         }
 
-        public Builder principalType(@Nullable Input<String> principalType) {
+        public Builder principalType(@Nullable Output<String> principalType) {
             this.principalType = principalType;
             return this;
         }
 
         public Builder principalType(@Nullable String principalType) {
-            this.principalType = Input.ofNullable(principalType);
+            this.principalType = Output.ofNullable(principalType);
             return this;
         }
         public PrincipalPortfolioAssociationArgs build() {

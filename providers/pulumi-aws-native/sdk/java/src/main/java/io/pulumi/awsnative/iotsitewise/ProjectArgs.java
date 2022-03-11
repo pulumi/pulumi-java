@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise;
 
 import io.pulumi.awsnative.iotsitewise.inputs.ProjectTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetIds")
-      private final @Nullable Input<List<String>> assetIds;
+      private final @Nullable Output<List<String>> assetIds;
 
-    public Input<List<String>> getAssetIds() {
-        return this.assetIds == null ? Input.empty() : this.assetIds;
+    public Output<List<String>> getAssetIds() {
+        return this.assetIds == null ? Output.empty() : this.assetIds;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalId", required=true)
-      private final Input<String> portalId;
+      private final Output<String> portalId;
 
-    public Input<String> getPortalId() {
+    public Output<String> getPortalId() {
         return this.portalId;
     }
 
@@ -43,10 +43,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectDescription")
-      private final @Nullable Input<String> projectDescription;
+      private final @Nullable Output<String> projectDescription;
 
-    public Input<String> getProjectDescription() {
-        return this.projectDescription == null ? Input.empty() : this.projectDescription;
+    public Output<String> getProjectDescription() {
+        return this.projectDescription == null ? Output.empty() : this.projectDescription;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName")
-      private final @Nullable Input<String> projectName;
+      private final @Nullable Output<String> projectName;
 
-    public Input<String> getProjectName() {
-        return this.projectName == null ? Input.empty() : this.projectName;
+    public Output<String> getProjectName() {
+        return this.projectName == null ? Output.empty() : this.projectName;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ProjectTagArgs>> tags;
+      private final @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Input<List<ProjectTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ProjectTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ProjectArgs(
-        @Nullable Input<List<String>> assetIds,
-        Input<String> portalId,
-        @Nullable Input<String> projectDescription,
-        @Nullable Input<String> projectName,
-        @Nullable Input<List<ProjectTagArgs>> tags) {
+        @Nullable Output<List<String>> assetIds,
+        Output<String> portalId,
+        @Nullable Output<String> projectDescription,
+        @Nullable Output<String> projectName,
+        @Nullable Output<List<ProjectTagArgs>> tags) {
         this.assetIds = assetIds;
         this.portalId = Objects.requireNonNull(portalId, "expected parameter 'portalId' to be non-null");
         this.projectDescription = projectDescription;
@@ -85,11 +85,11 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.assetIds = Input.empty();
-        this.portalId = Input.empty();
-        this.projectDescription = Input.empty();
-        this.projectName = Input.empty();
-        this.tags = Input.empty();
+        this.assetIds = Output.empty();
+        this.portalId = Output.empty();
+        this.projectDescription = Output.empty();
+        this.projectName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> assetIds;
-        private Input<String> portalId;
-        private @Nullable Input<String> projectDescription;
-        private @Nullable Input<String> projectName;
-        private @Nullable Input<List<ProjectTagArgs>> tags;
+        private @Nullable Output<List<String>> assetIds;
+        private Output<String> portalId;
+        private @Nullable Output<String> projectDescription;
+        private @Nullable Output<String> projectName;
+        private @Nullable Output<List<ProjectTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder assetIds(@Nullable Input<List<String>> assetIds) {
+        public Builder assetIds(@Nullable Output<List<String>> assetIds) {
             this.assetIds = assetIds;
             return this;
         }
 
         public Builder assetIds(@Nullable List<String> assetIds) {
-            this.assetIds = Input.ofNullable(assetIds);
+            this.assetIds = Output.ofNullable(assetIds);
             return this;
         }
 
-        public Builder portalId(Input<String> portalId) {
+        public Builder portalId(Output<String> portalId) {
             this.portalId = Objects.requireNonNull(portalId);
             return this;
         }
 
         public Builder portalId(String portalId) {
-            this.portalId = Input.of(Objects.requireNonNull(portalId));
+            this.portalId = Output.of(Objects.requireNonNull(portalId));
             return this;
         }
 
-        public Builder projectDescription(@Nullable Input<String> projectDescription) {
+        public Builder projectDescription(@Nullable Output<String> projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
 
         public Builder projectDescription(@Nullable String projectDescription) {
-            this.projectDescription = Input.ofNullable(projectDescription);
+            this.projectDescription = Output.ofNullable(projectDescription);
             return this;
         }
 
-        public Builder projectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Input.ofNullable(projectName);
+            this.projectName = Output.ofNullable(projectName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ProjectTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ProjectArgs build() {

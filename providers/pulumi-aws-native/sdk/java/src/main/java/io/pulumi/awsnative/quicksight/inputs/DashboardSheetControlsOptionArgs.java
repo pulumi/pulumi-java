@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DashboardUIState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
     public static final DashboardSheetControlsOptionArgs Empty = new DashboardSheetControlsOptionArgs();
 
     @InputImport(name="visibilityState")
-      private final @Nullable Input<DashboardUIState> visibilityState;
+      private final @Nullable Output<DashboardUIState> visibilityState;
 
-    public Input<DashboardUIState> getVisibilityState() {
-        return this.visibilityState == null ? Input.empty() : this.visibilityState;
+    public Output<DashboardUIState> getVisibilityState() {
+        return this.visibilityState == null ? Output.empty() : this.visibilityState;
     }
 
-    public DashboardSheetControlsOptionArgs(@Nullable Input<DashboardUIState> visibilityState) {
+    public DashboardSheetControlsOptionArgs(@Nullable Output<DashboardUIState> visibilityState) {
         this.visibilityState = visibilityState;
     }
 
     private DashboardSheetControlsOptionArgs() {
-        this.visibilityState = Input.empty();
+        this.visibilityState = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<DashboardUIState> visibilityState;
+        private @Nullable Output<DashboardUIState> visibilityState;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
     	      this.visibilityState = defaults.visibilityState;
         }
 
-        public Builder visibilityState(@Nullable Input<DashboardUIState> visibilityState) {
+        public Builder visibilityState(@Nullable Output<DashboardUIState> visibilityState) {
             this.visibilityState = visibilityState;
             return this;
         }
 
         public Builder visibilityState(@Nullable DashboardUIState visibilityState) {
-            this.visibilityState = Input.ofNullable(visibilityState);
+            this.visibilityState = Output.ofNullable(visibilityState);
             return this;
         }
         public DashboardSheetControlsOptionArgs build() {

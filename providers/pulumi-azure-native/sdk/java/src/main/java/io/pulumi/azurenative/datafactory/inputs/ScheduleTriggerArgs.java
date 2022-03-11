@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.ScheduleTriggerRecurrenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pipelines")
-      private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
+      private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Input<List<TriggerPipelineReferenceArgs>> getPipelines() {
-        return this.pipelines == null ? Input.empty() : this.pipelines;
+    public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
+        return this.pipelines == null ? Output.empty() : this.pipelines;
     }
 
     /**
@@ -60,9 +60,9 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="recurrence", required=true)
-      private final Input<ScheduleTriggerRecurrenceArgs> recurrence;
+      private final Output<ScheduleTriggerRecurrenceArgs> recurrence;
 
-    public Input<ScheduleTriggerRecurrenceArgs> getRecurrence() {
+    public Output<ScheduleTriggerRecurrenceArgs> getRecurrence() {
         return this.recurrence;
     }
 
@@ -72,18 +72,18 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ScheduleTriggerArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<String> description,
-        @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines,
-        Input<ScheduleTriggerRecurrenceArgs> recurrence,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<String> description,
+        @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines,
+        Output<ScheduleTriggerRecurrenceArgs> recurrence,
+        Output<String> type) {
         this.annotations = annotations;
         this.description = description;
         this.pipelines = pipelines;
@@ -92,11 +92,11 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScheduleTriggerArgs() {
-        this.annotations = Input.empty();
-        this.description = Input.empty();
-        this.pipelines = Input.empty();
-        this.recurrence = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.description = Output.empty();
+        this.pipelines = Output.empty();
+        this.recurrence = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
-        private Input<ScheduleTriggerRecurrenceArgs> recurrence;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
+        private Output<ScheduleTriggerRecurrenceArgs> recurrence;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder pipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
+        public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
-            this.pipelines = Input.ofNullable(pipelines);
+            this.pipelines = Output.ofNullable(pipelines);
             return this;
         }
 
-        public Builder recurrence(Input<ScheduleTriggerRecurrenceArgs> recurrence) {
+        public Builder recurrence(Output<ScheduleTriggerRecurrenceArgs> recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
 
         public Builder recurrence(ScheduleTriggerRecurrenceArgs recurrence) {
-            this.recurrence = Input.of(Objects.requireNonNull(recurrence));
+            this.recurrence = Output.of(Objects.requireNonNull(recurrence));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ScheduleTriggerArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.ApplicationGatewayCustomErrorStatusCode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="customErrorPageUrl")
-      private final @Nullable Input<String> customErrorPageUrl;
+      private final @Nullable Output<String> customErrorPageUrl;
 
-    public Input<String> getCustomErrorPageUrl() {
-        return this.customErrorPageUrl == null ? Input.empty() : this.customErrorPageUrl;
+    public Output<String> getCustomErrorPageUrl() {
+        return this.customErrorPageUrl == null ? Output.empty() : this.customErrorPageUrl;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="statusCode")
-      private final @Nullable Input<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
+      private final @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
 
-    public Input<Either<String,ApplicationGatewayCustomErrorStatusCode>> getStatusCode() {
-        return this.statusCode == null ? Input.empty() : this.statusCode;
+    public Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> getStatusCode() {
+        return this.statusCode == null ? Output.empty() : this.statusCode;
     }
 
     public ApplicationGatewayCustomErrorArgs(
-        @Nullable Input<String> customErrorPageUrl,
-        @Nullable Input<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode) {
+        @Nullable Output<String> customErrorPageUrl,
+        @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode) {
         this.customErrorPageUrl = customErrorPageUrl;
         this.statusCode = statusCode;
     }
 
     private ApplicationGatewayCustomErrorArgs() {
-        this.customErrorPageUrl = Input.empty();
-        this.statusCode = Input.empty();
+        this.customErrorPageUrl = Output.empty();
+        this.statusCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customErrorPageUrl;
-        private @Nullable Input<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
+        private @Nullable Output<String> customErrorPageUrl;
+        private @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder customErrorPageUrl(@Nullable Input<String> customErrorPageUrl) {
+        public Builder customErrorPageUrl(@Nullable Output<String> customErrorPageUrl) {
             this.customErrorPageUrl = customErrorPageUrl;
             return this;
         }
 
         public Builder customErrorPageUrl(@Nullable String customErrorPageUrl) {
-            this.customErrorPageUrl = Input.ofNullable(customErrorPageUrl);
+            this.customErrorPageUrl = Output.ofNullable(customErrorPageUrl);
             return this;
         }
 
-        public Builder statusCode(@Nullable Input<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode) {
+        public Builder statusCode(@Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
         public Builder statusCode(@Nullable Either<String,ApplicationGatewayCustomErrorStatusCode> statusCode) {
-            this.statusCode = Input.ofNullable(statusCode);
+            this.statusCode = Output.ofNullable(statusCode);
             return this;
         }
         public ApplicationGatewayCustomErrorArgs build() {

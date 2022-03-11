@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.azurenative.containerregistry.enums.OS;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentPoolName")
-      private final @Nullable Input<String> agentPoolName;
+      private final @Nullable Output<String> agentPoolName;
 
-    public Input<String> getAgentPoolName() {
-        return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
+    public Output<String> getAgentPoolName() {
+        return this.agentPoolName == null ? Output.empty() : this.agentPoolName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="os")
-      private final @Nullable Input<Either<String,OS>> os;
+      private final @Nullable Output<Either<String,OS>> os;
 
-    public Input<Either<String,OS>> getOs() {
-        return this.os == null ? Input.empty() : this.os;
+    public Output<Either<String,OS>> getOs() {
+        return this.os == null ? Output.empty() : this.os;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-      private final Input<String> registryName;
+      private final Output<String> registryName;
 
-    public Input<String> getRegistryName() {
+    public Output<String> getRegistryName() {
         return this.registryName;
     }
 
@@ -78,9 +78,9 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,10 +89,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkSubnetResourceId")
-      private final @Nullable Input<String> virtualNetworkSubnetResourceId;
+      private final @Nullable Output<String> virtualNetworkSubnetResourceId;
 
-    public Input<String> getVirtualNetworkSubnetResourceId() {
-        return this.virtualNetworkSubnetResourceId == null ? Input.empty() : this.virtualNetworkSubnetResourceId;
+    public Output<String> getVirtualNetworkSubnetResourceId() {
+        return this.virtualNetworkSubnetResourceId == null ? Output.empty() : this.virtualNetworkSubnetResourceId;
     }
 
     public AgentPoolArgs(
-        @Nullable Input<String> agentPoolName,
-        @Nullable Input<Integer> count,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,OS>> os,
-        Input<String> registryName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> tier,
-        @Nullable Input<String> virtualNetworkSubnetResourceId) {
+        @Nullable Output<String> agentPoolName,
+        @Nullable Output<Integer> count,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,OS>> os,
+        Output<String> registryName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> tier,
+        @Nullable Output<String> virtualNetworkSubnetResourceId) {
         this.agentPoolName = agentPoolName;
         this.count = count;
         this.location = location;
@@ -139,15 +139,15 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AgentPoolArgs() {
-        this.agentPoolName = Input.empty();
-        this.count = Input.empty();
-        this.location = Input.empty();
-        this.os = Input.empty();
-        this.registryName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.tier = Input.empty();
-        this.virtualNetworkSubnetResourceId = Input.empty();
+        this.agentPoolName = Output.empty();
+        this.count = Output.empty();
+        this.location = Output.empty();
+        this.os = Output.empty();
+        this.registryName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.tier = Output.empty();
+        this.virtualNetworkSubnetResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> agentPoolName;
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,OS>> os;
-        private Input<String> registryName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> tier;
-        private @Nullable Input<String> virtualNetworkSubnetResourceId;
+        private @Nullable Output<String> agentPoolName;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,OS>> os;
+        private Output<String> registryName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> tier;
+        private @Nullable Output<String> virtualNetworkSubnetResourceId;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkSubnetResourceId = defaults.virtualNetworkSubnetResourceId;
         }
 
-        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Input.ofNullable(agentPoolName);
+            this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder os(@Nullable Input<Either<String,OS>> os) {
+        public Builder os(@Nullable Output<Either<String,OS>> os) {
             this.os = os;
             return this;
         }
 
         public Builder os(@Nullable Either<String,OS> os) {
-            this.os = Input.ofNullable(os);
+            this.os = Output.ofNullable(os);
             return this;
         }
 
-        public Builder registryName(Input<String> registryName) {
+        public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Input.of(Objects.requireNonNull(registryName));
+            this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
 
-        public Builder virtualNetworkSubnetResourceId(@Nullable Input<String> virtualNetworkSubnetResourceId) {
+        public Builder virtualNetworkSubnetResourceId(@Nullable Output<String> virtualNetworkSubnetResourceId) {
             this.virtualNetworkSubnetResourceId = virtualNetworkSubnetResourceId;
             return this;
         }
 
         public Builder virtualNetworkSubnetResourceId(@Nullable String virtualNetworkSubnetResourceId) {
-            this.virtualNetworkSubnetResourceId = Input.ofNullable(virtualNetworkSubnetResourceId);
+            this.virtualNetworkSubnetResourceId = Output.ofNullable(virtualNetworkSubnetResourceId);
             return this;
         }
         public AgentPoolArgs build() {

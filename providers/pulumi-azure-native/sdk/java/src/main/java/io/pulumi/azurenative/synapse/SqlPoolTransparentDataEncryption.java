@@ -6,7 +6,6 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.SqlPoolTransparentDataEncryptionArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -126,24 +125,24 @@ public class SqlPoolTransparentDataEncryption extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlPoolTransparentDataEncryption(String name, SqlPoolTransparentDataEncryptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:SqlPoolTransparentDataEncryption", name, args == null ? SqlPoolTransparentDataEncryptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:synapse:SqlPoolTransparentDataEncryption", name, args == null ? SqlPoolTransparentDataEncryptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlPoolTransparentDataEncryption(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlPoolTransparentDataEncryption(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:SqlPoolTransparentDataEncryption", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:synapse/v20190601preview:SqlPoolTransparentDataEncryption").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20201201:SqlPoolTransparentDataEncryption").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210301:SqlPoolTransparentDataEncryption").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210401preview:SqlPoolTransparentDataEncryption").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210501:SqlPoolTransparentDataEncryption").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601:SqlPoolTransparentDataEncryption").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601preview:SqlPoolTransparentDataEncryption").build())
+                Output.of(Alias.builder().setType("azure-native:synapse/v20190601preview:SqlPoolTransparentDataEncryption").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20201201:SqlPoolTransparentDataEncryption").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210301:SqlPoolTransparentDataEncryption").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210401preview:SqlPoolTransparentDataEncryption").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210501:SqlPoolTransparentDataEncryption").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601:SqlPoolTransparentDataEncryption").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601preview:SqlPoolTransparentDataEncryption").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -157,7 +156,7 @@ public class SqlPoolTransparentDataEncryption extends io.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlPoolTransparentDataEncryption get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlPoolTransparentDataEncryption get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlPoolTransparentDataEncryption(name, id, options);
     }
 }

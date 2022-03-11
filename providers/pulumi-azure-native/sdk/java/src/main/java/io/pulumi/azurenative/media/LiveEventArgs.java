@@ -10,7 +10,7 @@ import io.pulumi.azurenative.media.inputs.LiveEventInputArgs;
 import io.pulumi.azurenative.media.inputs.LiveEventPreviewArgs;
 import io.pulumi.azurenative.media.inputs.LiveEventTranscriptionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,9 +29,9 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -40,10 +40,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoStart")
-      private final @Nullable Input<Boolean> autoStart;
+      private final @Nullable Output<Boolean> autoStart;
 
-    public Input<Boolean> getAutoStart() {
-        return this.autoStart == null ? Input.empty() : this.autoStart;
+    public Output<Boolean> getAutoStart() {
+        return this.autoStart == null ? Output.empty() : this.autoStart;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crossSiteAccessPolicies")
-      private final @Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
+      private final @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
-    public Input<CrossSiteAccessPoliciesArgs> getCrossSiteAccessPolicies() {
-        return this.crossSiteAccessPolicies == null ? Input.empty() : this.crossSiteAccessPolicies;
+    public Output<CrossSiteAccessPoliciesArgs> getCrossSiteAccessPolicies() {
+        return this.crossSiteAccessPolicies == null ? Output.empty() : this.crossSiteAccessPolicies;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<LiveEventEncodingArgs> encoding;
+      private final @Nullable Output<LiveEventEncodingArgs> encoding;
 
-    public Input<LiveEventEncodingArgs> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<LiveEventEncodingArgs> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnamePrefix")
-      private final @Nullable Input<String> hostnamePrefix;
+      private final @Nullable Output<String> hostnamePrefix;
 
-    public Input<String> getHostnamePrefix() {
-        return this.hostnamePrefix == null ? Input.empty() : this.hostnamePrefix;
+    public Output<String> getHostnamePrefix() {
+        return this.hostnamePrefix == null ? Output.empty() : this.hostnamePrefix;
     }
 
     /**
@@ -95,9 +95,9 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="input", required=true)
-      private final Input<LiveEventInputArgs> input;
+      private final Output<LiveEventInputArgs> input;
 
-    public Input<LiveEventInputArgs> getInput() {
+    public Output<LiveEventInputArgs> getInput() {
         return this.input;
     }
 
@@ -106,10 +106,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="liveEventName")
-      private final @Nullable Input<String> liveEventName;
+      private final @Nullable Output<String> liveEventName;
 
-    public Input<String> getLiveEventName() {
-        return this.liveEventName == null ? Input.empty() : this.liveEventName;
+    public Output<String> getLiveEventName() {
+        return this.liveEventName == null ? Output.empty() : this.liveEventName;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preview")
-      private final @Nullable Input<LiveEventPreviewArgs> preview;
+      private final @Nullable Output<LiveEventPreviewArgs> preview;
 
-    public Input<LiveEventPreviewArgs> getPreview() {
-        return this.preview == null ? Input.empty() : this.preview;
+    public Output<LiveEventPreviewArgs> getPreview() {
+        return this.preview == null ? Output.empty() : this.preview;
     }
 
     /**
@@ -139,9 +139,9 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -150,10 +150,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamOptions")
-      private final @Nullable Input<List<Either<String,StreamOptionsFlag>>> streamOptions;
+      private final @Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions;
 
-    public Input<List<Either<String,StreamOptionsFlag>>> getStreamOptions() {
-        return this.streamOptions == null ? Input.empty() : this.streamOptions;
+    public Output<List<Either<String,StreamOptionsFlag>>> getStreamOptions() {
+        return this.streamOptions == null ? Output.empty() : this.streamOptions;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transcriptions")
-      private final @Nullable Input<List<LiveEventTranscriptionArgs>> transcriptions;
+      private final @Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions;
 
-    public Input<List<LiveEventTranscriptionArgs>> getTranscriptions() {
-        return this.transcriptions == null ? Input.empty() : this.transcriptions;
+    public Output<List<LiveEventTranscriptionArgs>> getTranscriptions() {
+        return this.transcriptions == null ? Output.empty() : this.transcriptions;
     }
 
     /**
@@ -183,28 +183,28 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useStaticHostname")
-      private final @Nullable Input<Boolean> useStaticHostname;
+      private final @Nullable Output<Boolean> useStaticHostname;
 
-    public Input<Boolean> getUseStaticHostname() {
-        return this.useStaticHostname == null ? Input.empty() : this.useStaticHostname;
+    public Output<Boolean> getUseStaticHostname() {
+        return this.useStaticHostname == null ? Output.empty() : this.useStaticHostname;
     }
 
     public LiveEventArgs(
-        Input<String> accountName,
-        @Nullable Input<Boolean> autoStart,
-        @Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies,
-        @Nullable Input<String> description,
-        @Nullable Input<LiveEventEncodingArgs> encoding,
-        @Nullable Input<String> hostnamePrefix,
-        Input<LiveEventInputArgs> input,
-        @Nullable Input<String> liveEventName,
-        @Nullable Input<String> location,
-        @Nullable Input<LiveEventPreviewArgs> preview,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<Either<String,StreamOptionsFlag>>> streamOptions,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<LiveEventTranscriptionArgs>> transcriptions,
-        @Nullable Input<Boolean> useStaticHostname) {
+        Output<String> accountName,
+        @Nullable Output<Boolean> autoStart,
+        @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies,
+        @Nullable Output<String> description,
+        @Nullable Output<LiveEventEncodingArgs> encoding,
+        @Nullable Output<String> hostnamePrefix,
+        Output<LiveEventInputArgs> input,
+        @Nullable Output<String> liveEventName,
+        @Nullable Output<String> location,
+        @Nullable Output<LiveEventPreviewArgs> preview,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions,
+        @Nullable Output<Boolean> useStaticHostname) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.autoStart = autoStart;
         this.crossSiteAccessPolicies = crossSiteAccessPolicies;
@@ -223,21 +223,21 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LiveEventArgs() {
-        this.accountName = Input.empty();
-        this.autoStart = Input.empty();
-        this.crossSiteAccessPolicies = Input.empty();
-        this.description = Input.empty();
-        this.encoding = Input.empty();
-        this.hostnamePrefix = Input.empty();
-        this.input = Input.empty();
-        this.liveEventName = Input.empty();
-        this.location = Input.empty();
-        this.preview = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.streamOptions = Input.empty();
-        this.tags = Input.empty();
-        this.transcriptions = Input.empty();
-        this.useStaticHostname = Input.empty();
+        this.accountName = Output.empty();
+        this.autoStart = Output.empty();
+        this.crossSiteAccessPolicies = Output.empty();
+        this.description = Output.empty();
+        this.encoding = Output.empty();
+        this.hostnamePrefix = Output.empty();
+        this.input = Output.empty();
+        this.liveEventName = Output.empty();
+        this.location = Output.empty();
+        this.preview = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.streamOptions = Output.empty();
+        this.tags = Output.empty();
+        this.transcriptions = Output.empty();
+        this.useStaticHostname = Output.empty();
     }
 
     public static Builder builder() {
@@ -249,21 +249,21 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<Boolean> autoStart;
-        private @Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
-        private @Nullable Input<String> description;
-        private @Nullable Input<LiveEventEncodingArgs> encoding;
-        private @Nullable Input<String> hostnamePrefix;
-        private Input<LiveEventInputArgs> input;
-        private @Nullable Input<String> liveEventName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<LiveEventPreviewArgs> preview;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<Either<String,StreamOptionsFlag>>> streamOptions;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<LiveEventTranscriptionArgs>> transcriptions;
-        private @Nullable Input<Boolean> useStaticHostname;
+        private Output<String> accountName;
+        private @Nullable Output<Boolean> autoStart;
+        private @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
+        private @Nullable Output<String> description;
+        private @Nullable Output<LiveEventEncodingArgs> encoding;
+        private @Nullable Output<String> hostnamePrefix;
+        private Output<LiveEventInputArgs> input;
+        private @Nullable Output<String> liveEventName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<LiveEventPreviewArgs> preview;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions;
+        private @Nullable Output<Boolean> useStaticHostname;
 
         public Builder() {
     	      // Empty
@@ -288,153 +288,153 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useStaticHostname = defaults.useStaticHostname;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder autoStart(@Nullable Input<Boolean> autoStart) {
+        public Builder autoStart(@Nullable Output<Boolean> autoStart) {
             this.autoStart = autoStart;
             return this;
         }
 
         public Builder autoStart(@Nullable Boolean autoStart) {
-            this.autoStart = Input.ofNullable(autoStart);
+            this.autoStart = Output.ofNullable(autoStart);
             return this;
         }
 
-        public Builder crossSiteAccessPolicies(@Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
+        public Builder crossSiteAccessPolicies(@Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
 
         public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
-            this.crossSiteAccessPolicies = Input.ofNullable(crossSiteAccessPolicies);
+            this.crossSiteAccessPolicies = Output.ofNullable(crossSiteAccessPolicies);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encoding(@Nullable Input<LiveEventEncodingArgs> encoding) {
+        public Builder encoding(@Nullable Output<LiveEventEncodingArgs> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable LiveEventEncodingArgs encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder hostnamePrefix(@Nullable Input<String> hostnamePrefix) {
+        public Builder hostnamePrefix(@Nullable Output<String> hostnamePrefix) {
             this.hostnamePrefix = hostnamePrefix;
             return this;
         }
 
         public Builder hostnamePrefix(@Nullable String hostnamePrefix) {
-            this.hostnamePrefix = Input.ofNullable(hostnamePrefix);
+            this.hostnamePrefix = Output.ofNullable(hostnamePrefix);
             return this;
         }
 
-        public Builder input(Input<LiveEventInputArgs> input) {
+        public Builder input(Output<LiveEventInputArgs> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
         public Builder input(LiveEventInputArgs input) {
-            this.input = Input.of(Objects.requireNonNull(input));
+            this.input = Output.of(Objects.requireNonNull(input));
             return this;
         }
 
-        public Builder liveEventName(@Nullable Input<String> liveEventName) {
+        public Builder liveEventName(@Nullable Output<String> liveEventName) {
             this.liveEventName = liveEventName;
             return this;
         }
 
         public Builder liveEventName(@Nullable String liveEventName) {
-            this.liveEventName = Input.ofNullable(liveEventName);
+            this.liveEventName = Output.ofNullable(liveEventName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder preview(@Nullable Input<LiveEventPreviewArgs> preview) {
+        public Builder preview(@Nullable Output<LiveEventPreviewArgs> preview) {
             this.preview = preview;
             return this;
         }
 
         public Builder preview(@Nullable LiveEventPreviewArgs preview) {
-            this.preview = Input.ofNullable(preview);
+            this.preview = Output.ofNullable(preview);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder streamOptions(@Nullable Input<List<Either<String,StreamOptionsFlag>>> streamOptions) {
+        public Builder streamOptions(@Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions) {
             this.streamOptions = streamOptions;
             return this;
         }
 
         public Builder streamOptions(@Nullable List<Either<String,StreamOptionsFlag>> streamOptions) {
-            this.streamOptions = Input.ofNullable(streamOptions);
+            this.streamOptions = Output.ofNullable(streamOptions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder transcriptions(@Nullable Input<List<LiveEventTranscriptionArgs>> transcriptions) {
+        public Builder transcriptions(@Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions) {
             this.transcriptions = transcriptions;
             return this;
         }
 
         public Builder transcriptions(@Nullable List<LiveEventTranscriptionArgs> transcriptions) {
-            this.transcriptions = Input.ofNullable(transcriptions);
+            this.transcriptions = Output.ofNullable(transcriptions);
             return this;
         }
 
-        public Builder useStaticHostname(@Nullable Input<Boolean> useStaticHostname) {
+        public Builder useStaticHostname(@Nullable Output<Boolean> useStaticHostname) {
             this.useStaticHostname = useStaticHostname;
             return this;
         }
 
         public Builder useStaticHostname(@Nullable Boolean useStaticHostname) {
-            this.useStaticHostname = Input.ofNullable(useStaticHostname);
+            this.useStaticHostname = Output.ofNullable(useStaticHostname);
             return this;
         }
         public LiveEventArgs build() {

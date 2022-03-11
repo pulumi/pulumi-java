@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devices.DpsCertificateArgs;
 import io.pulumi.azurenative.devices.outputs.CertificatePropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -127,24 +126,24 @@ public class DpsCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DpsCertificate(String name, DpsCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devices:DpsCertificate", name, args == null ? DpsCertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:devices:DpsCertificate", name, args == null ? DpsCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DpsCertificate(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DpsCertificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devices:DpsCertificate", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:devices/v20170821preview:DpsCertificate").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20171115:DpsCertificate").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20180122:DpsCertificate").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20200101:DpsCertificate").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20200301:DpsCertificate").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20200901preview:DpsCertificate").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20211015:DpsCertificate").build())
+                Output.of(Alias.builder().setType("azure-native:devices/v20170821preview:DpsCertificate").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20171115:DpsCertificate").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20180122:DpsCertificate").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20200101:DpsCertificate").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20200301:DpsCertificate").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20200901preview:DpsCertificate").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20211015:DpsCertificate").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -158,7 +157,7 @@ public class DpsCertificate extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DpsCertificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DpsCertificate get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DpsCertificate(name, id, options);
     }
 }

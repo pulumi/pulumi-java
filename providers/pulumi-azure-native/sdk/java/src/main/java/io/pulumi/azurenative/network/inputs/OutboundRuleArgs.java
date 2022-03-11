@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.LoadBalancerOutboundRuleProtocol;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,10 +29,10 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocatedOutboundPorts")
-      private final @Nullable Input<Integer> allocatedOutboundPorts;
+      private final @Nullable Output<Integer> allocatedOutboundPorts;
 
-    public Input<Integer> getAllocatedOutboundPorts() {
-        return this.allocatedOutboundPorts == null ? Input.empty() : this.allocatedOutboundPorts;
+    public Output<Integer> getAllocatedOutboundPorts() {
+        return this.allocatedOutboundPorts == null ? Output.empty() : this.allocatedOutboundPorts;
     }
 
     /**
@@ -40,9 +40,9 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendAddressPool", required=true)
-      private final Input<SubResourceArgs> backendAddressPool;
+      private final Output<SubResourceArgs> backendAddressPool;
 
-    public Input<SubResourceArgs> getBackendAddressPool() {
+    public Output<SubResourceArgs> getBackendAddressPool() {
         return this.backendAddressPool;
     }
 
@@ -51,10 +51,10 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableTcpReset")
-      private final @Nullable Input<Boolean> enableTcpReset;
+      private final @Nullable Output<Boolean> enableTcpReset;
 
-    public Input<Boolean> getEnableTcpReset() {
-        return this.enableTcpReset == null ? Input.empty() : this.enableTcpReset;
+    public Output<Boolean> getEnableTcpReset() {
+        return this.enableTcpReset == null ? Output.empty() : this.enableTcpReset;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendIPConfigurations", required=true)
-      private final Input<List<SubResourceArgs>> frontendIPConfigurations;
+      private final Output<List<SubResourceArgs>> frontendIPConfigurations;
 
-    public Input<List<SubResourceArgs>> getFrontendIPConfigurations() {
+    public Output<List<SubResourceArgs>> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
 
@@ -73,10 +73,10 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-      private final @Nullable Input<Integer> idleTimeoutInMinutes;
+      private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Input<Integer> getIdleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
+    public Output<Integer> getIdleTimeoutInMinutes() {
+        return this.idleTimeoutInMinutes == null ? Output.empty() : this.idleTimeoutInMinutes;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<Either<String,LoadBalancerOutboundRuleProtocol>> protocol;
+      private final Output<Either<String,LoadBalancerOutboundRuleProtocol>> protocol;
 
-    public Input<Either<String,LoadBalancerOutboundRuleProtocol>> getProtocol() {
+    public Output<Either<String,LoadBalancerOutboundRuleProtocol>> getProtocol() {
         return this.protocol;
     }
 
     public OutboundRuleArgs(
-        @Nullable Input<Integer> allocatedOutboundPorts,
-        Input<SubResourceArgs> backendAddressPool,
-        @Nullable Input<Boolean> enableTcpReset,
-        Input<List<SubResourceArgs>> frontendIPConfigurations,
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> idleTimeoutInMinutes,
-        @Nullable Input<String> name,
-        Input<Either<String,LoadBalancerOutboundRuleProtocol>> protocol) {
+        @Nullable Output<Integer> allocatedOutboundPorts,
+        Output<SubResourceArgs> backendAddressPool,
+        @Nullable Output<Boolean> enableTcpReset,
+        Output<List<SubResourceArgs>> frontendIPConfigurations,
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> idleTimeoutInMinutes,
+        @Nullable Output<String> name,
+        Output<Either<String,LoadBalancerOutboundRuleProtocol>> protocol) {
         this.allocatedOutboundPorts = allocatedOutboundPorts;
         this.backendAddressPool = Objects.requireNonNull(backendAddressPool, "expected parameter 'backendAddressPool' to be non-null");
         this.enableTcpReset = enableTcpReset;
@@ -132,14 +132,14 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OutboundRuleArgs() {
-        this.allocatedOutboundPorts = Input.empty();
-        this.backendAddressPool = Input.empty();
-        this.enableTcpReset = Input.empty();
-        this.frontendIPConfigurations = Input.empty();
-        this.id = Input.empty();
-        this.idleTimeoutInMinutes = Input.empty();
-        this.name = Input.empty();
-        this.protocol = Input.empty();
+        this.allocatedOutboundPorts = Output.empty();
+        this.backendAddressPool = Output.empty();
+        this.enableTcpReset = Output.empty();
+        this.frontendIPConfigurations = Output.empty();
+        this.id = Output.empty();
+        this.idleTimeoutInMinutes = Output.empty();
+        this.name = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> allocatedOutboundPorts;
-        private Input<SubResourceArgs> backendAddressPool;
-        private @Nullable Input<Boolean> enableTcpReset;
-        private Input<List<SubResourceArgs>> frontendIPConfigurations;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> idleTimeoutInMinutes;
-        private @Nullable Input<String> name;
-        private Input<Either<String,LoadBalancerOutboundRuleProtocol>> protocol;
+        private @Nullable Output<Integer> allocatedOutboundPorts;
+        private Output<SubResourceArgs> backendAddressPool;
+        private @Nullable Output<Boolean> enableTcpReset;
+        private Output<List<SubResourceArgs>> frontendIPConfigurations;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> idleTimeoutInMinutes;
+        private @Nullable Output<String> name;
+        private Output<Either<String,LoadBalancerOutboundRuleProtocol>> protocol;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder allocatedOutboundPorts(@Nullable Input<Integer> allocatedOutboundPorts) {
+        public Builder allocatedOutboundPorts(@Nullable Output<Integer> allocatedOutboundPorts) {
             this.allocatedOutboundPorts = allocatedOutboundPorts;
             return this;
         }
 
         public Builder allocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
-            this.allocatedOutboundPorts = Input.ofNullable(allocatedOutboundPorts);
+            this.allocatedOutboundPorts = Output.ofNullable(allocatedOutboundPorts);
             return this;
         }
 
-        public Builder backendAddressPool(Input<SubResourceArgs> backendAddressPool) {
+        public Builder backendAddressPool(Output<SubResourceArgs> backendAddressPool) {
             this.backendAddressPool = Objects.requireNonNull(backendAddressPool);
             return this;
         }
 
         public Builder backendAddressPool(SubResourceArgs backendAddressPool) {
-            this.backendAddressPool = Input.of(Objects.requireNonNull(backendAddressPool));
+            this.backendAddressPool = Output.of(Objects.requireNonNull(backendAddressPool));
             return this;
         }
 
-        public Builder enableTcpReset(@Nullable Input<Boolean> enableTcpReset) {
+        public Builder enableTcpReset(@Nullable Output<Boolean> enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
 
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
-            this.enableTcpReset = Input.ofNullable(enableTcpReset);
+            this.enableTcpReset = Output.ofNullable(enableTcpReset);
             return this;
         }
 
-        public Builder frontendIPConfigurations(Input<List<SubResourceArgs>> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(Output<List<SubResourceArgs>> frontendIPConfigurations) {
             this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
             return this;
         }
 
         public Builder frontendIPConfigurations(List<SubResourceArgs> frontendIPConfigurations) {
-            this.frontendIPConfigurations = Input.of(Objects.requireNonNull(frontendIPConfigurations));
+            this.frontendIPConfigurations = Output.of(Objects.requireNonNull(frontendIPConfigurations));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder idleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Input.ofNullable(idleTimeoutInMinutes);
+            this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder protocol(Input<Either<String,LoadBalancerOutboundRuleProtocol>> protocol) {
+        public Builder protocol(Output<Either<String,LoadBalancerOutboundRuleProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(Either<String,LoadBalancerOutboundRuleProtocol> protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
         public OutboundRuleArgs build() {

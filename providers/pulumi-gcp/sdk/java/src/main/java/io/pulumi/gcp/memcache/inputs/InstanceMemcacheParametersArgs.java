@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.memcache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class InstanceMemcacheParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class InstanceMemcacheParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="params")
-      private final @Nullable Input<Map<String,String>> params;
+      private final @Nullable Output<Map<String,String>> params;
 
-    public Input<Map<String,String>> getParams() {
-        return this.params == null ? Input.empty() : this.params;
+    public Output<Map<String,String>> getParams() {
+        return this.params == null ? Output.empty() : this.params;
     }
 
     public InstanceMemcacheParametersArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<Map<String,String>> params) {
+        @Nullable Output<String> id,
+        @Nullable Output<Map<String,String>> params) {
         this.id = id;
         this.params = params;
     }
 
     private InstanceMemcacheParametersArgs() {
-        this.id = Input.empty();
-        this.params = Input.empty();
+        this.id = Output.empty();
+        this.params = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class InstanceMemcacheParametersArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<Map<String,String>> params;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Map<String,String>> params;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class InstanceMemcacheParametersArgs extends io.pulumi.resources.Re
     	      this.params = defaults.params;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder params(@Nullable Input<Map<String,String>> params) {
+        public Builder params(@Nullable Output<Map<String,String>> params) {
             this.params = params;
             return this;
         }
 
         public Builder params(@Nullable Map<String,String> params) {
-            this.params = Input.ofNullable(params);
+            this.params = Output.ofNullable(params);
             return this;
         }
         public InstanceMemcacheParametersArgs build() {

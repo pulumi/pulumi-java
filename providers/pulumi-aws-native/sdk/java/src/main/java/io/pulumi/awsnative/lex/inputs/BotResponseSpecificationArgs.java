@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -25,29 +25,29 @@ public final class BotResponseSpecificationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowInterrupt")
-      private final @Nullable Input<Boolean> allowInterrupt;
+      private final @Nullable Output<Boolean> allowInterrupt;
 
-    public Input<Boolean> getAllowInterrupt() {
-        return this.allowInterrupt == null ? Input.empty() : this.allowInterrupt;
+    public Output<Boolean> getAllowInterrupt() {
+        return this.allowInterrupt == null ? Output.empty() : this.allowInterrupt;
     }
 
     @InputImport(name="messageGroupsList", required=true)
-      private final Input<List<BotMessageGroupArgs>> messageGroupsList;
+      private final Output<List<BotMessageGroupArgs>> messageGroupsList;
 
-    public Input<List<BotMessageGroupArgs>> getMessageGroupsList() {
+    public Output<List<BotMessageGroupArgs>> getMessageGroupsList() {
         return this.messageGroupsList;
     }
 
     public BotResponseSpecificationArgs(
-        @Nullable Input<Boolean> allowInterrupt,
-        Input<List<BotMessageGroupArgs>> messageGroupsList) {
+        @Nullable Output<Boolean> allowInterrupt,
+        Output<List<BotMessageGroupArgs>> messageGroupsList) {
         this.allowInterrupt = allowInterrupt;
         this.messageGroupsList = Objects.requireNonNull(messageGroupsList, "expected parameter 'messageGroupsList' to be non-null");
     }
 
     private BotResponseSpecificationArgs() {
-        this.allowInterrupt = Input.empty();
-        this.messageGroupsList = Input.empty();
+        this.allowInterrupt = Output.empty();
+        this.messageGroupsList = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class BotResponseSpecificationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowInterrupt;
-        private Input<List<BotMessageGroupArgs>> messageGroupsList;
+        private @Nullable Output<Boolean> allowInterrupt;
+        private Output<List<BotMessageGroupArgs>> messageGroupsList;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class BotResponseSpecificationArgs extends io.pulumi.resources.Reso
     	      this.messageGroupsList = defaults.messageGroupsList;
         }
 
-        public Builder allowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Output<Boolean> allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
         public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
-            this.allowInterrupt = Input.ofNullable(allowInterrupt);
+            this.allowInterrupt = Output.ofNullable(allowInterrupt);
             return this;
         }
 
-        public Builder messageGroupsList(Input<List<BotMessageGroupArgs>> messageGroupsList) {
+        public Builder messageGroupsList(Output<List<BotMessageGroupArgs>> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
 
         public Builder messageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
-            this.messageGroupsList = Input.of(Objects.requireNonNull(messageGroupsList));
+            this.messageGroupsList = Output.of(Objects.requireNonNull(messageGroupsList));
             return this;
         }
         public BotResponseSpecificationArgs build() {

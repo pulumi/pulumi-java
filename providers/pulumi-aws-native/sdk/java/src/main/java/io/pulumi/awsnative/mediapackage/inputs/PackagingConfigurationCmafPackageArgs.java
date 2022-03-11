@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationCmafEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     public static final PackagingConfigurationCmafPackageArgs Empty = new PackagingConfigurationCmafPackageArgs();
 
     @InputImport(name="encryption")
-      private final @Nullable Input<PackagingConfigurationCmafEncryptionArgs> encryption;
+      private final @Nullable Output<PackagingConfigurationCmafEncryptionArgs> encryption;
 
-    public Input<PackagingConfigurationCmafEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<PackagingConfigurationCmafEncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hlsManifests", required=true)
-      private final Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
+      private final Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
-    public Input<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
+    public Output<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
         return this.hlsManifests;
     }
 
@@ -45,24 +45,24 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="includeEncoderConfigurationInSegments")
-      private final @Nullable Input<Boolean> includeEncoderConfigurationInSegments;
+      private final @Nullable Output<Boolean> includeEncoderConfigurationInSegments;
 
-    public Input<Boolean> getIncludeEncoderConfigurationInSegments() {
-        return this.includeEncoderConfigurationInSegments == null ? Input.empty() : this.includeEncoderConfigurationInSegments;
+    public Output<Boolean> getIncludeEncoderConfigurationInSegments() {
+        return this.includeEncoderConfigurationInSegments == null ? Output.empty() : this.includeEncoderConfigurationInSegments;
     }
 
     @InputImport(name="segmentDurationSeconds")
-      private final @Nullable Input<Integer> segmentDurationSeconds;
+      private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Input<Integer> getSegmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
+    public Output<Integer> getSegmentDurationSeconds() {
+        return this.segmentDurationSeconds == null ? Output.empty() : this.segmentDurationSeconds;
     }
 
     public PackagingConfigurationCmafPackageArgs(
-        @Nullable Input<PackagingConfigurationCmafEncryptionArgs> encryption,
-        Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests,
-        @Nullable Input<Boolean> includeEncoderConfigurationInSegments,
-        @Nullable Input<Integer> segmentDurationSeconds) {
+        @Nullable Output<PackagingConfigurationCmafEncryptionArgs> encryption,
+        Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests,
+        @Nullable Output<Boolean> includeEncoderConfigurationInSegments,
+        @Nullable Output<Integer> segmentDurationSeconds) {
         this.encryption = encryption;
         this.hlsManifests = Objects.requireNonNull(hlsManifests, "expected parameter 'hlsManifests' to be non-null");
         this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
@@ -70,10 +70,10 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     }
 
     private PackagingConfigurationCmafPackageArgs() {
-        this.encryption = Input.empty();
-        this.hlsManifests = Input.empty();
-        this.includeEncoderConfigurationInSegments = Input.empty();
-        this.segmentDurationSeconds = Input.empty();
+        this.encryption = Output.empty();
+        this.hlsManifests = Output.empty();
+        this.includeEncoderConfigurationInSegments = Output.empty();
+        this.segmentDurationSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<PackagingConfigurationCmafEncryptionArgs> encryption;
-        private Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
-        private @Nullable Input<Boolean> includeEncoderConfigurationInSegments;
-        private @Nullable Input<Integer> segmentDurationSeconds;
+        private @Nullable Output<PackagingConfigurationCmafEncryptionArgs> encryption;
+        private Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
+        private @Nullable Output<Boolean> includeEncoderConfigurationInSegments;
+        private @Nullable Output<Integer> segmentDurationSeconds;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
         }
 
-        public Builder encryption(@Nullable Input<PackagingConfigurationCmafEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<PackagingConfigurationCmafEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable PackagingConfigurationCmafEncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder hlsManifests(Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
+        public Builder hlsManifests(Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
             this.hlsManifests = Objects.requireNonNull(hlsManifests);
             return this;
         }
 
         public Builder hlsManifests(List<PackagingConfigurationHlsManifestArgs> hlsManifests) {
-            this.hlsManifests = Input.of(Objects.requireNonNull(hlsManifests));
+            this.hlsManifests = Output.of(Objects.requireNonNull(hlsManifests));
             return this;
         }
 
-        public Builder includeEncoderConfigurationInSegments(@Nullable Input<Boolean> includeEncoderConfigurationInSegments) {
+        public Builder includeEncoderConfigurationInSegments(@Nullable Output<Boolean> includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
 
         public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
-            this.includeEncoderConfigurationInSegments = Input.ofNullable(includeEncoderConfigurationInSegments);
+            this.includeEncoderConfigurationInSegments = Output.ofNullable(includeEncoderConfigurationInSegments);
             return this;
         }
 
-        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
+            this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
             return this;
         }
         public PackagingConfigurationCmafPackageArgs build() {

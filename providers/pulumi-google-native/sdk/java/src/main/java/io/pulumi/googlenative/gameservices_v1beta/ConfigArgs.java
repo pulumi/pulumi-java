@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.FleetConfigArgs;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.ScalingConfigArgs;
@@ -19,9 +19,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConfigArgs Empty = new ConfigArgs();
 
     @InputImport(name="configId", required=true)
-      private final Input<String> configId;
+      private final Output<String> configId;
 
-    public Input<String> getConfigId() {
+    public Output<String> getConfigId() {
         return this.configId;
     }
 
@@ -30,10 +30,10 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,16 +41,16 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetConfigs")
-      private final @Nullable Input<List<FleetConfigArgs>> fleetConfigs;
+      private final @Nullable Output<List<FleetConfigArgs>> fleetConfigs;
 
-    public Input<List<FleetConfigArgs>> getFleetConfigs() {
-        return this.fleetConfigs == null ? Input.empty() : this.fleetConfigs;
+    public Output<List<FleetConfigArgs>> getFleetConfigs() {
+        return this.fleetConfigs == null ? Output.empty() : this.fleetConfigs;
     }
 
     @InputImport(name="gameServerDeploymentId", required=true)
-      private final Input<String> gameServerDeploymentId;
+      private final Output<String> gameServerDeploymentId;
 
-    public Input<String> getGameServerDeploymentId() {
+    public Output<String> getGameServerDeploymentId() {
         return this.gameServerDeploymentId;
     }
 
@@ -59,17 +59,17 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -77,17 +77,17 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -95,22 +95,22 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingConfigs")
-      private final @Nullable Input<List<ScalingConfigArgs>> scalingConfigs;
+      private final @Nullable Output<List<ScalingConfigArgs>> scalingConfigs;
 
-    public Input<List<ScalingConfigArgs>> getScalingConfigs() {
-        return this.scalingConfigs == null ? Input.empty() : this.scalingConfigs;
+    public Output<List<ScalingConfigArgs>> getScalingConfigs() {
+        return this.scalingConfigs == null ? Output.empty() : this.scalingConfigs;
     }
 
     public ConfigArgs(
-        Input<String> configId,
-        @Nullable Input<String> description,
-        @Nullable Input<List<FleetConfigArgs>> fleetConfigs,
-        Input<String> gameServerDeploymentId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<ScalingConfigArgs>> scalingConfigs) {
+        Output<String> configId,
+        @Nullable Output<String> description,
+        @Nullable Output<List<FleetConfigArgs>> fleetConfigs,
+        Output<String> gameServerDeploymentId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<ScalingConfigArgs>> scalingConfigs) {
         this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
         this.description = description;
         this.fleetConfigs = fleetConfigs;
@@ -123,15 +123,15 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigArgs() {
-        this.configId = Input.empty();
-        this.description = Input.empty();
-        this.fleetConfigs = Input.empty();
-        this.gameServerDeploymentId = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.scalingConfigs = Input.empty();
+        this.configId = Output.empty();
+        this.description = Output.empty();
+        this.fleetConfigs = Output.empty();
+        this.gameServerDeploymentId = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.scalingConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,15 +143,15 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> configId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<FleetConfigArgs>> fleetConfigs;
-        private Input<String> gameServerDeploymentId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<ScalingConfigArgs>> scalingConfigs;
+        private Output<String> configId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<FleetConfigArgs>> fleetConfigs;
+        private Output<String> gameServerDeploymentId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<ScalingConfigArgs>> scalingConfigs;
 
         public Builder() {
     	      // Empty
@@ -170,93 +170,93 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scalingConfigs = defaults.scalingConfigs;
         }
 
-        public Builder configId(Input<String> configId) {
+        public Builder configId(Output<String> configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
         public Builder configId(String configId) {
-            this.configId = Input.of(Objects.requireNonNull(configId));
+            this.configId = Output.of(Objects.requireNonNull(configId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fleetConfigs(@Nullable Input<List<FleetConfigArgs>> fleetConfigs) {
+        public Builder fleetConfigs(@Nullable Output<List<FleetConfigArgs>> fleetConfigs) {
             this.fleetConfigs = fleetConfigs;
             return this;
         }
 
         public Builder fleetConfigs(@Nullable List<FleetConfigArgs> fleetConfigs) {
-            this.fleetConfigs = Input.ofNullable(fleetConfigs);
+            this.fleetConfigs = Output.ofNullable(fleetConfigs);
             return this;
         }
 
-        public Builder gameServerDeploymentId(Input<String> gameServerDeploymentId) {
+        public Builder gameServerDeploymentId(Output<String> gameServerDeploymentId) {
             this.gameServerDeploymentId = Objects.requireNonNull(gameServerDeploymentId);
             return this;
         }
 
         public Builder gameServerDeploymentId(String gameServerDeploymentId) {
-            this.gameServerDeploymentId = Input.of(Objects.requireNonNull(gameServerDeploymentId));
+            this.gameServerDeploymentId = Output.of(Objects.requireNonNull(gameServerDeploymentId));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder scalingConfigs(@Nullable Input<List<ScalingConfigArgs>> scalingConfigs) {
+        public Builder scalingConfigs(@Nullable Output<List<ScalingConfigArgs>> scalingConfigs) {
             this.scalingConfigs = scalingConfigs;
             return this;
         }
 
         public Builder scalingConfigs(@Nullable List<ScalingConfigArgs> scalingConfigs) {
-            this.scalingConfigs = Input.ofNullable(scalingConfigs);
+            this.scalingConfigs = Output.ofNullable(scalingConfigs);
             return this;
         }
         public ConfigArgs build() {

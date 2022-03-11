@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupGeneratedRulesType;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTargetType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,39 +17,39 @@ public final class RuleGroupRulesSourceListArgs extends io.pulumi.resources.Reso
     public static final RuleGroupRulesSourceListArgs Empty = new RuleGroupRulesSourceListArgs();
 
     @InputImport(name="generatedRulesType", required=true)
-      private final Input<RuleGroupGeneratedRulesType> generatedRulesType;
+      private final Output<RuleGroupGeneratedRulesType> generatedRulesType;
 
-    public Input<RuleGroupGeneratedRulesType> getGeneratedRulesType() {
+    public Output<RuleGroupGeneratedRulesType> getGeneratedRulesType() {
         return this.generatedRulesType;
     }
 
     @InputImport(name="targetTypes", required=true)
-      private final Input<List<RuleGroupTargetType>> targetTypes;
+      private final Output<List<RuleGroupTargetType>> targetTypes;
 
-    public Input<List<RuleGroupTargetType>> getTargetTypes() {
+    public Output<List<RuleGroupTargetType>> getTargetTypes() {
         return this.targetTypes;
     }
 
     @InputImport(name="targets", required=true)
-      private final Input<List<String>> targets;
+      private final Output<List<String>> targets;
 
-    public Input<List<String>> getTargets() {
+    public Output<List<String>> getTargets() {
         return this.targets;
     }
 
     public RuleGroupRulesSourceListArgs(
-        Input<RuleGroupGeneratedRulesType> generatedRulesType,
-        Input<List<RuleGroupTargetType>> targetTypes,
-        Input<List<String>> targets) {
+        Output<RuleGroupGeneratedRulesType> generatedRulesType,
+        Output<List<RuleGroupTargetType>> targetTypes,
+        Output<List<String>> targets) {
         this.generatedRulesType = Objects.requireNonNull(generatedRulesType, "expected parameter 'generatedRulesType' to be non-null");
         this.targetTypes = Objects.requireNonNull(targetTypes, "expected parameter 'targetTypes' to be non-null");
         this.targets = Objects.requireNonNull(targets, "expected parameter 'targets' to be non-null");
     }
 
     private RuleGroupRulesSourceListArgs() {
-        this.generatedRulesType = Input.empty();
-        this.targetTypes = Input.empty();
-        this.targets = Input.empty();
+        this.generatedRulesType = Output.empty();
+        this.targetTypes = Output.empty();
+        this.targets = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class RuleGroupRulesSourceListArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<RuleGroupGeneratedRulesType> generatedRulesType;
-        private Input<List<RuleGroupTargetType>> targetTypes;
-        private Input<List<String>> targets;
+        private Output<RuleGroupGeneratedRulesType> generatedRulesType;
+        private Output<List<RuleGroupTargetType>> targetTypes;
+        private Output<List<String>> targets;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class RuleGroupRulesSourceListArgs extends io.pulumi.resources.Reso
     	      this.targets = defaults.targets;
         }
 
-        public Builder generatedRulesType(Input<RuleGroupGeneratedRulesType> generatedRulesType) {
+        public Builder generatedRulesType(Output<RuleGroupGeneratedRulesType> generatedRulesType) {
             this.generatedRulesType = Objects.requireNonNull(generatedRulesType);
             return this;
         }
 
         public Builder generatedRulesType(RuleGroupGeneratedRulesType generatedRulesType) {
-            this.generatedRulesType = Input.of(Objects.requireNonNull(generatedRulesType));
+            this.generatedRulesType = Output.of(Objects.requireNonNull(generatedRulesType));
             return this;
         }
 
-        public Builder targetTypes(Input<List<RuleGroupTargetType>> targetTypes) {
+        public Builder targetTypes(Output<List<RuleGroupTargetType>> targetTypes) {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
 
         public Builder targetTypes(List<RuleGroupTargetType> targetTypes) {
-            this.targetTypes = Input.of(Objects.requireNonNull(targetTypes));
+            this.targetTypes = Output.of(Objects.requireNonNull(targetTypes));
             return this;
         }
 
-        public Builder targets(Input<List<String>> targets) {
+        public Builder targets(Output<List<String>> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
 
         public Builder targets(List<String> targets) {
-            this.targets = Input.of(Objects.requireNonNull(targets));
+            this.targets = Output.of(Objects.requireNonNull(targets));
             return this;
         }
         public RuleGroupRulesSourceListArgs build() {

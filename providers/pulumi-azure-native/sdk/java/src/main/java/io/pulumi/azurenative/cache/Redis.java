@@ -12,7 +12,6 @@ import io.pulumi.azurenative.cache.outputs.RedisInstanceDetailsResponse;
 import io.pulumi.azurenative.cache.outputs.RedisLinkedServerResponse;
 import io.pulumi.azurenative.cache.outputs.SkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -415,26 +414,26 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Redis(String name, RedisArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cache:Redis", name, args == null ? RedisArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:cache:Redis", name, args == null ? RedisArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Redis(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Redis(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cache:Redis", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:cache/v20150801:Redis").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20160401:Redis").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20170201:Redis").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20171001:Redis").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20180301:Redis").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20190701:Redis").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20200601:Redis").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20201201:Redis").build()),
-                Input.of(Alias.builder().setType("azure-native:cache/v20210601:Redis").build())
+                Output.of(Alias.builder().setType("azure-native:cache/v20150801:Redis").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20160401:Redis").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20170201:Redis").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20171001:Redis").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20180301:Redis").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20190701:Redis").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20200601:Redis").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20201201:Redis").build()),
+                Output.of(Alias.builder().setType("azure-native:cache/v20210601:Redis").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -448,7 +447,7 @@ public class Redis extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Redis get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Redis get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Redis(name, id, options);
     }
 }

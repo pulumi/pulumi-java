@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="humanReadableName")
-      private final @Nullable Input<String> humanReadableName;
+      private final @Nullable Output<String> humanReadableName;
 
-    public Input<String> getHumanReadableName() {
-        return this.humanReadableName == null ? Input.empty() : this.humanReadableName;
+    public Output<String> getHumanReadableName() {
+        return this.humanReadableName == null ? Output.empty() : this.humanReadableName;
     }
 
-    public AttestationAuthorityHintArgs(@Nullable Input<String> humanReadableName) {
+    public AttestationAuthorityHintArgs(@Nullable Output<String> humanReadableName) {
         this.humanReadableName = humanReadableName;
     }
 
     private AttestationAuthorityHintArgs() {
-        this.humanReadableName = Input.empty();
+        this.humanReadableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> humanReadableName;
+        private @Nullable Output<String> humanReadableName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
     	      this.humanReadableName = defaults.humanReadableName;
         }
 
-        public Builder humanReadableName(@Nullable Input<String> humanReadableName) {
+        public Builder humanReadableName(@Nullable Output<String> humanReadableName) {
             this.humanReadableName = humanReadableName;
             return this;
         }
 
         public Builder humanReadableName(@Nullable String humanReadableName) {
-            this.humanReadableName = Input.ofNullable(humanReadableName);
+            this.humanReadableName = Output.ofNullable(humanReadableName);
             return this;
         }
         public AttestationAuthorityHintArgs build() {

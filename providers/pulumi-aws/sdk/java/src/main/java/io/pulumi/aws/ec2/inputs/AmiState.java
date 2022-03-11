@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.AmiEbsBlockDeviceGetArgs;
 import io.pulumi.aws.ec2.inputs.AmiEphemeralBlockDeviceGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture")
-      private final @Nullable Input<String> architecture;
+      private final @Nullable Output<String> architecture;
 
-    public Input<String> getArchitecture() {
-        return this.architecture == null ? Input.empty() : this.architecture;
+    public Output<String> getArchitecture() {
+        return this.architecture == null ? Output.empty() : this.architecture;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsBlockDevices")
-      private final @Nullable Input<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices;
+      private final @Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
-    public Input<List<AmiEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
-        return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
+    public Output<List<AmiEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
+        return this.ebsBlockDevices == null ? Output.empty() : this.ebsBlockDevices;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enaSupport")
-      private final @Nullable Input<Boolean> enaSupport;
+      private final @Nullable Output<Boolean> enaSupport;
 
-    public Input<Boolean> getEnaSupport() {
-        return this.enaSupport == null ? Input.empty() : this.enaSupport;
+    public Output<Boolean> getEnaSupport() {
+        return this.enaSupport == null ? Output.empty() : this.enaSupport;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralBlockDevices")
-      private final @Nullable Input<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+      private final @Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
-    public Input<List<AmiEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
+    public Output<List<AmiEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
+        return this.ephemeralBlockDevices == null ? Output.empty() : this.ephemeralBlockDevices;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hypervisor")
-      private final @Nullable Input<String> hypervisor;
+      private final @Nullable Output<String> hypervisor;
 
-    public Input<String> getHypervisor() {
-        return this.hypervisor == null ? Input.empty() : this.hypervisor;
+    public Output<String> getHypervisor() {
+        return this.hypervisor == null ? Output.empty() : this.hypervisor;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageLocation")
-      private final @Nullable Input<String> imageLocation;
+      private final @Nullable Output<String> imageLocation;
 
-    public Input<String> getImageLocation() {
-        return this.imageLocation == null ? Input.empty() : this.imageLocation;
+    public Output<String> getImageLocation() {
+        return this.imageLocation == null ? Output.empty() : this.imageLocation;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageOwnerAlias")
-      private final @Nullable Input<String> imageOwnerAlias;
+      private final @Nullable Output<String> imageOwnerAlias;
 
-    public Input<String> getImageOwnerAlias() {
-        return this.imageOwnerAlias == null ? Input.empty() : this.imageOwnerAlias;
+    public Output<String> getImageOwnerAlias() {
+        return this.imageOwnerAlias == null ? Output.empty() : this.imageOwnerAlias;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageType")
-      private final @Nullable Input<String> imageType;
+      private final @Nullable Output<String> imageType;
 
-    public Input<String> getImageType() {
-        return this.imageType == null ? Input.empty() : this.imageType;
+    public Output<String> getImageType() {
+        return this.imageType == null ? Output.empty() : this.imageType;
     }
 
     /**
@@ -138,17 +138,17 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kernelId")
-      private final @Nullable Input<String> kernelId;
+      private final @Nullable Output<String> kernelId;
 
-    public Input<String> getKernelId() {
-        return this.kernelId == null ? Input.empty() : this.kernelId;
+    public Output<String> getKernelId() {
+        return this.kernelId == null ? Output.empty() : this.kernelId;
     }
 
     @InputImport(name="manageEbsSnapshots")
-      private final @Nullable Input<Boolean> manageEbsSnapshots;
+      private final @Nullable Output<Boolean> manageEbsSnapshots;
 
-    public Input<Boolean> getManageEbsSnapshots() {
-        return this.manageEbsSnapshots == null ? Input.empty() : this.manageEbsSnapshots;
+    public Output<Boolean> getManageEbsSnapshots() {
+        return this.manageEbsSnapshots == null ? Output.empty() : this.manageEbsSnapshots;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-      private final @Nullable Input<String> platform;
+      private final @Nullable Output<String> platform;
 
-    public Input<String> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<String> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformDetails")
-      private final @Nullable Input<String> platformDetails;
+      private final @Nullable Output<String> platformDetails;
 
-    public Input<String> getPlatformDetails() {
-        return this.platformDetails == null ? Input.empty() : this.platformDetails;
+    public Output<String> getPlatformDetails() {
+        return this.platformDetails == null ? Output.empty() : this.platformDetails;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="public")
-      private final @Nullable Input<Boolean> $public;
+      private final @Nullable Output<Boolean> $public;
 
-    public Input<Boolean> get$public() {
-        return this.$public == null ? Input.empty() : this.$public;
+    public Output<Boolean> get$public() {
+        return this.$public == null ? Output.empty() : this.$public;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ramdiskId")
-      private final @Nullable Input<String> ramdiskId;
+      private final @Nullable Output<String> ramdiskId;
 
-    public Input<String> getRamdiskId() {
-        return this.ramdiskId == null ? Input.empty() : this.ramdiskId;
+    public Output<String> getRamdiskId() {
+        return this.ramdiskId == null ? Output.empty() : this.ramdiskId;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootDeviceName")
-      private final @Nullable Input<String> rootDeviceName;
+      private final @Nullable Output<String> rootDeviceName;
 
-    public Input<String> getRootDeviceName() {
-        return this.rootDeviceName == null ? Input.empty() : this.rootDeviceName;
+    public Output<String> getRootDeviceName() {
+        return this.rootDeviceName == null ? Output.empty() : this.rootDeviceName;
     }
 
     /**
@@ -234,10 +234,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootSnapshotId")
-      private final @Nullable Input<String> rootSnapshotId;
+      private final @Nullable Output<String> rootSnapshotId;
 
-    public Input<String> getRootSnapshotId() {
-        return this.rootSnapshotId == null ? Input.empty() : this.rootSnapshotId;
+    public Output<String> getRootSnapshotId() {
+        return this.rootSnapshotId == null ? Output.empty() : this.rootSnapshotId;
     }
 
     /**
@@ -246,10 +246,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sriovNetSupport")
-      private final @Nullable Input<String> sriovNetSupport;
+      private final @Nullable Output<String> sriovNetSupport;
 
-    public Input<String> getSriovNetSupport() {
-        return this.sriovNetSupport == null ? Input.empty() : this.sriovNetSupport;
+    public Output<String> getSriovNetSupport() {
+        return this.sriovNetSupport == null ? Output.empty() : this.sriovNetSupport;
     }
 
     /**
@@ -257,10 +257,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -268,10 +268,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -279,10 +279,10 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usageOperation")
-      private final @Nullable Input<String> usageOperation;
+      private final @Nullable Output<String> usageOperation;
 
-    public Input<String> getUsageOperation() {
-        return this.usageOperation == null ? Input.empty() : this.usageOperation;
+    public Output<String> getUsageOperation() {
+        return this.usageOperation == null ? Output.empty() : this.usageOperation;
     }
 
     /**
@@ -292,38 +292,38 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualizationType")
-      private final @Nullable Input<String> virtualizationType;
+      private final @Nullable Output<String> virtualizationType;
 
-    public Input<String> getVirtualizationType() {
-        return this.virtualizationType == null ? Input.empty() : this.virtualizationType;
+    public Output<String> getVirtualizationType() {
+        return this.virtualizationType == null ? Output.empty() : this.virtualizationType;
     }
 
     public AmiState(
-        @Nullable Input<String> architecture,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices,
-        @Nullable Input<Boolean> enaSupport,
-        @Nullable Input<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices,
-        @Nullable Input<String> hypervisor,
-        @Nullable Input<String> imageLocation,
-        @Nullable Input<String> imageOwnerAlias,
-        @Nullable Input<String> imageType,
-        @Nullable Input<String> kernelId,
-        @Nullable Input<Boolean> manageEbsSnapshots,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<String> platform,
-        @Nullable Input<String> platformDetails,
-        @Nullable Input<Boolean> $public,
-        @Nullable Input<String> ramdiskId,
-        @Nullable Input<String> rootDeviceName,
-        @Nullable Input<String> rootSnapshotId,
-        @Nullable Input<String> sriovNetSupport,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> usageOperation,
-        @Nullable Input<String> virtualizationType) {
+        @Nullable Output<String> architecture,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices,
+        @Nullable Output<Boolean> enaSupport,
+        @Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices,
+        @Nullable Output<String> hypervisor,
+        @Nullable Output<String> imageLocation,
+        @Nullable Output<String> imageOwnerAlias,
+        @Nullable Output<String> imageType,
+        @Nullable Output<String> kernelId,
+        @Nullable Output<Boolean> manageEbsSnapshots,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<String> platform,
+        @Nullable Output<String> platformDetails,
+        @Nullable Output<Boolean> $public,
+        @Nullable Output<String> ramdiskId,
+        @Nullable Output<String> rootDeviceName,
+        @Nullable Output<String> rootSnapshotId,
+        @Nullable Output<String> sriovNetSupport,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> usageOperation,
+        @Nullable Output<String> virtualizationType) {
         this.architecture = architecture;
         this.arn = arn;
         this.description = description;
@@ -352,31 +352,31 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AmiState() {
-        this.architecture = Input.empty();
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.ebsBlockDevices = Input.empty();
-        this.enaSupport = Input.empty();
-        this.ephemeralBlockDevices = Input.empty();
-        this.hypervisor = Input.empty();
-        this.imageLocation = Input.empty();
-        this.imageOwnerAlias = Input.empty();
-        this.imageType = Input.empty();
-        this.kernelId = Input.empty();
-        this.manageEbsSnapshots = Input.empty();
-        this.name = Input.empty();
-        this.ownerId = Input.empty();
-        this.platform = Input.empty();
-        this.platformDetails = Input.empty();
-        this.$public = Input.empty();
-        this.ramdiskId = Input.empty();
-        this.rootDeviceName = Input.empty();
-        this.rootSnapshotId = Input.empty();
-        this.sriovNetSupport = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.usageOperation = Input.empty();
-        this.virtualizationType = Input.empty();
+        this.architecture = Output.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.ebsBlockDevices = Output.empty();
+        this.enaSupport = Output.empty();
+        this.ephemeralBlockDevices = Output.empty();
+        this.hypervisor = Output.empty();
+        this.imageLocation = Output.empty();
+        this.imageOwnerAlias = Output.empty();
+        this.imageType = Output.empty();
+        this.kernelId = Output.empty();
+        this.manageEbsSnapshots = Output.empty();
+        this.name = Output.empty();
+        this.ownerId = Output.empty();
+        this.platform = Output.empty();
+        this.platformDetails = Output.empty();
+        this.$public = Output.empty();
+        this.ramdiskId = Output.empty();
+        this.rootDeviceName = Output.empty();
+        this.rootSnapshotId = Output.empty();
+        this.sriovNetSupport = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.usageOperation = Output.empty();
+        this.virtualizationType = Output.empty();
     }
 
     public static Builder builder() {
@@ -388,31 +388,31 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> architecture;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices;
-        private @Nullable Input<Boolean> enaSupport;
-        private @Nullable Input<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
-        private @Nullable Input<String> hypervisor;
-        private @Nullable Input<String> imageLocation;
-        private @Nullable Input<String> imageOwnerAlias;
-        private @Nullable Input<String> imageType;
-        private @Nullable Input<String> kernelId;
-        private @Nullable Input<Boolean> manageEbsSnapshots;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<String> platform;
-        private @Nullable Input<String> platformDetails;
-        private @Nullable Input<Boolean> $public;
-        private @Nullable Input<String> ramdiskId;
-        private @Nullable Input<String> rootDeviceName;
-        private @Nullable Input<String> rootSnapshotId;
-        private @Nullable Input<String> sriovNetSupport;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> usageOperation;
-        private @Nullable Input<String> virtualizationType;
+        private @Nullable Output<String> architecture;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices;
+        private @Nullable Output<Boolean> enaSupport;
+        private @Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+        private @Nullable Output<String> hypervisor;
+        private @Nullable Output<String> imageLocation;
+        private @Nullable Output<String> imageOwnerAlias;
+        private @Nullable Output<String> imageType;
+        private @Nullable Output<String> kernelId;
+        private @Nullable Output<Boolean> manageEbsSnapshots;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<String> platform;
+        private @Nullable Output<String> platformDetails;
+        private @Nullable Output<Boolean> $public;
+        private @Nullable Output<String> ramdiskId;
+        private @Nullable Output<String> rootDeviceName;
+        private @Nullable Output<String> rootSnapshotId;
+        private @Nullable Output<String> sriovNetSupport;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> usageOperation;
+        private @Nullable Output<String> virtualizationType;
 
         public Builder() {
     	      // Empty
@@ -447,253 +447,253 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
     	      this.virtualizationType = defaults.virtualizationType;
         }
 
-        public Builder architecture(@Nullable Input<String> architecture) {
+        public Builder architecture(@Nullable Output<String> architecture) {
             this.architecture = architecture;
             return this;
         }
 
         public Builder architecture(@Nullable String architecture) {
-            this.architecture = Input.ofNullable(architecture);
+            this.architecture = Output.ofNullable(architecture);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ebsBlockDevices(@Nullable Input<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
         public Builder ebsBlockDevices(@Nullable List<AmiEbsBlockDeviceGetArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Input.ofNullable(ebsBlockDevices);
+            this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
             return this;
         }
 
-        public Builder enaSupport(@Nullable Input<Boolean> enaSupport) {
+        public Builder enaSupport(@Nullable Output<Boolean> enaSupport) {
             this.enaSupport = enaSupport;
             return this;
         }
 
         public Builder enaSupport(@Nullable Boolean enaSupport) {
-            this.enaSupport = Input.ofNullable(enaSupport);
+            this.enaSupport = Output.ofNullable(enaSupport);
             return this;
         }
 
-        public Builder ephemeralBlockDevices(@Nullable Input<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
         public Builder ephemeralBlockDevices(@Nullable List<AmiEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Input.ofNullable(ephemeralBlockDevices);
+            this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder hypervisor(@Nullable Input<String> hypervisor) {
+        public Builder hypervisor(@Nullable Output<String> hypervisor) {
             this.hypervisor = hypervisor;
             return this;
         }
 
         public Builder hypervisor(@Nullable String hypervisor) {
-            this.hypervisor = Input.ofNullable(hypervisor);
+            this.hypervisor = Output.ofNullable(hypervisor);
             return this;
         }
 
-        public Builder imageLocation(@Nullable Input<String> imageLocation) {
+        public Builder imageLocation(@Nullable Output<String> imageLocation) {
             this.imageLocation = imageLocation;
             return this;
         }
 
         public Builder imageLocation(@Nullable String imageLocation) {
-            this.imageLocation = Input.ofNullable(imageLocation);
+            this.imageLocation = Output.ofNullable(imageLocation);
             return this;
         }
 
-        public Builder imageOwnerAlias(@Nullable Input<String> imageOwnerAlias) {
+        public Builder imageOwnerAlias(@Nullable Output<String> imageOwnerAlias) {
             this.imageOwnerAlias = imageOwnerAlias;
             return this;
         }
 
         public Builder imageOwnerAlias(@Nullable String imageOwnerAlias) {
-            this.imageOwnerAlias = Input.ofNullable(imageOwnerAlias);
+            this.imageOwnerAlias = Output.ofNullable(imageOwnerAlias);
             return this;
         }
 
-        public Builder imageType(@Nullable Input<String> imageType) {
+        public Builder imageType(@Nullable Output<String> imageType) {
             this.imageType = imageType;
             return this;
         }
 
         public Builder imageType(@Nullable String imageType) {
-            this.imageType = Input.ofNullable(imageType);
+            this.imageType = Output.ofNullable(imageType);
             return this;
         }
 
-        public Builder kernelId(@Nullable Input<String> kernelId) {
+        public Builder kernelId(@Nullable Output<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
 
         public Builder kernelId(@Nullable String kernelId) {
-            this.kernelId = Input.ofNullable(kernelId);
+            this.kernelId = Output.ofNullable(kernelId);
             return this;
         }
 
-        public Builder manageEbsSnapshots(@Nullable Input<Boolean> manageEbsSnapshots) {
+        public Builder manageEbsSnapshots(@Nullable Output<Boolean> manageEbsSnapshots) {
             this.manageEbsSnapshots = manageEbsSnapshots;
             return this;
         }
 
         public Builder manageEbsSnapshots(@Nullable Boolean manageEbsSnapshots) {
-            this.manageEbsSnapshots = Input.ofNullable(manageEbsSnapshots);
+            this.manageEbsSnapshots = Output.ofNullable(manageEbsSnapshots);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder platform(@Nullable Input<String> platform) {
+        public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable String platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder platformDetails(@Nullable Input<String> platformDetails) {
+        public Builder platformDetails(@Nullable Output<String> platformDetails) {
             this.platformDetails = platformDetails;
             return this;
         }
 
         public Builder platformDetails(@Nullable String platformDetails) {
-            this.platformDetails = Input.ofNullable(platformDetails);
+            this.platformDetails = Output.ofNullable(platformDetails);
             return this;
         }
 
-        public Builder $public(@Nullable Input<Boolean> $public) {
+        public Builder $public(@Nullable Output<Boolean> $public) {
             this.$public = $public;
             return this;
         }
 
         public Builder $public(@Nullable Boolean $public) {
-            this.$public = Input.ofNullable($public);
+            this.$public = Output.ofNullable($public);
             return this;
         }
 
-        public Builder ramdiskId(@Nullable Input<String> ramdiskId) {
+        public Builder ramdiskId(@Nullable Output<String> ramdiskId) {
             this.ramdiskId = ramdiskId;
             return this;
         }
 
         public Builder ramdiskId(@Nullable String ramdiskId) {
-            this.ramdiskId = Input.ofNullable(ramdiskId);
+            this.ramdiskId = Output.ofNullable(ramdiskId);
             return this;
         }
 
-        public Builder rootDeviceName(@Nullable Input<String> rootDeviceName) {
+        public Builder rootDeviceName(@Nullable Output<String> rootDeviceName) {
             this.rootDeviceName = rootDeviceName;
             return this;
         }
 
         public Builder rootDeviceName(@Nullable String rootDeviceName) {
-            this.rootDeviceName = Input.ofNullable(rootDeviceName);
+            this.rootDeviceName = Output.ofNullable(rootDeviceName);
             return this;
         }
 
-        public Builder rootSnapshotId(@Nullable Input<String> rootSnapshotId) {
+        public Builder rootSnapshotId(@Nullable Output<String> rootSnapshotId) {
             this.rootSnapshotId = rootSnapshotId;
             return this;
         }
 
         public Builder rootSnapshotId(@Nullable String rootSnapshotId) {
-            this.rootSnapshotId = Input.ofNullable(rootSnapshotId);
+            this.rootSnapshotId = Output.ofNullable(rootSnapshotId);
             return this;
         }
 
-        public Builder sriovNetSupport(@Nullable Input<String> sriovNetSupport) {
+        public Builder sriovNetSupport(@Nullable Output<String> sriovNetSupport) {
             this.sriovNetSupport = sriovNetSupport;
             return this;
         }
 
         public Builder sriovNetSupport(@Nullable String sriovNetSupport) {
-            this.sriovNetSupport = Input.ofNullable(sriovNetSupport);
+            this.sriovNetSupport = Output.ofNullable(sriovNetSupport);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder usageOperation(@Nullable Input<String> usageOperation) {
+        public Builder usageOperation(@Nullable Output<String> usageOperation) {
             this.usageOperation = usageOperation;
             return this;
         }
 
         public Builder usageOperation(@Nullable String usageOperation) {
-            this.usageOperation = Input.ofNullable(usageOperation);
+            this.usageOperation = Output.ofNullable(usageOperation);
             return this;
         }
 
-        public Builder virtualizationType(@Nullable Input<String> virtualizationType) {
+        public Builder virtualizationType(@Nullable Output<String> virtualizationType) {
             this.virtualizationType = virtualizationType;
             return this;
         }
 
         public Builder virtualizationType(@Nullable String virtualizationType) {
-            this.virtualizationType = Input.ofNullable(virtualizationType);
+            this.virtualizationType = Output.ofNullable(virtualizationType);
             return this;
         }
         public AmiState build() {

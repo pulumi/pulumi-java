@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     public ConnectionMonitorDestinationArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> resourceId) {
+        @Nullable Output<String> address,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> resourceId) {
         this.address = address;
         this.port = port;
         this.resourceId = resourceId;
     }
 
     private ConnectionMonitorDestinationArgs() {
-        this.address = Input.empty();
-        this.port = Input.empty();
-        this.resourceId = Input.empty();
+        this.address = Output.empty();
+        this.port = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> resourceId;
+        private @Nullable Output<String> address;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
         public ConnectionMonitorDestinationArgs build() {

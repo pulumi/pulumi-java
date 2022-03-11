@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoveryreadiness;
 
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSetName", required=true)
-      private final Input<String> resourceSetName;
+      private final Output<String> resourceSetName;
 
-    public Input<String> getResourceSetName() {
+    public Output<String> getResourceSetName() {
         return this.resourceSetName;
     }
 
@@ -33,9 +33,9 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSetType", required=true)
-      private final Input<String> resourceSetType;
+      private final Output<String> resourceSetType;
 
-    public Input<String> getResourceSetType() {
+    public Output<String> getResourceSetType() {
         return this.resourceSetType;
     }
 
@@ -44,9 +44,9 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources", required=true)
-      private final Input<List<ResourceSetResourceArgs>> resources;
+      private final Output<List<ResourceSetResourceArgs>> resources;
 
-    public Input<List<ResourceSetResourceArgs>> getResources() {
+    public Output<List<ResourceSetResourceArgs>> getResources() {
         return this.resources;
     }
 
@@ -55,17 +55,17 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ResourceSetArgs(
-        Input<String> resourceSetName,
-        Input<String> resourceSetType,
-        Input<List<ResourceSetResourceArgs>> resources,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> resourceSetName,
+        Output<String> resourceSetType,
+        Output<List<ResourceSetResourceArgs>> resources,
+        @Nullable Output<Map<String,String>> tags) {
         this.resourceSetName = Objects.requireNonNull(resourceSetName, "expected parameter 'resourceSetName' to be non-null");
         this.resourceSetType = Objects.requireNonNull(resourceSetType, "expected parameter 'resourceSetType' to be non-null");
         this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
@@ -73,10 +73,10 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceSetArgs() {
-        this.resourceSetName = Input.empty();
-        this.resourceSetType = Input.empty();
-        this.resources = Input.empty();
-        this.tags = Input.empty();
+        this.resourceSetName = Output.empty();
+        this.resourceSetType = Output.empty();
+        this.resources = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> resourceSetName;
-        private Input<String> resourceSetType;
-        private Input<List<ResourceSetResourceArgs>> resources;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> resourceSetName;
+        private Output<String> resourceSetType;
+        private Output<List<ResourceSetResourceArgs>> resources;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder resourceSetName(Input<String> resourceSetName) {
+        public Builder resourceSetName(Output<String> resourceSetName) {
             this.resourceSetName = Objects.requireNonNull(resourceSetName);
             return this;
         }
 
         public Builder resourceSetName(String resourceSetName) {
-            this.resourceSetName = Input.of(Objects.requireNonNull(resourceSetName));
+            this.resourceSetName = Output.of(Objects.requireNonNull(resourceSetName));
             return this;
         }
 
-        public Builder resourceSetType(Input<String> resourceSetType) {
+        public Builder resourceSetType(Output<String> resourceSetType) {
             this.resourceSetType = Objects.requireNonNull(resourceSetType);
             return this;
         }
 
         public Builder resourceSetType(String resourceSetType) {
-            this.resourceSetType = Input.of(Objects.requireNonNull(resourceSetType));
+            this.resourceSetType = Output.of(Objects.requireNonNull(resourceSetType));
             return this;
         }
 
-        public Builder resources(Input<List<ResourceSetResourceArgs>> resources) {
+        public Builder resources(Output<List<ResourceSetResourceArgs>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
         public Builder resources(List<ResourceSetResourceArgs> resources) {
-            this.resources = Input.of(Objects.requireNonNull(resources));
+            this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ResourceSetArgs build() {

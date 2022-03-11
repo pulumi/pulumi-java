@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ImageOutputResourceAmiGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ImageOutputResourceAmiGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ImageOutputResourceAmiGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ImageOutputResourceAmiGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class ImageOutputResourceAmiGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     public ImageOutputResourceAmiGetArgs(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> image,
-        @Nullable Input<String> name,
-        @Nullable Input<String> region) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> image,
+        @Nullable Output<String> name,
+        @Nullable Output<String> region) {
         this.accountId = accountId;
         this.description = description;
         this.image = image;
@@ -83,11 +83,11 @@ public final class ImageOutputResourceAmiGetArgs extends io.pulumi.resources.Res
     }
 
     private ImageOutputResourceAmiGetArgs() {
-        this.accountId = Input.empty();
-        this.description = Input.empty();
-        this.image = Input.empty();
-        this.name = Input.empty();
-        this.region = Input.empty();
+        this.accountId = Output.empty();
+        this.description = Output.empty();
+        this.image = Output.empty();
+        this.name = Output.empty();
+        this.region = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class ImageOutputResourceAmiGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> image;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> region;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> image;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> region;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class ImageOutputResourceAmiGetArgs extends io.pulumi.resources.Res
     	      this.region = defaults.region;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
         public ImageOutputResourceAmiGetArgs build() {

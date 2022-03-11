@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,10 +34,10 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -57,17 +57,17 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public PSCredentialExecutionParameterArgs(
-        Input<String> name,
-        @Nullable Input<String> password,
-        Input<String> type,
-        @Nullable Input<String> username) {
+        Output<String> name,
+        @Nullable Output<String> password,
+        Output<String> type,
+        @Nullable Output<String> username) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.password = password;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -75,10 +75,10 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
     }
 
     private PSCredentialExecutionParameterArgs() {
-        this.name = Input.empty();
-        this.password = Input.empty();
-        this.type = Input.empty();
-        this.username = Input.empty();
+        this.name = Output.empty();
+        this.password = Output.empty();
+        this.type = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<String> password;
-        private Input<String> type;
-        private @Nullable Input<String> username;
+        private Output<String> name;
+        private @Nullable Output<String> password;
+        private Output<String> type;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
     	      this.username = defaults.username;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public PSCredentialExecutionParameterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class DatastoreColumnArgs extends io.pulumi.resources.ResourceArgs 
     public static final DatastoreColumnArgs Empty = new DatastoreColumnArgs();
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public DatastoreColumnArgs(
-        Input<String> name,
-        Input<String> type) {
+        Output<String> name,
+        Output<String> type) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private DatastoreColumnArgs() {
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class DatastoreColumnArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> type;
+        private Output<String> name;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class DatastoreColumnArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DatastoreColumnArgs build() {

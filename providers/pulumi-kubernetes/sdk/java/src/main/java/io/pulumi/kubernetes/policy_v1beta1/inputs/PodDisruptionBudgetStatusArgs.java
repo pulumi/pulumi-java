@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ConditionArgs;
 import java.lang.Integer;
@@ -35,10 +35,10 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<ConditionArgs>> conditions;
+      private final @Nullable Output<List<ConditionArgs>> conditions;
 
-    public Input<List<ConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<ConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="currentHealthy", required=true)
-      private final Input<Integer> currentHealthy;
+      private final Output<Integer> currentHealthy;
 
-    public Input<Integer> getCurrentHealthy() {
+    public Output<Integer> getCurrentHealthy() {
         return this.currentHealthy;
     }
 
@@ -57,9 +57,9 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="desiredHealthy", required=true)
-      private final Input<Integer> desiredHealthy;
+      private final Output<Integer> desiredHealthy;
 
-    public Input<Integer> getDesiredHealthy() {
+    public Output<Integer> getDesiredHealthy() {
         return this.desiredHealthy;
     }
 
@@ -68,10 +68,10 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disruptedPods")
-      private final @Nullable Input<Map<String,String>> disruptedPods;
+      private final @Nullable Output<Map<String,String>> disruptedPods;
 
-    public Input<Map<String,String>> getDisruptedPods() {
-        return this.disruptedPods == null ? Input.empty() : this.disruptedPods;
+    public Output<Map<String,String>> getDisruptedPods() {
+        return this.disruptedPods == null ? Output.empty() : this.disruptedPods;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disruptionsAllowed", required=true)
-      private final Input<Integer> disruptionsAllowed;
+      private final Output<Integer> disruptionsAllowed;
 
-    public Input<Integer> getDisruptionsAllowed() {
+    public Output<Integer> getDisruptionsAllowed() {
         return this.disruptionsAllowed;
     }
 
@@ -90,9 +90,9 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="expectedPods", required=true)
-      private final Input<Integer> expectedPods;
+      private final Output<Integer> expectedPods;
 
-    public Input<Integer> getExpectedPods() {
+    public Output<Integer> getExpectedPods() {
         return this.expectedPods;
     }
 
@@ -101,20 +101,20 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     public PodDisruptionBudgetStatusArgs(
-        @Nullable Input<List<ConditionArgs>> conditions,
-        Input<Integer> currentHealthy,
-        Input<Integer> desiredHealthy,
-        @Nullable Input<Map<String,String>> disruptedPods,
-        Input<Integer> disruptionsAllowed,
-        Input<Integer> expectedPods,
-        @Nullable Input<Integer> observedGeneration) {
+        @Nullable Output<List<ConditionArgs>> conditions,
+        Output<Integer> currentHealthy,
+        Output<Integer> desiredHealthy,
+        @Nullable Output<Map<String,String>> disruptedPods,
+        Output<Integer> disruptionsAllowed,
+        Output<Integer> expectedPods,
+        @Nullable Output<Integer> observedGeneration) {
         this.conditions = conditions;
         this.currentHealthy = Objects.requireNonNull(currentHealthy, "expected parameter 'currentHealthy' to be non-null");
         this.desiredHealthy = Objects.requireNonNull(desiredHealthy, "expected parameter 'desiredHealthy' to be non-null");
@@ -125,13 +125,13 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
     }
 
     private PodDisruptionBudgetStatusArgs() {
-        this.conditions = Input.empty();
-        this.currentHealthy = Input.empty();
-        this.desiredHealthy = Input.empty();
-        this.disruptedPods = Input.empty();
-        this.disruptionsAllowed = Input.empty();
-        this.expectedPods = Input.empty();
-        this.observedGeneration = Input.empty();
+        this.conditions = Output.empty();
+        this.currentHealthy = Output.empty();
+        this.desiredHealthy = Output.empty();
+        this.disruptedPods = Output.empty();
+        this.disruptionsAllowed = Output.empty();
+        this.expectedPods = Output.empty();
+        this.observedGeneration = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,13 +143,13 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ConditionArgs>> conditions;
-        private Input<Integer> currentHealthy;
-        private Input<Integer> desiredHealthy;
-        private @Nullable Input<Map<String,String>> disruptedPods;
-        private Input<Integer> disruptionsAllowed;
-        private Input<Integer> expectedPods;
-        private @Nullable Input<Integer> observedGeneration;
+        private @Nullable Output<List<ConditionArgs>> conditions;
+        private Output<Integer> currentHealthy;
+        private Output<Integer> desiredHealthy;
+        private @Nullable Output<Map<String,String>> disruptedPods;
+        private Output<Integer> disruptionsAllowed;
+        private Output<Integer> expectedPods;
+        private @Nullable Output<Integer> observedGeneration;
 
         public Builder() {
     	      // Empty
@@ -166,73 +166,73 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
     	      this.observedGeneration = defaults.observedGeneration;
         }
 
-        public Builder conditions(@Nullable Input<List<ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<ConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder currentHealthy(Input<Integer> currentHealthy) {
+        public Builder currentHealthy(Output<Integer> currentHealthy) {
             this.currentHealthy = Objects.requireNonNull(currentHealthy);
             return this;
         }
 
         public Builder currentHealthy(Integer currentHealthy) {
-            this.currentHealthy = Input.of(Objects.requireNonNull(currentHealthy));
+            this.currentHealthy = Output.of(Objects.requireNonNull(currentHealthy));
             return this;
         }
 
-        public Builder desiredHealthy(Input<Integer> desiredHealthy) {
+        public Builder desiredHealthy(Output<Integer> desiredHealthy) {
             this.desiredHealthy = Objects.requireNonNull(desiredHealthy);
             return this;
         }
 
         public Builder desiredHealthy(Integer desiredHealthy) {
-            this.desiredHealthy = Input.of(Objects.requireNonNull(desiredHealthy));
+            this.desiredHealthy = Output.of(Objects.requireNonNull(desiredHealthy));
             return this;
         }
 
-        public Builder disruptedPods(@Nullable Input<Map<String,String>> disruptedPods) {
+        public Builder disruptedPods(@Nullable Output<Map<String,String>> disruptedPods) {
             this.disruptedPods = disruptedPods;
             return this;
         }
 
         public Builder disruptedPods(@Nullable Map<String,String> disruptedPods) {
-            this.disruptedPods = Input.ofNullable(disruptedPods);
+            this.disruptedPods = Output.ofNullable(disruptedPods);
             return this;
         }
 
-        public Builder disruptionsAllowed(Input<Integer> disruptionsAllowed) {
+        public Builder disruptionsAllowed(Output<Integer> disruptionsAllowed) {
             this.disruptionsAllowed = Objects.requireNonNull(disruptionsAllowed);
             return this;
         }
 
         public Builder disruptionsAllowed(Integer disruptionsAllowed) {
-            this.disruptionsAllowed = Input.of(Objects.requireNonNull(disruptionsAllowed));
+            this.disruptionsAllowed = Output.of(Objects.requireNonNull(disruptionsAllowed));
             return this;
         }
 
-        public Builder expectedPods(Input<Integer> expectedPods) {
+        public Builder expectedPods(Output<Integer> expectedPods) {
             this.expectedPods = Objects.requireNonNull(expectedPods);
             return this;
         }
 
         public Builder expectedPods(Integer expectedPods) {
-            this.expectedPods = Input.of(Objects.requireNonNull(expectedPods));
+            this.expectedPods = Output.of(Objects.requireNonNull(expectedPods));
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
         public PodDisruptionBudgetStatusArgs build() {

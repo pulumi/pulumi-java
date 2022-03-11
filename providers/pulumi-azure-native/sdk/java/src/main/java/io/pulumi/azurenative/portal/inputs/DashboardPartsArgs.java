@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.DashboardPartsPositionArgs;
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<MarkdownPartMetadataArgs> metadata;
+      private final @Nullable Output<MarkdownPartMetadataArgs> metadata;
 
-    public Input<MarkdownPartMetadataArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<MarkdownPartMetadataArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="position", required=true)
-      private final Input<DashboardPartsPositionArgs> position;
+      private final Output<DashboardPartsPositionArgs> position;
 
-    public Input<DashboardPartsPositionArgs> getPosition() {
+    public Output<DashboardPartsPositionArgs> getPosition() {
         return this.position;
     }
 
     public DashboardPartsArgs(
-        @Nullable Input<MarkdownPartMetadataArgs> metadata,
-        Input<DashboardPartsPositionArgs> position) {
+        @Nullable Output<MarkdownPartMetadataArgs> metadata,
+        Output<DashboardPartsPositionArgs> position) {
         this.metadata = metadata;
         this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
     }
 
     private DashboardPartsArgs() {
-        this.metadata = Input.empty();
-        this.position = Input.empty();
+        this.metadata = Output.empty();
+        this.position = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<MarkdownPartMetadataArgs> metadata;
-        private Input<DashboardPartsPositionArgs> position;
+        private @Nullable Output<MarkdownPartMetadataArgs> metadata;
+        private Output<DashboardPartsPositionArgs> position;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.position = defaults.position;
         }
 
-        public Builder metadata(@Nullable Input<MarkdownPartMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Output<MarkdownPartMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable MarkdownPartMetadataArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder position(Input<DashboardPartsPositionArgs> position) {
+        public Builder position(Output<DashboardPartsPositionArgs> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
         public Builder position(DashboardPartsPositionArgs position) {
-            this.position = Input.of(Objects.requireNonNull(position));
+            this.position = Output.of(Objects.requireNonNull(position));
             return this;
         }
         public DashboardPartsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-      private final @Nullable Input<String> apiId;
+      private final @Nullable Output<String> apiId;
 
-    public Input<String> getApiId() {
-        return this.apiId == null ? Input.empty() : this.apiId;
+    public Output<String> getApiId() {
+        return this.apiId == null ? Output.empty() : this.apiId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDeployed")
-      private final @Nullable Input<Boolean> autoDeployed;
+      private final @Nullable Output<Boolean> autoDeployed;
 
-    public Input<Boolean> getAutoDeployed() {
-        return this.autoDeployed == null ? Input.empty() : this.autoDeployed;
+    public Output<Boolean> getAutoDeployed() {
+        return this.autoDeployed == null ? Output.empty() : this.autoDeployed;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-      private final @Nullable Input<Map<String,String>> triggers;
+      private final @Nullable Output<Map<String,String>> triggers;
 
-    public Input<Map<String,String>> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<Map<String,String>> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     public DeploymentState(
-        @Nullable Input<String> apiId,
-        @Nullable Input<Boolean> autoDeployed,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> triggers) {
+        @Nullable Output<String> apiId,
+        @Nullable Output<Boolean> autoDeployed,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> triggers) {
         this.apiId = apiId;
         this.autoDeployed = autoDeployed;
         this.description = description;
@@ -72,10 +72,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentState() {
-        this.apiId = Input.empty();
-        this.autoDeployed = Input.empty();
-        this.description = Input.empty();
-        this.triggers = Input.empty();
+        this.apiId = Output.empty();
+        this.autoDeployed = Output.empty();
+        this.description = Output.empty();
+        this.triggers = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiId;
-        private @Nullable Input<Boolean> autoDeployed;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> triggers;
+        private @Nullable Output<String> apiId;
+        private @Nullable Output<Boolean> autoDeployed;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> triggers;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder apiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Output<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Input.ofNullable(apiId);
+            this.apiId = Output.ofNullable(apiId);
             return this;
         }
 
-        public Builder autoDeployed(@Nullable Input<Boolean> autoDeployed) {
+        public Builder autoDeployed(@Nullable Output<Boolean> autoDeployed) {
             this.autoDeployed = autoDeployed;
             return this;
         }
 
         public Builder autoDeployed(@Nullable Boolean autoDeployed) {
-            this.autoDeployed = Input.ofNullable(autoDeployed);
+            this.autoDeployed = Output.ofNullable(autoDeployed);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder triggers(@Nullable Input<Map<String,String>> triggers) {
+        public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
         public DeploymentState build() {

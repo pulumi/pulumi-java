@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dataexchange;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetType", required=true)
-      private final Input<String> assetType;
+      private final Output<String> assetType;
 
-    public Input<String> getAssetType() {
+    public Output<String> getAssetType() {
         return this.assetType;
     }
 
@@ -31,9 +31,9 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
@@ -42,10 +42,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public DataSetArgs(
-        Input<String> assetType,
-        Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        Output<String> assetType,
+        Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.assetType = Objects.requireNonNull(assetType, "expected parameter 'assetType' to be non-null");
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.name = name;
@@ -84,11 +84,11 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSetArgs() {
-        this.assetType = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.assetType = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> assetType;
-        private Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private Output<String> assetType;
+        private Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder assetType(Input<String> assetType) {
+        public Builder assetType(Output<String> assetType) {
             this.assetType = Objects.requireNonNull(assetType);
             return this;
         }
 
         public Builder assetType(String assetType) {
-            this.assetType = Input.of(Objects.requireNonNull(assetType));
+            this.assetType = Output.of(Objects.requireNonNull(assetType));
             return this;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public DataSetArgs build() {

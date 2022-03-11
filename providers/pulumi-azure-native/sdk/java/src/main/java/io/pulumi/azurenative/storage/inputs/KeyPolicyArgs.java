@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class KeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyExpirationPeriodInDays", required=true)
-      private final Input<Integer> keyExpirationPeriodInDays;
+      private final Output<Integer> keyExpirationPeriodInDays;
 
-    public Input<Integer> getKeyExpirationPeriodInDays() {
+    public Output<Integer> getKeyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
     }
 
-    public KeyPolicyArgs(Input<Integer> keyExpirationPeriodInDays) {
+    public KeyPolicyArgs(Output<Integer> keyExpirationPeriodInDays) {
         this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays, "expected parameter 'keyExpirationPeriodInDays' to be non-null");
     }
 
     private KeyPolicyArgs() {
-        this.keyExpirationPeriodInDays = Input.empty();
+        this.keyExpirationPeriodInDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class KeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> keyExpirationPeriodInDays;
+        private Output<Integer> keyExpirationPeriodInDays;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class KeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keyExpirationPeriodInDays = defaults.keyExpirationPeriodInDays;
         }
 
-        public Builder keyExpirationPeriodInDays(Input<Integer> keyExpirationPeriodInDays) {
+        public Builder keyExpirationPeriodInDays(Output<Integer> keyExpirationPeriodInDays) {
             this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays);
             return this;
         }
 
         public Builder keyExpirationPeriodInDays(Integer keyExpirationPeriodInDays) {
-            this.keyExpirationPeriodInDays = Input.of(Objects.requireNonNull(keyExpirationPeriodInDays));
+            this.keyExpirationPeriodInDays = Output.of(Objects.requireNonNull(keyExpirationPeriodInDays));
             return this;
         }
         public KeyPolicyArgs build() {

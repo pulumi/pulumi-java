@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteTimeoutIdleGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteTimeoutPerRequestGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class RouteSpecHttpRouteTimeoutGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="idle")
-      private final @Nullable Input<RouteSpecHttpRouteTimeoutIdleGetArgs> idle;
+      private final @Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle;
 
-    public Input<RouteSpecHttpRouteTimeoutIdleGetArgs> getIdle() {
-        return this.idle == null ? Input.empty() : this.idle;
+    public Output<RouteSpecHttpRouteTimeoutIdleGetArgs> getIdle() {
+        return this.idle == null ? Output.empty() : this.idle;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class RouteSpecHttpRouteTimeoutGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="perRequest")
-      private final @Nullable Input<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest;
+      private final @Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest;
 
-    public Input<RouteSpecHttpRouteTimeoutPerRequestGetArgs> getPerRequest() {
-        return this.perRequest == null ? Input.empty() : this.perRequest;
+    public Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> getPerRequest() {
+        return this.perRequest == null ? Output.empty() : this.perRequest;
     }
 
     public RouteSpecHttpRouteTimeoutGetArgs(
-        @Nullable Input<RouteSpecHttpRouteTimeoutIdleGetArgs> idle,
-        @Nullable Input<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest) {
+        @Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle,
+        @Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }
 
     private RouteSpecHttpRouteTimeoutGetArgs() {
-        this.idle = Input.empty();
-        this.perRequest = Input.empty();
+        this.idle = Output.empty();
+        this.perRequest = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class RouteSpecHttpRouteTimeoutGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<RouteSpecHttpRouteTimeoutIdleGetArgs> idle;
-        private @Nullable Input<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest;
+        private @Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle;
+        private @Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class RouteSpecHttpRouteTimeoutGetArgs extends io.pulumi.resources.
     	      this.perRequest = defaults.perRequest;
         }
 
-        public Builder idle(@Nullable Input<RouteSpecHttpRouteTimeoutIdleGetArgs> idle) {
+        public Builder idle(@Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle) {
             this.idle = idle;
             return this;
         }
 
         public Builder idle(@Nullable RouteSpecHttpRouteTimeoutIdleGetArgs idle) {
-            this.idle = Input.ofNullable(idle);
+            this.idle = Output.ofNullable(idle);
             return this;
         }
 
-        public Builder perRequest(@Nullable Input<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest) {
+        public Builder perRequest(@Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest) {
             this.perRequest = perRequest;
             return this;
         }
 
         public Builder perRequest(@Nullable RouteSpecHttpRouteTimeoutPerRequestGetArgs perRequest) {
-            this.perRequest = Input.ofNullable(perRequest);
+            this.perRequest = Output.ofNullable(perRequest);
             return this;
         }
         public RouteSpecHttpRouteTimeoutGetArgs build() {

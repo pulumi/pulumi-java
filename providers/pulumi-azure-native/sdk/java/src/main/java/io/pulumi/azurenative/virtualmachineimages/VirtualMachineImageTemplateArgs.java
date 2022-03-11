@@ -16,7 +16,7 @@ import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateShellCusto
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateVhdDistributorArgs;
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateVmProfileArgs;
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateWindowsUpdateCustomizerArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -36,10 +36,10 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="buildTimeoutInMinutes")
-      private final @Nullable Input<Integer> buildTimeoutInMinutes;
+      private final @Nullable Output<Integer> buildTimeoutInMinutes;
 
-    public Input<Integer> getBuildTimeoutInMinutes() {
-        return this.buildTimeoutInMinutes == null ? Input.empty() : this.buildTimeoutInMinutes;
+    public Output<Integer> getBuildTimeoutInMinutes() {
+        return this.buildTimeoutInMinutes == null ? Output.empty() : this.buildTimeoutInMinutes;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customize")
-      private final @Nullable Input<List<Object>> customize;
+      private final @Nullable Output<List<Object>> customize;
 
-    public Input<List<Object>> getCustomize() {
-        return this.customize == null ? Input.empty() : this.customize;
+    public Output<List<Object>> getCustomize() {
+        return this.customize == null ? Output.empty() : this.customize;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="distribute", required=true)
-      private final Input<List<Object>> distribute;
+      private final Output<List<Object>> distribute;
 
-    public Input<List<Object>> getDistribute() {
+    public Output<List<Object>> getDistribute() {
         return this.distribute;
     }
 
@@ -69,9 +69,9 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="identity", required=true)
-      private final Input<ImageTemplateIdentityArgs> identity;
+      private final Output<ImageTemplateIdentityArgs> identity;
 
-    public Input<ImageTemplateIdentityArgs> getIdentity() {
+    public Output<ImageTemplateIdentityArgs> getIdentity() {
         return this.identity;
     }
 
@@ -80,10 +80,10 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="imageTemplateName")
-      private final @Nullable Input<String> imageTemplateName;
+      private final @Nullable Output<String> imageTemplateName;
 
-    public Input<String> getImageTemplateName() {
-        return this.imageTemplateName == null ? Input.empty() : this.imageTemplateName;
+    public Output<String> getImageTemplateName() {
+        return this.imageTemplateName == null ? Output.empty() : this.imageTemplateName;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -102,9 +102,9 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,9 +113,9 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<Object> source;
+      private final Output<Object> source;
 
-    public Input<Object> getSource() {
+    public Output<Object> getSource() {
         return this.source;
     }
 
@@ -124,10 +124,10 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -135,24 +135,24 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vmProfile")
-      private final @Nullable Input<ImageTemplateVmProfileArgs> vmProfile;
+      private final @Nullable Output<ImageTemplateVmProfileArgs> vmProfile;
 
-    public Input<ImageTemplateVmProfileArgs> getVmProfile() {
-        return this.vmProfile == null ? Input.empty() : this.vmProfile;
+    public Output<ImageTemplateVmProfileArgs> getVmProfile() {
+        return this.vmProfile == null ? Output.empty() : this.vmProfile;
     }
 
     public VirtualMachineImageTemplateArgs(
-        @Nullable Input<Integer> buildTimeoutInMinutes,
-        @Nullable Input<List<Object>> customize,
-        Input<List<Object>> distribute,
-        Input<ImageTemplateIdentityArgs> identity,
-        @Nullable Input<String> imageTemplateName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<Object> source,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<ImageTemplateVmProfileArgs> vmProfile) {
-        this.buildTimeoutInMinutes = buildTimeoutInMinutes == null ? Input.ofNullable(0) : buildTimeoutInMinutes;
+        @Nullable Output<Integer> buildTimeoutInMinutes,
+        @Nullable Output<List<Object>> customize,
+        Output<List<Object>> distribute,
+        Output<ImageTemplateIdentityArgs> identity,
+        @Nullable Output<String> imageTemplateName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<Object> source,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<ImageTemplateVmProfileArgs> vmProfile) {
+        this.buildTimeoutInMinutes = buildTimeoutInMinutes == null ? Output.ofNullable(0) : buildTimeoutInMinutes;
         this.customize = customize;
         this.distribute = Objects.requireNonNull(distribute, "expected parameter 'distribute' to be non-null");
         this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
@@ -165,16 +165,16 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     }
 
     private VirtualMachineImageTemplateArgs() {
-        this.buildTimeoutInMinutes = Input.empty();
-        this.customize = Input.empty();
-        this.distribute = Input.empty();
-        this.identity = Input.empty();
-        this.imageTemplateName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.source = Input.empty();
-        this.tags = Input.empty();
-        this.vmProfile = Input.empty();
+        this.buildTimeoutInMinutes = Output.empty();
+        this.customize = Output.empty();
+        this.distribute = Output.empty();
+        this.identity = Output.empty();
+        this.imageTemplateName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.source = Output.empty();
+        this.tags = Output.empty();
+        this.vmProfile = Output.empty();
     }
 
     public static Builder builder() {
@@ -186,16 +186,16 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> buildTimeoutInMinutes;
-        private @Nullable Input<List<Object>> customize;
-        private Input<List<Object>> distribute;
-        private Input<ImageTemplateIdentityArgs> identity;
-        private @Nullable Input<String> imageTemplateName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<Object> source;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<ImageTemplateVmProfileArgs> vmProfile;
+        private @Nullable Output<Integer> buildTimeoutInMinutes;
+        private @Nullable Output<List<Object>> customize;
+        private Output<List<Object>> distribute;
+        private Output<ImageTemplateIdentityArgs> identity;
+        private @Nullable Output<String> imageTemplateName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<Object> source;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<ImageTemplateVmProfileArgs> vmProfile;
 
         public Builder() {
     	      // Empty
@@ -215,103 +215,103 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     	      this.vmProfile = defaults.vmProfile;
         }
 
-        public Builder buildTimeoutInMinutes(@Nullable Input<Integer> buildTimeoutInMinutes) {
+        public Builder buildTimeoutInMinutes(@Nullable Output<Integer> buildTimeoutInMinutes) {
             this.buildTimeoutInMinutes = buildTimeoutInMinutes;
             return this;
         }
 
         public Builder buildTimeoutInMinutes(@Nullable Integer buildTimeoutInMinutes) {
-            this.buildTimeoutInMinutes = Input.ofNullable(buildTimeoutInMinutes);
+            this.buildTimeoutInMinutes = Output.ofNullable(buildTimeoutInMinutes);
             return this;
         }
 
-        public Builder customize(@Nullable Input<List<Object>> customize) {
+        public Builder customize(@Nullable Output<List<Object>> customize) {
             this.customize = customize;
             return this;
         }
 
         public Builder customize(@Nullable List<Object> customize) {
-            this.customize = Input.ofNullable(customize);
+            this.customize = Output.ofNullable(customize);
             return this;
         }
 
-        public Builder distribute(Input<List<Object>> distribute) {
+        public Builder distribute(Output<List<Object>> distribute) {
             this.distribute = Objects.requireNonNull(distribute);
             return this;
         }
 
         public Builder distribute(List<Object> distribute) {
-            this.distribute = Input.of(Objects.requireNonNull(distribute));
+            this.distribute = Output.of(Objects.requireNonNull(distribute));
             return this;
         }
 
-        public Builder identity(Input<ImageTemplateIdentityArgs> identity) {
+        public Builder identity(Output<ImageTemplateIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
         public Builder identity(ImageTemplateIdentityArgs identity) {
-            this.identity = Input.of(Objects.requireNonNull(identity));
+            this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder imageTemplateName(@Nullable Input<String> imageTemplateName) {
+        public Builder imageTemplateName(@Nullable Output<String> imageTemplateName) {
             this.imageTemplateName = imageTemplateName;
             return this;
         }
 
         public Builder imageTemplateName(@Nullable String imageTemplateName) {
-            this.imageTemplateName = Input.ofNullable(imageTemplateName);
+            this.imageTemplateName = Output.ofNullable(imageTemplateName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder source(Input<Object> source) {
+        public Builder source(Output<Object> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(Object source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vmProfile(@Nullable Input<ImageTemplateVmProfileArgs> vmProfile) {
+        public Builder vmProfile(@Nullable Output<ImageTemplateVmProfileArgs> vmProfile) {
             this.vmProfile = vmProfile;
             return this;
         }
 
         public Builder vmProfile(@Nullable ImageTemplateVmProfileArgs vmProfile) {
-            this.vmProfile = Input.ofNullable(vmProfile);
+            this.vmProfile = Output.ofNullable(vmProfile);
             return this;
         }
         public VirtualMachineImageTemplateArgs build() {

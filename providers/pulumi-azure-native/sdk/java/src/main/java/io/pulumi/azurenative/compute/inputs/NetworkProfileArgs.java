@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.NetworkApiVersion;
 import io.pulumi.azurenative.compute.inputs.NetworkInterfaceReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkApiVersion")
-      private final @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
+      private final @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
 
-    public Input<Either<String,NetworkApiVersion>> getNetworkApiVersion() {
-        return this.networkApiVersion == null ? Input.empty() : this.networkApiVersion;
+    public Output<Either<String,NetworkApiVersion>> getNetworkApiVersion() {
+        return this.networkApiVersion == null ? Output.empty() : this.networkApiVersion;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-      private final @Nullable Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
+      private final @Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
 
-    public Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> getNetworkInterfaceConfigurations() {
-        return this.networkInterfaceConfigurations == null ? Input.empty() : this.networkInterfaceConfigurations;
+    public Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> getNetworkInterfaceConfigurations() {
+        return this.networkInterfaceConfigurations == null ? Output.empty() : this.networkInterfaceConfigurations;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaces")
-      private final @Nullable Input<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
+      private final @Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
 
-    public Input<List<NetworkInterfaceReferenceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
+    public Output<List<NetworkInterfaceReferenceArgs>> getNetworkInterfaces() {
+        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
     public NetworkProfileArgs(
-        @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion,
-        @Nullable Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations,
-        @Nullable Input<List<NetworkInterfaceReferenceArgs>> networkInterfaces) {
+        @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion,
+        @Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations,
+        @Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces) {
         this.networkApiVersion = networkApiVersion;
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
         this.networkInterfaces = networkInterfaces;
     }
 
     private NetworkProfileArgs() {
-        this.networkApiVersion = Input.empty();
-        this.networkInterfaceConfigurations = Input.empty();
-        this.networkInterfaces = Input.empty();
+        this.networkApiVersion = Output.empty();
+        this.networkInterfaceConfigurations = Output.empty();
+        this.networkInterfaces = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
-        private @Nullable Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
-        private @Nullable Input<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
+        private @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
+        private @Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
+        private @Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkInterfaces = defaults.networkInterfaces;
         }
 
-        public Builder networkApiVersion(@Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion) {
+        public Builder networkApiVersion(@Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion) {
             this.networkApiVersion = networkApiVersion;
             return this;
         }
 
         public Builder networkApiVersion(@Nullable Either<String,NetworkApiVersion> networkApiVersion) {
-            this.networkApiVersion = Input.ofNullable(networkApiVersion);
+            this.networkApiVersion = Output.ofNullable(networkApiVersion);
             return this;
         }
 
-        public Builder networkInterfaceConfigurations(@Nullable Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationArgs> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = Input.ofNullable(networkInterfaceConfigurations);
+            this.networkInterfaceConfigurations = Output.ofNullable(networkInterfaceConfigurations);
             return this;
         }
 
-        public Builder networkInterfaces(@Nullable Input<List<NetworkInterfaceReferenceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceReferenceArgs> networkInterfaces) {
-            this.networkInterfaces = Input.ofNullable(networkInterfaces);
+            this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
         public NetworkProfileArgs build() {

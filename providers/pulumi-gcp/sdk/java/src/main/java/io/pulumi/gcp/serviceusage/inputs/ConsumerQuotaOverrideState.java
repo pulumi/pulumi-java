@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceusage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<Map<String,String>> dimensions;
+      private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Input<Map<String,String>> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<Map<String,String>> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="force")
-      private final @Nullable Input<Boolean> force;
+      private final @Nullable Output<Boolean> force;
 
-    public Input<Boolean> getForce() {
-        return this.force == null ? Input.empty() : this.force;
+    public Output<Boolean> getForce() {
+        return this.force == null ? Output.empty() : this.force;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="limit")
-      private final @Nullable Input<String> limit;
+      private final @Nullable Output<String> limit;
 
-    public Input<String> getLimit() {
-        return this.limit == null ? Input.empty() : this.limit;
+    public Output<String> getLimit() {
+        return this.limit == null ? Output.empty() : this.limit;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="metric")
-      private final @Nullable Input<String> metric;
+      private final @Nullable Output<String> metric;
 
-    public Input<String> getMetric() {
-        return this.metric == null ? Input.empty() : this.metric;
+    public Output<String> getMetric() {
+        return this.metric == null ? Output.empty() : this.metric;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="overrideValue")
-      private final @Nullable Input<String> overrideValue;
+      private final @Nullable Output<String> overrideValue;
 
-    public Input<String> getOverrideValue() {
-        return this.overrideValue == null ? Input.empty() : this.overrideValue;
+    public Output<String> getOverrideValue() {
+        return this.overrideValue == null ? Output.empty() : this.overrideValue;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public ConsumerQuotaOverrideState(
-        @Nullable Input<Map<String,String>> dimensions,
-        @Nullable Input<Boolean> force,
-        @Nullable Input<String> limit,
-        @Nullable Input<String> metric,
-        @Nullable Input<String> name,
-        @Nullable Input<String> overrideValue,
-        @Nullable Input<String> project,
-        @Nullable Input<String> service) {
+        @Nullable Output<Map<String,String>> dimensions,
+        @Nullable Output<Boolean> force,
+        @Nullable Output<String> limit,
+        @Nullable Output<String> metric,
+        @Nullable Output<String> name,
+        @Nullable Output<String> overrideValue,
+        @Nullable Output<String> project,
+        @Nullable Output<String> service) {
         this.dimensions = dimensions;
         this.force = force;
         this.limit = limit;
@@ -126,14 +126,14 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
     }
 
     private ConsumerQuotaOverrideState() {
-        this.dimensions = Input.empty();
-        this.force = Input.empty();
-        this.limit = Input.empty();
-        this.metric = Input.empty();
-        this.name = Input.empty();
-        this.overrideValue = Input.empty();
-        this.project = Input.empty();
-        this.service = Input.empty();
+        this.dimensions = Output.empty();
+        this.force = Output.empty();
+        this.limit = Output.empty();
+        this.metric = Output.empty();
+        this.name = Output.empty();
+        this.overrideValue = Output.empty();
+        this.project = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> dimensions;
-        private @Nullable Input<Boolean> force;
-        private @Nullable Input<String> limit;
-        private @Nullable Input<String> metric;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> overrideValue;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> service;
+        private @Nullable Output<Map<String,String>> dimensions;
+        private @Nullable Output<Boolean> force;
+        private @Nullable Output<String> limit;
+        private @Nullable Output<String> metric;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> overrideValue;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
     	      this.service = defaults.service;
         }
 
-        public Builder dimensions(@Nullable Input<Map<String,String>> dimensions) {
+        public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder force(@Nullable Input<Boolean> force) {
+        public Builder force(@Nullable Output<Boolean> force) {
             this.force = force;
             return this;
         }
 
         public Builder force(@Nullable Boolean force) {
-            this.force = Input.ofNullable(force);
+            this.force = Output.ofNullable(force);
             return this;
         }
 
-        public Builder limit(@Nullable Input<String> limit) {
+        public Builder limit(@Nullable Output<String> limit) {
             this.limit = limit;
             return this;
         }
 
         public Builder limit(@Nullable String limit) {
-            this.limit = Input.ofNullable(limit);
+            this.limit = Output.ofNullable(limit);
             return this;
         }
 
-        public Builder metric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
 
         public Builder metric(@Nullable String metric) {
-            this.metric = Input.ofNullable(metric);
+            this.metric = Output.ofNullable(metric);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder overrideValue(@Nullable Input<String> overrideValue) {
+        public Builder overrideValue(@Nullable Output<String> overrideValue) {
             this.overrideValue = overrideValue;
             return this;
         }
 
         public Builder overrideValue(@Nullable String overrideValue) {
-            this.overrideValue = Input.ofNullable(overrideValue);
+            this.overrideValue = Output.ofNullable(overrideValue);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public ConsumerQuotaOverrideState build() {

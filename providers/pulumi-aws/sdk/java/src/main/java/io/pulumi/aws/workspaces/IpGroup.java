@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.workspaces.IpGroupArgs;
 import io.pulumi.aws.workspaces.inputs.IpGroupState;
 import io.pulumi.aws.workspaces.outputs.IpGroupRule;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,14 +140,14 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IpGroup(String name, @Nullable IpGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:workspaces/ipGroup:IpGroup", name, args == null ? IpGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:workspaces/ipGroup:IpGroup", name, args == null ? IpGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IpGroup(String name, Input<String> id, @Nullable IpGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IpGroup(String name, Output<String> id, @Nullable IpGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:workspaces/ipGroup:IpGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -164,7 +163,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IpGroup get(String name, Input<String> id, @Nullable IpGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IpGroup get(String name, Output<String> id, @Nullable IpGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IpGroup(name, id, state, options);
     }
 }

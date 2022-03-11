@@ -12,7 +12,6 @@ import io.pulumi.azurenative.web.outputs.StaticSiteBuildPropertiesResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteTemplateOptionsResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteUserProvidedFunctionAppResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -372,26 +371,26 @@ public class StaticSite extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StaticSite(String name, StaticSiteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:StaticSite", name, args == null ? StaticSiteArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:StaticSite", name, args == null ? StaticSiteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private StaticSite(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private StaticSite(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:StaticSite", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:StaticSite").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:StaticSite").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:StaticSite").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:StaticSite").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:StaticSite").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:StaticSite").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:StaticSite").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:StaticSite").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:StaticSite").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:StaticSite").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:StaticSite").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:StaticSite").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:StaticSite").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:StaticSite").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:StaticSite").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:StaticSite").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:StaticSite").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:StaticSite").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -405,7 +404,7 @@ public class StaticSite extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static StaticSite get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static StaticSite get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StaticSite(name, id, options);
     }
 }

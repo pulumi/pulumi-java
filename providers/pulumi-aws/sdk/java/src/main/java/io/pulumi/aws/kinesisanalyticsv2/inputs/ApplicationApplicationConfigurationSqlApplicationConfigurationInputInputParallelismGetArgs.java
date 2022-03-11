@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs(@Nullable Input<Integer> count) {
+    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs(@Nullable Output<Integer> count) {
         this.count = count;
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs() {
-        this.count = Input.empty();
+        this.count = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> count;
+        private @Nullable Output<Integer> count;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.count = defaults.count;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
         public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.elastictranscoder.inputs.PipelineContentConfigPermissionArg
 import io.pulumi.aws.elastictranscoder.inputs.PipelineNotificationsArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigPermissionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsKmsKeyArn")
-      private final @Nullable Input<String> awsKmsKeyArn;
+      private final @Nullable Output<String> awsKmsKeyArn;
 
-    public Input<String> getAwsKmsKeyArn() {
-        return this.awsKmsKeyArn == null ? Input.empty() : this.awsKmsKeyArn;
+    public Output<String> getAwsKmsKeyArn() {
+        return this.awsKmsKeyArn == null ? Output.empty() : this.awsKmsKeyArn;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentConfig")
-      private final @Nullable Input<PipelineContentConfigArgs> contentConfig;
+      private final @Nullable Output<PipelineContentConfigArgs> contentConfig;
 
-    public Input<PipelineContentConfigArgs> getContentConfig() {
-        return this.contentConfig == null ? Input.empty() : this.contentConfig;
+    public Output<PipelineContentConfigArgs> getContentConfig() {
+        return this.contentConfig == null ? Output.empty() : this.contentConfig;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentConfigPermissions")
-      private final @Nullable Input<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions;
+      private final @Nullable Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions;
 
-    public Input<List<PipelineContentConfigPermissionArgs>> getContentConfigPermissions() {
-        return this.contentConfigPermissions == null ? Input.empty() : this.contentConfigPermissions;
+    public Output<List<PipelineContentConfigPermissionArgs>> getContentConfigPermissions() {
+        return this.contentConfigPermissions == null ? Output.empty() : this.contentConfigPermissions;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputBucket", required=true)
-      private final Input<String> inputBucket;
+      private final Output<String> inputBucket;
 
-    public Input<String> getInputBucket() {
+    public Output<String> getInputBucket() {
         return this.inputBucket;
     }
 
@@ -69,10 +69,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notifications")
-      private final @Nullable Input<PipelineNotificationsArgs> notifications;
+      private final @Nullable Output<PipelineNotificationsArgs> notifications;
 
-    public Input<PipelineNotificationsArgs> getNotifications() {
-        return this.notifications == null ? Input.empty() : this.notifications;
+    public Output<PipelineNotificationsArgs> getNotifications() {
+        return this.notifications == null ? Output.empty() : this.notifications;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputBucket")
-      private final @Nullable Input<String> outputBucket;
+      private final @Nullable Output<String> outputBucket;
 
-    public Input<String> getOutputBucket() {
-        return this.outputBucket == null ? Input.empty() : this.outputBucket;
+    public Output<String> getOutputBucket() {
+        return this.outputBucket == null ? Output.empty() : this.outputBucket;
     }
 
     /**
@@ -102,9 +102,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -113,10 +113,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbnailConfig")
-      private final @Nullable Input<PipelineThumbnailConfigArgs> thumbnailConfig;
+      private final @Nullable Output<PipelineThumbnailConfigArgs> thumbnailConfig;
 
-    public Input<PipelineThumbnailConfigArgs> getThumbnailConfig() {
-        return this.thumbnailConfig == null ? Input.empty() : this.thumbnailConfig;
+    public Output<PipelineThumbnailConfigArgs> getThumbnailConfig() {
+        return this.thumbnailConfig == null ? Output.empty() : this.thumbnailConfig;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbnailConfigPermissions")
-      private final @Nullable Input<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions;
+      private final @Nullable Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions;
 
-    public Input<List<PipelineThumbnailConfigPermissionArgs>> getThumbnailConfigPermissions() {
-        return this.thumbnailConfigPermissions == null ? Input.empty() : this.thumbnailConfigPermissions;
+    public Output<List<PipelineThumbnailConfigPermissionArgs>> getThumbnailConfigPermissions() {
+        return this.thumbnailConfigPermissions == null ? Output.empty() : this.thumbnailConfigPermissions;
     }
 
     public PipelineArgs(
-        @Nullable Input<String> awsKmsKeyArn,
-        @Nullable Input<PipelineContentConfigArgs> contentConfig,
-        @Nullable Input<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions,
-        Input<String> inputBucket,
-        @Nullable Input<String> name,
-        @Nullable Input<PipelineNotificationsArgs> notifications,
-        @Nullable Input<String> outputBucket,
-        Input<String> role,
-        @Nullable Input<PipelineThumbnailConfigArgs> thumbnailConfig,
-        @Nullable Input<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions) {
+        @Nullable Output<String> awsKmsKeyArn,
+        @Nullable Output<PipelineContentConfigArgs> contentConfig,
+        @Nullable Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions,
+        Output<String> inputBucket,
+        @Nullable Output<String> name,
+        @Nullable Output<PipelineNotificationsArgs> notifications,
+        @Nullable Output<String> outputBucket,
+        Output<String> role,
+        @Nullable Output<PipelineThumbnailConfigArgs> thumbnailConfig,
+        @Nullable Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions) {
         this.awsKmsKeyArn = awsKmsKeyArn;
         this.contentConfig = contentConfig;
         this.contentConfigPermissions = contentConfigPermissions;
@@ -154,16 +154,16 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.awsKmsKeyArn = Input.empty();
-        this.contentConfig = Input.empty();
-        this.contentConfigPermissions = Input.empty();
-        this.inputBucket = Input.empty();
-        this.name = Input.empty();
-        this.notifications = Input.empty();
-        this.outputBucket = Input.empty();
-        this.role = Input.empty();
-        this.thumbnailConfig = Input.empty();
-        this.thumbnailConfigPermissions = Input.empty();
+        this.awsKmsKeyArn = Output.empty();
+        this.contentConfig = Output.empty();
+        this.contentConfigPermissions = Output.empty();
+        this.inputBucket = Output.empty();
+        this.name = Output.empty();
+        this.notifications = Output.empty();
+        this.outputBucket = Output.empty();
+        this.role = Output.empty();
+        this.thumbnailConfig = Output.empty();
+        this.thumbnailConfigPermissions = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> awsKmsKeyArn;
-        private @Nullable Input<PipelineContentConfigArgs> contentConfig;
-        private @Nullable Input<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions;
-        private Input<String> inputBucket;
-        private @Nullable Input<String> name;
-        private @Nullable Input<PipelineNotificationsArgs> notifications;
-        private @Nullable Input<String> outputBucket;
-        private Input<String> role;
-        private @Nullable Input<PipelineThumbnailConfigArgs> thumbnailConfig;
-        private @Nullable Input<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions;
+        private @Nullable Output<String> awsKmsKeyArn;
+        private @Nullable Output<PipelineContentConfigArgs> contentConfig;
+        private @Nullable Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions;
+        private Output<String> inputBucket;
+        private @Nullable Output<String> name;
+        private @Nullable Output<PipelineNotificationsArgs> notifications;
+        private @Nullable Output<String> outputBucket;
+        private Output<String> role;
+        private @Nullable Output<PipelineThumbnailConfigArgs> thumbnailConfig;
+        private @Nullable Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thumbnailConfigPermissions = defaults.thumbnailConfigPermissions;
         }
 
-        public Builder awsKmsKeyArn(@Nullable Input<String> awsKmsKeyArn) {
+        public Builder awsKmsKeyArn(@Nullable Output<String> awsKmsKeyArn) {
             this.awsKmsKeyArn = awsKmsKeyArn;
             return this;
         }
 
         public Builder awsKmsKeyArn(@Nullable String awsKmsKeyArn) {
-            this.awsKmsKeyArn = Input.ofNullable(awsKmsKeyArn);
+            this.awsKmsKeyArn = Output.ofNullable(awsKmsKeyArn);
             return this;
         }
 
-        public Builder contentConfig(@Nullable Input<PipelineContentConfigArgs> contentConfig) {
+        public Builder contentConfig(@Nullable Output<PipelineContentConfigArgs> contentConfig) {
             this.contentConfig = contentConfig;
             return this;
         }
 
         public Builder contentConfig(@Nullable PipelineContentConfigArgs contentConfig) {
-            this.contentConfig = Input.ofNullable(contentConfig);
+            this.contentConfig = Output.ofNullable(contentConfig);
             return this;
         }
 
-        public Builder contentConfigPermissions(@Nullable Input<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions) {
+        public Builder contentConfigPermissions(@Nullable Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions) {
             this.contentConfigPermissions = contentConfigPermissions;
             return this;
         }
 
         public Builder contentConfigPermissions(@Nullable List<PipelineContentConfigPermissionArgs> contentConfigPermissions) {
-            this.contentConfigPermissions = Input.ofNullable(contentConfigPermissions);
+            this.contentConfigPermissions = Output.ofNullable(contentConfigPermissions);
             return this;
         }
 
-        public Builder inputBucket(Input<String> inputBucket) {
+        public Builder inputBucket(Output<String> inputBucket) {
             this.inputBucket = Objects.requireNonNull(inputBucket);
             return this;
         }
 
         public Builder inputBucket(String inputBucket) {
-            this.inputBucket = Input.of(Objects.requireNonNull(inputBucket));
+            this.inputBucket = Output.of(Objects.requireNonNull(inputBucket));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notifications(@Nullable Input<PipelineNotificationsArgs> notifications) {
+        public Builder notifications(@Nullable Output<PipelineNotificationsArgs> notifications) {
             this.notifications = notifications;
             return this;
         }
 
         public Builder notifications(@Nullable PipelineNotificationsArgs notifications) {
-            this.notifications = Input.ofNullable(notifications);
+            this.notifications = Output.ofNullable(notifications);
             return this;
         }
 
-        public Builder outputBucket(@Nullable Input<String> outputBucket) {
+        public Builder outputBucket(@Nullable Output<String> outputBucket) {
             this.outputBucket = outputBucket;
             return this;
         }
 
         public Builder outputBucket(@Nullable String outputBucket) {
-            this.outputBucket = Input.ofNullable(outputBucket);
+            this.outputBucket = Output.ofNullable(outputBucket);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder thumbnailConfig(@Nullable Input<PipelineThumbnailConfigArgs> thumbnailConfig) {
+        public Builder thumbnailConfig(@Nullable Output<PipelineThumbnailConfigArgs> thumbnailConfig) {
             this.thumbnailConfig = thumbnailConfig;
             return this;
         }
 
         public Builder thumbnailConfig(@Nullable PipelineThumbnailConfigArgs thumbnailConfig) {
-            this.thumbnailConfig = Input.ofNullable(thumbnailConfig);
+            this.thumbnailConfig = Output.ofNullable(thumbnailConfig);
             return this;
         }
 
-        public Builder thumbnailConfigPermissions(@Nullable Input<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions) {
+        public Builder thumbnailConfigPermissions(@Nullable Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions) {
             this.thumbnailConfigPermissions = thumbnailConfigPermissions;
             return this;
         }
 
         public Builder thumbnailConfigPermissions(@Nullable List<PipelineThumbnailConfigPermissionArgs> thumbnailConfigPermissions) {
-            this.thumbnailConfigPermissions = Input.ofNullable(thumbnailConfigPermissions);
+            this.thumbnailConfigPermissions = Output.ofNullable(thumbnailConfigPermissions);
             return this;
         }
         public PipelineArgs build() {

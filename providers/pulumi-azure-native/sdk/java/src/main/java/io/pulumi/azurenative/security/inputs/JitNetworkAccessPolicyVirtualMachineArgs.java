@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessPortRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -32,9 +32,9 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="ports", required=true)
-      private final Input<List<JitNetworkAccessPortRuleArgs>> ports;
+      private final Output<List<JitNetworkAccessPortRuleArgs>> ports;
 
-    public Input<List<JitNetworkAccessPortRuleArgs>> getPorts() {
+    public Output<List<JitNetworkAccessPortRuleArgs>> getPorts() {
         return this.ports;
     }
 
@@ -43,25 +43,25 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="publicIpAddress")
-      private final @Nullable Input<String> publicIpAddress;
+      private final @Nullable Output<String> publicIpAddress;
 
-    public Input<String> getPublicIpAddress() {
-        return this.publicIpAddress == null ? Input.empty() : this.publicIpAddress;
+    public Output<String> getPublicIpAddress() {
+        return this.publicIpAddress == null ? Output.empty() : this.publicIpAddress;
     }
 
     public JitNetworkAccessPolicyVirtualMachineArgs(
-        Input<String> id,
-        Input<List<JitNetworkAccessPortRuleArgs>> ports,
-        @Nullable Input<String> publicIpAddress) {
+        Output<String> id,
+        Output<List<JitNetworkAccessPortRuleArgs>> ports,
+        @Nullable Output<String> publicIpAddress) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
         this.publicIpAddress = publicIpAddress;
     }
 
     private JitNetworkAccessPolicyVirtualMachineArgs() {
-        this.id = Input.empty();
-        this.ports = Input.empty();
-        this.publicIpAddress = Input.empty();
+        this.id = Output.empty();
+        this.ports = Output.empty();
+        this.publicIpAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private Input<List<JitNetworkAccessPortRuleArgs>> ports;
-        private @Nullable Input<String> publicIpAddress;
+        private Output<String> id;
+        private Output<List<JitNetworkAccessPortRuleArgs>> ports;
+        private @Nullable Output<String> publicIpAddress;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
     	      this.publicIpAddress = defaults.publicIpAddress;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder ports(Input<List<JitNetworkAccessPortRuleArgs>> ports) {
+        public Builder ports(Output<List<JitNetworkAccessPortRuleArgs>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
         public Builder ports(List<JitNetworkAccessPortRuleArgs> ports) {
-            this.ports = Input.of(Objects.requireNonNull(ports));
+            this.ports = Output.of(Objects.requireNonNull(ports));
             return this;
         }
 
-        public Builder publicIpAddress(@Nullable Input<String> publicIpAddress) {
+        public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
 
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Input.ofNullable(publicIpAddress);
+            this.publicIpAddress = Output.ofNullable(publicIpAddress);
             return this;
         }
         public JitNetworkAccessPolicyVirtualMachineArgs build() {

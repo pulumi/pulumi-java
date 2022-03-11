@@ -6,7 +6,6 @@ package io.pulumi.aws.cloudcontrol;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudcontrol.ResourceArgs;
 import io.pulumi.aws.cloudcontrol.inputs.ResourceState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -128,14 +127,14 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resource(String name, ResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudcontrol/resource:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudcontrol/resource:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Resource(String name, Input<String> id, @Nullable ResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Resource(String name, Output<String> id, @Nullable ResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudcontrol/resource:Resource", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -151,7 +150,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Resource get(String name, Input<String> id, @Nullable ResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Resource get(String name, Output<String> id, @Nullable ResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Resource(name, id, state, options);
     }
 }

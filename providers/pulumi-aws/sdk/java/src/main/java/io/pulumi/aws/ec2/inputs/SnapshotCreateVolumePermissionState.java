@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
      * 
      */
     @InputImport(name="snapshotId")
-      private final @Nullable Input<String> snapshotId;
+      private final @Nullable Output<String> snapshotId;
 
-    public Input<String> getSnapshotId() {
-        return this.snapshotId == null ? Input.empty() : this.snapshotId;
+    public Output<String> getSnapshotId() {
+        return this.snapshotId == null ? Output.empty() : this.snapshotId;
     }
 
     public SnapshotCreateVolumePermissionState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> snapshotId) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> snapshotId) {
         this.accountId = accountId;
         this.snapshotId = snapshotId;
     }
 
     private SnapshotCreateVolumePermissionState() {
-        this.accountId = Input.empty();
-        this.snapshotId = Input.empty();
+        this.accountId = Output.empty();
+        this.snapshotId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> snapshotId;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> snapshotId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
     	      this.snapshotId = defaults.snapshotId;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder snapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Input.ofNullable(snapshotId);
+            this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
         public SnapshotCreateVolumePermissionState build() {

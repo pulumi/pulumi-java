@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.ImageRawDiskContainerType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerType")
-      private final @Nullable Input<ImageRawDiskContainerType> containerType;
+      private final @Nullable Output<ImageRawDiskContainerType> containerType;
 
-    public Input<ImageRawDiskContainerType> getContainerType() {
-        return this.containerType == null ? Input.empty() : this.containerType;
+    public Output<ImageRawDiskContainerType> getContainerType() {
+        return this.containerType == null ? Output.empty() : this.containerType;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     public ImageRawDiskArgs(
-        @Nullable Input<ImageRawDiskContainerType> containerType,
-        @Nullable Input<String> source) {
+        @Nullable Output<ImageRawDiskContainerType> containerType,
+        @Nullable Output<String> source) {
         this.containerType = containerType;
         this.source = source;
     }
 
     private ImageRawDiskArgs() {
-        this.containerType = Input.empty();
-        this.source = Input.empty();
+        this.containerType = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ImageRawDiskContainerType> containerType;
-        private @Nullable Input<String> source;
+        private @Nullable Output<ImageRawDiskContainerType> containerType;
+        private @Nullable Output<String> source;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder containerType(@Nullable Input<ImageRawDiskContainerType> containerType) {
+        public Builder containerType(@Nullable Output<ImageRawDiskContainerType> containerType) {
             this.containerType = containerType;
             return this;
         }
 
         public Builder containerType(@Nullable ImageRawDiskContainerType containerType) {
-            this.containerType = Input.ofNullable(containerType);
+            this.containerType = Output.ofNullable(containerType);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public ImageRawDiskArgs build() {

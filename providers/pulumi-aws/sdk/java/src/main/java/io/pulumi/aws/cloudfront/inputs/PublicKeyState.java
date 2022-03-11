@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callerReference")
-      private final @Nullable Input<String> callerReference;
+      private final @Nullable Output<String> callerReference;
 
-    public Input<String> getCallerReference() {
-        return this.callerReference == null ? Input.empty() : this.callerReference;
+    public Output<String> getCallerReference() {
+        return this.callerReference == null ? Output.empty() : this.callerReference;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encodedKey")
-      private final @Nullable Input<String> encodedKey;
+      private final @Nullable Output<String> encodedKey;
 
-    public Input<String> getEncodedKey() {
-        return this.encodedKey == null ? Input.empty() : this.encodedKey;
+    public Output<String> getEncodedKey() {
+        return this.encodedKey == null ? Output.empty() : this.encodedKey;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     public PublicKeyState(
-        @Nullable Input<String> callerReference,
-        @Nullable Input<String> comment,
-        @Nullable Input<String> encodedKey,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix) {
+        @Nullable Output<String> callerReference,
+        @Nullable Output<String> comment,
+        @Nullable Output<String> encodedKey,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix) {
         this.callerReference = callerReference;
         this.comment = comment;
         this.encodedKey = encodedKey;
@@ -96,12 +96,12 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PublicKeyState() {
-        this.callerReference = Input.empty();
-        this.comment = Input.empty();
-        this.encodedKey = Input.empty();
-        this.etag = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
+        this.callerReference = Output.empty();
+        this.comment = Output.empty();
+        this.encodedKey = Output.empty();
+        this.etag = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> callerReference;
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> encodedKey;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
+        private @Nullable Output<String> callerReference;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> encodedKey;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.namePrefix = defaults.namePrefix;
         }
 
-        public Builder callerReference(@Nullable Input<String> callerReference) {
+        public Builder callerReference(@Nullable Output<String> callerReference) {
             this.callerReference = callerReference;
             return this;
         }
 
         public Builder callerReference(@Nullable String callerReference) {
-            this.callerReference = Input.ofNullable(callerReference);
+            this.callerReference = Output.ofNullable(callerReference);
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder encodedKey(@Nullable Input<String> encodedKey) {
+        public Builder encodedKey(@Nullable Output<String> encodedKey) {
             this.encodedKey = encodedKey;
             return this;
         }
 
         public Builder encodedKey(@Nullable String encodedKey) {
-            this.encodedKey = Input.ofNullable(encodedKey);
+            this.encodedKey = Output.ofNullable(encodedKey);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
         public PublicKeyState build() {

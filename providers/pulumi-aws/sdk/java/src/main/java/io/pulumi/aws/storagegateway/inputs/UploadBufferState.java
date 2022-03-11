@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.storagegateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskId")
-      private final @Nullable Input<String> diskId;
+      private final @Nullable Output<String> diskId;
 
-    public Input<String> getDiskId() {
-        return this.diskId == null ? Input.empty() : this.diskId;
+    public Output<String> getDiskId() {
+        return this.diskId == null ? Output.empty() : this.diskId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskPath")
-      private final @Nullable Input<String> diskPath;
+      private final @Nullable Output<String> diskPath;
 
-    public Input<String> getDiskPath() {
-        return this.diskPath == null ? Input.empty() : this.diskPath;
+    public Output<String> getDiskPath() {
+        return this.diskPath == null ? Output.empty() : this.diskPath;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayArn")
-      private final @Nullable Input<String> gatewayArn;
+      private final @Nullable Output<String> gatewayArn;
 
-    public Input<String> getGatewayArn() {
-        return this.gatewayArn == null ? Input.empty() : this.gatewayArn;
+    public Output<String> getGatewayArn() {
+        return this.gatewayArn == null ? Output.empty() : this.gatewayArn;
     }
 
     public UploadBufferState(
-        @Nullable Input<String> diskId,
-        @Nullable Input<String> diskPath,
-        @Nullable Input<String> gatewayArn) {
+        @Nullable Output<String> diskId,
+        @Nullable Output<String> diskPath,
+        @Nullable Output<String> gatewayArn) {
         this.diskId = diskId;
         this.diskPath = diskPath;
         this.gatewayArn = gatewayArn;
     }
 
     private UploadBufferState() {
-        this.diskId = Input.empty();
-        this.diskPath = Input.empty();
-        this.gatewayArn = Input.empty();
+        this.diskId = Output.empty();
+        this.diskPath = Output.empty();
+        this.gatewayArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskId;
-        private @Nullable Input<String> diskPath;
-        private @Nullable Input<String> gatewayArn;
+        private @Nullable Output<String> diskId;
+        private @Nullable Output<String> diskPath;
+        private @Nullable Output<String> gatewayArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
     	      this.gatewayArn = defaults.gatewayArn;
         }
 
-        public Builder diskId(@Nullable Input<String> diskId) {
+        public Builder diskId(@Nullable Output<String> diskId) {
             this.diskId = diskId;
             return this;
         }
 
         public Builder diskId(@Nullable String diskId) {
-            this.diskId = Input.ofNullable(diskId);
+            this.diskId = Output.ofNullable(diskId);
             return this;
         }
 
-        public Builder diskPath(@Nullable Input<String> diskPath) {
+        public Builder diskPath(@Nullable Output<String> diskPath) {
             this.diskPath = diskPath;
             return this;
         }
 
         public Builder diskPath(@Nullable String diskPath) {
-            this.diskPath = Input.ofNullable(diskPath);
+            this.diskPath = Output.ofNullable(diskPath);
             return this;
         }
 
-        public Builder gatewayArn(@Nullable Input<String> gatewayArn) {
+        public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
             this.gatewayArn = gatewayArn;
             return this;
         }
 
         public Builder gatewayArn(@Nullable String gatewayArn) {
-            this.gatewayArn = Input.ofNullable(gatewayArn);
+            this.gatewayArn = Output.ofNullable(gatewayArn);
             return this;
         }
         public UploadBufferState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
      * 
      */
     @InputImport(name="imageIdOverride")
-      private final @Nullable Input<String> imageIdOverride;
+      private final @Nullable Output<String> imageIdOverride;
 
-    public Input<String> getImageIdOverride() {
-        return this.imageIdOverride == null ? Input.empty() : this.imageIdOverride;
+    public Output<String> getImageIdOverride() {
+        return this.imageIdOverride == null ? Output.empty() : this.imageIdOverride;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
      * 
      */
     @InputImport(name="imageType")
-      private final @Nullable Input<String> imageType;
+      private final @Nullable Output<String> imageType;
 
-    public Input<String> getImageType() {
-        return this.imageType == null ? Input.empty() : this.imageType;
+    public Output<String> getImageType() {
+        return this.imageType == null ? Output.empty() : this.imageType;
     }
 
     public ComputeEnvironmentComputeResourcesEc2ConfigurationArgs(
-        @Nullable Input<String> imageIdOverride,
-        @Nullable Input<String> imageType) {
+        @Nullable Output<String> imageIdOverride,
+        @Nullable Output<String> imageType) {
         this.imageIdOverride = imageIdOverride;
         this.imageType = imageType;
     }
 
     private ComputeEnvironmentComputeResourcesEc2ConfigurationArgs() {
-        this.imageIdOverride = Input.empty();
-        this.imageType = Input.empty();
+        this.imageIdOverride = Output.empty();
+        this.imageType = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<String> imageIdOverride;
-        private @Nullable Input<String> imageType;
+        private @Nullable Output<String> imageIdOverride;
+        private @Nullable Output<String> imageType;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
     	      this.imageType = defaults.imageType;
         }
 
-        public Builder imageIdOverride(@Nullable Input<String> imageIdOverride) {
+        public Builder imageIdOverride(@Nullable Output<String> imageIdOverride) {
             this.imageIdOverride = imageIdOverride;
             return this;
         }
 
         public Builder imageIdOverride(@Nullable String imageIdOverride) {
-            this.imageIdOverride = Input.ofNullable(imageIdOverride);
+            this.imageIdOverride = Output.ofNullable(imageIdOverride);
             return this;
         }
 
-        public Builder imageType(@Nullable Input<String> imageType) {
+        public Builder imageType(@Nullable Output<String> imageType) {
             this.imageType = imageType;
             return this;
         }
 
         public Builder imageType(@Nullable String imageType) {
-            this.imageType = Input.ofNullable(imageType);
+            this.imageType = Output.ofNullable(imageType);
             return this;
         }
         public ComputeEnvironmentComputeResourcesEc2ConfigurationArgs build() {

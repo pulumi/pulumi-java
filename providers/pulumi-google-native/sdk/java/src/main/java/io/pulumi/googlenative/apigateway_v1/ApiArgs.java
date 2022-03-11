@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -16,9 +16,9 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApiArgs Empty = new ApiArgs();
 
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
@@ -27,10 +27,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -38,17 +38,17 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,26 +56,26 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedService")
-      private final @Nullable Input<String> managedService;
+      private final @Nullable Output<String> managedService;
 
-    public Input<String> getManagedService() {
-        return this.managedService == null ? Input.empty() : this.managedService;
+    public Output<String> getManagedService() {
+        return this.managedService == null ? Output.empty() : this.managedService;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ApiArgs(
-        Input<String> apiId,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> managedService,
-        @Nullable Input<String> project) {
+        Output<String> apiId,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> managedService,
+        @Nullable Output<String> project) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
         this.displayName = displayName;
         this.labels = labels;
@@ -85,12 +85,12 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiArgs() {
-        this.apiId = Input.empty();
-        this.displayName = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.managedService = Input.empty();
-        this.project = Input.empty();
+        this.apiId = Output.empty();
+        this.displayName = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.managedService = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,12 +102,12 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> apiId;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managedService;
-        private @Nullable Input<String> project;
+        private Output<String> apiId;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managedService;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -123,63 +123,63 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedService(@Nullable Input<String> managedService) {
+        public Builder managedService(@Nullable Output<String> managedService) {
             this.managedService = managedService;
             return this;
         }
 
         public Builder managedService(@Nullable String managedService) {
-            this.managedService = Input.ofNullable(managedService);
+            this.managedService = Output.ofNullable(managedService);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ApiArgs build() {

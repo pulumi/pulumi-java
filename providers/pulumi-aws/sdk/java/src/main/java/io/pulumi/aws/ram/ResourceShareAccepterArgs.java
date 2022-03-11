@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ram;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ResourceShareAccepterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="shareArn", required=true)
-      private final Input<String> shareArn;
+      private final Output<String> shareArn;
 
-    public Input<String> getShareArn() {
+    public Output<String> getShareArn() {
         return this.shareArn;
     }
 
-    public ResourceShareAccepterArgs(Input<String> shareArn) {
+    public ResourceShareAccepterArgs(Output<String> shareArn) {
         this.shareArn = Objects.requireNonNull(shareArn, "expected parameter 'shareArn' to be non-null");
     }
 
     private ResourceShareAccepterArgs() {
-        this.shareArn = Input.empty();
+        this.shareArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ResourceShareAccepterArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> shareArn;
+        private Output<String> shareArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ResourceShareAccepterArgs extends io.pulumi.resources.Resourc
     	      this.shareArn = defaults.shareArn;
         }
 
-        public Builder shareArn(Input<String> shareArn) {
+        public Builder shareArn(Output<String> shareArn) {
             this.shareArn = Objects.requireNonNull(shareArn);
             return this;
         }
 
         public Builder shareArn(String shareArn) {
-            this.shareArn = Input.of(Objects.requireNonNull(shareArn));
+            this.shareArn = Output.of(Objects.requireNonNull(shareArn));
             return this;
         }
         public ResourceShareAccepterArgs build() {

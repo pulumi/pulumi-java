@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RegionDiskDiskEncryptionKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RegionDiskDiskEncryptionKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="rawKey")
-      private final @Nullable Input<String> rawKey;
+      private final @Nullable Output<String> rawKey;
 
-    public Input<String> getRawKey() {
-        return this.rawKey == null ? Input.empty() : this.rawKey;
+    public Output<String> getRawKey() {
+        return this.rawKey == null ? Output.empty() : this.rawKey;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class RegionDiskDiskEncryptionKeyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sha256")
-      private final @Nullable Input<String> sha256;
+      private final @Nullable Output<String> sha256;
 
-    public Input<String> getSha256() {
-        return this.sha256 == null ? Input.empty() : this.sha256;
+    public Output<String> getSha256() {
+        return this.sha256 == null ? Output.empty() : this.sha256;
     }
 
     public RegionDiskDiskEncryptionKeyArgs(
-        @Nullable Input<String> kmsKeyName,
-        @Nullable Input<String> rawKey,
-        @Nullable Input<String> sha256) {
+        @Nullable Output<String> kmsKeyName,
+        @Nullable Output<String> rawKey,
+        @Nullable Output<String> sha256) {
         this.kmsKeyName = kmsKeyName;
         this.rawKey = rawKey;
         this.sha256 = sha256;
     }
 
     private RegionDiskDiskEncryptionKeyArgs() {
-        this.kmsKeyName = Input.empty();
-        this.rawKey = Input.empty();
-        this.sha256 = Input.empty();
+        this.kmsKeyName = Output.empty();
+        this.rawKey = Output.empty();
+        this.sha256 = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class RegionDiskDiskEncryptionKeyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyName;
-        private @Nullable Input<String> rawKey;
-        private @Nullable Input<String> sha256;
+        private @Nullable Output<String> kmsKeyName;
+        private @Nullable Output<String> rawKey;
+        private @Nullable Output<String> sha256;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class RegionDiskDiskEncryptionKeyArgs extends io.pulumi.resources.R
     	      this.sha256 = defaults.sha256;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder rawKey(@Nullable Input<String> rawKey) {
+        public Builder rawKey(@Nullable Output<String> rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
         public Builder rawKey(@Nullable String rawKey) {
-            this.rawKey = Input.ofNullable(rawKey);
+            this.rawKey = Output.ofNullable(rawKey);
             return this;
         }
 
-        public Builder sha256(@Nullable Input<String> sha256) {
+        public Builder sha256(@Nullable Output<String> sha256) {
             this.sha256 = sha256;
             return this;
         }
 
         public Builder sha256(@Nullable String sha256) {
-            this.sha256 = Input.ofNullable(sha256);
+            this.sha256 = Output.ofNullable(sha256);
             return this;
         }
         public RegionDiskDiskEncryptionKeyArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.ApplicationSecurityGroupArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -169,47 +168,47 @@ public class ApplicationSecurityGroup extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationSecurityGroup(String name, ApplicationSecurityGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ApplicationSecurityGroup", name, args == null ? ApplicationSecurityGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:ApplicationSecurityGroup", name, args == null ? ApplicationSecurityGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApplicationSecurityGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApplicationSecurityGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ApplicationSecurityGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171101:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180101:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:ApplicationSecurityGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:ApplicationSecurityGroup").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:ApplicationSecurityGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:ApplicationSecurityGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -223,7 +222,7 @@ public class ApplicationSecurityGroup extends io.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplicationSecurityGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApplicationSecurityGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationSecurityGroup(name, id, options);
     }
 }

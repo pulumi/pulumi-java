@@ -6,7 +6,6 @@ package io.pulumi.aws.cognito;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cognito.UserPoolDomainArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolDomainState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -166,14 +165,14 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserPoolDomain(String name, UserPoolDomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/userPoolDomain:UserPoolDomain", name, args == null ? UserPoolDomainArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cognito/userPoolDomain:UserPoolDomain", name, args == null ? UserPoolDomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private UserPoolDomain(String name, Input<String> id, @Nullable UserPoolDomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private UserPoolDomain(String name, Output<String> id, @Nullable UserPoolDomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cognito/userPoolDomain:UserPoolDomain", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -189,7 +188,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static UserPoolDomain get(String name, Input<String> id, @Nullable UserPoolDomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static UserPoolDomain get(String name, Output<String> id, @Nullable UserPoolDomainState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new UserPoolDomain(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,9 +17,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     public static final ChannelArgs Empty = new ChannelArgs();
 
     @InputImport(name="channelId", required=true)
-      private final Input<String> channelId;
+      private final Output<String> channelId;
 
-    public Input<String> getChannelId() {
+    public Output<String> getChannelId() {
         return this.channelId;
     }
 
@@ -28,10 +28,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-      private final @Nullable Input<String> expireTime;
+      private final @Nullable Output<String> expireTime;
 
-    public Input<String> getExpireTime() {
-        return this.expireTime == null ? Input.empty() : this.expireTime;
+    public Output<String> getExpireTime() {
+        return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -50,17 +50,17 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -68,16 +68,16 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retainedReleaseCount")
-      private final @Nullable Input<Integer> retainedReleaseCount;
+      private final @Nullable Output<Integer> retainedReleaseCount;
 
-    public Input<Integer> getRetainedReleaseCount() {
-        return this.retainedReleaseCount == null ? Input.empty() : this.retainedReleaseCount;
+    public Output<Integer> getRetainedReleaseCount() {
+        return this.retainedReleaseCount == null ? Output.empty() : this.retainedReleaseCount;
     }
 
     @InputImport(name="siteId", required=true)
-      private final Input<String> siteId;
+      private final Output<String> siteId;
 
-    public Input<String> getSiteId() {
+    public Output<String> getSiteId() {
         return this.siteId;
     }
 
@@ -86,21 +86,21 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<String> ttl;
+      private final @Nullable Output<String> ttl;
 
-    public Input<String> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<String> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     public ChannelArgs(
-        Input<String> channelId,
-        @Nullable Input<String> expireTime,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<Integer> retainedReleaseCount,
-        Input<String> siteId,
-        @Nullable Input<String> ttl) {
+        Output<String> channelId,
+        @Nullable Output<String> expireTime,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<Integer> retainedReleaseCount,
+        Output<String> siteId,
+        @Nullable Output<String> ttl) {
         this.channelId = Objects.requireNonNull(channelId, "expected parameter 'channelId' to be non-null");
         this.expireTime = expireTime;
         this.labels = labels;
@@ -112,14 +112,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChannelArgs() {
-        this.channelId = Input.empty();
-        this.expireTime = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.retainedReleaseCount = Input.empty();
-        this.siteId = Input.empty();
-        this.ttl = Input.empty();
+        this.channelId = Output.empty();
+        this.expireTime = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.retainedReleaseCount = Output.empty();
+        this.siteId = Output.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,14 +131,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> channelId;
-        private @Nullable Input<String> expireTime;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Integer> retainedReleaseCount;
-        private Input<String> siteId;
-        private @Nullable Input<String> ttl;
+        private Output<String> channelId;
+        private @Nullable Output<String> expireTime;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Integer> retainedReleaseCount;
+        private Output<String> siteId;
+        private @Nullable Output<String> ttl;
 
         public Builder() {
     	      // Empty
@@ -156,83 +156,83 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder channelId(Input<String> channelId) {
+        public Builder channelId(Output<String> channelId) {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
 
         public Builder channelId(String channelId) {
-            this.channelId = Input.of(Objects.requireNonNull(channelId));
+            this.channelId = Output.of(Objects.requireNonNull(channelId));
             return this;
         }
 
-        public Builder expireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Input.ofNullable(expireTime);
+            this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder retainedReleaseCount(@Nullable Input<Integer> retainedReleaseCount) {
+        public Builder retainedReleaseCount(@Nullable Output<Integer> retainedReleaseCount) {
             this.retainedReleaseCount = retainedReleaseCount;
             return this;
         }
 
         public Builder retainedReleaseCount(@Nullable Integer retainedReleaseCount) {
-            this.retainedReleaseCount = Input.ofNullable(retainedReleaseCount);
+            this.retainedReleaseCount = Output.ofNullable(retainedReleaseCount);
             return this;
         }
 
-        public Builder siteId(Input<String> siteId) {
+        public Builder siteId(Output<String> siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
         public Builder siteId(String siteId) {
-            this.siteId = Input.of(Objects.requireNonNull(siteId));
+            this.siteId = Output.of(Objects.requireNonNull(siteId));
             return this;
         }
 
-        public Builder ttl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public ChannelArgs build() {

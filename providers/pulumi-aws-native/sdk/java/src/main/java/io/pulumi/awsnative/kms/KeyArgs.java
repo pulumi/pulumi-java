@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kms;
 import io.pulumi.awsnative.kms.enums.KeySpec;
 import io.pulumi.awsnative.kms.enums.KeyUsage;
 import io.pulumi.awsnative.kms.inputs.KeyTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableKeyRotation")
-      private final @Nullable Input<Boolean> enableKeyRotation;
+      private final @Nullable Output<Boolean> enableKeyRotation;
 
-    public Input<Boolean> getEnableKeyRotation() {
-        return this.enableKeyRotation == null ? Input.empty() : this.enableKeyRotation;
+    public Output<Boolean> getEnableKeyRotation() {
+        return this.enableKeyRotation == null ? Output.empty() : this.enableKeyRotation;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPolicy", required=true)
-      private final Input<Object> keyPolicy;
+      private final Output<Object> keyPolicy;
 
-    public Input<Object> getKeyPolicy() {
+    public Output<Object> getKeyPolicy() {
         return this.keyPolicy;
     }
 
@@ -70,10 +70,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySpec")
-      private final @Nullable Input<KeySpec> keySpec;
+      private final @Nullable Output<KeySpec> keySpec;
 
-    public Input<KeySpec> getKeySpec() {
-        return this.keySpec == null ? Input.empty() : this.keySpec;
+    public Output<KeySpec> getKeySpec() {
+        return this.keySpec == null ? Output.empty() : this.keySpec;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyUsage")
-      private final @Nullable Input<KeyUsage> keyUsage;
+      private final @Nullable Output<KeyUsage> keyUsage;
 
-    public Input<KeyUsage> getKeyUsage() {
-        return this.keyUsage == null ? Input.empty() : this.keyUsage;
+    public Output<KeyUsage> getKeyUsage() {
+        return this.keyUsage == null ? Output.empty() : this.keyUsage;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiRegion")
-      private final @Nullable Input<Boolean> multiRegion;
+      private final @Nullable Output<Boolean> multiRegion;
 
-    public Input<Boolean> getMultiRegion() {
-        return this.multiRegion == null ? Input.empty() : this.multiRegion;
+    public Output<Boolean> getMultiRegion() {
+        return this.multiRegion == null ? Output.empty() : this.multiRegion;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pendingWindowInDays")
-      private final @Nullable Input<Integer> pendingWindowInDays;
+      private final @Nullable Output<Integer> pendingWindowInDays;
 
-    public Input<Integer> getPendingWindowInDays() {
-        return this.pendingWindowInDays == null ? Input.empty() : this.pendingWindowInDays;
+    public Output<Integer> getPendingWindowInDays() {
+        return this.pendingWindowInDays == null ? Output.empty() : this.pendingWindowInDays;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<KeyTagArgs>> tags;
+      private final @Nullable Output<List<KeyTagArgs>> tags;
 
-    public Input<List<KeyTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<KeyTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public KeyArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enableKeyRotation,
-        @Nullable Input<Boolean> enabled,
-        Input<Object> keyPolicy,
-        @Nullable Input<KeySpec> keySpec,
-        @Nullable Input<KeyUsage> keyUsage,
-        @Nullable Input<Boolean> multiRegion,
-        @Nullable Input<Integer> pendingWindowInDays,
-        @Nullable Input<List<KeyTagArgs>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enableKeyRotation,
+        @Nullable Output<Boolean> enabled,
+        Output<Object> keyPolicy,
+        @Nullable Output<KeySpec> keySpec,
+        @Nullable Output<KeyUsage> keyUsage,
+        @Nullable Output<Boolean> multiRegion,
+        @Nullable Output<Integer> pendingWindowInDays,
+        @Nullable Output<List<KeyTagArgs>> tags) {
         this.description = description;
         this.enableKeyRotation = enableKeyRotation;
         this.enabled = enabled;
@@ -142,15 +142,15 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.description = Input.empty();
-        this.enableKeyRotation = Input.empty();
-        this.enabled = Input.empty();
-        this.keyPolicy = Input.empty();
-        this.keySpec = Input.empty();
-        this.keyUsage = Input.empty();
-        this.multiRegion = Input.empty();
-        this.pendingWindowInDays = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.enableKeyRotation = Output.empty();
+        this.enabled = Output.empty();
+        this.keyPolicy = Output.empty();
+        this.keySpec = Output.empty();
+        this.keyUsage = Output.empty();
+        this.multiRegion = Output.empty();
+        this.pendingWindowInDays = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enableKeyRotation;
-        private @Nullable Input<Boolean> enabled;
-        private Input<Object> keyPolicy;
-        private @Nullable Input<KeySpec> keySpec;
-        private @Nullable Input<KeyUsage> keyUsage;
-        private @Nullable Input<Boolean> multiRegion;
-        private @Nullable Input<Integer> pendingWindowInDays;
-        private @Nullable Input<List<KeyTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enableKeyRotation;
+        private @Nullable Output<Boolean> enabled;
+        private Output<Object> keyPolicy;
+        private @Nullable Output<KeySpec> keySpec;
+        private @Nullable Output<KeyUsage> keyUsage;
+        private @Nullable Output<Boolean> multiRegion;
+        private @Nullable Output<Integer> pendingWindowInDays;
+        private @Nullable Output<List<KeyTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableKeyRotation(@Nullable Input<Boolean> enableKeyRotation) {
+        public Builder enableKeyRotation(@Nullable Output<Boolean> enableKeyRotation) {
             this.enableKeyRotation = enableKeyRotation;
             return this;
         }
 
         public Builder enableKeyRotation(@Nullable Boolean enableKeyRotation) {
-            this.enableKeyRotation = Input.ofNullable(enableKeyRotation);
+            this.enableKeyRotation = Output.ofNullable(enableKeyRotation);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder keyPolicy(Input<Object> keyPolicy) {
+        public Builder keyPolicy(Output<Object> keyPolicy) {
             this.keyPolicy = Objects.requireNonNull(keyPolicy);
             return this;
         }
 
         public Builder keyPolicy(Object keyPolicy) {
-            this.keyPolicy = Input.of(Objects.requireNonNull(keyPolicy));
+            this.keyPolicy = Output.of(Objects.requireNonNull(keyPolicy));
             return this;
         }
 
-        public Builder keySpec(@Nullable Input<KeySpec> keySpec) {
+        public Builder keySpec(@Nullable Output<KeySpec> keySpec) {
             this.keySpec = keySpec;
             return this;
         }
 
         public Builder keySpec(@Nullable KeySpec keySpec) {
-            this.keySpec = Input.ofNullable(keySpec);
+            this.keySpec = Output.ofNullable(keySpec);
             return this;
         }
 
-        public Builder keyUsage(@Nullable Input<KeyUsage> keyUsage) {
+        public Builder keyUsage(@Nullable Output<KeyUsage> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
         public Builder keyUsage(@Nullable KeyUsage keyUsage) {
-            this.keyUsage = Input.ofNullable(keyUsage);
+            this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder multiRegion(@Nullable Input<Boolean> multiRegion) {
+        public Builder multiRegion(@Nullable Output<Boolean> multiRegion) {
             this.multiRegion = multiRegion;
             return this;
         }
 
         public Builder multiRegion(@Nullable Boolean multiRegion) {
-            this.multiRegion = Input.ofNullable(multiRegion);
+            this.multiRegion = Output.ofNullable(multiRegion);
             return this;
         }
 
-        public Builder pendingWindowInDays(@Nullable Input<Integer> pendingWindowInDays) {
+        public Builder pendingWindowInDays(@Nullable Output<Integer> pendingWindowInDays) {
             this.pendingWindowInDays = pendingWindowInDays;
             return this;
         }
 
         public Builder pendingWindowInDays(@Nullable Integer pendingWindowInDays) {
-            this.pendingWindowInDays = Input.ofNullable(pendingWindowInDays);
+            this.pendingWindowInDays = Output.ofNullable(pendingWindowInDays);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<KeyTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<KeyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<KeyTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public KeyArgs build() {

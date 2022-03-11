@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.enums.FeatureFlags;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -29,9 +29,9 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="flag", required=true)
-      private final Input<Either<String,FeatureFlags>> flag;
+      private final Output<Either<String,FeatureFlags>> flag;
 
-    public Input<Either<String,FeatureFlags>> getFlag() {
+    public Output<Either<String,FeatureFlags>> getFlag() {
         return this.flag;
     }
 
@@ -40,10 +40,10 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -51,25 +51,25 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public WebPubSubFeatureArgs(
-        Input<Either<String,FeatureFlags>> flag,
-        @Nullable Input<Map<String,String>> properties,
-        Input<String> value) {
+        Output<Either<String,FeatureFlags>> flag,
+        @Nullable Output<Map<String,String>> properties,
+        Output<String> value) {
         this.flag = Objects.requireNonNull(flag, "expected parameter 'flag' to be non-null");
         this.properties = properties;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private WebPubSubFeatureArgs() {
-        this.flag = Input.empty();
-        this.properties = Input.empty();
-        this.value = Input.empty();
+        this.flag = Output.empty();
+        this.properties = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,9 +81,9 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<Either<String,FeatureFlags>> flag;
-        private @Nullable Input<Map<String,String>> properties;
-        private Input<String> value;
+        private Output<Either<String,FeatureFlags>> flag;
+        private @Nullable Output<Map<String,String>> properties;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -96,33 +96,33 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
     	      this.value = defaults.value;
         }
 
-        public Builder flag(Input<Either<String,FeatureFlags>> flag) {
+        public Builder flag(Output<Either<String,FeatureFlags>> flag) {
             this.flag = Objects.requireNonNull(flag);
             return this;
         }
 
         public Builder flag(Either<String,FeatureFlags> flag) {
-            this.flag = Input.of(Objects.requireNonNull(flag));
+            this.flag = Output.of(Objects.requireNonNull(flag));
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public WebPubSubFeatureArgs build() {

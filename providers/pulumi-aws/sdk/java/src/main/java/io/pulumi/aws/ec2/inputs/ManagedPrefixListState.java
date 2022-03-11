@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListEntryGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="addressFamily")
-      private final @Nullable Input<String> addressFamily;
+      private final @Nullable Output<String> addressFamily;
 
-    public Input<String> getAddressFamily() {
-        return this.addressFamily == null ? Input.empty() : this.addressFamily;
+    public Output<String> getAddressFamily() {
+        return this.addressFamily == null ? Output.empty() : this.addressFamily;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="entries")
-      private final @Nullable Input<List<ManagedPrefixListEntryGetArgs>> entries;
+      private final @Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries;
 
-    public Input<List<ManagedPrefixListEntryGetArgs>> getEntries() {
-        return this.entries == null ? Input.empty() : this.entries;
+    public Output<List<ManagedPrefixListEntryGetArgs>> getEntries() {
+        return this.entries == null ? Output.empty() : this.entries;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxEntries")
-      private final @Nullable Input<Integer> maxEntries;
+      private final @Nullable Output<Integer> maxEntries;
 
-    public Input<Integer> getMaxEntries() {
-        return this.maxEntries == null ? Input.empty() : this.maxEntries;
+    public Output<Integer> getMaxEntries() {
+        return this.maxEntries == null ? Output.empty() : this.maxEntries;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -89,17 +89,17 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -107,22 +107,22 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ManagedPrefixListState(
-        @Nullable Input<String> addressFamily,
-        @Nullable Input<String> arn,
-        @Nullable Input<List<ManagedPrefixListEntryGetArgs>> entries,
-        @Nullable Input<Integer> maxEntries,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<String> addressFamily,
+        @Nullable Output<String> arn,
+        @Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries,
+        @Nullable Output<Integer> maxEntries,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Integer> version) {
         this.addressFamily = addressFamily;
         this.arn = arn;
         this.entries = entries;
@@ -135,15 +135,15 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
     }
 
     private ManagedPrefixListState() {
-        this.addressFamily = Input.empty();
-        this.arn = Input.empty();
-        this.entries = Input.empty();
-        this.maxEntries = Input.empty();
-        this.name = Input.empty();
-        this.ownerId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.version = Input.empty();
+        this.addressFamily = Output.empty();
+        this.arn = Output.empty();
+        this.entries = Output.empty();
+        this.maxEntries = Output.empty();
+        this.name = Output.empty();
+        this.ownerId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -155,15 +155,15 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressFamily;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<ManagedPrefixListEntryGetArgs>> entries;
-        private @Nullable Input<Integer> maxEntries;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<String> addressFamily;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries;
+        private @Nullable Output<Integer> maxEntries;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -182,93 +182,93 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
     	      this.version = defaults.version;
         }
 
-        public Builder addressFamily(@Nullable Input<String> addressFamily) {
+        public Builder addressFamily(@Nullable Output<String> addressFamily) {
             this.addressFamily = addressFamily;
             return this;
         }
 
         public Builder addressFamily(@Nullable String addressFamily) {
-            this.addressFamily = Input.ofNullable(addressFamily);
+            this.addressFamily = Output.ofNullable(addressFamily);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder entries(@Nullable Input<List<ManagedPrefixListEntryGetArgs>> entries) {
+        public Builder entries(@Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries) {
             this.entries = entries;
             return this;
         }
 
         public Builder entries(@Nullable List<ManagedPrefixListEntryGetArgs> entries) {
-            this.entries = Input.ofNullable(entries);
+            this.entries = Output.ofNullable(entries);
             return this;
         }
 
-        public Builder maxEntries(@Nullable Input<Integer> maxEntries) {
+        public Builder maxEntries(@Nullable Output<Integer> maxEntries) {
             this.maxEntries = maxEntries;
             return this;
         }
 
         public Builder maxEntries(@Nullable Integer maxEntries) {
-            this.maxEntries = Input.ofNullable(maxEntries);
+            this.maxEntries = Output.ofNullable(maxEntries);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ManagedPrefixListState build() {

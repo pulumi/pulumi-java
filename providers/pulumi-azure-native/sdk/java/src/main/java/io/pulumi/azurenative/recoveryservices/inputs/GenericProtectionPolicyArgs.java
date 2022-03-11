@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.SubProtectionPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-      private final Input<String> backupManagementType;
+      private final Output<String> backupManagementType;
 
-    public Input<String> getBackupManagementType() {
+    public Output<String> getBackupManagementType() {
         return this.backupManagementType;
     }
 
@@ -38,10 +38,10 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="fabricName")
-      private final @Nullable Input<String> fabricName;
+      private final @Nullable Output<String> fabricName;
 
-    public Input<String> getFabricName() {
-        return this.fabricName == null ? Input.empty() : this.fabricName;
+    public Output<String> getFabricName() {
+        return this.fabricName == null ? Output.empty() : this.fabricName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="protectedItemsCount")
-      private final @Nullable Input<Integer> protectedItemsCount;
+      private final @Nullable Output<Integer> protectedItemsCount;
 
-    public Input<Integer> getProtectedItemsCount() {
-        return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
+    public Output<Integer> getProtectedItemsCount() {
+        return this.protectedItemsCount == null ? Output.empty() : this.protectedItemsCount;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subProtectionPolicy")
-      private final @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy;
+      private final @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
-    public Input<List<SubProtectionPolicyArgs>> getSubProtectionPolicy() {
-        return this.subProtectionPolicy == null ? Input.empty() : this.subProtectionPolicy;
+    public Output<List<SubProtectionPolicyArgs>> getSubProtectionPolicy() {
+        return this.subProtectionPolicy == null ? Output.empty() : this.subProtectionPolicy;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     public GenericProtectionPolicyArgs(
-        Input<String> backupManagementType,
-        @Nullable Input<String> fabricName,
-        @Nullable Input<Integer> protectedItemsCount,
-        @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy,
-        @Nullable Input<String> timeZone) {
+        Output<String> backupManagementType,
+        @Nullable Output<String> fabricName,
+        @Nullable Output<Integer> protectedItemsCount,
+        @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy,
+        @Nullable Output<String> timeZone) {
         this.backupManagementType = Objects.requireNonNull(backupManagementType, "expected parameter 'backupManagementType' to be non-null");
         this.fabricName = fabricName;
         this.protectedItemsCount = protectedItemsCount;
@@ -91,11 +91,11 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private GenericProtectionPolicyArgs() {
-        this.backupManagementType = Input.empty();
-        this.fabricName = Input.empty();
-        this.protectedItemsCount = Input.empty();
-        this.subProtectionPolicy = Input.empty();
-        this.timeZone = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.fabricName = Output.empty();
+        this.protectedItemsCount = Output.empty();
+        this.subProtectionPolicy = Output.empty();
+        this.timeZone = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> backupManagementType;
-        private @Nullable Input<String> fabricName;
-        private @Nullable Input<Integer> protectedItemsCount;
-        private @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy;
-        private @Nullable Input<String> timeZone;
+        private Output<String> backupManagementType;
+        private @Nullable Output<String> fabricName;
+        private @Nullable Output<Integer> protectedItemsCount;
+        private @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
+        private @Nullable Output<String> timeZone;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder backupManagementType(Input<String> backupManagementType) {
+        public Builder backupManagementType(Output<String> backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Input.of(Objects.requireNonNull(backupManagementType));
+            this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
 
-        public Builder fabricName(@Nullable Input<String> fabricName) {
+        public Builder fabricName(@Nullable Output<String> fabricName) {
             this.fabricName = fabricName;
             return this;
         }
 
         public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Input.ofNullable(fabricName);
+            this.fabricName = Output.ofNullable(fabricName);
             return this;
         }
 
-        public Builder protectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Input.ofNullable(protectedItemsCount);
+            this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
             return this;
         }
 
-        public Builder subProtectionPolicy(@Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
+        public Builder subProtectionPolicy(@Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
 
         public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyArgs> subProtectionPolicy) {
-            this.subProtectionPolicy = Input.ofNullable(subProtectionPolicy);
+            this.subProtectionPolicy = Output.ofNullable(subProtectionPolicy);
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
         public GenericProtectionPolicyArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.AppImageConfigTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appImageConfigName")
-      private final @Nullable Input<String> appImageConfigName;
+      private final @Nullable Output<String> appImageConfigName;
 
-    public Input<String> getAppImageConfigName() {
-        return this.appImageConfigName == null ? Input.empty() : this.appImageConfigName;
+    public Output<String> getAppImageConfigName() {
+        return this.appImageConfigName == null ? Output.empty() : this.appImageConfigName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kernelGatewayImageConfig")
-      private final @Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
+      private final @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
-    public Input<AppImageConfigKernelGatewayImageConfigArgs> getKernelGatewayImageConfig() {
-        return this.kernelGatewayImageConfig == null ? Input.empty() : this.kernelGatewayImageConfig;
+    public Output<AppImageConfigKernelGatewayImageConfigArgs> getKernelGatewayImageConfig() {
+        return this.kernelGatewayImageConfig == null ? Output.empty() : this.kernelGatewayImageConfig;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<AppImageConfigTagArgs>> tags;
+      private final @Nullable Output<List<AppImageConfigTagArgs>> tags;
 
-    public Input<List<AppImageConfigTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AppImageConfigTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AppImageConfigArgs(
-        @Nullable Input<String> appImageConfigName,
-        @Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig,
-        @Nullable Input<List<AppImageConfigTagArgs>> tags) {
+        @Nullable Output<String> appImageConfigName,
+        @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig,
+        @Nullable Output<List<AppImageConfigTagArgs>> tags) {
         this.appImageConfigName = appImageConfigName;
         this.kernelGatewayImageConfig = kernelGatewayImageConfig;
         this.tags = tags;
     }
 
     private AppImageConfigArgs() {
-        this.appImageConfigName = Input.empty();
-        this.kernelGatewayImageConfig = Input.empty();
-        this.tags = Input.empty();
+        this.appImageConfigName = Output.empty();
+        this.kernelGatewayImageConfig = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appImageConfigName;
-        private @Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
-        private @Nullable Input<List<AppImageConfigTagArgs>> tags;
+        private @Nullable Output<String> appImageConfigName;
+        private @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
+        private @Nullable Output<List<AppImageConfigTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder appImageConfigName(@Nullable Input<String> appImageConfigName) {
+        public Builder appImageConfigName(@Nullable Output<String> appImageConfigName) {
             this.appImageConfigName = appImageConfigName;
             return this;
         }
 
         public Builder appImageConfigName(@Nullable String appImageConfigName) {
-            this.appImageConfigName = Input.ofNullable(appImageConfigName);
+            this.appImageConfigName = Output.ofNullable(appImageConfigName);
             return this;
         }
 
-        public Builder kernelGatewayImageConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(@Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
 
         public Builder kernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
-            this.kernelGatewayImageConfig = Input.ofNullable(kernelGatewayImageConfig);
+            this.kernelGatewayImageConfig = Output.ofNullable(kernelGatewayImageConfig);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AppImageConfigTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AppImageConfigTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AppImageConfigTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AppImageConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.BatchReleaseCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="batchGroupName", required=true)
-      private final Input<String> batchGroupName;
+      private final Output<String> batchGroupName;
 
-    public Input<String> getBatchGroupName() {
+    public Output<String> getBatchGroupName() {
         return this.batchGroupName;
     }
 
@@ -36,10 +36,10 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="changedTime")
-      private final @Nullable Input<String> changedTime;
+      private final @Nullable Output<String> changedTime;
 
-    public Input<String> getChangedTime() {
-        return this.changedTime == null ? Input.empty() : this.changedTime;
+    public Output<String> getChangedTime() {
+        return this.changedTime == null ? Output.empty() : this.changedTime;
     }
 
     /**
@@ -47,17 +47,17 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="releaseCriteria", required=true)
-      private final Input<BatchReleaseCriteriaArgs> releaseCriteria;
+      private final Output<BatchReleaseCriteriaArgs> releaseCriteria;
 
-    public Input<BatchReleaseCriteriaArgs> getReleaseCriteria() {
+    public Output<BatchReleaseCriteriaArgs> getReleaseCriteria() {
         return this.releaseCriteria;
     }
 
     public BatchConfigurationPropertiesArgs(
-        Input<String> batchGroupName,
-        @Nullable Input<String> changedTime,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<Object> metadata,
-        Input<BatchReleaseCriteriaArgs> releaseCriteria) {
+        Output<String> batchGroupName,
+        @Nullable Output<String> changedTime,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<Object> metadata,
+        Output<BatchReleaseCriteriaArgs> releaseCriteria) {
         this.batchGroupName = Objects.requireNonNull(batchGroupName, "expected parameter 'batchGroupName' to be non-null");
         this.changedTime = changedTime;
         this.createdTime = createdTime;
@@ -85,11 +85,11 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
     }
 
     private BatchConfigurationPropertiesArgs() {
-        this.batchGroupName = Input.empty();
-        this.changedTime = Input.empty();
-        this.createdTime = Input.empty();
-        this.metadata = Input.empty();
-        this.releaseCriteria = Input.empty();
+        this.batchGroupName = Output.empty();
+        this.changedTime = Output.empty();
+        this.createdTime = Output.empty();
+        this.metadata = Output.empty();
+        this.releaseCriteria = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> batchGroupName;
-        private @Nullable Input<String> changedTime;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<Object> metadata;
-        private Input<BatchReleaseCriteriaArgs> releaseCriteria;
+        private Output<String> batchGroupName;
+        private @Nullable Output<String> changedTime;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<Object> metadata;
+        private Output<BatchReleaseCriteriaArgs> releaseCriteria;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
     	      this.releaseCriteria = defaults.releaseCriteria;
         }
 
-        public Builder batchGroupName(Input<String> batchGroupName) {
+        public Builder batchGroupName(Output<String> batchGroupName) {
             this.batchGroupName = Objects.requireNonNull(batchGroupName);
             return this;
         }
 
         public Builder batchGroupName(String batchGroupName) {
-            this.batchGroupName = Input.of(Objects.requireNonNull(batchGroupName));
+            this.batchGroupName = Output.of(Objects.requireNonNull(batchGroupName));
             return this;
         }
 
-        public Builder changedTime(@Nullable Input<String> changedTime) {
+        public Builder changedTime(@Nullable Output<String> changedTime) {
             this.changedTime = changedTime;
             return this;
         }
 
         public Builder changedTime(@Nullable String changedTime) {
-            this.changedTime = Input.ofNullable(changedTime);
+            this.changedTime = Output.ofNullable(changedTime);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder releaseCriteria(Input<BatchReleaseCriteriaArgs> releaseCriteria) {
+        public Builder releaseCriteria(Output<BatchReleaseCriteriaArgs> releaseCriteria) {
             this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
             return this;
         }
 
         public Builder releaseCriteria(BatchReleaseCriteriaArgs releaseCriteria) {
-            this.releaseCriteria = Input.of(Objects.requireNonNull(releaseCriteria));
+            this.releaseCriteria = Output.of(Objects.requireNonNull(releaseCriteria));
             return this;
         }
         public BatchConfigurationPropertiesArgs build() {

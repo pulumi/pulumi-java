@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeStepExtractArchiveType;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="artifactId", required=true)
-      private final Input<String> artifactId;
+      private final Output<String> artifactId;
 
-    public Input<String> getArtifactId() {
+    public Output<String> getArtifactId() {
         return this.artifactId;
     }
 
@@ -35,10 +35,10 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<SoftwareRecipeStepExtractArchiveType> type;
+      private final Output<SoftwareRecipeStepExtractArchiveType> type;
 
-    public Input<SoftwareRecipeStepExtractArchiveType> getType() {
+    public Output<SoftwareRecipeStepExtractArchiveType> getType() {
         return this.type;
     }
 
     public SoftwareRecipeStepExtractArchiveArgs(
-        Input<String> artifactId,
-        @Nullable Input<String> destination,
-        Input<SoftwareRecipeStepExtractArchiveType> type) {
+        Output<String> artifactId,
+        @Nullable Output<String> destination,
+        Output<SoftwareRecipeStepExtractArchiveType> type) {
         this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
         this.destination = destination;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SoftwareRecipeStepExtractArchiveArgs() {
-        this.artifactId = Input.empty();
-        this.destination = Input.empty();
-        this.type = Input.empty();
+        this.artifactId = Output.empty();
+        this.destination = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> artifactId;
-        private @Nullable Input<String> destination;
-        private Input<SoftwareRecipeStepExtractArchiveType> type;
+        private Output<String> artifactId;
+        private @Nullable Output<String> destination;
+        private Output<SoftwareRecipeStepExtractArchiveType> type;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
     	      this.type = defaults.type;
         }
 
-        public Builder artifactId(Input<String> artifactId) {
+        public Builder artifactId(Output<String> artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
         public Builder artifactId(String artifactId) {
-            this.artifactId = Input.of(Objects.requireNonNull(artifactId));
+            this.artifactId = Output.of(Objects.requireNonNull(artifactId));
             return this;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder type(Input<SoftwareRecipeStepExtractArchiveType> type) {
+        public Builder type(Output<SoftwareRecipeStepExtractArchiveType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(SoftwareRecipeStepExtractArchiveType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SoftwareRecipeStepExtractArchiveArgs build() {

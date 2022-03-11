@@ -10,7 +10,6 @@ import io.pulumi.aws.appstream.outputs.StackAccessEndpoint;
 import io.pulumi.aws.appstream.outputs.StackApplicationSettings;
 import io.pulumi.aws.appstream.outputs.StackStorageConnector;
 import io.pulumi.aws.appstream.outputs.StackUserSetting;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -246,14 +245,14 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Stack(String name, @Nullable StackArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appstream/stack:Stack", name, args == null ? StackArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:appstream/stack:Stack", name, args == null ? StackArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Stack(String name, Input<String> id, @Nullable StackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Stack(String name, Output<String> id, @Nullable StackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:appstream/stack:Stack", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -269,7 +268,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Stack get(String name, Input<String> id, @Nullable StackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Stack get(String name, Output<String> id, @Nullable StackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Stack(name, id, state, options);
     }
 }

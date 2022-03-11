@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="instanceCount", required=true)
-      private final Input<Integer> instanceCount;
+      private final Output<Integer> instanceCount;
 
-    public Input<Integer> getInstanceCount() {
+    public Output<Integer> getInstanceCount() {
         return this.instanceCount;
     }
 
@@ -35,9 +35,9 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -46,10 +46,10 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="volumeKmsKeyId")
-      private final @Nullable Input<String> volumeKmsKeyId;
+      private final @Nullable Output<String> volumeKmsKeyId;
 
-    public Input<String> getVolumeKmsKeyId() {
-        return this.volumeKmsKeyId == null ? Input.empty() : this.volumeKmsKeyId;
+    public Output<String> getVolumeKmsKeyId() {
+        return this.volumeKmsKeyId == null ? Output.empty() : this.volumeKmsKeyId;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="volumeSizeInGB", required=true)
-      private final Input<Integer> volumeSizeInGB;
+      private final Output<Integer> volumeSizeInGB;
 
-    public Input<Integer> getVolumeSizeInGB() {
+    public Output<Integer> getVolumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 
     public ModelBiasJobDefinitionClusterConfigArgs(
-        Input<Integer> instanceCount,
-        Input<String> instanceType,
-        @Nullable Input<String> volumeKmsKeyId,
-        Input<Integer> volumeSizeInGB) {
+        Output<Integer> instanceCount,
+        Output<String> instanceType,
+        @Nullable Output<String> volumeKmsKeyId,
+        Output<Integer> volumeSizeInGB) {
         this.instanceCount = Objects.requireNonNull(instanceCount, "expected parameter 'instanceCount' to be non-null");
         this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
         this.volumeKmsKeyId = volumeKmsKeyId;
@@ -75,10 +75,10 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
     }
 
     private ModelBiasJobDefinitionClusterConfigArgs() {
-        this.instanceCount = Input.empty();
-        this.instanceType = Input.empty();
-        this.volumeKmsKeyId = Input.empty();
-        this.volumeSizeInGB = Input.empty();
+        this.instanceCount = Output.empty();
+        this.instanceType = Output.empty();
+        this.volumeKmsKeyId = Output.empty();
+        this.volumeSizeInGB = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<Integer> instanceCount;
-        private Input<String> instanceType;
-        private @Nullable Input<String> volumeKmsKeyId;
-        private Input<Integer> volumeSizeInGB;
+        private Output<Integer> instanceCount;
+        private Output<String> instanceType;
+        private @Nullable Output<String> volumeKmsKeyId;
+        private Output<Integer> volumeSizeInGB;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
     	      this.volumeSizeInGB = defaults.volumeSizeInGB;
         }
 
-        public Builder instanceCount(Input<Integer> instanceCount) {
+        public Builder instanceCount(Output<Integer> instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
 
         public Builder instanceCount(Integer instanceCount) {
-            this.instanceCount = Input.of(Objects.requireNonNull(instanceCount));
+            this.instanceCount = Output.of(Objects.requireNonNull(instanceCount));
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder volumeKmsKeyId(@Nullable Input<String> volumeKmsKeyId) {
+        public Builder volumeKmsKeyId(@Nullable Output<String> volumeKmsKeyId) {
             this.volumeKmsKeyId = volumeKmsKeyId;
             return this;
         }
 
         public Builder volumeKmsKeyId(@Nullable String volumeKmsKeyId) {
-            this.volumeKmsKeyId = Input.ofNullable(volumeKmsKeyId);
+            this.volumeKmsKeyId = Output.ofNullable(volumeKmsKeyId);
             return this;
         }
 
-        public Builder volumeSizeInGB(Input<Integer> volumeSizeInGB) {
+        public Builder volumeSizeInGB(Output<Integer> volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
 
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
-            this.volumeSizeInGB = Input.of(Objects.requireNonNull(volumeSizeInGB));
+            this.volumeSizeInGB = Output.of(Objects.requireNonNull(volumeSizeInGB));
             return this;
         }
         public ModelBiasJobDefinitionClusterConfigArgs build() {

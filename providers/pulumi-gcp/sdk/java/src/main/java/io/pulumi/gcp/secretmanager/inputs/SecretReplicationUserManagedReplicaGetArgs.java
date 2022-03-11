@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="customerManagedEncryption")
-      private final @Nullable Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption;
+      private final @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption;
 
-    public Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> getCustomerManagedEncryption() {
-        return this.customerManagedEncryption == null ? Input.empty() : this.customerManagedEncryption;
+    public Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> getCustomerManagedEncryption() {
+        return this.customerManagedEncryption == null ? Output.empty() : this.customerManagedEncryption;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
     public SecretReplicationUserManagedReplicaGetArgs(
-        @Nullable Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption,
-        Input<String> location) {
+        @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption,
+        Output<String> location) {
         this.customerManagedEncryption = customerManagedEncryption;
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
     }
 
     private SecretReplicationUserManagedReplicaGetArgs() {
-        this.customerManagedEncryption = Input.empty();
-        this.location = Input.empty();
+        this.customerManagedEncryption = Output.empty();
+        this.location = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption;
-        private Input<String> location;
+        private @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption;
+        private Output<String> location;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
     	      this.location = defaults.location;
         }
 
-        public Builder customerManagedEncryption(@Nullable Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption) {
+        public Builder customerManagedEncryption(@Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption) {
             this.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
         public Builder customerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs customerManagedEncryption) {
-            this.customerManagedEncryption = Input.ofNullable(customerManagedEncryption);
+            this.customerManagedEncryption = Output.ofNullable(customerManagedEncryption);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
         public SecretReplicationUserManagedReplicaGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class JobLoadTimePartitioningArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="expirationMs")
-      private final @Nullable Input<String> expirationMs;
+      private final @Nullable Output<String> expirationMs;
 
-    public Input<String> getExpirationMs() {
-        return this.expirationMs == null ? Input.empty() : this.expirationMs;
+    public Output<String> getExpirationMs() {
+        return this.expirationMs == null ? Output.empty() : this.expirationMs;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class JobLoadTimePartitioningArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class JobLoadTimePartitioningArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public JobLoadTimePartitioningArgs(
-        @Nullable Input<String> expirationMs,
-        @Nullable Input<String> field,
-        Input<String> type) {
+        @Nullable Output<String> expirationMs,
+        @Nullable Output<String> field,
+        Output<String> type) {
         this.expirationMs = expirationMs;
         this.field = field;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private JobLoadTimePartitioningArgs() {
-        this.expirationMs = Input.empty();
-        this.field = Input.empty();
-        this.type = Input.empty();
+        this.expirationMs = Output.empty();
+        this.field = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class JobLoadTimePartitioningArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expirationMs;
-        private @Nullable Input<String> field;
-        private Input<String> type;
+        private @Nullable Output<String> expirationMs;
+        private @Nullable Output<String> field;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class JobLoadTimePartitioningArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder expirationMs(@Nullable Input<String> expirationMs) {
+        public Builder expirationMs(@Nullable Output<String> expirationMs) {
             this.expirationMs = expirationMs;
             return this;
         }
 
         public Builder expirationMs(@Nullable String expirationMs) {
-            this.expirationMs = Input.ofNullable(expirationMs);
+            this.expirationMs = Output.ofNullable(expirationMs);
             return this;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public JobLoadTimePartitioningArgs build() {

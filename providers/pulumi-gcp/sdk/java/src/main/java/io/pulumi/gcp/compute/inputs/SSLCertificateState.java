@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="certificateId")
-      private final @Nullable Input<Integer> certificateId;
+      private final @Nullable Output<Integer> certificateId;
 
-    public Input<Integer> getCertificateId() {
-        return this.certificateId == null ? Input.empty() : this.certificateId;
+    public Output<Integer> getCertificateId() {
+        return this.certificateId == null ? Output.empty() : this.certificateId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<String> privateKey;
+      private final @Nullable Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<String> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -120,22 +120,22 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     public SSLCertificateState(
-        @Nullable Input<String> certificate,
-        @Nullable Input<Integer> certificateId,
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> privateKey,
-        @Nullable Input<String> project,
-        @Nullable Input<String> selfLink) {
+        @Nullable Output<String> certificate,
+        @Nullable Output<Integer> certificateId,
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> privateKey,
+        @Nullable Output<String> project,
+        @Nullable Output<String> selfLink) {
         this.certificate = certificate;
         this.certificateId = certificateId;
         this.creationTimestamp = creationTimestamp;
@@ -148,15 +148,15 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     }
 
     private SSLCertificateState() {
-        this.certificate = Input.empty();
-        this.certificateId = Input.empty();
-        this.creationTimestamp = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.privateKey = Input.empty();
-        this.project = Input.empty();
-        this.selfLink = Input.empty();
+        this.certificate = Output.empty();
+        this.certificateId = Output.empty();
+        this.creationTimestamp = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.privateKey = Output.empty();
+        this.project = Output.empty();
+        this.selfLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -168,15 +168,15 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificate;
-        private @Nullable Input<Integer> certificateId;
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> privateKey;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> selfLink;
+        private @Nullable Output<String> certificate;
+        private @Nullable Output<Integer> certificateId;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> privateKey;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> selfLink;
 
         public Builder() {
     	      // Empty
@@ -195,93 +195,93 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder certificateId(@Nullable Input<Integer> certificateId) {
+        public Builder certificateId(@Nullable Output<Integer> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
         public Builder certificateId(@Nullable Integer certificateId) {
-            this.certificateId = Input.ofNullable(certificateId);
+            this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder privateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
         public SSLCertificateState build() {

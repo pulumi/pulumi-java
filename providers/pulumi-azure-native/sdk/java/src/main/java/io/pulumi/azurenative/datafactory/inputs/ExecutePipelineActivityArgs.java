@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.PipelineReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -30,10 +30,10 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -63,10 +63,10 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,Object>> parameters;
+      private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Input<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,Object>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pipeline", required=true)
-      private final Input<PipelineReferenceArgs> pipeline;
+      private final Output<PipelineReferenceArgs> pipeline;
 
-    public Input<PipelineReferenceArgs> getPipeline() {
+    public Output<PipelineReferenceArgs> getPipeline() {
         return this.pipeline;
     }
 
@@ -86,9 +86,9 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -97,10 +97,10 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     /**
@@ -108,21 +108,21 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="waitOnCompletion")
-      private final @Nullable Input<Boolean> waitOnCompletion;
+      private final @Nullable Output<Boolean> waitOnCompletion;
 
-    public Input<Boolean> getWaitOnCompletion() {
-        return this.waitOnCompletion == null ? Input.empty() : this.waitOnCompletion;
+    public Output<Boolean> getWaitOnCompletion() {
+        return this.waitOnCompletion == null ? Output.empty() : this.waitOnCompletion;
     }
 
     public ExecutePipelineActivityArgs(
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        Input<String> name,
-        @Nullable Input<Map<String,Object>> parameters,
-        Input<PipelineReferenceArgs> pipeline,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties,
-        @Nullable Input<Boolean> waitOnCompletion) {
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        Output<String> name,
+        @Nullable Output<Map<String,Object>> parameters,
+        Output<PipelineReferenceArgs> pipeline,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties,
+        @Nullable Output<Boolean> waitOnCompletion) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -134,14 +134,14 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
     }
 
     private ExecutePipelineActivityArgs() {
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.pipeline = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
-        this.waitOnCompletion = Input.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.pipeline = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
+        this.waitOnCompletion = Output.empty();
     }
 
     public static Builder builder() {
@@ -153,14 +153,14 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private Input<String> name;
-        private @Nullable Input<Map<String,Object>> parameters;
-        private Input<PipelineReferenceArgs> pipeline;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
-        private @Nullable Input<Boolean> waitOnCompletion;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private Output<String> name;
+        private @Nullable Output<Map<String,Object>> parameters;
+        private Output<PipelineReferenceArgs> pipeline;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private @Nullable Output<Boolean> waitOnCompletion;
 
         public Builder() {
     	      // Empty
@@ -178,83 +178,83 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
     	      this.waitOnCompletion = defaults.waitOnCompletion;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder pipeline(Input<PipelineReferenceArgs> pipeline) {
+        public Builder pipeline(Output<PipelineReferenceArgs> pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
 
         public Builder pipeline(PipelineReferenceArgs pipeline) {
-            this.pipeline = Input.of(Objects.requireNonNull(pipeline));
+            this.pipeline = Output.of(Objects.requireNonNull(pipeline));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
 
-        public Builder waitOnCompletion(@Nullable Input<Boolean> waitOnCompletion) {
+        public Builder waitOnCompletion(@Nullable Output<Boolean> waitOnCompletion) {
             this.waitOnCompletion = waitOnCompletion;
             return this;
         }
 
         public Builder waitOnCompletion(@Nullable Boolean waitOnCompletion) {
-            this.waitOnCompletion = Input.ofNullable(waitOnCompletion);
+            this.waitOnCompletion = Output.ofNullable(waitOnCompletion);
             return this;
         }
         public ExecutePipelineActivityArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Integer> capacity;
+      private final @Nullable Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Integer> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleGroup")
-      private final @Nullable Input<RuleGroupRuleGroupGetArgs> ruleGroup;
+      private final @Nullable Output<RuleGroupRuleGroupGetArgs> ruleGroup;
 
-    public Input<RuleGroupRuleGroupGetArgs> getRuleGroup() {
-        return this.ruleGroup == null ? Input.empty() : this.ruleGroup;
+    public Output<RuleGroupRuleGroupGetArgs> getRuleGroup() {
+        return this.ruleGroup == null ? Output.empty() : this.ruleGroup;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<String> rules;
+      private final @Nullable Output<String> rules;
 
-    public Input<String> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<String> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateToken")
-      private final @Nullable Input<String> updateToken;
+      private final @Nullable Output<String> updateToken;
 
-    public Input<String> getUpdateToken() {
-        return this.updateToken == null ? Input.empty() : this.updateToken;
+    public Output<String> getUpdateToken() {
+        return this.updateToken == null ? Output.empty() : this.updateToken;
     }
 
     public RuleGroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Integer> capacity,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<RuleGroupRuleGroupGetArgs> ruleGroup,
-        @Nullable Input<String> rules,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> type,
-        @Nullable Input<String> updateToken) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Integer> capacity,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<RuleGroupRuleGroupGetArgs> ruleGroup,
+        @Nullable Output<String> rules,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> type,
+        @Nullable Output<String> updateToken) {
         this.arn = arn;
         this.capacity = capacity;
         this.description = description;
@@ -151,16 +151,16 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleGroupState() {
-        this.arn = Input.empty();
-        this.capacity = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.ruleGroup = Input.empty();
-        this.rules = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.type = Input.empty();
-        this.updateToken = Input.empty();
+        this.arn = Output.empty();
+        this.capacity = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.ruleGroup = Output.empty();
+        this.rules = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.type = Output.empty();
+        this.updateToken = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Integer> capacity;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<RuleGroupRuleGroupGetArgs> ruleGroup;
-        private @Nullable Input<String> rules;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> updateToken;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Integer> capacity;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RuleGroupRuleGroupGetArgs> ruleGroup;
+        private @Nullable Output<String> rules;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> updateToken;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.updateToken = defaults.updateToken;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder capacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ruleGroup(@Nullable Input<RuleGroupRuleGroupGetArgs> ruleGroup) {
+        public Builder ruleGroup(@Nullable Output<RuleGroupRuleGroupGetArgs> ruleGroup) {
             this.ruleGroup = ruleGroup;
             return this;
         }
 
         public Builder ruleGroup(@Nullable RuleGroupRuleGroupGetArgs ruleGroup) {
-            this.ruleGroup = Input.ofNullable(ruleGroup);
+            this.ruleGroup = Output.ofNullable(ruleGroup);
             return this;
         }
 
-        public Builder rules(@Nullable Input<String> rules) {
+        public Builder rules(@Nullable Output<String> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable String rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder updateToken(@Nullable Input<String> updateToken) {
+        public Builder updateToken(@Nullable Output<String> updateToken) {
             this.updateToken = updateToken;
             return this;
         }
 
         public Builder updateToken(@Nullable String updateToken) {
-            this.updateToken = Input.ofNullable(updateToken);
+            this.updateToken = Output.ofNullable(updateToken);
             return this;
         }
         public RuleGroupState build() {

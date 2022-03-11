@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.EcKeyTypeArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.RsaKeyTypeArgs;
@@ -24,10 +24,10 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ellipticCurve")
-      private final @Nullable Input<EcKeyTypeArgs> ellipticCurve;
+      private final @Nullable Output<EcKeyTypeArgs> ellipticCurve;
 
-    public Input<EcKeyTypeArgs> getEllipticCurve() {
-        return this.ellipticCurve == null ? Input.empty() : this.ellipticCurve;
+    public Output<EcKeyTypeArgs> getEllipticCurve() {
+        return this.ellipticCurve == null ? Output.empty() : this.ellipticCurve;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rsa")
-      private final @Nullable Input<RsaKeyTypeArgs> rsa;
+      private final @Nullable Output<RsaKeyTypeArgs> rsa;
 
-    public Input<RsaKeyTypeArgs> getRsa() {
-        return this.rsa == null ? Input.empty() : this.rsa;
+    public Output<RsaKeyTypeArgs> getRsa() {
+        return this.rsa == null ? Output.empty() : this.rsa;
     }
 
     public AllowedKeyTypeArgs(
-        @Nullable Input<EcKeyTypeArgs> ellipticCurve,
-        @Nullable Input<RsaKeyTypeArgs> rsa) {
+        @Nullable Output<EcKeyTypeArgs> ellipticCurve,
+        @Nullable Output<RsaKeyTypeArgs> rsa) {
         this.ellipticCurve = ellipticCurve;
         this.rsa = rsa;
     }
 
     private AllowedKeyTypeArgs() {
-        this.ellipticCurve = Input.empty();
-        this.rsa = Input.empty();
+        this.ellipticCurve = Output.empty();
+        this.rsa = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EcKeyTypeArgs> ellipticCurve;
-        private @Nullable Input<RsaKeyTypeArgs> rsa;
+        private @Nullable Output<EcKeyTypeArgs> ellipticCurve;
+        private @Nullable Output<RsaKeyTypeArgs> rsa;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rsa = defaults.rsa;
         }
 
-        public Builder ellipticCurve(@Nullable Input<EcKeyTypeArgs> ellipticCurve) {
+        public Builder ellipticCurve(@Nullable Output<EcKeyTypeArgs> ellipticCurve) {
             this.ellipticCurve = ellipticCurve;
             return this;
         }
 
         public Builder ellipticCurve(@Nullable EcKeyTypeArgs ellipticCurve) {
-            this.ellipticCurve = Input.ofNullable(ellipticCurve);
+            this.ellipticCurve = Output.ofNullable(ellipticCurve);
             return this;
         }
 
-        public Builder rsa(@Nullable Input<RsaKeyTypeArgs> rsa) {
+        public Builder rsa(@Nullable Output<RsaKeyTypeArgs> rsa) {
             this.rsa = rsa;
             return this;
         }
 
         public Builder rsa(@Nullable RsaKeyTypeArgs rsa) {
-            this.rsa = Input.ofNullable(rsa);
+            this.rsa = Output.ofNullable(rsa);
             return this;
         }
         public AllowedKeyTypeArgs build() {

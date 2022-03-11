@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends;
 import io.pulumi.googlenative.compute_alpha.enums.BackendServiceConnectionTrackingPolicyTrackingMode;
@@ -26,10 +26,10 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="connectionPersistenceOnUnhealthyBackends")
-      private final @Nullable Input<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
+      private final @Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
 
-    public Input<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> getConnectionPersistenceOnUnhealthyBackends() {
-        return this.connectionPersistenceOnUnhealthyBackends == null ? Input.empty() : this.connectionPersistenceOnUnhealthyBackends;
+    public Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> getConnectionPersistenceOnUnhealthyBackends() {
+        return this.connectionPersistenceOnUnhealthyBackends == null ? Output.empty() : this.connectionPersistenceOnUnhealthyBackends;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enableStrongAffinity")
-      private final @Nullable Input<Boolean> enableStrongAffinity;
+      private final @Nullable Output<Boolean> enableStrongAffinity;
 
-    public Input<Boolean> getEnableStrongAffinity() {
-        return this.enableStrongAffinity == null ? Input.empty() : this.enableStrongAffinity;
+    public Output<Boolean> getEnableStrongAffinity() {
+        return this.enableStrongAffinity == null ? Output.empty() : this.enableStrongAffinity;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="idleTimeoutSec")
-      private final @Nullable Input<Integer> idleTimeoutSec;
+      private final @Nullable Output<Integer> idleTimeoutSec;
 
-    public Input<Integer> getIdleTimeoutSec() {
-        return this.idleTimeoutSec == null ? Input.empty() : this.idleTimeoutSec;
+    public Output<Integer> getIdleTimeoutSec() {
+        return this.idleTimeoutSec == null ? Output.empty() : this.idleTimeoutSec;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="trackingMode")
-      private final @Nullable Input<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
+      private final @Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
 
-    public Input<BackendServiceConnectionTrackingPolicyTrackingMode> getTrackingMode() {
-        return this.trackingMode == null ? Input.empty() : this.trackingMode;
+    public Output<BackendServiceConnectionTrackingPolicyTrackingMode> getTrackingMode() {
+        return this.trackingMode == null ? Output.empty() : this.trackingMode;
     }
 
     public BackendServiceConnectionTrackingPolicyArgs(
-        @Nullable Input<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends,
-        @Nullable Input<Boolean> enableStrongAffinity,
-        @Nullable Input<Integer> idleTimeoutSec,
-        @Nullable Input<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode) {
+        @Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends,
+        @Nullable Output<Boolean> enableStrongAffinity,
+        @Nullable Output<Integer> idleTimeoutSec,
+        @Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode) {
         this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
         this.enableStrongAffinity = enableStrongAffinity;
         this.idleTimeoutSec = idleTimeoutSec;
@@ -77,10 +77,10 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     }
 
     private BackendServiceConnectionTrackingPolicyArgs() {
-        this.connectionPersistenceOnUnhealthyBackends = Input.empty();
-        this.enableStrongAffinity = Input.empty();
-        this.idleTimeoutSec = Input.empty();
-        this.trackingMode = Input.empty();
+        this.connectionPersistenceOnUnhealthyBackends = Output.empty();
+        this.enableStrongAffinity = Output.empty();
+        this.idleTimeoutSec = Output.empty();
+        this.trackingMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
-        private @Nullable Input<Boolean> enableStrongAffinity;
-        private @Nullable Input<Integer> idleTimeoutSec;
-        private @Nullable Input<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
+        private @Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
+        private @Nullable Output<Boolean> enableStrongAffinity;
+        private @Nullable Output<Integer> idleTimeoutSec;
+        private @Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     	      this.trackingMode = defaults.trackingMode;
         }
 
-        public Builder connectionPersistenceOnUnhealthyBackends(@Nullable Input<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends) {
+        public Builder connectionPersistenceOnUnhealthyBackends(@Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
 
         public Builder connectionPersistenceOnUnhealthyBackends(@Nullable BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends connectionPersistenceOnUnhealthyBackends) {
-            this.connectionPersistenceOnUnhealthyBackends = Input.ofNullable(connectionPersistenceOnUnhealthyBackends);
+            this.connectionPersistenceOnUnhealthyBackends = Output.ofNullable(connectionPersistenceOnUnhealthyBackends);
             return this;
         }
 
-        public Builder enableStrongAffinity(@Nullable Input<Boolean> enableStrongAffinity) {
+        public Builder enableStrongAffinity(@Nullable Output<Boolean> enableStrongAffinity) {
             this.enableStrongAffinity = enableStrongAffinity;
             return this;
         }
 
         public Builder enableStrongAffinity(@Nullable Boolean enableStrongAffinity) {
-            this.enableStrongAffinity = Input.ofNullable(enableStrongAffinity);
+            this.enableStrongAffinity = Output.ofNullable(enableStrongAffinity);
             return this;
         }
 
-        public Builder idleTimeoutSec(@Nullable Input<Integer> idleTimeoutSec) {
+        public Builder idleTimeoutSec(@Nullable Output<Integer> idleTimeoutSec) {
             this.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
 
         public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
-            this.idleTimeoutSec = Input.ofNullable(idleTimeoutSec);
+            this.idleTimeoutSec = Output.ofNullable(idleTimeoutSec);
             return this;
         }
 
-        public Builder trackingMode(@Nullable Input<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode) {
+        public Builder trackingMode(@Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode) {
             this.trackingMode = trackingMode;
             return this;
         }
 
         public Builder trackingMode(@Nullable BackendServiceConnectionTrackingPolicyTrackingMode trackingMode) {
-            this.trackingMode = Input.ofNullable(trackingMode);
+            this.trackingMode = Output.ofNullable(trackingMode);
             return this;
         }
         public BackendServiceConnectionTrackingPolicyArgs build() {

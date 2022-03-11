@@ -7,7 +7,7 @@ import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointIscseArgs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointManagementArgs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointNfArgs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointSmbArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="iscses")
-      private final @Nullable Input<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses;
+      private final @Nullable Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses;
 
-    public Input<List<OntapStorageVirtualMachineEndpointIscseArgs>> getIscses() {
-        return this.iscses == null ? Input.empty() : this.iscses;
+    public Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> getIscses() {
+        return this.iscses == null ? Output.empty() : this.iscses;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="managements")
-      private final @Nullable Input<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements;
+      private final @Nullable Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements;
 
-    public Input<List<OntapStorageVirtualMachineEndpointManagementArgs>> getManagements() {
-        return this.managements == null ? Input.empty() : this.managements;
+    public Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> getManagements() {
+        return this.managements == null ? Output.empty() : this.managements;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="nfs")
-      private final @Nullable Input<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs;
+      private final @Nullable Output<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs;
 
-    public Input<List<OntapStorageVirtualMachineEndpointNfArgs>> getNfs() {
-        return this.nfs == null ? Input.empty() : this.nfs;
+    public Output<List<OntapStorageVirtualMachineEndpointNfArgs>> getNfs() {
+        return this.nfs == null ? Output.empty() : this.nfs;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="smbs")
-      private final @Nullable Input<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs;
+      private final @Nullable Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs;
 
-    public Input<List<OntapStorageVirtualMachineEndpointSmbArgs>> getSmbs() {
-        return this.smbs == null ? Input.empty() : this.smbs;
+    public Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> getSmbs() {
+        return this.smbs == null ? Output.empty() : this.smbs;
     }
 
     public OntapStorageVirtualMachineEndpointArgs(
-        @Nullable Input<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses,
-        @Nullable Input<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements,
-        @Nullable Input<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs,
-        @Nullable Input<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs) {
+        @Nullable Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses,
+        @Nullable Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements,
+        @Nullable Output<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs,
+        @Nullable Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs) {
         this.iscses = iscses;
         this.managements = managements;
         this.nfs = nfs;
@@ -74,10 +74,10 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
     }
 
     private OntapStorageVirtualMachineEndpointArgs() {
-        this.iscses = Input.empty();
-        this.managements = Input.empty();
-        this.nfs = Input.empty();
-        this.smbs = Input.empty();
+        this.iscses = Output.empty();
+        this.managements = Output.empty();
+        this.nfs = Output.empty();
+        this.smbs = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses;
-        private @Nullable Input<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements;
-        private @Nullable Input<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs;
-        private @Nullable Input<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs;
+        private @Nullable Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses;
+        private @Nullable Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements;
+        private @Nullable Output<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs;
+        private @Nullable Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
     	      this.smbs = defaults.smbs;
         }
 
-        public Builder iscses(@Nullable Input<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses) {
+        public Builder iscses(@Nullable Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses) {
             this.iscses = iscses;
             return this;
         }
 
         public Builder iscses(@Nullable List<OntapStorageVirtualMachineEndpointIscseArgs> iscses) {
-            this.iscses = Input.ofNullable(iscses);
+            this.iscses = Output.ofNullable(iscses);
             return this;
         }
 
-        public Builder managements(@Nullable Input<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements) {
+        public Builder managements(@Nullable Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements) {
             this.managements = managements;
             return this;
         }
 
         public Builder managements(@Nullable List<OntapStorageVirtualMachineEndpointManagementArgs> managements) {
-            this.managements = Input.ofNullable(managements);
+            this.managements = Output.ofNullable(managements);
             return this;
         }
 
-        public Builder nfs(@Nullable Input<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs) {
+        public Builder nfs(@Nullable Output<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs) {
             this.nfs = nfs;
             return this;
         }
 
         public Builder nfs(@Nullable List<OntapStorageVirtualMachineEndpointNfArgs> nfs) {
-            this.nfs = Input.ofNullable(nfs);
+            this.nfs = Output.ofNullable(nfs);
             return this;
         }
 
-        public Builder smbs(@Nullable Input<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs) {
+        public Builder smbs(@Nullable Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs) {
             this.smbs = smbs;
             return this;
         }
 
         public Builder smbs(@Nullable List<OntapStorageVirtualMachineEndpointSmbArgs> smbs) {
-            this.smbs = Input.ofNullable(smbs);
+            this.smbs = Output.ofNullable(smbs);
             return this;
         }
         public OntapStorageVirtualMachineEndpointArgs build() {

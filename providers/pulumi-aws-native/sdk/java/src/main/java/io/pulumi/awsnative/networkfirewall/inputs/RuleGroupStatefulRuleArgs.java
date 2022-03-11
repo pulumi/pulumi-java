@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupStatefulRuleAction;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupHeaderArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRuleOptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,39 +17,39 @@ public final class RuleGroupStatefulRuleArgs extends io.pulumi.resources.Resourc
     public static final RuleGroupStatefulRuleArgs Empty = new RuleGroupStatefulRuleArgs();
 
     @InputImport(name="action", required=true)
-      private final Input<RuleGroupStatefulRuleAction> action;
+      private final Output<RuleGroupStatefulRuleAction> action;
 
-    public Input<RuleGroupStatefulRuleAction> getAction() {
+    public Output<RuleGroupStatefulRuleAction> getAction() {
         return this.action;
     }
 
     @InputImport(name="header", required=true)
-      private final Input<RuleGroupHeaderArgs> header;
+      private final Output<RuleGroupHeaderArgs> header;
 
-    public Input<RuleGroupHeaderArgs> getHeader() {
+    public Output<RuleGroupHeaderArgs> getHeader() {
         return this.header;
     }
 
     @InputImport(name="ruleOptions", required=true)
-      private final Input<List<RuleGroupRuleOptionArgs>> ruleOptions;
+      private final Output<List<RuleGroupRuleOptionArgs>> ruleOptions;
 
-    public Input<List<RuleGroupRuleOptionArgs>> getRuleOptions() {
+    public Output<List<RuleGroupRuleOptionArgs>> getRuleOptions() {
         return this.ruleOptions;
     }
 
     public RuleGroupStatefulRuleArgs(
-        Input<RuleGroupStatefulRuleAction> action,
-        Input<RuleGroupHeaderArgs> header,
-        Input<List<RuleGroupRuleOptionArgs>> ruleOptions) {
+        Output<RuleGroupStatefulRuleAction> action,
+        Output<RuleGroupHeaderArgs> header,
+        Output<List<RuleGroupRuleOptionArgs>> ruleOptions) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.header = Objects.requireNonNull(header, "expected parameter 'header' to be non-null");
         this.ruleOptions = Objects.requireNonNull(ruleOptions, "expected parameter 'ruleOptions' to be non-null");
     }
 
     private RuleGroupStatefulRuleArgs() {
-        this.action = Input.empty();
-        this.header = Input.empty();
-        this.ruleOptions = Input.empty();
+        this.action = Output.empty();
+        this.header = Output.empty();
+        this.ruleOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class RuleGroupStatefulRuleArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<RuleGroupStatefulRuleAction> action;
-        private Input<RuleGroupHeaderArgs> header;
-        private Input<List<RuleGroupRuleOptionArgs>> ruleOptions;
+        private Output<RuleGroupStatefulRuleAction> action;
+        private Output<RuleGroupHeaderArgs> header;
+        private Output<List<RuleGroupRuleOptionArgs>> ruleOptions;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class RuleGroupStatefulRuleArgs extends io.pulumi.resources.Resourc
     	      this.ruleOptions = defaults.ruleOptions;
         }
 
-        public Builder action(Input<RuleGroupStatefulRuleAction> action) {
+        public Builder action(Output<RuleGroupStatefulRuleAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(RuleGroupStatefulRuleAction action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder header(Input<RuleGroupHeaderArgs> header) {
+        public Builder header(Output<RuleGroupHeaderArgs> header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
         public Builder header(RuleGroupHeaderArgs header) {
-            this.header = Input.of(Objects.requireNonNull(header));
+            this.header = Output.of(Objects.requireNonNull(header));
             return this;
         }
 
-        public Builder ruleOptions(Input<List<RuleGroupRuleOptionArgs>> ruleOptions) {
+        public Builder ruleOptions(Output<List<RuleGroupRuleOptionArgs>> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }
 
         public Builder ruleOptions(List<RuleGroupRuleOptionArgs> ruleOptions) {
-            this.ruleOptions = Input.of(Objects.requireNonNull(ruleOptions));
+            this.ruleOptions = Output.of(Objects.requireNonNull(ruleOptions));
             return this;
         }
         public RuleGroupStatefulRuleArgs build() {

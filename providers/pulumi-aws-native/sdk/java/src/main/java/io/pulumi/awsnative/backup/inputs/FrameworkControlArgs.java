@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.awsnative.backup.inputs.FrameworkControlControlScopePropertiesArgs;
 import io.pulumi.awsnative.backup.inputs.FrameworkControlInputParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="controlInputParameters")
-      private final @Nullable Input<List<FrameworkControlInputParameterArgs>> controlInputParameters;
+      private final @Nullable Output<List<FrameworkControlInputParameterArgs>> controlInputParameters;
 
-    public Input<List<FrameworkControlInputParameterArgs>> getControlInputParameters() {
-        return this.controlInputParameters == null ? Input.empty() : this.controlInputParameters;
+    public Output<List<FrameworkControlInputParameterArgs>> getControlInputParameters() {
+        return this.controlInputParameters == null ? Output.empty() : this.controlInputParameters;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="controlName", required=true)
-      private final Input<String> controlName;
+      private final Output<String> controlName;
 
-    public Input<String> getControlName() {
+    public Output<String> getControlName() {
         return this.controlName;
     }
 
@@ -44,25 +44,25 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="controlScope")
-      private final @Nullable Input<FrameworkControlControlScopePropertiesArgs> controlScope;
+      private final @Nullable Output<FrameworkControlControlScopePropertiesArgs> controlScope;
 
-    public Input<FrameworkControlControlScopePropertiesArgs> getControlScope() {
-        return this.controlScope == null ? Input.empty() : this.controlScope;
+    public Output<FrameworkControlControlScopePropertiesArgs> getControlScope() {
+        return this.controlScope == null ? Output.empty() : this.controlScope;
     }
 
     public FrameworkControlArgs(
-        @Nullable Input<List<FrameworkControlInputParameterArgs>> controlInputParameters,
-        Input<String> controlName,
-        @Nullable Input<FrameworkControlControlScopePropertiesArgs> controlScope) {
+        @Nullable Output<List<FrameworkControlInputParameterArgs>> controlInputParameters,
+        Output<String> controlName,
+        @Nullable Output<FrameworkControlControlScopePropertiesArgs> controlScope) {
         this.controlInputParameters = controlInputParameters;
         this.controlName = Objects.requireNonNull(controlName, "expected parameter 'controlName' to be non-null");
         this.controlScope = controlScope;
     }
 
     private FrameworkControlArgs() {
-        this.controlInputParameters = Input.empty();
-        this.controlName = Input.empty();
-        this.controlScope = Input.empty();
+        this.controlInputParameters = Output.empty();
+        this.controlName = Output.empty();
+        this.controlScope = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FrameworkControlInputParameterArgs>> controlInputParameters;
-        private Input<String> controlName;
-        private @Nullable Input<FrameworkControlControlScopePropertiesArgs> controlScope;
+        private @Nullable Output<List<FrameworkControlInputParameterArgs>> controlInputParameters;
+        private Output<String> controlName;
+        private @Nullable Output<FrameworkControlControlScopePropertiesArgs> controlScope;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
     	      this.controlScope = defaults.controlScope;
         }
 
-        public Builder controlInputParameters(@Nullable Input<List<FrameworkControlInputParameterArgs>> controlInputParameters) {
+        public Builder controlInputParameters(@Nullable Output<List<FrameworkControlInputParameterArgs>> controlInputParameters) {
             this.controlInputParameters = controlInputParameters;
             return this;
         }
 
         public Builder controlInputParameters(@Nullable List<FrameworkControlInputParameterArgs> controlInputParameters) {
-            this.controlInputParameters = Input.ofNullable(controlInputParameters);
+            this.controlInputParameters = Output.ofNullable(controlInputParameters);
             return this;
         }
 
-        public Builder controlName(Input<String> controlName) {
+        public Builder controlName(Output<String> controlName) {
             this.controlName = Objects.requireNonNull(controlName);
             return this;
         }
 
         public Builder controlName(String controlName) {
-            this.controlName = Input.of(Objects.requireNonNull(controlName));
+            this.controlName = Output.of(Objects.requireNonNull(controlName));
             return this;
         }
 
-        public Builder controlScope(@Nullable Input<FrameworkControlControlScopePropertiesArgs> controlScope) {
+        public Builder controlScope(@Nullable Output<FrameworkControlControlScopePropertiesArgs> controlScope) {
             this.controlScope = controlScope;
             return this;
         }
 
         public Builder controlScope(@Nullable FrameworkControlControlScopePropertiesArgs controlScope) {
-            this.controlScope = Input.ofNullable(controlScope);
+            this.controlScope = Output.ofNullable(controlScope);
             return this;
         }
         public FrameworkControlArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.marketplace;
 
 import io.pulumi.azurenative.marketplace.inputs.PlanArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iconFileUris")
-      private final @Nullable Input<Map<String,String>> iconFileUris;
+      private final @Nullable Output<Map<String,String>> iconFileUris;
 
-    public Input<Map<String,String>> getIconFileUris() {
-        return this.iconFileUris == null ? Input.empty() : this.iconFileUris;
+    public Output<Map<String,String>> getIconFileUris() {
+        return this.iconFileUris == null ? Output.empty() : this.iconFileUris;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="offerId")
-      private final @Nullable Input<String> offerId;
+      private final @Nullable Output<String> offerId;
 
-    public Input<String> getOfferId() {
-        return this.offerId == null ? Input.empty() : this.offerId;
+    public Output<String> getOfferId() {
+        return this.offerId == null ? Output.empty() : this.offerId;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="plans")
-      private final @Nullable Input<List<PlanArgs>> plans;
+      private final @Nullable Output<List<PlanArgs>> plans;
 
-    public Input<List<PlanArgs>> getPlans() {
-        return this.plans == null ? Input.empty() : this.plans;
+    public Output<List<PlanArgs>> getPlans() {
+        return this.plans == null ? Output.empty() : this.plans;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateStoreId", required=true)
-      private final Input<String> privateStoreId;
+      private final Output<String> privateStoreId;
 
-    public Input<String> getPrivateStoreId() {
+    public Output<String> getPrivateStoreId() {
         return this.privateStoreId;
     }
 
@@ -78,10 +78,10 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="specificPlanIdsLimitation")
-      private final @Nullable Input<List<String>> specificPlanIdsLimitation;
+      private final @Nullable Output<List<String>> specificPlanIdsLimitation;
 
-    public Input<List<String>> getSpecificPlanIdsLimitation() {
-        return this.specificPlanIdsLimitation == null ? Input.empty() : this.specificPlanIdsLimitation;
+    public Output<List<String>> getSpecificPlanIdsLimitation() {
+        return this.specificPlanIdsLimitation == null ? Output.empty() : this.specificPlanIdsLimitation;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updateSuppressedDueIdempotence")
-      private final @Nullable Input<Boolean> updateSuppressedDueIdempotence;
+      private final @Nullable Output<Boolean> updateSuppressedDueIdempotence;
 
-    public Input<Boolean> getUpdateSuppressedDueIdempotence() {
-        return this.updateSuppressedDueIdempotence == null ? Input.empty() : this.updateSuppressedDueIdempotence;
+    public Output<Boolean> getUpdateSuppressedDueIdempotence() {
+        return this.updateSuppressedDueIdempotence == null ? Output.empty() : this.updateSuppressedDueIdempotence;
     }
 
     public PrivateStoreOfferArgs(
-        @Nullable Input<String> eTag,
-        @Nullable Input<Map<String,String>> iconFileUris,
-        @Nullable Input<String> offerId,
-        @Nullable Input<List<PlanArgs>> plans,
-        Input<String> privateStoreId,
-        @Nullable Input<List<String>> specificPlanIdsLimitation,
-        @Nullable Input<Boolean> updateSuppressedDueIdempotence) {
+        @Nullable Output<String> eTag,
+        @Nullable Output<Map<String,String>> iconFileUris,
+        @Nullable Output<String> offerId,
+        @Nullable Output<List<PlanArgs>> plans,
+        Output<String> privateStoreId,
+        @Nullable Output<List<String>> specificPlanIdsLimitation,
+        @Nullable Output<Boolean> updateSuppressedDueIdempotence) {
         this.eTag = eTag;
         this.iconFileUris = iconFileUris;
         this.offerId = offerId;
@@ -113,13 +113,13 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PrivateStoreOfferArgs() {
-        this.eTag = Input.empty();
-        this.iconFileUris = Input.empty();
-        this.offerId = Input.empty();
-        this.plans = Input.empty();
-        this.privateStoreId = Input.empty();
-        this.specificPlanIdsLimitation = Input.empty();
-        this.updateSuppressedDueIdempotence = Input.empty();
+        this.eTag = Output.empty();
+        this.iconFileUris = Output.empty();
+        this.offerId = Output.empty();
+        this.plans = Output.empty();
+        this.privateStoreId = Output.empty();
+        this.specificPlanIdsLimitation = Output.empty();
+        this.updateSuppressedDueIdempotence = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eTag;
-        private @Nullable Input<Map<String,String>> iconFileUris;
-        private @Nullable Input<String> offerId;
-        private @Nullable Input<List<PlanArgs>> plans;
-        private Input<String> privateStoreId;
-        private @Nullable Input<List<String>> specificPlanIdsLimitation;
-        private @Nullable Input<Boolean> updateSuppressedDueIdempotence;
+        private @Nullable Output<String> eTag;
+        private @Nullable Output<Map<String,String>> iconFileUris;
+        private @Nullable Output<String> offerId;
+        private @Nullable Output<List<PlanArgs>> plans;
+        private Output<String> privateStoreId;
+        private @Nullable Output<List<String>> specificPlanIdsLimitation;
+        private @Nullable Output<Boolean> updateSuppressedDueIdempotence;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
     	      this.updateSuppressedDueIdempotence = defaults.updateSuppressedDueIdempotence;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder iconFileUris(@Nullable Input<Map<String,String>> iconFileUris) {
+        public Builder iconFileUris(@Nullable Output<Map<String,String>> iconFileUris) {
             this.iconFileUris = iconFileUris;
             return this;
         }
 
         public Builder iconFileUris(@Nullable Map<String,String> iconFileUris) {
-            this.iconFileUris = Input.ofNullable(iconFileUris);
+            this.iconFileUris = Output.ofNullable(iconFileUris);
             return this;
         }
 
-        public Builder offerId(@Nullable Input<String> offerId) {
+        public Builder offerId(@Nullable Output<String> offerId) {
             this.offerId = offerId;
             return this;
         }
 
         public Builder offerId(@Nullable String offerId) {
-            this.offerId = Input.ofNullable(offerId);
+            this.offerId = Output.ofNullable(offerId);
             return this;
         }
 
-        public Builder plans(@Nullable Input<List<PlanArgs>> plans) {
+        public Builder plans(@Nullable Output<List<PlanArgs>> plans) {
             this.plans = plans;
             return this;
         }
 
         public Builder plans(@Nullable List<PlanArgs> plans) {
-            this.plans = Input.ofNullable(plans);
+            this.plans = Output.ofNullable(plans);
             return this;
         }
 
-        public Builder privateStoreId(Input<String> privateStoreId) {
+        public Builder privateStoreId(Output<String> privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
         }
 
         public Builder privateStoreId(String privateStoreId) {
-            this.privateStoreId = Input.of(Objects.requireNonNull(privateStoreId));
+            this.privateStoreId = Output.of(Objects.requireNonNull(privateStoreId));
             return this;
         }
 
-        public Builder specificPlanIdsLimitation(@Nullable Input<List<String>> specificPlanIdsLimitation) {
+        public Builder specificPlanIdsLimitation(@Nullable Output<List<String>> specificPlanIdsLimitation) {
             this.specificPlanIdsLimitation = specificPlanIdsLimitation;
             return this;
         }
 
         public Builder specificPlanIdsLimitation(@Nullable List<String> specificPlanIdsLimitation) {
-            this.specificPlanIdsLimitation = Input.ofNullable(specificPlanIdsLimitation);
+            this.specificPlanIdsLimitation = Output.ofNullable(specificPlanIdsLimitation);
             return this;
         }
 
-        public Builder updateSuppressedDueIdempotence(@Nullable Input<Boolean> updateSuppressedDueIdempotence) {
+        public Builder updateSuppressedDueIdempotence(@Nullable Output<Boolean> updateSuppressedDueIdempotence) {
             this.updateSuppressedDueIdempotence = updateSuppressedDueIdempotence;
             return this;
         }
 
         public Builder updateSuppressedDueIdempotence(@Nullable Boolean updateSuppressedDueIdempotence) {
-            this.updateSuppressedDueIdempotence = Input.ofNullable(updateSuppressedDueIdempotence);
+            this.updateSuppressedDueIdempotence = Output.ofNullable(updateSuppressedDueIdempotence);
             return this;
         }
         public PrivateStoreOfferArgs build() {

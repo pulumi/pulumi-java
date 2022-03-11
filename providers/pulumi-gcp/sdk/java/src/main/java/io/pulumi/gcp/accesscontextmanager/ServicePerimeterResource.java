@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.accesscontextmanager;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -119,14 +118,14 @@ public class ServicePerimeterResource extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ServicePerimeterResource(String name, ServicePerimeterResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/servicePerimeterResource:ServicePerimeterResource", name, args == null ? ServicePerimeterResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:accesscontextmanager/servicePerimeterResource:ServicePerimeterResource", name, args == null ? ServicePerimeterResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServicePerimeterResource(String name, Input<String> id, @Nullable ServicePerimeterResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServicePerimeterResource(String name, Output<String> id, @Nullable ServicePerimeterResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:accesscontextmanager/servicePerimeterResource:ServicePerimeterResource", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -142,7 +141,7 @@ public class ServicePerimeterResource extends io.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServicePerimeterResource get(String name, Input<String> id, @Nullable ServicePerimeterResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServicePerimeterResource get(String name, Output<String> id, @Nullable ServicePerimeterResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServicePerimeterResource(name, id, state, options);
     }
 }

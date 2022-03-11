@@ -6,7 +6,6 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.BlobContainerImmutabilityPolicyArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -156,29 +155,29 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public BlobContainerImmutabilityPolicy(String name, BlobContainerImmutabilityPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:BlobContainerImmutabilityPolicy", name, args == null ? BlobContainerImmutabilityPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storage:BlobContainerImmutabilityPolicy", name, args == null ? BlobContainerImmutabilityPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BlobContainerImmutabilityPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BlobContainerImmutabilityPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:BlobContainerImmutabilityPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storage/v20180201:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20180301preview:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20180701:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20181101:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20190401:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20190601:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20200801preview:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210101:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210201:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210401:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210601:BlobContainerImmutabilityPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210801:BlobContainerImmutabilityPolicy").build())
+                Output.of(Alias.builder().setType("azure-native:storage/v20180201:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20180301preview:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20180701:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20181101:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20190401:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20190601:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20200801preview:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210101:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210201:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210401:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210601:BlobContainerImmutabilityPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210801:BlobContainerImmutabilityPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -192,7 +191,7 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BlobContainerImmutabilityPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BlobContainerImmutabilityPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BlobContainerImmutabilityPolicy(name, id, options);
     }
 }

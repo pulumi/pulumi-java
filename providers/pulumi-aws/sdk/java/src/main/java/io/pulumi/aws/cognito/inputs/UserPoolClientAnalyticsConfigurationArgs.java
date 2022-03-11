@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="applicationArn")
-      private final @Nullable Input<String> applicationArn;
+      private final @Nullable Output<String> applicationArn;
 
-    public Input<String> getApplicationArn() {
-        return this.applicationArn == null ? Input.empty() : this.applicationArn;
+    public Output<String> getApplicationArn() {
+        return this.applicationArn == null ? Output.empty() : this.applicationArn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="externalId")
-      private final @Nullable Input<String> externalId;
+      private final @Nullable Output<String> externalId;
 
-    public Input<String> getExternalId() {
-        return this.externalId == null ? Input.empty() : this.externalId;
+    public Output<String> getExternalId() {
+        return this.externalId == null ? Output.empty() : this.externalId;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="userDataShared")
-      private final @Nullable Input<Boolean> userDataShared;
+      private final @Nullable Output<Boolean> userDataShared;
 
-    public Input<Boolean> getUserDataShared() {
-        return this.userDataShared == null ? Input.empty() : this.userDataShared;
+    public Output<Boolean> getUserDataShared() {
+        return this.userDataShared == null ? Output.empty() : this.userDataShared;
     }
 
     public UserPoolClientAnalyticsConfigurationArgs(
-        @Nullable Input<String> applicationArn,
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> externalId,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<Boolean> userDataShared) {
+        @Nullable Output<String> applicationArn,
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> externalId,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<Boolean> userDataShared) {
         this.applicationArn = applicationArn;
         this.applicationId = applicationId;
         this.externalId = externalId;
@@ -84,11 +84,11 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends io.pulumi.re
     }
 
     private UserPoolClientAnalyticsConfigurationArgs() {
-        this.applicationArn = Input.empty();
-        this.applicationId = Input.empty();
-        this.externalId = Input.empty();
-        this.roleArn = Input.empty();
-        this.userDataShared = Input.empty();
+        this.applicationArn = Output.empty();
+        this.applicationId = Output.empty();
+        this.externalId = Output.empty();
+        this.roleArn = Output.empty();
+        this.userDataShared = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationArn;
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> externalId;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<Boolean> userDataShared;
+        private @Nullable Output<String> applicationArn;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> externalId;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<Boolean> userDataShared;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends io.pulumi.re
     	      this.userDataShared = defaults.userDataShared;
         }
 
-        public Builder applicationArn(@Nullable Input<String> applicationArn) {
+        public Builder applicationArn(@Nullable Output<String> applicationArn) {
             this.applicationArn = applicationArn;
             return this;
         }
 
         public Builder applicationArn(@Nullable String applicationArn) {
-            this.applicationArn = Input.ofNullable(applicationArn);
+            this.applicationArn = Output.ofNullable(applicationArn);
             return this;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder externalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Input.ofNullable(externalId);
+            this.externalId = Output.ofNullable(externalId);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder userDataShared(@Nullable Input<Boolean> userDataShared) {
+        public Builder userDataShared(@Nullable Output<Boolean> userDataShared) {
             this.userDataShared = userDataShared;
             return this;
         }
 
         public Builder userDataShared(@Nullable Boolean userDataShared) {
-            this.userDataShared = Input.ofNullable(userDataShared);
+            this.userDataShared = Output.ofNullable(userDataShared);
             return this;
         }
         public UserPoolClientAnalyticsConfigurationArgs build() {

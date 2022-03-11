@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight;
 import io.pulumi.awsnative.quicksight.inputs.ThemeConfigurationArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThemeArgs Empty = new ThemeArgs();
 
     @InputImport(name="awsAccountId", required=true)
-      private final Input<String> awsAccountId;
+      private final Output<String> awsAccountId;
 
-    public Input<String> getAwsAccountId() {
+    public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
 
@@ -33,17 +33,17 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseThemeId")
-      private final @Nullable Input<String> baseThemeId;
+      private final @Nullable Output<String> baseThemeId;
 
-    public Input<String> getBaseThemeId() {
-        return this.baseThemeId == null ? Input.empty() : this.baseThemeId;
+    public Output<String> getBaseThemeId() {
+        return this.baseThemeId == null ? Output.empty() : this.baseThemeId;
     }
 
     @InputImport(name="configuration")
-      private final @Nullable Input<ThemeConfigurationArgs> configuration;
+      private final @Nullable Output<ThemeConfigurationArgs> configuration;
 
-    public Input<ThemeConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<ThemeConfigurationArgs> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<ThemeResourcePermissionArgs>> permissions;
+      private final @Nullable Output<List<ThemeResourcePermissionArgs>> permissions;
 
-    public Input<List<ThemeResourcePermissionArgs>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<ThemeResourcePermissionArgs>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -75,16 +75,16 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ThemeTagArgs>> tags;
+      private final @Nullable Output<List<ThemeTagArgs>> tags;
 
-    public Input<List<ThemeTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ThemeTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="themeId", required=true)
-      private final Input<String> themeId;
+      private final Output<String> themeId;
 
-    public Input<String> getThemeId() {
+    public Output<String> getThemeId() {
         return this.themeId;
     }
 
@@ -96,21 +96,21 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionDescription")
-      private final @Nullable Input<String> versionDescription;
+      private final @Nullable Output<String> versionDescription;
 
-    public Input<String> getVersionDescription() {
-        return this.versionDescription == null ? Input.empty() : this.versionDescription;
+    public Output<String> getVersionDescription() {
+        return this.versionDescription == null ? Output.empty() : this.versionDescription;
     }
 
     public ThemeArgs(
-        Input<String> awsAccountId,
-        @Nullable Input<String> baseThemeId,
-        @Nullable Input<ThemeConfigurationArgs> configuration,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ThemeResourcePermissionArgs>> permissions,
-        @Nullable Input<List<ThemeTagArgs>> tags,
-        Input<String> themeId,
-        @Nullable Input<String> versionDescription) {
+        Output<String> awsAccountId,
+        @Nullable Output<String> baseThemeId,
+        @Nullable Output<ThemeConfigurationArgs> configuration,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ThemeResourcePermissionArgs>> permissions,
+        @Nullable Output<List<ThemeTagArgs>> tags,
+        Output<String> themeId,
+        @Nullable Output<String> versionDescription) {
         this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
         this.baseThemeId = baseThemeId;
         this.configuration = configuration;
@@ -122,14 +122,14 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThemeArgs() {
-        this.awsAccountId = Input.empty();
-        this.baseThemeId = Input.empty();
-        this.configuration = Input.empty();
-        this.name = Input.empty();
-        this.permissions = Input.empty();
-        this.tags = Input.empty();
-        this.themeId = Input.empty();
-        this.versionDescription = Input.empty();
+        this.awsAccountId = Output.empty();
+        this.baseThemeId = Output.empty();
+        this.configuration = Output.empty();
+        this.name = Output.empty();
+        this.permissions = Output.empty();
+        this.tags = Output.empty();
+        this.themeId = Output.empty();
+        this.versionDescription = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> awsAccountId;
-        private @Nullable Input<String> baseThemeId;
-        private @Nullable Input<ThemeConfigurationArgs> configuration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ThemeResourcePermissionArgs>> permissions;
-        private @Nullable Input<List<ThemeTagArgs>> tags;
-        private Input<String> themeId;
-        private @Nullable Input<String> versionDescription;
+        private Output<String> awsAccountId;
+        private @Nullable Output<String> baseThemeId;
+        private @Nullable Output<ThemeConfigurationArgs> configuration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ThemeResourcePermissionArgs>> permissions;
+        private @Nullable Output<List<ThemeTagArgs>> tags;
+        private Output<String> themeId;
+        private @Nullable Output<String> versionDescription;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionDescription = defaults.versionDescription;
         }
 
-        public Builder awsAccountId(Input<String> awsAccountId) {
+        public Builder awsAccountId(Output<String> awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Input.of(Objects.requireNonNull(awsAccountId));
+            this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
 
-        public Builder baseThemeId(@Nullable Input<String> baseThemeId) {
+        public Builder baseThemeId(@Nullable Output<String> baseThemeId) {
             this.baseThemeId = baseThemeId;
             return this;
         }
 
         public Builder baseThemeId(@Nullable String baseThemeId) {
-            this.baseThemeId = Input.ofNullable(baseThemeId);
+            this.baseThemeId = Output.ofNullable(baseThemeId);
             return this;
         }
 
-        public Builder configuration(@Nullable Input<ThemeConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Output<ThemeConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable ThemeConfigurationArgs configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<List<ThemeResourcePermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Output<List<ThemeResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<ThemeResourcePermissionArgs> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ThemeTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ThemeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ThemeTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder themeId(Input<String> themeId) {
+        public Builder themeId(Output<String> themeId) {
             this.themeId = Objects.requireNonNull(themeId);
             return this;
         }
 
         public Builder themeId(String themeId) {
-            this.themeId = Input.of(Objects.requireNonNull(themeId));
+            this.themeId = Output.of(Objects.requireNonNull(themeId));
             return this;
         }
 
-        public Builder versionDescription(@Nullable Input<String> versionDescription) {
+        public Builder versionDescription(@Nullable Output<String> versionDescription) {
             this.versionDescription = versionDescription;
             return this;
         }
 
         public Builder versionDescription(@Nullable String versionDescription) {
-            this.versionDescription = Input.ofNullable(versionDescription);
+            this.versionDescription = Output.ofNullable(versionDescription);
             return this;
         }
         public ThemeArgs build() {

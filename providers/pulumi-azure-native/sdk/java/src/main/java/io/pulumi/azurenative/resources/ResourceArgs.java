@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resources;
 import io.pulumi.azurenative.resources.inputs.IdentityArgs;
 import io.pulumi.azurenative.resources.inputs.PlanArgs;
 import io.pulumi.azurenative.resources.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedBy")
-      private final @Nullable Input<String> managedBy;
+      private final @Nullable Output<String> managedBy;
 
-    public Input<String> getManagedBy() {
-        return this.managedBy == null ? Input.empty() : this.managedBy;
+    public Output<String> getManagedBy() {
+        return this.managedBy == null ? Output.empty() : this.managedBy;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResourcePath", required=true)
-      private final Input<String> parentResourcePath;
+      private final Output<String> parentResourcePath;
 
-    public Input<String> getParentResourcePath() {
+    public Output<String> getParentResourcePath() {
         return this.parentResourcePath;
     }
 
@@ -79,10 +79,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plan")
-      private final @Nullable Input<PlanArgs> plan;
+      private final @Nullable Output<PlanArgs> plan;
 
-    public Input<PlanArgs> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<PlanArgs> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Object> properties;
+      private final @Nullable Output<Object> properties;
 
-    public Input<Object> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Object> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -112,10 +112,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceProviderNamespace", required=true)
-      private final Input<String> resourceProviderNamespace;
+      private final Output<String> resourceProviderNamespace;
 
-    public Input<String> getResourceProviderNamespace() {
+    public Output<String> getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -134,9 +134,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
@@ -145,10 +145,10 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -156,26 +156,26 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ResourceArgs(
-        @Nullable Input<IdentityArgs> identity,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<String> managedBy,
-        Input<String> parentResourcePath,
-        @Nullable Input<PlanArgs> plan,
-        @Nullable Input<Object> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        Input<String> resourceProviderNamespace,
-        Input<String> resourceType,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<IdentityArgs> identity,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<String> managedBy,
+        Output<String> parentResourcePath,
+        @Nullable Output<PlanArgs> plan,
+        @Nullable Output<Object> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        Output<String> resourceProviderNamespace,
+        Output<String> resourceType,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.identity = identity;
         this.kind = kind;
         this.location = location;
@@ -192,19 +192,19 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceArgs() {
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.managedBy = Input.empty();
-        this.parentResourcePath = Input.empty();
-        this.plan = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.resourceProviderNamespace = Input.empty();
-        this.resourceType = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.managedBy = Output.empty();
+        this.parentResourcePath = Output.empty();
+        this.plan = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.resourceProviderNamespace = Output.empty();
+        this.resourceType = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -216,19 +216,19 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IdentityArgs> identity;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managedBy;
-        private Input<String> parentResourcePath;
-        private @Nullable Input<PlanArgs> plan;
-        private @Nullable Input<Object> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private Input<String> resourceProviderNamespace;
-        private Input<String> resourceType;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<IdentityArgs> identity;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managedBy;
+        private Output<String> parentResourcePath;
+        private @Nullable Output<PlanArgs> plan;
+        private @Nullable Output<Object> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private Output<String> resourceProviderNamespace;
+        private Output<String> resourceType;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -251,133 +251,133 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder identity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Output<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
         public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Input.ofNullable(managedBy);
+            this.managedBy = Output.ofNullable(managedBy);
             return this;
         }
 
-        public Builder parentResourcePath(Input<String> parentResourcePath) {
+        public Builder parentResourcePath(Output<String> parentResourcePath) {
             this.parentResourcePath = Objects.requireNonNull(parentResourcePath);
             return this;
         }
 
         public Builder parentResourcePath(String parentResourcePath) {
-            this.parentResourcePath = Input.of(Objects.requireNonNull(parentResourcePath));
+            this.parentResourcePath = Output.of(Objects.requireNonNull(parentResourcePath));
             return this;
         }
 
-        public Builder plan(@Nullable Input<PlanArgs> plan) {
+        public Builder plan(@Nullable Output<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable PlanArgs plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Object properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder resourceProviderNamespace(Input<String> resourceProviderNamespace) {
+        public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
 
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
-            this.resourceProviderNamespace = Input.of(Objects.requireNonNull(resourceProviderNamespace));
+            this.resourceProviderNamespace = Output.of(Objects.requireNonNull(resourceProviderNamespace));
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ResourceArgs build() {

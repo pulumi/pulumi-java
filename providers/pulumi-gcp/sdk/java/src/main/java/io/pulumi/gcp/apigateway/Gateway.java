@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.apigateway;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -203,14 +202,14 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Gateway(String name, GatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/gateway:Gateway", name, args == null ? GatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:apigateway/gateway:Gateway", name, args == null ? GatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Gateway(String name, Input<String> id, @Nullable GatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Gateway(String name, Output<String> id, @Nullable GatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:apigateway/gateway:Gateway", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -226,7 +225,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Gateway get(String name, Input<String> id, @Nullable GatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Gateway get(String name, Output<String> id, @Nullable GatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Gateway(name, id, state, options);
     }
 }

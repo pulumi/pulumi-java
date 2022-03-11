@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allocationWeight")
-      private final @Nullable Input<Integer> allocationWeight;
+      private final @Nullable Output<Integer> allocationWeight;
 
-    public Input<Integer> getAllocationWeight() {
-        return this.allocationWeight == null ? Input.empty() : this.allocationWeight;
+    public Output<Integer> getAllocationWeight() {
+        return this.allocationWeight == null ? Output.empty() : this.allocationWeight;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="applyAllocationPolicy")
-      private final @Nullable Input<Boolean> applyAllocationPolicy;
+      private final @Nullable Output<Boolean> applyAllocationPolicy;
 
-    public Input<Boolean> getApplyAllocationPolicy() {
-        return this.applyAllocationPolicy == null ? Input.empty() : this.applyAllocationPolicy;
+    public Output<Boolean> getApplyAllocationPolicy() {
+        return this.applyAllocationPolicy == null ? Output.empty() : this.applyAllocationPolicy;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="connectionString", required=true)
-      private final Input<String> connectionString;
+      private final Output<String> connectionString;
 
-    public Input<String> getConnectionString() {
+    public Output<String> getConnectionString() {
         return this.connectionString;
     }
 
@@ -58,17 +58,17 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
     public IotHubDefinitionDescriptionArgs(
-        @Nullable Input<Integer> allocationWeight,
-        @Nullable Input<Boolean> applyAllocationPolicy,
-        Input<String> connectionString,
-        Input<String> location) {
+        @Nullable Output<Integer> allocationWeight,
+        @Nullable Output<Boolean> applyAllocationPolicy,
+        Output<String> connectionString,
+        Output<String> location) {
         this.allocationWeight = allocationWeight;
         this.applyAllocationPolicy = applyAllocationPolicy;
         this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
@@ -76,10 +76,10 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
     }
 
     private IotHubDefinitionDescriptionArgs() {
-        this.allocationWeight = Input.empty();
-        this.applyAllocationPolicy = Input.empty();
-        this.connectionString = Input.empty();
-        this.location = Input.empty();
+        this.allocationWeight = Output.empty();
+        this.applyAllocationPolicy = Output.empty();
+        this.connectionString = Output.empty();
+        this.location = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> allocationWeight;
-        private @Nullable Input<Boolean> applyAllocationPolicy;
-        private Input<String> connectionString;
-        private Input<String> location;
+        private @Nullable Output<Integer> allocationWeight;
+        private @Nullable Output<Boolean> applyAllocationPolicy;
+        private Output<String> connectionString;
+        private Output<String> location;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
     	      this.location = defaults.location;
         }
 
-        public Builder allocationWeight(@Nullable Input<Integer> allocationWeight) {
+        public Builder allocationWeight(@Nullable Output<Integer> allocationWeight) {
             this.allocationWeight = allocationWeight;
             return this;
         }
 
         public Builder allocationWeight(@Nullable Integer allocationWeight) {
-            this.allocationWeight = Input.ofNullable(allocationWeight);
+            this.allocationWeight = Output.ofNullable(allocationWeight);
             return this;
         }
 
-        public Builder applyAllocationPolicy(@Nullable Input<Boolean> applyAllocationPolicy) {
+        public Builder applyAllocationPolicy(@Nullable Output<Boolean> applyAllocationPolicy) {
             this.applyAllocationPolicy = applyAllocationPolicy;
             return this;
         }
 
         public Builder applyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
-            this.applyAllocationPolicy = Input.ofNullable(applyAllocationPolicy);
+            this.applyAllocationPolicy = Output.ofNullable(applyAllocationPolicy);
             return this;
         }
 
-        public Builder connectionString(Input<String> connectionString) {
+        public Builder connectionString(Output<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
         public Builder connectionString(String connectionString) {
-            this.connectionString = Input.of(Objects.requireNonNull(connectionString));
+            this.connectionString = Output.of(Objects.requireNonNull(connectionString));
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
         public IotHubDefinitionDescriptionArgs build() {

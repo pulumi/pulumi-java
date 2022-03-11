@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.EventConnectionArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionState;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParameters;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,14 +154,14 @@ public class EventConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventConnection(String name, EventConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/eventConnection:EventConnection", name, args == null ? EventConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudwatch/eventConnection:EventConnection", name, args == null ? EventConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventConnection(String name, Input<String> id, @Nullable EventConnectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventConnection(String name, Output<String> id, @Nullable EventConnectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudwatch/eventConnection:EventConnection", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -178,7 +177,7 @@ public class EventConnection extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventConnection get(String name, Input<String> id, @Nullable EventConnectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventConnection get(String name, Output<String> id, @Nullable EventConnectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventConnection(name, id, state, options);
     }
 }

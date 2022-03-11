@@ -31,8 +31,8 @@ class UrnTest {
     @Test
     void testCreateUrnInputOutput() {
         var urn = Urn.create(
-                Input.of("name"),
-                Input.of("type"),
+                Output.of("name"),
+                Output.of("type"),
                 null,
                 null,
                 null,
@@ -46,8 +46,8 @@ class UrnTest {
     @Test
     void testCreateUrnString() {
         var urn = Urn.create(
-                Input.of("name"),
-                Input.of("type"),
+                Output.of("name"),
+                Output.of("type"),
                 null,
                 null,
                 null,

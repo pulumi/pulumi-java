@@ -6,7 +6,6 @@ package io.pulumi.aws.dms;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.dms.EventSubscriptionArgs;
 import io.pulumi.aws.dms.inputs.EventSubscriptionState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -197,14 +196,14 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventSubscription(String name, EventSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dms/eventSubscription:EventSubscription", name, args == null ? EventSubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:dms/eventSubscription:EventSubscription", name, args == null ? EventSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EventSubscription(String name, Input<String> id, @Nullable EventSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EventSubscription(String name, Output<String> id, @Nullable EventSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:dms/eventSubscription:EventSubscription", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -220,7 +219,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EventSubscription get(String name, Input<String> id, @Nullable EventSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EventSubscription get(String name, Output<String> id, @Nullable EventSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventSubscription(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ipTagType")
-      private final @Nullable Input<String> ipTagType;
+      private final @Nullable Output<String> ipTagType;
 
-    public Input<String> getIpTagType() {
-        return this.ipTagType == null ? Input.empty() : this.ipTagType;
+    public Output<String> getIpTagType() {
+        return this.ipTagType == null ? Output.empty() : this.ipTagType;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     public VirtualMachineIpTagArgs(
-        @Nullable Input<String> ipTagType,
-        @Nullable Input<String> tag) {
+        @Nullable Output<String> ipTagType,
+        @Nullable Output<String> tag) {
         this.ipTagType = ipTagType;
         this.tag = tag;
     }
 
     private VirtualMachineIpTagArgs() {
-        this.ipTagType = Input.empty();
-        this.tag = Input.empty();
+        this.ipTagType = Output.empty();
+        this.tag = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipTagType;
-        private @Nullable Input<String> tag;
+        private @Nullable Output<String> ipTagType;
+        private @Nullable Output<String> tag;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
     	      this.tag = defaults.tag;
         }
 
-        public Builder ipTagType(@Nullable Input<String> ipTagType) {
+        public Builder ipTagType(@Nullable Output<String> ipTagType) {
             this.ipTagType = ipTagType;
             return this;
         }
 
         public Builder ipTagType(@Nullable String ipTagType) {
-            this.ipTagType = Input.ofNullable(ipTagType);
+            this.ipTagType = Output.ofNullable(ipTagType);
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
         public VirtualMachineIpTagArgs build() {

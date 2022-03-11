@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleClusterConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class MonitoringScheduleMonitoringResourcesArgs extends io.pulumi.r
     public static final MonitoringScheduleMonitoringResourcesArgs Empty = new MonitoringScheduleMonitoringResourcesArgs();
 
     @InputImport(name="clusterConfig", required=true)
-      private final Input<MonitoringScheduleClusterConfigArgs> clusterConfig;
+      private final Output<MonitoringScheduleClusterConfigArgs> clusterConfig;
 
-    public Input<MonitoringScheduleClusterConfigArgs> getClusterConfig() {
+    public Output<MonitoringScheduleClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig;
     }
 
-    public MonitoringScheduleMonitoringResourcesArgs(Input<MonitoringScheduleClusterConfigArgs> clusterConfig) {
+    public MonitoringScheduleMonitoringResourcesArgs(Output<MonitoringScheduleClusterConfigArgs> clusterConfig) {
         this.clusterConfig = Objects.requireNonNull(clusterConfig, "expected parameter 'clusterConfig' to be non-null");
     }
 
     private MonitoringScheduleMonitoringResourcesArgs() {
-        this.clusterConfig = Input.empty();
+        this.clusterConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class MonitoringScheduleMonitoringResourcesArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<MonitoringScheduleClusterConfigArgs> clusterConfig;
+        private Output<MonitoringScheduleClusterConfigArgs> clusterConfig;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class MonitoringScheduleMonitoringResourcesArgs extends io.pulumi.r
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder clusterConfig(Input<MonitoringScheduleClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(Output<MonitoringScheduleClusterConfigArgs> clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
 
         public Builder clusterConfig(MonitoringScheduleClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
+            this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
             return this;
         }
         public MonitoringScheduleMonitoringResourcesArgs build() {

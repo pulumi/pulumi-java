@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.memorydb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<String> maintenanceWindow;
+      private final @Nullable Output<String> maintenanceWindow;
 
-    public Input<String> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<String> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nodeType")
-      private final @Nullable Input<String> nodeType;
+      private final @Nullable Output<String> nodeType;
 
-    public Input<String> getNodeType() {
-        return this.nodeType == null ? Input.empty() : this.nodeType;
+    public Output<String> getNodeType() {
+        return this.nodeType == null ? Output.empty() : this.nodeType;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="numShards")
-      private final @Nullable Input<Integer> numShards;
+      private final @Nullable Output<Integer> numShards;
 
-    public Input<Integer> getNumShards() {
-        return this.numShards == null ? Input.empty() : this.numShards;
+    public Output<Integer> getNumShards() {
+        return this.numShards == null ? Output.empty() : this.numShards;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parameterGroupName")
-      private final @Nullable Input<String> parameterGroupName;
+      private final @Nullable Output<String> parameterGroupName;
 
-    public Input<String> getParameterGroupName() {
-        return this.parameterGroupName == null ? Input.empty() : this.parameterGroupName;
+    public Output<String> getParameterGroupName() {
+        return this.parameterGroupName == null ? Output.empty() : this.parameterGroupName;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="snapshotRetentionLimit")
-      private final @Nullable Input<Integer> snapshotRetentionLimit;
+      private final @Nullable Output<Integer> snapshotRetentionLimit;
 
-    public Input<Integer> getSnapshotRetentionLimit() {
-        return this.snapshotRetentionLimit == null ? Input.empty() : this.snapshotRetentionLimit;
+    public Output<Integer> getSnapshotRetentionLimit() {
+        return this.snapshotRetentionLimit == null ? Output.empty() : this.snapshotRetentionLimit;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="snapshotWindow")
-      private final @Nullable Input<String> snapshotWindow;
+      private final @Nullable Output<String> snapshotWindow;
 
-    public Input<String> getSnapshotWindow() {
-        return this.snapshotWindow == null ? Input.empty() : this.snapshotWindow;
+    public Output<String> getSnapshotWindow() {
+        return this.snapshotWindow == null ? Output.empty() : this.snapshotWindow;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subnetGroupName")
-      private final @Nullable Input<String> subnetGroupName;
+      private final @Nullable Output<String> subnetGroupName;
 
-    public Input<String> getSubnetGroupName() {
-        return this.subnetGroupName == null ? Input.empty() : this.subnetGroupName;
+    public Output<String> getSubnetGroupName() {
+        return this.subnetGroupName == null ? Output.empty() : this.subnetGroupName;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="topicArn")
-      private final @Nullable Input<String> topicArn;
+      private final @Nullable Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
-        return this.topicArn == null ? Input.empty() : this.topicArn;
+    public Output<String> getTopicArn() {
+        return this.topicArn == null ? Output.empty() : this.topicArn;
     }
 
     /**
@@ -152,26 +152,26 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public SnapshotClusterConfigurationArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<String> maintenanceWindow,
-        @Nullable Input<String> name,
-        @Nullable Input<String> nodeType,
-        @Nullable Input<Integer> numShards,
-        @Nullable Input<String> parameterGroupName,
-        @Nullable Input<Integer> port,
-        @Nullable Input<Integer> snapshotRetentionLimit,
-        @Nullable Input<String> snapshotWindow,
-        @Nullable Input<String> subnetGroupName,
-        @Nullable Input<String> topicArn,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<String> maintenanceWindow,
+        @Nullable Output<String> name,
+        @Nullable Output<String> nodeType,
+        @Nullable Output<Integer> numShards,
+        @Nullable Output<String> parameterGroupName,
+        @Nullable Output<Integer> port,
+        @Nullable Output<Integer> snapshotRetentionLimit,
+        @Nullable Output<String> snapshotWindow,
+        @Nullable Output<String> subnetGroupName,
+        @Nullable Output<String> topicArn,
+        @Nullable Output<String> vpcId) {
         this.description = description;
         this.engineVersion = engineVersion;
         this.maintenanceWindow = maintenanceWindow;
@@ -188,19 +188,19 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
     }
 
     private SnapshotClusterConfigurationArgs() {
-        this.description = Input.empty();
-        this.engineVersion = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.name = Input.empty();
-        this.nodeType = Input.empty();
-        this.numShards = Input.empty();
-        this.parameterGroupName = Input.empty();
-        this.port = Input.empty();
-        this.snapshotRetentionLimit = Input.empty();
-        this.snapshotWindow = Input.empty();
-        this.subnetGroupName = Input.empty();
-        this.topicArn = Input.empty();
-        this.vpcId = Input.empty();
+        this.description = Output.empty();
+        this.engineVersion = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.name = Output.empty();
+        this.nodeType = Output.empty();
+        this.numShards = Output.empty();
+        this.parameterGroupName = Output.empty();
+        this.port = Output.empty();
+        this.snapshotRetentionLimit = Output.empty();
+        this.snapshotWindow = Output.empty();
+        this.subnetGroupName = Output.empty();
+        this.topicArn = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -212,19 +212,19 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<String> maintenanceWindow;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> nodeType;
-        private @Nullable Input<Integer> numShards;
-        private @Nullable Input<String> parameterGroupName;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<Integer> snapshotRetentionLimit;
-        private @Nullable Input<String> snapshotWindow;
-        private @Nullable Input<String> subnetGroupName;
-        private @Nullable Input<String> topicArn;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<String> maintenanceWindow;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> nodeType;
+        private @Nullable Output<Integer> numShards;
+        private @Nullable Output<String> parameterGroupName;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<Integer> snapshotRetentionLimit;
+        private @Nullable Output<String> snapshotWindow;
+        private @Nullable Output<String> subnetGroupName;
+        private @Nullable Output<String> topicArn;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -247,133 +247,133 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<String> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
         public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Input.ofNullable(nodeType);
+            this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
 
-        public Builder numShards(@Nullable Input<Integer> numShards) {
+        public Builder numShards(@Nullable Output<Integer> numShards) {
             this.numShards = numShards;
             return this;
         }
 
         public Builder numShards(@Nullable Integer numShards) {
-            this.numShards = Input.ofNullable(numShards);
+            this.numShards = Output.ofNullable(numShards);
             return this;
         }
 
-        public Builder parameterGroupName(@Nullable Input<String> parameterGroupName) {
+        public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
 
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Input.ofNullable(parameterGroupName);
+            this.parameterGroupName = Output.ofNullable(parameterGroupName);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder snapshotRetentionLimit(@Nullable Input<Integer> snapshotRetentionLimit) {
+        public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
             this.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
 
         public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
-            this.snapshotRetentionLimit = Input.ofNullable(snapshotRetentionLimit);
+            this.snapshotRetentionLimit = Output.ofNullable(snapshotRetentionLimit);
             return this;
         }
 
-        public Builder snapshotWindow(@Nullable Input<String> snapshotWindow) {
+        public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
             this.snapshotWindow = snapshotWindow;
             return this;
         }
 
         public Builder snapshotWindow(@Nullable String snapshotWindow) {
-            this.snapshotWindow = Input.ofNullable(snapshotWindow);
+            this.snapshotWindow = Output.ofNullable(snapshotWindow);
             return this;
         }
 
-        public Builder subnetGroupName(@Nullable Input<String> subnetGroupName) {
+        public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
 
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Input.ofNullable(subnetGroupName);
+            this.subnetGroupName = Output.ofNullable(subnetGroupName);
             return this;
         }
 
-        public Builder topicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Input.ofNullable(topicArn);
+            this.topicArn = Output.ofNullable(topicArn);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public SnapshotClusterConfigurationArgs build() {

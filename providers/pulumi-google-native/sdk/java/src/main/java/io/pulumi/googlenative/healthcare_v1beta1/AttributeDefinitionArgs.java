@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.enums.AttributeDefinitionCategory;
 import java.lang.String;
@@ -21,16 +21,16 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowedValues", required=true)
-      private final Input<List<String>> allowedValues;
+      private final Output<List<String>> allowedValues;
 
-    public Input<List<String>> getAllowedValues() {
+    public Output<List<String>> getAllowedValues() {
         return this.allowedValues;
     }
 
     @InputImport(name="attributeDefinitionId", required=true)
-      private final Input<String> attributeDefinitionId;
+      private final Output<String> attributeDefinitionId;
 
-    public Input<String> getAttributeDefinitionId() {
+    public Output<String> getAttributeDefinitionId() {
         return this.attributeDefinitionId;
     }
 
@@ -39,9 +39,9 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="category", required=true)
-      private final Input<AttributeDefinitionCategory> category;
+      private final Output<AttributeDefinitionCategory> category;
 
-    public Input<AttributeDefinitionCategory> getCategory() {
+    public Output<AttributeDefinitionCategory> getCategory() {
         return this.category;
     }
 
@@ -50,16 +50,16 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consentDefaultValues")
-      private final @Nullable Input<List<String>> consentDefaultValues;
+      private final @Nullable Output<List<String>> consentDefaultValues;
 
-    public Input<List<String>> getConsentDefaultValues() {
-        return this.consentDefaultValues == null ? Input.empty() : this.consentDefaultValues;
+    public Output<List<String>> getConsentDefaultValues() {
+        return this.consentDefaultValues == null ? Output.empty() : this.consentDefaultValues;
     }
 
     @InputImport(name="consentStoreId", required=true)
-      private final Input<String> consentStoreId;
+      private final Output<String> consentStoreId;
 
-    public Input<String> getConsentStoreId() {
+    public Output<String> getConsentStoreId() {
         return this.consentStoreId;
     }
 
@@ -68,16 +68,16 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataMappingDefaultValue")
-      private final @Nullable Input<String> dataMappingDefaultValue;
+      private final @Nullable Output<String> dataMappingDefaultValue;
 
-    public Input<String> getDataMappingDefaultValue() {
-        return this.dataMappingDefaultValue == null ? Input.empty() : this.dataMappingDefaultValue;
+    public Output<String> getDataMappingDefaultValue() {
+        return this.dataMappingDefaultValue == null ? Output.empty() : this.dataMappingDefaultValue;
     }
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -86,17 +86,17 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -104,31 +104,31 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public AttributeDefinitionArgs(
-        Input<List<String>> allowedValues,
-        Input<String> attributeDefinitionId,
-        Input<AttributeDefinitionCategory> category,
-        @Nullable Input<List<String>> consentDefaultValues,
-        Input<String> consentStoreId,
-        @Nullable Input<String> dataMappingDefaultValue,
-        Input<String> datasetId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        Output<List<String>> allowedValues,
+        Output<String> attributeDefinitionId,
+        Output<AttributeDefinitionCategory> category,
+        @Nullable Output<List<String>> consentDefaultValues,
+        Output<String> consentStoreId,
+        @Nullable Output<String> dataMappingDefaultValue,
+        Output<String> datasetId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.allowedValues = Objects.requireNonNull(allowedValues, "expected parameter 'allowedValues' to be non-null");
         this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId, "expected parameter 'attributeDefinitionId' to be non-null");
         this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
@@ -143,17 +143,17 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
     }
 
     private AttributeDefinitionArgs() {
-        this.allowedValues = Input.empty();
-        this.attributeDefinitionId = Input.empty();
-        this.category = Input.empty();
-        this.consentDefaultValues = Input.empty();
-        this.consentStoreId = Input.empty();
-        this.dataMappingDefaultValue = Input.empty();
-        this.datasetId = Input.empty();
-        this.description = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.allowedValues = Output.empty();
+        this.attributeDefinitionId = Output.empty();
+        this.category = Output.empty();
+        this.consentDefaultValues = Output.empty();
+        this.consentStoreId = Output.empty();
+        this.dataMappingDefaultValue = Output.empty();
+        this.datasetId = Output.empty();
+        this.description = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -165,17 +165,17 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<List<String>> allowedValues;
-        private Input<String> attributeDefinitionId;
-        private Input<AttributeDefinitionCategory> category;
-        private @Nullable Input<List<String>> consentDefaultValues;
-        private Input<String> consentStoreId;
-        private @Nullable Input<String> dataMappingDefaultValue;
-        private Input<String> datasetId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private Output<List<String>> allowedValues;
+        private Output<String> attributeDefinitionId;
+        private Output<AttributeDefinitionCategory> category;
+        private @Nullable Output<List<String>> consentDefaultValues;
+        private Output<String> consentStoreId;
+        private @Nullable Output<String> dataMappingDefaultValue;
+        private Output<String> datasetId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -196,113 +196,113 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
     	      this.project = defaults.project;
         }
 
-        public Builder allowedValues(Input<List<String>> allowedValues) {
+        public Builder allowedValues(Output<List<String>> allowedValues) {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
 
         public Builder allowedValues(List<String> allowedValues) {
-            this.allowedValues = Input.of(Objects.requireNonNull(allowedValues));
+            this.allowedValues = Output.of(Objects.requireNonNull(allowedValues));
             return this;
         }
 
-        public Builder attributeDefinitionId(Input<String> attributeDefinitionId) {
+        public Builder attributeDefinitionId(Output<String> attributeDefinitionId) {
             this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId);
             return this;
         }
 
         public Builder attributeDefinitionId(String attributeDefinitionId) {
-            this.attributeDefinitionId = Input.of(Objects.requireNonNull(attributeDefinitionId));
+            this.attributeDefinitionId = Output.of(Objects.requireNonNull(attributeDefinitionId));
             return this;
         }
 
-        public Builder category(Input<AttributeDefinitionCategory> category) {
+        public Builder category(Output<AttributeDefinitionCategory> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
         public Builder category(AttributeDefinitionCategory category) {
-            this.category = Input.of(Objects.requireNonNull(category));
+            this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder consentDefaultValues(@Nullable Input<List<String>> consentDefaultValues) {
+        public Builder consentDefaultValues(@Nullable Output<List<String>> consentDefaultValues) {
             this.consentDefaultValues = consentDefaultValues;
             return this;
         }
 
         public Builder consentDefaultValues(@Nullable List<String> consentDefaultValues) {
-            this.consentDefaultValues = Input.ofNullable(consentDefaultValues);
+            this.consentDefaultValues = Output.ofNullable(consentDefaultValues);
             return this;
         }
 
-        public Builder consentStoreId(Input<String> consentStoreId) {
+        public Builder consentStoreId(Output<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
 
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Input.of(Objects.requireNonNull(consentStoreId));
+            this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
 
-        public Builder dataMappingDefaultValue(@Nullable Input<String> dataMappingDefaultValue) {
+        public Builder dataMappingDefaultValue(@Nullable Output<String> dataMappingDefaultValue) {
             this.dataMappingDefaultValue = dataMappingDefaultValue;
             return this;
         }
 
         public Builder dataMappingDefaultValue(@Nullable String dataMappingDefaultValue) {
-            this.dataMappingDefaultValue = Input.ofNullable(dataMappingDefaultValue);
+            this.dataMappingDefaultValue = Output.ofNullable(dataMappingDefaultValue);
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public AttributeDefinitionArgs build() {

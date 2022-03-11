@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.ContentLinkArgs;
 import io.pulumi.azurenative.automation.inputs.RunbookParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<String> creationTime;
+      private final @Nullable Output<String> creationTime;
 
-    public Input<String> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<String> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="draftContentLink")
-      private final @Nullable Input<ContentLinkArgs> draftContentLink;
+      private final @Nullable Output<ContentLinkArgs> draftContentLink;
 
-    public Input<ContentLinkArgs> getDraftContentLink() {
-        return this.draftContentLink == null ? Input.empty() : this.draftContentLink;
+    public Output<ContentLinkArgs> getDraftContentLink() {
+        return this.draftContentLink == null ? Output.empty() : this.draftContentLink;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inEdit")
-      private final @Nullable Input<Boolean> inEdit;
+      private final @Nullable Output<Boolean> inEdit;
 
-    public Input<Boolean> getInEdit() {
-        return this.inEdit == null ? Input.empty() : this.inEdit;
+    public Output<Boolean> getInEdit() {
+        return this.inEdit == null ? Output.empty() : this.inEdit;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedTime")
-      private final @Nullable Input<String> lastModifiedTime;
+      private final @Nullable Output<String> lastModifiedTime;
 
-    public Input<String> getLastModifiedTime() {
-        return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
+    public Output<String> getLastModifiedTime() {
+        return this.lastModifiedTime == null ? Output.empty() : this.lastModifiedTime;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputTypes")
-      private final @Nullable Input<List<String>> outputTypes;
+      private final @Nullable Output<List<String>> outputTypes;
 
-    public Input<List<String>> getOutputTypes() {
-        return this.outputTypes == null ? Input.empty() : this.outputTypes;
+    public Output<List<String>> getOutputTypes() {
+        return this.outputTypes == null ? Output.empty() : this.outputTypes;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,RunbookParameterArgs>> parameters;
+      private final @Nullable Output<Map<String,RunbookParameterArgs>> parameters;
 
-    public Input<Map<String,RunbookParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,RunbookParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public RunbookDraftArgs(
-        @Nullable Input<String> creationTime,
-        @Nullable Input<ContentLinkArgs> draftContentLink,
-        @Nullable Input<Boolean> inEdit,
-        @Nullable Input<String> lastModifiedTime,
-        @Nullable Input<List<String>> outputTypes,
-        @Nullable Input<Map<String,RunbookParameterArgs>> parameters) {
+        @Nullable Output<String> creationTime,
+        @Nullable Output<ContentLinkArgs> draftContentLink,
+        @Nullable Output<Boolean> inEdit,
+        @Nullable Output<String> lastModifiedTime,
+        @Nullable Output<List<String>> outputTypes,
+        @Nullable Output<Map<String,RunbookParameterArgs>> parameters) {
         this.creationTime = creationTime;
         this.draftContentLink = draftContentLink;
         this.inEdit = inEdit;
@@ -101,12 +101,12 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RunbookDraftArgs() {
-        this.creationTime = Input.empty();
-        this.draftContentLink = Input.empty();
-        this.inEdit = Input.empty();
-        this.lastModifiedTime = Input.empty();
-        this.outputTypes = Input.empty();
-        this.parameters = Input.empty();
+        this.creationTime = Output.empty();
+        this.draftContentLink = Output.empty();
+        this.inEdit = Output.empty();
+        this.lastModifiedTime = Output.empty();
+        this.outputTypes = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> creationTime;
-        private @Nullable Input<ContentLinkArgs> draftContentLink;
-        private @Nullable Input<Boolean> inEdit;
-        private @Nullable Input<String> lastModifiedTime;
-        private @Nullable Input<List<String>> outputTypes;
-        private @Nullable Input<Map<String,RunbookParameterArgs>> parameters;
+        private @Nullable Output<String> creationTime;
+        private @Nullable Output<ContentLinkArgs> draftContentLink;
+        private @Nullable Output<Boolean> inEdit;
+        private @Nullable Output<String> lastModifiedTime;
+        private @Nullable Output<List<String>> outputTypes;
+        private @Nullable Output<Map<String,RunbookParameterArgs>> parameters;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder creationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder draftContentLink(@Nullable Input<ContentLinkArgs> draftContentLink) {
+        public Builder draftContentLink(@Nullable Output<ContentLinkArgs> draftContentLink) {
             this.draftContentLink = draftContentLink;
             return this;
         }
 
         public Builder draftContentLink(@Nullable ContentLinkArgs draftContentLink) {
-            this.draftContentLink = Input.ofNullable(draftContentLink);
+            this.draftContentLink = Output.ofNullable(draftContentLink);
             return this;
         }
 
-        public Builder inEdit(@Nullable Input<Boolean> inEdit) {
+        public Builder inEdit(@Nullable Output<Boolean> inEdit) {
             this.inEdit = inEdit;
             return this;
         }
 
         public Builder inEdit(@Nullable Boolean inEdit) {
-            this.inEdit = Input.ofNullable(inEdit);
+            this.inEdit = Output.ofNullable(inEdit);
             return this;
         }
 
-        public Builder lastModifiedTime(@Nullable Input<String> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
-            this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
+            this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder outputTypes(@Nullable Input<List<String>> outputTypes) {
+        public Builder outputTypes(@Nullable Output<List<String>> outputTypes) {
             this.outputTypes = outputTypes;
             return this;
         }
 
         public Builder outputTypes(@Nullable List<String> outputTypes) {
-            this.outputTypes = Input.ofNullable(outputTypes);
+            this.outputTypes = Output.ofNullable(outputTypes);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,RunbookParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,RunbookParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,RunbookParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public RunbookDraftArgs build() {

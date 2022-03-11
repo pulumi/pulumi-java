@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class LicenseProvisionalConfigurationArgs extends io.pulumi.resourc
     public static final LicenseProvisionalConfigurationArgs Empty = new LicenseProvisionalConfigurationArgs();
 
     @InputImport(name="maxTimeToLiveInMinutes", required=true)
-      private final Input<Integer> maxTimeToLiveInMinutes;
+      private final Output<Integer> maxTimeToLiveInMinutes;
 
-    public Input<Integer> getMaxTimeToLiveInMinutes() {
+    public Output<Integer> getMaxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;
     }
 
-    public LicenseProvisionalConfigurationArgs(Input<Integer> maxTimeToLiveInMinutes) {
+    public LicenseProvisionalConfigurationArgs(Output<Integer> maxTimeToLiveInMinutes) {
         this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes, "expected parameter 'maxTimeToLiveInMinutes' to be non-null");
     }
 
     private LicenseProvisionalConfigurationArgs() {
-        this.maxTimeToLiveInMinutes = Input.empty();
+        this.maxTimeToLiveInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class LicenseProvisionalConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Integer> maxTimeToLiveInMinutes;
+        private Output<Integer> maxTimeToLiveInMinutes;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class LicenseProvisionalConfigurationArgs extends io.pulumi.resourc
     	      this.maxTimeToLiveInMinutes = defaults.maxTimeToLiveInMinutes;
         }
 
-        public Builder maxTimeToLiveInMinutes(Input<Integer> maxTimeToLiveInMinutes) {
+        public Builder maxTimeToLiveInMinutes(Output<Integer> maxTimeToLiveInMinutes) {
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
         }
 
         public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
-            this.maxTimeToLiveInMinutes = Input.of(Objects.requireNonNull(maxTimeToLiveInMinutes));
+            this.maxTimeToLiveInMinutes = Output.of(Objects.requireNonNull(maxTimeToLiveInMinutes));
             return this;
         }
         public LicenseProvisionalConfigurationArgs build() {

@@ -10,7 +10,6 @@ import io.pulumi.azurenative.azurearcdata.outputs.SqlManagedInstancePropertiesRe
 import io.pulumi.azurenative.azurearcdata.outputs.SqlManagedInstanceSkuResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -187,21 +186,21 @@ public class SqlManagedInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlManagedInstance(String name, SqlManagedInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:azurearcdata:SqlManagedInstance", name, args == null ? SqlManagedInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:azurearcdata:SqlManagedInstance", name, args == null ? SqlManagedInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlManagedInstance(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlManagedInstance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:azurearcdata:SqlManagedInstance", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:azurearcdata/v20210601preview:SqlManagedInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:azurearcdata/v20210701preview:SqlManagedInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:azurearcdata/v20210801:SqlManagedInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:azurearcdata/v20211101:SqlManagedInstance").build())
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20210601preview:SqlManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20210701preview:SqlManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20210801:SqlManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:azurearcdata/v20211101:SqlManagedInstance").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -215,7 +214,7 @@ public class SqlManagedInstance extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlManagedInstance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlManagedInstance get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlManagedInstance(name, id, options);
     }
 }

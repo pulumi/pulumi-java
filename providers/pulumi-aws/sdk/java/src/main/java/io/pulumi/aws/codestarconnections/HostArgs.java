@@ -4,7 +4,7 @@
 package io.pulumi.aws.codestarconnections;
 
 import io.pulumi.aws.codestarconnections.inputs.HostVpcConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerEndpoint", required=true)
-      private final Input<String> providerEndpoint;
+      private final Output<String> providerEndpoint;
 
-    public Input<String> getProviderEndpoint() {
+    public Output<String> getProviderEndpoint() {
         return this.providerEndpoint;
     }
 
@@ -42,9 +42,9 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerType", required=true)
-      private final Input<String> providerType;
+      private final Output<String> providerType;
 
-    public Input<String> getProviderType() {
+    public Output<String> getProviderType() {
         return this.providerType;
     }
 
@@ -53,17 +53,17 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfiguration")
-      private final @Nullable Input<HostVpcConfigurationArgs> vpcConfiguration;
+      private final @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration;
 
-    public Input<HostVpcConfigurationArgs> getVpcConfiguration() {
-        return this.vpcConfiguration == null ? Input.empty() : this.vpcConfiguration;
+    public Output<HostVpcConfigurationArgs> getVpcConfiguration() {
+        return this.vpcConfiguration == null ? Output.empty() : this.vpcConfiguration;
     }
 
     public HostArgs(
-        @Nullable Input<String> name,
-        Input<String> providerEndpoint,
-        Input<String> providerType,
-        @Nullable Input<HostVpcConfigurationArgs> vpcConfiguration) {
+        @Nullable Output<String> name,
+        Output<String> providerEndpoint,
+        Output<String> providerType,
+        @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration) {
         this.name = name;
         this.providerEndpoint = Objects.requireNonNull(providerEndpoint, "expected parameter 'providerEndpoint' to be non-null");
         this.providerType = Objects.requireNonNull(providerType, "expected parameter 'providerType' to be non-null");
@@ -71,10 +71,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostArgs() {
-        this.name = Input.empty();
-        this.providerEndpoint = Input.empty();
-        this.providerType = Input.empty();
-        this.vpcConfiguration = Input.empty();
+        this.name = Output.empty();
+        this.providerEndpoint = Output.empty();
+        this.providerType = Output.empty();
+        this.vpcConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<String> providerEndpoint;
-        private Input<String> providerType;
-        private @Nullable Input<HostVpcConfigurationArgs> vpcConfiguration;
+        private @Nullable Output<String> name;
+        private Output<String> providerEndpoint;
+        private Output<String> providerType;
+        private @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder providerEndpoint(Input<String> providerEndpoint) {
+        public Builder providerEndpoint(Output<String> providerEndpoint) {
             this.providerEndpoint = Objects.requireNonNull(providerEndpoint);
             return this;
         }
 
         public Builder providerEndpoint(String providerEndpoint) {
-            this.providerEndpoint = Input.of(Objects.requireNonNull(providerEndpoint));
+            this.providerEndpoint = Output.of(Objects.requireNonNull(providerEndpoint));
             return this;
         }
 
-        public Builder providerType(Input<String> providerType) {
+        public Builder providerType(Output<String> providerType) {
             this.providerType = Objects.requireNonNull(providerType);
             return this;
         }
 
         public Builder providerType(String providerType) {
-            this.providerType = Input.of(Objects.requireNonNull(providerType));
+            this.providerType = Output.of(Objects.requireNonNull(providerType));
             return this;
         }
 
-        public Builder vpcConfiguration(@Nullable Input<HostVpcConfigurationArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Output<HostVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
         public Builder vpcConfiguration(@Nullable HostVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
+            this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
             return this;
         }
         public HostArgs build() {

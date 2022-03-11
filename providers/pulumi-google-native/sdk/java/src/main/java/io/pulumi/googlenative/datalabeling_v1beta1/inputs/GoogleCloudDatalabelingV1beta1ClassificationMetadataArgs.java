@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
      * 
      */
     @InputImport(name="isMultiLabel")
-      private final @Nullable Input<Boolean> isMultiLabel;
+      private final @Nullable Output<Boolean> isMultiLabel;
 
-    public Input<Boolean> getIsMultiLabel() {
-        return this.isMultiLabel == null ? Input.empty() : this.isMultiLabel;
+    public Output<Boolean> getIsMultiLabel() {
+        return this.isMultiLabel == null ? Output.empty() : this.isMultiLabel;
     }
 
-    public GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(@Nullable Input<Boolean> isMultiLabel) {
+    public GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(@Nullable Output<Boolean> isMultiLabel) {
         this.isMultiLabel = isMultiLabel;
     }
 
     private GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs() {
-        this.isMultiLabel = Input.empty();
+        this.isMultiLabel = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isMultiLabel;
+        private @Nullable Output<Boolean> isMultiLabel;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
     	      this.isMultiLabel = defaults.isMultiLabel;
         }
 
-        public Builder isMultiLabel(@Nullable Input<Boolean> isMultiLabel) {
+        public Builder isMultiLabel(@Nullable Output<Boolean> isMultiLabel) {
             this.isMultiLabel = isMultiLabel;
             return this;
         }
 
         public Builder isMultiLabel(@Nullable Boolean isMultiLabel) {
-            this.isMultiLabel = Input.ofNullable(isMultiLabel);
+            this.isMultiLabel = Output.ofNullable(isMultiLabel);
             return this;
         }
         public GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,17 +19,17 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="principalArn")
-      private final @Nullable Input<String> principalArn;
+      private final @Nullable Output<String> principalArn;
 
-    public Input<String> getPrincipalArn() {
-        return this.principalArn == null ? Input.empty() : this.principalArn;
+    public Output<String> getPrincipalArn() {
+        return this.principalArn == null ? Output.empty() : this.principalArn;
     }
 
     /**
@@ -37,25 +37,25 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public AccountSettingDefaultState(
-        @Nullable Input<String> name,
-        @Nullable Input<String> principalArn,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> principalArn,
+        @Nullable Output<String> value) {
         this.name = name;
         this.principalArn = principalArn;
         this.value = value;
     }
 
     private AccountSettingDefaultState() {
-        this.name = Input.empty();
-        this.principalArn = Input.empty();
-        this.value = Input.empty();
+        this.name = Output.empty();
+        this.principalArn = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> principalArn;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> principalArn;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
     	      this.value = defaults.value;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder principalArn(@Nullable Input<String> principalArn) {
+        public Builder principalArn(@Nullable Output<String> principalArn) {
             this.principalArn = principalArn;
             return this;
         }
 
         public Builder principalArn(@Nullable String principalArn) {
-            this.principalArn = Input.ofNullable(principalArn);
+            this.principalArn = Output.ofNullable(principalArn);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public AccountSettingDefaultState build() {

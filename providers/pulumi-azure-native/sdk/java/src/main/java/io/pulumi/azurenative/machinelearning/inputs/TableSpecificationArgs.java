@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.ColumnSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,ColumnSpecificationArgs>> properties;
+      private final @Nullable Output<Map<String,ColumnSpecificationArgs>> properties;
 
-    public Input<Map<String,ColumnSpecificationArgs>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,ColumnSpecificationArgs>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -69,31 +69,31 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public TableSpecificationArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> format,
-        @Nullable Input<Map<String,ColumnSpecificationArgs>> properties,
-        @Nullable Input<String> title,
-        Input<String> type) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> format,
+        @Nullable Output<Map<String,ColumnSpecificationArgs>> properties,
+        @Nullable Output<String> title,
+        Output<String> type) {
         this.description = description;
         this.format = format;
         this.properties = properties;
         this.title = title;
-        this.type = type == null ? Input.ofNullable("object") : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = type == null ? Output.ofNullable("object") : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private TableSpecificationArgs() {
-        this.description = Input.empty();
-        this.format = Input.empty();
-        this.properties = Input.empty();
-        this.title = Input.empty();
-        this.type = Input.empty();
+        this.description = Output.empty();
+        this.format = Output.empty();
+        this.properties = Output.empty();
+        this.title = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> format;
-        private @Nullable Input<Map<String,ColumnSpecificationArgs>> properties;
-        private @Nullable Input<String> title;
-        private Input<String> type;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> format;
+        private @Nullable Output<Map<String,ColumnSpecificationArgs>> properties;
+        private @Nullable Output<String> title;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,ColumnSpecificationArgs>> properties) {
+        public Builder properties(@Nullable Output<Map<String,ColumnSpecificationArgs>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,ColumnSpecificationArgs> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TableSpecificationArgs build() {

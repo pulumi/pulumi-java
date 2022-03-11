@@ -9,7 +9,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.ContainerCodePackageProper
 import io.pulumi.azurenative.servicefabricmesh.inputs.DiagnosticsRefArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="autoScalingPolicies")
-      private final @Nullable Input<List<AutoScalingPolicyArgs>> autoScalingPolicies;
+      private final @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies;
 
-    public Input<List<AutoScalingPolicyArgs>> getAutoScalingPolicies() {
-        return this.autoScalingPolicies == null ? Input.empty() : this.autoScalingPolicies;
+    public Output<List<AutoScalingPolicyArgs>> getAutoScalingPolicies() {
+        return this.autoScalingPolicies == null ? Output.empty() : this.autoScalingPolicies;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="codePackages", required=true)
-      private final Input<List<ContainerCodePackagePropertiesArgs>> codePackages;
+      private final Output<List<ContainerCodePackagePropertiesArgs>> codePackages;
 
-    public Input<List<ContainerCodePackagePropertiesArgs>> getCodePackages() {
+    public Output<List<ContainerCodePackagePropertiesArgs>> getCodePackages() {
         return this.codePackages;
     }
 
@@ -53,10 +53,10 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="diagnostics")
-      private final @Nullable Input<DiagnosticsRefArgs> diagnostics;
+      private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
-    public Input<DiagnosticsRefArgs> getDiagnostics() {
-        return this.diagnostics == null ? Input.empty() : this.diagnostics;
+    public Output<DiagnosticsRefArgs> getDiagnostics() {
+        return this.diagnostics == null ? Output.empty() : this.diagnostics;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkRefs")
-      private final @Nullable Input<List<NetworkRefArgs>> networkRefs;
+      private final @Nullable Output<List<NetworkRefArgs>> networkRefs;
 
-    public Input<List<NetworkRefArgs>> getNetworkRefs() {
-        return this.networkRefs == null ? Input.empty() : this.networkRefs;
+    public Output<List<NetworkRefArgs>> getNetworkRefs() {
+        return this.networkRefs == null ? Output.empty() : this.networkRefs;
     }
 
     /**
@@ -97,9 +97,9 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="osType", required=true)
-      private final Input<Either<String,OperatingSystemType>> osType;
+      private final Output<Either<String,OperatingSystemType>> osType;
 
-    public Input<Either<String,OperatingSystemType>> getOsType() {
+    public Output<Either<String,OperatingSystemType>> getOsType() {
         return this.osType;
     }
 
@@ -108,21 +108,21 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="replicaCount")
-      private final @Nullable Input<Integer> replicaCount;
+      private final @Nullable Output<Integer> replicaCount;
 
-    public Input<Integer> getReplicaCount() {
-        return this.replicaCount == null ? Input.empty() : this.replicaCount;
+    public Output<Integer> getReplicaCount() {
+        return this.replicaCount == null ? Output.empty() : this.replicaCount;
     }
 
     public ServiceResourceDescriptionArgs(
-        @Nullable Input<List<AutoScalingPolicyArgs>> autoScalingPolicies,
-        Input<List<ContainerCodePackagePropertiesArgs>> codePackages,
-        @Nullable Input<String> description,
-        @Nullable Input<DiagnosticsRefArgs> diagnostics,
-        @Nullable Input<String> name,
-        @Nullable Input<List<NetworkRefArgs>> networkRefs,
-        Input<Either<String,OperatingSystemType>> osType,
-        @Nullable Input<Integer> replicaCount) {
+        @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies,
+        Output<List<ContainerCodePackagePropertiesArgs>> codePackages,
+        @Nullable Output<String> description,
+        @Nullable Output<DiagnosticsRefArgs> diagnostics,
+        @Nullable Output<String> name,
+        @Nullable Output<List<NetworkRefArgs>> networkRefs,
+        Output<Either<String,OperatingSystemType>> osType,
+        @Nullable Output<Integer> replicaCount) {
         this.autoScalingPolicies = autoScalingPolicies;
         this.codePackages = Objects.requireNonNull(codePackages, "expected parameter 'codePackages' to be non-null");
         this.description = description;
@@ -134,14 +134,14 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     }
 
     private ServiceResourceDescriptionArgs() {
-        this.autoScalingPolicies = Input.empty();
-        this.codePackages = Input.empty();
-        this.description = Input.empty();
-        this.diagnostics = Input.empty();
-        this.name = Input.empty();
-        this.networkRefs = Input.empty();
-        this.osType = Input.empty();
-        this.replicaCount = Input.empty();
+        this.autoScalingPolicies = Output.empty();
+        this.codePackages = Output.empty();
+        this.description = Output.empty();
+        this.diagnostics = Output.empty();
+        this.name = Output.empty();
+        this.networkRefs = Output.empty();
+        this.osType = Output.empty();
+        this.replicaCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -153,14 +153,14 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AutoScalingPolicyArgs>> autoScalingPolicies;
-        private Input<List<ContainerCodePackagePropertiesArgs>> codePackages;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DiagnosticsRefArgs> diagnostics;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<NetworkRefArgs>> networkRefs;
-        private Input<Either<String,OperatingSystemType>> osType;
-        private @Nullable Input<Integer> replicaCount;
+        private @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies;
+        private Output<List<ContainerCodePackagePropertiesArgs>> codePackages;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DiagnosticsRefArgs> diagnostics;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<NetworkRefArgs>> networkRefs;
+        private Output<Either<String,OperatingSystemType>> osType;
+        private @Nullable Output<Integer> replicaCount;
 
         public Builder() {
     	      // Empty
@@ -178,83 +178,83 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     	      this.replicaCount = defaults.replicaCount;
         }
 
-        public Builder autoScalingPolicies(@Nullable Input<List<AutoScalingPolicyArgs>> autoScalingPolicies) {
+        public Builder autoScalingPolicies(@Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies) {
             this.autoScalingPolicies = autoScalingPolicies;
             return this;
         }
 
         public Builder autoScalingPolicies(@Nullable List<AutoScalingPolicyArgs> autoScalingPolicies) {
-            this.autoScalingPolicies = Input.ofNullable(autoScalingPolicies);
+            this.autoScalingPolicies = Output.ofNullable(autoScalingPolicies);
             return this;
         }
 
-        public Builder codePackages(Input<List<ContainerCodePackagePropertiesArgs>> codePackages) {
+        public Builder codePackages(Output<List<ContainerCodePackagePropertiesArgs>> codePackages) {
             this.codePackages = Objects.requireNonNull(codePackages);
             return this;
         }
 
         public Builder codePackages(List<ContainerCodePackagePropertiesArgs> codePackages) {
-            this.codePackages = Input.of(Objects.requireNonNull(codePackages));
+            this.codePackages = Output.of(Objects.requireNonNull(codePackages));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diagnostics(@Nullable Input<DiagnosticsRefArgs> diagnostics) {
+        public Builder diagnostics(@Nullable Output<DiagnosticsRefArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
         public Builder diagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
-            this.diagnostics = Input.ofNullable(diagnostics);
+            this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkRefs(@Nullable Input<List<NetworkRefArgs>> networkRefs) {
+        public Builder networkRefs(@Nullable Output<List<NetworkRefArgs>> networkRefs) {
             this.networkRefs = networkRefs;
             return this;
         }
 
         public Builder networkRefs(@Nullable List<NetworkRefArgs> networkRefs) {
-            this.networkRefs = Input.ofNullable(networkRefs);
+            this.networkRefs = Output.ofNullable(networkRefs);
             return this;
         }
 
-        public Builder osType(Input<Either<String,OperatingSystemType>> osType) {
+        public Builder osType(Output<Either<String,OperatingSystemType>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
         public Builder osType(Either<String,OperatingSystemType> osType) {
-            this.osType = Input.of(Objects.requireNonNull(osType));
+            this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder replicaCount(@Nullable Input<Integer> replicaCount) {
+        public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Input.ofNullable(replicaCount);
+            this.replicaCount = Output.ofNullable(replicaCount);
             return this;
         }
         public ServiceResourceDescriptionArgs build() {

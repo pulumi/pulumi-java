@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
      * 
      */
     @InputImport(name="ssml")
-      private final @Nullable Input<String> ssml;
+      private final @Nullable Output<String> ssml;
 
-    public Input<String> getSsml() {
-        return this.ssml == null ? Input.empty() : this.ssml;
+    public Output<String> getSsml() {
+        return this.ssml == null ? Output.empty() : this.ssml;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<String> text;
+      private final @Nullable Output<String> text;
 
-    public Input<String> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<String> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
     public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs(
-        @Nullable Input<String> ssml,
-        @Nullable Input<String> text) {
+        @Nullable Output<String> ssml,
+        @Nullable Output<String> text) {
         this.ssml = ssml;
         this.text = text;
     }
 
     private GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs() {
-        this.ssml = Input.empty();
-        this.text = Input.empty();
+        this.ssml = Output.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ssml;
-        private @Nullable Input<String> text;
+        private @Nullable Output<String> ssml;
+        private @Nullable Output<String> text;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
     	      this.text = defaults.text;
         }
 
-        public Builder ssml(@Nullable Input<String> ssml) {
+        public Builder ssml(@Nullable Output<String> ssml) {
             this.ssml = ssml;
             return this;
         }
 
         public Builder ssml(@Nullable String ssml) {
-            this.ssml = Input.ofNullable(ssml);
+            this.ssml = Output.ofNullable(ssml);
             return this;
         }
 
-        public Builder text(@Nullable Input<String> text) {
+        public Builder text(@Nullable Output<String> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable String text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
         public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs build() {

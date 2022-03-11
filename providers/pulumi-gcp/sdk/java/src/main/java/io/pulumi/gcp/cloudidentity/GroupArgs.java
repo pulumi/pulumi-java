@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudidentity.inputs.GroupGroupKeyArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupKey", required=true)
-      private final Input<GroupGroupKeyArgs> groupKey;
+      private final Output<GroupGroupKeyArgs> groupKey;
 
-    public Input<GroupGroupKeyArgs> getGroupKey() {
+    public Output<GroupGroupKeyArgs> getGroupKey() {
         return this.groupKey;
     }
 
@@ -61,10 +61,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialGroupConfig")
-      private final @Nullable Input<String> initialGroupConfig;
+      private final @Nullable Output<String> initialGroupConfig;
 
-    public Input<String> getInitialGroupConfig() {
-        return this.initialGroupConfig == null ? Input.empty() : this.initialGroupConfig;
+    public Output<String> getInitialGroupConfig() {
+        return this.initialGroupConfig == null ? Output.empty() : this.initialGroupConfig;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-      private final Input<Map<String,String>> labels;
+      private final Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
 
@@ -89,19 +89,19 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
     public GroupArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<GroupGroupKeyArgs> groupKey,
-        @Nullable Input<String> initialGroupConfig,
-        Input<Map<String,String>> labels,
-        Input<String> parent) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<GroupGroupKeyArgs> groupKey,
+        @Nullable Output<String> initialGroupConfig,
+        Output<Map<String,String>> labels,
+        Output<String> parent) {
         this.description = description;
         this.displayName = displayName;
         this.groupKey = Objects.requireNonNull(groupKey, "expected parameter 'groupKey' to be non-null");
@@ -111,12 +111,12 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.groupKey = Input.empty();
-        this.initialGroupConfig = Input.empty();
-        this.labels = Input.empty();
-        this.parent = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.groupKey = Output.empty();
+        this.initialGroupConfig = Output.empty();
+        this.labels = Output.empty();
+        this.parent = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,12 +128,12 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<GroupGroupKeyArgs> groupKey;
-        private @Nullable Input<String> initialGroupConfig;
-        private Input<Map<String,String>> labels;
-        private Input<String> parent;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<GroupGroupKeyArgs> groupKey;
+        private @Nullable Output<String> initialGroupConfig;
+        private Output<Map<String,String>> labels;
+        private Output<String> parent;
 
         public Builder() {
     	      // Empty
@@ -149,63 +149,63 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parent = defaults.parent;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder groupKey(Input<GroupGroupKeyArgs> groupKey) {
+        public Builder groupKey(Output<GroupGroupKeyArgs> groupKey) {
             this.groupKey = Objects.requireNonNull(groupKey);
             return this;
         }
 
         public Builder groupKey(GroupGroupKeyArgs groupKey) {
-            this.groupKey = Input.of(Objects.requireNonNull(groupKey));
+            this.groupKey = Output.of(Objects.requireNonNull(groupKey));
             return this;
         }
 
-        public Builder initialGroupConfig(@Nullable Input<String> initialGroupConfig) {
+        public Builder initialGroupConfig(@Nullable Output<String> initialGroupConfig) {
             this.initialGroupConfig = initialGroupConfig;
             return this;
         }
 
         public Builder initialGroupConfig(@Nullable String initialGroupConfig) {
-            this.initialGroupConfig = Input.ofNullable(initialGroupConfig);
+            this.initialGroupConfig = Output.ofNullable(initialGroupConfig);
             return this;
         }
 
-        public Builder labels(Input<Map<String,String>> labels) {
+        public Builder labels(Output<Map<String,String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
         public Builder labels(Map<String,String> labels) {
-            this.labels = Input.of(Objects.requireNonNull(labels));
+            this.labels = Output.of(Objects.requireNonNull(labels));
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
         public GroupArgs build() {

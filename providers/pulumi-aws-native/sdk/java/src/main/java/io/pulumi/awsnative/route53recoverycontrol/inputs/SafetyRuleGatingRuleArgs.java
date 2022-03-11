@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="gatingControls", required=true)
-      private final Input<List<String>> gatingControls;
+      private final Output<List<String>> gatingControls;
 
-    public Input<List<String>> getGatingControls() {
+    public Output<List<String>> getGatingControls() {
         return this.gatingControls;
     }
 
@@ -36,9 +36,9 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="targetControls", required=true)
-      private final Input<List<String>> targetControls;
+      private final Output<List<String>> targetControls;
 
-    public Input<List<String>> getTargetControls() {
+    public Output<List<String>> getTargetControls() {
         return this.targetControls;
     }
 
@@ -47,25 +47,25 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="waitPeriodMs", required=true)
-      private final Input<Integer> waitPeriodMs;
+      private final Output<Integer> waitPeriodMs;
 
-    public Input<Integer> getWaitPeriodMs() {
+    public Output<Integer> getWaitPeriodMs() {
         return this.waitPeriodMs;
     }
 
     public SafetyRuleGatingRuleArgs(
-        Input<List<String>> gatingControls,
-        Input<List<String>> targetControls,
-        Input<Integer> waitPeriodMs) {
+        Output<List<String>> gatingControls,
+        Output<List<String>> targetControls,
+        Output<Integer> waitPeriodMs) {
         this.gatingControls = Objects.requireNonNull(gatingControls, "expected parameter 'gatingControls' to be non-null");
         this.targetControls = Objects.requireNonNull(targetControls, "expected parameter 'targetControls' to be non-null");
         this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
     }
 
     private SafetyRuleGatingRuleArgs() {
-        this.gatingControls = Input.empty();
-        this.targetControls = Input.empty();
-        this.waitPeriodMs = Input.empty();
+        this.gatingControls = Output.empty();
+        this.targetControls = Output.empty();
+        this.waitPeriodMs = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<List<String>> gatingControls;
-        private Input<List<String>> targetControls;
-        private Input<Integer> waitPeriodMs;
+        private Output<List<String>> gatingControls;
+        private Output<List<String>> targetControls;
+        private Output<Integer> waitPeriodMs;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     	      this.waitPeriodMs = defaults.waitPeriodMs;
         }
 
-        public Builder gatingControls(Input<List<String>> gatingControls) {
+        public Builder gatingControls(Output<List<String>> gatingControls) {
             this.gatingControls = Objects.requireNonNull(gatingControls);
             return this;
         }
 
         public Builder gatingControls(List<String> gatingControls) {
-            this.gatingControls = Input.of(Objects.requireNonNull(gatingControls));
+            this.gatingControls = Output.of(Objects.requireNonNull(gatingControls));
             return this;
         }
 
-        public Builder targetControls(Input<List<String>> targetControls) {
+        public Builder targetControls(Output<List<String>> targetControls) {
             this.targetControls = Objects.requireNonNull(targetControls);
             return this;
         }
 
         public Builder targetControls(List<String> targetControls) {
-            this.targetControls = Input.of(Objects.requireNonNull(targetControls));
+            this.targetControls = Output.of(Objects.requireNonNull(targetControls));
             return this;
         }
 
-        public Builder waitPeriodMs(Input<Integer> waitPeriodMs) {
+        public Builder waitPeriodMs(Output<Integer> waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
 
         public Builder waitPeriodMs(Integer waitPeriodMs) {
-            this.waitPeriodMs = Input.of(Objects.requireNonNull(waitPeriodMs));
+            this.waitPeriodMs = Output.of(Objects.requireNonNull(waitPeriodMs));
             return this;
         }
         public SafetyRuleGatingRuleArgs build() {

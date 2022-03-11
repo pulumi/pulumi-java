@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DataSourceVpcConnectionPropertiesGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="vpcConnectionArn", required=true)
-      private final Input<String> vpcConnectionArn;
+      private final Output<String> vpcConnectionArn;
 
-    public Input<String> getVpcConnectionArn() {
+    public Output<String> getVpcConnectionArn() {
         return this.vpcConnectionArn;
     }
 
-    public DataSourceVpcConnectionPropertiesGetArgs(Input<String> vpcConnectionArn) {
+    public DataSourceVpcConnectionPropertiesGetArgs(Output<String> vpcConnectionArn) {
         this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn, "expected parameter 'vpcConnectionArn' to be non-null");
     }
 
     private DataSourceVpcConnectionPropertiesGetArgs() {
-        this.vpcConnectionArn = Input.empty();
+        this.vpcConnectionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DataSourceVpcConnectionPropertiesGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> vpcConnectionArn;
+        private Output<String> vpcConnectionArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DataSourceVpcConnectionPropertiesGetArgs extends io.pulumi.re
     	      this.vpcConnectionArn = defaults.vpcConnectionArn;
         }
 
-        public Builder vpcConnectionArn(Input<String> vpcConnectionArn) {
+        public Builder vpcConnectionArn(Output<String> vpcConnectionArn) {
             this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn);
             return this;
         }
 
         public Builder vpcConnectionArn(String vpcConnectionArn) {
-            this.vpcConnectionArn = Input.of(Objects.requireNonNull(vpcConnectionArn));
+            this.vpcConnectionArn = Output.of(Objects.requireNonNull(vpcConnectionArn));
             return this;
         }
         public DataSourceVpcConnectionPropertiesGetArgs build() {

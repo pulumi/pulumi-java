@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.awsnative.evidently.enums.ExperimentMetricGoalObjectDesiredChange;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,9 +16,9 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
     public static final ExperimentMetricGoalObjectArgs Empty = new ExperimentMetricGoalObjectArgs();
 
     @InputImport(name="desiredChange", required=true)
-      private final Input<ExperimentMetricGoalObjectDesiredChange> desiredChange;
+      private final Output<ExperimentMetricGoalObjectDesiredChange> desiredChange;
 
-    public Input<ExperimentMetricGoalObjectDesiredChange> getDesiredChange() {
+    public Output<ExperimentMetricGoalObjectDesiredChange> getDesiredChange() {
         return this.desiredChange;
     }
 
@@ -27,9 +27,9 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="entityIdKey", required=true)
-      private final Input<String> entityIdKey;
+      private final Output<String> entityIdKey;
 
-    public Input<String> getEntityIdKey() {
+    public Output<String> getEntityIdKey() {
         return this.entityIdKey;
     }
 
@@ -38,24 +38,24 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="eventPattern", required=true)
-      private final Input<String> eventPattern;
+      private final Output<String> eventPattern;
 
-    public Input<String> getEventPattern() {
+    public Output<String> getEventPattern() {
         return this.eventPattern;
     }
 
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
     @InputImport(name="unitLabel")
-      private final @Nullable Input<String> unitLabel;
+      private final @Nullable Output<String> unitLabel;
 
-    public Input<String> getUnitLabel() {
-        return this.unitLabel == null ? Input.empty() : this.unitLabel;
+    public Output<String> getUnitLabel() {
+        return this.unitLabel == null ? Output.empty() : this.unitLabel;
     }
 
     /**
@@ -63,19 +63,19 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="valueKey", required=true)
-      private final Input<String> valueKey;
+      private final Output<String> valueKey;
 
-    public Input<String> getValueKey() {
+    public Output<String> getValueKey() {
         return this.valueKey;
     }
 
     public ExperimentMetricGoalObjectArgs(
-        Input<ExperimentMetricGoalObjectDesiredChange> desiredChange,
-        Input<String> entityIdKey,
-        Input<String> eventPattern,
-        Input<String> metricName,
-        @Nullable Input<String> unitLabel,
-        Input<String> valueKey) {
+        Output<ExperimentMetricGoalObjectDesiredChange> desiredChange,
+        Output<String> entityIdKey,
+        Output<String> eventPattern,
+        Output<String> metricName,
+        @Nullable Output<String> unitLabel,
+        Output<String> valueKey) {
         this.desiredChange = Objects.requireNonNull(desiredChange, "expected parameter 'desiredChange' to be non-null");
         this.entityIdKey = Objects.requireNonNull(entityIdKey, "expected parameter 'entityIdKey' to be non-null");
         this.eventPattern = Objects.requireNonNull(eventPattern, "expected parameter 'eventPattern' to be non-null");
@@ -85,12 +85,12 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
     }
 
     private ExperimentMetricGoalObjectArgs() {
-        this.desiredChange = Input.empty();
-        this.entityIdKey = Input.empty();
-        this.eventPattern = Input.empty();
-        this.metricName = Input.empty();
-        this.unitLabel = Input.empty();
-        this.valueKey = Input.empty();
+        this.desiredChange = Output.empty();
+        this.entityIdKey = Output.empty();
+        this.eventPattern = Output.empty();
+        this.metricName = Output.empty();
+        this.unitLabel = Output.empty();
+        this.valueKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,12 +102,12 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<ExperimentMetricGoalObjectDesiredChange> desiredChange;
-        private Input<String> entityIdKey;
-        private Input<String> eventPattern;
-        private Input<String> metricName;
-        private @Nullable Input<String> unitLabel;
-        private Input<String> valueKey;
+        private Output<ExperimentMetricGoalObjectDesiredChange> desiredChange;
+        private Output<String> entityIdKey;
+        private Output<String> eventPattern;
+        private Output<String> metricName;
+        private @Nullable Output<String> unitLabel;
+        private Output<String> valueKey;
 
         public Builder() {
     	      // Empty
@@ -123,63 +123,63 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
     	      this.valueKey = defaults.valueKey;
         }
 
-        public Builder desiredChange(Input<ExperimentMetricGoalObjectDesiredChange> desiredChange) {
+        public Builder desiredChange(Output<ExperimentMetricGoalObjectDesiredChange> desiredChange) {
             this.desiredChange = Objects.requireNonNull(desiredChange);
             return this;
         }
 
         public Builder desiredChange(ExperimentMetricGoalObjectDesiredChange desiredChange) {
-            this.desiredChange = Input.of(Objects.requireNonNull(desiredChange));
+            this.desiredChange = Output.of(Objects.requireNonNull(desiredChange));
             return this;
         }
 
-        public Builder entityIdKey(Input<String> entityIdKey) {
+        public Builder entityIdKey(Output<String> entityIdKey) {
             this.entityIdKey = Objects.requireNonNull(entityIdKey);
             return this;
         }
 
         public Builder entityIdKey(String entityIdKey) {
-            this.entityIdKey = Input.of(Objects.requireNonNull(entityIdKey));
+            this.entityIdKey = Output.of(Objects.requireNonNull(entityIdKey));
             return this;
         }
 
-        public Builder eventPattern(Input<String> eventPattern) {
+        public Builder eventPattern(Output<String> eventPattern) {
             this.eventPattern = Objects.requireNonNull(eventPattern);
             return this;
         }
 
         public Builder eventPattern(String eventPattern) {
-            this.eventPattern = Input.of(Objects.requireNonNull(eventPattern));
+            this.eventPattern = Output.of(Objects.requireNonNull(eventPattern));
             return this;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder unitLabel(@Nullable Input<String> unitLabel) {
+        public Builder unitLabel(@Nullable Output<String> unitLabel) {
             this.unitLabel = unitLabel;
             return this;
         }
 
         public Builder unitLabel(@Nullable String unitLabel) {
-            this.unitLabel = Input.ofNullable(unitLabel);
+            this.unitLabel = Output.ofNullable(unitLabel);
             return this;
         }
 
-        public Builder valueKey(Input<String> valueKey) {
+        public Builder valueKey(Output<String> valueKey) {
             this.valueKey = Objects.requireNonNull(valueKey);
             return this;
         }
 
         public Builder valueKey(String valueKey) {
-            this.valueKey = Input.of(Objects.requireNonNull(valueKey));
+            this.valueKey = Output.of(Objects.requireNonNull(valueKey));
             return this;
         }
         public ExperimentMetricGoalObjectArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs e
     public static final SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs Empty = new SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs();
 
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs(
-        @Nullable Input<String> target,
-        Input<String> type) {
+        @Nullable Output<String> target,
+        Output<String> type) {
         this.target = target;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs() {
-        this.target = Input.empty();
-        this.type = Input.empty();
+        this.target = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<String> target;
-        private Input<String> type;
+        private @Nullable Output<String> target;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs e
     	      this.type = defaults.type;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs build() {

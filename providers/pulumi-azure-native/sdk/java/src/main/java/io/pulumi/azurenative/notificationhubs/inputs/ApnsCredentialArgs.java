@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apnsCertificate")
-      private final @Nullable Input<String> apnsCertificate;
+      private final @Nullable Output<String> apnsCertificate;
 
-    public Input<String> getApnsCertificate() {
-        return this.apnsCertificate == null ? Input.empty() : this.apnsCertificate;
+    public Output<String> getApnsCertificate() {
+        return this.apnsCertificate == null ? Output.empty() : this.apnsCertificate;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-      private final @Nullable Input<String> appId;
+      private final @Nullable Output<String> appId;
 
-    public Input<String> getAppId() {
-        return this.appId == null ? Input.empty() : this.appId;
+    public Output<String> getAppId() {
+        return this.appId == null ? Output.empty() : this.appId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appName")
-      private final @Nullable Input<String> appName;
+      private final @Nullable Output<String> appName;
 
-    public Input<String> getAppName() {
-        return this.appName == null ? Input.empty() : this.appName;
+    public Output<String> getAppName() {
+        return this.appName == null ? Output.empty() : this.appName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateKey")
-      private final @Nullable Input<String> certificateKey;
+      private final @Nullable Output<String> certificateKey;
 
-    public Input<String> getCertificateKey() {
-        return this.certificateKey == null ? Input.empty() : this.certificateKey;
+    public Output<String> getCertificateKey() {
+        return this.certificateKey == null ? Output.empty() : this.certificateKey;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbprint")
-      private final @Nullable Input<String> thumbprint;
+      private final @Nullable Output<String> thumbprint;
 
-    public Input<String> getThumbprint() {
-        return this.thumbprint == null ? Input.empty() : this.thumbprint;
+    public Output<String> getThumbprint() {
+        return this.thumbprint == null ? Output.empty() : this.thumbprint;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="token")
-      private final @Nullable Input<String> token;
+      private final @Nullable Output<String> token;
 
-    public Input<String> getToken() {
-        return this.token == null ? Input.empty() : this.token;
+    public Output<String> getToken() {
+        return this.token == null ? Output.empty() : this.token;
     }
 
     public ApnsCredentialArgs(
-        @Nullable Input<String> apnsCertificate,
-        @Nullable Input<String> appId,
-        @Nullable Input<String> appName,
-        @Nullable Input<String> certificateKey,
-        @Nullable Input<String> endpoint,
-        @Nullable Input<String> keyId,
-        @Nullable Input<String> thumbprint,
-        @Nullable Input<String> token) {
+        @Nullable Output<String> apnsCertificate,
+        @Nullable Output<String> appId,
+        @Nullable Output<String> appName,
+        @Nullable Output<String> certificateKey,
+        @Nullable Output<String> endpoint,
+        @Nullable Output<String> keyId,
+        @Nullable Output<String> thumbprint,
+        @Nullable Output<String> token) {
         this.apnsCertificate = apnsCertificate;
         this.appId = appId;
         this.appName = appName;
@@ -126,14 +126,14 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApnsCredentialArgs() {
-        this.apnsCertificate = Input.empty();
-        this.appId = Input.empty();
-        this.appName = Input.empty();
-        this.certificateKey = Input.empty();
-        this.endpoint = Input.empty();
-        this.keyId = Input.empty();
-        this.thumbprint = Input.empty();
-        this.token = Input.empty();
+        this.apnsCertificate = Output.empty();
+        this.appId = Output.empty();
+        this.appName = Output.empty();
+        this.certificateKey = Output.empty();
+        this.endpoint = Output.empty();
+        this.keyId = Output.empty();
+        this.thumbprint = Output.empty();
+        this.token = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apnsCertificate;
-        private @Nullable Input<String> appId;
-        private @Nullable Input<String> appName;
-        private @Nullable Input<String> certificateKey;
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<String> keyId;
-        private @Nullable Input<String> thumbprint;
-        private @Nullable Input<String> token;
+        private @Nullable Output<String> apnsCertificate;
+        private @Nullable Output<String> appId;
+        private @Nullable Output<String> appName;
+        private @Nullable Output<String> certificateKey;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<String> keyId;
+        private @Nullable Output<String> thumbprint;
+        private @Nullable Output<String> token;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.token = defaults.token;
         }
 
-        public Builder apnsCertificate(@Nullable Input<String> apnsCertificate) {
+        public Builder apnsCertificate(@Nullable Output<String> apnsCertificate) {
             this.apnsCertificate = apnsCertificate;
             return this;
         }
 
         public Builder apnsCertificate(@Nullable String apnsCertificate) {
-            this.apnsCertificate = Input.ofNullable(apnsCertificate);
+            this.apnsCertificate = Output.ofNullable(apnsCertificate);
             return this;
         }
 
-        public Builder appId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Output<String> appId) {
             this.appId = appId;
             return this;
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = Input.ofNullable(appId);
+            this.appId = Output.ofNullable(appId);
             return this;
         }
 
-        public Builder appName(@Nullable Input<String> appName) {
+        public Builder appName(@Nullable Output<String> appName) {
             this.appName = appName;
             return this;
         }
 
         public Builder appName(@Nullable String appName) {
-            this.appName = Input.ofNullable(appName);
+            this.appName = Output.ofNullable(appName);
             return this;
         }
 
-        public Builder certificateKey(@Nullable Input<String> certificateKey) {
+        public Builder certificateKey(@Nullable Output<String> certificateKey) {
             this.certificateKey = certificateKey;
             return this;
         }
 
         public Builder certificateKey(@Nullable String certificateKey) {
-            this.certificateKey = Input.ofNullable(certificateKey);
+            this.certificateKey = Output.ofNullable(certificateKey);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
 
-        public Builder thumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Input.ofNullable(thumbprint);
+            this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
 
-        public Builder token(@Nullable Input<String> token) {
+        public Builder token(@Nullable Output<String> token) {
             this.token = token;
             return this;
         }
 
         public Builder token(@Nullable String token) {
-            this.token = Input.ofNullable(token);
+            this.token = Output.ofNullable(token);
             return this;
         }
         public ApnsCredentialArgs build() {

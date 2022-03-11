@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
     public static final BotMessageGroupArgs Empty = new BotMessageGroupArgs();
 
     @InputImport(name="message", required=true)
-      private final Input<BotMessageArgs> message;
+      private final Output<BotMessageArgs> message;
 
-    public Input<BotMessageArgs> getMessage() {
+    public Output<BotMessageArgs> getMessage() {
         return this.message;
     }
 
@@ -31,22 +31,22 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="variations")
-      private final @Nullable Input<List<BotMessageArgs>> variations;
+      private final @Nullable Output<List<BotMessageArgs>> variations;
 
-    public Input<List<BotMessageArgs>> getVariations() {
-        return this.variations == null ? Input.empty() : this.variations;
+    public Output<List<BotMessageArgs>> getVariations() {
+        return this.variations == null ? Output.empty() : this.variations;
     }
 
     public BotMessageGroupArgs(
-        Input<BotMessageArgs> message,
-        @Nullable Input<List<BotMessageArgs>> variations) {
+        Output<BotMessageArgs> message,
+        @Nullable Output<List<BotMessageArgs>> variations) {
         this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
         this.variations = variations;
     }
 
     private BotMessageGroupArgs() {
-        this.message = Input.empty();
-        this.variations = Input.empty();
+        this.message = Output.empty();
+        this.variations = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<BotMessageArgs> message;
-        private @Nullable Input<List<BotMessageArgs>> variations;
+        private Output<BotMessageArgs> message;
+        private @Nullable Output<List<BotMessageArgs>> variations;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
     	      this.variations = defaults.variations;
         }
 
-        public Builder message(Input<BotMessageArgs> message) {
+        public Builder message(Output<BotMessageArgs> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
         public Builder message(BotMessageArgs message) {
-            this.message = Input.of(Objects.requireNonNull(message));
+            this.message = Output.of(Objects.requireNonNull(message));
             return this;
         }
 
-        public Builder variations(@Nullable Input<List<BotMessageArgs>> variations) {
+        public Builder variations(@Nullable Output<List<BotMessageArgs>> variations) {
             this.variations = variations;
             return this;
         }
 
         public Builder variations(@Nullable List<BotMessageArgs> variations) {
-            this.variations = Input.ofNullable(variations);
+            this.variations = Output.ofNullable(variations);
             return this;
         }
         public BotMessageGroupArgs build() {

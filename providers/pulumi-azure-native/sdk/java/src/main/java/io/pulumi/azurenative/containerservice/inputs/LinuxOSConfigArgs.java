@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.SysctlConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="swapFileSizeMB")
-      private final @Nullable Input<Integer> swapFileSizeMB;
+      private final @Nullable Output<Integer> swapFileSizeMB;
 
-    public Input<Integer> getSwapFileSizeMB() {
-        return this.swapFileSizeMB == null ? Input.empty() : this.swapFileSizeMB;
+    public Output<Integer> getSwapFileSizeMB() {
+        return this.swapFileSizeMB == null ? Output.empty() : this.swapFileSizeMB;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sysctls")
-      private final @Nullable Input<SysctlConfigArgs> sysctls;
+      private final @Nullable Output<SysctlConfigArgs> sysctls;
 
-    public Input<SysctlConfigArgs> getSysctls() {
-        return this.sysctls == null ? Input.empty() : this.sysctls;
+    public Output<SysctlConfigArgs> getSysctls() {
+        return this.sysctls == null ? Output.empty() : this.sysctls;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transparentHugePageDefrag")
-      private final @Nullable Input<String> transparentHugePageDefrag;
+      private final @Nullable Output<String> transparentHugePageDefrag;
 
-    public Input<String> getTransparentHugePageDefrag() {
-        return this.transparentHugePageDefrag == null ? Input.empty() : this.transparentHugePageDefrag;
+    public Output<String> getTransparentHugePageDefrag() {
+        return this.transparentHugePageDefrag == null ? Output.empty() : this.transparentHugePageDefrag;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transparentHugePageEnabled")
-      private final @Nullable Input<String> transparentHugePageEnabled;
+      private final @Nullable Output<String> transparentHugePageEnabled;
 
-    public Input<String> getTransparentHugePageEnabled() {
-        return this.transparentHugePageEnabled == null ? Input.empty() : this.transparentHugePageEnabled;
+    public Output<String> getTransparentHugePageEnabled() {
+        return this.transparentHugePageEnabled == null ? Output.empty() : this.transparentHugePageEnabled;
     }
 
     public LinuxOSConfigArgs(
-        @Nullable Input<Integer> swapFileSizeMB,
-        @Nullable Input<SysctlConfigArgs> sysctls,
-        @Nullable Input<String> transparentHugePageDefrag,
-        @Nullable Input<String> transparentHugePageEnabled) {
+        @Nullable Output<Integer> swapFileSizeMB,
+        @Nullable Output<SysctlConfigArgs> sysctls,
+        @Nullable Output<String> transparentHugePageDefrag,
+        @Nullable Output<String> transparentHugePageEnabled) {
         this.swapFileSizeMB = swapFileSizeMB;
         this.sysctls = sysctls;
         this.transparentHugePageDefrag = transparentHugePageDefrag;
@@ -76,10 +76,10 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinuxOSConfigArgs() {
-        this.swapFileSizeMB = Input.empty();
-        this.sysctls = Input.empty();
-        this.transparentHugePageDefrag = Input.empty();
-        this.transparentHugePageEnabled = Input.empty();
+        this.swapFileSizeMB = Output.empty();
+        this.sysctls = Output.empty();
+        this.transparentHugePageDefrag = Output.empty();
+        this.transparentHugePageEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> swapFileSizeMB;
-        private @Nullable Input<SysctlConfigArgs> sysctls;
-        private @Nullable Input<String> transparentHugePageDefrag;
-        private @Nullable Input<String> transparentHugePageEnabled;
+        private @Nullable Output<Integer> swapFileSizeMB;
+        private @Nullable Output<SysctlConfigArgs> sysctls;
+        private @Nullable Output<String> transparentHugePageDefrag;
+        private @Nullable Output<String> transparentHugePageEnabled;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transparentHugePageEnabled = defaults.transparentHugePageEnabled;
         }
 
-        public Builder swapFileSizeMB(@Nullable Input<Integer> swapFileSizeMB) {
+        public Builder swapFileSizeMB(@Nullable Output<Integer> swapFileSizeMB) {
             this.swapFileSizeMB = swapFileSizeMB;
             return this;
         }
 
         public Builder swapFileSizeMB(@Nullable Integer swapFileSizeMB) {
-            this.swapFileSizeMB = Input.ofNullable(swapFileSizeMB);
+            this.swapFileSizeMB = Output.ofNullable(swapFileSizeMB);
             return this;
         }
 
-        public Builder sysctls(@Nullable Input<SysctlConfigArgs> sysctls) {
+        public Builder sysctls(@Nullable Output<SysctlConfigArgs> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
 
         public Builder sysctls(@Nullable SysctlConfigArgs sysctls) {
-            this.sysctls = Input.ofNullable(sysctls);
+            this.sysctls = Output.ofNullable(sysctls);
             return this;
         }
 
-        public Builder transparentHugePageDefrag(@Nullable Input<String> transparentHugePageDefrag) {
+        public Builder transparentHugePageDefrag(@Nullable Output<String> transparentHugePageDefrag) {
             this.transparentHugePageDefrag = transparentHugePageDefrag;
             return this;
         }
 
         public Builder transparentHugePageDefrag(@Nullable String transparentHugePageDefrag) {
-            this.transparentHugePageDefrag = Input.ofNullable(transparentHugePageDefrag);
+            this.transparentHugePageDefrag = Output.ofNullable(transparentHugePageDefrag);
             return this;
         }
 
-        public Builder transparentHugePageEnabled(@Nullable Input<String> transparentHugePageEnabled) {
+        public Builder transparentHugePageEnabled(@Nullable Output<String> transparentHugePageEnabled) {
             this.transparentHugePageEnabled = transparentHugePageEnabled;
             return this;
         }
 
         public Builder transparentHugePageEnabled(@Nullable String transparentHugePageEnabled) {
-            this.transparentHugePageEnabled = Input.ofNullable(transparentHugePageEnabled);
+            this.transparentHugePageEnabled = Output.ofNullable(transparentHugePageEnabled);
             return this;
         }
         public LinuxOSConfigArgs build() {

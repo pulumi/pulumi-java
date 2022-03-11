@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fsType")
-      private final @Nullable Input<String> fsType;
+      private final @Nullable Output<String> fsType;
 
-    public Input<String> getFsType() {
-        return this.fsType == null ? Input.empty() : this.fsType;
+    public Output<String> getFsType() {
+        return this.fsType == null ? Output.empty() : this.fsType;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="pdID", required=true)
-      private final Input<String> pdID;
+      private final Output<String> pdID;
 
-    public Input<String> getPdID() {
+    public Output<String> getPdID() {
         return this.pdID;
     }
 
     public PhotonPersistentDiskVolumeSourceArgs(
-        @Nullable Input<String> fsType,
-        Input<String> pdID) {
+        @Nullable Output<String> fsType,
+        Output<String> pdID) {
         this.fsType = fsType;
         this.pdID = Objects.requireNonNull(pdID, "expected parameter 'pdID' to be non-null");
     }
 
     private PhotonPersistentDiskVolumeSourceArgs() {
-        this.fsType = Input.empty();
-        this.pdID = Input.empty();
+        this.fsType = Output.empty();
+        this.pdID = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fsType;
-        private Input<String> pdID;
+        private @Nullable Output<String> fsType;
+        private Output<String> pdID;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
     	      this.pdID = defaults.pdID;
         }
 
-        public Builder fsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Output<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Input.ofNullable(fsType);
+            this.fsType = Output.ofNullable(fsType);
             return this;
         }
 
-        public Builder pdID(Input<String> pdID) {
+        public Builder pdID(Output<String> pdID) {
             this.pdID = Objects.requireNonNull(pdID);
             return this;
         }
 
         public Builder pdID(String pdID) {
-            this.pdID = Input.of(Objects.requireNonNull(pdID));
+            this.pdID = Output.of(Objects.requireNonNull(pdID));
             return this;
         }
         public PhotonPersistentDiskVolumeSourceArgs build() {

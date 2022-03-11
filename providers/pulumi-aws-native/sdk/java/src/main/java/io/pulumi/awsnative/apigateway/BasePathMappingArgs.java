@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="basePath")
-      private final @Nullable Input<String> basePath;
+      private final @Nullable Output<String> basePath;
 
-    public Input<String> getBasePath() {
-        return this.basePath == null ? Input.empty() : this.basePath;
+    public Output<String> getBasePath() {
+        return this.basePath == null ? Output.empty() : this.basePath;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -41,10 +41,10 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restApiId")
-      private final @Nullable Input<String> restApiId;
+      private final @Nullable Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
-        return this.restApiId == null ? Input.empty() : this.restApiId;
+    public Output<String> getRestApiId() {
+        return this.restApiId == null ? Output.empty() : this.restApiId;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="stage")
-      private final @Nullable Input<String> stage;
+      private final @Nullable Output<String> stage;
 
-    public Input<String> getStage() {
-        return this.stage == null ? Input.empty() : this.stage;
+    public Output<String> getStage() {
+        return this.stage == null ? Output.empty() : this.stage;
     }
 
     public BasePathMappingArgs(
-        @Nullable Input<String> basePath,
-        Input<String> domainName,
-        @Nullable Input<String> restApiId,
-        @Nullable Input<String> stage) {
+        @Nullable Output<String> basePath,
+        Output<String> domainName,
+        @Nullable Output<String> restApiId,
+        @Nullable Output<String> stage) {
         this.basePath = basePath;
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.restApiId = restApiId;
@@ -70,10 +70,10 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BasePathMappingArgs() {
-        this.basePath = Input.empty();
-        this.domainName = Input.empty();
-        this.restApiId = Input.empty();
-        this.stage = Input.empty();
+        this.basePath = Output.empty();
+        this.domainName = Output.empty();
+        this.restApiId = Output.empty();
+        this.stage = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> basePath;
-        private Input<String> domainName;
-        private @Nullable Input<String> restApiId;
-        private @Nullable Input<String> stage;
+        private @Nullable Output<String> basePath;
+        private Output<String> domainName;
+        private @Nullable Output<String> restApiId;
+        private @Nullable Output<String> stage;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
     	      this.stage = defaults.stage;
         }
 
-        public Builder basePath(@Nullable Input<String> basePath) {
+        public Builder basePath(@Nullable Output<String> basePath) {
             this.basePath = basePath;
             return this;
         }
 
         public Builder basePath(@Nullable String basePath) {
-            this.basePath = Input.ofNullable(basePath);
+            this.basePath = Output.ofNullable(basePath);
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder restApiId(@Nullable Input<String> restApiId) {
+        public Builder restApiId(@Nullable Output<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
 
         public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Input.ofNullable(restApiId);
+            this.restApiId = Output.ofNullable(restApiId);
             return this;
         }
 
-        public Builder stage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
 
         public Builder stage(@Nullable String stage) {
-            this.stage = Input.ofNullable(stage);
+            this.stage = Output.ofNullable(stage);
             return this;
         }
         public BasePathMappingArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class TopicRuleIotAnalyticsActionArgs extends io.pulumi.resources.R
     public static final TopicRuleIotAnalyticsActionArgs Empty = new TopicRuleIotAnalyticsActionArgs();
 
     @InputImport(name="batchMode")
-      private final @Nullable Input<Boolean> batchMode;
+      private final @Nullable Output<Boolean> batchMode;
 
-    public Input<Boolean> getBatchMode() {
-        return this.batchMode == null ? Input.empty() : this.batchMode;
+    public Output<Boolean> getBatchMode() {
+        return this.batchMode == null ? Output.empty() : this.batchMode;
     }
 
     @InputImport(name="channelName", required=true)
-      private final Input<String> channelName;
+      private final Output<String> channelName;
 
-    public Input<String> getChannelName() {
+    public Output<String> getChannelName() {
         return this.channelName;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public TopicRuleIotAnalyticsActionArgs(
-        @Nullable Input<Boolean> batchMode,
-        Input<String> channelName,
-        Input<String> roleArn) {
+        @Nullable Output<Boolean> batchMode,
+        Output<String> channelName,
+        Output<String> roleArn) {
         this.batchMode = batchMode;
         this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private TopicRuleIotAnalyticsActionArgs() {
-        this.batchMode = Input.empty();
-        this.channelName = Input.empty();
-        this.roleArn = Input.empty();
+        this.batchMode = Output.empty();
+        this.channelName = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class TopicRuleIotAnalyticsActionArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> batchMode;
-        private Input<String> channelName;
-        private Input<String> roleArn;
+        private @Nullable Output<Boolean> batchMode;
+        private Output<String> channelName;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class TopicRuleIotAnalyticsActionArgs extends io.pulumi.resources.R
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder batchMode(@Nullable Input<Boolean> batchMode) {
+        public Builder batchMode(@Nullable Output<Boolean> batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
         public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = Input.ofNullable(batchMode);
+            this.batchMode = Output.ofNullable(batchMode);
             return this;
         }
 
-        public Builder channelName(Input<String> channelName) {
+        public Builder channelName(Output<String> channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
         public Builder channelName(String channelName) {
-            this.channelName = Input.of(Objects.requireNonNull(channelName));
+            this.channelName = Output.of(Objects.requireNonNull(channelName));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public TopicRuleIotAnalyticsActionArgs build() {

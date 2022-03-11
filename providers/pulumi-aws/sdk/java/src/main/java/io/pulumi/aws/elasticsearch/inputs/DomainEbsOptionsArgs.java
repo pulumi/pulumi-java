@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,9 +21,9 @@ public final class DomainEbsOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ebsEnabled", required=true)
-      private final Input<Boolean> ebsEnabled;
+      private final Output<Boolean> ebsEnabled;
 
-    public Input<Boolean> getEbsEnabled() {
+    public Output<Boolean> getEbsEnabled() {
         return this.ebsEnabled;
     }
 
@@ -32,10 +32,10 @@ public final class DomainEbsOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="iops")
-      private final @Nullable Input<Integer> iops;
+      private final @Nullable Output<Integer> iops;
 
-    public Input<Integer> getIops() {
-        return this.iops == null ? Input.empty() : this.iops;
+    public Output<Integer> getIops() {
+        return this.iops == null ? Output.empty() : this.iops;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DomainEbsOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="volumeSize")
-      private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Output<Integer> volumeSize;
 
-    public Input<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Input.empty() : this.volumeSize;
+    public Output<Integer> getVolumeSize() {
+        return this.volumeSize == null ? Output.empty() : this.volumeSize;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class DomainEbsOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="volumeType")
-      private final @Nullable Input<String> volumeType;
+      private final @Nullable Output<String> volumeType;
 
-    public Input<String> getVolumeType() {
-        return this.volumeType == null ? Input.empty() : this.volumeType;
+    public Output<String> getVolumeType() {
+        return this.volumeType == null ? Output.empty() : this.volumeType;
     }
 
     public DomainEbsOptionsArgs(
-        Input<Boolean> ebsEnabled,
-        @Nullable Input<Integer> iops,
-        @Nullable Input<Integer> volumeSize,
-        @Nullable Input<String> volumeType) {
+        Output<Boolean> ebsEnabled,
+        @Nullable Output<Integer> iops,
+        @Nullable Output<Integer> volumeSize,
+        @Nullable Output<String> volumeType) {
         this.ebsEnabled = Objects.requireNonNull(ebsEnabled, "expected parameter 'ebsEnabled' to be non-null");
         this.iops = iops;
         this.volumeSize = volumeSize;
@@ -72,10 +72,10 @@ public final class DomainEbsOptionsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DomainEbsOptionsArgs() {
-        this.ebsEnabled = Input.empty();
-        this.iops = Input.empty();
-        this.volumeSize = Input.empty();
-        this.volumeType = Input.empty();
+        this.ebsEnabled = Output.empty();
+        this.iops = Output.empty();
+        this.volumeSize = Output.empty();
+        this.volumeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class DomainEbsOptionsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<Boolean> ebsEnabled;
-        private @Nullable Input<Integer> iops;
-        private @Nullable Input<Integer> volumeSize;
-        private @Nullable Input<String> volumeType;
+        private Output<Boolean> ebsEnabled;
+        private @Nullable Output<Integer> iops;
+        private @Nullable Output<Integer> volumeSize;
+        private @Nullable Output<String> volumeType;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class DomainEbsOptionsArgs extends io.pulumi.resources.ResourceArgs
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder ebsEnabled(Input<Boolean> ebsEnabled) {
+        public Builder ebsEnabled(Output<Boolean> ebsEnabled) {
             this.ebsEnabled = Objects.requireNonNull(ebsEnabled);
             return this;
         }
 
         public Builder ebsEnabled(Boolean ebsEnabled) {
-            this.ebsEnabled = Input.of(Objects.requireNonNull(ebsEnabled));
+            this.ebsEnabled = Output.of(Objects.requireNonNull(ebsEnabled));
             return this;
         }
 
-        public Builder iops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Input.ofNullable(iops);
+            this.iops = Output.ofNullable(iops);
             return this;
         }
 
-        public Builder volumeSize(@Nullable Input<Integer> volumeSize) {
+        public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Input.ofNullable(volumeSize);
+            this.volumeSize = Output.ofNullable(volumeSize);
             return this;
         }
 
-        public Builder volumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Input.ofNullable(volumeType);
+            this.volumeType = Output.ofNullable(volumeType);
             return this;
         }
         public DomainEbsOptionsArgs build() {

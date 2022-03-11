@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkconnectivity.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkconnectivity.inputs.HubRoutingVpcGetArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingVpcs")
-      private final @Nullable Input<List<HubRoutingVpcGetArgs>> routingVpcs;
+      private final @Nullable Output<List<HubRoutingVpcGetArgs>> routingVpcs;
 
-    public Input<List<HubRoutingVpcGetArgs>> getRoutingVpcs() {
-        return this.routingVpcs == null ? Input.empty() : this.routingVpcs;
+    public Output<List<HubRoutingVpcGetArgs>> getRoutingVpcs() {
+        return this.routingVpcs == null ? Output.empty() : this.routingVpcs;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniqueId")
-      private final @Nullable Input<String> uniqueId;
+      private final @Nullable Output<String> uniqueId;
 
-    public Input<String> getUniqueId() {
-        return this.uniqueId == null ? Input.empty() : this.uniqueId;
+    public Output<String> getUniqueId() {
+        return this.uniqueId == null ? Output.empty() : this.uniqueId;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public HubState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<List<HubRoutingVpcGetArgs>> routingVpcs,
-        @Nullable Input<String> state,
-        @Nullable Input<String> uniqueId,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<List<HubRoutingVpcGetArgs>> routingVpcs,
+        @Nullable Output<String> state,
+        @Nullable Output<String> uniqueId,
+        @Nullable Output<String> updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.labels = labels;
@@ -141,15 +141,15 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubState() {
-        this.createTime = Input.empty();
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.routingVpcs = Input.empty();
-        this.state = Input.empty();
-        this.uniqueId = Input.empty();
-        this.updateTime = Input.empty();
+        this.createTime = Output.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.routingVpcs = Output.empty();
+        this.state = Output.empty();
+        this.uniqueId = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<HubRoutingVpcGetArgs>> routingVpcs;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> uniqueId;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<HubRoutingVpcGetArgs>> routingVpcs;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> uniqueId;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder routingVpcs(@Nullable Input<List<HubRoutingVpcGetArgs>> routingVpcs) {
+        public Builder routingVpcs(@Nullable Output<List<HubRoutingVpcGetArgs>> routingVpcs) {
             this.routingVpcs = routingVpcs;
             return this;
         }
 
         public Builder routingVpcs(@Nullable List<HubRoutingVpcGetArgs> routingVpcs) {
-            this.routingVpcs = Input.ofNullable(routingVpcs);
+            this.routingVpcs = Output.ofNullable(routingVpcs);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder uniqueId(@Nullable Input<String> uniqueId) {
+        public Builder uniqueId(@Nullable Output<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
 
         public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Input.ofNullable(uniqueId);
+            this.uniqueId = Output.ofNullable(uniqueId);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public HubState build() {

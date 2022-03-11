@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.RecipeActionArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeConditionExpressionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +17,9 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
     public static final RecipeStepArgs Empty = new RecipeStepArgs();
 
     @InputImport(name="action", required=true)
-      private final Input<RecipeActionArgs> action;
+      private final Output<RecipeActionArgs> action;
 
-    public Input<RecipeActionArgs> getAction() {
+    public Output<RecipeActionArgs> getAction() {
         return this.action;
     }
 
@@ -28,22 +28,22 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionExpressions")
-      private final @Nullable Input<List<RecipeConditionExpressionArgs>> conditionExpressions;
+      private final @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions;
 
-    public Input<List<RecipeConditionExpressionArgs>> getConditionExpressions() {
-        return this.conditionExpressions == null ? Input.empty() : this.conditionExpressions;
+    public Output<List<RecipeConditionExpressionArgs>> getConditionExpressions() {
+        return this.conditionExpressions == null ? Output.empty() : this.conditionExpressions;
     }
 
     public RecipeStepArgs(
-        Input<RecipeActionArgs> action,
-        @Nullable Input<List<RecipeConditionExpressionArgs>> conditionExpressions) {
+        Output<RecipeActionArgs> action,
+        @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.conditionExpressions = conditionExpressions;
     }
 
     private RecipeStepArgs() {
-        this.action = Input.empty();
-        this.conditionExpressions = Input.empty();
+        this.action = Output.empty();
+        this.conditionExpressions = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<RecipeActionArgs> action;
-        private @Nullable Input<List<RecipeConditionExpressionArgs>> conditionExpressions;
+        private Output<RecipeActionArgs> action;
+        private @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.conditionExpressions = defaults.conditionExpressions;
         }
 
-        public Builder action(Input<RecipeActionArgs> action) {
+        public Builder action(Output<RecipeActionArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(RecipeActionArgs action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder conditionExpressions(@Nullable Input<List<RecipeConditionExpressionArgs>> conditionExpressions) {
+        public Builder conditionExpressions(@Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions) {
             this.conditionExpressions = conditionExpressions;
             return this;
         }
 
         public Builder conditionExpressions(@Nullable List<RecipeConditionExpressionArgs> conditionExpressions) {
-            this.conditionExpressions = Input.ofNullable(conditionExpressions);
+            this.conditionExpressions = Output.ofNullable(conditionExpressions);
             return this;
         }
         public RecipeStepArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class HookVersionLoggingConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="logGroupName")
-      private final @Nullable Input<String> logGroupName;
+      private final @Nullable Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
-        return this.logGroupName == null ? Input.empty() : this.logGroupName;
+    public Output<String> getLogGroupName() {
+        return this.logGroupName == null ? Output.empty() : this.logGroupName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class HookVersionLoggingConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="logRoleArn")
-      private final @Nullable Input<String> logRoleArn;
+      private final @Nullable Output<String> logRoleArn;
 
-    public Input<String> getLogRoleArn() {
-        return this.logRoleArn == null ? Input.empty() : this.logRoleArn;
+    public Output<String> getLogRoleArn() {
+        return this.logRoleArn == null ? Output.empty() : this.logRoleArn;
     }
 
     public HookVersionLoggingConfigArgs(
-        @Nullable Input<String> logGroupName,
-        @Nullable Input<String> logRoleArn) {
+        @Nullable Output<String> logGroupName,
+        @Nullable Output<String> logRoleArn) {
         this.logGroupName = logGroupName;
         this.logRoleArn = logRoleArn;
     }
 
     private HookVersionLoggingConfigArgs() {
-        this.logGroupName = Input.empty();
-        this.logRoleArn = Input.empty();
+        this.logGroupName = Output.empty();
+        this.logRoleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class HookVersionLoggingConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> logGroupName;
-        private @Nullable Input<String> logRoleArn;
+        private @Nullable Output<String> logGroupName;
+        private @Nullable Output<String> logRoleArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class HookVersionLoggingConfigArgs extends io.pulumi.resources.Reso
     	      this.logRoleArn = defaults.logRoleArn;
         }
 
-        public Builder logGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Input.ofNullable(logGroupName);
+            this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder logRoleArn(@Nullable Input<String> logRoleArn) {
+        public Builder logRoleArn(@Nullable Output<String> logRoleArn) {
             this.logRoleArn = logRoleArn;
             return this;
         }
 
         public Builder logRoleArn(@Nullable String logRoleArn) {
-            this.logRoleArn = Input.ofNullable(logRoleArn);
+            this.logRoleArn = Output.ofNullable(logRoleArn);
             return this;
         }
         public HookVersionLoggingConfigArgs build() {

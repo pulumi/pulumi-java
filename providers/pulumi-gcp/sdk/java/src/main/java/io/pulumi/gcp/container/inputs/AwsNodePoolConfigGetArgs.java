@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigConfigEncryptionGetArgs;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigRootVolumeGetArgs;
@@ -25,9 +25,9 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="configEncryption", required=true)
-      private final Input<AwsNodePoolConfigConfigEncryptionGetArgs> configEncryption;
+      private final Output<AwsNodePoolConfigConfigEncryptionGetArgs> configEncryption;
 
-    public Input<AwsNodePoolConfigConfigEncryptionGetArgs> getConfigEncryption() {
+    public Output<AwsNodePoolConfigConfigEncryptionGetArgs> getConfigEncryption() {
         return this.configEncryption;
     }
 
@@ -36,9 +36,9 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="iamInstanceProfile", required=true)
-      private final Input<String> iamInstanceProfile;
+      private final Output<String> iamInstanceProfile;
 
-    public Input<String> getIamInstanceProfile() {
+    public Output<String> getIamInstanceProfile() {
         return this.iamInstanceProfile;
     }
 
@@ -47,10 +47,10 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="rootVolume")
-      private final @Nullable Input<AwsNodePoolConfigRootVolumeGetArgs> rootVolume;
+      private final @Nullable Output<AwsNodePoolConfigRootVolumeGetArgs> rootVolume;
 
-    public Input<AwsNodePoolConfigRootVolumeGetArgs> getRootVolume() {
-        return this.rootVolume == null ? Input.empty() : this.rootVolume;
+    public Output<AwsNodePoolConfigRootVolumeGetArgs> getRootVolume() {
+        return this.rootVolume == null ? Output.empty() : this.rootVolume;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sshConfig")
-      private final @Nullable Input<AwsNodePoolConfigSshConfigGetArgs> sshConfig;
+      private final @Nullable Output<AwsNodePoolConfigSshConfigGetArgs> sshConfig;
 
-    public Input<AwsNodePoolConfigSshConfigGetArgs> getSshConfig() {
-        return this.sshConfig == null ? Input.empty() : this.sshConfig;
+    public Output<AwsNodePoolConfigSshConfigGetArgs> getSshConfig() {
+        return this.sshConfig == null ? Output.empty() : this.sshConfig;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="taints")
-      private final @Nullable Input<List<AwsNodePoolConfigTaintGetArgs>> taints;
+      private final @Nullable Output<List<AwsNodePoolConfigTaintGetArgs>> taints;
 
-    public Input<List<AwsNodePoolConfigTaintGetArgs>> getTaints() {
-        return this.taints == null ? Input.empty() : this.taints;
+    public Output<List<AwsNodePoolConfigTaintGetArgs>> getTaints() {
+        return this.taints == null ? Output.empty() : this.taints;
     }
 
     public AwsNodePoolConfigGetArgs(
-        Input<AwsNodePoolConfigConfigEncryptionGetArgs> configEncryption,
-        Input<String> iamInstanceProfile,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<AwsNodePoolConfigRootVolumeGetArgs> rootVolume,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<AwsNodePoolConfigSshConfigGetArgs> sshConfig,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<AwsNodePoolConfigTaintGetArgs>> taints) {
+        Output<AwsNodePoolConfigConfigEncryptionGetArgs> configEncryption,
+        Output<String> iamInstanceProfile,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<AwsNodePoolConfigRootVolumeGetArgs> rootVolume,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<AwsNodePoolConfigSshConfigGetArgs> sshConfig,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<AwsNodePoolConfigTaintGetArgs>> taints) {
         this.configEncryption = Objects.requireNonNull(configEncryption, "expected parameter 'configEncryption' to be non-null");
         this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile, "expected parameter 'iamInstanceProfile' to be non-null");
         this.instanceType = instanceType;
@@ -141,15 +141,15 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     }
 
     private AwsNodePoolConfigGetArgs() {
-        this.configEncryption = Input.empty();
-        this.iamInstanceProfile = Input.empty();
-        this.instanceType = Input.empty();
-        this.labels = Input.empty();
-        this.rootVolume = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.sshConfig = Input.empty();
-        this.tags = Input.empty();
-        this.taints = Input.empty();
+        this.configEncryption = Output.empty();
+        this.iamInstanceProfile = Output.empty();
+        this.instanceType = Output.empty();
+        this.labels = Output.empty();
+        this.rootVolume = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.sshConfig = Output.empty();
+        this.tags = Output.empty();
+        this.taints = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<AwsNodePoolConfigConfigEncryptionGetArgs> configEncryption;
-        private Input<String> iamInstanceProfile;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<AwsNodePoolConfigRootVolumeGetArgs> rootVolume;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<AwsNodePoolConfigSshConfigGetArgs> sshConfig;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<AwsNodePoolConfigTaintGetArgs>> taints;
+        private Output<AwsNodePoolConfigConfigEncryptionGetArgs> configEncryption;
+        private Output<String> iamInstanceProfile;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<AwsNodePoolConfigRootVolumeGetArgs> rootVolume;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<AwsNodePoolConfigSshConfigGetArgs> sshConfig;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<AwsNodePoolConfigTaintGetArgs>> taints;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     	      this.taints = defaults.taints;
         }
 
-        public Builder configEncryption(Input<AwsNodePoolConfigConfigEncryptionGetArgs> configEncryption) {
+        public Builder configEncryption(Output<AwsNodePoolConfigConfigEncryptionGetArgs> configEncryption) {
             this.configEncryption = Objects.requireNonNull(configEncryption);
             return this;
         }
 
         public Builder configEncryption(AwsNodePoolConfigConfigEncryptionGetArgs configEncryption) {
-            this.configEncryption = Input.of(Objects.requireNonNull(configEncryption));
+            this.configEncryption = Output.of(Objects.requireNonNull(configEncryption));
             return this;
         }
 
-        public Builder iamInstanceProfile(Input<String> iamInstanceProfile) {
+        public Builder iamInstanceProfile(Output<String> iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
 
         public Builder iamInstanceProfile(String iamInstanceProfile) {
-            this.iamInstanceProfile = Input.of(Objects.requireNonNull(iamInstanceProfile));
+            this.iamInstanceProfile = Output.of(Objects.requireNonNull(iamInstanceProfile));
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder rootVolume(@Nullable Input<AwsNodePoolConfigRootVolumeGetArgs> rootVolume) {
+        public Builder rootVolume(@Nullable Output<AwsNodePoolConfigRootVolumeGetArgs> rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
 
         public Builder rootVolume(@Nullable AwsNodePoolConfigRootVolumeGetArgs rootVolume) {
-            this.rootVolume = Input.ofNullable(rootVolume);
+            this.rootVolume = Output.ofNullable(rootVolume);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder sshConfig(@Nullable Input<AwsNodePoolConfigSshConfigGetArgs> sshConfig) {
+        public Builder sshConfig(@Nullable Output<AwsNodePoolConfigSshConfigGetArgs> sshConfig) {
             this.sshConfig = sshConfig;
             return this;
         }
 
         public Builder sshConfig(@Nullable AwsNodePoolConfigSshConfigGetArgs sshConfig) {
-            this.sshConfig = Input.ofNullable(sshConfig);
+            this.sshConfig = Output.ofNullable(sshConfig);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder taints(@Nullable Input<List<AwsNodePoolConfigTaintGetArgs>> taints) {
+        public Builder taints(@Nullable Output<List<AwsNodePoolConfigTaintGetArgs>> taints) {
             this.taints = taints;
             return this;
         }
 
         public Builder taints(@Nullable List<AwsNodePoolConfigTaintGetArgs> taints) {
-            this.taints = Input.ofNullable(taints);
+            this.taints = Output.ofNullable(taints);
             return this;
         }
         public AwsNodePoolConfigGetArgs build() {

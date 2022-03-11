@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.baremetalsolution_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,24 +30,24 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeBytes")
-      private final @Nullable Input<String> sizeBytes;
+      private final @Nullable Output<String> sizeBytes;
 
-    public Input<String> getSizeBytes() {
-        return this.sizeBytes == null ? Input.empty() : this.sizeBytes;
+    public Output<String> getSizeBytes() {
+        return this.sizeBytes == null ? Output.empty() : this.sizeBytes;
     }
 
     /**
@@ -66,27 +66,27 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageVolume")
-      private final @Nullable Input<String> storageVolume;
+      private final @Nullable Output<String> storageVolume;
 
-    public Input<String> getStorageVolume() {
-        return this.storageVolume == null ? Input.empty() : this.storageVolume;
+    public Output<String> getStorageVolume() {
+        return this.storageVolume == null ? Output.empty() : this.storageVolume;
     }
 
     @InputImport(name="volumeId", required=true)
-      private final Input<String> volumeId;
+      private final Output<String> volumeId;
 
-    public Input<String> getVolumeId() {
+    public Output<String> getVolumeId() {
         return this.volumeId;
     }
 
     public SnapshotArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<String> sizeBytes,
-        @Nullable Input<String> storageVolume,
-        Input<String> volumeId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<String> sizeBytes,
+        @Nullable Output<String> storageVolume,
+        Output<String> volumeId) {
         this.description = description;
         this.id = id;
         this.location = location;
@@ -97,13 +97,13 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.description = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.sizeBytes = Input.empty();
-        this.storageVolume = Input.empty();
-        this.volumeId = Input.empty();
+        this.description = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.sizeBytes = Output.empty();
+        this.storageVolume = Output.empty();
+        this.volumeId = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,13 +115,13 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> sizeBytes;
-        private @Nullable Input<String> storageVolume;
-        private Input<String> volumeId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> sizeBytes;
+        private @Nullable Output<String> storageVolume;
+        private Output<String> volumeId;
 
         public Builder() {
     	      // Empty
@@ -138,73 +138,73 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeId = defaults.volumeId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder sizeBytes(@Nullable Input<String> sizeBytes) {
+        public Builder sizeBytes(@Nullable Output<String> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
 
         public Builder sizeBytes(@Nullable String sizeBytes) {
-            this.sizeBytes = Input.ofNullable(sizeBytes);
+            this.sizeBytes = Output.ofNullable(sizeBytes);
             return this;
         }
 
-        public Builder storageVolume(@Nullable Input<String> storageVolume) {
+        public Builder storageVolume(@Nullable Output<String> storageVolume) {
             this.storageVolume = storageVolume;
             return this;
         }
 
         public Builder storageVolume(@Nullable String storageVolume) {
-            this.storageVolume = Input.ofNullable(storageVolume);
+            this.storageVolume = Output.ofNullable(storageVolume);
             return this;
         }
 
-        public Builder volumeId(Input<String> volumeId) {
+        public Builder volumeId(Output<String> volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
 
         public Builder volumeId(String volumeId) {
-            this.volumeId = Input.of(Objects.requireNonNull(volumeId));
+            this.volumeId = Output.of(Objects.requireNonNull(volumeId));
             return this;
         }
         public SnapshotArgs build() {

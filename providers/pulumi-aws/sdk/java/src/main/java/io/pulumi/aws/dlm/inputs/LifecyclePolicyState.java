@@ -4,7 +4,7 @@
 package io.pulumi.aws.dlm.inputs;
 
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="executionRoleArn")
-      private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Output<String> executionRoleArn;
 
-    public Input<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
+    public Output<String> getExecutionRoleArn() {
+        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyDetails")
-      private final @Nullable Input<LifecyclePolicyPolicyDetailsGetArgs> policyDetails;
+      private final @Nullable Output<LifecyclePolicyPolicyDetailsGetArgs> policyDetails;
 
-    public Input<LifecyclePolicyPolicyDetailsGetArgs> getPolicyDetails() {
-        return this.policyDetails == null ? Input.empty() : this.policyDetails;
+    public Output<LifecyclePolicyPolicyDetailsGetArgs> getPolicyDetails() {
+        return this.policyDetails == null ? Output.empty() : this.policyDetails;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public LifecyclePolicyState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> executionRoleArn,
-        @Nullable Input<LifecyclePolicyPolicyDetailsGetArgs> policyDetails,
-        @Nullable Input<String> state,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> executionRoleArn,
+        @Nullable Output<LifecyclePolicyPolicyDetailsGetArgs> policyDetails,
+        @Nullable Output<String> state,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.description = description;
         this.executionRoleArn = executionRoleArn;
@@ -111,13 +111,13 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     private LifecyclePolicyState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.executionRoleArn = Input.empty();
-        this.policyDetails = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.executionRoleArn = Output.empty();
+        this.policyDetails = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> executionRoleArn;
-        private @Nullable Input<LifecyclePolicyPolicyDetailsGetArgs> policyDetails;
-        private @Nullable Input<String> state;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> executionRoleArn;
+        private @Nullable Output<LifecyclePolicyPolicyDetailsGetArgs> policyDetails;
+        private @Nullable Output<String> state;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Input.ofNullable(executionRoleArn);
+            this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder policyDetails(@Nullable Input<LifecyclePolicyPolicyDetailsGetArgs> policyDetails) {
+        public Builder policyDetails(@Nullable Output<LifecyclePolicyPolicyDetailsGetArgs> policyDetails) {
             this.policyDetails = policyDetails;
             return this;
         }
 
         public Builder policyDetails(@Nullable LifecyclePolicyPolicyDetailsGetArgs policyDetails) {
-            this.policyDetails = Input.ofNullable(policyDetails);
+            this.policyDetails = Output.ofNullable(policyDetails);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public LifecyclePolicyState build() {

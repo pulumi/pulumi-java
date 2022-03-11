@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="keyVaultUri", required=true)
-      private final Input<String> keyVaultUri;
+      private final Output<String> keyVaultUri;
 
-    public Input<String> getKeyVaultUri() {
+    public Output<String> getKeyVaultUri() {
         return this.keyVaultUri;
     }
 
@@ -34,10 +34,10 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public ExportPipelineTargetPropertiesArgs(
-        Input<String> keyVaultUri,
-        @Nullable Input<String> type,
-        @Nullable Input<String> uri) {
+        Output<String> keyVaultUri,
+        @Nullable Output<String> type,
+        @Nullable Output<String> uri) {
         this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
         this.type = type;
         this.uri = uri;
     }
 
     private ExportPipelineTargetPropertiesArgs() {
-        this.keyVaultUri = Input.empty();
-        this.type = Input.empty();
-        this.uri = Input.empty();
+        this.keyVaultUri = Output.empty();
+        this.type = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> keyVaultUri;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> uri;
+        private Output<String> keyVaultUri;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
     	      this.uri = defaults.uri;
         }
 
-        public Builder keyVaultUri(Input<String> keyVaultUri) {
+        public Builder keyVaultUri(Output<String> keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
 
         public Builder keyVaultUri(String keyVaultUri) {
-            this.keyVaultUri = Input.of(Objects.requireNonNull(keyVaultUri));
+            this.keyVaultUri = Output.of(Objects.requireNonNull(keyVaultUri));
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public ExportPipelineTargetPropertiesArgs build() {

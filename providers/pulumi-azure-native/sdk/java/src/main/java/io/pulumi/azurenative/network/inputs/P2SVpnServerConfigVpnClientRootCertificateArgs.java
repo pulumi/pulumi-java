@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
      * 
      */
     @InputImport(name="publicCertData", required=true)
-      private final Input<String> publicCertData;
+      private final Output<String> publicCertData;
 
-    public Input<String> getPublicCertData() {
+    public Output<String> getPublicCertData() {
         return this.publicCertData;
     }
 
     public P2SVpnServerConfigVpnClientRootCertificateArgs(
-        @Nullable Input<String> etag,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        Input<String> publicCertData) {
+        @Nullable Output<String> etag,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        Output<String> publicCertData) {
         this.etag = etag;
         this.id = id;
         this.name = name;
@@ -74,10 +74,10 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
     }
 
     private P2SVpnServerConfigVpnClientRootCertificateArgs() {
-        this.etag = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.publicCertData = Input.empty();
+        this.etag = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.publicCertData = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private Input<String> publicCertData;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private Output<String> publicCertData;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
     	      this.publicCertData = defaults.publicCertData;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder publicCertData(Input<String> publicCertData) {
+        public Builder publicCertData(Output<String> publicCertData) {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
 
         public Builder publicCertData(String publicCertData) {
-            this.publicCertData = Input.of(Objects.requireNonNull(publicCertData));
+            this.publicCertData = Output.of(Objects.requireNonNull(publicCertData));
             return this;
         }
         public P2SVpnServerConfigVpnClientRootCertificateArgs build() {

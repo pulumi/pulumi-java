@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ClusterReleaseChannelGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="channel", required=true)
-      private final Input<String> channel;
+      private final Output<String> channel;
 
-    public Input<String> getChannel() {
+    public Output<String> getChannel() {
         return this.channel;
     }
 
-    public ClusterReleaseChannelGetArgs(Input<String> channel) {
+    public ClusterReleaseChannelGetArgs(Output<String> channel) {
         this.channel = Objects.requireNonNull(channel, "expected parameter 'channel' to be non-null");
     }
 
     private ClusterReleaseChannelGetArgs() {
-        this.channel = Input.empty();
+        this.channel = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ClusterReleaseChannelGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> channel;
+        private Output<String> channel;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ClusterReleaseChannelGetArgs extends io.pulumi.resources.Reso
     	      this.channel = defaults.channel;
         }
 
-        public Builder channel(Input<String> channel) {
+        public Builder channel(Output<String> channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
 
         public Builder channel(String channel) {
-            this.channel = Input.of(Objects.requireNonNull(channel));
+            this.channel = Output.of(Objects.requireNonNull(channel));
             return this;
         }
         public ClusterReleaseChannelGetArgs build() {

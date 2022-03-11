@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
      * 
      */
     @InputImport(name="rangeEnd", required=true)
-      private final Input<Integer> rangeEnd;
+      private final Output<Integer> rangeEnd;
 
-    public Input<Integer> getRangeEnd() {
+    public Output<Integer> getRangeEnd() {
         return this.rangeEnd;
     }
 
@@ -29,22 +29,22 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
      * 
      */
     @InputImport(name="rangeStart", required=true)
-      private final Input<Integer> rangeStart;
+      private final Output<Integer> rangeStart;
 
-    public Input<Integer> getRangeStart() {
+    public Output<Integer> getRangeStart() {
         return this.rangeStart;
     }
 
     public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs(
-        Input<Integer> rangeEnd,
-        Input<Integer> rangeStart) {
+        Output<Integer> rangeEnd,
+        Output<Integer> rangeStart) {
         this.rangeEnd = Objects.requireNonNull(rangeEnd, "expected parameter 'rangeEnd' to be non-null");
         this.rangeStart = Objects.requireNonNull(rangeStart, "expected parameter 'rangeStart' to be non-null");
     }
 
     private RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs() {
-        this.rangeEnd = Input.empty();
-        this.rangeStart = Input.empty();
+        this.rangeEnd = Output.empty();
+        this.rangeStart = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
     }
 
     public static final class Builder {
-        private Input<Integer> rangeEnd;
-        private Input<Integer> rangeStart;
+        private Output<Integer> rangeEnd;
+        private Output<Integer> rangeStart;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
     	      this.rangeStart = defaults.rangeStart;
         }
 
-        public Builder rangeEnd(Input<Integer> rangeEnd) {
+        public Builder rangeEnd(Output<Integer> rangeEnd) {
             this.rangeEnd = Objects.requireNonNull(rangeEnd);
             return this;
         }
 
         public Builder rangeEnd(Integer rangeEnd) {
-            this.rangeEnd = Input.of(Objects.requireNonNull(rangeEnd));
+            this.rangeEnd = Output.of(Objects.requireNonNull(rangeEnd));
             return this;
         }
 
-        public Builder rangeStart(Input<Integer> rangeStart) {
+        public Builder rangeStart(Output<Integer> rangeStart) {
             this.rangeStart = Objects.requireNonNull(rangeStart);
             return this;
         }
 
         public Builder rangeStart(Integer rangeStart) {
-            this.rangeStart = Input.of(Objects.requireNonNull(rangeStart));
+            this.rangeStart = Output.of(Objects.requireNonNull(rangeStart));
             return this;
         }
         public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs build() {

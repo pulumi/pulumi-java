@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class NodeGroupTaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="effect", required=true)
-      private final Input<String> effect;
+      private final Output<String> effect;
 
-    public Input<String> getEffect() {
+    public Output<String> getEffect() {
         return this.effect;
     }
 
@@ -30,9 +30,9 @@ public final class NodeGroupTaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -41,25 +41,25 @@ public final class NodeGroupTaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public NodeGroupTaintArgs(
-        Input<String> effect,
-        Input<String> key,
-        @Nullable Input<String> value) {
+        Output<String> effect,
+        Output<String> key,
+        @Nullable Output<String> value) {
         this.effect = Objects.requireNonNull(effect, "expected parameter 'effect' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.value = value;
     }
 
     private NodeGroupTaintArgs() {
-        this.effect = Input.empty();
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.effect = Output.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class NodeGroupTaintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> effect;
-        private Input<String> key;
-        private @Nullable Input<String> value;
+        private Output<String> effect;
+        private Output<String> key;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class NodeGroupTaintArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder effect(Input<String> effect) {
+        public Builder effect(Output<String> effect) {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
 
         public Builder effect(String effect) {
-            this.effect = Input.of(Objects.requireNonNull(effect));
+            this.effect = Output.of(Objects.requireNonNull(effect));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public NodeGroupTaintArgs build() {

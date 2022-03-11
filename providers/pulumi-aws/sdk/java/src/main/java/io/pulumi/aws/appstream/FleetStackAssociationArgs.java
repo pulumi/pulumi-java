@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class FleetStackAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fleetName", required=true)
-      private final Input<String> fleetName;
+      private final Output<String> fleetName;
 
-    public Input<String> getFleetName() {
+    public Output<String> getFleetName() {
         return this.fleetName;
     }
 
@@ -29,22 +29,22 @@ public final class FleetStackAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="stackName", required=true)
-      private final Input<String> stackName;
+      private final Output<String> stackName;
 
-    public Input<String> getStackName() {
+    public Output<String> getStackName() {
         return this.stackName;
     }
 
     public FleetStackAssociationArgs(
-        Input<String> fleetName,
-        Input<String> stackName) {
+        Output<String> fleetName,
+        Output<String> stackName) {
         this.fleetName = Objects.requireNonNull(fleetName, "expected parameter 'fleetName' to be non-null");
         this.stackName = Objects.requireNonNull(stackName, "expected parameter 'stackName' to be non-null");
     }
 
     private FleetStackAssociationArgs() {
-        this.fleetName = Input.empty();
-        this.stackName = Input.empty();
+        this.fleetName = Output.empty();
+        this.stackName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class FleetStackAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> fleetName;
-        private Input<String> stackName;
+        private Output<String> fleetName;
+        private Output<String> stackName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class FleetStackAssociationArgs extends io.pulumi.resources.Resourc
     	      this.stackName = defaults.stackName;
         }
 
-        public Builder fleetName(Input<String> fleetName) {
+        public Builder fleetName(Output<String> fleetName) {
             this.fleetName = Objects.requireNonNull(fleetName);
             return this;
         }
 
         public Builder fleetName(String fleetName) {
-            this.fleetName = Input.of(Objects.requireNonNull(fleetName));
+            this.fleetName = Output.of(Objects.requireNonNull(fleetName));
             return this;
         }
 
-        public Builder stackName(Input<String> stackName) {
+        public Builder stackName(Output<String> stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
 
         public Builder stackName(String stackName) {
-            this.stackName = Input.of(Objects.requireNonNull(stackName));
+            this.stackName = Output.of(Objects.requireNonNull(stackName));
             return this;
         }
         public FleetStackAssociationArgs build() {

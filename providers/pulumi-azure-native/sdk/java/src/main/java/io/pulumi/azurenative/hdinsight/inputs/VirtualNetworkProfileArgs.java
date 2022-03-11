@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<String> subnet;
+      private final @Nullable Output<String> subnet;
 
-    public Input<String> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<String> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     public VirtualNetworkProfileArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> subnet) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> subnet) {
         this.id = id;
         this.subnet = subnet;
     }
 
     private VirtualNetworkProfileArgs() {
-        this.id = Input.empty();
-        this.subnet = Input.empty();
+        this.id = Output.empty();
+        this.subnet = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> subnet;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> subnet;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
         public VirtualNetworkProfileArgs build() {

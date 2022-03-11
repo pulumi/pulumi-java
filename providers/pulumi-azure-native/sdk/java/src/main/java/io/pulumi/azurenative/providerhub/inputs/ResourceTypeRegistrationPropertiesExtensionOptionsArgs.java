@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeExtensionOptionsResourceCreationBeginArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
     public static final ResourceTypeRegistrationPropertiesExtensionOptionsArgs Empty = new ResourceTypeRegistrationPropertiesExtensionOptionsArgs();
 
     @InputImport(name="resourceCreationBegin")
-      private final @Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
+      private final @Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
 
-    public Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> getResourceCreationBegin() {
-        return this.resourceCreationBegin == null ? Input.empty() : this.resourceCreationBegin;
+    public Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> getResourceCreationBegin() {
+        return this.resourceCreationBegin == null ? Output.empty() : this.resourceCreationBegin;
     }
 
-    public ResourceTypeRegistrationPropertiesExtensionOptionsArgs(@Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin) {
+    public ResourceTypeRegistrationPropertiesExtensionOptionsArgs(@Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin) {
         this.resourceCreationBegin = resourceCreationBegin;
     }
 
     private ResourceTypeRegistrationPropertiesExtensionOptionsArgs() {
-        this.resourceCreationBegin = Input.empty();
+        this.resourceCreationBegin = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
+        private @Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
     	      this.resourceCreationBegin = defaults.resourceCreationBegin;
         }
 
-        public Builder resourceCreationBegin(@Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin) {
+        public Builder resourceCreationBegin(@Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin) {
             this.resourceCreationBegin = resourceCreationBegin;
             return this;
         }
 
         public Builder resourceCreationBegin(@Nullable ResourceTypeExtensionOptionsResourceCreationBeginArgs resourceCreationBegin) {
-            this.resourceCreationBegin = Input.ofNullable(resourceCreationBegin);
+            this.resourceCreationBegin = Output.ofNullable(resourceCreationBegin);
             return this;
         }
         public ResourceTypeRegistrationPropertiesExtensionOptionsArgs build() {

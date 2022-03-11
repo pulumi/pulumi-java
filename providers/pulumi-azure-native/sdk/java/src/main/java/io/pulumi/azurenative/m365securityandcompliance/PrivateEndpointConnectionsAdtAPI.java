@@ -9,7 +9,6 @@ import io.pulumi.azurenative.m365securityandcompliance.outputs.PrivateEndpointRe
 import io.pulumi.azurenative.m365securityandcompliance.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -157,18 +156,18 @@ public class PrivateEndpointConnectionsAdtAPI extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateEndpointConnectionsAdtAPI(String name, PrivateEndpointConnectionsAdtAPIArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:m365securityandcompliance:PrivateEndpointConnectionsAdtAPI", name, args == null ? PrivateEndpointConnectionsAdtAPIArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:m365securityandcompliance:PrivateEndpointConnectionsAdtAPI", name, args == null ? PrivateEndpointConnectionsAdtAPIArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PrivateEndpointConnectionsAdtAPI(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PrivateEndpointConnectionsAdtAPI(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:m365securityandcompliance:PrivateEndpointConnectionsAdtAPI", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:m365securityandcompliance/v20210325preview:PrivateEndpointConnectionsAdtAPI").build())
+                Output.of(Alias.builder().setType("azure-native:m365securityandcompliance/v20210325preview:PrivateEndpointConnectionsAdtAPI").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -182,7 +181,7 @@ public class PrivateEndpointConnectionsAdtAPI extends io.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PrivateEndpointConnectionsAdtAPI get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PrivateEndpointConnectionsAdtAPI get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnectionsAdtAPI(name, id, options);
     }
 }

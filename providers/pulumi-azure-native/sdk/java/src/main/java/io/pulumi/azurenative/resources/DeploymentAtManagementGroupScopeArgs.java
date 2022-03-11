@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.resources.inputs.DeploymentPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="deploymentName")
-      private final @Nullable Input<String> deploymentName;
+      private final @Nullable Output<String> deploymentName;
 
-    public Input<String> getDeploymentName() {
-        return this.deploymentName == null ? Input.empty() : this.deploymentName;
+    public Output<String> getDeploymentName() {
+        return this.deploymentName == null ? Output.empty() : this.deploymentName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="groupId", required=true)
-      private final Input<String> groupId;
+      private final Output<String> groupId;
 
-    public Input<String> getGroupId() {
+    public Output<String> getGroupId() {
         return this.groupId;
     }
 
@@ -43,10 +43,10 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<DeploymentPropertiesArgs> properties;
+      private final Output<DeploymentPropertiesArgs> properties;
 
-    public Input<DeploymentPropertiesArgs> getProperties() {
+    public Output<DeploymentPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -65,18 +65,18 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DeploymentAtManagementGroupScopeArgs(
-        @Nullable Input<String> deploymentName,
-        Input<String> groupId,
-        @Nullable Input<String> location,
-        Input<DeploymentPropertiesArgs> properties,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> deploymentName,
+        Output<String> groupId,
+        @Nullable Output<String> location,
+        Output<DeploymentPropertiesArgs> properties,
+        @Nullable Output<Map<String,String>> tags) {
         this.deploymentName = deploymentName;
         this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
         this.location = location;
@@ -85,11 +85,11 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
     }
 
     private DeploymentAtManagementGroupScopeArgs() {
-        this.deploymentName = Input.empty();
-        this.groupId = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.tags = Input.empty();
+        this.deploymentName = Output.empty();
+        this.groupId = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deploymentName;
-        private Input<String> groupId;
-        private @Nullable Input<String> location;
-        private Input<DeploymentPropertiesArgs> properties;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> deploymentName;
+        private Output<String> groupId;
+        private @Nullable Output<String> location;
+        private Output<DeploymentPropertiesArgs> properties;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class DeploymentAtManagementGroupScopeArgs extends io.pulumi.resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder deploymentName(@Nullable Input<String> deploymentName) {
+        public Builder deploymentName(@Nullable Output<String> deploymentName) {
             this.deploymentName = deploymentName;
             return this;
         }
 
         public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Input.ofNullable(deploymentName);
+            this.deploymentName = Output.ofNullable(deploymentName);
             return this;
         }
 
-        public Builder groupId(Input<String> groupId) {
+        public Builder groupId(Output<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Input.of(Objects.requireNonNull(groupId));
+            this.groupId = Output.of(Objects.requireNonNull(groupId));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(Input<DeploymentPropertiesArgs> properties) {
+        public Builder properties(Output<DeploymentPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(DeploymentPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DeploymentAtManagementGroupScopeArgs build() {

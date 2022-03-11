@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class LicenseIssuerDataArgs extends io.pulumi.resources.ResourceArg
     public static final LicenseIssuerDataArgs Empty = new LicenseIssuerDataArgs();
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="signKey")
-      private final @Nullable Input<String> signKey;
+      private final @Nullable Output<String> signKey;
 
-    public Input<String> getSignKey() {
-        return this.signKey == null ? Input.empty() : this.signKey;
+    public Output<String> getSignKey() {
+        return this.signKey == null ? Output.empty() : this.signKey;
     }
 
     public LicenseIssuerDataArgs(
-        Input<String> name,
-        @Nullable Input<String> signKey) {
+        Output<String> name,
+        @Nullable Output<String> signKey) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.signKey = signKey;
     }
 
     private LicenseIssuerDataArgs() {
-        this.name = Input.empty();
-        this.signKey = Input.empty();
+        this.name = Output.empty();
+        this.signKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class LicenseIssuerDataArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<String> signKey;
+        private Output<String> name;
+        private @Nullable Output<String> signKey;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class LicenseIssuerDataArgs extends io.pulumi.resources.ResourceArg
     	      this.signKey = defaults.signKey;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder signKey(@Nullable Input<String> signKey) {
+        public Builder signKey(@Nullable Output<String> signKey) {
             this.signKey = signKey;
             return this;
         }
 
         public Builder signKey(@Nullable String signKey) {
-            this.signKey = Input.ofNullable(signKey);
+            this.signKey = Output.ofNullable(signKey);
             return this;
         }
         public LicenseIssuerDataArgs build() {

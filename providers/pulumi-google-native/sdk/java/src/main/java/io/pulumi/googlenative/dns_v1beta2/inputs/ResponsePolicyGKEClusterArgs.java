@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class ResponsePolicyGKEClusterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="gkeClusterName")
-      private final @Nullable Input<String> gkeClusterName;
+      private final @Nullable Output<String> gkeClusterName;
 
-    public Input<String> getGkeClusterName() {
-        return this.gkeClusterName == null ? Input.empty() : this.gkeClusterName;
+    public Output<String> getGkeClusterName() {
+        return this.gkeClusterName == null ? Output.empty() : this.gkeClusterName;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     public ResponsePolicyGKEClusterArgs(
-        @Nullable Input<String> gkeClusterName,
-        @Nullable Input<String> kind) {
+        @Nullable Output<String> gkeClusterName,
+        @Nullable Output<String> kind) {
         this.gkeClusterName = gkeClusterName;
         this.kind = kind;
     }
 
     private ResponsePolicyGKEClusterArgs() {
-        this.gkeClusterName = Input.empty();
-        this.kind = Input.empty();
+        this.gkeClusterName = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ResponsePolicyGKEClusterArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gkeClusterName;
-        private @Nullable Input<String> kind;
+        private @Nullable Output<String> gkeClusterName;
+        private @Nullable Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ResponsePolicyGKEClusterArgs extends io.pulumi.resources.Reso
     	      this.kind = defaults.kind;
         }
 
-        public Builder gkeClusterName(@Nullable Input<String> gkeClusterName) {
+        public Builder gkeClusterName(@Nullable Output<String> gkeClusterName) {
             this.gkeClusterName = gkeClusterName;
             return this;
         }
 
         public Builder gkeClusterName(@Nullable String gkeClusterName) {
-            this.gkeClusterName = Input.ofNullable(gkeClusterName);
+            this.gkeClusterName = Output.ofNullable(gkeClusterName);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
         public ResponsePolicyGKEClusterArgs build() {

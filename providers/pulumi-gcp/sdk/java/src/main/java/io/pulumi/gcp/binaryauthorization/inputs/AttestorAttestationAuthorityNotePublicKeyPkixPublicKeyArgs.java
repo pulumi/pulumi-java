@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.binaryauthorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
      * 
      */
     @InputImport(name="publicKeyPem")
-      private final @Nullable Input<String> publicKeyPem;
+      private final @Nullable Output<String> publicKeyPem;
 
-    public Input<String> getPublicKeyPem() {
-        return this.publicKeyPem == null ? Input.empty() : this.publicKeyPem;
+    public Output<String> getPublicKeyPem() {
+        return this.publicKeyPem == null ? Output.empty() : this.publicKeyPem;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
      * 
      */
     @InputImport(name="signatureAlgorithm")
-      private final @Nullable Input<String> signatureAlgorithm;
+      private final @Nullable Output<String> signatureAlgorithm;
 
-    public Input<String> getSignatureAlgorithm() {
-        return this.signatureAlgorithm == null ? Input.empty() : this.signatureAlgorithm;
+    public Output<String> getSignatureAlgorithm() {
+        return this.signatureAlgorithm == null ? Output.empty() : this.signatureAlgorithm;
     }
 
     public AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(
-        @Nullable Input<String> publicKeyPem,
-        @Nullable Input<String> signatureAlgorithm) {
+        @Nullable Output<String> publicKeyPem,
+        @Nullable Output<String> signatureAlgorithm) {
         this.publicKeyPem = publicKeyPem;
         this.signatureAlgorithm = signatureAlgorithm;
     }
 
     private AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs() {
-        this.publicKeyPem = Input.empty();
-        this.signatureAlgorithm = Input.empty();
+        this.publicKeyPem = Output.empty();
+        this.signatureAlgorithm = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<String> publicKeyPem;
-        private @Nullable Input<String> signatureAlgorithm;
+        private @Nullable Output<String> publicKeyPem;
+        private @Nullable Output<String> signatureAlgorithm;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
     	      this.signatureAlgorithm = defaults.signatureAlgorithm;
         }
 
-        public Builder publicKeyPem(@Nullable Input<String> publicKeyPem) {
+        public Builder publicKeyPem(@Nullable Output<String> publicKeyPem) {
             this.publicKeyPem = publicKeyPem;
             return this;
         }
 
         public Builder publicKeyPem(@Nullable String publicKeyPem) {
-            this.publicKeyPem = Input.ofNullable(publicKeyPem);
+            this.publicKeyPem = Output.ofNullable(publicKeyPem);
             return this;
         }
 
-        public Builder signatureAlgorithm(@Nullable Input<String> signatureAlgorithm) {
+        public Builder signatureAlgorithm(@Nullable Output<String> signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
         public Builder signatureAlgorithm(@Nullable String signatureAlgorithm) {
-            this.signatureAlgorithm = Input.ofNullable(signatureAlgorithm);
+            this.signatureAlgorithm = Output.ofNullable(signatureAlgorithm);
             return this;
         }
         public AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs build() {

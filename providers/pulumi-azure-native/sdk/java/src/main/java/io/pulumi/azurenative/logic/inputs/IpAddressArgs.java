@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
-    public IpAddressArgs(@Nullable Input<String> address) {
+    public IpAddressArgs(@Nullable Output<String> address) {
         this.address = address;
     }
 
     private IpAddressArgs() {
-        this.address = Input.empty();
+        this.address = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
+        private @Nullable Output<String> address;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.address = defaults.address;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
         public IpAddressArgs build() {

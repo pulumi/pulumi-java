@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.enums.EnabledProtocols;
 import io.pulumi.azurenative.storage.enums.RootSquashType;
 import io.pulumi.azurenative.storage.enums.ShareAccessTier;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessTier")
-      private final @Nullable Input<Either<String,ShareAccessTier>> accessTier;
+      private final @Nullable Output<Either<String,ShareAccessTier>> accessTier;
 
-    public Input<Either<String,ShareAccessTier>> getAccessTier() {
-        return this.accessTier == null ? Input.empty() : this.accessTier;
+    public Output<Either<String,ShareAccessTier>> getAccessTier() {
+        return this.accessTier == null ? Output.empty() : this.accessTier;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -47,10 +47,10 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledProtocols")
-      private final @Nullable Input<Either<String,EnabledProtocols>> enabledProtocols;
+      private final @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols;
 
-    public Input<Either<String,EnabledProtocols>> getEnabledProtocols() {
-        return this.enabledProtocols == null ? Input.empty() : this.enabledProtocols;
+    public Output<Either<String,EnabledProtocols>> getEnabledProtocols() {
+        return this.enabledProtocols == null ? Output.empty() : this.enabledProtocols;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expand")
-      private final @Nullable Input<String> expand;
+      private final @Nullable Output<String> expand;
 
-    public Input<String> getExpand() {
-        return this.expand == null ? Input.empty() : this.expand;
+    public Output<String> getExpand() {
+        return this.expand == null ? Output.empty() : this.expand;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,10 +91,10 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootSquash")
-      private final @Nullable Input<Either<String,RootSquashType>> rootSquash;
+      private final @Nullable Output<Either<String,RootSquashType>> rootSquash;
 
-    public Input<Either<String,RootSquashType>> getRootSquash() {
-        return this.rootSquash == null ? Input.empty() : this.rootSquash;
+    public Output<Either<String,RootSquashType>> getRootSquash() {
+        return this.rootSquash == null ? Output.empty() : this.rootSquash;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareName")
-      private final @Nullable Input<String> shareName;
+      private final @Nullable Output<String> shareName;
 
-    public Input<String> getShareName() {
-        return this.shareName == null ? Input.empty() : this.shareName;
+    public Output<String> getShareName() {
+        return this.shareName == null ? Output.empty() : this.shareName;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareQuota")
-      private final @Nullable Input<Integer> shareQuota;
+      private final @Nullable Output<Integer> shareQuota;
 
-    public Input<Integer> getShareQuota() {
-        return this.shareQuota == null ? Input.empty() : this.shareQuota;
+    public Output<Integer> getShareQuota() {
+        return this.shareQuota == null ? Output.empty() : this.shareQuota;
     }
 
     public FileShareArgs(
-        @Nullable Input<Either<String,ShareAccessTier>> accessTier,
-        Input<String> accountName,
-        @Nullable Input<Either<String,EnabledProtocols>> enabledProtocols,
-        @Nullable Input<String> expand,
-        @Nullable Input<Map<String,String>> metadata,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,RootSquashType>> rootSquash,
-        @Nullable Input<String> shareName,
-        @Nullable Input<Integer> shareQuota) {
+        @Nullable Output<Either<String,ShareAccessTier>> accessTier,
+        Output<String> accountName,
+        @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols,
+        @Nullable Output<String> expand,
+        @Nullable Output<Map<String,String>> metadata,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,RootSquashType>> rootSquash,
+        @Nullable Output<String> shareName,
+        @Nullable Output<Integer> shareQuota) {
         this.accessTier = accessTier;
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.enabledProtocols = enabledProtocols;
@@ -141,15 +141,15 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileShareArgs() {
-        this.accessTier = Input.empty();
-        this.accountName = Input.empty();
-        this.enabledProtocols = Input.empty();
-        this.expand = Input.empty();
-        this.metadata = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.rootSquash = Input.empty();
-        this.shareName = Input.empty();
-        this.shareQuota = Input.empty();
+        this.accessTier = Output.empty();
+        this.accountName = Output.empty();
+        this.enabledProtocols = Output.empty();
+        this.expand = Output.empty();
+        this.metadata = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.rootSquash = Output.empty();
+        this.shareName = Output.empty();
+        this.shareQuota = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ShareAccessTier>> accessTier;
-        private Input<String> accountName;
-        private @Nullable Input<Either<String,EnabledProtocols>> enabledProtocols;
-        private @Nullable Input<String> expand;
-        private @Nullable Input<Map<String,String>> metadata;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,RootSquashType>> rootSquash;
-        private @Nullable Input<String> shareName;
-        private @Nullable Input<Integer> shareQuota;
+        private @Nullable Output<Either<String,ShareAccessTier>> accessTier;
+        private Output<String> accountName;
+        private @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols;
+        private @Nullable Output<String> expand;
+        private @Nullable Output<Map<String,String>> metadata;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,RootSquashType>> rootSquash;
+        private @Nullable Output<String> shareName;
+        private @Nullable Output<Integer> shareQuota;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shareQuota = defaults.shareQuota;
         }
 
-        public Builder accessTier(@Nullable Input<Either<String,ShareAccessTier>> accessTier) {
+        public Builder accessTier(@Nullable Output<Either<String,ShareAccessTier>> accessTier) {
             this.accessTier = accessTier;
             return this;
         }
 
         public Builder accessTier(@Nullable Either<String,ShareAccessTier> accessTier) {
-            this.accessTier = Input.ofNullable(accessTier);
+            this.accessTier = Output.ofNullable(accessTier);
             return this;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder enabledProtocols(@Nullable Input<Either<String,EnabledProtocols>> enabledProtocols) {
+        public Builder enabledProtocols(@Nullable Output<Either<String,EnabledProtocols>> enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
 
         public Builder enabledProtocols(@Nullable Either<String,EnabledProtocols> enabledProtocols) {
-            this.enabledProtocols = Input.ofNullable(enabledProtocols);
+            this.enabledProtocols = Output.ofNullable(enabledProtocols);
             return this;
         }
 
-        public Builder expand(@Nullable Input<String> expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             this.expand = expand;
             return this;
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = Input.ofNullable(expand);
+            this.expand = Output.ofNullable(expand);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder rootSquash(@Nullable Input<Either<String,RootSquashType>> rootSquash) {
+        public Builder rootSquash(@Nullable Output<Either<String,RootSquashType>> rootSquash) {
             this.rootSquash = rootSquash;
             return this;
         }
 
         public Builder rootSquash(@Nullable Either<String,RootSquashType> rootSquash) {
-            this.rootSquash = Input.ofNullable(rootSquash);
+            this.rootSquash = Output.ofNullable(rootSquash);
             return this;
         }
 
-        public Builder shareName(@Nullable Input<String> shareName) {
+        public Builder shareName(@Nullable Output<String> shareName) {
             this.shareName = shareName;
             return this;
         }
 
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = Input.ofNullable(shareName);
+            this.shareName = Output.ofNullable(shareName);
             return this;
         }
 
-        public Builder shareQuota(@Nullable Input<Integer> shareQuota) {
+        public Builder shareQuota(@Nullable Output<Integer> shareQuota) {
             this.shareQuota = shareQuota;
             return this;
         }
 
         public Builder shareQuota(@Nullable Integer shareQuota) {
-            this.shareQuota = Input.ofNullable(shareQuota);
+            this.shareQuota = Output.ofNullable(shareQuota);
             return this;
         }
         public FileShareArgs build() {

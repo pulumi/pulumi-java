@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ClientRegistrationArgs;
 import io.pulumi.azurenative.web.inputs.LoginScopesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="login")
-      private final @Nullable Input<LoginScopesArgs> login;
+      private final @Nullable Output<LoginScopesArgs> login;
 
-    public Input<LoginScopesArgs> getLogin() {
-        return this.login == null ? Input.empty() : this.login;
+    public Output<LoginScopesArgs> getLogin() {
+        return this.login == null ? Output.empty() : this.login;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registration")
-      private final @Nullable Input<ClientRegistrationArgs> registration;
+      private final @Nullable Output<ClientRegistrationArgs> registration;
 
-    public Input<ClientRegistrationArgs> getRegistration() {
-        return this.registration == null ? Input.empty() : this.registration;
+    public Output<ClientRegistrationArgs> getRegistration() {
+        return this.registration == null ? Output.empty() : this.registration;
     }
 
     public GitHubArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<LoginScopesArgs> login,
-        @Nullable Input<ClientRegistrationArgs> registration) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<LoginScopesArgs> login,
+        @Nullable Output<ClientRegistrationArgs> registration) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;
     }
 
     private GitHubArgs() {
-        this.enabled = Input.empty();
-        this.login = Input.empty();
-        this.registration = Input.empty();
+        this.enabled = Output.empty();
+        this.login = Output.empty();
+        this.registration = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<LoginScopesArgs> login;
-        private @Nullable Input<ClientRegistrationArgs> registration;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<LoginScopesArgs> login;
+        private @Nullable Output<ClientRegistrationArgs> registration;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registration = defaults.registration;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder login(@Nullable Input<LoginScopesArgs> login) {
+        public Builder login(@Nullable Output<LoginScopesArgs> login) {
             this.login = login;
             return this;
         }
 
         public Builder login(@Nullable LoginScopesArgs login) {
-            this.login = Input.ofNullable(login);
+            this.login = Output.ofNullable(login);
             return this;
         }
 
-        public Builder registration(@Nullable Input<ClientRegistrationArgs> registration) {
+        public Builder registration(@Nullable Output<ClientRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
         public Builder registration(@Nullable ClientRegistrationArgs registration) {
-            this.registration = Input.ofNullable(registration);
+            this.registration = Output.ofNullable(registration);
             return this;
         }
         public GitHubArgs build() {

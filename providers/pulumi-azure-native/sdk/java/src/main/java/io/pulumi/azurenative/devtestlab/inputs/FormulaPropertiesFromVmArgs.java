@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="labVmId")
-      private final @Nullable Input<String> labVmId;
+      private final @Nullable Output<String> labVmId;
 
-    public Input<String> getLabVmId() {
-        return this.labVmId == null ? Input.empty() : this.labVmId;
+    public Output<String> getLabVmId() {
+        return this.labVmId == null ? Output.empty() : this.labVmId;
     }
 
-    public FormulaPropertiesFromVmArgs(@Nullable Input<String> labVmId) {
+    public FormulaPropertiesFromVmArgs(@Nullable Output<String> labVmId) {
         this.labVmId = labVmId;
     }
 
     private FormulaPropertiesFromVmArgs() {
-        this.labVmId = Input.empty();
+        this.labVmId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> labVmId;
+        private @Nullable Output<String> labVmId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.Resou
     	      this.labVmId = defaults.labVmId;
         }
 
-        public Builder labVmId(@Nullable Input<String> labVmId) {
+        public Builder labVmId(@Nullable Output<String> labVmId) {
             this.labVmId = labVmId;
             return this;
         }
 
         public Builder labVmId(@Nullable String labVmId) {
-            this.labVmId = Input.ofNullable(labVmId);
+            this.labVmId = Output.ofNullable(labVmId);
             return this;
         }
         public FormulaPropertiesFromVmArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.securitycenter;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.securitycenter.inputs.NotificationConfigStreamingConfigArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configId", required=true)
-      private final Input<String> configId;
+      private final Output<String> configId;
 
-    public Input<String> getConfigId() {
+    public Output<String> getConfigId() {
         return this.configId;
     }
 
@@ -31,10 +31,10 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="organization", required=true)
-      private final Input<String> organization;
+      private final Output<String> organization;
 
-    public Input<String> getOrganization() {
+    public Output<String> getOrganization() {
         return this.organization;
     }
 
@@ -55,9 +55,9 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-      private final Input<String> pubsubTopic;
+      private final Output<String> pubsubTopic;
 
-    public Input<String> getPubsubTopic() {
+    public Output<String> getPubsubTopic() {
         return this.pubsubTopic;
     }
 
@@ -67,18 +67,18 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="streamingConfig", required=true)
-      private final Input<NotificationConfigStreamingConfigArgs> streamingConfig;
+      private final Output<NotificationConfigStreamingConfigArgs> streamingConfig;
 
-    public Input<NotificationConfigStreamingConfigArgs> getStreamingConfig() {
+    public Output<NotificationConfigStreamingConfigArgs> getStreamingConfig() {
         return this.streamingConfig;
     }
 
     public NotificationConfigArgs(
-        Input<String> configId,
-        @Nullable Input<String> description,
-        Input<String> organization,
-        Input<String> pubsubTopic,
-        Input<NotificationConfigStreamingConfigArgs> streamingConfig) {
+        Output<String> configId,
+        @Nullable Output<String> description,
+        Output<String> organization,
+        Output<String> pubsubTopic,
+        Output<NotificationConfigStreamingConfigArgs> streamingConfig) {
         this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
         this.description = description;
         this.organization = Objects.requireNonNull(organization, "expected parameter 'organization' to be non-null");
@@ -87,11 +87,11 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private NotificationConfigArgs() {
-        this.configId = Input.empty();
-        this.description = Input.empty();
-        this.organization = Input.empty();
-        this.pubsubTopic = Input.empty();
-        this.streamingConfig = Input.empty();
+        this.configId = Output.empty();
+        this.description = Output.empty();
+        this.organization = Output.empty();
+        this.pubsubTopic = Output.empty();
+        this.streamingConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> configId;
-        private @Nullable Input<String> description;
-        private Input<String> organization;
-        private Input<String> pubsubTopic;
-        private Input<NotificationConfigStreamingConfigArgs> streamingConfig;
+        private Output<String> configId;
+        private @Nullable Output<String> description;
+        private Output<String> organization;
+        private Output<String> pubsubTopic;
+        private Output<NotificationConfigStreamingConfigArgs> streamingConfig;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.streamingConfig = defaults.streamingConfig;
         }
 
-        public Builder configId(Input<String> configId) {
+        public Builder configId(Output<String> configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
         public Builder configId(String configId) {
-            this.configId = Input.of(Objects.requireNonNull(configId));
+            this.configId = Output.of(Objects.requireNonNull(configId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder organization(Input<String> organization) {
+        public Builder organization(Output<String> organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
 
         public Builder organization(String organization) {
-            this.organization = Input.of(Objects.requireNonNull(organization));
+            this.organization = Output.of(Objects.requireNonNull(organization));
             return this;
         }
 
-        public Builder pubsubTopic(Input<String> pubsubTopic) {
+        public Builder pubsubTopic(Output<String> pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
 
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Input.of(Objects.requireNonNull(pubsubTopic));
+            this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
             return this;
         }
 
-        public Builder streamingConfig(Input<NotificationConfigStreamingConfigArgs> streamingConfig) {
+        public Builder streamingConfig(Output<NotificationConfigStreamingConfigArgs> streamingConfig) {
             this.streamingConfig = Objects.requireNonNull(streamingConfig);
             return this;
         }
 
         public Builder streamingConfig(NotificationConfigStreamingConfigArgs streamingConfig) {
-            this.streamingConfig = Input.of(Objects.requireNonNull(streamingConfig));
+            this.streamingConfig = Output.of(Objects.requireNonNull(streamingConfig));
             return this;
         }
         public NotificationConfigArgs build() {

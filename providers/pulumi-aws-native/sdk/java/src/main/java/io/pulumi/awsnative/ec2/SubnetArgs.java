@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.SubnetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -18,70 +18,70 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     public static final SubnetArgs Empty = new SubnetArgs();
 
     @InputImport(name="assignIpv6AddressOnCreation")
-      private final @Nullable Input<Boolean> assignIpv6AddressOnCreation;
+      private final @Nullable Output<Boolean> assignIpv6AddressOnCreation;
 
-    public Input<Boolean> getAssignIpv6AddressOnCreation() {
-        return this.assignIpv6AddressOnCreation == null ? Input.empty() : this.assignIpv6AddressOnCreation;
+    public Output<Boolean> getAssignIpv6AddressOnCreation() {
+        return this.assignIpv6AddressOnCreation == null ? Output.empty() : this.assignIpv6AddressOnCreation;
     }
 
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     @InputImport(name="cidrBlock", required=true)
-      private final Input<String> cidrBlock;
+      private final Output<String> cidrBlock;
 
-    public Input<String> getCidrBlock() {
+    public Output<String> getCidrBlock() {
         return this.cidrBlock;
     }
 
     @InputImport(name="ipv6CidrBlock")
-      private final @Nullable Input<String> ipv6CidrBlock;
+      private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Input<String> getIpv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Input.empty() : this.ipv6CidrBlock;
+    public Output<String> getIpv6CidrBlock() {
+        return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
     }
 
     @InputImport(name="mapPublicIpOnLaunch")
-      private final @Nullable Input<Boolean> mapPublicIpOnLaunch;
+      private final @Nullable Output<Boolean> mapPublicIpOnLaunch;
 
-    public Input<Boolean> getMapPublicIpOnLaunch() {
-        return this.mapPublicIpOnLaunch == null ? Input.empty() : this.mapPublicIpOnLaunch;
+    public Output<Boolean> getMapPublicIpOnLaunch() {
+        return this.mapPublicIpOnLaunch == null ? Output.empty() : this.mapPublicIpOnLaunch;
     }
 
     @InputImport(name="outpostArn")
-      private final @Nullable Input<String> outpostArn;
+      private final @Nullable Output<String> outpostArn;
 
-    public Input<String> getOutpostArn() {
-        return this.outpostArn == null ? Input.empty() : this.outpostArn;
+    public Output<String> getOutpostArn() {
+        return this.outpostArn == null ? Output.empty() : this.outpostArn;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<SubnetTagArgs>> tags;
+      private final @Nullable Output<List<SubnetTagArgs>> tags;
 
-    public Input<List<SubnetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<SubnetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public SubnetArgs(
-        @Nullable Input<Boolean> assignIpv6AddressOnCreation,
-        @Nullable Input<String> availabilityZone,
-        Input<String> cidrBlock,
-        @Nullable Input<String> ipv6CidrBlock,
-        @Nullable Input<Boolean> mapPublicIpOnLaunch,
-        @Nullable Input<String> outpostArn,
-        @Nullable Input<List<SubnetTagArgs>> tags,
-        Input<String> vpcId) {
+        @Nullable Output<Boolean> assignIpv6AddressOnCreation,
+        @Nullable Output<String> availabilityZone,
+        Output<String> cidrBlock,
+        @Nullable Output<String> ipv6CidrBlock,
+        @Nullable Output<Boolean> mapPublicIpOnLaunch,
+        @Nullable Output<String> outpostArn,
+        @Nullable Output<List<SubnetTagArgs>> tags,
+        Output<String> vpcId) {
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         this.availabilityZone = availabilityZone;
         this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
@@ -93,14 +93,14 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetArgs() {
-        this.assignIpv6AddressOnCreation = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.cidrBlock = Input.empty();
-        this.ipv6CidrBlock = Input.empty();
-        this.mapPublicIpOnLaunch = Input.empty();
-        this.outpostArn = Input.empty();
-        this.tags = Input.empty();
-        this.vpcId = Input.empty();
+        this.assignIpv6AddressOnCreation = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.cidrBlock = Output.empty();
+        this.ipv6CidrBlock = Output.empty();
+        this.mapPublicIpOnLaunch = Output.empty();
+        this.outpostArn = Output.empty();
+        this.tags = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,14 +112,14 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> assignIpv6AddressOnCreation;
-        private @Nullable Input<String> availabilityZone;
-        private Input<String> cidrBlock;
-        private @Nullable Input<String> ipv6CidrBlock;
-        private @Nullable Input<Boolean> mapPublicIpOnLaunch;
-        private @Nullable Input<String> outpostArn;
-        private @Nullable Input<List<SubnetTagArgs>> tags;
-        private Input<String> vpcId;
+        private @Nullable Output<Boolean> assignIpv6AddressOnCreation;
+        private @Nullable Output<String> availabilityZone;
+        private Output<String> cidrBlock;
+        private @Nullable Output<String> ipv6CidrBlock;
+        private @Nullable Output<Boolean> mapPublicIpOnLaunch;
+        private @Nullable Output<String> outpostArn;
+        private @Nullable Output<List<SubnetTagArgs>> tags;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -137,83 +137,83 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder assignIpv6AddressOnCreation(@Nullable Input<Boolean> assignIpv6AddressOnCreation) {
+        public Builder assignIpv6AddressOnCreation(@Nullable Output<Boolean> assignIpv6AddressOnCreation) {
             this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
             return this;
         }
 
         public Builder assignIpv6AddressOnCreation(@Nullable Boolean assignIpv6AddressOnCreation) {
-            this.assignIpv6AddressOnCreation = Input.ofNullable(assignIpv6AddressOnCreation);
+            this.assignIpv6AddressOnCreation = Output.ofNullable(assignIpv6AddressOnCreation);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder cidrBlock(Input<String> cidrBlock) {
+        public Builder cidrBlock(Output<String> cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Input.of(Objects.requireNonNull(cidrBlock));
+            this.cidrBlock = Output.of(Objects.requireNonNull(cidrBlock));
             return this;
         }
 
-        public Builder ipv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Input.ofNullable(ipv6CidrBlock);
+            this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
             return this;
         }
 
-        public Builder mapPublicIpOnLaunch(@Nullable Input<Boolean> mapPublicIpOnLaunch) {
+        public Builder mapPublicIpOnLaunch(@Nullable Output<Boolean> mapPublicIpOnLaunch) {
             this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
             return this;
         }
 
         public Builder mapPublicIpOnLaunch(@Nullable Boolean mapPublicIpOnLaunch) {
-            this.mapPublicIpOnLaunch = Input.ofNullable(mapPublicIpOnLaunch);
+            this.mapPublicIpOnLaunch = Output.ofNullable(mapPublicIpOnLaunch);
             return this;
         }
 
-        public Builder outpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Output<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
         public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Input.ofNullable(outpostArn);
+            this.outpostArn = Output.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<SubnetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<SubnetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<SubnetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public SubnetArgs build() {

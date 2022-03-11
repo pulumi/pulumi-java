@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsGetArgs exten
      * 
      */
     @InputImport(name="outputConfig", required=true)
-      private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig;
+      private final Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig;
 
-    public Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> getOutputConfig() {
+    public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> getOutputConfig() {
         return this.outputConfig;
     }
 
-    public PreventionJobTriggerInspectJobActionSaveFindingsGetArgs(Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig) {
+    public PreventionJobTriggerInspectJobActionSaveFindingsGetArgs(Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig) {
         this.outputConfig = Objects.requireNonNull(outputConfig, "expected parameter 'outputConfig' to be non-null");
     }
 
     private PreventionJobTriggerInspectJobActionSaveFindingsGetArgs() {
-        this.outputConfig = Input.empty();
+        this.outputConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsGetArgs exten
     }
 
     public static final class Builder {
-        private Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig;
+        private Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsGetArgs exten
     	      this.outputConfig = defaults.outputConfig;
         }
 
-        public Builder outputConfig(Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig) {
+        public Builder outputConfig(Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
 
         public Builder outputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs outputConfig) {
-            this.outputConfig = Input.of(Objects.requireNonNull(outputConfig));
+            this.outputConfig = Output.of(Objects.requireNonNull(outputConfig));
             return this;
         }
         public PreventionJobTriggerInspectJobActionSaveFindingsGetArgs build() {

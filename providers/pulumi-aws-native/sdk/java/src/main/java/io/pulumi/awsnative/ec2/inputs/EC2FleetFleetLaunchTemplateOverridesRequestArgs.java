@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.EC2FleetInstanceRequirementsRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetPlacementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -18,70 +18,70 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
     public static final EC2FleetFleetLaunchTemplateOverridesRequestArgs Empty = new EC2FleetFleetLaunchTemplateOverridesRequestArgs();
 
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     @InputImport(name="instanceRequirements")
-      private final @Nullable Input<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements;
+      private final @Nullable Output<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements;
 
-    public Input<EC2FleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
-        return this.instanceRequirements == null ? Input.empty() : this.instanceRequirements;
+    public Output<EC2FleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
+        return this.instanceRequirements == null ? Output.empty() : this.instanceRequirements;
     }
 
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     @InputImport(name="maxPrice")
-      private final @Nullable Input<String> maxPrice;
+      private final @Nullable Output<String> maxPrice;
 
-    public Input<String> getMaxPrice() {
-        return this.maxPrice == null ? Input.empty() : this.maxPrice;
+    public Output<String> getMaxPrice() {
+        return this.maxPrice == null ? Output.empty() : this.maxPrice;
     }
 
     @InputImport(name="placement")
-      private final @Nullable Input<EC2FleetPlacementArgs> placement;
+      private final @Nullable Output<EC2FleetPlacementArgs> placement;
 
-    public Input<EC2FleetPlacementArgs> getPlacement() {
-        return this.placement == null ? Input.empty() : this.placement;
+    public Output<EC2FleetPlacementArgs> getPlacement() {
+        return this.placement == null ? Output.empty() : this.placement;
     }
 
     @InputImport(name="priority")
-      private final @Nullable Input<Double> priority;
+      private final @Nullable Output<Double> priority;
 
-    public Input<Double> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Double> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     @InputImport(name="weightedCapacity")
-      private final @Nullable Input<Double> weightedCapacity;
+      private final @Nullable Output<Double> weightedCapacity;
 
-    public Input<Double> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Input.empty() : this.weightedCapacity;
+    public Output<Double> getWeightedCapacity() {
+        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
     }
 
     public EC2FleetFleetLaunchTemplateOverridesRequestArgs(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<String> maxPrice,
-        @Nullable Input<EC2FleetPlacementArgs> placement,
-        @Nullable Input<Double> priority,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<Double> weightedCapacity) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<String> maxPrice,
+        @Nullable Output<EC2FleetPlacementArgs> placement,
+        @Nullable Output<Double> priority,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<Double> weightedCapacity) {
         this.availabilityZone = availabilityZone;
         this.instanceRequirements = instanceRequirements;
         this.instanceType = instanceType;
@@ -93,14 +93,14 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
     }
 
     private EC2FleetFleetLaunchTemplateOverridesRequestArgs() {
-        this.availabilityZone = Input.empty();
-        this.instanceRequirements = Input.empty();
-        this.instanceType = Input.empty();
-        this.maxPrice = Input.empty();
-        this.placement = Input.empty();
-        this.priority = Input.empty();
-        this.subnetId = Input.empty();
-        this.weightedCapacity = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.instanceRequirements = Output.empty();
+        this.instanceType = Output.empty();
+        this.maxPrice = Output.empty();
+        this.placement = Output.empty();
+        this.priority = Output.empty();
+        this.subnetId = Output.empty();
+        this.weightedCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,14 +112,14 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<String> maxPrice;
-        private @Nullable Input<EC2FleetPlacementArgs> placement;
-        private @Nullable Input<Double> priority;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<Double> weightedCapacity;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<String> maxPrice;
+        private @Nullable Output<EC2FleetPlacementArgs> placement;
+        private @Nullable Output<Double> priority;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<Double> weightedCapacity;
 
         public Builder() {
     	      // Empty
@@ -137,83 +137,83 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder instanceRequirements(@Nullable Input<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements) {
+        public Builder instanceRequirements(@Nullable Output<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
 
         public Builder instanceRequirements(@Nullable EC2FleetInstanceRequirementsRequestArgs instanceRequirements) {
-            this.instanceRequirements = Input.ofNullable(instanceRequirements);
+            this.instanceRequirements = Output.ofNullable(instanceRequirements);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder maxPrice(@Nullable Input<String> maxPrice) {
+        public Builder maxPrice(@Nullable Output<String> maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
 
         public Builder maxPrice(@Nullable String maxPrice) {
-            this.maxPrice = Input.ofNullable(maxPrice);
+            this.maxPrice = Output.ofNullable(maxPrice);
             return this;
         }
 
-        public Builder placement(@Nullable Input<EC2FleetPlacementArgs> placement) {
+        public Builder placement(@Nullable Output<EC2FleetPlacementArgs> placement) {
             this.placement = placement;
             return this;
         }
 
         public Builder placement(@Nullable EC2FleetPlacementArgs placement) {
-            this.placement = Input.ofNullable(placement);
+            this.placement = Output.ofNullable(placement);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Double> priority) {
+        public Builder priority(@Nullable Output<Double> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Double priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder weightedCapacity(@Nullable Input<Double> weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
 
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
-            this.weightedCapacity = Input.ofNullable(weightedCapacity);
+            this.weightedCapacity = Output.ofNullable(weightedCapacity);
             return this;
         }
         public EC2FleetFleetLaunchTemplateOverridesRequestArgs build() {

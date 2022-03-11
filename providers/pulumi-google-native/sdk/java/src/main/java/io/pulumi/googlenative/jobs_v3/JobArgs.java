@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v3.enums.JobDegreeTypesItem;
 import io.pulumi.googlenative.jobs_v3.enums.JobEmploymentTypesItem;
@@ -30,10 +30,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addresses")
-      private final @Nullable Input<List<String>> addresses;
+      private final @Nullable Output<List<String>> addresses;
 
-    public Input<List<String>> getAddresses() {
-        return this.addresses == null ? Input.empty() : this.addresses;
+    public Output<List<String>> getAddresses() {
+        return this.addresses == null ? Output.empty() : this.addresses;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationInfo", required=true)
-      private final Input<ApplicationInfoArgs> applicationInfo;
+      private final Output<ApplicationInfoArgs> applicationInfo;
 
-    public Input<ApplicationInfoArgs> getApplicationInfo() {
+    public Output<ApplicationInfoArgs> getApplicationInfo() {
         return this.applicationInfo;
     }
 
@@ -52,9 +52,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="companyName", required=true)
-      private final Input<String> companyName;
+      private final Output<String> companyName;
 
-    public Input<String> getCompanyName() {
+    public Output<String> getCompanyName() {
         return this.companyName;
     }
 
@@ -63,10 +63,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compensationInfo")
-      private final @Nullable Input<CompensationInfoArgs> compensationInfo;
+      private final @Nullable Output<CompensationInfoArgs> compensationInfo;
 
-    public Input<CompensationInfoArgs> getCompensationInfo() {
-        return this.compensationInfo == null ? Input.empty() : this.compensationInfo;
+    public Output<CompensationInfoArgs> getCompensationInfo() {
+        return this.compensationInfo == null ? Output.empty() : this.compensationInfo;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAttributes")
-      private final @Nullable Input<Map<String,String>> customAttributes;
+      private final @Nullable Output<Map<String,String>> customAttributes;
 
-    public Input<Map<String,String>> getCustomAttributes() {
-        return this.customAttributes == null ? Input.empty() : this.customAttributes;
+    public Output<Map<String,String>> getCustomAttributes() {
+        return this.customAttributes == null ? Output.empty() : this.customAttributes;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="degreeTypes")
-      private final @Nullable Input<List<JobDegreeTypesItem>> degreeTypes;
+      private final @Nullable Output<List<JobDegreeTypesItem>> degreeTypes;
 
-    public Input<List<JobDegreeTypesItem>> getDegreeTypes() {
-        return this.degreeTypes == null ? Input.empty() : this.degreeTypes;
+    public Output<List<JobDegreeTypesItem>> getDegreeTypes() {
+        return this.degreeTypes == null ? Output.empty() : this.degreeTypes;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="department")
-      private final @Nullable Input<String> department;
+      private final @Nullable Output<String> department;
 
-    public Input<String> getDepartment() {
-        return this.department == null ? Input.empty() : this.department;
+    public Output<String> getDepartment() {
+        return this.department == null ? Output.empty() : this.department;
     }
 
     /**
@@ -107,9 +107,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
@@ -118,10 +118,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="employmentTypes")
-      private final @Nullable Input<List<JobEmploymentTypesItem>> employmentTypes;
+      private final @Nullable Output<List<JobEmploymentTypesItem>> employmentTypes;
 
-    public Input<List<JobEmploymentTypesItem>> getEmploymentTypes() {
-        return this.employmentTypes == null ? Input.empty() : this.employmentTypes;
+    public Output<List<JobEmploymentTypesItem>> getEmploymentTypes() {
+        return this.employmentTypes == null ? Output.empty() : this.employmentTypes;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incentives")
-      private final @Nullable Input<String> incentives;
+      private final @Nullable Output<String> incentives;
 
-    public Input<String> getIncentives() {
-        return this.incentives == null ? Input.empty() : this.incentives;
+    public Output<String> getIncentives() {
+        return this.incentives == null ? Output.empty() : this.incentives;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobBenefits")
-      private final @Nullable Input<List<JobJobBenefitsItem>> jobBenefits;
+      private final @Nullable Output<List<JobJobBenefitsItem>> jobBenefits;
 
-    public Input<List<JobJobBenefitsItem>> getJobBenefits() {
-        return this.jobBenefits == null ? Input.empty() : this.jobBenefits;
+    public Output<List<JobJobBenefitsItem>> getJobBenefits() {
+        return this.jobBenefits == null ? Output.empty() : this.jobBenefits;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobEndTime")
-      private final @Nullable Input<String> jobEndTime;
+      private final @Nullable Output<String> jobEndTime;
 
-    public Input<String> getJobEndTime() {
-        return this.jobEndTime == null ? Input.empty() : this.jobEndTime;
+    public Output<String> getJobEndTime() {
+        return this.jobEndTime == null ? Output.empty() : this.jobEndTime;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobLevel")
-      private final @Nullable Input<JobJobLevel> jobLevel;
+      private final @Nullable Output<JobJobLevel> jobLevel;
 
-    public Input<JobJobLevel> getJobLevel() {
-        return this.jobLevel == null ? Input.empty() : this.jobLevel;
+    public Output<JobJobLevel> getJobLevel() {
+        return this.jobLevel == null ? Output.empty() : this.jobLevel;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobStartTime")
-      private final @Nullable Input<String> jobStartTime;
+      private final @Nullable Output<String> jobStartTime;
 
-    public Input<String> getJobStartTime() {
-        return this.jobStartTime == null ? Input.empty() : this.jobStartTime;
+    public Output<String> getJobStartTime() {
+        return this.jobStartTime == null ? Output.empty() : this.jobStartTime;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-      private final @Nullable Input<String> languageCode;
+      private final @Nullable Output<String> languageCode;
 
-    public Input<String> getLanguageCode() {
-        return this.languageCode == null ? Input.empty() : this.languageCode;
+    public Output<String> getLanguageCode() {
+        return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -206,10 +206,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postingExpireTime")
-      private final @Nullable Input<String> postingExpireTime;
+      private final @Nullable Output<String> postingExpireTime;
 
-    public Input<String> getPostingExpireTime() {
-        return this.postingExpireTime == null ? Input.empty() : this.postingExpireTime;
+    public Output<String> getPostingExpireTime() {
+        return this.postingExpireTime == null ? Output.empty() : this.postingExpireTime;
     }
 
     /**
@@ -217,10 +217,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postingPublishTime")
-      private final @Nullable Input<String> postingPublishTime;
+      private final @Nullable Output<String> postingPublishTime;
 
-    public Input<String> getPostingPublishTime() {
-        return this.postingPublishTime == null ? Input.empty() : this.postingPublishTime;
+    public Output<String> getPostingPublishTime() {
+        return this.postingPublishTime == null ? Output.empty() : this.postingPublishTime;
     }
 
     /**
@@ -228,10 +228,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postingRegion")
-      private final @Nullable Input<JobPostingRegion> postingRegion;
+      private final @Nullable Output<JobPostingRegion> postingRegion;
 
-    public Input<JobPostingRegion> getPostingRegion() {
-        return this.postingRegion == null ? Input.empty() : this.postingRegion;
+    public Output<JobPostingRegion> getPostingRegion() {
+        return this.postingRegion == null ? Output.empty() : this.postingRegion;
     }
 
     /**
@@ -239,17 +239,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="processingOptions")
-      private final @Nullable Input<ProcessingOptionsArgs> processingOptions;
+      private final @Nullable Output<ProcessingOptionsArgs> processingOptions;
 
-    public Input<ProcessingOptionsArgs> getProcessingOptions() {
-        return this.processingOptions == null ? Input.empty() : this.processingOptions;
+    public Output<ProcessingOptionsArgs> getProcessingOptions() {
+        return this.processingOptions == null ? Output.empty() : this.processingOptions;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -257,10 +257,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="promotionValue")
-      private final @Nullable Input<Integer> promotionValue;
+      private final @Nullable Output<Integer> promotionValue;
 
-    public Input<Integer> getPromotionValue() {
-        return this.promotionValue == null ? Input.empty() : this.promotionValue;
+    public Output<Integer> getPromotionValue() {
+        return this.promotionValue == null ? Output.empty() : this.promotionValue;
     }
 
     /**
@@ -268,10 +268,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qualifications")
-      private final @Nullable Input<String> qualifications;
+      private final @Nullable Output<String> qualifications;
 
-    public Input<String> getQualifications() {
-        return this.qualifications == null ? Input.empty() : this.qualifications;
+    public Output<String> getQualifications() {
+        return this.qualifications == null ? Output.empty() : this.qualifications;
     }
 
     /**
@@ -279,9 +279,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requisitionId", required=true)
-      private final Input<String> requisitionId;
+      private final Output<String> requisitionId;
 
-    public Input<String> getRequisitionId() {
+    public Output<String> getRequisitionId() {
         return this.requisitionId;
     }
 
@@ -290,10 +290,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responsibilities")
-      private final @Nullable Input<String> responsibilities;
+      private final @Nullable Output<String> responsibilities;
 
-    public Input<String> getResponsibilities() {
-        return this.responsibilities == null ? Input.empty() : this.responsibilities;
+    public Output<String> getResponsibilities() {
+        return this.responsibilities == null ? Output.empty() : this.responsibilities;
     }
 
     /**
@@ -301,39 +301,39 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
     public JobArgs(
-        @Nullable Input<List<String>> addresses,
-        Input<ApplicationInfoArgs> applicationInfo,
-        Input<String> companyName,
-        @Nullable Input<CompensationInfoArgs> compensationInfo,
-        @Nullable Input<Map<String,String>> customAttributes,
-        @Nullable Input<List<JobDegreeTypesItem>> degreeTypes,
-        @Nullable Input<String> department,
-        Input<String> description,
-        @Nullable Input<List<JobEmploymentTypesItem>> employmentTypes,
-        @Nullable Input<String> incentives,
-        @Nullable Input<List<JobJobBenefitsItem>> jobBenefits,
-        @Nullable Input<String> jobEndTime,
-        @Nullable Input<JobJobLevel> jobLevel,
-        @Nullable Input<String> jobStartTime,
-        @Nullable Input<String> languageCode,
-        @Nullable Input<String> name,
-        @Nullable Input<String> postingExpireTime,
-        @Nullable Input<String> postingPublishTime,
-        @Nullable Input<JobPostingRegion> postingRegion,
-        @Nullable Input<ProcessingOptionsArgs> processingOptions,
-        @Nullable Input<String> project,
-        @Nullable Input<Integer> promotionValue,
-        @Nullable Input<String> qualifications,
-        Input<String> requisitionId,
-        @Nullable Input<String> responsibilities,
-        Input<String> title) {
+        @Nullable Output<List<String>> addresses,
+        Output<ApplicationInfoArgs> applicationInfo,
+        Output<String> companyName,
+        @Nullable Output<CompensationInfoArgs> compensationInfo,
+        @Nullable Output<Map<String,String>> customAttributes,
+        @Nullable Output<List<JobDegreeTypesItem>> degreeTypes,
+        @Nullable Output<String> department,
+        Output<String> description,
+        @Nullable Output<List<JobEmploymentTypesItem>> employmentTypes,
+        @Nullable Output<String> incentives,
+        @Nullable Output<List<JobJobBenefitsItem>> jobBenefits,
+        @Nullable Output<String> jobEndTime,
+        @Nullable Output<JobJobLevel> jobLevel,
+        @Nullable Output<String> jobStartTime,
+        @Nullable Output<String> languageCode,
+        @Nullable Output<String> name,
+        @Nullable Output<String> postingExpireTime,
+        @Nullable Output<String> postingPublishTime,
+        @Nullable Output<JobPostingRegion> postingRegion,
+        @Nullable Output<ProcessingOptionsArgs> processingOptions,
+        @Nullable Output<String> project,
+        @Nullable Output<Integer> promotionValue,
+        @Nullable Output<String> qualifications,
+        Output<String> requisitionId,
+        @Nullable Output<String> responsibilities,
+        Output<String> title) {
         this.addresses = addresses;
         this.applicationInfo = Objects.requireNonNull(applicationInfo, "expected parameter 'applicationInfo' to be non-null");
         this.companyName = Objects.requireNonNull(companyName, "expected parameter 'companyName' to be non-null");
@@ -363,32 +363,32 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.addresses = Input.empty();
-        this.applicationInfo = Input.empty();
-        this.companyName = Input.empty();
-        this.compensationInfo = Input.empty();
-        this.customAttributes = Input.empty();
-        this.degreeTypes = Input.empty();
-        this.department = Input.empty();
-        this.description = Input.empty();
-        this.employmentTypes = Input.empty();
-        this.incentives = Input.empty();
-        this.jobBenefits = Input.empty();
-        this.jobEndTime = Input.empty();
-        this.jobLevel = Input.empty();
-        this.jobStartTime = Input.empty();
-        this.languageCode = Input.empty();
-        this.name = Input.empty();
-        this.postingExpireTime = Input.empty();
-        this.postingPublishTime = Input.empty();
-        this.postingRegion = Input.empty();
-        this.processingOptions = Input.empty();
-        this.project = Input.empty();
-        this.promotionValue = Input.empty();
-        this.qualifications = Input.empty();
-        this.requisitionId = Input.empty();
-        this.responsibilities = Input.empty();
-        this.title = Input.empty();
+        this.addresses = Output.empty();
+        this.applicationInfo = Output.empty();
+        this.companyName = Output.empty();
+        this.compensationInfo = Output.empty();
+        this.customAttributes = Output.empty();
+        this.degreeTypes = Output.empty();
+        this.department = Output.empty();
+        this.description = Output.empty();
+        this.employmentTypes = Output.empty();
+        this.incentives = Output.empty();
+        this.jobBenefits = Output.empty();
+        this.jobEndTime = Output.empty();
+        this.jobLevel = Output.empty();
+        this.jobStartTime = Output.empty();
+        this.languageCode = Output.empty();
+        this.name = Output.empty();
+        this.postingExpireTime = Output.empty();
+        this.postingPublishTime = Output.empty();
+        this.postingRegion = Output.empty();
+        this.processingOptions = Output.empty();
+        this.project = Output.empty();
+        this.promotionValue = Output.empty();
+        this.qualifications = Output.empty();
+        this.requisitionId = Output.empty();
+        this.responsibilities = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -400,32 +400,32 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> addresses;
-        private Input<ApplicationInfoArgs> applicationInfo;
-        private Input<String> companyName;
-        private @Nullable Input<CompensationInfoArgs> compensationInfo;
-        private @Nullable Input<Map<String,String>> customAttributes;
-        private @Nullable Input<List<JobDegreeTypesItem>> degreeTypes;
-        private @Nullable Input<String> department;
-        private Input<String> description;
-        private @Nullable Input<List<JobEmploymentTypesItem>> employmentTypes;
-        private @Nullable Input<String> incentives;
-        private @Nullable Input<List<JobJobBenefitsItem>> jobBenefits;
-        private @Nullable Input<String> jobEndTime;
-        private @Nullable Input<JobJobLevel> jobLevel;
-        private @Nullable Input<String> jobStartTime;
-        private @Nullable Input<String> languageCode;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> postingExpireTime;
-        private @Nullable Input<String> postingPublishTime;
-        private @Nullable Input<JobPostingRegion> postingRegion;
-        private @Nullable Input<ProcessingOptionsArgs> processingOptions;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Integer> promotionValue;
-        private @Nullable Input<String> qualifications;
-        private Input<String> requisitionId;
-        private @Nullable Input<String> responsibilities;
-        private Input<String> title;
+        private @Nullable Output<List<String>> addresses;
+        private Output<ApplicationInfoArgs> applicationInfo;
+        private Output<String> companyName;
+        private @Nullable Output<CompensationInfoArgs> compensationInfo;
+        private @Nullable Output<Map<String,String>> customAttributes;
+        private @Nullable Output<List<JobDegreeTypesItem>> degreeTypes;
+        private @Nullable Output<String> department;
+        private Output<String> description;
+        private @Nullable Output<List<JobEmploymentTypesItem>> employmentTypes;
+        private @Nullable Output<String> incentives;
+        private @Nullable Output<List<JobJobBenefitsItem>> jobBenefits;
+        private @Nullable Output<String> jobEndTime;
+        private @Nullable Output<JobJobLevel> jobLevel;
+        private @Nullable Output<String> jobStartTime;
+        private @Nullable Output<String> languageCode;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> postingExpireTime;
+        private @Nullable Output<String> postingPublishTime;
+        private @Nullable Output<JobPostingRegion> postingRegion;
+        private @Nullable Output<ProcessingOptionsArgs> processingOptions;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Integer> promotionValue;
+        private @Nullable Output<String> qualifications;
+        private Output<String> requisitionId;
+        private @Nullable Output<String> responsibilities;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -461,263 +461,263 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder addresses(@Nullable Input<List<String>> addresses) {
+        public Builder addresses(@Nullable Output<List<String>> addresses) {
             this.addresses = addresses;
             return this;
         }
 
         public Builder addresses(@Nullable List<String> addresses) {
-            this.addresses = Input.ofNullable(addresses);
+            this.addresses = Output.ofNullable(addresses);
             return this;
         }
 
-        public Builder applicationInfo(Input<ApplicationInfoArgs> applicationInfo) {
+        public Builder applicationInfo(Output<ApplicationInfoArgs> applicationInfo) {
             this.applicationInfo = Objects.requireNonNull(applicationInfo);
             return this;
         }
 
         public Builder applicationInfo(ApplicationInfoArgs applicationInfo) {
-            this.applicationInfo = Input.of(Objects.requireNonNull(applicationInfo));
+            this.applicationInfo = Output.of(Objects.requireNonNull(applicationInfo));
             return this;
         }
 
-        public Builder companyName(Input<String> companyName) {
+        public Builder companyName(Output<String> companyName) {
             this.companyName = Objects.requireNonNull(companyName);
             return this;
         }
 
         public Builder companyName(String companyName) {
-            this.companyName = Input.of(Objects.requireNonNull(companyName));
+            this.companyName = Output.of(Objects.requireNonNull(companyName));
             return this;
         }
 
-        public Builder compensationInfo(@Nullable Input<CompensationInfoArgs> compensationInfo) {
+        public Builder compensationInfo(@Nullable Output<CompensationInfoArgs> compensationInfo) {
             this.compensationInfo = compensationInfo;
             return this;
         }
 
         public Builder compensationInfo(@Nullable CompensationInfoArgs compensationInfo) {
-            this.compensationInfo = Input.ofNullable(compensationInfo);
+            this.compensationInfo = Output.ofNullable(compensationInfo);
             return this;
         }
 
-        public Builder customAttributes(@Nullable Input<Map<String,String>> customAttributes) {
+        public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
 
         public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
-            this.customAttributes = Input.ofNullable(customAttributes);
+            this.customAttributes = Output.ofNullable(customAttributes);
             return this;
         }
 
-        public Builder degreeTypes(@Nullable Input<List<JobDegreeTypesItem>> degreeTypes) {
+        public Builder degreeTypes(@Nullable Output<List<JobDegreeTypesItem>> degreeTypes) {
             this.degreeTypes = degreeTypes;
             return this;
         }
 
         public Builder degreeTypes(@Nullable List<JobDegreeTypesItem> degreeTypes) {
-            this.degreeTypes = Input.ofNullable(degreeTypes);
+            this.degreeTypes = Output.ofNullable(degreeTypes);
             return this;
         }
 
-        public Builder department(@Nullable Input<String> department) {
+        public Builder department(@Nullable Output<String> department) {
             this.department = department;
             return this;
         }
 
         public Builder department(@Nullable String department) {
-            this.department = Input.ofNullable(department);
+            this.department = Output.ofNullable(department);
             return this;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder employmentTypes(@Nullable Input<List<JobEmploymentTypesItem>> employmentTypes) {
+        public Builder employmentTypes(@Nullable Output<List<JobEmploymentTypesItem>> employmentTypes) {
             this.employmentTypes = employmentTypes;
             return this;
         }
 
         public Builder employmentTypes(@Nullable List<JobEmploymentTypesItem> employmentTypes) {
-            this.employmentTypes = Input.ofNullable(employmentTypes);
+            this.employmentTypes = Output.ofNullable(employmentTypes);
             return this;
         }
 
-        public Builder incentives(@Nullable Input<String> incentives) {
+        public Builder incentives(@Nullable Output<String> incentives) {
             this.incentives = incentives;
             return this;
         }
 
         public Builder incentives(@Nullable String incentives) {
-            this.incentives = Input.ofNullable(incentives);
+            this.incentives = Output.ofNullable(incentives);
             return this;
         }
 
-        public Builder jobBenefits(@Nullable Input<List<JobJobBenefitsItem>> jobBenefits) {
+        public Builder jobBenefits(@Nullable Output<List<JobJobBenefitsItem>> jobBenefits) {
             this.jobBenefits = jobBenefits;
             return this;
         }
 
         public Builder jobBenefits(@Nullable List<JobJobBenefitsItem> jobBenefits) {
-            this.jobBenefits = Input.ofNullable(jobBenefits);
+            this.jobBenefits = Output.ofNullable(jobBenefits);
             return this;
         }
 
-        public Builder jobEndTime(@Nullable Input<String> jobEndTime) {
+        public Builder jobEndTime(@Nullable Output<String> jobEndTime) {
             this.jobEndTime = jobEndTime;
             return this;
         }
 
         public Builder jobEndTime(@Nullable String jobEndTime) {
-            this.jobEndTime = Input.ofNullable(jobEndTime);
+            this.jobEndTime = Output.ofNullable(jobEndTime);
             return this;
         }
 
-        public Builder jobLevel(@Nullable Input<JobJobLevel> jobLevel) {
+        public Builder jobLevel(@Nullable Output<JobJobLevel> jobLevel) {
             this.jobLevel = jobLevel;
             return this;
         }
 
         public Builder jobLevel(@Nullable JobJobLevel jobLevel) {
-            this.jobLevel = Input.ofNullable(jobLevel);
+            this.jobLevel = Output.ofNullable(jobLevel);
             return this;
         }
 
-        public Builder jobStartTime(@Nullable Input<String> jobStartTime) {
+        public Builder jobStartTime(@Nullable Output<String> jobStartTime) {
             this.jobStartTime = jobStartTime;
             return this;
         }
 
         public Builder jobStartTime(@Nullable String jobStartTime) {
-            this.jobStartTime = Input.ofNullable(jobStartTime);
+            this.jobStartTime = Output.ofNullable(jobStartTime);
             return this;
         }
 
-        public Builder languageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Input.ofNullable(languageCode);
+            this.languageCode = Output.ofNullable(languageCode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder postingExpireTime(@Nullable Input<String> postingExpireTime) {
+        public Builder postingExpireTime(@Nullable Output<String> postingExpireTime) {
             this.postingExpireTime = postingExpireTime;
             return this;
         }
 
         public Builder postingExpireTime(@Nullable String postingExpireTime) {
-            this.postingExpireTime = Input.ofNullable(postingExpireTime);
+            this.postingExpireTime = Output.ofNullable(postingExpireTime);
             return this;
         }
 
-        public Builder postingPublishTime(@Nullable Input<String> postingPublishTime) {
+        public Builder postingPublishTime(@Nullable Output<String> postingPublishTime) {
             this.postingPublishTime = postingPublishTime;
             return this;
         }
 
         public Builder postingPublishTime(@Nullable String postingPublishTime) {
-            this.postingPublishTime = Input.ofNullable(postingPublishTime);
+            this.postingPublishTime = Output.ofNullable(postingPublishTime);
             return this;
         }
 
-        public Builder postingRegion(@Nullable Input<JobPostingRegion> postingRegion) {
+        public Builder postingRegion(@Nullable Output<JobPostingRegion> postingRegion) {
             this.postingRegion = postingRegion;
             return this;
         }
 
         public Builder postingRegion(@Nullable JobPostingRegion postingRegion) {
-            this.postingRegion = Input.ofNullable(postingRegion);
+            this.postingRegion = Output.ofNullable(postingRegion);
             return this;
         }
 
-        public Builder processingOptions(@Nullable Input<ProcessingOptionsArgs> processingOptions) {
+        public Builder processingOptions(@Nullable Output<ProcessingOptionsArgs> processingOptions) {
             this.processingOptions = processingOptions;
             return this;
         }
 
         public Builder processingOptions(@Nullable ProcessingOptionsArgs processingOptions) {
-            this.processingOptions = Input.ofNullable(processingOptions);
+            this.processingOptions = Output.ofNullable(processingOptions);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder promotionValue(@Nullable Input<Integer> promotionValue) {
+        public Builder promotionValue(@Nullable Output<Integer> promotionValue) {
             this.promotionValue = promotionValue;
             return this;
         }
 
         public Builder promotionValue(@Nullable Integer promotionValue) {
-            this.promotionValue = Input.ofNullable(promotionValue);
+            this.promotionValue = Output.ofNullable(promotionValue);
             return this;
         }
 
-        public Builder qualifications(@Nullable Input<String> qualifications) {
+        public Builder qualifications(@Nullable Output<String> qualifications) {
             this.qualifications = qualifications;
             return this;
         }
 
         public Builder qualifications(@Nullable String qualifications) {
-            this.qualifications = Input.ofNullable(qualifications);
+            this.qualifications = Output.ofNullable(qualifications);
             return this;
         }
 
-        public Builder requisitionId(Input<String> requisitionId) {
+        public Builder requisitionId(Output<String> requisitionId) {
             this.requisitionId = Objects.requireNonNull(requisitionId);
             return this;
         }
 
         public Builder requisitionId(String requisitionId) {
-            this.requisitionId = Input.of(Objects.requireNonNull(requisitionId));
+            this.requisitionId = Output.of(Objects.requireNonNull(requisitionId));
             return this;
         }
 
-        public Builder responsibilities(@Nullable Input<String> responsibilities) {
+        public Builder responsibilities(@Nullable Output<String> responsibilities) {
             this.responsibilities = responsibilities;
             return this;
         }
 
         public Builder responsibilities(@Nullable String responsibilities) {
-            this.responsibilities = Input.ofNullable(responsibilities);
+            this.responsibilities = Output.ofNullable(responsibilities);
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public JobArgs build() {

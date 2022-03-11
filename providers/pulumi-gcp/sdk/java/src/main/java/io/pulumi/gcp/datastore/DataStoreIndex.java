@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.datastore;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -168,14 +167,14 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataStoreIndex(String name, DataStoreIndexArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datastore/dataStoreIndex:DataStoreIndex", name, args == null ? DataStoreIndexArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:datastore/dataStoreIndex:DataStoreIndex", name, args == null ? DataStoreIndexArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DataStoreIndex(String name, Input<String> id, @Nullable DataStoreIndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DataStoreIndex(String name, Output<String> id, @Nullable DataStoreIndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:datastore/dataStoreIndex:DataStoreIndex", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -191,7 +190,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DataStoreIndex get(String name, Input<String> id, @Nullable DataStoreIndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DataStoreIndex get(String name, Output<String> id, @Nullable DataStoreIndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataStoreIndex(name, id, state, options);
     }
 }

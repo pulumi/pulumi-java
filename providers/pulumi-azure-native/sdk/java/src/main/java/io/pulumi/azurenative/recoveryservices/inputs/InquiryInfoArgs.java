@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.WorkloadInquiryDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inquiryDetails")
-      private final @Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
+      private final @Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
 
-    public Input<List<WorkloadInquiryDetailsArgs>> getInquiryDetails() {
-        return this.inquiryDetails == null ? Input.empty() : this.inquiryDetails;
+    public Output<List<WorkloadInquiryDetailsArgs>> getInquiryDetails() {
+        return this.inquiryDetails == null ? Output.empty() : this.inquiryDetails;
     }
 
     /**
@@ -38,22 +38,22 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public InquiryInfoArgs(
-        @Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails,
-        @Nullable Input<String> status) {
+        @Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails,
+        @Nullable Output<String> status) {
         this.inquiryDetails = inquiryDetails;
         this.status = status;
     }
 
     private InquiryInfoArgs() {
-        this.inquiryDetails = Input.empty();
-        this.status = Input.empty();
+        this.inquiryDetails = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
-        private @Nullable Input<String> status;
+        private @Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder inquiryDetails(@Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails) {
+        public Builder inquiryDetails(@Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails) {
             this.inquiryDetails = inquiryDetails;
             return this;
         }
 
         public Builder inquiryDetails(@Nullable List<WorkloadInquiryDetailsArgs> inquiryDetails) {
-            this.inquiryDetails = Input.ofNullable(inquiryDetails);
+            this.inquiryDetails = Output.ofNullable(inquiryDetails);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public InquiryInfoArgs build() {

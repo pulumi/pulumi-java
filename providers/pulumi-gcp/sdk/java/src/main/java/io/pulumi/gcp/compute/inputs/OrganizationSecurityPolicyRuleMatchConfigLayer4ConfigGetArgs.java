@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs 
      * 
      */
     @InputImport(name="ipProtocol", required=true)
-      private final Input<String> ipProtocol;
+      private final Output<String> ipProtocol;
 
-    public Input<String> getIpProtocol() {
+    public Output<String> getIpProtocol() {
         return this.ipProtocol;
     }
 
@@ -40,22 +40,22 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs 
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<String>> ports;
+      private final @Nullable Output<List<String>> ports;
 
-    public Input<List<String>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<String>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     public OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs(
-        Input<String> ipProtocol,
-        @Nullable Input<List<String>> ports) {
+        Output<String> ipProtocol,
+        @Nullable Output<List<String>> ports) {
         this.ipProtocol = Objects.requireNonNull(ipProtocol, "expected parameter 'ipProtocol' to be non-null");
         this.ports = ports;
     }
 
     private OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs() {
-        this.ipProtocol = Input.empty();
-        this.ports = Input.empty();
+        this.ipProtocol = Output.empty();
+        this.ports = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,8 +67,8 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs 
     }
 
     public static final class Builder {
-        private Input<String> ipProtocol;
-        private @Nullable Input<List<String>> ports;
+        private Output<String> ipProtocol;
+        private @Nullable Output<List<String>> ports;
 
         public Builder() {
     	      // Empty
@@ -80,23 +80,23 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs 
     	      this.ports = defaults.ports;
         }
 
-        public Builder ipProtocol(Input<String> ipProtocol) {
+        public Builder ipProtocol(Output<String> ipProtocol) {
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
 
         public Builder ipProtocol(String ipProtocol) {
-            this.ipProtocol = Input.of(Objects.requireNonNull(ipProtocol));
+            this.ipProtocol = Output.of(Objects.requireNonNull(ipProtocol));
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<String>> ports) {
+        public Builder ports(@Nullable Output<List<String>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<String> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
         public OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs build() {

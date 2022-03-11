@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methods")
-      private final @Nullable Input<List<String>> methods;
+      private final @Nullable Output<List<String>> methods;
 
-    public Input<List<String>> getMethods() {
-        return this.methods == null ? Input.empty() : this.methods;
+    public Output<List<String>> getMethods() {
+        return this.methods == null ? Output.empty() : this.methods;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public V2ApiTargetArgs(
-        @Nullable Input<List<String>> methods,
-        @Nullable Input<String> service) {
+        @Nullable Output<List<String>> methods,
+        @Nullable Output<String> service) {
         this.methods = methods;
         this.service = service;
     }
 
     private V2ApiTargetArgs() {
-        this.methods = Input.empty();
-        this.service = Input.empty();
+        this.methods = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> methods;
-        private @Nullable Input<String> service;
+        private @Nullable Output<List<String>> methods;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder methods(@Nullable Input<List<String>> methods) {
+        public Builder methods(@Nullable Output<List<String>> methods) {
             this.methods = methods;
             return this;
         }
 
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Input.ofNullable(methods);
+            this.methods = Output.ofNullable(methods);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public V2ApiTargetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="changeDescription")
-      private final @Nullable Input<String> changeDescription;
+      private final @Nullable Output<String> changeDescription;
 
-    public Input<String> getChangeDescription() {
-        return this.changeDescription == null ? Input.empty() : this.changeDescription;
+    public Output<String> getChangeDescription() {
+        return this.changeDescription == null ? Output.empty() : this.changeDescription;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dateCreated")
-      private final @Nullable Input<String> dateCreated;
+      private final @Nullable Output<String> dateCreated;
 
-    public Input<String> getDateCreated() {
-        return this.dateCreated == null ? Input.empty() : this.dateCreated;
+    public Output<String> getDateCreated() {
+        return this.dateCreated == null ? Output.empty() : this.dateCreated;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-      private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Output<Boolean> encrypted;
 
-    public Input<Boolean> getEncrypted() {
-        return this.encrypted == null ? Input.empty() : this.encrypted;
+    public Output<Boolean> getEncrypted() {
+        return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-      private final @Nullable Input<String> platform;
+      private final @Nullable Output<String> platform;
 
-    public Input<String> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<String> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedOsVersions")
-      private final @Nullable Input<List<String>> supportedOsVersions;
+      private final @Nullable Output<List<String>> supportedOsVersions;
 
-    public Input<List<String>> getSupportedOsVersions() {
-        return this.supportedOsVersions == null ? Input.empty() : this.supportedOsVersions;
+    public Output<List<String>> getSupportedOsVersions() {
+        return this.supportedOsVersions == null ? Output.empty() : this.supportedOsVersions;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     /**
@@ -187,29 +187,29 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ComponentState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> changeDescription,
-        @Nullable Input<String> data,
-        @Nullable Input<String> dateCreated,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> encrypted,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> owner,
-        @Nullable Input<String> platform,
-        @Nullable Input<List<String>> supportedOsVersions,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> type,
-        @Nullable Input<String> uri,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> changeDescription,
+        @Nullable Output<String> data,
+        @Nullable Output<String> dateCreated,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> encrypted,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> owner,
+        @Nullable Output<String> platform,
+        @Nullable Output<List<String>> supportedOsVersions,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> type,
+        @Nullable Output<String> uri,
+        @Nullable Output<String> version) {
         this.arn = arn;
         this.changeDescription = changeDescription;
         this.data = data;
@@ -229,22 +229,22 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComponentState() {
-        this.arn = Input.empty();
-        this.changeDescription = Input.empty();
-        this.data = Input.empty();
-        this.dateCreated = Input.empty();
-        this.description = Input.empty();
-        this.encrypted = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.name = Input.empty();
-        this.owner = Input.empty();
-        this.platform = Input.empty();
-        this.supportedOsVersions = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.type = Input.empty();
-        this.uri = Input.empty();
-        this.version = Input.empty();
+        this.arn = Output.empty();
+        this.changeDescription = Output.empty();
+        this.data = Output.empty();
+        this.dateCreated = Output.empty();
+        this.description = Output.empty();
+        this.encrypted = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.name = Output.empty();
+        this.owner = Output.empty();
+        this.platform = Output.empty();
+        this.supportedOsVersions = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.type = Output.empty();
+        this.uri = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -256,22 +256,22 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> changeDescription;
-        private @Nullable Input<String> data;
-        private @Nullable Input<String> dateCreated;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> encrypted;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<String> platform;
-        private @Nullable Input<List<String>> supportedOsVersions;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> uri;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> changeDescription;
+        private @Nullable Output<String> data;
+        private @Nullable Output<String> dateCreated;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> encrypted;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<String> platform;
+        private @Nullable Output<List<String>> supportedOsVersions;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> uri;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -297,163 +297,163 @@ public final class ComponentState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder changeDescription(@Nullable Input<String> changeDescription) {
+        public Builder changeDescription(@Nullable Output<String> changeDescription) {
             this.changeDescription = changeDescription;
             return this;
         }
 
         public Builder changeDescription(@Nullable String changeDescription) {
-            this.changeDescription = Input.ofNullable(changeDescription);
+            this.changeDescription = Output.ofNullable(changeDescription);
             return this;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder dateCreated(@Nullable Input<String> dateCreated) {
+        public Builder dateCreated(@Nullable Output<String> dateCreated) {
             this.dateCreated = dateCreated;
             return this;
         }
 
         public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Input.ofNullable(dateCreated);
+            this.dateCreated = Output.ofNullable(dateCreated);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Input.ofNullable(encrypted);
+            this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder platform(@Nullable Input<String> platform) {
+        public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable String platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder supportedOsVersions(@Nullable Input<List<String>> supportedOsVersions) {
+        public Builder supportedOsVersions(@Nullable Output<List<String>> supportedOsVersions) {
             this.supportedOsVersions = supportedOsVersions;
             return this;
         }
 
         public Builder supportedOsVersions(@Nullable List<String> supportedOsVersions) {
-            this.supportedOsVersions = Input.ofNullable(supportedOsVersions);
+            this.supportedOsVersions = Output.ofNullable(supportedOsVersions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ComponentState build() {

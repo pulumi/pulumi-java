@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountId")
-      private final @Nullable Input<String> serviceAccountId;
+      private final @Nullable Output<String> serviceAccountId;
 
-    public Input<String> getServiceAccountId() {
-        return this.serviceAccountId == null ? Input.empty() : this.serviceAccountId;
+    public Output<String> getServiceAccountId() {
+        return this.serviceAccountId == null ? Output.empty() : this.serviceAccountId;
     }
 
     public IAMPolicyState(
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData,
-        @Nullable Input<String> serviceAccountId) {
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData,
+        @Nullable Output<String> serviceAccountId) {
         this.etag = etag;
         this.policyData = policyData;
         this.serviceAccountId = serviceAccountId;
     }
 
     private IAMPolicyState() {
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
-        this.serviceAccountId = Input.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
+        this.serviceAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
-        private @Nullable Input<String> serviceAccountId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
+        private @Nullable Output<String> serviceAccountId;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccountId = defaults.serviceAccountId;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
 
-        public Builder serviceAccountId(@Nullable Input<String> serviceAccountId) {
+        public Builder serviceAccountId(@Nullable Output<String> serviceAccountId) {
             this.serviceAccountId = serviceAccountId;
             return this;
         }
 
         public Builder serviceAccountId(@Nullable String serviceAccountId) {
-            this.serviceAccountId = Input.ofNullable(serviceAccountId);
+            this.serviceAccountId = Output.ofNullable(serviceAccountId);
             return this;
         }
         public IAMPolicyState build() {

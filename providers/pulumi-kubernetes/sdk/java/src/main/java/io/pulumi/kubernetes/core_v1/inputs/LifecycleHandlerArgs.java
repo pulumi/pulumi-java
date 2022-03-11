@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ExecActionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.HTTPGetActionArgs;
@@ -25,10 +25,10 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="exec")
-      private final @Nullable Input<ExecActionArgs> exec;
+      private final @Nullable Output<ExecActionArgs> exec;
 
-    public Input<ExecActionArgs> getExec() {
-        return this.exec == null ? Input.empty() : this.exec;
+    public Output<ExecActionArgs> getExec() {
+        return this.exec == null ? Output.empty() : this.exec;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="httpGet")
-      private final @Nullable Input<HTTPGetActionArgs> httpGet;
+      private final @Nullable Output<HTTPGetActionArgs> httpGet;
 
-    public Input<HTTPGetActionArgs> getHttpGet() {
-        return this.httpGet == null ? Input.empty() : this.httpGet;
+    public Output<HTTPGetActionArgs> getHttpGet() {
+        return this.httpGet == null ? Output.empty() : this.httpGet;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tcpSocket")
-      private final @Nullable Input<TCPSocketActionArgs> tcpSocket;
+      private final @Nullable Output<TCPSocketActionArgs> tcpSocket;
 
-    public Input<TCPSocketActionArgs> getTcpSocket() {
-        return this.tcpSocket == null ? Input.empty() : this.tcpSocket;
+    public Output<TCPSocketActionArgs> getTcpSocket() {
+        return this.tcpSocket == null ? Output.empty() : this.tcpSocket;
     }
 
     public LifecycleHandlerArgs(
-        @Nullable Input<ExecActionArgs> exec,
-        @Nullable Input<HTTPGetActionArgs> httpGet,
-        @Nullable Input<TCPSocketActionArgs> tcpSocket) {
+        @Nullable Output<ExecActionArgs> exec,
+        @Nullable Output<HTTPGetActionArgs> httpGet,
+        @Nullable Output<TCPSocketActionArgs> tcpSocket) {
         this.exec = exec;
         this.httpGet = httpGet;
         this.tcpSocket = tcpSocket;
     }
 
     private LifecycleHandlerArgs() {
-        this.exec = Input.empty();
-        this.httpGet = Input.empty();
-        this.tcpSocket = Input.empty();
+        this.exec = Output.empty();
+        this.httpGet = Output.empty();
+        this.tcpSocket = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ExecActionArgs> exec;
-        private @Nullable Input<HTTPGetActionArgs> httpGet;
-        private @Nullable Input<TCPSocketActionArgs> tcpSocket;
+        private @Nullable Output<ExecActionArgs> exec;
+        private @Nullable Output<HTTPGetActionArgs> httpGet;
+        private @Nullable Output<TCPSocketActionArgs> tcpSocket;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
     	      this.tcpSocket = defaults.tcpSocket;
         }
 
-        public Builder exec(@Nullable Input<ExecActionArgs> exec) {
+        public Builder exec(@Nullable Output<ExecActionArgs> exec) {
             this.exec = exec;
             return this;
         }
 
         public Builder exec(@Nullable ExecActionArgs exec) {
-            this.exec = Input.ofNullable(exec);
+            this.exec = Output.ofNullable(exec);
             return this;
         }
 
-        public Builder httpGet(@Nullable Input<HTTPGetActionArgs> httpGet) {
+        public Builder httpGet(@Nullable Output<HTTPGetActionArgs> httpGet) {
             this.httpGet = httpGet;
             return this;
         }
 
         public Builder httpGet(@Nullable HTTPGetActionArgs httpGet) {
-            this.httpGet = Input.ofNullable(httpGet);
+            this.httpGet = Output.ofNullable(httpGet);
             return this;
         }
 
-        public Builder tcpSocket(@Nullable Input<TCPSocketActionArgs> tcpSocket) {
+        public Builder tcpSocket(@Nullable Output<TCPSocketActionArgs> tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
         }
 
         public Builder tcpSocket(@Nullable TCPSocketActionArgs tcpSocket) {
-            this.tcpSocket = Input.ofNullable(tcpSocket);
+            this.tcpSocket = Output.ofNullable(tcpSocket);
             return this;
         }
         public LifecycleHandlerArgs build() {

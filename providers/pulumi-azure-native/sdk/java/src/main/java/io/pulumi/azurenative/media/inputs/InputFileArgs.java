@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.SelectAudioTrackByIdArgs;
 import io.pulumi.azurenative.media.inputs.SelectVideoTrackByAttributeArgs;
 import io.pulumi.azurenative.media.inputs.SelectVideoTrackByIdArgs;
 import io.pulumi.azurenative.media.inputs.VideoTrackDescriptorArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filename")
-      private final @Nullable Input<String> filename;
+      private final @Nullable Output<String> filename;
 
-    public Input<String> getFilename() {
-        return this.filename == null ? Input.empty() : this.filename;
+    public Output<String> getFilename() {
+        return this.filename == null ? Output.empty() : this.filename;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includedTracks")
-      private final @Nullable Input<List<Object>> includedTracks;
+      private final @Nullable Output<List<Object>> includedTracks;
 
-    public Input<List<Object>> getIncludedTracks() {
-        return this.includedTracks == null ? Input.empty() : this.includedTracks;
+    public Output<List<Object>> getIncludedTracks() {
+        return this.includedTracks == null ? Output.empty() : this.includedTracks;
     }
 
     /**
@@ -54,25 +54,25 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public InputFileArgs(
-        @Nullable Input<String> filename,
-        @Nullable Input<List<Object>> includedTracks,
-        Input<String> odataType) {
+        @Nullable Output<String> filename,
+        @Nullable Output<List<Object>> includedTracks,
+        Output<String> odataType) {
         this.filename = filename;
         this.includedTracks = includedTracks;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private InputFileArgs() {
-        this.filename = Input.empty();
-        this.includedTracks = Input.empty();
-        this.odataType = Input.empty();
+        this.filename = Output.empty();
+        this.includedTracks = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,9 +84,9 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filename;
-        private @Nullable Input<List<Object>> includedTracks;
-        private Input<String> odataType;
+        private @Nullable Output<String> filename;
+        private @Nullable Output<List<Object>> includedTracks;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -99,33 +99,33 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder filename(@Nullable Input<String> filename) {
+        public Builder filename(@Nullable Output<String> filename) {
             this.filename = filename;
             return this;
         }
 
         public Builder filename(@Nullable String filename) {
-            this.filename = Input.ofNullable(filename);
+            this.filename = Output.ofNullable(filename);
             return this;
         }
 
-        public Builder includedTracks(@Nullable Input<List<Object>> includedTracks) {
+        public Builder includedTracks(@Nullable Output<List<Object>> includedTracks) {
             this.includedTracks = includedTracks;
             return this;
         }
 
         public Builder includedTracks(@Nullable List<Object> includedTracks) {
-            this.includedTracks = Input.ofNullable(includedTracks);
+            this.includedTracks = Output.ofNullable(includedTracks);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public InputFileArgs build() {

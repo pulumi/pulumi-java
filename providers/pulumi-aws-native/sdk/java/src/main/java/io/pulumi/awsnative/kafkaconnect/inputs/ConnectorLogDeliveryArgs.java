@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorWorkerLogDeliveryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ConnectorLogDeliveryArgs extends io.pulumi.resources.Resource
     public static final ConnectorLogDeliveryArgs Empty = new ConnectorLogDeliveryArgs();
 
     @InputImport(name="workerLogDelivery", required=true)
-      private final Input<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
+      private final Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
 
-    public Input<ConnectorWorkerLogDeliveryArgs> getWorkerLogDelivery() {
+    public Output<ConnectorWorkerLogDeliveryArgs> getWorkerLogDelivery() {
         return this.workerLogDelivery;
     }
 
-    public ConnectorLogDeliveryArgs(Input<ConnectorWorkerLogDeliveryArgs> workerLogDelivery) {
+    public ConnectorLogDeliveryArgs(Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery) {
         this.workerLogDelivery = Objects.requireNonNull(workerLogDelivery, "expected parameter 'workerLogDelivery' to be non-null");
     }
 
     private ConnectorLogDeliveryArgs() {
-        this.workerLogDelivery = Input.empty();
+        this.workerLogDelivery = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ConnectorLogDeliveryArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
+        private Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ConnectorLogDeliveryArgs extends io.pulumi.resources.Resource
     	      this.workerLogDelivery = defaults.workerLogDelivery;
         }
 
-        public Builder workerLogDelivery(Input<ConnectorWorkerLogDeliveryArgs> workerLogDelivery) {
+        public Builder workerLogDelivery(Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery) {
             this.workerLogDelivery = Objects.requireNonNull(workerLogDelivery);
             return this;
         }
 
         public Builder workerLogDelivery(ConnectorWorkerLogDeliveryArgs workerLogDelivery) {
-            this.workerLogDelivery = Input.of(Objects.requireNonNull(workerLogDelivery));
+            this.workerLogDelivery = Output.of(Objects.requireNonNull(workerLogDelivery));
             return this;
         }
         public ConnectorLogDeliveryArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accountId", required=true)
-      private final Input<String> accountId;
+      private final Output<String> accountId;
 
-    public Input<String> getAccountId() {
+    public Output<String> getAccountId() {
         return this.accountId;
     }
 
@@ -29,22 +29,22 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="servicePrincipal", required=true)
-      private final Input<String> servicePrincipal;
+      private final Output<String> servicePrincipal;
 
-    public Input<String> getServicePrincipal() {
+    public Output<String> getServicePrincipal() {
         return this.servicePrincipal;
     }
 
     public DelegatedAdministratorArgs(
-        Input<String> accountId,
-        Input<String> servicePrincipal) {
+        Output<String> accountId,
+        Output<String> servicePrincipal) {
         this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
         this.servicePrincipal = Objects.requireNonNull(servicePrincipal, "expected parameter 'servicePrincipal' to be non-null");
     }
 
     private DelegatedAdministratorArgs() {
-        this.accountId = Input.empty();
-        this.servicePrincipal = Input.empty();
+        this.accountId = Output.empty();
+        this.servicePrincipal = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> accountId;
-        private Input<String> servicePrincipal;
+        private Output<String> accountId;
+        private Output<String> servicePrincipal;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder accountId(Input<String> accountId) {
+        public Builder accountId(Output<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Input.of(Objects.requireNonNull(accountId));
+            this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder servicePrincipal(Input<String> servicePrincipal) {
+        public Builder servicePrincipal(Output<String> servicePrincipal) {
             this.servicePrincipal = Objects.requireNonNull(servicePrincipal);
             return this;
         }
 
         public Builder servicePrincipal(String servicePrincipal) {
-            this.servicePrincipal = Input.of(Objects.requireNonNull(servicePrincipal));
+            this.servicePrincipal = Output.of(Objects.requireNonNull(servicePrincipal));
             return this;
         }
         public DelegatedAdministratorArgs build() {

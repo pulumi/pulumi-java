@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codeartifact.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class RepositoryUpstreamGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="repositoryName", required=true)
-      private final Input<String> repositoryName;
+      private final Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
+    public Output<String> getRepositoryName() {
         return this.repositoryName;
     }
 
-    public RepositoryUpstreamGetArgs(Input<String> repositoryName) {
+    public RepositoryUpstreamGetArgs(Output<String> repositoryName) {
         this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
     }
 
     private RepositoryUpstreamGetArgs() {
-        this.repositoryName = Input.empty();
+        this.repositoryName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class RepositoryUpstreamGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> repositoryName;
+        private Output<String> repositoryName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class RepositoryUpstreamGetArgs extends io.pulumi.resources.Resourc
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder repositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Output<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
+            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
             return this;
         }
         public RepositoryUpstreamGetArgs build() {

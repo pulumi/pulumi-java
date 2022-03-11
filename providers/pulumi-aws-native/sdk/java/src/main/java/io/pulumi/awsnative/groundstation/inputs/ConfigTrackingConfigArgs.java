@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigTrackingConfigAutotrack;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class ConfigTrackingConfigArgs extends io.pulumi.resources.Resource
     public static final ConfigTrackingConfigArgs Empty = new ConfigTrackingConfigArgs();
 
     @InputImport(name="autotrack")
-      private final @Nullable Input<ConfigTrackingConfigAutotrack> autotrack;
+      private final @Nullable Output<ConfigTrackingConfigAutotrack> autotrack;
 
-    public Input<ConfigTrackingConfigAutotrack> getAutotrack() {
-        return this.autotrack == null ? Input.empty() : this.autotrack;
+    public Output<ConfigTrackingConfigAutotrack> getAutotrack() {
+        return this.autotrack == null ? Output.empty() : this.autotrack;
     }
 
-    public ConfigTrackingConfigArgs(@Nullable Input<ConfigTrackingConfigAutotrack> autotrack) {
+    public ConfigTrackingConfigArgs(@Nullable Output<ConfigTrackingConfigAutotrack> autotrack) {
         this.autotrack = autotrack;
     }
 
     private ConfigTrackingConfigArgs() {
-        this.autotrack = Input.empty();
+        this.autotrack = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ConfigTrackingConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigTrackingConfigAutotrack> autotrack;
+        private @Nullable Output<ConfigTrackingConfigAutotrack> autotrack;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ConfigTrackingConfigArgs extends io.pulumi.resources.Resource
     	      this.autotrack = defaults.autotrack;
         }
 
-        public Builder autotrack(@Nullable Input<ConfigTrackingConfigAutotrack> autotrack) {
+        public Builder autotrack(@Nullable Output<ConfigTrackingConfigAutotrack> autotrack) {
             this.autotrack = autotrack;
             return this;
         }
 
         public Builder autotrack(@Nullable ConfigTrackingConfigAutotrack autotrack) {
-            this.autotrack = Input.ofNullable(autotrack);
+            this.autotrack = Output.ofNullable(autotrack);
             return this;
         }
         public ConfigTrackingConfigArgs build() {

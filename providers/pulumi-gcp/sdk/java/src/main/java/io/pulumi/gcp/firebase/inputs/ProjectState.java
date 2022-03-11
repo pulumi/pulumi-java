@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.firebase.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectNumber")
-      private final @Nullable Input<String> projectNumber;
+      private final @Nullable Output<String> projectNumber;
 
-    public Input<String> getProjectNumber() {
-        return this.projectNumber == null ? Input.empty() : this.projectNumber;
+    public Output<String> getProjectNumber() {
+        return this.projectNumber == null ? Output.empty() : this.projectNumber;
     }
 
     public ProjectState(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> project,
-        @Nullable Input<String> projectNumber) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> project,
+        @Nullable Output<String> projectNumber) {
         this.displayName = displayName;
         this.project = project;
         this.projectNumber = projectNumber;
     }
 
     private ProjectState() {
-        this.displayName = Input.empty();
-        this.project = Input.empty();
-        this.projectNumber = Input.empty();
+        this.displayName = Output.empty();
+        this.project = Output.empty();
+        this.projectNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> projectNumber;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> projectNumber;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     	      this.projectNumber = defaults.projectNumber;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder projectNumber(@Nullable Input<String> projectNumber) {
+        public Builder projectNumber(@Nullable Output<String> projectNumber) {
             this.projectNumber = projectNumber;
             return this;
         }
 
         public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Input.ofNullable(projectNumber);
+            this.projectNumber = Output.ofNullable(projectNumber);
             return this;
         }
         public ProjectState build() {

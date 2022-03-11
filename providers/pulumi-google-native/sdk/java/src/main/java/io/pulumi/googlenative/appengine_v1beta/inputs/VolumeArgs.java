@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeGb")
-      private final @Nullable Input<Double> sizeGb;
+      private final @Nullable Output<Double> sizeGb;
 
-    public Input<Double> getSizeGb() {
-        return this.sizeGb == null ? Input.empty() : this.sizeGb;
+    public Output<Double> getSizeGb() {
+        return this.sizeGb == null ? Output.empty() : this.sizeGb;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeType")
-      private final @Nullable Input<String> volumeType;
+      private final @Nullable Output<String> volumeType;
 
-    public Input<String> getVolumeType() {
-        return this.volumeType == null ? Input.empty() : this.volumeType;
+    public Output<String> getVolumeType() {
+        return this.volumeType == null ? Output.empty() : this.volumeType;
     }
 
     public VolumeArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<Double> sizeGb,
-        @Nullable Input<String> volumeType) {
+        @Nullable Output<String> name,
+        @Nullable Output<Double> sizeGb,
+        @Nullable Output<String> volumeType) {
         this.name = name;
         this.sizeGb = sizeGb;
         this.volumeType = volumeType;
     }
 
     private VolumeArgs() {
-        this.name = Input.empty();
-        this.sizeGb = Input.empty();
-        this.volumeType = Input.empty();
+        this.name = Output.empty();
+        this.sizeGb = Output.empty();
+        this.volumeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<Double> sizeGb;
-        private @Nullable Input<String> volumeType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Double> sizeGb;
+        private @Nullable Output<String> volumeType;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sizeGb(@Nullable Input<Double> sizeGb) {
+        public Builder sizeGb(@Nullable Output<Double> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
 
         public Builder sizeGb(@Nullable Double sizeGb) {
-            this.sizeGb = Input.ofNullable(sizeGb);
+            this.sizeGb = Output.ofNullable(sizeGb);
             return this;
         }
 
-        public Builder volumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Input.ofNullable(volumeType);
+            this.volumeType = Output.ofNullable(volumeType);
             return this;
         }
         public VolumeArgs build() {

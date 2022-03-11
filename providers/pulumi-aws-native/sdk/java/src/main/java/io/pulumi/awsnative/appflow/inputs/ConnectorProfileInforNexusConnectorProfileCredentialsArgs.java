@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="accessKeyId", required=true)
-      private final Input<String> accessKeyId;
+      private final Output<String> accessKeyId;
 
-    public Input<String> getAccessKeyId() {
+    public Output<String> getAccessKeyId() {
         return this.accessKeyId;
     }
 
@@ -29,9 +29,9 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="datakey", required=true)
-      private final Input<String> datakey;
+      private final Output<String> datakey;
 
-    public Input<String> getDatakey() {
+    public Output<String> getDatakey() {
         return this.datakey;
     }
 
@@ -40,9 +40,9 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="secretAccessKey", required=true)
-      private final Input<String> secretAccessKey;
+      private final Output<String> secretAccessKey;
 
-    public Input<String> getSecretAccessKey() {
+    public Output<String> getSecretAccessKey() {
         return this.secretAccessKey;
     }
 
@@ -51,17 +51,17 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="userId", required=true)
-      private final Input<String> userId;
+      private final Output<String> userId;
 
-    public Input<String> getUserId() {
+    public Output<String> getUserId() {
         return this.userId;
     }
 
     public ConnectorProfileInforNexusConnectorProfileCredentialsArgs(
-        Input<String> accessKeyId,
-        Input<String> datakey,
-        Input<String> secretAccessKey,
-        Input<String> userId) {
+        Output<String> accessKeyId,
+        Output<String> datakey,
+        Output<String> secretAccessKey,
+        Output<String> userId) {
         this.accessKeyId = Objects.requireNonNull(accessKeyId, "expected parameter 'accessKeyId' to be non-null");
         this.datakey = Objects.requireNonNull(datakey, "expected parameter 'datakey' to be non-null");
         this.secretAccessKey = Objects.requireNonNull(secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
@@ -69,10 +69,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     }
 
     private ConnectorProfileInforNexusConnectorProfileCredentialsArgs() {
-        this.accessKeyId = Input.empty();
-        this.datakey = Input.empty();
-        this.secretAccessKey = Input.empty();
-        this.userId = Input.empty();
+        this.accessKeyId = Output.empty();
+        this.datakey = Output.empty();
+        this.secretAccessKey = Output.empty();
+        this.userId = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     }
 
     public static final class Builder {
-        private Input<String> accessKeyId;
-        private Input<String> datakey;
-        private Input<String> secretAccessKey;
-        private Input<String> userId;
+        private Output<String> accessKeyId;
+        private Output<String> datakey;
+        private Output<String> secretAccessKey;
+        private Output<String> userId;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     	      this.userId = defaults.userId;
         }
 
-        public Builder accessKeyId(Input<String> accessKeyId) {
+        public Builder accessKeyId(Output<String> accessKeyId) {
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
 
         public Builder accessKeyId(String accessKeyId) {
-            this.accessKeyId = Input.of(Objects.requireNonNull(accessKeyId));
+            this.accessKeyId = Output.of(Objects.requireNonNull(accessKeyId));
             return this;
         }
 
-        public Builder datakey(Input<String> datakey) {
+        public Builder datakey(Output<String> datakey) {
             this.datakey = Objects.requireNonNull(datakey);
             return this;
         }
 
         public Builder datakey(String datakey) {
-            this.datakey = Input.of(Objects.requireNonNull(datakey));
+            this.datakey = Output.of(Objects.requireNonNull(datakey));
             return this;
         }
 
-        public Builder secretAccessKey(Input<String> secretAccessKey) {
+        public Builder secretAccessKey(Output<String> secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
 
         public Builder secretAccessKey(String secretAccessKey) {
-            this.secretAccessKey = Input.of(Objects.requireNonNull(secretAccessKey));
+            this.secretAccessKey = Output.of(Objects.requireNonNull(secretAccessKey));
             return this;
         }
 
-        public Builder userId(Input<String> userId) {
+        public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
         public Builder userId(String userId) {
-            this.userId = Input.of(Objects.requireNonNull(userId));
+            this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
         public ConnectorProfileInforNexusConnectorProfileCredentialsArgs build() {

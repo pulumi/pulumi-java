@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.CapacityReservationFleetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
     public static final CapacityReservationFleetTagSpecificationArgs Empty = new CapacityReservationFleetTagSpecificationArgs();
 
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<CapacityReservationFleetTagArgs>> tags;
+      private final @Nullable Output<List<CapacityReservationFleetTagArgs>> tags;
 
-    public Input<List<CapacityReservationFleetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<CapacityReservationFleetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CapacityReservationFleetTagSpecificationArgs(
-        @Nullable Input<String> resourceType,
-        @Nullable Input<List<CapacityReservationFleetTagArgs>> tags) {
+        @Nullable Output<String> resourceType,
+        @Nullable Output<List<CapacityReservationFleetTagArgs>> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }
 
     private CapacityReservationFleetTagSpecificationArgs() {
-        this.resourceType = Input.empty();
-        this.tags = Input.empty();
+        this.resourceType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> resourceType;
-        private @Nullable Input<List<CapacityReservationFleetTagArgs>> tags;
+        private @Nullable Output<String> resourceType;
+        private @Nullable Output<List<CapacityReservationFleetTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
     	      this.tags = defaults.tags;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<CapacityReservationFleetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<CapacityReservationFleetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<CapacityReservationFleetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CapacityReservationFleetTagSpecificationArgs build() {

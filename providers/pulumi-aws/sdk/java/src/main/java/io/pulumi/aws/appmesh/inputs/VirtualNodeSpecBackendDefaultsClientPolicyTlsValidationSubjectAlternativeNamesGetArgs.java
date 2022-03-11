@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
      * 
      */
     @InputImport(name="match", required=true)
-      private final Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
+      private final Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
 
-    public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> getMatch() {
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> getMatch() {
         return this.match;
     }
 
-    public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs(Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
+    public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs(Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
         this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
     }
 
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs() {
-        this.match = Input.empty();
+        this.match = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
     }
 
     public static final class Builder {
-        private Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
+        private Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
     	      this.match = defaults.match;
         }
 
-        public Builder match(Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
+        public Builder match(Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
         public Builder match(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs match) {
-            this.match = Input.of(Objects.requireNonNull(match));
+            this.match = Output.of(Objects.requireNonNull(match));
             return this;
         }
         public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="adxDatabaseName", required=true)
-      private final Input<String> adxDatabaseName;
+      private final Output<String> adxDatabaseName;
 
-    public Input<String> getAdxDatabaseName() {
+    public Output<String> getAdxDatabaseName() {
         return this.adxDatabaseName;
     }
 
@@ -34,9 +34,9 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="adxEndpointUri", required=true)
-      private final Input<String> adxEndpointUri;
+      private final Output<String> adxEndpointUri;
 
-    public Input<String> getAdxEndpointUri() {
+    public Output<String> getAdxEndpointUri() {
         return this.adxEndpointUri;
     }
 
@@ -45,9 +45,9 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="adxResourceId", required=true)
-      private final Input<String> adxResourceId;
+      private final Output<String> adxResourceId;
 
-    public Input<String> getAdxResourceId() {
+    public Output<String> getAdxResourceId() {
         return this.adxResourceId;
     }
 
@@ -56,10 +56,10 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="adxTableName")
-      private final @Nullable Input<String> adxTableName;
+      private final @Nullable Output<String> adxTableName;
 
-    public Input<String> getAdxTableName() {
-        return this.adxTableName == null ? Input.empty() : this.adxTableName;
+    public Output<String> getAdxTableName() {
+        return this.adxTableName == null ? Output.empty() : this.adxTableName;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="connectionType", required=true)
-      private final Input<String> connectionType;
+      private final Output<String> connectionType;
 
-    public Input<String> getConnectionType() {
+    public Output<String> getConnectionType() {
         return this.connectionType;
     }
 
@@ -79,10 +79,10 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubConsumerGroup")
-      private final @Nullable Input<String> eventHubConsumerGroup;
+      private final @Nullable Output<String> eventHubConsumerGroup;
 
-    public Input<String> getEventHubConsumerGroup() {
-        return this.eventHubConsumerGroup == null ? Input.empty() : this.eventHubConsumerGroup;
+    public Output<String> getEventHubConsumerGroup() {
+        return this.eventHubConsumerGroup == null ? Output.empty() : this.eventHubConsumerGroup;
     }
 
     /**
@@ -90,9 +90,9 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubEndpointUri", required=true)
-      private final Input<String> eventHubEndpointUri;
+      private final Output<String> eventHubEndpointUri;
 
-    public Input<String> getEventHubEndpointUri() {
+    public Output<String> getEventHubEndpointUri() {
         return this.eventHubEndpointUri;
     }
 
@@ -101,9 +101,9 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubEntityPath", required=true)
-      private final Input<String> eventHubEntityPath;
+      private final Output<String> eventHubEntityPath;
 
-    public Input<String> getEventHubEntityPath() {
+    public Output<String> getEventHubEntityPath() {
         return this.eventHubEntityPath;
     }
 
@@ -112,22 +112,22 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubNamespaceResourceId", required=true)
-      private final Input<String> eventHubNamespaceResourceId;
+      private final Output<String> eventHubNamespaceResourceId;
 
-    public Input<String> getEventHubNamespaceResourceId() {
+    public Output<String> getEventHubNamespaceResourceId() {
         return this.eventHubNamespaceResourceId;
     }
 
     public AzureDataExplorerConnectionPropertiesArgs(
-        Input<String> adxDatabaseName,
-        Input<String> adxEndpointUri,
-        Input<String> adxResourceId,
-        @Nullable Input<String> adxTableName,
-        Input<String> connectionType,
-        @Nullable Input<String> eventHubConsumerGroup,
-        Input<String> eventHubEndpointUri,
-        Input<String> eventHubEntityPath,
-        Input<String> eventHubNamespaceResourceId) {
+        Output<String> adxDatabaseName,
+        Output<String> adxEndpointUri,
+        Output<String> adxResourceId,
+        @Nullable Output<String> adxTableName,
+        Output<String> connectionType,
+        @Nullable Output<String> eventHubConsumerGroup,
+        Output<String> eventHubEndpointUri,
+        Output<String> eventHubEntityPath,
+        Output<String> eventHubNamespaceResourceId) {
         this.adxDatabaseName = Objects.requireNonNull(adxDatabaseName, "expected parameter 'adxDatabaseName' to be non-null");
         this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri, "expected parameter 'adxEndpointUri' to be non-null");
         this.adxResourceId = Objects.requireNonNull(adxResourceId, "expected parameter 'adxResourceId' to be non-null");
@@ -140,15 +140,15 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     }
 
     private AzureDataExplorerConnectionPropertiesArgs() {
-        this.adxDatabaseName = Input.empty();
-        this.adxEndpointUri = Input.empty();
-        this.adxResourceId = Input.empty();
-        this.adxTableName = Input.empty();
-        this.connectionType = Input.empty();
-        this.eventHubConsumerGroup = Input.empty();
-        this.eventHubEndpointUri = Input.empty();
-        this.eventHubEntityPath = Input.empty();
-        this.eventHubNamespaceResourceId = Input.empty();
+        this.adxDatabaseName = Output.empty();
+        this.adxEndpointUri = Output.empty();
+        this.adxResourceId = Output.empty();
+        this.adxTableName = Output.empty();
+        this.connectionType = Output.empty();
+        this.eventHubConsumerGroup = Output.empty();
+        this.eventHubEndpointUri = Output.empty();
+        this.eventHubEntityPath = Output.empty();
+        this.eventHubNamespaceResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> adxDatabaseName;
-        private Input<String> adxEndpointUri;
-        private Input<String> adxResourceId;
-        private @Nullable Input<String> adxTableName;
-        private Input<String> connectionType;
-        private @Nullable Input<String> eventHubConsumerGroup;
-        private Input<String> eventHubEndpointUri;
-        private Input<String> eventHubEntityPath;
-        private Input<String> eventHubNamespaceResourceId;
+        private Output<String> adxDatabaseName;
+        private Output<String> adxEndpointUri;
+        private Output<String> adxResourceId;
+        private @Nullable Output<String> adxTableName;
+        private Output<String> connectionType;
+        private @Nullable Output<String> eventHubConsumerGroup;
+        private Output<String> eventHubEndpointUri;
+        private Output<String> eventHubEntityPath;
+        private Output<String> eventHubNamespaceResourceId;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     	      this.eventHubNamespaceResourceId = defaults.eventHubNamespaceResourceId;
         }
 
-        public Builder adxDatabaseName(Input<String> adxDatabaseName) {
+        public Builder adxDatabaseName(Output<String> adxDatabaseName) {
             this.adxDatabaseName = Objects.requireNonNull(adxDatabaseName);
             return this;
         }
 
         public Builder adxDatabaseName(String adxDatabaseName) {
-            this.adxDatabaseName = Input.of(Objects.requireNonNull(adxDatabaseName));
+            this.adxDatabaseName = Output.of(Objects.requireNonNull(adxDatabaseName));
             return this;
         }
 
-        public Builder adxEndpointUri(Input<String> adxEndpointUri) {
+        public Builder adxEndpointUri(Output<String> adxEndpointUri) {
             this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri);
             return this;
         }
 
         public Builder adxEndpointUri(String adxEndpointUri) {
-            this.adxEndpointUri = Input.of(Objects.requireNonNull(adxEndpointUri));
+            this.adxEndpointUri = Output.of(Objects.requireNonNull(adxEndpointUri));
             return this;
         }
 
-        public Builder adxResourceId(Input<String> adxResourceId) {
+        public Builder adxResourceId(Output<String> adxResourceId) {
             this.adxResourceId = Objects.requireNonNull(adxResourceId);
             return this;
         }
 
         public Builder adxResourceId(String adxResourceId) {
-            this.adxResourceId = Input.of(Objects.requireNonNull(adxResourceId));
+            this.adxResourceId = Output.of(Objects.requireNonNull(adxResourceId));
             return this;
         }
 
-        public Builder adxTableName(@Nullable Input<String> adxTableName) {
+        public Builder adxTableName(@Nullable Output<String> adxTableName) {
             this.adxTableName = adxTableName;
             return this;
         }
 
         public Builder adxTableName(@Nullable String adxTableName) {
-            this.adxTableName = Input.ofNullable(adxTableName);
+            this.adxTableName = Output.ofNullable(adxTableName);
             return this;
         }
 
-        public Builder connectionType(Input<String> connectionType) {
+        public Builder connectionType(Output<String> connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
 
         public Builder connectionType(String connectionType) {
-            this.connectionType = Input.of(Objects.requireNonNull(connectionType));
+            this.connectionType = Output.of(Objects.requireNonNull(connectionType));
             return this;
         }
 
-        public Builder eventHubConsumerGroup(@Nullable Input<String> eventHubConsumerGroup) {
+        public Builder eventHubConsumerGroup(@Nullable Output<String> eventHubConsumerGroup) {
             this.eventHubConsumerGroup = eventHubConsumerGroup;
             return this;
         }
 
         public Builder eventHubConsumerGroup(@Nullable String eventHubConsumerGroup) {
-            this.eventHubConsumerGroup = Input.ofNullable(eventHubConsumerGroup);
+            this.eventHubConsumerGroup = Output.ofNullable(eventHubConsumerGroup);
             return this;
         }
 
-        public Builder eventHubEndpointUri(Input<String> eventHubEndpointUri) {
+        public Builder eventHubEndpointUri(Output<String> eventHubEndpointUri) {
             this.eventHubEndpointUri = Objects.requireNonNull(eventHubEndpointUri);
             return this;
         }
 
         public Builder eventHubEndpointUri(String eventHubEndpointUri) {
-            this.eventHubEndpointUri = Input.of(Objects.requireNonNull(eventHubEndpointUri));
+            this.eventHubEndpointUri = Output.of(Objects.requireNonNull(eventHubEndpointUri));
             return this;
         }
 
-        public Builder eventHubEntityPath(Input<String> eventHubEntityPath) {
+        public Builder eventHubEntityPath(Output<String> eventHubEntityPath) {
             this.eventHubEntityPath = Objects.requireNonNull(eventHubEntityPath);
             return this;
         }
 
         public Builder eventHubEntityPath(String eventHubEntityPath) {
-            this.eventHubEntityPath = Input.of(Objects.requireNonNull(eventHubEntityPath));
+            this.eventHubEntityPath = Output.of(Objects.requireNonNull(eventHubEntityPath));
             return this;
         }
 
-        public Builder eventHubNamespaceResourceId(Input<String> eventHubNamespaceResourceId) {
+        public Builder eventHubNamespaceResourceId(Output<String> eventHubNamespaceResourceId) {
             this.eventHubNamespaceResourceId = Objects.requireNonNull(eventHubNamespaceResourceId);
             return this;
         }
 
         public Builder eventHubNamespaceResourceId(String eventHubNamespaceResourceId) {
-            this.eventHubNamespaceResourceId = Input.of(Objects.requireNonNull(eventHubNamespaceResourceId));
+            this.eventHubNamespaceResourceId = Output.of(Objects.requireNonNull(eventHubNamespaceResourceId));
             return this;
         }
         public AzureDataExplorerConnectionPropertiesArgs build() {

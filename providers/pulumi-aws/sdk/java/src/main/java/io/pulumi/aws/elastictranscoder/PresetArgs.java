@@ -8,7 +8,7 @@ import io.pulumi.aws.elastictranscoder.inputs.PresetAudioCodecOptionsArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PresetThumbnailsArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PresetVideoArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PresetVideoWatermarkArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audio")
-      private final @Nullable Input<PresetAudioArgs> audio;
+      private final @Nullable Output<PresetAudioArgs> audio;
 
-    public Input<PresetAudioArgs> getAudio() {
-        return this.audio == null ? Input.empty() : this.audio;
+    public Output<PresetAudioArgs> getAudio() {
+        return this.audio == null ? Output.empty() : this.audio;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audioCodecOptions")
-      private final @Nullable Input<PresetAudioCodecOptionsArgs> audioCodecOptions;
+      private final @Nullable Output<PresetAudioCodecOptionsArgs> audioCodecOptions;
 
-    public Input<PresetAudioCodecOptionsArgs> getAudioCodecOptions() {
-        return this.audioCodecOptions == null ? Input.empty() : this.audioCodecOptions;
+    public Output<PresetAudioCodecOptionsArgs> getAudioCodecOptions() {
+        return this.audioCodecOptions == null ? Output.empty() : this.audioCodecOptions;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="container", required=true)
-      private final Input<String> container;
+      private final Output<String> container;
 
-    public Input<String> getContainer() {
+    public Output<String> getContainer() {
         return this.container;
     }
 
@@ -59,10 +59,10 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -81,17 +81,17 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbnails")
-      private final @Nullable Input<PresetThumbnailsArgs> thumbnails;
+      private final @Nullable Output<PresetThumbnailsArgs> thumbnails;
 
-    public Input<PresetThumbnailsArgs> getThumbnails() {
-        return this.thumbnails == null ? Input.empty() : this.thumbnails;
+    public Output<PresetThumbnailsArgs> getThumbnails() {
+        return this.thumbnails == null ? Output.empty() : this.thumbnails;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="video")
-      private final @Nullable Input<PresetVideoArgs> video;
+      private final @Nullable Output<PresetVideoArgs> video;
 
-    public Input<PresetVideoArgs> getVideo() {
-        return this.video == null ? Input.empty() : this.video;
+    public Output<PresetVideoArgs> getVideo() {
+        return this.video == null ? Output.empty() : this.video;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoCodecOptions")
-      private final @Nullable Input<Map<String,String>> videoCodecOptions;
+      private final @Nullable Output<Map<String,String>> videoCodecOptions;
 
-    public Input<Map<String,String>> getVideoCodecOptions() {
-        return this.videoCodecOptions == null ? Input.empty() : this.videoCodecOptions;
+    public Output<Map<String,String>> getVideoCodecOptions() {
+        return this.videoCodecOptions == null ? Output.empty() : this.videoCodecOptions;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoWatermarks")
-      private final @Nullable Input<List<PresetVideoWatermarkArgs>> videoWatermarks;
+      private final @Nullable Output<List<PresetVideoWatermarkArgs>> videoWatermarks;
 
-    public Input<List<PresetVideoWatermarkArgs>> getVideoWatermarks() {
-        return this.videoWatermarks == null ? Input.empty() : this.videoWatermarks;
+    public Output<List<PresetVideoWatermarkArgs>> getVideoWatermarks() {
+        return this.videoWatermarks == null ? Output.empty() : this.videoWatermarks;
     }
 
     public PresetArgs(
-        @Nullable Input<PresetAudioArgs> audio,
-        @Nullable Input<PresetAudioCodecOptionsArgs> audioCodecOptions,
-        Input<String> container,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<PresetThumbnailsArgs> thumbnails,
-        @Nullable Input<String> type,
-        @Nullable Input<PresetVideoArgs> video,
-        @Nullable Input<Map<String,String>> videoCodecOptions,
-        @Nullable Input<List<PresetVideoWatermarkArgs>> videoWatermarks) {
+        @Nullable Output<PresetAudioArgs> audio,
+        @Nullable Output<PresetAudioCodecOptionsArgs> audioCodecOptions,
+        Output<String> container,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<PresetThumbnailsArgs> thumbnails,
+        @Nullable Output<String> type,
+        @Nullable Output<PresetVideoArgs> video,
+        @Nullable Output<Map<String,String>> videoCodecOptions,
+        @Nullable Output<List<PresetVideoWatermarkArgs>> videoWatermarks) {
         this.audio = audio;
         this.audioCodecOptions = audioCodecOptions;
         this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
@@ -151,16 +151,16 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PresetArgs() {
-        this.audio = Input.empty();
-        this.audioCodecOptions = Input.empty();
-        this.container = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.thumbnails = Input.empty();
-        this.type = Input.empty();
-        this.video = Input.empty();
-        this.videoCodecOptions = Input.empty();
-        this.videoWatermarks = Input.empty();
+        this.audio = Output.empty();
+        this.audioCodecOptions = Output.empty();
+        this.container = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.thumbnails = Output.empty();
+        this.type = Output.empty();
+        this.video = Output.empty();
+        this.videoCodecOptions = Output.empty();
+        this.videoWatermarks = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<PresetAudioArgs> audio;
-        private @Nullable Input<PresetAudioCodecOptionsArgs> audioCodecOptions;
-        private Input<String> container;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<PresetThumbnailsArgs> thumbnails;
-        private @Nullable Input<String> type;
-        private @Nullable Input<PresetVideoArgs> video;
-        private @Nullable Input<Map<String,String>> videoCodecOptions;
-        private @Nullable Input<List<PresetVideoWatermarkArgs>> videoWatermarks;
+        private @Nullable Output<PresetAudioArgs> audio;
+        private @Nullable Output<PresetAudioCodecOptionsArgs> audioCodecOptions;
+        private Output<String> container;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<PresetThumbnailsArgs> thumbnails;
+        private @Nullable Output<String> type;
+        private @Nullable Output<PresetVideoArgs> video;
+        private @Nullable Output<Map<String,String>> videoCodecOptions;
+        private @Nullable Output<List<PresetVideoWatermarkArgs>> videoWatermarks;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.videoWatermarks = defaults.videoWatermarks;
         }
 
-        public Builder audio(@Nullable Input<PresetAudioArgs> audio) {
+        public Builder audio(@Nullable Output<PresetAudioArgs> audio) {
             this.audio = audio;
             return this;
         }
 
         public Builder audio(@Nullable PresetAudioArgs audio) {
-            this.audio = Input.ofNullable(audio);
+            this.audio = Output.ofNullable(audio);
             return this;
         }
 
-        public Builder audioCodecOptions(@Nullable Input<PresetAudioCodecOptionsArgs> audioCodecOptions) {
+        public Builder audioCodecOptions(@Nullable Output<PresetAudioCodecOptionsArgs> audioCodecOptions) {
             this.audioCodecOptions = audioCodecOptions;
             return this;
         }
 
         public Builder audioCodecOptions(@Nullable PresetAudioCodecOptionsArgs audioCodecOptions) {
-            this.audioCodecOptions = Input.ofNullable(audioCodecOptions);
+            this.audioCodecOptions = Output.ofNullable(audioCodecOptions);
             return this;
         }
 
-        public Builder container(Input<String> container) {
+        public Builder container(Output<String> container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
         public Builder container(String container) {
-            this.container = Input.of(Objects.requireNonNull(container));
+            this.container = Output.of(Objects.requireNonNull(container));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder thumbnails(@Nullable Input<PresetThumbnailsArgs> thumbnails) {
+        public Builder thumbnails(@Nullable Output<PresetThumbnailsArgs> thumbnails) {
             this.thumbnails = thumbnails;
             return this;
         }
 
         public Builder thumbnails(@Nullable PresetThumbnailsArgs thumbnails) {
-            this.thumbnails = Input.ofNullable(thumbnails);
+            this.thumbnails = Output.ofNullable(thumbnails);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder video(@Nullable Input<PresetVideoArgs> video) {
+        public Builder video(@Nullable Output<PresetVideoArgs> video) {
             this.video = video;
             return this;
         }
 
         public Builder video(@Nullable PresetVideoArgs video) {
-            this.video = Input.ofNullable(video);
+            this.video = Output.ofNullable(video);
             return this;
         }
 
-        public Builder videoCodecOptions(@Nullable Input<Map<String,String>> videoCodecOptions) {
+        public Builder videoCodecOptions(@Nullable Output<Map<String,String>> videoCodecOptions) {
             this.videoCodecOptions = videoCodecOptions;
             return this;
         }
 
         public Builder videoCodecOptions(@Nullable Map<String,String> videoCodecOptions) {
-            this.videoCodecOptions = Input.ofNullable(videoCodecOptions);
+            this.videoCodecOptions = Output.ofNullable(videoCodecOptions);
             return this;
         }
 
-        public Builder videoWatermarks(@Nullable Input<List<PresetVideoWatermarkArgs>> videoWatermarks) {
+        public Builder videoWatermarks(@Nullable Output<List<PresetVideoWatermarkArgs>> videoWatermarks) {
             this.videoWatermarks = videoWatermarks;
             return this;
         }
 
         public Builder videoWatermarks(@Nullable List<PresetVideoWatermarkArgs> videoWatermarks) {
-            this.videoWatermarks = Input.ofNullable(videoWatermarks);
+            this.videoWatermarks = Output.ofNullable(videoWatermarks);
             return this;
         }
         public PresetArgs build() {

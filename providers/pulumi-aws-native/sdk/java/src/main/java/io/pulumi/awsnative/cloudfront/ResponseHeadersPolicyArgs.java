@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class ResponseHeadersPolicyArgs extends io.pulumi.resources.Resourc
     public static final ResponseHeadersPolicyArgs Empty = new ResponseHeadersPolicyArgs();
 
     @InputImport(name="responseHeadersPolicyConfig", required=true)
-      private final Input<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
+      private final Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
 
-    public Input<ResponseHeadersPolicyConfigArgs> getResponseHeadersPolicyConfig() {
+    public Output<ResponseHeadersPolicyConfigArgs> getResponseHeadersPolicyConfig() {
         return this.responseHeadersPolicyConfig;
     }
 
-    public ResponseHeadersPolicyArgs(Input<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig) {
+    public ResponseHeadersPolicyArgs(Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig) {
         this.responseHeadersPolicyConfig = Objects.requireNonNull(responseHeadersPolicyConfig, "expected parameter 'responseHeadersPolicyConfig' to be non-null");
     }
 
     private ResponseHeadersPolicyArgs() {
-        this.responseHeadersPolicyConfig = Input.empty();
+        this.responseHeadersPolicyConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class ResponseHeadersPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
+        private Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class ResponseHeadersPolicyArgs extends io.pulumi.resources.Resourc
     	      this.responseHeadersPolicyConfig = defaults.responseHeadersPolicyConfig;
         }
 
-        public Builder responseHeadersPolicyConfig(Input<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig) {
+        public Builder responseHeadersPolicyConfig(Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig) {
             this.responseHeadersPolicyConfig = Objects.requireNonNull(responseHeadersPolicyConfig);
             return this;
         }
 
         public Builder responseHeadersPolicyConfig(ResponseHeadersPolicyConfigArgs responseHeadersPolicyConfig) {
-            this.responseHeadersPolicyConfig = Input.of(Objects.requireNonNull(responseHeadersPolicyConfig));
+            this.responseHeadersPolicyConfig = Output.of(Objects.requireNonNull(responseHeadersPolicyConfig));
             return this;
         }
         public ResponseHeadersPolicyArgs build() {

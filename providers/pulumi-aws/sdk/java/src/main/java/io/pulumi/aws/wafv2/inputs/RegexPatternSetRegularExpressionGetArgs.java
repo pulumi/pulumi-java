@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class RegexPatternSetRegularExpressionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="regexString", required=true)
-      private final Input<String> regexString;
+      private final Output<String> regexString;
 
-    public Input<String> getRegexString() {
+    public Output<String> getRegexString() {
         return this.regexString;
     }
 
-    public RegexPatternSetRegularExpressionGetArgs(Input<String> regexString) {
+    public RegexPatternSetRegularExpressionGetArgs(Output<String> regexString) {
         this.regexString = Objects.requireNonNull(regexString, "expected parameter 'regexString' to be non-null");
     }
 
     private RegexPatternSetRegularExpressionGetArgs() {
-        this.regexString = Input.empty();
+        this.regexString = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class RegexPatternSetRegularExpressionGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> regexString;
+        private Output<String> regexString;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class RegexPatternSetRegularExpressionGetArgs extends io.pulumi.res
     	      this.regexString = defaults.regexString;
         }
 
-        public Builder regexString(Input<String> regexString) {
+        public Builder regexString(Output<String> regexString) {
             this.regexString = Objects.requireNonNull(regexString);
             return this;
         }
 
         public Builder regexString(String regexString) {
-            this.regexString = Input.of(Objects.requireNonNull(regexString));
+            this.regexString = Output.of(Objects.requireNonNull(regexString));
             return this;
         }
         public RegexPatternSetRegularExpressionGetArgs build() {

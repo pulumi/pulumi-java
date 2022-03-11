@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,22 +34,22 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<Object> value;
+      private final Output<Object> value;
 
-    public Input<Object> getValue() {
+    public Output<Object> getValue() {
         return this.value;
     }
 
     public UserPropertyArgs(
-        Input<String> name,
-        Input<Object> value) {
+        Output<String> name,
+        Output<Object> value) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private UserPropertyArgs() {
-        this.name = Input.empty();
-        this.value = Input.empty();
+        this.name = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<Object> value;
+        private Output<String> name;
+        private Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class UserPropertyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder value(Input<Object> value) {
+        public Builder value(Output<Object> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Object value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public UserPropertyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ArtifactArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.CommandArgs;
@@ -28,10 +28,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="buildOptions")
-      private final @Nullable Input<Map<String,String>> buildOptions;
+      private final @Nullable Output<Map<String,String>> buildOptions;
 
-    public Input<Map<String,String>> getBuildOptions() {
-        return this.buildOptions == null ? Input.empty() : this.buildOptions;
+    public Output<Map<String,String>> getBuildOptions() {
+        return this.buildOptions == null ? Output.empty() : this.buildOptions;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="builderVersion")
-      private final @Nullable Input<String> builderVersion;
+      private final @Nullable Output<String> builderVersion;
 
-    public Input<String> getBuilderVersion() {
-        return this.builderVersion == null ? Input.empty() : this.builderVersion;
+    public Output<String> getBuilderVersion() {
+        return this.builderVersion == null ? Output.empty() : this.builderVersion;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="builtArtifacts")
-      private final @Nullable Input<List<ArtifactArgs>> builtArtifacts;
+      private final @Nullable Output<List<ArtifactArgs>> builtArtifacts;
 
-    public Input<List<ArtifactArgs>> getBuiltArtifacts() {
-        return this.builtArtifacts == null ? Input.empty() : this.builtArtifacts;
+    public Output<List<ArtifactArgs>> getBuiltArtifacts() {
+        return this.builtArtifacts == null ? Output.empty() : this.builtArtifacts;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="commands")
-      private final @Nullable Input<List<CommandArgs>> commands;
+      private final @Nullable Output<List<CommandArgs>> commands;
 
-    public Input<List<CommandArgs>> getCommands() {
-        return this.commands == null ? Input.empty() : this.commands;
+    public Output<List<CommandArgs>> getCommands() {
+        return this.commands == null ? Output.empty() : this.commands;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creator")
-      private final @Nullable Input<String> creator;
+      private final @Nullable Output<String> creator;
 
-    public Input<String> getCreator() {
-        return this.creator == null ? Input.empty() : this.creator;
+    public Output<String> getCreator() {
+        return this.creator == null ? Output.empty() : this.creator;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="finishTime")
-      private final @Nullable Input<String> finishTime;
+      private final @Nullable Output<String> finishTime;
 
-    public Input<String> getFinishTime() {
-        return this.finishTime == null ? Input.empty() : this.finishTime;
+    public Output<String> getFinishTime() {
+        return this.finishTime == null ? Output.empty() : this.finishTime;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logsBucket")
-      private final @Nullable Input<String> logsBucket;
+      private final @Nullable Output<String> logsBucket;
 
-    public Input<String> getLogsBucket() {
-        return this.logsBucket == null ? Input.empty() : this.logsBucket;
+    public Output<String> getLogsBucket() {
+        return this.logsBucket == null ? Output.empty() : this.logsBucket;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceProvenance")
-      private final @Nullable Input<SourceArgs> sourceProvenance;
+      private final @Nullable Output<SourceArgs> sourceProvenance;
 
-    public Input<SourceArgs> getSourceProvenance() {
-        return this.sourceProvenance == null ? Input.empty() : this.sourceProvenance;
+    public Output<SourceArgs> getSourceProvenance() {
+        return this.sourceProvenance == null ? Output.empty() : this.sourceProvenance;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -160,26 +160,26 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="triggerId")
-      private final @Nullable Input<String> triggerId;
+      private final @Nullable Output<String> triggerId;
 
-    public Input<String> getTriggerId() {
-        return this.triggerId == null ? Input.empty() : this.triggerId;
+    public Output<String> getTriggerId() {
+        return this.triggerId == null ? Output.empty() : this.triggerId;
     }
 
     public BuildProvenanceArgs(
-        @Nullable Input<Map<String,String>> buildOptions,
-        @Nullable Input<String> builderVersion,
-        @Nullable Input<List<ArtifactArgs>> builtArtifacts,
-        @Nullable Input<List<CommandArgs>> commands,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> creator,
-        @Nullable Input<String> finishTime,
-        @Nullable Input<String> id,
-        @Nullable Input<String> logsBucket,
-        @Nullable Input<String> project,
-        @Nullable Input<SourceArgs> sourceProvenance,
-        @Nullable Input<String> startTime,
-        @Nullable Input<String> triggerId) {
+        @Nullable Output<Map<String,String>> buildOptions,
+        @Nullable Output<String> builderVersion,
+        @Nullable Output<List<ArtifactArgs>> builtArtifacts,
+        @Nullable Output<List<CommandArgs>> commands,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> creator,
+        @Nullable Output<String> finishTime,
+        @Nullable Output<String> id,
+        @Nullable Output<String> logsBucket,
+        @Nullable Output<String> project,
+        @Nullable Output<SourceArgs> sourceProvenance,
+        @Nullable Output<String> startTime,
+        @Nullable Output<String> triggerId) {
         this.buildOptions = buildOptions;
         this.builderVersion = builderVersion;
         this.builtArtifacts = builtArtifacts;
@@ -196,19 +196,19 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BuildProvenanceArgs() {
-        this.buildOptions = Input.empty();
-        this.builderVersion = Input.empty();
-        this.builtArtifacts = Input.empty();
-        this.commands = Input.empty();
-        this.createTime = Input.empty();
-        this.creator = Input.empty();
-        this.finishTime = Input.empty();
-        this.id = Input.empty();
-        this.logsBucket = Input.empty();
-        this.project = Input.empty();
-        this.sourceProvenance = Input.empty();
-        this.startTime = Input.empty();
-        this.triggerId = Input.empty();
+        this.buildOptions = Output.empty();
+        this.builderVersion = Output.empty();
+        this.builtArtifacts = Output.empty();
+        this.commands = Output.empty();
+        this.createTime = Output.empty();
+        this.creator = Output.empty();
+        this.finishTime = Output.empty();
+        this.id = Output.empty();
+        this.logsBucket = Output.empty();
+        this.project = Output.empty();
+        this.sourceProvenance = Output.empty();
+        this.startTime = Output.empty();
+        this.triggerId = Output.empty();
     }
 
     public static Builder builder() {
@@ -220,19 +220,19 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> buildOptions;
-        private @Nullable Input<String> builderVersion;
-        private @Nullable Input<List<ArtifactArgs>> builtArtifacts;
-        private @Nullable Input<List<CommandArgs>> commands;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> creator;
-        private @Nullable Input<String> finishTime;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> logsBucket;
-        private @Nullable Input<String> project;
-        private @Nullable Input<SourceArgs> sourceProvenance;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<String> triggerId;
+        private @Nullable Output<Map<String,String>> buildOptions;
+        private @Nullable Output<String> builderVersion;
+        private @Nullable Output<List<ArtifactArgs>> builtArtifacts;
+        private @Nullable Output<List<CommandArgs>> commands;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> creator;
+        private @Nullable Output<String> finishTime;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> logsBucket;
+        private @Nullable Output<String> project;
+        private @Nullable Output<SourceArgs> sourceProvenance;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<String> triggerId;
 
         public Builder() {
     	      // Empty
@@ -255,133 +255,133 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.triggerId = defaults.triggerId;
         }
 
-        public Builder buildOptions(@Nullable Input<Map<String,String>> buildOptions) {
+        public Builder buildOptions(@Nullable Output<Map<String,String>> buildOptions) {
             this.buildOptions = buildOptions;
             return this;
         }
 
         public Builder buildOptions(@Nullable Map<String,String> buildOptions) {
-            this.buildOptions = Input.ofNullable(buildOptions);
+            this.buildOptions = Output.ofNullable(buildOptions);
             return this;
         }
 
-        public Builder builderVersion(@Nullable Input<String> builderVersion) {
+        public Builder builderVersion(@Nullable Output<String> builderVersion) {
             this.builderVersion = builderVersion;
             return this;
         }
 
         public Builder builderVersion(@Nullable String builderVersion) {
-            this.builderVersion = Input.ofNullable(builderVersion);
+            this.builderVersion = Output.ofNullable(builderVersion);
             return this;
         }
 
-        public Builder builtArtifacts(@Nullable Input<List<ArtifactArgs>> builtArtifacts) {
+        public Builder builtArtifacts(@Nullable Output<List<ArtifactArgs>> builtArtifacts) {
             this.builtArtifacts = builtArtifacts;
             return this;
         }
 
         public Builder builtArtifacts(@Nullable List<ArtifactArgs> builtArtifacts) {
-            this.builtArtifacts = Input.ofNullable(builtArtifacts);
+            this.builtArtifacts = Output.ofNullable(builtArtifacts);
             return this;
         }
 
-        public Builder commands(@Nullable Input<List<CommandArgs>> commands) {
+        public Builder commands(@Nullable Output<List<CommandArgs>> commands) {
             this.commands = commands;
             return this;
         }
 
         public Builder commands(@Nullable List<CommandArgs> commands) {
-            this.commands = Input.ofNullable(commands);
+            this.commands = Output.ofNullable(commands);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder creator(@Nullable Input<String> creator) {
+        public Builder creator(@Nullable Output<String> creator) {
             this.creator = creator;
             return this;
         }
 
         public Builder creator(@Nullable String creator) {
-            this.creator = Input.ofNullable(creator);
+            this.creator = Output.ofNullable(creator);
             return this;
         }
 
-        public Builder finishTime(@Nullable Input<String> finishTime) {
+        public Builder finishTime(@Nullable Output<String> finishTime) {
             this.finishTime = finishTime;
             return this;
         }
 
         public Builder finishTime(@Nullable String finishTime) {
-            this.finishTime = Input.ofNullable(finishTime);
+            this.finishTime = Output.ofNullable(finishTime);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder logsBucket(@Nullable Input<String> logsBucket) {
+        public Builder logsBucket(@Nullable Output<String> logsBucket) {
             this.logsBucket = logsBucket;
             return this;
         }
 
         public Builder logsBucket(@Nullable String logsBucket) {
-            this.logsBucket = Input.ofNullable(logsBucket);
+            this.logsBucket = Output.ofNullable(logsBucket);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder sourceProvenance(@Nullable Input<SourceArgs> sourceProvenance) {
+        public Builder sourceProvenance(@Nullable Output<SourceArgs> sourceProvenance) {
             this.sourceProvenance = sourceProvenance;
             return this;
         }
 
         public Builder sourceProvenance(@Nullable SourceArgs sourceProvenance) {
-            this.sourceProvenance = Input.ofNullable(sourceProvenance);
+            this.sourceProvenance = Output.ofNullable(sourceProvenance);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder triggerId(@Nullable Input<String> triggerId) {
+        public Builder triggerId(@Nullable Output<String> triggerId) {
             this.triggerId = triggerId;
             return this;
         }
 
         public Builder triggerId(@Nullable String triggerId) {
-            this.triggerId = Input.ofNullable(triggerId);
+            this.triggerId = Output.ofNullable(triggerId);
             return this;
         }
         public BuildProvenanceArgs build() {

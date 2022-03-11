@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurestackhci;
 
 import io.pulumi.azurenative.azurestackhci.enums.CreatedByType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -23,9 +23,9 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arcSettingName", required=true)
-      private final Input<String> arcSettingName;
+      private final Output<String> arcSettingName;
 
-    public Input<String> getArcSettingName() {
+    public Output<String> getArcSettingName() {
         return this.arcSettingName;
     }
 
@@ -34,10 +34,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-      private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+      private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Input<Boolean> getAutoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
+    public Output<Boolean> getAutoUpgradeMinorVersion() {
+        return this.autoUpgradeMinorVersion == null ? Output.empty() : this.autoUpgradeMinorVersion;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -56,10 +56,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-      private final @Nullable Input<String> createdBy;
+      private final @Nullable Output<String> createdBy;
 
-    public Input<String> getCreatedBy() {
-        return this.createdBy == null ? Input.empty() : this.createdBy;
+    public Output<String> getCreatedBy() {
+        return this.createdBy == null ? Output.empty() : this.createdBy;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdByType")
-      private final @Nullable Input<Either<String,CreatedByType>> createdByType;
+      private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Input<Either<String,CreatedByType>> getCreatedByType() {
-        return this.createdByType == null ? Input.empty() : this.createdByType;
+    public Output<Either<String,CreatedByType>> getCreatedByType() {
+        return this.createdByType == null ? Output.empty() : this.createdByType;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensionName")
-      private final @Nullable Input<String> extensionName;
+      private final @Nullable Output<String> extensionName;
 
-    public Input<String> getExtensionName() {
-        return this.extensionName == null ? Input.empty() : this.extensionName;
+    public Output<String> getExtensionName() {
+        return this.extensionName == null ? Output.empty() : this.extensionName;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdateTag")
-      private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Output<String> forceUpdateTag;
 
-    public Input<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
+    public Output<String> getForceUpdateTag() {
+        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-      private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Output<String> lastModifiedAt;
 
-    public Input<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
+    public Output<String> getLastModifiedAt() {
+        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedBy")
-      private final @Nullable Input<String> lastModifiedBy;
+      private final @Nullable Output<String> lastModifiedBy;
 
-    public Input<String> getLastModifiedBy() {
-        return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
+    public Output<String> getLastModifiedBy() {
+        return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedByType")
-      private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
+      private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Input<Either<String,CreatedByType>> getLastModifiedByType() {
-        return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
+    public Output<Either<String,CreatedByType>> getLastModifiedByType() {
+        return this.lastModifiedByType == null ? Output.empty() : this.lastModifiedByType;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protectedSettings")
-      private final @Nullable Input<Object> protectedSettings;
+      private final @Nullable Output<Object> protectedSettings;
 
-    public Input<Object> getProtectedSettings() {
-        return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
+    public Output<Object> getProtectedSettings() {
+        return this.protectedSettings == null ? Output.empty() : this.protectedSettings;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisher")
-      private final @Nullable Input<String> publisher;
+      private final @Nullable Output<String> publisher;
 
-    public Input<String> getPublisher() {
-        return this.publisher == null ? Input.empty() : this.publisher;
+    public Output<String> getPublisher() {
+        return this.publisher == null ? Output.empty() : this.publisher;
     }
 
     /**
@@ -166,9 +166,9 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -177,10 +177,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<Object> settings;
+      private final @Nullable Output<Object> settings;
 
-    public Input<Object> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<Object> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -199,30 +199,30 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeHandlerVersion")
-      private final @Nullable Input<String> typeHandlerVersion;
+      private final @Nullable Output<String> typeHandlerVersion;
 
-    public Input<String> getTypeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
+    public Output<String> getTypeHandlerVersion() {
+        return this.typeHandlerVersion == null ? Output.empty() : this.typeHandlerVersion;
     }
 
     public ExtensionArgs(
-        Input<String> arcSettingName,
-        @Nullable Input<Boolean> autoUpgradeMinorVersion,
-        Input<String> clusterName,
-        @Nullable Input<String> createdAt,
-        @Nullable Input<String> createdBy,
-        @Nullable Input<Either<String,CreatedByType>> createdByType,
-        @Nullable Input<String> extensionName,
-        @Nullable Input<String> forceUpdateTag,
-        @Nullable Input<String> lastModifiedAt,
-        @Nullable Input<String> lastModifiedBy,
-        @Nullable Input<Either<String,CreatedByType>> lastModifiedByType,
-        @Nullable Input<Object> protectedSettings,
-        @Nullable Input<String> publisher,
-        Input<String> resourceGroupName,
-        @Nullable Input<Object> settings,
-        @Nullable Input<String> type,
-        @Nullable Input<String> typeHandlerVersion) {
+        Output<String> arcSettingName,
+        @Nullable Output<Boolean> autoUpgradeMinorVersion,
+        Output<String> clusterName,
+        @Nullable Output<String> createdAt,
+        @Nullable Output<String> createdBy,
+        @Nullable Output<Either<String,CreatedByType>> createdByType,
+        @Nullable Output<String> extensionName,
+        @Nullable Output<String> forceUpdateTag,
+        @Nullable Output<String> lastModifiedAt,
+        @Nullable Output<String> lastModifiedBy,
+        @Nullable Output<Either<String,CreatedByType>> lastModifiedByType,
+        @Nullable Output<Object> protectedSettings,
+        @Nullable Output<String> publisher,
+        Output<String> resourceGroupName,
+        @Nullable Output<Object> settings,
+        @Nullable Output<String> type,
+        @Nullable Output<String> typeHandlerVersion) {
         this.arcSettingName = Objects.requireNonNull(arcSettingName, "expected parameter 'arcSettingName' to be non-null");
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
@@ -243,23 +243,23 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExtensionArgs() {
-        this.arcSettingName = Input.empty();
-        this.autoUpgradeMinorVersion = Input.empty();
-        this.clusterName = Input.empty();
-        this.createdAt = Input.empty();
-        this.createdBy = Input.empty();
-        this.createdByType = Input.empty();
-        this.extensionName = Input.empty();
-        this.forceUpdateTag = Input.empty();
-        this.lastModifiedAt = Input.empty();
-        this.lastModifiedBy = Input.empty();
-        this.lastModifiedByType = Input.empty();
-        this.protectedSettings = Input.empty();
-        this.publisher = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.settings = Input.empty();
-        this.type = Input.empty();
-        this.typeHandlerVersion = Input.empty();
+        this.arcSettingName = Output.empty();
+        this.autoUpgradeMinorVersion = Output.empty();
+        this.clusterName = Output.empty();
+        this.createdAt = Output.empty();
+        this.createdBy = Output.empty();
+        this.createdByType = Output.empty();
+        this.extensionName = Output.empty();
+        this.forceUpdateTag = Output.empty();
+        this.lastModifiedAt = Output.empty();
+        this.lastModifiedBy = Output.empty();
+        this.lastModifiedByType = Output.empty();
+        this.protectedSettings = Output.empty();
+        this.publisher = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.settings = Output.empty();
+        this.type = Output.empty();
+        this.typeHandlerVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -271,23 +271,23 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> arcSettingName;
-        private @Nullable Input<Boolean> autoUpgradeMinorVersion;
-        private Input<String> clusterName;
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<String> createdBy;
-        private @Nullable Input<Either<String,CreatedByType>> createdByType;
-        private @Nullable Input<String> extensionName;
-        private @Nullable Input<String> forceUpdateTag;
-        private @Nullable Input<String> lastModifiedAt;
-        private @Nullable Input<String> lastModifiedBy;
-        private @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
-        private @Nullable Input<Object> protectedSettings;
-        private @Nullable Input<String> publisher;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Object> settings;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> typeHandlerVersion;
+        private Output<String> arcSettingName;
+        private @Nullable Output<Boolean> autoUpgradeMinorVersion;
+        private Output<String> clusterName;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<String> createdBy;
+        private @Nullable Output<Either<String,CreatedByType>> createdByType;
+        private @Nullable Output<String> extensionName;
+        private @Nullable Output<String> forceUpdateTag;
+        private @Nullable Output<String> lastModifiedAt;
+        private @Nullable Output<String> lastModifiedBy;
+        private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
+        private @Nullable Output<Object> protectedSettings;
+        private @Nullable Output<String> publisher;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Object> settings;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> typeHandlerVersion;
 
         public Builder() {
     	      // Empty
@@ -314,173 +314,173 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder arcSettingName(Input<String> arcSettingName) {
+        public Builder arcSettingName(Output<String> arcSettingName) {
             this.arcSettingName = Objects.requireNonNull(arcSettingName);
             return this;
         }
 
         public Builder arcSettingName(String arcSettingName) {
-            this.arcSettingName = Input.of(Objects.requireNonNull(arcSettingName));
+            this.arcSettingName = Output.of(Objects.requireNonNull(arcSettingName));
             return this;
         }
 
-        public Builder autoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Input.ofNullable(autoUpgradeMinorVersion);
+            this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder createdBy(@Nullable Input<String> createdBy) {
+        public Builder createdBy(@Nullable Output<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Input.ofNullable(createdBy);
+            this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
 
-        public Builder createdByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
+        public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
-            this.createdByType = Input.ofNullable(createdByType);
+            this.createdByType = Output.ofNullable(createdByType);
             return this;
         }
 
-        public Builder extensionName(@Nullable Input<String> extensionName) {
+        public Builder extensionName(@Nullable Output<String> extensionName) {
             this.extensionName = extensionName;
             return this;
         }
 
         public Builder extensionName(@Nullable String extensionName) {
-            this.extensionName = Input.ofNullable(extensionName);
+            this.extensionName = Output.ofNullable(extensionName);
             return this;
         }
 
-        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder lastModifiedBy(@Nullable Input<String> lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Input.ofNullable(lastModifiedBy);
+            this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
             return this;
         }
 
-        public Builder lastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
-            this.lastModifiedByType = Input.ofNullable(lastModifiedByType);
+            this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
             return this;
         }
 
-        public Builder protectedSettings(@Nullable Input<Object> protectedSettings) {
+        public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
         public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Input.ofNullable(protectedSettings);
+            this.protectedSettings = Output.ofNullable(protectedSettings);
             return this;
         }
 
-        public Builder publisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Input.ofNullable(publisher);
+            this.publisher = Output.ofNullable(publisher);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder settings(@Nullable Input<Object> settings) {
+        public Builder settings(@Nullable Output<Object> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable Object settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder typeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
+            this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
             return this;
         }
         public ExtensionArgs build() {

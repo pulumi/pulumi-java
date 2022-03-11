@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobReferenceArgs Empty = new JobReferenceArgs();
 
     @InputImport(name="jobId")
-      private final @Nullable Input<String> jobId;
+      private final @Nullable Output<String> jobId;
 
-    public Input<String> getJobId() {
-        return this.jobId == null ? Input.empty() : this.jobId;
+    public Output<String> getJobId() {
+        return this.jobId == null ? Output.empty() : this.jobId;
     }
 
-    public JobReferenceArgs(@Nullable Input<String> jobId) {
+    public JobReferenceArgs(@Nullable Output<String> jobId) {
         this.jobId = jobId;
     }
 
     private JobReferenceArgs() {
-        this.jobId = Input.empty();
+        this.jobId = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> jobId;
+        private @Nullable Output<String> jobId;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.jobId = defaults.jobId;
         }
 
-        public Builder jobId(@Nullable Input<String> jobId) {
+        public Builder jobId(@Nullable Output<String> jobId) {
             this.jobId = jobId;
             return this;
         }
 
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = Input.ofNullable(jobId);
+            this.jobId = Output.ofNullable(jobId);
             return this;
         }
         public JobReferenceArgs build() {

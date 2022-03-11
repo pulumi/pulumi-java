@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="directoryName")
-      private final @Nullable Input<String> directoryName;
+      private final @Nullable Output<String> directoryName;
 
-    public Input<String> getDirectoryName() {
-        return this.directoryName == null ? Input.empty() : this.directoryName;
+    public Output<String> getDirectoryName() {
+        return this.directoryName == null ? Output.empty() : this.directoryName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="organizationalUnitDistinguishedNames")
-      private final @Nullable Input<List<String>> organizationalUnitDistinguishedNames;
+      private final @Nullable Output<List<String>> organizationalUnitDistinguishedNames;
 
-    public Input<List<String>> getOrganizationalUnitDistinguishedNames() {
-        return this.organizationalUnitDistinguishedNames == null ? Input.empty() : this.organizationalUnitDistinguishedNames;
+    public Output<List<String>> getOrganizationalUnitDistinguishedNames() {
+        return this.organizationalUnitDistinguishedNames == null ? Output.empty() : this.organizationalUnitDistinguishedNames;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceAccountCredentials")
-      private final @Nullable Input<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
+      private final @Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
 
-    public Input<DirectoryConfigServiceAccountCredentialsGetArgs> getServiceAccountCredentials() {
-        return this.serviceAccountCredentials == null ? Input.empty() : this.serviceAccountCredentials;
+    public Output<DirectoryConfigServiceAccountCredentialsGetArgs> getServiceAccountCredentials() {
+        return this.serviceAccountCredentials == null ? Output.empty() : this.serviceAccountCredentials;
     }
 
     public DirectoryConfigState(
-        @Nullable Input<String> createdTime,
-        @Nullable Input<String> directoryName,
-        @Nullable Input<List<String>> organizationalUnitDistinguishedNames,
-        @Nullable Input<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials) {
+        @Nullable Output<String> createdTime,
+        @Nullable Output<String> directoryName,
+        @Nullable Output<List<String>> organizationalUnitDistinguishedNames,
+        @Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials) {
         this.createdTime = createdTime;
         this.directoryName = directoryName;
         this.organizationalUnitDistinguishedNames = organizationalUnitDistinguishedNames;
@@ -72,10 +72,10 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
     }
 
     private DirectoryConfigState() {
-        this.createdTime = Input.empty();
-        this.directoryName = Input.empty();
-        this.organizationalUnitDistinguishedNames = Input.empty();
-        this.serviceAccountCredentials = Input.empty();
+        this.createdTime = Output.empty();
+        this.directoryName = Output.empty();
+        this.organizationalUnitDistinguishedNames = Output.empty();
+        this.serviceAccountCredentials = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<String> directoryName;
-        private @Nullable Input<List<String>> organizationalUnitDistinguishedNames;
-        private @Nullable Input<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<String> directoryName;
+        private @Nullable Output<List<String>> organizationalUnitDistinguishedNames;
+        private @Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
     	      this.serviceAccountCredentials = defaults.serviceAccountCredentials;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder directoryName(@Nullable Input<String> directoryName) {
+        public Builder directoryName(@Nullable Output<String> directoryName) {
             this.directoryName = directoryName;
             return this;
         }
 
         public Builder directoryName(@Nullable String directoryName) {
-            this.directoryName = Input.ofNullable(directoryName);
+            this.directoryName = Output.ofNullable(directoryName);
             return this;
         }
 
-        public Builder organizationalUnitDistinguishedNames(@Nullable Input<List<String>> organizationalUnitDistinguishedNames) {
+        public Builder organizationalUnitDistinguishedNames(@Nullable Output<List<String>> organizationalUnitDistinguishedNames) {
             this.organizationalUnitDistinguishedNames = organizationalUnitDistinguishedNames;
             return this;
         }
 
         public Builder organizationalUnitDistinguishedNames(@Nullable List<String> organizationalUnitDistinguishedNames) {
-            this.organizationalUnitDistinguishedNames = Input.ofNullable(organizationalUnitDistinguishedNames);
+            this.organizationalUnitDistinguishedNames = Output.ofNullable(organizationalUnitDistinguishedNames);
             return this;
         }
 
-        public Builder serviceAccountCredentials(@Nullable Input<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials) {
+        public Builder serviceAccountCredentials(@Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials) {
             this.serviceAccountCredentials = serviceAccountCredentials;
             return this;
         }
 
         public Builder serviceAccountCredentials(@Nullable DirectoryConfigServiceAccountCredentialsGetArgs serviceAccountCredentials) {
-            this.serviceAccountCredentials = Input.ofNullable(serviceAccountCredentials);
+            this.serviceAccountCredentials = Output.ofNullable(serviceAccountCredentials);
             return this;
         }
         public DirectoryConfigState build() {

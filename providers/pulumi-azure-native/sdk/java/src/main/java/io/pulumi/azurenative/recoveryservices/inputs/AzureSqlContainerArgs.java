@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backupManagementType")
-      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Input<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
     }
 
     /**
@@ -40,9 +40,9 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="containerType", required=true)
-      private final Input<String> containerType;
+      private final Output<String> containerType;
 
-    public Input<String> getContainerType() {
+    public Output<String> getContainerType() {
         return this.containerType;
     }
 
@@ -51,10 +51,10 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="healthStatus")
-      private final @Nullable Input<String> healthStatus;
+      private final @Nullable Output<String> healthStatus;
 
-    public Input<String> getHealthStatus() {
-        return this.healthStatus == null ? Input.empty() : this.healthStatus;
+    public Output<String> getHealthStatus() {
+        return this.healthStatus == null ? Output.empty() : this.healthStatus;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="registrationStatus")
-      private final @Nullable Input<String> registrationStatus;
+      private final @Nullable Output<String> registrationStatus;
 
-    public Input<String> getRegistrationStatus() {
-        return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
+    public Output<String> getRegistrationStatus() {
+        return this.registrationStatus == null ? Output.empty() : this.registrationStatus;
     }
 
     public AzureSqlContainerArgs(
-        @Nullable Input<Either<String,BackupManagementType>> backupManagementType,
-        Input<String> containerType,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<String> healthStatus,
-        @Nullable Input<String> registrationStatus) {
+        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
+        Output<String> containerType,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<String> healthStatus,
+        @Nullable Output<String> registrationStatus) {
         this.backupManagementType = backupManagementType;
         this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
         this.friendlyName = friendlyName;
@@ -93,11 +93,11 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AzureSqlContainerArgs() {
-        this.backupManagementType = Input.empty();
-        this.containerType = Input.empty();
-        this.friendlyName = Input.empty();
-        this.healthStatus = Input.empty();
-        this.registrationStatus = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.containerType = Output.empty();
+        this.friendlyName = Output.empty();
+        this.healthStatus = Output.empty();
+        this.registrationStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
-        private Input<String> containerType;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<String> healthStatus;
-        private @Nullable Input<String> registrationStatus;
+        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+        private Output<String> containerType;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<String> healthStatus;
+        private @Nullable Output<String> registrationStatus;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class AzureSqlContainerArgs extends io.pulumi.resources.ResourceArg
     	      this.registrationStatus = defaults.registrationStatus;
         }
 
-        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Input.ofNullable(backupManagementType);
+            this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder containerType(Input<String> containerType) {
+        public Builder containerType(Output<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
         public Builder containerType(String containerType) {
-            this.containerType = Input.of(Objects.requireNonNull(containerType));
+            this.containerType = Output.of(Objects.requireNonNull(containerType));
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder healthStatus(@Nullable Input<String> healthStatus) {
+        public Builder healthStatus(@Nullable Output<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Input.ofNullable(healthStatus);
+            this.healthStatus = Output.ofNullable(healthStatus);
             return this;
         }
 
-        public Builder registrationStatus(@Nullable Input<String> registrationStatus) {
+        public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
 
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Input.ofNullable(registrationStatus);
+            this.registrationStatus = Output.ofNullable(registrationStatus);
             return this;
         }
         public AzureSqlContainerArgs build() {

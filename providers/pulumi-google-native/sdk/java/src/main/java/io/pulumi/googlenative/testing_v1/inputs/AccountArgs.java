@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.GoogleAutoArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleAuto")
-      private final @Nullable Input<GoogleAutoArgs> googleAuto;
+      private final @Nullable Output<GoogleAutoArgs> googleAuto;
 
-    public Input<GoogleAutoArgs> getGoogleAuto() {
-        return this.googleAuto == null ? Input.empty() : this.googleAuto;
+    public Output<GoogleAutoArgs> getGoogleAuto() {
+        return this.googleAuto == null ? Output.empty() : this.googleAuto;
     }
 
-    public AccountArgs(@Nullable Input<GoogleAutoArgs> googleAuto) {
+    public AccountArgs(@Nullable Output<GoogleAutoArgs> googleAuto) {
         this.googleAuto = googleAuto;
     }
 
     private AccountArgs() {
-        this.googleAuto = Input.empty();
+        this.googleAuto = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleAutoArgs> googleAuto;
+        private @Nullable Output<GoogleAutoArgs> googleAuto;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.googleAuto = defaults.googleAuto;
         }
 
-        public Builder googleAuto(@Nullable Input<GoogleAutoArgs> googleAuto) {
+        public Builder googleAuto(@Nullable Output<GoogleAutoArgs> googleAuto) {
             this.googleAuto = googleAuto;
             return this;
         }
 
         public Builder googleAuto(@Nullable GoogleAutoArgs googleAuto) {
-            this.googleAuto = Input.ofNullable(googleAuto);
+            this.googleAuto = Output.ofNullable(googleAuto);
             return this;
         }
         public AccountArgs build() {

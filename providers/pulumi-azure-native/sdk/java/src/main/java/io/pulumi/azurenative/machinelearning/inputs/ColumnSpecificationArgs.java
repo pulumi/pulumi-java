@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 import io.pulumi.azurenative.machinelearning.enums.ColumnFormat;
 import io.pulumi.azurenative.machinelearning.enums.ColumnType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -29,10 +29,10 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enum")
-      private final @Nullable Input<List<Object>> $enum;
+      private final @Nullable Output<List<Object>> $enum;
 
-    public Input<List<Object>> get$enum() {
-        return this.$enum == null ? Input.empty() : this.$enum;
+    public Output<List<Object>> get$enum() {
+        return this.$enum == null ? Output.empty() : this.$enum;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<Either<String,ColumnFormat>> format;
+      private final @Nullable Output<Either<String,ColumnFormat>> format;
 
-    public Input<Either<String,ColumnFormat>> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<Either<String,ColumnFormat>> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -51,9 +51,9 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ColumnType>> type;
+      private final Output<Either<String,ColumnType>> type;
 
-    public Input<Either<String,ColumnType>> getType() {
+    public Output<Either<String,ColumnType>> getType() {
         return this.type;
     }
 
@@ -62,10 +62,10 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="xMsIsnullable")
-      private final @Nullable Input<Boolean> xMsIsnullable;
+      private final @Nullable Output<Boolean> xMsIsnullable;
 
-    public Input<Boolean> getXMsIsnullable() {
-        return this.xMsIsnullable == null ? Input.empty() : this.xMsIsnullable;
+    public Output<Boolean> getXMsIsnullable() {
+        return this.xMsIsnullable == null ? Output.empty() : this.xMsIsnullable;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="xMsIsordered")
-      private final @Nullable Input<Boolean> xMsIsordered;
+      private final @Nullable Output<Boolean> xMsIsordered;
 
-    public Input<Boolean> getXMsIsordered() {
-        return this.xMsIsordered == null ? Input.empty() : this.xMsIsordered;
+    public Output<Boolean> getXMsIsordered() {
+        return this.xMsIsordered == null ? Output.empty() : this.xMsIsordered;
     }
 
     public ColumnSpecificationArgs(
-        @Nullable Input<List<Object>> $enum,
-        @Nullable Input<Either<String,ColumnFormat>> format,
-        Input<Either<String,ColumnType>> type,
-        @Nullable Input<Boolean> xMsIsnullable,
-        @Nullable Input<Boolean> xMsIsordered) {
+        @Nullable Output<List<Object>> $enum,
+        @Nullable Output<Either<String,ColumnFormat>> format,
+        Output<Either<String,ColumnType>> type,
+        @Nullable Output<Boolean> xMsIsnullable,
+        @Nullable Output<Boolean> xMsIsordered) {
         this.$enum = $enum;
         this.format = format;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
@@ -93,11 +93,11 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
     }
 
     private ColumnSpecificationArgs() {
-        this.$enum = Input.empty();
-        this.format = Input.empty();
-        this.type = Input.empty();
-        this.xMsIsnullable = Input.empty();
-        this.xMsIsordered = Input.empty();
+        this.$enum = Output.empty();
+        this.format = Output.empty();
+        this.type = Output.empty();
+        this.xMsIsnullable = Output.empty();
+        this.xMsIsordered = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> $enum;
-        private @Nullable Input<Either<String,ColumnFormat>> format;
-        private Input<Either<String,ColumnType>> type;
-        private @Nullable Input<Boolean> xMsIsnullable;
-        private @Nullable Input<Boolean> xMsIsordered;
+        private @Nullable Output<List<Object>> $enum;
+        private @Nullable Output<Either<String,ColumnFormat>> format;
+        private Output<Either<String,ColumnType>> type;
+        private @Nullable Output<Boolean> xMsIsnullable;
+        private @Nullable Output<Boolean> xMsIsordered;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
     	      this.xMsIsordered = defaults.xMsIsordered;
         }
 
-        public Builder $enum(@Nullable Input<List<Object>> $enum) {
+        public Builder $enum(@Nullable Output<List<Object>> $enum) {
             this.$enum = $enum;
             return this;
         }
 
         public Builder $enum(@Nullable List<Object> $enum) {
-            this.$enum = Input.ofNullable($enum);
+            this.$enum = Output.ofNullable($enum);
             return this;
         }
 
-        public Builder format(@Nullable Input<Either<String,ColumnFormat>> format) {
+        public Builder format(@Nullable Output<Either<String,ColumnFormat>> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable Either<String,ColumnFormat> format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder type(Input<Either<String,ColumnType>> type) {
+        public Builder type(Output<Either<String,ColumnType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ColumnType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder xMsIsnullable(@Nullable Input<Boolean> xMsIsnullable) {
+        public Builder xMsIsnullable(@Nullable Output<Boolean> xMsIsnullable) {
             this.xMsIsnullable = xMsIsnullable;
             return this;
         }
 
         public Builder xMsIsnullable(@Nullable Boolean xMsIsnullable) {
-            this.xMsIsnullable = Input.ofNullable(xMsIsnullable);
+            this.xMsIsnullable = Output.ofNullable(xMsIsnullable);
             return this;
         }
 
-        public Builder xMsIsordered(@Nullable Input<Boolean> xMsIsordered) {
+        public Builder xMsIsordered(@Nullable Output<Boolean> xMsIsordered) {
             this.xMsIsordered = xMsIsordered;
             return this;
         }
 
         public Builder xMsIsordered(@Nullable Boolean xMsIsordered) {
-            this.xMsIsordered = Input.ofNullable(xMsIsordered);
+            this.xMsIsordered = Output.ofNullable(xMsIsordered);
             return this;
         }
         public ColumnSpecificationArgs build() {

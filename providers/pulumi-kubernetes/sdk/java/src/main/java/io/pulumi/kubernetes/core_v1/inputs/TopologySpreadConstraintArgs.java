@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="labelSelector")
-      private final @Nullable Input<LabelSelectorArgs> labelSelector;
+      private final @Nullable Output<LabelSelectorArgs> labelSelector;
 
-    public Input<LabelSelectorArgs> getLabelSelector() {
-        return this.labelSelector == null ? Input.empty() : this.labelSelector;
+    public Output<LabelSelectorArgs> getLabelSelector() {
+        return this.labelSelector == null ? Output.empty() : this.labelSelector;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maxSkew", required=true)
-      private final Input<Integer> maxSkew;
+      private final Output<Integer> maxSkew;
 
-    public Input<Integer> getMaxSkew() {
+    public Output<Integer> getMaxSkew() {
         return this.maxSkew;
     }
 
@@ -47,9 +47,9 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="topologyKey", required=true)
-      private final Input<String> topologyKey;
+      private final Output<String> topologyKey;
 
-    public Input<String> getTopologyKey() {
+    public Output<String> getTopologyKey() {
         return this.topologyKey;
     }
 
@@ -65,17 +65,17 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="whenUnsatisfiable", required=true)
-      private final Input<String> whenUnsatisfiable;
+      private final Output<String> whenUnsatisfiable;
 
-    public Input<String> getWhenUnsatisfiable() {
+    public Output<String> getWhenUnsatisfiable() {
         return this.whenUnsatisfiable;
     }
 
     public TopologySpreadConstraintArgs(
-        @Nullable Input<LabelSelectorArgs> labelSelector,
-        Input<Integer> maxSkew,
-        Input<String> topologyKey,
-        Input<String> whenUnsatisfiable) {
+        @Nullable Output<LabelSelectorArgs> labelSelector,
+        Output<Integer> maxSkew,
+        Output<String> topologyKey,
+        Output<String> whenUnsatisfiable) {
         this.labelSelector = labelSelector;
         this.maxSkew = Objects.requireNonNull(maxSkew, "expected parameter 'maxSkew' to be non-null");
         this.topologyKey = Objects.requireNonNull(topologyKey, "expected parameter 'topologyKey' to be non-null");
@@ -83,10 +83,10 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
     }
 
     private TopologySpreadConstraintArgs() {
-        this.labelSelector = Input.empty();
-        this.maxSkew = Input.empty();
-        this.topologyKey = Input.empty();
-        this.whenUnsatisfiable = Input.empty();
+        this.labelSelector = Output.empty();
+        this.maxSkew = Output.empty();
+        this.topologyKey = Output.empty();
+        this.whenUnsatisfiable = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,10 +98,10 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<LabelSelectorArgs> labelSelector;
-        private Input<Integer> maxSkew;
-        private Input<String> topologyKey;
-        private Input<String> whenUnsatisfiable;
+        private @Nullable Output<LabelSelectorArgs> labelSelector;
+        private Output<Integer> maxSkew;
+        private Output<String> topologyKey;
+        private Output<String> whenUnsatisfiable;
 
         public Builder() {
     	      // Empty
@@ -115,43 +115,43 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
     	      this.whenUnsatisfiable = defaults.whenUnsatisfiable;
         }
 
-        public Builder labelSelector(@Nullable Input<LabelSelectorArgs> labelSelector) {
+        public Builder labelSelector(@Nullable Output<LabelSelectorArgs> labelSelector) {
             this.labelSelector = labelSelector;
             return this;
         }
 
         public Builder labelSelector(@Nullable LabelSelectorArgs labelSelector) {
-            this.labelSelector = Input.ofNullable(labelSelector);
+            this.labelSelector = Output.ofNullable(labelSelector);
             return this;
         }
 
-        public Builder maxSkew(Input<Integer> maxSkew) {
+        public Builder maxSkew(Output<Integer> maxSkew) {
             this.maxSkew = Objects.requireNonNull(maxSkew);
             return this;
         }
 
         public Builder maxSkew(Integer maxSkew) {
-            this.maxSkew = Input.of(Objects.requireNonNull(maxSkew));
+            this.maxSkew = Output.of(Objects.requireNonNull(maxSkew));
             return this;
         }
 
-        public Builder topologyKey(Input<String> topologyKey) {
+        public Builder topologyKey(Output<String> topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }
 
         public Builder topologyKey(String topologyKey) {
-            this.topologyKey = Input.of(Objects.requireNonNull(topologyKey));
+            this.topologyKey = Output.of(Objects.requireNonNull(topologyKey));
             return this;
         }
 
-        public Builder whenUnsatisfiable(Input<String> whenUnsatisfiable) {
+        public Builder whenUnsatisfiable(Output<String> whenUnsatisfiable) {
             this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable);
             return this;
         }
 
         public Builder whenUnsatisfiable(String whenUnsatisfiable) {
-            this.whenUnsatisfiable = Input.of(Objects.requireNonNull(whenUnsatisfiable));
+            this.whenUnsatisfiable = Output.of(Objects.requireNonNull(whenUnsatisfiable));
             return this;
         }
         public TopologySpreadConstraintArgs build() {

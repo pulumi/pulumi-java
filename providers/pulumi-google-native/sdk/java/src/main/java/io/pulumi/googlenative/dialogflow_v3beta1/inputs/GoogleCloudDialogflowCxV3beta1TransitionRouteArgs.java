@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<String> condition;
+      private final @Nullable Output<String> condition;
 
-    public Input<String> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<String> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
      * 
      */
     @InputImport(name="intent")
-      private final @Nullable Input<String> intent;
+      private final @Nullable Output<String> intent;
 
-    public Input<String> getIntent() {
-        return this.intent == null ? Input.empty() : this.intent;
+    public Output<String> getIntent() {
+        return this.intent == null ? Output.empty() : this.intent;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
      * 
      */
     @InputImport(name="targetFlow")
-      private final @Nullable Input<String> targetFlow;
+      private final @Nullable Output<String> targetFlow;
 
-    public Input<String> getTargetFlow() {
-        return this.targetFlow == null ? Input.empty() : this.targetFlow;
+    public Output<String> getTargetFlow() {
+        return this.targetFlow == null ? Output.empty() : this.targetFlow;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
      * 
      */
     @InputImport(name="targetPage")
-      private final @Nullable Input<String> targetPage;
+      private final @Nullable Output<String> targetPage;
 
-    public Input<String> getTargetPage() {
-        return this.targetPage == null ? Input.empty() : this.targetPage;
+    public Output<String> getTargetPage() {
+        return this.targetPage == null ? Output.empty() : this.targetPage;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
      * 
      */
     @InputImport(name="triggerFulfillment")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
 
-    public Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> getTriggerFulfillment() {
-        return this.triggerFulfillment == null ? Input.empty() : this.triggerFulfillment;
+    public Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> getTriggerFulfillment() {
+        return this.triggerFulfillment == null ? Output.empty() : this.triggerFulfillment;
     }
 
     public GoogleCloudDialogflowCxV3beta1TransitionRouteArgs(
-        @Nullable Input<String> condition,
-        @Nullable Input<String> intent,
-        @Nullable Input<String> targetFlow,
-        @Nullable Input<String> targetPage,
-        @Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
+        @Nullable Output<String> condition,
+        @Nullable Output<String> intent,
+        @Nullable Output<String> targetFlow,
+        @Nullable Output<String> targetPage,
+        @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
         this.condition = condition;
         this.intent = intent;
         this.targetFlow = targetFlow;
@@ -88,11 +88,11 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
     }
 
     private GoogleCloudDialogflowCxV3beta1TransitionRouteArgs() {
-        this.condition = Input.empty();
-        this.intent = Input.empty();
-        this.targetFlow = Input.empty();
-        this.targetPage = Input.empty();
-        this.triggerFulfillment = Input.empty();
+        this.condition = Output.empty();
+        this.intent = Output.empty();
+        this.targetFlow = Output.empty();
+        this.targetPage = Output.empty();
+        this.triggerFulfillment = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> condition;
-        private @Nullable Input<String> intent;
-        private @Nullable Input<String> targetFlow;
-        private @Nullable Input<String> targetPage;
-        private @Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
+        private @Nullable Output<String> condition;
+        private @Nullable Output<String> intent;
+        private @Nullable Output<String> targetFlow;
+        private @Nullable Output<String> targetPage;
+        private @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
     	      this.triggerFulfillment = defaults.triggerFulfillment;
         }
 
-        public Builder condition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Output<String> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable String condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder intent(@Nullable Input<String> intent) {
+        public Builder intent(@Nullable Output<String> intent) {
             this.intent = intent;
             return this;
         }
 
         public Builder intent(@Nullable String intent) {
-            this.intent = Input.ofNullable(intent);
+            this.intent = Output.ofNullable(intent);
             return this;
         }
 
-        public Builder targetFlow(@Nullable Input<String> targetFlow) {
+        public Builder targetFlow(@Nullable Output<String> targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
 
         public Builder targetFlow(@Nullable String targetFlow) {
-            this.targetFlow = Input.ofNullable(targetFlow);
+            this.targetFlow = Output.ofNullable(targetFlow);
             return this;
         }
 
-        public Builder targetPage(@Nullable Input<String> targetPage) {
+        public Builder targetPage(@Nullable Output<String> targetPage) {
             this.targetPage = targetPage;
             return this;
         }
 
         public Builder targetPage(@Nullable String targetPage) {
-            this.targetPage = Input.ofNullable(targetPage);
+            this.targetPage = Output.ofNullable(targetPage);
             return this;
         }
 
-        public Builder triggerFulfillment(@Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
+        public Builder triggerFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
 
         public Builder triggerFulfillment(@Nullable GoogleCloudDialogflowCxV3beta1FulfillmentArgs triggerFulfillment) {
-            this.triggerFulfillment = Input.ofNullable(triggerFulfillment);
+            this.triggerFulfillment = Output.ofNullable(triggerFulfillment);
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1TransitionRouteArgs build() {

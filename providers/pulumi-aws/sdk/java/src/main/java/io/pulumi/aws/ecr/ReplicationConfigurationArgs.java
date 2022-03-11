@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr;
 
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="replicationConfiguration")
-      private final @Nullable Input<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
+      private final @Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
 
-    public Input<ReplicationConfigurationReplicationConfigurationArgs> getReplicationConfiguration() {
-        return this.replicationConfiguration == null ? Input.empty() : this.replicationConfiguration;
+    public Output<ReplicationConfigurationReplicationConfigurationArgs> getReplicationConfiguration() {
+        return this.replicationConfiguration == null ? Output.empty() : this.replicationConfiguration;
     }
 
-    public ReplicationConfigurationArgs(@Nullable Input<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration) {
+    public ReplicationConfigurationArgs(@Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration) {
         this.replicationConfiguration = replicationConfiguration;
     }
 
     private ReplicationConfigurationArgs() {
-        this.replicationConfiguration = Input.empty();
+        this.replicationConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
+        private @Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     	      this.replicationConfiguration = defaults.replicationConfiguration;
         }
 
-        public Builder replicationConfiguration(@Nullable Input<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration) {
+        public Builder replicationConfiguration(@Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration) {
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }
 
         public Builder replicationConfiguration(@Nullable ReplicationConfigurationReplicationConfigurationArgs replicationConfiguration) {
-            this.replicationConfiguration = Input.ofNullable(replicationConfiguration);
+            this.replicationConfiguration = Output.ofNullable(replicationConfiguration);
             return this;
         }
         public ReplicationConfigurationArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.robomaker;
 import io.pulumi.awsnative.robomaker.inputs.RobotApplicationRobotSoftwareSuiteArgs;
 import io.pulumi.awsnative.robomaker.inputs.RobotApplicationSourceConfigArgs;
 import io.pulumi.awsnative.robomaker.inputs.RobotApplicationTagsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="currentRevisionId")
-      private final @Nullable Input<String> currentRevisionId;
+      private final @Nullable Output<String> currentRevisionId;
 
-    public Input<String> getCurrentRevisionId() {
-        return this.currentRevisionId == null ? Input.empty() : this.currentRevisionId;
+    public Output<String> getCurrentRevisionId() {
+        return this.currentRevisionId == null ? Output.empty() : this.currentRevisionId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<String> environment;
+      private final @Nullable Output<String> environment;
 
-    public Input<String> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<String> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -45,16 +45,16 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="robotSoftwareSuite", required=true)
-      private final Input<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
+      private final Output<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
 
-    public Input<RobotApplicationRobotSoftwareSuiteArgs> getRobotSoftwareSuite() {
+    public Output<RobotApplicationRobotSoftwareSuiteArgs> getRobotSoftwareSuite() {
         return this.robotSoftwareSuite;
     }
 
@@ -63,26 +63,26 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sources")
-      private final @Nullable Input<List<RobotApplicationSourceConfigArgs>> sources;
+      private final @Nullable Output<List<RobotApplicationSourceConfigArgs>> sources;
 
-    public Input<List<RobotApplicationSourceConfigArgs>> getSources() {
-        return this.sources == null ? Input.empty() : this.sources;
+    public Output<List<RobotApplicationSourceConfigArgs>> getSources() {
+        return this.sources == null ? Output.empty() : this.sources;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<RobotApplicationTagsArgs> tags;
+      private final @Nullable Output<RobotApplicationTagsArgs> tags;
 
-    public Input<RobotApplicationTagsArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<RobotApplicationTagsArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RobotApplicationArgs(
-        @Nullable Input<String> currentRevisionId,
-        @Nullable Input<String> environment,
-        @Nullable Input<String> name,
-        Input<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite,
-        @Nullable Input<List<RobotApplicationSourceConfigArgs>> sources,
-        @Nullable Input<RobotApplicationTagsArgs> tags) {
+        @Nullable Output<String> currentRevisionId,
+        @Nullable Output<String> environment,
+        @Nullable Output<String> name,
+        Output<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite,
+        @Nullable Output<List<RobotApplicationSourceConfigArgs>> sources,
+        @Nullable Output<RobotApplicationTagsArgs> tags) {
         this.currentRevisionId = currentRevisionId;
         this.environment = environment;
         this.name = name;
@@ -92,12 +92,12 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RobotApplicationArgs() {
-        this.currentRevisionId = Input.empty();
-        this.environment = Input.empty();
-        this.name = Input.empty();
-        this.robotSoftwareSuite = Input.empty();
-        this.sources = Input.empty();
-        this.tags = Input.empty();
+        this.currentRevisionId = Output.empty();
+        this.environment = Output.empty();
+        this.name = Output.empty();
+        this.robotSoftwareSuite = Output.empty();
+        this.sources = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,12 +109,12 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> currentRevisionId;
-        private @Nullable Input<String> environment;
-        private @Nullable Input<String> name;
-        private Input<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
-        private @Nullable Input<List<RobotApplicationSourceConfigArgs>> sources;
-        private @Nullable Input<RobotApplicationTagsArgs> tags;
+        private @Nullable Output<String> currentRevisionId;
+        private @Nullable Output<String> environment;
+        private @Nullable Output<String> name;
+        private Output<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
+        private @Nullable Output<List<RobotApplicationSourceConfigArgs>> sources;
+        private @Nullable Output<RobotApplicationTagsArgs> tags;
 
         public Builder() {
     	      // Empty
@@ -130,63 +130,63 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder currentRevisionId(@Nullable Input<String> currentRevisionId) {
+        public Builder currentRevisionId(@Nullable Output<String> currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
 
         public Builder currentRevisionId(@Nullable String currentRevisionId) {
-            this.currentRevisionId = Input.ofNullable(currentRevisionId);
+            this.currentRevisionId = Output.ofNullable(currentRevisionId);
             return this;
         }
 
-        public Builder environment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Output<String> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable String environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder robotSoftwareSuite(Input<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite) {
+        public Builder robotSoftwareSuite(Output<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite) {
             this.robotSoftwareSuite = Objects.requireNonNull(robotSoftwareSuite);
             return this;
         }
 
         public Builder robotSoftwareSuite(RobotApplicationRobotSoftwareSuiteArgs robotSoftwareSuite) {
-            this.robotSoftwareSuite = Input.of(Objects.requireNonNull(robotSoftwareSuite));
+            this.robotSoftwareSuite = Output.of(Objects.requireNonNull(robotSoftwareSuite));
             return this;
         }
 
-        public Builder sources(@Nullable Input<List<RobotApplicationSourceConfigArgs>> sources) {
+        public Builder sources(@Nullable Output<List<RobotApplicationSourceConfigArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
         public Builder sources(@Nullable List<RobotApplicationSourceConfigArgs> sources) {
-            this.sources = Input.ofNullable(sources);
+            this.sources = Output.ofNullable(sources);
             return this;
         }
 
-        public Builder tags(@Nullable Input<RobotApplicationTagsArgs> tags) {
+        public Builder tags(@Nullable Output<RobotApplicationTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable RobotApplicationTagsArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RobotApplicationArgs build() {

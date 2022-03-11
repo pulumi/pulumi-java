@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.serialconsole;
 
 import io.pulumi.azurenative.serialconsole.enums.SerialPortState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResource", required=true)
-      private final Input<String> parentResource;
+      private final Output<String> parentResource;
 
-    public Input<String> getParentResource() {
+    public Output<String> getParentResource() {
         return this.parentResource;
     }
 
@@ -31,9 +31,9 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResourceType", required=true)
-      private final Input<String> parentResourceType;
+      private final Output<String> parentResourceType;
 
-    public Input<String> getParentResourceType() {
+    public Output<String> getParentResourceType() {
         return this.parentResourceType;
     }
 
@@ -42,9 +42,9 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,9 +53,9 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceProviderNamespace", required=true)
-      private final Input<String> resourceProviderNamespace;
+      private final Output<String> resourceProviderNamespace;
 
-    public Input<String> getResourceProviderNamespace() {
+    public Output<String> getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -64,10 +64,10 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serialPort")
-      private final @Nullable Input<String> serialPort;
+      private final @Nullable Output<String> serialPort;
 
-    public Input<String> getSerialPort() {
-        return this.serialPort == null ? Input.empty() : this.serialPort;
+    public Output<String> getSerialPort() {
+        return this.serialPort == null ? Output.empty() : this.serialPort;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<SerialPortState> state;
+      private final @Nullable Output<SerialPortState> state;
 
-    public Input<SerialPortState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<SerialPortState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public SerialPortArgs(
-        Input<String> parentResource,
-        Input<String> parentResourceType,
-        Input<String> resourceGroupName,
-        Input<String> resourceProviderNamespace,
-        @Nullable Input<String> serialPort,
-        @Nullable Input<SerialPortState> state) {
+        Output<String> parentResource,
+        Output<String> parentResourceType,
+        Output<String> resourceGroupName,
+        Output<String> resourceProviderNamespace,
+        @Nullable Output<String> serialPort,
+        @Nullable Output<SerialPortState> state) {
         this.parentResource = Objects.requireNonNull(parentResource, "expected parameter 'parentResource' to be non-null");
         this.parentResourceType = Objects.requireNonNull(parentResourceType, "expected parameter 'parentResourceType' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -97,12 +97,12 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SerialPortArgs() {
-        this.parentResource = Input.empty();
-        this.parentResourceType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceProviderNamespace = Input.empty();
-        this.serialPort = Input.empty();
-        this.state = Input.empty();
+        this.parentResource = Output.empty();
+        this.parentResourceType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceProviderNamespace = Output.empty();
+        this.serialPort = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> parentResource;
-        private Input<String> parentResourceType;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceProviderNamespace;
-        private @Nullable Input<String> serialPort;
-        private @Nullable Input<SerialPortState> state;
+        private Output<String> parentResource;
+        private Output<String> parentResourceType;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceProviderNamespace;
+        private @Nullable Output<String> serialPort;
+        private @Nullable Output<SerialPortState> state;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder parentResource(Input<String> parentResource) {
+        public Builder parentResource(Output<String> parentResource) {
             this.parentResource = Objects.requireNonNull(parentResource);
             return this;
         }
 
         public Builder parentResource(String parentResource) {
-            this.parentResource = Input.of(Objects.requireNonNull(parentResource));
+            this.parentResource = Output.of(Objects.requireNonNull(parentResource));
             return this;
         }
 
-        public Builder parentResourceType(Input<String> parentResourceType) {
+        public Builder parentResourceType(Output<String> parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
 
         public Builder parentResourceType(String parentResourceType) {
-            this.parentResourceType = Input.of(Objects.requireNonNull(parentResourceType));
+            this.parentResourceType = Output.of(Objects.requireNonNull(parentResourceType));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceProviderNamespace(Input<String> resourceProviderNamespace) {
+        public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
 
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
-            this.resourceProviderNamespace = Input.of(Objects.requireNonNull(resourceProviderNamespace));
+            this.resourceProviderNamespace = Output.of(Objects.requireNonNull(resourceProviderNamespace));
             return this;
         }
 
-        public Builder serialPort(@Nullable Input<String> serialPort) {
+        public Builder serialPort(@Nullable Output<String> serialPort) {
             this.serialPort = serialPort;
             return this;
         }
 
         public Builder serialPort(@Nullable String serialPort) {
-            this.serialPort = Input.ofNullable(serialPort);
+            this.serialPort = Output.ofNullable(serialPort);
             return this;
         }
 
-        public Builder state(@Nullable Input<SerialPortState> state) {
+        public Builder state(@Nullable Output<SerialPortState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable SerialPortState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public SerialPortArgs build() {

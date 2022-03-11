@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,29 +15,29 @@ public final class ModelVpcConfigGetArgs extends io.pulumi.resources.ResourceArg
     public static final ModelVpcConfigGetArgs Empty = new ModelVpcConfigGetArgs();
 
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
     @InputImport(name="subnets", required=true)
-      private final Input<List<String>> subnets;
+      private final Output<List<String>> subnets;
 
-    public Input<List<String>> getSubnets() {
+    public Output<List<String>> getSubnets() {
         return this.subnets;
     }
 
     public ModelVpcConfigGetArgs(
-        Input<List<String>> securityGroupIds,
-        Input<List<String>> subnets) {
+        Output<List<String>> securityGroupIds,
+        Output<List<String>> subnets) {
         this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
         this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
     }
 
     private ModelVpcConfigGetArgs() {
-        this.securityGroupIds = Input.empty();
-        this.subnets = Input.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnets = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ModelVpcConfigGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<List<String>> securityGroupIds;
-        private Input<List<String>> subnets;
+        private Output<List<String>> securityGroupIds;
+        private Output<List<String>> subnets;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ModelVpcConfigGetArgs extends io.pulumi.resources.ResourceArg
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder subnets(Input<List<String>> subnets) {
+        public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
         public Builder subnets(List<String> subnets) {
-            this.subnets = Input.of(Objects.requireNonNull(subnets));
+            this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
         public ModelVpcConfigGetArgs build() {

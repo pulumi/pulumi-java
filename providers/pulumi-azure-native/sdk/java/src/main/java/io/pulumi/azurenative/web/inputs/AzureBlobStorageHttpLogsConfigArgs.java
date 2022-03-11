@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="retentionInDays")
-      private final @Nullable Input<Integer> retentionInDays;
+      private final @Nullable Output<Integer> retentionInDays;
 
-    public Input<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
+    public Output<Integer> getRetentionInDays() {
+        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sasUrl")
-      private final @Nullable Input<String> sasUrl;
+      private final @Nullable Output<String> sasUrl;
 
-    public Input<String> getSasUrl() {
-        return this.sasUrl == null ? Input.empty() : this.sasUrl;
+    public Output<String> getSasUrl() {
+        return this.sasUrl == null ? Output.empty() : this.sasUrl;
     }
 
     public AzureBlobStorageHttpLogsConfigArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Integer> retentionInDays,
-        @Nullable Input<String> sasUrl) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Integer> retentionInDays,
+        @Nullable Output<String> sasUrl) {
         this.enabled = enabled;
         this.retentionInDays = retentionInDays;
         this.sasUrl = sasUrl;
     }
 
     private AzureBlobStorageHttpLogsConfigArgs() {
-        this.enabled = Input.empty();
-        this.retentionInDays = Input.empty();
-        this.sasUrl = Input.empty();
+        this.enabled = Output.empty();
+        this.retentionInDays = Output.empty();
+        this.sasUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Integer> retentionInDays;
-        private @Nullable Input<String> sasUrl;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Integer> retentionInDays;
+        private @Nullable Output<String> sasUrl;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
     	      this.sasUrl = defaults.sasUrl;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Input.ofNullable(retentionInDays);
+            this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder sasUrl(@Nullable Input<String> sasUrl) {
+        public Builder sasUrl(@Nullable Output<String> sasUrl) {
             this.sasUrl = sasUrl;
             return this;
         }
 
         public Builder sasUrl(@Nullable String sasUrl) {
-            this.sasUrl = Input.ofNullable(sasUrl);
+            this.sasUrl = Output.ofNullable(sasUrl);
             return this;
         }
         public AzureBlobStorageHttpLogsConfigArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.DiagnosticsDescriptionArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.ServiceResourceDescriptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationResourceName")
-      private final @Nullable Input<String> applicationResourceName;
+      private final @Nullable Output<String> applicationResourceName;
 
-    public Input<String> getApplicationResourceName() {
-        return this.applicationResourceName == null ? Input.empty() : this.applicationResourceName;
+    public Output<String> getApplicationResourceName() {
+        return this.applicationResourceName == null ? Output.empty() : this.applicationResourceName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="debugParams")
-      private final @Nullable Input<String> debugParams;
+      private final @Nullable Output<String> debugParams;
 
-    public Input<String> getDebugParams() {
-        return this.debugParams == null ? Input.empty() : this.debugParams;
+    public Output<String> getDebugParams() {
+        return this.debugParams == null ? Output.empty() : this.debugParams;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diagnostics")
-      private final @Nullable Input<DiagnosticsDescriptionArgs> diagnostics;
+      private final @Nullable Output<DiagnosticsDescriptionArgs> diagnostics;
 
-    public Input<DiagnosticsDescriptionArgs> getDiagnostics() {
-        return this.diagnostics == null ? Input.empty() : this.diagnostics;
+    public Output<DiagnosticsDescriptionArgs> getDiagnostics() {
+        return this.diagnostics == null ? Output.empty() : this.diagnostics;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,10 +89,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="services")
-      private final @Nullable Input<List<ServiceResourceDescriptionArgs>> services;
+      private final @Nullable Output<List<ServiceResourceDescriptionArgs>> services;
 
-    public Input<List<ServiceResourceDescriptionArgs>> getServices() {
-        return this.services == null ? Input.empty() : this.services;
+    public Output<List<ServiceResourceDescriptionArgs>> getServices() {
+        return this.services == null ? Output.empty() : this.services;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ApplicationArgs(
-        @Nullable Input<String> applicationResourceName,
-        @Nullable Input<String> debugParams,
-        @Nullable Input<String> description,
-        @Nullable Input<DiagnosticsDescriptionArgs> diagnostics,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<ServiceResourceDescriptionArgs>> services,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> applicationResourceName,
+        @Nullable Output<String> debugParams,
+        @Nullable Output<String> description,
+        @Nullable Output<DiagnosticsDescriptionArgs> diagnostics,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<ServiceResourceDescriptionArgs>> services,
+        @Nullable Output<Map<String,String>> tags) {
         this.applicationResourceName = applicationResourceName;
         this.debugParams = debugParams;
         this.description = description;
@@ -126,14 +126,14 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationResourceName = Input.empty();
-        this.debugParams = Input.empty();
-        this.description = Input.empty();
-        this.diagnostics = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.services = Input.empty();
-        this.tags = Input.empty();
+        this.applicationResourceName = Output.empty();
+        this.debugParams = Output.empty();
+        this.description = Output.empty();
+        this.diagnostics = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.services = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationResourceName;
-        private @Nullable Input<String> debugParams;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DiagnosticsDescriptionArgs> diagnostics;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<ServiceResourceDescriptionArgs>> services;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> applicationResourceName;
+        private @Nullable Output<String> debugParams;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DiagnosticsDescriptionArgs> diagnostics;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<ServiceResourceDescriptionArgs>> services;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder applicationResourceName(@Nullable Input<String> applicationResourceName) {
+        public Builder applicationResourceName(@Nullable Output<String> applicationResourceName) {
             this.applicationResourceName = applicationResourceName;
             return this;
         }
 
         public Builder applicationResourceName(@Nullable String applicationResourceName) {
-            this.applicationResourceName = Input.ofNullable(applicationResourceName);
+            this.applicationResourceName = Output.ofNullable(applicationResourceName);
             return this;
         }
 
-        public Builder debugParams(@Nullable Input<String> debugParams) {
+        public Builder debugParams(@Nullable Output<String> debugParams) {
             this.debugParams = debugParams;
             return this;
         }
 
         public Builder debugParams(@Nullable String debugParams) {
-            this.debugParams = Input.ofNullable(debugParams);
+            this.debugParams = Output.ofNullable(debugParams);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diagnostics(@Nullable Input<DiagnosticsDescriptionArgs> diagnostics) {
+        public Builder diagnostics(@Nullable Output<DiagnosticsDescriptionArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
         public Builder diagnostics(@Nullable DiagnosticsDescriptionArgs diagnostics) {
-            this.diagnostics = Input.ofNullable(diagnostics);
+            this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder services(@Nullable Input<List<ServiceResourceDescriptionArgs>> services) {
+        public Builder services(@Nullable Output<List<ServiceResourceDescriptionArgs>> services) {
             this.services = services;
             return this;
         }
 
         public Builder services(@Nullable List<ServiceResourceDescriptionArgs> services) {
-            this.services = Input.ofNullable(services);
+            this.services = Output.ofNullable(services);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ApplicationArgs build() {

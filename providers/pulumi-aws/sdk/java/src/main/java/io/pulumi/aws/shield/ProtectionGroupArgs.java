@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.shield;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="aggregation", required=true)
-      private final Input<String> aggregation;
+      private final Output<String> aggregation;
 
-    public Input<String> getAggregation() {
+    public Output<String> getAggregation() {
         return this.aggregation;
     }
 
@@ -32,10 +32,10 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pattern", required=true)
-      private final Input<String> pattern;
+      private final Output<String> pattern;
 
-    public Input<String> getPattern() {
+    public Output<String> getPattern() {
         return this.pattern;
     }
 
@@ -54,9 +54,9 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="protectionGroupId", required=true)
-      private final Input<String> protectionGroupId;
+      private final Output<String> protectionGroupId;
 
-    public Input<String> getProtectionGroupId() {
+    public Output<String> getProtectionGroupId() {
         return this.protectionGroupId;
     }
 
@@ -65,10 +65,10 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ProtectionGroupArgs(
-        Input<String> aggregation,
-        @Nullable Input<List<String>> members,
-        Input<String> pattern,
-        Input<String> protectionGroupId,
-        @Nullable Input<String> resourceType,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> aggregation,
+        @Nullable Output<List<String>> members,
+        Output<String> pattern,
+        Output<String> protectionGroupId,
+        @Nullable Output<String> resourceType,
+        @Nullable Output<Map<String,String>> tags) {
         this.aggregation = Objects.requireNonNull(aggregation, "expected parameter 'aggregation' to be non-null");
         this.members = members;
         this.pattern = Objects.requireNonNull(pattern, "expected parameter 'pattern' to be non-null");
@@ -98,12 +98,12 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ProtectionGroupArgs() {
-        this.aggregation = Input.empty();
-        this.members = Input.empty();
-        this.pattern = Input.empty();
-        this.protectionGroupId = Input.empty();
-        this.resourceType = Input.empty();
-        this.tags = Input.empty();
+        this.aggregation = Output.empty();
+        this.members = Output.empty();
+        this.pattern = Output.empty();
+        this.protectionGroupId = Output.empty();
+        this.resourceType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> aggregation;
-        private @Nullable Input<List<String>> members;
-        private Input<String> pattern;
-        private Input<String> protectionGroupId;
-        private @Nullable Input<String> resourceType;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> aggregation;
+        private @Nullable Output<List<String>> members;
+        private Output<String> pattern;
+        private Output<String> protectionGroupId;
+        private @Nullable Output<String> resourceType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder aggregation(Input<String> aggregation) {
+        public Builder aggregation(Output<String> aggregation) {
             this.aggregation = Objects.requireNonNull(aggregation);
             return this;
         }
 
         public Builder aggregation(String aggregation) {
-            this.aggregation = Input.of(Objects.requireNonNull(aggregation));
+            this.aggregation = Output.of(Objects.requireNonNull(aggregation));
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder pattern(Input<String> pattern) {
+        public Builder pattern(Output<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
         public Builder pattern(String pattern) {
-            this.pattern = Input.of(Objects.requireNonNull(pattern));
+            this.pattern = Output.of(Objects.requireNonNull(pattern));
             return this;
         }
 
-        public Builder protectionGroupId(Input<String> protectionGroupId) {
+        public Builder protectionGroupId(Output<String> protectionGroupId) {
             this.protectionGroupId = Objects.requireNonNull(protectionGroupId);
             return this;
         }
 
         public Builder protectionGroupId(String protectionGroupId) {
-            this.protectionGroupId = Input.of(Objects.requireNonNull(protectionGroupId));
+            this.protectionGroupId = Output.of(Objects.requireNonNull(protectionGroupId));
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ProtectionGroupArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentId")
-      private final @Nullable Input<String> environmentId;
+      private final @Nullable Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
-        return this.environmentId == null ? Input.empty() : this.environmentId;
+    public Output<String> getEnvironmentId() {
+        return this.environmentId == null ? Output.empty() : this.environmentId;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentVariables")
-      private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Input<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
+    public Output<Map<String,String>> getEnvironmentVariables() {
+        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="errorThreshold")
-      private final @Nullable Input<Integer> errorThreshold;
+      private final @Nullable Output<Integer> errorThreshold;
 
-    public Input<Integer> getErrorThreshold() {
-        return this.errorThreshold == null ? Input.empty() : this.errorThreshold;
+    public Output<Integer> getErrorThreshold() {
+        return this.errorThreshold == null ? Output.empty() : this.errorThreshold;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="miniBatchSize")
-      private final @Nullable Input<Double> miniBatchSize;
+      private final @Nullable Output<Double> miniBatchSize;
 
-    public Input<Double> getMiniBatchSize() {
-        return this.miniBatchSize == null ? Input.empty() : this.miniBatchSize;
+    public Output<Double> getMiniBatchSize() {
+        return this.miniBatchSize == null ? Output.empty() : this.miniBatchSize;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="partitionKeys")
-      private final @Nullable Input<List<String>> partitionKeys;
+      private final @Nullable Output<List<String>> partitionKeys;
 
-    public Input<List<String>> getPartitionKeys() {
-        return this.partitionKeys == null ? Input.empty() : this.partitionKeys;
+    public Output<List<String>> getPartitionKeys() {
+        return this.partitionKeys == null ? Output.empty() : this.partitionKeys;
     }
 
     /**
@@ -99,20 +99,20 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public BatchDeploymentArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> environmentId,
-        @Nullable Input<Map<String,String>> environmentVariables,
-        @Nullable Input<Integer> errorThreshold,
-        @Nullable Input<Double> miniBatchSize,
-        @Nullable Input<List<String>> partitionKeys,
-        @Nullable Input<Map<String,String>> properties) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> environmentId,
+        @Nullable Output<Map<String,String>> environmentVariables,
+        @Nullable Output<Integer> errorThreshold,
+        @Nullable Output<Double> miniBatchSize,
+        @Nullable Output<List<String>> partitionKeys,
+        @Nullable Output<Map<String,String>> properties) {
         this.description = description;
         this.environmentId = environmentId;
         this.environmentVariables = environmentVariables;
@@ -123,13 +123,13 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BatchDeploymentArgs() {
-        this.description = Input.empty();
-        this.environmentId = Input.empty();
-        this.environmentVariables = Input.empty();
-        this.errorThreshold = Input.empty();
-        this.miniBatchSize = Input.empty();
-        this.partitionKeys = Input.empty();
-        this.properties = Input.empty();
+        this.description = Output.empty();
+        this.environmentId = Output.empty();
+        this.environmentVariables = Output.empty();
+        this.errorThreshold = Output.empty();
+        this.miniBatchSize = Output.empty();
+        this.partitionKeys = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,13 +141,13 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> environmentId;
-        private @Nullable Input<Map<String,String>> environmentVariables;
-        private @Nullable Input<Integer> errorThreshold;
-        private @Nullable Input<Double> miniBatchSize;
-        private @Nullable Input<List<String>> partitionKeys;
-        private @Nullable Input<Map<String,String>> properties;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> environmentId;
+        private @Nullable Output<Map<String,String>> environmentVariables;
+        private @Nullable Output<Integer> errorThreshold;
+        private @Nullable Output<Double> miniBatchSize;
+        private @Nullable Output<List<String>> partitionKeys;
+        private @Nullable Output<Map<String,String>> properties;
 
         public Builder() {
     	      // Empty
@@ -164,73 +164,73 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.properties = defaults.properties;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Input.ofNullable(environmentId);
+            this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
 
-        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Input.ofNullable(environmentVariables);
+            this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder errorThreshold(@Nullable Input<Integer> errorThreshold) {
+        public Builder errorThreshold(@Nullable Output<Integer> errorThreshold) {
             this.errorThreshold = errorThreshold;
             return this;
         }
 
         public Builder errorThreshold(@Nullable Integer errorThreshold) {
-            this.errorThreshold = Input.ofNullable(errorThreshold);
+            this.errorThreshold = Output.ofNullable(errorThreshold);
             return this;
         }
 
-        public Builder miniBatchSize(@Nullable Input<Double> miniBatchSize) {
+        public Builder miniBatchSize(@Nullable Output<Double> miniBatchSize) {
             this.miniBatchSize = miniBatchSize;
             return this;
         }
 
         public Builder miniBatchSize(@Nullable Double miniBatchSize) {
-            this.miniBatchSize = Input.ofNullable(miniBatchSize);
+            this.miniBatchSize = Output.ofNullable(miniBatchSize);
             return this;
         }
 
-        public Builder partitionKeys(@Nullable Input<List<String>> partitionKeys) {
+        public Builder partitionKeys(@Nullable Output<List<String>> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
 
         public Builder partitionKeys(@Nullable List<String> partitionKeys) {
-            this.partitionKeys = Input.ofNullable(partitionKeys);
+            this.partitionKeys = Output.ofNullable(partitionKeys);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public BatchDeploymentArgs build() {

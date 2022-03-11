@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributionType", required=true)
-      private final Input<String> distributionType;
+      private final Output<String> distributionType;
 
-    public Input<String> getDistributionType() {
+    public Output<String> getDistributionType() {
         return this.distributionType;
     }
 
@@ -36,10 +36,10 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterServerCount")
-      private final @Nullable Input<Integer> parameterServerCount;
+      private final @Nullable Output<Integer> parameterServerCount;
 
-    public Input<Integer> getParameterServerCount() {
-        return this.parameterServerCount == null ? Input.empty() : this.parameterServerCount;
+    public Output<Integer> getParameterServerCount() {
+        return this.parameterServerCount == null ? Output.empty() : this.parameterServerCount;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerCount")
-      private final @Nullable Input<Integer> workerCount;
+      private final @Nullable Output<Integer> workerCount;
 
-    public Input<Integer> getWorkerCount() {
-        return this.workerCount == null ? Input.empty() : this.workerCount;
+    public Output<Integer> getWorkerCount() {
+        return this.workerCount == null ? Output.empty() : this.workerCount;
     }
 
     public TensorFlowArgs(
-        Input<String> distributionType,
-        @Nullable Input<Integer> parameterServerCount,
-        @Nullable Input<Integer> workerCount) {
+        Output<String> distributionType,
+        @Nullable Output<Integer> parameterServerCount,
+        @Nullable Output<Integer> workerCount) {
         this.distributionType = Objects.requireNonNull(distributionType, "expected parameter 'distributionType' to be non-null");
         this.parameterServerCount = parameterServerCount;
         this.workerCount = workerCount;
     }
 
     private TensorFlowArgs() {
-        this.distributionType = Input.empty();
-        this.parameterServerCount = Input.empty();
-        this.workerCount = Input.empty();
+        this.distributionType = Output.empty();
+        this.parameterServerCount = Output.empty();
+        this.workerCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> distributionType;
-        private @Nullable Input<Integer> parameterServerCount;
-        private @Nullable Input<Integer> workerCount;
+        private Output<String> distributionType;
+        private @Nullable Output<Integer> parameterServerCount;
+        private @Nullable Output<Integer> workerCount;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerCount = defaults.workerCount;
         }
 
-        public Builder distributionType(Input<String> distributionType) {
+        public Builder distributionType(Output<String> distributionType) {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
 
         public Builder distributionType(String distributionType) {
-            this.distributionType = Input.of(Objects.requireNonNull(distributionType));
+            this.distributionType = Output.of(Objects.requireNonNull(distributionType));
             return this;
         }
 
-        public Builder parameterServerCount(@Nullable Input<Integer> parameterServerCount) {
+        public Builder parameterServerCount(@Nullable Output<Integer> parameterServerCount) {
             this.parameterServerCount = parameterServerCount;
             return this;
         }
 
         public Builder parameterServerCount(@Nullable Integer parameterServerCount) {
-            this.parameterServerCount = Input.ofNullable(parameterServerCount);
+            this.parameterServerCount = Output.ofNullable(parameterServerCount);
             return this;
         }
 
-        public Builder workerCount(@Nullable Input<Integer> workerCount) {
+        public Builder workerCount(@Nullable Output<Integer> workerCount) {
             this.workerCount = workerCount;
             return this;
         }
 
         public Builder workerCount(@Nullable Integer workerCount) {
-            this.workerCount = Input.ofNullable(workerCount);
+            this.workerCount = Output.ofNullable(workerCount);
             return this;
         }
         public TensorFlowArgs build() {

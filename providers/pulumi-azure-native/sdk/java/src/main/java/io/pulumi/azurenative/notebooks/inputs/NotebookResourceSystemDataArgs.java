@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,54 +19,54 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
     public static final NotebookResourceSystemDataArgs Empty = new NotebookResourceSystemDataArgs();
 
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     @InputImport(name="createdBy")
-      private final @Nullable Input<String> createdBy;
+      private final @Nullable Output<String> createdBy;
 
-    public Input<String> getCreatedBy() {
-        return this.createdBy == null ? Input.empty() : this.createdBy;
+    public Output<String> getCreatedBy() {
+        return this.createdBy == null ? Output.empty() : this.createdBy;
     }
 
     @InputImport(name="createdByType")
-      private final @Nullable Input<String> createdByType;
+      private final @Nullable Output<String> createdByType;
 
-    public Input<String> getCreatedByType() {
-        return this.createdByType == null ? Input.empty() : this.createdByType;
+    public Output<String> getCreatedByType() {
+        return this.createdByType == null ? Output.empty() : this.createdByType;
     }
 
     @InputImport(name="lastModifiedAt")
-      private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Output<String> lastModifiedAt;
 
-    public Input<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
+    public Output<String> getLastModifiedAt() {
+        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
     }
 
     @InputImport(name="lastModifiedBy")
-      private final @Nullable Input<String> lastModifiedBy;
+      private final @Nullable Output<String> lastModifiedBy;
 
-    public Input<String> getLastModifiedBy() {
-        return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
+    public Output<String> getLastModifiedBy() {
+        return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
     }
 
     @InputImport(name="lastModifiedByType")
-      private final @Nullable Input<String> lastModifiedByType;
+      private final @Nullable Output<String> lastModifiedByType;
 
-    public Input<String> getLastModifiedByType() {
-        return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
+    public Output<String> getLastModifiedByType() {
+        return this.lastModifiedByType == null ? Output.empty() : this.lastModifiedByType;
     }
 
     public NotebookResourceSystemDataArgs(
-        @Nullable Input<String> createdAt,
-        @Nullable Input<String> createdBy,
-        @Nullable Input<String> createdByType,
-        @Nullable Input<String> lastModifiedAt,
-        @Nullable Input<String> lastModifiedBy,
-        @Nullable Input<String> lastModifiedByType) {
+        @Nullable Output<String> createdAt,
+        @Nullable Output<String> createdBy,
+        @Nullable Output<String> createdByType,
+        @Nullable Output<String> lastModifiedAt,
+        @Nullable Output<String> lastModifiedBy,
+        @Nullable Output<String> lastModifiedByType) {
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;
@@ -76,12 +76,12 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
     }
 
     private NotebookResourceSystemDataArgs() {
-        this.createdAt = Input.empty();
-        this.createdBy = Input.empty();
-        this.createdByType = Input.empty();
-        this.lastModifiedAt = Input.empty();
-        this.lastModifiedBy = Input.empty();
-        this.lastModifiedByType = Input.empty();
+        this.createdAt = Output.empty();
+        this.createdBy = Output.empty();
+        this.createdByType = Output.empty();
+        this.lastModifiedAt = Output.empty();
+        this.lastModifiedBy = Output.empty();
+        this.lastModifiedByType = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,12 +93,12 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<String> createdBy;
-        private @Nullable Input<String> createdByType;
-        private @Nullable Input<String> lastModifiedAt;
-        private @Nullable Input<String> lastModifiedBy;
-        private @Nullable Input<String> lastModifiedByType;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<String> createdBy;
+        private @Nullable Output<String> createdByType;
+        private @Nullable Output<String> lastModifiedAt;
+        private @Nullable Output<String> lastModifiedBy;
+        private @Nullable Output<String> lastModifiedByType;
 
         public Builder() {
     	      // Empty
@@ -114,63 +114,63 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
     	      this.lastModifiedByType = defaults.lastModifiedByType;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder createdBy(@Nullable Input<String> createdBy) {
+        public Builder createdBy(@Nullable Output<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Input.ofNullable(createdBy);
+            this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
 
-        public Builder createdByType(@Nullable Input<String> createdByType) {
+        public Builder createdByType(@Nullable Output<String> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
         public Builder createdByType(@Nullable String createdByType) {
-            this.createdByType = Input.ofNullable(createdByType);
+            this.createdByType = Output.ofNullable(createdByType);
             return this;
         }
 
-        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder lastModifiedBy(@Nullable Input<String> lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Input.ofNullable(lastModifiedBy);
+            this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
             return this;
         }
 
-        public Builder lastModifiedByType(@Nullable Input<String> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Output<String> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
         public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
-            this.lastModifiedByType = Input.ofNullable(lastModifiedByType);
+            this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
             return this;
         }
         public NotebookResourceSystemDataArgs build() {

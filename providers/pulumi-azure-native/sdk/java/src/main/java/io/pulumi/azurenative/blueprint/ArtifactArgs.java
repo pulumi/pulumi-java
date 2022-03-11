@@ -5,7 +5,7 @@ package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.azurenative.blueprint.enums.ArtifactKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactName")
-      private final @Nullable Input<String> artifactName;
+      private final @Nullable Output<String> artifactName;
 
-    public Input<String> getArtifactName() {
-        return this.artifactName == null ? Input.empty() : this.artifactName;
+    public Output<String> getArtifactName() {
+        return this.artifactName == null ? Output.empty() : this.artifactName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintName", required=true)
-      private final Input<String> blueprintName;
+      private final Output<String> blueprintName;
 
-    public Input<String> getBlueprintName() {
+    public Output<String> getBlueprintName() {
         return this.blueprintName;
     }
 
@@ -43,9 +43,9 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,ArtifactKind>> kind;
+      private final Output<Either<String,ArtifactKind>> kind;
 
-    public Input<Either<String,ArtifactKind>> getKind() {
+    public Output<Either<String,ArtifactKind>> getKind() {
         return this.kind;
     }
 
@@ -54,17 +54,17 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceScope", required=true)
-      private final Input<String> resourceScope;
+      private final Output<String> resourceScope;
 
-    public Input<String> getResourceScope() {
+    public Output<String> getResourceScope() {
         return this.resourceScope;
     }
 
     public ArtifactArgs(
-        @Nullable Input<String> artifactName,
-        Input<String> blueprintName,
-        Input<Either<String,ArtifactKind>> kind,
-        Input<String> resourceScope) {
+        @Nullable Output<String> artifactName,
+        Output<String> blueprintName,
+        Output<Either<String,ArtifactKind>> kind,
+        Output<String> resourceScope) {
         this.artifactName = artifactName;
         this.blueprintName = Objects.requireNonNull(blueprintName, "expected parameter 'blueprintName' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -72,10 +72,10 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArtifactArgs() {
-        this.artifactName = Input.empty();
-        this.blueprintName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceScope = Input.empty();
+        this.artifactName = Output.empty();
+        this.blueprintName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceScope = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> artifactName;
-        private Input<String> blueprintName;
-        private Input<Either<String,ArtifactKind>> kind;
-        private Input<String> resourceScope;
+        private @Nullable Output<String> artifactName;
+        private Output<String> blueprintName;
+        private Output<Either<String,ArtifactKind>> kind;
+        private Output<String> resourceScope;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceScope = defaults.resourceScope;
         }
 
-        public Builder artifactName(@Nullable Input<String> artifactName) {
+        public Builder artifactName(@Nullable Output<String> artifactName) {
             this.artifactName = artifactName;
             return this;
         }
 
         public Builder artifactName(@Nullable String artifactName) {
-            this.artifactName = Input.ofNullable(artifactName);
+            this.artifactName = Output.ofNullable(artifactName);
             return this;
         }
 
-        public Builder blueprintName(Input<String> blueprintName) {
+        public Builder blueprintName(Output<String> blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
 
         public Builder blueprintName(String blueprintName) {
-            this.blueprintName = Input.of(Objects.requireNonNull(blueprintName));
+            this.blueprintName = Output.of(Objects.requireNonNull(blueprintName));
             return this;
         }
 
-        public Builder kind(Input<Either<String,ArtifactKind>> kind) {
+        public Builder kind(Output<Either<String,ArtifactKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,ArtifactKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceScope(Input<String> resourceScope) {
+        public Builder resourceScope(Output<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
 
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Input.of(Objects.requireNonNull(resourceScope));
+            this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
             return this;
         }
         public ArtifactArgs build() {

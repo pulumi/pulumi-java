@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.ConfigMapKeySelectorArgs;
 import io.pulumi.googlenative.run_v1.inputs.SecretKeySelectorArgs;
@@ -24,10 +24,10 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configMapKeyRef")
-      private final @Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef;
+      private final @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef;
 
-    public Input<ConfigMapKeySelectorArgs> getConfigMapKeyRef() {
-        return this.configMapKeyRef == null ? Input.empty() : this.configMapKeyRef;
+    public Output<ConfigMapKeySelectorArgs> getConfigMapKeyRef() {
+        return this.configMapKeyRef == null ? Output.empty() : this.configMapKeyRef;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretKeyRef")
-      private final @Nullable Input<SecretKeySelectorArgs> secretKeyRef;
+      private final @Nullable Output<SecretKeySelectorArgs> secretKeyRef;
 
-    public Input<SecretKeySelectorArgs> getSecretKeyRef() {
-        return this.secretKeyRef == null ? Input.empty() : this.secretKeyRef;
+    public Output<SecretKeySelectorArgs> getSecretKeyRef() {
+        return this.secretKeyRef == null ? Output.empty() : this.secretKeyRef;
     }
 
     public EnvVarSourceArgs(
-        @Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef,
-        @Nullable Input<SecretKeySelectorArgs> secretKeyRef) {
+        @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef,
+        @Nullable Output<SecretKeySelectorArgs> secretKeyRef) {
         this.configMapKeyRef = configMapKeyRef;
         this.secretKeyRef = secretKeyRef;
     }
 
     private EnvVarSourceArgs() {
-        this.configMapKeyRef = Input.empty();
-        this.secretKeyRef = Input.empty();
+        this.configMapKeyRef = Output.empty();
+        this.secretKeyRef = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef;
-        private @Nullable Input<SecretKeySelectorArgs> secretKeyRef;
+        private @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef;
+        private @Nullable Output<SecretKeySelectorArgs> secretKeyRef;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretKeyRef = defaults.secretKeyRef;
         }
 
-        public Builder configMapKeyRef(@Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef) {
+        public Builder configMapKeyRef(@Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef) {
             this.configMapKeyRef = configMapKeyRef;
             return this;
         }
 
         public Builder configMapKeyRef(@Nullable ConfigMapKeySelectorArgs configMapKeyRef) {
-            this.configMapKeyRef = Input.ofNullable(configMapKeyRef);
+            this.configMapKeyRef = Output.ofNullable(configMapKeyRef);
             return this;
         }
 
-        public Builder secretKeyRef(@Nullable Input<SecretKeySelectorArgs> secretKeyRef) {
+        public Builder secretKeyRef(@Nullable Output<SecretKeySelectorArgs> secretKeyRef) {
             this.secretKeyRef = secretKeyRef;
             return this;
         }
 
         public Builder secretKeyRef(@Nullable SecretKeySelectorArgs secretKeyRef) {
-            this.secretKeyRef = Input.ofNullable(secretKeyRef);
+            this.secretKeyRef = Output.ofNullable(secretKeyRef);
             return this;
         }
         public EnvVarSourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningexperimentation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -31,10 +31,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName", required=true)
-      private final Input<String> friendlyName;
+      private final Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
+    public Output<String> getFriendlyName() {
         return this.friendlyName;
     }
 
@@ -53,10 +53,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gitrepo")
-      private final @Nullable Input<String> gitrepo;
+      private final @Nullable Output<String> gitrepo;
 
-    public Input<String> getGitrepo() {
-        return this.gitrepo == null ? Input.empty() : this.gitrepo;
+    public Output<String> getGitrepo() {
+        return this.gitrepo == null ? Output.empty() : this.gitrepo;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName")
-      private final @Nullable Input<String> projectName;
+      private final @Nullable Output<String> projectName;
 
-    public Input<String> getProjectName() {
-        return this.projectName == null ? Input.empty() : this.projectName;
+    public Output<String> getProjectName() {
+        return this.projectName == null ? Output.empty() : this.projectName;
     }
 
     /**
@@ -86,9 +86,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -97,10 +97,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public ProjectArgs(
-        Input<String> accountName,
-        @Nullable Input<String> description,
-        Input<String> friendlyName,
-        @Nullable Input<String> gitrepo,
-        @Nullable Input<String> location,
-        @Nullable Input<String> projectName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> workspaceName) {
+        Output<String> accountName,
+        @Nullable Output<String> description,
+        Output<String> friendlyName,
+        @Nullable Output<String> gitrepo,
+        @Nullable Output<String> location,
+        @Nullable Output<String> projectName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> workspaceName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.description = description;
         this.friendlyName = Objects.requireNonNull(friendlyName, "expected parameter 'friendlyName' to be non-null");
@@ -136,15 +136,15 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.accountName = Input.empty();
-        this.description = Input.empty();
-        this.friendlyName = Input.empty();
-        this.gitrepo = Input.empty();
-        this.location = Input.empty();
-        this.projectName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceName = Input.empty();
+        this.accountName = Output.empty();
+        this.description = Output.empty();
+        this.friendlyName = Output.empty();
+        this.gitrepo = Output.empty();
+        this.location = Output.empty();
+        this.projectName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> description;
-        private Input<String> friendlyName;
-        private @Nullable Input<String> gitrepo;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> projectName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> workspaceName;
+        private Output<String> accountName;
+        private @Nullable Output<String> description;
+        private Output<String> friendlyName;
+        private @Nullable Output<String> gitrepo;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> projectName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder friendlyName(Input<String> friendlyName) {
+        public Builder friendlyName(Output<String> friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
         public Builder friendlyName(String friendlyName) {
-            this.friendlyName = Input.of(Objects.requireNonNull(friendlyName));
+            this.friendlyName = Output.of(Objects.requireNonNull(friendlyName));
             return this;
         }
 
-        public Builder gitrepo(@Nullable Input<String> gitrepo) {
+        public Builder gitrepo(@Nullable Output<String> gitrepo) {
             this.gitrepo = gitrepo;
             return this;
         }
 
         public Builder gitrepo(@Nullable String gitrepo) {
-            this.gitrepo = Input.ofNullable(gitrepo);
+            this.gitrepo = Output.ofNullable(gitrepo);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder projectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Input.ofNullable(projectName);
+            this.projectName = Output.ofNullable(projectName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public ProjectArgs build() {

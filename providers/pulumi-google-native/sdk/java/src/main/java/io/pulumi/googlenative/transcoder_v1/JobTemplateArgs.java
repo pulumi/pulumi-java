@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.JobConfigArgs;
 import java.lang.String;
@@ -20,24 +20,24 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<JobConfigArgs> config;
+      private final @Nullable Output<JobConfigArgs> config;
 
-    public Input<JobConfigArgs> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<JobConfigArgs> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     @InputImport(name="jobTemplateId", required=true)
-      private final Input<String> jobTemplateId;
+      private final Output<String> jobTemplateId;
 
-    public Input<String> getJobTemplateId() {
+    public Output<String> getJobTemplateId() {
         return this.jobTemplateId;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public JobTemplateArgs(
-        @Nullable Input<JobConfigArgs> config,
-        Input<String> jobTemplateId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        @Nullable Output<JobConfigArgs> config,
+        Output<String> jobTemplateId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.config = config;
         this.jobTemplateId = Objects.requireNonNull(jobTemplateId, "expected parameter 'jobTemplateId' to be non-null");
         this.location = location;
@@ -72,11 +72,11 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobTemplateArgs() {
-        this.config = Input.empty();
-        this.jobTemplateId = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.config = Output.empty();
+        this.jobTemplateId = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,11 +88,11 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<JobConfigArgs> config;
-        private Input<String> jobTemplateId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private @Nullable Output<JobConfigArgs> config;
+        private Output<String> jobTemplateId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -107,53 +107,53 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder config(@Nullable Input<JobConfigArgs> config) {
+        public Builder config(@Nullable Output<JobConfigArgs> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable JobConfigArgs config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder jobTemplateId(Input<String> jobTemplateId) {
+        public Builder jobTemplateId(Output<String> jobTemplateId) {
             this.jobTemplateId = Objects.requireNonNull(jobTemplateId);
             return this;
         }
 
         public Builder jobTemplateId(String jobTemplateId) {
-            this.jobTemplateId = Input.of(Objects.requireNonNull(jobTemplateId));
+            this.jobTemplateId = Output.of(Objects.requireNonNull(jobTemplateId));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public JobTemplateArgs build() {

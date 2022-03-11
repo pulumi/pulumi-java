@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbClusterIdentifier")
-      private final @Nullable Input<String> dbClusterIdentifier;
+      private final @Nullable Output<String> dbClusterIdentifier;
 
-    public Input<String> getDbClusterIdentifier() {
-        return this.dbClusterIdentifier == null ? Input.empty() : this.dbClusterIdentifier;
+    public Output<String> getDbClusterIdentifier() {
+        return this.dbClusterIdentifier == null ? Output.empty() : this.dbClusterIdentifier;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbInstanceIdentifier")
-      private final @Nullable Input<String> dbInstanceIdentifier;
+      private final @Nullable Output<String> dbInstanceIdentifier;
 
-    public Input<String> getDbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Input.empty() : this.dbInstanceIdentifier;
+    public Output<String> getDbInstanceIdentifier() {
+        return this.dbInstanceIdentifier == null ? Output.empty() : this.dbInstanceIdentifier;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbProxyName", required=true)
-      private final Input<String> dbProxyName;
+      private final Output<String> dbProxyName;
 
-    public Input<String> getDbProxyName() {
+    public Output<String> getDbProxyName() {
         return this.dbProxyName;
     }
 
@@ -52,17 +52,17 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetGroupName", required=true)
-      private final Input<String> targetGroupName;
+      private final Output<String> targetGroupName;
 
-    public Input<String> getTargetGroupName() {
+    public Output<String> getTargetGroupName() {
         return this.targetGroupName;
     }
 
     public ProxyTargetArgs(
-        @Nullable Input<String> dbClusterIdentifier,
-        @Nullable Input<String> dbInstanceIdentifier,
-        Input<String> dbProxyName,
-        Input<String> targetGroupName) {
+        @Nullable Output<String> dbClusterIdentifier,
+        @Nullable Output<String> dbInstanceIdentifier,
+        Output<String> dbProxyName,
+        Output<String> targetGroupName) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         this.dbProxyName = Objects.requireNonNull(dbProxyName, "expected parameter 'dbProxyName' to be non-null");
@@ -70,10 +70,10 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProxyTargetArgs() {
-        this.dbClusterIdentifier = Input.empty();
-        this.dbInstanceIdentifier = Input.empty();
-        this.dbProxyName = Input.empty();
-        this.targetGroupName = Input.empty();
+        this.dbClusterIdentifier = Output.empty();
+        this.dbInstanceIdentifier = Output.empty();
+        this.dbProxyName = Output.empty();
+        this.targetGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dbClusterIdentifier;
-        private @Nullable Input<String> dbInstanceIdentifier;
-        private Input<String> dbProxyName;
-        private Input<String> targetGroupName;
+        private @Nullable Output<String> dbClusterIdentifier;
+        private @Nullable Output<String> dbInstanceIdentifier;
+        private Output<String> dbProxyName;
+        private Output<String> targetGroupName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetGroupName = defaults.targetGroupName;
         }
 
-        public Builder dbClusterIdentifier(@Nullable Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable Output<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
 
         public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Input.ofNullable(dbClusterIdentifier);
+            this.dbClusterIdentifier = Output.ofNullable(dbClusterIdentifier);
             return this;
         }
 
-        public Builder dbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
 
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Input.ofNullable(dbInstanceIdentifier);
+            this.dbInstanceIdentifier = Output.ofNullable(dbInstanceIdentifier);
             return this;
         }
 
-        public Builder dbProxyName(Input<String> dbProxyName) {
+        public Builder dbProxyName(Output<String> dbProxyName) {
             this.dbProxyName = Objects.requireNonNull(dbProxyName);
             return this;
         }
 
         public Builder dbProxyName(String dbProxyName) {
-            this.dbProxyName = Input.of(Objects.requireNonNull(dbProxyName));
+            this.dbProxyName = Output.of(Objects.requireNonNull(dbProxyName));
             return this;
         }
 
-        public Builder targetGroupName(Input<String> targetGroupName) {
+        public Builder targetGroupName(Output<String> targetGroupName) {
             this.targetGroupName = Objects.requireNonNull(targetGroupName);
             return this;
         }
 
         public Builder targetGroupName(String targetGroupName) {
-            this.targetGroupName = Input.of(Objects.requireNonNull(targetGroupName));
+            this.targetGroupName = Output.of(Objects.requireNonNull(targetGroupName));
             return this;
         }
         public ProxyTargetArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.aws.ec2.PeeringConnectionOptionsArgs;
 import io.pulumi.aws.ec2.inputs.PeeringConnectionOptionsState;
 import io.pulumi.aws.ec2.outputs.PeeringConnectionOptionsAccepter;
 import io.pulumi.aws.ec2.outputs.PeeringConnectionOptionsRequester;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -129,14 +128,14 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public PeeringConnectionOptions(String name, PeeringConnectionOptionsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/peeringConnectionOptions:PeeringConnectionOptions", name, args == null ? PeeringConnectionOptionsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/peeringConnectionOptions:PeeringConnectionOptions", name, args == null ? PeeringConnectionOptionsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PeeringConnectionOptions(String name, Input<String> id, @Nullable PeeringConnectionOptionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PeeringConnectionOptions(String name, Output<String> id, @Nullable PeeringConnectionOptionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/peeringConnectionOptions:PeeringConnectionOptions", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -152,7 +151,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PeeringConnectionOptions get(String name, Input<String> id, @Nullable PeeringConnectionOptionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PeeringConnectionOptions get(String name, Output<String> id, @Nullable PeeringConnectionOptionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PeeringConnectionOptions(name, id, state, options);
     }
 }

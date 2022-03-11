@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DataCatalogEncryptionSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DataCatalogEncryptionSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dataCatalogEncryptionSettings", required=true)
-      private final Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings;
+      private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings;
 
-    public Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> getDataCatalogEncryptionSettings() {
+    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> getDataCatalogEncryptionSettings() {
         return this.dataCatalogEncryptionSettings;
     }
 
     public DataCatalogEncryptionSettingsArgs(
-        @Nullable Input<String> catalogId,
-        Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings) {
+        @Nullable Output<String> catalogId,
+        Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings) {
         this.catalogId = catalogId;
         this.dataCatalogEncryptionSettings = Objects.requireNonNull(dataCatalogEncryptionSettings, "expected parameter 'dataCatalogEncryptionSettings' to be non-null");
     }
 
     private DataCatalogEncryptionSettingsArgs() {
-        this.catalogId = Input.empty();
-        this.dataCatalogEncryptionSettings = Input.empty();
+        this.catalogId = Output.empty();
+        this.dataCatalogEncryptionSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DataCatalogEncryptionSettingsArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings;
+        private @Nullable Output<String> catalogId;
+        private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DataCatalogEncryptionSettingsArgs extends io.pulumi.resources
     	      this.dataCatalogEncryptionSettings = defaults.dataCatalogEncryptionSettings;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder dataCatalogEncryptionSettings(Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings) {
+        public Builder dataCatalogEncryptionSettings(Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings) {
             this.dataCatalogEncryptionSettings = Objects.requireNonNull(dataCatalogEncryptionSettings);
             return this;
         }
 
         public Builder dataCatalogEncryptionSettings(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs dataCatalogEncryptionSettings) {
-            this.dataCatalogEncryptionSettings = Input.of(Objects.requireNonNull(dataCatalogEncryptionSettings));
+            this.dataCatalogEncryptionSettings = Output.of(Objects.requireNonNull(dataCatalogEncryptionSettings));
             return this;
         }
         public DataCatalogEncryptionSettingsArgs build() {

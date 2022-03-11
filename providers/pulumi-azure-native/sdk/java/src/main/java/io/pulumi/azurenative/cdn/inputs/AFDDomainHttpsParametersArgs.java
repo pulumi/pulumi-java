@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.AfdCertificateType;
 import io.pulumi.azurenative.cdn.enums.AfdMinimumTlsVersion;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,9 +27,9 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateType", required=true)
-      private final Input<Either<String,AfdCertificateType>> certificateType;
+      private final Output<Either<String,AfdCertificateType>> certificateType;
 
-    public Input<Either<String,AfdCertificateType>> getCertificateType() {
+    public Output<Either<String,AfdCertificateType>> getCertificateType() {
         return this.certificateType;
     }
 
@@ -38,10 +38,10 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="minimumTlsVersion")
-      private final @Nullable Input<AfdMinimumTlsVersion> minimumTlsVersion;
+      private final @Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion;
 
-    public Input<AfdMinimumTlsVersion> getMinimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Input.empty() : this.minimumTlsVersion;
+    public Output<AfdMinimumTlsVersion> getMinimumTlsVersion() {
+        return this.minimumTlsVersion == null ? Output.empty() : this.minimumTlsVersion;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<ResourceReferenceArgs> secret;
+      private final @Nullable Output<ResourceReferenceArgs> secret;
 
-    public Input<ResourceReferenceArgs> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<ResourceReferenceArgs> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     public AFDDomainHttpsParametersArgs(
-        Input<Either<String,AfdCertificateType>> certificateType,
-        @Nullable Input<AfdMinimumTlsVersion> minimumTlsVersion,
-        @Nullable Input<ResourceReferenceArgs> secret) {
+        Output<Either<String,AfdCertificateType>> certificateType,
+        @Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion,
+        @Nullable Output<ResourceReferenceArgs> secret) {
         this.certificateType = Objects.requireNonNull(certificateType, "expected parameter 'certificateType' to be non-null");
         this.minimumTlsVersion = minimumTlsVersion;
         this.secret = secret;
     }
 
     private AFDDomainHttpsParametersArgs() {
-        this.certificateType = Input.empty();
-        this.minimumTlsVersion = Input.empty();
-        this.secret = Input.empty();
+        this.certificateType = Output.empty();
+        this.minimumTlsVersion = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<Either<String,AfdCertificateType>> certificateType;
-        private @Nullable Input<AfdMinimumTlsVersion> minimumTlsVersion;
-        private @Nullable Input<ResourceReferenceArgs> secret;
+        private Output<Either<String,AfdCertificateType>> certificateType;
+        private @Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion;
+        private @Nullable Output<ResourceReferenceArgs> secret;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
     	      this.secret = defaults.secret;
         }
 
-        public Builder certificateType(Input<Either<String,AfdCertificateType>> certificateType) {
+        public Builder certificateType(Output<Either<String,AfdCertificateType>> certificateType) {
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }
 
         public Builder certificateType(Either<String,AfdCertificateType> certificateType) {
-            this.certificateType = Input.of(Objects.requireNonNull(certificateType));
+            this.certificateType = Output.of(Objects.requireNonNull(certificateType));
             return this;
         }
 
-        public Builder minimumTlsVersion(@Nullable Input<AfdMinimumTlsVersion> minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
         public Builder minimumTlsVersion(@Nullable AfdMinimumTlsVersion minimumTlsVersion) {
-            this.minimumTlsVersion = Input.ofNullable(minimumTlsVersion);
+            this.minimumTlsVersion = Output.ofNullable(minimumTlsVersion);
             return this;
         }
 
-        public Builder secret(@Nullable Input<ResourceReferenceArgs> secret) {
+        public Builder secret(@Nullable Output<ResourceReferenceArgs> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable ResourceReferenceArgs secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
         public AFDDomainHttpsParametersArgs build() {

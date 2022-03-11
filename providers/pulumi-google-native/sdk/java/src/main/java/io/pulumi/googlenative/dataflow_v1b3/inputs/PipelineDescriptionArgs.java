@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ExecutionStageSummaryArgs;
@@ -26,10 +26,10 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayData")
-      private final @Nullable Input<List<DisplayDataArgs>> displayData;
+      private final @Nullable Output<List<DisplayDataArgs>> displayData;
 
-    public Input<List<DisplayDataArgs>> getDisplayData() {
-        return this.displayData == null ? Input.empty() : this.displayData;
+    public Output<List<DisplayDataArgs>> getDisplayData() {
+        return this.displayData == null ? Output.empty() : this.displayData;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="executionPipelineStage")
-      private final @Nullable Input<List<ExecutionStageSummaryArgs>> executionPipelineStage;
+      private final @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage;
 
-    public Input<List<ExecutionStageSummaryArgs>> getExecutionPipelineStage() {
-        return this.executionPipelineStage == null ? Input.empty() : this.executionPipelineStage;
+    public Output<List<ExecutionStageSummaryArgs>> getExecutionPipelineStage() {
+        return this.executionPipelineStage == null ? Output.empty() : this.executionPipelineStage;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="originalPipelineTransform")
-      private final @Nullable Input<List<TransformSummaryArgs>> originalPipelineTransform;
+      private final @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform;
 
-    public Input<List<TransformSummaryArgs>> getOriginalPipelineTransform() {
-        return this.originalPipelineTransform == null ? Input.empty() : this.originalPipelineTransform;
+    public Output<List<TransformSummaryArgs>> getOriginalPipelineTransform() {
+        return this.originalPipelineTransform == null ? Output.empty() : this.originalPipelineTransform;
     }
 
     public PipelineDescriptionArgs(
-        @Nullable Input<List<DisplayDataArgs>> displayData,
-        @Nullable Input<List<ExecutionStageSummaryArgs>> executionPipelineStage,
-        @Nullable Input<List<TransformSummaryArgs>> originalPipelineTransform) {
+        @Nullable Output<List<DisplayDataArgs>> displayData,
+        @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage,
+        @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform) {
         this.displayData = displayData;
         this.executionPipelineStage = executionPipelineStage;
         this.originalPipelineTransform = originalPipelineTransform;
     }
 
     private PipelineDescriptionArgs() {
-        this.displayData = Input.empty();
-        this.executionPipelineStage = Input.empty();
-        this.originalPipelineTransform = Input.empty();
+        this.displayData = Output.empty();
+        this.executionPipelineStage = Output.empty();
+        this.originalPipelineTransform = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DisplayDataArgs>> displayData;
-        private @Nullable Input<List<ExecutionStageSummaryArgs>> executionPipelineStage;
-        private @Nullable Input<List<TransformSummaryArgs>> originalPipelineTransform;
+        private @Nullable Output<List<DisplayDataArgs>> displayData;
+        private @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage;
+        private @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
     	      this.originalPipelineTransform = defaults.originalPipelineTransform;
         }
 
-        public Builder displayData(@Nullable Input<List<DisplayDataArgs>> displayData) {
+        public Builder displayData(@Nullable Output<List<DisplayDataArgs>> displayData) {
             this.displayData = displayData;
             return this;
         }
 
         public Builder displayData(@Nullable List<DisplayDataArgs> displayData) {
-            this.displayData = Input.ofNullable(displayData);
+            this.displayData = Output.ofNullable(displayData);
             return this;
         }
 
-        public Builder executionPipelineStage(@Nullable Input<List<ExecutionStageSummaryArgs>> executionPipelineStage) {
+        public Builder executionPipelineStage(@Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage) {
             this.executionPipelineStage = executionPipelineStage;
             return this;
         }
 
         public Builder executionPipelineStage(@Nullable List<ExecutionStageSummaryArgs> executionPipelineStage) {
-            this.executionPipelineStage = Input.ofNullable(executionPipelineStage);
+            this.executionPipelineStage = Output.ofNullable(executionPipelineStage);
             return this;
         }
 
-        public Builder originalPipelineTransform(@Nullable Input<List<TransformSummaryArgs>> originalPipelineTransform) {
+        public Builder originalPipelineTransform(@Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform) {
             this.originalPipelineTransform = originalPipelineTransform;
             return this;
         }
 
         public Builder originalPipelineTransform(@Nullable List<TransformSummaryArgs> originalPipelineTransform) {
-            this.originalPipelineTransform = Input.ofNullable(originalPipelineTransform);
+            this.originalPipelineTransform = Output.ofNullable(originalPipelineTransform);
             return this;
         }
         public PipelineDescriptionArgs build() {

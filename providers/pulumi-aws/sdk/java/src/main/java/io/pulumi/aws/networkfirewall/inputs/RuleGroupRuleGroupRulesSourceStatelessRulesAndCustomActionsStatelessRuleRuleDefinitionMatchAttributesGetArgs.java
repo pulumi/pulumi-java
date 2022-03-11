@@ -8,7 +8,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatele
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="destinationPorts")
-      private final @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts;
+      private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts;
 
-    public Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> getDestinationPorts() {
-        return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> getDestinationPorts() {
+        return this.destinationPorts == null ? Output.empty() : this.destinationPorts;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="destinations")
-      private final @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations;
+      private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations;
 
-    public Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> getDestinations() {
-        return this.destinations == null ? Input.empty() : this.destinations;
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> getDestinations() {
+        return this.destinations == null ? Output.empty() : this.destinations;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="protocols")
-      private final @Nullable Input<List<Integer>> protocols;
+      private final @Nullable Output<List<Integer>> protocols;
 
-    public Input<List<Integer>> getProtocols() {
-        return this.protocols == null ? Input.empty() : this.protocols;
+    public Output<List<Integer>> getProtocols() {
+        return this.protocols == null ? Output.empty() : this.protocols;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="sourcePorts")
-      private final @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts;
+      private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts;
 
-    public Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> getSourcePorts() {
-        return this.sourcePorts == null ? Input.empty() : this.sourcePorts;
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> getSourcePorts() {
+        return this.sourcePorts == null ? Output.empty() : this.sourcePorts;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="sources")
-      private final @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources;
+      private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources;
 
-    public Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> getSources() {
-        return this.sources == null ? Input.empty() : this.sources;
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> getSources() {
+        return this.sources == null ? Output.empty() : this.sources;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="tcpFlags")
-      private final @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags;
+      private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags;
 
-    public Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> getTcpFlags() {
-        return this.tcpFlags == null ? Input.empty() : this.tcpFlags;
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> getTcpFlags() {
+        return this.tcpFlags == null ? Output.empty() : this.tcpFlags;
     }
 
     public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesGetArgs(
-        @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts,
-        @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations,
-        @Nullable Input<List<Integer>> protocols,
-        @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts,
-        @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources,
-        @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags) {
+        @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts,
+        @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations,
+        @Nullable Output<List<Integer>> protocols,
+        @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts,
+        @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources,
+        @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags) {
         this.destinationPorts = destinationPorts;
         this.destinations = destinations;
         this.protocols = protocols;
@@ -102,12 +102,12 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     }
 
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesGetArgs() {
-        this.destinationPorts = Input.empty();
-        this.destinations = Input.empty();
-        this.protocols = Input.empty();
-        this.sourcePorts = Input.empty();
-        this.sources = Input.empty();
-        this.tcpFlags = Input.empty();
+        this.destinationPorts = Output.empty();
+        this.destinations = Output.empty();
+        this.protocols = Output.empty();
+        this.sourcePorts = Output.empty();
+        this.sources = Output.empty();
+        this.tcpFlags = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts;
-        private @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations;
-        private @Nullable Input<List<Integer>> protocols;
-        private @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts;
-        private @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources;
-        private @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags;
+        private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts;
+        private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations;
+        private @Nullable Output<List<Integer>> protocols;
+        private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts;
+        private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources;
+        private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     	      this.tcpFlags = defaults.tcpFlags;
         }
 
-        public Builder destinationPorts(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts) {
+        public Builder destinationPorts(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
         public Builder destinationPorts(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs> destinationPorts) {
-            this.destinationPorts = Input.ofNullable(destinationPorts);
+            this.destinationPorts = Output.ofNullable(destinationPorts);
             return this;
         }
 
-        public Builder destinations(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations) {
+        public Builder destinations(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
         public Builder destinations(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs> destinations) {
-            this.destinations = Input.ofNullable(destinations);
+            this.destinations = Output.ofNullable(destinations);
             return this;
         }
 
-        public Builder protocols(@Nullable Input<List<Integer>> protocols) {
+        public Builder protocols(@Nullable Output<List<Integer>> protocols) {
             this.protocols = protocols;
             return this;
         }
 
         public Builder protocols(@Nullable List<Integer> protocols) {
-            this.protocols = Input.ofNullable(protocols);
+            this.protocols = Output.ofNullable(protocols);
             return this;
         }
 
-        public Builder sourcePorts(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts) {
+        public Builder sourcePorts(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
 
         public Builder sourcePorts(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs> sourcePorts) {
-            this.sourcePorts = Input.ofNullable(sourcePorts);
+            this.sourcePorts = Output.ofNullable(sourcePorts);
             return this;
         }
 
-        public Builder sources(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources) {
+        public Builder sources(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
         public Builder sources(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs> sources) {
-            this.sources = Input.ofNullable(sources);
+            this.sources = Output.ofNullable(sources);
             return this;
         }
 
-        public Builder tcpFlags(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags) {
+        public Builder tcpFlags(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags) {
             this.tcpFlags = tcpFlags;
             return this;
         }
 
         public Builder tcpFlags(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs> tcpFlags) {
-            this.tcpFlags = Input.ofNullable(tcpFlags);
+            this.tcpFlags = Output.ofNullable(tcpFlags);
             return this;
         }
         public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesGetArgs build() {

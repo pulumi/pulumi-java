@@ -9,7 +9,6 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllo
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponsePlan;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -261,30 +260,30 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:desktopvirtualization:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:desktopvirtualization:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Workspace(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Workspace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:desktopvirtualization:Workspace", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20190123preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20190924preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20191210preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20200921preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201019preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201102preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201110preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210114preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210201preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210309preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210712:Workspace").build()),
-                Input.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:Workspace").build())
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20190123preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20190924preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20191210preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20200921preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201019preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201102preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20201110preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210114preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210201preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210309preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210401preview:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210712:Workspace").build()),
+                Output.of(Alias.builder().setType("azure-native:desktopvirtualization/v20210903preview:Workspace").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -298,7 +297,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Workspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Workspace get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workspace(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssm.inputs;
 
 import io.pulumi.awsnative.ssm.enums.DocumentAttachmentsSourceKey;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<DocumentAttachmentsSourceKey> key;
+      private final @Nullable Output<DocumentAttachmentsSourceKey> key;
 
-    public Input<DocumentAttachmentsSourceKey> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<DocumentAttachmentsSourceKey> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public DocumentAttachmentsSourceArgs(
-        @Nullable Input<DocumentAttachmentsSourceKey> key,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<DocumentAttachmentsSourceKey> key,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> values) {
         this.key = key;
         this.name = name;
         this.values = values;
     }
 
     private DocumentAttachmentsSourceArgs() {
-        this.key = Input.empty();
-        this.name = Input.empty();
-        this.values = Input.empty();
+        this.key = Output.empty();
+        this.name = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<DocumentAttachmentsSourceKey> key;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<DocumentAttachmentsSourceKey> key;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
     	      this.values = defaults.values;
         }
 
-        public Builder key(@Nullable Input<DocumentAttachmentsSourceKey> key) {
+        public Builder key(@Nullable Output<DocumentAttachmentsSourceKey> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable DocumentAttachmentsSourceKey key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public DocumentAttachmentsSourceArgs build() {

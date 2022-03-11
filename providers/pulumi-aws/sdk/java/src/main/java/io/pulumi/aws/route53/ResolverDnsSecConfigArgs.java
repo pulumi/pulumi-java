@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ResolverDnsSecConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
-    public ResolverDnsSecConfigArgs(Input<String> resourceId) {
+    public ResolverDnsSecConfigArgs(Output<String> resourceId) {
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
     }
 
     private ResolverDnsSecConfigArgs() {
-        this.resourceId = Input.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ResolverDnsSecConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> resourceId;
+        private Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ResolverDnsSecConfigArgs extends io.pulumi.resources.Resource
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
         public ResolverDnsSecConfigArgs build() {

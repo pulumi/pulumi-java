@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.LayerDirective;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-      private final @Nullable Input<String> arguments;
+      private final @Nullable Output<String> arguments;
 
-    public Input<String> getArguments() {
-        return this.arguments == null ? Input.empty() : this.arguments;
+    public Output<String> getArguments() {
+        return this.arguments == null ? Output.empty() : this.arguments;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directive", required=true)
-      private final Input<LayerDirective> directive;
+      private final Output<LayerDirective> directive;
 
-    public Input<LayerDirective> getDirective() {
+    public Output<LayerDirective> getDirective() {
         return this.directive;
     }
 
     public LayerArgs(
-        @Nullable Input<String> arguments,
-        Input<LayerDirective> directive) {
+        @Nullable Output<String> arguments,
+        Output<LayerDirective> directive) {
         this.arguments = arguments;
         this.directive = Objects.requireNonNull(directive, "expected parameter 'directive' to be non-null");
     }
 
     private LayerArgs() {
-        this.arguments = Input.empty();
-        this.directive = Input.empty();
+        this.arguments = Output.empty();
+        this.directive = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arguments;
-        private Input<LayerDirective> directive;
+        private @Nullable Output<String> arguments;
+        private Output<LayerDirective> directive;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.directive = defaults.directive;
         }
 
-        public Builder arguments(@Nullable Input<String> arguments) {
+        public Builder arguments(@Nullable Output<String> arguments) {
             this.arguments = arguments;
             return this;
         }
 
         public Builder arguments(@Nullable String arguments) {
-            this.arguments = Input.ofNullable(arguments);
+            this.arguments = Output.ofNullable(arguments);
             return this;
         }
 
-        public Builder directive(Input<LayerDirective> directive) {
+        public Builder directive(Output<LayerDirective> directive) {
             this.directive = Objects.requireNonNull(directive);
             return this;
         }
 
         public Builder directive(LayerDirective directive) {
-            this.directive = Input.of(Objects.requireNonNull(directive));
+            this.directive = Output.of(Objects.requireNonNull(directive));
             return this;
         }
         public LayerArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicedirectory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.servicedirectory.inputs.NamespaceIamBindingConditionGetArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class NamespaceIamBindingState extends io.pulumi.resources.Resource
     public static final NamespaceIamBindingState Empty = new NamespaceIamBindingState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<NamespaceIamBindingConditionGetArgs> condition;
+      private final @Nullable Output<NamespaceIamBindingConditionGetArgs> condition;
 
-    public Input<NamespaceIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<NamespaceIamBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -28,17 +28,17 @@ public final class NamespaceIamBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NamespaceIamBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -59,18 +59,18 @@ public final class NamespaceIamBindingState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public NamespaceIamBindingState(
-        @Nullable Input<NamespaceIamBindingConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> name,
-        @Nullable Input<String> role) {
+        @Nullable Output<NamespaceIamBindingConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> name,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.etag = etag;
         this.members = members;
@@ -79,11 +79,11 @@ public final class NamespaceIamBindingState extends io.pulumi.resources.Resource
     }
 
     private NamespaceIamBindingState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.members = Input.empty();
-        this.name = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.members = Output.empty();
+        this.name = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,11 +95,11 @@ public final class NamespaceIamBindingState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<NamespaceIamBindingConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> role;
+        private @Nullable Output<NamespaceIamBindingConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -114,53 +114,53 @@ public final class NamespaceIamBindingState extends io.pulumi.resources.Resource
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<NamespaceIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<NamespaceIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable NamespaceIamBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public NamespaceIamBindingState build() {

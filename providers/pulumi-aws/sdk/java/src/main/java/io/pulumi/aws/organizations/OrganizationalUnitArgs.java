@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parentId", required=true)
-      private final Input<String> parentId;
+      private final Output<String> parentId;
 
-    public Input<String> getParentId() {
+    public Output<String> getParentId() {
         return this.parentId;
     }
 
@@ -42,25 +42,25 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public OrganizationalUnitArgs(
-        @Nullable Input<String> name,
-        Input<String> parentId,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> name,
+        Output<String> parentId,
+        @Nullable Output<Map<String,String>> tags) {
         this.name = name;
         this.parentId = Objects.requireNonNull(parentId, "expected parameter 'parentId' to be non-null");
         this.tags = tags;
     }
 
     private OrganizationalUnitArgs() {
-        this.name = Input.empty();
-        this.parentId = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.parentId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<String> parentId;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> name;
+        private Output<String> parentId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentId(Input<String> parentId) {
+        public Builder parentId(Output<String> parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
 
         public Builder parentId(String parentId) {
-            this.parentId = Input.of(Objects.requireNonNull(parentId));
+            this.parentId = Output.of(Objects.requireNonNull(parentId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public OrganizationalUnitArgs build() {

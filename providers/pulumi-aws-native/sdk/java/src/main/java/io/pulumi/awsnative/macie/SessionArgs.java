@@ -5,7 +5,7 @@ package io.pulumi.awsnative.macie;
 
 import io.pulumi.awsnative.macie.enums.SessionFindingPublishingFrequency;
 import io.pulumi.awsnative.macie.enums.SessionStatus;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="findingPublishingFrequency")
-      private final @Nullable Input<SessionFindingPublishingFrequency> findingPublishingFrequency;
+      private final @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency;
 
-    public Input<SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Input.empty() : this.findingPublishingFrequency;
+    public Output<SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
+        return this.findingPublishingFrequency == null ? Output.empty() : this.findingPublishingFrequency;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<SessionStatus> status;
+      private final @Nullable Output<SessionStatus> status;
 
-    public Input<SessionStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<SessionStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public SessionArgs(
-        @Nullable Input<SessionFindingPublishingFrequency> findingPublishingFrequency,
-        @Nullable Input<SessionStatus> status) {
+        @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency,
+        @Nullable Output<SessionStatus> status) {
         this.findingPublishingFrequency = findingPublishingFrequency;
         this.status = status;
     }
 
     private SessionArgs() {
-        this.findingPublishingFrequency = Input.empty();
-        this.status = Input.empty();
+        this.findingPublishingFrequency = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SessionFindingPublishingFrequency> findingPublishingFrequency;
-        private @Nullable Input<SessionStatus> status;
+        private @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency;
+        private @Nullable Output<SessionStatus> status;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder findingPublishingFrequency(@Nullable Input<SessionFindingPublishingFrequency> findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
         public Builder findingPublishingFrequency(@Nullable SessionFindingPublishingFrequency findingPublishingFrequency) {
-            this.findingPublishingFrequency = Input.ofNullable(findingPublishingFrequency);
+            this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
             return this;
         }
 
-        public Builder status(@Nullable Input<SessionStatus> status) {
+        public Builder status(@Nullable Output<SessionStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable SessionStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public SessionArgs build() {

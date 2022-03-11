@@ -11,7 +11,6 @@ import io.pulumi.awsnative.healthlake.outputs.FHIRDatastoreCreatedAt;
 import io.pulumi.awsnative.healthlake.outputs.FHIRDatastorePreloadDataConfig;
 import io.pulumi.awsnative.healthlake.outputs.FHIRDatastoreSseConfiguration;
 import io.pulumi.awsnative.healthlake.outputs.FHIRDatastoreTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -124,14 +123,14 @@ public class FHIRDatastore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FHIRDatastore(String name, FHIRDatastoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:healthlake:FHIRDatastore", name, args == null ? FHIRDatastoreArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:healthlake:FHIRDatastore", name, args == null ? FHIRDatastoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FHIRDatastore(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FHIRDatastore(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:healthlake:FHIRDatastore", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -146,7 +145,7 @@ public class FHIRDatastore extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FHIRDatastore get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FHIRDatastore get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FHIRDatastore(name, id, options);
     }
 }

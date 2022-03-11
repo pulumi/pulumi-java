@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class TaskDefinitionLoRaWANGatewayVersionArgs extends io.pulumi.res
     public static final TaskDefinitionLoRaWANGatewayVersionArgs Empty = new TaskDefinitionLoRaWANGatewayVersionArgs();
 
     @InputImport(name="model")
-      private final @Nullable Input<String> model;
+      private final @Nullable Output<String> model;
 
-    public Input<String> getModel() {
-        return this.model == null ? Input.empty() : this.model;
+    public Output<String> getModel() {
+        return this.model == null ? Output.empty() : this.model;
     }
 
     @InputImport(name="packageVersion")
-      private final @Nullable Input<String> packageVersion;
+      private final @Nullable Output<String> packageVersion;
 
-    public Input<String> getPackageVersion() {
-        return this.packageVersion == null ? Input.empty() : this.packageVersion;
+    public Output<String> getPackageVersion() {
+        return this.packageVersion == null ? Output.empty() : this.packageVersion;
     }
 
     @InputImport(name="station")
-      private final @Nullable Input<String> station;
+      private final @Nullable Output<String> station;
 
-    public Input<String> getStation() {
-        return this.station == null ? Input.empty() : this.station;
+    public Output<String> getStation() {
+        return this.station == null ? Output.empty() : this.station;
     }
 
     public TaskDefinitionLoRaWANGatewayVersionArgs(
-        @Nullable Input<String> model,
-        @Nullable Input<String> packageVersion,
-        @Nullable Input<String> station) {
+        @Nullable Output<String> model,
+        @Nullable Output<String> packageVersion,
+        @Nullable Output<String> station) {
         this.model = model;
         this.packageVersion = packageVersion;
         this.station = station;
     }
 
     private TaskDefinitionLoRaWANGatewayVersionArgs() {
-        this.model = Input.empty();
-        this.packageVersion = Input.empty();
-        this.station = Input.empty();
+        this.model = Output.empty();
+        this.packageVersion = Output.empty();
+        this.station = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class TaskDefinitionLoRaWANGatewayVersionArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> model;
-        private @Nullable Input<String> packageVersion;
-        private @Nullable Input<String> station;
+        private @Nullable Output<String> model;
+        private @Nullable Output<String> packageVersion;
+        private @Nullable Output<String> station;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class TaskDefinitionLoRaWANGatewayVersionArgs extends io.pulumi.res
     	      this.station = defaults.station;
         }
 
-        public Builder model(@Nullable Input<String> model) {
+        public Builder model(@Nullable Output<String> model) {
             this.model = model;
             return this;
         }
 
         public Builder model(@Nullable String model) {
-            this.model = Input.ofNullable(model);
+            this.model = Output.ofNullable(model);
             return this;
         }
 
-        public Builder packageVersion(@Nullable Input<String> packageVersion) {
+        public Builder packageVersion(@Nullable Output<String> packageVersion) {
             this.packageVersion = packageVersion;
             return this;
         }
 
         public Builder packageVersion(@Nullable String packageVersion) {
-            this.packageVersion = Input.ofNullable(packageVersion);
+            this.packageVersion = Output.ofNullable(packageVersion);
             return this;
         }
 
-        public Builder station(@Nullable Input<String> station) {
+        public Builder station(@Nullable Output<String> station) {
             this.station = station;
             return this;
         }
 
         public Builder station(@Nullable String station) {
-            this.station = Input.ofNullable(station);
+            this.station = Output.ofNullable(station);
             return this;
         }
         public TaskDefinitionLoRaWANGatewayVersionArgs build() {

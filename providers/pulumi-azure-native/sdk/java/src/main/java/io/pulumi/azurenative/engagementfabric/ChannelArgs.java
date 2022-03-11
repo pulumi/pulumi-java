@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.engagementfabric;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,10 +32,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelFunctions")
-      private final @Nullable Input<List<String>> channelFunctions;
+      private final @Nullable Output<List<String>> channelFunctions;
 
-    public Input<List<String>> getChannelFunctions() {
-        return this.channelFunctions == null ? Input.empty() : this.channelFunctions;
+    public Output<List<String>> getChannelFunctions() {
+        return this.channelFunctions == null ? Output.empty() : this.channelFunctions;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelName")
-      private final @Nullable Input<String> channelName;
+      private final @Nullable Output<String> channelName;
 
-    public Input<String> getChannelName() {
-        return this.channelName == null ? Input.empty() : this.channelName;
+    public Output<String> getChannelName() {
+        return this.channelName == null ? Output.empty() : this.channelName;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelType", required=true)
-      private final Input<String> channelType;
+      private final Output<String> channelType;
 
-    public Input<String> getChannelType() {
+    public Output<String> getChannelType() {
         return this.channelType;
     }
 
@@ -65,10 +65,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<Map<String,String>> credentials;
+      private final @Nullable Output<Map<String,String>> credentials;
 
-    public Input<Map<String,String>> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<Map<String,String>> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ChannelArgs(
-        Input<String> accountName,
-        @Nullable Input<List<String>> channelFunctions,
-        @Nullable Input<String> channelName,
-        Input<String> channelType,
-        @Nullable Input<Map<String,String>> credentials,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<List<String>> channelFunctions,
+        @Nullable Output<String> channelName,
+        Output<String> channelType,
+        @Nullable Output<Map<String,String>> credentials,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.channelFunctions = channelFunctions;
         this.channelName = channelName;
@@ -98,12 +98,12 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChannelArgs() {
-        this.accountName = Input.empty();
-        this.channelFunctions = Input.empty();
-        this.channelName = Input.empty();
-        this.channelType = Input.empty();
-        this.credentials = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.channelFunctions = Output.empty();
+        this.channelName = Output.empty();
+        this.channelType = Output.empty();
+        this.credentials = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<List<String>> channelFunctions;
-        private @Nullable Input<String> channelName;
-        private Input<String> channelType;
-        private @Nullable Input<Map<String,String>> credentials;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<List<String>> channelFunctions;
+        private @Nullable Output<String> channelName;
+        private Output<String> channelType;
+        private @Nullable Output<Map<String,String>> credentials;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder channelFunctions(@Nullable Input<List<String>> channelFunctions) {
+        public Builder channelFunctions(@Nullable Output<List<String>> channelFunctions) {
             this.channelFunctions = channelFunctions;
             return this;
         }
 
         public Builder channelFunctions(@Nullable List<String> channelFunctions) {
-            this.channelFunctions = Input.ofNullable(channelFunctions);
+            this.channelFunctions = Output.ofNullable(channelFunctions);
             return this;
         }
 
-        public Builder channelName(@Nullable Input<String> channelName) {
+        public Builder channelName(@Nullable Output<String> channelName) {
             this.channelName = channelName;
             return this;
         }
 
         public Builder channelName(@Nullable String channelName) {
-            this.channelName = Input.ofNullable(channelName);
+            this.channelName = Output.ofNullable(channelName);
             return this;
         }
 
-        public Builder channelType(Input<String> channelType) {
+        public Builder channelType(Output<String> channelType) {
             this.channelType = Objects.requireNonNull(channelType);
             return this;
         }
 
         public Builder channelType(String channelType) {
-            this.channelType = Input.of(Objects.requireNonNull(channelType));
+            this.channelType = Output.of(Objects.requireNonNull(channelType));
             return this;
         }
 
-        public Builder credentials(@Nullable Input<Map<String,String>> credentials) {
+        public Builder credentials(@Nullable Output<Map<String,String>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable Map<String,String> credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ChannelArgs build() {

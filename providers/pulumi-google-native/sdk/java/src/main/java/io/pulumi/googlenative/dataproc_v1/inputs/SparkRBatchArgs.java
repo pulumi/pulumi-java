@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveUris")
-      private final @Nullable Input<List<String>> archiveUris;
+      private final @Nullable Output<List<String>> archiveUris;
 
-    public Input<List<String>> getArchiveUris() {
-        return this.archiveUris == null ? Input.empty() : this.archiveUris;
+    public Output<List<String>> getArchiveUris() {
+        return this.archiveUris == null ? Output.empty() : this.archiveUris;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileUris")
-      private final @Nullable Input<List<String>> fileUris;
+      private final @Nullable Output<List<String>> fileUris;
 
-    public Input<List<String>> getFileUris() {
-        return this.fileUris == null ? Input.empty() : this.fileUris;
+    public Output<List<String>> getFileUris() {
+        return this.fileUris == null ? Output.empty() : this.fileUris;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mainRFileUri", required=true)
-      private final Input<String> mainRFileUri;
+      private final Output<String> mainRFileUri;
 
-    public Input<String> getMainRFileUri() {
+    public Output<String> getMainRFileUri() {
         return this.mainRFileUri;
     }
 
     public SparkRBatchArgs(
-        @Nullable Input<List<String>> archiveUris,
-        @Nullable Input<List<String>> args,
-        @Nullable Input<List<String>> fileUris,
-        Input<String> mainRFileUri) {
+        @Nullable Output<List<String>> archiveUris,
+        @Nullable Output<List<String>> args,
+        @Nullable Output<List<String>> fileUris,
+        Output<String> mainRFileUri) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;
@@ -75,10 +75,10 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SparkRBatchArgs() {
-        this.archiveUris = Input.empty();
-        this.args = Input.empty();
-        this.fileUris = Input.empty();
-        this.mainRFileUri = Input.empty();
+        this.archiveUris = Output.empty();
+        this.args = Output.empty();
+        this.fileUris = Output.empty();
+        this.mainRFileUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> archiveUris;
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<List<String>> fileUris;
-        private Input<String> mainRFileUri;
+        private @Nullable Output<List<String>> archiveUris;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<List<String>> fileUris;
+        private Output<String> mainRFileUri;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mainRFileUri = defaults.mainRFileUri;
         }
 
-        public Builder archiveUris(@Nullable Input<List<String>> archiveUris) {
+        public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
             this.archiveUris = archiveUris;
             return this;
         }
 
         public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Input.ofNullable(archiveUris);
+            this.archiveUris = Output.ofNullable(archiveUris);
             return this;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder fileUris(@Nullable Input<List<String>> fileUris) {
+        public Builder fileUris(@Nullable Output<List<String>> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
 
         public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Input.ofNullable(fileUris);
+            this.fileUris = Output.ofNullable(fileUris);
             return this;
         }
 
-        public Builder mainRFileUri(Input<String> mainRFileUri) {
+        public Builder mainRFileUri(Output<String> mainRFileUri) {
             this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
             return this;
         }
 
         public Builder mainRFileUri(String mainRFileUri) {
-            this.mainRFileUri = Input.of(Objects.requireNonNull(mainRFileUri));
+            this.mainRFileUri = Output.of(Objects.requireNonNull(mainRFileUri));
             return this;
         }
         public SparkRBatchArgs build() {

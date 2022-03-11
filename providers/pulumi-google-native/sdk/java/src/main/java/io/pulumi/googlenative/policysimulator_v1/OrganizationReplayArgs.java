@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.policysimulator_v1.inputs.GoogleCloudPolicysimulatorV1ReplayConfigArgs;
 import java.lang.String;
@@ -20,39 +20,39 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
+      private final Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
 
-    public Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> getConfig() {
+    public Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> getConfig() {
         return this.config;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public OrganizationReplayArgs(
-        Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config,
-        @Nullable Input<String> location,
-        Input<String> organizationId) {
+        Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config,
+        @Nullable Output<String> location,
+        Output<String> organizationId) {
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
         this.location = location;
         this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
     }
 
     private OrganizationReplayArgs() {
-        this.config = Input.empty();
-        this.location = Input.empty();
-        this.organizationId = Input.empty();
+        this.config = Output.empty();
+        this.location = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,9 +64,9 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
-        private @Nullable Input<String> location;
-        private Input<String> organizationId;
+        private Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
+        private @Nullable Output<String> location;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -79,33 +79,33 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder config(Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config) {
+        public Builder config(Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(GoogleCloudPolicysimulatorV1ReplayConfigArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public OrganizationReplayArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkTier")
-      private final @Nullable Input<String> networkTier;
+      private final @Nullable Output<String> networkTier;
 
-    public Input<String> getNetworkTier() {
-        return this.networkTier == null ? Input.empty() : this.networkTier;
+    public Output<String> getNetworkTier() {
+        return this.networkTier == null ? Output.empty() : this.networkTier;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ProjectDefaultNetworkTierState(
-        @Nullable Input<String> networkTier,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> networkTier,
+        @Nullable Output<String> project) {
         this.networkTier = networkTier;
         this.project = project;
     }
 
     private ProjectDefaultNetworkTierState() {
-        this.networkTier = Input.empty();
-        this.project = Input.empty();
+        this.networkTier = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> networkTier;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> networkTier;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
     	      this.project = defaults.project;
         }
 
-        public Builder networkTier(@Nullable Input<String> networkTier) {
+        public Builder networkTier(@Nullable Output<String> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
 
         public Builder networkTier(@Nullable String networkTier) {
-            this.networkTier = Input.ofNullable(networkTier);
+            this.networkTier = Output.ofNullable(networkTier);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ProjectDefaultNetworkTierState build() {

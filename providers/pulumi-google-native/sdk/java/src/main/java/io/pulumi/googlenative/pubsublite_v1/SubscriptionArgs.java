@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsublite_v1.inputs.DeliveryConfigArgs;
 import java.lang.String;
@@ -20,17 +20,17 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryConfig")
-      private final @Nullable Input<DeliveryConfigArgs> deliveryConfig;
+      private final @Nullable Output<DeliveryConfigArgs> deliveryConfig;
 
-    public Input<DeliveryConfigArgs> getDeliveryConfig() {
-        return this.deliveryConfig == null ? Input.empty() : this.deliveryConfig;
+    public Output<DeliveryConfigArgs> getDeliveryConfig() {
+        return this.deliveryConfig == null ? Output.empty() : this.deliveryConfig;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -38,30 +38,30 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="skipBacklog")
-      private final @Nullable Input<String> skipBacklog;
+      private final @Nullable Output<String> skipBacklog;
 
-    public Input<String> getSkipBacklog() {
-        return this.skipBacklog == null ? Input.empty() : this.skipBacklog;
+    public Output<String> getSkipBacklog() {
+        return this.skipBacklog == null ? Output.empty() : this.skipBacklog;
     }
 
     @InputImport(name="subscriptionId", required=true)
-      private final Input<String> subscriptionId;
+      private final Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
+    public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
 
@@ -70,20 +70,20 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public SubscriptionArgs(
-        @Nullable Input<DeliveryConfigArgs> deliveryConfig,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> skipBacklog,
-        Input<String> subscriptionId,
-        @Nullable Input<String> topic) {
+        @Nullable Output<DeliveryConfigArgs> deliveryConfig,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> skipBacklog,
+        Output<String> subscriptionId,
+        @Nullable Output<String> topic) {
         this.deliveryConfig = deliveryConfig;
         this.location = location;
         this.name = name;
@@ -94,13 +94,13 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.deliveryConfig = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.skipBacklog = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.topic = Input.empty();
+        this.deliveryConfig = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.skipBacklog = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,13 +112,13 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DeliveryConfigArgs> deliveryConfig;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> skipBacklog;
-        private Input<String> subscriptionId;
-        private @Nullable Input<String> topic;
+        private @Nullable Output<DeliveryConfigArgs> deliveryConfig;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> skipBacklog;
+        private Output<String> subscriptionId;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -135,73 +135,73 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder deliveryConfig(@Nullable Input<DeliveryConfigArgs> deliveryConfig) {
+        public Builder deliveryConfig(@Nullable Output<DeliveryConfigArgs> deliveryConfig) {
             this.deliveryConfig = deliveryConfig;
             return this;
         }
 
         public Builder deliveryConfig(@Nullable DeliveryConfigArgs deliveryConfig) {
-            this.deliveryConfig = Input.ofNullable(deliveryConfig);
+            this.deliveryConfig = Output.ofNullable(deliveryConfig);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder skipBacklog(@Nullable Input<String> skipBacklog) {
+        public Builder skipBacklog(@Nullable Output<String> skipBacklog) {
             this.skipBacklog = skipBacklog;
             return this;
         }
 
         public Builder skipBacklog(@Nullable String skipBacklog) {
-            this.skipBacklog = Input.ofNullable(skipBacklog);
+            this.skipBacklog = Output.ofNullable(skipBacklog);
             return this;
         }
 
-        public Builder subscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
+            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public SubscriptionArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.enums.ResourceHealthStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceHealthStatus")
-      private final @Nullable Input<Either<String,ResourceHealthStatus>> resourceHealthStatus;
+      private final @Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus;
 
-    public Input<Either<String,ResourceHealthStatus>> getResourceHealthStatus() {
-        return this.resourceHealthStatus == null ? Input.empty() : this.resourceHealthStatus;
+    public Output<Either<String,ResourceHealthStatus>> getResourceHealthStatus() {
+        return this.resourceHealthStatus == null ? Output.empty() : this.resourceHealthStatus;
     }
 
-    public KPIResourceHealthDetailsArgs(@Nullable Input<Either<String,ResourceHealthStatus>> resourceHealthStatus) {
+    public KPIResourceHealthDetailsArgs(@Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus) {
         this.resourceHealthStatus = resourceHealthStatus;
     }
 
     private KPIResourceHealthDetailsArgs() {
-        this.resourceHealthStatus = Input.empty();
+        this.resourceHealthStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ResourceHealthStatus>> resourceHealthStatus;
+        private @Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.Reso
     	      this.resourceHealthStatus = defaults.resourceHealthStatus;
         }
 
-        public Builder resourceHealthStatus(@Nullable Input<Either<String,ResourceHealthStatus>> resourceHealthStatus) {
+        public Builder resourceHealthStatus(@Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus) {
             this.resourceHealthStatus = resourceHealthStatus;
             return this;
         }
 
         public Builder resourceHealthStatus(@Nullable Either<String,ResourceHealthStatus> resourceHealthStatus) {
-            this.resourceHealthStatus = Input.ofNullable(resourceHealthStatus);
+            this.resourceHealthStatus = Output.ofNullable(resourceHealthStatus);
             return this;
         }
         public KPIResourceHealthDetailsArgs build() {

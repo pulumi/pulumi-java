@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="thumbprint")
-      private final @Nullable Input<String> thumbprint;
+      private final @Nullable Output<String> thumbprint;
 
-    public Input<String> getThumbprint() {
-        return this.thumbprint == null ? Input.empty() : this.thumbprint;
+    public Output<String> getThumbprint() {
+        return this.thumbprint == null ? Output.empty() : this.thumbprint;
     }
 
     public VpnClientRevokedCertificateArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<String> thumbprint) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<String> thumbprint) {
         this.id = id;
         this.name = name;
         this.thumbprint = thumbprint;
     }
 
     private VpnClientRevokedCertificateArgs() {
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.thumbprint = Input.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.thumbprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> thumbprint;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> thumbprint;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class VpnClientRevokedCertificateArgs extends io.pulumi.resources.R
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder thumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Input.ofNullable(thumbprint);
+            this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
         public VpnClientRevokedCertificateArgs build() {

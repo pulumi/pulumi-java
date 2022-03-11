@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.TransferFilterDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends io.pul
      * 
      */
     @InputImport(name="include")
-      private final @Nullable Input<TransferFilterDetailsArgs> include;
+      private final @Nullable Output<TransferFilterDetailsArgs> include;
 
-    public Input<TransferFilterDetailsArgs> getInclude() {
-        return this.include == null ? Input.empty() : this.include;
+    public Output<TransferFilterDetailsArgs> getInclude() {
+        return this.include == null ? Output.empty() : this.include;
     }
 
-    public TransferConfigurationTransferFilterDetailsArgs(@Nullable Input<TransferFilterDetailsArgs> include) {
+    public TransferConfigurationTransferFilterDetailsArgs(@Nullable Output<TransferFilterDetailsArgs> include) {
         this.include = include;
     }
 
     private TransferConfigurationTransferFilterDetailsArgs() {
-        this.include = Input.empty();
+        this.include = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<TransferFilterDetailsArgs> include;
+        private @Nullable Output<TransferFilterDetailsArgs> include;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends io.pul
     	      this.include = defaults.include;
         }
 
-        public Builder include(@Nullable Input<TransferFilterDetailsArgs> include) {
+        public Builder include(@Nullable Output<TransferFilterDetailsArgs> include) {
             this.include = include;
             return this;
         }
 
         public Builder include(@Nullable TransferFilterDetailsArgs include) {
-            this.include = Input.ofNullable(include);
+            this.include = Output.ofNullable(include);
             return this;
         }
         public TransferConfigurationTransferFilterDetailsArgs build() {

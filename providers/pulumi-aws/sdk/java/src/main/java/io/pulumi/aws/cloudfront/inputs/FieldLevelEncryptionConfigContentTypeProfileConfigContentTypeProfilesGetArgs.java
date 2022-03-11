@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     public static final FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs Empty = new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs();
 
     @InputImport(name="items", required=true)
-      private final Input<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> items;
+      private final Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> items;
 
-    public Input<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> getItems() {
+    public Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> getItems() {
         return this.items;
     }
 
-    public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs(Input<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> items) {
+    public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs(Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> items) {
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
     }
 
     private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     }
 
     public static final class Builder {
-        private Input<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> items;
+        private Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     	      this.items = defaults.items;
         }
 
-        public Builder items(Input<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> items) {
+        public Builder items(Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs> items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
         public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs build() {

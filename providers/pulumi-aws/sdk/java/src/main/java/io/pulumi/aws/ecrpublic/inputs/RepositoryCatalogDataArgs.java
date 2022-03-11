@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecrpublic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="aboutText")
-      private final @Nullable Input<String> aboutText;
+      private final @Nullable Output<String> aboutText;
 
-    public Input<String> getAboutText() {
-        return this.aboutText == null ? Input.empty() : this.aboutText;
+    public Output<String> getAboutText() {
+        return this.aboutText == null ? Output.empty() : this.aboutText;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="architectures")
-      private final @Nullable Input<List<String>> architectures;
+      private final @Nullable Output<List<String>> architectures;
 
-    public Input<List<String>> getArchitectures() {
-        return this.architectures == null ? Input.empty() : this.architectures;
+    public Output<List<String>> getArchitectures() {
+        return this.architectures == null ? Output.empty() : this.architectures;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="logoImageBlob")
-      private final @Nullable Input<String> logoImageBlob;
+      private final @Nullable Output<String> logoImageBlob;
 
-    public Input<String> getLogoImageBlob() {
-        return this.logoImageBlob == null ? Input.empty() : this.logoImageBlob;
+    public Output<String> getLogoImageBlob() {
+        return this.logoImageBlob == null ? Output.empty() : this.logoImageBlob;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="operatingSystems")
-      private final @Nullable Input<List<String>> operatingSystems;
+      private final @Nullable Output<List<String>> operatingSystems;
 
-    public Input<List<String>> getOperatingSystems() {
-        return this.operatingSystems == null ? Input.empty() : this.operatingSystems;
+    public Output<List<String>> getOperatingSystems() {
+        return this.operatingSystems == null ? Output.empty() : this.operatingSystems;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="usageText")
-      private final @Nullable Input<String> usageText;
+      private final @Nullable Output<String> usageText;
 
-    public Input<String> getUsageText() {
-        return this.usageText == null ? Input.empty() : this.usageText;
+    public Output<String> getUsageText() {
+        return this.usageText == null ? Output.empty() : this.usageText;
     }
 
     public RepositoryCatalogDataArgs(
-        @Nullable Input<String> aboutText,
-        @Nullable Input<List<String>> architectures,
-        @Nullable Input<String> description,
-        @Nullable Input<String> logoImageBlob,
-        @Nullable Input<List<String>> operatingSystems,
-        @Nullable Input<String> usageText) {
+        @Nullable Output<String> aboutText,
+        @Nullable Output<List<String>> architectures,
+        @Nullable Output<String> description,
+        @Nullable Output<String> logoImageBlob,
+        @Nullable Output<List<String>> operatingSystems,
+        @Nullable Output<String> usageText) {
         this.aboutText = aboutText;
         this.architectures = architectures;
         this.description = description;
@@ -97,12 +97,12 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
     }
 
     private RepositoryCatalogDataArgs() {
-        this.aboutText = Input.empty();
-        this.architectures = Input.empty();
-        this.description = Input.empty();
-        this.logoImageBlob = Input.empty();
-        this.operatingSystems = Input.empty();
-        this.usageText = Input.empty();
+        this.aboutText = Output.empty();
+        this.architectures = Output.empty();
+        this.description = Output.empty();
+        this.logoImageBlob = Output.empty();
+        this.operatingSystems = Output.empty();
+        this.usageText = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aboutText;
-        private @Nullable Input<List<String>> architectures;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> logoImageBlob;
-        private @Nullable Input<List<String>> operatingSystems;
-        private @Nullable Input<String> usageText;
+        private @Nullable Output<String> aboutText;
+        private @Nullable Output<List<String>> architectures;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> logoImageBlob;
+        private @Nullable Output<List<String>> operatingSystems;
+        private @Nullable Output<String> usageText;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class RepositoryCatalogDataArgs extends io.pulumi.resources.Resourc
     	      this.usageText = defaults.usageText;
         }
 
-        public Builder aboutText(@Nullable Input<String> aboutText) {
+        public Builder aboutText(@Nullable Output<String> aboutText) {
             this.aboutText = aboutText;
             return this;
         }
 
         public Builder aboutText(@Nullable String aboutText) {
-            this.aboutText = Input.ofNullable(aboutText);
+            this.aboutText = Output.ofNullable(aboutText);
             return this;
         }
 
-        public Builder architectures(@Nullable Input<List<String>> architectures) {
+        public Builder architectures(@Nullable Output<List<String>> architectures) {
             this.architectures = architectures;
             return this;
         }
 
         public Builder architectures(@Nullable List<String> architectures) {
-            this.architectures = Input.ofNullable(architectures);
+            this.architectures = Output.ofNullable(architectures);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder logoImageBlob(@Nullable Input<String> logoImageBlob) {
+        public Builder logoImageBlob(@Nullable Output<String> logoImageBlob) {
             this.logoImageBlob = logoImageBlob;
             return this;
         }
 
         public Builder logoImageBlob(@Nullable String logoImageBlob) {
-            this.logoImageBlob = Input.ofNullable(logoImageBlob);
+            this.logoImageBlob = Output.ofNullable(logoImageBlob);
             return this;
         }
 
-        public Builder operatingSystems(@Nullable Input<List<String>> operatingSystems) {
+        public Builder operatingSystems(@Nullable Output<List<String>> operatingSystems) {
             this.operatingSystems = operatingSystems;
             return this;
         }
 
         public Builder operatingSystems(@Nullable List<String> operatingSystems) {
-            this.operatingSystems = Input.ofNullable(operatingSystems);
+            this.operatingSystems = Output.ofNullable(operatingSystems);
             return this;
         }
 
-        public Builder usageText(@Nullable Input<String> usageText) {
+        public Builder usageText(@Nullable Output<String> usageText) {
             this.usageText = usageText;
             return this;
         }
 
         public Builder usageText(@Nullable String usageText) {
-            this.usageText = Input.ofNullable(usageText);
+            this.usageText = Output.ofNullable(usageText);
             return this;
         }
         public RepositoryCatalogDataArgs build() {

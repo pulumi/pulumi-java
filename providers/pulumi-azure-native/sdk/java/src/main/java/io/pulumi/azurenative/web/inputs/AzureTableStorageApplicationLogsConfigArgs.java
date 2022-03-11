@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.LogLevel;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="level")
-      private final @Nullable Input<LogLevel> level;
+      private final @Nullable Output<LogLevel> level;
 
-    public Input<LogLevel> getLevel() {
-        return this.level == null ? Input.empty() : this.level;
+    public Output<LogLevel> getLevel() {
+        return this.level == null ? Output.empty() : this.level;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sasUrl", required=true)
-      private final Input<String> sasUrl;
+      private final Output<String> sasUrl;
 
-    public Input<String> getSasUrl() {
+    public Output<String> getSasUrl() {
         return this.sasUrl;
     }
 
     public AzureTableStorageApplicationLogsConfigArgs(
-        @Nullable Input<LogLevel> level,
-        Input<String> sasUrl) {
+        @Nullable Output<LogLevel> level,
+        Output<String> sasUrl) {
         this.level = level;
         this.sasUrl = Objects.requireNonNull(sasUrl, "expected parameter 'sasUrl' to be non-null");
     }
 
     private AzureTableStorageApplicationLogsConfigArgs() {
-        this.level = Input.empty();
-        this.sasUrl = Input.empty();
+        this.level = Output.empty();
+        this.sasUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<LogLevel> level;
-        private Input<String> sasUrl;
+        private @Nullable Output<LogLevel> level;
+        private Output<String> sasUrl;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
     	      this.sasUrl = defaults.sasUrl;
         }
 
-        public Builder level(@Nullable Input<LogLevel> level) {
+        public Builder level(@Nullable Output<LogLevel> level) {
             this.level = level;
             return this;
         }
 
         public Builder level(@Nullable LogLevel level) {
-            this.level = Input.ofNullable(level);
+            this.level = Output.ofNullable(level);
             return this;
         }
 
-        public Builder sasUrl(Input<String> sasUrl) {
+        public Builder sasUrl(Output<String> sasUrl) {
             this.sasUrl = Objects.requireNonNull(sasUrl);
             return this;
         }
 
         public Builder sasUrl(String sasUrl) {
-            this.sasUrl = Input.of(Objects.requireNonNull(sasUrl));
+            this.sasUrl = Output.of(Objects.requireNonNull(sasUrl));
             return this;
         }
         public AzureTableStorageApplicationLogsConfigArgs build() {

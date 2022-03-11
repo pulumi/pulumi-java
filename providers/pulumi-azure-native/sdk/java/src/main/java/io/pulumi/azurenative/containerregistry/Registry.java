@@ -11,7 +11,6 @@ import io.pulumi.azurenative.containerregistry.outputs.SkuResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StatusResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StorageAccountPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -259,28 +258,28 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Registry(String name, RegistryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerregistry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:containerregistry:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Registry(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Registry(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerregistry:Registry", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20160627preview:Registry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20170301:Registry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20170601preview:Registry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20171001:Registry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20190501:Registry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20191201preview:Registry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20201101preview:Registry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20210601preview:Registry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20210801preview:Registry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20210901:Registry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20211201preview:Registry").build())
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20160627preview:Registry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20170301:Registry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20170601preview:Registry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20171001:Registry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20190501:Registry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20191201preview:Registry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20201101preview:Registry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210601preview:Registry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210801preview:Registry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210901:Registry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20211201preview:Registry").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -294,7 +293,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Registry get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Registry get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Registry(name, id, options);
     }
 }

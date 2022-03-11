@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.CustomDnsConfigPropertiesFormatArgs;
 import io.pulumi.azurenative.network.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionArgs;
 import io.pulumi.azurenative.network.inputs.SubnetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customDnsConfigs")
-      private final @Nullable Input<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
+      private final @Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
 
-    public Input<List<CustomDnsConfigPropertiesFormatArgs>> getCustomDnsConfigs() {
-        return this.customDnsConfigs == null ? Input.empty() : this.customDnsConfigs;
+    public Output<List<CustomDnsConfigPropertiesFormatArgs>> getCustomDnsConfigs() {
+        return this.customDnsConfigs == null ? Output.empty() : this.customDnsConfigs;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="manualPrivateLinkServiceConnections")
-      private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
+      private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
-    public Input<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections == null ? Input.empty() : this.manualPrivateLinkServiceConnections;
+    public Output<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
+        return this.manualPrivateLinkServiceConnections == null ? Output.empty() : this.manualPrivateLinkServiceConnections;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateEndpointName")
-      private final @Nullable Input<String> privateEndpointName;
+      private final @Nullable Output<String> privateEndpointName;
 
-    public Input<String> getPrivateEndpointName() {
-        return this.privateEndpointName == null ? Input.empty() : this.privateEndpointName;
+    public Output<String> getPrivateEndpointName() {
+        return this.privateEndpointName == null ? Output.empty() : this.privateEndpointName;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateLinkServiceConnections")
-      private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
+      private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
-    public Input<List<PrivateLinkServiceConnectionArgs>> getPrivateLinkServiceConnections() {
-        return this.privateLinkServiceConnections == null ? Input.empty() : this.privateLinkServiceConnections;
+    public Output<List<PrivateLinkServiceConnectionArgs>> getPrivateLinkServiceConnections() {
+        return this.privateLinkServiceConnections == null ? Output.empty() : this.privateLinkServiceConnections;
     }
 
     /**
@@ -102,9 +102,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,10 +113,10 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<SubnetArgs> subnet;
+      private final @Nullable Output<SubnetArgs> subnet;
 
-    public Input<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<SubnetArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PrivateEndpointArgs(
-        @Nullable Input<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections,
-        @Nullable Input<String> privateEndpointName,
-        @Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections,
-        Input<String> resourceGroupName,
-        @Nullable Input<SubnetArgs> subnet,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections,
+        @Nullable Output<String> privateEndpointName,
+        @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections,
+        Output<String> resourceGroupName,
+        @Nullable Output<SubnetArgs> subnet,
+        @Nullable Output<Map<String,String>> tags) {
         this.customDnsConfigs = customDnsConfigs;
         this.extendedLocation = extendedLocation;
         this.id = id;
@@ -154,16 +154,16 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PrivateEndpointArgs() {
-        this.customDnsConfigs = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.manualPrivateLinkServiceConnections = Input.empty();
-        this.privateEndpointName = Input.empty();
-        this.privateLinkServiceConnections = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.subnet = Input.empty();
-        this.tags = Input.empty();
+        this.customDnsConfigs = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.manualPrivateLinkServiceConnections = Output.empty();
+        this.privateEndpointName = Output.empty();
+        this.privateLinkServiceConnections = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.subnet = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
-        private @Nullable Input<String> privateEndpointName;
-        private @Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SubnetArgs> subnet;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
+        private @Nullable Output<String> privateEndpointName;
+        private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SubnetArgs> subnet;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder customDnsConfigs(@Nullable Input<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs) {
+        public Builder customDnsConfigs(@Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs) {
             this.customDnsConfigs = customDnsConfigs;
             return this;
         }
 
         public Builder customDnsConfigs(@Nullable List<CustomDnsConfigPropertiesFormatArgs> customDnsConfigs) {
-            this.customDnsConfigs = Input.ofNullable(customDnsConfigs);
+            this.customDnsConfigs = Output.ofNullable(customDnsConfigs);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder manualPrivateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
+        public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = Input.ofNullable(manualPrivateLinkServiceConnections);
+            this.manualPrivateLinkServiceConnections = Output.ofNullable(manualPrivateLinkServiceConnections);
             return this;
         }
 
-        public Builder privateEndpointName(@Nullable Input<String> privateEndpointName) {
+        public Builder privateEndpointName(@Nullable Output<String> privateEndpointName) {
             this.privateEndpointName = privateEndpointName;
             return this;
         }
 
         public Builder privateEndpointName(@Nullable String privateEndpointName) {
-            this.privateEndpointName = Input.ofNullable(privateEndpointName);
+            this.privateEndpointName = Output.ofNullable(privateEndpointName);
             return this;
         }
 
-        public Builder privateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
+        public Builder privateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
 
         public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
-            this.privateLinkServiceConnections = Input.ofNullable(privateLinkServiceConnections);
+            this.privateLinkServiceConnections = Output.ofNullable(privateLinkServiceConnections);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder subnet(@Nullable Input<SubnetArgs> subnet) {
+        public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PrivateEndpointArgs build() {

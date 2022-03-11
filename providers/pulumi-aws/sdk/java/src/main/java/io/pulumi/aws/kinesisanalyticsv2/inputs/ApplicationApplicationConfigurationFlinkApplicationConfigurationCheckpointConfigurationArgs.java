@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="checkpointInterval")
-      private final @Nullable Input<Integer> checkpointInterval;
+      private final @Nullable Output<Integer> checkpointInterval;
 
-    public Input<Integer> getCheckpointInterval() {
-        return this.checkpointInterval == null ? Input.empty() : this.checkpointInterval;
+    public Output<Integer> getCheckpointInterval() {
+        return this.checkpointInterval == null ? Output.empty() : this.checkpointInterval;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="checkpointingEnabled")
-      private final @Nullable Input<Boolean> checkpointingEnabled;
+      private final @Nullable Output<Boolean> checkpointingEnabled;
 
-    public Input<Boolean> getCheckpointingEnabled() {
-        return this.checkpointingEnabled == null ? Input.empty() : this.checkpointingEnabled;
+    public Output<Boolean> getCheckpointingEnabled() {
+        return this.checkpointingEnabled == null ? Output.empty() : this.checkpointingEnabled;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="configurationType", required=true)
-      private final Input<String> configurationType;
+      private final Output<String> configurationType;
 
-    public Input<String> getConfigurationType() {
+    public Output<String> getConfigurationType() {
         return this.configurationType;
     }
 
@@ -57,17 +57,17 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="minPauseBetweenCheckpoints")
-      private final @Nullable Input<Integer> minPauseBetweenCheckpoints;
+      private final @Nullable Output<Integer> minPauseBetweenCheckpoints;
 
-    public Input<Integer> getMinPauseBetweenCheckpoints() {
-        return this.minPauseBetweenCheckpoints == null ? Input.empty() : this.minPauseBetweenCheckpoints;
+    public Output<Integer> getMinPauseBetweenCheckpoints() {
+        return this.minPauseBetweenCheckpoints == null ? Output.empty() : this.minPauseBetweenCheckpoints;
     }
 
     public ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs(
-        @Nullable Input<Integer> checkpointInterval,
-        @Nullable Input<Boolean> checkpointingEnabled,
-        Input<String> configurationType,
-        @Nullable Input<Integer> minPauseBetweenCheckpoints) {
+        @Nullable Output<Integer> checkpointInterval,
+        @Nullable Output<Boolean> checkpointingEnabled,
+        Output<String> configurationType,
+        @Nullable Output<Integer> minPauseBetweenCheckpoints) {
         this.checkpointInterval = checkpointInterval;
         this.checkpointingEnabled = checkpointingEnabled;
         this.configurationType = Objects.requireNonNull(configurationType, "expected parameter 'configurationType' to be non-null");
@@ -75,10 +75,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     }
 
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs() {
-        this.checkpointInterval = Input.empty();
-        this.checkpointingEnabled = Input.empty();
-        this.configurationType = Input.empty();
-        this.minPauseBetweenCheckpoints = Input.empty();
+        this.checkpointInterval = Output.empty();
+        this.checkpointingEnabled = Output.empty();
+        this.configurationType = Output.empty();
+        this.minPauseBetweenCheckpoints = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> checkpointInterval;
-        private @Nullable Input<Boolean> checkpointingEnabled;
-        private Input<String> configurationType;
-        private @Nullable Input<Integer> minPauseBetweenCheckpoints;
+        private @Nullable Output<Integer> checkpointInterval;
+        private @Nullable Output<Boolean> checkpointingEnabled;
+        private Output<String> configurationType;
+        private @Nullable Output<Integer> minPauseBetweenCheckpoints;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     	      this.minPauseBetweenCheckpoints = defaults.minPauseBetweenCheckpoints;
         }
 
-        public Builder checkpointInterval(@Nullable Input<Integer> checkpointInterval) {
+        public Builder checkpointInterval(@Nullable Output<Integer> checkpointInterval) {
             this.checkpointInterval = checkpointInterval;
             return this;
         }
 
         public Builder checkpointInterval(@Nullable Integer checkpointInterval) {
-            this.checkpointInterval = Input.ofNullable(checkpointInterval);
+            this.checkpointInterval = Output.ofNullable(checkpointInterval);
             return this;
         }
 
-        public Builder checkpointingEnabled(@Nullable Input<Boolean> checkpointingEnabled) {
+        public Builder checkpointingEnabled(@Nullable Output<Boolean> checkpointingEnabled) {
             this.checkpointingEnabled = checkpointingEnabled;
             return this;
         }
 
         public Builder checkpointingEnabled(@Nullable Boolean checkpointingEnabled) {
-            this.checkpointingEnabled = Input.ofNullable(checkpointingEnabled);
+            this.checkpointingEnabled = Output.ofNullable(checkpointingEnabled);
             return this;
         }
 
-        public Builder configurationType(Input<String> configurationType) {
+        public Builder configurationType(Output<String> configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
 
         public Builder configurationType(String configurationType) {
-            this.configurationType = Input.of(Objects.requireNonNull(configurationType));
+            this.configurationType = Output.of(Objects.requireNonNull(configurationType));
             return this;
         }
 
-        public Builder minPauseBetweenCheckpoints(@Nullable Input<Integer> minPauseBetweenCheckpoints) {
+        public Builder minPauseBetweenCheckpoints(@Nullable Output<Integer> minPauseBetweenCheckpoints) {
             this.minPauseBetweenCheckpoints = minPauseBetweenCheckpoints;
             return this;
         }
 
         public Builder minPauseBetweenCheckpoints(@Nullable Integer minPauseBetweenCheckpoints) {
-            this.minPauseBetweenCheckpoints = Input.ofNullable(minPauseBetweenCheckpoints);
+            this.minPauseBetweenCheckpoints = Output.ofNullable(minPauseBetweenCheckpoints);
             return this;
         }
         public ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs build() {

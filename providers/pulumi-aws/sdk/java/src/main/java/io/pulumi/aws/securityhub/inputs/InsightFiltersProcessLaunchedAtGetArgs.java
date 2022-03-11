@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.aws.securityhub.inputs.InsightFiltersProcessLaunchedAtDateRangeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class InsightFiltersProcessLaunchedAtGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dateRange")
-      private final @Nullable Input<InsightFiltersProcessLaunchedAtDateRangeGetArgs> dateRange;
+      private final @Nullable Output<InsightFiltersProcessLaunchedAtDateRangeGetArgs> dateRange;
 
-    public Input<InsightFiltersProcessLaunchedAtDateRangeGetArgs> getDateRange() {
-        return this.dateRange == null ? Input.empty() : this.dateRange;
+    public Output<InsightFiltersProcessLaunchedAtDateRangeGetArgs> getDateRange() {
+        return this.dateRange == null ? Output.empty() : this.dateRange;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InsightFiltersProcessLaunchedAtGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="end")
-      private final @Nullable Input<String> end;
+      private final @Nullable Output<String> end;
 
-    public Input<String> getEnd() {
-        return this.end == null ? Input.empty() : this.end;
+    public Output<String> getEnd() {
+        return this.end == null ? Output.empty() : this.end;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class InsightFiltersProcessLaunchedAtGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="start")
-      private final @Nullable Input<String> start;
+      private final @Nullable Output<String> start;
 
-    public Input<String> getStart() {
-        return this.start == null ? Input.empty() : this.start;
+    public Output<String> getStart() {
+        return this.start == null ? Output.empty() : this.start;
     }
 
     public InsightFiltersProcessLaunchedAtGetArgs(
-        @Nullable Input<InsightFiltersProcessLaunchedAtDateRangeGetArgs> dateRange,
-        @Nullable Input<String> end,
-        @Nullable Input<String> start) {
+        @Nullable Output<InsightFiltersProcessLaunchedAtDateRangeGetArgs> dateRange,
+        @Nullable Output<String> end,
+        @Nullable Output<String> start) {
         this.dateRange = dateRange;
         this.end = end;
         this.start = start;
     }
 
     private InsightFiltersProcessLaunchedAtGetArgs() {
-        this.dateRange = Input.empty();
-        this.end = Input.empty();
-        this.start = Input.empty();
+        this.dateRange = Output.empty();
+        this.end = Output.empty();
+        this.start = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class InsightFiltersProcessLaunchedAtGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<InsightFiltersProcessLaunchedAtDateRangeGetArgs> dateRange;
-        private @Nullable Input<String> end;
-        private @Nullable Input<String> start;
+        private @Nullable Output<InsightFiltersProcessLaunchedAtDateRangeGetArgs> dateRange;
+        private @Nullable Output<String> end;
+        private @Nullable Output<String> start;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class InsightFiltersProcessLaunchedAtGetArgs extends io.pulumi.reso
     	      this.start = defaults.start;
         }
 
-        public Builder dateRange(@Nullable Input<InsightFiltersProcessLaunchedAtDateRangeGetArgs> dateRange) {
+        public Builder dateRange(@Nullable Output<InsightFiltersProcessLaunchedAtDateRangeGetArgs> dateRange) {
             this.dateRange = dateRange;
             return this;
         }
 
         public Builder dateRange(@Nullable InsightFiltersProcessLaunchedAtDateRangeGetArgs dateRange) {
-            this.dateRange = Input.ofNullable(dateRange);
+            this.dateRange = Output.ofNullable(dateRange);
             return this;
         }
 
-        public Builder end(@Nullable Input<String> end) {
+        public Builder end(@Nullable Output<String> end) {
             this.end = end;
             return this;
         }
 
         public Builder end(@Nullable String end) {
-            this.end = Input.ofNullable(end);
+            this.end = Output.ofNullable(end);
             return this;
         }
 
-        public Builder start(@Nullable Input<String> start) {
+        public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
 
         public Builder start(@Nullable String start) {
-            this.start = Input.ofNullable(start);
+            this.start = Output.ofNullable(start);
             return this;
         }
         public InsightFiltersProcessLaunchedAtGetArgs build() {

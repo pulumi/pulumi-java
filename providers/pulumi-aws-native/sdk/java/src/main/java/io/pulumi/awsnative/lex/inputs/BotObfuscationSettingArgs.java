@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.enums.BotObfuscationSettingObfuscationSettingType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class BotObfuscationSettingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="obfuscationSettingType", required=true)
-      private final Input<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType;
+      private final Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType;
 
-    public Input<BotObfuscationSettingObfuscationSettingType> getObfuscationSettingType() {
+    public Output<BotObfuscationSettingObfuscationSettingType> getObfuscationSettingType() {
         return this.obfuscationSettingType;
     }
 
-    public BotObfuscationSettingArgs(Input<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType) {
+    public BotObfuscationSettingArgs(Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType) {
         this.obfuscationSettingType = Objects.requireNonNull(obfuscationSettingType, "expected parameter 'obfuscationSettingType' to be non-null");
     }
 
     private BotObfuscationSettingArgs() {
-        this.obfuscationSettingType = Input.empty();
+        this.obfuscationSettingType = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class BotObfuscationSettingArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType;
+        private Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class BotObfuscationSettingArgs extends io.pulumi.resources.Resourc
     	      this.obfuscationSettingType = defaults.obfuscationSettingType;
         }
 
-        public Builder obfuscationSettingType(Input<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType) {
+        public Builder obfuscationSettingType(Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType) {
             this.obfuscationSettingType = Objects.requireNonNull(obfuscationSettingType);
             return this;
         }
 
         public Builder obfuscationSettingType(BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
-            this.obfuscationSettingType = Input.of(Objects.requireNonNull(obfuscationSettingType));
+            this.obfuscationSettingType = Output.of(Objects.requireNonNull(obfuscationSettingType));
             return this;
         }
         public BotObfuscationSettingArgs build() {

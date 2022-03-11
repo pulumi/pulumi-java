@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="deserializer", required=true)
-      private final Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer;
+      private final Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> getDeserializer() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> getDeserializer() {
         return this.deserializer;
     }
 
-    public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs(Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer) {
+    public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs(Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer) {
         this.deserializer = Objects.requireNonNull(deserializer, "expected parameter 'deserializer' to be non-null");
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs() {
-        this.deserializer = Input.empty();
+        this.deserializer = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     public static final class Builder {
-        private Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer;
+        private Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     	      this.deserializer = defaults.deserializer;
         }
 
-        public Builder deserializer(Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer) {
+        public Builder deserializer(Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer) {
             this.deserializer = Objects.requireNonNull(deserializer);
             return this;
         }
 
         public Builder deserializer(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs deserializer) {
-            this.deserializer = Input.of(Objects.requireNonNull(deserializer));
+            this.deserializer = Output.of(Objects.requireNonNull(deserializer));
             return this;
         }
         public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.DatabaseEncryptionState;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<DatabaseEncryptionState> state;
+      private final @Nullable Output<DatabaseEncryptionState> state;
 
-    public Input<DatabaseEncryptionState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<DatabaseEncryptionState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public DatabaseEncryptionArgs(
-        @Nullable Input<String> keyName,
-        @Nullable Input<DatabaseEncryptionState> state) {
+        @Nullable Output<String> keyName,
+        @Nullable Output<DatabaseEncryptionState> state) {
         this.keyName = keyName;
         this.state = state;
     }
 
     private DatabaseEncryptionArgs() {
-        this.keyName = Input.empty();
-        this.state = Input.empty();
+        this.keyName = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyName;
-        private @Nullable Input<DatabaseEncryptionState> state;
+        private @Nullable Output<String> keyName;
+        private @Nullable Output<DatabaseEncryptionState> state;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
     	      this.state = defaults.state;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder state(@Nullable Input<DatabaseEncryptionState> state) {
+        public Builder state(@Nullable Output<DatabaseEncryptionState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable DatabaseEncryptionState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public DatabaseEncryptionArgs build() {

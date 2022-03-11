@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.speech_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ClassItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
-    public ClassItemArgs(@Nullable Input<String> value) {
+    public ClassItemArgs(@Nullable Output<String> value) {
         this.value = value;
     }
 
     private ClassItemArgs() {
-        this.value = Input.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ClassItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ClassItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ClassItemArgs build() {

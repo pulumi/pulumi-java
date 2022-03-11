@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="validateCertificateChain")
-      private final @Nullable Input<Boolean> validateCertificateChain;
+      private final @Nullable Output<Boolean> validateCertificateChain;
 
-    public Input<Boolean> getValidateCertificateChain() {
-        return this.validateCertificateChain == null ? Input.empty() : this.validateCertificateChain;
+    public Output<Boolean> getValidateCertificateChain() {
+        return this.validateCertificateChain == null ? Output.empty() : this.validateCertificateChain;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="validateCertificateName")
-      private final @Nullable Input<Boolean> validateCertificateName;
+      private final @Nullable Output<Boolean> validateCertificateName;
 
-    public Input<Boolean> getValidateCertificateName() {
-        return this.validateCertificateName == null ? Input.empty() : this.validateCertificateName;
+    public Output<Boolean> getValidateCertificateName() {
+        return this.validateCertificateName == null ? Output.empty() : this.validateCertificateName;
     }
 
     public BackendTlsPropertiesArgs(
-        @Nullable Input<Boolean> validateCertificateChain,
-        @Nullable Input<Boolean> validateCertificateName) {
-        this.validateCertificateChain = validateCertificateChain == null ? Input.ofNullable(true) : validateCertificateChain;
-        this.validateCertificateName = validateCertificateName == null ? Input.ofNullable(true) : validateCertificateName;
+        @Nullable Output<Boolean> validateCertificateChain,
+        @Nullable Output<Boolean> validateCertificateName) {
+        this.validateCertificateChain = validateCertificateChain == null ? Output.ofNullable(true) : validateCertificateChain;
+        this.validateCertificateName = validateCertificateName == null ? Output.ofNullable(true) : validateCertificateName;
     }
 
     private BackendTlsPropertiesArgs() {
-        this.validateCertificateChain = Input.empty();
-        this.validateCertificateName = Input.empty();
+        this.validateCertificateChain = Output.empty();
+        this.validateCertificateName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> validateCertificateChain;
-        private @Nullable Input<Boolean> validateCertificateName;
+        private @Nullable Output<Boolean> validateCertificateChain;
+        private @Nullable Output<Boolean> validateCertificateName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
     	      this.validateCertificateName = defaults.validateCertificateName;
         }
 
-        public Builder validateCertificateChain(@Nullable Input<Boolean> validateCertificateChain) {
+        public Builder validateCertificateChain(@Nullable Output<Boolean> validateCertificateChain) {
             this.validateCertificateChain = validateCertificateChain;
             return this;
         }
 
         public Builder validateCertificateChain(@Nullable Boolean validateCertificateChain) {
-            this.validateCertificateChain = Input.ofNullable(validateCertificateChain);
+            this.validateCertificateChain = Output.ofNullable(validateCertificateChain);
             return this;
         }
 
-        public Builder validateCertificateName(@Nullable Input<Boolean> validateCertificateName) {
+        public Builder validateCertificateName(@Nullable Output<Boolean> validateCertificateName) {
             this.validateCertificateName = validateCertificateName;
             return this;
         }
 
         public Builder validateCertificateName(@Nullable Boolean validateCertificateName) {
-            this.validateCertificateName = Input.ofNullable(validateCertificateName);
+            this.validateCertificateName = Output.ofNullable(validateCertificateName);
             return this;
         }
         public BackendTlsPropertiesArgs build() {

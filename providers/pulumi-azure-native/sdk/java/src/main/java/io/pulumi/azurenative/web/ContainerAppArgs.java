@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.ConfigurationArgs;
 import io.pulumi.azurenative.web.inputs.TemplateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<ConfigurationArgs> configuration;
+      private final @Nullable Output<ConfigurationArgs> configuration;
 
-    public Input<ConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<ConfigurationArgs> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubeEnvironmentId")
-      private final @Nullable Input<String> kubeEnvironmentId;
+      private final @Nullable Output<String> kubeEnvironmentId;
 
-    public Input<String> getKubeEnvironmentId() {
-        return this.kubeEnvironmentId == null ? Input.empty() : this.kubeEnvironmentId;
+    public Output<String> getKubeEnvironmentId() {
+        return this.kubeEnvironmentId == null ? Output.empty() : this.kubeEnvironmentId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,10 +88,10 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-      private final @Nullable Input<TemplateArgs> template;
+      private final @Nullable Output<TemplateArgs> template;
 
-    public Input<TemplateArgs> getTemplate() {
-        return this.template == null ? Input.empty() : this.template;
+    public Output<TemplateArgs> getTemplate() {
+        return this.template == null ? Output.empty() : this.template;
     }
 
     public ContainerAppArgs(
-        @Nullable Input<ConfigurationArgs> configuration,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> kubeEnvironmentId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<TemplateArgs> template) {
+        @Nullable Output<ConfigurationArgs> configuration,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> kubeEnvironmentId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<TemplateArgs> template) {
         this.configuration = configuration;
         this.kind = kind;
         this.kubeEnvironmentId = kubeEnvironmentId;
@@ -125,14 +125,14 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerAppArgs() {
-        this.configuration = Input.empty();
-        this.kind = Input.empty();
-        this.kubeEnvironmentId = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.template = Input.empty();
+        this.configuration = Output.empty();
+        this.kind = Output.empty();
+        this.kubeEnvironmentId = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.template = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigurationArgs> configuration;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> kubeEnvironmentId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<TemplateArgs> template;
+        private @Nullable Output<ConfigurationArgs> configuration;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> kubeEnvironmentId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<TemplateArgs> template;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.template = defaults.template;
         }
 
-        public Builder configuration(@Nullable Input<ConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Output<ConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable ConfigurationArgs configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder kubeEnvironmentId(@Nullable Input<String> kubeEnvironmentId) {
+        public Builder kubeEnvironmentId(@Nullable Output<String> kubeEnvironmentId) {
             this.kubeEnvironmentId = kubeEnvironmentId;
             return this;
         }
 
         public Builder kubeEnvironmentId(@Nullable String kubeEnvironmentId) {
-            this.kubeEnvironmentId = Input.ofNullable(kubeEnvironmentId);
+            this.kubeEnvironmentId = Output.ofNullable(kubeEnvironmentId);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder template(@Nullable Input<TemplateArgs> template) {
+        public Builder template(@Nullable Output<TemplateArgs> template) {
             this.template = template;
             return this;
         }
 
         public Builder template(@Nullable TemplateArgs template) {
-            this.template = Input.ofNullable(template);
+            this.template = Output.ofNullable(template);
             return this;
         }
         public ContainerAppArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelCustomArgs;
@@ -22,10 +22,10 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basic")
-      private final @Nullable Input<AccessLevelBasicArgs> basic;
+      private final @Nullable Output<AccessLevelBasicArgs> basic;
 
-    public Input<AccessLevelBasicArgs> getBasic() {
-        return this.basic == null ? Input.empty() : this.basic;
+    public Output<AccessLevelBasicArgs> getBasic() {
+        return this.basic == null ? Output.empty() : this.basic;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="custom")
-      private final @Nullable Input<AccessLevelCustomArgs> custom;
+      private final @Nullable Output<AccessLevelCustomArgs> custom;
 
-    public Input<AccessLevelCustomArgs> getCustom() {
-        return this.custom == null ? Input.empty() : this.custom;
+    public Output<AccessLevelCustomArgs> getCustom() {
+        return this.custom == null ? Output.empty() : this.custom;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -71,9 +71,9 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
@@ -82,19 +82,19 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
     public AccessLevelArgs(
-        @Nullable Input<AccessLevelBasicArgs> basic,
-        @Nullable Input<AccessLevelCustomArgs> custom,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<String> parent,
-        Input<String> title) {
+        @Nullable Output<AccessLevelBasicArgs> basic,
+        @Nullable Output<AccessLevelCustomArgs> custom,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<String> parent,
+        Output<String> title) {
         this.basic = basic;
         this.custom = custom;
         this.description = description;
@@ -104,12 +104,12 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessLevelArgs() {
-        this.basic = Input.empty();
-        this.custom = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.parent = Input.empty();
-        this.title = Input.empty();
+        this.basic = Output.empty();
+        this.custom = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.parent = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AccessLevelBasicArgs> basic;
-        private @Nullable Input<AccessLevelCustomArgs> custom;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<String> parent;
-        private Input<String> title;
+        private @Nullable Output<AccessLevelBasicArgs> basic;
+        private @Nullable Output<AccessLevelCustomArgs> custom;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<String> parent;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder basic(@Nullable Input<AccessLevelBasicArgs> basic) {
+        public Builder basic(@Nullable Output<AccessLevelBasicArgs> basic) {
             this.basic = basic;
             return this;
         }
 
         public Builder basic(@Nullable AccessLevelBasicArgs basic) {
-            this.basic = Input.ofNullable(basic);
+            this.basic = Output.ofNullable(basic);
             return this;
         }
 
-        public Builder custom(@Nullable Input<AccessLevelCustomArgs> custom) {
+        public Builder custom(@Nullable Output<AccessLevelCustomArgs> custom) {
             this.custom = custom;
             return this;
         }
 
         public Builder custom(@Nullable AccessLevelCustomArgs custom) {
-            this.custom = Input.ofNullable(custom);
+            this.custom = Output.ofNullable(custom);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public AccessLevelArgs build() {

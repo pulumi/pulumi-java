@@ -12,7 +12,6 @@ import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigVpnClientRevokedC
 import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigVpnClientRootCertificateResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -244,25 +243,25 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public P2sVpnServerConfiguration(String name, P2sVpnServerConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:P2sVpnServerConfiguration", name, args == null ? P2sVpnServerConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:P2sVpnServerConfiguration", name, args == null ? P2sVpnServerConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private P2sVpnServerConfiguration(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private P2sVpnServerConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:P2sVpnServerConfiguration", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:P2sVpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:P2sVpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:P2sVpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:P2sVpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:P2sVpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:P2sVpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:P2sVpnServerConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:P2sVpnServerConfiguration").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:P2sVpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:P2sVpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:P2sVpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:P2sVpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:P2sVpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:P2sVpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:P2sVpnServerConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:P2sVpnServerConfiguration").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -276,7 +275,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static P2sVpnServerConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static P2sVpnServerConfiguration get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new P2sVpnServerConfiguration(name, id, options);
     }
 }

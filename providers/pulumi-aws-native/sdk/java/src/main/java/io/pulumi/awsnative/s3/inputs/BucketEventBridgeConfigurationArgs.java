@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class BucketEventBridgeConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="eventBridgeEnabled", required=true)
-      private final Input<Boolean> eventBridgeEnabled;
+      private final Output<Boolean> eventBridgeEnabled;
 
-    public Input<Boolean> getEventBridgeEnabled() {
+    public Output<Boolean> getEventBridgeEnabled() {
         return this.eventBridgeEnabled;
     }
 
-    public BucketEventBridgeConfigurationArgs(Input<Boolean> eventBridgeEnabled) {
+    public BucketEventBridgeConfigurationArgs(Output<Boolean> eventBridgeEnabled) {
         this.eventBridgeEnabled = Objects.requireNonNull(eventBridgeEnabled, "expected parameter 'eventBridgeEnabled' to be non-null");
     }
 
     private BucketEventBridgeConfigurationArgs() {
-        this.eventBridgeEnabled = Input.empty();
+        this.eventBridgeEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class BucketEventBridgeConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<Boolean> eventBridgeEnabled;
+        private Output<Boolean> eventBridgeEnabled;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class BucketEventBridgeConfigurationArgs extends io.pulumi.resource
     	      this.eventBridgeEnabled = defaults.eventBridgeEnabled;
         }
 
-        public Builder eventBridgeEnabled(Input<Boolean> eventBridgeEnabled) {
+        public Builder eventBridgeEnabled(Output<Boolean> eventBridgeEnabled) {
             this.eventBridgeEnabled = Objects.requireNonNull(eventBridgeEnabled);
             return this;
         }
 
         public Builder eventBridgeEnabled(Boolean eventBridgeEnabled) {
-            this.eventBridgeEnabled = Input.of(Objects.requireNonNull(eventBridgeEnabled));
+            this.eventBridgeEnabled = Output.of(Objects.requireNonNull(eventBridgeEnabled));
             return this;
         }
         public BucketEventBridgeConfigurationArgs build() {

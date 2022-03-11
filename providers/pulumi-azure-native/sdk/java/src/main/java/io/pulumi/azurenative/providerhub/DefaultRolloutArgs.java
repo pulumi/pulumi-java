@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<DefaultRolloutPropertiesArgs> properties;
+      private final @Nullable Output<DefaultRolloutPropertiesArgs> properties;
 
-    public Input<DefaultRolloutPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<DefaultRolloutPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-      private final Input<String> providerNamespace;
+      private final Output<String> providerNamespace;
 
-    public Input<String> getProviderNamespace() {
+    public Output<String> getProviderNamespace() {
         return this.providerNamespace;
     }
 
@@ -42,25 +42,25 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutName")
-      private final @Nullable Input<String> rolloutName;
+      private final @Nullable Output<String> rolloutName;
 
-    public Input<String> getRolloutName() {
-        return this.rolloutName == null ? Input.empty() : this.rolloutName;
+    public Output<String> getRolloutName() {
+        return this.rolloutName == null ? Output.empty() : this.rolloutName;
     }
 
     public DefaultRolloutArgs(
-        @Nullable Input<DefaultRolloutPropertiesArgs> properties,
-        Input<String> providerNamespace,
-        @Nullable Input<String> rolloutName) {
+        @Nullable Output<DefaultRolloutPropertiesArgs> properties,
+        Output<String> providerNamespace,
+        @Nullable Output<String> rolloutName) {
         this.properties = properties;
         this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
         this.rolloutName = rolloutName;
     }
 
     private DefaultRolloutArgs() {
-        this.properties = Input.empty();
-        this.providerNamespace = Input.empty();
-        this.rolloutName = Input.empty();
+        this.properties = Output.empty();
+        this.providerNamespace = Output.empty();
+        this.rolloutName = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DefaultRolloutPropertiesArgs> properties;
-        private Input<String> providerNamespace;
-        private @Nullable Input<String> rolloutName;
+        private @Nullable Output<DefaultRolloutPropertiesArgs> properties;
+        private Output<String> providerNamespace;
+        private @Nullable Output<String> rolloutName;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rolloutName = defaults.rolloutName;
         }
 
-        public Builder properties(@Nullable Input<DefaultRolloutPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<DefaultRolloutPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable DefaultRolloutPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder providerNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Output<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
+            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
 
-        public Builder rolloutName(@Nullable Input<String> rolloutName) {
+        public Builder rolloutName(@Nullable Output<String> rolloutName) {
             this.rolloutName = rolloutName;
             return this;
         }
 
         public Builder rolloutName(@Nullable String rolloutName) {
-            this.rolloutName = Input.ofNullable(rolloutName);
+            this.rolloutName = Output.ofNullable(rolloutName);
             return this;
         }
         public DefaultRolloutArgs build() {

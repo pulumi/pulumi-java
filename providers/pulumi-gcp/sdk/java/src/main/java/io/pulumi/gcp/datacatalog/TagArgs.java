@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TagFieldArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="column")
-      private final @Nullable Input<String> column;
+      private final @Nullable Output<String> column;
 
-    public Input<String> getColumn() {
-        return this.column == null ? Input.empty() : this.column;
+    public Output<String> getColumn() {
+        return this.column == null ? Output.empty() : this.column;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-      private final Input<List<TagFieldArgs>> fields;
+      private final Output<List<TagFieldArgs>> fields;
 
-    public Input<List<TagFieldArgs>> getFields() {
+    public Output<List<TagFieldArgs>> getFields() {
         return this.fields;
     }
 
@@ -49,10 +49,10 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     /**
@@ -62,17 +62,17 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template", required=true)
-      private final Input<String> template;
+      private final Output<String> template;
 
-    public Input<String> getTemplate() {
+    public Output<String> getTemplate() {
         return this.template;
     }
 
     public TagArgs(
-        @Nullable Input<String> column,
-        Input<List<TagFieldArgs>> fields,
-        @Nullable Input<String> parent,
-        Input<String> template) {
+        @Nullable Output<String> column,
+        Output<List<TagFieldArgs>> fields,
+        @Nullable Output<String> parent,
+        Output<String> template) {
         this.column = column;
         this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
         this.parent = parent;
@@ -80,10 +80,10 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagArgs() {
-        this.column = Input.empty();
-        this.fields = Input.empty();
-        this.parent = Input.empty();
-        this.template = Input.empty();
+        this.column = Output.empty();
+        this.fields = Output.empty();
+        this.parent = Output.empty();
+        this.template = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,10 +95,10 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> column;
-        private Input<List<TagFieldArgs>> fields;
-        private @Nullable Input<String> parent;
-        private Input<String> template;
+        private @Nullable Output<String> column;
+        private Output<List<TagFieldArgs>> fields;
+        private @Nullable Output<String> parent;
+        private Output<String> template;
 
         public Builder() {
     	      // Empty
@@ -112,43 +112,43 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.template = defaults.template;
         }
 
-        public Builder column(@Nullable Input<String> column) {
+        public Builder column(@Nullable Output<String> column) {
             this.column = column;
             return this;
         }
 
         public Builder column(@Nullable String column) {
-            this.column = Input.ofNullable(column);
+            this.column = Output.ofNullable(column);
             return this;
         }
 
-        public Builder fields(Input<List<TagFieldArgs>> fields) {
+        public Builder fields(Output<List<TagFieldArgs>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
         public Builder fields(List<TagFieldArgs> fields) {
-            this.fields = Input.of(Objects.requireNonNull(fields));
+            this.fields = Output.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder template(Input<String> template) {
+        public Builder template(Output<String> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
         public Builder template(String template) {
-            this.template = Input.of(Objects.requireNonNull(template));
+            this.template = Output.of(Objects.requireNonNull(template));
             return this;
         }
         public TagArgs build() {

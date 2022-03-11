@@ -6,7 +6,7 @@ package io.pulumi.aws.msk.inputs;
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs;
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsFirehoseArgs;
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsS3Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,39 +17,39 @@ public final class ClusterLoggingInfoBrokerLogsArgs extends io.pulumi.resources.
     public static final ClusterLoggingInfoBrokerLogsArgs Empty = new ClusterLoggingInfoBrokerLogsArgs();
 
     @InputImport(name="cloudwatchLogs")
-      private final @Nullable Input<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs;
+      private final @Nullable Output<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs;
 
-    public Input<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> getCloudwatchLogs() {
-        return this.cloudwatchLogs == null ? Input.empty() : this.cloudwatchLogs;
+    public Output<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> getCloudwatchLogs() {
+        return this.cloudwatchLogs == null ? Output.empty() : this.cloudwatchLogs;
     }
 
     @InputImport(name="firehose")
-      private final @Nullable Input<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose;
+      private final @Nullable Output<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose;
 
-    public Input<ClusterLoggingInfoBrokerLogsFirehoseArgs> getFirehose() {
-        return this.firehose == null ? Input.empty() : this.firehose;
+    public Output<ClusterLoggingInfoBrokerLogsFirehoseArgs> getFirehose() {
+        return this.firehose == null ? Output.empty() : this.firehose;
     }
 
     @InputImport(name="s3")
-      private final @Nullable Input<ClusterLoggingInfoBrokerLogsS3Args> s3;
+      private final @Nullable Output<ClusterLoggingInfoBrokerLogsS3Args> s3;
 
-    public Input<ClusterLoggingInfoBrokerLogsS3Args> getS3() {
-        return this.s3 == null ? Input.empty() : this.s3;
+    public Output<ClusterLoggingInfoBrokerLogsS3Args> getS3() {
+        return this.s3 == null ? Output.empty() : this.s3;
     }
 
     public ClusterLoggingInfoBrokerLogsArgs(
-        @Nullable Input<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs,
-        @Nullable Input<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose,
-        @Nullable Input<ClusterLoggingInfoBrokerLogsS3Args> s3) {
+        @Nullable Output<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs,
+        @Nullable Output<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose,
+        @Nullable Output<ClusterLoggingInfoBrokerLogsS3Args> s3) {
         this.cloudwatchLogs = cloudwatchLogs;
         this.firehose = firehose;
         this.s3 = s3;
     }
 
     private ClusterLoggingInfoBrokerLogsArgs() {
-        this.cloudwatchLogs = Input.empty();
-        this.firehose = Input.empty();
-        this.s3 = Input.empty();
+        this.cloudwatchLogs = Output.empty();
+        this.firehose = Output.empty();
+        this.s3 = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class ClusterLoggingInfoBrokerLogsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs;
-        private @Nullable Input<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose;
-        private @Nullable Input<ClusterLoggingInfoBrokerLogsS3Args> s3;
+        private @Nullable Output<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs;
+        private @Nullable Output<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose;
+        private @Nullable Output<ClusterLoggingInfoBrokerLogsS3Args> s3;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class ClusterLoggingInfoBrokerLogsArgs extends io.pulumi.resources.
     	      this.s3 = defaults.s3;
         }
 
-        public Builder cloudwatchLogs(@Nullable Input<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs) {
+        public Builder cloudwatchLogs(@Nullable Output<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs) {
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
 
         public Builder cloudwatchLogs(@Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs cloudwatchLogs) {
-            this.cloudwatchLogs = Input.ofNullable(cloudwatchLogs);
+            this.cloudwatchLogs = Output.ofNullable(cloudwatchLogs);
             return this;
         }
 
-        public Builder firehose(@Nullable Input<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose) {
+        public Builder firehose(@Nullable Output<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose) {
             this.firehose = firehose;
             return this;
         }
 
         public Builder firehose(@Nullable ClusterLoggingInfoBrokerLogsFirehoseArgs firehose) {
-            this.firehose = Input.ofNullable(firehose);
+            this.firehose = Output.ofNullable(firehose);
             return this;
         }
 
-        public Builder s3(@Nullable Input<ClusterLoggingInfoBrokerLogsS3Args> s3) {
+        public Builder s3(@Nullable Output<ClusterLoggingInfoBrokerLogsS3Args> s3) {
             this.s3 = s3;
             return this;
         }
 
         public Builder s3(@Nullable ClusterLoggingInfoBrokerLogsS3Args s3) {
-            this.s3 = Input.ofNullable(s3);
+            this.s3 = Output.ofNullable(s3);
             return this;
         }
         public ClusterLoggingInfoBrokerLogsArgs build() {

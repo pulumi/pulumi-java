@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorTermArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class NodeSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeSelectorTerms", required=true)
-      private final Input<List<NodeSelectorTermArgs>> nodeSelectorTerms;
+      private final Output<List<NodeSelectorTermArgs>> nodeSelectorTerms;
 
-    public Input<List<NodeSelectorTermArgs>> getNodeSelectorTerms() {
+    public Output<List<NodeSelectorTermArgs>> getNodeSelectorTerms() {
         return this.nodeSelectorTerms;
     }
 
-    public NodeSelectorArgs(Input<List<NodeSelectorTermArgs>> nodeSelectorTerms) {
+    public NodeSelectorArgs(Output<List<NodeSelectorTermArgs>> nodeSelectorTerms) {
         this.nodeSelectorTerms = Objects.requireNonNull(nodeSelectorTerms, "expected parameter 'nodeSelectorTerms' to be non-null");
     }
 
     private NodeSelectorArgs() {
-        this.nodeSelectorTerms = Input.empty();
+        this.nodeSelectorTerms = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NodeSelectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<NodeSelectorTermArgs>> nodeSelectorTerms;
+        private Output<List<NodeSelectorTermArgs>> nodeSelectorTerms;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NodeSelectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nodeSelectorTerms = defaults.nodeSelectorTerms;
         }
 
-        public Builder nodeSelectorTerms(Input<List<NodeSelectorTermArgs>> nodeSelectorTerms) {
+        public Builder nodeSelectorTerms(Output<List<NodeSelectorTermArgs>> nodeSelectorTerms) {
             this.nodeSelectorTerms = Objects.requireNonNull(nodeSelectorTerms);
             return this;
         }
 
         public Builder nodeSelectorTerms(List<NodeSelectorTermArgs> nodeSelectorTerms) {
-            this.nodeSelectorTerms = Input.of(Objects.requireNonNull(nodeSelectorTerms));
+            this.nodeSelectorTerms = Output.of(Objects.requireNonNull(nodeSelectorTerms));
             return this;
         }
         public NodeSelectorArgs build() {

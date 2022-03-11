@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
     public SqlStoredProcedureResourceArgs(
-        @Nullable Input<String> body,
-        Input<String> id) {
+        @Nullable Output<String> body,
+        Output<String> id) {
         this.body = body;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
     }
 
     private SqlStoredProcedureResourceArgs() {
-        this.body = Input.empty();
-        this.id = Input.empty();
+        this.body = Output.empty();
+        this.id = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> body;
-        private Input<String> id;
+        private @Nullable Output<String> body;
+        private Output<String> id;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
     	      this.id = defaults.id;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
         public SqlStoredProcedureResourceArgs build() {

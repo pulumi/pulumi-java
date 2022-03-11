@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apprunner;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -31,10 +31,10 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableWwwSubdomain")
-      private final @Nullable Input<Boolean> enableWwwSubdomain;
+      private final @Nullable Output<Boolean> enableWwwSubdomain;
 
-    public Input<Boolean> getEnableWwwSubdomain() {
-        return this.enableWwwSubdomain == null ? Input.empty() : this.enableWwwSubdomain;
+    public Output<Boolean> getEnableWwwSubdomain() {
+        return this.enableWwwSubdomain == null ? Output.empty() : this.enableWwwSubdomain;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceArn", required=true)
-      private final Input<String> serviceArn;
+      private final Output<String> serviceArn;
 
-    public Input<String> getServiceArn() {
+    public Output<String> getServiceArn() {
         return this.serviceArn;
     }
 
     public CustomDomainAssociationArgs(
-        Input<String> domainName,
-        @Nullable Input<Boolean> enableWwwSubdomain,
-        Input<String> serviceArn) {
+        Output<String> domainName,
+        @Nullable Output<Boolean> enableWwwSubdomain,
+        Output<String> serviceArn) {
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.enableWwwSubdomain = enableWwwSubdomain;
         this.serviceArn = Objects.requireNonNull(serviceArn, "expected parameter 'serviceArn' to be non-null");
     }
 
     private CustomDomainAssociationArgs() {
-        this.domainName = Input.empty();
-        this.enableWwwSubdomain = Input.empty();
-        this.serviceArn = Input.empty();
+        this.domainName = Output.empty();
+        this.enableWwwSubdomain = Output.empty();
+        this.serviceArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> domainName;
-        private @Nullable Input<Boolean> enableWwwSubdomain;
-        private Input<String> serviceArn;
+        private Output<String> domainName;
+        private @Nullable Output<Boolean> enableWwwSubdomain;
+        private Output<String> serviceArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
     	      this.serviceArn = defaults.serviceArn;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder enableWwwSubdomain(@Nullable Input<Boolean> enableWwwSubdomain) {
+        public Builder enableWwwSubdomain(@Nullable Output<Boolean> enableWwwSubdomain) {
             this.enableWwwSubdomain = enableWwwSubdomain;
             return this;
         }
 
         public Builder enableWwwSubdomain(@Nullable Boolean enableWwwSubdomain) {
-            this.enableWwwSubdomain = Input.ofNullable(enableWwwSubdomain);
+            this.enableWwwSubdomain = Output.ofNullable(enableWwwSubdomain);
             return this;
         }
 
-        public Builder serviceArn(Input<String> serviceArn) {
+        public Builder serviceArn(Output<String> serviceArn) {
             this.serviceArn = Objects.requireNonNull(serviceArn);
             return this;
         }
 
         public Builder serviceArn(String serviceArn) {
-            this.serviceArn = Input.of(Objects.requireNonNull(serviceArn));
+            this.serviceArn = Output.of(Objects.requireNonNull(serviceArn));
             return this;
         }
         public CustomDomainAssociationArgs build() {

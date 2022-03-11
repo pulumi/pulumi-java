@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.SchedulingInstanceTerminationAction;
 import io.pulumi.googlenative.compute_alpha.enums.SchedulingMaintenanceInterval;
@@ -32,10 +32,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automaticRestart")
-      private final @Nullable Input<Boolean> automaticRestart;
+      private final @Nullable Output<Boolean> automaticRestart;
 
-    public Input<Boolean> getAutomaticRestart() {
-        return this.automaticRestart == null ? Input.empty() : this.automaticRestart;
+    public Output<Boolean> getAutomaticRestart() {
+        return this.automaticRestart == null ? Output.empty() : this.automaticRestart;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityDomain")
-      private final @Nullable Input<Integer> availabilityDomain;
+      private final @Nullable Output<Integer> availabilityDomain;
 
-    public Input<Integer> getAvailabilityDomain() {
-        return this.availabilityDomain == null ? Input.empty() : this.availabilityDomain;
+    public Output<Integer> getAvailabilityDomain() {
+        return this.availabilityDomain == null ? Output.empty() : this.availabilityDomain;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currentCpus")
-      private final @Nullable Input<Integer> currentCpus;
+      private final @Nullable Output<Integer> currentCpus;
 
-    public Input<Integer> getCurrentCpus() {
-        return this.currentCpus == null ? Input.empty() : this.currentCpus;
+    public Output<Integer> getCurrentCpus() {
+        return this.currentCpus == null ? Output.empty() : this.currentCpus;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currentMemoryMb")
-      private final @Nullable Input<String> currentMemoryMb;
+      private final @Nullable Output<String> currentMemoryMb;
 
-    public Input<String> getCurrentMemoryMb() {
-        return this.currentMemoryMb == null ? Input.empty() : this.currentMemoryMb;
+    public Output<String> getCurrentMemoryMb() {
+        return this.currentMemoryMb == null ? Output.empty() : this.currentMemoryMb;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostErrorTimeoutSeconds")
-      private final @Nullable Input<Integer> hostErrorTimeoutSeconds;
+      private final @Nullable Output<Integer> hostErrorTimeoutSeconds;
 
-    public Input<Integer> getHostErrorTimeoutSeconds() {
-        return this.hostErrorTimeoutSeconds == null ? Input.empty() : this.hostErrorTimeoutSeconds;
+    public Output<Integer> getHostErrorTimeoutSeconds() {
+        return this.hostErrorTimeoutSeconds == null ? Output.empty() : this.hostErrorTimeoutSeconds;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceTerminationAction")
-      private final @Nullable Input<SchedulingInstanceTerminationAction> instanceTerminationAction;
+      private final @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
 
-    public Input<SchedulingInstanceTerminationAction> getInstanceTerminationAction() {
-        return this.instanceTerminationAction == null ? Input.empty() : this.instanceTerminationAction;
+    public Output<SchedulingInstanceTerminationAction> getInstanceTerminationAction() {
+        return this.instanceTerminationAction == null ? Output.empty() : this.instanceTerminationAction;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latencyTolerant")
-      private final @Nullable Input<Boolean> latencyTolerant;
+      private final @Nullable Output<Boolean> latencyTolerant;
 
-    public Input<Boolean> getLatencyTolerant() {
-        return this.latencyTolerant == null ? Input.empty() : this.latencyTolerant;
+    public Output<Boolean> getLatencyTolerant() {
+        return this.latencyTolerant == null ? Output.empty() : this.latencyTolerant;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationHint")
-      private final @Nullable Input<String> locationHint;
+      private final @Nullable Output<String> locationHint;
 
-    public Input<String> getLocationHint() {
-        return this.locationHint == null ? Input.empty() : this.locationHint;
+    public Output<String> getLocationHint() {
+        return this.locationHint == null ? Output.empty() : this.locationHint;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceFreezeDurationHours")
-      private final @Nullable Input<Integer> maintenanceFreezeDurationHours;
+      private final @Nullable Output<Integer> maintenanceFreezeDurationHours;
 
-    public Input<Integer> getMaintenanceFreezeDurationHours() {
-        return this.maintenanceFreezeDurationHours == null ? Input.empty() : this.maintenanceFreezeDurationHours;
+    public Output<Integer> getMaintenanceFreezeDurationHours() {
+        return this.maintenanceFreezeDurationHours == null ? Output.empty() : this.maintenanceFreezeDurationHours;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceInterval")
-      private final @Nullable Input<SchedulingMaintenanceInterval> maintenanceInterval;
+      private final @Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval;
 
-    public Input<SchedulingMaintenanceInterval> getMaintenanceInterval() {
-        return this.maintenanceInterval == null ? Input.empty() : this.maintenanceInterval;
+    public Output<SchedulingMaintenanceInterval> getMaintenanceInterval() {
+        return this.maintenanceInterval == null ? Output.empty() : this.maintenanceInterval;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRunDuration")
-      private final @Nullable Input<DurationArgs> maxRunDuration;
+      private final @Nullable Output<DurationArgs> maxRunDuration;
 
-    public Input<DurationArgs> getMaxRunDuration() {
-        return this.maxRunDuration == null ? Input.empty() : this.maxRunDuration;
+    public Output<DurationArgs> getMaxRunDuration() {
+        return this.maxRunDuration == null ? Output.empty() : this.maxRunDuration;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minNodeCpus")
-      private final @Nullable Input<Integer> minNodeCpus;
+      private final @Nullable Output<Integer> minNodeCpus;
 
-    public Input<Integer> getMinNodeCpus() {
-        return this.minNodeCpus == null ? Input.empty() : this.minNodeCpus;
+    public Output<Integer> getMinNodeCpus() {
+        return this.minNodeCpus == null ? Output.empty() : this.minNodeCpus;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeAffinities")
-      private final @Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities;
+      private final @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
-    public Input<List<SchedulingNodeAffinityArgs>> getNodeAffinities() {
-        return this.nodeAffinities == null ? Input.empty() : this.nodeAffinities;
+    public Output<List<SchedulingNodeAffinityArgs>> getNodeAffinities() {
+        return this.nodeAffinities == null ? Output.empty() : this.nodeAffinities;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onHostMaintenance")
-      private final @Nullable Input<SchedulingOnHostMaintenance> onHostMaintenance;
+      private final @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
 
-    public Input<SchedulingOnHostMaintenance> getOnHostMaintenance() {
-        return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
+    public Output<SchedulingOnHostMaintenance> getOnHostMaintenance() {
+        return this.onHostMaintenance == null ? Output.empty() : this.onHostMaintenance;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preemptible")
-      private final @Nullable Input<Boolean> preemptible;
+      private final @Nullable Output<Boolean> preemptible;
 
-    public Input<Boolean> getPreemptible() {
-        return this.preemptible == null ? Input.empty() : this.preemptible;
+    public Output<Boolean> getPreemptible() {
+        return this.preemptible == null ? Output.empty() : this.preemptible;
     }
 
     /**
@@ -197,10 +197,10 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningModel")
-      private final @Nullable Input<SchedulingProvisioningModel> provisioningModel;
+      private final @Nullable Output<SchedulingProvisioningModel> provisioningModel;
 
-    public Input<SchedulingProvisioningModel> getProvisioningModel() {
-        return this.provisioningModel == null ? Input.empty() : this.provisioningModel;
+    public Output<SchedulingProvisioningModel> getProvisioningModel() {
+        return this.provisioningModel == null ? Output.empty() : this.provisioningModel;
     }
 
     /**
@@ -208,30 +208,30 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationTime")
-      private final @Nullable Input<String> terminationTime;
+      private final @Nullable Output<String> terminationTime;
 
-    public Input<String> getTerminationTime() {
-        return this.terminationTime == null ? Input.empty() : this.terminationTime;
+    public Output<String> getTerminationTime() {
+        return this.terminationTime == null ? Output.empty() : this.terminationTime;
     }
 
     public SchedulingArgs(
-        @Nullable Input<Boolean> automaticRestart,
-        @Nullable Input<Integer> availabilityDomain,
-        @Nullable Input<Integer> currentCpus,
-        @Nullable Input<String> currentMemoryMb,
-        @Nullable Input<Integer> hostErrorTimeoutSeconds,
-        @Nullable Input<SchedulingInstanceTerminationAction> instanceTerminationAction,
-        @Nullable Input<Boolean> latencyTolerant,
-        @Nullable Input<String> locationHint,
-        @Nullable Input<Integer> maintenanceFreezeDurationHours,
-        @Nullable Input<SchedulingMaintenanceInterval> maintenanceInterval,
-        @Nullable Input<DurationArgs> maxRunDuration,
-        @Nullable Input<Integer> minNodeCpus,
-        @Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities,
-        @Nullable Input<SchedulingOnHostMaintenance> onHostMaintenance,
-        @Nullable Input<Boolean> preemptible,
-        @Nullable Input<SchedulingProvisioningModel> provisioningModel,
-        @Nullable Input<String> terminationTime) {
+        @Nullable Output<Boolean> automaticRestart,
+        @Nullable Output<Integer> availabilityDomain,
+        @Nullable Output<Integer> currentCpus,
+        @Nullable Output<String> currentMemoryMb,
+        @Nullable Output<Integer> hostErrorTimeoutSeconds,
+        @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction,
+        @Nullable Output<Boolean> latencyTolerant,
+        @Nullable Output<String> locationHint,
+        @Nullable Output<Integer> maintenanceFreezeDurationHours,
+        @Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval,
+        @Nullable Output<DurationArgs> maxRunDuration,
+        @Nullable Output<Integer> minNodeCpus,
+        @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities,
+        @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance,
+        @Nullable Output<Boolean> preemptible,
+        @Nullable Output<SchedulingProvisioningModel> provisioningModel,
+        @Nullable Output<String> terminationTime) {
         this.automaticRestart = automaticRestart;
         this.availabilityDomain = availabilityDomain;
         this.currentCpus = currentCpus;
@@ -252,23 +252,23 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchedulingArgs() {
-        this.automaticRestart = Input.empty();
-        this.availabilityDomain = Input.empty();
-        this.currentCpus = Input.empty();
-        this.currentMemoryMb = Input.empty();
-        this.hostErrorTimeoutSeconds = Input.empty();
-        this.instanceTerminationAction = Input.empty();
-        this.latencyTolerant = Input.empty();
-        this.locationHint = Input.empty();
-        this.maintenanceFreezeDurationHours = Input.empty();
-        this.maintenanceInterval = Input.empty();
-        this.maxRunDuration = Input.empty();
-        this.minNodeCpus = Input.empty();
-        this.nodeAffinities = Input.empty();
-        this.onHostMaintenance = Input.empty();
-        this.preemptible = Input.empty();
-        this.provisioningModel = Input.empty();
-        this.terminationTime = Input.empty();
+        this.automaticRestart = Output.empty();
+        this.availabilityDomain = Output.empty();
+        this.currentCpus = Output.empty();
+        this.currentMemoryMb = Output.empty();
+        this.hostErrorTimeoutSeconds = Output.empty();
+        this.instanceTerminationAction = Output.empty();
+        this.latencyTolerant = Output.empty();
+        this.locationHint = Output.empty();
+        this.maintenanceFreezeDurationHours = Output.empty();
+        this.maintenanceInterval = Output.empty();
+        this.maxRunDuration = Output.empty();
+        this.minNodeCpus = Output.empty();
+        this.nodeAffinities = Output.empty();
+        this.onHostMaintenance = Output.empty();
+        this.preemptible = Output.empty();
+        this.provisioningModel = Output.empty();
+        this.terminationTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -280,23 +280,23 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> automaticRestart;
-        private @Nullable Input<Integer> availabilityDomain;
-        private @Nullable Input<Integer> currentCpus;
-        private @Nullable Input<String> currentMemoryMb;
-        private @Nullable Input<Integer> hostErrorTimeoutSeconds;
-        private @Nullable Input<SchedulingInstanceTerminationAction> instanceTerminationAction;
-        private @Nullable Input<Boolean> latencyTolerant;
-        private @Nullable Input<String> locationHint;
-        private @Nullable Input<Integer> maintenanceFreezeDurationHours;
-        private @Nullable Input<SchedulingMaintenanceInterval> maintenanceInterval;
-        private @Nullable Input<DurationArgs> maxRunDuration;
-        private @Nullable Input<Integer> minNodeCpus;
-        private @Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities;
-        private @Nullable Input<SchedulingOnHostMaintenance> onHostMaintenance;
-        private @Nullable Input<Boolean> preemptible;
-        private @Nullable Input<SchedulingProvisioningModel> provisioningModel;
-        private @Nullable Input<String> terminationTime;
+        private @Nullable Output<Boolean> automaticRestart;
+        private @Nullable Output<Integer> availabilityDomain;
+        private @Nullable Output<Integer> currentCpus;
+        private @Nullable Output<String> currentMemoryMb;
+        private @Nullable Output<Integer> hostErrorTimeoutSeconds;
+        private @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
+        private @Nullable Output<Boolean> latencyTolerant;
+        private @Nullable Output<String> locationHint;
+        private @Nullable Output<Integer> maintenanceFreezeDurationHours;
+        private @Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval;
+        private @Nullable Output<DurationArgs> maxRunDuration;
+        private @Nullable Output<Integer> minNodeCpus;
+        private @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
+        private @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
+        private @Nullable Output<Boolean> preemptible;
+        private @Nullable Output<SchedulingProvisioningModel> provisioningModel;
+        private @Nullable Output<String> terminationTime;
 
         public Builder() {
     	      // Empty
@@ -323,173 +323,173 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.terminationTime = defaults.terminationTime;
         }
 
-        public Builder automaticRestart(@Nullable Input<Boolean> automaticRestart) {
+        public Builder automaticRestart(@Nullable Output<Boolean> automaticRestart) {
             this.automaticRestart = automaticRestart;
             return this;
         }
 
         public Builder automaticRestart(@Nullable Boolean automaticRestart) {
-            this.automaticRestart = Input.ofNullable(automaticRestart);
+            this.automaticRestart = Output.ofNullable(automaticRestart);
             return this;
         }
 
-        public Builder availabilityDomain(@Nullable Input<Integer> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<Integer> availabilityDomain) {
             this.availabilityDomain = availabilityDomain;
             return this;
         }
 
         public Builder availabilityDomain(@Nullable Integer availabilityDomain) {
-            this.availabilityDomain = Input.ofNullable(availabilityDomain);
+            this.availabilityDomain = Output.ofNullable(availabilityDomain);
             return this;
         }
 
-        public Builder currentCpus(@Nullable Input<Integer> currentCpus) {
+        public Builder currentCpus(@Nullable Output<Integer> currentCpus) {
             this.currentCpus = currentCpus;
             return this;
         }
 
         public Builder currentCpus(@Nullable Integer currentCpus) {
-            this.currentCpus = Input.ofNullable(currentCpus);
+            this.currentCpus = Output.ofNullable(currentCpus);
             return this;
         }
 
-        public Builder currentMemoryMb(@Nullable Input<String> currentMemoryMb) {
+        public Builder currentMemoryMb(@Nullable Output<String> currentMemoryMb) {
             this.currentMemoryMb = currentMemoryMb;
             return this;
         }
 
         public Builder currentMemoryMb(@Nullable String currentMemoryMb) {
-            this.currentMemoryMb = Input.ofNullable(currentMemoryMb);
+            this.currentMemoryMb = Output.ofNullable(currentMemoryMb);
             return this;
         }
 
-        public Builder hostErrorTimeoutSeconds(@Nullable Input<Integer> hostErrorTimeoutSeconds) {
+        public Builder hostErrorTimeoutSeconds(@Nullable Output<Integer> hostErrorTimeoutSeconds) {
             this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
             return this;
         }
 
         public Builder hostErrorTimeoutSeconds(@Nullable Integer hostErrorTimeoutSeconds) {
-            this.hostErrorTimeoutSeconds = Input.ofNullable(hostErrorTimeoutSeconds);
+            this.hostErrorTimeoutSeconds = Output.ofNullable(hostErrorTimeoutSeconds);
             return this;
         }
 
-        public Builder instanceTerminationAction(@Nullable Input<SchedulingInstanceTerminationAction> instanceTerminationAction) {
+        public Builder instanceTerminationAction(@Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction) {
             this.instanceTerminationAction = instanceTerminationAction;
             return this;
         }
 
         public Builder instanceTerminationAction(@Nullable SchedulingInstanceTerminationAction instanceTerminationAction) {
-            this.instanceTerminationAction = Input.ofNullable(instanceTerminationAction);
+            this.instanceTerminationAction = Output.ofNullable(instanceTerminationAction);
             return this;
         }
 
-        public Builder latencyTolerant(@Nullable Input<Boolean> latencyTolerant) {
+        public Builder latencyTolerant(@Nullable Output<Boolean> latencyTolerant) {
             this.latencyTolerant = latencyTolerant;
             return this;
         }
 
         public Builder latencyTolerant(@Nullable Boolean latencyTolerant) {
-            this.latencyTolerant = Input.ofNullable(latencyTolerant);
+            this.latencyTolerant = Output.ofNullable(latencyTolerant);
             return this;
         }
 
-        public Builder locationHint(@Nullable Input<String> locationHint) {
+        public Builder locationHint(@Nullable Output<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
 
         public Builder locationHint(@Nullable String locationHint) {
-            this.locationHint = Input.ofNullable(locationHint);
+            this.locationHint = Output.ofNullable(locationHint);
             return this;
         }
 
-        public Builder maintenanceFreezeDurationHours(@Nullable Input<Integer> maintenanceFreezeDurationHours) {
+        public Builder maintenanceFreezeDurationHours(@Nullable Output<Integer> maintenanceFreezeDurationHours) {
             this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
             return this;
         }
 
         public Builder maintenanceFreezeDurationHours(@Nullable Integer maintenanceFreezeDurationHours) {
-            this.maintenanceFreezeDurationHours = Input.ofNullable(maintenanceFreezeDurationHours);
+            this.maintenanceFreezeDurationHours = Output.ofNullable(maintenanceFreezeDurationHours);
             return this;
         }
 
-        public Builder maintenanceInterval(@Nullable Input<SchedulingMaintenanceInterval> maintenanceInterval) {
+        public Builder maintenanceInterval(@Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval) {
             this.maintenanceInterval = maintenanceInterval;
             return this;
         }
 
         public Builder maintenanceInterval(@Nullable SchedulingMaintenanceInterval maintenanceInterval) {
-            this.maintenanceInterval = Input.ofNullable(maintenanceInterval);
+            this.maintenanceInterval = Output.ofNullable(maintenanceInterval);
             return this;
         }
 
-        public Builder maxRunDuration(@Nullable Input<DurationArgs> maxRunDuration) {
+        public Builder maxRunDuration(@Nullable Output<DurationArgs> maxRunDuration) {
             this.maxRunDuration = maxRunDuration;
             return this;
         }
 
         public Builder maxRunDuration(@Nullable DurationArgs maxRunDuration) {
-            this.maxRunDuration = Input.ofNullable(maxRunDuration);
+            this.maxRunDuration = Output.ofNullable(maxRunDuration);
             return this;
         }
 
-        public Builder minNodeCpus(@Nullable Input<Integer> minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
 
         public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
-            this.minNodeCpus = Input.ofNullable(minNodeCpus);
+            this.minNodeCpus = Output.ofNullable(minNodeCpus);
             return this;
         }
 
-        public Builder nodeAffinities(@Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
 
         public Builder nodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
-            this.nodeAffinities = Input.ofNullable(nodeAffinities);
+            this.nodeAffinities = Output.ofNullable(nodeAffinities);
             return this;
         }
 
-        public Builder onHostMaintenance(@Nullable Input<SchedulingOnHostMaintenance> onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
         public Builder onHostMaintenance(@Nullable SchedulingOnHostMaintenance onHostMaintenance) {
-            this.onHostMaintenance = Input.ofNullable(onHostMaintenance);
+            this.onHostMaintenance = Output.ofNullable(onHostMaintenance);
             return this;
         }
 
-        public Builder preemptible(@Nullable Input<Boolean> preemptible) {
+        public Builder preemptible(@Nullable Output<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
 
         public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Input.ofNullable(preemptible);
+            this.preemptible = Output.ofNullable(preemptible);
             return this;
         }
 
-        public Builder provisioningModel(@Nullable Input<SchedulingProvisioningModel> provisioningModel) {
+        public Builder provisioningModel(@Nullable Output<SchedulingProvisioningModel> provisioningModel) {
             this.provisioningModel = provisioningModel;
             return this;
         }
 
         public Builder provisioningModel(@Nullable SchedulingProvisioningModel provisioningModel) {
-            this.provisioningModel = Input.ofNullable(provisioningModel);
+            this.provisioningModel = Output.ofNullable(provisioningModel);
             return this;
         }
 
-        public Builder terminationTime(@Nullable Input<String> terminationTime) {
+        public Builder terminationTime(@Nullable Output<String> terminationTime) {
             this.terminationTime = terminationTime;
             return this;
         }
 
         public Builder terminationTime(@Nullable String terminationTime) {
-            this.terminationTime = Input.ofNullable(terminationTime);
+            this.terminationTime = Output.ofNullable(terminationTime);
             return this;
         }
         public SchedulingArgs build() {

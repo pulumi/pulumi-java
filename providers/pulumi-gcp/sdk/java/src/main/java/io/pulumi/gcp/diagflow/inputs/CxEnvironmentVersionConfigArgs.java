@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class CxEnvironmentVersionConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
-    public CxEnvironmentVersionConfigArgs(Input<String> version) {
+    public CxEnvironmentVersionConfigArgs(Output<String> version) {
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
     }
 
     private CxEnvironmentVersionConfigArgs() {
-        this.version = Input.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class CxEnvironmentVersionConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> version;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class CxEnvironmentVersionConfigArgs extends io.pulumi.resources.Re
     	      this.version = defaults.version;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public CxEnvironmentVersionConfigArgs build() {

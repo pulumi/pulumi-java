@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.m365securityandcompliance.inputs;
 
 import io.pulumi.azurenative.m365securityandcompliance.inputs.PrivateLinkServiceConnectionStateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-      private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
 
-    public PrivateEndpointConnectionArgs(Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+    public PrivateEndpointConnectionArgs(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
         this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.privateLinkServiceConnectionState = Input.empty();
+        this.privateLinkServiceConnectionState = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
         }
 
-        public Builder privateLinkServiceConnectionState(Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
 
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Input.of(Objects.requireNonNull(privateLinkServiceConnectionState));
+            this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }
         public PrivateEndpointConnectionArgs build() {

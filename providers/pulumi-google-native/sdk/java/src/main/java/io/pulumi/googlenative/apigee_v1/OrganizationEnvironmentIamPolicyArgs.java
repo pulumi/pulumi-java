@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleIamV1AuditConfigArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleIamV1BindingArgs;
@@ -23,10 +23,10 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="auditConfigs")
-      private final @Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
+      private final @Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
 
-    public Input<List<GoogleIamV1AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
+    public Output<List<GoogleIamV1AuditConfigArgs>> getAuditConfigs() {
+        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
     }
 
     /**
@@ -34,16 +34,16 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<GoogleIamV1BindingArgs>> bindings;
+      private final @Nullable Output<List<GoogleIamV1BindingArgs>> bindings;
 
-    public Input<List<GoogleIamV1BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<GoogleIamV1BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -52,16 +52,16 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -70,10 +70,10 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="updateMask")
-      private final @Nullable Input<String> updateMask;
+      private final @Nullable Output<String> updateMask;
 
-    public Input<String> getUpdateMask() {
-        return this.updateMask == null ? Input.empty() : this.updateMask;
+    public Output<String> getUpdateMask() {
+        return this.updateMask == null ? Output.empty() : this.updateMask;
     }
 
     /**
@@ -81,20 +81,20 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public OrganizationEnvironmentIamPolicyArgs(
-        @Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs,
-        @Nullable Input<List<GoogleIamV1BindingArgs>> bindings,
-        Input<String> environmentId,
-        @Nullable Input<String> etag,
-        Input<String> organizationId,
-        @Nullable Input<String> updateMask,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs,
+        @Nullable Output<List<GoogleIamV1BindingArgs>> bindings,
+        Output<String> environmentId,
+        @Nullable Output<String> etag,
+        Output<String> organizationId,
+        @Nullable Output<String> updateMask,
+        @Nullable Output<Integer> version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
@@ -105,13 +105,13 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
     }
 
     private OrganizationEnvironmentIamPolicyArgs() {
-        this.auditConfigs = Input.empty();
-        this.bindings = Input.empty();
-        this.environmentId = Input.empty();
-        this.etag = Input.empty();
-        this.organizationId = Input.empty();
-        this.updateMask = Input.empty();
-        this.version = Input.empty();
+        this.auditConfigs = Output.empty();
+        this.bindings = Output.empty();
+        this.environmentId = Output.empty();
+        this.etag = Output.empty();
+        this.organizationId = Output.empty();
+        this.updateMask = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,13 +123,13 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
-        private @Nullable Input<List<GoogleIamV1BindingArgs>> bindings;
-        private Input<String> environmentId;
-        private @Nullable Input<String> etag;
-        private Input<String> organizationId;
-        private @Nullable Input<String> updateMask;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
+        private @Nullable Output<List<GoogleIamV1BindingArgs>> bindings;
+        private Output<String> environmentId;
+        private @Nullable Output<String> etag;
+        private Output<String> organizationId;
+        private @Nullable Output<String> updateMask;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -146,73 +146,73 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
     	      this.version = defaults.version;
         }
 
-        public Builder auditConfigs(@Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
         public Builder auditConfigs(@Nullable List<GoogleIamV1AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Input.ofNullable(auditConfigs);
+            this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder bindings(@Nullable Input<List<GoogleIamV1BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<GoogleIamV1BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<GoogleIamV1BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder updateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Input.ofNullable(updateMask);
+            this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public OrganizationEnvironmentIamPolicyArgs build() {

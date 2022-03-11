@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.endpoints.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.endpoints.inputs.ServiceApiGetArgs;
 import io.pulumi.gcp.endpoints.inputs.ServiceEndpointGetArgs;
@@ -22,10 +22,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apis")
-      private final @Nullable Input<List<ServiceApiGetArgs>> apis;
+      private final @Nullable Output<List<ServiceApiGetArgs>> apis;
 
-    public Input<List<ServiceApiGetArgs>> getApis() {
-        return this.apis == null ? Input.empty() : this.apis;
+    public Output<List<ServiceApiGetArgs>> getApis() {
+        return this.apis == null ? Output.empty() : this.apis;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configId")
-      private final @Nullable Input<String> configId;
+      private final @Nullable Output<String> configId;
 
-    public Input<String> getConfigId() {
-        return this.configId == null ? Input.empty() : this.configId;
+    public Output<String> getConfigId() {
+        return this.configId == null ? Output.empty() : this.configId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsAddress")
-      private final @Nullable Input<String> dnsAddress;
+      private final @Nullable Output<String> dnsAddress;
 
-    public Input<String> getDnsAddress() {
-        return this.dnsAddress == null ? Input.empty() : this.dnsAddress;
+    public Output<String> getDnsAddress() {
+        return this.dnsAddress == null ? Output.empty() : this.dnsAddress;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints")
-      private final @Nullable Input<List<ServiceEndpointGetArgs>> endpoints;
+      private final @Nullable Output<List<ServiceEndpointGetArgs>> endpoints;
 
-    public Input<List<ServiceEndpointGetArgs>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<ServiceEndpointGetArgs>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grpcConfig")
-      private final @Nullable Input<String> grpcConfig;
+      private final @Nullable Output<String> grpcConfig;
 
-    public Input<String> getGrpcConfig() {
-        return this.grpcConfig == null ? Input.empty() : this.grpcConfig;
+    public Output<String> getGrpcConfig() {
+        return this.grpcConfig == null ? Output.empty() : this.grpcConfig;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openapiConfig")
-      private final @Nullable Input<String> openapiConfig;
+      private final @Nullable Output<String> openapiConfig;
 
-    public Input<String> getOpenapiConfig() {
-        return this.openapiConfig == null ? Input.empty() : this.openapiConfig;
+    public Output<String> getOpenapiConfig() {
+        return this.openapiConfig == null ? Output.empty() : this.openapiConfig;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocOutputBase64")
-      private final @Nullable Input<String> protocOutputBase64;
+      private final @Nullable Output<String> protocOutputBase64;
 
-    public Input<String> getProtocOutputBase64() {
-        return this.protocOutputBase64 == null ? Input.empty() : this.protocOutputBase64;
+    public Output<String> getProtocOutputBase64() {
+        return this.protocOutputBase64 == null ? Output.empty() : this.protocOutputBase64;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     public ServiceState(
-        @Nullable Input<List<ServiceApiGetArgs>> apis,
-        @Nullable Input<String> configId,
-        @Nullable Input<String> dnsAddress,
-        @Nullable Input<List<ServiceEndpointGetArgs>> endpoints,
-        @Nullable Input<String> grpcConfig,
-        @Nullable Input<String> openapiConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<String> protocOutputBase64,
-        @Nullable Input<String> serviceName) {
+        @Nullable Output<List<ServiceApiGetArgs>> apis,
+        @Nullable Output<String> configId,
+        @Nullable Output<String> dnsAddress,
+        @Nullable Output<List<ServiceEndpointGetArgs>> endpoints,
+        @Nullable Output<String> grpcConfig,
+        @Nullable Output<String> openapiConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<String> protocOutputBase64,
+        @Nullable Output<String> serviceName) {
         this.apis = apis;
         this.configId = configId;
         this.dnsAddress = dnsAddress;
@@ -142,15 +142,15 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceState() {
-        this.apis = Input.empty();
-        this.configId = Input.empty();
-        this.dnsAddress = Input.empty();
-        this.endpoints = Input.empty();
-        this.grpcConfig = Input.empty();
-        this.openapiConfig = Input.empty();
-        this.project = Input.empty();
-        this.protocOutputBase64 = Input.empty();
-        this.serviceName = Input.empty();
+        this.apis = Output.empty();
+        this.configId = Output.empty();
+        this.dnsAddress = Output.empty();
+        this.endpoints = Output.empty();
+        this.grpcConfig = Output.empty();
+        this.openapiConfig = Output.empty();
+        this.project = Output.empty();
+        this.protocOutputBase64 = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ServiceApiGetArgs>> apis;
-        private @Nullable Input<String> configId;
-        private @Nullable Input<String> dnsAddress;
-        private @Nullable Input<List<ServiceEndpointGetArgs>> endpoints;
-        private @Nullable Input<String> grpcConfig;
-        private @Nullable Input<String> openapiConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> protocOutputBase64;
-        private @Nullable Input<String> serviceName;
+        private @Nullable Output<List<ServiceApiGetArgs>> apis;
+        private @Nullable Output<String> configId;
+        private @Nullable Output<String> dnsAddress;
+        private @Nullable Output<List<ServiceEndpointGetArgs>> endpoints;
+        private @Nullable Output<String> grpcConfig;
+        private @Nullable Output<String> openapiConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> protocOutputBase64;
+        private @Nullable Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder apis(@Nullable Input<List<ServiceApiGetArgs>> apis) {
+        public Builder apis(@Nullable Output<List<ServiceApiGetArgs>> apis) {
             this.apis = apis;
             return this;
         }
 
         public Builder apis(@Nullable List<ServiceApiGetArgs> apis) {
-            this.apis = Input.ofNullable(apis);
+            this.apis = Output.ofNullable(apis);
             return this;
         }
 
-        public Builder configId(@Nullable Input<String> configId) {
+        public Builder configId(@Nullable Output<String> configId) {
             this.configId = configId;
             return this;
         }
 
         public Builder configId(@Nullable String configId) {
-            this.configId = Input.ofNullable(configId);
+            this.configId = Output.ofNullable(configId);
             return this;
         }
 
-        public Builder dnsAddress(@Nullable Input<String> dnsAddress) {
+        public Builder dnsAddress(@Nullable Output<String> dnsAddress) {
             this.dnsAddress = dnsAddress;
             return this;
         }
 
         public Builder dnsAddress(@Nullable String dnsAddress) {
-            this.dnsAddress = Input.ofNullable(dnsAddress);
+            this.dnsAddress = Output.ofNullable(dnsAddress);
             return this;
         }
 
-        public Builder endpoints(@Nullable Input<List<ServiceEndpointGetArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<ServiceEndpointGetArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<ServiceEndpointGetArgs> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
 
-        public Builder grpcConfig(@Nullable Input<String> grpcConfig) {
+        public Builder grpcConfig(@Nullable Output<String> grpcConfig) {
             this.grpcConfig = grpcConfig;
             return this;
         }
 
         public Builder grpcConfig(@Nullable String grpcConfig) {
-            this.grpcConfig = Input.ofNullable(grpcConfig);
+            this.grpcConfig = Output.ofNullable(grpcConfig);
             return this;
         }
 
-        public Builder openapiConfig(@Nullable Input<String> openapiConfig) {
+        public Builder openapiConfig(@Nullable Output<String> openapiConfig) {
             this.openapiConfig = openapiConfig;
             return this;
         }
 
         public Builder openapiConfig(@Nullable String openapiConfig) {
-            this.openapiConfig = Input.ofNullable(openapiConfig);
+            this.openapiConfig = Output.ofNullable(openapiConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder protocOutputBase64(@Nullable Input<String> protocOutputBase64) {
+        public Builder protocOutputBase64(@Nullable Output<String> protocOutputBase64) {
             this.protocOutputBase64 = protocOutputBase64;
             return this;
         }
 
         public Builder protocOutputBase64(@Nullable String protocOutputBase64) {
-            this.protocOutputBase64 = Input.ofNullable(protocOutputBase64);
+            this.protocOutputBase64 = Output.ofNullable(protocOutputBase64);
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
         public ServiceState build() {

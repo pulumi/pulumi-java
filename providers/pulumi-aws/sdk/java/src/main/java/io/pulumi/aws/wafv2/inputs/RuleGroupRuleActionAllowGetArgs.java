@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionAllowCustomRequestHandlingGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class RuleGroupRuleActionAllowGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customRequestHandling")
-      private final @Nullable Input<RuleGroupRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
+      private final @Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
 
-    public Input<RuleGroupRuleActionAllowCustomRequestHandlingGetArgs> getCustomRequestHandling() {
-        return this.customRequestHandling == null ? Input.empty() : this.customRequestHandling;
+    public Output<RuleGroupRuleActionAllowCustomRequestHandlingGetArgs> getCustomRequestHandling() {
+        return this.customRequestHandling == null ? Output.empty() : this.customRequestHandling;
     }
 
-    public RuleGroupRuleActionAllowGetArgs(@Nullable Input<RuleGroupRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
+    public RuleGroupRuleActionAllowGetArgs(@Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 
     private RuleGroupRuleActionAllowGetArgs() {
-        this.customRequestHandling = Input.empty();
+        this.customRequestHandling = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class RuleGroupRuleActionAllowGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
+        private @Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class RuleGroupRuleActionAllowGetArgs extends io.pulumi.resources.R
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder customRequestHandling(@Nullable Input<RuleGroupRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
+        public Builder customRequestHandling(@Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
 
         public Builder customRequestHandling(@Nullable RuleGroupRuleActionAllowCustomRequestHandlingGetArgs customRequestHandling) {
-            this.customRequestHandling = Input.ofNullable(customRequestHandling);
+            this.customRequestHandling = Output.ofNullable(customRequestHandling);
             return this;
         }
         public RuleGroupRuleActionAllowGetArgs build() {

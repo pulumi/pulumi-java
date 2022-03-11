@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretRef")
-      private final @Nullable Input<String> secretRef;
+      private final @Nullable Output<String> secretRef;
 
-    public Input<String> getSecretRef() {
-        return this.secretRef == null ? Input.empty() : this.secretRef;
+    public Output<String> getSecretRef() {
+        return this.secretRef == null ? Output.empty() : this.secretRef;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerParameter")
-      private final @Nullable Input<String> triggerParameter;
+      private final @Nullable Output<String> triggerParameter;
 
-    public Input<String> getTriggerParameter() {
-        return this.triggerParameter == null ? Input.empty() : this.triggerParameter;
+    public Output<String> getTriggerParameter() {
+        return this.triggerParameter == null ? Output.empty() : this.triggerParameter;
     }
 
     public ScaleRuleAuthArgs(
-        @Nullable Input<String> secretRef,
-        @Nullable Input<String> triggerParameter) {
+        @Nullable Output<String> secretRef,
+        @Nullable Output<String> triggerParameter) {
         this.secretRef = secretRef;
         this.triggerParameter = triggerParameter;
     }
 
     private ScaleRuleAuthArgs() {
-        this.secretRef = Input.empty();
-        this.triggerParameter = Input.empty();
+        this.secretRef = Output.empty();
+        this.triggerParameter = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> secretRef;
-        private @Nullable Input<String> triggerParameter;
+        private @Nullable Output<String> secretRef;
+        private @Nullable Output<String> triggerParameter;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggerParameter = defaults.triggerParameter;
         }
 
-        public Builder secretRef(@Nullable Input<String> secretRef) {
+        public Builder secretRef(@Nullable Output<String> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
         public Builder secretRef(@Nullable String secretRef) {
-            this.secretRef = Input.ofNullable(secretRef);
+            this.secretRef = Output.ofNullable(secretRef);
             return this;
         }
 
-        public Builder triggerParameter(@Nullable Input<String> triggerParameter) {
+        public Builder triggerParameter(@Nullable Output<String> triggerParameter) {
             this.triggerParameter = triggerParameter;
             return this;
         }
 
         public Builder triggerParameter(@Nullable String triggerParameter) {
-            this.triggerParameter = Input.ofNullable(triggerParameter);
+            this.triggerParameter = Output.ofNullable(triggerParameter);
             return this;
         }
         public ScaleRuleAuthArgs build() {

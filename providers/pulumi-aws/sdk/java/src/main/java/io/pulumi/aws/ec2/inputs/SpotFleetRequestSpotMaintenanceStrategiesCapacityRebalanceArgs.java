@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArg
      * 
      */
     @InputImport(name="replacementStrategy")
-      private final @Nullable Input<String> replacementStrategy;
+      private final @Nullable Output<String> replacementStrategy;
 
-    public Input<String> getReplacementStrategy() {
-        return this.replacementStrategy == null ? Input.empty() : this.replacementStrategy;
+    public Output<String> getReplacementStrategy() {
+        return this.replacementStrategy == null ? Output.empty() : this.replacementStrategy;
     }
 
-    public SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs(@Nullable Input<String> replacementStrategy) {
+    public SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs(@Nullable Output<String> replacementStrategy) {
         this.replacementStrategy = replacementStrategy;
     }
 
     private SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs() {
-        this.replacementStrategy = Input.empty();
+        this.replacementStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> replacementStrategy;
+        private @Nullable Output<String> replacementStrategy;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArg
     	      this.replacementStrategy = defaults.replacementStrategy;
         }
 
-        public Builder replacementStrategy(@Nullable Input<String> replacementStrategy) {
+        public Builder replacementStrategy(@Nullable Output<String> replacementStrategy) {
             this.replacementStrategy = replacementStrategy;
             return this;
         }
 
         public Builder replacementStrategy(@Nullable String replacementStrategy) {
-            this.replacementStrategy = Input.ofNullable(replacementStrategy);
+            this.replacementStrategy = Output.ofNullable(replacementStrategy);
             return this;
         }
         public SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<List<String>> scopes;
+      private final @Nullable Output<List<String>> scopes;
 
-    public Input<List<String>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<String>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
-    public LoginScopesArgs(@Nullable Input<List<String>> scopes) {
+    public LoginScopesArgs(@Nullable Output<List<String>> scopes) {
         this.scopes = scopes;
     }
 
     private LoginScopesArgs() {
-        this.scopes = Input.empty();
+        this.scopes = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> scopes;
+        private @Nullable Output<List<String>> scopes;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder scopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Output<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
         public LoginScopesArgs build() {

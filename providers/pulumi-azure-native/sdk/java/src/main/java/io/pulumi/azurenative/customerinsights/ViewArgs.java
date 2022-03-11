@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition", required=true)
-      private final Input<String> definition;
+      private final Output<String> definition;
 
-    public Input<String> getDefinition() {
+    public Output<String> getDefinition() {
         return this.definition;
     }
 
@@ -31,10 +31,10 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<Map<String,String>> displayName;
+      private final @Nullable Output<Map<String,String>> displayName;
 
-    public Input<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<Map<String,String>> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-      private final Input<String> hubName;
+      private final Output<String> hubName;
 
-    public Input<String> getHubName() {
+    public Output<String> getHubName() {
         return this.hubName;
     }
 
@@ -53,9 +53,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,10 +64,10 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId")
-      private final @Nullable Input<String> userId;
+      private final @Nullable Output<String> userId;
 
-    public Input<String> getUserId() {
-        return this.userId == null ? Input.empty() : this.userId;
+    public Output<String> getUserId() {
+        return this.userId == null ? Output.empty() : this.userId;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="viewName")
-      private final @Nullable Input<String> viewName;
+      private final @Nullable Output<String> viewName;
 
-    public Input<String> getViewName() {
-        return this.viewName == null ? Input.empty() : this.viewName;
+    public Output<String> getViewName() {
+        return this.viewName == null ? Output.empty() : this.viewName;
     }
 
     public ViewArgs(
-        Input<String> definition,
-        @Nullable Input<Map<String,String>> displayName,
-        Input<String> hubName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> userId,
-        @Nullable Input<String> viewName) {
+        Output<String> definition,
+        @Nullable Output<Map<String,String>> displayName,
+        Output<String> hubName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> userId,
+        @Nullable Output<String> viewName) {
         this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
         this.displayName = displayName;
         this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
@@ -97,12 +97,12 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ViewArgs() {
-        this.definition = Input.empty();
-        this.displayName = Input.empty();
-        this.hubName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.userId = Input.empty();
-        this.viewName = Input.empty();
+        this.definition = Output.empty();
+        this.displayName = Output.empty();
+        this.hubName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.userId = Output.empty();
+        this.viewName = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> definition;
-        private @Nullable Input<Map<String,String>> displayName;
-        private Input<String> hubName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> userId;
-        private @Nullable Input<String> viewName;
+        private Output<String> definition;
+        private @Nullable Output<Map<String,String>> displayName;
+        private Output<String> hubName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> userId;
+        private @Nullable Output<String> viewName;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     	      this.viewName = defaults.viewName;
         }
 
-        public Builder definition(Input<String> definition) {
+        public Builder definition(Output<String> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
         public Builder definition(String definition) {
-            this.definition = Input.of(Objects.requireNonNull(definition));
+            this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder hubName(Input<String> hubName) {
+        public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Input.of(Objects.requireNonNull(hubName));
+            this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder userId(@Nullable Input<String> userId) {
+        public Builder userId(@Nullable Output<String> userId) {
             this.userId = userId;
             return this;
         }
 
         public Builder userId(@Nullable String userId) {
-            this.userId = Input.ofNullable(userId);
+            this.userId = Output.ofNullable(userId);
             return this;
         }
 
-        public Builder viewName(@Nullable Input<String> viewName) {
+        public Builder viewName(@Nullable Output<String> viewName) {
             this.viewName = viewName;
             return this;
         }
 
         public Builder viewName(@Nullable String viewName) {
-            this.viewName = Input.ofNullable(viewName);
+            this.viewName = Output.ofNullable(viewName);
             return this;
         }
         public ViewArgs build() {

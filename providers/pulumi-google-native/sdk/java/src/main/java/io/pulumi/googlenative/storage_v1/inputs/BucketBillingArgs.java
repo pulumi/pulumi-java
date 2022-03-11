@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requesterPays")
-      private final @Nullable Input<Boolean> requesterPays;
+      private final @Nullable Output<Boolean> requesterPays;
 
-    public Input<Boolean> getRequesterPays() {
-        return this.requesterPays == null ? Input.empty() : this.requesterPays;
+    public Output<Boolean> getRequesterPays() {
+        return this.requesterPays == null ? Output.empty() : this.requesterPays;
     }
 
-    public BucketBillingArgs(@Nullable Input<Boolean> requesterPays) {
+    public BucketBillingArgs(@Nullable Output<Boolean> requesterPays) {
         this.requesterPays = requesterPays;
     }
 
     private BucketBillingArgs() {
-        this.requesterPays = Input.empty();
+        this.requesterPays = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> requesterPays;
+        private @Nullable Output<Boolean> requesterPays;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requesterPays = defaults.requesterPays;
         }
 
-        public Builder requesterPays(@Nullable Input<Boolean> requesterPays) {
+        public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
             this.requesterPays = requesterPays;
             return this;
         }
 
         public Builder requesterPays(@Nullable Boolean requesterPays) {
-            this.requesterPays = Input.ofNullable(requesterPays);
+            this.requesterPays = Output.ofNullable(requesterPays);
             return this;
         }
         public BucketBillingArgs build() {

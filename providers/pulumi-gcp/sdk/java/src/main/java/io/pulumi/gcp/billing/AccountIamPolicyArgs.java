@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class AccountIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     public static final AccountIamPolicyArgs Empty = new AccountIamPolicyArgs();
 
     @InputImport(name="billingAccountId", required=true)
-      private final Input<String> billingAccountId;
+      private final Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
+    public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public AccountIamPolicyArgs(
-        Input<String> billingAccountId,
-        Input<String> policyData) {
+        Output<String> billingAccountId,
+        Output<String> policyData) {
         this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private AccountIamPolicyArgs() {
-        this.billingAccountId = Input.empty();
-        this.policyData = Input.empty();
+        this.billingAccountId = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class AccountIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> billingAccountId;
-        private Input<String> policyData;
+        private Output<String> billingAccountId;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class AccountIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder billingAccountId(Input<String> billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Input.of(Objects.requireNonNull(billingAccountId));
+            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public AccountIamPolicyArgs build() {

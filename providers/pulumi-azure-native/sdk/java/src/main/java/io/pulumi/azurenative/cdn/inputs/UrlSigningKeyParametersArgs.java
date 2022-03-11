@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="keyId", required=true)
-      private final Input<String> keyId;
+      private final Output<String> keyId;
 
-    public Input<String> getKeyId() {
+    public Output<String> getKeyId() {
         return this.keyId;
     }
 
@@ -35,9 +35,9 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="secretSource", required=true)
-      private final Input<ResourceReferenceArgs> secretSource;
+      private final Output<ResourceReferenceArgs> secretSource;
 
-    public Input<ResourceReferenceArgs> getSecretSource() {
+    public Output<ResourceReferenceArgs> getSecretSource() {
         return this.secretSource;
     }
 
@@ -46,10 +46,10 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="secretVersion")
-      private final @Nullable Input<String> secretVersion;
+      private final @Nullable Output<String> secretVersion;
 
-    public Input<String> getSecretVersion() {
-        return this.secretVersion == null ? Input.empty() : this.secretVersion;
+    public Output<String> getSecretVersion() {
+        return this.secretVersion == null ? Output.empty() : this.secretVersion;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public UrlSigningKeyParametersArgs(
-        Input<String> keyId,
-        Input<ResourceReferenceArgs> secretSource,
-        @Nullable Input<String> secretVersion,
-        Input<String> type) {
+        Output<String> keyId,
+        Output<ResourceReferenceArgs> secretSource,
+        @Nullable Output<String> secretVersion,
+        Output<String> type) {
         this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
         this.secretSource = Objects.requireNonNull(secretSource, "expected parameter 'secretSource' to be non-null");
         this.secretVersion = secretVersion;
@@ -76,10 +76,10 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
     }
 
     private UrlSigningKeyParametersArgs() {
-        this.keyId = Input.empty();
-        this.secretSource = Input.empty();
-        this.secretVersion = Input.empty();
-        this.type = Input.empty();
+        this.keyId = Output.empty();
+        this.secretSource = Output.empty();
+        this.secretVersion = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> keyId;
-        private Input<ResourceReferenceArgs> secretSource;
-        private @Nullable Input<String> secretVersion;
-        private Input<String> type;
+        private Output<String> keyId;
+        private Output<ResourceReferenceArgs> secretSource;
+        private @Nullable Output<String> secretVersion;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder keyId(Input<String> keyId) {
+        public Builder keyId(Output<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Input.of(Objects.requireNonNull(keyId));
+            this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
 
-        public Builder secretSource(Input<ResourceReferenceArgs> secretSource) {
+        public Builder secretSource(Output<ResourceReferenceArgs> secretSource) {
             this.secretSource = Objects.requireNonNull(secretSource);
             return this;
         }
 
         public Builder secretSource(ResourceReferenceArgs secretSource) {
-            this.secretSource = Input.of(Objects.requireNonNull(secretSource));
+            this.secretSource = Output.of(Objects.requireNonNull(secretSource));
             return this;
         }
 
-        public Builder secretVersion(@Nullable Input<String> secretVersion) {
+        public Builder secretVersion(@Nullable Output<String> secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Input.ofNullable(secretVersion);
+            this.secretVersion = Output.ofNullable(secretVersion);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public UrlSigningKeyParametersArgs build() {

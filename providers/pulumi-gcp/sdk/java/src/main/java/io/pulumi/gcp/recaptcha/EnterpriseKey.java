@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.recaptcha;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -207,14 +206,14 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnterpriseKey(String name, EnterpriseKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:recaptcha/enterpriseKey:EnterpriseKey", name, args == null ? EnterpriseKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:recaptcha/enterpriseKey:EnterpriseKey", name, args == null ? EnterpriseKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EnterpriseKey(String name, Input<String> id, @Nullable EnterpriseKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EnterpriseKey(String name, Output<String> id, @Nullable EnterpriseKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:recaptcha/enterpriseKey:EnterpriseKey", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -230,7 +229,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EnterpriseKey get(String name, Input<String> id, @Nullable EnterpriseKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EnterpriseKey get(String name, Output<String> id, @Nullable EnterpriseKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EnterpriseKey(name, id, state, options);
     }
 }

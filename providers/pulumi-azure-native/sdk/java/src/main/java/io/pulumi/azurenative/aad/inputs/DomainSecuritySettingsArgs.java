@@ -11,7 +11,7 @@ import io.pulumi.azurenative.aad.enums.SyncNtlmPasswords;
 import io.pulumi.azurenative.aad.enums.SyncOnPremPasswords;
 import io.pulumi.azurenative.aad.enums.TlsV1;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -31,10 +31,10 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kerberosArmoring")
-      private final @Nullable Input<Either<String,KerberosArmoring>> kerberosArmoring;
+      private final @Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring;
 
-    public Input<Either<String,KerberosArmoring>> getKerberosArmoring() {
-        return this.kerberosArmoring == null ? Input.empty() : this.kerberosArmoring;
+    public Output<Either<String,KerberosArmoring>> getKerberosArmoring() {
+        return this.kerberosArmoring == null ? Output.empty() : this.kerberosArmoring;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kerberosRc4Encryption")
-      private final @Nullable Input<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
+      private final @Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
 
-    public Input<Either<String,KerberosRc4Encryption>> getKerberosRc4Encryption() {
-        return this.kerberosRc4Encryption == null ? Input.empty() : this.kerberosRc4Encryption;
+    public Output<Either<String,KerberosRc4Encryption>> getKerberosRc4Encryption() {
+        return this.kerberosRc4Encryption == null ? Output.empty() : this.kerberosRc4Encryption;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ntlmV1")
-      private final @Nullable Input<Either<String,NtlmV1>> ntlmV1;
+      private final @Nullable Output<Either<String,NtlmV1>> ntlmV1;
 
-    public Input<Either<String,NtlmV1>> getNtlmV1() {
-        return this.ntlmV1 == null ? Input.empty() : this.ntlmV1;
+    public Output<Either<String,NtlmV1>> getNtlmV1() {
+        return this.ntlmV1 == null ? Output.empty() : this.ntlmV1;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="syncKerberosPasswords")
-      private final @Nullable Input<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
+      private final @Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
 
-    public Input<Either<String,SyncKerberosPasswords>> getSyncKerberosPasswords() {
-        return this.syncKerberosPasswords == null ? Input.empty() : this.syncKerberosPasswords;
+    public Output<Either<String,SyncKerberosPasswords>> getSyncKerberosPasswords() {
+        return this.syncKerberosPasswords == null ? Output.empty() : this.syncKerberosPasswords;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="syncNtlmPasswords")
-      private final @Nullable Input<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
+      private final @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
 
-    public Input<Either<String,SyncNtlmPasswords>> getSyncNtlmPasswords() {
-        return this.syncNtlmPasswords == null ? Input.empty() : this.syncNtlmPasswords;
+    public Output<Either<String,SyncNtlmPasswords>> getSyncNtlmPasswords() {
+        return this.syncNtlmPasswords == null ? Output.empty() : this.syncNtlmPasswords;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="syncOnPremPasswords")
-      private final @Nullable Input<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
+      private final @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
 
-    public Input<Either<String,SyncOnPremPasswords>> getSyncOnPremPasswords() {
-        return this.syncOnPremPasswords == null ? Input.empty() : this.syncOnPremPasswords;
+    public Output<Either<String,SyncOnPremPasswords>> getSyncOnPremPasswords() {
+        return this.syncOnPremPasswords == null ? Output.empty() : this.syncOnPremPasswords;
     }
 
     /**
@@ -97,37 +97,37 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tlsV1")
-      private final @Nullable Input<Either<String,TlsV1>> tlsV1;
+      private final @Nullable Output<Either<String,TlsV1>> tlsV1;
 
-    public Input<Either<String,TlsV1>> getTlsV1() {
-        return this.tlsV1 == null ? Input.empty() : this.tlsV1;
+    public Output<Either<String,TlsV1>> getTlsV1() {
+        return this.tlsV1 == null ? Output.empty() : this.tlsV1;
     }
 
     public DomainSecuritySettingsArgs(
-        @Nullable Input<Either<String,KerberosArmoring>> kerberosArmoring,
-        @Nullable Input<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption,
-        @Nullable Input<Either<String,NtlmV1>> ntlmV1,
-        @Nullable Input<Either<String,SyncKerberosPasswords>> syncKerberosPasswords,
-        @Nullable Input<Either<String,SyncNtlmPasswords>> syncNtlmPasswords,
-        @Nullable Input<Either<String,SyncOnPremPasswords>> syncOnPremPasswords,
-        @Nullable Input<Either<String,TlsV1>> tlsV1) {
-        this.kerberosArmoring = kerberosArmoring == null ? Input.ofLeft("Disabled") : kerberosArmoring;
-        this.kerberosRc4Encryption = kerberosRc4Encryption == null ? Input.ofLeft("Enabled") : kerberosRc4Encryption;
-        this.ntlmV1 = ntlmV1 == null ? Input.ofLeft("Enabled") : ntlmV1;
-        this.syncKerberosPasswords = syncKerberosPasswords == null ? Input.ofLeft("Enabled") : syncKerberosPasswords;
-        this.syncNtlmPasswords = syncNtlmPasswords == null ? Input.ofLeft("Enabled") : syncNtlmPasswords;
-        this.syncOnPremPasswords = syncOnPremPasswords == null ? Input.ofLeft("Enabled") : syncOnPremPasswords;
-        this.tlsV1 = tlsV1 == null ? Input.ofLeft("Enabled") : tlsV1;
+        @Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring,
+        @Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption,
+        @Nullable Output<Either<String,NtlmV1>> ntlmV1,
+        @Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords,
+        @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords,
+        @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords,
+        @Nullable Output<Either<String,TlsV1>> tlsV1) {
+        this.kerberosArmoring = kerberosArmoring == null ? Output.ofLeft("Disabled") : kerberosArmoring;
+        this.kerberosRc4Encryption = kerberosRc4Encryption == null ? Output.ofLeft("Enabled") : kerberosRc4Encryption;
+        this.ntlmV1 = ntlmV1 == null ? Output.ofLeft("Enabled") : ntlmV1;
+        this.syncKerberosPasswords = syncKerberosPasswords == null ? Output.ofLeft("Enabled") : syncKerberosPasswords;
+        this.syncNtlmPasswords = syncNtlmPasswords == null ? Output.ofLeft("Enabled") : syncNtlmPasswords;
+        this.syncOnPremPasswords = syncOnPremPasswords == null ? Output.ofLeft("Enabled") : syncOnPremPasswords;
+        this.tlsV1 = tlsV1 == null ? Output.ofLeft("Enabled") : tlsV1;
     }
 
     private DomainSecuritySettingsArgs() {
-        this.kerberosArmoring = Input.empty();
-        this.kerberosRc4Encryption = Input.empty();
-        this.ntlmV1 = Input.empty();
-        this.syncKerberosPasswords = Input.empty();
-        this.syncNtlmPasswords = Input.empty();
-        this.syncOnPremPasswords = Input.empty();
-        this.tlsV1 = Input.empty();
+        this.kerberosArmoring = Output.empty();
+        this.kerberosRc4Encryption = Output.empty();
+        this.ntlmV1 = Output.empty();
+        this.syncKerberosPasswords = Output.empty();
+        this.syncNtlmPasswords = Output.empty();
+        this.syncOnPremPasswords = Output.empty();
+        this.tlsV1 = Output.empty();
     }
 
     public static Builder builder() {
@@ -139,13 +139,13 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,KerberosArmoring>> kerberosArmoring;
-        private @Nullable Input<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
-        private @Nullable Input<Either<String,NtlmV1>> ntlmV1;
-        private @Nullable Input<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
-        private @Nullable Input<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
-        private @Nullable Input<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
-        private @Nullable Input<Either<String,TlsV1>> tlsV1;
+        private @Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring;
+        private @Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
+        private @Nullable Output<Either<String,NtlmV1>> ntlmV1;
+        private @Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
+        private @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
+        private @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
+        private @Nullable Output<Either<String,TlsV1>> tlsV1;
 
         public Builder() {
     	      // Empty
@@ -162,73 +162,73 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
     	      this.tlsV1 = defaults.tlsV1;
         }
 
-        public Builder kerberosArmoring(@Nullable Input<Either<String,KerberosArmoring>> kerberosArmoring) {
+        public Builder kerberosArmoring(@Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring) {
             this.kerberosArmoring = kerberosArmoring;
             return this;
         }
 
         public Builder kerberosArmoring(@Nullable Either<String,KerberosArmoring> kerberosArmoring) {
-            this.kerberosArmoring = Input.ofNullable(kerberosArmoring);
+            this.kerberosArmoring = Output.ofNullable(kerberosArmoring);
             return this;
         }
 
-        public Builder kerberosRc4Encryption(@Nullable Input<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption) {
+        public Builder kerberosRc4Encryption(@Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption) {
             this.kerberosRc4Encryption = kerberosRc4Encryption;
             return this;
         }
 
         public Builder kerberosRc4Encryption(@Nullable Either<String,KerberosRc4Encryption> kerberosRc4Encryption) {
-            this.kerberosRc4Encryption = Input.ofNullable(kerberosRc4Encryption);
+            this.kerberosRc4Encryption = Output.ofNullable(kerberosRc4Encryption);
             return this;
         }
 
-        public Builder ntlmV1(@Nullable Input<Either<String,NtlmV1>> ntlmV1) {
+        public Builder ntlmV1(@Nullable Output<Either<String,NtlmV1>> ntlmV1) {
             this.ntlmV1 = ntlmV1;
             return this;
         }
 
         public Builder ntlmV1(@Nullable Either<String,NtlmV1> ntlmV1) {
-            this.ntlmV1 = Input.ofNullable(ntlmV1);
+            this.ntlmV1 = Output.ofNullable(ntlmV1);
             return this;
         }
 
-        public Builder syncKerberosPasswords(@Nullable Input<Either<String,SyncKerberosPasswords>> syncKerberosPasswords) {
+        public Builder syncKerberosPasswords(@Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords) {
             this.syncKerberosPasswords = syncKerberosPasswords;
             return this;
         }
 
         public Builder syncKerberosPasswords(@Nullable Either<String,SyncKerberosPasswords> syncKerberosPasswords) {
-            this.syncKerberosPasswords = Input.ofNullable(syncKerberosPasswords);
+            this.syncKerberosPasswords = Output.ofNullable(syncKerberosPasswords);
             return this;
         }
 
-        public Builder syncNtlmPasswords(@Nullable Input<Either<String,SyncNtlmPasswords>> syncNtlmPasswords) {
+        public Builder syncNtlmPasswords(@Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords) {
             this.syncNtlmPasswords = syncNtlmPasswords;
             return this;
         }
 
         public Builder syncNtlmPasswords(@Nullable Either<String,SyncNtlmPasswords> syncNtlmPasswords) {
-            this.syncNtlmPasswords = Input.ofNullable(syncNtlmPasswords);
+            this.syncNtlmPasswords = Output.ofNullable(syncNtlmPasswords);
             return this;
         }
 
-        public Builder syncOnPremPasswords(@Nullable Input<Either<String,SyncOnPremPasswords>> syncOnPremPasswords) {
+        public Builder syncOnPremPasswords(@Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords) {
             this.syncOnPremPasswords = syncOnPremPasswords;
             return this;
         }
 
         public Builder syncOnPremPasswords(@Nullable Either<String,SyncOnPremPasswords> syncOnPremPasswords) {
-            this.syncOnPremPasswords = Input.ofNullable(syncOnPremPasswords);
+            this.syncOnPremPasswords = Output.ofNullable(syncOnPremPasswords);
             return this;
         }
 
-        public Builder tlsV1(@Nullable Input<Either<String,TlsV1>> tlsV1) {
+        public Builder tlsV1(@Nullable Output<Either<String,TlsV1>> tlsV1) {
             this.tlsV1 = tlsV1;
             return this;
         }
 
         public Builder tlsV1(@Nullable Either<String,TlsV1> tlsV1) {
-            this.tlsV1 = Input.ofNullable(tlsV1);
+            this.tlsV1 = Output.ofNullable(tlsV1);
             return this;
         }
         public DomainSecuritySettingsArgs build() {

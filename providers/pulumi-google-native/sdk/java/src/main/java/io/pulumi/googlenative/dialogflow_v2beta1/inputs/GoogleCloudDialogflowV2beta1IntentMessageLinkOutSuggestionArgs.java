@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArg
      * 
      */
     @InputImport(name="destinationName", required=true)
-      private final Input<String> destinationName;
+      private final Output<String> destinationName;
 
-    public Input<String> getDestinationName() {
+    public Output<String> getDestinationName() {
         return this.destinationName;
     }
 
@@ -33,22 +33,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArg
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs(
-        Input<String> destinationName,
-        Input<String> uri) {
+        Output<String> destinationName,
+        Output<String> uri) {
         this.destinationName = Objects.requireNonNull(destinationName, "expected parameter 'destinationName' to be non-null");
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs() {
-        this.destinationName = Input.empty();
-        this.uri = Input.empty();
+        this.destinationName = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArg
     }
 
     public static final class Builder {
-        private Input<String> destinationName;
-        private Input<String> uri;
+        private Output<String> destinationName;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArg
     	      this.uri = defaults.uri;
         }
 
-        public Builder destinationName(Input<String> destinationName) {
+        public Builder destinationName(Output<String> destinationName) {
             this.destinationName = Objects.requireNonNull(destinationName);
             return this;
         }
 
         public Builder destinationName(String destinationName) {
-            this.destinationName = Input.of(Objects.requireNonNull(destinationName));
+            this.destinationName = Output.of(Objects.requireNonNull(destinationName));
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs build() {

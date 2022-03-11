@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tpu.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class NodeSchedulingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="preemptible", required=true)
-      private final Input<Boolean> preemptible;
+      private final Output<Boolean> preemptible;
 
-    public Input<Boolean> getPreemptible() {
+    public Output<Boolean> getPreemptible() {
         return this.preemptible;
     }
 
-    public NodeSchedulingConfigArgs(Input<Boolean> preemptible) {
+    public NodeSchedulingConfigArgs(Output<Boolean> preemptible) {
         this.preemptible = Objects.requireNonNull(preemptible, "expected parameter 'preemptible' to be non-null");
     }
 
     private NodeSchedulingConfigArgs() {
-        this.preemptible = Input.empty();
+        this.preemptible = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class NodeSchedulingConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<Boolean> preemptible;
+        private Output<Boolean> preemptible;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class NodeSchedulingConfigArgs extends io.pulumi.resources.Resource
     	      this.preemptible = defaults.preemptible;
         }
 
-        public Builder preemptible(Input<Boolean> preemptible) {
+        public Builder preemptible(Output<Boolean> preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
 
         public Builder preemptible(Boolean preemptible) {
-            this.preemptible = Input.of(Objects.requireNonNull(preemptible));
+            this.preemptible = Output.of(Objects.requireNonNull(preemptible));
             return this;
         }
         public NodeSchedulingConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.deploymentmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetConfigGetArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetImportGetArgs;
@@ -22,9 +22,9 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<DeploymentTargetConfigGetArgs> config;
+      private final Output<DeploymentTargetConfigGetArgs> config;
 
-    public Input<DeploymentTargetConfigGetArgs> getConfig() {
+    public Output<DeploymentTargetConfigGetArgs> getConfig() {
         return this.config;
     }
 
@@ -36,22 +36,22 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="imports")
-      private final @Nullable Input<List<DeploymentTargetImportGetArgs>> imports;
+      private final @Nullable Output<List<DeploymentTargetImportGetArgs>> imports;
 
-    public Input<List<DeploymentTargetImportGetArgs>> getImports() {
-        return this.imports == null ? Input.empty() : this.imports;
+    public Output<List<DeploymentTargetImportGetArgs>> getImports() {
+        return this.imports == null ? Output.empty() : this.imports;
     }
 
     public DeploymentTargetGetArgs(
-        Input<DeploymentTargetConfigGetArgs> config,
-        @Nullable Input<List<DeploymentTargetImportGetArgs>> imports) {
+        Output<DeploymentTargetConfigGetArgs> config,
+        @Nullable Output<List<DeploymentTargetImportGetArgs>> imports) {
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
         this.imports = imports;
     }
 
     private DeploymentTargetGetArgs() {
-        this.config = Input.empty();
-        this.imports = Input.empty();
+        this.config = Output.empty();
+        this.imports = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<DeploymentTargetConfigGetArgs> config;
-        private @Nullable Input<List<DeploymentTargetImportGetArgs>> imports;
+        private Output<DeploymentTargetConfigGetArgs> config;
+        private @Nullable Output<List<DeploymentTargetImportGetArgs>> imports;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
     	      this.imports = defaults.imports;
         }
 
-        public Builder config(Input<DeploymentTargetConfigGetArgs> config) {
+        public Builder config(Output<DeploymentTargetConfigGetArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(DeploymentTargetConfigGetArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder imports(@Nullable Input<List<DeploymentTargetImportGetArgs>> imports) {
+        public Builder imports(@Nullable Output<List<DeploymentTargetImportGetArgs>> imports) {
             this.imports = imports;
             return this;
         }
 
         public Builder imports(@Nullable List<DeploymentTargetImportGetArgs> imports) {
-            this.imports = Input.ofNullable(imports);
+            this.imports = Output.ofNullable(imports);
             return this;
         }
         public DeploymentTargetGetArgs build() {

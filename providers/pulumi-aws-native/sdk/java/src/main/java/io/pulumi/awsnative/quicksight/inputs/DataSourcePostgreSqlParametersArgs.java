@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<String> database;
+      private final Output<String> database;
 
-    public Input<String> getDatabase() {
+    public Output<String> getDatabase() {
         return this.database;
     }
 
@@ -34,9 +34,9 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
@@ -45,25 +45,25 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Double> port;
+      private final Output<Double> port;
 
-    public Input<Double> getPort() {
+    public Output<Double> getPort() {
         return this.port;
     }
 
     public DataSourcePostgreSqlParametersArgs(
-        Input<String> database,
-        Input<String> host,
-        Input<Double> port) {
+        Output<String> database,
+        Output<String> host,
+        Output<Double> port) {
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private DataSourcePostgreSqlParametersArgs() {
-        this.database = Input.empty();
-        this.host = Input.empty();
-        this.port = Input.empty();
+        this.database = Output.empty();
+        this.host = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> database;
-        private Input<String> host;
-        private Input<Double> port;
+        private Output<String> database;
+        private Output<String> host;
+        private Output<Double> port;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
     	      this.port = defaults.port;
         }
 
-        public Builder database(Input<String> database) {
+        public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(String database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder port(Input<Double> port) {
+        public Builder port(Output<Double> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Double port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public DataSourcePostgreSqlParametersArgs build() {

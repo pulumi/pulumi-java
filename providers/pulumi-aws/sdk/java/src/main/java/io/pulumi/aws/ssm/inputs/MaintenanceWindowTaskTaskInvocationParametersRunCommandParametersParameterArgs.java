@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,22 +30,22 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<String>> values;
+      private final Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
+    public Output<List<String>> getValues() {
         return this.values;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs(
-        Input<String> name,
-        Input<List<String>> values) {
+        Output<String> name,
+        Output<List<String>> values) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs() {
-        this.name = Input.empty();
-        this.values = Input.empty();
+        this.name = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<List<String>> values;
+        private Output<String> name;
+        private Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     	      this.values = defaults.values;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder values(Input<List<String>> values) {
+        public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<String> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs build() {

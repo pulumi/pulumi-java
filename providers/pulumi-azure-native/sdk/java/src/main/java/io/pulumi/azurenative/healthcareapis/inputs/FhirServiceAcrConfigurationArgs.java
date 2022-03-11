@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class FhirServiceAcrConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="loginServers")
-      private final @Nullable Input<List<String>> loginServers;
+      private final @Nullable Output<List<String>> loginServers;
 
-    public Input<List<String>> getLoginServers() {
-        return this.loginServers == null ? Input.empty() : this.loginServers;
+    public Output<List<String>> getLoginServers() {
+        return this.loginServers == null ? Output.empty() : this.loginServers;
     }
 
-    public FhirServiceAcrConfigurationArgs(@Nullable Input<List<String>> loginServers) {
+    public FhirServiceAcrConfigurationArgs(@Nullable Output<List<String>> loginServers) {
         this.loginServers = loginServers;
     }
 
     private FhirServiceAcrConfigurationArgs() {
-        this.loginServers = Input.empty();
+        this.loginServers = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class FhirServiceAcrConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> loginServers;
+        private @Nullable Output<List<String>> loginServers;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class FhirServiceAcrConfigurationArgs extends io.pulumi.resources.R
     	      this.loginServers = defaults.loginServers;
         }
 
-        public Builder loginServers(@Nullable Input<List<String>> loginServers) {
+        public Builder loginServers(@Nullable Output<List<String>> loginServers) {
             this.loginServers = loginServers;
             return this;
         }
 
         public Builder loginServers(@Nullable List<String> loginServers) {
-            this.loginServers = Input.ofNullable(loginServers);
+            this.loginServers = Output.ofNullable(loginServers);
             return this;
         }
         public FhirServiceAcrConfigurationArgs build() {

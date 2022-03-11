@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
      * 
      */
     @InputImport(name="cookieBehavior", required=true)
-      private final Input<String> cookieBehavior;
+      private final Output<String> cookieBehavior;
 
-    public Input<String> getCookieBehavior() {
+    public Output<String> getCookieBehavior() {
         return this.cookieBehavior;
     }
 
@@ -31,22 +31,22 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
      * 
      */
     @InputImport(name="cookies")
-      private final @Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> cookies;
+      private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> cookies;
 
-    public Input<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> getCookies() {
-        return this.cookies == null ? Input.empty() : this.cookies;
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> getCookies() {
+        return this.cookies == null ? Output.empty() : this.cookies;
     }
 
     public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs(
-        Input<String> cookieBehavior,
-        @Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> cookies) {
+        Output<String> cookieBehavior,
+        @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> cookies) {
         this.cookieBehavior = Objects.requireNonNull(cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
         this.cookies = cookies;
     }
 
     private CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs() {
-        this.cookieBehavior = Input.empty();
-        this.cookies = Input.empty();
+        this.cookieBehavior = Output.empty();
+        this.cookies = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
     }
 
     public static final class Builder {
-        private Input<String> cookieBehavior;
-        private @Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> cookies;
+        private Output<String> cookieBehavior;
+        private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> cookies;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
     	      this.cookies = defaults.cookies;
         }
 
-        public Builder cookieBehavior(Input<String> cookieBehavior) {
+        public Builder cookieBehavior(Output<String> cookieBehavior) {
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
 
         public Builder cookieBehavior(String cookieBehavior) {
-            this.cookieBehavior = Input.of(Objects.requireNonNull(cookieBehavior));
+            this.cookieBehavior = Output.of(Objects.requireNonNull(cookieBehavior));
             return this;
         }
 
-        public Builder cookies(@Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> cookies) {
+        public Builder cookies(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> cookies) {
             this.cookies = cookies;
             return this;
         }
 
         public Builder cookies(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs cookies) {
-            this.cookies = Input.ofNullable(cookies);
+            this.cookies = Output.ofNullable(cookies);
             return this;
         }
         public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs build() {

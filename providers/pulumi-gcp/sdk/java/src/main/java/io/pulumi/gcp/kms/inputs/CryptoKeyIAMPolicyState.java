@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cryptoKeyId")
-      private final @Nullable Input<String> cryptoKeyId;
+      private final @Nullable Output<String> cryptoKeyId;
 
-    public Input<String> getCryptoKeyId() {
-        return this.cryptoKeyId == null ? Input.empty() : this.cryptoKeyId;
+    public Output<String> getCryptoKeyId() {
+        return this.cryptoKeyId == null ? Output.empty() : this.cryptoKeyId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     public CryptoKeyIAMPolicyState(
-        @Nullable Input<String> cryptoKeyId,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData) {
+        @Nullable Output<String> cryptoKeyId,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData) {
         this.cryptoKeyId = cryptoKeyId;
         this.etag = etag;
         this.policyData = policyData;
     }
 
     private CryptoKeyIAMPolicyState() {
-        this.cryptoKeyId = Input.empty();
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
+        this.cryptoKeyId = Output.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cryptoKeyId;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
+        private @Nullable Output<String> cryptoKeyId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder cryptoKeyId(@Nullable Input<String> cryptoKeyId) {
+        public Builder cryptoKeyId(@Nullable Output<String> cryptoKeyId) {
             this.cryptoKeyId = cryptoKeyId;
             return this;
         }
 
         public Builder cryptoKeyId(@Nullable String cryptoKeyId) {
-            this.cryptoKeyId = Input.ofNullable(cryptoKeyId);
+            this.cryptoKeyId = Output.ofNullable(cryptoKeyId);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
         public CryptoKeyIAMPolicyState build() {

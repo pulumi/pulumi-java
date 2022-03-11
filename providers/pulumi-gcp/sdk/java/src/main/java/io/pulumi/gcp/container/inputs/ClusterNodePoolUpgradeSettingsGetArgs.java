@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class ClusterNodePoolUpgradeSettingsGetArgs extends io.pulumi.resou
     public static final ClusterNodePoolUpgradeSettingsGetArgs Empty = new ClusterNodePoolUpgradeSettingsGetArgs();
 
     @InputImport(name="maxSurge", required=true)
-      private final Input<Integer> maxSurge;
+      private final Output<Integer> maxSurge;
 
-    public Input<Integer> getMaxSurge() {
+    public Output<Integer> getMaxSurge() {
         return this.maxSurge;
     }
 
     @InputImport(name="maxUnavailable", required=true)
-      private final Input<Integer> maxUnavailable;
+      private final Output<Integer> maxUnavailable;
 
-    public Input<Integer> getMaxUnavailable() {
+    public Output<Integer> getMaxUnavailable() {
         return this.maxUnavailable;
     }
 
     public ClusterNodePoolUpgradeSettingsGetArgs(
-        Input<Integer> maxSurge,
-        Input<Integer> maxUnavailable) {
+        Output<Integer> maxSurge,
+        Output<Integer> maxUnavailable) {
         this.maxSurge = Objects.requireNonNull(maxSurge, "expected parameter 'maxSurge' to be non-null");
         this.maxUnavailable = Objects.requireNonNull(maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
     }
 
     private ClusterNodePoolUpgradeSettingsGetArgs() {
-        this.maxSurge = Input.empty();
-        this.maxUnavailable = Input.empty();
+        this.maxSurge = Output.empty();
+        this.maxUnavailable = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class ClusterNodePoolUpgradeSettingsGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<Integer> maxSurge;
-        private Input<Integer> maxUnavailable;
+        private Output<Integer> maxSurge;
+        private Output<Integer> maxUnavailable;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class ClusterNodePoolUpgradeSettingsGetArgs extends io.pulumi.resou
     	      this.maxUnavailable = defaults.maxUnavailable;
         }
 
-        public Builder maxSurge(Input<Integer> maxSurge) {
+        public Builder maxSurge(Output<Integer> maxSurge) {
             this.maxSurge = Objects.requireNonNull(maxSurge);
             return this;
         }
 
         public Builder maxSurge(Integer maxSurge) {
-            this.maxSurge = Input.of(Objects.requireNonNull(maxSurge));
+            this.maxSurge = Output.of(Objects.requireNonNull(maxSurge));
             return this;
         }
 
-        public Builder maxUnavailable(Input<Integer> maxUnavailable) {
+        public Builder maxUnavailable(Output<Integer> maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
 
         public Builder maxUnavailable(Integer maxUnavailable) {
-            this.maxUnavailable = Input.of(Objects.requireNonNull(maxUnavailable));
+            this.maxUnavailable = Output.of(Objects.requireNonNull(maxUnavailable));
             return this;
         }
         public ClusterNodePoolUpgradeSettingsGetArgs build() {

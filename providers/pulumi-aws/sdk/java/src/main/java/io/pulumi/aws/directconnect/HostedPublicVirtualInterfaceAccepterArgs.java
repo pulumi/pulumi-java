@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="virtualInterfaceId", required=true)
-      private final Input<String> virtualInterfaceId;
+      private final Output<String> virtualInterfaceId;
 
-    public Input<String> getVirtualInterfaceId() {
+    public Output<String> getVirtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 
     public HostedPublicVirtualInterfaceAccepterArgs(
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> virtualInterfaceId) {
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> virtualInterfaceId) {
         this.tags = tags;
         this.virtualInterfaceId = Objects.requireNonNull(virtualInterfaceId, "expected parameter 'virtualInterfaceId' to be non-null");
     }
 
     private HostedPublicVirtualInterfaceAccepterArgs() {
-        this.tags = Input.empty();
-        this.virtualInterfaceId = Input.empty();
+        this.tags = Output.empty();
+        this.virtualInterfaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> virtualInterfaceId;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> virtualInterfaceId;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
     	      this.virtualInterfaceId = defaults.virtualInterfaceId;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualInterfaceId(Input<String> virtualInterfaceId) {
+        public Builder virtualInterfaceId(Output<String> virtualInterfaceId) {
             this.virtualInterfaceId = Objects.requireNonNull(virtualInterfaceId);
             return this;
         }
 
         public Builder virtualInterfaceId(String virtualInterfaceId) {
-            this.virtualInterfaceId = Input.of(Objects.requireNonNull(virtualInterfaceId));
+            this.virtualInterfaceId = Output.of(Objects.requireNonNull(virtualInterfaceId));
             return this;
         }
         public HostedPublicVirtualInterfaceAccepterArgs build() {

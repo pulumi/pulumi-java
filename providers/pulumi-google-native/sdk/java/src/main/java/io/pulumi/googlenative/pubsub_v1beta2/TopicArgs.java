@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,39 +19,39 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="topicId", required=true)
-      private final Input<String> topicId;
+      private final Output<String> topicId;
 
-    public Input<String> getTopicId() {
+    public Output<String> getTopicId() {
         return this.topicId;
     }
 
     public TopicArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> topicId) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> topicId) {
         this.name = name;
         this.project = project;
         this.topicId = Objects.requireNonNull(topicId, "expected parameter 'topicId' to be non-null");
     }
 
     private TopicArgs() {
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.topicId = Input.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.topicId = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,9 +63,9 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> topicId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> topicId;
 
         public Builder() {
     	      // Empty
@@ -78,33 +78,33 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicId = defaults.topicId;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder topicId(Input<String> topicId) {
+        public Builder topicId(Output<String> topicId) {
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }
 
         public Builder topicId(String topicId) {
-            this.topicId = Input.of(Objects.requireNonNull(topicId));
+            this.topicId = Output.of(Objects.requireNonNull(topicId));
             return this;
         }
         public TopicArgs build() {

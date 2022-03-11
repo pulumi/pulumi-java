@@ -4,7 +4,7 @@
 package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.aws.codepipeline.inputs.PipelineStageActionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class PipelineStageGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="actions", required=true)
-      private final Input<List<PipelineStageActionGetArgs>> actions;
+      private final Output<List<PipelineStageActionGetArgs>> actions;
 
-    public Input<List<PipelineStageActionGetArgs>> getActions() {
+    public Output<List<PipelineStageActionGetArgs>> getActions() {
         return this.actions;
     }
 
@@ -31,22 +31,22 @@ public final class PipelineStageGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public PipelineStageGetArgs(
-        Input<List<PipelineStageActionGetArgs>> actions,
-        Input<String> name) {
+        Output<List<PipelineStageActionGetArgs>> actions,
+        Output<String> name) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private PipelineStageGetArgs() {
-        this.actions = Input.empty();
-        this.name = Input.empty();
+        this.actions = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class PipelineStageGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<List<PipelineStageActionGetArgs>> actions;
-        private Input<String> name;
+        private Output<List<PipelineStageActionGetArgs>> actions;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class PipelineStageGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.name = defaults.name;
         }
 
-        public Builder actions(Input<List<PipelineStageActionGetArgs>> actions) {
+        public Builder actions(Output<List<PipelineStageActionGetArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<PipelineStageActionGetArgs> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public PipelineStageGetArgs build() {

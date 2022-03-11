@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v2beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudresourcemanager_v2beta1.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.cloudresourcemanager_v2beta1.inputs.BindingArgs;
@@ -23,10 +23,10 @@ public final class FolderIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="auditConfigs")
-      private final @Nullable Input<List<AuditConfigArgs>> auditConfigs;
+      private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Input<List<AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
+    public Output<List<AuditConfigArgs>> getAuditConfigs() {
+        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FolderIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     /**
@@ -45,16 +45,16 @@ public final class FolderIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="folderId", required=true)
-      private final Input<String> folderId;
+      private final Output<String> folderId;
 
-    public Input<String> getFolderId() {
+    public Output<String> getFolderId() {
         return this.folderId;
     }
 
@@ -63,10 +63,10 @@ public final class FolderIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="updateMask")
-      private final @Nullable Input<String> updateMask;
+      private final @Nullable Output<String> updateMask;
 
-    public Input<String> getUpdateMask() {
-        return this.updateMask == null ? Input.empty() : this.updateMask;
+    public Output<String> getUpdateMask() {
+        return this.updateMask == null ? Output.empty() : this.updateMask;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class FolderIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public FolderIamPolicyArgs(
-        @Nullable Input<List<AuditConfigArgs>> auditConfigs,
-        @Nullable Input<List<BindingArgs>> bindings,
-        @Nullable Input<String> etag,
-        Input<String> folderId,
-        @Nullable Input<String> updateMask,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<AuditConfigArgs>> auditConfigs,
+        @Nullable Output<List<BindingArgs>> bindings,
+        @Nullable Output<String> etag,
+        Output<String> folderId,
+        @Nullable Output<String> updateMask,
+        @Nullable Output<Integer> version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;
@@ -96,12 +96,12 @@ public final class FolderIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private FolderIamPolicyArgs() {
-        this.auditConfigs = Input.empty();
-        this.bindings = Input.empty();
-        this.etag = Input.empty();
-        this.folderId = Input.empty();
-        this.updateMask = Input.empty();
-        this.version = Input.empty();
+        this.auditConfigs = Output.empty();
+        this.bindings = Output.empty();
+        this.etag = Output.empty();
+        this.folderId = Output.empty();
+        this.updateMask = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class FolderIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AuditConfigArgs>> auditConfigs;
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private @Nullable Input<String> etag;
-        private Input<String> folderId;
-        private @Nullable Input<String> updateMask;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private @Nullable Output<String> etag;
+        private Output<String> folderId;
+        private @Nullable Output<String> updateMask;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class FolderIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder auditConfigs(@Nullable Input<List<AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Output<List<AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
         public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Input.ofNullable(auditConfigs);
+            this.auditConfigs = Output.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder folderId(Input<String> folderId) {
+        public Builder folderId(Output<String> folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
 
         public Builder folderId(String folderId) {
-            this.folderId = Input.of(Objects.requireNonNull(folderId));
+            this.folderId = Output.of(Objects.requireNonNull(folderId));
             return this;
         }
 
-        public Builder updateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Output<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Input.ofNullable(updateMask);
+            this.updateMask = Output.ofNullable(updateMask);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public FolderIamPolicyArgs build() {

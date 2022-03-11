@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<String> format;
+      private final @Nullable Output<String> format;
 
-    public Input<String> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<String> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public DeploymentModelArgs(
-        @Nullable Input<String> format,
-        @Nullable Input<String> name,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> format,
+        @Nullable Output<String> name,
+        @Nullable Output<String> version) {
         this.format = format;
         this.name = name;
         this.version = version;
     }
 
     private DeploymentModelArgs() {
-        this.format = Input.empty();
-        this.name = Input.empty();
-        this.version = Input.empty();
+        this.format = Output.empty();
+        this.name = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> format;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> format;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder format(@Nullable Input<String> format) {
+        public Builder format(@Nullable Output<String> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable String format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public DeploymentModelArgs build() {

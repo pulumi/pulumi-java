@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clientTlsPolicy")
-      private final @Nullable Input<String> clientTlsPolicy;
+      private final @Nullable Output<String> clientTlsPolicy;
 
-    public Input<String> getClientTlsPolicy() {
-        return this.clientTlsPolicy == null ? Input.empty() : this.clientTlsPolicy;
+    public Output<String> getClientTlsPolicy() {
+        return this.clientTlsPolicy == null ? Output.empty() : this.clientTlsPolicy;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subjectAltNames")
-      private final @Nullable Input<List<String>> subjectAltNames;
+      private final @Nullable Output<List<String>> subjectAltNames;
 
-    public Input<List<String>> getSubjectAltNames() {
-        return this.subjectAltNames == null ? Input.empty() : this.subjectAltNames;
+    public Output<List<String>> getSubjectAltNames() {
+        return this.subjectAltNames == null ? Output.empty() : this.subjectAltNames;
     }
 
     public SecuritySettingsArgs(
-        @Nullable Input<String> clientTlsPolicy,
-        @Nullable Input<List<String>> subjectAltNames) {
+        @Nullable Output<String> clientTlsPolicy,
+        @Nullable Output<List<String>> subjectAltNames) {
         this.clientTlsPolicy = clientTlsPolicy;
         this.subjectAltNames = subjectAltNames;
     }
 
     private SecuritySettingsArgs() {
-        this.clientTlsPolicy = Input.empty();
-        this.subjectAltNames = Input.empty();
+        this.clientTlsPolicy = Output.empty();
+        this.subjectAltNames = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientTlsPolicy;
-        private @Nullable Input<List<String>> subjectAltNames;
+        private @Nullable Output<String> clientTlsPolicy;
+        private @Nullable Output<List<String>> subjectAltNames;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.subjectAltNames = defaults.subjectAltNames;
         }
 
-        public Builder clientTlsPolicy(@Nullable Input<String> clientTlsPolicy) {
+        public Builder clientTlsPolicy(@Nullable Output<String> clientTlsPolicy) {
             this.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
 
         public Builder clientTlsPolicy(@Nullable String clientTlsPolicy) {
-            this.clientTlsPolicy = Input.ofNullable(clientTlsPolicy);
+            this.clientTlsPolicy = Output.ofNullable(clientTlsPolicy);
             return this;
         }
 
-        public Builder subjectAltNames(@Nullable Input<List<String>> subjectAltNames) {
+        public Builder subjectAltNames(@Nullable Output<List<String>> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
 
         public Builder subjectAltNames(@Nullable List<String> subjectAltNames) {
-            this.subjectAltNames = Input.ofNullable(subjectAltNames);
+            this.subjectAltNames = Output.ofNullable(subjectAltNames);
             return this;
         }
         public SecuritySettingsArgs build() {

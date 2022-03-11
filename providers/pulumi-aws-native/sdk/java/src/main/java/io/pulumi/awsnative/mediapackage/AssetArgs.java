@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage;
 
 import io.pulumi.awsnative.mediapackage.inputs.AssetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packagingGroupId", required=true)
-      private final Input<String> packagingGroupId;
+      private final Output<String> packagingGroupId;
 
-    public Input<String> getPackagingGroupId() {
+    public Output<String> getPackagingGroupId() {
         return this.packagingGroupId;
     }
 
@@ -32,10 +32,10 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceArn", required=true)
-      private final Input<String> sourceArn;
+      private final Output<String> sourceArn;
 
-    public Input<String> getSourceArn() {
+    public Output<String> getSourceArn() {
         return this.sourceArn;
     }
 
@@ -54,9 +54,9 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRoleArn", required=true)
-      private final Input<String> sourceRoleArn;
+      private final Output<String> sourceRoleArn;
 
-    public Input<String> getSourceRoleArn() {
+    public Output<String> getSourceRoleArn() {
         return this.sourceRoleArn;
     }
 
@@ -65,18 +65,18 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<AssetTagArgs>> tags;
+      private final @Nullable Output<List<AssetTagArgs>> tags;
 
-    public Input<List<AssetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AssetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AssetArgs(
-        Input<String> packagingGroupId,
-        @Nullable Input<String> resourceId,
-        Input<String> sourceArn,
-        Input<String> sourceRoleArn,
-        @Nullable Input<List<AssetTagArgs>> tags) {
+        Output<String> packagingGroupId,
+        @Nullable Output<String> resourceId,
+        Output<String> sourceArn,
+        Output<String> sourceRoleArn,
+        @Nullable Output<List<AssetTagArgs>> tags) {
         this.packagingGroupId = Objects.requireNonNull(packagingGroupId, "expected parameter 'packagingGroupId' to be non-null");
         this.resourceId = resourceId;
         this.sourceArn = Objects.requireNonNull(sourceArn, "expected parameter 'sourceArn' to be non-null");
@@ -85,11 +85,11 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssetArgs() {
-        this.packagingGroupId = Input.empty();
-        this.resourceId = Input.empty();
-        this.sourceArn = Input.empty();
-        this.sourceRoleArn = Input.empty();
-        this.tags = Input.empty();
+        this.packagingGroupId = Output.empty();
+        this.resourceId = Output.empty();
+        this.sourceArn = Output.empty();
+        this.sourceRoleArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> packagingGroupId;
-        private @Nullable Input<String> resourceId;
-        private Input<String> sourceArn;
-        private Input<String> sourceRoleArn;
-        private @Nullable Input<List<AssetTagArgs>> tags;
+        private Output<String> packagingGroupId;
+        private @Nullable Output<String> resourceId;
+        private Output<String> sourceArn;
+        private Output<String> sourceRoleArn;
+        private @Nullable Output<List<AssetTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder packagingGroupId(Input<String> packagingGroupId) {
+        public Builder packagingGroupId(Output<String> packagingGroupId) {
             this.packagingGroupId = Objects.requireNonNull(packagingGroupId);
             return this;
         }
 
         public Builder packagingGroupId(String packagingGroupId) {
-            this.packagingGroupId = Input.of(Objects.requireNonNull(packagingGroupId));
+            this.packagingGroupId = Output.of(Objects.requireNonNull(packagingGroupId));
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder sourceArn(Input<String> sourceArn) {
+        public Builder sourceArn(Output<String> sourceArn) {
             this.sourceArn = Objects.requireNonNull(sourceArn);
             return this;
         }
 
         public Builder sourceArn(String sourceArn) {
-            this.sourceArn = Input.of(Objects.requireNonNull(sourceArn));
+            this.sourceArn = Output.of(Objects.requireNonNull(sourceArn));
             return this;
         }
 
-        public Builder sourceRoleArn(Input<String> sourceRoleArn) {
+        public Builder sourceRoleArn(Output<String> sourceRoleArn) {
             this.sourceRoleArn = Objects.requireNonNull(sourceRoleArn);
             return this;
         }
 
         public Builder sourceRoleArn(String sourceRoleArn) {
-            this.sourceRoleArn = Input.of(Objects.requireNonNull(sourceRoleArn));
+            this.sourceRoleArn = Output.of(Objects.requireNonNull(sourceRoleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AssetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AssetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AssetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AssetArgs build() {

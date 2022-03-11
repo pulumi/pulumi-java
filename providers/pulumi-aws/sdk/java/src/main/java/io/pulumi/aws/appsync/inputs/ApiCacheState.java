@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiCachingBehavior")
-      private final @Nullable Input<String> apiCachingBehavior;
+      private final @Nullable Output<String> apiCachingBehavior;
 
-    public Input<String> getApiCachingBehavior() {
-        return this.apiCachingBehavior == null ? Input.empty() : this.apiCachingBehavior;
+    public Output<String> getApiCachingBehavior() {
+        return this.apiCachingBehavior == null ? Output.empty() : this.apiCachingBehavior;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-      private final @Nullable Input<String> apiId;
+      private final @Nullable Output<String> apiId;
 
-    public Input<String> getApiId() {
-        return this.apiId == null ? Input.empty() : this.apiId;
+    public Output<String> getApiId() {
+        return this.apiId == null ? Output.empty() : this.apiId;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="atRestEncryptionEnabled")
-      private final @Nullable Input<Boolean> atRestEncryptionEnabled;
+      private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
-    public Input<Boolean> getAtRestEncryptionEnabled() {
-        return this.atRestEncryptionEnabled == null ? Input.empty() : this.atRestEncryptionEnabled;
+    public Output<Boolean> getAtRestEncryptionEnabled() {
+        return this.atRestEncryptionEnabled == null ? Output.empty() : this.atRestEncryptionEnabled;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitEncryptionEnabled")
-      private final @Nullable Input<Boolean> transitEncryptionEnabled;
+      private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
-    public Input<Boolean> getTransitEncryptionEnabled() {
-        return this.transitEncryptionEnabled == null ? Input.empty() : this.transitEncryptionEnabled;
+    public Output<Boolean> getTransitEncryptionEnabled() {
+        return this.transitEncryptionEnabled == null ? Output.empty() : this.transitEncryptionEnabled;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<Integer> ttl;
+      private final @Nullable Output<Integer> ttl;
 
-    public Input<Integer> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<Integer> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ApiCacheState(
-        @Nullable Input<String> apiCachingBehavior,
-        @Nullable Input<String> apiId,
-        @Nullable Input<Boolean> atRestEncryptionEnabled,
-        @Nullable Input<Boolean> transitEncryptionEnabled,
-        @Nullable Input<Integer> ttl,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> apiCachingBehavior,
+        @Nullable Output<String> apiId,
+        @Nullable Output<Boolean> atRestEncryptionEnabled,
+        @Nullable Output<Boolean> transitEncryptionEnabled,
+        @Nullable Output<Integer> ttl,
+        @Nullable Output<String> type) {
         this.apiCachingBehavior = apiCachingBehavior;
         this.apiId = apiId;
         this.atRestEncryptionEnabled = atRestEncryptionEnabled;
@@ -98,12 +98,12 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiCacheState() {
-        this.apiCachingBehavior = Input.empty();
-        this.apiId = Input.empty();
-        this.atRestEncryptionEnabled = Input.empty();
-        this.transitEncryptionEnabled = Input.empty();
-        this.ttl = Input.empty();
-        this.type = Input.empty();
+        this.apiCachingBehavior = Output.empty();
+        this.apiId = Output.empty();
+        this.atRestEncryptionEnabled = Output.empty();
+        this.transitEncryptionEnabled = Output.empty();
+        this.ttl = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiCachingBehavior;
-        private @Nullable Input<String> apiId;
-        private @Nullable Input<Boolean> atRestEncryptionEnabled;
-        private @Nullable Input<Boolean> transitEncryptionEnabled;
-        private @Nullable Input<Integer> ttl;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> apiCachingBehavior;
+        private @Nullable Output<String> apiId;
+        private @Nullable Output<Boolean> atRestEncryptionEnabled;
+        private @Nullable Output<Boolean> transitEncryptionEnabled;
+        private @Nullable Output<Integer> ttl;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder apiCachingBehavior(@Nullable Input<String> apiCachingBehavior) {
+        public Builder apiCachingBehavior(@Nullable Output<String> apiCachingBehavior) {
             this.apiCachingBehavior = apiCachingBehavior;
             return this;
         }
 
         public Builder apiCachingBehavior(@Nullable String apiCachingBehavior) {
-            this.apiCachingBehavior = Input.ofNullable(apiCachingBehavior);
+            this.apiCachingBehavior = Output.ofNullable(apiCachingBehavior);
             return this;
         }
 
-        public Builder apiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Output<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Input.ofNullable(apiId);
+            this.apiId = Output.ofNullable(apiId);
             return this;
         }
 
-        public Builder atRestEncryptionEnabled(@Nullable Input<Boolean> atRestEncryptionEnabled) {
+        public Builder atRestEncryptionEnabled(@Nullable Output<Boolean> atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
 
         public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
-            this.atRestEncryptionEnabled = Input.ofNullable(atRestEncryptionEnabled);
+            this.atRestEncryptionEnabled = Output.ofNullable(atRestEncryptionEnabled);
             return this;
         }
 
-        public Builder transitEncryptionEnabled(@Nullable Input<Boolean> transitEncryptionEnabled) {
+        public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
             this.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
 
         public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
-            this.transitEncryptionEnabled = Input.ofNullable(transitEncryptionEnabled);
+            this.transitEncryptionEnabled = Output.ofNullable(transitEncryptionEnabled);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ApiCacheState build() {

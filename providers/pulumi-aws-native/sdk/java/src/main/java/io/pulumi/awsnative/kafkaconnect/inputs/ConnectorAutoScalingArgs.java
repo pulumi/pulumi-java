@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleInPolicyArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleOutPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxWorkerCount", required=true)
-      private final Input<Integer> maxWorkerCount;
+      private final Output<Integer> maxWorkerCount;
 
-    public Input<Integer> getMaxWorkerCount() {
+    public Output<Integer> getMaxWorkerCount() {
         return this.maxWorkerCount;
     }
 
@@ -35,9 +35,9 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mcuCount", required=true)
-      private final Input<Integer> mcuCount;
+      private final Output<Integer> mcuCount;
 
-    public Input<Integer> getMcuCount() {
+    public Output<Integer> getMcuCount() {
         return this.mcuCount;
     }
 
@@ -46,32 +46,32 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="minWorkerCount", required=true)
-      private final Input<Integer> minWorkerCount;
+      private final Output<Integer> minWorkerCount;
 
-    public Input<Integer> getMinWorkerCount() {
+    public Output<Integer> getMinWorkerCount() {
         return this.minWorkerCount;
     }
 
     @InputImport(name="scaleInPolicy", required=true)
-      private final Input<ConnectorScaleInPolicyArgs> scaleInPolicy;
+      private final Output<ConnectorScaleInPolicyArgs> scaleInPolicy;
 
-    public Input<ConnectorScaleInPolicyArgs> getScaleInPolicy() {
+    public Output<ConnectorScaleInPolicyArgs> getScaleInPolicy() {
         return this.scaleInPolicy;
     }
 
     @InputImport(name="scaleOutPolicy", required=true)
-      private final Input<ConnectorScaleOutPolicyArgs> scaleOutPolicy;
+      private final Output<ConnectorScaleOutPolicyArgs> scaleOutPolicy;
 
-    public Input<ConnectorScaleOutPolicyArgs> getScaleOutPolicy() {
+    public Output<ConnectorScaleOutPolicyArgs> getScaleOutPolicy() {
         return this.scaleOutPolicy;
     }
 
     public ConnectorAutoScalingArgs(
-        Input<Integer> maxWorkerCount,
-        Input<Integer> mcuCount,
-        Input<Integer> minWorkerCount,
-        Input<ConnectorScaleInPolicyArgs> scaleInPolicy,
-        Input<ConnectorScaleOutPolicyArgs> scaleOutPolicy) {
+        Output<Integer> maxWorkerCount,
+        Output<Integer> mcuCount,
+        Output<Integer> minWorkerCount,
+        Output<ConnectorScaleInPolicyArgs> scaleInPolicy,
+        Output<ConnectorScaleOutPolicyArgs> scaleOutPolicy) {
         this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount, "expected parameter 'maxWorkerCount' to be non-null");
         this.mcuCount = Objects.requireNonNull(mcuCount, "expected parameter 'mcuCount' to be non-null");
         this.minWorkerCount = Objects.requireNonNull(minWorkerCount, "expected parameter 'minWorkerCount' to be non-null");
@@ -80,11 +80,11 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     }
 
     private ConnectorAutoScalingArgs() {
-        this.maxWorkerCount = Input.empty();
-        this.mcuCount = Input.empty();
-        this.minWorkerCount = Input.empty();
-        this.scaleInPolicy = Input.empty();
-        this.scaleOutPolicy = Input.empty();
+        this.maxWorkerCount = Output.empty();
+        this.mcuCount = Output.empty();
+        this.minWorkerCount = Output.empty();
+        this.scaleInPolicy = Output.empty();
+        this.scaleOutPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,11 +96,11 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<Integer> maxWorkerCount;
-        private Input<Integer> mcuCount;
-        private Input<Integer> minWorkerCount;
-        private Input<ConnectorScaleInPolicyArgs> scaleInPolicy;
-        private Input<ConnectorScaleOutPolicyArgs> scaleOutPolicy;
+        private Output<Integer> maxWorkerCount;
+        private Output<Integer> mcuCount;
+        private Output<Integer> minWorkerCount;
+        private Output<ConnectorScaleInPolicyArgs> scaleInPolicy;
+        private Output<ConnectorScaleOutPolicyArgs> scaleOutPolicy;
 
         public Builder() {
     	      // Empty
@@ -115,53 +115,53 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     	      this.scaleOutPolicy = defaults.scaleOutPolicy;
         }
 
-        public Builder maxWorkerCount(Input<Integer> maxWorkerCount) {
+        public Builder maxWorkerCount(Output<Integer> maxWorkerCount) {
             this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount);
             return this;
         }
 
         public Builder maxWorkerCount(Integer maxWorkerCount) {
-            this.maxWorkerCount = Input.of(Objects.requireNonNull(maxWorkerCount));
+            this.maxWorkerCount = Output.of(Objects.requireNonNull(maxWorkerCount));
             return this;
         }
 
-        public Builder mcuCount(Input<Integer> mcuCount) {
+        public Builder mcuCount(Output<Integer> mcuCount) {
             this.mcuCount = Objects.requireNonNull(mcuCount);
             return this;
         }
 
         public Builder mcuCount(Integer mcuCount) {
-            this.mcuCount = Input.of(Objects.requireNonNull(mcuCount));
+            this.mcuCount = Output.of(Objects.requireNonNull(mcuCount));
             return this;
         }
 
-        public Builder minWorkerCount(Input<Integer> minWorkerCount) {
+        public Builder minWorkerCount(Output<Integer> minWorkerCount) {
             this.minWorkerCount = Objects.requireNonNull(minWorkerCount);
             return this;
         }
 
         public Builder minWorkerCount(Integer minWorkerCount) {
-            this.minWorkerCount = Input.of(Objects.requireNonNull(minWorkerCount));
+            this.minWorkerCount = Output.of(Objects.requireNonNull(minWorkerCount));
             return this;
         }
 
-        public Builder scaleInPolicy(Input<ConnectorScaleInPolicyArgs> scaleInPolicy) {
+        public Builder scaleInPolicy(Output<ConnectorScaleInPolicyArgs> scaleInPolicy) {
             this.scaleInPolicy = Objects.requireNonNull(scaleInPolicy);
             return this;
         }
 
         public Builder scaleInPolicy(ConnectorScaleInPolicyArgs scaleInPolicy) {
-            this.scaleInPolicy = Input.of(Objects.requireNonNull(scaleInPolicy));
+            this.scaleInPolicy = Output.of(Objects.requireNonNull(scaleInPolicy));
             return this;
         }
 
-        public Builder scaleOutPolicy(Input<ConnectorScaleOutPolicyArgs> scaleOutPolicy) {
+        public Builder scaleOutPolicy(Output<ConnectorScaleOutPolicyArgs> scaleOutPolicy) {
             this.scaleOutPolicy = Objects.requireNonNull(scaleOutPolicy);
             return this;
         }
 
         public Builder scaleOutPolicy(ConnectorScaleOutPolicyArgs scaleOutPolicy) {
-            this.scaleOutPolicy = Input.of(Objects.requireNonNull(scaleOutPolicy));
+            this.scaleOutPolicy = Output.of(Objects.requireNonNull(scaleOutPolicy));
             return this;
         }
         public ConnectorAutoScalingArgs build() {

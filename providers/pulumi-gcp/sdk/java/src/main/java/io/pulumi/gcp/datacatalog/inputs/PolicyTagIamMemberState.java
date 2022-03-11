@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagIamMemberConditionGetArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
     public static final PolicyTagIamMemberState Empty = new PolicyTagIamMemberState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<PolicyTagIamMemberConditionGetArgs> condition;
+      private final @Nullable Output<PolicyTagIamMemberConditionGetArgs> condition;
 
-    public Input<PolicyTagIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<PolicyTagIamMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,17 +27,17 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyTag")
-      private final @Nullable Input<String> policyTag;
+      private final @Nullable Output<String> policyTag;
 
-    public Input<String> getPolicyTag() {
-        return this.policyTag == null ? Input.empty() : this.policyTag;
+    public Output<String> getPolicyTag() {
+        return this.policyTag == null ? Output.empty() : this.policyTag;
     }
 
     /**
@@ -58,18 +58,18 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public PolicyTagIamMemberState(
-        @Nullable Input<PolicyTagIamMemberConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> member,
-        @Nullable Input<String> policyTag,
-        @Nullable Input<String> role) {
+        @Nullable Output<PolicyTagIamMemberConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> member,
+        @Nullable Output<String> policyTag,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.etag = etag;
         this.member = member;
@@ -78,11 +78,11 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
     }
 
     private PolicyTagIamMemberState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.member = Input.empty();
-        this.policyTag = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.member = Output.empty();
+        this.policyTag = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,11 +94,11 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<PolicyTagIamMemberConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> policyTag;
-        private @Nullable Input<String> role;
+        private @Nullable Output<PolicyTagIamMemberConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> policyTag;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -113,53 +113,53 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<PolicyTagIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<PolicyTagIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable PolicyTagIamMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder policyTag(@Nullable Input<String> policyTag) {
+        public Builder policyTag(@Nullable Output<String> policyTag) {
             this.policyTag = policyTag;
             return this;
         }
 
         public Builder policyTag(@Nullable String policyTag) {
-            this.policyTag = Input.ofNullable(policyTag);
+            this.policyTag = Output.ofNullable(policyTag);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public PolicyTagIamMemberState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.transfer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="addressAllocationIds")
-      private final @Nullable Input<List<String>> addressAllocationIds;
+      private final @Nullable Output<List<String>> addressAllocationIds;
 
-    public Input<List<String>> getAddressAllocationIds() {
-        return this.addressAllocationIds == null ? Input.empty() : this.addressAllocationIds;
+    public Output<List<String>> getAddressAllocationIds() {
+        return this.addressAllocationIds == null ? Output.empty() : this.addressAllocationIds;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vpcEndpointId")
-      private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Output<String> vpcEndpointId;
 
-    public Input<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
+    public Output<String> getVpcEndpointId() {
+        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public ServerEndpointDetailsGetArgs(
-        @Nullable Input<List<String>> addressAllocationIds,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<String> vpcEndpointId,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<List<String>> addressAllocationIds,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<String> vpcEndpointId,
+        @Nullable Output<String> vpcId) {
         this.addressAllocationIds = addressAllocationIds;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
@@ -84,11 +84,11 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
     }
 
     private ServerEndpointDetailsGetArgs() {
-        this.addressAllocationIds = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.subnetIds = Input.empty();
-        this.vpcEndpointId = Input.empty();
-        this.vpcId = Input.empty();
+        this.addressAllocationIds = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetIds = Output.empty();
+        this.vpcEndpointId = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> addressAllocationIds;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<String> vpcEndpointId;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<List<String>> addressAllocationIds;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<String> vpcEndpointId;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder addressAllocationIds(@Nullable Input<List<String>> addressAllocationIds) {
+        public Builder addressAllocationIds(@Nullable Output<List<String>> addressAllocationIds) {
             this.addressAllocationIds = addressAllocationIds;
             return this;
         }
 
         public Builder addressAllocationIds(@Nullable List<String> addressAllocationIds) {
-            this.addressAllocationIds = Input.ofNullable(addressAllocationIds);
+            this.addressAllocationIds = Output.ofNullable(addressAllocationIds);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public ServerEndpointDetailsGetArgs build() {

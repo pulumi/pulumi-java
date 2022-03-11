@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sourcerepo_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployKeyId")
-      private final @Nullable Input<String> deployKeyId;
+      private final @Nullable Output<String> deployKeyId;
 
-    public Input<String> getDeployKeyId() {
-        return this.deployKeyId == null ? Input.empty() : this.deployKeyId;
+    public Output<String> getDeployKeyId() {
+        return this.deployKeyId == null ? Output.empty() : this.deployKeyId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookId")
-      private final @Nullable Input<String> webhookId;
+      private final @Nullable Output<String> webhookId;
 
-    public Input<String> getWebhookId() {
-        return this.webhookId == null ? Input.empty() : this.webhookId;
+    public Output<String> getWebhookId() {
+        return this.webhookId == null ? Output.empty() : this.webhookId;
     }
 
     public MirrorConfigArgs(
-        @Nullable Input<String> deployKeyId,
-        @Nullable Input<String> url,
-        @Nullable Input<String> webhookId) {
+        @Nullable Output<String> deployKeyId,
+        @Nullable Output<String> url,
+        @Nullable Output<String> webhookId) {
         this.deployKeyId = deployKeyId;
         this.url = url;
         this.webhookId = webhookId;
     }
 
     private MirrorConfigArgs() {
-        this.deployKeyId = Input.empty();
-        this.url = Input.empty();
-        this.webhookId = Input.empty();
+        this.deployKeyId = Output.empty();
+        this.url = Output.empty();
+        this.webhookId = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deployKeyId;
-        private @Nullable Input<String> url;
-        private @Nullable Input<String> webhookId;
+        private @Nullable Output<String> deployKeyId;
+        private @Nullable Output<String> url;
+        private @Nullable Output<String> webhookId;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookId = defaults.webhookId;
         }
 
-        public Builder deployKeyId(@Nullable Input<String> deployKeyId) {
+        public Builder deployKeyId(@Nullable Output<String> deployKeyId) {
             this.deployKeyId = deployKeyId;
             return this;
         }
 
         public Builder deployKeyId(@Nullable String deployKeyId) {
-            this.deployKeyId = Input.ofNullable(deployKeyId);
+            this.deployKeyId = Output.ofNullable(deployKeyId);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
 
-        public Builder webhookId(@Nullable Input<String> webhookId) {
+        public Builder webhookId(@Nullable Output<String> webhookId) {
             this.webhookId = webhookId;
             return this;
         }
 
         public Builder webhookId(@Nullable String webhookId) {
-            this.webhookId = Input.ofNullable(webhookId);
+            this.webhookId = Output.ofNullable(webhookId);
             return this;
         }
         public MirrorConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecific
      * 
      */
     @InputImport(name="launchTemplateId")
-      private final @Nullable Input<String> launchTemplateId;
+      private final @Nullable Output<String> launchTemplateId;
 
-    public Input<String> getLaunchTemplateId() {
-        return this.launchTemplateId == null ? Input.empty() : this.launchTemplateId;
+    public Output<String> getLaunchTemplateId() {
+        return this.launchTemplateId == null ? Output.empty() : this.launchTemplateId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecific
      * 
      */
     @InputImport(name="launchTemplateName")
-      private final @Nullable Input<String> launchTemplateName;
+      private final @Nullable Output<String> launchTemplateName;
 
-    public Input<String> getLaunchTemplateName() {
-        return this.launchTemplateName == null ? Input.empty() : this.launchTemplateName;
+    public Output<String> getLaunchTemplateName() {
+        return this.launchTemplateName == null ? Output.empty() : this.launchTemplateName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecific
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs(
-        @Nullable Input<String> launchTemplateId,
-        @Nullable Input<String> launchTemplateName,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> launchTemplateId,
+        @Nullable Output<String> launchTemplateName,
+        @Nullable Output<String> version) {
         this.launchTemplateId = launchTemplateId;
         this.launchTemplateName = launchTemplateName;
         this.version = version;
     }
 
     private GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs() {
-        this.launchTemplateId = Input.empty();
-        this.launchTemplateName = Input.empty();
-        this.version = Input.empty();
+        this.launchTemplateId = Output.empty();
+        this.launchTemplateName = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecific
     }
 
     public static final class Builder {
-        private @Nullable Input<String> launchTemplateId;
-        private @Nullable Input<String> launchTemplateName;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> launchTemplateId;
+        private @Nullable Output<String> launchTemplateName;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecific
     	      this.version = defaults.version;
         }
 
-        public Builder launchTemplateId(@Nullable Input<String> launchTemplateId) {
+        public Builder launchTemplateId(@Nullable Output<String> launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
 
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
-            this.launchTemplateId = Input.ofNullable(launchTemplateId);
+            this.launchTemplateId = Output.ofNullable(launchTemplateId);
             return this;
         }
 
-        public Builder launchTemplateName(@Nullable Input<String> launchTemplateName) {
+        public Builder launchTemplateName(@Nullable Output<String> launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
 
         public Builder launchTemplateName(@Nullable String launchTemplateName) {
-            this.launchTemplateName = Input.ofNullable(launchTemplateName);
+            this.launchTemplateName = Output.ofNullable(launchTemplateName);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
      * 
      */
     @InputImport(name="idProvider", required=true)
-      private final Input<String> idProvider;
+      private final Output<String> idProvider;
 
-    public Input<String> getIdProvider() {
+    public Output<String> getIdProvider() {
         return this.idProvider;
     }
 
@@ -33,22 +33,22 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public CreateTrustedIdProviderWithAccountParametersArgs(
-        Input<String> idProvider,
-        Input<String> name) {
+        Output<String> idProvider,
+        Output<String> name) {
         this.idProvider = Objects.requireNonNull(idProvider, "expected parameter 'idProvider' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private CreateTrustedIdProviderWithAccountParametersArgs() {
-        this.idProvider = Input.empty();
-        this.name = Input.empty();
+        this.idProvider = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<String> idProvider;
-        private Input<String> name;
+        private Output<String> idProvider;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
     	      this.name = defaults.name;
         }
 
-        public Builder idProvider(Input<String> idProvider) {
+        public Builder idProvider(Output<String> idProvider) {
             this.idProvider = Objects.requireNonNull(idProvider);
             return this;
         }
 
         public Builder idProvider(String idProvider) {
-            this.idProvider = Input.of(Objects.requireNonNull(idProvider));
+            this.idProvider = Output.of(Objects.requireNonNull(idProvider));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public CreateTrustedIdProviderWithAccountParametersArgs build() {

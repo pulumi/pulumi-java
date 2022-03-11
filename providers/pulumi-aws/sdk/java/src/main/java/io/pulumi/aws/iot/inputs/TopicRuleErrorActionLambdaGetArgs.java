@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class TopicRuleErrorActionLambdaGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="functionArn", required=true)
-      private final Input<String> functionArn;
+      private final Output<String> functionArn;
 
-    public Input<String> getFunctionArn() {
+    public Output<String> getFunctionArn() {
         return this.functionArn;
     }
 
-    public TopicRuleErrorActionLambdaGetArgs(Input<String> functionArn) {
+    public TopicRuleErrorActionLambdaGetArgs(Output<String> functionArn) {
         this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
     }
 
     private TopicRuleErrorActionLambdaGetArgs() {
-        this.functionArn = Input.empty();
+        this.functionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class TopicRuleErrorActionLambdaGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> functionArn;
+        private Output<String> functionArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class TopicRuleErrorActionLambdaGetArgs extends io.pulumi.resources
     	      this.functionArn = defaults.functionArn;
         }
 
-        public Builder functionArn(Input<String> functionArn) {
+        public Builder functionArn(Output<String> functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
         public Builder functionArn(String functionArn) {
-            this.functionArn = Input.of(Objects.requireNonNull(functionArn));
+            this.functionArn = Output.of(Objects.requireNonNull(functionArn));
             return this;
         }
         public TopicRuleErrorActionLambdaGetArgs build() {

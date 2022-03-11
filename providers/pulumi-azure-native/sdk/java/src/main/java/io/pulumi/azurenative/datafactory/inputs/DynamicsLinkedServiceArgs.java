@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authenticationType", required=true)
-      private final Input<Object> authenticationType;
+      private final Output<Object> authenticationType;
 
-    public Input<Object> getAuthenticationType() {
+    public Output<Object> getAuthenticationType() {
         return this.authenticationType;
     }
 
@@ -54,10 +54,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="credential")
-      private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Input<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Input.empty() : this.credential;
+    public Output<CredentialReferenceArgs> getCredential() {
+        return this.credential == null ? Output.empty() : this.credential;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="deploymentType", required=true)
-      private final Input<Object> deploymentType;
+      private final Output<Object> deploymentType;
 
-    public Input<Object> getDeploymentType() {
+    public Output<Object> getDeploymentType() {
         return this.deploymentType;
     }
 
@@ -87,10 +87,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostName")
-      private final @Nullable Input<Object> hostName;
+      private final @Nullable Output<Object> hostName;
 
-    public Input<Object> getHostName() {
-        return this.hostName == null ? Input.empty() : this.hostName;
+    public Output<Object> getHostName() {
+        return this.hostName == null ? Output.empty() : this.hostName;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="organizationName")
-      private final @Nullable Input<Object> organizationName;
+      private final @Nullable Output<Object> organizationName;
 
-    public Input<Object> getOrganizationName() {
-        return this.organizationName == null ? Input.empty() : this.organizationName;
+    public Output<Object> getOrganizationName() {
+        return this.organizationName == null ? Output.empty() : this.organizationName;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Object> port;
+      private final @Nullable Output<Object> port;
 
-    public Input<Object> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Object> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="servicePrincipalCredential")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalCredential() {
-        return this.servicePrincipalCredential == null ? Input.empty() : this.servicePrincipalCredential;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalCredential() {
+        return this.servicePrincipalCredential == null ? Output.empty() : this.servicePrincipalCredential;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="servicePrincipalCredentialType")
-      private final @Nullable Input<Object> servicePrincipalCredentialType;
+      private final @Nullable Output<Object> servicePrincipalCredentialType;
 
-    public Input<Object> getServicePrincipalCredentialType() {
-        return this.servicePrincipalCredentialType == null ? Input.empty() : this.servicePrincipalCredentialType;
+    public Output<Object> getServicePrincipalCredentialType() {
+        return this.servicePrincipalCredentialType == null ? Output.empty() : this.servicePrincipalCredentialType;
     }
 
     /**
@@ -186,10 +186,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="servicePrincipalId")
-      private final @Nullable Input<Object> servicePrincipalId;
+      private final @Nullable Output<Object> servicePrincipalId;
 
-    public Input<Object> getServicePrincipalId() {
-        return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
+    public Output<Object> getServicePrincipalId() {
+        return this.servicePrincipalId == null ? Output.empty() : this.servicePrincipalId;
     }
 
     /**
@@ -197,10 +197,10 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceUri")
-      private final @Nullable Input<Object> serviceUri;
+      private final @Nullable Output<Object> serviceUri;
 
-    public Input<Object> getServiceUri() {
-        return this.serviceUri == null ? Input.empty() : this.serviceUri;
+    public Output<Object> getServiceUri() {
+        return this.serviceUri == null ? Output.empty() : this.serviceUri;
     }
 
     /**
@@ -209,9 +209,9 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -220,31 +220,31 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<Object> username;
+      private final @Nullable Output<Object> username;
 
-    public Input<Object> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<Object> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public DynamicsLinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        Input<Object> authenticationType,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<CredentialReferenceArgs> credential,
-        Input<Object> deploymentType,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Object> hostName,
-        @Nullable Input<Object> organizationName,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        @Nullable Input<Object> port,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential,
-        @Nullable Input<Object> servicePrincipalCredentialType,
-        @Nullable Input<Object> servicePrincipalId,
-        @Nullable Input<Object> serviceUri,
-        Input<String> type,
-        @Nullable Input<Object> username) {
+        @Nullable Output<List<Object>> annotations,
+        Output<Object> authenticationType,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<CredentialReferenceArgs> credential,
+        Output<Object> deploymentType,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Object> hostName,
+        @Nullable Output<Object> organizationName,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
+        @Nullable Output<Object> port,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential,
+        @Nullable Output<Object> servicePrincipalCredentialType,
+        @Nullable Output<Object> servicePrincipalId,
+        @Nullable Output<Object> serviceUri,
+        Output<String> type,
+        @Nullable Output<Object> username) {
         this.annotations = annotations;
         this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
         this.connectVia = connectVia;
@@ -266,24 +266,24 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
     }
 
     private DynamicsLinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.authenticationType = Input.empty();
-        this.connectVia = Input.empty();
-        this.credential = Input.empty();
-        this.deploymentType = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.hostName = Input.empty();
-        this.organizationName = Input.empty();
-        this.parameters = Input.empty();
-        this.password = Input.empty();
-        this.port = Input.empty();
-        this.servicePrincipalCredential = Input.empty();
-        this.servicePrincipalCredentialType = Input.empty();
-        this.servicePrincipalId = Input.empty();
-        this.serviceUri = Input.empty();
-        this.type = Input.empty();
-        this.username = Input.empty();
+        this.annotations = Output.empty();
+        this.authenticationType = Output.empty();
+        this.connectVia = Output.empty();
+        this.credential = Output.empty();
+        this.deploymentType = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.hostName = Output.empty();
+        this.organizationName = Output.empty();
+        this.parameters = Output.empty();
+        this.password = Output.empty();
+        this.port = Output.empty();
+        this.servicePrincipalCredential = Output.empty();
+        this.servicePrincipalCredentialType = Output.empty();
+        this.servicePrincipalId = Output.empty();
+        this.serviceUri = Output.empty();
+        this.type = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -295,24 +295,24 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private Input<Object> authenticationType;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<CredentialReferenceArgs> credential;
-        private Input<Object> deploymentType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Object> hostName;
-        private @Nullable Input<Object> organizationName;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private @Nullable Input<Object> port;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
-        private @Nullable Input<Object> servicePrincipalCredentialType;
-        private @Nullable Input<Object> servicePrincipalId;
-        private @Nullable Input<Object> serviceUri;
-        private Input<String> type;
-        private @Nullable Input<Object> username;
+        private @Nullable Output<List<Object>> annotations;
+        private Output<Object> authenticationType;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<CredentialReferenceArgs> credential;
+        private Output<Object> deploymentType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Object> hostName;
+        private @Nullable Output<Object> organizationName;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private @Nullable Output<Object> port;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
+        private @Nullable Output<Object> servicePrincipalCredentialType;
+        private @Nullable Output<Object> servicePrincipalId;
+        private @Nullable Output<Object> serviceUri;
+        private Output<String> type;
+        private @Nullable Output<Object> username;
 
         public Builder() {
     	      // Empty
@@ -340,183 +340,183 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
     	      this.username = defaults.username;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder authenticationType(Input<Object> authenticationType) {
+        public Builder authenticationType(Output<Object> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
         public Builder authenticationType(Object authenticationType) {
-            this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
+            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Input.ofNullable(credential);
+            this.credential = Output.ofNullable(credential);
             return this;
         }
 
-        public Builder deploymentType(Input<Object> deploymentType) {
+        public Builder deploymentType(Output<Object> deploymentType) {
             this.deploymentType = Objects.requireNonNull(deploymentType);
             return this;
         }
 
         public Builder deploymentType(Object deploymentType) {
-            this.deploymentType = Input.of(Objects.requireNonNull(deploymentType));
+            this.deploymentType = Output.of(Objects.requireNonNull(deploymentType));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder hostName(@Nullable Input<Object> hostName) {
+        public Builder hostName(@Nullable Output<Object> hostName) {
             this.hostName = hostName;
             return this;
         }
 
         public Builder hostName(@Nullable Object hostName) {
-            this.hostName = Input.ofNullable(hostName);
+            this.hostName = Output.ofNullable(hostName);
             return this;
         }
 
-        public Builder organizationName(@Nullable Input<Object> organizationName) {
+        public Builder organizationName(@Nullable Output<Object> organizationName) {
             this.organizationName = organizationName;
             return this;
         }
 
         public Builder organizationName(@Nullable Object organizationName) {
-            this.organizationName = Input.ofNullable(organizationName);
+            this.organizationName = Output.ofNullable(organizationName);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder port(@Nullable Input<Object> port) {
+        public Builder port(@Nullable Output<Object> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Object port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder servicePrincipalCredential(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential) {
+        public Builder servicePrincipalCredential(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential) {
             this.servicePrincipalCredential = servicePrincipalCredential;
             return this;
         }
 
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalCredential) {
-            this.servicePrincipalCredential = Input.ofNullable(servicePrincipalCredential);
+            this.servicePrincipalCredential = Output.ofNullable(servicePrincipalCredential);
             return this;
         }
 
-        public Builder servicePrincipalCredentialType(@Nullable Input<Object> servicePrincipalCredentialType) {
+        public Builder servicePrincipalCredentialType(@Nullable Output<Object> servicePrincipalCredentialType) {
             this.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
         }
 
         public Builder servicePrincipalCredentialType(@Nullable Object servicePrincipalCredentialType) {
-            this.servicePrincipalCredentialType = Input.ofNullable(servicePrincipalCredentialType);
+            this.servicePrincipalCredentialType = Output.ofNullable(servicePrincipalCredentialType);
             return this;
         }
 
-        public Builder servicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Input.ofNullable(servicePrincipalId);
+            this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
             return this;
         }
 
-        public Builder serviceUri(@Nullable Input<Object> serviceUri) {
+        public Builder serviceUri(@Nullable Output<Object> serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }
 
         public Builder serviceUri(@Nullable Object serviceUri) {
-            this.serviceUri = Input.ofNullable(serviceUri);
+            this.serviceUri = Output.ofNullable(serviceUri);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder username(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable Object username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public DynamicsLinkedServiceArgs build() {

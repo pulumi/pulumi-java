@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.RepositoryRefDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="httpsCAFile")
-      private final @Nullable Input<String> httpsCAFile;
+      private final @Nullable Output<String> httpsCAFile;
 
-    public Input<String> getHttpsCAFile() {
-        return this.httpsCAFile == null ? Input.empty() : this.httpsCAFile;
+    public Output<String> getHttpsCAFile() {
+        return this.httpsCAFile == null ? Output.empty() : this.httpsCAFile;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="httpsUser")
-      private final @Nullable Input<String> httpsUser;
+      private final @Nullable Output<String> httpsUser;
 
-    public Input<String> getHttpsUser() {
-        return this.httpsUser == null ? Input.empty() : this.httpsUser;
+    public Output<String> getHttpsUser() {
+        return this.httpsUser == null ? Output.empty() : this.httpsUser;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="localAuthRef")
-      private final @Nullable Input<String> localAuthRef;
+      private final @Nullable Output<String> localAuthRef;
 
-    public Input<String> getLocalAuthRef() {
-        return this.localAuthRef == null ? Input.empty() : this.localAuthRef;
+    public Output<String> getLocalAuthRef() {
+        return this.localAuthRef == null ? Output.empty() : this.localAuthRef;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="repositoryRef")
-      private final @Nullable Input<RepositoryRefDefinitionArgs> repositoryRef;
+      private final @Nullable Output<RepositoryRefDefinitionArgs> repositoryRef;
 
-    public Input<RepositoryRefDefinitionArgs> getRepositoryRef() {
-        return this.repositoryRef == null ? Input.empty() : this.repositoryRef;
+    public Output<RepositoryRefDefinitionArgs> getRepositoryRef() {
+        return this.repositoryRef == null ? Output.empty() : this.repositoryRef;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sshKnownHosts")
-      private final @Nullable Input<String> sshKnownHosts;
+      private final @Nullable Output<String> sshKnownHosts;
 
-    public Input<String> getSshKnownHosts() {
-        return this.sshKnownHosts == null ? Input.empty() : this.sshKnownHosts;
+    public Output<String> getSshKnownHosts() {
+        return this.sshKnownHosts == null ? Output.empty() : this.sshKnownHosts;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="syncIntervalInSeconds")
-      private final @Nullable Input<Double> syncIntervalInSeconds;
+      private final @Nullable Output<Double> syncIntervalInSeconds;
 
-    public Input<Double> getSyncIntervalInSeconds() {
-        return this.syncIntervalInSeconds == null ? Input.empty() : this.syncIntervalInSeconds;
+    public Output<Double> getSyncIntervalInSeconds() {
+        return this.syncIntervalInSeconds == null ? Output.empty() : this.syncIntervalInSeconds;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeoutInSeconds")
-      private final @Nullable Input<Double> timeoutInSeconds;
+      private final @Nullable Output<Double> timeoutInSeconds;
 
-    public Input<Double> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
+    public Output<Double> getTimeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
     }
 
     /**
@@ -102,40 +102,40 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public GitRepositoryDefinitionArgs(
-        @Nullable Input<String> httpsCAFile,
-        @Nullable Input<String> httpsUser,
-        @Nullable Input<String> localAuthRef,
-        @Nullable Input<RepositoryRefDefinitionArgs> repositoryRef,
-        @Nullable Input<String> sshKnownHosts,
-        @Nullable Input<Double> syncIntervalInSeconds,
-        @Nullable Input<Double> timeoutInSeconds,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> httpsCAFile,
+        @Nullable Output<String> httpsUser,
+        @Nullable Output<String> localAuthRef,
+        @Nullable Output<RepositoryRefDefinitionArgs> repositoryRef,
+        @Nullable Output<String> sshKnownHosts,
+        @Nullable Output<Double> syncIntervalInSeconds,
+        @Nullable Output<Double> timeoutInSeconds,
+        @Nullable Output<String> url) {
         this.httpsCAFile = httpsCAFile;
         this.httpsUser = httpsUser;
         this.localAuthRef = localAuthRef;
         this.repositoryRef = repositoryRef;
         this.sshKnownHosts = sshKnownHosts;
-        this.syncIntervalInSeconds = syncIntervalInSeconds == null ? Input.ofNullable(6e+02) : syncIntervalInSeconds;
-        this.timeoutInSeconds = timeoutInSeconds == null ? Input.ofNullable(6e+02) : timeoutInSeconds;
+        this.syncIntervalInSeconds = syncIntervalInSeconds == null ? Output.ofNullable(6e+02) : syncIntervalInSeconds;
+        this.timeoutInSeconds = timeoutInSeconds == null ? Output.ofNullable(6e+02) : timeoutInSeconds;
         this.url = url;
     }
 
     private GitRepositoryDefinitionArgs() {
-        this.httpsCAFile = Input.empty();
-        this.httpsUser = Input.empty();
-        this.localAuthRef = Input.empty();
-        this.repositoryRef = Input.empty();
-        this.sshKnownHosts = Input.empty();
-        this.syncIntervalInSeconds = Input.empty();
-        this.timeoutInSeconds = Input.empty();
-        this.url = Input.empty();
+        this.httpsCAFile = Output.empty();
+        this.httpsUser = Output.empty();
+        this.localAuthRef = Output.empty();
+        this.repositoryRef = Output.empty();
+        this.sshKnownHosts = Output.empty();
+        this.syncIntervalInSeconds = Output.empty();
+        this.timeoutInSeconds = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> httpsCAFile;
-        private @Nullable Input<String> httpsUser;
-        private @Nullable Input<String> localAuthRef;
-        private @Nullable Input<RepositoryRefDefinitionArgs> repositoryRef;
-        private @Nullable Input<String> sshKnownHosts;
-        private @Nullable Input<Double> syncIntervalInSeconds;
-        private @Nullable Input<Double> timeoutInSeconds;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> httpsCAFile;
+        private @Nullable Output<String> httpsUser;
+        private @Nullable Output<String> localAuthRef;
+        private @Nullable Output<RepositoryRefDefinitionArgs> repositoryRef;
+        private @Nullable Output<String> sshKnownHosts;
+        private @Nullable Output<Double> syncIntervalInSeconds;
+        private @Nullable Output<Double> timeoutInSeconds;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     	      this.url = defaults.url;
         }
 
-        public Builder httpsCAFile(@Nullable Input<String> httpsCAFile) {
+        public Builder httpsCAFile(@Nullable Output<String> httpsCAFile) {
             this.httpsCAFile = httpsCAFile;
             return this;
         }
 
         public Builder httpsCAFile(@Nullable String httpsCAFile) {
-            this.httpsCAFile = Input.ofNullable(httpsCAFile);
+            this.httpsCAFile = Output.ofNullable(httpsCAFile);
             return this;
         }
 
-        public Builder httpsUser(@Nullable Input<String> httpsUser) {
+        public Builder httpsUser(@Nullable Output<String> httpsUser) {
             this.httpsUser = httpsUser;
             return this;
         }
 
         public Builder httpsUser(@Nullable String httpsUser) {
-            this.httpsUser = Input.ofNullable(httpsUser);
+            this.httpsUser = Output.ofNullable(httpsUser);
             return this;
         }
 
-        public Builder localAuthRef(@Nullable Input<String> localAuthRef) {
+        public Builder localAuthRef(@Nullable Output<String> localAuthRef) {
             this.localAuthRef = localAuthRef;
             return this;
         }
 
         public Builder localAuthRef(@Nullable String localAuthRef) {
-            this.localAuthRef = Input.ofNullable(localAuthRef);
+            this.localAuthRef = Output.ofNullable(localAuthRef);
             return this;
         }
 
-        public Builder repositoryRef(@Nullable Input<RepositoryRefDefinitionArgs> repositoryRef) {
+        public Builder repositoryRef(@Nullable Output<RepositoryRefDefinitionArgs> repositoryRef) {
             this.repositoryRef = repositoryRef;
             return this;
         }
 
         public Builder repositoryRef(@Nullable RepositoryRefDefinitionArgs repositoryRef) {
-            this.repositoryRef = Input.ofNullable(repositoryRef);
+            this.repositoryRef = Output.ofNullable(repositoryRef);
             return this;
         }
 
-        public Builder sshKnownHosts(@Nullable Input<String> sshKnownHosts) {
+        public Builder sshKnownHosts(@Nullable Output<String> sshKnownHosts) {
             this.sshKnownHosts = sshKnownHosts;
             return this;
         }
 
         public Builder sshKnownHosts(@Nullable String sshKnownHosts) {
-            this.sshKnownHosts = Input.ofNullable(sshKnownHosts);
+            this.sshKnownHosts = Output.ofNullable(sshKnownHosts);
             return this;
         }
 
-        public Builder syncIntervalInSeconds(@Nullable Input<Double> syncIntervalInSeconds) {
+        public Builder syncIntervalInSeconds(@Nullable Output<Double> syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
 
         public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
-            this.syncIntervalInSeconds = Input.ofNullable(syncIntervalInSeconds);
+            this.syncIntervalInSeconds = Output.ofNullable(syncIntervalInSeconds);
             return this;
         }
 
-        public Builder timeoutInSeconds(@Nullable Input<Double> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Output<Double> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
-            this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public GitRepositoryDefinitionArgs build() {

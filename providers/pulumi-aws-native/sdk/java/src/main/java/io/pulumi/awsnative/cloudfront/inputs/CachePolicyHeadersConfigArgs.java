@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class CachePolicyHeadersConfigArgs extends io.pulumi.resources.Reso
     public static final CachePolicyHeadersConfigArgs Empty = new CachePolicyHeadersConfigArgs();
 
     @InputImport(name="headerBehavior", required=true)
-      private final Input<String> headerBehavior;
+      private final Output<String> headerBehavior;
 
-    public Input<String> getHeaderBehavior() {
+    public Output<String> getHeaderBehavior() {
         return this.headerBehavior;
     }
 
     @InputImport(name="headers")
-      private final @Nullable Input<List<String>> headers;
+      private final @Nullable Output<List<String>> headers;
 
-    public Input<List<String>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<List<String>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     public CachePolicyHeadersConfigArgs(
-        Input<String> headerBehavior,
-        @Nullable Input<List<String>> headers) {
+        Output<String> headerBehavior,
+        @Nullable Output<List<String>> headers) {
         this.headerBehavior = Objects.requireNonNull(headerBehavior, "expected parameter 'headerBehavior' to be non-null");
         this.headers = headers;
     }
 
     private CachePolicyHeadersConfigArgs() {
-        this.headerBehavior = Input.empty();
-        this.headers = Input.empty();
+        this.headerBehavior = Output.empty();
+        this.headers = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class CachePolicyHeadersConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> headerBehavior;
-        private @Nullable Input<List<String>> headers;
+        private Output<String> headerBehavior;
+        private @Nullable Output<List<String>> headers;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class CachePolicyHeadersConfigArgs extends io.pulumi.resources.Reso
     	      this.headers = defaults.headers;
         }
 
-        public Builder headerBehavior(Input<String> headerBehavior) {
+        public Builder headerBehavior(Output<String> headerBehavior) {
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
 
         public Builder headerBehavior(String headerBehavior) {
-            this.headerBehavior = Input.of(Objects.requireNonNull(headerBehavior));
+            this.headerBehavior = Output.of(Objects.requireNonNull(headerBehavior));
             return this;
         }
 
-        public Builder headers(@Nullable Input<List<String>> headers) {
+        public Builder headers(@Nullable Output<List<String>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
         public CachePolicyHeadersConfigArgs build() {

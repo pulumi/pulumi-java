@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.AzureQueryPropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.NonAzureQueryPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="azureQueries")
-      private final @Nullable Input<List<AzureQueryPropertiesArgs>> azureQueries;
+      private final @Nullable Output<List<AzureQueryPropertiesArgs>> azureQueries;
 
-    public Input<List<AzureQueryPropertiesArgs>> getAzureQueries() {
-        return this.azureQueries == null ? Input.empty() : this.azureQueries;
+    public Output<List<AzureQueryPropertiesArgs>> getAzureQueries() {
+        return this.azureQueries == null ? Output.empty() : this.azureQueries;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nonAzureQueries")
-      private final @Nullable Input<List<NonAzureQueryPropertiesArgs>> nonAzureQueries;
+      private final @Nullable Output<List<NonAzureQueryPropertiesArgs>> nonAzureQueries;
 
-    public Input<List<NonAzureQueryPropertiesArgs>> getNonAzureQueries() {
-        return this.nonAzureQueries == null ? Input.empty() : this.nonAzureQueries;
+    public Output<List<NonAzureQueryPropertiesArgs>> getNonAzureQueries() {
+        return this.nonAzureQueries == null ? Output.empty() : this.nonAzureQueries;
     }
 
     public TargetPropertiesArgs(
-        @Nullable Input<List<AzureQueryPropertiesArgs>> azureQueries,
-        @Nullable Input<List<NonAzureQueryPropertiesArgs>> nonAzureQueries) {
+        @Nullable Output<List<AzureQueryPropertiesArgs>> azureQueries,
+        @Nullable Output<List<NonAzureQueryPropertiesArgs>> nonAzureQueries) {
         this.azureQueries = azureQueries;
         this.nonAzureQueries = nonAzureQueries;
     }
 
     private TargetPropertiesArgs() {
-        this.azureQueries = Input.empty();
-        this.nonAzureQueries = Input.empty();
+        this.azureQueries = Output.empty();
+        this.nonAzureQueries = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AzureQueryPropertiesArgs>> azureQueries;
-        private @Nullable Input<List<NonAzureQueryPropertiesArgs>> nonAzureQueries;
+        private @Nullable Output<List<AzureQueryPropertiesArgs>> azureQueries;
+        private @Nullable Output<List<NonAzureQueryPropertiesArgs>> nonAzureQueries;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.nonAzureQueries = defaults.nonAzureQueries;
         }
 
-        public Builder azureQueries(@Nullable Input<List<AzureQueryPropertiesArgs>> azureQueries) {
+        public Builder azureQueries(@Nullable Output<List<AzureQueryPropertiesArgs>> azureQueries) {
             this.azureQueries = azureQueries;
             return this;
         }
 
         public Builder azureQueries(@Nullable List<AzureQueryPropertiesArgs> azureQueries) {
-            this.azureQueries = Input.ofNullable(azureQueries);
+            this.azureQueries = Output.ofNullable(azureQueries);
             return this;
         }
 
-        public Builder nonAzureQueries(@Nullable Input<List<NonAzureQueryPropertiesArgs>> nonAzureQueries) {
+        public Builder nonAzureQueries(@Nullable Output<List<NonAzureQueryPropertiesArgs>> nonAzureQueries) {
             this.nonAzureQueries = nonAzureQueries;
             return this;
         }
 
         public Builder nonAzureQueries(@Nullable List<NonAzureQueryPropertiesArgs> nonAzureQueries) {
-            this.nonAzureQueries = Input.ofNullable(nonAzureQueries);
+            this.nonAzureQueries = Output.ofNullable(nonAzureQueries);
             return this;
         }
         public TargetPropertiesArgs build() {

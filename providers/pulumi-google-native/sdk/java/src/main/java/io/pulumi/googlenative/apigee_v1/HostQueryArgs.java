@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1QueryMetricArgs;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="csvDelimiter")
-      private final @Nullable Input<String> csvDelimiter;
+      private final @Nullable Output<String> csvDelimiter;
 
-    public Input<String> getCsvDelimiter() {
-        return this.csvDelimiter == null ? Input.empty() : this.csvDelimiter;
+    public Output<String> getCsvDelimiter() {
+        return this.csvDelimiter == null ? Output.empty() : this.csvDelimiter;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-      private final @Nullable Input<List<String>> dimensions;
+      private final @Nullable Output<List<String>> dimensions;
 
-    public Input<List<String>> getDimensions() {
-        return this.dimensions == null ? Input.empty() : this.dimensions;
+    public Output<List<String>> getDimensions() {
+        return this.dimensions == null ? Output.empty() : this.dimensions;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envgroupHostname")
-      private final @Nullable Input<String> envgroupHostname;
+      private final @Nullable Output<String> envgroupHostname;
 
-    public Input<String> getEnvgroupHostname() {
-        return this.envgroupHostname == null ? Input.empty() : this.envgroupHostname;
+    public Output<String> getEnvgroupHostname() {
+        return this.envgroupHostname == null ? Output.empty() : this.envgroupHostname;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupByTimeUnit")
-      private final @Nullable Input<String> groupByTimeUnit;
+      private final @Nullable Output<String> groupByTimeUnit;
 
-    public Input<String> getGroupByTimeUnit() {
-        return this.groupByTimeUnit == null ? Input.empty() : this.groupByTimeUnit;
+    public Output<String> getGroupByTimeUnit() {
+        return this.groupByTimeUnit == null ? Output.empty() : this.groupByTimeUnit;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limit")
-      private final @Nullable Input<Integer> limit;
+      private final @Nullable Output<Integer> limit;
 
-    public Input<Integer> getLimit() {
-        return this.limit == null ? Input.empty() : this.limit;
+    public Output<Integer> getLimit() {
+        return this.limit == null ? Output.empty() : this.limit;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metrics")
-      private final @Nullable Input<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
+      private final @Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
 
-    public Input<List<GoogleCloudApigeeV1QueryMetricArgs>> getMetrics() {
-        return this.metrics == null ? Input.empty() : this.metrics;
+    public Output<List<GoogleCloudApigeeV1QueryMetricArgs>> getMetrics() {
+        return this.metrics == null ? Output.empty() : this.metrics;
     }
 
     /**
@@ -100,16 +100,16 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -118,10 +118,10 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputFormat")
-      private final @Nullable Input<String> outputFormat;
+      private final @Nullable Output<String> outputFormat;
 
-    public Input<String> getOutputFormat() {
-        return this.outputFormat == null ? Input.empty() : this.outputFormat;
+    public Output<String> getOutputFormat() {
+        return this.outputFormat == null ? Output.empty() : this.outputFormat;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reportDefinitionId")
-      private final @Nullable Input<String> reportDefinitionId;
+      private final @Nullable Output<String> reportDefinitionId;
 
-    public Input<String> getReportDefinitionId() {
-        return this.reportDefinitionId == null ? Input.empty() : this.reportDefinitionId;
+    public Output<String> getReportDefinitionId() {
+        return this.reportDefinitionId == null ? Output.empty() : this.reportDefinitionId;
     }
 
     /**
@@ -140,25 +140,25 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeRange", required=true)
-      private final Input<Object> timeRange;
+      private final Output<Object> timeRange;
 
-    public Input<Object> getTimeRange() {
+    public Output<Object> getTimeRange() {
         return this.timeRange;
     }
 
     public HostQueryArgs(
-        @Nullable Input<String> csvDelimiter,
-        @Nullable Input<List<String>> dimensions,
-        @Nullable Input<String> envgroupHostname,
-        @Nullable Input<String> filter,
-        @Nullable Input<String> groupByTimeUnit,
-        @Nullable Input<Integer> limit,
-        @Nullable Input<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics,
-        @Nullable Input<String> name,
-        Input<String> organizationId,
-        @Nullable Input<String> outputFormat,
-        @Nullable Input<String> reportDefinitionId,
-        Input<Object> timeRange) {
+        @Nullable Output<String> csvDelimiter,
+        @Nullable Output<List<String>> dimensions,
+        @Nullable Output<String> envgroupHostname,
+        @Nullable Output<String> filter,
+        @Nullable Output<String> groupByTimeUnit,
+        @Nullable Output<Integer> limit,
+        @Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics,
+        @Nullable Output<String> name,
+        Output<String> organizationId,
+        @Nullable Output<String> outputFormat,
+        @Nullable Output<String> reportDefinitionId,
+        Output<Object> timeRange) {
         this.csvDelimiter = csvDelimiter;
         this.dimensions = dimensions;
         this.envgroupHostname = envgroupHostname;
@@ -174,18 +174,18 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostQueryArgs() {
-        this.csvDelimiter = Input.empty();
-        this.dimensions = Input.empty();
-        this.envgroupHostname = Input.empty();
-        this.filter = Input.empty();
-        this.groupByTimeUnit = Input.empty();
-        this.limit = Input.empty();
-        this.metrics = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
-        this.outputFormat = Input.empty();
-        this.reportDefinitionId = Input.empty();
-        this.timeRange = Input.empty();
+        this.csvDelimiter = Output.empty();
+        this.dimensions = Output.empty();
+        this.envgroupHostname = Output.empty();
+        this.filter = Output.empty();
+        this.groupByTimeUnit = Output.empty();
+        this.limit = Output.empty();
+        this.metrics = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
+        this.outputFormat = Output.empty();
+        this.reportDefinitionId = Output.empty();
+        this.timeRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -197,18 +197,18 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> csvDelimiter;
-        private @Nullable Input<List<String>> dimensions;
-        private @Nullable Input<String> envgroupHostname;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<String> groupByTimeUnit;
-        private @Nullable Input<Integer> limit;
-        private @Nullable Input<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
-        private @Nullable Input<String> outputFormat;
-        private @Nullable Input<String> reportDefinitionId;
-        private Input<Object> timeRange;
+        private @Nullable Output<String> csvDelimiter;
+        private @Nullable Output<List<String>> dimensions;
+        private @Nullable Output<String> envgroupHostname;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<String> groupByTimeUnit;
+        private @Nullable Output<Integer> limit;
+        private @Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
+        private @Nullable Output<String> outputFormat;
+        private @Nullable Output<String> reportDefinitionId;
+        private Output<Object> timeRange;
 
         public Builder() {
     	      // Empty
@@ -230,123 +230,123 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeRange = defaults.timeRange;
         }
 
-        public Builder csvDelimiter(@Nullable Input<String> csvDelimiter) {
+        public Builder csvDelimiter(@Nullable Output<String> csvDelimiter) {
             this.csvDelimiter = csvDelimiter;
             return this;
         }
 
         public Builder csvDelimiter(@Nullable String csvDelimiter) {
-            this.csvDelimiter = Input.ofNullable(csvDelimiter);
+            this.csvDelimiter = Output.ofNullable(csvDelimiter);
             return this;
         }
 
-        public Builder dimensions(@Nullable Input<List<String>> dimensions) {
+        public Builder dimensions(@Nullable Output<List<String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
         public Builder dimensions(@Nullable List<String> dimensions) {
-            this.dimensions = Input.ofNullable(dimensions);
+            this.dimensions = Output.ofNullable(dimensions);
             return this;
         }
 
-        public Builder envgroupHostname(@Nullable Input<String> envgroupHostname) {
+        public Builder envgroupHostname(@Nullable Output<String> envgroupHostname) {
             this.envgroupHostname = envgroupHostname;
             return this;
         }
 
         public Builder envgroupHostname(@Nullable String envgroupHostname) {
-            this.envgroupHostname = Input.ofNullable(envgroupHostname);
+            this.envgroupHostname = Output.ofNullable(envgroupHostname);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder groupByTimeUnit(@Nullable Input<String> groupByTimeUnit) {
+        public Builder groupByTimeUnit(@Nullable Output<String> groupByTimeUnit) {
             this.groupByTimeUnit = groupByTimeUnit;
             return this;
         }
 
         public Builder groupByTimeUnit(@Nullable String groupByTimeUnit) {
-            this.groupByTimeUnit = Input.ofNullable(groupByTimeUnit);
+            this.groupByTimeUnit = Output.ofNullable(groupByTimeUnit);
             return this;
         }
 
-        public Builder limit(@Nullable Input<Integer> limit) {
+        public Builder limit(@Nullable Output<Integer> limit) {
             this.limit = limit;
             return this;
         }
 
         public Builder limit(@Nullable Integer limit) {
-            this.limit = Input.ofNullable(limit);
+            this.limit = Output.ofNullable(limit);
             return this;
         }
 
-        public Builder metrics(@Nullable Input<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics) {
+        public Builder metrics(@Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
         public Builder metrics(@Nullable List<GoogleCloudApigeeV1QueryMetricArgs> metrics) {
-            this.metrics = Input.ofNullable(metrics);
+            this.metrics = Output.ofNullable(metrics);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder outputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Input.ofNullable(outputFormat);
+            this.outputFormat = Output.ofNullable(outputFormat);
             return this;
         }
 
-        public Builder reportDefinitionId(@Nullable Input<String> reportDefinitionId) {
+        public Builder reportDefinitionId(@Nullable Output<String> reportDefinitionId) {
             this.reportDefinitionId = reportDefinitionId;
             return this;
         }
 
         public Builder reportDefinitionId(@Nullable String reportDefinitionId) {
-            this.reportDefinitionId = Input.ofNullable(reportDefinitionId);
+            this.reportDefinitionId = Output.ofNullable(reportDefinitionId);
             return this;
         }
 
-        public Builder timeRange(Input<Object> timeRange) {
+        public Builder timeRange(Output<Object> timeRange) {
             this.timeRange = Objects.requireNonNull(timeRange);
             return this;
         }
 
         public Builder timeRange(Object timeRange) {
-            this.timeRange = Input.of(Objects.requireNonNull(timeRange));
+            this.timeRange = Output.of(Objects.requireNonNull(timeRange));
             return this;
         }
         public HostQueryArgs build() {

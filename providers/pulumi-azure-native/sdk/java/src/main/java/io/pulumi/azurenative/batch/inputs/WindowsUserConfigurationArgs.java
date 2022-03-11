@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.LoginMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class WindowsUserConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="loginMode")
-      private final @Nullable Input<LoginMode> loginMode;
+      private final @Nullable Output<LoginMode> loginMode;
 
-    public Input<LoginMode> getLoginMode() {
-        return this.loginMode == null ? Input.empty() : this.loginMode;
+    public Output<LoginMode> getLoginMode() {
+        return this.loginMode == null ? Output.empty() : this.loginMode;
     }
 
-    public WindowsUserConfigurationArgs(@Nullable Input<LoginMode> loginMode) {
+    public WindowsUserConfigurationArgs(@Nullable Output<LoginMode> loginMode) {
         this.loginMode = loginMode;
     }
 
     private WindowsUserConfigurationArgs() {
-        this.loginMode = Input.empty();
+        this.loginMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WindowsUserConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<LoginMode> loginMode;
+        private @Nullable Output<LoginMode> loginMode;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WindowsUserConfigurationArgs extends io.pulumi.resources.Reso
     	      this.loginMode = defaults.loginMode;
         }
 
-        public Builder loginMode(@Nullable Input<LoginMode> loginMode) {
+        public Builder loginMode(@Nullable Output<LoginMode> loginMode) {
             this.loginMode = loginMode;
             return this;
         }
 
         public Builder loginMode(@Nullable LoginMode loginMode) {
-            this.loginMode = Input.ofNullable(loginMode);
+            this.loginMode = Output.ofNullable(loginMode);
             return this;
         }
         public WindowsUserConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destinationCidrBlock")
-      private final @Nullable Input<String> destinationCidrBlock;
+      private final @Nullable Output<String> destinationCidrBlock;
 
-    public Input<String> getDestinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Input.empty() : this.destinationCidrBlock;
+    public Output<String> getDestinationCidrBlock() {
+        return this.destinationCidrBlock == null ? Output.empty() : this.destinationCidrBlock;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public VpnConnectionRouteArgs(
-        @Nullable Input<String> destinationCidrBlock,
-        @Nullable Input<String> source,
-        @Nullable Input<String> state) {
+        @Nullable Output<String> destinationCidrBlock,
+        @Nullable Output<String> source,
+        @Nullable Output<String> state) {
         this.destinationCidrBlock = destinationCidrBlock;
         this.source = source;
         this.state = state;
     }
 
     private VpnConnectionRouteArgs() {
-        this.destinationCidrBlock = Input.empty();
-        this.source = Input.empty();
-        this.state = Input.empty();
+        this.destinationCidrBlock = Output.empty();
+        this.source = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destinationCidrBlock;
-        private @Nullable Input<String> source;
-        private @Nullable Input<String> state;
+        private @Nullable Output<String> destinationCidrBlock;
+        private @Nullable Output<String> source;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     	      this.state = defaults.state;
         }
 
-        public Builder destinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Input.ofNullable(destinationCidrBlock);
+            this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public VpnConnectionRouteArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
     public static final BasicAuthArgs Empty = new BasicAuthArgs();
 
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public BasicAuthArgs(
-        @Nullable Input<String> password,
-        @Nullable Input<String> user) {
+        @Nullable Output<String> password,
+        @Nullable Output<String> user) {
         this.password = password;
         this.user = user;
     }
 
     private BasicAuthArgs() {
-        this.password = Input.empty();
-        this.user = Input.empty();
+        this.password = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> user;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class BasicAuthArgs extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public BasicAuthArgs build() {

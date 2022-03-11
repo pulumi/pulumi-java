@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,17 +20,17 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     @InputImport(name="creationTime")
-      private final @Nullable Input<String> creationTime;
+      private final @Nullable Output<String> creationTime;
 
-    public Input<String> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<String> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -71,19 +71,19 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="volumeId")
-      private final @Nullable Input<String> volumeId;
+      private final @Nullable Output<String> volumeId;
 
-    public Input<String> getVolumeId() {
-        return this.volumeId == null ? Input.empty() : this.volumeId;
+    public Output<String> getVolumeId() {
+        return this.volumeId == null ? Output.empty() : this.volumeId;
     }
 
     public OpenZfsSnapshotState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> creationTime,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> volumeId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> creationTime,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> volumeId) {
         this.arn = arn;
         this.creationTime = creationTime;
         this.name = name;
@@ -93,12 +93,12 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
     }
 
     private OpenZfsSnapshotState() {
-        this.arn = Input.empty();
-        this.creationTime = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.volumeId = Input.empty();
+        this.arn = Output.empty();
+        this.creationTime = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.volumeId = Output.empty();
     }
 
     public static Builder builder() {
@@ -110,12 +110,12 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> creationTime;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> volumeId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> creationTime;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> volumeId;
 
         public Builder() {
     	      // Empty
@@ -131,63 +131,63 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
     	      this.volumeId = defaults.volumeId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder creationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder volumeId(@Nullable Input<String> volumeId) {
+        public Builder volumeId(@Nullable Output<String> volumeId) {
             this.volumeId = volumeId;
             return this;
         }
 
         public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Input.ofNullable(volumeId);
+            this.volumeId = Output.ofNullable(volumeId);
             return this;
         }
         public OpenZfsSnapshotState build() {

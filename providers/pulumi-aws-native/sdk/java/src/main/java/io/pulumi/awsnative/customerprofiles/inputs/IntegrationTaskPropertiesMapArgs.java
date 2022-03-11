@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationOperatorPropertiesKeys;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class IntegrationTaskPropertiesMapArgs extends io.pulumi.resources.
     public static final IntegrationTaskPropertiesMapArgs Empty = new IntegrationTaskPropertiesMapArgs();
 
     @InputImport(name="operatorPropertyKey", required=true)
-      private final Input<IntegrationOperatorPropertiesKeys> operatorPropertyKey;
+      private final Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey;
 
-    public Input<IntegrationOperatorPropertiesKeys> getOperatorPropertyKey() {
+    public Output<IntegrationOperatorPropertiesKeys> getOperatorPropertyKey() {
         return this.operatorPropertyKey;
     }
 
     @InputImport(name="property", required=true)
-      private final Input<String> property;
+      private final Output<String> property;
 
-    public Input<String> getProperty() {
+    public Output<String> getProperty() {
         return this.property;
     }
 
     public IntegrationTaskPropertiesMapArgs(
-        Input<IntegrationOperatorPropertiesKeys> operatorPropertyKey,
-        Input<String> property) {
+        Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey,
+        Output<String> property) {
         this.operatorPropertyKey = Objects.requireNonNull(operatorPropertyKey, "expected parameter 'operatorPropertyKey' to be non-null");
         this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
     }
 
     private IntegrationTaskPropertiesMapArgs() {
-        this.operatorPropertyKey = Input.empty();
-        this.property = Input.empty();
+        this.operatorPropertyKey = Output.empty();
+        this.property = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class IntegrationTaskPropertiesMapArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<IntegrationOperatorPropertiesKeys> operatorPropertyKey;
-        private Input<String> property;
+        private Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey;
+        private Output<String> property;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class IntegrationTaskPropertiesMapArgs extends io.pulumi.resources.
     	      this.property = defaults.property;
         }
 
-        public Builder operatorPropertyKey(Input<IntegrationOperatorPropertiesKeys> operatorPropertyKey) {
+        public Builder operatorPropertyKey(Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey) {
             this.operatorPropertyKey = Objects.requireNonNull(operatorPropertyKey);
             return this;
         }
 
         public Builder operatorPropertyKey(IntegrationOperatorPropertiesKeys operatorPropertyKey) {
-            this.operatorPropertyKey = Input.of(Objects.requireNonNull(operatorPropertyKey));
+            this.operatorPropertyKey = Output.of(Objects.requireNonNull(operatorPropertyKey));
             return this;
         }
 
-        public Builder property(Input<String> property) {
+        public Builder property(Output<String> property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
         public Builder property(String property) {
-            this.property = Input.of(Objects.requireNonNull(property));
+            this.property = Output.of(Objects.requireNonNull(property));
             return this;
         }
         public IntegrationTaskPropertiesMapArgs build() {

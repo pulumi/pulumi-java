@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName")
-      private final @Nullable Input<String> metricName;
+      private final @Nullable Output<String> metricName;
 
-    public Input<String> getMetricName() {
-        return this.metricName == null ? Input.empty() : this.metricName;
+    public Output<String> getMetricName() {
+        return this.metricName == null ? Output.empty() : this.metricName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleInstanceAssignment")
-      private final @Nullable Input<Double> singleInstanceAssignment;
+      private final @Nullable Output<Double> singleInstanceAssignment;
 
-    public Input<Double> getSingleInstanceAssignment() {
-        return this.singleInstanceAssignment == null ? Input.empty() : this.singleInstanceAssignment;
+    public Output<Double> getSingleInstanceAssignment() {
+        return this.singleInstanceAssignment == null ? Output.empty() : this.singleInstanceAssignment;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType")
-      private final @Nullable Input<String> targetType;
+      private final @Nullable Output<String> targetType;
 
-    public Input<String> getTargetType() {
-        return this.targetType == null ? Input.empty() : this.targetType;
+    public Output<String> getTargetType() {
+        return this.targetType == null ? Output.empty() : this.targetType;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetUtilization")
-      private final @Nullable Input<Double> targetUtilization;
+      private final @Nullable Output<Double> targetUtilization;
 
-    public Input<Double> getTargetUtilization() {
-        return this.targetUtilization == null ? Input.empty() : this.targetUtilization;
+    public Output<Double> getTargetUtilization() {
+        return this.targetUtilization == null ? Output.empty() : this.targetUtilization;
     }
 
     public CustomMetricArgs(
-        @Nullable Input<String> filter,
-        @Nullable Input<String> metricName,
-        @Nullable Input<Double> singleInstanceAssignment,
-        @Nullable Input<String> targetType,
-        @Nullable Input<Double> targetUtilization) {
+        @Nullable Output<String> filter,
+        @Nullable Output<String> metricName,
+        @Nullable Output<Double> singleInstanceAssignment,
+        @Nullable Output<String> targetType,
+        @Nullable Output<Double> targetUtilization) {
         this.filter = filter;
         this.metricName = metricName;
         this.singleInstanceAssignment = singleInstanceAssignment;
@@ -88,11 +88,11 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomMetricArgs() {
-        this.filter = Input.empty();
-        this.metricName = Input.empty();
-        this.singleInstanceAssignment = Input.empty();
-        this.targetType = Input.empty();
-        this.targetUtilization = Input.empty();
+        this.filter = Output.empty();
+        this.metricName = Output.empty();
+        this.singleInstanceAssignment = Output.empty();
+        this.targetType = Output.empty();
+        this.targetUtilization = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filter;
-        private @Nullable Input<String> metricName;
-        private @Nullable Input<Double> singleInstanceAssignment;
-        private @Nullable Input<String> targetType;
-        private @Nullable Input<Double> targetUtilization;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<String> metricName;
+        private @Nullable Output<Double> singleInstanceAssignment;
+        private @Nullable Output<String> targetType;
+        private @Nullable Output<Double> targetUtilization;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder metricName(@Nullable Input<String> metricName) {
+        public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
 
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Input.ofNullable(metricName);
+            this.metricName = Output.ofNullable(metricName);
             return this;
         }
 
-        public Builder singleInstanceAssignment(@Nullable Input<Double> singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(@Nullable Output<Double> singleInstanceAssignment) {
             this.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
 
         public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
-            this.singleInstanceAssignment = Input.ofNullable(singleInstanceAssignment);
+            this.singleInstanceAssignment = Output.ofNullable(singleInstanceAssignment);
             return this;
         }
 
-        public Builder targetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Input.ofNullable(targetType);
+            this.targetType = Output.ofNullable(targetType);
             return this;
         }
 
-        public Builder targetUtilization(@Nullable Input<Double> targetUtilization) {
+        public Builder targetUtilization(@Nullable Output<Double> targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }
 
         public Builder targetUtilization(@Nullable Double targetUtilization) {
-            this.targetUtilization = Input.ofNullable(targetUtilization);
+            this.targetUtilization = Output.ofNullable(targetUtilization);
             return this;
         }
         public CustomMetricArgs build() {

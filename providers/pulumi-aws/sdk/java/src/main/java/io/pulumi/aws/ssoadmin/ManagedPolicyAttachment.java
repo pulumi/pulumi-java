@@ -6,7 +6,6 @@ package io.pulumi.aws.ssoadmin;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssoadmin.ManagedPolicyAttachmentArgs;
 import io.pulumi.aws.ssoadmin.inputs.ManagedPolicyAttachmentState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -124,14 +123,14 @@ public class ManagedPolicyAttachment extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedPolicyAttachment(String name, ManagedPolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssoadmin/managedPolicyAttachment:ManagedPolicyAttachment", name, args == null ? ManagedPolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ssoadmin/managedPolicyAttachment:ManagedPolicyAttachment", name, args == null ? ManagedPolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagedPolicyAttachment(String name, Input<String> id, @Nullable ManagedPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagedPolicyAttachment(String name, Output<String> id, @Nullable ManagedPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ssoadmin/managedPolicyAttachment:ManagedPolicyAttachment", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -147,7 +146,7 @@ public class ManagedPolicyAttachment extends io.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedPolicyAttachment get(String name, Input<String> id, @Nullable ManagedPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedPolicyAttachment get(String name, Output<String> id, @Nullable ManagedPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedPolicyAttachment(name, id, state, options);
     }
 }

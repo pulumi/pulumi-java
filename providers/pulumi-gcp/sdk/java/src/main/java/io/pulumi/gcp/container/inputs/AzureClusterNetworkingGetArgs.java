@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class AzureClusterNetworkingGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="podAddressCidrBlocks", required=true)
-      private final Input<List<String>> podAddressCidrBlocks;
+      private final Output<List<String>> podAddressCidrBlocks;
 
-    public Input<List<String>> getPodAddressCidrBlocks() {
+    public Output<List<String>> getPodAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
     }
 
@@ -30,9 +30,9 @@ public final class AzureClusterNetworkingGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serviceAddressCidrBlocks", required=true)
-      private final Input<List<String>> serviceAddressCidrBlocks;
+      private final Output<List<String>> serviceAddressCidrBlocks;
 
-    public Input<List<String>> getServiceAddressCidrBlocks() {
+    public Output<List<String>> getServiceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
     }
 
@@ -41,25 +41,25 @@ public final class AzureClusterNetworkingGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="virtualNetworkId", required=true)
-      private final Input<String> virtualNetworkId;
+      private final Output<String> virtualNetworkId;
 
-    public Input<String> getVirtualNetworkId() {
+    public Output<String> getVirtualNetworkId() {
         return this.virtualNetworkId;
     }
 
     public AzureClusterNetworkingGetArgs(
-        Input<List<String>> podAddressCidrBlocks,
-        Input<List<String>> serviceAddressCidrBlocks,
-        Input<String> virtualNetworkId) {
+        Output<List<String>> podAddressCidrBlocks,
+        Output<List<String>> serviceAddressCidrBlocks,
+        Output<String> virtualNetworkId) {
         this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks, "expected parameter 'podAddressCidrBlocks' to be non-null");
         this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks, "expected parameter 'serviceAddressCidrBlocks' to be non-null");
         this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId, "expected parameter 'virtualNetworkId' to be non-null");
     }
 
     private AzureClusterNetworkingGetArgs() {
-        this.podAddressCidrBlocks = Input.empty();
-        this.serviceAddressCidrBlocks = Input.empty();
-        this.virtualNetworkId = Input.empty();
+        this.podAddressCidrBlocks = Output.empty();
+        this.serviceAddressCidrBlocks = Output.empty();
+        this.virtualNetworkId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AzureClusterNetworkingGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<List<String>> podAddressCidrBlocks;
-        private Input<List<String>> serviceAddressCidrBlocks;
-        private Input<String> virtualNetworkId;
+        private Output<List<String>> podAddressCidrBlocks;
+        private Output<List<String>> serviceAddressCidrBlocks;
+        private Output<String> virtualNetworkId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AzureClusterNetworkingGetArgs extends io.pulumi.resources.Res
     	      this.virtualNetworkId = defaults.virtualNetworkId;
         }
 
-        public Builder podAddressCidrBlocks(Input<List<String>> podAddressCidrBlocks) {
+        public Builder podAddressCidrBlocks(Output<List<String>> podAddressCidrBlocks) {
             this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
             return this;
         }
 
         public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
-            this.podAddressCidrBlocks = Input.of(Objects.requireNonNull(podAddressCidrBlocks));
+            this.podAddressCidrBlocks = Output.of(Objects.requireNonNull(podAddressCidrBlocks));
             return this;
         }
 
-        public Builder serviceAddressCidrBlocks(Input<List<String>> serviceAddressCidrBlocks) {
+        public Builder serviceAddressCidrBlocks(Output<List<String>> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
             return this;
         }
 
         public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
-            this.serviceAddressCidrBlocks = Input.of(Objects.requireNonNull(serviceAddressCidrBlocks));
+            this.serviceAddressCidrBlocks = Output.of(Objects.requireNonNull(serviceAddressCidrBlocks));
             return this;
         }
 
-        public Builder virtualNetworkId(Input<String> virtualNetworkId) {
+        public Builder virtualNetworkId(Output<String> virtualNetworkId) {
             this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId);
             return this;
         }
 
         public Builder virtualNetworkId(String virtualNetworkId) {
-            this.virtualNetworkId = Input.of(Objects.requireNonNull(virtualNetworkId));
+            this.virtualNetworkId = Output.of(Objects.requireNonNull(virtualNetworkId));
             return this;
         }
         public AzureClusterNetworkingGetArgs build() {

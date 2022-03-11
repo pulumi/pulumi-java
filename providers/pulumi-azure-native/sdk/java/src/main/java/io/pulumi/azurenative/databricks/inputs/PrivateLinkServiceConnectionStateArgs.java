@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databricks.inputs;
 
 import io.pulumi.azurenative.databricks.enums.PrivateLinkServiceConnectionStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="actionRequired")
-      private final @Nullable Input<String> actionRequired;
+      private final @Nullable Output<String> actionRequired;
 
-    public Input<String> getActionRequired() {
-        return this.actionRequired == null ? Input.empty() : this.actionRequired;
+    public Output<String> getActionRequired() {
+        return this.actionRequired == null ? Output.empty() : this.actionRequired;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<Either<String,PrivateLinkServiceConnectionStatus>> status;
+      private final Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
-    public Input<Either<String,PrivateLinkServiceConnectionStatus>> getStatus() {
+    public Output<Either<String,PrivateLinkServiceConnectionStatus>> getStatus() {
         return this.status;
     }
 
     public PrivateLinkServiceConnectionStateArgs(
-        @Nullable Input<String> actionRequired,
-        @Nullable Input<String> description,
-        Input<Either<String,PrivateLinkServiceConnectionStatus>> status) {
+        @Nullable Output<String> actionRequired,
+        @Nullable Output<String> description,
+        Output<Either<String,PrivateLinkServiceConnectionStatus>> status) {
         this.actionRequired = actionRequired;
         this.description = description;
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private PrivateLinkServiceConnectionStateArgs() {
-        this.actionRequired = Input.empty();
-        this.description = Input.empty();
-        this.status = Input.empty();
+        this.actionRequired = Output.empty();
+        this.description = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> actionRequired;
-        private @Nullable Input<String> description;
-        private Input<Either<String,PrivateLinkServiceConnectionStatus>> status;
+        private @Nullable Output<String> actionRequired;
+        private @Nullable Output<String> description;
+        private Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
     	      this.status = defaults.status;
         }
 
-        public Builder actionRequired(@Nullable Input<String> actionRequired) {
+        public Builder actionRequired(@Nullable Output<String> actionRequired) {
             this.actionRequired = actionRequired;
             return this;
         }
 
         public Builder actionRequired(@Nullable String actionRequired) {
-            this.actionRequired = Input.ofNullable(actionRequired);
+            this.actionRequired = Output.ofNullable(actionRequired);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder status(Input<Either<String,PrivateLinkServiceConnectionStatus>> status) {
+        public Builder status(Output<Either<String,PrivateLinkServiceConnectionStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(Either<String,PrivateLinkServiceConnectionStatus> status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public PrivateLinkServiceConnectionStateArgs build() {

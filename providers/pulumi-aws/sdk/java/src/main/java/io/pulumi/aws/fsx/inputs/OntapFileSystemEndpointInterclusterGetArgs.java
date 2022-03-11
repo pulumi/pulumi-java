@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class OntapFileSystemEndpointInterclusterGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dnsName")
-      private final @Nullable Input<String> dnsName;
+      private final @Nullable Output<String> dnsName;
 
-    public Input<String> getDnsName() {
-        return this.dnsName == null ? Input.empty() : this.dnsName;
+    public Output<String> getDnsName() {
+        return this.dnsName == null ? Output.empty() : this.dnsName;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class OntapFileSystemEndpointInterclusterGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="ipAddresses")
-      private final @Nullable Input<List<String>> ipAddresses;
+      private final @Nullable Output<List<String>> ipAddresses;
 
-    public Input<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
+    public Output<List<String>> getIpAddresses() {
+        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
     }
 
     public OntapFileSystemEndpointInterclusterGetArgs(
-        @Nullable Input<String> dnsName,
-        @Nullable Input<List<String>> ipAddresses) {
+        @Nullable Output<String> dnsName,
+        @Nullable Output<List<String>> ipAddresses) {
         this.dnsName = dnsName;
         this.ipAddresses = ipAddresses;
     }
 
     private OntapFileSystemEndpointInterclusterGetArgs() {
-        this.dnsName = Input.empty();
-        this.ipAddresses = Input.empty();
+        this.dnsName = Output.empty();
+        this.ipAddresses = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class OntapFileSystemEndpointInterclusterGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dnsName;
-        private @Nullable Input<List<String>> ipAddresses;
+        private @Nullable Output<String> dnsName;
+        private @Nullable Output<List<String>> ipAddresses;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class OntapFileSystemEndpointInterclusterGetArgs extends io.pulumi.
     	      this.ipAddresses = defaults.ipAddresses;
         }
 
-        public Builder dnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Input.ofNullable(dnsName);
+            this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
 
-        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Input.ofNullable(ipAddresses);
+            this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
         public OntapFileSystemEndpointInterclusterGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
      * 
      */
     @InputImport(name="categories")
-      private final @Nullable Input<List<String>> categories;
+      private final @Nullable Output<List<String>> categories;
 
-    public Input<List<String>> getCategories() {
-        return this.categories == null ? Input.empty() : this.categories;
+    public Output<List<String>> getCategories() {
+        return this.categories == null ? Output.empty() : this.categories;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
      * 
      */
     @InputImport(name="resourceTypes")
-      private final @Nullable Input<List<String>> resourceTypes;
+      private final @Nullable Output<List<String>> resourceTypes;
 
-    public Input<List<String>> getResourceTypes() {
-        return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
+    public Output<List<String>> getResourceTypes() {
+        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
      * 
      */
     @InputImport(name="solutions")
-      private final @Nullable Input<List<String>> solutions;
+      private final @Nullable Output<List<String>> solutions;
 
-    public Input<List<String>> getSolutions() {
-        return this.solutions == null ? Input.empty() : this.solutions;
+    public Output<List<String>> getSolutions() {
+        return this.solutions == null ? Output.empty() : this.solutions;
     }
 
     public LogAnalyticsQueryPackQueryPropertiesRelatedArgs(
-        @Nullable Input<List<String>> categories,
-        @Nullable Input<List<String>> resourceTypes,
-        @Nullable Input<List<String>> solutions) {
+        @Nullable Output<List<String>> categories,
+        @Nullable Output<List<String>> resourceTypes,
+        @Nullable Output<List<String>> solutions) {
         this.categories = categories;
         this.resourceTypes = resourceTypes;
         this.solutions = solutions;
     }
 
     private LogAnalyticsQueryPackQueryPropertiesRelatedArgs() {
-        this.categories = Input.empty();
-        this.resourceTypes = Input.empty();
-        this.solutions = Input.empty();
+        this.categories = Output.empty();
+        this.resourceTypes = Output.empty();
+        this.solutions = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> categories;
-        private @Nullable Input<List<String>> resourceTypes;
-        private @Nullable Input<List<String>> solutions;
+        private @Nullable Output<List<String>> categories;
+        private @Nullable Output<List<String>> resourceTypes;
+        private @Nullable Output<List<String>> solutions;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
     	      this.solutions = defaults.solutions;
         }
 
-        public Builder categories(@Nullable Input<List<String>> categories) {
+        public Builder categories(@Nullable Output<List<String>> categories) {
             this.categories = categories;
             return this;
         }
 
         public Builder categories(@Nullable List<String> categories) {
-            this.categories = Input.ofNullable(categories);
+            this.categories = Output.ofNullable(categories);
             return this;
         }
 
-        public Builder resourceTypes(@Nullable Input<List<String>> resourceTypes) {
+        public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Input.ofNullable(resourceTypes);
+            this.resourceTypes = Output.ofNullable(resourceTypes);
             return this;
         }
 
-        public Builder solutions(@Nullable Input<List<String>> solutions) {
+        public Builder solutions(@Nullable Output<List<String>> solutions) {
             this.solutions = solutions;
             return this;
         }
 
         public Builder solutions(@Nullable List<String> solutions) {
-            this.solutions = Input.ofNullable(solutions);
+            this.solutions = Output.ofNullable(solutions);
             return this;
         }
         public LogAnalyticsQueryPackQueryPropertiesRelatedArgs build() {

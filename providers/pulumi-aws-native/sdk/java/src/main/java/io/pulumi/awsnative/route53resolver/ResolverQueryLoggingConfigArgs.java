@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53resolver;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="destinationArn")
-      private final @Nullable Input<String> destinationArn;
+      private final @Nullable Output<String> destinationArn;
 
-    public Input<String> getDestinationArn() {
-        return this.destinationArn == null ? Input.empty() : this.destinationArn;
+    public Output<String> getDestinationArn() {
+        return this.destinationArn == null ? Output.empty() : this.destinationArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ResolverQueryLoggingConfigArgs(
-        @Nullable Input<String> destinationArn,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> destinationArn,
+        @Nullable Output<String> name) {
         this.destinationArn = destinationArn;
         this.name = name;
     }
 
     private ResolverQueryLoggingConfigArgs() {
-        this.destinationArn = Input.empty();
-        this.name = Input.empty();
+        this.destinationArn = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destinationArn;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> destinationArn;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
     	      this.name = defaults.name;
         }
 
-        public Builder destinationArn(@Nullable Input<String> destinationArn) {
+        public Builder destinationArn(@Nullable Output<String> destinationArn) {
             this.destinationArn = destinationArn;
             return this;
         }
 
         public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Input.ofNullable(destinationArn);
+            this.destinationArn = Output.ofNullable(destinationArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ResolverQueryLoggingConfigArgs build() {

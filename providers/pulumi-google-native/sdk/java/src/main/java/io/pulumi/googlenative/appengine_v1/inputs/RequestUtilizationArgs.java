@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetConcurrentRequests")
-      private final @Nullable Input<Integer> targetConcurrentRequests;
+      private final @Nullable Output<Integer> targetConcurrentRequests;
 
-    public Input<Integer> getTargetConcurrentRequests() {
-        return this.targetConcurrentRequests == null ? Input.empty() : this.targetConcurrentRequests;
+    public Output<Integer> getTargetConcurrentRequests() {
+        return this.targetConcurrentRequests == null ? Output.empty() : this.targetConcurrentRequests;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetRequestCountPerSecond")
-      private final @Nullable Input<Integer> targetRequestCountPerSecond;
+      private final @Nullable Output<Integer> targetRequestCountPerSecond;
 
-    public Input<Integer> getTargetRequestCountPerSecond() {
-        return this.targetRequestCountPerSecond == null ? Input.empty() : this.targetRequestCountPerSecond;
+    public Output<Integer> getTargetRequestCountPerSecond() {
+        return this.targetRequestCountPerSecond == null ? Output.empty() : this.targetRequestCountPerSecond;
     }
 
     public RequestUtilizationArgs(
-        @Nullable Input<Integer> targetConcurrentRequests,
-        @Nullable Input<Integer> targetRequestCountPerSecond) {
+        @Nullable Output<Integer> targetConcurrentRequests,
+        @Nullable Output<Integer> targetRequestCountPerSecond) {
         this.targetConcurrentRequests = targetConcurrentRequests;
         this.targetRequestCountPerSecond = targetRequestCountPerSecond;
     }
 
     private RequestUtilizationArgs() {
-        this.targetConcurrentRequests = Input.empty();
-        this.targetRequestCountPerSecond = Input.empty();
+        this.targetConcurrentRequests = Output.empty();
+        this.targetRequestCountPerSecond = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> targetConcurrentRequests;
-        private @Nullable Input<Integer> targetRequestCountPerSecond;
+        private @Nullable Output<Integer> targetConcurrentRequests;
+        private @Nullable Output<Integer> targetRequestCountPerSecond;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
     	      this.targetRequestCountPerSecond = defaults.targetRequestCountPerSecond;
         }
 
-        public Builder targetConcurrentRequests(@Nullable Input<Integer> targetConcurrentRequests) {
+        public Builder targetConcurrentRequests(@Nullable Output<Integer> targetConcurrentRequests) {
             this.targetConcurrentRequests = targetConcurrentRequests;
             return this;
         }
 
         public Builder targetConcurrentRequests(@Nullable Integer targetConcurrentRequests) {
-            this.targetConcurrentRequests = Input.ofNullable(targetConcurrentRequests);
+            this.targetConcurrentRequests = Output.ofNullable(targetConcurrentRequests);
             return this;
         }
 
-        public Builder targetRequestCountPerSecond(@Nullable Input<Integer> targetRequestCountPerSecond) {
+        public Builder targetRequestCountPerSecond(@Nullable Output<Integer> targetRequestCountPerSecond) {
             this.targetRequestCountPerSecond = targetRequestCountPerSecond;
             return this;
         }
 
         public Builder targetRequestCountPerSecond(@Nullable Integer targetRequestCountPerSecond) {
-            this.targetRequestCountPerSecond = Input.ofNullable(targetRequestCountPerSecond);
+            this.targetRequestCountPerSecond = Output.ofNullable(targetRequestCountPerSecond);
             return this;
         }
         public RequestUtilizationArgs build() {

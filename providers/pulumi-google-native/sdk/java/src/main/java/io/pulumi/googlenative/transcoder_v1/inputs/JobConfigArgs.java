@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AdBreakArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.EditAtomArgs;
@@ -33,10 +33,10 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adBreaks")
-      private final @Nullable Input<List<AdBreakArgs>> adBreaks;
+      private final @Nullable Output<List<AdBreakArgs>> adBreaks;
 
-    public Input<List<AdBreakArgs>> getAdBreaks() {
-        return this.adBreaks == null ? Input.empty() : this.adBreaks;
+    public Output<List<AdBreakArgs>> getAdBreaks() {
+        return this.adBreaks == null ? Output.empty() : this.adBreaks;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="editList")
-      private final @Nullable Input<List<EditAtomArgs>> editList;
+      private final @Nullable Output<List<EditAtomArgs>> editList;
 
-    public Input<List<EditAtomArgs>> getEditList() {
-        return this.editList == null ? Input.empty() : this.editList;
+    public Output<List<EditAtomArgs>> getEditList() {
+        return this.editList == null ? Output.empty() : this.editList;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elementaryStreams")
-      private final @Nullable Input<List<ElementaryStreamArgs>> elementaryStreams;
+      private final @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams;
 
-    public Input<List<ElementaryStreamArgs>> getElementaryStreams() {
-        return this.elementaryStreams == null ? Input.empty() : this.elementaryStreams;
+    public Output<List<ElementaryStreamArgs>> getElementaryStreams() {
+        return this.elementaryStreams == null ? Output.empty() : this.elementaryStreams;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-      private final @Nullable Input<List<InputArgs>> inputs;
+      private final @Nullable Output<List<InputArgs>> inputs;
 
-    public Input<List<InputArgs>> getInputs() {
-        return this.inputs == null ? Input.empty() : this.inputs;
+    public Output<List<InputArgs>> getInputs() {
+        return this.inputs == null ? Output.empty() : this.inputs;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manifests")
-      private final @Nullable Input<List<ManifestArgs>> manifests;
+      private final @Nullable Output<List<ManifestArgs>> manifests;
 
-    public Input<List<ManifestArgs>> getManifests() {
-        return this.manifests == null ? Input.empty() : this.manifests;
+    public Output<List<ManifestArgs>> getManifests() {
+        return this.manifests == null ? Output.empty() : this.manifests;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="muxStreams")
-      private final @Nullable Input<List<MuxStreamArgs>> muxStreams;
+      private final @Nullable Output<List<MuxStreamArgs>> muxStreams;
 
-    public Input<List<MuxStreamArgs>> getMuxStreams() {
-        return this.muxStreams == null ? Input.empty() : this.muxStreams;
+    public Output<List<MuxStreamArgs>> getMuxStreams() {
+        return this.muxStreams == null ? Output.empty() : this.muxStreams;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="output")
-      private final @Nullable Input<OutputArgs> output;
+      private final @Nullable Output<OutputArgs> output;
 
-    public Input<OutputArgs> getOutput() {
-        return this.output == null ? Input.empty() : this.output;
+    public Output<OutputArgs> getOutput() {
+        return this.output == null ? Output.empty() : this.output;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overlays")
-      private final @Nullable Input<List<OverlayArgs>> overlays;
+      private final @Nullable Output<List<OverlayArgs>> overlays;
 
-    public Input<List<OverlayArgs>> getOverlays() {
-        return this.overlays == null ? Input.empty() : this.overlays;
+    public Output<List<OverlayArgs>> getOverlays() {
+        return this.overlays == null ? Output.empty() : this.overlays;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubDestination")
-      private final @Nullable Input<PubsubDestinationArgs> pubsubDestination;
+      private final @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
-    public Input<PubsubDestinationArgs> getPubsubDestination() {
-        return this.pubsubDestination == null ? Input.empty() : this.pubsubDestination;
+    public Output<PubsubDestinationArgs> getPubsubDestination() {
+        return this.pubsubDestination == null ? Output.empty() : this.pubsubDestination;
     }
 
     /**
@@ -132,23 +132,23 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spriteSheets")
-      private final @Nullable Input<List<SpriteSheetArgs>> spriteSheets;
+      private final @Nullable Output<List<SpriteSheetArgs>> spriteSheets;
 
-    public Input<List<SpriteSheetArgs>> getSpriteSheets() {
-        return this.spriteSheets == null ? Input.empty() : this.spriteSheets;
+    public Output<List<SpriteSheetArgs>> getSpriteSheets() {
+        return this.spriteSheets == null ? Output.empty() : this.spriteSheets;
     }
 
     public JobConfigArgs(
-        @Nullable Input<List<AdBreakArgs>> adBreaks,
-        @Nullable Input<List<EditAtomArgs>> editList,
-        @Nullable Input<List<ElementaryStreamArgs>> elementaryStreams,
-        @Nullable Input<List<InputArgs>> inputs,
-        @Nullable Input<List<ManifestArgs>> manifests,
-        @Nullable Input<List<MuxStreamArgs>> muxStreams,
-        @Nullable Input<OutputArgs> output,
-        @Nullable Input<List<OverlayArgs>> overlays,
-        @Nullable Input<PubsubDestinationArgs> pubsubDestination,
-        @Nullable Input<List<SpriteSheetArgs>> spriteSheets) {
+        @Nullable Output<List<AdBreakArgs>> adBreaks,
+        @Nullable Output<List<EditAtomArgs>> editList,
+        @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams,
+        @Nullable Output<List<InputArgs>> inputs,
+        @Nullable Output<List<ManifestArgs>> manifests,
+        @Nullable Output<List<MuxStreamArgs>> muxStreams,
+        @Nullable Output<OutputArgs> output,
+        @Nullable Output<List<OverlayArgs>> overlays,
+        @Nullable Output<PubsubDestinationArgs> pubsubDestination,
+        @Nullable Output<List<SpriteSheetArgs>> spriteSheets) {
         this.adBreaks = adBreaks;
         this.editList = editList;
         this.elementaryStreams = elementaryStreams;
@@ -162,16 +162,16 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobConfigArgs() {
-        this.adBreaks = Input.empty();
-        this.editList = Input.empty();
-        this.elementaryStreams = Input.empty();
-        this.inputs = Input.empty();
-        this.manifests = Input.empty();
-        this.muxStreams = Input.empty();
-        this.output = Input.empty();
-        this.overlays = Input.empty();
-        this.pubsubDestination = Input.empty();
-        this.spriteSheets = Input.empty();
+        this.adBreaks = Output.empty();
+        this.editList = Output.empty();
+        this.elementaryStreams = Output.empty();
+        this.inputs = Output.empty();
+        this.manifests = Output.empty();
+        this.muxStreams = Output.empty();
+        this.output = Output.empty();
+        this.overlays = Output.empty();
+        this.pubsubDestination = Output.empty();
+        this.spriteSheets = Output.empty();
     }
 
     public static Builder builder() {
@@ -183,16 +183,16 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AdBreakArgs>> adBreaks;
-        private @Nullable Input<List<EditAtomArgs>> editList;
-        private @Nullable Input<List<ElementaryStreamArgs>> elementaryStreams;
-        private @Nullable Input<List<InputArgs>> inputs;
-        private @Nullable Input<List<ManifestArgs>> manifests;
-        private @Nullable Input<List<MuxStreamArgs>> muxStreams;
-        private @Nullable Input<OutputArgs> output;
-        private @Nullable Input<List<OverlayArgs>> overlays;
-        private @Nullable Input<PubsubDestinationArgs> pubsubDestination;
-        private @Nullable Input<List<SpriteSheetArgs>> spriteSheets;
+        private @Nullable Output<List<AdBreakArgs>> adBreaks;
+        private @Nullable Output<List<EditAtomArgs>> editList;
+        private @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams;
+        private @Nullable Output<List<InputArgs>> inputs;
+        private @Nullable Output<List<ManifestArgs>> manifests;
+        private @Nullable Output<List<MuxStreamArgs>> muxStreams;
+        private @Nullable Output<OutputArgs> output;
+        private @Nullable Output<List<OverlayArgs>> overlays;
+        private @Nullable Output<PubsubDestinationArgs> pubsubDestination;
+        private @Nullable Output<List<SpriteSheetArgs>> spriteSheets;
 
         public Builder() {
     	      // Empty
@@ -212,103 +212,103 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spriteSheets = defaults.spriteSheets;
         }
 
-        public Builder adBreaks(@Nullable Input<List<AdBreakArgs>> adBreaks) {
+        public Builder adBreaks(@Nullable Output<List<AdBreakArgs>> adBreaks) {
             this.adBreaks = adBreaks;
             return this;
         }
 
         public Builder adBreaks(@Nullable List<AdBreakArgs> adBreaks) {
-            this.adBreaks = Input.ofNullable(adBreaks);
+            this.adBreaks = Output.ofNullable(adBreaks);
             return this;
         }
 
-        public Builder editList(@Nullable Input<List<EditAtomArgs>> editList) {
+        public Builder editList(@Nullable Output<List<EditAtomArgs>> editList) {
             this.editList = editList;
             return this;
         }
 
         public Builder editList(@Nullable List<EditAtomArgs> editList) {
-            this.editList = Input.ofNullable(editList);
+            this.editList = Output.ofNullable(editList);
             return this;
         }
 
-        public Builder elementaryStreams(@Nullable Input<List<ElementaryStreamArgs>> elementaryStreams) {
+        public Builder elementaryStreams(@Nullable Output<List<ElementaryStreamArgs>> elementaryStreams) {
             this.elementaryStreams = elementaryStreams;
             return this;
         }
 
         public Builder elementaryStreams(@Nullable List<ElementaryStreamArgs> elementaryStreams) {
-            this.elementaryStreams = Input.ofNullable(elementaryStreams);
+            this.elementaryStreams = Output.ofNullable(elementaryStreams);
             return this;
         }
 
-        public Builder inputs(@Nullable Input<List<InputArgs>> inputs) {
+        public Builder inputs(@Nullable Output<List<InputArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
         public Builder inputs(@Nullable List<InputArgs> inputs) {
-            this.inputs = Input.ofNullable(inputs);
+            this.inputs = Output.ofNullable(inputs);
             return this;
         }
 
-        public Builder manifests(@Nullable Input<List<ManifestArgs>> manifests) {
+        public Builder manifests(@Nullable Output<List<ManifestArgs>> manifests) {
             this.manifests = manifests;
             return this;
         }
 
         public Builder manifests(@Nullable List<ManifestArgs> manifests) {
-            this.manifests = Input.ofNullable(manifests);
+            this.manifests = Output.ofNullable(manifests);
             return this;
         }
 
-        public Builder muxStreams(@Nullable Input<List<MuxStreamArgs>> muxStreams) {
+        public Builder muxStreams(@Nullable Output<List<MuxStreamArgs>> muxStreams) {
             this.muxStreams = muxStreams;
             return this;
         }
 
         public Builder muxStreams(@Nullable List<MuxStreamArgs> muxStreams) {
-            this.muxStreams = Input.ofNullable(muxStreams);
+            this.muxStreams = Output.ofNullable(muxStreams);
             return this;
         }
 
-        public Builder output(@Nullable Input<OutputArgs> output) {
+        public Builder output(@Nullable Output<OutputArgs> output) {
             this.output = output;
             return this;
         }
 
         public Builder output(@Nullable OutputArgs output) {
-            this.output = Input.ofNullable(output);
+            this.output = Output.ofNullable(output);
             return this;
         }
 
-        public Builder overlays(@Nullable Input<List<OverlayArgs>> overlays) {
+        public Builder overlays(@Nullable Output<List<OverlayArgs>> overlays) {
             this.overlays = overlays;
             return this;
         }
 
         public Builder overlays(@Nullable List<OverlayArgs> overlays) {
-            this.overlays = Input.ofNullable(overlays);
+            this.overlays = Output.ofNullable(overlays);
             return this;
         }
 
-        public Builder pubsubDestination(@Nullable Input<PubsubDestinationArgs> pubsubDestination) {
+        public Builder pubsubDestination(@Nullable Output<PubsubDestinationArgs> pubsubDestination) {
             this.pubsubDestination = pubsubDestination;
             return this;
         }
 
         public Builder pubsubDestination(@Nullable PubsubDestinationArgs pubsubDestination) {
-            this.pubsubDestination = Input.ofNullable(pubsubDestination);
+            this.pubsubDestination = Output.ofNullable(pubsubDestination);
             return this;
         }
 
-        public Builder spriteSheets(@Nullable Input<List<SpriteSheetArgs>> spriteSheets) {
+        public Builder spriteSheets(@Nullable Output<List<SpriteSheetArgs>> spriteSheets) {
             this.spriteSheets = spriteSheets;
             return this;
         }
 
         public Builder spriteSheets(@Nullable List<SpriteSheetArgs> spriteSheets) {
-            this.spriteSheets = Input.ofNullable(spriteSheets);
+            this.spriteSheets = Output.ofNullable(spriteSheets);
             return this;
         }
         public JobConfigArgs build() {

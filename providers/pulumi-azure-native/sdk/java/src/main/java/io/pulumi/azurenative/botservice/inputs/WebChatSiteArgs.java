@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -34,9 +34,9 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isWebchatPreviewEnabled", required=true)
-      private final Input<Boolean> isWebchatPreviewEnabled;
+      private final Output<Boolean> isWebchatPreviewEnabled;
 
-    public Input<Boolean> getIsWebchatPreviewEnabled() {
+    public Output<Boolean> getIsWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
 
@@ -45,25 +45,25 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteName", required=true)
-      private final Input<String> siteName;
+      private final Output<String> siteName;
 
-    public Input<String> getSiteName() {
+    public Output<String> getSiteName() {
         return this.siteName;
     }
 
     public WebChatSiteArgs(
-        Input<Boolean> isEnabled,
-        Input<Boolean> isWebchatPreviewEnabled,
-        Input<String> siteName) {
+        Output<Boolean> isEnabled,
+        Output<Boolean> isWebchatPreviewEnabled,
+        Output<String> siteName) {
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isWebchatPreviewEnabled = isWebchatPreviewEnabled == null ? Input.ofNullable(false) : Objects.requireNonNull(isWebchatPreviewEnabled, "expected parameter 'isWebchatPreviewEnabled' to be non-null");
+        this.isWebchatPreviewEnabled = isWebchatPreviewEnabled == null ? Output.ofNullable(false) : Objects.requireNonNull(isWebchatPreviewEnabled, "expected parameter 'isWebchatPreviewEnabled' to be non-null");
         this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
     }
 
     private WebChatSiteArgs() {
-        this.isEnabled = Input.empty();
-        this.isWebchatPreviewEnabled = Input.empty();
-        this.siteName = Input.empty();
+        this.isEnabled = Output.empty();
+        this.isWebchatPreviewEnabled = Output.empty();
+        this.siteName = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Boolean> isEnabled;
-        private Input<Boolean> isWebchatPreviewEnabled;
-        private Input<String> siteName;
+        private Output<Boolean> isEnabled;
+        private Output<Boolean> isWebchatPreviewEnabled;
+        private Output<String> siteName;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.siteName = defaults.siteName;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder isWebchatPreviewEnabled(Input<Boolean> isWebchatPreviewEnabled) {
+        public Builder isWebchatPreviewEnabled(Output<Boolean> isWebchatPreviewEnabled) {
             this.isWebchatPreviewEnabled = Objects.requireNonNull(isWebchatPreviewEnabled);
             return this;
         }
 
         public Builder isWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
-            this.isWebchatPreviewEnabled = Input.of(Objects.requireNonNull(isWebchatPreviewEnabled));
+            this.isWebchatPreviewEnabled = Output.of(Objects.requireNonNull(isWebchatPreviewEnabled));
             return this;
         }
 
-        public Builder siteName(Input<String> siteName) {
+        public Builder siteName(Output<String> siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
 
         public Builder siteName(String siteName) {
-            this.siteName = Input.of(Objects.requireNonNull(siteName));
+            this.siteName = Output.of(Objects.requireNonNull(siteName));
             return this;
         }
         public WebChatSiteArgs build() {

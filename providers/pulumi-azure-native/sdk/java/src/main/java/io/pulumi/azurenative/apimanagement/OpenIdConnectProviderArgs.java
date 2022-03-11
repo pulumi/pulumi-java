@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -30,10 +30,10 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -63,9 +63,9 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metadataEndpoint", required=true)
-      private final Input<String> metadataEndpoint;
+      private final Output<String> metadataEndpoint;
 
-    public Input<String> getMetadataEndpoint() {
+    public Output<String> getMetadataEndpoint() {
         return this.metadataEndpoint;
     }
 
@@ -74,10 +74,10 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="opid")
-      private final @Nullable Input<String> opid;
+      private final @Nullable Output<String> opid;
 
-    public Input<String> getOpid() {
-        return this.opid == null ? Input.empty() : this.opid;
+    public Output<String> getOpid() {
+        return this.opid == null ? Output.empty() : this.opid;
     }
 
     /**
@@ -85,9 +85,9 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -96,21 +96,21 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public OpenIdConnectProviderArgs(
-        Input<String> clientId,
-        @Nullable Input<String> clientSecret,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        Input<String> metadataEndpoint,
-        @Nullable Input<String> opid,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        Output<String> clientId,
+        @Nullable Output<String> clientSecret,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        Output<String> metadataEndpoint,
+        @Nullable Output<String> opid,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.clientSecret = clientSecret;
         this.description = description;
@@ -122,14 +122,14 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     }
 
     private OpenIdConnectProviderArgs() {
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.metadataEndpoint = Input.empty();
-        this.opid = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.metadataEndpoint = Output.empty();
+        this.opid = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private Input<String> metadataEndpoint;
-        private @Nullable Input<String> opid;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private Output<String> metadataEndpoint;
+        private @Nullable Output<String> opid;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder metadataEndpoint(Input<String> metadataEndpoint) {
+        public Builder metadataEndpoint(Output<String> metadataEndpoint) {
             this.metadataEndpoint = Objects.requireNonNull(metadataEndpoint);
             return this;
         }
 
         public Builder metadataEndpoint(String metadataEndpoint) {
-            this.metadataEndpoint = Input.of(Objects.requireNonNull(metadataEndpoint));
+            this.metadataEndpoint = Output.of(Objects.requireNonNull(metadataEndpoint));
             return this;
         }
 
-        public Builder opid(@Nullable Input<String> opid) {
+        public Builder opid(@Nullable Output<String> opid) {
             this.opid = opid;
             return this;
         }
 
         public Builder opid(@Nullable String opid) {
-            this.opid = Input.ofNullable(opid);
+            this.opid = Output.ofNullable(opid);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public OpenIdConnectProviderArgs build() {

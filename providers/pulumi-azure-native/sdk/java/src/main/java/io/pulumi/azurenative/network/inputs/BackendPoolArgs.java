@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.BackendArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backends")
-      private final @Nullable Input<List<BackendArgs>> backends;
+      private final @Nullable Output<List<BackendArgs>> backends;
 
-    public Input<List<BackendArgs>> getBackends() {
-        return this.backends == null ? Input.empty() : this.backends;
+    public Output<List<BackendArgs>> getBackends() {
+        return this.backends == null ? Output.empty() : this.backends;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthProbeSettings")
-      private final @Nullable Input<SubResourceArgs> healthProbeSettings;
+      private final @Nullable Output<SubResourceArgs> healthProbeSettings;
 
-    public Input<SubResourceArgs> getHealthProbeSettings() {
-        return this.healthProbeSettings == null ? Input.empty() : this.healthProbeSettings;
+    public Output<SubResourceArgs> getHealthProbeSettings() {
+        return this.healthProbeSettings == null ? Output.empty() : this.healthProbeSettings;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancingSettings")
-      private final @Nullable Input<SubResourceArgs> loadBalancingSettings;
+      private final @Nullable Output<SubResourceArgs> loadBalancingSettings;
 
-    public Input<SubResourceArgs> getLoadBalancingSettings() {
-        return this.loadBalancingSettings == null ? Input.empty() : this.loadBalancingSettings;
+    public Output<SubResourceArgs> getLoadBalancingSettings() {
+        return this.loadBalancingSettings == null ? Output.empty() : this.loadBalancingSettings;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public BackendPoolArgs(
-        @Nullable Input<List<BackendArgs>> backends,
-        @Nullable Input<SubResourceArgs> healthProbeSettings,
-        @Nullable Input<String> id,
-        @Nullable Input<SubResourceArgs> loadBalancingSettings,
-        @Nullable Input<String> name) {
+        @Nullable Output<List<BackendArgs>> backends,
+        @Nullable Output<SubResourceArgs> healthProbeSettings,
+        @Nullable Output<String> id,
+        @Nullable Output<SubResourceArgs> loadBalancingSettings,
+        @Nullable Output<String> name) {
         this.backends = backends;
         this.healthProbeSettings = healthProbeSettings;
         this.id = id;
@@ -90,11 +90,11 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackendPoolArgs() {
-        this.backends = Input.empty();
-        this.healthProbeSettings = Input.empty();
-        this.id = Input.empty();
-        this.loadBalancingSettings = Input.empty();
-        this.name = Input.empty();
+        this.backends = Output.empty();
+        this.healthProbeSettings = Output.empty();
+        this.id = Output.empty();
+        this.loadBalancingSettings = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BackendArgs>> backends;
-        private @Nullable Input<SubResourceArgs> healthProbeSettings;
-        private @Nullable Input<String> id;
-        private @Nullable Input<SubResourceArgs> loadBalancingSettings;
-        private @Nullable Input<String> name;
+        private @Nullable Output<List<BackendArgs>> backends;
+        private @Nullable Output<SubResourceArgs> healthProbeSettings;
+        private @Nullable Output<String> id;
+        private @Nullable Output<SubResourceArgs> loadBalancingSettings;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder backends(@Nullable Input<List<BackendArgs>> backends) {
+        public Builder backends(@Nullable Output<List<BackendArgs>> backends) {
             this.backends = backends;
             return this;
         }
 
         public Builder backends(@Nullable List<BackendArgs> backends) {
-            this.backends = Input.ofNullable(backends);
+            this.backends = Output.ofNullable(backends);
             return this;
         }
 
-        public Builder healthProbeSettings(@Nullable Input<SubResourceArgs> healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable Output<SubResourceArgs> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
         public Builder healthProbeSettings(@Nullable SubResourceArgs healthProbeSettings) {
-            this.healthProbeSettings = Input.ofNullable(healthProbeSettings);
+            this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder loadBalancingSettings(@Nullable Input<SubResourceArgs> loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable Output<SubResourceArgs> loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
         public Builder loadBalancingSettings(@Nullable SubResourceArgs loadBalancingSettings) {
-            this.loadBalancingSettings = Input.ofNullable(loadBalancingSettings);
+            this.loadBalancingSettings = Output.ofNullable(loadBalancingSettings);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public BackendPoolArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="throughputReservation")
-      private final @Nullable Input<String> throughputReservation;
+      private final @Nullable Output<String> throughputReservation;
 
-    public Input<String> getThroughputReservation() {
-        return this.throughputReservation == null ? Input.empty() : this.throughputReservation;
+    public Output<String> getThroughputReservation() {
+        return this.throughputReservation == null ? Output.empty() : this.throughputReservation;
     }
 
-    public LiteTopicReservationConfigArgs(@Nullable Input<String> throughputReservation) {
+    public LiteTopicReservationConfigArgs(@Nullable Output<String> throughputReservation) {
         this.throughputReservation = throughputReservation;
     }
 
     private LiteTopicReservationConfigArgs() {
-        this.throughputReservation = Input.empty();
+        this.throughputReservation = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> throughputReservation;
+        private @Nullable Output<String> throughputReservation;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class LiteTopicReservationConfigArgs extends io.pulumi.resources.Re
     	      this.throughputReservation = defaults.throughputReservation;
         }
 
-        public Builder throughputReservation(@Nullable Input<String> throughputReservation) {
+        public Builder throughputReservation(@Nullable Output<String> throughputReservation) {
             this.throughputReservation = throughputReservation;
             return this;
         }
 
         public Builder throughputReservation(@Nullable String throughputReservation) {
-            this.throughputReservation = Input.ofNullable(throughputReservation);
+            this.throughputReservation = Output.ofNullable(throughputReservation);
             return this;
         }
         public LiteTopicReservationConfigArgs build() {

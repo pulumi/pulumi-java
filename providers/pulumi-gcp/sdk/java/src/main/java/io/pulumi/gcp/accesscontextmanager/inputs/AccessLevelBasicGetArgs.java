@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicConditionGetArgs;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class AccessLevelBasicGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="combiningFunction")
-      private final @Nullable Input<String> combiningFunction;
+      private final @Nullable Output<String> combiningFunction;
 
-    public Input<String> getCombiningFunction() {
-        return this.combiningFunction == null ? Input.empty() : this.combiningFunction;
+    public Output<String> getCombiningFunction() {
+        return this.combiningFunction == null ? Output.empty() : this.combiningFunction;
     }
 
     /**
@@ -39,22 +39,22 @@ public final class AccessLevelBasicGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="conditions", required=true)
-      private final Input<List<AccessLevelBasicConditionGetArgs>> conditions;
+      private final Output<List<AccessLevelBasicConditionGetArgs>> conditions;
 
-    public Input<List<AccessLevelBasicConditionGetArgs>> getConditions() {
+    public Output<List<AccessLevelBasicConditionGetArgs>> getConditions() {
         return this.conditions;
     }
 
     public AccessLevelBasicGetArgs(
-        @Nullable Input<String> combiningFunction,
-        Input<List<AccessLevelBasicConditionGetArgs>> conditions) {
+        @Nullable Output<String> combiningFunction,
+        Output<List<AccessLevelBasicConditionGetArgs>> conditions) {
         this.combiningFunction = combiningFunction;
         this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
     }
 
     private AccessLevelBasicGetArgs() {
-        this.combiningFunction = Input.empty();
-        this.conditions = Input.empty();
+        this.combiningFunction = Output.empty();
+        this.conditions = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,8 +66,8 @@ public final class AccessLevelBasicGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> combiningFunction;
-        private Input<List<AccessLevelBasicConditionGetArgs>> conditions;
+        private @Nullable Output<String> combiningFunction;
+        private Output<List<AccessLevelBasicConditionGetArgs>> conditions;
 
         public Builder() {
     	      // Empty
@@ -79,23 +79,23 @@ public final class AccessLevelBasicGetArgs extends io.pulumi.resources.ResourceA
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder combiningFunction(@Nullable Input<String> combiningFunction) {
+        public Builder combiningFunction(@Nullable Output<String> combiningFunction) {
             this.combiningFunction = combiningFunction;
             return this;
         }
 
         public Builder combiningFunction(@Nullable String combiningFunction) {
-            this.combiningFunction = Input.ofNullable(combiningFunction);
+            this.combiningFunction = Output.ofNullable(combiningFunction);
             return this;
         }
 
-        public Builder conditions(Input<List<AccessLevelBasicConditionGetArgs>> conditions) {
+        public Builder conditions(Output<List<AccessLevelBasicConditionGetArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
         public Builder conditions(List<AccessLevelBasicConditionGetArgs> conditions) {
-            this.conditions = Input.of(Objects.requireNonNull(conditions));
+            this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
         public AccessLevelBasicGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="companyName", required=true)
-      private final Input<String> companyName;
+      private final Output<String> companyName;
 
-    public Input<String> getCompanyName() {
+    public Output<String> getCompanyName() {
         return this.companyName;
     }
 
@@ -34,9 +34,9 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactPerson", required=true)
-      private final Input<String> contactPerson;
+      private final Output<String> contactPerson;
 
-    public Input<String> getContactPerson() {
+    public Output<String> getContactPerson() {
         return this.contactPerson;
     }
 
@@ -45,9 +45,9 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailList", required=true)
-      private final Input<List<String>> emailList;
+      private final Output<List<String>> emailList;
 
-    public Input<List<String>> getEmailList() {
+    public Output<List<String>> getEmailList() {
         return this.emailList;
     }
 
@@ -56,17 +56,17 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone", required=true)
-      private final Input<String> phone;
+      private final Output<String> phone;
 
-    public Input<String> getPhone() {
+    public Output<String> getPhone() {
         return this.phone;
     }
 
     public ContactDetailsArgs(
-        Input<String> companyName,
-        Input<String> contactPerson,
-        Input<List<String>> emailList,
-        Input<String> phone) {
+        Output<String> companyName,
+        Output<String> contactPerson,
+        Output<List<String>> emailList,
+        Output<String> phone) {
         this.companyName = Objects.requireNonNull(companyName, "expected parameter 'companyName' to be non-null");
         this.contactPerson = Objects.requireNonNull(contactPerson, "expected parameter 'contactPerson' to be non-null");
         this.emailList = Objects.requireNonNull(emailList, "expected parameter 'emailList' to be non-null");
@@ -74,10 +74,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactDetailsArgs() {
-        this.companyName = Input.empty();
-        this.contactPerson = Input.empty();
-        this.emailList = Input.empty();
-        this.phone = Input.empty();
+        this.companyName = Output.empty();
+        this.contactPerson = Output.empty();
+        this.emailList = Output.empty();
+        this.phone = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> companyName;
-        private Input<String> contactPerson;
-        private Input<List<String>> emailList;
-        private Input<String> phone;
+        private Output<String> companyName;
+        private Output<String> contactPerson;
+        private Output<List<String>> emailList;
+        private Output<String> phone;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.phone = defaults.phone;
         }
 
-        public Builder companyName(Input<String> companyName) {
+        public Builder companyName(Output<String> companyName) {
             this.companyName = Objects.requireNonNull(companyName);
             return this;
         }
 
         public Builder companyName(String companyName) {
-            this.companyName = Input.of(Objects.requireNonNull(companyName));
+            this.companyName = Output.of(Objects.requireNonNull(companyName));
             return this;
         }
 
-        public Builder contactPerson(Input<String> contactPerson) {
+        public Builder contactPerson(Output<String> contactPerson) {
             this.contactPerson = Objects.requireNonNull(contactPerson);
             return this;
         }
 
         public Builder contactPerson(String contactPerson) {
-            this.contactPerson = Input.of(Objects.requireNonNull(contactPerson));
+            this.contactPerson = Output.of(Objects.requireNonNull(contactPerson));
             return this;
         }
 
-        public Builder emailList(Input<List<String>> emailList) {
+        public Builder emailList(Output<List<String>> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
 
         public Builder emailList(List<String> emailList) {
-            this.emailList = Input.of(Objects.requireNonNull(emailList));
+            this.emailList = Output.of(Objects.requireNonNull(emailList));
             return this;
         }
 
-        public Builder phone(Input<String> phone) {
+        public Builder phone(Output<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
         public Builder phone(String phone) {
-            this.phone = Input.of(Objects.requireNonNull(phone));
+            this.phone = Output.of(Objects.requireNonNull(phone));
             return this;
         }
         public ContactDetailsArgs build() {

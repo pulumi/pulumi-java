@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ranges", required=true)
-      private final Input<String> ranges;
+      private final Output<String> ranges;
 
-    public Input<String> getRanges() {
+    public Output<String> getRanges() {
         return this.ranges;
     }
 
@@ -34,22 +34,22 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public VideoSequenceAbsoluteTimeMarkersArgs(
-        Input<String> ranges,
-        Input<String> type) {
+        Output<String> ranges,
+        Output<String> type) {
         this.ranges = Objects.requireNonNull(ranges, "expected parameter 'ranges' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private VideoSequenceAbsoluteTimeMarkersArgs() {
-        this.ranges = Input.empty();
-        this.type = Input.empty();
+        this.ranges = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> ranges;
-        private Input<String> type;
+        private Output<String> ranges;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
     	      this.type = defaults.type;
         }
 
-        public Builder ranges(Input<String> ranges) {
+        public Builder ranges(Output<String> ranges) {
             this.ranges = Objects.requireNonNull(ranges);
             return this;
         }
 
         public Builder ranges(String ranges) {
-            this.ranges = Input.of(Objects.requireNonNull(ranges));
+            this.ranges = Output.of(Objects.requireNonNull(ranges));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public VideoSequenceAbsoluteTimeMarkersArgs build() {

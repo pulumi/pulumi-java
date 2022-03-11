@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageSummaryKind;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ComponentSourceArgs;
@@ -28,10 +28,10 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="componentSource")
-      private final @Nullable Input<List<ComponentSourceArgs>> componentSource;
+      private final @Nullable Output<List<ComponentSourceArgs>> componentSource;
 
-    public Input<List<ComponentSourceArgs>> getComponentSource() {
-        return this.componentSource == null ? Input.empty() : this.componentSource;
+    public Output<List<ComponentSourceArgs>> getComponentSource() {
+        return this.componentSource == null ? Output.empty() : this.componentSource;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="componentTransform")
-      private final @Nullable Input<List<ComponentTransformArgs>> componentTransform;
+      private final @Nullable Output<List<ComponentTransformArgs>> componentTransform;
 
-    public Input<List<ComponentTransformArgs>> getComponentTransform() {
-        return this.componentTransform == null ? Input.empty() : this.componentTransform;
+    public Output<List<ComponentTransformArgs>> getComponentTransform() {
+        return this.componentTransform == null ? Output.empty() : this.componentTransform;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="inputSource")
-      private final @Nullable Input<List<StageSourceArgs>> inputSource;
+      private final @Nullable Output<List<StageSourceArgs>> inputSource;
 
-    public Input<List<StageSourceArgs>> getInputSource() {
-        return this.inputSource == null ? Input.empty() : this.inputSource;
+    public Output<List<StageSourceArgs>> getInputSource() {
+        return this.inputSource == null ? Output.empty() : this.inputSource;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<ExecutionStageSummaryKind> kind;
+      private final @Nullable Output<ExecutionStageSummaryKind> kind;
 
-    public Input<ExecutionStageSummaryKind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<ExecutionStageSummaryKind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="outputSource")
-      private final @Nullable Input<List<StageSourceArgs>> outputSource;
+      private final @Nullable Output<List<StageSourceArgs>> outputSource;
 
-    public Input<List<StageSourceArgs>> getOutputSource() {
-        return this.outputSource == null ? Input.empty() : this.outputSource;
+    public Output<List<StageSourceArgs>> getOutputSource() {
+        return this.outputSource == null ? Output.empty() : this.outputSource;
     }
 
     /**
@@ -105,21 +105,21 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="prerequisiteStage")
-      private final @Nullable Input<List<String>> prerequisiteStage;
+      private final @Nullable Output<List<String>> prerequisiteStage;
 
-    public Input<List<String>> getPrerequisiteStage() {
-        return this.prerequisiteStage == null ? Input.empty() : this.prerequisiteStage;
+    public Output<List<String>> getPrerequisiteStage() {
+        return this.prerequisiteStage == null ? Output.empty() : this.prerequisiteStage;
     }
 
     public ExecutionStageSummaryArgs(
-        @Nullable Input<List<ComponentSourceArgs>> componentSource,
-        @Nullable Input<List<ComponentTransformArgs>> componentTransform,
-        @Nullable Input<String> id,
-        @Nullable Input<List<StageSourceArgs>> inputSource,
-        @Nullable Input<ExecutionStageSummaryKind> kind,
-        @Nullable Input<String> name,
-        @Nullable Input<List<StageSourceArgs>> outputSource,
-        @Nullable Input<List<String>> prerequisiteStage) {
+        @Nullable Output<List<ComponentSourceArgs>> componentSource,
+        @Nullable Output<List<ComponentTransformArgs>> componentTransform,
+        @Nullable Output<String> id,
+        @Nullable Output<List<StageSourceArgs>> inputSource,
+        @Nullable Output<ExecutionStageSummaryKind> kind,
+        @Nullable Output<String> name,
+        @Nullable Output<List<StageSourceArgs>> outputSource,
+        @Nullable Output<List<String>> prerequisiteStage) {
         this.componentSource = componentSource;
         this.componentTransform = componentTransform;
         this.id = id;
@@ -131,14 +131,14 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     }
 
     private ExecutionStageSummaryArgs() {
-        this.componentSource = Input.empty();
-        this.componentTransform = Input.empty();
-        this.id = Input.empty();
-        this.inputSource = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.outputSource = Input.empty();
-        this.prerequisiteStage = Input.empty();
+        this.componentSource = Output.empty();
+        this.componentTransform = Output.empty();
+        this.id = Output.empty();
+        this.inputSource = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.outputSource = Output.empty();
+        this.prerequisiteStage = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,14 +150,14 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ComponentSourceArgs>> componentSource;
-        private @Nullable Input<List<ComponentTransformArgs>> componentTransform;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<StageSourceArgs>> inputSource;
-        private @Nullable Input<ExecutionStageSummaryKind> kind;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<StageSourceArgs>> outputSource;
-        private @Nullable Input<List<String>> prerequisiteStage;
+        private @Nullable Output<List<ComponentSourceArgs>> componentSource;
+        private @Nullable Output<List<ComponentTransformArgs>> componentTransform;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<StageSourceArgs>> inputSource;
+        private @Nullable Output<ExecutionStageSummaryKind> kind;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<StageSourceArgs>> outputSource;
+        private @Nullable Output<List<String>> prerequisiteStage;
 
         public Builder() {
     	      // Empty
@@ -175,83 +175,83 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
     	      this.prerequisiteStage = defaults.prerequisiteStage;
         }
 
-        public Builder componentSource(@Nullable Input<List<ComponentSourceArgs>> componentSource) {
+        public Builder componentSource(@Nullable Output<List<ComponentSourceArgs>> componentSource) {
             this.componentSource = componentSource;
             return this;
         }
 
         public Builder componentSource(@Nullable List<ComponentSourceArgs> componentSource) {
-            this.componentSource = Input.ofNullable(componentSource);
+            this.componentSource = Output.ofNullable(componentSource);
             return this;
         }
 
-        public Builder componentTransform(@Nullable Input<List<ComponentTransformArgs>> componentTransform) {
+        public Builder componentTransform(@Nullable Output<List<ComponentTransformArgs>> componentTransform) {
             this.componentTransform = componentTransform;
             return this;
         }
 
         public Builder componentTransform(@Nullable List<ComponentTransformArgs> componentTransform) {
-            this.componentTransform = Input.ofNullable(componentTransform);
+            this.componentTransform = Output.ofNullable(componentTransform);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder inputSource(@Nullable Input<List<StageSourceArgs>> inputSource) {
+        public Builder inputSource(@Nullable Output<List<StageSourceArgs>> inputSource) {
             this.inputSource = inputSource;
             return this;
         }
 
         public Builder inputSource(@Nullable List<StageSourceArgs> inputSource) {
-            this.inputSource = Input.ofNullable(inputSource);
+            this.inputSource = Output.ofNullable(inputSource);
             return this;
         }
 
-        public Builder kind(@Nullable Input<ExecutionStageSummaryKind> kind) {
+        public Builder kind(@Nullable Output<ExecutionStageSummaryKind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable ExecutionStageSummaryKind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outputSource(@Nullable Input<List<StageSourceArgs>> outputSource) {
+        public Builder outputSource(@Nullable Output<List<StageSourceArgs>> outputSource) {
             this.outputSource = outputSource;
             return this;
         }
 
         public Builder outputSource(@Nullable List<StageSourceArgs> outputSource) {
-            this.outputSource = Input.ofNullable(outputSource);
+            this.outputSource = Output.ofNullable(outputSource);
             return this;
         }
 
-        public Builder prerequisiteStage(@Nullable Input<List<String>> prerequisiteStage) {
+        public Builder prerequisiteStage(@Nullable Output<List<String>> prerequisiteStage) {
             this.prerequisiteStage = prerequisiteStage;
             return this;
         }
 
         public Builder prerequisiteStage(@Nullable List<String> prerequisiteStage) {
-            this.prerequisiteStage = Input.ofNullable(prerequisiteStage);
+            this.prerequisiteStage = Output.ofNullable(prerequisiteStage);
             return this;
         }
         public ExecutionStageSummaryArgs build() {

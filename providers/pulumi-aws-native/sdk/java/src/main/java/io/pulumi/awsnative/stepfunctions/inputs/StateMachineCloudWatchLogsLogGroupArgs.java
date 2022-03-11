@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.stepfunctions.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends io.pulumi.reso
     public static final StateMachineCloudWatchLogsLogGroupArgs Empty = new StateMachineCloudWatchLogsLogGroupArgs();
 
     @InputImport(name="logGroupArn")
-      private final @Nullable Input<String> logGroupArn;
+      private final @Nullable Output<String> logGroupArn;
 
-    public Input<String> getLogGroupArn() {
-        return this.logGroupArn == null ? Input.empty() : this.logGroupArn;
+    public Output<String> getLogGroupArn() {
+        return this.logGroupArn == null ? Output.empty() : this.logGroupArn;
     }
 
-    public StateMachineCloudWatchLogsLogGroupArgs(@Nullable Input<String> logGroupArn) {
+    public StateMachineCloudWatchLogsLogGroupArgs(@Nullable Output<String> logGroupArn) {
         this.logGroupArn = logGroupArn;
     }
 
     private StateMachineCloudWatchLogsLogGroupArgs() {
-        this.logGroupArn = Input.empty();
+        this.logGroupArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> logGroupArn;
+        private @Nullable Output<String> logGroupArn;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends io.pulumi.reso
     	      this.logGroupArn = defaults.logGroupArn;
         }
 
-        public Builder logGroupArn(@Nullable Input<String> logGroupArn) {
+        public Builder logGroupArn(@Nullable Output<String> logGroupArn) {
             this.logGroupArn = logGroupArn;
             return this;
         }
 
         public Builder logGroupArn(@Nullable String logGroupArn) {
-            this.logGroupArn = Input.ofNullable(logGroupArn);
+            this.logGroupArn = Output.ofNullable(logGroupArn);
             return this;
         }
         public StateMachineCloudWatchLogsLogGroupArgs build() {

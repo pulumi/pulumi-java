@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.enums.AutoProvision;
 import io.pulumi.azurenative.security.inputs.ProxyServerPropertiesArgs;
 import io.pulumi.azurenative.security.inputs.ServicePrincipalPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,9 +27,9 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="autoProvision", required=true)
-      private final Input<Either<String,AutoProvision>> autoProvision;
+      private final Output<Either<String,AutoProvision>> autoProvision;
 
-    public Input<Either<String,AutoProvision>> getAutoProvision() {
+    public Output<Either<String,AutoProvision>> getAutoProvision() {
         return this.autoProvision;
     }
 
@@ -38,10 +38,10 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="proxyServer")
-      private final @Nullable Input<ProxyServerPropertiesArgs> proxyServer;
+      private final @Nullable Output<ProxyServerPropertiesArgs> proxyServer;
 
-    public Input<ProxyServerPropertiesArgs> getProxyServer() {
-        return this.proxyServer == null ? Input.empty() : this.proxyServer;
+    public Output<ProxyServerPropertiesArgs> getProxyServer() {
+        return this.proxyServer == null ? Output.empty() : this.proxyServer;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName")
-      private final @Nullable Input<String> resourceGroupName;
+      private final @Nullable Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
-        return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
+    public Output<String> getResourceGroupName() {
+        return this.resourceGroupName == null ? Output.empty() : this.resourceGroupName;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipal")
-      private final @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal;
+      private final @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
-    public Input<ServicePrincipalPropertiesArgs> getServicePrincipal() {
-        return this.servicePrincipal == null ? Input.empty() : this.servicePrincipal;
+    public Output<ServicePrincipalPropertiesArgs> getServicePrincipal() {
+        return this.servicePrincipal == null ? Output.empty() : this.servicePrincipal;
     }
 
     public HybridComputeSettingsPropertiesArgs(
-        Input<Either<String,AutoProvision>> autoProvision,
-        @Nullable Input<ProxyServerPropertiesArgs> proxyServer,
-        @Nullable Input<String> region,
-        @Nullable Input<String> resourceGroupName,
-        @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal) {
+        Output<Either<String,AutoProvision>> autoProvision,
+        @Nullable Output<ProxyServerPropertiesArgs> proxyServer,
+        @Nullable Output<String> region,
+        @Nullable Output<String> resourceGroupName,
+        @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
         this.autoProvision = Objects.requireNonNull(autoProvision, "expected parameter 'autoProvision' to be non-null");
         this.proxyServer = proxyServer;
         this.region = region;
@@ -91,11 +91,11 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
     }
 
     private HybridComputeSettingsPropertiesArgs() {
-        this.autoProvision = Input.empty();
-        this.proxyServer = Input.empty();
-        this.region = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.servicePrincipal = Input.empty();
+        this.autoProvision = Output.empty();
+        this.proxyServer = Output.empty();
+        this.region = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.servicePrincipal = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Either<String,AutoProvision>> autoProvision;
-        private @Nullable Input<ProxyServerPropertiesArgs> proxyServer;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> resourceGroupName;
-        private @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal;
+        private Output<Either<String,AutoProvision>> autoProvision;
+        private @Nullable Output<ProxyServerPropertiesArgs> proxyServer;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> resourceGroupName;
+        private @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder autoProvision(Input<Either<String,AutoProvision>> autoProvision) {
+        public Builder autoProvision(Output<Either<String,AutoProvision>> autoProvision) {
             this.autoProvision = Objects.requireNonNull(autoProvision);
             return this;
         }
 
         public Builder autoProvision(Either<String,AutoProvision> autoProvision) {
-            this.autoProvision = Input.of(Objects.requireNonNull(autoProvision));
+            this.autoProvision = Output.of(Objects.requireNonNull(autoProvision));
             return this;
         }
 
-        public Builder proxyServer(@Nullable Input<ProxyServerPropertiesArgs> proxyServer) {
+        public Builder proxyServer(@Nullable Output<ProxyServerPropertiesArgs> proxyServer) {
             this.proxyServer = proxyServer;
             return this;
         }
 
         public Builder proxyServer(@Nullable ProxyServerPropertiesArgs proxyServer) {
-            this.proxyServer = Input.ofNullable(proxyServer);
+            this.proxyServer = Output.ofNullable(proxyServer);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder resourceGroupName(@Nullable Input<String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = Input.ofNullable(resourceGroupName);
+            this.resourceGroupName = Output.ofNullable(resourceGroupName);
             return this;
         }
 
-        public Builder servicePrincipal(@Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal) {
+        public Builder servicePrincipal(@Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
 
         public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesArgs servicePrincipal) {
-            this.servicePrincipal = Input.ofNullable(servicePrincipal);
+            this.servicePrincipal = Output.ofNullable(servicePrincipal);
             return this;
         }
         public HybridComputeSettingsPropertiesArgs build() {

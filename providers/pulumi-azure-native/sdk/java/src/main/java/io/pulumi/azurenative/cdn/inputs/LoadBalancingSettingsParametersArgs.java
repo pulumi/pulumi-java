@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="additionalLatencyInMilliseconds")
-      private final @Nullable Input<Integer> additionalLatencyInMilliseconds;
+      private final @Nullable Output<Integer> additionalLatencyInMilliseconds;
 
-    public Input<Integer> getAdditionalLatencyInMilliseconds() {
-        return this.additionalLatencyInMilliseconds == null ? Input.empty() : this.additionalLatencyInMilliseconds;
+    public Output<Integer> getAdditionalLatencyInMilliseconds() {
+        return this.additionalLatencyInMilliseconds == null ? Output.empty() : this.additionalLatencyInMilliseconds;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sampleSize")
-      private final @Nullable Input<Integer> sampleSize;
+      private final @Nullable Output<Integer> sampleSize;
 
-    public Input<Integer> getSampleSize() {
-        return this.sampleSize == null ? Input.empty() : this.sampleSize;
+    public Output<Integer> getSampleSize() {
+        return this.sampleSize == null ? Output.empty() : this.sampleSize;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="successfulSamplesRequired")
-      private final @Nullable Input<Integer> successfulSamplesRequired;
+      private final @Nullable Output<Integer> successfulSamplesRequired;
 
-    public Input<Integer> getSuccessfulSamplesRequired() {
-        return this.successfulSamplesRequired == null ? Input.empty() : this.successfulSamplesRequired;
+    public Output<Integer> getSuccessfulSamplesRequired() {
+        return this.successfulSamplesRequired == null ? Output.empty() : this.successfulSamplesRequired;
     }
 
     public LoadBalancingSettingsParametersArgs(
-        @Nullable Input<Integer> additionalLatencyInMilliseconds,
-        @Nullable Input<Integer> sampleSize,
-        @Nullable Input<Integer> successfulSamplesRequired) {
+        @Nullable Output<Integer> additionalLatencyInMilliseconds,
+        @Nullable Output<Integer> sampleSize,
+        @Nullable Output<Integer> successfulSamplesRequired) {
         this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
         this.sampleSize = sampleSize;
         this.successfulSamplesRequired = successfulSamplesRequired;
     }
 
     private LoadBalancingSettingsParametersArgs() {
-        this.additionalLatencyInMilliseconds = Input.empty();
-        this.sampleSize = Input.empty();
-        this.successfulSamplesRequired = Input.empty();
+        this.additionalLatencyInMilliseconds = Output.empty();
+        this.sampleSize = Output.empty();
+        this.successfulSamplesRequired = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> additionalLatencyInMilliseconds;
-        private @Nullable Input<Integer> sampleSize;
-        private @Nullable Input<Integer> successfulSamplesRequired;
+        private @Nullable Output<Integer> additionalLatencyInMilliseconds;
+        private @Nullable Output<Integer> sampleSize;
+        private @Nullable Output<Integer> successfulSamplesRequired;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
     	      this.successfulSamplesRequired = defaults.successfulSamplesRequired;
         }
 
-        public Builder additionalLatencyInMilliseconds(@Nullable Input<Integer> additionalLatencyInMilliseconds) {
+        public Builder additionalLatencyInMilliseconds(@Nullable Output<Integer> additionalLatencyInMilliseconds) {
             this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
             return this;
         }
 
         public Builder additionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
-            this.additionalLatencyInMilliseconds = Input.ofNullable(additionalLatencyInMilliseconds);
+            this.additionalLatencyInMilliseconds = Output.ofNullable(additionalLatencyInMilliseconds);
             return this;
         }
 
-        public Builder sampleSize(@Nullable Input<Integer> sampleSize) {
+        public Builder sampleSize(@Nullable Output<Integer> sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
 
         public Builder sampleSize(@Nullable Integer sampleSize) {
-            this.sampleSize = Input.ofNullable(sampleSize);
+            this.sampleSize = Output.ofNullable(sampleSize);
             return this;
         }
 
-        public Builder successfulSamplesRequired(@Nullable Input<Integer> successfulSamplesRequired) {
+        public Builder successfulSamplesRequired(@Nullable Output<Integer> successfulSamplesRequired) {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
 
         public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
-            this.successfulSamplesRequired = Input.ofNullable(successfulSamplesRequired);
+            this.successfulSamplesRequired = Output.ofNullable(successfulSamplesRequired);
             return this;
         }
         public LoadBalancingSettingsParametersArgs build() {

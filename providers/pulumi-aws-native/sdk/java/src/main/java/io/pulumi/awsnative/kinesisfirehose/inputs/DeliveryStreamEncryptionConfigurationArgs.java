@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamEncryptionConfigurationNoEncryptionConfig;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamKMSEncryptionConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends io.pulumi.r
     public static final DeliveryStreamEncryptionConfigurationArgs Empty = new DeliveryStreamEncryptionConfigurationArgs();
 
     @InputImport(name="kMSEncryptionConfig")
-      private final @Nullable Input<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig;
+      private final @Nullable Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig;
 
-    public Input<DeliveryStreamKMSEncryptionConfigArgs> getKMSEncryptionConfig() {
-        return this.kMSEncryptionConfig == null ? Input.empty() : this.kMSEncryptionConfig;
+    public Output<DeliveryStreamKMSEncryptionConfigArgs> getKMSEncryptionConfig() {
+        return this.kMSEncryptionConfig == null ? Output.empty() : this.kMSEncryptionConfig;
     }
 
     @InputImport(name="noEncryptionConfig")
-      private final @Nullable Input<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig;
+      private final @Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig;
 
-    public Input<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> getNoEncryptionConfig() {
-        return this.noEncryptionConfig == null ? Input.empty() : this.noEncryptionConfig;
+    public Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> getNoEncryptionConfig() {
+        return this.noEncryptionConfig == null ? Output.empty() : this.noEncryptionConfig;
     }
 
     public DeliveryStreamEncryptionConfigurationArgs(
-        @Nullable Input<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig,
-        @Nullable Input<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig) {
+        @Nullable Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig,
+        @Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig) {
         this.kMSEncryptionConfig = kMSEncryptionConfig;
         this.noEncryptionConfig = noEncryptionConfig;
     }
 
     private DeliveryStreamEncryptionConfigurationArgs() {
-        this.kMSEncryptionConfig = Input.empty();
-        this.noEncryptionConfig = Input.empty();
+        this.kMSEncryptionConfig = Output.empty();
+        this.noEncryptionConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig;
-        private @Nullable Input<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig;
+        private @Nullable Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig;
+        private @Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends io.pulumi.r
     	      this.noEncryptionConfig = defaults.noEncryptionConfig;
         }
 
-        public Builder kMSEncryptionConfig(@Nullable Input<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig) {
+        public Builder kMSEncryptionConfig(@Nullable Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig) {
             this.kMSEncryptionConfig = kMSEncryptionConfig;
             return this;
         }
 
         public Builder kMSEncryptionConfig(@Nullable DeliveryStreamKMSEncryptionConfigArgs kMSEncryptionConfig) {
-            this.kMSEncryptionConfig = Input.ofNullable(kMSEncryptionConfig);
+            this.kMSEncryptionConfig = Output.ofNullable(kMSEncryptionConfig);
             return this;
         }
 
-        public Builder noEncryptionConfig(@Nullable Input<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig) {
+        public Builder noEncryptionConfig(@Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig) {
             this.noEncryptionConfig = noEncryptionConfig;
             return this;
         }
 
         public Builder noEncryptionConfig(@Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
-            this.noEncryptionConfig = Input.ofNullable(noEncryptionConfig);
+            this.noEncryptionConfig = Output.ofNullable(noEncryptionConfig);
             return this;
         }
         public DeliveryStreamEncryptionConfigurationArgs build() {

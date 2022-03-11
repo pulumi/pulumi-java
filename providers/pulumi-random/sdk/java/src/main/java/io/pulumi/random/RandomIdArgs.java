@@ -3,14 +3,12 @@
 
 package io.pulumi.random;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
+
+import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Objects;
-import javax.annotation.Nullable;
 
 
 public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
@@ -22,9 +20,9 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="byteLength", required=true)
-      private final Input<Integer> byteLength;
+      private final Output<Integer> byteLength;
 
-    public Input<Integer> getByteLength() {
+    public Output<Integer> getByteLength() {
         return this.byteLength;
     }
 
@@ -33,10 +31,10 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-      private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Input<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Input.empty() : this.keepers;
+    public Output<Map<String,Object>> getKeepers() {
+        return this.keepers == null ? Output.empty() : this.keepers;
     }
 
     /**
@@ -44,25 +42,25 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public RandomIdArgs(
-        Input<Integer> byteLength,
-        @Nullable Input<Map<String,Object>> keepers,
-        @Nullable Input<String> prefix) {
+        Output<Integer> byteLength,
+        @Nullable Output<Map<String,Object>> keepers,
+        @Nullable Output<String> prefix) {
         this.byteLength = Objects.requireNonNull(byteLength, "expected parameter 'byteLength' to be non-null");
         this.keepers = keepers;
         this.prefix = prefix;
     }
 
     private RandomIdArgs() {
-        this.byteLength = Input.empty();
-        this.keepers = Input.empty();
-        this.prefix = Input.empty();
+        this.byteLength = Output.empty();
+        this.keepers = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +72,9 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> byteLength;
-        private @Nullable Input<Map<String,Object>> keepers;
-        private @Nullable Input<String> prefix;
+        private Output<Integer> byteLength;
+        private @Nullable Output<Map<String,Object>> keepers;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -89,33 +87,33 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder byteLength(Input<Integer> byteLength) {
+        public Builder byteLength(Output<Integer> byteLength) {
             this.byteLength = Objects.requireNonNull(byteLength);
             return this;
         }
 
         public Builder byteLength(Integer byteLength) {
-            this.byteLength = Input.of(Objects.requireNonNull(byteLength));
+            this.byteLength = Output.of(Objects.requireNonNull(byteLength));
             return this;
         }
 
-        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Input.ofNullable(keepers);
+            this.keepers = Output.ofNullable(keepers);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public RandomIdArgs build() {

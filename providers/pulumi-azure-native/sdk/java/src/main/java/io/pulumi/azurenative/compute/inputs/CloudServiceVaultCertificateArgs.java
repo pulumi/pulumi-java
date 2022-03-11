@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CloudServiceVaultCertificateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificateUrl")
-      private final @Nullable Input<String> certificateUrl;
+      private final @Nullable Output<String> certificateUrl;
 
-    public Input<String> getCertificateUrl() {
-        return this.certificateUrl == null ? Input.empty() : this.certificateUrl;
+    public Output<String> getCertificateUrl() {
+        return this.certificateUrl == null ? Output.empty() : this.certificateUrl;
     }
 
-    public CloudServiceVaultCertificateArgs(@Nullable Input<String> certificateUrl) {
+    public CloudServiceVaultCertificateArgs(@Nullable Output<String> certificateUrl) {
         this.certificateUrl = certificateUrl;
     }
 
     private CloudServiceVaultCertificateArgs() {
-        this.certificateUrl = Input.empty();
+        this.certificateUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CloudServiceVaultCertificateArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateUrl;
+        private @Nullable Output<String> certificateUrl;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CloudServiceVaultCertificateArgs extends io.pulumi.resources.
     	      this.certificateUrl = defaults.certificateUrl;
         }
 
-        public Builder certificateUrl(@Nullable Input<String> certificateUrl) {
+        public Builder certificateUrl(@Nullable Output<String> certificateUrl) {
             this.certificateUrl = certificateUrl;
             return this;
         }
 
         public Builder certificateUrl(@Nullable String certificateUrl) {
-            this.certificateUrl = Input.ofNullable(certificateUrl);
+            this.certificateUrl = Output.ofNullable(certificateUrl);
             return this;
         }
         public CloudServiceVaultCertificateArgs build() {

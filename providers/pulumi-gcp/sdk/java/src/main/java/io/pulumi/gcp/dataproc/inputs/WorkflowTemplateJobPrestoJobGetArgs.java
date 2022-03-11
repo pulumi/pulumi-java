@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPrestoJobLoggingConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPrestoJobQueryListGetArgs;
@@ -24,10 +24,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="clientTags")
-      private final @Nullable Input<List<String>> clientTags;
+      private final @Nullable Output<List<String>> clientTags;
 
-    public Input<List<String>> getClientTags() {
-        return this.clientTags == null ? Input.empty() : this.clientTags;
+    public Output<List<String>> getClientTags() {
+        return this.clientTags == null ? Output.empty() : this.clientTags;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="continueOnFailure")
-      private final @Nullable Input<Boolean> continueOnFailure;
+      private final @Nullable Output<Boolean> continueOnFailure;
 
-    public Input<Boolean> getContinueOnFailure() {
-        return this.continueOnFailure == null ? Input.empty() : this.continueOnFailure;
+    public Output<Boolean> getContinueOnFailure() {
+        return this.continueOnFailure == null ? Output.empty() : this.continueOnFailure;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="loggingConfig")
-      private final @Nullable Input<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig;
+      private final @Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig;
 
-    public Input<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
+    public Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> getLoggingConfig() {
+        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="outputFormat")
-      private final @Nullable Input<String> outputFormat;
+      private final @Nullable Output<String> outputFormat;
 
-    public Input<String> getOutputFormat() {
-        return this.outputFormat == null ? Input.empty() : this.outputFormat;
+    public Output<String> getOutputFormat() {
+        return this.outputFormat == null ? Output.empty() : this.outputFormat;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="queryFileUri")
-      private final @Nullable Input<String> queryFileUri;
+      private final @Nullable Output<String> queryFileUri;
 
-    public Input<String> getQueryFileUri() {
-        return this.queryFileUri == null ? Input.empty() : this.queryFileUri;
+    public Output<String> getQueryFileUri() {
+        return this.queryFileUri == null ? Output.empty() : this.queryFileUri;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="queryList")
-      private final @Nullable Input<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList;
+      private final @Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList;
 
-    public Input<WorkflowTemplateJobPrestoJobQueryListGetArgs> getQueryList() {
-        return this.queryList == null ? Input.empty() : this.queryList;
+    public Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> getQueryList() {
+        return this.queryList == null ? Output.empty() : this.queryList;
     }
 
     public WorkflowTemplateJobPrestoJobGetArgs(
-        @Nullable Input<List<String>> clientTags,
-        @Nullable Input<Boolean> continueOnFailure,
-        @Nullable Input<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig,
-        @Nullable Input<String> outputFormat,
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<String> queryFileUri,
-        @Nullable Input<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList) {
+        @Nullable Output<List<String>> clientTags,
+        @Nullable Output<Boolean> continueOnFailure,
+        @Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig,
+        @Nullable Output<String> outputFormat,
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<String> queryFileUri,
+        @Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList) {
         this.clientTags = clientTags;
         this.continueOnFailure = continueOnFailure;
         this.loggingConfig = loggingConfig;
@@ -114,13 +114,13 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     }
 
     private WorkflowTemplateJobPrestoJobGetArgs() {
-        this.clientTags = Input.empty();
-        this.continueOnFailure = Input.empty();
-        this.loggingConfig = Input.empty();
-        this.outputFormat = Input.empty();
-        this.properties = Input.empty();
-        this.queryFileUri = Input.empty();
-        this.queryList = Input.empty();
+        this.clientTags = Output.empty();
+        this.continueOnFailure = Output.empty();
+        this.loggingConfig = Output.empty();
+        this.outputFormat = Output.empty();
+        this.properties = Output.empty();
+        this.queryFileUri = Output.empty();
+        this.queryList = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> clientTags;
-        private @Nullable Input<Boolean> continueOnFailure;
-        private @Nullable Input<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig;
-        private @Nullable Input<String> outputFormat;
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<String> queryFileUri;
-        private @Nullable Input<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList;
+        private @Nullable Output<List<String>> clientTags;
+        private @Nullable Output<Boolean> continueOnFailure;
+        private @Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig;
+        private @Nullable Output<String> outputFormat;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<String> queryFileUri;
+        private @Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends io.pulumi.resourc
     	      this.queryList = defaults.queryList;
         }
 
-        public Builder clientTags(@Nullable Input<List<String>> clientTags) {
+        public Builder clientTags(@Nullable Output<List<String>> clientTags) {
             this.clientTags = clientTags;
             return this;
         }
 
         public Builder clientTags(@Nullable List<String> clientTags) {
-            this.clientTags = Input.ofNullable(clientTags);
+            this.clientTags = Output.ofNullable(clientTags);
             return this;
         }
 
-        public Builder continueOnFailure(@Nullable Input<Boolean> continueOnFailure) {
+        public Builder continueOnFailure(@Nullable Output<Boolean> continueOnFailure) {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
 
         public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
-            this.continueOnFailure = Input.ofNullable(continueOnFailure);
+            this.continueOnFailure = Output.ofNullable(continueOnFailure);
             return this;
         }
 
-        public Builder loggingConfig(@Nullable Input<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
         public Builder loggingConfig(@Nullable WorkflowTemplateJobPrestoJobLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Input.ofNullable(loggingConfig);
+            this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder outputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Output<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Input.ofNullable(outputFormat);
+            this.outputFormat = Output.ofNullable(outputFormat);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder queryFileUri(@Nullable Input<String> queryFileUri) {
+        public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
 
         public Builder queryFileUri(@Nullable String queryFileUri) {
-            this.queryFileUri = Input.ofNullable(queryFileUri);
+            this.queryFileUri = Output.ofNullable(queryFileUri);
             return this;
         }
 
-        public Builder queryList(@Nullable Input<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList) {
+        public Builder queryList(@Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList) {
             this.queryList = queryList;
             return this;
         }
 
         public Builder queryList(@Nullable WorkflowTemplateJobPrestoJobQueryListGetArgs queryList) {
-            this.queryList = Input.ofNullable(queryList);
+            this.queryList = Output.ofNullable(queryList);
             return this;
         }
         public WorkflowTemplateJobPrestoJobGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * 
      */
     @InputImport(name="cents")
-      private final @Nullable Input<Integer> cents;
+      private final @Nullable Output<Integer> cents;
 
-    public Input<Integer> getCents() {
-        return this.cents == null ? Input.empty() : this.cents;
+    public Output<Integer> getCents() {
+        return this.cents == null ? Output.empty() : this.cents;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * 
      */
     @InputImport(name="dollars")
-      private final @Nullable Input<Integer> dollars;
+      private final @Nullable Output<Integer> dollars;
 
-    public Input<Integer> getDollars() {
-        return this.dollars == null ? Input.empty() : this.dollars;
+    public Output<Integer> getDollars() {
+        return this.dollars == null ? Output.empty() : this.dollars;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * 
      */
     @InputImport(name="tenthFractionsOfACent")
-      private final @Nullable Input<Integer> tenthFractionsOfACent;
+      private final @Nullable Output<Integer> tenthFractionsOfACent;
 
-    public Input<Integer> getTenthFractionsOfACent() {
-        return this.tenthFractionsOfACent == null ? Input.empty() : this.tenthFractionsOfACent;
+    public Output<Integer> getTenthFractionsOfACent() {
+        return this.tenthFractionsOfACent == null ? Output.empty() : this.tenthFractionsOfACent;
     }
 
     public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs(
-        @Nullable Input<Integer> cents,
-        @Nullable Input<Integer> dollars,
-        @Nullable Input<Integer> tenthFractionsOfACent) {
+        @Nullable Output<Integer> cents,
+        @Nullable Output<Integer> dollars,
+        @Nullable Output<Integer> tenthFractionsOfACent) {
         this.cents = cents;
         this.dollars = dollars;
         this.tenthFractionsOfACent = tenthFractionsOfACent;
     }
 
     private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs() {
-        this.cents = Input.empty();
-        this.dollars = Input.empty();
-        this.tenthFractionsOfACent = Input.empty();
+        this.cents = Output.empty();
+        this.dollars = Output.empty();
+        this.tenthFractionsOfACent = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> cents;
-        private @Nullable Input<Integer> dollars;
-        private @Nullable Input<Integer> tenthFractionsOfACent;
+        private @Nullable Output<Integer> cents;
+        private @Nullable Output<Integer> dollars;
+        private @Nullable Output<Integer> tenthFractionsOfACent;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
     	      this.tenthFractionsOfACent = defaults.tenthFractionsOfACent;
         }
 
-        public Builder cents(@Nullable Input<Integer> cents) {
+        public Builder cents(@Nullable Output<Integer> cents) {
             this.cents = cents;
             return this;
         }
 
         public Builder cents(@Nullable Integer cents) {
-            this.cents = Input.ofNullable(cents);
+            this.cents = Output.ofNullable(cents);
             return this;
         }
 
-        public Builder dollars(@Nullable Input<Integer> dollars) {
+        public Builder dollars(@Nullable Output<Integer> dollars) {
             this.dollars = dollars;
             return this;
         }
 
         public Builder dollars(@Nullable Integer dollars) {
-            this.dollars = Input.ofNullable(dollars);
+            this.dollars = Output.ofNullable(dollars);
             return this;
         }
 
-        public Builder tenthFractionsOfACent(@Nullable Input<Integer> tenthFractionsOfACent) {
+        public Builder tenthFractionsOfACent(@Nullable Output<Integer> tenthFractionsOfACent) {
             this.tenthFractionsOfACent = tenthFractionsOfACent;
             return this;
         }
 
         public Builder tenthFractionsOfACent(@Nullable Integer tenthFractionsOfACent) {
-            this.tenthFractionsOfACent = Input.ofNullable(tenthFractionsOfACent);
+            this.tenthFractionsOfACent = Output.ofNullable(tenthFractionsOfACent);
             return this;
         }
         public FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdArgs build() {

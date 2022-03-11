@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.GuestDiagnosticsSettingArgs;
 import io.pulumi.azurenative.insights.outputs.DataSourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -162,18 +161,18 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public GuestDiagnosticsSetting(String name, GuestDiagnosticsSettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:guestDiagnosticsSetting", name, args == null ? GuestDiagnosticsSettingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:insights:guestDiagnosticsSetting", name, args == null ? GuestDiagnosticsSettingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GuestDiagnosticsSetting(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GuestDiagnosticsSetting(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:guestDiagnosticsSetting", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:insights/v20180601preview:guestDiagnosticsSetting").build())
+                Output.of(Alias.builder().setType("azure-native:insights/v20180601preview:guestDiagnosticsSetting").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -187,7 +186,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GuestDiagnosticsSetting get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GuestDiagnosticsSetting get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GuestDiagnosticsSetting(name, id, options);
     }
 }

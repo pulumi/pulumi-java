@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.ValueArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatorName")
-      private final @Nullable Input<String> operatorName;
+      private final @Nullable Output<String> operatorName;
 
-    public Input<String> getOperatorName() {
-        return this.operatorName == null ? Input.empty() : this.operatorName;
+    public Output<String> getOperatorName() {
+        return this.operatorName == null ? Output.empty() : this.operatorName;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<ValueArgs> value;
+      private final @Nullable Output<ValueArgs> value;
 
-    public Input<ValueArgs> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<ValueArgs> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ValueFilterArgs(
-        @Nullable Input<String> operatorName,
-        @Nullable Input<ValueArgs> value) {
+        @Nullable Output<String> operatorName,
+        @Nullable Output<ValueArgs> value) {
         this.operatorName = operatorName;
         this.value = value;
     }
 
     private ValueFilterArgs() {
-        this.operatorName = Input.empty();
-        this.value = Input.empty();
+        this.operatorName = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> operatorName;
-        private @Nullable Input<ValueArgs> value;
+        private @Nullable Output<String> operatorName;
+        private @Nullable Output<ValueArgs> value;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder operatorName(@Nullable Input<String> operatorName) {
+        public Builder operatorName(@Nullable Output<String> operatorName) {
             this.operatorName = operatorName;
             return this;
         }
 
         public Builder operatorName(@Nullable String operatorName) {
-            this.operatorName = Input.ofNullable(operatorName);
+            this.operatorName = Output.ofNullable(operatorName);
             return this;
         }
 
-        public Builder value(@Nullable Input<ValueArgs> value) {
+        public Builder value(@Nullable Output<ValueArgs> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable ValueArgs value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ValueFilterArgs build() {

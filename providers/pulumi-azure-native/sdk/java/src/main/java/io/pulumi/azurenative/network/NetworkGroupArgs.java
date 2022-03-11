@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.GroupMembersItemArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionalMembership")
-      private final @Nullable Input<String> conditionalMembership;
+      private final @Nullable Output<String> conditionalMembership;
 
-    public Input<String> getConditionalMembership() {
-        return this.conditionalMembership == null ? Input.empty() : this.conditionalMembership;
+    public Output<String> getConditionalMembership() {
+        return this.conditionalMembership == null ? Output.empty() : this.conditionalMembership;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupMembers")
-      private final @Nullable Input<List<GroupMembersItemArgs>> groupMembers;
+      private final @Nullable Output<List<GroupMembersItemArgs>> groupMembers;
 
-    public Input<List<GroupMembersItemArgs>> getGroupMembers() {
-        return this.groupMembers == null ? Input.empty() : this.groupMembers;
+    public Output<List<GroupMembersItemArgs>> getGroupMembers() {
+        return this.groupMembers == null ? Output.empty() : this.groupMembers;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memberType")
-      private final @Nullable Input<String> memberType;
+      private final @Nullable Output<String> memberType;
 
-    public Input<String> getMemberType() {
-        return this.memberType == null ? Input.empty() : this.memberType;
+    public Output<String> getMemberType() {
+        return this.memberType == null ? Output.empty() : this.memberType;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkGroupName")
-      private final @Nullable Input<String> networkGroupName;
+      private final @Nullable Output<String> networkGroupName;
 
-    public Input<String> getNetworkGroupName() {
-        return this.networkGroupName == null ? Input.empty() : this.networkGroupName;
+    public Output<String> getNetworkGroupName() {
+        return this.networkGroupName == null ? Output.empty() : this.networkGroupName;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-      private final Input<String> networkManagerName;
+      private final Output<String> networkManagerName;
 
-    public Input<String> getNetworkManagerName() {
+    public Output<String> getNetworkManagerName() {
         return this.networkManagerName;
     }
 
@@ -98,21 +98,21 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public NetworkGroupArgs(
-        @Nullable Input<String> conditionalMembership,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<List<GroupMembersItemArgs>> groupMembers,
-        @Nullable Input<String> memberType,
-        @Nullable Input<String> networkGroupName,
-        Input<String> networkManagerName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> conditionalMembership,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<List<GroupMembersItemArgs>> groupMembers,
+        @Nullable Output<String> memberType,
+        @Nullable Output<String> networkGroupName,
+        Output<String> networkManagerName,
+        Output<String> resourceGroupName) {
         this.conditionalMembership = conditionalMembership;
         this.description = description;
         this.displayName = displayName;
@@ -124,14 +124,14 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkGroupArgs() {
-        this.conditionalMembership = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.groupMembers = Input.empty();
-        this.memberType = Input.empty();
-        this.networkGroupName = Input.empty();
-        this.networkManagerName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.conditionalMembership = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.groupMembers = Output.empty();
+        this.memberType = Output.empty();
+        this.networkGroupName = Output.empty();
+        this.networkManagerName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> conditionalMembership;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<List<GroupMembersItemArgs>> groupMembers;
-        private @Nullable Input<String> memberType;
-        private @Nullable Input<String> networkGroupName;
-        private Input<String> networkManagerName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> conditionalMembership;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<List<GroupMembersItemArgs>> groupMembers;
+        private @Nullable Output<String> memberType;
+        private @Nullable Output<String> networkGroupName;
+        private Output<String> networkManagerName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder conditionalMembership(@Nullable Input<String> conditionalMembership) {
+        public Builder conditionalMembership(@Nullable Output<String> conditionalMembership) {
             this.conditionalMembership = conditionalMembership;
             return this;
         }
 
         public Builder conditionalMembership(@Nullable String conditionalMembership) {
-            this.conditionalMembership = Input.ofNullable(conditionalMembership);
+            this.conditionalMembership = Output.ofNullable(conditionalMembership);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder groupMembers(@Nullable Input<List<GroupMembersItemArgs>> groupMembers) {
+        public Builder groupMembers(@Nullable Output<List<GroupMembersItemArgs>> groupMembers) {
             this.groupMembers = groupMembers;
             return this;
         }
 
         public Builder groupMembers(@Nullable List<GroupMembersItemArgs> groupMembers) {
-            this.groupMembers = Input.ofNullable(groupMembers);
+            this.groupMembers = Output.ofNullable(groupMembers);
             return this;
         }
 
-        public Builder memberType(@Nullable Input<String> memberType) {
+        public Builder memberType(@Nullable Output<String> memberType) {
             this.memberType = memberType;
             return this;
         }
 
         public Builder memberType(@Nullable String memberType) {
-            this.memberType = Input.ofNullable(memberType);
+            this.memberType = Output.ofNullable(memberType);
             return this;
         }
 
-        public Builder networkGroupName(@Nullable Input<String> networkGroupName) {
+        public Builder networkGroupName(@Nullable Output<String> networkGroupName) {
             this.networkGroupName = networkGroupName;
             return this;
         }
 
         public Builder networkGroupName(@Nullable String networkGroupName) {
-            this.networkGroupName = Input.ofNullable(networkGroupName);
+            this.networkGroupName = Output.ofNullable(networkGroupName);
             return this;
         }
 
-        public Builder networkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
+            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public NetworkGroupArgs build() {

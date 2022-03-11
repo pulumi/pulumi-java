@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributions")
-      private final @Nullable Input<List<String>> attributions;
+      private final @Nullable Output<List<String>> attributions;
 
-    public Input<List<String>> getAttributions() {
-        return this.attributions == null ? Input.empty() : this.attributions;
+    public Output<List<String>> getAttributions() {
+        return this.attributions == null ? Output.empty() : this.attributions;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contributors")
-      private final @Nullable Input<List<String>> contributors;
+      private final @Nullable Output<List<String>> contributors;
 
-    public Input<List<String>> getContributors() {
-        return this.contributors == null ? Input.empty() : this.contributors;
+    public Output<List<String>> getContributors() {
+        return this.contributors == null ? Output.empty() : this.contributors;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyright")
-      private final @Nullable Input<String> copyright;
+      private final @Nullable Output<String> copyright;
 
-    public Input<String> getCopyright() {
-        return this.copyright == null ? Input.empty() : this.copyright;
+    public Output<String> getCopyright() {
+        return this.copyright == null ? Output.empty() : this.copyright;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filesLicenseInfo")
-      private final @Nullable Input<List<String>> filesLicenseInfo;
+      private final @Nullable Output<List<String>> filesLicenseInfo;
 
-    public Input<List<String>> getFilesLicenseInfo() {
-        return this.filesLicenseInfo == null ? Input.empty() : this.filesLicenseInfo;
+    public Output<List<String>> getFilesLicenseInfo() {
+        return this.filesLicenseInfo == null ? Output.empty() : this.filesLicenseInfo;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseConcluded")
-      private final @Nullable Input<LicenseArgs> licenseConcluded;
+      private final @Nullable Output<LicenseArgs> licenseConcluded;
 
-    public Input<LicenseArgs> getLicenseConcluded() {
-        return this.licenseConcluded == null ? Input.empty() : this.licenseConcluded;
+    public Output<LicenseArgs> getLicenseConcluded() {
+        return this.licenseConcluded == null ? Output.empty() : this.licenseConcluded;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notice")
-      private final @Nullable Input<String> notice;
+      private final @Nullable Output<String> notice;
 
-    public Input<String> getNotice() {
-        return this.notice == null ? Input.empty() : this.notice;
+    public Output<String> getNotice() {
+        return this.notice == null ? Output.empty() : this.notice;
     }
 
     public FileOccurrenceArgs(
-        @Nullable Input<List<String>> attributions,
-        @Nullable Input<String> comment,
-        @Nullable Input<List<String>> contributors,
-        @Nullable Input<String> copyright,
-        @Nullable Input<List<String>> filesLicenseInfo,
-        @Nullable Input<String> id,
-        @Nullable Input<LicenseArgs> licenseConcluded,
-        @Nullable Input<String> notice) {
+        @Nullable Output<List<String>> attributions,
+        @Nullable Output<String> comment,
+        @Nullable Output<List<String>> contributors,
+        @Nullable Output<String> copyright,
+        @Nullable Output<List<String>> filesLicenseInfo,
+        @Nullable Output<String> id,
+        @Nullable Output<LicenseArgs> licenseConcluded,
+        @Nullable Output<String> notice) {
         this.attributions = attributions;
         this.comment = comment;
         this.contributors = contributors;
@@ -128,14 +128,14 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileOccurrenceArgs() {
-        this.attributions = Input.empty();
-        this.comment = Input.empty();
-        this.contributors = Input.empty();
-        this.copyright = Input.empty();
-        this.filesLicenseInfo = Input.empty();
-        this.id = Input.empty();
-        this.licenseConcluded = Input.empty();
-        this.notice = Input.empty();
+        this.attributions = Output.empty();
+        this.comment = Output.empty();
+        this.contributors = Output.empty();
+        this.copyright = Output.empty();
+        this.filesLicenseInfo = Output.empty();
+        this.id = Output.empty();
+        this.licenseConcluded = Output.empty();
+        this.notice = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> attributions;
-        private @Nullable Input<String> comment;
-        private @Nullable Input<List<String>> contributors;
-        private @Nullable Input<String> copyright;
-        private @Nullable Input<List<String>> filesLicenseInfo;
-        private @Nullable Input<String> id;
-        private @Nullable Input<LicenseArgs> licenseConcluded;
-        private @Nullable Input<String> notice;
+        private @Nullable Output<List<String>> attributions;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<List<String>> contributors;
+        private @Nullable Output<String> copyright;
+        private @Nullable Output<List<String>> filesLicenseInfo;
+        private @Nullable Output<String> id;
+        private @Nullable Output<LicenseArgs> licenseConcluded;
+        private @Nullable Output<String> notice;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.notice = defaults.notice;
         }
 
-        public Builder attributions(@Nullable Input<List<String>> attributions) {
+        public Builder attributions(@Nullable Output<List<String>> attributions) {
             this.attributions = attributions;
             return this;
         }
 
         public Builder attributions(@Nullable List<String> attributions) {
-            this.attributions = Input.ofNullable(attributions);
+            this.attributions = Output.ofNullable(attributions);
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder contributors(@Nullable Input<List<String>> contributors) {
+        public Builder contributors(@Nullable Output<List<String>> contributors) {
             this.contributors = contributors;
             return this;
         }
 
         public Builder contributors(@Nullable List<String> contributors) {
-            this.contributors = Input.ofNullable(contributors);
+            this.contributors = Output.ofNullable(contributors);
             return this;
         }
 
-        public Builder copyright(@Nullable Input<String> copyright) {
+        public Builder copyright(@Nullable Output<String> copyright) {
             this.copyright = copyright;
             return this;
         }
 
         public Builder copyright(@Nullable String copyright) {
-            this.copyright = Input.ofNullable(copyright);
+            this.copyright = Output.ofNullable(copyright);
             return this;
         }
 
-        public Builder filesLicenseInfo(@Nullable Input<List<String>> filesLicenseInfo) {
+        public Builder filesLicenseInfo(@Nullable Output<List<String>> filesLicenseInfo) {
             this.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
 
         public Builder filesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
-            this.filesLicenseInfo = Input.ofNullable(filesLicenseInfo);
+            this.filesLicenseInfo = Output.ofNullable(filesLicenseInfo);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder licenseConcluded(@Nullable Input<LicenseArgs> licenseConcluded) {
+        public Builder licenseConcluded(@Nullable Output<LicenseArgs> licenseConcluded) {
             this.licenseConcluded = licenseConcluded;
             return this;
         }
 
         public Builder licenseConcluded(@Nullable LicenseArgs licenseConcluded) {
-            this.licenseConcluded = Input.ofNullable(licenseConcluded);
+            this.licenseConcluded = Output.ofNullable(licenseConcluded);
             return this;
         }
 
-        public Builder notice(@Nullable Input<String> notice) {
+        public Builder notice(@Nullable Output<String> notice) {
             this.notice = notice;
             return this;
         }
 
         public Builder notice(@Nullable String notice) {
-            this.notice = Input.ofNullable(notice);
+            this.notice = Output.ofNullable(notice);
             return this;
         }
         public FileOccurrenceArgs build() {

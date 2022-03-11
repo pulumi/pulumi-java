@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -15,38 +15,38 @@ public final class IndexSearchArgs extends io.pulumi.resources.ResourceArgs {
     public static final IndexSearchArgs Empty = new IndexSearchArgs();
 
     @InputImport(name="displayable")
-      private final @Nullable Input<Boolean> displayable;
+      private final @Nullable Output<Boolean> displayable;
 
-    public Input<Boolean> getDisplayable() {
-        return this.displayable == null ? Input.empty() : this.displayable;
+    public Output<Boolean> getDisplayable() {
+        return this.displayable == null ? Output.empty() : this.displayable;
     }
 
     @InputImport(name="facetable")
-      private final @Nullable Input<Boolean> facetable;
+      private final @Nullable Output<Boolean> facetable;
 
-    public Input<Boolean> getFacetable() {
-        return this.facetable == null ? Input.empty() : this.facetable;
+    public Output<Boolean> getFacetable() {
+        return this.facetable == null ? Output.empty() : this.facetable;
     }
 
     @InputImport(name="searchable")
-      private final @Nullable Input<Boolean> searchable;
+      private final @Nullable Output<Boolean> searchable;
 
-    public Input<Boolean> getSearchable() {
-        return this.searchable == null ? Input.empty() : this.searchable;
+    public Output<Boolean> getSearchable() {
+        return this.searchable == null ? Output.empty() : this.searchable;
     }
 
     @InputImport(name="sortable")
-      private final @Nullable Input<Boolean> sortable;
+      private final @Nullable Output<Boolean> sortable;
 
-    public Input<Boolean> getSortable() {
-        return this.sortable == null ? Input.empty() : this.sortable;
+    public Output<Boolean> getSortable() {
+        return this.sortable == null ? Output.empty() : this.sortable;
     }
 
     public IndexSearchArgs(
-        @Nullable Input<Boolean> displayable,
-        @Nullable Input<Boolean> facetable,
-        @Nullable Input<Boolean> searchable,
-        @Nullable Input<Boolean> sortable) {
+        @Nullable Output<Boolean> displayable,
+        @Nullable Output<Boolean> facetable,
+        @Nullable Output<Boolean> searchable,
+        @Nullable Output<Boolean> sortable) {
         this.displayable = displayable;
         this.facetable = facetable;
         this.searchable = searchable;
@@ -54,10 +54,10 @@ public final class IndexSearchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexSearchArgs() {
-        this.displayable = Input.empty();
-        this.facetable = Input.empty();
-        this.searchable = Input.empty();
-        this.sortable = Input.empty();
+        this.displayable = Output.empty();
+        this.facetable = Output.empty();
+        this.searchable = Output.empty();
+        this.sortable = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,10 +69,10 @@ public final class IndexSearchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> displayable;
-        private @Nullable Input<Boolean> facetable;
-        private @Nullable Input<Boolean> searchable;
-        private @Nullable Input<Boolean> sortable;
+        private @Nullable Output<Boolean> displayable;
+        private @Nullable Output<Boolean> facetable;
+        private @Nullable Output<Boolean> searchable;
+        private @Nullable Output<Boolean> sortable;
 
         public Builder() {
     	      // Empty
@@ -86,43 +86,43 @@ public final class IndexSearchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sortable = defaults.sortable;
         }
 
-        public Builder displayable(@Nullable Input<Boolean> displayable) {
+        public Builder displayable(@Nullable Output<Boolean> displayable) {
             this.displayable = displayable;
             return this;
         }
 
         public Builder displayable(@Nullable Boolean displayable) {
-            this.displayable = Input.ofNullable(displayable);
+            this.displayable = Output.ofNullable(displayable);
             return this;
         }
 
-        public Builder facetable(@Nullable Input<Boolean> facetable) {
+        public Builder facetable(@Nullable Output<Boolean> facetable) {
             this.facetable = facetable;
             return this;
         }
 
         public Builder facetable(@Nullable Boolean facetable) {
-            this.facetable = Input.ofNullable(facetable);
+            this.facetable = Output.ofNullable(facetable);
             return this;
         }
 
-        public Builder searchable(@Nullable Input<Boolean> searchable) {
+        public Builder searchable(@Nullable Output<Boolean> searchable) {
             this.searchable = searchable;
             return this;
         }
 
         public Builder searchable(@Nullable Boolean searchable) {
-            this.searchable = Input.ofNullable(searchable);
+            this.searchable = Output.ofNullable(searchable);
             return this;
         }
 
-        public Builder sortable(@Nullable Input<Boolean> sortable) {
+        public Builder sortable(@Nullable Output<Boolean> sortable) {
             this.sortable = sortable;
             return this;
         }
 
         public Builder sortable(@Nullable Boolean sortable) {
-            this.sortable = Input.ofNullable(sortable);
+            this.sortable = Output.ofNullable(sortable);
             return this;
         }
         public IndexSearchArgs build() {

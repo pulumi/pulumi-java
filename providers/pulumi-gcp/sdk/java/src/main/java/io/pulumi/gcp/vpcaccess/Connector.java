@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.vpcaccess;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -276,14 +275,14 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Connector(String name, @Nullable ConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:vpcaccess/connector:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:vpcaccess/connector:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Connector(String name, Input<String> id, @Nullable ConnectorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Connector(String name, Output<String> id, @Nullable ConnectorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:vpcaccess/connector:Connector", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -299,7 +298,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Connector get(String name, Input<String> id, @Nullable ConnectorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Connector get(String name, Output<String> id, @Nullable ConnectorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Connector(name, id, state, options);
     }
 }

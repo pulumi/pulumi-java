@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleHeaderActionArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleMatchRuleArgs;
@@ -29,10 +29,10 @@ public final class URLMapPathMatcherRouteRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="headerAction")
-      private final @Nullable Input<URLMapPathMatcherRouteRuleHeaderActionArgs> headerAction;
+      private final @Nullable Output<URLMapPathMatcherRouteRuleHeaderActionArgs> headerAction;
 
-    public Input<URLMapPathMatcherRouteRuleHeaderActionArgs> getHeaderAction() {
-        return this.headerAction == null ? Input.empty() : this.headerAction;
+    public Output<URLMapPathMatcherRouteRuleHeaderActionArgs> getHeaderAction() {
+        return this.headerAction == null ? Output.empty() : this.headerAction;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class URLMapPathMatcherRouteRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="matchRules")
-      private final @Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> matchRules;
+      private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> matchRules;
 
-    public Input<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> getMatchRules() {
-        return this.matchRules == null ? Input.empty() : this.matchRules;
+    public Output<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> getMatchRules() {
+        return this.matchRules == null ? Output.empty() : this.matchRules;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class URLMapPathMatcherRouteRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -81,10 +81,10 @@ public final class URLMapPathMatcherRouteRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="routeAction")
-      private final @Nullable Input<URLMapPathMatcherRouteRuleRouteActionArgs> routeAction;
+      private final @Nullable Output<URLMapPathMatcherRouteRuleRouteActionArgs> routeAction;
 
-    public Input<URLMapPathMatcherRouteRuleRouteActionArgs> getRouteAction() {
-        return this.routeAction == null ? Input.empty() : this.routeAction;
+    public Output<URLMapPathMatcherRouteRuleRouteActionArgs> getRouteAction() {
+        return this.routeAction == null ? Output.empty() : this.routeAction;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class URLMapPathMatcherRouteRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -106,19 +106,19 @@ public final class URLMapPathMatcherRouteRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="urlRedirect")
-      private final @Nullable Input<URLMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
+      private final @Nullable Output<URLMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
 
-    public Input<URLMapPathMatcherRouteRuleUrlRedirectArgs> getUrlRedirect() {
-        return this.urlRedirect == null ? Input.empty() : this.urlRedirect;
+    public Output<URLMapPathMatcherRouteRuleUrlRedirectArgs> getUrlRedirect() {
+        return this.urlRedirect == null ? Output.empty() : this.urlRedirect;
     }
 
     public URLMapPathMatcherRouteRuleArgs(
-        @Nullable Input<URLMapPathMatcherRouteRuleHeaderActionArgs> headerAction,
-        @Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> matchRules,
-        Input<Integer> priority,
-        @Nullable Input<URLMapPathMatcherRouteRuleRouteActionArgs> routeAction,
-        @Nullable Input<String> service,
-        @Nullable Input<URLMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect) {
+        @Nullable Output<URLMapPathMatcherRouteRuleHeaderActionArgs> headerAction,
+        @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> matchRules,
+        Output<Integer> priority,
+        @Nullable Output<URLMapPathMatcherRouteRuleRouteActionArgs> routeAction,
+        @Nullable Output<String> service,
+        @Nullable Output<URLMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect) {
         this.headerAction = headerAction;
         this.matchRules = matchRules;
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
@@ -128,12 +128,12 @@ public final class URLMapPathMatcherRouteRuleArgs extends io.pulumi.resources.Re
     }
 
     private URLMapPathMatcherRouteRuleArgs() {
-        this.headerAction = Input.empty();
-        this.matchRules = Input.empty();
-        this.priority = Input.empty();
-        this.routeAction = Input.empty();
-        this.service = Input.empty();
-        this.urlRedirect = Input.empty();
+        this.headerAction = Output.empty();
+        this.matchRules = Output.empty();
+        this.priority = Output.empty();
+        this.routeAction = Output.empty();
+        this.service = Output.empty();
+        this.urlRedirect = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,12 +145,12 @@ public final class URLMapPathMatcherRouteRuleArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<URLMapPathMatcherRouteRuleHeaderActionArgs> headerAction;
-        private @Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> matchRules;
-        private Input<Integer> priority;
-        private @Nullable Input<URLMapPathMatcherRouteRuleRouteActionArgs> routeAction;
-        private @Nullable Input<String> service;
-        private @Nullable Input<URLMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
+        private @Nullable Output<URLMapPathMatcherRouteRuleHeaderActionArgs> headerAction;
+        private @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> matchRules;
+        private Output<Integer> priority;
+        private @Nullable Output<URLMapPathMatcherRouteRuleRouteActionArgs> routeAction;
+        private @Nullable Output<String> service;
+        private @Nullable Output<URLMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
 
         public Builder() {
     	      // Empty
@@ -166,63 +166,63 @@ public final class URLMapPathMatcherRouteRuleArgs extends io.pulumi.resources.Re
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder headerAction(@Nullable Input<URLMapPathMatcherRouteRuleHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Output<URLMapPathMatcherRouteRuleHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
         public Builder headerAction(@Nullable URLMapPathMatcherRouteRuleHeaderActionArgs headerAction) {
-            this.headerAction = Input.ofNullable(headerAction);
+            this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
 
-        public Builder matchRules(@Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> matchRules) {
+        public Builder matchRules(@Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleArgs>> matchRules) {
             this.matchRules = matchRules;
             return this;
         }
 
         public Builder matchRules(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleArgs> matchRules) {
-            this.matchRules = Input.ofNullable(matchRules);
+            this.matchRules = Output.ofNullable(matchRules);
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder routeAction(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionArgs> routeAction) {
+        public Builder routeAction(@Nullable Output<URLMapPathMatcherRouteRuleRouteActionArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
         public Builder routeAction(@Nullable URLMapPathMatcherRouteRuleRouteActionArgs routeAction) {
-            this.routeAction = Input.ofNullable(routeAction);
+            this.routeAction = Output.ofNullable(routeAction);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder urlRedirect(@Nullable Input<URLMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect) {
+        public Builder urlRedirect(@Nullable Output<URLMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
 
         public Builder urlRedirect(@Nullable URLMapPathMatcherRouteRuleUrlRedirectArgs urlRedirect) {
-            this.urlRedirect = Input.ofNullable(urlRedirect);
+            this.urlRedirect = Output.ofNullable(urlRedirect);
             return this;
         }
         public URLMapPathMatcherRouteRuleArgs build() {

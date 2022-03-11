@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<Map<String,Object>> properties;
+      private final Output<Map<String,Object>> properties;
 
-    public Input<Map<String,Object>> getProperties() {
+    public Output<Map<String,Object>> getProperties() {
         return this.properties;
     }
 
@@ -31,22 +31,22 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ExtensionResourceArgs(
-        Input<Map<String,Object>> properties,
-        Input<String> type) {
+        Output<Map<String,Object>> properties,
+        Output<String> type) {
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ExtensionResourceArgs() {
-        this.properties = Input.empty();
-        this.type = Input.empty();
+        this.properties = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Map<String,Object>> properties;
-        private Input<String> type;
+        private Output<Map<String,Object>> properties;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder properties(Input<Map<String,Object>> properties) {
+        public Builder properties(Output<Map<String,Object>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(Map<String,Object> properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ExtensionResourceArgs build() {

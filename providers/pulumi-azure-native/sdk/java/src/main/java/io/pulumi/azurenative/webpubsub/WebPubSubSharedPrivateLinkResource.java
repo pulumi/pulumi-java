@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.webpubsub.WebPubSubSharedPrivateLinkResourceArgs;
 import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -183,21 +182,21 @@ public class WebPubSubSharedPrivateLinkResource extends io.pulumi.resources.Cust
      * @param options A bag of options that control this resource's behavior.
      */
     public WebPubSubSharedPrivateLinkResource(String name, WebPubSubSharedPrivateLinkResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:webpubsub:WebPubSubSharedPrivateLinkResource", name, args == null ? WebPubSubSharedPrivateLinkResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:webpubsub:WebPubSubSharedPrivateLinkResource", name, args == null ? WebPubSubSharedPrivateLinkResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebPubSubSharedPrivateLinkResource(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebPubSubSharedPrivateLinkResource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:webpubsub:WebPubSubSharedPrivateLinkResource", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20210401preview:WebPubSubSharedPrivateLinkResource").build()),
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20210601preview:WebPubSubSharedPrivateLinkResource").build()),
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20210901preview:WebPubSubSharedPrivateLinkResource").build()),
-                Input.of(Alias.builder().setType("azure-native:webpubsub/v20211001:WebPubSubSharedPrivateLinkResource").build())
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210401preview:WebPubSubSharedPrivateLinkResource").build()),
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210601preview:WebPubSubSharedPrivateLinkResource").build()),
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210901preview:WebPubSubSharedPrivateLinkResource").build()),
+                Output.of(Alias.builder().setType("azure-native:webpubsub/v20211001:WebPubSubSharedPrivateLinkResource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -211,7 +210,7 @@ public class WebPubSubSharedPrivateLinkResource extends io.pulumi.resources.Cust
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebPubSubSharedPrivateLinkResource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebPubSubSharedPrivateLinkResource get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebPubSubSharedPrivateLinkResource(name, id, options);
     }
 }

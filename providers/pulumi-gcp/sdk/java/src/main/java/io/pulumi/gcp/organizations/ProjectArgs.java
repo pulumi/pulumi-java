@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoCreateNetwork")
-      private final @Nullable Input<Boolean> autoCreateNetwork;
+      private final @Nullable Output<Boolean> autoCreateNetwork;
 
-    public Input<Boolean> getAutoCreateNetwork() {
-        return this.autoCreateNetwork == null ? Input.empty() : this.autoCreateNetwork;
+    public Output<Boolean> getAutoCreateNetwork() {
+        return this.autoCreateNetwork == null ? Output.empty() : this.autoCreateNetwork;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingAccount")
-      private final @Nullable Input<String> billingAccount;
+      private final @Nullable Output<String> billingAccount;
 
-    public Input<String> getBillingAccount() {
-        return this.billingAccount == null ? Input.empty() : this.billingAccount;
+    public Output<String> getBillingAccount() {
+        return this.billingAccount == null ? Output.empty() : this.billingAccount;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderId")
-      private final @Nullable Input<String> folderId;
+      private final @Nullable Output<String> folderId;
 
-    public Input<String> getFolderId() {
-        return this.folderId == null ? Input.empty() : this.folderId;
+    public Output<String> getFolderId() {
+        return this.folderId == null ? Output.empty() : this.folderId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId")
-      private final @Nullable Input<String> orgId;
+      private final @Nullable Output<String> orgId;
 
-    public Input<String> getOrgId() {
-        return this.orgId == null ? Input.empty() : this.orgId;
+    public Output<String> getOrgId() {
+        return this.orgId == null ? Output.empty() : this.orgId;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectId", required=true)
-      private final Input<String> projectId;
+      private final Output<String> projectId;
 
-    public Input<String> getProjectId() {
+    public Output<String> getProjectId() {
         return this.projectId;
     }
 
@@ -115,21 +115,21 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipDelete")
-      private final @Nullable Input<Boolean> skipDelete;
+      private final @Nullable Output<Boolean> skipDelete;
 
-    public Input<Boolean> getSkipDelete() {
-        return this.skipDelete == null ? Input.empty() : this.skipDelete;
+    public Output<Boolean> getSkipDelete() {
+        return this.skipDelete == null ? Output.empty() : this.skipDelete;
     }
 
     public ProjectArgs(
-        @Nullable Input<Boolean> autoCreateNetwork,
-        @Nullable Input<String> billingAccount,
-        @Nullable Input<String> folderId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> orgId,
-        Input<String> projectId,
-        @Nullable Input<Boolean> skipDelete) {
+        @Nullable Output<Boolean> autoCreateNetwork,
+        @Nullable Output<String> billingAccount,
+        @Nullable Output<String> folderId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> orgId,
+        Output<String> projectId,
+        @Nullable Output<Boolean> skipDelete) {
         this.autoCreateNetwork = autoCreateNetwork;
         this.billingAccount = billingAccount;
         this.folderId = folderId;
@@ -141,14 +141,14 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.autoCreateNetwork = Input.empty();
-        this.billingAccount = Input.empty();
-        this.folderId = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.orgId = Input.empty();
-        this.projectId = Input.empty();
-        this.skipDelete = Input.empty();
+        this.autoCreateNetwork = Output.empty();
+        this.billingAccount = Output.empty();
+        this.folderId = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.orgId = Output.empty();
+        this.projectId = Output.empty();
+        this.skipDelete = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,14 +160,14 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoCreateNetwork;
-        private @Nullable Input<String> billingAccount;
-        private @Nullable Input<String> folderId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> orgId;
-        private Input<String> projectId;
-        private @Nullable Input<Boolean> skipDelete;
+        private @Nullable Output<Boolean> autoCreateNetwork;
+        private @Nullable Output<String> billingAccount;
+        private @Nullable Output<String> folderId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> orgId;
+        private Output<String> projectId;
+        private @Nullable Output<Boolean> skipDelete;
 
         public Builder() {
     	      // Empty
@@ -185,83 +185,83 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.skipDelete = defaults.skipDelete;
         }
 
-        public Builder autoCreateNetwork(@Nullable Input<Boolean> autoCreateNetwork) {
+        public Builder autoCreateNetwork(@Nullable Output<Boolean> autoCreateNetwork) {
             this.autoCreateNetwork = autoCreateNetwork;
             return this;
         }
 
         public Builder autoCreateNetwork(@Nullable Boolean autoCreateNetwork) {
-            this.autoCreateNetwork = Input.ofNullable(autoCreateNetwork);
+            this.autoCreateNetwork = Output.ofNullable(autoCreateNetwork);
             return this;
         }
 
-        public Builder billingAccount(@Nullable Input<String> billingAccount) {
+        public Builder billingAccount(@Nullable Output<String> billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
 
         public Builder billingAccount(@Nullable String billingAccount) {
-            this.billingAccount = Input.ofNullable(billingAccount);
+            this.billingAccount = Output.ofNullable(billingAccount);
             return this;
         }
 
-        public Builder folderId(@Nullable Input<String> folderId) {
+        public Builder folderId(@Nullable Output<String> folderId) {
             this.folderId = folderId;
             return this;
         }
 
         public Builder folderId(@Nullable String folderId) {
-            this.folderId = Input.ofNullable(folderId);
+            this.folderId = Output.ofNullable(folderId);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder orgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Input.ofNullable(orgId);
+            this.orgId = Output.ofNullable(orgId);
             return this;
         }
 
-        public Builder projectId(Input<String> projectId) {
+        public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Input.of(Objects.requireNonNull(projectId));
+            this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder skipDelete(@Nullable Input<Boolean> skipDelete) {
+        public Builder skipDelete(@Nullable Output<Boolean> skipDelete) {
             this.skipDelete = skipDelete;
             return this;
         }
 
         public Builder skipDelete(@Nullable Boolean skipDelete) {
-            this.skipDelete = Input.ofNullable(skipDelete);
+            this.skipDelete = Output.ofNullable(skipDelete);
             return this;
         }
         public ProjectArgs build() {

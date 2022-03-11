@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.ClusterShardNodeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="nodes")
-      private final @Nullable Input<List<ClusterShardNodeGetArgs>> nodes;
+      private final @Nullable Output<List<ClusterShardNodeGetArgs>> nodes;
 
-    public Input<List<ClusterShardNodeGetArgs>> getNodes() {
-        return this.nodes == null ? Input.empty() : this.nodes;
+    public Output<List<ClusterShardNodeGetArgs>> getNodes() {
+        return this.nodes == null ? Output.empty() : this.nodes;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numNodes")
-      private final @Nullable Input<Integer> numNodes;
+      private final @Nullable Output<Integer> numNodes;
 
-    public Input<Integer> getNumNodes() {
-        return this.numNodes == null ? Input.empty() : this.numNodes;
+    public Output<Integer> getNumNodes() {
+        return this.numNodes == null ? Output.empty() : this.numNodes;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="slots")
-      private final @Nullable Input<String> slots;
+      private final @Nullable Output<String> slots;
 
-    public Input<String> getSlots() {
-        return this.slots == null ? Input.empty() : this.slots;
+    public Output<String> getSlots() {
+        return this.slots == null ? Output.empty() : this.slots;
     }
 
     public ClusterShardGetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<ClusterShardNodeGetArgs>> nodes,
-        @Nullable Input<Integer> numNodes,
-        @Nullable Input<String> slots) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<ClusterShardNodeGetArgs>> nodes,
+        @Nullable Output<Integer> numNodes,
+        @Nullable Output<String> slots) {
         this.name = name;
         this.nodes = nodes;
         this.numNodes = numNodes;
@@ -74,10 +74,10 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterShardGetArgs() {
-        this.name = Input.empty();
-        this.nodes = Input.empty();
-        this.numNodes = Input.empty();
-        this.slots = Input.empty();
+        this.name = Output.empty();
+        this.nodes = Output.empty();
+        this.numNodes = Output.empty();
+        this.slots = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ClusterShardNodeGetArgs>> nodes;
-        private @Nullable Input<Integer> numNodes;
-        private @Nullable Input<String> slots;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ClusterShardNodeGetArgs>> nodes;
+        private @Nullable Output<Integer> numNodes;
+        private @Nullable Output<String> slots;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.slots = defaults.slots;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nodes(@Nullable Input<List<ClusterShardNodeGetArgs>> nodes) {
+        public Builder nodes(@Nullable Output<List<ClusterShardNodeGetArgs>> nodes) {
             this.nodes = nodes;
             return this;
         }
 
         public Builder nodes(@Nullable List<ClusterShardNodeGetArgs> nodes) {
-            this.nodes = Input.ofNullable(nodes);
+            this.nodes = Output.ofNullable(nodes);
             return this;
         }
 
-        public Builder numNodes(@Nullable Input<Integer> numNodes) {
+        public Builder numNodes(@Nullable Output<Integer> numNodes) {
             this.numNodes = numNodes;
             return this;
         }
 
         public Builder numNodes(@Nullable Integer numNodes) {
-            this.numNodes = Input.ofNullable(numNodes);
+            this.numNodes = Output.ofNullable(numNodes);
             return this;
         }
 
-        public Builder slots(@Nullable Input<String> slots) {
+        public Builder slots(@Nullable Output<String> slots) {
             this.slots = slots;
             return this;
         }
 
         public Builder slots(@Nullable String slots) {
-            this.slots = Input.ofNullable(slots);
+            this.slots = Output.ofNullable(slots);
             return this;
         }
         public ClusterShardGetArgs build() {

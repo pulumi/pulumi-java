@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="format", required=true)
-      private final Input<String> format;
+      private final Output<String> format;
 
-    public Input<String> getFormat() {
+    public Output<String> getFormat() {
         return this.format;
     }
 
@@ -30,10 +30,10 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="localeCode")
-      private final @Nullable Input<String> localeCode;
+      private final @Nullable Output<String> localeCode;
 
-    public Input<String> getLocaleCode() {
-        return this.localeCode == null ? Input.empty() : this.localeCode;
+    public Output<String> getLocaleCode() {
+        return this.localeCode == null ? Output.empty() : this.localeCode;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="timezoneOffset")
-      private final @Nullable Input<String> timezoneOffset;
+      private final @Nullable Output<String> timezoneOffset;
 
-    public Input<String> getTimezoneOffset() {
-        return this.timezoneOffset == null ? Input.empty() : this.timezoneOffset;
+    public Output<String> getTimezoneOffset() {
+        return this.timezoneOffset == null ? Output.empty() : this.timezoneOffset;
     }
 
     public DatasetDatetimeOptionsArgs(
-        Input<String> format,
-        @Nullable Input<String> localeCode,
-        @Nullable Input<String> timezoneOffset) {
+        Output<String> format,
+        @Nullable Output<String> localeCode,
+        @Nullable Output<String> timezoneOffset) {
         this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
         this.localeCode = localeCode;
         this.timezoneOffset = timezoneOffset;
     }
 
     private DatasetDatetimeOptionsArgs() {
-        this.format = Input.empty();
-        this.localeCode = Input.empty();
-        this.timezoneOffset = Input.empty();
+        this.format = Output.empty();
+        this.localeCode = Output.empty();
+        this.timezoneOffset = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> format;
-        private @Nullable Input<String> localeCode;
-        private @Nullable Input<String> timezoneOffset;
+        private Output<String> format;
+        private @Nullable Output<String> localeCode;
+        private @Nullable Output<String> timezoneOffset;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DatasetDatetimeOptionsArgs extends io.pulumi.resources.Resour
     	      this.timezoneOffset = defaults.timezoneOffset;
         }
 
-        public Builder format(Input<String> format) {
+        public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
         public Builder format(String format) {
-            this.format = Input.of(Objects.requireNonNull(format));
+            this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder localeCode(@Nullable Input<String> localeCode) {
+        public Builder localeCode(@Nullable Output<String> localeCode) {
             this.localeCode = localeCode;
             return this;
         }
 
         public Builder localeCode(@Nullable String localeCode) {
-            this.localeCode = Input.ofNullable(localeCode);
+            this.localeCode = Output.ofNullable(localeCode);
             return this;
         }
 
-        public Builder timezoneOffset(@Nullable Input<String> timezoneOffset) {
+        public Builder timezoneOffset(@Nullable Output<String> timezoneOffset) {
             this.timezoneOffset = timezoneOffset;
             return this;
         }
 
         public Builder timezoneOffset(@Nullable String timezoneOffset) {
-            this.timezoneOffset = Input.ofNullable(timezoneOffset);
+            this.timezoneOffset = Output.ofNullable(timezoneOffset);
             return this;
         }
         public DatasetDatetimeOptionsArgs build() {

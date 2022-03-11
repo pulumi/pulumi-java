@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv6CidrBlock")
-      private final @Nullable Input<String> ipv6CidrBlock;
+      private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Input<String> getIpv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Input.empty() : this.ipv6CidrBlock;
+    public Output<String> getIpv6CidrBlock() {
+        return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv6IpamPoolId", required=true)
-      private final Input<String> ipv6IpamPoolId;
+      private final Output<String> ipv6IpamPoolId;
 
-    public Input<String> getIpv6IpamPoolId() {
+    public Output<String> getIpv6IpamPoolId() {
         return this.ipv6IpamPoolId;
     }
 
@@ -42,10 +42,10 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv6NetmaskLength")
-      private final @Nullable Input<Integer> ipv6NetmaskLength;
+      private final @Nullable Output<Integer> ipv6NetmaskLength;
 
-    public Input<Integer> getIpv6NetmaskLength() {
-        return this.ipv6NetmaskLength == null ? Input.empty() : this.ipv6NetmaskLength;
+    public Output<Integer> getIpv6NetmaskLength() {
+        return this.ipv6NetmaskLength == null ? Output.empty() : this.ipv6NetmaskLength;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public VpcIpv6CidrBlockAssociationArgs(
-        @Nullable Input<String> ipv6CidrBlock,
-        Input<String> ipv6IpamPoolId,
-        @Nullable Input<Integer> ipv6NetmaskLength,
-        Input<String> vpcId) {
+        @Nullable Output<String> ipv6CidrBlock,
+        Output<String> ipv6IpamPoolId,
+        @Nullable Output<Integer> ipv6NetmaskLength,
+        Output<String> vpcId) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         this.ipv6IpamPoolId = Objects.requireNonNull(ipv6IpamPoolId, "expected parameter 'ipv6IpamPoolId' to be non-null");
         this.ipv6NetmaskLength = ipv6NetmaskLength;
@@ -71,10 +71,10 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
     }
 
     private VpcIpv6CidrBlockAssociationArgs() {
-        this.ipv6CidrBlock = Input.empty();
-        this.ipv6IpamPoolId = Input.empty();
-        this.ipv6NetmaskLength = Input.empty();
-        this.vpcId = Input.empty();
+        this.ipv6CidrBlock = Output.empty();
+        this.ipv6IpamPoolId = Output.empty();
+        this.ipv6NetmaskLength = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipv6CidrBlock;
-        private Input<String> ipv6IpamPoolId;
-        private @Nullable Input<Integer> ipv6NetmaskLength;
-        private Input<String> vpcId;
+        private @Nullable Output<String> ipv6CidrBlock;
+        private Output<String> ipv6IpamPoolId;
+        private @Nullable Output<Integer> ipv6NetmaskLength;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder ipv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Input.ofNullable(ipv6CidrBlock);
+            this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
             return this;
         }
 
-        public Builder ipv6IpamPoolId(Input<String> ipv6IpamPoolId) {
+        public Builder ipv6IpamPoolId(Output<String> ipv6IpamPoolId) {
             this.ipv6IpamPoolId = Objects.requireNonNull(ipv6IpamPoolId);
             return this;
         }
 
         public Builder ipv6IpamPoolId(String ipv6IpamPoolId) {
-            this.ipv6IpamPoolId = Input.of(Objects.requireNonNull(ipv6IpamPoolId));
+            this.ipv6IpamPoolId = Output.of(Objects.requireNonNull(ipv6IpamPoolId));
             return this;
         }
 
-        public Builder ipv6NetmaskLength(@Nullable Input<Integer> ipv6NetmaskLength) {
+        public Builder ipv6NetmaskLength(@Nullable Output<Integer> ipv6NetmaskLength) {
             this.ipv6NetmaskLength = ipv6NetmaskLength;
             return this;
         }
 
         public Builder ipv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
-            this.ipv6NetmaskLength = Input.ofNullable(ipv6NetmaskLength);
+            this.ipv6NetmaskLength = Output.ofNullable(ipv6NetmaskLength);
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public VpcIpv6CidrBlockAssociationArgs build() {

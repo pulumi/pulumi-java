@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,38 +15,38 @@ public final class DeviceConfigGetArgs extends io.pulumi.resources.ResourceArgs 
     public static final DeviceConfigGetArgs Empty = new DeviceConfigGetArgs();
 
     @InputImport(name="binaryData")
-      private final @Nullable Input<String> binaryData;
+      private final @Nullable Output<String> binaryData;
 
-    public Input<String> getBinaryData() {
-        return this.binaryData == null ? Input.empty() : this.binaryData;
+    public Output<String> getBinaryData() {
+        return this.binaryData == null ? Output.empty() : this.binaryData;
     }
 
     @InputImport(name="cloudUpdateTime")
-      private final @Nullable Input<String> cloudUpdateTime;
+      private final @Nullable Output<String> cloudUpdateTime;
 
-    public Input<String> getCloudUpdateTime() {
-        return this.cloudUpdateTime == null ? Input.empty() : this.cloudUpdateTime;
+    public Output<String> getCloudUpdateTime() {
+        return this.cloudUpdateTime == null ? Output.empty() : this.cloudUpdateTime;
     }
 
     @InputImport(name="deviceAckTime")
-      private final @Nullable Input<String> deviceAckTime;
+      private final @Nullable Output<String> deviceAckTime;
 
-    public Input<String> getDeviceAckTime() {
-        return this.deviceAckTime == null ? Input.empty() : this.deviceAckTime;
+    public Output<String> getDeviceAckTime() {
+        return this.deviceAckTime == null ? Output.empty() : this.deviceAckTime;
     }
 
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public DeviceConfigGetArgs(
-        @Nullable Input<String> binaryData,
-        @Nullable Input<String> cloudUpdateTime,
-        @Nullable Input<String> deviceAckTime,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> binaryData,
+        @Nullable Output<String> cloudUpdateTime,
+        @Nullable Output<String> deviceAckTime,
+        @Nullable Output<String> version) {
         this.binaryData = binaryData;
         this.cloudUpdateTime = cloudUpdateTime;
         this.deviceAckTime = deviceAckTime;
@@ -54,10 +54,10 @@ public final class DeviceConfigGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DeviceConfigGetArgs() {
-        this.binaryData = Input.empty();
-        this.cloudUpdateTime = Input.empty();
-        this.deviceAckTime = Input.empty();
-        this.version = Input.empty();
+        this.binaryData = Output.empty();
+        this.cloudUpdateTime = Output.empty();
+        this.deviceAckTime = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,10 +69,10 @@ public final class DeviceConfigGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> binaryData;
-        private @Nullable Input<String> cloudUpdateTime;
-        private @Nullable Input<String> deviceAckTime;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> binaryData;
+        private @Nullable Output<String> cloudUpdateTime;
+        private @Nullable Output<String> deviceAckTime;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -86,43 +86,43 @@ public final class DeviceConfigGetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder binaryData(@Nullable Input<String> binaryData) {
+        public Builder binaryData(@Nullable Output<String> binaryData) {
             this.binaryData = binaryData;
             return this;
         }
 
         public Builder binaryData(@Nullable String binaryData) {
-            this.binaryData = Input.ofNullable(binaryData);
+            this.binaryData = Output.ofNullable(binaryData);
             return this;
         }
 
-        public Builder cloudUpdateTime(@Nullable Input<String> cloudUpdateTime) {
+        public Builder cloudUpdateTime(@Nullable Output<String> cloudUpdateTime) {
             this.cloudUpdateTime = cloudUpdateTime;
             return this;
         }
 
         public Builder cloudUpdateTime(@Nullable String cloudUpdateTime) {
-            this.cloudUpdateTime = Input.ofNullable(cloudUpdateTime);
+            this.cloudUpdateTime = Output.ofNullable(cloudUpdateTime);
             return this;
         }
 
-        public Builder deviceAckTime(@Nullable Input<String> deviceAckTime) {
+        public Builder deviceAckTime(@Nullable Output<String> deviceAckTime) {
             this.deviceAckTime = deviceAckTime;
             return this;
         }
 
         public Builder deviceAckTime(@Nullable String deviceAckTime) {
-            this.deviceAckTime = Input.ofNullable(deviceAckTime);
+            this.deviceAckTime = Output.ofNullable(deviceAckTime);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public DeviceConfigGetArgs build() {

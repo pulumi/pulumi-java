@@ -5,7 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.aws.rds.enums.InstanceType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="applyImmediately")
-      private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Output<Boolean> applyImmediately;
 
-    public Input<Boolean> getApplyImmediately() {
-        return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
+    public Output<Boolean> getApplyImmediately() {
+        return this.applyImmediately == null ? Output.empty() : this.applyImmediately;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Input<Boolean> getAutoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
+    public Output<Boolean> getAutoMinorVersionUpgrade() {
+        return this.autoMinorVersionUpgrade == null ? Output.empty() : this.autoMinorVersionUpgrade;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="caCertIdentifier")
-      private final @Nullable Input<String> caCertIdentifier;
+      private final @Nullable Output<String> caCertIdentifier;
 
-    public Input<String> getCaCertIdentifier() {
-        return this.caCertIdentifier == null ? Input.empty() : this.caCertIdentifier;
+    public Output<String> getCaCertIdentifier() {
+        return this.caCertIdentifier == null ? Output.empty() : this.caCertIdentifier;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clusterIdentifier")
-      private final @Nullable Input<String> clusterIdentifier;
+      private final @Nullable Output<String> clusterIdentifier;
 
-    public Input<String> getClusterIdentifier() {
-        return this.clusterIdentifier == null ? Input.empty() : this.clusterIdentifier;
+    public Output<String> getClusterIdentifier() {
+        return this.clusterIdentifier == null ? Output.empty() : this.clusterIdentifier;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="copyTagsToSnapshot")
-      private final @Nullable Input<Boolean> copyTagsToSnapshot;
+      private final @Nullable Output<Boolean> copyTagsToSnapshot;
 
-    public Input<Boolean> getCopyTagsToSnapshot() {
-        return this.copyTagsToSnapshot == null ? Input.empty() : this.copyTagsToSnapshot;
+    public Output<Boolean> getCopyTagsToSnapshot() {
+        return this.copyTagsToSnapshot == null ? Output.empty() : this.copyTagsToSnapshot;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbParameterGroupName")
-      private final @Nullable Input<String> dbParameterGroupName;
+      private final @Nullable Output<String> dbParameterGroupName;
 
-    public Input<String> getDbParameterGroupName() {
-        return this.dbParameterGroupName == null ? Input.empty() : this.dbParameterGroupName;
+    public Output<String> getDbParameterGroupName() {
+        return this.dbParameterGroupName == null ? Output.empty() : this.dbParameterGroupName;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbSubnetGroupName")
-      private final @Nullable Input<String> dbSubnetGroupName;
+      private final @Nullable Output<String> dbSubnetGroupName;
 
-    public Input<String> getDbSubnetGroupName() {
-        return this.dbSubnetGroupName == null ? Input.empty() : this.dbSubnetGroupName;
+    public Output<String> getDbSubnetGroupName() {
+        return this.dbSubnetGroupName == null ? Output.empty() : this.dbSubnetGroupName;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbiResourceId")
-      private final @Nullable Input<String> dbiResourceId;
+      private final @Nullable Output<String> dbiResourceId;
 
-    public Input<String> getDbiResourceId() {
-        return this.dbiResourceId == null ? Input.empty() : this.dbiResourceId;
+    public Output<String> getDbiResourceId() {
+        return this.dbiResourceId == null ? Output.empty() : this.dbiResourceId;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="engineVersionActual")
-      private final @Nullable Input<String> engineVersionActual;
+      private final @Nullable Output<String> engineVersionActual;
 
-    public Input<String> getEngineVersionActual() {
-        return this.engineVersionActual == null ? Input.empty() : this.engineVersionActual;
+    public Output<String> getEngineVersionActual() {
+        return this.engineVersionActual == null ? Output.empty() : this.engineVersionActual;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identifier")
-      private final @Nullable Input<String> identifier;
+      private final @Nullable Output<String> identifier;
 
-    public Input<String> getIdentifier() {
-        return this.identifier == null ? Input.empty() : this.identifier;
+    public Output<String> getIdentifier() {
+        return this.identifier == null ? Output.empty() : this.identifier;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identifierPrefix")
-      private final @Nullable Input<String> identifierPrefix;
+      private final @Nullable Output<String> identifierPrefix;
 
-    public Input<String> getIdentifierPrefix() {
-        return this.identifierPrefix == null ? Input.empty() : this.identifierPrefix;
+    public Output<String> getIdentifierPrefix() {
+        return this.identifierPrefix == null ? Output.empty() : this.identifierPrefix;
     }
 
     /**
@@ -205,10 +205,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instanceClass")
-      private final @Nullable Input<Either<String,InstanceType>> instanceClass;
+      private final @Nullable Output<Either<String,InstanceType>> instanceClass;
 
-    public Input<Either<String,InstanceType>> getInstanceClass() {
-        return this.instanceClass == null ? Input.empty() : this.instanceClass;
+    public Output<Either<String,InstanceType>> getInstanceClass() {
+        return this.instanceClass == null ? Output.empty() : this.instanceClass;
     }
 
     /**
@@ -216,10 +216,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -227,10 +227,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="monitoringInterval")
-      private final @Nullable Input<Integer> monitoringInterval;
+      private final @Nullable Output<Integer> monitoringInterval;
 
-    public Input<Integer> getMonitoringInterval() {
-        return this.monitoringInterval == null ? Input.empty() : this.monitoringInterval;
+    public Output<Integer> getMonitoringInterval() {
+        return this.monitoringInterval == null ? Output.empty() : this.monitoringInterval;
     }
 
     /**
@@ -240,10 +240,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="monitoringRoleArn")
-      private final @Nullable Input<String> monitoringRoleArn;
+      private final @Nullable Output<String> monitoringRoleArn;
 
-    public Input<String> getMonitoringRoleArn() {
-        return this.monitoringRoleArn == null ? Input.empty() : this.monitoringRoleArn;
+    public Output<String> getMonitoringRoleArn() {
+        return this.monitoringRoleArn == null ? Output.empty() : this.monitoringRoleArn;
     }
 
     /**
@@ -251,10 +251,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="performanceInsightsEnabled")
-      private final @Nullable Input<Boolean> performanceInsightsEnabled;
+      private final @Nullable Output<Boolean> performanceInsightsEnabled;
 
-    public Input<Boolean> getPerformanceInsightsEnabled() {
-        return this.performanceInsightsEnabled == null ? Input.empty() : this.performanceInsightsEnabled;
+    public Output<Boolean> getPerformanceInsightsEnabled() {
+        return this.performanceInsightsEnabled == null ? Output.empty() : this.performanceInsightsEnabled;
     }
 
     /**
@@ -262,10 +262,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="performanceInsightsKmsKeyId")
-      private final @Nullable Input<String> performanceInsightsKmsKeyId;
+      private final @Nullable Output<String> performanceInsightsKmsKeyId;
 
-    public Input<String> getPerformanceInsightsKmsKeyId() {
-        return this.performanceInsightsKmsKeyId == null ? Input.empty() : this.performanceInsightsKmsKeyId;
+    public Output<String> getPerformanceInsightsKmsKeyId() {
+        return this.performanceInsightsKmsKeyId == null ? Output.empty() : this.performanceInsightsKmsKeyId;
     }
 
     /**
@@ -273,10 +273,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="performanceInsightsRetentionPeriod")
-      private final @Nullable Input<Integer> performanceInsightsRetentionPeriod;
+      private final @Nullable Output<Integer> performanceInsightsRetentionPeriod;
 
-    public Input<Integer> getPerformanceInsightsRetentionPeriod() {
-        return this.performanceInsightsRetentionPeriod == null ? Input.empty() : this.performanceInsightsRetentionPeriod;
+    public Output<Integer> getPerformanceInsightsRetentionPeriod() {
+        return this.performanceInsightsRetentionPeriod == null ? Output.empty() : this.performanceInsightsRetentionPeriod;
     }
 
     /**
@@ -284,10 +284,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -296,10 +296,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preferredBackupWindow")
-      private final @Nullable Input<String> preferredBackupWindow;
+      private final @Nullable Output<String> preferredBackupWindow;
 
-    public Input<String> getPreferredBackupWindow() {
-        return this.preferredBackupWindow == null ? Input.empty() : this.preferredBackupWindow;
+    public Output<String> getPreferredBackupWindow() {
+        return this.preferredBackupWindow == null ? Output.empty() : this.preferredBackupWindow;
     }
 
     /**
@@ -308,10 +308,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preferredMaintenanceWindow")
-      private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Input<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
+    public Output<String> getPreferredMaintenanceWindow() {
+        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
     }
 
     /**
@@ -319,10 +319,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="promotionTier")
-      private final @Nullable Input<Integer> promotionTier;
+      private final @Nullable Output<Integer> promotionTier;
 
-    public Input<Integer> getPromotionTier() {
-        return this.promotionTier == null ? Input.empty() : this.promotionTier;
+    public Output<Integer> getPromotionTier() {
+        return this.promotionTier == null ? Output.empty() : this.promotionTier;
     }
 
     /**
@@ -332,10 +332,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publiclyAccessible")
-      private final @Nullable Input<Boolean> publiclyAccessible;
+      private final @Nullable Output<Boolean> publiclyAccessible;
 
-    public Input<Boolean> getPubliclyAccessible() {
-        return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
+    public Output<Boolean> getPubliclyAccessible() {
+        return this.publiclyAccessible == null ? Output.empty() : this.publiclyAccessible;
     }
 
     /**
@@ -343,10 +343,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storageEncrypted")
-      private final @Nullable Input<Boolean> storageEncrypted;
+      private final @Nullable Output<Boolean> storageEncrypted;
 
-    public Input<Boolean> getStorageEncrypted() {
-        return this.storageEncrypted == null ? Input.empty() : this.storageEncrypted;
+    public Output<Boolean> getStorageEncrypted() {
+        return this.storageEncrypted == null ? Output.empty() : this.storageEncrypted;
     }
 
     /**
@@ -354,10 +354,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -365,10 +365,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -376,45 +376,45 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="writer")
-      private final @Nullable Input<Boolean> writer;
+      private final @Nullable Output<Boolean> writer;
 
-    public Input<Boolean> getWriter() {
-        return this.writer == null ? Input.empty() : this.writer;
+    public Output<Boolean> getWriter() {
+        return this.writer == null ? Output.empty() : this.writer;
     }
 
     public ClusterInstanceState(
-        @Nullable Input<Boolean> applyImmediately,
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> autoMinorVersionUpgrade,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> caCertIdentifier,
-        @Nullable Input<String> clusterIdentifier,
-        @Nullable Input<Boolean> copyTagsToSnapshot,
-        @Nullable Input<String> dbParameterGroupName,
-        @Nullable Input<String> dbSubnetGroupName,
-        @Nullable Input<String> dbiResourceId,
-        @Nullable Input<String> endpoint,
-        @Nullable Input<String> engine,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<String> engineVersionActual,
-        @Nullable Input<String> identifier,
-        @Nullable Input<String> identifierPrefix,
-        @Nullable Input<Either<String,InstanceType>> instanceClass,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<Integer> monitoringInterval,
-        @Nullable Input<String> monitoringRoleArn,
-        @Nullable Input<Boolean> performanceInsightsEnabled,
-        @Nullable Input<String> performanceInsightsKmsKeyId,
-        @Nullable Input<Integer> performanceInsightsRetentionPeriod,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> preferredBackupWindow,
-        @Nullable Input<String> preferredMaintenanceWindow,
-        @Nullable Input<Integer> promotionTier,
-        @Nullable Input<Boolean> publiclyAccessible,
-        @Nullable Input<Boolean> storageEncrypted,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Boolean> writer) {
+        @Nullable Output<Boolean> applyImmediately,
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> autoMinorVersionUpgrade,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> caCertIdentifier,
+        @Nullable Output<String> clusterIdentifier,
+        @Nullable Output<Boolean> copyTagsToSnapshot,
+        @Nullable Output<String> dbParameterGroupName,
+        @Nullable Output<String> dbSubnetGroupName,
+        @Nullable Output<String> dbiResourceId,
+        @Nullable Output<String> endpoint,
+        @Nullable Output<String> engine,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<String> engineVersionActual,
+        @Nullable Output<String> identifier,
+        @Nullable Output<String> identifierPrefix,
+        @Nullable Output<Either<String,InstanceType>> instanceClass,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<Integer> monitoringInterval,
+        @Nullable Output<String> monitoringRoleArn,
+        @Nullable Output<Boolean> performanceInsightsEnabled,
+        @Nullable Output<String> performanceInsightsKmsKeyId,
+        @Nullable Output<Integer> performanceInsightsRetentionPeriod,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> preferredBackupWindow,
+        @Nullable Output<String> preferredMaintenanceWindow,
+        @Nullable Output<Integer> promotionTier,
+        @Nullable Output<Boolean> publiclyAccessible,
+        @Nullable Output<Boolean> storageEncrypted,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Boolean> writer) {
         this.applyImmediately = applyImmediately;
         this.arn = arn;
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
@@ -450,38 +450,38 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
     }
 
     private ClusterInstanceState() {
-        this.applyImmediately = Input.empty();
-        this.arn = Input.empty();
-        this.autoMinorVersionUpgrade = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.caCertIdentifier = Input.empty();
-        this.clusterIdentifier = Input.empty();
-        this.copyTagsToSnapshot = Input.empty();
-        this.dbParameterGroupName = Input.empty();
-        this.dbSubnetGroupName = Input.empty();
-        this.dbiResourceId = Input.empty();
-        this.endpoint = Input.empty();
-        this.engine = Input.empty();
-        this.engineVersion = Input.empty();
-        this.engineVersionActual = Input.empty();
-        this.identifier = Input.empty();
-        this.identifierPrefix = Input.empty();
-        this.instanceClass = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.monitoringInterval = Input.empty();
-        this.monitoringRoleArn = Input.empty();
-        this.performanceInsightsEnabled = Input.empty();
-        this.performanceInsightsKmsKeyId = Input.empty();
-        this.performanceInsightsRetentionPeriod = Input.empty();
-        this.port = Input.empty();
-        this.preferredBackupWindow = Input.empty();
-        this.preferredMaintenanceWindow = Input.empty();
-        this.promotionTier = Input.empty();
-        this.publiclyAccessible = Input.empty();
-        this.storageEncrypted = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.writer = Input.empty();
+        this.applyImmediately = Output.empty();
+        this.arn = Output.empty();
+        this.autoMinorVersionUpgrade = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.caCertIdentifier = Output.empty();
+        this.clusterIdentifier = Output.empty();
+        this.copyTagsToSnapshot = Output.empty();
+        this.dbParameterGroupName = Output.empty();
+        this.dbSubnetGroupName = Output.empty();
+        this.dbiResourceId = Output.empty();
+        this.endpoint = Output.empty();
+        this.engine = Output.empty();
+        this.engineVersion = Output.empty();
+        this.engineVersionActual = Output.empty();
+        this.identifier = Output.empty();
+        this.identifierPrefix = Output.empty();
+        this.instanceClass = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.monitoringInterval = Output.empty();
+        this.monitoringRoleArn = Output.empty();
+        this.performanceInsightsEnabled = Output.empty();
+        this.performanceInsightsKmsKeyId = Output.empty();
+        this.performanceInsightsRetentionPeriod = Output.empty();
+        this.port = Output.empty();
+        this.preferredBackupWindow = Output.empty();
+        this.preferredMaintenanceWindow = Output.empty();
+        this.promotionTier = Output.empty();
+        this.publiclyAccessible = Output.empty();
+        this.storageEncrypted = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.writer = Output.empty();
     }
 
     public static Builder builder() {
@@ -493,38 +493,38 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> applyImmediately;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> caCertIdentifier;
-        private @Nullable Input<String> clusterIdentifier;
-        private @Nullable Input<Boolean> copyTagsToSnapshot;
-        private @Nullable Input<String> dbParameterGroupName;
-        private @Nullable Input<String> dbSubnetGroupName;
-        private @Nullable Input<String> dbiResourceId;
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<String> engineVersionActual;
-        private @Nullable Input<String> identifier;
-        private @Nullable Input<String> identifierPrefix;
-        private @Nullable Input<Either<String,InstanceType>> instanceClass;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<Integer> monitoringInterval;
-        private @Nullable Input<String> monitoringRoleArn;
-        private @Nullable Input<Boolean> performanceInsightsEnabled;
-        private @Nullable Input<String> performanceInsightsKmsKeyId;
-        private @Nullable Input<Integer> performanceInsightsRetentionPeriod;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> preferredBackupWindow;
-        private @Nullable Input<String> preferredMaintenanceWindow;
-        private @Nullable Input<Integer> promotionTier;
-        private @Nullable Input<Boolean> publiclyAccessible;
-        private @Nullable Input<Boolean> storageEncrypted;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Boolean> writer;
+        private @Nullable Output<Boolean> applyImmediately;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> caCertIdentifier;
+        private @Nullable Output<String> clusterIdentifier;
+        private @Nullable Output<Boolean> copyTagsToSnapshot;
+        private @Nullable Output<String> dbParameterGroupName;
+        private @Nullable Output<String> dbSubnetGroupName;
+        private @Nullable Output<String> dbiResourceId;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<String> engineVersionActual;
+        private @Nullable Output<String> identifier;
+        private @Nullable Output<String> identifierPrefix;
+        private @Nullable Output<Either<String,InstanceType>> instanceClass;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<Integer> monitoringInterval;
+        private @Nullable Output<String> monitoringRoleArn;
+        private @Nullable Output<Boolean> performanceInsightsEnabled;
+        private @Nullable Output<String> performanceInsightsKmsKeyId;
+        private @Nullable Output<Integer> performanceInsightsRetentionPeriod;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> preferredBackupWindow;
+        private @Nullable Output<String> preferredMaintenanceWindow;
+        private @Nullable Output<Integer> promotionTier;
+        private @Nullable Output<Boolean> publiclyAccessible;
+        private @Nullable Output<Boolean> storageEncrypted;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Boolean> writer;
 
         public Builder() {
     	      // Empty
@@ -566,323 +566,323 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
     	      this.writer = defaults.writer;
         }
 
-        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Input.ofNullable(applyImmediately);
+            this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
+            this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder caCertIdentifier(@Nullable Input<String> caCertIdentifier) {
+        public Builder caCertIdentifier(@Nullable Output<String> caCertIdentifier) {
             this.caCertIdentifier = caCertIdentifier;
             return this;
         }
 
         public Builder caCertIdentifier(@Nullable String caCertIdentifier) {
-            this.caCertIdentifier = Input.ofNullable(caCertIdentifier);
+            this.caCertIdentifier = Output.ofNullable(caCertIdentifier);
             return this;
         }
 
-        public Builder clusterIdentifier(@Nullable Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
         public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Input.ofNullable(clusterIdentifier);
+            this.clusterIdentifier = Output.ofNullable(clusterIdentifier);
             return this;
         }
 
-        public Builder copyTagsToSnapshot(@Nullable Input<Boolean> copyTagsToSnapshot) {
+        public Builder copyTagsToSnapshot(@Nullable Output<Boolean> copyTagsToSnapshot) {
             this.copyTagsToSnapshot = copyTagsToSnapshot;
             return this;
         }
 
         public Builder copyTagsToSnapshot(@Nullable Boolean copyTagsToSnapshot) {
-            this.copyTagsToSnapshot = Input.ofNullable(copyTagsToSnapshot);
+            this.copyTagsToSnapshot = Output.ofNullable(copyTagsToSnapshot);
             return this;
         }
 
-        public Builder dbParameterGroupName(@Nullable Input<String> dbParameterGroupName) {
+        public Builder dbParameterGroupName(@Nullable Output<String> dbParameterGroupName) {
             this.dbParameterGroupName = dbParameterGroupName;
             return this;
         }
 
         public Builder dbParameterGroupName(@Nullable String dbParameterGroupName) {
-            this.dbParameterGroupName = Input.ofNullable(dbParameterGroupName);
+            this.dbParameterGroupName = Output.ofNullable(dbParameterGroupName);
             return this;
         }
 
-        public Builder dbSubnetGroupName(@Nullable Input<String> dbSubnetGroupName) {
+        public Builder dbSubnetGroupName(@Nullable Output<String> dbSubnetGroupName) {
             this.dbSubnetGroupName = dbSubnetGroupName;
             return this;
         }
 
         public Builder dbSubnetGroupName(@Nullable String dbSubnetGroupName) {
-            this.dbSubnetGroupName = Input.ofNullable(dbSubnetGroupName);
+            this.dbSubnetGroupName = Output.ofNullable(dbSubnetGroupName);
             return this;
         }
 
-        public Builder dbiResourceId(@Nullable Input<String> dbiResourceId) {
+        public Builder dbiResourceId(@Nullable Output<String> dbiResourceId) {
             this.dbiResourceId = dbiResourceId;
             return this;
         }
 
         public Builder dbiResourceId(@Nullable String dbiResourceId) {
-            this.dbiResourceId = Input.ofNullable(dbiResourceId);
+            this.dbiResourceId = Output.ofNullable(dbiResourceId);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder engineVersionActual(@Nullable Input<String> engineVersionActual) {
+        public Builder engineVersionActual(@Nullable Output<String> engineVersionActual) {
             this.engineVersionActual = engineVersionActual;
             return this;
         }
 
         public Builder engineVersionActual(@Nullable String engineVersionActual) {
-            this.engineVersionActual = Input.ofNullable(engineVersionActual);
+            this.engineVersionActual = Output.ofNullable(engineVersionActual);
             return this;
         }
 
-        public Builder identifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Input.ofNullable(identifier);
+            this.identifier = Output.ofNullable(identifier);
             return this;
         }
 
-        public Builder identifierPrefix(@Nullable Input<String> identifierPrefix) {
+        public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
             this.identifierPrefix = identifierPrefix;
             return this;
         }
 
         public Builder identifierPrefix(@Nullable String identifierPrefix) {
-            this.identifierPrefix = Input.ofNullable(identifierPrefix);
+            this.identifierPrefix = Output.ofNullable(identifierPrefix);
             return this;
         }
 
-        public Builder instanceClass(@Nullable Input<Either<String,InstanceType>> instanceClass) {
+        public Builder instanceClass(@Nullable Output<Either<String,InstanceType>> instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
 
         public Builder instanceClass(@Nullable Either<String,InstanceType> instanceClass) {
-            this.instanceClass = Input.ofNullable(instanceClass);
+            this.instanceClass = Output.ofNullable(instanceClass);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder monitoringInterval(@Nullable Input<Integer> monitoringInterval) {
+        public Builder monitoringInterval(@Nullable Output<Integer> monitoringInterval) {
             this.monitoringInterval = monitoringInterval;
             return this;
         }
 
         public Builder monitoringInterval(@Nullable Integer monitoringInterval) {
-            this.monitoringInterval = Input.ofNullable(monitoringInterval);
+            this.monitoringInterval = Output.ofNullable(monitoringInterval);
             return this;
         }
 
-        public Builder monitoringRoleArn(@Nullable Input<String> monitoringRoleArn) {
+        public Builder monitoringRoleArn(@Nullable Output<String> monitoringRoleArn) {
             this.monitoringRoleArn = monitoringRoleArn;
             return this;
         }
 
         public Builder monitoringRoleArn(@Nullable String monitoringRoleArn) {
-            this.monitoringRoleArn = Input.ofNullable(monitoringRoleArn);
+            this.monitoringRoleArn = Output.ofNullable(monitoringRoleArn);
             return this;
         }
 
-        public Builder performanceInsightsEnabled(@Nullable Input<Boolean> performanceInsightsEnabled) {
+        public Builder performanceInsightsEnabled(@Nullable Output<Boolean> performanceInsightsEnabled) {
             this.performanceInsightsEnabled = performanceInsightsEnabled;
             return this;
         }
 
         public Builder performanceInsightsEnabled(@Nullable Boolean performanceInsightsEnabled) {
-            this.performanceInsightsEnabled = Input.ofNullable(performanceInsightsEnabled);
+            this.performanceInsightsEnabled = Output.ofNullable(performanceInsightsEnabled);
             return this;
         }
 
-        public Builder performanceInsightsKmsKeyId(@Nullable Input<String> performanceInsightsKmsKeyId) {
+        public Builder performanceInsightsKmsKeyId(@Nullable Output<String> performanceInsightsKmsKeyId) {
             this.performanceInsightsKmsKeyId = performanceInsightsKmsKeyId;
             return this;
         }
 
         public Builder performanceInsightsKmsKeyId(@Nullable String performanceInsightsKmsKeyId) {
-            this.performanceInsightsKmsKeyId = Input.ofNullable(performanceInsightsKmsKeyId);
+            this.performanceInsightsKmsKeyId = Output.ofNullable(performanceInsightsKmsKeyId);
             return this;
         }
 
-        public Builder performanceInsightsRetentionPeriod(@Nullable Input<Integer> performanceInsightsRetentionPeriod) {
+        public Builder performanceInsightsRetentionPeriod(@Nullable Output<Integer> performanceInsightsRetentionPeriod) {
             this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
             return this;
         }
 
         public Builder performanceInsightsRetentionPeriod(@Nullable Integer performanceInsightsRetentionPeriod) {
-            this.performanceInsightsRetentionPeriod = Input.ofNullable(performanceInsightsRetentionPeriod);
+            this.performanceInsightsRetentionPeriod = Output.ofNullable(performanceInsightsRetentionPeriod);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder preferredBackupWindow(@Nullable Input<String> preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
 
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
-            this.preferredBackupWindow = Input.ofNullable(preferredBackupWindow);
+            this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
             return this;
         }
 
-        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder promotionTier(@Nullable Input<Integer> promotionTier) {
+        public Builder promotionTier(@Nullable Output<Integer> promotionTier) {
             this.promotionTier = promotionTier;
             return this;
         }
 
         public Builder promotionTier(@Nullable Integer promotionTier) {
-            this.promotionTier = Input.ofNullable(promotionTier);
+            this.promotionTier = Output.ofNullable(promotionTier);
             return this;
         }
 
-        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
+            this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder storageEncrypted(@Nullable Input<Boolean> storageEncrypted) {
+        public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
 
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
-            this.storageEncrypted = Input.ofNullable(storageEncrypted);
+            this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder writer(@Nullable Input<Boolean> writer) {
+        public Builder writer(@Nullable Output<Boolean> writer) {
             this.writer = writer;
             return this;
         }
 
         public Builder writer(@Nullable Boolean writer) {
-            this.writer = Input.ofNullable(writer);
+            this.writer = Output.ofNullable(writer);
             return this;
         }
         public ClusterInstanceState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection;
 
 import io.pulumi.azurenative.dataprotection.inputs.DppIdentityDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<DppIdentityDetailsArgs> identity;
+      private final @Nullable Output<DppIdentityDetailsArgs> identity;
 
-    public Input<DppIdentityDetailsArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<DppIdentityDetailsArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,10 +65,10 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGuardsName")
-      private final @Nullable Input<String> resourceGuardsName;
+      private final @Nullable Output<String> resourceGuardsName;
 
-    public Input<String> getResourceGuardsName() {
-        return this.resourceGuardsName == null ? Input.empty() : this.resourceGuardsName;
+    public Output<String> getResourceGuardsName() {
+        return this.resourceGuardsName == null ? Output.empty() : this.resourceGuardsName;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ResourceGuardArgs(
-        @Nullable Input<String> eTag,
-        @Nullable Input<DppIdentityDetailsArgs> identity,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceGuardsName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> eTag,
+        @Nullable Output<DppIdentityDetailsArgs> identity,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceGuardsName,
+        @Nullable Output<Map<String,String>> tags) {
         this.eTag = eTag;
         this.identity = identity;
         this.location = location;
@@ -98,12 +98,12 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceGuardArgs() {
-        this.eTag = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceGuardsName = Input.empty();
-        this.tags = Input.empty();
+        this.eTag = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceGuardsName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eTag;
-        private @Nullable Input<DppIdentityDetailsArgs> identity;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceGuardsName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> eTag;
+        private @Nullable Output<DppIdentityDetailsArgs> identity;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceGuardsName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder identity(@Nullable Input<DppIdentityDetailsArgs> identity) {
+        public Builder identity(@Nullable Output<DppIdentityDetailsArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable DppIdentityDetailsArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceGuardsName(@Nullable Input<String> resourceGuardsName) {
+        public Builder resourceGuardsName(@Nullable Output<String> resourceGuardsName) {
             this.resourceGuardsName = resourceGuardsName;
             return this;
         }
 
         public Builder resourceGuardsName(@Nullable String resourceGuardsName) {
-            this.resourceGuardsName = Input.ofNullable(resourceGuardsName);
+            this.resourceGuardsName = Output.ofNullable(resourceGuardsName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ResourceGuardArgs build() {

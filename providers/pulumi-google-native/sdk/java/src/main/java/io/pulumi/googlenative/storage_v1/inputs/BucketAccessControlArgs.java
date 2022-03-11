@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketAccessControlProjectTeamArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entity")
-      private final @Nullable Input<String> entity;
+      private final @Nullable Output<String> entity;
 
-    public Input<String> getEntity() {
-        return this.entity == null ? Input.empty() : this.entity;
+    public Output<String> getEntity() {
+        return this.entity == null ? Output.empty() : this.entity;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entityId")
-      private final @Nullable Input<String> entityId;
+      private final @Nullable Output<String> entityId;
 
-    public Input<String> getEntityId() {
-        return this.entityId == null ? Input.empty() : this.entityId;
+    public Output<String> getEntityId() {
+        return this.entityId == null ? Output.empty() : this.entityId;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="projectTeam")
-      private final @Nullable Input<BucketAccessControlProjectTeamArgs> projectTeam;
+      private final @Nullable Output<BucketAccessControlProjectTeamArgs> projectTeam;
 
-    public Input<BucketAccessControlProjectTeamArgs> getProjectTeam() {
-        return this.projectTeam == null ? Input.empty() : this.projectTeam;
+    public Output<BucketAccessControlProjectTeamArgs> getProjectTeam() {
+        return this.projectTeam == null ? Output.empty() : this.projectTeam;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -145,24 +145,24 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     public BucketAccessControlArgs(
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> email,
-        @Nullable Input<String> entity,
-        @Nullable Input<String> entityId,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> id,
-        @Nullable Input<String> kind,
-        @Nullable Input<BucketAccessControlProjectTeamArgs> projectTeam,
-        @Nullable Input<String> role,
-        @Nullable Input<String> selfLink) {
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> email,
+        @Nullable Output<String> entity,
+        @Nullable Output<String> entityId,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> id,
+        @Nullable Output<String> kind,
+        @Nullable Output<BucketAccessControlProjectTeamArgs> projectTeam,
+        @Nullable Output<String> role,
+        @Nullable Output<String> selfLink) {
         this.bucket = bucket;
         this.domain = domain;
         this.email = email;
@@ -177,17 +177,17 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     }
 
     private BucketAccessControlArgs() {
-        this.bucket = Input.empty();
-        this.domain = Input.empty();
-        this.email = Input.empty();
-        this.entity = Input.empty();
-        this.entityId = Input.empty();
-        this.etag = Input.empty();
-        this.id = Input.empty();
-        this.kind = Input.empty();
-        this.projectTeam = Input.empty();
-        this.role = Input.empty();
-        this.selfLink = Input.empty();
+        this.bucket = Output.empty();
+        this.domain = Output.empty();
+        this.email = Output.empty();
+        this.entity = Output.empty();
+        this.entityId = Output.empty();
+        this.etag = Output.empty();
+        this.id = Output.empty();
+        this.kind = Output.empty();
+        this.projectTeam = Output.empty();
+        this.role = Output.empty();
+        this.selfLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -199,17 +199,17 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> entity;
-        private @Nullable Input<String> entityId;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<BucketAccessControlProjectTeamArgs> projectTeam;
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> selfLink;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> entity;
+        private @Nullable Output<String> entityId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<BucketAccessControlProjectTeamArgs> projectTeam;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> selfLink;
 
         public Builder() {
     	      // Empty
@@ -230,113 +230,113 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder entity(@Nullable Input<String> entity) {
+        public Builder entity(@Nullable Output<String> entity) {
             this.entity = entity;
             return this;
         }
 
         public Builder entity(@Nullable String entity) {
-            this.entity = Input.ofNullable(entity);
+            this.entity = Output.ofNullable(entity);
             return this;
         }
 
-        public Builder entityId(@Nullable Input<String> entityId) {
+        public Builder entityId(@Nullable Output<String> entityId) {
             this.entityId = entityId;
             return this;
         }
 
         public Builder entityId(@Nullable String entityId) {
-            this.entityId = Input.ofNullable(entityId);
+            this.entityId = Output.ofNullable(entityId);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder projectTeam(@Nullable Input<BucketAccessControlProjectTeamArgs> projectTeam) {
+        public Builder projectTeam(@Nullable Output<BucketAccessControlProjectTeamArgs> projectTeam) {
             this.projectTeam = projectTeam;
             return this;
         }
 
         public Builder projectTeam(@Nullable BucketAccessControlProjectTeamArgs projectTeam) {
-            this.projectTeam = Input.ofNullable(projectTeam);
+            this.projectTeam = Output.ofNullable(projectTeam);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
         public BucketAccessControlArgs build() {

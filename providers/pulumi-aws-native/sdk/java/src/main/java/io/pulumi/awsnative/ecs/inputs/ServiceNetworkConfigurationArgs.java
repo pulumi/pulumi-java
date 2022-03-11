@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.ServiceAwsVpcConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     public static final ServiceNetworkConfigurationArgs Empty = new ServiceNetworkConfigurationArgs();
 
     @InputImport(name="awsvpcConfiguration")
-      private final @Nullable Input<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
+      private final @Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
 
-    public Input<ServiceAwsVpcConfigurationArgs> getAwsvpcConfiguration() {
-        return this.awsvpcConfiguration == null ? Input.empty() : this.awsvpcConfiguration;
+    public Output<ServiceAwsVpcConfigurationArgs> getAwsvpcConfiguration() {
+        return this.awsvpcConfiguration == null ? Output.empty() : this.awsvpcConfiguration;
     }
 
-    public ServiceNetworkConfigurationArgs(@Nullable Input<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration) {
+    public ServiceNetworkConfigurationArgs(@Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration) {
         this.awsvpcConfiguration = awsvpcConfiguration;
     }
 
     private ServiceNetworkConfigurationArgs() {
-        this.awsvpcConfiguration = Input.empty();
+        this.awsvpcConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
+        private @Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     	      this.awsvpcConfiguration = defaults.awsvpcConfiguration;
         }
 
-        public Builder awsvpcConfiguration(@Nullable Input<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration) {
+        public Builder awsvpcConfiguration(@Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration) {
             this.awsvpcConfiguration = awsvpcConfiguration;
             return this;
         }
 
         public Builder awsvpcConfiguration(@Nullable ServiceAwsVpcConfigurationArgs awsvpcConfiguration) {
-            this.awsvpcConfiguration = Input.ofNullable(awsvpcConfiguration);
+            this.awsvpcConfiguration = Output.ofNullable(awsvpcConfiguration);
             return this;
         }
         public ServiceNetworkConfigurationArgs build() {

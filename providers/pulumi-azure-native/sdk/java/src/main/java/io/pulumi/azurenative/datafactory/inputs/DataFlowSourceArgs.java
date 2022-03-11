@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class DataFlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset")
-      private final @Nullable Input<DatasetReferenceArgs> dataset;
+      private final @Nullable Output<DatasetReferenceArgs> dataset;
 
-    public Input<DatasetReferenceArgs> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<DatasetReferenceArgs> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DataFlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DataFlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowlet")
-      private final @Nullable Input<DataFlowReferenceArgs> flowlet;
+      private final @Nullable Output<DataFlowReferenceArgs> flowlet;
 
-    public Input<DataFlowReferenceArgs> getFlowlet() {
-        return this.flowlet == null ? Input.empty() : this.flowlet;
+    public Output<DataFlowReferenceArgs> getFlowlet() {
+        return this.flowlet == null ? Output.empty() : this.flowlet;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DataFlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedService")
-      private final @Nullable Input<LinkedServiceReferenceArgs> linkedService;
+      private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedService() {
-        return this.linkedService == null ? Input.empty() : this.linkedService;
+    public Output<LinkedServiceReferenceArgs> getLinkedService() {
+        return this.linkedService == null ? Output.empty() : this.linkedService;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class DataFlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -81,19 +81,19 @@ public final class DataFlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaLinkedService")
-      private final @Nullable Input<LinkedServiceReferenceArgs> schemaLinkedService;
+      private final @Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService;
 
-    public Input<LinkedServiceReferenceArgs> getSchemaLinkedService() {
-        return this.schemaLinkedService == null ? Input.empty() : this.schemaLinkedService;
+    public Output<LinkedServiceReferenceArgs> getSchemaLinkedService() {
+        return this.schemaLinkedService == null ? Output.empty() : this.schemaLinkedService;
     }
 
     public DataFlowSourceArgs(
-        @Nullable Input<DatasetReferenceArgs> dataset,
-        @Nullable Input<String> description,
-        @Nullable Input<DataFlowReferenceArgs> flowlet,
-        @Nullable Input<LinkedServiceReferenceArgs> linkedService,
-        Input<String> name,
-        @Nullable Input<LinkedServiceReferenceArgs> schemaLinkedService) {
+        @Nullable Output<DatasetReferenceArgs> dataset,
+        @Nullable Output<String> description,
+        @Nullable Output<DataFlowReferenceArgs> flowlet,
+        @Nullable Output<LinkedServiceReferenceArgs> linkedService,
+        Output<String> name,
+        @Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService) {
         this.dataset = dataset;
         this.description = description;
         this.flowlet = flowlet;
@@ -103,12 +103,12 @@ public final class DataFlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataFlowSourceArgs() {
-        this.dataset = Input.empty();
-        this.description = Input.empty();
-        this.flowlet = Input.empty();
-        this.linkedService = Input.empty();
-        this.name = Input.empty();
-        this.schemaLinkedService = Input.empty();
+        this.dataset = Output.empty();
+        this.description = Output.empty();
+        this.flowlet = Output.empty();
+        this.linkedService = Output.empty();
+        this.name = Output.empty();
+        this.schemaLinkedService = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class DataFlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DatasetReferenceArgs> dataset;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DataFlowReferenceArgs> flowlet;
-        private @Nullable Input<LinkedServiceReferenceArgs> linkedService;
-        private Input<String> name;
-        private @Nullable Input<LinkedServiceReferenceArgs> schemaLinkedService;
+        private @Nullable Output<DatasetReferenceArgs> dataset;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DataFlowReferenceArgs> flowlet;
+        private @Nullable Output<LinkedServiceReferenceArgs> linkedService;
+        private Output<String> name;
+        private @Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class DataFlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schemaLinkedService = defaults.schemaLinkedService;
         }
 
-        public Builder dataset(@Nullable Input<DatasetReferenceArgs> dataset) {
+        public Builder dataset(@Nullable Output<DatasetReferenceArgs> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable DatasetReferenceArgs dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder flowlet(@Nullable Input<DataFlowReferenceArgs> flowlet) {
+        public Builder flowlet(@Nullable Output<DataFlowReferenceArgs> flowlet) {
             this.flowlet = flowlet;
             return this;
         }
 
         public Builder flowlet(@Nullable DataFlowReferenceArgs flowlet) {
-            this.flowlet = Input.ofNullable(flowlet);
+            this.flowlet = Output.ofNullable(flowlet);
             return this;
         }
 
-        public Builder linkedService(@Nullable Input<LinkedServiceReferenceArgs> linkedService) {
+        public Builder linkedService(@Nullable Output<LinkedServiceReferenceArgs> linkedService) {
             this.linkedService = linkedService;
             return this;
         }
 
         public Builder linkedService(@Nullable LinkedServiceReferenceArgs linkedService) {
-            this.linkedService = Input.ofNullable(linkedService);
+            this.linkedService = Output.ofNullable(linkedService);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder schemaLinkedService(@Nullable Input<LinkedServiceReferenceArgs> schemaLinkedService) {
+        public Builder schemaLinkedService(@Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService) {
             this.schemaLinkedService = schemaLinkedService;
             return this;
         }
 
         public Builder schemaLinkedService(@Nullable LinkedServiceReferenceArgs schemaLinkedService) {
-            this.schemaLinkedService = Input.ofNullable(schemaLinkedService);
+            this.schemaLinkedService = Output.ofNullable(schemaLinkedService);
             return this;
         }
         public DataFlowSourceArgs build() {

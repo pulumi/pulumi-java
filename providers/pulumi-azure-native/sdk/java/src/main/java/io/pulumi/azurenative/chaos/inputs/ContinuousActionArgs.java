@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.inputs.KeyValuePairArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="duration", required=true)
-      private final Input<String> duration;
+      private final Output<String> duration;
 
-    public Input<String> getDuration() {
+    public Output<String> getDuration() {
         return this.duration;
     }
 
@@ -35,9 +35,9 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -46,9 +46,9 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters", required=true)
-      private final Input<List<KeyValuePairArgs>> parameters;
+      private final Output<List<KeyValuePairArgs>> parameters;
 
-    public Input<List<KeyValuePairArgs>> getParameters() {
+    public Output<List<KeyValuePairArgs>> getParameters() {
         return this.parameters;
     }
 
@@ -57,9 +57,9 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="selectorId", required=true)
-      private final Input<String> selectorId;
+      private final Output<String> selectorId;
 
-    public Input<String> getSelectorId() {
+    public Output<String> getSelectorId() {
         return this.selectorId;
     }
 
@@ -69,18 +69,18 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ContinuousActionArgs(
-        Input<String> duration,
-        Input<String> name,
-        Input<List<KeyValuePairArgs>> parameters,
-        Input<String> selectorId,
-        Input<String> type) {
+        Output<String> duration,
+        Output<String> name,
+        Output<List<KeyValuePairArgs>> parameters,
+        Output<String> selectorId,
+        Output<String> type) {
         this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
@@ -89,11 +89,11 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ContinuousActionArgs() {
-        this.duration = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.selectorId = Input.empty();
-        this.type = Input.empty();
+        this.duration = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.selectorId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> duration;
-        private Input<String> name;
-        private Input<List<KeyValuePairArgs>> parameters;
-        private Input<String> selectorId;
-        private Input<String> type;
+        private Output<String> duration;
+        private Output<String> name;
+        private Output<List<KeyValuePairArgs>> parameters;
+        private Output<String> selectorId;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder duration(Input<String> duration) {
+        public Builder duration(Output<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
         public Builder duration(String duration) {
-            this.duration = Input.of(Objects.requireNonNull(duration));
+            this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(Input<List<KeyValuePairArgs>> parameters) {
+        public Builder parameters(Output<List<KeyValuePairArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
         public Builder parameters(List<KeyValuePairArgs> parameters) {
-            this.parameters = Input.of(Objects.requireNonNull(parameters));
+            this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder selectorId(Input<String> selectorId) {
+        public Builder selectorId(Output<String> selectorId) {
             this.selectorId = Objects.requireNonNull(selectorId);
             return this;
         }
 
         public Builder selectorId(String selectorId) {
-            this.selectorId = Input.of(Objects.requireNonNull(selectorId));
+            this.selectorId = Output.of(Objects.requireNonNull(selectorId));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ContinuousActionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientSecretSettingName")
-      private final @Nullable Input<String> clientSecretSettingName;
+      private final @Nullable Output<String> clientSecretSettingName;
 
-    public Input<String> getClientSecretSettingName() {
-        return this.clientSecretSettingName == null ? Input.empty() : this.clientSecretSettingName;
+    public Output<String> getClientSecretSettingName() {
+        return this.clientSecretSettingName == null ? Output.empty() : this.clientSecretSettingName;
     }
 
     public AppleRegistrationArgs(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecretSettingName) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecretSettingName) {
         this.clientId = clientId;
         this.clientSecretSettingName = clientSecretSettingName;
     }
 
     private AppleRegistrationArgs() {
-        this.clientId = Input.empty();
-        this.clientSecretSettingName = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecretSettingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecretSettingName;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecretSettingName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
     	      this.clientSecretSettingName = defaults.clientSecretSettingName;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecretSettingName(@Nullable Input<String> clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable Output<String> clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
 
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
-            this.clientSecretSettingName = Input.ofNullable(clientSecretSettingName);
+            this.clientSecretSettingName = Output.ofNullable(clientSecretSettingName);
             return this;
         }
         public AppleRegistrationArgs build() {

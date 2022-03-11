@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.panorama;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,54 +16,54 @@ public final class PackageVersionArgs extends io.pulumi.resources.ResourceArgs {
     public static final PackageVersionArgs Empty = new PackageVersionArgs();
 
     @InputImport(name="markLatest")
-      private final @Nullable Input<Boolean> markLatest;
+      private final @Nullable Output<Boolean> markLatest;
 
-    public Input<Boolean> getMarkLatest() {
-        return this.markLatest == null ? Input.empty() : this.markLatest;
+    public Output<Boolean> getMarkLatest() {
+        return this.markLatest == null ? Output.empty() : this.markLatest;
     }
 
     @InputImport(name="ownerAccount")
-      private final @Nullable Input<String> ownerAccount;
+      private final @Nullable Output<String> ownerAccount;
 
-    public Input<String> getOwnerAccount() {
-        return this.ownerAccount == null ? Input.empty() : this.ownerAccount;
+    public Output<String> getOwnerAccount() {
+        return this.ownerAccount == null ? Output.empty() : this.ownerAccount;
     }
 
     @InputImport(name="packageId", required=true)
-      private final Input<String> packageId;
+      private final Output<String> packageId;
 
-    public Input<String> getPackageId() {
+    public Output<String> getPackageId() {
         return this.packageId;
     }
 
     @InputImport(name="packageVersion", required=true)
-      private final Input<String> packageVersion;
+      private final Output<String> packageVersion;
 
-    public Input<String> getPackageVersion() {
+    public Output<String> getPackageVersion() {
         return this.packageVersion;
     }
 
     @InputImport(name="patchVersion", required=true)
-      private final Input<String> patchVersion;
+      private final Output<String> patchVersion;
 
-    public Input<String> getPatchVersion() {
+    public Output<String> getPatchVersion() {
         return this.patchVersion;
     }
 
     @InputImport(name="updatedLatestPatchVersion")
-      private final @Nullable Input<String> updatedLatestPatchVersion;
+      private final @Nullable Output<String> updatedLatestPatchVersion;
 
-    public Input<String> getUpdatedLatestPatchVersion() {
-        return this.updatedLatestPatchVersion == null ? Input.empty() : this.updatedLatestPatchVersion;
+    public Output<String> getUpdatedLatestPatchVersion() {
+        return this.updatedLatestPatchVersion == null ? Output.empty() : this.updatedLatestPatchVersion;
     }
 
     public PackageVersionArgs(
-        @Nullable Input<Boolean> markLatest,
-        @Nullable Input<String> ownerAccount,
-        Input<String> packageId,
-        Input<String> packageVersion,
-        Input<String> patchVersion,
-        @Nullable Input<String> updatedLatestPatchVersion) {
+        @Nullable Output<Boolean> markLatest,
+        @Nullable Output<String> ownerAccount,
+        Output<String> packageId,
+        Output<String> packageVersion,
+        Output<String> patchVersion,
+        @Nullable Output<String> updatedLatestPatchVersion) {
         this.markLatest = markLatest;
         this.ownerAccount = ownerAccount;
         this.packageId = Objects.requireNonNull(packageId, "expected parameter 'packageId' to be non-null");
@@ -73,12 +73,12 @@ public final class PackageVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageVersionArgs() {
-        this.markLatest = Input.empty();
-        this.ownerAccount = Input.empty();
-        this.packageId = Input.empty();
-        this.packageVersion = Input.empty();
-        this.patchVersion = Input.empty();
-        this.updatedLatestPatchVersion = Input.empty();
+        this.markLatest = Output.empty();
+        this.ownerAccount = Output.empty();
+        this.packageId = Output.empty();
+        this.packageVersion = Output.empty();
+        this.patchVersion = Output.empty();
+        this.updatedLatestPatchVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,12 +90,12 @@ public final class PackageVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> markLatest;
-        private @Nullable Input<String> ownerAccount;
-        private Input<String> packageId;
-        private Input<String> packageVersion;
-        private Input<String> patchVersion;
-        private @Nullable Input<String> updatedLatestPatchVersion;
+        private @Nullable Output<Boolean> markLatest;
+        private @Nullable Output<String> ownerAccount;
+        private Output<String> packageId;
+        private Output<String> packageVersion;
+        private Output<String> patchVersion;
+        private @Nullable Output<String> updatedLatestPatchVersion;
 
         public Builder() {
     	      // Empty
@@ -111,63 +111,63 @@ public final class PackageVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updatedLatestPatchVersion = defaults.updatedLatestPatchVersion;
         }
 
-        public Builder markLatest(@Nullable Input<Boolean> markLatest) {
+        public Builder markLatest(@Nullable Output<Boolean> markLatest) {
             this.markLatest = markLatest;
             return this;
         }
 
         public Builder markLatest(@Nullable Boolean markLatest) {
-            this.markLatest = Input.ofNullable(markLatest);
+            this.markLatest = Output.ofNullable(markLatest);
             return this;
         }
 
-        public Builder ownerAccount(@Nullable Input<String> ownerAccount) {
+        public Builder ownerAccount(@Nullable Output<String> ownerAccount) {
             this.ownerAccount = ownerAccount;
             return this;
         }
 
         public Builder ownerAccount(@Nullable String ownerAccount) {
-            this.ownerAccount = Input.ofNullable(ownerAccount);
+            this.ownerAccount = Output.ofNullable(ownerAccount);
             return this;
         }
 
-        public Builder packageId(Input<String> packageId) {
+        public Builder packageId(Output<String> packageId) {
             this.packageId = Objects.requireNonNull(packageId);
             return this;
         }
 
         public Builder packageId(String packageId) {
-            this.packageId = Input.of(Objects.requireNonNull(packageId));
+            this.packageId = Output.of(Objects.requireNonNull(packageId));
             return this;
         }
 
-        public Builder packageVersion(Input<String> packageVersion) {
+        public Builder packageVersion(Output<String> packageVersion) {
             this.packageVersion = Objects.requireNonNull(packageVersion);
             return this;
         }
 
         public Builder packageVersion(String packageVersion) {
-            this.packageVersion = Input.of(Objects.requireNonNull(packageVersion));
+            this.packageVersion = Output.of(Objects.requireNonNull(packageVersion));
             return this;
         }
 
-        public Builder patchVersion(Input<String> patchVersion) {
+        public Builder patchVersion(Output<String> patchVersion) {
             this.patchVersion = Objects.requireNonNull(patchVersion);
             return this;
         }
 
         public Builder patchVersion(String patchVersion) {
-            this.patchVersion = Input.of(Objects.requireNonNull(patchVersion));
+            this.patchVersion = Output.of(Objects.requireNonNull(patchVersion));
             return this;
         }
 
-        public Builder updatedLatestPatchVersion(@Nullable Input<String> updatedLatestPatchVersion) {
+        public Builder updatedLatestPatchVersion(@Nullable Output<String> updatedLatestPatchVersion) {
             this.updatedLatestPatchVersion = updatedLatestPatchVersion;
             return this;
         }
 
         public Builder updatedLatestPatchVersion(@Nullable String updatedLatestPatchVersion) {
-            this.updatedLatestPatchVersion = Input.ofNullable(updatedLatestPatchVersion);
+            this.updatedLatestPatchVersion = Output.ofNullable(updatedLatestPatchVersion);
             return this;
         }
         public PackageVersionArgs build() {

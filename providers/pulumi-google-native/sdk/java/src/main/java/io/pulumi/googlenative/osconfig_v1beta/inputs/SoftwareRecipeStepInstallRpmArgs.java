@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class SoftwareRecipeStepInstallRpmArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="artifactId", required=true)
-      private final Input<String> artifactId;
+      private final Output<String> artifactId;
 
-    public Input<String> getArtifactId() {
+    public Output<String> getArtifactId() {
         return this.artifactId;
     }
 
-    public SoftwareRecipeStepInstallRpmArgs(Input<String> artifactId) {
+    public SoftwareRecipeStepInstallRpmArgs(Output<String> artifactId) {
         this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
     }
 
     private SoftwareRecipeStepInstallRpmArgs() {
-        this.artifactId = Input.empty();
+        this.artifactId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class SoftwareRecipeStepInstallRpmArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> artifactId;
+        private Output<String> artifactId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class SoftwareRecipeStepInstallRpmArgs extends io.pulumi.resources.
     	      this.artifactId = defaults.artifactId;
         }
 
-        public Builder artifactId(Input<String> artifactId) {
+        public Builder artifactId(Output<String> artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
         public Builder artifactId(String artifactId) {
-            this.artifactId = Input.of(Objects.requireNonNull(artifactId));
+            this.artifactId = Output.of(Objects.requireNonNull(artifactId));
             return this;
         }
         public SoftwareRecipeStepInstallRpmArgs build() {

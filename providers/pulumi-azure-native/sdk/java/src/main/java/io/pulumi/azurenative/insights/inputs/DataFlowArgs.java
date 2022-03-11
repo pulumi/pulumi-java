@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.KnownDataFlowStreams;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinations")
-      private final @Nullable Input<List<String>> destinations;
+      private final @Nullable Output<List<String>> destinations;
 
-    public Input<List<String>> getDestinations() {
-        return this.destinations == null ? Input.empty() : this.destinations;
+    public Output<List<String>> getDestinations() {
+        return this.destinations == null ? Output.empty() : this.destinations;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streams")
-      private final @Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams;
+      private final @Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams;
 
-    public Input<List<Either<String,KnownDataFlowStreams>>> getStreams() {
-        return this.streams == null ? Input.empty() : this.streams;
+    public Output<List<Either<String,KnownDataFlowStreams>>> getStreams() {
+        return this.streams == null ? Output.empty() : this.streams;
     }
 
     public DataFlowArgs(
-        @Nullable Input<List<String>> destinations,
-        @Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams) {
+        @Nullable Output<List<String>> destinations,
+        @Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams) {
         this.destinations = destinations;
         this.streams = streams;
     }
 
     private DataFlowArgs() {
-        this.destinations = Input.empty();
-        this.streams = Input.empty();
+        this.destinations = Output.empty();
+        this.streams = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> destinations;
-        private @Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams;
+        private @Nullable Output<List<String>> destinations;
+        private @Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.streams = defaults.streams;
         }
 
-        public Builder destinations(@Nullable Input<List<String>> destinations) {
+        public Builder destinations(@Nullable Output<List<String>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
         public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = Input.ofNullable(destinations);
+            this.destinations = Output.ofNullable(destinations);
             return this;
         }
 
-        public Builder streams(@Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams) {
+        public Builder streams(@Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams) {
             this.streams = streams;
             return this;
         }
 
         public Builder streams(@Nullable List<Either<String,KnownDataFlowStreams>> streams) {
-            this.streams = Input.ofNullable(streams);
+            this.streams = Output.ofNullable(streams);
             return this;
         }
         public DataFlowArgs build() {

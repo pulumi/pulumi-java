@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg;
 
 import io.pulumi.aws.cfg.inputs.RecorderRecordingGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class RecorderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RecorderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordingGroup")
-      private final @Nullable Input<RecorderRecordingGroupArgs> recordingGroup;
+      private final @Nullable Output<RecorderRecordingGroupArgs> recordingGroup;
 
-    public Input<RecorderRecordingGroupArgs> getRecordingGroup() {
-        return this.recordingGroup == null ? Input.empty() : this.recordingGroup;
+    public Output<RecorderRecordingGroupArgs> getRecordingGroup() {
+        return this.recordingGroup == null ? Output.empty() : this.recordingGroup;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class RecorderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public RecorderArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<RecorderRecordingGroupArgs> recordingGroup,
-        Input<String> roleArn) {
+        @Nullable Output<String> name,
+        @Nullable Output<RecorderRecordingGroupArgs> recordingGroup,
+        Output<String> roleArn) {
         this.name = name;
         this.recordingGroup = recordingGroup;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private RecorderArgs() {
-        this.name = Input.empty();
-        this.recordingGroup = Input.empty();
-        this.roleArn = Input.empty();
+        this.name = Output.empty();
+        this.recordingGroup = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class RecorderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<RecorderRecordingGroupArgs> recordingGroup;
-        private Input<String> roleArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<RecorderRecordingGroupArgs> recordingGroup;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class RecorderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder recordingGroup(@Nullable Input<RecorderRecordingGroupArgs> recordingGroup) {
+        public Builder recordingGroup(@Nullable Output<RecorderRecordingGroupArgs> recordingGroup) {
             this.recordingGroup = recordingGroup;
             return this;
         }
 
         public Builder recordingGroup(@Nullable RecorderRecordingGroupArgs recordingGroup) {
-            this.recordingGroup = Input.ofNullable(recordingGroup);
+            this.recordingGroup = Output.ofNullable(recordingGroup);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public RecorderArgs build() {

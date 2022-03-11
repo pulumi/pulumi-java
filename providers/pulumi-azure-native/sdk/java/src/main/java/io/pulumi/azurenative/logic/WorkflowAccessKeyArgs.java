@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accessKeyName")
-      private final @Nullable Input<String> accessKeyName;
+      private final @Nullable Output<String> accessKeyName;
 
-    public Input<String> getAccessKeyName() {
-        return this.accessKeyName == null ? Input.empty() : this.accessKeyName;
+    public Output<String> getAccessKeyName() {
+        return this.accessKeyName == null ? Output.empty() : this.accessKeyName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="notAfter")
-      private final @Nullable Input<String> notAfter;
+      private final @Nullable Output<String> notAfter;
 
-    public Input<String> getNotAfter() {
-        return this.notAfter == null ? Input.empty() : this.notAfter;
+    public Output<String> getNotAfter() {
+        return this.notAfter == null ? Output.empty() : this.notAfter;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="notBefore")
-      private final @Nullable Input<String> notBefore;
+      private final @Nullable Output<String> notBefore;
 
-    public Input<String> getNotBefore() {
-        return this.notBefore == null ? Input.empty() : this.notBefore;
+    public Output<String> getNotBefore() {
+        return this.notBefore == null ? Output.empty() : this.notBefore;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -74,19 +74,19 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="workflowName", required=true)
-      private final Input<String> workflowName;
+      private final Output<String> workflowName;
 
-    public Input<String> getWorkflowName() {
+    public Output<String> getWorkflowName() {
         return this.workflowName;
     }
 
     public WorkflowAccessKeyArgs(
-        @Nullable Input<String> accessKeyName,
-        @Nullable Input<String> id,
-        @Nullable Input<String> notAfter,
-        @Nullable Input<String> notBefore,
-        Input<String> resourceGroupName,
-        Input<String> workflowName) {
+        @Nullable Output<String> accessKeyName,
+        @Nullable Output<String> id,
+        @Nullable Output<String> notAfter,
+        @Nullable Output<String> notBefore,
+        Output<String> resourceGroupName,
+        Output<String> workflowName) {
         this.accessKeyName = accessKeyName;
         this.id = id;
         this.notAfter = notAfter;
@@ -96,12 +96,12 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WorkflowAccessKeyArgs() {
-        this.accessKeyName = Input.empty();
-        this.id = Input.empty();
-        this.notAfter = Input.empty();
-        this.notBefore = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.workflowName = Input.empty();
+        this.accessKeyName = Output.empty();
+        this.id = Output.empty();
+        this.notAfter = Output.empty();
+        this.notBefore = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.workflowName = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessKeyName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> notAfter;
-        private @Nullable Input<String> notBefore;
-        private Input<String> resourceGroupName;
-        private Input<String> workflowName;
+        private @Nullable Output<String> accessKeyName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> notAfter;
+        private @Nullable Output<String> notBefore;
+        private Output<String> resourceGroupName;
+        private Output<String> workflowName;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     	      this.workflowName = defaults.workflowName;
         }
 
-        public Builder accessKeyName(@Nullable Input<String> accessKeyName) {
+        public Builder accessKeyName(@Nullable Output<String> accessKeyName) {
             this.accessKeyName = accessKeyName;
             return this;
         }
 
         public Builder accessKeyName(@Nullable String accessKeyName) {
-            this.accessKeyName = Input.ofNullable(accessKeyName);
+            this.accessKeyName = Output.ofNullable(accessKeyName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder notAfter(@Nullable Input<String> notAfter) {
+        public Builder notAfter(@Nullable Output<String> notAfter) {
             this.notAfter = notAfter;
             return this;
         }
 
         public Builder notAfter(@Nullable String notAfter) {
-            this.notAfter = Input.ofNullable(notAfter);
+            this.notAfter = Output.ofNullable(notAfter);
             return this;
         }
 
-        public Builder notBefore(@Nullable Input<String> notBefore) {
+        public Builder notBefore(@Nullable Output<String> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
         public Builder notBefore(@Nullable String notBefore) {
-            this.notBefore = Input.ofNullable(notBefore);
+            this.notBefore = Output.ofNullable(notBefore);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder workflowName(Input<String> workflowName) {
+        public Builder workflowName(Output<String> workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
         }
 
         public Builder workflowName(String workflowName) {
-            this.workflowName = Input.of(Objects.requireNonNull(workflowName));
+            this.workflowName = Output.of(Objects.requireNonNull(workflowName));
             return this;
         }
         public WorkflowAccessKeyArgs build() {

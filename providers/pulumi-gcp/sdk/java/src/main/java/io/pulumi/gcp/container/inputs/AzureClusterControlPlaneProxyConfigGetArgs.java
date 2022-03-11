@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AzureClusterControlPlaneProxyConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceGroupId", required=true)
-      private final Input<String> resourceGroupId;
+      private final Output<String> resourceGroupId;
 
-    public Input<String> getResourceGroupId() {
+    public Output<String> getResourceGroupId() {
         return this.resourceGroupId;
     }
 
@@ -29,22 +29,22 @@ public final class AzureClusterControlPlaneProxyConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="secretId", required=true)
-      private final Input<String> secretId;
+      private final Output<String> secretId;
 
-    public Input<String> getSecretId() {
+    public Output<String> getSecretId() {
         return this.secretId;
     }
 
     public AzureClusterControlPlaneProxyConfigGetArgs(
-        Input<String> resourceGroupId,
-        Input<String> secretId) {
+        Output<String> resourceGroupId,
+        Output<String> secretId) {
         this.resourceGroupId = Objects.requireNonNull(resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
         this.secretId = Objects.requireNonNull(secretId, "expected parameter 'secretId' to be non-null");
     }
 
     private AzureClusterControlPlaneProxyConfigGetArgs() {
-        this.resourceGroupId = Input.empty();
-        this.secretId = Input.empty();
+        this.resourceGroupId = Output.empty();
+        this.secretId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AzureClusterControlPlaneProxyConfigGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> resourceGroupId;
-        private Input<String> secretId;
+        private Output<String> resourceGroupId;
+        private Output<String> secretId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AzureClusterControlPlaneProxyConfigGetArgs extends io.pulumi.
     	      this.secretId = defaults.secretId;
         }
 
-        public Builder resourceGroupId(Input<String> resourceGroupId) {
+        public Builder resourceGroupId(Output<String> resourceGroupId) {
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
 
         public Builder resourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = Input.of(Objects.requireNonNull(resourceGroupId));
+            this.resourceGroupId = Output.of(Objects.requireNonNull(resourceGroupId));
             return this;
         }
 
-        public Builder secretId(Input<String> secretId) {
+        public Builder secretId(Output<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
         public Builder secretId(String secretId) {
-            this.secretId = Input.of(Objects.requireNonNull(secretId));
+            this.secretId = Output.of(Objects.requireNonNull(secretId));
             return this;
         }
         public AzureClusterControlPlaneProxyConfigGetArgs build() {

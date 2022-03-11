@@ -8,7 +8,6 @@ import io.pulumi.azurenative.devices.IotDpsResourceArgs;
 import io.pulumi.azurenative.devices.outputs.IotDpsPropertiesDescriptionResponse;
 import io.pulumi.azurenative.devices.outputs.IotDpsSkuInfoResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -171,24 +170,24 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IotDpsResource(String name, IotDpsResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devices:IotDpsResource", name, args == null ? IotDpsResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:devices:IotDpsResource", name, args == null ? IotDpsResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IotDpsResource(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IotDpsResource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devices:IotDpsResource", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:devices/v20170821preview:IotDpsResource").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20171115:IotDpsResource").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20180122:IotDpsResource").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20200101:IotDpsResource").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20200301:IotDpsResource").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20200901preview:IotDpsResource").build()),
-                Input.of(Alias.builder().setType("azure-native:devices/v20211015:IotDpsResource").build())
+                Output.of(Alias.builder().setType("azure-native:devices/v20170821preview:IotDpsResource").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20171115:IotDpsResource").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20180122:IotDpsResource").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20200101:IotDpsResource").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20200301:IotDpsResource").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20200901preview:IotDpsResource").build()),
+                Output.of(Alias.builder().setType("azure-native:devices/v20211015:IotDpsResource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -202,7 +201,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IotDpsResource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IotDpsResource get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IotDpsResource(name, id, options);
     }
 }

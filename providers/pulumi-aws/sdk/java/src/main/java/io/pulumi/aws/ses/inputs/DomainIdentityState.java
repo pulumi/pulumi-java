@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="verificationToken")
-      private final @Nullable Input<String> verificationToken;
+      private final @Nullable Output<String> verificationToken;
 
-    public Input<String> getVerificationToken() {
-        return this.verificationToken == null ? Input.empty() : this.verificationToken;
+    public Output<String> getVerificationToken() {
+        return this.verificationToken == null ? Output.empty() : this.verificationToken;
     }
 
     public DomainIdentityState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> verificationToken) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> verificationToken) {
         this.arn = arn;
         this.domain = domain;
         this.verificationToken = verificationToken;
     }
 
     private DomainIdentityState() {
-        this.arn = Input.empty();
-        this.domain = Input.empty();
-        this.verificationToken = Input.empty();
+        this.arn = Output.empty();
+        this.domain = Output.empty();
+        this.verificationToken = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> verificationToken;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> verificationToken;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
     	      this.verificationToken = defaults.verificationToken;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder verificationToken(@Nullable Input<String> verificationToken) {
+        public Builder verificationToken(@Nullable Output<String> verificationToken) {
             this.verificationToken = verificationToken;
             return this;
         }
 
         public Builder verificationToken(@Nullable String verificationToken) {
-            this.verificationToken = Input.ofNullable(verificationToken);
+            this.verificationToken = Output.ofNullable(verificationToken);
             return this;
         }
         public DomainIdentityState build() {

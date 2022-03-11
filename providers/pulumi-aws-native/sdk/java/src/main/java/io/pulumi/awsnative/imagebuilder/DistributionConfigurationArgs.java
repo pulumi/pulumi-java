@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder;
 
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="distributions", required=true)
-      private final Input<List<DistributionConfigurationDistributionArgs>> distributions;
+      private final Output<List<DistributionConfigurationDistributionArgs>> distributions;
 
-    public Input<List<DistributionConfigurationDistributionArgs>> getDistributions() {
+    public Output<List<DistributionConfigurationDistributionArgs>> getDistributions() {
         return this.distributions;
     }
 
@@ -44,10 +44,10 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Object> tags;
+      private final @Nullable Output<Object> tags;
 
-    public Input<Object> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Object> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DistributionConfigurationArgs(
-        @Nullable Input<String> description,
-        Input<List<DistributionConfigurationDistributionArgs>> distributions,
-        @Nullable Input<String> name,
-        @Nullable Input<Object> tags) {
+        @Nullable Output<String> description,
+        Output<List<DistributionConfigurationDistributionArgs>> distributions,
+        @Nullable Output<String> name,
+        @Nullable Output<Object> tags) {
         this.description = description;
         this.distributions = Objects.requireNonNull(distributions, "expected parameter 'distributions' to be non-null");
         this.name = name;
@@ -73,10 +73,10 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private DistributionConfigurationArgs() {
-        this.description = Input.empty();
-        this.distributions = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.distributions = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<DistributionConfigurationDistributionArgs>> distributions;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Object> tags;
+        private @Nullable Output<String> description;
+        private Output<List<DistributionConfigurationDistributionArgs>> distributions;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Object> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder distributions(Input<List<DistributionConfigurationDistributionArgs>> distributions) {
+        public Builder distributions(Output<List<DistributionConfigurationDistributionArgs>> distributions) {
             this.distributions = Objects.requireNonNull(distributions);
             return this;
         }
 
         public Builder distributions(List<DistributionConfigurationDistributionArgs> distributions) {
-            this.distributions = Input.of(Objects.requireNonNull(distributions));
+            this.distributions = Output.of(Objects.requireNonNull(distributions));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Output<Object> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Object tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DistributionConfigurationArgs build() {

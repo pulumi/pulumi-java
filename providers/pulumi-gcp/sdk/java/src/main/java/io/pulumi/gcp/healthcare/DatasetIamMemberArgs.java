@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.DatasetIamMemberConditionArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
     public static final DatasetIamMemberArgs Empty = new DatasetIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<DatasetIamMemberConditionArgs> condition;
+      private final @Nullable Output<DatasetIamMemberConditionArgs> condition;
 
-    public Input<DatasetIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<DatasetIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -30,16 +30,16 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -50,17 +50,17 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public DatasetIamMemberArgs(
-        @Nullable Input<DatasetIamMemberConditionArgs> condition,
-        Input<String> datasetId,
-        Input<String> member,
-        Input<String> role) {
+        @Nullable Output<DatasetIamMemberConditionArgs> condition,
+        Output<String> datasetId,
+        Output<String> member,
+        Output<String> role) {
         this.condition = condition;
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -68,10 +68,10 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DatasetIamMemberArgs() {
-        this.condition = Input.empty();
-        this.datasetId = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.datasetId = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<DatasetIamMemberConditionArgs> condition;
-        private Input<String> datasetId;
-        private Input<String> member;
-        private Input<String> role;
+        private @Nullable Output<DatasetIamMemberConditionArgs> condition;
+        private Output<String> datasetId;
+        private Output<String> member;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<DatasetIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<DatasetIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable DatasetIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public DatasetIamMemberArgs build() {

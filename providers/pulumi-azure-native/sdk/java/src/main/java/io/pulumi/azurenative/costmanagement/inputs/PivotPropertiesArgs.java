@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.enums.PivotTypeType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class PivotPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PivotPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,PivotTypeType>> type;
+      private final @Nullable Output<Either<String,PivotTypeType>> type;
 
-    public Input<Either<String,PivotTypeType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,PivotTypeType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public PivotPropertiesArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,PivotTypeType>> type) {
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,PivotTypeType>> type) {
         this.name = name;
         this.type = type;
     }
 
     private PivotPropertiesArgs() {
-        this.name = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PivotPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,PivotTypeType>> type;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,PivotTypeType>> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PivotPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,PivotTypeType>> type) {
+        public Builder type(@Nullable Output<Either<String,PivotTypeType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,PivotTypeType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public PivotPropertiesArgs build() {

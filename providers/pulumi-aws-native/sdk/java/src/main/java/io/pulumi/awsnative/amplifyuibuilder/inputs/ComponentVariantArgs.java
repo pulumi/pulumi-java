@@ -5,7 +5,7 @@ package io.pulumi.awsnative.amplifyuibuilder.inputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentOverridesArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentVariantValuesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class ComponentVariantArgs extends io.pulumi.resources.ResourceArgs
     public static final ComponentVariantArgs Empty = new ComponentVariantArgs();
 
     @InputImport(name="overrides")
-      private final @Nullable Input<ComponentOverridesArgs> overrides;
+      private final @Nullable Output<ComponentOverridesArgs> overrides;
 
-    public Input<ComponentOverridesArgs> getOverrides() {
-        return this.overrides == null ? Input.empty() : this.overrides;
+    public Output<ComponentOverridesArgs> getOverrides() {
+        return this.overrides == null ? Output.empty() : this.overrides;
     }
 
     @InputImport(name="variantValues")
-      private final @Nullable Input<ComponentVariantValuesArgs> variantValues;
+      private final @Nullable Output<ComponentVariantValuesArgs> variantValues;
 
-    public Input<ComponentVariantValuesArgs> getVariantValues() {
-        return this.variantValues == null ? Input.empty() : this.variantValues;
+    public Output<ComponentVariantValuesArgs> getVariantValues() {
+        return this.variantValues == null ? Output.empty() : this.variantValues;
     }
 
     public ComponentVariantArgs(
-        @Nullable Input<ComponentOverridesArgs> overrides,
-        @Nullable Input<ComponentVariantValuesArgs> variantValues) {
+        @Nullable Output<ComponentOverridesArgs> overrides,
+        @Nullable Output<ComponentVariantValuesArgs> variantValues) {
         this.overrides = overrides;
         this.variantValues = variantValues;
     }
 
     private ComponentVariantArgs() {
-        this.overrides = Input.empty();
-        this.variantValues = Input.empty();
+        this.overrides = Output.empty();
+        this.variantValues = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ComponentVariantArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ComponentOverridesArgs> overrides;
-        private @Nullable Input<ComponentVariantValuesArgs> variantValues;
+        private @Nullable Output<ComponentOverridesArgs> overrides;
+        private @Nullable Output<ComponentVariantValuesArgs> variantValues;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ComponentVariantArgs extends io.pulumi.resources.ResourceArgs
     	      this.variantValues = defaults.variantValues;
         }
 
-        public Builder overrides(@Nullable Input<ComponentOverridesArgs> overrides) {
+        public Builder overrides(@Nullable Output<ComponentOverridesArgs> overrides) {
             this.overrides = overrides;
             return this;
         }
 
         public Builder overrides(@Nullable ComponentOverridesArgs overrides) {
-            this.overrides = Input.ofNullable(overrides);
+            this.overrides = Output.ofNullable(overrides);
             return this;
         }
 
-        public Builder variantValues(@Nullable Input<ComponentVariantValuesArgs> variantValues) {
+        public Builder variantValues(@Nullable Output<ComponentVariantValuesArgs> variantValues) {
             this.variantValues = variantValues;
             return this;
         }
 
         public Builder variantValues(@Nullable ComponentVariantValuesArgs variantValues) {
-            this.variantValues = Input.ofNullable(variantValues);
+            this.variantValues = Output.ofNullable(variantValues);
             return this;
         }
         public ComponentVariantArgs build() {

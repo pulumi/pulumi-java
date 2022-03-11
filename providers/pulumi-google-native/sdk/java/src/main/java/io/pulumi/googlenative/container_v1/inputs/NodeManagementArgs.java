@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.AutoUpgradeOptionsArgs;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoRepair")
-      private final @Nullable Input<Boolean> autoRepair;
+      private final @Nullable Output<Boolean> autoRepair;
 
-    public Input<Boolean> getAutoRepair() {
-        return this.autoRepair == null ? Input.empty() : this.autoRepair;
+    public Output<Boolean> getAutoRepair() {
+        return this.autoRepair == null ? Output.empty() : this.autoRepair;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpgrade")
-      private final @Nullable Input<Boolean> autoUpgrade;
+      private final @Nullable Output<Boolean> autoUpgrade;
 
-    public Input<Boolean> getAutoUpgrade() {
-        return this.autoUpgrade == null ? Input.empty() : this.autoUpgrade;
+    public Output<Boolean> getAutoUpgrade() {
+        return this.autoUpgrade == null ? Output.empty() : this.autoUpgrade;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradeOptions")
-      private final @Nullable Input<AutoUpgradeOptionsArgs> upgradeOptions;
+      private final @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions;
 
-    public Input<AutoUpgradeOptionsArgs> getUpgradeOptions() {
-        return this.upgradeOptions == null ? Input.empty() : this.upgradeOptions;
+    public Output<AutoUpgradeOptionsArgs> getUpgradeOptions() {
+        return this.upgradeOptions == null ? Output.empty() : this.upgradeOptions;
     }
 
     public NodeManagementArgs(
-        @Nullable Input<Boolean> autoRepair,
-        @Nullable Input<Boolean> autoUpgrade,
-        @Nullable Input<AutoUpgradeOptionsArgs> upgradeOptions) {
+        @Nullable Output<Boolean> autoRepair,
+        @Nullable Output<Boolean> autoUpgrade,
+        @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions) {
         this.autoRepair = autoRepair;
         this.autoUpgrade = autoUpgrade;
         this.upgradeOptions = upgradeOptions;
     }
 
     private NodeManagementArgs() {
-        this.autoRepair = Input.empty();
-        this.autoUpgrade = Input.empty();
-        this.upgradeOptions = Input.empty();
+        this.autoRepair = Output.empty();
+        this.autoUpgrade = Output.empty();
+        this.upgradeOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoRepair;
-        private @Nullable Input<Boolean> autoUpgrade;
-        private @Nullable Input<AutoUpgradeOptionsArgs> upgradeOptions;
+        private @Nullable Output<Boolean> autoRepair;
+        private @Nullable Output<Boolean> autoUpgrade;
+        private @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upgradeOptions = defaults.upgradeOptions;
         }
 
-        public Builder autoRepair(@Nullable Input<Boolean> autoRepair) {
+        public Builder autoRepair(@Nullable Output<Boolean> autoRepair) {
             this.autoRepair = autoRepair;
             return this;
         }
 
         public Builder autoRepair(@Nullable Boolean autoRepair) {
-            this.autoRepair = Input.ofNullable(autoRepair);
+            this.autoRepair = Output.ofNullable(autoRepair);
             return this;
         }
 
-        public Builder autoUpgrade(@Nullable Input<Boolean> autoUpgrade) {
+        public Builder autoUpgrade(@Nullable Output<Boolean> autoUpgrade) {
             this.autoUpgrade = autoUpgrade;
             return this;
         }
 
         public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
-            this.autoUpgrade = Input.ofNullable(autoUpgrade);
+            this.autoUpgrade = Output.ofNullable(autoUpgrade);
             return this;
         }
 
-        public Builder upgradeOptions(@Nullable Input<AutoUpgradeOptionsArgs> upgradeOptions) {
+        public Builder upgradeOptions(@Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions) {
             this.upgradeOptions = upgradeOptions;
             return this;
         }
 
         public Builder upgradeOptions(@Nullable AutoUpgradeOptionsArgs upgradeOptions) {
-            this.upgradeOptions = Input.ofNullable(upgradeOptions);
+            this.upgradeOptions = Output.ofNullable(upgradeOptions);
             return this;
         }
         public NodeManagementArgs build() {

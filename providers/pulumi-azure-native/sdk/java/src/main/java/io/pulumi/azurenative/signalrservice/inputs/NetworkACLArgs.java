@@ -5,7 +5,7 @@ package io.pulumi.azurenative.signalrservice.inputs;
 
 import io.pulumi.azurenative.signalrservice.enums.SignalRRequestType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allow")
-      private final @Nullable Input<List<Either<String,SignalRRequestType>>> allow;
+      private final @Nullable Output<List<Either<String,SignalRRequestType>>> allow;
 
-    public Input<List<Either<String,SignalRRequestType>>> getAllow() {
-        return this.allow == null ? Input.empty() : this.allow;
+    public Output<List<Either<String,SignalRRequestType>>> getAllow() {
+        return this.allow == null ? Output.empty() : this.allow;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deny")
-      private final @Nullable Input<List<Either<String,SignalRRequestType>>> deny;
+      private final @Nullable Output<List<Either<String,SignalRRequestType>>> deny;
 
-    public Input<List<Either<String,SignalRRequestType>>> getDeny() {
-        return this.deny == null ? Input.empty() : this.deny;
+    public Output<List<Either<String,SignalRRequestType>>> getDeny() {
+        return this.deny == null ? Output.empty() : this.deny;
     }
 
     public NetworkACLArgs(
-        @Nullable Input<List<Either<String,SignalRRequestType>>> allow,
-        @Nullable Input<List<Either<String,SignalRRequestType>>> deny) {
+        @Nullable Output<List<Either<String,SignalRRequestType>>> allow,
+        @Nullable Output<List<Either<String,SignalRRequestType>>> deny) {
         this.allow = allow;
         this.deny = deny;
     }
 
     private NetworkACLArgs() {
-        this.allow = Input.empty();
-        this.deny = Input.empty();
+        this.allow = Output.empty();
+        this.deny = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,SignalRRequestType>>> allow;
-        private @Nullable Input<List<Either<String,SignalRRequestType>>> deny;
+        private @Nullable Output<List<Either<String,SignalRRequestType>>> allow;
+        private @Nullable Output<List<Either<String,SignalRRequestType>>> deny;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
     	      this.deny = defaults.deny;
         }
 
-        public Builder allow(@Nullable Input<List<Either<String,SignalRRequestType>>> allow) {
+        public Builder allow(@Nullable Output<List<Either<String,SignalRRequestType>>> allow) {
             this.allow = allow;
             return this;
         }
 
         public Builder allow(@Nullable List<Either<String,SignalRRequestType>> allow) {
-            this.allow = Input.ofNullable(allow);
+            this.allow = Output.ofNullable(allow);
             return this;
         }
 
-        public Builder deny(@Nullable Input<List<Either<String,SignalRRequestType>>> deny) {
+        public Builder deny(@Nullable Output<List<Either<String,SignalRRequestType>>> deny) {
             this.deny = deny;
             return this;
         }
 
         public Builder deny(@Nullable List<Either<String,SignalRRequestType>> deny) {
-            this.deny = Input.ofNullable(deny);
+            this.deny = Output.ofNullable(deny);
             return this;
         }
         public NetworkACLArgs build() {

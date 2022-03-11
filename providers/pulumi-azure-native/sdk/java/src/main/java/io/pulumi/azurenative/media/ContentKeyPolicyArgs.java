@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyOptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,10 +32,10 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="contentKeyPolicyName")
-      private final @Nullable Input<String> contentKeyPolicyName;
+      private final @Nullable Output<String> contentKeyPolicyName;
 
-    public Input<String> getContentKeyPolicyName() {
-        return this.contentKeyPolicyName == null ? Input.empty() : this.contentKeyPolicyName;
+    public Output<String> getContentKeyPolicyName() {
+        return this.contentKeyPolicyName == null ? Output.empty() : this.contentKeyPolicyName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="options", required=true)
-      private final Input<List<ContentKeyPolicyOptionArgs>> options;
+      private final Output<List<ContentKeyPolicyOptionArgs>> options;
 
-    public Input<List<ContentKeyPolicyOptionArgs>> getOptions() {
+    public Output<List<ContentKeyPolicyOptionArgs>> getOptions() {
         return this.options;
     }
 
@@ -65,18 +65,18 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ContentKeyPolicyArgs(
-        Input<String> accountName,
-        @Nullable Input<String> contentKeyPolicyName,
-        @Nullable Input<String> description,
-        Input<List<ContentKeyPolicyOptionArgs>> options,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<String> contentKeyPolicyName,
+        @Nullable Output<String> description,
+        Output<List<ContentKeyPolicyOptionArgs>> options,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.contentKeyPolicyName = contentKeyPolicyName;
         this.description = description;
@@ -85,11 +85,11 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ContentKeyPolicyArgs() {
-        this.accountName = Input.empty();
-        this.contentKeyPolicyName = Input.empty();
-        this.description = Input.empty();
-        this.options = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.contentKeyPolicyName = Output.empty();
+        this.description = Output.empty();
+        this.options = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> contentKeyPolicyName;
-        private @Nullable Input<String> description;
-        private Input<List<ContentKeyPolicyOptionArgs>> options;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<String> contentKeyPolicyName;
+        private @Nullable Output<String> description;
+        private Output<List<ContentKeyPolicyOptionArgs>> options;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder contentKeyPolicyName(@Nullable Input<String> contentKeyPolicyName) {
+        public Builder contentKeyPolicyName(@Nullable Output<String> contentKeyPolicyName) {
             this.contentKeyPolicyName = contentKeyPolicyName;
             return this;
         }
 
         public Builder contentKeyPolicyName(@Nullable String contentKeyPolicyName) {
-            this.contentKeyPolicyName = Input.ofNullable(contentKeyPolicyName);
+            this.contentKeyPolicyName = Output.ofNullable(contentKeyPolicyName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder options(Input<List<ContentKeyPolicyOptionArgs>> options) {
+        public Builder options(Output<List<ContentKeyPolicyOptionArgs>> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
         public Builder options(List<ContentKeyPolicyOptionArgs> options) {
-            this.options = Input.of(Objects.requireNonNull(options));
+            this.options = Output.of(Objects.requireNonNull(options));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ContentKeyPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -28,18 +28,18 @@ public final class PodReadinessGateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditionType", required=true)
-      private final Input<String> conditionType;
+      private final Output<String> conditionType;
 
-    public Input<String> getConditionType() {
+    public Output<String> getConditionType() {
         return this.conditionType;
     }
 
-    public PodReadinessGateArgs(Input<String> conditionType) {
+    public PodReadinessGateArgs(Output<String> conditionType) {
         this.conditionType = Objects.requireNonNull(conditionType, "expected parameter 'conditionType' to be non-null");
     }
 
     private PodReadinessGateArgs() {
-        this.conditionType = Input.empty();
+        this.conditionType = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,7 +51,7 @@ public final class PodReadinessGateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> conditionType;
+        private Output<String> conditionType;
 
         public Builder() {
     	      // Empty
@@ -62,13 +62,13 @@ public final class PodReadinessGateArgs extends io.pulumi.resources.ResourceArgs
     	      this.conditionType = defaults.conditionType;
         }
 
-        public Builder conditionType(Input<String> conditionType) {
+        public Builder conditionType(Output<String> conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
 
         public Builder conditionType(String conditionType) {
-            this.conditionType = Input.of(Objects.requireNonNull(conditionType));
+            this.conditionType = Output.of(Objects.requireNonNull(conditionType));
             return this;
         }
         public PodReadinessGateArgs build() {

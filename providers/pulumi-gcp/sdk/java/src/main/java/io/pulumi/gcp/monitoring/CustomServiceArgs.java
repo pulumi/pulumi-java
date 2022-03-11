@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.CustomServiceTelemetryArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceId")
-      private final @Nullable Input<String> serviceId;
+      private final @Nullable Output<String> serviceId;
 
-    public Input<String> getServiceId() {
-        return this.serviceId == null ? Input.empty() : this.serviceId;
+    public Output<String> getServiceId() {
+        return this.serviceId == null ? Output.empty() : this.serviceId;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="telemetry")
-      private final @Nullable Input<CustomServiceTelemetryArgs> telemetry;
+      private final @Nullable Output<CustomServiceTelemetryArgs> telemetry;
 
-    public Input<CustomServiceTelemetryArgs> getTelemetry() {
-        return this.telemetry == null ? Input.empty() : this.telemetry;
+    public Output<CustomServiceTelemetryArgs> getTelemetry() {
+        return this.telemetry == null ? Output.empty() : this.telemetry;
     }
 
     public CustomServiceArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> project,
-        @Nullable Input<String> serviceId,
-        @Nullable Input<CustomServiceTelemetryArgs> telemetry) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> project,
+        @Nullable Output<String> serviceId,
+        @Nullable Output<CustomServiceTelemetryArgs> telemetry) {
         this.displayName = displayName;
         this.project = project;
         this.serviceId = serviceId;
@@ -74,10 +74,10 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomServiceArgs() {
-        this.displayName = Input.empty();
-        this.project = Input.empty();
-        this.serviceId = Input.empty();
-        this.telemetry = Input.empty();
+        this.displayName = Output.empty();
+        this.project = Output.empty();
+        this.serviceId = Output.empty();
+        this.telemetry = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> serviceId;
-        private @Nullable Input<CustomServiceTelemetryArgs> telemetry;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> serviceId;
+        private @Nullable Output<CustomServiceTelemetryArgs> telemetry;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.telemetry = defaults.telemetry;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceId(@Nullable Input<String> serviceId) {
+        public Builder serviceId(@Nullable Output<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
 
         public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Input.ofNullable(serviceId);
+            this.serviceId = Output.ofNullable(serviceId);
             return this;
         }
 
-        public Builder telemetry(@Nullable Input<CustomServiceTelemetryArgs> telemetry) {
+        public Builder telemetry(@Nullable Output<CustomServiceTelemetryArgs> telemetry) {
             this.telemetry = telemetry;
             return this;
         }
 
         public Builder telemetry(@Nullable CustomServiceTelemetryArgs telemetry) {
-            this.telemetry = Input.ofNullable(telemetry);
+            this.telemetry = Output.ofNullable(telemetry);
             return this;
         }
         public CustomServiceArgs build() {

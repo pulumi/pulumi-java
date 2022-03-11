@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="interval", required=true)
-      private final Input<String> interval;
+      private final Output<String> interval;
 
-    public Input<String> getInterval() {
+    public Output<String> getInterval() {
         return this.interval;
     }
 
@@ -34,9 +34,9 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="limit", required=true)
-      private final Input<String> limit;
+      private final Output<String> limit;
 
-    public Input<String> getLimit() {
+    public Output<String> getLimit() {
         return this.limit;
     }
 
@@ -45,25 +45,25 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="timeUnit")
-      private final @Nullable Input<String> timeUnit;
+      private final @Nullable Output<String> timeUnit;
 
-    public Input<String> getTimeUnit() {
-        return this.timeUnit == null ? Input.empty() : this.timeUnit;
+    public Output<String> getTimeUnit() {
+        return this.timeUnit == null ? Output.empty() : this.timeUnit;
     }
 
     public GoogleCloudApigeeV1QuotaArgs(
-        Input<String> interval,
-        Input<String> limit,
-        @Nullable Input<String> timeUnit) {
+        Output<String> interval,
+        Output<String> limit,
+        @Nullable Output<String> timeUnit) {
         this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
         this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
         this.timeUnit = timeUnit;
     }
 
     private GoogleCloudApigeeV1QuotaArgs() {
-        this.interval = Input.empty();
-        this.limit = Input.empty();
-        this.timeUnit = Input.empty();
+        this.interval = Output.empty();
+        this.limit = Output.empty();
+        this.timeUnit = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> interval;
-        private Input<String> limit;
-        private @Nullable Input<String> timeUnit;
+        private Output<String> interval;
+        private Output<String> limit;
+        private @Nullable Output<String> timeUnit;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder interval(Input<String> interval) {
+        public Builder interval(Output<String> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
         public Builder interval(String interval) {
-            this.interval = Input.of(Objects.requireNonNull(interval));
+            this.interval = Output.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder limit(Input<String> limit) {
+        public Builder limit(Output<String> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
         public Builder limit(String limit) {
-            this.limit = Input.of(Objects.requireNonNull(limit));
+            this.limit = Output.of(Objects.requireNonNull(limit));
             return this;
         }
 
-        public Builder timeUnit(@Nullable Input<String> timeUnit) {
+        public Builder timeUnit(@Nullable Output<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
 
         public Builder timeUnit(@Nullable String timeUnit) {
-            this.timeUnit = Input.ofNullable(timeUnit);
+            this.timeUnit = Output.ofNullable(timeUnit);
             return this;
         }
         public GoogleCloudApigeeV1QuotaArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dbformariadb.inputs;
 import io.pulumi.azurenative.dbformariadb.enums.GeoRedundantBackup;
 import io.pulumi.azurenative.dbformariadb.enums.StorageAutogrow;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupRetentionDays")
-      private final @Nullable Input<Integer> backupRetentionDays;
+      private final @Nullable Output<Integer> backupRetentionDays;
 
-    public Input<Integer> getBackupRetentionDays() {
-        return this.backupRetentionDays == null ? Input.empty() : this.backupRetentionDays;
+    public Output<Integer> getBackupRetentionDays() {
+        return this.backupRetentionDays == null ? Output.empty() : this.backupRetentionDays;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="geoRedundantBackup")
-      private final @Nullable Input<Either<String,GeoRedundantBackup>> geoRedundantBackup;
+      private final @Nullable Output<Either<String,GeoRedundantBackup>> geoRedundantBackup;
 
-    public Input<Either<String,GeoRedundantBackup>> getGeoRedundantBackup() {
-        return this.geoRedundantBackup == null ? Input.empty() : this.geoRedundantBackup;
+    public Output<Either<String,GeoRedundantBackup>> getGeoRedundantBackup() {
+        return this.geoRedundantBackup == null ? Output.empty() : this.geoRedundantBackup;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAutogrow")
-      private final @Nullable Input<Either<String,StorageAutogrow>> storageAutogrow;
+      private final @Nullable Output<Either<String,StorageAutogrow>> storageAutogrow;
 
-    public Input<Either<String,StorageAutogrow>> getStorageAutogrow() {
-        return this.storageAutogrow == null ? Input.empty() : this.storageAutogrow;
+    public Output<Either<String,StorageAutogrow>> getStorageAutogrow() {
+        return this.storageAutogrow == null ? Output.empty() : this.storageAutogrow;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageMB")
-      private final @Nullable Input<Integer> storageMB;
+      private final @Nullable Output<Integer> storageMB;
 
-    public Input<Integer> getStorageMB() {
-        return this.storageMB == null ? Input.empty() : this.storageMB;
+    public Output<Integer> getStorageMB() {
+        return this.storageMB == null ? Output.empty() : this.storageMB;
     }
 
     public StorageProfileArgs(
-        @Nullable Input<Integer> backupRetentionDays,
-        @Nullable Input<Either<String,GeoRedundantBackup>> geoRedundantBackup,
-        @Nullable Input<Either<String,StorageAutogrow>> storageAutogrow,
-        @Nullable Input<Integer> storageMB) {
+        @Nullable Output<Integer> backupRetentionDays,
+        @Nullable Output<Either<String,GeoRedundantBackup>> geoRedundantBackup,
+        @Nullable Output<Either<String,StorageAutogrow>> storageAutogrow,
+        @Nullable Output<Integer> storageMB) {
         this.backupRetentionDays = backupRetentionDays;
         this.geoRedundantBackup = geoRedundantBackup;
         this.storageAutogrow = storageAutogrow;
@@ -78,10 +78,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageProfileArgs() {
-        this.backupRetentionDays = Input.empty();
-        this.geoRedundantBackup = Input.empty();
-        this.storageAutogrow = Input.empty();
-        this.storageMB = Input.empty();
+        this.backupRetentionDays = Output.empty();
+        this.geoRedundantBackup = Output.empty();
+        this.storageAutogrow = Output.empty();
+        this.storageMB = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> backupRetentionDays;
-        private @Nullable Input<Either<String,GeoRedundantBackup>> geoRedundantBackup;
-        private @Nullable Input<Either<String,StorageAutogrow>> storageAutogrow;
-        private @Nullable Input<Integer> storageMB;
+        private @Nullable Output<Integer> backupRetentionDays;
+        private @Nullable Output<Either<String,GeoRedundantBackup>> geoRedundantBackup;
+        private @Nullable Output<Either<String,StorageAutogrow>> storageAutogrow;
+        private @Nullable Output<Integer> storageMB;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageMB = defaults.storageMB;
         }
 
-        public Builder backupRetentionDays(@Nullable Input<Integer> backupRetentionDays) {
+        public Builder backupRetentionDays(@Nullable Output<Integer> backupRetentionDays) {
             this.backupRetentionDays = backupRetentionDays;
             return this;
         }
 
         public Builder backupRetentionDays(@Nullable Integer backupRetentionDays) {
-            this.backupRetentionDays = Input.ofNullable(backupRetentionDays);
+            this.backupRetentionDays = Output.ofNullable(backupRetentionDays);
             return this;
         }
 
-        public Builder geoRedundantBackup(@Nullable Input<Either<String,GeoRedundantBackup>> geoRedundantBackup) {
+        public Builder geoRedundantBackup(@Nullable Output<Either<String,GeoRedundantBackup>> geoRedundantBackup) {
             this.geoRedundantBackup = geoRedundantBackup;
             return this;
         }
 
         public Builder geoRedundantBackup(@Nullable Either<String,GeoRedundantBackup> geoRedundantBackup) {
-            this.geoRedundantBackup = Input.ofNullable(geoRedundantBackup);
+            this.geoRedundantBackup = Output.ofNullable(geoRedundantBackup);
             return this;
         }
 
-        public Builder storageAutogrow(@Nullable Input<Either<String,StorageAutogrow>> storageAutogrow) {
+        public Builder storageAutogrow(@Nullable Output<Either<String,StorageAutogrow>> storageAutogrow) {
             this.storageAutogrow = storageAutogrow;
             return this;
         }
 
         public Builder storageAutogrow(@Nullable Either<String,StorageAutogrow> storageAutogrow) {
-            this.storageAutogrow = Input.ofNullable(storageAutogrow);
+            this.storageAutogrow = Output.ofNullable(storageAutogrow);
             return this;
         }
 
-        public Builder storageMB(@Nullable Input<Integer> storageMB) {
+        public Builder storageMB(@Nullable Output<Integer> storageMB) {
             this.storageMB = storageMB;
             return this;
         }
 
         public Builder storageMB(@Nullable Integer storageMB) {
-            this.storageMB = Input.ofNullable(storageMB);
+            this.storageMB = Output.ofNullable(storageMB);
             return this;
         }
         public StorageProfileArgs build() {

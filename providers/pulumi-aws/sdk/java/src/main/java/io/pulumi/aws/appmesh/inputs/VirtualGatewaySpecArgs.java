@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecLoggingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,10 +21,10 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backendDefaults")
-      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults;
+      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults;
 
-    public Input<VirtualGatewaySpecBackendDefaultsArgs> getBackendDefaults() {
-        return this.backendDefaults == null ? Input.empty() : this.backendDefaults;
+    public Output<VirtualGatewaySpecBackendDefaultsArgs> getBackendDefaults() {
+        return this.backendDefaults == null ? Output.empty() : this.backendDefaults;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="listener", required=true)
-      private final Input<VirtualGatewaySpecListenerArgs> listener;
+      private final Output<VirtualGatewaySpecListenerArgs> listener;
 
-    public Input<VirtualGatewaySpecListenerArgs> getListener() {
+    public Output<VirtualGatewaySpecListenerArgs> getListener() {
         return this.listener;
     }
 
@@ -43,25 +43,25 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logging")
-      private final @Nullable Input<VirtualGatewaySpecLoggingArgs> logging;
+      private final @Nullable Output<VirtualGatewaySpecLoggingArgs> logging;
 
-    public Input<VirtualGatewaySpecLoggingArgs> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<VirtualGatewaySpecLoggingArgs> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     public VirtualGatewaySpecArgs(
-        @Nullable Input<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults,
-        Input<VirtualGatewaySpecListenerArgs> listener,
-        @Nullable Input<VirtualGatewaySpecLoggingArgs> logging) {
+        @Nullable Output<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults,
+        Output<VirtualGatewaySpecListenerArgs> listener,
+        @Nullable Output<VirtualGatewaySpecLoggingArgs> logging) {
         this.backendDefaults = backendDefaults;
         this.listener = Objects.requireNonNull(listener, "expected parameter 'listener' to be non-null");
         this.logging = logging;
     }
 
     private VirtualGatewaySpecArgs() {
-        this.backendDefaults = Input.empty();
-        this.listener = Input.empty();
-        this.logging = Input.empty();
+        this.backendDefaults = Output.empty();
+        this.listener = Output.empty();
+        this.logging = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults;
-        private Input<VirtualGatewaySpecListenerArgs> listener;
-        private @Nullable Input<VirtualGatewaySpecLoggingArgs> logging;
+        private @Nullable Output<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults;
+        private Output<VirtualGatewaySpecListenerArgs> listener;
+        private @Nullable Output<VirtualGatewaySpecLoggingArgs> logging;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
     	      this.logging = defaults.logging;
         }
 
-        public Builder backendDefaults(@Nullable Input<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults) {
+        public Builder backendDefaults(@Nullable Output<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults) {
             this.backendDefaults = backendDefaults;
             return this;
         }
 
         public Builder backendDefaults(@Nullable VirtualGatewaySpecBackendDefaultsArgs backendDefaults) {
-            this.backendDefaults = Input.ofNullable(backendDefaults);
+            this.backendDefaults = Output.ofNullable(backendDefaults);
             return this;
         }
 
-        public Builder listener(Input<VirtualGatewaySpecListenerArgs> listener) {
+        public Builder listener(Output<VirtualGatewaySpecListenerArgs> listener) {
             this.listener = Objects.requireNonNull(listener);
             return this;
         }
 
         public Builder listener(VirtualGatewaySpecListenerArgs listener) {
-            this.listener = Input.of(Objects.requireNonNull(listener));
+            this.listener = Output.of(Objects.requireNonNull(listener));
             return this;
         }
 
-        public Builder logging(@Nullable Input<VirtualGatewaySpecLoggingArgs> logging) {
+        public Builder logging(@Nullable Output<VirtualGatewaySpecLoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable VirtualGatewaySpecLoggingArgs logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
         public VirtualGatewaySpecArgs build() {

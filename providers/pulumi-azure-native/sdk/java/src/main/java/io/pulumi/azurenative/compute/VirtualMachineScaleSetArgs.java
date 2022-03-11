@@ -15,7 +15,7 @@ import io.pulumi.azurenative.compute.inputs.UpgradePolicyArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetIdentityArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetVMProfileArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -35,10 +35,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="additionalCapabilities")
-      private final @Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities;
+      private final @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
 
-    public Input<AdditionalCapabilitiesArgs> getAdditionalCapabilities() {
-        return this.additionalCapabilities == null ? Input.empty() : this.additionalCapabilities;
+    public Output<AdditionalCapabilitiesArgs> getAdditionalCapabilities() {
+        return this.additionalCapabilities == null ? Output.empty() : this.additionalCapabilities;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="automaticRepairsPolicy")
-      private final @Nullable Input<AutomaticRepairsPolicyArgs> automaticRepairsPolicy;
+      private final @Nullable Output<AutomaticRepairsPolicyArgs> automaticRepairsPolicy;
 
-    public Input<AutomaticRepairsPolicyArgs> getAutomaticRepairsPolicy() {
-        return this.automaticRepairsPolicy == null ? Input.empty() : this.automaticRepairsPolicy;
+    public Output<AutomaticRepairsPolicyArgs> getAutomaticRepairsPolicy() {
+        return this.automaticRepairsPolicy == null ? Output.empty() : this.automaticRepairsPolicy;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="doNotRunExtensionsOnOverprovisionedVMs")
-      private final @Nullable Input<Boolean> doNotRunExtensionsOnOverprovisionedVMs;
+      private final @Nullable Output<Boolean> doNotRunExtensionsOnOverprovisionedVMs;
 
-    public Input<Boolean> getDoNotRunExtensionsOnOverprovisionedVMs() {
-        return this.doNotRunExtensionsOnOverprovisionedVMs == null ? Input.empty() : this.doNotRunExtensionsOnOverprovisionedVMs;
+    public Output<Boolean> getDoNotRunExtensionsOnOverprovisionedVMs() {
+        return this.doNotRunExtensionsOnOverprovisionedVMs == null ? Output.empty() : this.doNotRunExtensionsOnOverprovisionedVMs;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hostGroup")
-      private final @Nullable Input<SubResourceArgs> hostGroup;
+      private final @Nullable Output<SubResourceArgs> hostGroup;
 
-    public Input<SubResourceArgs> getHostGroup() {
-        return this.hostGroup == null ? Input.empty() : this.hostGroup;
+    public Output<SubResourceArgs> getHostGroup() {
+        return this.hostGroup == null ? Output.empty() : this.hostGroup;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<VirtualMachineScaleSetIdentityArgs> identity;
+      private final @Nullable Output<VirtualMachineScaleSetIdentityArgs> identity;
 
-    public Input<VirtualMachineScaleSetIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<VirtualMachineScaleSetIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="orchestrationMode")
-      private final @Nullable Input<Either<String,OrchestrationMode>> orchestrationMode;
+      private final @Nullable Output<Either<String,OrchestrationMode>> orchestrationMode;
 
-    public Input<Either<String,OrchestrationMode>> getOrchestrationMode() {
-        return this.orchestrationMode == null ? Input.empty() : this.orchestrationMode;
+    public Output<Either<String,OrchestrationMode>> getOrchestrationMode() {
+        return this.orchestrationMode == null ? Output.empty() : this.orchestrationMode;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="overprovision")
-      private final @Nullable Input<Boolean> overprovision;
+      private final @Nullable Output<Boolean> overprovision;
 
-    public Input<Boolean> getOverprovision() {
-        return this.overprovision == null ? Input.empty() : this.overprovision;
+    public Output<Boolean> getOverprovision() {
+        return this.overprovision == null ? Output.empty() : this.overprovision;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="plan")
-      private final @Nullable Input<PlanArgs> plan;
+      private final @Nullable Output<PlanArgs> plan;
 
-    public Input<PlanArgs> getPlan() {
-        return this.plan == null ? Input.empty() : this.plan;
+    public Output<PlanArgs> getPlan() {
+        return this.plan == null ? Output.empty() : this.plan;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="platformFaultDomainCount")
-      private final @Nullable Input<Integer> platformFaultDomainCount;
+      private final @Nullable Output<Integer> platformFaultDomainCount;
 
-    public Input<Integer> getPlatformFaultDomainCount() {
-        return this.platformFaultDomainCount == null ? Input.empty() : this.platformFaultDomainCount;
+    public Output<Integer> getPlatformFaultDomainCount() {
+        return this.platformFaultDomainCount == null ? Output.empty() : this.platformFaultDomainCount;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="proximityPlacementGroup")
-      private final @Nullable Input<SubResourceArgs> proximityPlacementGroup;
+      private final @Nullable Output<SubResourceArgs> proximityPlacementGroup;
 
-    public Input<SubResourceArgs> getProximityPlacementGroup() {
-        return this.proximityPlacementGroup == null ? Input.empty() : this.proximityPlacementGroup;
+    public Output<SubResourceArgs> getProximityPlacementGroup() {
+        return this.proximityPlacementGroup == null ? Output.empty() : this.proximityPlacementGroup;
     }
 
     /**
@@ -167,9 +167,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -178,10 +178,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scaleInPolicy")
-      private final @Nullable Input<ScaleInPolicyArgs> scaleInPolicy;
+      private final @Nullable Output<ScaleInPolicyArgs> scaleInPolicy;
 
-    public Input<ScaleInPolicyArgs> getScaleInPolicy() {
-        return this.scaleInPolicy == null ? Input.empty() : this.scaleInPolicy;
+    public Output<ScaleInPolicyArgs> getScaleInPolicy() {
+        return this.scaleInPolicy == null ? Output.empty() : this.scaleInPolicy;
     }
 
     /**
@@ -189,10 +189,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="singlePlacementGroup")
-      private final @Nullable Input<Boolean> singlePlacementGroup;
+      private final @Nullable Output<Boolean> singlePlacementGroup;
 
-    public Input<Boolean> getSinglePlacementGroup() {
-        return this.singlePlacementGroup == null ? Input.empty() : this.singlePlacementGroup;
+    public Output<Boolean> getSinglePlacementGroup() {
+        return this.singlePlacementGroup == null ? Output.empty() : this.singlePlacementGroup;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="upgradePolicy")
-      private final @Nullable Input<UpgradePolicyArgs> upgradePolicy;
+      private final @Nullable Output<UpgradePolicyArgs> upgradePolicy;
 
-    public Input<UpgradePolicyArgs> getUpgradePolicy() {
-        return this.upgradePolicy == null ? Input.empty() : this.upgradePolicy;
+    public Output<UpgradePolicyArgs> getUpgradePolicy() {
+        return this.upgradePolicy == null ? Output.empty() : this.upgradePolicy;
     }
 
     /**
@@ -233,10 +233,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="virtualMachineProfile")
-      private final @Nullable Input<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile;
+      private final @Nullable Output<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile;
 
-    public Input<VirtualMachineScaleSetVMProfileArgs> getVirtualMachineProfile() {
-        return this.virtualMachineProfile == null ? Input.empty() : this.virtualMachineProfile;
+    public Output<VirtualMachineScaleSetVMProfileArgs> getVirtualMachineProfile() {
+        return this.virtualMachineProfile == null ? Output.empty() : this.virtualMachineProfile;
     }
 
     /**
@@ -244,10 +244,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vmScaleSetName")
-      private final @Nullable Input<String> vmScaleSetName;
+      private final @Nullable Output<String> vmScaleSetName;
 
-    public Input<String> getVmScaleSetName() {
-        return this.vmScaleSetName == null ? Input.empty() : this.vmScaleSetName;
+    public Output<String> getVmScaleSetName() {
+        return this.vmScaleSetName == null ? Output.empty() : this.vmScaleSetName;
     }
 
     /**
@@ -255,10 +255,10 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="zoneBalance")
-      private final @Nullable Input<Boolean> zoneBalance;
+      private final @Nullable Output<Boolean> zoneBalance;
 
-    public Input<Boolean> getZoneBalance() {
-        return this.zoneBalance == null ? Input.empty() : this.zoneBalance;
+    public Output<Boolean> getZoneBalance() {
+        return this.zoneBalance == null ? Output.empty() : this.zoneBalance;
     }
 
     /**
@@ -266,35 +266,35 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public VirtualMachineScaleSetArgs(
-        @Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities,
-        @Nullable Input<AutomaticRepairsPolicyArgs> automaticRepairsPolicy,
-        @Nullable Input<Boolean> doNotRunExtensionsOnOverprovisionedVMs,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<SubResourceArgs> hostGroup,
-        @Nullable Input<VirtualMachineScaleSetIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,OrchestrationMode>> orchestrationMode,
-        @Nullable Input<Boolean> overprovision,
-        @Nullable Input<PlanArgs> plan,
-        @Nullable Input<Integer> platformFaultDomainCount,
-        @Nullable Input<SubResourceArgs> proximityPlacementGroup,
-        Input<String> resourceGroupName,
-        @Nullable Input<ScaleInPolicyArgs> scaleInPolicy,
-        @Nullable Input<Boolean> singlePlacementGroup,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<UpgradePolicyArgs> upgradePolicy,
-        @Nullable Input<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile,
-        @Nullable Input<String> vmScaleSetName,
-        @Nullable Input<Boolean> zoneBalance,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities,
+        @Nullable Output<AutomaticRepairsPolicyArgs> automaticRepairsPolicy,
+        @Nullable Output<Boolean> doNotRunExtensionsOnOverprovisionedVMs,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<SubResourceArgs> hostGroup,
+        @Nullable Output<VirtualMachineScaleSetIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,OrchestrationMode>> orchestrationMode,
+        @Nullable Output<Boolean> overprovision,
+        @Nullable Output<PlanArgs> plan,
+        @Nullable Output<Integer> platformFaultDomainCount,
+        @Nullable Output<SubResourceArgs> proximityPlacementGroup,
+        Output<String> resourceGroupName,
+        @Nullable Output<ScaleInPolicyArgs> scaleInPolicy,
+        @Nullable Output<Boolean> singlePlacementGroup,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<UpgradePolicyArgs> upgradePolicy,
+        @Nullable Output<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile,
+        @Nullable Output<String> vmScaleSetName,
+        @Nullable Output<Boolean> zoneBalance,
+        @Nullable Output<List<String>> zones) {
         this.additionalCapabilities = additionalCapabilities;
         this.automaticRepairsPolicy = automaticRepairsPolicy;
         this.doNotRunExtensionsOnOverprovisionedVMs = doNotRunExtensionsOnOverprovisionedVMs;
@@ -320,28 +320,28 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
     }
 
     private VirtualMachineScaleSetArgs() {
-        this.additionalCapabilities = Input.empty();
-        this.automaticRepairsPolicy = Input.empty();
-        this.doNotRunExtensionsOnOverprovisionedVMs = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.hostGroup = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.orchestrationMode = Input.empty();
-        this.overprovision = Input.empty();
-        this.plan = Input.empty();
-        this.platformFaultDomainCount = Input.empty();
-        this.proximityPlacementGroup = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scaleInPolicy = Input.empty();
-        this.singlePlacementGroup = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.upgradePolicy = Input.empty();
-        this.virtualMachineProfile = Input.empty();
-        this.vmScaleSetName = Input.empty();
-        this.zoneBalance = Input.empty();
-        this.zones = Input.empty();
+        this.additionalCapabilities = Output.empty();
+        this.automaticRepairsPolicy = Output.empty();
+        this.doNotRunExtensionsOnOverprovisionedVMs = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.hostGroup = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.orchestrationMode = Output.empty();
+        this.overprovision = Output.empty();
+        this.plan = Output.empty();
+        this.platformFaultDomainCount = Output.empty();
+        this.proximityPlacementGroup = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scaleInPolicy = Output.empty();
+        this.singlePlacementGroup = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.upgradePolicy = Output.empty();
+        this.virtualMachineProfile = Output.empty();
+        this.vmScaleSetName = Output.empty();
+        this.zoneBalance = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -353,28 +353,28 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities;
-        private @Nullable Input<AutomaticRepairsPolicyArgs> automaticRepairsPolicy;
-        private @Nullable Input<Boolean> doNotRunExtensionsOnOverprovisionedVMs;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<SubResourceArgs> hostGroup;
-        private @Nullable Input<VirtualMachineScaleSetIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,OrchestrationMode>> orchestrationMode;
-        private @Nullable Input<Boolean> overprovision;
-        private @Nullable Input<PlanArgs> plan;
-        private @Nullable Input<Integer> platformFaultDomainCount;
-        private @Nullable Input<SubResourceArgs> proximityPlacementGroup;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ScaleInPolicyArgs> scaleInPolicy;
-        private @Nullable Input<Boolean> singlePlacementGroup;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<UpgradePolicyArgs> upgradePolicy;
-        private @Nullable Input<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile;
-        private @Nullable Input<String> vmScaleSetName;
-        private @Nullable Input<Boolean> zoneBalance;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
+        private @Nullable Output<AutomaticRepairsPolicyArgs> automaticRepairsPolicy;
+        private @Nullable Output<Boolean> doNotRunExtensionsOnOverprovisionedVMs;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<SubResourceArgs> hostGroup;
+        private @Nullable Output<VirtualMachineScaleSetIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,OrchestrationMode>> orchestrationMode;
+        private @Nullable Output<Boolean> overprovision;
+        private @Nullable Output<PlanArgs> plan;
+        private @Nullable Output<Integer> platformFaultDomainCount;
+        private @Nullable Output<SubResourceArgs> proximityPlacementGroup;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ScaleInPolicyArgs> scaleInPolicy;
+        private @Nullable Output<Boolean> singlePlacementGroup;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<UpgradePolicyArgs> upgradePolicy;
+        private @Nullable Output<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile;
+        private @Nullable Output<String> vmScaleSetName;
+        private @Nullable Output<Boolean> zoneBalance;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -406,223 +406,223 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
     	      this.zones = defaults.zones;
         }
 
-        public Builder additionalCapabilities(@Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities) {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
         public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
-            this.additionalCapabilities = Input.ofNullable(additionalCapabilities);
+            this.additionalCapabilities = Output.ofNullable(additionalCapabilities);
             return this;
         }
 
-        public Builder automaticRepairsPolicy(@Nullable Input<AutomaticRepairsPolicyArgs> automaticRepairsPolicy) {
+        public Builder automaticRepairsPolicy(@Nullable Output<AutomaticRepairsPolicyArgs> automaticRepairsPolicy) {
             this.automaticRepairsPolicy = automaticRepairsPolicy;
             return this;
         }
 
         public Builder automaticRepairsPolicy(@Nullable AutomaticRepairsPolicyArgs automaticRepairsPolicy) {
-            this.automaticRepairsPolicy = Input.ofNullable(automaticRepairsPolicy);
+            this.automaticRepairsPolicy = Output.ofNullable(automaticRepairsPolicy);
             return this;
         }
 
-        public Builder doNotRunExtensionsOnOverprovisionedVMs(@Nullable Input<Boolean> doNotRunExtensionsOnOverprovisionedVMs) {
+        public Builder doNotRunExtensionsOnOverprovisionedVMs(@Nullable Output<Boolean> doNotRunExtensionsOnOverprovisionedVMs) {
             this.doNotRunExtensionsOnOverprovisionedVMs = doNotRunExtensionsOnOverprovisionedVMs;
             return this;
         }
 
         public Builder doNotRunExtensionsOnOverprovisionedVMs(@Nullable Boolean doNotRunExtensionsOnOverprovisionedVMs) {
-            this.doNotRunExtensionsOnOverprovisionedVMs = Input.ofNullable(doNotRunExtensionsOnOverprovisionedVMs);
+            this.doNotRunExtensionsOnOverprovisionedVMs = Output.ofNullable(doNotRunExtensionsOnOverprovisionedVMs);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder hostGroup(@Nullable Input<SubResourceArgs> hostGroup) {
+        public Builder hostGroup(@Nullable Output<SubResourceArgs> hostGroup) {
             this.hostGroup = hostGroup;
             return this;
         }
 
         public Builder hostGroup(@Nullable SubResourceArgs hostGroup) {
-            this.hostGroup = Input.ofNullable(hostGroup);
+            this.hostGroup = Output.ofNullable(hostGroup);
             return this;
         }
 
-        public Builder identity(@Nullable Input<VirtualMachineScaleSetIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<VirtualMachineScaleSetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable VirtualMachineScaleSetIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder orchestrationMode(@Nullable Input<Either<String,OrchestrationMode>> orchestrationMode) {
+        public Builder orchestrationMode(@Nullable Output<Either<String,OrchestrationMode>> orchestrationMode) {
             this.orchestrationMode = orchestrationMode;
             return this;
         }
 
         public Builder orchestrationMode(@Nullable Either<String,OrchestrationMode> orchestrationMode) {
-            this.orchestrationMode = Input.ofNullable(orchestrationMode);
+            this.orchestrationMode = Output.ofNullable(orchestrationMode);
             return this;
         }
 
-        public Builder overprovision(@Nullable Input<Boolean> overprovision) {
+        public Builder overprovision(@Nullable Output<Boolean> overprovision) {
             this.overprovision = overprovision;
             return this;
         }
 
         public Builder overprovision(@Nullable Boolean overprovision) {
-            this.overprovision = Input.ofNullable(overprovision);
+            this.overprovision = Output.ofNullable(overprovision);
             return this;
         }
 
-        public Builder plan(@Nullable Input<PlanArgs> plan) {
+        public Builder plan(@Nullable Output<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
         public Builder plan(@Nullable PlanArgs plan) {
-            this.plan = Input.ofNullable(plan);
+            this.plan = Output.ofNullable(plan);
             return this;
         }
 
-        public Builder platformFaultDomainCount(@Nullable Input<Integer> platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(@Nullable Output<Integer> platformFaultDomainCount) {
             this.platformFaultDomainCount = platformFaultDomainCount;
             return this;
         }
 
         public Builder platformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
-            this.platformFaultDomainCount = Input.ofNullable(platformFaultDomainCount);
+            this.platformFaultDomainCount = Output.ofNullable(platformFaultDomainCount);
             return this;
         }
 
-        public Builder proximityPlacementGroup(@Nullable Input<SubResourceArgs> proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable Output<SubResourceArgs> proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
 
         public Builder proximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
-            this.proximityPlacementGroup = Input.ofNullable(proximityPlacementGroup);
+            this.proximityPlacementGroup = Output.ofNullable(proximityPlacementGroup);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scaleInPolicy(@Nullable Input<ScaleInPolicyArgs> scaleInPolicy) {
+        public Builder scaleInPolicy(@Nullable Output<ScaleInPolicyArgs> scaleInPolicy) {
             this.scaleInPolicy = scaleInPolicy;
             return this;
         }
 
         public Builder scaleInPolicy(@Nullable ScaleInPolicyArgs scaleInPolicy) {
-            this.scaleInPolicy = Input.ofNullable(scaleInPolicy);
+            this.scaleInPolicy = Output.ofNullable(scaleInPolicy);
             return this;
         }
 
-        public Builder singlePlacementGroup(@Nullable Input<Boolean> singlePlacementGroup) {
+        public Builder singlePlacementGroup(@Nullable Output<Boolean> singlePlacementGroup) {
             this.singlePlacementGroup = singlePlacementGroup;
             return this;
         }
 
         public Builder singlePlacementGroup(@Nullable Boolean singlePlacementGroup) {
-            this.singlePlacementGroup = Input.ofNullable(singlePlacementGroup);
+            this.singlePlacementGroup = Output.ofNullable(singlePlacementGroup);
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder upgradePolicy(@Nullable Input<UpgradePolicyArgs> upgradePolicy) {
+        public Builder upgradePolicy(@Nullable Output<UpgradePolicyArgs> upgradePolicy) {
             this.upgradePolicy = upgradePolicy;
             return this;
         }
 
         public Builder upgradePolicy(@Nullable UpgradePolicyArgs upgradePolicy) {
-            this.upgradePolicy = Input.ofNullable(upgradePolicy);
+            this.upgradePolicy = Output.ofNullable(upgradePolicy);
             return this;
         }
 
-        public Builder virtualMachineProfile(@Nullable Input<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile) {
+        public Builder virtualMachineProfile(@Nullable Output<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile) {
             this.virtualMachineProfile = virtualMachineProfile;
             return this;
         }
 
         public Builder virtualMachineProfile(@Nullable VirtualMachineScaleSetVMProfileArgs virtualMachineProfile) {
-            this.virtualMachineProfile = Input.ofNullable(virtualMachineProfile);
+            this.virtualMachineProfile = Output.ofNullable(virtualMachineProfile);
             return this;
         }
 
-        public Builder vmScaleSetName(@Nullable Input<String> vmScaleSetName) {
+        public Builder vmScaleSetName(@Nullable Output<String> vmScaleSetName) {
             this.vmScaleSetName = vmScaleSetName;
             return this;
         }
 
         public Builder vmScaleSetName(@Nullable String vmScaleSetName) {
-            this.vmScaleSetName = Input.ofNullable(vmScaleSetName);
+            this.vmScaleSetName = Output.ofNullable(vmScaleSetName);
             return this;
         }
 
-        public Builder zoneBalance(@Nullable Input<Boolean> zoneBalance) {
+        public Builder zoneBalance(@Nullable Output<Boolean> zoneBalance) {
             this.zoneBalance = zoneBalance;
             return this;
         }
 
         public Builder zoneBalance(@Nullable Boolean zoneBalance) {
-            this.zoneBalance = Input.ofNullable(zoneBalance);
+            this.zoneBalance = Output.ofNullable(zoneBalance);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public VirtualMachineScaleSetArgs build() {

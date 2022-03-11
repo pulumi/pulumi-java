@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class VirtualNodeSpecListenerConnectionPoolGrpcArgs extends io.pulu
      * 
      */
     @InputImport(name="maxRequests", required=true)
-      private final Input<Integer> maxRequests;
+      private final Output<Integer> maxRequests;
 
-    public Input<Integer> getMaxRequests() {
+    public Output<Integer> getMaxRequests() {
         return this.maxRequests;
     }
 
-    public VirtualNodeSpecListenerConnectionPoolGrpcArgs(Input<Integer> maxRequests) {
+    public VirtualNodeSpecListenerConnectionPoolGrpcArgs(Output<Integer> maxRequests) {
         this.maxRequests = Objects.requireNonNull(maxRequests, "expected parameter 'maxRequests' to be non-null");
     }
 
     private VirtualNodeSpecListenerConnectionPoolGrpcArgs() {
-        this.maxRequests = Input.empty();
+        this.maxRequests = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGrpcArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<Integer> maxRequests;
+        private Output<Integer> maxRequests;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class VirtualNodeSpecListenerConnectionPoolGrpcArgs extends io.pulu
     	      this.maxRequests = defaults.maxRequests;
         }
 
-        public Builder maxRequests(Input<Integer> maxRequests) {
+        public Builder maxRequests(Output<Integer> maxRequests) {
             this.maxRequests = Objects.requireNonNull(maxRequests);
             return this;
         }
 
         public Builder maxRequests(Integer maxRequests) {
-            this.maxRequests = Input.of(Objects.requireNonNull(maxRequests));
+            this.maxRequests = Output.of(Objects.requireNonNull(maxRequests));
             return this;
         }
         public VirtualNodeSpecListenerConnectionPoolGrpcArgs build() {

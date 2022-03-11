@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.AS2OneWayAgreementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,9 +22,9 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="receiveAgreement", required=true)
-      private final Input<AS2OneWayAgreementArgs> receiveAgreement;
+      private final Output<AS2OneWayAgreementArgs> receiveAgreement;
 
-    public Input<AS2OneWayAgreementArgs> getReceiveAgreement() {
+    public Output<AS2OneWayAgreementArgs> getReceiveAgreement() {
         return this.receiveAgreement;
     }
 
@@ -33,22 +33,22 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sendAgreement", required=true)
-      private final Input<AS2OneWayAgreementArgs> sendAgreement;
+      private final Output<AS2OneWayAgreementArgs> sendAgreement;
 
-    public Input<AS2OneWayAgreementArgs> getSendAgreement() {
+    public Output<AS2OneWayAgreementArgs> getSendAgreement() {
         return this.sendAgreement;
     }
 
     public AS2AgreementContentArgs(
-        Input<AS2OneWayAgreementArgs> receiveAgreement,
-        Input<AS2OneWayAgreementArgs> sendAgreement) {
+        Output<AS2OneWayAgreementArgs> receiveAgreement,
+        Output<AS2OneWayAgreementArgs> sendAgreement) {
         this.receiveAgreement = Objects.requireNonNull(receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
         this.sendAgreement = Objects.requireNonNull(sendAgreement, "expected parameter 'sendAgreement' to be non-null");
     }
 
     private AS2AgreementContentArgs() {
-        this.receiveAgreement = Input.empty();
-        this.sendAgreement = Input.empty();
+        this.receiveAgreement = Output.empty();
+        this.sendAgreement = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<AS2OneWayAgreementArgs> receiveAgreement;
-        private Input<AS2OneWayAgreementArgs> sendAgreement;
+        private Output<AS2OneWayAgreementArgs> receiveAgreement;
+        private Output<AS2OneWayAgreementArgs> sendAgreement;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
     	      this.sendAgreement = defaults.sendAgreement;
         }
 
-        public Builder receiveAgreement(Input<AS2OneWayAgreementArgs> receiveAgreement) {
+        public Builder receiveAgreement(Output<AS2OneWayAgreementArgs> receiveAgreement) {
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
 
         public Builder receiveAgreement(AS2OneWayAgreementArgs receiveAgreement) {
-            this.receiveAgreement = Input.of(Objects.requireNonNull(receiveAgreement));
+            this.receiveAgreement = Output.of(Objects.requireNonNull(receiveAgreement));
             return this;
         }
 
-        public Builder sendAgreement(Input<AS2OneWayAgreementArgs> sendAgreement) {
+        public Builder sendAgreement(Output<AS2OneWayAgreementArgs> sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
 
         public Builder sendAgreement(AS2OneWayAgreementArgs sendAgreement) {
-            this.sendAgreement = Input.of(Objects.requireNonNull(sendAgreement));
+            this.sendAgreement = Output.of(Objects.requireNonNull(sendAgreement));
             return this;
         }
         public AS2AgreementContentArgs build() {

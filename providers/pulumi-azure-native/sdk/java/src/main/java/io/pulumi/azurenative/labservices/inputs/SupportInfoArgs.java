@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instructions")
-      private final @Nullable Input<String> instructions;
+      private final @Nullable Output<String> instructions;
 
-    public Input<String> getInstructions() {
-        return this.instructions == null ? Input.empty() : this.instructions;
+    public Output<String> getInstructions() {
+        return this.instructions == null ? Output.empty() : this.instructions;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone")
-      private final @Nullable Input<String> phone;
+      private final @Nullable Output<String> phone;
 
-    public Input<String> getPhone() {
-        return this.phone == null ? Input.empty() : this.phone;
+    public Output<String> getPhone() {
+        return this.phone == null ? Output.empty() : this.phone;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public SupportInfoArgs(
-        @Nullable Input<String> email,
-        @Nullable Input<String> instructions,
-        @Nullable Input<String> phone,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> email,
+        @Nullable Output<String> instructions,
+        @Nullable Output<String> phone,
+        @Nullable Output<String> url) {
         this.email = email;
         this.instructions = instructions;
         this.phone = phone;
@@ -74,10 +74,10 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SupportInfoArgs() {
-        this.email = Input.empty();
-        this.instructions = Input.empty();
-        this.phone = Input.empty();
-        this.url = Input.empty();
+        this.email = Output.empty();
+        this.instructions = Output.empty();
+        this.phone = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> instructions;
-        private @Nullable Input<String> phone;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> instructions;
+        private @Nullable Output<String> phone;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder instructions(@Nullable Input<String> instructions) {
+        public Builder instructions(@Nullable Output<String> instructions) {
             this.instructions = instructions;
             return this;
         }
 
         public Builder instructions(@Nullable String instructions) {
-            this.instructions = Input.ofNullable(instructions);
+            this.instructions = Output.ofNullable(instructions);
             return this;
         }
 
-        public Builder phone(@Nullable Input<String> phone) {
+        public Builder phone(@Nullable Output<String> phone) {
             this.phone = phone;
             return this;
         }
 
         public Builder phone(@Nullable String phone) {
-            this.phone = Input.ofNullable(phone);
+            this.phone = Output.ofNullable(phone);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public SupportInfoArgs build() {

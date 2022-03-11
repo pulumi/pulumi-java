@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.WorkloadMetadataConfigMode;
 import io.pulumi.googlenative.container_v1beta1.enums.WorkloadMetadataConfigNodeMetadata;
@@ -24,10 +24,10 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<WorkloadMetadataConfigMode> mode;
+      private final @Nullable Output<WorkloadMetadataConfigMode> mode;
 
-    public Input<WorkloadMetadataConfigMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<WorkloadMetadataConfigMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="nodeMetadata")
-      private final @Nullable Input<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
+      private final @Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
 
-    public Input<WorkloadMetadataConfigNodeMetadata> getNodeMetadata() {
-        return this.nodeMetadata == null ? Input.empty() : this.nodeMetadata;
+    public Output<WorkloadMetadataConfigNodeMetadata> getNodeMetadata() {
+        return this.nodeMetadata == null ? Output.empty() : this.nodeMetadata;
     }
 
     public WorkloadMetadataConfigArgs(
-        @Nullable Input<WorkloadMetadataConfigMode> mode,
-        @Nullable Input<WorkloadMetadataConfigNodeMetadata> nodeMetadata) {
+        @Nullable Output<WorkloadMetadataConfigMode> mode,
+        @Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata) {
         this.mode = mode;
         this.nodeMetadata = nodeMetadata;
     }
 
     private WorkloadMetadataConfigArgs() {
-        this.mode = Input.empty();
-        this.nodeMetadata = Input.empty();
+        this.mode = Output.empty();
+        this.nodeMetadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkloadMetadataConfigMode> mode;
-        private @Nullable Input<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
+        private @Nullable Output<WorkloadMetadataConfigMode> mode;
+        private @Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     	      this.nodeMetadata = defaults.nodeMetadata;
         }
 
-        public Builder mode(@Nullable Input<WorkloadMetadataConfigMode> mode) {
+        public Builder mode(@Nullable Output<WorkloadMetadataConfigMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable WorkloadMetadataConfigMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder nodeMetadata(@Nullable Input<WorkloadMetadataConfigNodeMetadata> nodeMetadata) {
+        public Builder nodeMetadata(@Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata) {
             this.nodeMetadata = nodeMetadata;
             return this;
         }
 
         public Builder nodeMetadata(@Nullable WorkloadMetadataConfigNodeMetadata nodeMetadata) {
-            this.nodeMetadata = Input.ofNullable(nodeMetadata);
+            this.nodeMetadata = Output.ofNullable(nodeMetadata);
             return this;
         }
         public WorkloadMetadataConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataSettingsSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class MarkdownPartMetadataContentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<MarkdownPartMetadataSettingsSettingsArgs> settings;
+      private final @Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings;
 
-    public Input<MarkdownPartMetadataSettingsSettingsArgs> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<MarkdownPartMetadataSettingsSettingsArgs> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
-    public MarkdownPartMetadataContentArgs(@Nullable Input<MarkdownPartMetadataSettingsSettingsArgs> settings) {
+    public MarkdownPartMetadataContentArgs(@Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings) {
         this.settings = settings;
     }
 
     private MarkdownPartMetadataContentArgs() {
-        this.settings = Input.empty();
+        this.settings = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class MarkdownPartMetadataContentArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<MarkdownPartMetadataSettingsSettingsArgs> settings;
+        private @Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class MarkdownPartMetadataContentArgs extends io.pulumi.resources.R
     	      this.settings = defaults.settings;
         }
 
-        public Builder settings(@Nullable Input<MarkdownPartMetadataSettingsSettingsArgs> settings) {
+        public Builder settings(@Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable MarkdownPartMetadataSettingsSettingsArgs settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
         public MarkdownPartMetadataContentArgs build() {

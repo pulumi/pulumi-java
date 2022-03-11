@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterRatioArgs;
@@ -25,10 +25,10 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeSeriesFilter")
-      private final @Nullable Input<TimeSeriesFilterArgs> timeSeriesFilter;
+      private final @Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter;
 
-    public Input<TimeSeriesFilterArgs> getTimeSeriesFilter() {
-        return this.timeSeriesFilter == null ? Input.empty() : this.timeSeriesFilter;
+    public Output<TimeSeriesFilterArgs> getTimeSeriesFilter() {
+        return this.timeSeriesFilter == null ? Output.empty() : this.timeSeriesFilter;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeSeriesFilterRatio")
-      private final @Nullable Input<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
+      private final @Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
 
-    public Input<TimeSeriesFilterRatioArgs> getTimeSeriesFilterRatio() {
-        return this.timeSeriesFilterRatio == null ? Input.empty() : this.timeSeriesFilterRatio;
+    public Output<TimeSeriesFilterRatioArgs> getTimeSeriesFilterRatio() {
+        return this.timeSeriesFilterRatio == null ? Output.empty() : this.timeSeriesFilterRatio;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeSeriesQueryLanguage")
-      private final @Nullable Input<String> timeSeriesQueryLanguage;
+      private final @Nullable Output<String> timeSeriesQueryLanguage;
 
-    public Input<String> getTimeSeriesQueryLanguage() {
-        return this.timeSeriesQueryLanguage == null ? Input.empty() : this.timeSeriesQueryLanguage;
+    public Output<String> getTimeSeriesQueryLanguage() {
+        return this.timeSeriesQueryLanguage == null ? Output.empty() : this.timeSeriesQueryLanguage;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="unitOverride")
-      private final @Nullable Input<String> unitOverride;
+      private final @Nullable Output<String> unitOverride;
 
-    public Input<String> getUnitOverride() {
-        return this.unitOverride == null ? Input.empty() : this.unitOverride;
+    public Output<String> getUnitOverride() {
+        return this.unitOverride == null ? Output.empty() : this.unitOverride;
     }
 
     public TimeSeriesQueryArgs(
-        @Nullable Input<TimeSeriesFilterArgs> timeSeriesFilter,
-        @Nullable Input<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio,
-        @Nullable Input<String> timeSeriesQueryLanguage,
-        @Nullable Input<String> unitOverride) {
+        @Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter,
+        @Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio,
+        @Nullable Output<String> timeSeriesQueryLanguage,
+        @Nullable Output<String> unitOverride) {
         this.timeSeriesFilter = timeSeriesFilter;
         this.timeSeriesFilterRatio = timeSeriesFilterRatio;
         this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
@@ -76,10 +76,10 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TimeSeriesQueryArgs() {
-        this.timeSeriesFilter = Input.empty();
-        this.timeSeriesFilterRatio = Input.empty();
-        this.timeSeriesQueryLanguage = Input.empty();
-        this.unitOverride = Input.empty();
+        this.timeSeriesFilter = Output.empty();
+        this.timeSeriesFilterRatio = Output.empty();
+        this.timeSeriesQueryLanguage = Output.empty();
+        this.unitOverride = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<TimeSeriesFilterArgs> timeSeriesFilter;
-        private @Nullable Input<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
-        private @Nullable Input<String> timeSeriesQueryLanguage;
-        private @Nullable Input<String> unitOverride;
+        private @Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter;
+        private @Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
+        private @Nullable Output<String> timeSeriesQueryLanguage;
+        private @Nullable Output<String> unitOverride;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
     	      this.unitOverride = defaults.unitOverride;
         }
 
-        public Builder timeSeriesFilter(@Nullable Input<TimeSeriesFilterArgs> timeSeriesFilter) {
+        public Builder timeSeriesFilter(@Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter) {
             this.timeSeriesFilter = timeSeriesFilter;
             return this;
         }
 
         public Builder timeSeriesFilter(@Nullable TimeSeriesFilterArgs timeSeriesFilter) {
-            this.timeSeriesFilter = Input.ofNullable(timeSeriesFilter);
+            this.timeSeriesFilter = Output.ofNullable(timeSeriesFilter);
             return this;
         }
 
-        public Builder timeSeriesFilterRatio(@Nullable Input<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio) {
+        public Builder timeSeriesFilterRatio(@Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio) {
             this.timeSeriesFilterRatio = timeSeriesFilterRatio;
             return this;
         }
 
         public Builder timeSeriesFilterRatio(@Nullable TimeSeriesFilterRatioArgs timeSeriesFilterRatio) {
-            this.timeSeriesFilterRatio = Input.ofNullable(timeSeriesFilterRatio);
+            this.timeSeriesFilterRatio = Output.ofNullable(timeSeriesFilterRatio);
             return this;
         }
 
-        public Builder timeSeriesQueryLanguage(@Nullable Input<String> timeSeriesQueryLanguage) {
+        public Builder timeSeriesQueryLanguage(@Nullable Output<String> timeSeriesQueryLanguage) {
             this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
             return this;
         }
 
         public Builder timeSeriesQueryLanguage(@Nullable String timeSeriesQueryLanguage) {
-            this.timeSeriesQueryLanguage = Input.ofNullable(timeSeriesQueryLanguage);
+            this.timeSeriesQueryLanguage = Output.ofNullable(timeSeriesQueryLanguage);
             return this;
         }
 
-        public Builder unitOverride(@Nullable Input<String> unitOverride) {
+        public Builder unitOverride(@Nullable Output<String> unitOverride) {
             this.unitOverride = unitOverride;
             return this;
         }
 
         public Builder unitOverride(@Nullable String unitOverride) {
-            this.unitOverride = Input.ofNullable(unitOverride);
+            this.unitOverride = Output.ofNullable(unitOverride);
             return this;
         }
         public TimeSeriesQueryArgs build() {

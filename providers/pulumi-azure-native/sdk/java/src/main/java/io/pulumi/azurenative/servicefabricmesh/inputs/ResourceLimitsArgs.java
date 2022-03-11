@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<Double> cpu;
+      private final @Nullable Output<Double> cpu;
 
-    public Input<Double> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<Double> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memoryInGB")
-      private final @Nullable Input<Double> memoryInGB;
+      private final @Nullable Output<Double> memoryInGB;
 
-    public Input<Double> getMemoryInGB() {
-        return this.memoryInGB == null ? Input.empty() : this.memoryInGB;
+    public Output<Double> getMemoryInGB() {
+        return this.memoryInGB == null ? Output.empty() : this.memoryInGB;
     }
 
     public ResourceLimitsArgs(
-        @Nullable Input<Double> cpu,
-        @Nullable Input<Double> memoryInGB) {
+        @Nullable Output<Double> cpu,
+        @Nullable Output<Double> memoryInGB) {
         this.cpu = cpu;
         this.memoryInGB = memoryInGB;
     }
 
     private ResourceLimitsArgs() {
-        this.cpu = Input.empty();
-        this.memoryInGB = Input.empty();
+        this.cpu = Output.empty();
+        this.memoryInGB = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> cpu;
-        private @Nullable Input<Double> memoryInGB;
+        private @Nullable Output<Double> cpu;
+        private @Nullable Output<Double> memoryInGB;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.memoryInGB = defaults.memoryInGB;
         }
 
-        public Builder cpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Output<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder memoryInGB(@Nullable Input<Double> memoryInGB) {
+        public Builder memoryInGB(@Nullable Output<Double> memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
 
         public Builder memoryInGB(@Nullable Double memoryInGB) {
-            this.memoryInGB = Input.ofNullable(memoryInGB);
+            this.memoryInGB = Output.ofNullable(memoryInGB);
             return this;
         }
         public ResourceLimitsArgs build() {

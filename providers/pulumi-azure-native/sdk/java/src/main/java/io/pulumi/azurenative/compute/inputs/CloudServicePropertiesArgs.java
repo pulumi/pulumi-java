@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.inputs.CloudServiceNetworkProfileArgs;
 import io.pulumi.azurenative.compute.inputs.CloudServiceOsProfileArgs;
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleProfileArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -31,10 +31,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowModelOverride")
-      private final @Nullable Input<Boolean> allowModelOverride;
+      private final @Nullable Output<Boolean> allowModelOverride;
 
-    public Input<Boolean> getAllowModelOverride() {
-        return this.allowModelOverride == null ? Input.empty() : this.allowModelOverride;
+    public Output<Boolean> getAllowModelOverride() {
+        return this.allowModelOverride == null ? Output.empty() : this.allowModelOverride;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<String> configuration;
+      private final @Nullable Output<String> configuration;
 
-    public Input<String> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<String> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configurationUrl")
-      private final @Nullable Input<String> configurationUrl;
+      private final @Nullable Output<String> configurationUrl;
 
-    public Input<String> getConfigurationUrl() {
-        return this.configurationUrl == null ? Input.empty() : this.configurationUrl;
+    public Output<String> getConfigurationUrl() {
+        return this.configurationUrl == null ? Output.empty() : this.configurationUrl;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="extensionProfile")
-      private final @Nullable Input<CloudServiceExtensionProfileArgs> extensionProfile;
+      private final @Nullable Output<CloudServiceExtensionProfileArgs> extensionProfile;
 
-    public Input<CloudServiceExtensionProfileArgs> getExtensionProfile() {
-        return this.extensionProfile == null ? Input.empty() : this.extensionProfile;
+    public Output<CloudServiceExtensionProfileArgs> getExtensionProfile() {
+        return this.extensionProfile == null ? Output.empty() : this.extensionProfile;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<CloudServiceNetworkProfileArgs> networkProfile;
+      private final @Nullable Output<CloudServiceNetworkProfileArgs> networkProfile;
 
-    public Input<CloudServiceNetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<CloudServiceNetworkProfileArgs> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="osProfile")
-      private final @Nullable Input<CloudServiceOsProfileArgs> osProfile;
+      private final @Nullable Output<CloudServiceOsProfileArgs> osProfile;
 
-    public Input<CloudServiceOsProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Input.empty() : this.osProfile;
+    public Output<CloudServiceOsProfileArgs> getOsProfile() {
+        return this.osProfile == null ? Output.empty() : this.osProfile;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="packageUrl")
-      private final @Nullable Input<String> packageUrl;
+      private final @Nullable Output<String> packageUrl;
 
-    public Input<String> getPackageUrl() {
-        return this.packageUrl == null ? Input.empty() : this.packageUrl;
+    public Output<String> getPackageUrl() {
+        return this.packageUrl == null ? Output.empty() : this.packageUrl;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleProfile")
-      private final @Nullable Input<CloudServiceRoleProfileArgs> roleProfile;
+      private final @Nullable Output<CloudServiceRoleProfileArgs> roleProfile;
 
-    public Input<CloudServiceRoleProfileArgs> getRoleProfile() {
-        return this.roleProfile == null ? Input.empty() : this.roleProfile;
+    public Output<CloudServiceRoleProfileArgs> getRoleProfile() {
+        return this.roleProfile == null ? Output.empty() : this.roleProfile;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="startCloudService")
-      private final @Nullable Input<Boolean> startCloudService;
+      private final @Nullable Output<Boolean> startCloudService;
 
-    public Input<Boolean> getStartCloudService() {
-        return this.startCloudService == null ? Input.empty() : this.startCloudService;
+    public Output<Boolean> getStartCloudService() {
+        return this.startCloudService == null ? Output.empty() : this.startCloudService;
     }
 
     /**
@@ -135,23 +135,23 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="upgradeMode")
-      private final @Nullable Input<Either<String,CloudServiceUpgradeMode>> upgradeMode;
+      private final @Nullable Output<Either<String,CloudServiceUpgradeMode>> upgradeMode;
 
-    public Input<Either<String,CloudServiceUpgradeMode>> getUpgradeMode() {
-        return this.upgradeMode == null ? Input.empty() : this.upgradeMode;
+    public Output<Either<String,CloudServiceUpgradeMode>> getUpgradeMode() {
+        return this.upgradeMode == null ? Output.empty() : this.upgradeMode;
     }
 
     public CloudServicePropertiesArgs(
-        @Nullable Input<Boolean> allowModelOverride,
-        @Nullable Input<String> configuration,
-        @Nullable Input<String> configurationUrl,
-        @Nullable Input<CloudServiceExtensionProfileArgs> extensionProfile,
-        @Nullable Input<CloudServiceNetworkProfileArgs> networkProfile,
-        @Nullable Input<CloudServiceOsProfileArgs> osProfile,
-        @Nullable Input<String> packageUrl,
-        @Nullable Input<CloudServiceRoleProfileArgs> roleProfile,
-        @Nullable Input<Boolean> startCloudService,
-        @Nullable Input<Either<String,CloudServiceUpgradeMode>> upgradeMode) {
+        @Nullable Output<Boolean> allowModelOverride,
+        @Nullable Output<String> configuration,
+        @Nullable Output<String> configurationUrl,
+        @Nullable Output<CloudServiceExtensionProfileArgs> extensionProfile,
+        @Nullable Output<CloudServiceNetworkProfileArgs> networkProfile,
+        @Nullable Output<CloudServiceOsProfileArgs> osProfile,
+        @Nullable Output<String> packageUrl,
+        @Nullable Output<CloudServiceRoleProfileArgs> roleProfile,
+        @Nullable Output<Boolean> startCloudService,
+        @Nullable Output<Either<String,CloudServiceUpgradeMode>> upgradeMode) {
         this.allowModelOverride = allowModelOverride;
         this.configuration = configuration;
         this.configurationUrl = configurationUrl;
@@ -165,16 +165,16 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private CloudServicePropertiesArgs() {
-        this.allowModelOverride = Input.empty();
-        this.configuration = Input.empty();
-        this.configurationUrl = Input.empty();
-        this.extensionProfile = Input.empty();
-        this.networkProfile = Input.empty();
-        this.osProfile = Input.empty();
-        this.packageUrl = Input.empty();
-        this.roleProfile = Input.empty();
-        this.startCloudService = Input.empty();
-        this.upgradeMode = Input.empty();
+        this.allowModelOverride = Output.empty();
+        this.configuration = Output.empty();
+        this.configurationUrl = Output.empty();
+        this.extensionProfile = Output.empty();
+        this.networkProfile = Output.empty();
+        this.osProfile = Output.empty();
+        this.packageUrl = Output.empty();
+        this.roleProfile = Output.empty();
+        this.startCloudService = Output.empty();
+        this.upgradeMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -186,16 +186,16 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowModelOverride;
-        private @Nullable Input<String> configuration;
-        private @Nullable Input<String> configurationUrl;
-        private @Nullable Input<CloudServiceExtensionProfileArgs> extensionProfile;
-        private @Nullable Input<CloudServiceNetworkProfileArgs> networkProfile;
-        private @Nullable Input<CloudServiceOsProfileArgs> osProfile;
-        private @Nullable Input<String> packageUrl;
-        private @Nullable Input<CloudServiceRoleProfileArgs> roleProfile;
-        private @Nullable Input<Boolean> startCloudService;
-        private @Nullable Input<Either<String,CloudServiceUpgradeMode>> upgradeMode;
+        private @Nullable Output<Boolean> allowModelOverride;
+        private @Nullable Output<String> configuration;
+        private @Nullable Output<String> configurationUrl;
+        private @Nullable Output<CloudServiceExtensionProfileArgs> extensionProfile;
+        private @Nullable Output<CloudServiceNetworkProfileArgs> networkProfile;
+        private @Nullable Output<CloudServiceOsProfileArgs> osProfile;
+        private @Nullable Output<String> packageUrl;
+        private @Nullable Output<CloudServiceRoleProfileArgs> roleProfile;
+        private @Nullable Output<Boolean> startCloudService;
+        private @Nullable Output<Either<String,CloudServiceUpgradeMode>> upgradeMode;
 
         public Builder() {
     	      // Empty
@@ -215,103 +215,103 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     	      this.upgradeMode = defaults.upgradeMode;
         }
 
-        public Builder allowModelOverride(@Nullable Input<Boolean> allowModelOverride) {
+        public Builder allowModelOverride(@Nullable Output<Boolean> allowModelOverride) {
             this.allowModelOverride = allowModelOverride;
             return this;
         }
 
         public Builder allowModelOverride(@Nullable Boolean allowModelOverride) {
-            this.allowModelOverride = Input.ofNullable(allowModelOverride);
+            this.allowModelOverride = Output.ofNullable(allowModelOverride);
             return this;
         }
 
-        public Builder configuration(@Nullable Input<String> configuration) {
+        public Builder configuration(@Nullable Output<String> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable String configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder configurationUrl(@Nullable Input<String> configurationUrl) {
+        public Builder configurationUrl(@Nullable Output<String> configurationUrl) {
             this.configurationUrl = configurationUrl;
             return this;
         }
 
         public Builder configurationUrl(@Nullable String configurationUrl) {
-            this.configurationUrl = Input.ofNullable(configurationUrl);
+            this.configurationUrl = Output.ofNullable(configurationUrl);
             return this;
         }
 
-        public Builder extensionProfile(@Nullable Input<CloudServiceExtensionProfileArgs> extensionProfile) {
+        public Builder extensionProfile(@Nullable Output<CloudServiceExtensionProfileArgs> extensionProfile) {
             this.extensionProfile = extensionProfile;
             return this;
         }
 
         public Builder extensionProfile(@Nullable CloudServiceExtensionProfileArgs extensionProfile) {
-            this.extensionProfile = Input.ofNullable(extensionProfile);
+            this.extensionProfile = Output.ofNullable(extensionProfile);
             return this;
         }
 
-        public Builder networkProfile(@Nullable Input<CloudServiceNetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Output<CloudServiceNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable CloudServiceNetworkProfileArgs networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder osProfile(@Nullable Input<CloudServiceOsProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Output<CloudServiceOsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
         public Builder osProfile(@Nullable CloudServiceOsProfileArgs osProfile) {
-            this.osProfile = Input.ofNullable(osProfile);
+            this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
 
-        public Builder packageUrl(@Nullable Input<String> packageUrl) {
+        public Builder packageUrl(@Nullable Output<String> packageUrl) {
             this.packageUrl = packageUrl;
             return this;
         }
 
         public Builder packageUrl(@Nullable String packageUrl) {
-            this.packageUrl = Input.ofNullable(packageUrl);
+            this.packageUrl = Output.ofNullable(packageUrl);
             return this;
         }
 
-        public Builder roleProfile(@Nullable Input<CloudServiceRoleProfileArgs> roleProfile) {
+        public Builder roleProfile(@Nullable Output<CloudServiceRoleProfileArgs> roleProfile) {
             this.roleProfile = roleProfile;
             return this;
         }
 
         public Builder roleProfile(@Nullable CloudServiceRoleProfileArgs roleProfile) {
-            this.roleProfile = Input.ofNullable(roleProfile);
+            this.roleProfile = Output.ofNullable(roleProfile);
             return this;
         }
 
-        public Builder startCloudService(@Nullable Input<Boolean> startCloudService) {
+        public Builder startCloudService(@Nullable Output<Boolean> startCloudService) {
             this.startCloudService = startCloudService;
             return this;
         }
 
         public Builder startCloudService(@Nullable Boolean startCloudService) {
-            this.startCloudService = Input.ofNullable(startCloudService);
+            this.startCloudService = Output.ofNullable(startCloudService);
             return this;
         }
 
-        public Builder upgradeMode(@Nullable Input<Either<String,CloudServiceUpgradeMode>> upgradeMode) {
+        public Builder upgradeMode(@Nullable Output<Either<String,CloudServiceUpgradeMode>> upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
 
         public Builder upgradeMode(@Nullable Either<String,CloudServiceUpgradeMode> upgradeMode) {
-            this.upgradeMode = Input.ofNullable(upgradeMode);
+            this.upgradeMode = Output.ofNullable(upgradeMode);
             return this;
         }
         public CloudServicePropertiesArgs build() {

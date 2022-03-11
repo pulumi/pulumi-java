@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.DiskInstantiationConfigInstantiateFrom;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="autoDelete")
-      private final @Nullable Input<Boolean> autoDelete;
+      private final @Nullable Output<Boolean> autoDelete;
 
-    public Input<Boolean> getAutoDelete() {
-        return this.autoDelete == null ? Input.empty() : this.autoDelete;
+    public Output<Boolean> getAutoDelete() {
+        return this.autoDelete == null ? Output.empty() : this.autoDelete;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customImage")
-      private final @Nullable Input<String> customImage;
+      private final @Nullable Output<String> customImage;
 
-    public Input<String> getCustomImage() {
-        return this.customImage == null ? Input.empty() : this.customImage;
+    public Output<String> getCustomImage() {
+        return this.customImage == null ? Output.empty() : this.customImage;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instantiateFrom")
-      private final @Nullable Input<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
+      private final @Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
 
-    public Input<DiskInstantiationConfigInstantiateFrom> getInstantiateFrom() {
-        return this.instantiateFrom == null ? Input.empty() : this.instantiateFrom;
+    public Output<DiskInstantiationConfigInstantiateFrom> getInstantiateFrom() {
+        return this.instantiateFrom == null ? Output.empty() : this.instantiateFrom;
     }
 
     public DiskInstantiationConfigArgs(
-        @Nullable Input<Boolean> autoDelete,
-        @Nullable Input<String> customImage,
-        @Nullable Input<String> deviceName,
-        @Nullable Input<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
+        @Nullable Output<Boolean> autoDelete,
+        @Nullable Output<String> customImage,
+        @Nullable Output<String> deviceName,
+        @Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
         this.autoDelete = autoDelete;
         this.customImage = customImage;
         this.deviceName = deviceName;
@@ -76,10 +76,10 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
     }
 
     private DiskInstantiationConfigArgs() {
-        this.autoDelete = Input.empty();
-        this.customImage = Input.empty();
-        this.deviceName = Input.empty();
-        this.instantiateFrom = Input.empty();
+        this.autoDelete = Output.empty();
+        this.customImage = Output.empty();
+        this.deviceName = Output.empty();
+        this.instantiateFrom = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoDelete;
-        private @Nullable Input<String> customImage;
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
+        private @Nullable Output<Boolean> autoDelete;
+        private @Nullable Output<String> customImage;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
     	      this.instantiateFrom = defaults.instantiateFrom;
         }
 
-        public Builder autoDelete(@Nullable Input<Boolean> autoDelete) {
+        public Builder autoDelete(@Nullable Output<Boolean> autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
         public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Input.ofNullable(autoDelete);
+            this.autoDelete = Output.ofNullable(autoDelete);
             return this;
         }
 
-        public Builder customImage(@Nullable Input<String> customImage) {
+        public Builder customImage(@Nullable Output<String> customImage) {
             this.customImage = customImage;
             return this;
         }
 
         public Builder customImage(@Nullable String customImage) {
-            this.customImage = Input.ofNullable(customImage);
+            this.customImage = Output.ofNullable(customImage);
             return this;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder instantiateFrom(@Nullable Input<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
+        public Builder instantiateFrom(@Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
             this.instantiateFrom = instantiateFrom;
             return this;
         }
 
         public Builder instantiateFrom(@Nullable DiskInstantiationConfigInstantiateFrom instantiateFrom) {
-            this.instantiateFrom = Input.ofNullable(instantiateFrom);
+            this.instantiateFrom = Output.ofNullable(instantiateFrom);
             return this;
         }
         public DiskInstantiationConfigArgs build() {

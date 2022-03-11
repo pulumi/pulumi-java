@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
-    public ContainerInfoArgs(@Nullable Input<String> image) {
+    public ContainerInfoArgs(@Nullable Output<String> image) {
         this.image = image;
     }
 
     private ContainerInfoArgs() {
-        this.image = Input.empty();
+        this.image = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> image;
+        private @Nullable Output<String> image;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.image = defaults.image;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
         public ContainerInfoArgs build() {

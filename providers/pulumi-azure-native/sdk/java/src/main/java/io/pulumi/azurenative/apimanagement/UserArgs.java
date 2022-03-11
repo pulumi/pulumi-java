@@ -8,7 +8,7 @@ import io.pulumi.azurenative.apimanagement.enums.Confirmation;
 import io.pulumi.azurenative.apimanagement.enums.UserState;
 import io.pulumi.azurenative.apimanagement.inputs.UserIdentityContractArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appType")
-      private final @Nullable Input<Either<String,AppType>> appType;
+      private final @Nullable Output<Either<String,AppType>> appType;
 
-    public Input<Either<String,AppType>> getAppType() {
-        return this.appType == null ? Input.empty() : this.appType;
+    public Output<Either<String,AppType>> getAppType() {
+        return this.appType == null ? Output.empty() : this.appType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="confirmation")
-      private final @Nullable Input<Either<String,Confirmation>> confirmation;
+      private final @Nullable Output<Either<String,Confirmation>> confirmation;
 
-    public Input<Either<String,Confirmation>> getConfirmation() {
-        return this.confirmation == null ? Input.empty() : this.confirmation;
+    public Output<Either<String,Confirmation>> getConfirmation() {
+        return this.confirmation == null ? Output.empty() : this.confirmation;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
@@ -59,9 +59,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstName", required=true)
-      private final Input<String> firstName;
+      private final Output<String> firstName;
 
-    public Input<String> getFirstName() {
+    public Output<String> getFirstName() {
         return this.firstName;
     }
 
@@ -70,10 +70,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identities")
-      private final @Nullable Input<List<UserIdentityContractArgs>> identities;
+      private final @Nullable Output<List<UserIdentityContractArgs>> identities;
 
-    public Input<List<UserIdentityContractArgs>> getIdentities() {
-        return this.identities == null ? Input.empty() : this.identities;
+    public Output<List<UserIdentityContractArgs>> getIdentities() {
+        return this.identities == null ? Output.empty() : this.identities;
     }
 
     /**
@@ -81,9 +81,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastName", required=true)
-      private final Input<String> lastName;
+      private final Output<String> lastName;
 
-    public Input<String> getLastName() {
+    public Output<String> getLastName() {
         return this.lastName;
     }
 
@@ -92,10 +92,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="note")
-      private final @Nullable Input<String> note;
+      private final @Nullable Output<String> note;
 
-    public Input<String> getNote() {
-        return this.note == null ? Input.empty() : this.note;
+    public Output<String> getNote() {
+        return this.note == null ? Output.empty() : this.note;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notify")
-      private final @Nullable Input<Boolean> notify;
+      private final @Nullable Output<Boolean> notify;
 
-    public Input<Boolean> getNotify() {
-        return this.notify == null ? Input.empty() : this.notify;
+    public Output<Boolean> getNotify() {
+        return this.notify == null ? Output.empty() : this.notify;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -125,9 +125,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -136,9 +136,9 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -147,10 +147,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,UserState>> state;
+      private final @Nullable Output<Either<String,UserState>> state;
 
-    public Input<Either<String,UserState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,UserState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -158,26 +158,26 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId")
-      private final @Nullable Input<String> userId;
+      private final @Nullable Output<String> userId;
 
-    public Input<String> getUserId() {
-        return this.userId == null ? Input.empty() : this.userId;
+    public Output<String> getUserId() {
+        return this.userId == null ? Output.empty() : this.userId;
     }
 
     public UserArgs(
-        @Nullable Input<Either<String,AppType>> appType,
-        @Nullable Input<Either<String,Confirmation>> confirmation,
-        Input<String> email,
-        Input<String> firstName,
-        @Nullable Input<List<UserIdentityContractArgs>> identities,
-        Input<String> lastName,
-        @Nullable Input<String> note,
-        @Nullable Input<Boolean> notify,
-        @Nullable Input<String> password,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        @Nullable Input<Either<String,UserState>> state,
-        @Nullable Input<String> userId) {
+        @Nullable Output<Either<String,AppType>> appType,
+        @Nullable Output<Either<String,Confirmation>> confirmation,
+        Output<String> email,
+        Output<String> firstName,
+        @Nullable Output<List<UserIdentityContractArgs>> identities,
+        Output<String> lastName,
+        @Nullable Output<String> note,
+        @Nullable Output<Boolean> notify,
+        @Nullable Output<String> password,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        @Nullable Output<Either<String,UserState>> state,
+        @Nullable Output<String> userId) {
         this.appType = appType;
         this.confirmation = confirmation;
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
@@ -189,24 +189,24 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         this.password = password;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.state = state == null ? Input.ofLeft("active") : state;
+        this.state = state == null ? Output.ofLeft("active") : state;
         this.userId = userId;
     }
 
     private UserArgs() {
-        this.appType = Input.empty();
-        this.confirmation = Input.empty();
-        this.email = Input.empty();
-        this.firstName = Input.empty();
-        this.identities = Input.empty();
-        this.lastName = Input.empty();
-        this.note = Input.empty();
-        this.notify = Input.empty();
-        this.password = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.state = Input.empty();
-        this.userId = Input.empty();
+        this.appType = Output.empty();
+        this.confirmation = Output.empty();
+        this.email = Output.empty();
+        this.firstName = Output.empty();
+        this.identities = Output.empty();
+        this.lastName = Output.empty();
+        this.note = Output.empty();
+        this.notify = Output.empty();
+        this.password = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.state = Output.empty();
+        this.userId = Output.empty();
     }
 
     public static Builder builder() {
@@ -218,19 +218,19 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,AppType>> appType;
-        private @Nullable Input<Either<String,Confirmation>> confirmation;
-        private Input<String> email;
-        private Input<String> firstName;
-        private @Nullable Input<List<UserIdentityContractArgs>> identities;
-        private Input<String> lastName;
-        private @Nullable Input<String> note;
-        private @Nullable Input<Boolean> notify;
-        private @Nullable Input<String> password;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private @Nullable Input<Either<String,UserState>> state;
-        private @Nullable Input<String> userId;
+        private @Nullable Output<Either<String,AppType>> appType;
+        private @Nullable Output<Either<String,Confirmation>> confirmation;
+        private Output<String> email;
+        private Output<String> firstName;
+        private @Nullable Output<List<UserIdentityContractArgs>> identities;
+        private Output<String> lastName;
+        private @Nullable Output<String> note;
+        private @Nullable Output<Boolean> notify;
+        private @Nullable Output<String> password;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private @Nullable Output<Either<String,UserState>> state;
+        private @Nullable Output<String> userId;
 
         public Builder() {
     	      // Empty
@@ -253,133 +253,133 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder appType(@Nullable Input<Either<String,AppType>> appType) {
+        public Builder appType(@Nullable Output<Either<String,AppType>> appType) {
             this.appType = appType;
             return this;
         }
 
         public Builder appType(@Nullable Either<String,AppType> appType) {
-            this.appType = Input.ofNullable(appType);
+            this.appType = Output.ofNullable(appType);
             return this;
         }
 
-        public Builder confirmation(@Nullable Input<Either<String,Confirmation>> confirmation) {
+        public Builder confirmation(@Nullable Output<Either<String,Confirmation>> confirmation) {
             this.confirmation = confirmation;
             return this;
         }
 
         public Builder confirmation(@Nullable Either<String,Confirmation> confirmation) {
-            this.confirmation = Input.ofNullable(confirmation);
+            this.confirmation = Output.ofNullable(confirmation);
             return this;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder firstName(Input<String> firstName) {
+        public Builder firstName(Output<String> firstName) {
             this.firstName = Objects.requireNonNull(firstName);
             return this;
         }
 
         public Builder firstName(String firstName) {
-            this.firstName = Input.of(Objects.requireNonNull(firstName));
+            this.firstName = Output.of(Objects.requireNonNull(firstName));
             return this;
         }
 
-        public Builder identities(@Nullable Input<List<UserIdentityContractArgs>> identities) {
+        public Builder identities(@Nullable Output<List<UserIdentityContractArgs>> identities) {
             this.identities = identities;
             return this;
         }
 
         public Builder identities(@Nullable List<UserIdentityContractArgs> identities) {
-            this.identities = Input.ofNullable(identities);
+            this.identities = Output.ofNullable(identities);
             return this;
         }
 
-        public Builder lastName(Input<String> lastName) {
+        public Builder lastName(Output<String> lastName) {
             this.lastName = Objects.requireNonNull(lastName);
             return this;
         }
 
         public Builder lastName(String lastName) {
-            this.lastName = Input.of(Objects.requireNonNull(lastName));
+            this.lastName = Output.of(Objects.requireNonNull(lastName));
             return this;
         }
 
-        public Builder note(@Nullable Input<String> note) {
+        public Builder note(@Nullable Output<String> note) {
             this.note = note;
             return this;
         }
 
         public Builder note(@Nullable String note) {
-            this.note = Input.ofNullable(note);
+            this.note = Output.ofNullable(note);
             return this;
         }
 
-        public Builder notify(@Nullable Input<Boolean> notify) {
+        public Builder notify(@Nullable Output<Boolean> notify) {
             this.notify = notify;
             return this;
         }
 
         public Builder notify(@Nullable Boolean notify) {
-            this.notify = Input.ofNullable(notify);
+            this.notify = Output.ofNullable(notify);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,UserState>> state) {
+        public Builder state(@Nullable Output<Either<String,UserState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,UserState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder userId(@Nullable Input<String> userId) {
+        public Builder userId(@Nullable Output<String> userId) {
             this.userId = userId;
             return this;
         }
 
         public Builder userId(@Nullable String userId) {
-            this.userId = Input.ofNullable(userId);
+            this.userId = Output.ofNullable(userId);
             return this;
         }
         public UserArgs build() {

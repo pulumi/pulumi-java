@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.ParameterType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ParameterType>> type;
+      private final @Nullable Output<Either<String,ParameterType>> type;
 
-    public Input<Either<String,ParameterType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ParameterType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Object> value;
+      private final @Nullable Output<Object> value;
 
-    public Input<Object> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Object> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public WorkflowParameterArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Object> metadata,
-        @Nullable Input<Either<String,ParameterType>> type,
-        @Nullable Input<Object> value) {
+        @Nullable Output<String> description,
+        @Nullable Output<Object> metadata,
+        @Nullable Output<Either<String,ParameterType>> type,
+        @Nullable Output<Object> value) {
         this.description = description;
         this.metadata = metadata;
         this.type = type;
@@ -77,10 +77,10 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WorkflowParameterArgs() {
-        this.description = Input.empty();
-        this.metadata = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.description = Output.empty();
+        this.metadata = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> metadata;
-        private @Nullable Input<Either<String,ParameterType>> type;
-        private @Nullable Input<Object> value;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> metadata;
+        private @Nullable Output<Either<String,ParameterType>> type;
+        private @Nullable Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
     	      this.value = defaults.value;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,ParameterType>> type) {
+        public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ParameterType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder value(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Output<Object> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Object value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public WorkflowParameterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableHttpPortAccess")
-      private final @Nullable Input<Boolean> enableHttpPortAccess;
+      private final @Nullable Output<Boolean> enableHttpPortAccess;
 
-    public Input<Boolean> getEnableHttpPortAccess() {
-        return this.enableHttpPortAccess == null ? Input.empty() : this.enableHttpPortAccess;
+    public Output<Boolean> getEnableHttpPortAccess() {
+        return this.enableHttpPortAccess == null ? Output.empty() : this.enableHttpPortAccess;
     }
 
-    public EndpointConfigArgs(@Nullable Input<Boolean> enableHttpPortAccess) {
+    public EndpointConfigArgs(@Nullable Output<Boolean> enableHttpPortAccess) {
         this.enableHttpPortAccess = enableHttpPortAccess;
     }
 
     private EndpointConfigArgs() {
-        this.enableHttpPortAccess = Input.empty();
+        this.enableHttpPortAccess = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableHttpPortAccess;
+        private @Nullable Output<Boolean> enableHttpPortAccess;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.enableHttpPortAccess = defaults.enableHttpPortAccess;
         }
 
-        public Builder enableHttpPortAccess(@Nullable Input<Boolean> enableHttpPortAccess) {
+        public Builder enableHttpPortAccess(@Nullable Output<Boolean> enableHttpPortAccess) {
             this.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
 
         public Builder enableHttpPortAccess(@Nullable Boolean enableHttpPortAccess) {
-            this.enableHttpPortAccess = Input.ofNullable(enableHttpPortAccess);
+            this.enableHttpPortAccess = Output.ofNullable(enableHttpPortAccess);
             return this;
         }
         public EndpointConfigArgs build() {

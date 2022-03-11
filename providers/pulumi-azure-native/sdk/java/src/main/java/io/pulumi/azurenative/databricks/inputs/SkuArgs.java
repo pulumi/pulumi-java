@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,22 +34,22 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public SkuArgs(
-        Input<String> name,
-        @Nullable Input<String> tier) {
+        Output<String> name,
+        @Nullable Output<String> tier) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.tier = tier;
     }
 
     private SkuArgs() {
-        this.name = Input.empty();
-        this.tier = Input.empty();
+        this.name = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<String> tier;
+        private Output<String> name;
+        private @Nullable Output<String> tier;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public SkuArgs build() {

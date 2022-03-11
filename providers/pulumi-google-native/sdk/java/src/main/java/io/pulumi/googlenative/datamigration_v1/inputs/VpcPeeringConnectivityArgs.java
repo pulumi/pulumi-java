@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpc")
-      private final @Nullable Input<String> vpc;
+      private final @Nullable Output<String> vpc;
 
-    public Input<String> getVpc() {
-        return this.vpc == null ? Input.empty() : this.vpc;
+    public Output<String> getVpc() {
+        return this.vpc == null ? Output.empty() : this.vpc;
     }
 
-    public VpcPeeringConnectivityArgs(@Nullable Input<String> vpc) {
+    public VpcPeeringConnectivityArgs(@Nullable Output<String> vpc) {
         this.vpc = vpc;
     }
 
     private VpcPeeringConnectivityArgs() {
-        this.vpc = Input.empty();
+        this.vpc = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> vpc;
+        private @Nullable Output<String> vpc;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder vpc(@Nullable Input<String> vpc) {
+        public Builder vpc(@Nullable Output<String> vpc) {
             this.vpc = vpc;
             return this;
         }
 
         public Builder vpc(@Nullable String vpc) {
-            this.vpc = Input.ofNullable(vpc);
+            this.vpc = Output.ofNullable(vpc);
             return this;
         }
         public VpcPeeringConnectivityArgs build() {

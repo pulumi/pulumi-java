@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardAdHocFilteringOptionArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardExportToCSVOptionArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardSheetControlsOptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,39 +21,39 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
     public static final DashboardPublishOptionsArgs Empty = new DashboardPublishOptionsArgs();
 
     @InputImport(name="adHocFilteringOption")
-      private final @Nullable Input<DashboardAdHocFilteringOptionArgs> adHocFilteringOption;
+      private final @Nullable Output<DashboardAdHocFilteringOptionArgs> adHocFilteringOption;
 
-    public Input<DashboardAdHocFilteringOptionArgs> getAdHocFilteringOption() {
-        return this.adHocFilteringOption == null ? Input.empty() : this.adHocFilteringOption;
+    public Output<DashboardAdHocFilteringOptionArgs> getAdHocFilteringOption() {
+        return this.adHocFilteringOption == null ? Output.empty() : this.adHocFilteringOption;
     }
 
     @InputImport(name="exportToCSVOption")
-      private final @Nullable Input<DashboardExportToCSVOptionArgs> exportToCSVOption;
+      private final @Nullable Output<DashboardExportToCSVOptionArgs> exportToCSVOption;
 
-    public Input<DashboardExportToCSVOptionArgs> getExportToCSVOption() {
-        return this.exportToCSVOption == null ? Input.empty() : this.exportToCSVOption;
+    public Output<DashboardExportToCSVOptionArgs> getExportToCSVOption() {
+        return this.exportToCSVOption == null ? Output.empty() : this.exportToCSVOption;
     }
 
     @InputImport(name="sheetControlsOption")
-      private final @Nullable Input<DashboardSheetControlsOptionArgs> sheetControlsOption;
+      private final @Nullable Output<DashboardSheetControlsOptionArgs> sheetControlsOption;
 
-    public Input<DashboardSheetControlsOptionArgs> getSheetControlsOption() {
-        return this.sheetControlsOption == null ? Input.empty() : this.sheetControlsOption;
+    public Output<DashboardSheetControlsOptionArgs> getSheetControlsOption() {
+        return this.sheetControlsOption == null ? Output.empty() : this.sheetControlsOption;
     }
 
     public DashboardPublishOptionsArgs(
-        @Nullable Input<DashboardAdHocFilteringOptionArgs> adHocFilteringOption,
-        @Nullable Input<DashboardExportToCSVOptionArgs> exportToCSVOption,
-        @Nullable Input<DashboardSheetControlsOptionArgs> sheetControlsOption) {
+        @Nullable Output<DashboardAdHocFilteringOptionArgs> adHocFilteringOption,
+        @Nullable Output<DashboardExportToCSVOptionArgs> exportToCSVOption,
+        @Nullable Output<DashboardSheetControlsOptionArgs> sheetControlsOption) {
         this.adHocFilteringOption = adHocFilteringOption;
         this.exportToCSVOption = exportToCSVOption;
         this.sheetControlsOption = sheetControlsOption;
     }
 
     private DashboardPublishOptionsArgs() {
-        this.adHocFilteringOption = Input.empty();
-        this.exportToCSVOption = Input.empty();
-        this.sheetControlsOption = Input.empty();
+        this.adHocFilteringOption = Output.empty();
+        this.exportToCSVOption = Output.empty();
+        this.sheetControlsOption = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,9 +65,9 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<DashboardAdHocFilteringOptionArgs> adHocFilteringOption;
-        private @Nullable Input<DashboardExportToCSVOptionArgs> exportToCSVOption;
-        private @Nullable Input<DashboardSheetControlsOptionArgs> sheetControlsOption;
+        private @Nullable Output<DashboardAdHocFilteringOptionArgs> adHocFilteringOption;
+        private @Nullable Output<DashboardExportToCSVOptionArgs> exportToCSVOption;
+        private @Nullable Output<DashboardSheetControlsOptionArgs> sheetControlsOption;
 
         public Builder() {
     	      // Empty
@@ -80,33 +80,33 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
     	      this.sheetControlsOption = defaults.sheetControlsOption;
         }
 
-        public Builder adHocFilteringOption(@Nullable Input<DashboardAdHocFilteringOptionArgs> adHocFilteringOption) {
+        public Builder adHocFilteringOption(@Nullable Output<DashboardAdHocFilteringOptionArgs> adHocFilteringOption) {
             this.adHocFilteringOption = adHocFilteringOption;
             return this;
         }
 
         public Builder adHocFilteringOption(@Nullable DashboardAdHocFilteringOptionArgs adHocFilteringOption) {
-            this.adHocFilteringOption = Input.ofNullable(adHocFilteringOption);
+            this.adHocFilteringOption = Output.ofNullable(adHocFilteringOption);
             return this;
         }
 
-        public Builder exportToCSVOption(@Nullable Input<DashboardExportToCSVOptionArgs> exportToCSVOption) {
+        public Builder exportToCSVOption(@Nullable Output<DashboardExportToCSVOptionArgs> exportToCSVOption) {
             this.exportToCSVOption = exportToCSVOption;
             return this;
         }
 
         public Builder exportToCSVOption(@Nullable DashboardExportToCSVOptionArgs exportToCSVOption) {
-            this.exportToCSVOption = Input.ofNullable(exportToCSVOption);
+            this.exportToCSVOption = Output.ofNullable(exportToCSVOption);
             return this;
         }
 
-        public Builder sheetControlsOption(@Nullable Input<DashboardSheetControlsOptionArgs> sheetControlsOption) {
+        public Builder sheetControlsOption(@Nullable Output<DashboardSheetControlsOptionArgs> sheetControlsOption) {
             this.sheetControlsOption = sheetControlsOption;
             return this;
         }
 
         public Builder sheetControlsOption(@Nullable DashboardSheetControlsOptionArgs sheetControlsOption) {
-            this.sheetControlsOption = Input.ofNullable(sheetControlsOption);
+            this.sheetControlsOption = Output.ofNullable(sheetControlsOption);
             return this;
         }
         public DashboardPublishOptionsArgs build() {

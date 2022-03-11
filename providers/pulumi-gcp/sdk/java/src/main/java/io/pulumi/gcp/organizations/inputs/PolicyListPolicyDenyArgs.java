@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class PolicyListPolicyDenyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="all")
-      private final @Nullable Input<Boolean> all;
+      private final @Nullable Output<Boolean> all;
 
-    public Input<Boolean> getAll() {
-        return this.all == null ? Input.empty() : this.all;
+    public Output<Boolean> getAll() {
+        return this.all == null ? Output.empty() : this.all;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class PolicyListPolicyDenyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public PolicyListPolicyDenyArgs(
-        @Nullable Input<Boolean> all,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<Boolean> all,
+        @Nullable Output<List<String>> values) {
         this.all = all;
         this.values = values;
     }
 
     private PolicyListPolicyDenyArgs() {
-        this.all = Input.empty();
-        this.values = Input.empty();
+        this.all = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class PolicyListPolicyDenyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> all;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<Boolean> all;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class PolicyListPolicyDenyArgs extends io.pulumi.resources.Resource
     	      this.values = defaults.values;
         }
 
-        public Builder all(@Nullable Input<Boolean> all) {
+        public Builder all(@Nullable Output<Boolean> all) {
             this.all = all;
             return this;
         }
 
         public Builder all(@Nullable Boolean all) {
-            this.all = Input.ofNullable(all);
+            this.all = Output.ofNullable(all);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public PolicyListPolicyDenyArgs build() {

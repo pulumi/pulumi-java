@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class S3BucketAssociationClassificationTypeGetArgs extends io.pulum
      * 
      */
     @InputImport(name="continuous")
-      private final @Nullable Input<String> continuous;
+      private final @Nullable Output<String> continuous;
 
-    public Input<String> getContinuous() {
-        return this.continuous == null ? Input.empty() : this.continuous;
+    public Output<String> getContinuous() {
+        return this.continuous == null ? Output.empty() : this.continuous;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class S3BucketAssociationClassificationTypeGetArgs extends io.pulum
      * 
      */
     @InputImport(name="oneTime")
-      private final @Nullable Input<String> oneTime;
+      private final @Nullable Output<String> oneTime;
 
-    public Input<String> getOneTime() {
-        return this.oneTime == null ? Input.empty() : this.oneTime;
+    public Output<String> getOneTime() {
+        return this.oneTime == null ? Output.empty() : this.oneTime;
     }
 
     public S3BucketAssociationClassificationTypeGetArgs(
-        @Nullable Input<String> continuous,
-        @Nullable Input<String> oneTime) {
+        @Nullable Output<String> continuous,
+        @Nullable Output<String> oneTime) {
         this.continuous = continuous;
         this.oneTime = oneTime;
     }
 
     private S3BucketAssociationClassificationTypeGetArgs() {
-        this.continuous = Input.empty();
-        this.oneTime = Input.empty();
+        this.continuous = Output.empty();
+        this.oneTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class S3BucketAssociationClassificationTypeGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> continuous;
-        private @Nullable Input<String> oneTime;
+        private @Nullable Output<String> continuous;
+        private @Nullable Output<String> oneTime;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class S3BucketAssociationClassificationTypeGetArgs extends io.pulum
     	      this.oneTime = defaults.oneTime;
         }
 
-        public Builder continuous(@Nullable Input<String> continuous) {
+        public Builder continuous(@Nullable Output<String> continuous) {
             this.continuous = continuous;
             return this;
         }
 
         public Builder continuous(@Nullable String continuous) {
-            this.continuous = Input.ofNullable(continuous);
+            this.continuous = Output.ofNullable(continuous);
             return this;
         }
 
-        public Builder oneTime(@Nullable Input<String> oneTime) {
+        public Builder oneTime(@Nullable Output<String> oneTime) {
             this.oneTime = oneTime;
             return this;
         }
 
         public Builder oneTime(@Nullable String oneTime) {
-            this.oneTime = Input.ofNullable(oneTime);
+            this.oneTime = Output.ofNullable(oneTime);
             return this;
         }
         public S3BucketAssociationClassificationTypeGetArgs build() {

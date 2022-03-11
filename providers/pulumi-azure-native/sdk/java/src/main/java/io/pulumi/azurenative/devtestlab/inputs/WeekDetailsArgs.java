@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="time")
-      private final @Nullable Input<String> time;
+      private final @Nullable Output<String> time;
 
-    public Input<String> getTime() {
-        return this.time == null ? Input.empty() : this.time;
+    public Output<String> getTime() {
+        return this.time == null ? Output.empty() : this.time;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weekdays")
-      private final @Nullable Input<List<String>> weekdays;
+      private final @Nullable Output<List<String>> weekdays;
 
-    public Input<List<String>> getWeekdays() {
-        return this.weekdays == null ? Input.empty() : this.weekdays;
+    public Output<List<String>> getWeekdays() {
+        return this.weekdays == null ? Output.empty() : this.weekdays;
     }
 
     public WeekDetailsArgs(
-        @Nullable Input<String> time,
-        @Nullable Input<List<String>> weekdays) {
+        @Nullable Output<String> time,
+        @Nullable Output<List<String>> weekdays) {
         this.time = time;
         this.weekdays = weekdays;
     }
 
     private WeekDetailsArgs() {
-        this.time = Input.empty();
-        this.weekdays = Input.empty();
+        this.time = Output.empty();
+        this.weekdays = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> time;
-        private @Nullable Input<List<String>> weekdays;
+        private @Nullable Output<String> time;
+        private @Nullable Output<List<String>> weekdays;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weekdays = defaults.weekdays;
         }
 
-        public Builder time(@Nullable Input<String> time) {
+        public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
 
         public Builder time(@Nullable String time) {
-            this.time = Input.ofNullable(time);
+            this.time = Output.ofNullable(time);
             return this;
         }
 
-        public Builder weekdays(@Nullable Input<List<String>> weekdays) {
+        public Builder weekdays(@Nullable Output<List<String>> weekdays) {
             this.weekdays = weekdays;
             return this;
         }
 
         public Builder weekdays(@Nullable List<String> weekdays) {
-            this.weekdays = Input.ofNullable(weekdays);
+            this.weekdays = Output.ofNullable(weekdays);
             return this;
         }
         public WeekDetailsArgs build() {

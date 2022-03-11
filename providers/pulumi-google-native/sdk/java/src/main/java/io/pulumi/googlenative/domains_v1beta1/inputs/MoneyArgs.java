@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class MoneyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currencyCode")
-      private final @Nullable Input<String> currencyCode;
+      private final @Nullable Output<String> currencyCode;
 
-    public Input<String> getCurrencyCode() {
-        return this.currencyCode == null ? Input.empty() : this.currencyCode;
+    public Output<String> getCurrencyCode() {
+        return this.currencyCode == null ? Output.empty() : this.currencyCode;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MoneyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nanos")
-      private final @Nullable Input<Integer> nanos;
+      private final @Nullable Output<Integer> nanos;
 
-    public Input<Integer> getNanos() {
-        return this.nanos == null ? Input.empty() : this.nanos;
+    public Output<Integer> getNanos() {
+        return this.nanos == null ? Output.empty() : this.nanos;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class MoneyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="units")
-      private final @Nullable Input<String> units;
+      private final @Nullable Output<String> units;
 
-    public Input<String> getUnits() {
-        return this.units == null ? Input.empty() : this.units;
+    public Output<String> getUnits() {
+        return this.units == null ? Output.empty() : this.units;
     }
 
     public MoneyArgs(
-        @Nullable Input<String> currencyCode,
-        @Nullable Input<Integer> nanos,
-        @Nullable Input<String> units) {
+        @Nullable Output<String> currencyCode,
+        @Nullable Output<Integer> nanos,
+        @Nullable Output<String> units) {
         this.currencyCode = currencyCode;
         this.nanos = nanos;
         this.units = units;
     }
 
     private MoneyArgs() {
-        this.currencyCode = Input.empty();
-        this.nanos = Input.empty();
-        this.units = Input.empty();
+        this.currencyCode = Output.empty();
+        this.nanos = Output.empty();
+        this.units = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class MoneyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> currencyCode;
-        private @Nullable Input<Integer> nanos;
-        private @Nullable Input<String> units;
+        private @Nullable Output<String> currencyCode;
+        private @Nullable Output<Integer> nanos;
+        private @Nullable Output<String> units;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class MoneyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.units = defaults.units;
         }
 
-        public Builder currencyCode(@Nullable Input<String> currencyCode) {
+        public Builder currencyCode(@Nullable Output<String> currencyCode) {
             this.currencyCode = currencyCode;
             return this;
         }
 
         public Builder currencyCode(@Nullable String currencyCode) {
-            this.currencyCode = Input.ofNullable(currencyCode);
+            this.currencyCode = Output.ofNullable(currencyCode);
             return this;
         }
 
-        public Builder nanos(@Nullable Input<Integer> nanos) {
+        public Builder nanos(@Nullable Output<Integer> nanos) {
             this.nanos = nanos;
             return this;
         }
 
         public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Input.ofNullable(nanos);
+            this.nanos = Output.ofNullable(nanos);
             return this;
         }
 
-        public Builder units(@Nullable Input<String> units) {
+        public Builder units(@Nullable Output<String> units) {
             this.units = units;
             return this;
         }
 
         public Builder units(@Nullable String units) {
-            this.units = Input.ofNullable(units);
+            this.units = Output.ofNullable(units);
             return this;
         }
         public MoneyArgs build() {

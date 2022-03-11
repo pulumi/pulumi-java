@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.FargateProfileSelectorGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fargateProfileName")
-      private final @Nullable Input<String> fargateProfileName;
+      private final @Nullable Output<String> fargateProfileName;
 
-    public Input<String> getFargateProfileName() {
-        return this.fargateProfileName == null ? Input.empty() : this.fargateProfileName;
+    public Output<String> getFargateProfileName() {
+        return this.fargateProfileName == null ? Output.empty() : this.fargateProfileName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="podExecutionRoleArn")
-      private final @Nullable Input<String> podExecutionRoleArn;
+      private final @Nullable Output<String> podExecutionRoleArn;
 
-    public Input<String> getPodExecutionRoleArn() {
-        return this.podExecutionRoleArn == null ? Input.empty() : this.podExecutionRoleArn;
+    public Output<String> getPodExecutionRoleArn() {
+        return this.podExecutionRoleArn == null ? Output.empty() : this.podExecutionRoleArn;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selectors")
-      private final @Nullable Input<List<FargateProfileSelectorGetArgs>> selectors;
+      private final @Nullable Output<List<FargateProfileSelectorGetArgs>> selectors;
 
-    public Input<List<FargateProfileSelectorGetArgs>> getSelectors() {
-        return this.selectors == null ? Input.empty() : this.selectors;
+    public Output<List<FargateProfileSelectorGetArgs>> getSelectors() {
+        return this.selectors == null ? Output.empty() : this.selectors;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -110,22 +110,22 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public FargateProfileState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> clusterName,
-        @Nullable Input<String> fargateProfileName,
-        @Nullable Input<String> podExecutionRoleArn,
-        @Nullable Input<List<FargateProfileSelectorGetArgs>> selectors,
-        @Nullable Input<String> status,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> clusterName,
+        @Nullable Output<String> fargateProfileName,
+        @Nullable Output<String> podExecutionRoleArn,
+        @Nullable Output<List<FargateProfileSelectorGetArgs>> selectors,
+        @Nullable Output<String> status,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.clusterName = clusterName;
         this.fargateProfileName = fargateProfileName;
@@ -138,15 +138,15 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
     }
 
     private FargateProfileState() {
-        this.arn = Input.empty();
-        this.clusterName = Input.empty();
-        this.fargateProfileName = Input.empty();
-        this.podExecutionRoleArn = Input.empty();
-        this.selectors = Input.empty();
-        this.status = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.clusterName = Output.empty();
+        this.fargateProfileName = Output.empty();
+        this.podExecutionRoleArn = Output.empty();
+        this.selectors = Output.empty();
+        this.status = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<String> fargateProfileName;
-        private @Nullable Input<String> podExecutionRoleArn;
-        private @Nullable Input<List<FargateProfileSelectorGetArgs>> selectors;
-        private @Nullable Input<String> status;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<String> fargateProfileName;
+        private @Nullable Output<String> podExecutionRoleArn;
+        private @Nullable Output<List<FargateProfileSelectorGetArgs>> selectors;
+        private @Nullable Output<String> status;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -185,93 +185,93 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder fargateProfileName(@Nullable Input<String> fargateProfileName) {
+        public Builder fargateProfileName(@Nullable Output<String> fargateProfileName) {
             this.fargateProfileName = fargateProfileName;
             return this;
         }
 
         public Builder fargateProfileName(@Nullable String fargateProfileName) {
-            this.fargateProfileName = Input.ofNullable(fargateProfileName);
+            this.fargateProfileName = Output.ofNullable(fargateProfileName);
             return this;
         }
 
-        public Builder podExecutionRoleArn(@Nullable Input<String> podExecutionRoleArn) {
+        public Builder podExecutionRoleArn(@Nullable Output<String> podExecutionRoleArn) {
             this.podExecutionRoleArn = podExecutionRoleArn;
             return this;
         }
 
         public Builder podExecutionRoleArn(@Nullable String podExecutionRoleArn) {
-            this.podExecutionRoleArn = Input.ofNullable(podExecutionRoleArn);
+            this.podExecutionRoleArn = Output.ofNullable(podExecutionRoleArn);
             return this;
         }
 
-        public Builder selectors(@Nullable Input<List<FargateProfileSelectorGetArgs>> selectors) {
+        public Builder selectors(@Nullable Output<List<FargateProfileSelectorGetArgs>> selectors) {
             this.selectors = selectors;
             return this;
         }
 
         public Builder selectors(@Nullable List<FargateProfileSelectorGetArgs> selectors) {
-            this.selectors = Input.ofNullable(selectors);
+            this.selectors = Output.ofNullable(selectors);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public FargateProfileState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="age")
-      private final @Nullable Input<Integer> age;
+      private final @Nullable Output<Integer> age;
 
-    public Input<Integer> getAge() {
-        return this.age == null ? Input.empty() : this.age;
+    public Output<Integer> getAge() {
+        return this.age == null ? Output.empty() : this.age;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="createdBefore")
-      private final @Nullable Input<String> createdBefore;
+      private final @Nullable Output<String> createdBefore;
 
-    public Input<String> getCreatedBefore() {
-        return this.createdBefore == null ? Input.empty() : this.createdBefore;
+    public Output<String> getCreatedBefore() {
+        return this.createdBefore == null ? Output.empty() : this.createdBefore;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="customTimeBefore")
-      private final @Nullable Input<String> customTimeBefore;
+      private final @Nullable Output<String> customTimeBefore;
 
-    public Input<String> getCustomTimeBefore() {
-        return this.customTimeBefore == null ? Input.empty() : this.customTimeBefore;
+    public Output<String> getCustomTimeBefore() {
+        return this.customTimeBefore == null ? Output.empty() : this.customTimeBefore;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="daysSinceCustomTime")
-      private final @Nullable Input<Integer> daysSinceCustomTime;
+      private final @Nullable Output<Integer> daysSinceCustomTime;
 
-    public Input<Integer> getDaysSinceCustomTime() {
-        return this.daysSinceCustomTime == null ? Input.empty() : this.daysSinceCustomTime;
+    public Output<Integer> getDaysSinceCustomTime() {
+        return this.daysSinceCustomTime == null ? Output.empty() : this.daysSinceCustomTime;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="daysSinceNoncurrentTime")
-      private final @Nullable Input<Integer> daysSinceNoncurrentTime;
+      private final @Nullable Output<Integer> daysSinceNoncurrentTime;
 
-    public Input<Integer> getDaysSinceNoncurrentTime() {
-        return this.daysSinceNoncurrentTime == null ? Input.empty() : this.daysSinceNoncurrentTime;
+    public Output<Integer> getDaysSinceNoncurrentTime() {
+        return this.daysSinceNoncurrentTime == null ? Output.empty() : this.daysSinceNoncurrentTime;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="matchesStorageClasses")
-      private final @Nullable Input<List<String>> matchesStorageClasses;
+      private final @Nullable Output<List<String>> matchesStorageClasses;
 
-    public Input<List<String>> getMatchesStorageClasses() {
-        return this.matchesStorageClasses == null ? Input.empty() : this.matchesStorageClasses;
+    public Output<List<String>> getMatchesStorageClasses() {
+        return this.matchesStorageClasses == null ? Output.empty() : this.matchesStorageClasses;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="noncurrentTimeBefore")
-      private final @Nullable Input<String> noncurrentTimeBefore;
+      private final @Nullable Output<String> noncurrentTimeBefore;
 
-    public Input<String> getNoncurrentTimeBefore() {
-        return this.noncurrentTimeBefore == null ? Input.empty() : this.noncurrentTimeBefore;
+    public Output<String> getNoncurrentTimeBefore() {
+        return this.noncurrentTimeBefore == null ? Output.empty() : this.noncurrentTimeBefore;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="numNewerVersions")
-      private final @Nullable Input<Integer> numNewerVersions;
+      private final @Nullable Output<Integer> numNewerVersions;
 
-    public Input<Integer> getNumNewerVersions() {
-        return this.numNewerVersions == null ? Input.empty() : this.numNewerVersions;
+    public Output<Integer> getNumNewerVersions() {
+        return this.numNewerVersions == null ? Output.empty() : this.numNewerVersions;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="withState")
-      private final @Nullable Input<String> withState;
+      private final @Nullable Output<String> withState;
 
-    public Input<String> getWithState() {
-        return this.withState == null ? Input.empty() : this.withState;
+    public Output<String> getWithState() {
+        return this.withState == null ? Output.empty() : this.withState;
     }
 
     public BucketLifecycleRuleConditionGetArgs(
-        @Nullable Input<Integer> age,
-        @Nullable Input<String> createdBefore,
-        @Nullable Input<String> customTimeBefore,
-        @Nullable Input<Integer> daysSinceCustomTime,
-        @Nullable Input<Integer> daysSinceNoncurrentTime,
-        @Nullable Input<List<String>> matchesStorageClasses,
-        @Nullable Input<String> noncurrentTimeBefore,
-        @Nullable Input<Integer> numNewerVersions,
-        @Nullable Input<String> withState) {
+        @Nullable Output<Integer> age,
+        @Nullable Output<String> createdBefore,
+        @Nullable Output<String> customTimeBefore,
+        @Nullable Output<Integer> daysSinceCustomTime,
+        @Nullable Output<Integer> daysSinceNoncurrentTime,
+        @Nullable Output<List<String>> matchesStorageClasses,
+        @Nullable Output<String> noncurrentTimeBefore,
+        @Nullable Output<Integer> numNewerVersions,
+        @Nullable Output<String> withState) {
         this.age = age;
         this.createdBefore = createdBefore;
         this.customTimeBefore = customTimeBefore;
@@ -137,15 +137,15 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
     }
 
     private BucketLifecycleRuleConditionGetArgs() {
-        this.age = Input.empty();
-        this.createdBefore = Input.empty();
-        this.customTimeBefore = Input.empty();
-        this.daysSinceCustomTime = Input.empty();
-        this.daysSinceNoncurrentTime = Input.empty();
-        this.matchesStorageClasses = Input.empty();
-        this.noncurrentTimeBefore = Input.empty();
-        this.numNewerVersions = Input.empty();
-        this.withState = Input.empty();
+        this.age = Output.empty();
+        this.createdBefore = Output.empty();
+        this.customTimeBefore = Output.empty();
+        this.daysSinceCustomTime = Output.empty();
+        this.daysSinceNoncurrentTime = Output.empty();
+        this.matchesStorageClasses = Output.empty();
+        this.noncurrentTimeBefore = Output.empty();
+        this.numNewerVersions = Output.empty();
+        this.withState = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> age;
-        private @Nullable Input<String> createdBefore;
-        private @Nullable Input<String> customTimeBefore;
-        private @Nullable Input<Integer> daysSinceCustomTime;
-        private @Nullable Input<Integer> daysSinceNoncurrentTime;
-        private @Nullable Input<List<String>> matchesStorageClasses;
-        private @Nullable Input<String> noncurrentTimeBefore;
-        private @Nullable Input<Integer> numNewerVersions;
-        private @Nullable Input<String> withState;
+        private @Nullable Output<Integer> age;
+        private @Nullable Output<String> createdBefore;
+        private @Nullable Output<String> customTimeBefore;
+        private @Nullable Output<Integer> daysSinceCustomTime;
+        private @Nullable Output<Integer> daysSinceNoncurrentTime;
+        private @Nullable Output<List<String>> matchesStorageClasses;
+        private @Nullable Output<String> noncurrentTimeBefore;
+        private @Nullable Output<Integer> numNewerVersions;
+        private @Nullable Output<String> withState;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
     	      this.withState = defaults.withState;
         }
 
-        public Builder age(@Nullable Input<Integer> age) {
+        public Builder age(@Nullable Output<Integer> age) {
             this.age = age;
             return this;
         }
 
         public Builder age(@Nullable Integer age) {
-            this.age = Input.ofNullable(age);
+            this.age = Output.ofNullable(age);
             return this;
         }
 
-        public Builder createdBefore(@Nullable Input<String> createdBefore) {
+        public Builder createdBefore(@Nullable Output<String> createdBefore) {
             this.createdBefore = createdBefore;
             return this;
         }
 
         public Builder createdBefore(@Nullable String createdBefore) {
-            this.createdBefore = Input.ofNullable(createdBefore);
+            this.createdBefore = Output.ofNullable(createdBefore);
             return this;
         }
 
-        public Builder customTimeBefore(@Nullable Input<String> customTimeBefore) {
+        public Builder customTimeBefore(@Nullable Output<String> customTimeBefore) {
             this.customTimeBefore = customTimeBefore;
             return this;
         }
 
         public Builder customTimeBefore(@Nullable String customTimeBefore) {
-            this.customTimeBefore = Input.ofNullable(customTimeBefore);
+            this.customTimeBefore = Output.ofNullable(customTimeBefore);
             return this;
         }
 
-        public Builder daysSinceCustomTime(@Nullable Input<Integer> daysSinceCustomTime) {
+        public Builder daysSinceCustomTime(@Nullable Output<Integer> daysSinceCustomTime) {
             this.daysSinceCustomTime = daysSinceCustomTime;
             return this;
         }
 
         public Builder daysSinceCustomTime(@Nullable Integer daysSinceCustomTime) {
-            this.daysSinceCustomTime = Input.ofNullable(daysSinceCustomTime);
+            this.daysSinceCustomTime = Output.ofNullable(daysSinceCustomTime);
             return this;
         }
 
-        public Builder daysSinceNoncurrentTime(@Nullable Input<Integer> daysSinceNoncurrentTime) {
+        public Builder daysSinceNoncurrentTime(@Nullable Output<Integer> daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
             return this;
         }
 
         public Builder daysSinceNoncurrentTime(@Nullable Integer daysSinceNoncurrentTime) {
-            this.daysSinceNoncurrentTime = Input.ofNullable(daysSinceNoncurrentTime);
+            this.daysSinceNoncurrentTime = Output.ofNullable(daysSinceNoncurrentTime);
             return this;
         }
 
-        public Builder matchesStorageClasses(@Nullable Input<List<String>> matchesStorageClasses) {
+        public Builder matchesStorageClasses(@Nullable Output<List<String>> matchesStorageClasses) {
             this.matchesStorageClasses = matchesStorageClasses;
             return this;
         }
 
         public Builder matchesStorageClasses(@Nullable List<String> matchesStorageClasses) {
-            this.matchesStorageClasses = Input.ofNullable(matchesStorageClasses);
+            this.matchesStorageClasses = Output.ofNullable(matchesStorageClasses);
             return this;
         }
 
-        public Builder noncurrentTimeBefore(@Nullable Input<String> noncurrentTimeBefore) {
+        public Builder noncurrentTimeBefore(@Nullable Output<String> noncurrentTimeBefore) {
             this.noncurrentTimeBefore = noncurrentTimeBefore;
             return this;
         }
 
         public Builder noncurrentTimeBefore(@Nullable String noncurrentTimeBefore) {
-            this.noncurrentTimeBefore = Input.ofNullable(noncurrentTimeBefore);
+            this.noncurrentTimeBefore = Output.ofNullable(noncurrentTimeBefore);
             return this;
         }
 
-        public Builder numNewerVersions(@Nullable Input<Integer> numNewerVersions) {
+        public Builder numNewerVersions(@Nullable Output<Integer> numNewerVersions) {
             this.numNewerVersions = numNewerVersions;
             return this;
         }
 
         public Builder numNewerVersions(@Nullable Integer numNewerVersions) {
-            this.numNewerVersions = Input.ofNullable(numNewerVersions);
+            this.numNewerVersions = Output.ofNullable(numNewerVersions);
             return this;
         }
 
-        public Builder withState(@Nullable Input<String> withState) {
+        public Builder withState(@Nullable Output<String> withState) {
             this.withState = withState;
             return this;
         }
 
         public Builder withState(@Nullable String withState) {
-            this.withState = Input.ofNullable(withState);
+            this.withState = Output.ofNullable(withState);
             return this;
         }
         public BucketLifecycleRuleConditionGetArgs build() {

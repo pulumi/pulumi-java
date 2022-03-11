@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.VertexArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vertices")
-      private final @Nullable Input<List<VertexArgs>> vertices;
+      private final @Nullable Output<List<VertexArgs>> vertices;
 
-    public Input<List<VertexArgs>> getVertices() {
-        return this.vertices == null ? Input.empty() : this.vertices;
+    public Output<List<VertexArgs>> getVertices() {
+        return this.vertices == null ? Output.empty() : this.vertices;
     }
 
     public BoundingPolyArgs(
-        @Nullable Input<String> label,
-        @Nullable Input<List<VertexArgs>> vertices) {
+        @Nullable Output<String> label,
+        @Nullable Output<List<VertexArgs>> vertices) {
         this.label = label;
         this.vertices = vertices;
     }
 
     private BoundingPolyArgs() {
-        this.label = Input.empty();
-        this.vertices = Input.empty();
+        this.label = Output.empty();
+        this.vertices = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> label;
-        private @Nullable Input<List<VertexArgs>> vertices;
+        private @Nullable Output<String> label;
+        private @Nullable Output<List<VertexArgs>> vertices;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vertices = defaults.vertices;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder vertices(@Nullable Input<List<VertexArgs>> vertices) {
+        public Builder vertices(@Nullable Output<List<VertexArgs>> vertices) {
             this.vertices = vertices;
             return this;
         }
 
         public Builder vertices(@Nullable List<VertexArgs> vertices) {
-            this.vertices = Input.ofNullable(vertices);
+            this.vertices = Output.ofNullable(vertices);
             return this;
         }
         public BoundingPolyArgs build() {

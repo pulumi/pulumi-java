@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayGreengrassArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayGreengrassV2Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="greengrass")
-      private final @Nullable Input<GatewayGreengrassArgs> greengrass;
+      private final @Nullable Output<GatewayGreengrassArgs> greengrass;
 
-    public Input<GatewayGreengrassArgs> getGreengrass() {
-        return this.greengrass == null ? Input.empty() : this.greengrass;
+    public Output<GatewayGreengrassArgs> getGreengrass() {
+        return this.greengrass == null ? Output.empty() : this.greengrass;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="greengrassV2")
-      private final @Nullable Input<GatewayGreengrassV2Args> greengrassV2;
+      private final @Nullable Output<GatewayGreengrassV2Args> greengrassV2;
 
-    public Input<GatewayGreengrassV2Args> getGreengrassV2() {
-        return this.greengrassV2 == null ? Input.empty() : this.greengrassV2;
+    public Output<GatewayGreengrassV2Args> getGreengrassV2() {
+        return this.greengrassV2 == null ? Output.empty() : this.greengrassV2;
     }
 
     public GatewayPlatformArgs(
-        @Nullable Input<GatewayGreengrassArgs> greengrass,
-        @Nullable Input<GatewayGreengrassV2Args> greengrassV2) {
+        @Nullable Output<GatewayGreengrassArgs> greengrass,
+        @Nullable Output<GatewayGreengrassV2Args> greengrassV2) {
         this.greengrass = greengrass;
         this.greengrassV2 = greengrassV2;
     }
 
     private GatewayPlatformArgs() {
-        this.greengrass = Input.empty();
-        this.greengrassV2 = Input.empty();
+        this.greengrass = Output.empty();
+        this.greengrassV2 = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<GatewayGreengrassArgs> greengrass;
-        private @Nullable Input<GatewayGreengrassV2Args> greengrassV2;
+        private @Nullable Output<GatewayGreengrassArgs> greengrass;
+        private @Nullable Output<GatewayGreengrassV2Args> greengrassV2;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
     	      this.greengrassV2 = defaults.greengrassV2;
         }
 
-        public Builder greengrass(@Nullable Input<GatewayGreengrassArgs> greengrass) {
+        public Builder greengrass(@Nullable Output<GatewayGreengrassArgs> greengrass) {
             this.greengrass = greengrass;
             return this;
         }
 
         public Builder greengrass(@Nullable GatewayGreengrassArgs greengrass) {
-            this.greengrass = Input.ofNullable(greengrass);
+            this.greengrass = Output.ofNullable(greengrass);
             return this;
         }
 
-        public Builder greengrassV2(@Nullable Input<GatewayGreengrassV2Args> greengrassV2) {
+        public Builder greengrassV2(@Nullable Output<GatewayGreengrassV2Args> greengrassV2) {
             this.greengrassV2 = greengrassV2;
             return this;
         }
 
         public Builder greengrassV2(@Nullable GatewayGreengrassV2Args greengrassV2) {
-            this.greengrassV2 = Input.ofNullable(greengrassV2);
+            this.greengrassV2 = Output.ofNullable(greengrassV2);
             return this;
         }
         public GatewayPlatformArgs build() {

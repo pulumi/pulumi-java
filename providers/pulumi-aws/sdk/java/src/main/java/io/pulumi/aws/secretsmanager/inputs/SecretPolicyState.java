@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.secretsmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockPublicPolicy")
-      private final @Nullable Input<Boolean> blockPublicPolicy;
+      private final @Nullable Output<Boolean> blockPublicPolicy;
 
-    public Input<Boolean> getBlockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Input.empty() : this.blockPublicPolicy;
+    public Output<Boolean> getBlockPublicPolicy() {
+        return this.blockPublicPolicy == null ? Output.empty() : this.blockPublicPolicy;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretArn")
-      private final @Nullable Input<String> secretArn;
+      private final @Nullable Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
-        return this.secretArn == null ? Input.empty() : this.secretArn;
+    public Output<String> getSecretArn() {
+        return this.secretArn == null ? Output.empty() : this.secretArn;
     }
 
     public SecretPolicyState(
-        @Nullable Input<Boolean> blockPublicPolicy,
-        @Nullable Input<String> policy,
-        @Nullable Input<String> secretArn) {
+        @Nullable Output<Boolean> blockPublicPolicy,
+        @Nullable Output<String> policy,
+        @Nullable Output<String> secretArn) {
         this.blockPublicPolicy = blockPublicPolicy;
         this.policy = policy;
         this.secretArn = secretArn;
     }
 
     private SecretPolicyState() {
-        this.blockPublicPolicy = Input.empty();
-        this.policy = Input.empty();
-        this.secretArn = Input.empty();
+        this.blockPublicPolicy = Output.empty();
+        this.policy = Output.empty();
+        this.secretArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> blockPublicPolicy;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<String> secretArn;
+        private @Nullable Output<Boolean> blockPublicPolicy;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<String> secretArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder blockPublicPolicy(@Nullable Input<Boolean> blockPublicPolicy) {
+        public Builder blockPublicPolicy(@Nullable Output<Boolean> blockPublicPolicy) {
             this.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
 
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = Input.ofNullable(blockPublicPolicy);
+            this.blockPublicPolicy = Output.ofNullable(blockPublicPolicy);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder secretArn(@Nullable Input<String> secretArn) {
+        public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Input.ofNullable(secretArn);
+            this.secretArn = Output.ofNullable(secretArn);
             return this;
         }
         public SecretPolicyState build() {

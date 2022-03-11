@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-      private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Input<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Input.empty() : this.keepers;
+    public Output<Map<String,Object>> getKeepers() {
+        return this.keepers == null ? Output.empty() : this.keepers;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyAlgorithm")
-      private final @Nullable Input<String> keyAlgorithm;
+      private final @Nullable Output<String> keyAlgorithm;
 
-    public Input<String> getKeyAlgorithm() {
-        return this.keyAlgorithm == null ? Input.empty() : this.keyAlgorithm;
+    public Output<String> getKeyAlgorithm() {
+        return this.keyAlgorithm == null ? Output.empty() : this.keyAlgorithm;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKeyType")
-      private final @Nullable Input<String> privateKeyType;
+      private final @Nullable Output<String> privateKeyType;
 
-    public Input<String> getPrivateKeyType() {
-        return this.privateKeyType == null ? Input.empty() : this.privateKeyType;
+    public Output<String> getPrivateKeyType() {
+        return this.privateKeyType == null ? Output.empty() : this.privateKeyType;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyData")
-      private final @Nullable Input<String> publicKeyData;
+      private final @Nullable Output<String> publicKeyData;
 
-    public Input<String> getPublicKeyData() {
-        return this.publicKeyData == null ? Input.empty() : this.publicKeyData;
+    public Output<String> getPublicKeyData() {
+        return this.publicKeyData == null ? Output.empty() : this.publicKeyData;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyType")
-      private final @Nullable Input<String> publicKeyType;
+      private final @Nullable Output<String> publicKeyType;
 
-    public Input<String> getPublicKeyType() {
-        return this.publicKeyType == null ? Input.empty() : this.publicKeyType;
+    public Output<String> getPublicKeyType() {
+        return this.publicKeyType == null ? Output.empty() : this.publicKeyType;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountId", required=true)
-      private final Input<String> serviceAccountId;
+      private final Output<String> serviceAccountId;
 
-    public Input<String> getServiceAccountId() {
+    public Output<String> getServiceAccountId() {
         return this.serviceAccountId;
     }
 
     public KeyArgs(
-        @Nullable Input<Map<String,Object>> keepers,
-        @Nullable Input<String> keyAlgorithm,
-        @Nullable Input<String> privateKeyType,
-        @Nullable Input<String> publicKeyData,
-        @Nullable Input<String> publicKeyType,
-        Input<String> serviceAccountId) {
+        @Nullable Output<Map<String,Object>> keepers,
+        @Nullable Output<String> keyAlgorithm,
+        @Nullable Output<String> privateKeyType,
+        @Nullable Output<String> publicKeyData,
+        @Nullable Output<String> publicKeyType,
+        Output<String> serviceAccountId) {
         this.keepers = keepers;
         this.keyAlgorithm = keyAlgorithm;
         this.privateKeyType = privateKeyType;
@@ -103,12 +103,12 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.keepers = Input.empty();
-        this.keyAlgorithm = Input.empty();
-        this.privateKeyType = Input.empty();
-        this.publicKeyData = Input.empty();
-        this.publicKeyType = Input.empty();
-        this.serviceAccountId = Input.empty();
+        this.keepers = Output.empty();
+        this.keyAlgorithm = Output.empty();
+        this.privateKeyType = Output.empty();
+        this.publicKeyData = Output.empty();
+        this.publicKeyType = Output.empty();
+        this.serviceAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> keepers;
-        private @Nullable Input<String> keyAlgorithm;
-        private @Nullable Input<String> privateKeyType;
-        private @Nullable Input<String> publicKeyData;
-        private @Nullable Input<String> publicKeyType;
-        private Input<String> serviceAccountId;
+        private @Nullable Output<Map<String,Object>> keepers;
+        private @Nullable Output<String> keyAlgorithm;
+        private @Nullable Output<String> privateKeyType;
+        private @Nullable Output<String> publicKeyData;
+        private @Nullable Output<String> publicKeyType;
+        private Output<String> serviceAccountId;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccountId = defaults.serviceAccountId;
         }
 
-        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Input.ofNullable(keepers);
+            this.keepers = Output.ofNullable(keepers);
             return this;
         }
 
-        public Builder keyAlgorithm(@Nullable Input<String> keyAlgorithm) {
+        public Builder keyAlgorithm(@Nullable Output<String> keyAlgorithm) {
             this.keyAlgorithm = keyAlgorithm;
             return this;
         }
 
         public Builder keyAlgorithm(@Nullable String keyAlgorithm) {
-            this.keyAlgorithm = Input.ofNullable(keyAlgorithm);
+            this.keyAlgorithm = Output.ofNullable(keyAlgorithm);
             return this;
         }
 
-        public Builder privateKeyType(@Nullable Input<String> privateKeyType) {
+        public Builder privateKeyType(@Nullable Output<String> privateKeyType) {
             this.privateKeyType = privateKeyType;
             return this;
         }
 
         public Builder privateKeyType(@Nullable String privateKeyType) {
-            this.privateKeyType = Input.ofNullable(privateKeyType);
+            this.privateKeyType = Output.ofNullable(privateKeyType);
             return this;
         }
 
-        public Builder publicKeyData(@Nullable Input<String> publicKeyData) {
+        public Builder publicKeyData(@Nullable Output<String> publicKeyData) {
             this.publicKeyData = publicKeyData;
             return this;
         }
 
         public Builder publicKeyData(@Nullable String publicKeyData) {
-            this.publicKeyData = Input.ofNullable(publicKeyData);
+            this.publicKeyData = Output.ofNullable(publicKeyData);
             return this;
         }
 
-        public Builder publicKeyType(@Nullable Input<String> publicKeyType) {
+        public Builder publicKeyType(@Nullable Output<String> publicKeyType) {
             this.publicKeyType = publicKeyType;
             return this;
         }
 
         public Builder publicKeyType(@Nullable String publicKeyType) {
-            this.publicKeyType = Input.ofNullable(publicKeyType);
+            this.publicKeyType = Output.ofNullable(publicKeyType);
             return this;
         }
 
-        public Builder serviceAccountId(Input<String> serviceAccountId) {
+        public Builder serviceAccountId(Output<String> serviceAccountId) {
             this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
             return this;
         }
 
         public Builder serviceAccountId(String serviceAccountId) {
-            this.serviceAccountId = Input.of(Objects.requireNonNull(serviceAccountId));
+            this.serviceAccountId = Output.of(Objects.requireNonNull(serviceAccountId));
             return this;
         }
         public KeyArgs build() {

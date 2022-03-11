@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class VirtualServiceSpecProviderVirtualRouterArgs extends io.pulumi
      * 
      */
     @InputImport(name="virtualRouterName", required=true)
-      private final Input<String> virtualRouterName;
+      private final Output<String> virtualRouterName;
 
-    public Input<String> getVirtualRouterName() {
+    public Output<String> getVirtualRouterName() {
         return this.virtualRouterName;
     }
 
-    public VirtualServiceSpecProviderVirtualRouterArgs(Input<String> virtualRouterName) {
+    public VirtualServiceSpecProviderVirtualRouterArgs(Output<String> virtualRouterName) {
         this.virtualRouterName = Objects.requireNonNull(virtualRouterName, "expected parameter 'virtualRouterName' to be non-null");
     }
 
     private VirtualServiceSpecProviderVirtualRouterArgs() {
-        this.virtualRouterName = Input.empty();
+        this.virtualRouterName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class VirtualServiceSpecProviderVirtualRouterArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<String> virtualRouterName;
+        private Output<String> virtualRouterName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class VirtualServiceSpecProviderVirtualRouterArgs extends io.pulumi
     	      this.virtualRouterName = defaults.virtualRouterName;
         }
 
-        public Builder virtualRouterName(Input<String> virtualRouterName) {
+        public Builder virtualRouterName(Output<String> virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }
 
         public Builder virtualRouterName(String virtualRouterName) {
-            this.virtualRouterName = Input.of(Objects.requireNonNull(virtualRouterName));
+            this.virtualRouterName = Output.of(Objects.requireNonNull(virtualRouterName));
             return this;
         }
         public VirtualServiceSpecProviderVirtualRouterArgs build() {

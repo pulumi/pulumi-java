@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameterKey", required=true)
-      private final Input<String> parameterKey;
+      private final Output<String> parameterKey;
 
-    public Input<String> getParameterKey() {
+    public Output<String> getParameterKey() {
         return this.parameterKey;
     }
 
@@ -29,22 +29,22 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameterValue", required=true)
-      private final Input<String> parameterValue;
+      private final Output<String> parameterValue;
 
-    public Input<String> getParameterValue() {
+    public Output<String> getParameterValue() {
         return this.parameterValue;
     }
 
     public StackSetParameterArgs(
-        Input<String> parameterKey,
-        Input<String> parameterValue) {
+        Output<String> parameterKey,
+        Output<String> parameterValue) {
         this.parameterKey = Objects.requireNonNull(parameterKey, "expected parameter 'parameterKey' to be non-null");
         this.parameterValue = Objects.requireNonNull(parameterValue, "expected parameter 'parameterValue' to be non-null");
     }
 
     private StackSetParameterArgs() {
-        this.parameterKey = Input.empty();
-        this.parameterValue = Input.empty();
+        this.parameterKey = Output.empty();
+        this.parameterValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> parameterKey;
-        private Input<String> parameterValue;
+        private Output<String> parameterKey;
+        private Output<String> parameterValue;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder parameterKey(Input<String> parameterKey) {
+        public Builder parameterKey(Output<String> parameterKey) {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }
 
         public Builder parameterKey(String parameterKey) {
-            this.parameterKey = Input.of(Objects.requireNonNull(parameterKey));
+            this.parameterKey = Output.of(Objects.requireNonNull(parameterKey));
             return this;
         }
 
-        public Builder parameterValue(Input<String> parameterValue) {
+        public Builder parameterValue(Output<String> parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
 
         public Builder parameterValue(String parameterValue) {
-            this.parameterValue = Input.of(Objects.requireNonNull(parameterValue));
+            this.parameterValue = Output.of(Objects.requireNonNull(parameterValue));
             return this;
         }
         public StackSetParameterArgs build() {

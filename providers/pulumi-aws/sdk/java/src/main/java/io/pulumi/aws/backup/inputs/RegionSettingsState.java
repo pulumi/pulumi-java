@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class RegionSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceTypeManagementPreference")
-      private final @Nullable Input<Map<String,Boolean>> resourceTypeManagementPreference;
+      private final @Nullable Output<Map<String,Boolean>> resourceTypeManagementPreference;
 
-    public Input<Map<String,Boolean>> getResourceTypeManagementPreference() {
-        return this.resourceTypeManagementPreference == null ? Input.empty() : this.resourceTypeManagementPreference;
+    public Output<Map<String,Boolean>> getResourceTypeManagementPreference() {
+        return this.resourceTypeManagementPreference == null ? Output.empty() : this.resourceTypeManagementPreference;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class RegionSettingsState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceTypeOptInPreference")
-      private final @Nullable Input<Map<String,Boolean>> resourceTypeOptInPreference;
+      private final @Nullable Output<Map<String,Boolean>> resourceTypeOptInPreference;
 
-    public Input<Map<String,Boolean>> getResourceTypeOptInPreference() {
-        return this.resourceTypeOptInPreference == null ? Input.empty() : this.resourceTypeOptInPreference;
+    public Output<Map<String,Boolean>> getResourceTypeOptInPreference() {
+        return this.resourceTypeOptInPreference == null ? Output.empty() : this.resourceTypeOptInPreference;
     }
 
     public RegionSettingsState(
-        @Nullable Input<Map<String,Boolean>> resourceTypeManagementPreference,
-        @Nullable Input<Map<String,Boolean>> resourceTypeOptInPreference) {
+        @Nullable Output<Map<String,Boolean>> resourceTypeManagementPreference,
+        @Nullable Output<Map<String,Boolean>> resourceTypeOptInPreference) {
         this.resourceTypeManagementPreference = resourceTypeManagementPreference;
         this.resourceTypeOptInPreference = resourceTypeOptInPreference;
     }
 
     private RegionSettingsState() {
-        this.resourceTypeManagementPreference = Input.empty();
-        this.resourceTypeOptInPreference = Input.empty();
+        this.resourceTypeManagementPreference = Output.empty();
+        this.resourceTypeOptInPreference = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class RegionSettingsState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Boolean>> resourceTypeManagementPreference;
-        private @Nullable Input<Map<String,Boolean>> resourceTypeOptInPreference;
+        private @Nullable Output<Map<String,Boolean>> resourceTypeManagementPreference;
+        private @Nullable Output<Map<String,Boolean>> resourceTypeOptInPreference;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class RegionSettingsState extends io.pulumi.resources.ResourceArgs 
     	      this.resourceTypeOptInPreference = defaults.resourceTypeOptInPreference;
         }
 
-        public Builder resourceTypeManagementPreference(@Nullable Input<Map<String,Boolean>> resourceTypeManagementPreference) {
+        public Builder resourceTypeManagementPreference(@Nullable Output<Map<String,Boolean>> resourceTypeManagementPreference) {
             this.resourceTypeManagementPreference = resourceTypeManagementPreference;
             return this;
         }
 
         public Builder resourceTypeManagementPreference(@Nullable Map<String,Boolean> resourceTypeManagementPreference) {
-            this.resourceTypeManagementPreference = Input.ofNullable(resourceTypeManagementPreference);
+            this.resourceTypeManagementPreference = Output.ofNullable(resourceTypeManagementPreference);
             return this;
         }
 
-        public Builder resourceTypeOptInPreference(@Nullable Input<Map<String,Boolean>> resourceTypeOptInPreference) {
+        public Builder resourceTypeOptInPreference(@Nullable Output<Map<String,Boolean>> resourceTypeOptInPreference) {
             this.resourceTypeOptInPreference = resourceTypeOptInPreference;
             return this;
         }
 
         public Builder resourceTypeOptInPreference(@Nullable Map<String,Boolean> resourceTypeOptInPreference) {
-            this.resourceTypeOptInPreference = Input.ofNullable(resourceTypeOptInPreference);
+            this.resourceTypeOptInPreference = Output.ofNullable(resourceTypeOptInPreference);
             return this;
         }
         public RegionSettingsState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupImmunityTimePropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class RuleGroupCaptchaConfigArgs extends io.pulumi.resources.Resour
     public static final RuleGroupCaptchaConfigArgs Empty = new RuleGroupCaptchaConfigArgs();
 
     @InputImport(name="immunityTimeProperty")
-      private final @Nullable Input<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
+      private final @Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
 
-    public Input<RuleGroupImmunityTimePropertyArgs> getImmunityTimeProperty() {
-        return this.immunityTimeProperty == null ? Input.empty() : this.immunityTimeProperty;
+    public Output<RuleGroupImmunityTimePropertyArgs> getImmunityTimeProperty() {
+        return this.immunityTimeProperty == null ? Output.empty() : this.immunityTimeProperty;
     }
 
-    public RuleGroupCaptchaConfigArgs(@Nullable Input<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty) {
+    public RuleGroupCaptchaConfigArgs(@Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty) {
         this.immunityTimeProperty = immunityTimeProperty;
     }
 
     private RuleGroupCaptchaConfigArgs() {
-        this.immunityTimeProperty = Input.empty();
+        this.immunityTimeProperty = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class RuleGroupCaptchaConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
+        private @Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class RuleGroupCaptchaConfigArgs extends io.pulumi.resources.Resour
     	      this.immunityTimeProperty = defaults.immunityTimeProperty;
         }
 
-        public Builder immunityTimeProperty(@Nullable Input<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty) {
+        public Builder immunityTimeProperty(@Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty) {
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
         }
 
         public Builder immunityTimeProperty(@Nullable RuleGroupImmunityTimePropertyArgs immunityTimeProperty) {
-            this.immunityTimeProperty = Input.ofNullable(immunityTimeProperty);
+            this.immunityTimeProperty = Output.ofNullable(immunityTimeProperty);
             return this;
         }
         public RuleGroupCaptchaConfigArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.providerhub.NotificationRegistrationArgs;
 import io.pulumi.azurenative.providerhub.outputs.NotificationRegistrationResponseProperties;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -105,21 +104,21 @@ public class NotificationRegistration extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationRegistration(String name, NotificationRegistrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:providerhub:NotificationRegistration", name, args == null ? NotificationRegistrationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:providerhub:NotificationRegistration", name, args == null ? NotificationRegistrationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NotificationRegistration(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NotificationRegistration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:providerhub:NotificationRegistration", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20201120:NotificationRegistration").build()),
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20210501preview:NotificationRegistration").build()),
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20210601preview:NotificationRegistration").build()),
-                Input.of(Alias.builder().setType("azure-native:providerhub/v20210901preview:NotificationRegistration").build())
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20201120:NotificationRegistration").build()),
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20210501preview:NotificationRegistration").build()),
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20210601preview:NotificationRegistration").build()),
+                Output.of(Alias.builder().setType("azure-native:providerhub/v20210901preview:NotificationRegistration").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -133,7 +132,7 @@ public class NotificationRegistration extends io.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NotificationRegistration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NotificationRegistration get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotificationRegistration(name, id, options);
     }
 }

@@ -10,7 +10,7 @@ import io.pulumi.aws.ses.inputs.ReceiptRuleS3ActionGetArgs;
 import io.pulumi.aws.ses.inputs.ReceiptRuleSnsActionGetArgs;
 import io.pulumi.aws.ses.inputs.ReceiptRuleStopActionGetArgs;
 import io.pulumi.aws.ses.inputs.ReceiptRuleWorkmailActionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addHeaderActions")
-      private final @Nullable Input<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
+      private final @Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
 
-    public Input<List<ReceiptRuleAddHeaderActionGetArgs>> getAddHeaderActions() {
-        return this.addHeaderActions == null ? Input.empty() : this.addHeaderActions;
+    public Output<List<ReceiptRuleAddHeaderActionGetArgs>> getAddHeaderActions() {
+        return this.addHeaderActions == null ? Output.empty() : this.addHeaderActions;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="after")
-      private final @Nullable Input<String> after;
+      private final @Nullable Output<String> after;
 
-    public Input<String> getAfter() {
-        return this.after == null ? Input.empty() : this.after;
+    public Output<String> getAfter() {
+        return this.after == null ? Output.empty() : this.after;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bounceActions")
-      private final @Nullable Input<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
+      private final @Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
 
-    public Input<List<ReceiptRuleBounceActionGetArgs>> getBounceActions() {
-        return this.bounceActions == null ? Input.empty() : this.bounceActions;
+    public Output<List<ReceiptRuleBounceActionGetArgs>> getBounceActions() {
+        return this.bounceActions == null ? Output.empty() : this.bounceActions;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaActions")
-      private final @Nullable Input<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
+      private final @Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
 
-    public Input<List<ReceiptRuleLambdaActionGetArgs>> getLambdaActions() {
-        return this.lambdaActions == null ? Input.empty() : this.lambdaActions;
+    public Output<List<ReceiptRuleLambdaActionGetArgs>> getLambdaActions() {
+        return this.lambdaActions == null ? Output.empty() : this.lambdaActions;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipients")
-      private final @Nullable Input<List<String>> recipients;
+      private final @Nullable Output<List<String>> recipients;
 
-    public Input<List<String>> getRecipients() {
-        return this.recipients == null ? Input.empty() : this.recipients;
+    public Output<List<String>> getRecipients() {
+        return this.recipients == null ? Output.empty() : this.recipients;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleSetName")
-      private final @Nullable Input<String> ruleSetName;
+      private final @Nullable Output<String> ruleSetName;
 
-    public Input<String> getRuleSetName() {
-        return this.ruleSetName == null ? Input.empty() : this.ruleSetName;
+    public Output<String> getRuleSetName() {
+        return this.ruleSetName == null ? Output.empty() : this.ruleSetName;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Actions")
-      private final @Nullable Input<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
+      private final @Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
 
-    public Input<List<ReceiptRuleS3ActionGetArgs>> getS3Actions() {
-        return this.s3Actions == null ? Input.empty() : this.s3Actions;
+    public Output<List<ReceiptRuleS3ActionGetArgs>> getS3Actions() {
+        return this.s3Actions == null ? Output.empty() : this.s3Actions;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scanEnabled")
-      private final @Nullable Input<Boolean> scanEnabled;
+      private final @Nullable Output<Boolean> scanEnabled;
 
-    public Input<Boolean> getScanEnabled() {
-        return this.scanEnabled == null ? Input.empty() : this.scanEnabled;
+    public Output<Boolean> getScanEnabled() {
+        return this.scanEnabled == null ? Output.empty() : this.scanEnabled;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snsActions")
-      private final @Nullable Input<List<ReceiptRuleSnsActionGetArgs>> snsActions;
+      private final @Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions;
 
-    public Input<List<ReceiptRuleSnsActionGetArgs>> getSnsActions() {
-        return this.snsActions == null ? Input.empty() : this.snsActions;
+    public Output<List<ReceiptRuleSnsActionGetArgs>> getSnsActions() {
+        return this.snsActions == null ? Output.empty() : this.snsActions;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stopActions")
-      private final @Nullable Input<List<ReceiptRuleStopActionGetArgs>> stopActions;
+      private final @Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions;
 
-    public Input<List<ReceiptRuleStopActionGetArgs>> getStopActions() {
-        return this.stopActions == null ? Input.empty() : this.stopActions;
+    public Output<List<ReceiptRuleStopActionGetArgs>> getStopActions() {
+        return this.stopActions == null ? Output.empty() : this.stopActions;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tlsPolicy")
-      private final @Nullable Input<String> tlsPolicy;
+      private final @Nullable Output<String> tlsPolicy;
 
-    public Input<String> getTlsPolicy() {
-        return this.tlsPolicy == null ? Input.empty() : this.tlsPolicy;
+    public Output<String> getTlsPolicy() {
+        return this.tlsPolicy == null ? Output.empty() : this.tlsPolicy;
     }
 
     /**
@@ -182,28 +182,28 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workmailActions")
-      private final @Nullable Input<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
+      private final @Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
 
-    public Input<List<ReceiptRuleWorkmailActionGetArgs>> getWorkmailActions() {
-        return this.workmailActions == null ? Input.empty() : this.workmailActions;
+    public Output<List<ReceiptRuleWorkmailActionGetArgs>> getWorkmailActions() {
+        return this.workmailActions == null ? Output.empty() : this.workmailActions;
     }
 
     public ReceiptRuleState(
-        @Nullable Input<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions,
-        @Nullable Input<String> after,
-        @Nullable Input<String> arn,
-        @Nullable Input<List<ReceiptRuleBounceActionGetArgs>> bounceActions,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> recipients,
-        @Nullable Input<String> ruleSetName,
-        @Nullable Input<List<ReceiptRuleS3ActionGetArgs>> s3Actions,
-        @Nullable Input<Boolean> scanEnabled,
-        @Nullable Input<List<ReceiptRuleSnsActionGetArgs>> snsActions,
-        @Nullable Input<List<ReceiptRuleStopActionGetArgs>> stopActions,
-        @Nullable Input<String> tlsPolicy,
-        @Nullable Input<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions) {
+        @Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions,
+        @Nullable Output<String> after,
+        @Nullable Output<String> arn,
+        @Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> recipients,
+        @Nullable Output<String> ruleSetName,
+        @Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions,
+        @Nullable Output<Boolean> scanEnabled,
+        @Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions,
+        @Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions,
+        @Nullable Output<String> tlsPolicy,
+        @Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions) {
         this.addHeaderActions = addHeaderActions;
         this.after = after;
         this.arn = arn;
@@ -222,21 +222,21 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReceiptRuleState() {
-        this.addHeaderActions = Input.empty();
-        this.after = Input.empty();
-        this.arn = Input.empty();
-        this.bounceActions = Input.empty();
-        this.enabled = Input.empty();
-        this.lambdaActions = Input.empty();
-        this.name = Input.empty();
-        this.recipients = Input.empty();
-        this.ruleSetName = Input.empty();
-        this.s3Actions = Input.empty();
-        this.scanEnabled = Input.empty();
-        this.snsActions = Input.empty();
-        this.stopActions = Input.empty();
-        this.tlsPolicy = Input.empty();
-        this.workmailActions = Input.empty();
+        this.addHeaderActions = Output.empty();
+        this.after = Output.empty();
+        this.arn = Output.empty();
+        this.bounceActions = Output.empty();
+        this.enabled = Output.empty();
+        this.lambdaActions = Output.empty();
+        this.name = Output.empty();
+        this.recipients = Output.empty();
+        this.ruleSetName = Output.empty();
+        this.s3Actions = Output.empty();
+        this.scanEnabled = Output.empty();
+        this.snsActions = Output.empty();
+        this.stopActions = Output.empty();
+        this.tlsPolicy = Output.empty();
+        this.workmailActions = Output.empty();
     }
 
     public static Builder builder() {
@@ -248,21 +248,21 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
-        private @Nullable Input<String> after;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> recipients;
-        private @Nullable Input<String> ruleSetName;
-        private @Nullable Input<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
-        private @Nullable Input<Boolean> scanEnabled;
-        private @Nullable Input<List<ReceiptRuleSnsActionGetArgs>> snsActions;
-        private @Nullable Input<List<ReceiptRuleStopActionGetArgs>> stopActions;
-        private @Nullable Input<String> tlsPolicy;
-        private @Nullable Input<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
+        private @Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
+        private @Nullable Output<String> after;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> recipients;
+        private @Nullable Output<String> ruleSetName;
+        private @Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
+        private @Nullable Output<Boolean> scanEnabled;
+        private @Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions;
+        private @Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions;
+        private @Nullable Output<String> tlsPolicy;
+        private @Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
 
         public Builder() {
     	      // Empty
@@ -287,153 +287,153 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.workmailActions = defaults.workmailActions;
         }
 
-        public Builder addHeaderActions(@Nullable Input<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions) {
+        public Builder addHeaderActions(@Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions) {
             this.addHeaderActions = addHeaderActions;
             return this;
         }
 
         public Builder addHeaderActions(@Nullable List<ReceiptRuleAddHeaderActionGetArgs> addHeaderActions) {
-            this.addHeaderActions = Input.ofNullable(addHeaderActions);
+            this.addHeaderActions = Output.ofNullable(addHeaderActions);
             return this;
         }
 
-        public Builder after(@Nullable Input<String> after) {
+        public Builder after(@Nullable Output<String> after) {
             this.after = after;
             return this;
         }
 
         public Builder after(@Nullable String after) {
-            this.after = Input.ofNullable(after);
+            this.after = Output.ofNullable(after);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder bounceActions(@Nullable Input<List<ReceiptRuleBounceActionGetArgs>> bounceActions) {
+        public Builder bounceActions(@Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions) {
             this.bounceActions = bounceActions;
             return this;
         }
 
         public Builder bounceActions(@Nullable List<ReceiptRuleBounceActionGetArgs> bounceActions) {
-            this.bounceActions = Input.ofNullable(bounceActions);
+            this.bounceActions = Output.ofNullable(bounceActions);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder lambdaActions(@Nullable Input<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions) {
+        public Builder lambdaActions(@Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions) {
             this.lambdaActions = lambdaActions;
             return this;
         }
 
         public Builder lambdaActions(@Nullable List<ReceiptRuleLambdaActionGetArgs> lambdaActions) {
-            this.lambdaActions = Input.ofNullable(lambdaActions);
+            this.lambdaActions = Output.ofNullable(lambdaActions);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder recipients(@Nullable Input<List<String>> recipients) {
+        public Builder recipients(@Nullable Output<List<String>> recipients) {
             this.recipients = recipients;
             return this;
         }
 
         public Builder recipients(@Nullable List<String> recipients) {
-            this.recipients = Input.ofNullable(recipients);
+            this.recipients = Output.ofNullable(recipients);
             return this;
         }
 
-        public Builder ruleSetName(@Nullable Input<String> ruleSetName) {
+        public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
 
         public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Input.ofNullable(ruleSetName);
+            this.ruleSetName = Output.ofNullable(ruleSetName);
             return this;
         }
 
-        public Builder s3Actions(@Nullable Input<List<ReceiptRuleS3ActionGetArgs>> s3Actions) {
+        public Builder s3Actions(@Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions) {
             this.s3Actions = s3Actions;
             return this;
         }
 
         public Builder s3Actions(@Nullable List<ReceiptRuleS3ActionGetArgs> s3Actions) {
-            this.s3Actions = Input.ofNullable(s3Actions);
+            this.s3Actions = Output.ofNullable(s3Actions);
             return this;
         }
 
-        public Builder scanEnabled(@Nullable Input<Boolean> scanEnabled) {
+        public Builder scanEnabled(@Nullable Output<Boolean> scanEnabled) {
             this.scanEnabled = scanEnabled;
             return this;
         }
 
         public Builder scanEnabled(@Nullable Boolean scanEnabled) {
-            this.scanEnabled = Input.ofNullable(scanEnabled);
+            this.scanEnabled = Output.ofNullable(scanEnabled);
             return this;
         }
 
-        public Builder snsActions(@Nullable Input<List<ReceiptRuleSnsActionGetArgs>> snsActions) {
+        public Builder snsActions(@Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions) {
             this.snsActions = snsActions;
             return this;
         }
 
         public Builder snsActions(@Nullable List<ReceiptRuleSnsActionGetArgs> snsActions) {
-            this.snsActions = Input.ofNullable(snsActions);
+            this.snsActions = Output.ofNullable(snsActions);
             return this;
         }
 
-        public Builder stopActions(@Nullable Input<List<ReceiptRuleStopActionGetArgs>> stopActions) {
+        public Builder stopActions(@Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions) {
             this.stopActions = stopActions;
             return this;
         }
 
         public Builder stopActions(@Nullable List<ReceiptRuleStopActionGetArgs> stopActions) {
-            this.stopActions = Input.ofNullable(stopActions);
+            this.stopActions = Output.ofNullable(stopActions);
             return this;
         }
 
-        public Builder tlsPolicy(@Nullable Input<String> tlsPolicy) {
+        public Builder tlsPolicy(@Nullable Output<String> tlsPolicy) {
             this.tlsPolicy = tlsPolicy;
             return this;
         }
 
         public Builder tlsPolicy(@Nullable String tlsPolicy) {
-            this.tlsPolicy = Input.ofNullable(tlsPolicy);
+            this.tlsPolicy = Output.ofNullable(tlsPolicy);
             return this;
         }
 
-        public Builder workmailActions(@Nullable Input<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions) {
+        public Builder workmailActions(@Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions) {
             this.workmailActions = workmailActions;
             return this;
         }
 
         public Builder workmailActions(@Nullable List<ReceiptRuleWorkmailActionGetArgs> workmailActions) {
-            this.workmailActions = Input.ofNullable(workmailActions);
+            this.workmailActions = Output.ofNullable(workmailActions);
             return this;
         }
         public ReceiptRuleState build() {

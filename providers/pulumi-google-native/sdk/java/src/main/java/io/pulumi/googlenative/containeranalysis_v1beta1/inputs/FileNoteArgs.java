@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.FileNoteFileType;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checksum")
-      private final @Nullable Input<List<String>> checksum;
+      private final @Nullable Output<List<String>> checksum;
 
-    public Input<List<String>> getChecksum() {
-        return this.checksum == null ? Input.empty() : this.checksum;
+    public Output<List<String>> getChecksum() {
+        return this.checksum == null ? Output.empty() : this.checksum;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileType")
-      private final @Nullable Input<FileNoteFileType> fileType;
+      private final @Nullable Output<FileNoteFileType> fileType;
 
-    public Input<FileNoteFileType> getFileType() {
-        return this.fileType == null ? Input.empty() : this.fileType;
+    public Output<FileNoteFileType> getFileType() {
+        return this.fileType == null ? Output.empty() : this.fileType;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public FileNoteArgs(
-        @Nullable Input<List<String>> checksum,
-        @Nullable Input<FileNoteFileType> fileType,
-        @Nullable Input<String> title) {
+        @Nullable Output<List<String>> checksum,
+        @Nullable Output<FileNoteFileType> fileType,
+        @Nullable Output<String> title) {
         this.checksum = checksum;
         this.fileType = fileType;
         this.title = title;
     }
 
     private FileNoteArgs() {
-        this.checksum = Input.empty();
-        this.fileType = Input.empty();
-        this.title = Input.empty();
+        this.checksum = Output.empty();
+        this.fileType = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> checksum;
-        private @Nullable Input<FileNoteFileType> fileType;
-        private @Nullable Input<String> title;
+        private @Nullable Output<List<String>> checksum;
+        private @Nullable Output<FileNoteFileType> fileType;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder checksum(@Nullable Input<List<String>> checksum) {
+        public Builder checksum(@Nullable Output<List<String>> checksum) {
             this.checksum = checksum;
             return this;
         }
 
         public Builder checksum(@Nullable List<String> checksum) {
-            this.checksum = Input.ofNullable(checksum);
+            this.checksum = Output.ofNullable(checksum);
             return this;
         }
 
-        public Builder fileType(@Nullable Input<FileNoteFileType> fileType) {
+        public Builder fileType(@Nullable Output<FileNoteFileType> fileType) {
             this.fileType = fileType;
             return this;
         }
 
         public Builder fileType(@Nullable FileNoteFileType fileType) {
-            this.fileType = Input.ofNullable(fileType);
+            this.fileType = Output.ofNullable(fileType);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public FileNoteArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="makeSourceDbReadOnly")
-      private final @Nullable Input<Boolean> makeSourceDbReadOnly;
+      private final @Nullable Output<Boolean> makeSourceDbReadOnly;
 
-    public Input<Boolean> getMakeSourceDbReadOnly() {
-        return this.makeSourceDbReadOnly == null ? Input.empty() : this.makeSourceDbReadOnly;
+    public Output<Boolean> getMakeSourceDbReadOnly() {
+        return this.makeSourceDbReadOnly == null ? Output.empty() : this.makeSourceDbReadOnly;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tableMap")
-      private final @Nullable Input<Map<String,String>> tableMap;
+      private final @Nullable Output<Map<String,String>> tableMap;
 
-    public Input<Map<String,String>> getTableMap() {
-        return this.tableMap == null ? Input.empty() : this.tableMap;
+    public Output<Map<String,String>> getTableMap() {
+        return this.tableMap == null ? Output.empty() : this.tableMap;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetDatabaseName")
-      private final @Nullable Input<String> targetDatabaseName;
+      private final @Nullable Output<String> targetDatabaseName;
 
-    public Input<String> getTargetDatabaseName() {
-        return this.targetDatabaseName == null ? Input.empty() : this.targetDatabaseName;
+    public Output<String> getTargetDatabaseName() {
+        return this.targetDatabaseName == null ? Output.empty() : this.targetDatabaseName;
     }
 
     public MigrateSqlServerSqlDbDatabaseInputArgs(
-        @Nullable Input<Boolean> makeSourceDbReadOnly,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tableMap,
-        @Nullable Input<String> targetDatabaseName) {
+        @Nullable Output<Boolean> makeSourceDbReadOnly,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tableMap,
+        @Nullable Output<String> targetDatabaseName) {
         this.makeSourceDbReadOnly = makeSourceDbReadOnly;
         this.name = name;
         this.tableMap = tableMap;
@@ -76,10 +76,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
     }
 
     private MigrateSqlServerSqlDbDatabaseInputArgs() {
-        this.makeSourceDbReadOnly = Input.empty();
-        this.name = Input.empty();
-        this.tableMap = Input.empty();
-        this.targetDatabaseName = Input.empty();
+        this.makeSourceDbReadOnly = Output.empty();
+        this.name = Output.empty();
+        this.tableMap = Output.empty();
+        this.targetDatabaseName = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> makeSourceDbReadOnly;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tableMap;
-        private @Nullable Input<String> targetDatabaseName;
+        private @Nullable Output<Boolean> makeSourceDbReadOnly;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tableMap;
+        private @Nullable Output<String> targetDatabaseName;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
     	      this.targetDatabaseName = defaults.targetDatabaseName;
         }
 
-        public Builder makeSourceDbReadOnly(@Nullable Input<Boolean> makeSourceDbReadOnly) {
+        public Builder makeSourceDbReadOnly(@Nullable Output<Boolean> makeSourceDbReadOnly) {
             this.makeSourceDbReadOnly = makeSourceDbReadOnly;
             return this;
         }
 
         public Builder makeSourceDbReadOnly(@Nullable Boolean makeSourceDbReadOnly) {
-            this.makeSourceDbReadOnly = Input.ofNullable(makeSourceDbReadOnly);
+            this.makeSourceDbReadOnly = Output.ofNullable(makeSourceDbReadOnly);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tableMap(@Nullable Input<Map<String,String>> tableMap) {
+        public Builder tableMap(@Nullable Output<Map<String,String>> tableMap) {
             this.tableMap = tableMap;
             return this;
         }
 
         public Builder tableMap(@Nullable Map<String,String> tableMap) {
-            this.tableMap = Input.ofNullable(tableMap);
+            this.tableMap = Output.ofNullable(tableMap);
             return this;
         }
 
-        public Builder targetDatabaseName(@Nullable Input<String> targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable Output<String> targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
-            this.targetDatabaseName = Input.ofNullable(targetDatabaseName);
+            this.targetDatabaseName = Output.ofNullable(targetDatabaseName);
             return this;
         }
         public MigrateSqlServerSqlDbDatabaseInputArgs build() {

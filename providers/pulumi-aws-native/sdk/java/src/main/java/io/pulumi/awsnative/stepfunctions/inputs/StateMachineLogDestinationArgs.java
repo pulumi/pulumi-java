@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.stepfunctions.inputs;
 
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineCloudWatchLogsLogGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class StateMachineLogDestinationArgs extends io.pulumi.resources.Re
     public static final StateMachineLogDestinationArgs Empty = new StateMachineLogDestinationArgs();
 
     @InputImport(name="cloudWatchLogsLogGroup")
-      private final @Nullable Input<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
+      private final @Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
 
-    public Input<StateMachineCloudWatchLogsLogGroupArgs> getCloudWatchLogsLogGroup() {
-        return this.cloudWatchLogsLogGroup == null ? Input.empty() : this.cloudWatchLogsLogGroup;
+    public Output<StateMachineCloudWatchLogsLogGroupArgs> getCloudWatchLogsLogGroup() {
+        return this.cloudWatchLogsLogGroup == null ? Output.empty() : this.cloudWatchLogsLogGroup;
     }
 
-    public StateMachineLogDestinationArgs(@Nullable Input<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup) {
+    public StateMachineLogDestinationArgs(@Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup) {
         this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
     }
 
     private StateMachineLogDestinationArgs() {
-        this.cloudWatchLogsLogGroup = Input.empty();
+        this.cloudWatchLogsLogGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class StateMachineLogDestinationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
+        private @Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class StateMachineLogDestinationArgs extends io.pulumi.resources.Re
     	      this.cloudWatchLogsLogGroup = defaults.cloudWatchLogsLogGroup;
         }
 
-        public Builder cloudWatchLogsLogGroup(@Nullable Input<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup) {
+        public Builder cloudWatchLogsLogGroup(@Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup) {
             this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
             return this;
         }
 
         public Builder cloudWatchLogsLogGroup(@Nullable StateMachineCloudWatchLogsLogGroupArgs cloudWatchLogsLogGroup) {
-            this.cloudWatchLogsLogGroup = Input.ofNullable(cloudWatchLogsLogGroup);
+            this.cloudWatchLogsLogGroup = Output.ofNullable(cloudWatchLogsLogGroup);
             return this;
         }
         public StateMachineLogDestinationArgs build() {

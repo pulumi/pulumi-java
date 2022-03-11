@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.container;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -370,14 +369,14 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AzureCluster(String name, AzureClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:container/azureCluster:AzureCluster", name, args == null ? AzureClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:container/azureCluster:AzureCluster", name, args == null ? AzureClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AzureCluster(String name, Input<String> id, @Nullable AzureClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AzureCluster(String name, Output<String> id, @Nullable AzureClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:container/azureCluster:AzureCluster", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -393,7 +392,7 @@ public class AzureCluster extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AzureCluster get(String name, Input<String> id, @Nullable AzureClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AzureCluster get(String name, Output<String> id, @Nullable AzureClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AzureCluster(name, id, state, options);
     }
 }

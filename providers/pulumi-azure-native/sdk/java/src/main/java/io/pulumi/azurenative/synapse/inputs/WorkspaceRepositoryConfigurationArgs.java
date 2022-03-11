@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="collaborationBranch")
-      private final @Nullable Input<String> collaborationBranch;
+      private final @Nullable Output<String> collaborationBranch;
 
-    public Input<String> getCollaborationBranch() {
-        return this.collaborationBranch == null ? Input.empty() : this.collaborationBranch;
+    public Output<String> getCollaborationBranch() {
+        return this.collaborationBranch == null ? Output.empty() : this.collaborationBranch;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="hostName")
-      private final @Nullable Input<String> hostName;
+      private final @Nullable Output<String> hostName;
 
-    public Input<String> getHostName() {
-        return this.hostName == null ? Input.empty() : this.hostName;
+    public Output<String> getHostName() {
+        return this.hostName == null ? Output.empty() : this.hostName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="lastCommitId")
-      private final @Nullable Input<String> lastCommitId;
+      private final @Nullable Output<String> lastCommitId;
 
-    public Input<String> getLastCommitId() {
-        return this.lastCommitId == null ? Input.empty() : this.lastCommitId;
+    public Output<String> getLastCommitId() {
+        return this.lastCommitId == null ? Output.empty() : this.lastCommitId;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="projectName")
-      private final @Nullable Input<String> projectName;
+      private final @Nullable Output<String> projectName;
 
-    public Input<String> getProjectName() {
-        return this.projectName == null ? Input.empty() : this.projectName;
+    public Output<String> getProjectName() {
+        return this.projectName == null ? Output.empty() : this.projectName;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="repositoryName")
-      private final @Nullable Input<String> repositoryName;
+      private final @Nullable Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
-        return this.repositoryName == null ? Input.empty() : this.repositoryName;
+    public Output<String> getRepositoryName() {
+        return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="rootFolder")
-      private final @Nullable Input<String> rootFolder;
+      private final @Nullable Output<String> rootFolder;
 
-    public Input<String> getRootFolder() {
-        return this.rootFolder == null ? Input.empty() : this.rootFolder;
+    public Output<String> getRootFolder() {
+        return this.rootFolder == null ? Output.empty() : this.rootFolder;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public WorkspaceRepositoryConfigurationArgs(
-        @Nullable Input<String> accountName,
-        @Nullable Input<String> collaborationBranch,
-        @Nullable Input<String> hostName,
-        @Nullable Input<String> lastCommitId,
-        @Nullable Input<String> projectName,
-        @Nullable Input<String> repositoryName,
-        @Nullable Input<String> rootFolder,
-        @Nullable Input<String> tenantId,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> accountName,
+        @Nullable Output<String> collaborationBranch,
+        @Nullable Output<String> hostName,
+        @Nullable Output<String> lastCommitId,
+        @Nullable Output<String> projectName,
+        @Nullable Output<String> repositoryName,
+        @Nullable Output<String> rootFolder,
+        @Nullable Output<String> tenantId,
+        @Nullable Output<String> type) {
         this.accountName = accountName;
         this.collaborationBranch = collaborationBranch;
         this.hostName = hostName;
@@ -139,15 +139,15 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     }
 
     private WorkspaceRepositoryConfigurationArgs() {
-        this.accountName = Input.empty();
-        this.collaborationBranch = Input.empty();
-        this.hostName = Input.empty();
-        this.lastCommitId = Input.empty();
-        this.projectName = Input.empty();
-        this.repositoryName = Input.empty();
-        this.rootFolder = Input.empty();
-        this.tenantId = Input.empty();
-        this.type = Input.empty();
+        this.accountName = Output.empty();
+        this.collaborationBranch = Output.empty();
+        this.hostName = Output.empty();
+        this.lastCommitId = Output.empty();
+        this.projectName = Output.empty();
+        this.repositoryName = Output.empty();
+        this.rootFolder = Output.empty();
+        this.tenantId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<String> collaborationBranch;
-        private @Nullable Input<String> hostName;
-        private @Nullable Input<String> lastCommitId;
-        private @Nullable Input<String> projectName;
-        private @Nullable Input<String> repositoryName;
-        private @Nullable Input<String> rootFolder;
-        private @Nullable Input<String> tenantId;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<String> collaborationBranch;
+        private @Nullable Output<String> hostName;
+        private @Nullable Output<String> lastCommitId;
+        private @Nullable Output<String> projectName;
+        private @Nullable Output<String> repositoryName;
+        private @Nullable Output<String> rootFolder;
+        private @Nullable Output<String> tenantId;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     	      this.type = defaults.type;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder collaborationBranch(@Nullable Input<String> collaborationBranch) {
+        public Builder collaborationBranch(@Nullable Output<String> collaborationBranch) {
             this.collaborationBranch = collaborationBranch;
             return this;
         }
 
         public Builder collaborationBranch(@Nullable String collaborationBranch) {
-            this.collaborationBranch = Input.ofNullable(collaborationBranch);
+            this.collaborationBranch = Output.ofNullable(collaborationBranch);
             return this;
         }
 
-        public Builder hostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Output<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Input.ofNullable(hostName);
+            this.hostName = Output.ofNullable(hostName);
             return this;
         }
 
-        public Builder lastCommitId(@Nullable Input<String> lastCommitId) {
+        public Builder lastCommitId(@Nullable Output<String> lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
 
         public Builder lastCommitId(@Nullable String lastCommitId) {
-            this.lastCommitId = Input.ofNullable(lastCommitId);
+            this.lastCommitId = Output.ofNullable(lastCommitId);
             return this;
         }
 
-        public Builder projectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Input.ofNullable(projectName);
+            this.projectName = Output.ofNullable(projectName);
             return this;
         }
 
-        public Builder repositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Input.ofNullable(repositoryName);
+            this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder rootFolder(@Nullable Input<String> rootFolder) {
+        public Builder rootFolder(@Nullable Output<String> rootFolder) {
             this.rootFolder = rootFolder;
             return this;
         }
 
         public Builder rootFolder(@Nullable String rootFolder) {
-            this.rootFolder = Input.ofNullable(rootFolder);
+            this.rootFolder = Output.ofNullable(rootFolder);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public WorkspaceRepositoryConfigurationArgs build() {

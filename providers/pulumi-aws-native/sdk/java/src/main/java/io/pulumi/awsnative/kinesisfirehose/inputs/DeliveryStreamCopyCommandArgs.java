@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class DeliveryStreamCopyCommandArgs extends io.pulumi.resources.Res
     public static final DeliveryStreamCopyCommandArgs Empty = new DeliveryStreamCopyCommandArgs();
 
     @InputImport(name="copyOptions")
-      private final @Nullable Input<String> copyOptions;
+      private final @Nullable Output<String> copyOptions;
 
-    public Input<String> getCopyOptions() {
-        return this.copyOptions == null ? Input.empty() : this.copyOptions;
+    public Output<String> getCopyOptions() {
+        return this.copyOptions == null ? Output.empty() : this.copyOptions;
     }
 
     @InputImport(name="dataTableColumns")
-      private final @Nullable Input<String> dataTableColumns;
+      private final @Nullable Output<String> dataTableColumns;
 
-    public Input<String> getDataTableColumns() {
-        return this.dataTableColumns == null ? Input.empty() : this.dataTableColumns;
+    public Output<String> getDataTableColumns() {
+        return this.dataTableColumns == null ? Output.empty() : this.dataTableColumns;
     }
 
     @InputImport(name="dataTableName", required=true)
-      private final Input<String> dataTableName;
+      private final Output<String> dataTableName;
 
-    public Input<String> getDataTableName() {
+    public Output<String> getDataTableName() {
         return this.dataTableName;
     }
 
     public DeliveryStreamCopyCommandArgs(
-        @Nullable Input<String> copyOptions,
-        @Nullable Input<String> dataTableColumns,
-        Input<String> dataTableName) {
+        @Nullable Output<String> copyOptions,
+        @Nullable Output<String> dataTableColumns,
+        Output<String> dataTableName) {
         this.copyOptions = copyOptions;
         this.dataTableColumns = dataTableColumns;
         this.dataTableName = Objects.requireNonNull(dataTableName, "expected parameter 'dataTableName' to be non-null");
     }
 
     private DeliveryStreamCopyCommandArgs() {
-        this.copyOptions = Input.empty();
-        this.dataTableColumns = Input.empty();
-        this.dataTableName = Input.empty();
+        this.copyOptions = Output.empty();
+        this.dataTableColumns = Output.empty();
+        this.dataTableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class DeliveryStreamCopyCommandArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> copyOptions;
-        private @Nullable Input<String> dataTableColumns;
-        private Input<String> dataTableName;
+        private @Nullable Output<String> copyOptions;
+        private @Nullable Output<String> dataTableColumns;
+        private Output<String> dataTableName;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class DeliveryStreamCopyCommandArgs extends io.pulumi.resources.Res
     	      this.dataTableName = defaults.dataTableName;
         }
 
-        public Builder copyOptions(@Nullable Input<String> copyOptions) {
+        public Builder copyOptions(@Nullable Output<String> copyOptions) {
             this.copyOptions = copyOptions;
             return this;
         }
 
         public Builder copyOptions(@Nullable String copyOptions) {
-            this.copyOptions = Input.ofNullable(copyOptions);
+            this.copyOptions = Output.ofNullable(copyOptions);
             return this;
         }
 
-        public Builder dataTableColumns(@Nullable Input<String> dataTableColumns) {
+        public Builder dataTableColumns(@Nullable Output<String> dataTableColumns) {
             this.dataTableColumns = dataTableColumns;
             return this;
         }
 
         public Builder dataTableColumns(@Nullable String dataTableColumns) {
-            this.dataTableColumns = Input.ofNullable(dataTableColumns);
+            this.dataTableColumns = Output.ofNullable(dataTableColumns);
             return this;
         }
 
-        public Builder dataTableName(Input<String> dataTableName) {
+        public Builder dataTableName(Output<String> dataTableName) {
             this.dataTableName = Objects.requireNonNull(dataTableName);
             return this;
         }
 
         public Builder dataTableName(String dataTableName) {
-            this.dataTableName = Input.of(Objects.requireNonNull(dataTableName));
+            this.dataTableName = Output.of(Objects.requireNonNull(dataTableName));
             return this;
         }
         public DeliveryStreamCopyCommandArgs build() {

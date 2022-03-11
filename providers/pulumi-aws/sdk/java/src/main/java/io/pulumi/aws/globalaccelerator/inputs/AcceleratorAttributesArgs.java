@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.globalaccelerator.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class AcceleratorAttributesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="flowLogsEnabled")
-      private final @Nullable Input<Boolean> flowLogsEnabled;
+      private final @Nullable Output<Boolean> flowLogsEnabled;
 
-    public Input<Boolean> getFlowLogsEnabled() {
-        return this.flowLogsEnabled == null ? Input.empty() : this.flowLogsEnabled;
+    public Output<Boolean> getFlowLogsEnabled() {
+        return this.flowLogsEnabled == null ? Output.empty() : this.flowLogsEnabled;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AcceleratorAttributesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="flowLogsS3Bucket")
-      private final @Nullable Input<String> flowLogsS3Bucket;
+      private final @Nullable Output<String> flowLogsS3Bucket;
 
-    public Input<String> getFlowLogsS3Bucket() {
-        return this.flowLogsS3Bucket == null ? Input.empty() : this.flowLogsS3Bucket;
+    public Output<String> getFlowLogsS3Bucket() {
+        return this.flowLogsS3Bucket == null ? Output.empty() : this.flowLogsS3Bucket;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class AcceleratorAttributesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="flowLogsS3Prefix")
-      private final @Nullable Input<String> flowLogsS3Prefix;
+      private final @Nullable Output<String> flowLogsS3Prefix;
 
-    public Input<String> getFlowLogsS3Prefix() {
-        return this.flowLogsS3Prefix == null ? Input.empty() : this.flowLogsS3Prefix;
+    public Output<String> getFlowLogsS3Prefix() {
+        return this.flowLogsS3Prefix == null ? Output.empty() : this.flowLogsS3Prefix;
     }
 
     public AcceleratorAttributesArgs(
-        @Nullable Input<Boolean> flowLogsEnabled,
-        @Nullable Input<String> flowLogsS3Bucket,
-        @Nullable Input<String> flowLogsS3Prefix) {
+        @Nullable Output<Boolean> flowLogsEnabled,
+        @Nullable Output<String> flowLogsS3Bucket,
+        @Nullable Output<String> flowLogsS3Prefix) {
         this.flowLogsEnabled = flowLogsEnabled;
         this.flowLogsS3Bucket = flowLogsS3Bucket;
         this.flowLogsS3Prefix = flowLogsS3Prefix;
     }
 
     private AcceleratorAttributesArgs() {
-        this.flowLogsEnabled = Input.empty();
-        this.flowLogsS3Bucket = Input.empty();
-        this.flowLogsS3Prefix = Input.empty();
+        this.flowLogsEnabled = Output.empty();
+        this.flowLogsS3Bucket = Output.empty();
+        this.flowLogsS3Prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AcceleratorAttributesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> flowLogsEnabled;
-        private @Nullable Input<String> flowLogsS3Bucket;
-        private @Nullable Input<String> flowLogsS3Prefix;
+        private @Nullable Output<Boolean> flowLogsEnabled;
+        private @Nullable Output<String> flowLogsS3Bucket;
+        private @Nullable Output<String> flowLogsS3Prefix;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AcceleratorAttributesArgs extends io.pulumi.resources.Resourc
     	      this.flowLogsS3Prefix = defaults.flowLogsS3Prefix;
         }
 
-        public Builder flowLogsEnabled(@Nullable Input<Boolean> flowLogsEnabled) {
+        public Builder flowLogsEnabled(@Nullable Output<Boolean> flowLogsEnabled) {
             this.flowLogsEnabled = flowLogsEnabled;
             return this;
         }
 
         public Builder flowLogsEnabled(@Nullable Boolean flowLogsEnabled) {
-            this.flowLogsEnabled = Input.ofNullable(flowLogsEnabled);
+            this.flowLogsEnabled = Output.ofNullable(flowLogsEnabled);
             return this;
         }
 
-        public Builder flowLogsS3Bucket(@Nullable Input<String> flowLogsS3Bucket) {
+        public Builder flowLogsS3Bucket(@Nullable Output<String> flowLogsS3Bucket) {
             this.flowLogsS3Bucket = flowLogsS3Bucket;
             return this;
         }
 
         public Builder flowLogsS3Bucket(@Nullable String flowLogsS3Bucket) {
-            this.flowLogsS3Bucket = Input.ofNullable(flowLogsS3Bucket);
+            this.flowLogsS3Bucket = Output.ofNullable(flowLogsS3Bucket);
             return this;
         }
 
-        public Builder flowLogsS3Prefix(@Nullable Input<String> flowLogsS3Prefix) {
+        public Builder flowLogsS3Prefix(@Nullable Output<String> flowLogsS3Prefix) {
             this.flowLogsS3Prefix = flowLogsS3Prefix;
             return this;
         }
 
         public Builder flowLogsS3Prefix(@Nullable String flowLogsS3Prefix) {
-            this.flowLogsS3Prefix = Input.ofNullable(flowLogsS3Prefix);
+            this.flowLogsS3Prefix = Output.ofNullable(flowLogsS3Prefix);
             return this;
         }
         public AcceleratorAttributesArgs build() {

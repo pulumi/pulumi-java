@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.DestinationProtocol;
 import io.pulumi.azurenative.cdn.enums.RedirectType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customFragment")
-      private final @Nullable Input<String> customFragment;
+      private final @Nullable Output<String> customFragment;
 
-    public Input<String> getCustomFragment() {
-        return this.customFragment == null ? Input.empty() : this.customFragment;
+    public Output<String> getCustomFragment() {
+        return this.customFragment == null ? Output.empty() : this.customFragment;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customHostname")
-      private final @Nullable Input<String> customHostname;
+      private final @Nullable Output<String> customHostname;
 
-    public Input<String> getCustomHostname() {
-        return this.customHostname == null ? Input.empty() : this.customHostname;
+    public Output<String> getCustomHostname() {
+        return this.customHostname == null ? Output.empty() : this.customHostname;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customPath")
-      private final @Nullable Input<String> customPath;
+      private final @Nullable Output<String> customPath;
 
-    public Input<String> getCustomPath() {
-        return this.customPath == null ? Input.empty() : this.customPath;
+    public Output<String> getCustomPath() {
+        return this.customPath == null ? Output.empty() : this.customPath;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customQueryString")
-      private final @Nullable Input<String> customQueryString;
+      private final @Nullable Output<String> customQueryString;
 
-    public Input<String> getCustomQueryString() {
-        return this.customQueryString == null ? Input.empty() : this.customQueryString;
+    public Output<String> getCustomQueryString() {
+        return this.customQueryString == null ? Output.empty() : this.customQueryString;
     }
 
     /**
@@ -70,16 +70,16 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="destinationProtocol")
-      private final @Nullable Input<Either<String,DestinationProtocol>> destinationProtocol;
+      private final @Nullable Output<Either<String,DestinationProtocol>> destinationProtocol;
 
-    public Input<Either<String,DestinationProtocol>> getDestinationProtocol() {
-        return this.destinationProtocol == null ? Input.empty() : this.destinationProtocol;
+    public Output<Either<String,DestinationProtocol>> getDestinationProtocol() {
+        return this.destinationProtocol == null ? Output.empty() : this.destinationProtocol;
     }
 
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -88,20 +88,20 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="redirectType", required=true)
-      private final Input<Either<String,RedirectType>> redirectType;
+      private final Output<Either<String,RedirectType>> redirectType;
 
-    public Input<Either<String,RedirectType>> getRedirectType() {
+    public Output<Either<String,RedirectType>> getRedirectType() {
         return this.redirectType;
     }
 
     public UrlRedirectActionParametersArgs(
-        @Nullable Input<String> customFragment,
-        @Nullable Input<String> customHostname,
-        @Nullable Input<String> customPath,
-        @Nullable Input<String> customQueryString,
-        @Nullable Input<Either<String,DestinationProtocol>> destinationProtocol,
-        Input<String> odataType,
-        Input<Either<String,RedirectType>> redirectType) {
+        @Nullable Output<String> customFragment,
+        @Nullable Output<String> customHostname,
+        @Nullable Output<String> customPath,
+        @Nullable Output<String> customQueryString,
+        @Nullable Output<Either<String,DestinationProtocol>> destinationProtocol,
+        Output<String> odataType,
+        Output<Either<String,RedirectType>> redirectType) {
         this.customFragment = customFragment;
         this.customHostname = customHostname;
         this.customPath = customPath;
@@ -112,13 +112,13 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
     }
 
     private UrlRedirectActionParametersArgs() {
-        this.customFragment = Input.empty();
-        this.customHostname = Input.empty();
-        this.customPath = Input.empty();
-        this.customQueryString = Input.empty();
-        this.destinationProtocol = Input.empty();
-        this.odataType = Input.empty();
-        this.redirectType = Input.empty();
+        this.customFragment = Output.empty();
+        this.customHostname = Output.empty();
+        this.customPath = Output.empty();
+        this.customQueryString = Output.empty();
+        this.destinationProtocol = Output.empty();
+        this.odataType = Output.empty();
+        this.redirectType = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customFragment;
-        private @Nullable Input<String> customHostname;
-        private @Nullable Input<String> customPath;
-        private @Nullable Input<String> customQueryString;
-        private @Nullable Input<Either<String,DestinationProtocol>> destinationProtocol;
-        private Input<String> odataType;
-        private Input<Either<String,RedirectType>> redirectType;
+        private @Nullable Output<String> customFragment;
+        private @Nullable Output<String> customHostname;
+        private @Nullable Output<String> customPath;
+        private @Nullable Output<String> customQueryString;
+        private @Nullable Output<Either<String,DestinationProtocol>> destinationProtocol;
+        private Output<String> odataType;
+        private Output<Either<String,RedirectType>> redirectType;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
     	      this.redirectType = defaults.redirectType;
         }
 
-        public Builder customFragment(@Nullable Input<String> customFragment) {
+        public Builder customFragment(@Nullable Output<String> customFragment) {
             this.customFragment = customFragment;
             return this;
         }
 
         public Builder customFragment(@Nullable String customFragment) {
-            this.customFragment = Input.ofNullable(customFragment);
+            this.customFragment = Output.ofNullable(customFragment);
             return this;
         }
 
-        public Builder customHostname(@Nullable Input<String> customHostname) {
+        public Builder customHostname(@Nullable Output<String> customHostname) {
             this.customHostname = customHostname;
             return this;
         }
 
         public Builder customHostname(@Nullable String customHostname) {
-            this.customHostname = Input.ofNullable(customHostname);
+            this.customHostname = Output.ofNullable(customHostname);
             return this;
         }
 
-        public Builder customPath(@Nullable Input<String> customPath) {
+        public Builder customPath(@Nullable Output<String> customPath) {
             this.customPath = customPath;
             return this;
         }
 
         public Builder customPath(@Nullable String customPath) {
-            this.customPath = Input.ofNullable(customPath);
+            this.customPath = Output.ofNullable(customPath);
             return this;
         }
 
-        public Builder customQueryString(@Nullable Input<String> customQueryString) {
+        public Builder customQueryString(@Nullable Output<String> customQueryString) {
             this.customQueryString = customQueryString;
             return this;
         }
 
         public Builder customQueryString(@Nullable String customQueryString) {
-            this.customQueryString = Input.ofNullable(customQueryString);
+            this.customQueryString = Output.ofNullable(customQueryString);
             return this;
         }
 
-        public Builder destinationProtocol(@Nullable Input<Either<String,DestinationProtocol>> destinationProtocol) {
+        public Builder destinationProtocol(@Nullable Output<Either<String,DestinationProtocol>> destinationProtocol) {
             this.destinationProtocol = destinationProtocol;
             return this;
         }
 
         public Builder destinationProtocol(@Nullable Either<String,DestinationProtocol> destinationProtocol) {
-            this.destinationProtocol = Input.ofNullable(destinationProtocol);
+            this.destinationProtocol = Output.ofNullable(destinationProtocol);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder redirectType(Input<Either<String,RedirectType>> redirectType) {
+        public Builder redirectType(Output<Either<String,RedirectType>> redirectType) {
             this.redirectType = Objects.requireNonNull(redirectType);
             return this;
         }
 
         public Builder redirectType(Either<String,RedirectType> redirectType) {
-            this.redirectType = Input.of(Objects.requireNonNull(redirectType));
+            this.redirectType = Output.of(Objects.requireNonNull(redirectType));
             return this;
         }
         public UrlRedirectActionParametersArgs build() {

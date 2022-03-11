@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
      * 
      */
     @InputImport(name="errorTopic")
-      private final @Nullable Input<String> errorTopic;
+      private final @Nullable Output<String> errorTopic;
 
-    public Input<String> getErrorTopic() {
-        return this.errorTopic == null ? Input.empty() : this.errorTopic;
+    public Output<String> getErrorTopic() {
+        return this.errorTopic == null ? Output.empty() : this.errorTopic;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
      * 
      */
     @InputImport(name="successTopic")
-      private final @Nullable Input<String> successTopic;
+      private final @Nullable Output<String> successTopic;
 
-    public Input<String> getSuccessTopic() {
-        return this.successTopic == null ? Input.empty() : this.successTopic;
+    public Output<String> getSuccessTopic() {
+        return this.successTopic == null ? Output.empty() : this.successTopic;
     }
 
     public EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs(
-        @Nullable Input<String> errorTopic,
-        @Nullable Input<String> successTopic) {
+        @Nullable Output<String> errorTopic,
+        @Nullable Output<String> successTopic) {
         this.errorTopic = errorTopic;
         this.successTopic = successTopic;
     }
 
     private EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs() {
-        this.errorTopic = Input.empty();
-        this.successTopic = Input.empty();
+        this.errorTopic = Output.empty();
+        this.successTopic = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
     }
 
     public static final class Builder {
-        private @Nullable Input<String> errorTopic;
-        private @Nullable Input<String> successTopic;
+        private @Nullable Output<String> errorTopic;
+        private @Nullable Output<String> successTopic;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
     	      this.successTopic = defaults.successTopic;
         }
 
-        public Builder errorTopic(@Nullable Input<String> errorTopic) {
+        public Builder errorTopic(@Nullable Output<String> errorTopic) {
             this.errorTopic = errorTopic;
             return this;
         }
 
         public Builder errorTopic(@Nullable String errorTopic) {
-            this.errorTopic = Input.ofNullable(errorTopic);
+            this.errorTopic = Output.ofNullable(errorTopic);
             return this;
         }
 
-        public Builder successTopic(@Nullable Input<String> successTopic) {
+        public Builder successTopic(@Nullable Output<String> successTopic) {
             this.successTopic = successTopic;
             return this;
         }
 
         public Builder successTopic(@Nullable String successTopic) {
-            this.successTopic = Input.ofNullable(successTopic);
+            this.successTopic = Output.ofNullable(successTopic);
             return this;
         }
         public EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs build() {

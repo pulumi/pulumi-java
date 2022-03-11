@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="computeTypesAlloweds")
-      private final @Nullable Input<List<String>> computeTypesAlloweds;
+      private final @Nullable Output<List<String>> computeTypesAlloweds;
 
-    public Input<List<String>> getComputeTypesAlloweds() {
-        return this.computeTypesAlloweds == null ? Input.empty() : this.computeTypesAlloweds;
+    public Output<List<String>> getComputeTypesAlloweds() {
+        return this.computeTypesAlloweds == null ? Output.empty() : this.computeTypesAlloweds;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maximumBuildsAllowed")
-      private final @Nullable Input<Integer> maximumBuildsAllowed;
+      private final @Nullable Output<Integer> maximumBuildsAllowed;
 
-    public Input<Integer> getMaximumBuildsAllowed() {
-        return this.maximumBuildsAllowed == null ? Input.empty() : this.maximumBuildsAllowed;
+    public Output<Integer> getMaximumBuildsAllowed() {
+        return this.maximumBuildsAllowed == null ? Output.empty() : this.maximumBuildsAllowed;
     }
 
     public ProjectBuildBatchConfigRestrictionsGetArgs(
-        @Nullable Input<List<String>> computeTypesAlloweds,
-        @Nullable Input<Integer> maximumBuildsAllowed) {
+        @Nullable Output<List<String>> computeTypesAlloweds,
+        @Nullable Output<Integer> maximumBuildsAllowed) {
         this.computeTypesAlloweds = computeTypesAlloweds;
         this.maximumBuildsAllowed = maximumBuildsAllowed;
     }
 
     private ProjectBuildBatchConfigRestrictionsGetArgs() {
-        this.computeTypesAlloweds = Input.empty();
-        this.maximumBuildsAllowed = Input.empty();
+        this.computeTypesAlloweds = Output.empty();
+        this.maximumBuildsAllowed = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> computeTypesAlloweds;
-        private @Nullable Input<Integer> maximumBuildsAllowed;
+        private @Nullable Output<List<String>> computeTypesAlloweds;
+        private @Nullable Output<Integer> maximumBuildsAllowed;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
     	      this.maximumBuildsAllowed = defaults.maximumBuildsAllowed;
         }
 
-        public Builder computeTypesAlloweds(@Nullable Input<List<String>> computeTypesAlloweds) {
+        public Builder computeTypesAlloweds(@Nullable Output<List<String>> computeTypesAlloweds) {
             this.computeTypesAlloweds = computeTypesAlloweds;
             return this;
         }
 
         public Builder computeTypesAlloweds(@Nullable List<String> computeTypesAlloweds) {
-            this.computeTypesAlloweds = Input.ofNullable(computeTypesAlloweds);
+            this.computeTypesAlloweds = Output.ofNullable(computeTypesAlloweds);
             return this;
         }
 
-        public Builder maximumBuildsAllowed(@Nullable Input<Integer> maximumBuildsAllowed) {
+        public Builder maximumBuildsAllowed(@Nullable Output<Integer> maximumBuildsAllowed) {
             this.maximumBuildsAllowed = maximumBuildsAllowed;
             return this;
         }
 
         public Builder maximumBuildsAllowed(@Nullable Integer maximumBuildsAllowed) {
-            this.maximumBuildsAllowed = Input.ofNullable(maximumBuildsAllowed);
+            this.maximumBuildsAllowed = Output.ofNullable(maximumBuildsAllowed);
             return this;
         }
         public ProjectBuildBatchConfigRestrictionsGetArgs build() {

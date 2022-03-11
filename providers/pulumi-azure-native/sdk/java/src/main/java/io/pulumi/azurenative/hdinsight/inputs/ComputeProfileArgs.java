@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.RoleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-      private final @Nullable Input<List<RoleArgs>> roles;
+      private final @Nullable Output<List<RoleArgs>> roles;
 
-    public Input<List<RoleArgs>> getRoles() {
-        return this.roles == null ? Input.empty() : this.roles;
+    public Output<List<RoleArgs>> getRoles() {
+        return this.roles == null ? Output.empty() : this.roles;
     }
 
-    public ComputeProfileArgs(@Nullable Input<List<RoleArgs>> roles) {
+    public ComputeProfileArgs(@Nullable Output<List<RoleArgs>> roles) {
         this.roles = roles;
     }
 
     private ComputeProfileArgs() {
-        this.roles = Input.empty();
+        this.roles = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RoleArgs>> roles;
+        private @Nullable Output<List<RoleArgs>> roles;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roles = defaults.roles;
         }
 
-        public Builder roles(@Nullable Input<List<RoleArgs>> roles) {
+        public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
         public Builder roles(@Nullable List<RoleArgs> roles) {
-            this.roles = Input.ofNullable(roles);
+            this.roles = Output.ofNullable(roles);
             return this;
         }
         public ComputeProfileArgs build() {

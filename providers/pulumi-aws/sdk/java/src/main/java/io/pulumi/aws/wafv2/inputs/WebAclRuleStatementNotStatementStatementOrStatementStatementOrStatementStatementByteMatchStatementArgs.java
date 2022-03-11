@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
      * 
      */
     @InputImport(name="fieldToMatch")
-      private final @Nullable Input<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
+      private final @Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Input<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
+    public Output<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs> getFieldToMatch() {
+        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
      * 
      */
     @InputImport(name="positionalConstraint", required=true)
-      private final Input<String> positionalConstraint;
+      private final Output<String> positionalConstraint;
 
-    public Input<String> getPositionalConstraint() {
+    public Output<String> getPositionalConstraint() {
         return this.positionalConstraint;
     }
 
@@ -44,9 +44,9 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
      * 
      */
     @InputImport(name="searchString", required=true)
-      private final Input<String> searchString;
+      private final Output<String> searchString;
 
-    public Input<String> getSearchString() {
+    public Output<String> getSearchString() {
         return this.searchString;
     }
 
@@ -55,17 +55,17 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
      * 
      */
     @InputImport(name="textTransformations", required=true)
-      private final Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations;
+      private final Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations;
 
-    public Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
     }
 
     public WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementArgs(
-        @Nullable Input<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch,
-        Input<String> positionalConstraint,
-        Input<String> searchString,
-        Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations) {
+        @Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch,
+        Output<String> positionalConstraint,
+        Output<String> searchString,
+        Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = Objects.requireNonNull(positionalConstraint, "expected parameter 'positionalConstraint' to be non-null");
         this.searchString = Objects.requireNonNull(searchString, "expected parameter 'searchString' to be non-null");
@@ -73,10 +73,10 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
     }
 
     private WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementArgs() {
-        this.fieldToMatch = Input.empty();
-        this.positionalConstraint = Input.empty();
-        this.searchString = Input.empty();
-        this.textTransformations = Input.empty();
+        this.fieldToMatch = Output.empty();
+        this.positionalConstraint = Output.empty();
+        this.searchString = Output.empty();
+        this.textTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
-        private Input<String> positionalConstraint;
-        private Input<String> searchString;
-        private Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations;
+        private @Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
+        private Output<String> positionalConstraint;
+        private Output<String> searchString;
+        private Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder fieldToMatch(@Nullable Input<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(@Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
 
         public Builder fieldToMatch(@Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Input.ofNullable(fieldToMatch);
+            this.fieldToMatch = Output.ofNullable(fieldToMatch);
             return this;
         }
 
-        public Builder positionalConstraint(Input<String> positionalConstraint) {
+        public Builder positionalConstraint(Output<String> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
         public Builder positionalConstraint(String positionalConstraint) {
-            this.positionalConstraint = Input.of(Objects.requireNonNull(positionalConstraint));
+            this.positionalConstraint = Output.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
 
-        public Builder searchString(Input<String> searchString) {
+        public Builder searchString(Output<String> searchString) {
             this.searchString = Objects.requireNonNull(searchString);
             return this;
         }
 
         public Builder searchString(String searchString) {
-            this.searchString = Input.of(Objects.requireNonNull(searchString));
+            this.searchString = Output.of(Objects.requireNonNull(searchString));
             return this;
         }
 
-        public Builder textTransformations(Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
         public Builder textTransformations(List<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs> textTransformations) {
-            this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
+            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
             return this;
         }
         public WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementArgs build() {

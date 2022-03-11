@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.ConfigFileArgs;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.ImportFileArgs;
@@ -21,10 +21,10 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<ConfigFileArgs> config;
+      private final @Nullable Output<ConfigFileArgs> config;
 
-    public Input<ConfigFileArgs> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<ConfigFileArgs> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="imports")
-      private final @Nullable Input<List<ImportFileArgs>> imports;
+      private final @Nullable Output<List<ImportFileArgs>> imports;
 
-    public Input<List<ImportFileArgs>> getImports() {
-        return this.imports == null ? Input.empty() : this.imports;
+    public Output<List<ImportFileArgs>> getImports() {
+        return this.imports == null ? Output.empty() : this.imports;
     }
 
     public TargetConfigurationArgs(
-        @Nullable Input<ConfigFileArgs> config,
-        @Nullable Input<List<ImportFileArgs>> imports) {
+        @Nullable Output<ConfigFileArgs> config,
+        @Nullable Output<List<ImportFileArgs>> imports) {
         this.config = config;
         this.imports = imports;
     }
 
     private TargetConfigurationArgs() {
-        this.config = Input.empty();
-        this.imports = Input.empty();
+        this.config = Output.empty();
+        this.imports = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigFileArgs> config;
-        private @Nullable Input<List<ImportFileArgs>> imports;
+        private @Nullable Output<ConfigFileArgs> config;
+        private @Nullable Output<List<ImportFileArgs>> imports;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.imports = defaults.imports;
         }
 
-        public Builder config(@Nullable Input<ConfigFileArgs> config) {
+        public Builder config(@Nullable Output<ConfigFileArgs> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable ConfigFileArgs config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder imports(@Nullable Input<List<ImportFileArgs>> imports) {
+        public Builder imports(@Nullable Output<List<ImportFileArgs>> imports) {
             this.imports = imports;
             return this;
         }
 
         public Builder imports(@Nullable List<ImportFileArgs> imports) {
-            this.imports = Input.ofNullable(imports);
+            this.imports = Output.ofNullable(imports);
             return this;
         }
         public TargetConfigurationArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -28,10 +28,10 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderPath", required=true)
-      private final Input<String> folderPath;
+      private final Output<String> folderPath;
 
-    public Input<String> getFolderPath() {
+    public Output<String> getFolderPath() {
         return this.folderPath;
     }
 
@@ -61,9 +61,9 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedService", required=true)
-      private final Input<LinkedServiceReferenceArgs> linkedService;
+      private final Output<LinkedServiceReferenceArgs> linkedService;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedService() {
+    public Output<LinkedServiceReferenceArgs> getLinkedService() {
         return this.linkedService;
     }
 
@@ -72,9 +72,9 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrency", required=true)
-      private final Input<Integer> maxConcurrency;
+      private final Output<Integer> maxConcurrency;
 
-    public Input<Integer> getMaxConcurrency() {
+    public Output<Integer> getMaxConcurrency() {
         return this.maxConcurrency;
     }
 
@@ -83,10 +83,10 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelines")
-      private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
+      private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Input<List<TriggerPipelineReferenceArgs>> getPipelines() {
-        return this.pipelines == null ? Input.empty() : this.pipelines;
+    public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
+        return this.pipelines == null ? Output.empty() : this.pipelines;
     }
 
     /**
@@ -95,20 +95,20 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public BlobTriggerArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<String> description,
-        Input<String> folderPath,
-        Input<LinkedServiceReferenceArgs> linkedService,
-        Input<Integer> maxConcurrency,
-        @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<String> description,
+        Output<String> folderPath,
+        Output<LinkedServiceReferenceArgs> linkedService,
+        Output<Integer> maxConcurrency,
+        @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines,
+        Output<String> type) {
         this.annotations = annotations;
         this.description = description;
         this.folderPath = Objects.requireNonNull(folderPath, "expected parameter 'folderPath' to be non-null");
@@ -119,13 +119,13 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BlobTriggerArgs() {
-        this.annotations = Input.empty();
-        this.description = Input.empty();
-        this.folderPath = Input.empty();
-        this.linkedService = Input.empty();
-        this.maxConcurrency = Input.empty();
-        this.pipelines = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.description = Output.empty();
+        this.folderPath = Output.empty();
+        this.linkedService = Output.empty();
+        this.maxConcurrency = Output.empty();
+        this.pipelines = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,13 +137,13 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<String> description;
-        private Input<String> folderPath;
-        private Input<LinkedServiceReferenceArgs> linkedService;
-        private Input<Integer> maxConcurrency;
-        private @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<String> description;
+        private Output<String> folderPath;
+        private Output<LinkedServiceReferenceArgs> linkedService;
+        private Output<Integer> maxConcurrency;
+        private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -160,73 +160,73 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder folderPath(Input<String> folderPath) {
+        public Builder folderPath(Output<String> folderPath) {
             this.folderPath = Objects.requireNonNull(folderPath);
             return this;
         }
 
         public Builder folderPath(String folderPath) {
-            this.folderPath = Input.of(Objects.requireNonNull(folderPath));
+            this.folderPath = Output.of(Objects.requireNonNull(folderPath));
             return this;
         }
 
-        public Builder linkedService(Input<LinkedServiceReferenceArgs> linkedService) {
+        public Builder linkedService(Output<LinkedServiceReferenceArgs> linkedService) {
             this.linkedService = Objects.requireNonNull(linkedService);
             return this;
         }
 
         public Builder linkedService(LinkedServiceReferenceArgs linkedService) {
-            this.linkedService = Input.of(Objects.requireNonNull(linkedService));
+            this.linkedService = Output.of(Objects.requireNonNull(linkedService));
             return this;
         }
 
-        public Builder maxConcurrency(Input<Integer> maxConcurrency) {
+        public Builder maxConcurrency(Output<Integer> maxConcurrency) {
             this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
             return this;
         }
 
         public Builder maxConcurrency(Integer maxConcurrency) {
-            this.maxConcurrency = Input.of(Objects.requireNonNull(maxConcurrency));
+            this.maxConcurrency = Output.of(Objects.requireNonNull(maxConcurrency));
             return this;
         }
 
-        public Builder pipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
+        public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
-            this.pipelines = Input.ofNullable(pipelines);
+            this.pipelines = Output.ofNullable(pipelines);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public BlobTriggerArgs build() {

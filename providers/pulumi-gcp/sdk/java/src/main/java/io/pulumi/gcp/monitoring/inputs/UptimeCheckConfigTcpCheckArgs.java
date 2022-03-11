@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class UptimeCheckConfigTcpCheckArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
-    public UptimeCheckConfigTcpCheckArgs(Input<Integer> port) {
+    public UptimeCheckConfigTcpCheckArgs(Output<Integer> port) {
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private UptimeCheckConfigTcpCheckArgs() {
-        this.port = Input.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class UptimeCheckConfigTcpCheckArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<Integer> port;
+        private Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class UptimeCheckConfigTcpCheckArgs extends io.pulumi.resources.Res
     	      this.port = defaults.port;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public UptimeCheckConfigTcpCheckArgs build() {

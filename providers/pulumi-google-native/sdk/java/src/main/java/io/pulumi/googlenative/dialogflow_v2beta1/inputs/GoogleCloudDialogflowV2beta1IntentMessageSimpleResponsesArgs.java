@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs 
      * 
      */
     @InputImport(name="simpleResponses", required=true)
-      private final Input<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> simpleResponses;
+      private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> simpleResponses;
 
-    public Input<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> getSimpleResponses() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> getSimpleResponses() {
         return this.simpleResponses;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs(Input<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> simpleResponses) {
+    public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs(Output<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> simpleResponses) {
         this.simpleResponses = Objects.requireNonNull(simpleResponses, "expected parameter 'simpleResponses' to be non-null");
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs() {
-        this.simpleResponses = Input.empty();
+        this.simpleResponses = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs 
     }
 
     public static final class Builder {
-        private Input<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> simpleResponses;
+        private Output<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> simpleResponses;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs 
     	      this.simpleResponses = defaults.simpleResponses;
         }
 
-        public Builder simpleResponses(Input<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> simpleResponses) {
+        public Builder simpleResponses(Output<List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs>> simpleResponses) {
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }
 
         public Builder simpleResponses(List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseArgs> simpleResponses) {
-            this.simpleResponses = Input.of(Objects.requireNonNull(simpleResponses));
+            this.simpleResponses = Output.of(Objects.requireNonNull(simpleResponses));
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs build() {

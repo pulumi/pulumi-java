@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="streamName")
-      private final @Nullable Input<String> streamName;
+      private final @Nullable Output<String> streamName;
 
-    public Input<String> getStreamName() {
-        return this.streamName == null ? Input.empty() : this.streamName;
+    public Output<String> getStreamName() {
+        return this.streamName == null ? Output.empty() : this.streamName;
     }
 
     public ProjectLogsConfigCloudwatchLogsGetArgs(
-        @Nullable Input<String> groupName,
-        @Nullable Input<String> status,
-        @Nullable Input<String> streamName) {
+        @Nullable Output<String> groupName,
+        @Nullable Output<String> status,
+        @Nullable Output<String> streamName) {
         this.groupName = groupName;
         this.status = status;
         this.streamName = streamName;
     }
 
     private ProjectLogsConfigCloudwatchLogsGetArgs() {
-        this.groupName = Input.empty();
-        this.status = Input.empty();
-        this.streamName = Input.empty();
+        this.groupName = Output.empty();
+        this.status = Output.empty();
+        this.streamName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupName;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> streamName;
+        private @Nullable Output<String> groupName;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> streamName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends io.pulumi.reso
     	      this.streamName = defaults.streamName;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder streamName(@Nullable Input<String> streamName) {
+        public Builder streamName(@Nullable Output<String> streamName) {
             this.streamName = streamName;
             return this;
         }
 
         public Builder streamName(@Nullable String streamName) {
-            this.streamName = Input.ofNullable(streamName);
+            this.streamName = Output.ofNullable(streamName);
             return this;
         }
         public ProjectLogsConfigCloudwatchLogsGetArgs build() {

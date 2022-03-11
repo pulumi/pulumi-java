@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="encryptionConfiguration")
-      private final @Nullable Input<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
+      private final @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
-    public Input<SecurityConfigurationEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
+    public Output<SecurityConfigurationEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
+        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public SecurityConfigurationState(
-        @Nullable Input<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration,
-        @Nullable Input<String> name) {
+        @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration,
+        @Nullable Output<String> name) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.name = name;
     }
 
     private SecurityConfigurationState() {
-        this.encryptionConfiguration = Input.empty();
-        this.name = Input.empty();
+        this.encryptionConfiguration = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
-        private @Nullable Input<String> name;
+        private @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     	      this.name = defaults.name;
         }
 
-        public Builder encryptionConfiguration(@Nullable Input<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
         public Builder encryptionConfiguration(@Nullable SecurityConfigurationEncryptionConfigurationGetArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public SecurityConfigurationState build() {

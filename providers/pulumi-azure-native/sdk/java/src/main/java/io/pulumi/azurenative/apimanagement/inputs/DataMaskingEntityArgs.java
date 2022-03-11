@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.enums.DataMaskingMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,DataMaskingMode>> mode;
+      private final @Nullable Output<Either<String,DataMaskingMode>> mode;
 
-    public Input<Either<String,DataMaskingMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,DataMaskingMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public DataMaskingEntityArgs(
-        @Nullable Input<Either<String,DataMaskingMode>> mode,
-        @Nullable Input<String> value) {
+        @Nullable Output<Either<String,DataMaskingMode>> mode,
+        @Nullable Output<String> value) {
         this.mode = mode;
         this.value = value;
     }
 
     private DataMaskingEntityArgs() {
-        this.mode = Input.empty();
-        this.value = Input.empty();
+        this.mode = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DataMaskingMode>> mode;
-        private @Nullable Input<String> value;
+        private @Nullable Output<Either<String,DataMaskingMode>> mode;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
     	      this.value = defaults.value;
         }
 
-        public Builder mode(@Nullable Input<Either<String,DataMaskingMode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,DataMaskingMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,DataMaskingMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public DataMaskingEntityArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.KnownPublicNetworkAccessOptions;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
 
-    public Input<Either<String,KnownPublicNetworkAccessOptions>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,KnownPublicNetworkAccessOptions>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
-    public DataCollectionEndpointNetworkAclsArgs(@Nullable Input<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess) {
+    public DataCollectionEndpointNetworkAclsArgs(@Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess) {
         this.publicNetworkAccess = publicNetworkAccess;
     }
 
     private DataCollectionEndpointNetworkAclsArgs() {
-        this.publicNetworkAccess = Input.empty();
+        this.publicNetworkAccess = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
+        private @Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
     	      this.publicNetworkAccess = defaults.publicNetworkAccess;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,KnownPublicNetworkAccessOptions> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
         public DataCollectionEndpointNetworkAclsArgs build() {

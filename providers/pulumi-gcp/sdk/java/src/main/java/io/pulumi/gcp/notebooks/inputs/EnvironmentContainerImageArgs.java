@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class EnvironmentContainerImageArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="repository", required=true)
-      private final Input<String> repository;
+      private final Output<String> repository;
 
-    public Input<String> getRepository() {
+    public Output<String> getRepository() {
         return this.repository;
     }
 
@@ -31,22 +31,22 @@ public final class EnvironmentContainerImageArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<String> tag;
+      private final @Nullable Output<String> tag;
 
-    public Input<String> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<String> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     public EnvironmentContainerImageArgs(
-        Input<String> repository,
-        @Nullable Input<String> tag) {
+        Output<String> repository,
+        @Nullable Output<String> tag) {
         this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
         this.tag = tag;
     }
 
     private EnvironmentContainerImageArgs() {
-        this.repository = Input.empty();
-        this.tag = Input.empty();
+        this.repository = Output.empty();
+        this.tag = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class EnvironmentContainerImageArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> repository;
-        private @Nullable Input<String> tag;
+        private Output<String> repository;
+        private @Nullable Output<String> tag;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class EnvironmentContainerImageArgs extends io.pulumi.resources.Res
     	      this.tag = defaults.tag;
         }
 
-        public Builder repository(Input<String> repository) {
+        public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
         public Builder repository(String repository) {
-            this.repository = Input.of(Objects.requireNonNull(repository));
+            this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
 
-        public Builder tag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable String tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
         public EnvironmentContainerImageArgs build() {

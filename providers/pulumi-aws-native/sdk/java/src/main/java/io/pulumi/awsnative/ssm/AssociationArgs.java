@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ssm.enums.AssociationComplianceSeverity;
 import io.pulumi.awsnative.ssm.enums.AssociationSyncCompliance;
 import io.pulumi.awsnative.ssm.inputs.AssociationInstanceAssociationOutputLocationArgs;
 import io.pulumi.awsnative.ssm.inputs.AssociationTargetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     public static final AssociationArgs Empty = new AssociationArgs();
 
     @InputImport(name="applyOnlyAtCronInterval")
-      private final @Nullable Input<Boolean> applyOnlyAtCronInterval;
+      private final @Nullable Output<Boolean> applyOnlyAtCronInterval;
 
-    public Input<Boolean> getApplyOnlyAtCronInterval() {
-        return this.applyOnlyAtCronInterval == null ? Input.empty() : this.applyOnlyAtCronInterval;
+    public Output<Boolean> getApplyOnlyAtCronInterval() {
+        return this.applyOnlyAtCronInterval == null ? Output.empty() : this.applyOnlyAtCronInterval;
     }
 
     /**
@@ -34,31 +34,31 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associationName")
-      private final @Nullable Input<String> associationName;
+      private final @Nullable Output<String> associationName;
 
-    public Input<String> getAssociationName() {
-        return this.associationName == null ? Input.empty() : this.associationName;
+    public Output<String> getAssociationName() {
+        return this.associationName == null ? Output.empty() : this.associationName;
     }
 
     @InputImport(name="automationTargetParameterName")
-      private final @Nullable Input<String> automationTargetParameterName;
+      private final @Nullable Output<String> automationTargetParameterName;
 
-    public Input<String> getAutomationTargetParameterName() {
-        return this.automationTargetParameterName == null ? Input.empty() : this.automationTargetParameterName;
+    public Output<String> getAutomationTargetParameterName() {
+        return this.automationTargetParameterName == null ? Output.empty() : this.automationTargetParameterName;
     }
 
     @InputImport(name="calendarNames")
-      private final @Nullable Input<List<String>> calendarNames;
+      private final @Nullable Output<List<String>> calendarNames;
 
-    public Input<List<String>> getCalendarNames() {
-        return this.calendarNames == null ? Input.empty() : this.calendarNames;
+    public Output<List<String>> getCalendarNames() {
+        return this.calendarNames == null ? Output.empty() : this.calendarNames;
     }
 
     @InputImport(name="complianceSeverity")
-      private final @Nullable Input<AssociationComplianceSeverity> complianceSeverity;
+      private final @Nullable Output<AssociationComplianceSeverity> complianceSeverity;
 
-    public Input<AssociationComplianceSeverity> getComplianceSeverity() {
-        return this.complianceSeverity == null ? Input.empty() : this.complianceSeverity;
+    public Output<AssociationComplianceSeverity> getComplianceSeverity() {
+        return this.complianceSeverity == null ? Output.empty() : this.complianceSeverity;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentVersion")
-      private final @Nullable Input<String> documentVersion;
+      private final @Nullable Output<String> documentVersion;
 
-    public Input<String> getDocumentVersion() {
-        return this.documentVersion == null ? Input.empty() : this.documentVersion;
+    public Output<String> getDocumentVersion() {
+        return this.documentVersion == null ? Output.empty() : this.documentVersion;
     }
 
     /**
@@ -77,24 +77,24 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     @InputImport(name="maxConcurrency")
-      private final @Nullable Input<String> maxConcurrency;
+      private final @Nullable Output<String> maxConcurrency;
 
-    public Input<String> getMaxConcurrency() {
-        return this.maxConcurrency == null ? Input.empty() : this.maxConcurrency;
+    public Output<String> getMaxConcurrency() {
+        return this.maxConcurrency == null ? Output.empty() : this.maxConcurrency;
     }
 
     @InputImport(name="maxErrors")
-      private final @Nullable Input<String> maxErrors;
+      private final @Nullable Output<String> maxErrors;
 
-    public Input<String> getMaxErrors() {
-        return this.maxErrors == null ? Input.empty() : this.maxErrors;
+    public Output<String> getMaxErrors() {
+        return this.maxErrors == null ? Output.empty() : this.maxErrors;
     }
 
     /**
@@ -102,17 +102,17 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="outputLocation")
-      private final @Nullable Input<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
+      private final @Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
 
-    public Input<AssociationInstanceAssociationOutputLocationArgs> getOutputLocation() {
-        return this.outputLocation == null ? Input.empty() : this.outputLocation;
+    public Output<AssociationInstanceAssociationOutputLocationArgs> getOutputLocation() {
+        return this.outputLocation == null ? Output.empty() : this.outputLocation;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Object> parameters;
+      private final @Nullable Output<Object> parameters;
 
-    public Input<Object> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Object> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -131,17 +131,17 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleExpression")
-      private final @Nullable Input<String> scheduleExpression;
+      private final @Nullable Output<String> scheduleExpression;
 
-    public Input<String> getScheduleExpression() {
-        return this.scheduleExpression == null ? Input.empty() : this.scheduleExpression;
+    public Output<String> getScheduleExpression() {
+        return this.scheduleExpression == null ? Output.empty() : this.scheduleExpression;
     }
 
     @InputImport(name="syncCompliance")
-      private final @Nullable Input<AssociationSyncCompliance> syncCompliance;
+      private final @Nullable Output<AssociationSyncCompliance> syncCompliance;
 
-    public Input<AssociationSyncCompliance> getSyncCompliance() {
-        return this.syncCompliance == null ? Input.empty() : this.syncCompliance;
+    public Output<AssociationSyncCompliance> getSyncCompliance() {
+        return this.syncCompliance == null ? Output.empty() : this.syncCompliance;
     }
 
     /**
@@ -149,36 +149,36 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targets")
-      private final @Nullable Input<List<AssociationTargetArgs>> targets;
+      private final @Nullable Output<List<AssociationTargetArgs>> targets;
 
-    public Input<List<AssociationTargetArgs>> getTargets() {
-        return this.targets == null ? Input.empty() : this.targets;
+    public Output<List<AssociationTargetArgs>> getTargets() {
+        return this.targets == null ? Output.empty() : this.targets;
     }
 
     @InputImport(name="waitForSuccessTimeoutSeconds")
-      private final @Nullable Input<Integer> waitForSuccessTimeoutSeconds;
+      private final @Nullable Output<Integer> waitForSuccessTimeoutSeconds;
 
-    public Input<Integer> getWaitForSuccessTimeoutSeconds() {
-        return this.waitForSuccessTimeoutSeconds == null ? Input.empty() : this.waitForSuccessTimeoutSeconds;
+    public Output<Integer> getWaitForSuccessTimeoutSeconds() {
+        return this.waitForSuccessTimeoutSeconds == null ? Output.empty() : this.waitForSuccessTimeoutSeconds;
     }
 
     public AssociationArgs(
-        @Nullable Input<Boolean> applyOnlyAtCronInterval,
-        @Nullable Input<String> associationName,
-        @Nullable Input<String> automationTargetParameterName,
-        @Nullable Input<List<String>> calendarNames,
-        @Nullable Input<AssociationComplianceSeverity> complianceSeverity,
-        @Nullable Input<String> documentVersion,
-        @Nullable Input<String> instanceId,
-        @Nullable Input<String> maxConcurrency,
-        @Nullable Input<String> maxErrors,
-        @Nullable Input<String> name,
-        @Nullable Input<AssociationInstanceAssociationOutputLocationArgs> outputLocation,
-        @Nullable Input<Object> parameters,
-        @Nullable Input<String> scheduleExpression,
-        @Nullable Input<AssociationSyncCompliance> syncCompliance,
-        @Nullable Input<List<AssociationTargetArgs>> targets,
-        @Nullable Input<Integer> waitForSuccessTimeoutSeconds) {
+        @Nullable Output<Boolean> applyOnlyAtCronInterval,
+        @Nullable Output<String> associationName,
+        @Nullable Output<String> automationTargetParameterName,
+        @Nullable Output<List<String>> calendarNames,
+        @Nullable Output<AssociationComplianceSeverity> complianceSeverity,
+        @Nullable Output<String> documentVersion,
+        @Nullable Output<String> instanceId,
+        @Nullable Output<String> maxConcurrency,
+        @Nullable Output<String> maxErrors,
+        @Nullable Output<String> name,
+        @Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation,
+        @Nullable Output<Object> parameters,
+        @Nullable Output<String> scheduleExpression,
+        @Nullable Output<AssociationSyncCompliance> syncCompliance,
+        @Nullable Output<List<AssociationTargetArgs>> targets,
+        @Nullable Output<Integer> waitForSuccessTimeoutSeconds) {
         this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
         this.associationName = associationName;
         this.automationTargetParameterName = automationTargetParameterName;
@@ -198,22 +198,22 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssociationArgs() {
-        this.applyOnlyAtCronInterval = Input.empty();
-        this.associationName = Input.empty();
-        this.automationTargetParameterName = Input.empty();
-        this.calendarNames = Input.empty();
-        this.complianceSeverity = Input.empty();
-        this.documentVersion = Input.empty();
-        this.instanceId = Input.empty();
-        this.maxConcurrency = Input.empty();
-        this.maxErrors = Input.empty();
-        this.name = Input.empty();
-        this.outputLocation = Input.empty();
-        this.parameters = Input.empty();
-        this.scheduleExpression = Input.empty();
-        this.syncCompliance = Input.empty();
-        this.targets = Input.empty();
-        this.waitForSuccessTimeoutSeconds = Input.empty();
+        this.applyOnlyAtCronInterval = Output.empty();
+        this.associationName = Output.empty();
+        this.automationTargetParameterName = Output.empty();
+        this.calendarNames = Output.empty();
+        this.complianceSeverity = Output.empty();
+        this.documentVersion = Output.empty();
+        this.instanceId = Output.empty();
+        this.maxConcurrency = Output.empty();
+        this.maxErrors = Output.empty();
+        this.name = Output.empty();
+        this.outputLocation = Output.empty();
+        this.parameters = Output.empty();
+        this.scheduleExpression = Output.empty();
+        this.syncCompliance = Output.empty();
+        this.targets = Output.empty();
+        this.waitForSuccessTimeoutSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -225,22 +225,22 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> applyOnlyAtCronInterval;
-        private @Nullable Input<String> associationName;
-        private @Nullable Input<String> automationTargetParameterName;
-        private @Nullable Input<List<String>> calendarNames;
-        private @Nullable Input<AssociationComplianceSeverity> complianceSeverity;
-        private @Nullable Input<String> documentVersion;
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<String> maxConcurrency;
-        private @Nullable Input<String> maxErrors;
-        private @Nullable Input<String> name;
-        private @Nullable Input<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
-        private @Nullable Input<Object> parameters;
-        private @Nullable Input<String> scheduleExpression;
-        private @Nullable Input<AssociationSyncCompliance> syncCompliance;
-        private @Nullable Input<List<AssociationTargetArgs>> targets;
-        private @Nullable Input<Integer> waitForSuccessTimeoutSeconds;
+        private @Nullable Output<Boolean> applyOnlyAtCronInterval;
+        private @Nullable Output<String> associationName;
+        private @Nullable Output<String> automationTargetParameterName;
+        private @Nullable Output<List<String>> calendarNames;
+        private @Nullable Output<AssociationComplianceSeverity> complianceSeverity;
+        private @Nullable Output<String> documentVersion;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<String> maxConcurrency;
+        private @Nullable Output<String> maxErrors;
+        private @Nullable Output<String> name;
+        private @Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
+        private @Nullable Output<Object> parameters;
+        private @Nullable Output<String> scheduleExpression;
+        private @Nullable Output<AssociationSyncCompliance> syncCompliance;
+        private @Nullable Output<List<AssociationTargetArgs>> targets;
+        private @Nullable Output<Integer> waitForSuccessTimeoutSeconds;
 
         public Builder() {
     	      // Empty
@@ -266,163 +266,163 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitForSuccessTimeoutSeconds = defaults.waitForSuccessTimeoutSeconds;
         }
 
-        public Builder applyOnlyAtCronInterval(@Nullable Input<Boolean> applyOnlyAtCronInterval) {
+        public Builder applyOnlyAtCronInterval(@Nullable Output<Boolean> applyOnlyAtCronInterval) {
             this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
             return this;
         }
 
         public Builder applyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
-            this.applyOnlyAtCronInterval = Input.ofNullable(applyOnlyAtCronInterval);
+            this.applyOnlyAtCronInterval = Output.ofNullable(applyOnlyAtCronInterval);
             return this;
         }
 
-        public Builder associationName(@Nullable Input<String> associationName) {
+        public Builder associationName(@Nullable Output<String> associationName) {
             this.associationName = associationName;
             return this;
         }
 
         public Builder associationName(@Nullable String associationName) {
-            this.associationName = Input.ofNullable(associationName);
+            this.associationName = Output.ofNullable(associationName);
             return this;
         }
 
-        public Builder automationTargetParameterName(@Nullable Input<String> automationTargetParameterName) {
+        public Builder automationTargetParameterName(@Nullable Output<String> automationTargetParameterName) {
             this.automationTargetParameterName = automationTargetParameterName;
             return this;
         }
 
         public Builder automationTargetParameterName(@Nullable String automationTargetParameterName) {
-            this.automationTargetParameterName = Input.ofNullable(automationTargetParameterName);
+            this.automationTargetParameterName = Output.ofNullable(automationTargetParameterName);
             return this;
         }
 
-        public Builder calendarNames(@Nullable Input<List<String>> calendarNames) {
+        public Builder calendarNames(@Nullable Output<List<String>> calendarNames) {
             this.calendarNames = calendarNames;
             return this;
         }
 
         public Builder calendarNames(@Nullable List<String> calendarNames) {
-            this.calendarNames = Input.ofNullable(calendarNames);
+            this.calendarNames = Output.ofNullable(calendarNames);
             return this;
         }
 
-        public Builder complianceSeverity(@Nullable Input<AssociationComplianceSeverity> complianceSeverity) {
+        public Builder complianceSeverity(@Nullable Output<AssociationComplianceSeverity> complianceSeverity) {
             this.complianceSeverity = complianceSeverity;
             return this;
         }
 
         public Builder complianceSeverity(@Nullable AssociationComplianceSeverity complianceSeverity) {
-            this.complianceSeverity = Input.ofNullable(complianceSeverity);
+            this.complianceSeverity = Output.ofNullable(complianceSeverity);
             return this;
         }
 
-        public Builder documentVersion(@Nullable Input<String> documentVersion) {
+        public Builder documentVersion(@Nullable Output<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Input.ofNullable(documentVersion);
+            this.documentVersion = Output.ofNullable(documentVersion);
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder maxConcurrency(@Nullable Input<String> maxConcurrency) {
+        public Builder maxConcurrency(@Nullable Output<String> maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
 
         public Builder maxConcurrency(@Nullable String maxConcurrency) {
-            this.maxConcurrency = Input.ofNullable(maxConcurrency);
+            this.maxConcurrency = Output.ofNullable(maxConcurrency);
             return this;
         }
 
-        public Builder maxErrors(@Nullable Input<String> maxErrors) {
+        public Builder maxErrors(@Nullable Output<String> maxErrors) {
             this.maxErrors = maxErrors;
             return this;
         }
 
         public Builder maxErrors(@Nullable String maxErrors) {
-            this.maxErrors = Input.ofNullable(maxErrors);
+            this.maxErrors = Output.ofNullable(maxErrors);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outputLocation(@Nullable Input<AssociationInstanceAssociationOutputLocationArgs> outputLocation) {
+        public Builder outputLocation(@Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
         public Builder outputLocation(@Nullable AssociationInstanceAssociationOutputLocationArgs outputLocation) {
-            this.outputLocation = Input.ofNullable(outputLocation);
+            this.outputLocation = Output.ofNullable(outputLocation);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Object> parameters) {
+        public Builder parameters(@Nullable Output<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder scheduleExpression(@Nullable Input<String> scheduleExpression) {
+        public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
 
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
-            this.scheduleExpression = Input.ofNullable(scheduleExpression);
+            this.scheduleExpression = Output.ofNullable(scheduleExpression);
             return this;
         }
 
-        public Builder syncCompliance(@Nullable Input<AssociationSyncCompliance> syncCompliance) {
+        public Builder syncCompliance(@Nullable Output<AssociationSyncCompliance> syncCompliance) {
             this.syncCompliance = syncCompliance;
             return this;
         }
 
         public Builder syncCompliance(@Nullable AssociationSyncCompliance syncCompliance) {
-            this.syncCompliance = Input.ofNullable(syncCompliance);
+            this.syncCompliance = Output.ofNullable(syncCompliance);
             return this;
         }
 
-        public Builder targets(@Nullable Input<List<AssociationTargetArgs>> targets) {
+        public Builder targets(@Nullable Output<List<AssociationTargetArgs>> targets) {
             this.targets = targets;
             return this;
         }
 
         public Builder targets(@Nullable List<AssociationTargetArgs> targets) {
-            this.targets = Input.ofNullable(targets);
+            this.targets = Output.ofNullable(targets);
             return this;
         }
 
-        public Builder waitForSuccessTimeoutSeconds(@Nullable Input<Integer> waitForSuccessTimeoutSeconds) {
+        public Builder waitForSuccessTimeoutSeconds(@Nullable Output<Integer> waitForSuccessTimeoutSeconds) {
             this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
             return this;
         }
 
         public Builder waitForSuccessTimeoutSeconds(@Nullable Integer waitForSuccessTimeoutSeconds) {
-            this.waitForSuccessTimeoutSeconds = Input.ofNullable(waitForSuccessTimeoutSeconds);
+            this.waitForSuccessTimeoutSeconds = Output.ofNullable(waitForSuccessTimeoutSeconds);
             return this;
         }
         public AssociationArgs build() {

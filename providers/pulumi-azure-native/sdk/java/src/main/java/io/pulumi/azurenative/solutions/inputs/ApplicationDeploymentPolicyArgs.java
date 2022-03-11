@@ -5,7 +5,7 @@ package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.azurenative.solutions.enums.DeploymentMode;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class ApplicationDeploymentPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deploymentMode", required=true)
-      private final Input<Either<String,DeploymentMode>> deploymentMode;
+      private final Output<Either<String,DeploymentMode>> deploymentMode;
 
-    public Input<Either<String,DeploymentMode>> getDeploymentMode() {
+    public Output<Either<String,DeploymentMode>> getDeploymentMode() {
         return this.deploymentMode;
     }
 
-    public ApplicationDeploymentPolicyArgs(Input<Either<String,DeploymentMode>> deploymentMode) {
+    public ApplicationDeploymentPolicyArgs(Output<Either<String,DeploymentMode>> deploymentMode) {
         this.deploymentMode = Objects.requireNonNull(deploymentMode, "expected parameter 'deploymentMode' to be non-null");
     }
 
     private ApplicationDeploymentPolicyArgs() {
-        this.deploymentMode = Input.empty();
+        this.deploymentMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ApplicationDeploymentPolicyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<Either<String,DeploymentMode>> deploymentMode;
+        private Output<Either<String,DeploymentMode>> deploymentMode;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ApplicationDeploymentPolicyArgs extends io.pulumi.resources.R
     	      this.deploymentMode = defaults.deploymentMode;
         }
 
-        public Builder deploymentMode(Input<Either<String,DeploymentMode>> deploymentMode) {
+        public Builder deploymentMode(Output<Either<String,DeploymentMode>> deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
 
         public Builder deploymentMode(Either<String,DeploymentMode> deploymentMode) {
-            this.deploymentMode = Input.of(Objects.requireNonNull(deploymentMode));
+            this.deploymentMode = Output.of(Objects.requireNonNull(deploymentMode));
             return this;
         }
         public ApplicationDeploymentPolicyArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileResourceSpecArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
     public static final UserProfileJupyterServerAppSettingsArgs Empty = new UserProfileJupyterServerAppSettingsArgs();
 
     @InputImport(name="defaultResourceSpec")
-      private final @Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec;
+      private final @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
 
-    public Input<UserProfileResourceSpecArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;
+    public Output<UserProfileResourceSpecArgs> getDefaultResourceSpec() {
+        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
     }
 
-    public UserProfileJupyterServerAppSettingsArgs(@Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec) {
+    public UserProfileJupyterServerAppSettingsArgs(@Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 
     private UserProfileJupyterServerAppSettingsArgs() {
-        this.defaultResourceSpec = Input.empty();
+        this.defaultResourceSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec;
+        private @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
     	      this.defaultResourceSpec = defaults.defaultResourceSpec;
         }
 
-        public Builder defaultResourceSpec(@Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
         public Builder defaultResourceSpec(@Nullable UserProfileResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
             return this;
         }
         public UserProfileJupyterServerAppSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
      * 
      */
     @InputImport(name="whenDeleted")
-      private final @Nullable Input<String> whenDeleted;
+      private final @Nullable Output<String> whenDeleted;
 
-    public Input<String> getWhenDeleted() {
-        return this.whenDeleted == null ? Input.empty() : this.whenDeleted;
+    public Output<String> getWhenDeleted() {
+        return this.whenDeleted == null ? Output.empty() : this.whenDeleted;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
      * 
      */
     @InputImport(name="whenScaled")
-      private final @Nullable Input<String> whenScaled;
+      private final @Nullable Output<String> whenScaled;
 
-    public Input<String> getWhenScaled() {
-        return this.whenScaled == null ? Input.empty() : this.whenScaled;
+    public Output<String> getWhenScaled() {
+        return this.whenScaled == null ? Output.empty() : this.whenScaled;
     }
 
     public StatefulSetPersistentVolumeClaimRetentionPolicyArgs(
-        @Nullable Input<String> whenDeleted,
-        @Nullable Input<String> whenScaled) {
+        @Nullable Output<String> whenDeleted,
+        @Nullable Output<String> whenScaled) {
         this.whenDeleted = whenDeleted;
         this.whenScaled = whenScaled;
     }
 
     private StatefulSetPersistentVolumeClaimRetentionPolicyArgs() {
-        this.whenDeleted = Input.empty();
-        this.whenScaled = Input.empty();
+        this.whenDeleted = Output.empty();
+        this.whenScaled = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<String> whenDeleted;
-        private @Nullable Input<String> whenScaled;
+        private @Nullable Output<String> whenDeleted;
+        private @Nullable Output<String> whenScaled;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
     	      this.whenScaled = defaults.whenScaled;
         }
 
-        public Builder whenDeleted(@Nullable Input<String> whenDeleted) {
+        public Builder whenDeleted(@Nullable Output<String> whenDeleted) {
             this.whenDeleted = whenDeleted;
             return this;
         }
 
         public Builder whenDeleted(@Nullable String whenDeleted) {
-            this.whenDeleted = Input.ofNullable(whenDeleted);
+            this.whenDeleted = Output.ofNullable(whenDeleted);
             return this;
         }
 
-        public Builder whenScaled(@Nullable Input<String> whenScaled) {
+        public Builder whenScaled(@Nullable Output<String> whenScaled) {
             this.whenScaled = whenScaled;
             return this;
         }
 
         public Builder whenScaled(@Nullable String whenScaled) {
-            this.whenScaled = Input.ofNullable(whenScaled);
+            this.whenScaled = Output.ofNullable(whenScaled);
             return this;
         }
         public StatefulSetPersistentVolumeClaimRetentionPolicyArgs build() {

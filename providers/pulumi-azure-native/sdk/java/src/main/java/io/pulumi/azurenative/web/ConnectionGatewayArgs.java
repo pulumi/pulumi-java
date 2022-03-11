@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.ConnectionGatewayDefinitionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectionGatewayName")
-      private final @Nullable Input<String> connectionGatewayName;
+      private final @Nullable Output<String> connectionGatewayName;
 
-    public Input<String> getConnectionGatewayName() {
-        return this.connectionGatewayName == null ? Input.empty() : this.connectionGatewayName;
+    public Output<String> getConnectionGatewayName() {
+        return this.connectionGatewayName == null ? Output.empty() : this.connectionGatewayName;
     }
 
     /**
@@ -32,17 +32,17 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<ConnectionGatewayDefinitionPropertiesArgs> properties;
+      private final @Nullable Output<ConnectionGatewayDefinitionPropertiesArgs> properties;
 
-    public Input<ConnectionGatewayDefinitionPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ConnectionGatewayDefinitionPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -61,10 +61,10 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     /**
@@ -72,19 +72,19 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ConnectionGatewayArgs(
-        @Nullable Input<String> connectionGatewayName,
-        @Nullable Input<String> location,
-        @Nullable Input<ConnectionGatewayDefinitionPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> subscriptionId,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> connectionGatewayName,
+        @Nullable Output<String> location,
+        @Nullable Output<ConnectionGatewayDefinitionPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> subscriptionId,
+        @Nullable Output<Map<String,String>> tags) {
         this.connectionGatewayName = connectionGatewayName;
         this.location = location;
         this.properties = properties;
@@ -94,12 +94,12 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ConnectionGatewayArgs() {
-        this.connectionGatewayName = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.tags = Input.empty();
+        this.connectionGatewayName = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,12 +111,12 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectionGatewayName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ConnectionGatewayDefinitionPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> subscriptionId;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> connectionGatewayName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ConnectionGatewayDefinitionPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> subscriptionId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -132,63 +132,63 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder connectionGatewayName(@Nullable Input<String> connectionGatewayName) {
+        public Builder connectionGatewayName(@Nullable Output<String> connectionGatewayName) {
             this.connectionGatewayName = connectionGatewayName;
             return this;
         }
 
         public Builder connectionGatewayName(@Nullable String connectionGatewayName) {
-            this.connectionGatewayName = Input.ofNullable(connectionGatewayName);
+            this.connectionGatewayName = Output.ofNullable(connectionGatewayName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ConnectionGatewayDefinitionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ConnectionGatewayDefinitionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ConnectionGatewayDefinitionPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ConnectionGatewayArgs build() {

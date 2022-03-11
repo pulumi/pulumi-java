@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStoragePathArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListArgs;
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudStoragePath")
-      private final @Nullable Input<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath;
+      private final @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath;
 
-    public Input<GooglePrivacyDlpV2CloudStoragePathArgs> getCloudStoragePath() {
-        return this.cloudStoragePath == null ? Input.empty() : this.cloudStoragePath;
+    public Output<GooglePrivacyDlpV2CloudStoragePathArgs> getCloudStoragePath() {
+        return this.cloudStoragePath == null ? Output.empty() : this.cloudStoragePath;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="wordList")
-      private final @Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList;
+      private final @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
 
-    public Input<GooglePrivacyDlpV2WordListArgs> getWordList() {
-        return this.wordList == null ? Input.empty() : this.wordList;
+    public Output<GooglePrivacyDlpV2WordListArgs> getWordList() {
+        return this.wordList == null ? Output.empty() : this.wordList;
     }
 
     public GooglePrivacyDlpV2DictionaryArgs(
-        @Nullable Input<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath,
-        @Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList) {
+        @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath,
+        @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList) {
         this.cloudStoragePath = cloudStoragePath;
         this.wordList = wordList;
     }
 
     private GooglePrivacyDlpV2DictionaryArgs() {
-        this.cloudStoragePath = Input.empty();
-        this.wordList = Input.empty();
+        this.cloudStoragePath = Output.empty();
+        this.wordList = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath;
-        private @Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList;
+        private @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath;
+        private @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder cloudStoragePath(@Nullable Input<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath) {
+        public Builder cloudStoragePath(@Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath) {
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
         public Builder cloudStoragePath(@Nullable GooglePrivacyDlpV2CloudStoragePathArgs cloudStoragePath) {
-            this.cloudStoragePath = Input.ofNullable(cloudStoragePath);
+            this.cloudStoragePath = Output.ofNullable(cloudStoragePath);
             return this;
         }
 
-        public Builder wordList(@Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList) {
+        public Builder wordList(@Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList) {
             this.wordList = wordList;
             return this;
         }
 
         public Builder wordList(@Nullable GooglePrivacyDlpV2WordListArgs wordList) {
-            this.wordList = Input.ofNullable(wordList);
+            this.wordList = Output.ofNullable(wordList);
             return this;
         }
         public GooglePrivacyDlpV2DictionaryArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="function")
-      private final @Nullable Input<String> function;
+      private final @Nullable Output<String> function;
 
-    public Input<String> getFunction() {
-        return this.function == null ? Input.empty() : this.function;
+    public Output<String> getFunction() {
+        return this.function == null ? Output.empty() : this.function;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -56,10 +56,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="operator")
-      private final @Nullable Input<String> operator;
+      private final @Nullable Output<String> operator;
 
-    public Input<String> getOperator() {
-        return this.operator == null ? Input.empty() : this.operator;
+    public Output<String> getOperator() {
+        return this.operator == null ? Output.empty() : this.operator;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public GoogleCloudApigeeV1QueryMetricArgs(
-        @Nullable Input<String> alias,
-        @Nullable Input<String> function,
-        Input<String> name,
-        @Nullable Input<String> operator,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> alias,
+        @Nullable Output<String> function,
+        Output<String> name,
+        @Nullable Output<String> operator,
+        @Nullable Output<String> value) {
         this.alias = alias;
         this.function = function;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -87,11 +87,11 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
     }
 
     private GoogleCloudApigeeV1QueryMetricArgs() {
-        this.alias = Input.empty();
-        this.function = Input.empty();
-        this.name = Input.empty();
-        this.operator = Input.empty();
-        this.value = Input.empty();
+        this.alias = Output.empty();
+        this.function = Output.empty();
+        this.name = Output.empty();
+        this.operator = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alias;
-        private @Nullable Input<String> function;
-        private Input<String> name;
-        private @Nullable Input<String> operator;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<String> function;
+        private Output<String> name;
+        private @Nullable Output<String> operator;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
     	      this.value = defaults.value;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder function(@Nullable Input<String> function) {
+        public Builder function(@Nullable Output<String> function) {
             this.function = function;
             return this;
         }
 
         public Builder function(@Nullable String function) {
-            this.function = Input.ofNullable(function);
+            this.function = Output.ofNullable(function);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder operator(@Nullable Input<String> operator) {
+        public Builder operator(@Nullable Output<String> operator) {
             this.operator = operator;
             return this;
         }
 
         public Builder operator(@Nullable String operator) {
-            this.operator = Input.ofNullable(operator);
+            this.operator = Output.ofNullable(operator);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public GoogleCloudApigeeV1QueryMetricArgs build() {

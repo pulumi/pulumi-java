@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
      * 
      */
     @InputImport(name="maxFindingsPerInfoTypes")
-      private final @Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
+      private final @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
 
-    public Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> getMaxFindingsPerInfoTypes() {
-        return this.maxFindingsPerInfoTypes == null ? Input.empty() : this.maxFindingsPerInfoTypes;
+    public Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> getMaxFindingsPerInfoTypes() {
+        return this.maxFindingsPerInfoTypes == null ? Output.empty() : this.maxFindingsPerInfoTypes;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
      * 
      */
     @InputImport(name="maxFindingsPerItem", required=true)
-      private final Input<Integer> maxFindingsPerItem;
+      private final Output<Integer> maxFindingsPerItem;
 
-    public Input<Integer> getMaxFindingsPerItem() {
+    public Output<Integer> getMaxFindingsPerItem() {
         return this.maxFindingsPerItem;
     }
 
@@ -44,25 +44,25 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
      * 
      */
     @InputImport(name="maxFindingsPerRequest", required=true)
-      private final Input<Integer> maxFindingsPerRequest;
+      private final Output<Integer> maxFindingsPerRequest;
 
-    public Input<Integer> getMaxFindingsPerRequest() {
+    public Output<Integer> getMaxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
     }
 
     public PreventionInspectTemplateInspectConfigLimitsArgs(
-        @Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes,
-        Input<Integer> maxFindingsPerItem,
-        Input<Integer> maxFindingsPerRequest) {
+        @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes,
+        Output<Integer> maxFindingsPerItem,
+        Output<Integer> maxFindingsPerRequest) {
         this.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
         this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem, "expected parameter 'maxFindingsPerItem' to be non-null");
         this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest, "expected parameter 'maxFindingsPerRequest' to be non-null");
     }
 
     private PreventionInspectTemplateInspectConfigLimitsArgs() {
-        this.maxFindingsPerInfoTypes = Input.empty();
-        this.maxFindingsPerItem = Input.empty();
-        this.maxFindingsPerRequest = Input.empty();
+        this.maxFindingsPerInfoTypes = Output.empty();
+        this.maxFindingsPerItem = Output.empty();
+        this.maxFindingsPerRequest = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
-        private Input<Integer> maxFindingsPerItem;
-        private Input<Integer> maxFindingsPerRequest;
+        private @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
+        private Output<Integer> maxFindingsPerItem;
+        private Output<Integer> maxFindingsPerRequest;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
     	      this.maxFindingsPerRequest = defaults.maxFindingsPerRequest;
         }
 
-        public Builder maxFindingsPerInfoTypes(@Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes) {
+        public Builder maxFindingsPerInfoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes) {
             this.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
             return this;
         }
 
         public Builder maxFindingsPerInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs> maxFindingsPerInfoTypes) {
-            this.maxFindingsPerInfoTypes = Input.ofNullable(maxFindingsPerInfoTypes);
+            this.maxFindingsPerInfoTypes = Output.ofNullable(maxFindingsPerInfoTypes);
             return this;
         }
 
-        public Builder maxFindingsPerItem(Input<Integer> maxFindingsPerItem) {
+        public Builder maxFindingsPerItem(Output<Integer> maxFindingsPerItem) {
             this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem);
             return this;
         }
 
         public Builder maxFindingsPerItem(Integer maxFindingsPerItem) {
-            this.maxFindingsPerItem = Input.of(Objects.requireNonNull(maxFindingsPerItem));
+            this.maxFindingsPerItem = Output.of(Objects.requireNonNull(maxFindingsPerItem));
             return this;
         }
 
-        public Builder maxFindingsPerRequest(Input<Integer> maxFindingsPerRequest) {
+        public Builder maxFindingsPerRequest(Output<Integer> maxFindingsPerRequest) {
             this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
             return this;
         }
 
         public Builder maxFindingsPerRequest(Integer maxFindingsPerRequest) {
-            this.maxFindingsPerRequest = Input.of(Objects.requireNonNull(maxFindingsPerRequest));
+            this.maxFindingsPerRequest = Output.of(Objects.requireNonNull(maxFindingsPerRequest));
             return this;
         }
         public PreventionInspectTemplateInspectConfigLimitsArgs build() {

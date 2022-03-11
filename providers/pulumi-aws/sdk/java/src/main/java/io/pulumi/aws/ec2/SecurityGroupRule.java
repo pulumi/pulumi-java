@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.SecurityGroupRuleArgs;
 import io.pulumi.aws.ec2.inputs.SecurityGroupRuleState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -275,14 +274,14 @@ public class SecurityGroupRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecurityGroupRule(String name, SecurityGroupRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/securityGroupRule:SecurityGroupRule", name, args == null ? SecurityGroupRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/securityGroupRule:SecurityGroupRule", name, args == null ? SecurityGroupRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SecurityGroupRule(String name, Input<String> id, @Nullable SecurityGroupRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SecurityGroupRule(String name, Output<String> id, @Nullable SecurityGroupRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/securityGroupRule:SecurityGroupRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -298,7 +297,7 @@ public class SecurityGroupRule extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SecurityGroupRule get(String name, Input<String> id, @Nullable SecurityGroupRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SecurityGroupRule get(String name, Output<String> id, @Nullable SecurityGroupRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SecurityGroupRule(name, id, state, options);
     }
 }

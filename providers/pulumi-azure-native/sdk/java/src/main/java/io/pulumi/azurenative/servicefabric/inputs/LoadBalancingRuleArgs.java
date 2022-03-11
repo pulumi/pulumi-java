@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 import io.pulumi.azurenative.servicefabric.enums.ProbeProtocol;
 import io.pulumi.azurenative.servicefabric.enums.Protocol;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backendPort", required=true)
-      private final Input<Integer> backendPort;
+      private final Output<Integer> backendPort;
 
-    public Input<Integer> getBackendPort() {
+    public Output<Integer> getBackendPort() {
         return this.backendPort;
     }
 
@@ -38,9 +38,9 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="frontendPort", required=true)
-      private final Input<Integer> frontendPort;
+      private final Output<Integer> frontendPort;
 
-    public Input<Integer> getFrontendPort() {
+    public Output<Integer> getFrontendPort() {
         return this.frontendPort;
     }
 
@@ -49,9 +49,9 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="probeProtocol", required=true)
-      private final Input<Either<String,ProbeProtocol>> probeProtocol;
+      private final Output<Either<String,ProbeProtocol>> probeProtocol;
 
-    public Input<Either<String,ProbeProtocol>> getProbeProtocol() {
+    public Output<Either<String,ProbeProtocol>> getProbeProtocol() {
         return this.probeProtocol;
     }
 
@@ -60,10 +60,10 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="probeRequestPath")
-      private final @Nullable Input<String> probeRequestPath;
+      private final @Nullable Output<String> probeRequestPath;
 
-    public Input<String> getProbeRequestPath() {
-        return this.probeRequestPath == null ? Input.empty() : this.probeRequestPath;
+    public Output<String> getProbeRequestPath() {
+        return this.probeRequestPath == null ? Output.empty() : this.probeRequestPath;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<Either<String,Protocol>> protocol;
+      private final Output<Either<String,Protocol>> protocol;
 
-    public Input<Either<String,Protocol>> getProtocol() {
+    public Output<Either<String,Protocol>> getProtocol() {
         return this.protocol;
     }
 
     public LoadBalancingRuleArgs(
-        Input<Integer> backendPort,
-        Input<Integer> frontendPort,
-        Input<Either<String,ProbeProtocol>> probeProtocol,
-        @Nullable Input<String> probeRequestPath,
-        Input<Either<String,Protocol>> protocol) {
+        Output<Integer> backendPort,
+        Output<Integer> frontendPort,
+        Output<Either<String,ProbeProtocol>> probeProtocol,
+        @Nullable Output<String> probeRequestPath,
+        Output<Either<String,Protocol>> protocol) {
         this.backendPort = Objects.requireNonNull(backendPort, "expected parameter 'backendPort' to be non-null");
         this.frontendPort = Objects.requireNonNull(frontendPort, "expected parameter 'frontendPort' to be non-null");
         this.probeProtocol = Objects.requireNonNull(probeProtocol, "expected parameter 'probeProtocol' to be non-null");
@@ -91,11 +91,11 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LoadBalancingRuleArgs() {
-        this.backendPort = Input.empty();
-        this.frontendPort = Input.empty();
-        this.probeProtocol = Input.empty();
-        this.probeRequestPath = Input.empty();
-        this.protocol = Input.empty();
+        this.backendPort = Output.empty();
+        this.frontendPort = Output.empty();
+        this.probeProtocol = Output.empty();
+        this.probeRequestPath = Output.empty();
+        this.protocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Integer> backendPort;
-        private Input<Integer> frontendPort;
-        private Input<Either<String,ProbeProtocol>> probeProtocol;
-        private @Nullable Input<String> probeRequestPath;
-        private Input<Either<String,Protocol>> protocol;
+        private Output<Integer> backendPort;
+        private Output<Integer> frontendPort;
+        private Output<Either<String,ProbeProtocol>> probeProtocol;
+        private @Nullable Output<String> probeRequestPath;
+        private Output<Either<String,Protocol>> protocol;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder backendPort(Input<Integer> backendPort) {
+        public Builder backendPort(Output<Integer> backendPort) {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
 
         public Builder backendPort(Integer backendPort) {
-            this.backendPort = Input.of(Objects.requireNonNull(backendPort));
+            this.backendPort = Output.of(Objects.requireNonNull(backendPort));
             return this;
         }
 
-        public Builder frontendPort(Input<Integer> frontendPort) {
+        public Builder frontendPort(Output<Integer> frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
 
         public Builder frontendPort(Integer frontendPort) {
-            this.frontendPort = Input.of(Objects.requireNonNull(frontendPort));
+            this.frontendPort = Output.of(Objects.requireNonNull(frontendPort));
             return this;
         }
 
-        public Builder probeProtocol(Input<Either<String,ProbeProtocol>> probeProtocol) {
+        public Builder probeProtocol(Output<Either<String,ProbeProtocol>> probeProtocol) {
             this.probeProtocol = Objects.requireNonNull(probeProtocol);
             return this;
         }
 
         public Builder probeProtocol(Either<String,ProbeProtocol> probeProtocol) {
-            this.probeProtocol = Input.of(Objects.requireNonNull(probeProtocol));
+            this.probeProtocol = Output.of(Objects.requireNonNull(probeProtocol));
             return this;
         }
 
-        public Builder probeRequestPath(@Nullable Input<String> probeRequestPath) {
+        public Builder probeRequestPath(@Nullable Output<String> probeRequestPath) {
             this.probeRequestPath = probeRequestPath;
             return this;
         }
 
         public Builder probeRequestPath(@Nullable String probeRequestPath) {
-            this.probeRequestPath = Input.ofNullable(probeRequestPath);
+            this.probeRequestPath = Output.ofNullable(probeRequestPath);
             return this;
         }
 
-        public Builder protocol(Input<Either<String,Protocol>> protocol) {
+        public Builder protocol(Output<Either<String,Protocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(Either<String,Protocol> protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
         public LoadBalancingRuleArgs build() {

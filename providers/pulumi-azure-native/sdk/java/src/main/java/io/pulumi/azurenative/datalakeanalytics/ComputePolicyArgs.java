@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datalakeanalytics;
 
 import io.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -33,10 +33,10 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computePolicyName")
-      private final @Nullable Input<String> computePolicyName;
+      private final @Nullable Output<String> computePolicyName;
 
-    public Input<String> getComputePolicyName() {
-        return this.computePolicyName == null ? Input.empty() : this.computePolicyName;
+    public Output<String> getComputePolicyName() {
+        return this.computePolicyName == null ? Output.empty() : this.computePolicyName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDegreeOfParallelismPerJob")
-      private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
+      private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
-    public Input<Integer> getMaxDegreeOfParallelismPerJob() {
-        return this.maxDegreeOfParallelismPerJob == null ? Input.empty() : this.maxDegreeOfParallelismPerJob;
+    public Output<Integer> getMaxDegreeOfParallelismPerJob() {
+        return this.maxDegreeOfParallelismPerJob == null ? Output.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minPriorityPerJob")
-      private final @Nullable Input<Integer> minPriorityPerJob;
+      private final @Nullable Output<Integer> minPriorityPerJob;
 
-    public Input<Integer> getMinPriorityPerJob() {
-        return this.minPriorityPerJob == null ? Input.empty() : this.minPriorityPerJob;
+    public Output<Integer> getMinPriorityPerJob() {
+        return this.minPriorityPerJob == null ? Output.empty() : this.minPriorityPerJob;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId", required=true)
-      private final Input<String> objectId;
+      private final Output<String> objectId;
 
-    public Input<String> getObjectId() {
+    public Output<String> getObjectId() {
         return this.objectId;
     }
 
@@ -77,9 +77,9 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectType", required=true)
-      private final Input<Either<String,AADObjectType>> objectType;
+      private final Output<Either<String,AADObjectType>> objectType;
 
-    public Input<Either<String,AADObjectType>> getObjectType() {
+    public Output<Either<String,AADObjectType>> getObjectType() {
         return this.objectType;
     }
 
@@ -88,20 +88,20 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ComputePolicyArgs(
-        Input<String> accountName,
-        @Nullable Input<String> computePolicyName,
-        @Nullable Input<Integer> maxDegreeOfParallelismPerJob,
-        @Nullable Input<Integer> minPriorityPerJob,
-        Input<String> objectId,
-        Input<Either<String,AADObjectType>> objectType,
-        Input<String> resourceGroupName) {
+        Output<String> accountName,
+        @Nullable Output<String> computePolicyName,
+        @Nullable Output<Integer> maxDegreeOfParallelismPerJob,
+        @Nullable Output<Integer> minPriorityPerJob,
+        Output<String> objectId,
+        Output<Either<String,AADObjectType>> objectType,
+        Output<String> resourceGroupName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.computePolicyName = computePolicyName;
         this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
@@ -112,13 +112,13 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComputePolicyArgs() {
-        this.accountName = Input.empty();
-        this.computePolicyName = Input.empty();
-        this.maxDegreeOfParallelismPerJob = Input.empty();
-        this.minPriorityPerJob = Input.empty();
-        this.objectId = Input.empty();
-        this.objectType = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.accountName = Output.empty();
+        this.computePolicyName = Output.empty();
+        this.maxDegreeOfParallelismPerJob = Output.empty();
+        this.minPriorityPerJob = Output.empty();
+        this.objectId = Output.empty();
+        this.objectType = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> computePolicyName;
-        private @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
-        private @Nullable Input<Integer> minPriorityPerJob;
-        private Input<String> objectId;
-        private Input<Either<String,AADObjectType>> objectType;
-        private Input<String> resourceGroupName;
+        private Output<String> accountName;
+        private @Nullable Output<String> computePolicyName;
+        private @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
+        private @Nullable Output<Integer> minPriorityPerJob;
+        private Output<String> objectId;
+        private Output<Either<String,AADObjectType>> objectType;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder computePolicyName(@Nullable Input<String> computePolicyName) {
+        public Builder computePolicyName(@Nullable Output<String> computePolicyName) {
             this.computePolicyName = computePolicyName;
             return this;
         }
 
         public Builder computePolicyName(@Nullable String computePolicyName) {
-            this.computePolicyName = Input.ofNullable(computePolicyName);
+            this.computePolicyName = Output.ofNullable(computePolicyName);
             return this;
         }
 
-        public Builder maxDegreeOfParallelismPerJob(@Nullable Input<Integer> maxDegreeOfParallelismPerJob) {
+        public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
 
         public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = Input.ofNullable(maxDegreeOfParallelismPerJob);
+            this.maxDegreeOfParallelismPerJob = Output.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
 
-        public Builder minPriorityPerJob(@Nullable Input<Integer> minPriorityPerJob) {
+        public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
             this.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
 
         public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
-            this.minPriorityPerJob = Input.ofNullable(minPriorityPerJob);
+            this.minPriorityPerJob = Output.ofNullable(minPriorityPerJob);
             return this;
         }
 
-        public Builder objectId(Input<String> objectId) {
+        public Builder objectId(Output<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
         public Builder objectId(String objectId) {
-            this.objectId = Input.of(Objects.requireNonNull(objectId));
+            this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder objectType(Input<Either<String,AADObjectType>> objectType) {
+        public Builder objectType(Output<Either<String,AADObjectType>> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
         public Builder objectType(Either<String,AADObjectType> objectType) {
-            this.objectType = Input.of(Objects.requireNonNull(objectType));
+            this.objectType = Output.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ComputePolicyArgs build() {

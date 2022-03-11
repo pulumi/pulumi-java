@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.SqlPoolArgs;
 import io.pulumi.azurenative.synapse.outputs.SkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -299,25 +298,25 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlPool(String name, SqlPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:SqlPool", name, args == null ? SqlPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:synapse:SqlPool", name, args == null ? SqlPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlPool(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:SqlPool", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:synapse/v20190601preview:SqlPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20200401preview:SqlPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20201201:SqlPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210301:SqlPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210401preview:SqlPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210501:SqlPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601:SqlPool").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601preview:SqlPool").build())
+                Output.of(Alias.builder().setType("azure-native:synapse/v20190601preview:SqlPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20200401preview:SqlPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20201201:SqlPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210301:SqlPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210401preview:SqlPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210501:SqlPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601:SqlPool").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601preview:SqlPool").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -331,7 +330,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlPool get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlPool(name, id, options);
     }
 }

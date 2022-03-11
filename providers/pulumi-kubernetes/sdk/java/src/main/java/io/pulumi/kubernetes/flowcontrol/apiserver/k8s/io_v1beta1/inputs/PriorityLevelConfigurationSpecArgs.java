@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.LimitedPriorityLevelConfigurationArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="limited")
-      private final @Nullable Input<LimitedPriorityLevelConfigurationArgs> limited;
+      private final @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited;
 
-    public Input<LimitedPriorityLevelConfigurationArgs> getLimited() {
-        return this.limited == null ? Input.empty() : this.limited;
+    public Output<LimitedPriorityLevelConfigurationArgs> getLimited() {
+        return this.limited == null ? Output.empty() : this.limited;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public PriorityLevelConfigurationSpecArgs(
-        @Nullable Input<LimitedPriorityLevelConfigurationArgs> limited,
-        Input<String> type) {
+        @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited,
+        Output<String> type) {
         this.limited = limited;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private PriorityLevelConfigurationSpecArgs() {
-        this.limited = Input.empty();
-        this.type = Input.empty();
+        this.limited = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<LimitedPriorityLevelConfigurationArgs> limited;
-        private Input<String> type;
+        private @Nullable Output<LimitedPriorityLevelConfigurationArgs> limited;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder limited(@Nullable Input<LimitedPriorityLevelConfigurationArgs> limited) {
+        public Builder limited(@Nullable Output<LimitedPriorityLevelConfigurationArgs> limited) {
             this.limited = limited;
             return this;
         }
 
         public Builder limited(@Nullable LimitedPriorityLevelConfigurationArgs limited) {
-            this.limited = Input.ofNullable(limited);
+            this.limited = Output.ofNullable(limited);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public PriorityLevelConfigurationSpecArgs build() {

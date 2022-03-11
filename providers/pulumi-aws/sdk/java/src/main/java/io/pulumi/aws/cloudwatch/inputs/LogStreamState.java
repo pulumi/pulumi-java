@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logGroupName")
-      private final @Nullable Input<String> logGroupName;
+      private final @Nullable Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
-        return this.logGroupName == null ? Input.empty() : this.logGroupName;
+    public Output<String> getLogGroupName() {
+        return this.logGroupName == null ? Output.empty() : this.logGroupName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public LogStreamState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> logGroupName,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> logGroupName,
+        @Nullable Output<String> name) {
         this.arn = arn;
         this.logGroupName = logGroupName;
         this.name = name;
     }
 
     private LogStreamState() {
-        this.arn = Input.empty();
-        this.logGroupName = Input.empty();
-        this.name = Input.empty();
+        this.arn = Output.empty();
+        this.logGroupName = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> logGroupName;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> logGroupName;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder logGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Input.ofNullable(logGroupName);
+            this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public LogStreamState build() {

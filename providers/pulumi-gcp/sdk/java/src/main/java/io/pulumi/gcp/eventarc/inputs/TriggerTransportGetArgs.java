@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.eventarc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.eventarc.inputs.TriggerTransportPubsubGetArgs;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class TriggerTransportGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pubsubs")
-      private final @Nullable Input<List<TriggerTransportPubsubGetArgs>> pubsubs;
+      private final @Nullable Output<List<TriggerTransportPubsubGetArgs>> pubsubs;
 
-    public Input<List<TriggerTransportPubsubGetArgs>> getPubsubs() {
-        return this.pubsubs == null ? Input.empty() : this.pubsubs;
+    public Output<List<TriggerTransportPubsubGetArgs>> getPubsubs() {
+        return this.pubsubs == null ? Output.empty() : this.pubsubs;
     }
 
-    public TriggerTransportGetArgs(@Nullable Input<List<TriggerTransportPubsubGetArgs>> pubsubs) {
+    public TriggerTransportGetArgs(@Nullable Output<List<TriggerTransportPubsubGetArgs>> pubsubs) {
         this.pubsubs = pubsubs;
     }
 
     private TriggerTransportGetArgs() {
-        this.pubsubs = Input.empty();
+        this.pubsubs = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class TriggerTransportGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<TriggerTransportPubsubGetArgs>> pubsubs;
+        private @Nullable Output<List<TriggerTransportPubsubGetArgs>> pubsubs;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class TriggerTransportGetArgs extends io.pulumi.resources.ResourceA
     	      this.pubsubs = defaults.pubsubs;
         }
 
-        public Builder pubsubs(@Nullable Input<List<TriggerTransportPubsubGetArgs>> pubsubs) {
+        public Builder pubsubs(@Nullable Output<List<TriggerTransportPubsubGetArgs>> pubsubs) {
             this.pubsubs = pubsubs;
             return this;
         }
 
         public Builder pubsubs(@Nullable List<TriggerTransportPubsubGetArgs> pubsubs) {
-            this.pubsubs = Input.ofNullable(pubsubs);
+            this.pubsubs = Output.ofNullable(pubsubs);
             return this;
         }
         public TriggerTransportGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunErrorTraceCode;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScanConfigErrorArgs;
@@ -25,10 +25,10 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<ScanRunErrorTraceCode> code;
+      private final @Nullable Output<ScanRunErrorTraceCode> code;
 
-    public Input<ScanRunErrorTraceCode> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<ScanRunErrorTraceCode> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mostCommonHttpErrorCode")
-      private final @Nullable Input<Integer> mostCommonHttpErrorCode;
+      private final @Nullable Output<Integer> mostCommonHttpErrorCode;
 
-    public Input<Integer> getMostCommonHttpErrorCode() {
-        return this.mostCommonHttpErrorCode == null ? Input.empty() : this.mostCommonHttpErrorCode;
+    public Output<Integer> getMostCommonHttpErrorCode() {
+        return this.mostCommonHttpErrorCode == null ? Output.empty() : this.mostCommonHttpErrorCode;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scanConfigError")
-      private final @Nullable Input<ScanConfigErrorArgs> scanConfigError;
+      private final @Nullable Output<ScanConfigErrorArgs> scanConfigError;
 
-    public Input<ScanConfigErrorArgs> getScanConfigError() {
-        return this.scanConfigError == null ? Input.empty() : this.scanConfigError;
+    public Output<ScanConfigErrorArgs> getScanConfigError() {
+        return this.scanConfigError == null ? Output.empty() : this.scanConfigError;
     }
 
     public ScanRunErrorTraceArgs(
-        @Nullable Input<ScanRunErrorTraceCode> code,
-        @Nullable Input<Integer> mostCommonHttpErrorCode,
-        @Nullable Input<ScanConfigErrorArgs> scanConfigError) {
+        @Nullable Output<ScanRunErrorTraceCode> code,
+        @Nullable Output<Integer> mostCommonHttpErrorCode,
+        @Nullable Output<ScanConfigErrorArgs> scanConfigError) {
         this.code = code;
         this.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
         this.scanConfigError = scanConfigError;
     }
 
     private ScanRunErrorTraceArgs() {
-        this.code = Input.empty();
-        this.mostCommonHttpErrorCode = Input.empty();
-        this.scanConfigError = Input.empty();
+        this.code = Output.empty();
+        this.mostCommonHttpErrorCode = Output.empty();
+        this.scanConfigError = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<ScanRunErrorTraceCode> code;
-        private @Nullable Input<Integer> mostCommonHttpErrorCode;
-        private @Nullable Input<ScanConfigErrorArgs> scanConfigError;
+        private @Nullable Output<ScanRunErrorTraceCode> code;
+        private @Nullable Output<Integer> mostCommonHttpErrorCode;
+        private @Nullable Output<ScanConfigErrorArgs> scanConfigError;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
     	      this.scanConfigError = defaults.scanConfigError;
         }
 
-        public Builder code(@Nullable Input<ScanRunErrorTraceCode> code) {
+        public Builder code(@Nullable Output<ScanRunErrorTraceCode> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable ScanRunErrorTraceCode code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder mostCommonHttpErrorCode(@Nullable Input<Integer> mostCommonHttpErrorCode) {
+        public Builder mostCommonHttpErrorCode(@Nullable Output<Integer> mostCommonHttpErrorCode) {
             this.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
             return this;
         }
 
         public Builder mostCommonHttpErrorCode(@Nullable Integer mostCommonHttpErrorCode) {
-            this.mostCommonHttpErrorCode = Input.ofNullable(mostCommonHttpErrorCode);
+            this.mostCommonHttpErrorCode = Output.ofNullable(mostCommonHttpErrorCode);
             return this;
         }
 
-        public Builder scanConfigError(@Nullable Input<ScanConfigErrorArgs> scanConfigError) {
+        public Builder scanConfigError(@Nullable Output<ScanConfigErrorArgs> scanConfigError) {
             this.scanConfigError = scanConfigError;
             return this;
         }
 
         public Builder scanConfigError(@Nullable ScanConfigErrorArgs scanConfigError) {
-            this.scanConfigError = Input.ofNullable(scanConfigError);
+            this.scanConfigError = Output.ofNullable(scanConfigError);
             return this;
         }
         public ScanRunErrorTraceArgs build() {

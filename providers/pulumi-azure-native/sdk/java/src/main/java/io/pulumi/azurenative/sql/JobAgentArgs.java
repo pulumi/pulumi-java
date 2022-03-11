@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.inputs.SkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseId", required=true)
-      private final Input<String> databaseId;
+      private final Output<String> databaseId;
 
-    public Input<String> getDatabaseId() {
+    public Output<String> getDatabaseId() {
         return this.databaseId;
     }
 
@@ -32,10 +32,10 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobAgentName")
-      private final @Nullable Input<String> jobAgentName;
+      private final @Nullable Output<String> jobAgentName;
 
-    public Input<String> getJobAgentName() {
-        return this.jobAgentName == null ? Input.empty() : this.jobAgentName;
+    public Output<String> getJobAgentName() {
+        return this.jobAgentName == null ? Output.empty() : this.jobAgentName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,9 +65,9 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -76,10 +76,10 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public JobAgentArgs(
-        Input<String> databaseId,
-        @Nullable Input<String> jobAgentName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> databaseId,
+        @Nullable Output<String> jobAgentName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.databaseId = Objects.requireNonNull(databaseId, "expected parameter 'databaseId' to be non-null");
         this.jobAgentName = jobAgentName;
         this.location = location;
@@ -111,13 +111,13 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobAgentArgs() {
-        this.databaseId = Input.empty();
-        this.jobAgentName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.databaseId = Output.empty();
+        this.jobAgentName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> databaseId;
-        private @Nullable Input<String> jobAgentName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> databaseId;
+        private @Nullable Output<String> jobAgentName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder databaseId(Input<String> databaseId) {
+        public Builder databaseId(Output<String> databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
         public Builder databaseId(String databaseId) {
-            this.databaseId = Input.of(Objects.requireNonNull(databaseId));
+            this.databaseId = Output.of(Objects.requireNonNull(databaseId));
             return this;
         }
 
-        public Builder jobAgentName(@Nullable Input<String> jobAgentName) {
+        public Builder jobAgentName(@Nullable Output<String> jobAgentName) {
             this.jobAgentName = jobAgentName;
             return this;
         }
 
         public Builder jobAgentName(@Nullable String jobAgentName) {
-            this.jobAgentName = Input.ofNullable(jobAgentName);
+            this.jobAgentName = Output.ofNullable(jobAgentName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public JobAgentArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ManagementPolicySchemaArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<ManagementPolicyRuleArgs>> rules;
+      private final Output<List<ManagementPolicyRuleArgs>> rules;
 
-    public Input<List<ManagementPolicyRuleArgs>> getRules() {
+    public Output<List<ManagementPolicyRuleArgs>> getRules() {
         return this.rules;
     }
 
-    public ManagementPolicySchemaArgs(Input<List<ManagementPolicyRuleArgs>> rules) {
+    public ManagementPolicySchemaArgs(Output<List<ManagementPolicyRuleArgs>> rules) {
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
     }
 
     private ManagementPolicySchemaArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ManagementPolicySchemaArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<List<ManagementPolicyRuleArgs>> rules;
+        private Output<List<ManagementPolicyRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ManagementPolicySchemaArgs extends io.pulumi.resources.Resour
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(Input<List<ManagementPolicyRuleArgs>> rules) {
+        public Builder rules(Output<List<ManagementPolicyRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<ManagementPolicyRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
         public ManagementPolicySchemaArgs build() {

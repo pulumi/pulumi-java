@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class WarmStoreConfigurationPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dataRetention", required=true)
-      private final Input<String> dataRetention;
+      private final Output<String> dataRetention;
 
-    public Input<String> getDataRetention() {
+    public Output<String> getDataRetention() {
         return this.dataRetention;
     }
 
-    public WarmStoreConfigurationPropertiesArgs(Input<String> dataRetention) {
+    public WarmStoreConfigurationPropertiesArgs(Output<String> dataRetention) {
         this.dataRetention = Objects.requireNonNull(dataRetention, "expected parameter 'dataRetention' to be non-null");
     }
 
     private WarmStoreConfigurationPropertiesArgs() {
-        this.dataRetention = Input.empty();
+        this.dataRetention = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class WarmStoreConfigurationPropertiesArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> dataRetention;
+        private Output<String> dataRetention;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class WarmStoreConfigurationPropertiesArgs extends io.pulumi.resour
     	      this.dataRetention = defaults.dataRetention;
         }
 
-        public Builder dataRetention(Input<String> dataRetention) {
+        public Builder dataRetention(Output<String> dataRetention) {
             this.dataRetention = Objects.requireNonNull(dataRetention);
             return this;
         }
 
         public Builder dataRetention(String dataRetention) {
-            this.dataRetention = Input.of(Objects.requireNonNull(dataRetention));
+            this.dataRetention = Output.of(Objects.requireNonNull(dataRetention));
             return this;
         }
         public WarmStoreConfigurationPropertiesArgs build() {

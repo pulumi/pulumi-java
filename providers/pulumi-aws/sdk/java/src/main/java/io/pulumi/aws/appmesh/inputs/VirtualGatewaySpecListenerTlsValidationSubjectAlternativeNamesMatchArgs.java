@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
      * 
      */
     @InputImport(name="exacts", required=true)
-      private final Input<List<String>> exacts;
+      private final Output<List<String>> exacts;
 
-    public Input<List<String>> getExacts() {
+    public Output<List<String>> getExacts() {
         return this.exacts;
     }
 
-    public VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs(Input<List<String>> exacts) {
+    public VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs(Output<List<String>> exacts) {
         this.exacts = Objects.requireNonNull(exacts, "expected parameter 'exacts' to be non-null");
     }
 
     private VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs() {
-        this.exacts = Input.empty();
+        this.exacts = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     }
 
     public static final class Builder {
-        private Input<List<String>> exacts;
+        private Output<List<String>> exacts;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     	      this.exacts = defaults.exacts;
         }
 
-        public Builder exacts(Input<List<String>> exacts) {
+        public Builder exacts(Output<List<String>> exacts) {
             this.exacts = Objects.requireNonNull(exacts);
             return this;
         }
 
         public Builder exacts(List<String> exacts) {
-            this.exacts = Input.of(Objects.requireNonNull(exacts));
+            this.exacts = Output.of(Objects.requireNonNull(exacts));
             return this;
         }
         public VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs build() {

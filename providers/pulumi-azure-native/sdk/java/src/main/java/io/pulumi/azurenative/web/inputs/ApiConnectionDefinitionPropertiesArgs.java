@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ApiConnectionTestLinkArgs;
 import io.pulumi.azurenative.web.inputs.ApiReferenceArgs;
 import io.pulumi.azurenative.web.inputs.ConnectionStatusDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     public static final ApiConnectionDefinitionPropertiesArgs Empty = new ApiConnectionDefinitionPropertiesArgs();
 
     @InputImport(name="api")
-      private final @Nullable Input<ApiReferenceArgs> api;
+      private final @Nullable Output<ApiReferenceArgs> api;
 
-    public Input<ApiReferenceArgs> getApi() {
-        return this.api == null ? Input.empty() : this.api;
+    public Output<ApiReferenceArgs> getApi() {
+        return this.api == null ? Output.empty() : this.api;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="changedTime")
-      private final @Nullable Input<String> changedTime;
+      private final @Nullable Output<String> changedTime;
 
-    public Input<String> getChangedTime() {
-        return this.changedTime == null ? Input.empty() : this.changedTime;
+    public Output<String> getChangedTime() {
+        return this.changedTime == null ? Output.empty() : this.changedTime;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="customParameterValues")
-      private final @Nullable Input<Map<String,String>> customParameterValues;
+      private final @Nullable Output<Map<String,String>> customParameterValues;
 
-    public Input<Map<String,String>> getCustomParameterValues() {
-        return this.customParameterValues == null ? Input.empty() : this.customParameterValues;
+    public Output<Map<String,String>> getCustomParameterValues() {
+        return this.customParameterValues == null ? Output.empty() : this.customParameterValues;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="nonSecretParameterValues")
-      private final @Nullable Input<Map<String,String>> nonSecretParameterValues;
+      private final @Nullable Output<Map<String,String>> nonSecretParameterValues;
 
-    public Input<Map<String,String>> getNonSecretParameterValues() {
-        return this.nonSecretParameterValues == null ? Input.empty() : this.nonSecretParameterValues;
+    public Output<Map<String,String>> getNonSecretParameterValues() {
+        return this.nonSecretParameterValues == null ? Output.empty() : this.nonSecretParameterValues;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameterValues")
-      private final @Nullable Input<Map<String,String>> parameterValues;
+      private final @Nullable Output<Map<String,String>> parameterValues;
 
-    public Input<Map<String,String>> getParameterValues() {
-        return this.parameterValues == null ? Input.empty() : this.parameterValues;
+    public Output<Map<String,String>> getParameterValues() {
+        return this.parameterValues == null ? Output.empty() : this.parameterValues;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="statuses")
-      private final @Nullable Input<List<ConnectionStatusDefinitionArgs>> statuses;
+      private final @Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses;
 
-    public Input<List<ConnectionStatusDefinitionArgs>> getStatuses() {
-        return this.statuses == null ? Input.empty() : this.statuses;
+    public Output<List<ConnectionStatusDefinitionArgs>> getStatuses() {
+        return this.statuses == null ? Output.empty() : this.statuses;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="testLinks")
-      private final @Nullable Input<List<ApiConnectionTestLinkArgs>> testLinks;
+      private final @Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks;
 
-    public Input<List<ApiConnectionTestLinkArgs>> getTestLinks() {
-        return this.testLinks == null ? Input.empty() : this.testLinks;
+    public Output<List<ApiConnectionTestLinkArgs>> getTestLinks() {
+        return this.testLinks == null ? Output.empty() : this.testLinks;
     }
 
     public ApiConnectionDefinitionPropertiesArgs(
-        @Nullable Input<ApiReferenceArgs> api,
-        @Nullable Input<String> changedTime,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<Map<String,String>> customParameterValues,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Map<String,String>> nonSecretParameterValues,
-        @Nullable Input<Map<String,String>> parameterValues,
-        @Nullable Input<List<ConnectionStatusDefinitionArgs>> statuses,
-        @Nullable Input<List<ApiConnectionTestLinkArgs>> testLinks) {
+        @Nullable Output<ApiReferenceArgs> api,
+        @Nullable Output<String> changedTime,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<Map<String,String>> customParameterValues,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Map<String,String>> nonSecretParameterValues,
+        @Nullable Output<Map<String,String>> parameterValues,
+        @Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses,
+        @Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks) {
         this.api = api;
         this.changedTime = changedTime;
         this.createdTime = createdTime;
@@ -136,15 +136,15 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     }
 
     private ApiConnectionDefinitionPropertiesArgs() {
-        this.api = Input.empty();
-        this.changedTime = Input.empty();
-        this.createdTime = Input.empty();
-        this.customParameterValues = Input.empty();
-        this.displayName = Input.empty();
-        this.nonSecretParameterValues = Input.empty();
-        this.parameterValues = Input.empty();
-        this.statuses = Input.empty();
-        this.testLinks = Input.empty();
+        this.api = Output.empty();
+        this.changedTime = Output.empty();
+        this.createdTime = Output.empty();
+        this.customParameterValues = Output.empty();
+        this.displayName = Output.empty();
+        this.nonSecretParameterValues = Output.empty();
+        this.parameterValues = Output.empty();
+        this.statuses = Output.empty();
+        this.testLinks = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<ApiReferenceArgs> api;
-        private @Nullable Input<String> changedTime;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<Map<String,String>> customParameterValues;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Map<String,String>> nonSecretParameterValues;
-        private @Nullable Input<Map<String,String>> parameterValues;
-        private @Nullable Input<List<ConnectionStatusDefinitionArgs>> statuses;
-        private @Nullable Input<List<ApiConnectionTestLinkArgs>> testLinks;
+        private @Nullable Output<ApiReferenceArgs> api;
+        private @Nullable Output<String> changedTime;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<Map<String,String>> customParameterValues;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Map<String,String>> nonSecretParameterValues;
+        private @Nullable Output<Map<String,String>> parameterValues;
+        private @Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses;
+        private @Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     	      this.testLinks = defaults.testLinks;
         }
 
-        public Builder api(@Nullable Input<ApiReferenceArgs> api) {
+        public Builder api(@Nullable Output<ApiReferenceArgs> api) {
             this.api = api;
             return this;
         }
 
         public Builder api(@Nullable ApiReferenceArgs api) {
-            this.api = Input.ofNullable(api);
+            this.api = Output.ofNullable(api);
             return this;
         }
 
-        public Builder changedTime(@Nullable Input<String> changedTime) {
+        public Builder changedTime(@Nullable Output<String> changedTime) {
             this.changedTime = changedTime;
             return this;
         }
 
         public Builder changedTime(@Nullable String changedTime) {
-            this.changedTime = Input.ofNullable(changedTime);
+            this.changedTime = Output.ofNullable(changedTime);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder customParameterValues(@Nullable Input<Map<String,String>> customParameterValues) {
+        public Builder customParameterValues(@Nullable Output<Map<String,String>> customParameterValues) {
             this.customParameterValues = customParameterValues;
             return this;
         }
 
         public Builder customParameterValues(@Nullable Map<String,String> customParameterValues) {
-            this.customParameterValues = Input.ofNullable(customParameterValues);
+            this.customParameterValues = Output.ofNullable(customParameterValues);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder nonSecretParameterValues(@Nullable Input<Map<String,String>> nonSecretParameterValues) {
+        public Builder nonSecretParameterValues(@Nullable Output<Map<String,String>> nonSecretParameterValues) {
             this.nonSecretParameterValues = nonSecretParameterValues;
             return this;
         }
 
         public Builder nonSecretParameterValues(@Nullable Map<String,String> nonSecretParameterValues) {
-            this.nonSecretParameterValues = Input.ofNullable(nonSecretParameterValues);
+            this.nonSecretParameterValues = Output.ofNullable(nonSecretParameterValues);
             return this;
         }
 
-        public Builder parameterValues(@Nullable Input<Map<String,String>> parameterValues) {
+        public Builder parameterValues(@Nullable Output<Map<String,String>> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }
 
         public Builder parameterValues(@Nullable Map<String,String> parameterValues) {
-            this.parameterValues = Input.ofNullable(parameterValues);
+            this.parameterValues = Output.ofNullable(parameterValues);
             return this;
         }
 
-        public Builder statuses(@Nullable Input<List<ConnectionStatusDefinitionArgs>> statuses) {
+        public Builder statuses(@Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
         public Builder statuses(@Nullable List<ConnectionStatusDefinitionArgs> statuses) {
-            this.statuses = Input.ofNullable(statuses);
+            this.statuses = Output.ofNullable(statuses);
             return this;
         }
 
-        public Builder testLinks(@Nullable Input<List<ApiConnectionTestLinkArgs>> testLinks) {
+        public Builder testLinks(@Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks) {
             this.testLinks = testLinks;
             return this;
         }
 
         public Builder testLinks(@Nullable List<ApiConnectionTestLinkArgs> testLinks) {
-            this.testLinks = Input.ofNullable(testLinks);
+            this.testLinks = Output.ofNullable(testLinks);
             return this;
         }
         public ApiConnectionDefinitionPropertiesArgs build() {

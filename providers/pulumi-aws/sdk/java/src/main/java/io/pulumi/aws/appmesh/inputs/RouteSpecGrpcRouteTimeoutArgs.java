@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutIdleArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutPerRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class RouteSpecGrpcRouteTimeoutArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="idle")
-      private final @Nullable Input<RouteSpecGrpcRouteTimeoutIdleArgs> idle;
+      private final @Nullable Output<RouteSpecGrpcRouteTimeoutIdleArgs> idle;
 
-    public Input<RouteSpecGrpcRouteTimeoutIdleArgs> getIdle() {
-        return this.idle == null ? Input.empty() : this.idle;
+    public Output<RouteSpecGrpcRouteTimeoutIdleArgs> getIdle() {
+        return this.idle == null ? Output.empty() : this.idle;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class RouteSpecGrpcRouteTimeoutArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="perRequest")
-      private final @Nullable Input<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest;
+      private final @Nullable Output<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest;
 
-    public Input<RouteSpecGrpcRouteTimeoutPerRequestArgs> getPerRequest() {
-        return this.perRequest == null ? Input.empty() : this.perRequest;
+    public Output<RouteSpecGrpcRouteTimeoutPerRequestArgs> getPerRequest() {
+        return this.perRequest == null ? Output.empty() : this.perRequest;
     }
 
     public RouteSpecGrpcRouteTimeoutArgs(
-        @Nullable Input<RouteSpecGrpcRouteTimeoutIdleArgs> idle,
-        @Nullable Input<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest) {
+        @Nullable Output<RouteSpecGrpcRouteTimeoutIdleArgs> idle,
+        @Nullable Output<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }
 
     private RouteSpecGrpcRouteTimeoutArgs() {
-        this.idle = Input.empty();
-        this.perRequest = Input.empty();
+        this.idle = Output.empty();
+        this.perRequest = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class RouteSpecGrpcRouteTimeoutArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<RouteSpecGrpcRouteTimeoutIdleArgs> idle;
-        private @Nullable Input<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest;
+        private @Nullable Output<RouteSpecGrpcRouteTimeoutIdleArgs> idle;
+        private @Nullable Output<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class RouteSpecGrpcRouteTimeoutArgs extends io.pulumi.resources.Res
     	      this.perRequest = defaults.perRequest;
         }
 
-        public Builder idle(@Nullable Input<RouteSpecGrpcRouteTimeoutIdleArgs> idle) {
+        public Builder idle(@Nullable Output<RouteSpecGrpcRouteTimeoutIdleArgs> idle) {
             this.idle = idle;
             return this;
         }
 
         public Builder idle(@Nullable RouteSpecGrpcRouteTimeoutIdleArgs idle) {
-            this.idle = Input.ofNullable(idle);
+            this.idle = Output.ofNullable(idle);
             return this;
         }
 
-        public Builder perRequest(@Nullable Input<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest) {
+        public Builder perRequest(@Nullable Output<RouteSpecGrpcRouteTimeoutPerRequestArgs> perRequest) {
             this.perRequest = perRequest;
             return this;
         }
 
         public Builder perRequest(@Nullable RouteSpecGrpcRouteTimeoutPerRequestArgs perRequest) {
-            this.perRequest = Input.ofNullable(perRequest);
+            this.perRequest = Output.ofNullable(perRequest);
             return this;
         }
         public RouteSpecGrpcRouteTimeoutArgs build() {

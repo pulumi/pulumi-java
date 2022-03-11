@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.UserDefinedFunctionResourceUriArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="className", required=true)
-      private final Input<String> className;
+      private final Output<String> className;
 
-    public Input<String> getClassName() {
+    public Output<String> getClassName() {
         return this.className;
     }
 
@@ -43,9 +43,9 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -54,10 +54,10 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ownerName", required=true)
-      private final Input<String> ownerName;
+      private final Output<String> ownerName;
 
-    public Input<String> getOwnerName() {
+    public Output<String> getOwnerName() {
         return this.ownerName;
     }
 
@@ -76,9 +76,9 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ownerType", required=true)
-      private final Input<String> ownerType;
+      private final Output<String> ownerType;
 
-    public Input<String> getOwnerType() {
+    public Output<String> getOwnerType() {
         return this.ownerType;
     }
 
@@ -87,20 +87,20 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceUris")
-      private final @Nullable Input<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
+      private final @Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
 
-    public Input<List<UserDefinedFunctionResourceUriArgs>> getResourceUris() {
-        return this.resourceUris == null ? Input.empty() : this.resourceUris;
+    public Output<List<UserDefinedFunctionResourceUriArgs>> getResourceUris() {
+        return this.resourceUris == null ? Output.empty() : this.resourceUris;
     }
 
     public UserDefinedFunctionArgs(
-        @Nullable Input<String> catalogId,
-        Input<String> className,
-        Input<String> databaseName,
-        @Nullable Input<String> name,
-        Input<String> ownerName,
-        Input<String> ownerType,
-        @Nullable Input<List<UserDefinedFunctionResourceUriArgs>> resourceUris) {
+        @Nullable Output<String> catalogId,
+        Output<String> className,
+        Output<String> databaseName,
+        @Nullable Output<String> name,
+        Output<String> ownerName,
+        Output<String> ownerType,
+        @Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris) {
         this.catalogId = catalogId;
         this.className = Objects.requireNonNull(className, "expected parameter 'className' to be non-null");
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
@@ -111,13 +111,13 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     }
 
     private UserDefinedFunctionArgs() {
-        this.catalogId = Input.empty();
-        this.className = Input.empty();
-        this.databaseName = Input.empty();
-        this.name = Input.empty();
-        this.ownerName = Input.empty();
-        this.ownerType = Input.empty();
-        this.resourceUris = Input.empty();
+        this.catalogId = Output.empty();
+        this.className = Output.empty();
+        this.databaseName = Output.empty();
+        this.name = Output.empty();
+        this.ownerName = Output.empty();
+        this.ownerType = Output.empty();
+        this.resourceUris = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private Input<String> className;
-        private Input<String> databaseName;
-        private @Nullable Input<String> name;
-        private Input<String> ownerName;
-        private Input<String> ownerType;
-        private @Nullable Input<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
+        private @Nullable Output<String> catalogId;
+        private Output<String> className;
+        private Output<String> databaseName;
+        private @Nullable Output<String> name;
+        private Output<String> ownerName;
+        private Output<String> ownerType;
+        private @Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     	      this.resourceUris = defaults.resourceUris;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder className(Input<String> className) {
+        public Builder className(Output<String> className) {
             this.className = Objects.requireNonNull(className);
             return this;
         }
 
         public Builder className(String className) {
-            this.className = Input.of(Objects.requireNonNull(className));
+            this.className = Output.of(Objects.requireNonNull(className));
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerName(Input<String> ownerName) {
+        public Builder ownerName(Output<String> ownerName) {
             this.ownerName = Objects.requireNonNull(ownerName);
             return this;
         }
 
         public Builder ownerName(String ownerName) {
-            this.ownerName = Input.of(Objects.requireNonNull(ownerName));
+            this.ownerName = Output.of(Objects.requireNonNull(ownerName));
             return this;
         }
 
-        public Builder ownerType(Input<String> ownerType) {
+        public Builder ownerType(Output<String> ownerType) {
             this.ownerType = Objects.requireNonNull(ownerType);
             return this;
         }
 
         public Builder ownerType(String ownerType) {
-            this.ownerType = Input.of(Objects.requireNonNull(ownerType));
+            this.ownerType = Output.of(Objects.requireNonNull(ownerType));
             return this;
         }
 
-        public Builder resourceUris(@Nullable Input<List<UserDefinedFunctionResourceUriArgs>> resourceUris) {
+        public Builder resourceUris(@Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris) {
             this.resourceUris = resourceUris;
             return this;
         }
 
         public Builder resourceUris(@Nullable List<UserDefinedFunctionResourceUriArgs> resourceUris) {
-            this.resourceUris = Input.ofNullable(resourceUris);
+            this.resourceUris = Output.ofNullable(resourceUris);
             return this;
         }
         public UserDefinedFunctionArgs build() {

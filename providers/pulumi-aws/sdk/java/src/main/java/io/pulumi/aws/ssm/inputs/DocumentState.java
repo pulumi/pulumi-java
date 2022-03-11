@@ -5,7 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.aws.ssm.inputs.DocumentAttachmentsSourceGetArgs;
 import io.pulumi.aws.ssm.inputs.DocumentParameterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,10 +19,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     public static final DocumentState Empty = new DocumentState();
 
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachmentsSources")
-      private final @Nullable Input<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
+      private final @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
 
-    public Input<List<DocumentAttachmentsSourceGetArgs>> getAttachmentsSources() {
-        return this.attachmentsSources == null ? Input.empty() : this.attachmentsSources;
+    public Output<List<DocumentAttachmentsSourceGetArgs>> getAttachmentsSources() {
+        return this.attachmentsSources == null ? Output.empty() : this.attachmentsSources;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-      private final @Nullable Input<String> createdDate;
+      private final @Nullable Output<String> createdDate;
 
-    public Input<String> getCreatedDate() {
-        return this.createdDate == null ? Input.empty() : this.createdDate;
+    public Output<String> getCreatedDate() {
+        return this.createdDate == null ? Output.empty() : this.createdDate;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultVersion")
-      private final @Nullable Input<String> defaultVersion;
+      private final @Nullable Output<String> defaultVersion;
 
-    public Input<String> getDefaultVersion() {
-        return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
+    public Output<String> getDefaultVersion() {
+        return this.defaultVersion == null ? Output.empty() : this.defaultVersion;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentFormat")
-      private final @Nullable Input<String> documentFormat;
+      private final @Nullable Output<String> documentFormat;
 
-    public Input<String> getDocumentFormat() {
-        return this.documentFormat == null ? Input.empty() : this.documentFormat;
+    public Output<String> getDocumentFormat() {
+        return this.documentFormat == null ? Output.empty() : this.documentFormat;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentType")
-      private final @Nullable Input<String> documentType;
+      private final @Nullable Output<String> documentType;
 
-    public Input<String> getDocumentType() {
-        return this.documentType == null ? Input.empty() : this.documentType;
+    public Output<String> getDocumentType() {
+        return this.documentType == null ? Output.empty() : this.documentType;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentVersion")
-      private final @Nullable Input<String> documentVersion;
+      private final @Nullable Output<String> documentVersion;
 
-    public Input<String> getDocumentVersion() {
-        return this.documentVersion == null ? Input.empty() : this.documentVersion;
+    public Output<String> getDocumentVersion() {
+        return this.documentVersion == null ? Output.empty() : this.documentVersion;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hash")
-      private final @Nullable Input<String> hash;
+      private final @Nullable Output<String> hash;
 
-    public Input<String> getHash() {
-        return this.hash == null ? Input.empty() : this.hash;
+    public Output<String> getHash() {
+        return this.hash == null ? Output.empty() : this.hash;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hashType")
-      private final @Nullable Input<String> hashType;
+      private final @Nullable Output<String> hashType;
 
-    public Input<String> getHashType() {
-        return this.hashType == null ? Input.empty() : this.hashType;
+    public Output<String> getHashType() {
+        return this.hashType == null ? Output.empty() : this.hashType;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestVersion")
-      private final @Nullable Input<String> latestVersion;
+      private final @Nullable Output<String> latestVersion;
 
-    public Input<String> getLatestVersion() {
-        return this.latestVersion == null ? Input.empty() : this.latestVersion;
+    public Output<String> getLatestVersion() {
+        return this.latestVersion == null ? Output.empty() : this.latestVersion;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<DocumentParameterGetArgs>> parameters;
+      private final @Nullable Output<List<DocumentParameterGetArgs>> parameters;
 
-    public Input<List<DocumentParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<DocumentParameterGetArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<Map<String,String>> permissions;
+      private final @Nullable Output<Map<String,String>> permissions;
 
-    public Input<Map<String,String>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<Map<String,String>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformTypes")
-      private final @Nullable Input<List<String>> platformTypes;
+      private final @Nullable Output<List<String>> platformTypes;
 
-    public Input<List<String>> getPlatformTypes() {
-        return this.platformTypes == null ? Input.empty() : this.platformTypes;
+    public Output<List<String>> getPlatformTypes() {
+        return this.platformTypes == null ? Output.empty() : this.platformTypes;
     }
 
     /**
@@ -206,10 +206,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaVersion")
-      private final @Nullable Input<String> schemaVersion;
+      private final @Nullable Output<String> schemaVersion;
 
-    public Input<String> getSchemaVersion() {
-        return this.schemaVersion == null ? Input.empty() : this.schemaVersion;
+    public Output<String> getSchemaVersion() {
+        return this.schemaVersion == null ? Output.empty() : this.schemaVersion;
     }
 
     /**
@@ -217,10 +217,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -228,10 +228,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -239,10 +239,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -250,10 +250,10 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType")
-      private final @Nullable Input<String> targetType;
+      private final @Nullable Output<String> targetType;
 
-    public Input<String> getTargetType() {
-        return this.targetType == null ? Input.empty() : this.targetType;
+    public Output<String> getTargetType() {
+        return this.targetType == null ? Output.empty() : this.targetType;
     }
 
     /**
@@ -261,36 +261,36 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionName")
-      private final @Nullable Input<String> versionName;
+      private final @Nullable Output<String> versionName;
 
-    public Input<String> getVersionName() {
-        return this.versionName == null ? Input.empty() : this.versionName;
+    public Output<String> getVersionName() {
+        return this.versionName == null ? Output.empty() : this.versionName;
     }
 
     public DocumentState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources,
-        @Nullable Input<String> content,
-        @Nullable Input<String> createdDate,
-        @Nullable Input<String> defaultVersion,
-        @Nullable Input<String> description,
-        @Nullable Input<String> documentFormat,
-        @Nullable Input<String> documentType,
-        @Nullable Input<String> documentVersion,
-        @Nullable Input<String> hash,
-        @Nullable Input<String> hashType,
-        @Nullable Input<String> latestVersion,
-        @Nullable Input<String> name,
-        @Nullable Input<String> owner,
-        @Nullable Input<List<DocumentParameterGetArgs>> parameters,
-        @Nullable Input<Map<String,String>> permissions,
-        @Nullable Input<List<String>> platformTypes,
-        @Nullable Input<String> schemaVersion,
-        @Nullable Input<String> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> targetType,
-        @Nullable Input<String> versionName) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources,
+        @Nullable Output<String> content,
+        @Nullable Output<String> createdDate,
+        @Nullable Output<String> defaultVersion,
+        @Nullable Output<String> description,
+        @Nullable Output<String> documentFormat,
+        @Nullable Output<String> documentType,
+        @Nullable Output<String> documentVersion,
+        @Nullable Output<String> hash,
+        @Nullable Output<String> hashType,
+        @Nullable Output<String> latestVersion,
+        @Nullable Output<String> name,
+        @Nullable Output<String> owner,
+        @Nullable Output<List<DocumentParameterGetArgs>> parameters,
+        @Nullable Output<Map<String,String>> permissions,
+        @Nullable Output<List<String>> platformTypes,
+        @Nullable Output<String> schemaVersion,
+        @Nullable Output<String> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> targetType,
+        @Nullable Output<String> versionName) {
         this.arn = arn;
         this.attachmentsSources = attachmentsSources;
         this.content = content;
@@ -317,29 +317,29 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentState() {
-        this.arn = Input.empty();
-        this.attachmentsSources = Input.empty();
-        this.content = Input.empty();
-        this.createdDate = Input.empty();
-        this.defaultVersion = Input.empty();
-        this.description = Input.empty();
-        this.documentFormat = Input.empty();
-        this.documentType = Input.empty();
-        this.documentVersion = Input.empty();
-        this.hash = Input.empty();
-        this.hashType = Input.empty();
-        this.latestVersion = Input.empty();
-        this.name = Input.empty();
-        this.owner = Input.empty();
-        this.parameters = Input.empty();
-        this.permissions = Input.empty();
-        this.platformTypes = Input.empty();
-        this.schemaVersion = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.targetType = Input.empty();
-        this.versionName = Input.empty();
+        this.arn = Output.empty();
+        this.attachmentsSources = Output.empty();
+        this.content = Output.empty();
+        this.createdDate = Output.empty();
+        this.defaultVersion = Output.empty();
+        this.description = Output.empty();
+        this.documentFormat = Output.empty();
+        this.documentType = Output.empty();
+        this.documentVersion = Output.empty();
+        this.hash = Output.empty();
+        this.hashType = Output.empty();
+        this.latestVersion = Output.empty();
+        this.name = Output.empty();
+        this.owner = Output.empty();
+        this.parameters = Output.empty();
+        this.permissions = Output.empty();
+        this.platformTypes = Output.empty();
+        this.schemaVersion = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.targetType = Output.empty();
+        this.versionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -351,29 +351,29 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> createdDate;
-        private @Nullable Input<String> defaultVersion;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> documentFormat;
-        private @Nullable Input<String> documentType;
-        private @Nullable Input<String> documentVersion;
-        private @Nullable Input<String> hash;
-        private @Nullable Input<String> hashType;
-        private @Nullable Input<String> latestVersion;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> owner;
-        private @Nullable Input<List<DocumentParameterGetArgs>> parameters;
-        private @Nullable Input<Map<String,String>> permissions;
-        private @Nullable Input<List<String>> platformTypes;
-        private @Nullable Input<String> schemaVersion;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> targetType;
-        private @Nullable Input<String> versionName;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> createdDate;
+        private @Nullable Output<String> defaultVersion;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> documentFormat;
+        private @Nullable Output<String> documentType;
+        private @Nullable Output<String> documentVersion;
+        private @Nullable Output<String> hash;
+        private @Nullable Output<String> hashType;
+        private @Nullable Output<String> latestVersion;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> owner;
+        private @Nullable Output<List<DocumentParameterGetArgs>> parameters;
+        private @Nullable Output<Map<String,String>> permissions;
+        private @Nullable Output<List<String>> platformTypes;
+        private @Nullable Output<String> schemaVersion;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> targetType;
+        private @Nullable Output<String> versionName;
 
         public Builder() {
     	      // Empty
@@ -406,233 +406,233 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder attachmentsSources(@Nullable Input<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources) {
+        public Builder attachmentsSources(@Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources) {
             this.attachmentsSources = attachmentsSources;
             return this;
         }
 
         public Builder attachmentsSources(@Nullable List<DocumentAttachmentsSourceGetArgs> attachmentsSources) {
-            this.attachmentsSources = Input.ofNullable(attachmentsSources);
+            this.attachmentsSources = Output.ofNullable(attachmentsSources);
             return this;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder createdDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Input.ofNullable(createdDate);
+            this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
 
-        public Builder defaultVersion(@Nullable Input<String> defaultVersion) {
+        public Builder defaultVersion(@Nullable Output<String> defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
 
         public Builder defaultVersion(@Nullable String defaultVersion) {
-            this.defaultVersion = Input.ofNullable(defaultVersion);
+            this.defaultVersion = Output.ofNullable(defaultVersion);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder documentFormat(@Nullable Input<String> documentFormat) {
+        public Builder documentFormat(@Nullable Output<String> documentFormat) {
             this.documentFormat = documentFormat;
             return this;
         }
 
         public Builder documentFormat(@Nullable String documentFormat) {
-            this.documentFormat = Input.ofNullable(documentFormat);
+            this.documentFormat = Output.ofNullable(documentFormat);
             return this;
         }
 
-        public Builder documentType(@Nullable Input<String> documentType) {
+        public Builder documentType(@Nullable Output<String> documentType) {
             this.documentType = documentType;
             return this;
         }
 
         public Builder documentType(@Nullable String documentType) {
-            this.documentType = Input.ofNullable(documentType);
+            this.documentType = Output.ofNullable(documentType);
             return this;
         }
 
-        public Builder documentVersion(@Nullable Input<String> documentVersion) {
+        public Builder documentVersion(@Nullable Output<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Input.ofNullable(documentVersion);
+            this.documentVersion = Output.ofNullable(documentVersion);
             return this;
         }
 
-        public Builder hash(@Nullable Input<String> hash) {
+        public Builder hash(@Nullable Output<String> hash) {
             this.hash = hash;
             return this;
         }
 
         public Builder hash(@Nullable String hash) {
-            this.hash = Input.ofNullable(hash);
+            this.hash = Output.ofNullable(hash);
             return this;
         }
 
-        public Builder hashType(@Nullable Input<String> hashType) {
+        public Builder hashType(@Nullable Output<String> hashType) {
             this.hashType = hashType;
             return this;
         }
 
         public Builder hashType(@Nullable String hashType) {
-            this.hashType = Input.ofNullable(hashType);
+            this.hashType = Output.ofNullable(hashType);
             return this;
         }
 
-        public Builder latestVersion(@Nullable Input<String> latestVersion) {
+        public Builder latestVersion(@Nullable Output<String> latestVersion) {
             this.latestVersion = latestVersion;
             return this;
         }
 
         public Builder latestVersion(@Nullable String latestVersion) {
-            this.latestVersion = Input.ofNullable(latestVersion);
+            this.latestVersion = Output.ofNullable(latestVersion);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<DocumentParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<DocumentParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<DocumentParameterGetArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<Map<String,String>> permissions) {
+        public Builder permissions(@Nullable Output<Map<String,String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable Map<String,String> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder platformTypes(@Nullable Input<List<String>> platformTypes) {
+        public Builder platformTypes(@Nullable Output<List<String>> platformTypes) {
             this.platformTypes = platformTypes;
             return this;
         }
 
         public Builder platformTypes(@Nullable List<String> platformTypes) {
-            this.platformTypes = Input.ofNullable(platformTypes);
+            this.platformTypes = Output.ofNullable(platformTypes);
             return this;
         }
 
-        public Builder schemaVersion(@Nullable Input<String> schemaVersion) {
+        public Builder schemaVersion(@Nullable Output<String> schemaVersion) {
             this.schemaVersion = schemaVersion;
             return this;
         }
 
         public Builder schemaVersion(@Nullable String schemaVersion) {
-            this.schemaVersion = Input.ofNullable(schemaVersion);
+            this.schemaVersion = Output.ofNullable(schemaVersion);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder targetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Input.ofNullable(targetType);
+            this.targetType = Output.ofNullable(targetType);
             return this;
         }
 
-        public Builder versionName(@Nullable Input<String> versionName) {
+        public Builder versionName(@Nullable Output<String> versionName) {
             this.versionName = versionName;
             return this;
         }
 
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Input.ofNullable(versionName);
+            this.versionName = Output.ofNullable(versionName);
             return this;
         }
         public DocumentState build() {

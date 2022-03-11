@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="studioLifecycleConfigAppType")
-      private final @Nullable Input<String> studioLifecycleConfigAppType;
+      private final @Nullable Output<String> studioLifecycleConfigAppType;
 
-    public Input<String> getStudioLifecycleConfigAppType() {
-        return this.studioLifecycleConfigAppType == null ? Input.empty() : this.studioLifecycleConfigAppType;
+    public Output<String> getStudioLifecycleConfigAppType() {
+        return this.studioLifecycleConfigAppType == null ? Output.empty() : this.studioLifecycleConfigAppType;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="studioLifecycleConfigContent")
-      private final @Nullable Input<String> studioLifecycleConfigContent;
+      private final @Nullable Output<String> studioLifecycleConfigContent;
 
-    public Input<String> getStudioLifecycleConfigContent() {
-        return this.studioLifecycleConfigContent == null ? Input.empty() : this.studioLifecycleConfigContent;
+    public Output<String> getStudioLifecycleConfigContent() {
+        return this.studioLifecycleConfigContent == null ? Output.empty() : this.studioLifecycleConfigContent;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="studioLifecycleConfigName")
-      private final @Nullable Input<String> studioLifecycleConfigName;
+      private final @Nullable Output<String> studioLifecycleConfigName;
 
-    public Input<String> getStudioLifecycleConfigName() {
-        return this.studioLifecycleConfigName == null ? Input.empty() : this.studioLifecycleConfigName;
+    public Output<String> getStudioLifecycleConfigName() {
+        return this.studioLifecycleConfigName == null ? Output.empty() : this.studioLifecycleConfigName;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public StudioLifecycleConfigState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> studioLifecycleConfigAppType,
-        @Nullable Input<String> studioLifecycleConfigContent,
-        @Nullable Input<String> studioLifecycleConfigName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> studioLifecycleConfigAppType,
+        @Nullable Output<String> studioLifecycleConfigContent,
+        @Nullable Output<String> studioLifecycleConfigName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.studioLifecycleConfigAppType = studioLifecycleConfigAppType;
         this.studioLifecycleConfigContent = studioLifecycleConfigContent;
@@ -97,12 +97,12 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
     }
 
     private StudioLifecycleConfigState() {
-        this.arn = Input.empty();
-        this.studioLifecycleConfigAppType = Input.empty();
-        this.studioLifecycleConfigContent = Input.empty();
-        this.studioLifecycleConfigName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.studioLifecycleConfigAppType = Output.empty();
+        this.studioLifecycleConfigContent = Output.empty();
+        this.studioLifecycleConfigName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> studioLifecycleConfigAppType;
-        private @Nullable Input<String> studioLifecycleConfigContent;
-        private @Nullable Input<String> studioLifecycleConfigName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> studioLifecycleConfigAppType;
+        private @Nullable Output<String> studioLifecycleConfigContent;
+        private @Nullable Output<String> studioLifecycleConfigName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder studioLifecycleConfigAppType(@Nullable Input<String> studioLifecycleConfigAppType) {
+        public Builder studioLifecycleConfigAppType(@Nullable Output<String> studioLifecycleConfigAppType) {
             this.studioLifecycleConfigAppType = studioLifecycleConfigAppType;
             return this;
         }
 
         public Builder studioLifecycleConfigAppType(@Nullable String studioLifecycleConfigAppType) {
-            this.studioLifecycleConfigAppType = Input.ofNullable(studioLifecycleConfigAppType);
+            this.studioLifecycleConfigAppType = Output.ofNullable(studioLifecycleConfigAppType);
             return this;
         }
 
-        public Builder studioLifecycleConfigContent(@Nullable Input<String> studioLifecycleConfigContent) {
+        public Builder studioLifecycleConfigContent(@Nullable Output<String> studioLifecycleConfigContent) {
             this.studioLifecycleConfigContent = studioLifecycleConfigContent;
             return this;
         }
 
         public Builder studioLifecycleConfigContent(@Nullable String studioLifecycleConfigContent) {
-            this.studioLifecycleConfigContent = Input.ofNullable(studioLifecycleConfigContent);
+            this.studioLifecycleConfigContent = Output.ofNullable(studioLifecycleConfigContent);
             return this;
         }
 
-        public Builder studioLifecycleConfigName(@Nullable Input<String> studioLifecycleConfigName) {
+        public Builder studioLifecycleConfigName(@Nullable Output<String> studioLifecycleConfigName) {
             this.studioLifecycleConfigName = studioLifecycleConfigName;
             return this;
         }
 
         public Builder studioLifecycleConfigName(@Nullable String studioLifecycleConfigName) {
-            this.studioLifecycleConfigName = Input.ofNullable(studioLifecycleConfigName);
+            this.studioLifecycleConfigName = Output.ofNullable(studioLifecycleConfigName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public StudioLifecycleConfigState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="attributeMapping")
-      private final @Nullable Input<Map<String,String>> attributeMapping;
+      private final @Nullable Output<Map<String,String>> attributeMapping;
 
-    public Input<Map<String,String>> getAttributeMapping() {
-        return this.attributeMapping == null ? Input.empty() : this.attributeMapping;
+    public Output<Map<String,String>> getAttributeMapping() {
+        return this.attributeMapping == null ? Output.empty() : this.attributeMapping;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="idpIdentifiers")
-      private final @Nullable Input<List<String>> idpIdentifiers;
+      private final @Nullable Output<List<String>> idpIdentifiers;
 
-    public Input<List<String>> getIdpIdentifiers() {
-        return this.idpIdentifiers == null ? Input.empty() : this.idpIdentifiers;
+    public Output<List<String>> getIdpIdentifiers() {
+        return this.idpIdentifiers == null ? Output.empty() : this.idpIdentifiers;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="providerDetails")
-      private final @Nullable Input<Map<String,String>> providerDetails;
+      private final @Nullable Output<Map<String,String>> providerDetails;
 
-    public Input<Map<String,String>> getProviderDetails() {
-        return this.providerDetails == null ? Input.empty() : this.providerDetails;
+    public Output<Map<String,String>> getProviderDetails() {
+        return this.providerDetails == null ? Output.empty() : this.providerDetails;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="providerName")
-      private final @Nullable Input<String> providerName;
+      private final @Nullable Output<String> providerName;
 
-    public Input<String> getProviderName() {
-        return this.providerName == null ? Input.empty() : this.providerName;
+    public Output<String> getProviderName() {
+        return this.providerName == null ? Output.empty() : this.providerName;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="providerType")
-      private final @Nullable Input<String> providerType;
+      private final @Nullable Output<String> providerType;
 
-    public Input<String> getProviderType() {
-        return this.providerType == null ? Input.empty() : this.providerType;
+    public Output<String> getProviderType() {
+        return this.providerType == null ? Output.empty() : this.providerType;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userPoolId")
-      private final @Nullable Input<String> userPoolId;
+      private final @Nullable Output<String> userPoolId;
 
-    public Input<String> getUserPoolId() {
-        return this.userPoolId == null ? Input.empty() : this.userPoolId;
+    public Output<String> getUserPoolId() {
+        return this.userPoolId == null ? Output.empty() : this.userPoolId;
     }
 
     public IdentityProviderState(
-        @Nullable Input<Map<String,String>> attributeMapping,
-        @Nullable Input<List<String>> idpIdentifiers,
-        @Nullable Input<Map<String,String>> providerDetails,
-        @Nullable Input<String> providerName,
-        @Nullable Input<String> providerType,
-        @Nullable Input<String> userPoolId) {
+        @Nullable Output<Map<String,String>> attributeMapping,
+        @Nullable Output<List<String>> idpIdentifiers,
+        @Nullable Output<Map<String,String>> providerDetails,
+        @Nullable Output<String> providerName,
+        @Nullable Output<String> providerType,
+        @Nullable Output<String> userPoolId) {
         this.attributeMapping = attributeMapping;
         this.idpIdentifiers = idpIdentifiers;
         this.providerDetails = providerDetails;
@@ -98,12 +98,12 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     }
 
     private IdentityProviderState() {
-        this.attributeMapping = Input.empty();
-        this.idpIdentifiers = Input.empty();
-        this.providerDetails = Input.empty();
-        this.providerName = Input.empty();
-        this.providerType = Input.empty();
-        this.userPoolId = Input.empty();
+        this.attributeMapping = Output.empty();
+        this.idpIdentifiers = Output.empty();
+        this.providerDetails = Output.empty();
+        this.providerName = Output.empty();
+        this.providerType = Output.empty();
+        this.userPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> attributeMapping;
-        private @Nullable Input<List<String>> idpIdentifiers;
-        private @Nullable Input<Map<String,String>> providerDetails;
-        private @Nullable Input<String> providerName;
-        private @Nullable Input<String> providerType;
-        private @Nullable Input<String> userPoolId;
+        private @Nullable Output<Map<String,String>> attributeMapping;
+        private @Nullable Output<List<String>> idpIdentifiers;
+        private @Nullable Output<Map<String,String>> providerDetails;
+        private @Nullable Output<String> providerName;
+        private @Nullable Output<String> providerType;
+        private @Nullable Output<String> userPoolId;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder attributeMapping(@Nullable Input<Map<String,String>> attributeMapping) {
+        public Builder attributeMapping(@Nullable Output<Map<String,String>> attributeMapping) {
             this.attributeMapping = attributeMapping;
             return this;
         }
 
         public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
-            this.attributeMapping = Input.ofNullable(attributeMapping);
+            this.attributeMapping = Output.ofNullable(attributeMapping);
             return this;
         }
 
-        public Builder idpIdentifiers(@Nullable Input<List<String>> idpIdentifiers) {
+        public Builder idpIdentifiers(@Nullable Output<List<String>> idpIdentifiers) {
             this.idpIdentifiers = idpIdentifiers;
             return this;
         }
 
         public Builder idpIdentifiers(@Nullable List<String> idpIdentifiers) {
-            this.idpIdentifiers = Input.ofNullable(idpIdentifiers);
+            this.idpIdentifiers = Output.ofNullable(idpIdentifiers);
             return this;
         }
 
-        public Builder providerDetails(@Nullable Input<Map<String,String>> providerDetails) {
+        public Builder providerDetails(@Nullable Output<Map<String,String>> providerDetails) {
             this.providerDetails = providerDetails;
             return this;
         }
 
         public Builder providerDetails(@Nullable Map<String,String> providerDetails) {
-            this.providerDetails = Input.ofNullable(providerDetails);
+            this.providerDetails = Output.ofNullable(providerDetails);
             return this;
         }
 
-        public Builder providerName(@Nullable Input<String> providerName) {
+        public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
 
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Input.ofNullable(providerName);
+            this.providerName = Output.ofNullable(providerName);
             return this;
         }
 
-        public Builder providerType(@Nullable Input<String> providerType) {
+        public Builder providerType(@Nullable Output<String> providerType) {
             this.providerType = providerType;
             return this;
         }
 
         public Builder providerType(@Nullable String providerType) {
-            this.providerType = Input.ofNullable(providerType);
+            this.providerType = Output.ofNullable(providerType);
             return this;
         }
 
-        public Builder userPoolId(@Nullable Input<String> userPoolId) {
+        public Builder userPoolId(@Nullable Output<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
 
         public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Input.ofNullable(userPoolId);
+            this.userPoolId = Output.ofNullable(userPoolId);
             return this;
         }
         public IdentityProviderState build() {

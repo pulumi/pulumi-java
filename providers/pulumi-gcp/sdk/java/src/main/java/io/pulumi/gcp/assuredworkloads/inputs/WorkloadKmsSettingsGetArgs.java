@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.assuredworkloads.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class WorkloadKmsSettingsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="nextRotationTime", required=true)
-      private final Input<String> nextRotationTime;
+      private final Output<String> nextRotationTime;
 
-    public Input<String> getNextRotationTime() {
+    public Output<String> getNextRotationTime() {
         return this.nextRotationTime;
     }
 
@@ -29,22 +29,22 @@ public final class WorkloadKmsSettingsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rotationPeriod", required=true)
-      private final Input<String> rotationPeriod;
+      private final Output<String> rotationPeriod;
 
-    public Input<String> getRotationPeriod() {
+    public Output<String> getRotationPeriod() {
         return this.rotationPeriod;
     }
 
     public WorkloadKmsSettingsGetArgs(
-        Input<String> nextRotationTime,
-        Input<String> rotationPeriod) {
+        Output<String> nextRotationTime,
+        Output<String> rotationPeriod) {
         this.nextRotationTime = Objects.requireNonNull(nextRotationTime, "expected parameter 'nextRotationTime' to be non-null");
         this.rotationPeriod = Objects.requireNonNull(rotationPeriod, "expected parameter 'rotationPeriod' to be non-null");
     }
 
     private WorkloadKmsSettingsGetArgs() {
-        this.nextRotationTime = Input.empty();
-        this.rotationPeriod = Input.empty();
+        this.nextRotationTime = Output.empty();
+        this.rotationPeriod = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class WorkloadKmsSettingsGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> nextRotationTime;
-        private Input<String> rotationPeriod;
+        private Output<String> nextRotationTime;
+        private Output<String> rotationPeriod;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class WorkloadKmsSettingsGetArgs extends io.pulumi.resources.Resour
     	      this.rotationPeriod = defaults.rotationPeriod;
         }
 
-        public Builder nextRotationTime(Input<String> nextRotationTime) {
+        public Builder nextRotationTime(Output<String> nextRotationTime) {
             this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
             return this;
         }
 
         public Builder nextRotationTime(String nextRotationTime) {
-            this.nextRotationTime = Input.of(Objects.requireNonNull(nextRotationTime));
+            this.nextRotationTime = Output.of(Objects.requireNonNull(nextRotationTime));
             return this;
         }
 
-        public Builder rotationPeriod(Input<String> rotationPeriod) {
+        public Builder rotationPeriod(Output<String> rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
 
         public Builder rotationPeriod(String rotationPeriod) {
-            this.rotationPeriod = Input.of(Objects.requireNonNull(rotationPeriod));
+            this.rotationPeriod = Output.of(Objects.requireNonNull(rotationPeriod));
             return this;
         }
         public WorkloadKmsSettingsGetArgs build() {

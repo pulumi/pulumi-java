@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ManagementClusterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterSize", required=true)
-      private final Input<Integer> clusterSize;
+      private final Output<Integer> clusterSize;
 
-    public Input<Integer> getClusterSize() {
+    public Output<Integer> getClusterSize() {
         return this.clusterSize;
     }
 
-    public ManagementClusterArgs(Input<Integer> clusterSize) {
+    public ManagementClusterArgs(Output<Integer> clusterSize) {
         this.clusterSize = Objects.requireNonNull(clusterSize, "expected parameter 'clusterSize' to be non-null");
     }
 
     private ManagementClusterArgs() {
-        this.clusterSize = Input.empty();
+        this.clusterSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ManagementClusterArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<Integer> clusterSize;
+        private Output<Integer> clusterSize;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ManagementClusterArgs extends io.pulumi.resources.ResourceArg
     	      this.clusterSize = defaults.clusterSize;
         }
 
-        public Builder clusterSize(Input<Integer> clusterSize) {
+        public Builder clusterSize(Output<Integer> clusterSize) {
             this.clusterSize = Objects.requireNonNull(clusterSize);
             return this;
         }
 
         public Builder clusterSize(Integer clusterSize) {
-            this.clusterSize = Input.of(Objects.requireNonNull(clusterSize));
+            this.clusterSize = Output.of(Objects.requireNonNull(clusterSize));
             return this;
         }
         public ManagementClusterArgs build() {

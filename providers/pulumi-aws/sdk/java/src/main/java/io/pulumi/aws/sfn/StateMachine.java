@@ -8,7 +8,6 @@ import io.pulumi.aws.sfn.StateMachineArgs;
 import io.pulumi.aws.sfn.inputs.StateMachineState;
 import io.pulumi.aws.sfn.outputs.StateMachineLoggingConfiguration;
 import io.pulumi.aws.sfn.outputs.StateMachineTracingConfiguration;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -225,14 +224,14 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StateMachine(String name, StateMachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sfn/stateMachine:StateMachine", name, args == null ? StateMachineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sfn/stateMachine:StateMachine", name, args == null ? StateMachineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private StateMachine(String name, Input<String> id, @Nullable StateMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private StateMachine(String name, Output<String> id, @Nullable StateMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sfn/stateMachine:StateMachine", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -248,7 +247,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static StateMachine get(String name, Input<String> id, @Nullable StateMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static StateMachine get(String name, Output<String> id, @Nullable StateMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StateMachine(name, id, state, options);
     }
 }

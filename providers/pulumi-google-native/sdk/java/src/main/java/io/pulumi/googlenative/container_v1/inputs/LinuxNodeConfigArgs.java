@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,18 +24,18 @@ public final class LinuxNodeConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sysctls")
-      private final @Nullable Input<Map<String,String>> sysctls;
+      private final @Nullable Output<Map<String,String>> sysctls;
 
-    public Input<Map<String,String>> getSysctls() {
-        return this.sysctls == null ? Input.empty() : this.sysctls;
+    public Output<Map<String,String>> getSysctls() {
+        return this.sysctls == null ? Output.empty() : this.sysctls;
     }
 
-    public LinuxNodeConfigArgs(@Nullable Input<Map<String,String>> sysctls) {
+    public LinuxNodeConfigArgs(@Nullable Output<Map<String,String>> sysctls) {
         this.sysctls = sysctls;
     }
 
     private LinuxNodeConfigArgs() {
-        this.sysctls = Input.empty();
+        this.sysctls = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class LinuxNodeConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> sysctls;
+        private @Nullable Output<Map<String,String>> sysctls;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class LinuxNodeConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sysctls = defaults.sysctls;
         }
 
-        public Builder sysctls(@Nullable Input<Map<String,String>> sysctls) {
+        public Builder sysctls(@Nullable Output<Map<String,String>> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
 
         public Builder sysctls(@Nullable Map<String,String> sysctls) {
-            this.sysctls = Input.ofNullable(sysctls);
+            this.sysctls = Output.ofNullable(sysctls);
             return this;
         }
         public LinuxNodeConfigArgs build() {

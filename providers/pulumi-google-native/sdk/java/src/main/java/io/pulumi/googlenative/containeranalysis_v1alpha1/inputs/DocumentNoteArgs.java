@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataLicence")
-      private final @Nullable Input<String> dataLicence;
+      private final @Nullable Output<String> dataLicence;
 
-    public Input<String> getDataLicence() {
-        return this.dataLicence == null ? Input.empty() : this.dataLicence;
+    public Output<String> getDataLicence() {
+        return this.dataLicence == null ? Output.empty() : this.dataLicence;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spdxVersion")
-      private final @Nullable Input<String> spdxVersion;
+      private final @Nullable Output<String> spdxVersion;
 
-    public Input<String> getSpdxVersion() {
-        return this.spdxVersion == null ? Input.empty() : this.spdxVersion;
+    public Output<String> getSpdxVersion() {
+        return this.spdxVersion == null ? Output.empty() : this.spdxVersion;
     }
 
     public DocumentNoteArgs(
-        @Nullable Input<String> dataLicence,
-        @Nullable Input<String> spdxVersion) {
+        @Nullable Output<String> dataLicence,
+        @Nullable Output<String> spdxVersion) {
         this.dataLicence = dataLicence;
         this.spdxVersion = spdxVersion;
     }
 
     private DocumentNoteArgs() {
-        this.dataLicence = Input.empty();
-        this.spdxVersion = Input.empty();
+        this.dataLicence = Output.empty();
+        this.spdxVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataLicence;
-        private @Nullable Input<String> spdxVersion;
+        private @Nullable Output<String> dataLicence;
+        private @Nullable Output<String> spdxVersion;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spdxVersion = defaults.spdxVersion;
         }
 
-        public Builder dataLicence(@Nullable Input<String> dataLicence) {
+        public Builder dataLicence(@Nullable Output<String> dataLicence) {
             this.dataLicence = dataLicence;
             return this;
         }
 
         public Builder dataLicence(@Nullable String dataLicence) {
-            this.dataLicence = Input.ofNullable(dataLicence);
+            this.dataLicence = Output.ofNullable(dataLicence);
             return this;
         }
 
-        public Builder spdxVersion(@Nullable Input<String> spdxVersion) {
+        public Builder spdxVersion(@Nullable Output<String> spdxVersion) {
             this.spdxVersion = spdxVersion;
             return this;
         }
 
         public Builder spdxVersion(@Nullable String spdxVersion) {
-            this.spdxVersion = Input.ofNullable(spdxVersion);
+            this.spdxVersion = Output.ofNullable(spdxVersion);
             return this;
         }
         public DocumentNoteArgs build() {

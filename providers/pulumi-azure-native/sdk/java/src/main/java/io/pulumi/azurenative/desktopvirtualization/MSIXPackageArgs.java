@@ -5,7 +5,7 @@ package io.pulumi.azurenative.desktopvirtualization;
 
 import io.pulumi.azurenative.desktopvirtualization.inputs.MsixPackageApplicationsArgs;
 import io.pulumi.azurenative.desktopvirtualization.inputs.MsixPackageDependenciesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPoolName", required=true)
-      private final Input<String> hostPoolName;
+      private final Output<String> hostPoolName;
 
-    public Input<String> getHostPoolName() {
+    public Output<String> getHostPoolName() {
         return this.hostPoolName;
     }
 
@@ -45,10 +45,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePath")
-      private final @Nullable Input<String> imagePath;
+      private final @Nullable Output<String> imagePath;
 
-    public Input<String> getImagePath() {
-        return this.imagePath == null ? Input.empty() : this.imagePath;
+    public Output<String> getImagePath() {
+        return this.imagePath == null ? Output.empty() : this.imagePath;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isActive")
-      private final @Nullable Input<Boolean> isActive;
+      private final @Nullable Output<Boolean> isActive;
 
-    public Input<Boolean> getIsActive() {
-        return this.isActive == null ? Input.empty() : this.isActive;
+    public Output<Boolean> getIsActive() {
+        return this.isActive == null ? Output.empty() : this.isActive;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isRegularRegistration")
-      private final @Nullable Input<Boolean> isRegularRegistration;
+      private final @Nullable Output<Boolean> isRegularRegistration;
 
-    public Input<Boolean> getIsRegularRegistration() {
-        return this.isRegularRegistration == null ? Input.empty() : this.isRegularRegistration;
+    public Output<Boolean> getIsRegularRegistration() {
+        return this.isRegularRegistration == null ? Output.empty() : this.isRegularRegistration;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdated")
-      private final @Nullable Input<String> lastUpdated;
+      private final @Nullable Output<String> lastUpdated;
 
-    public Input<String> getLastUpdated() {
-        return this.lastUpdated == null ? Input.empty() : this.lastUpdated;
+    public Output<String> getLastUpdated() {
+        return this.lastUpdated == null ? Output.empty() : this.lastUpdated;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msixPackageFullName")
-      private final @Nullable Input<String> msixPackageFullName;
+      private final @Nullable Output<String> msixPackageFullName;
 
-    public Input<String> getMsixPackageFullName() {
-        return this.msixPackageFullName == null ? Input.empty() : this.msixPackageFullName;
+    public Output<String> getMsixPackageFullName() {
+        return this.msixPackageFullName == null ? Output.empty() : this.msixPackageFullName;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageApplications")
-      private final @Nullable Input<List<MsixPackageApplicationsArgs>> packageApplications;
+      private final @Nullable Output<List<MsixPackageApplicationsArgs>> packageApplications;
 
-    public Input<List<MsixPackageApplicationsArgs>> getPackageApplications() {
-        return this.packageApplications == null ? Input.empty() : this.packageApplications;
+    public Output<List<MsixPackageApplicationsArgs>> getPackageApplications() {
+        return this.packageApplications == null ? Output.empty() : this.packageApplications;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageDependencies")
-      private final @Nullable Input<List<MsixPackageDependenciesArgs>> packageDependencies;
+      private final @Nullable Output<List<MsixPackageDependenciesArgs>> packageDependencies;
 
-    public Input<List<MsixPackageDependenciesArgs>> getPackageDependencies() {
-        return this.packageDependencies == null ? Input.empty() : this.packageDependencies;
+    public Output<List<MsixPackageDependenciesArgs>> getPackageDependencies() {
+        return this.packageDependencies == null ? Output.empty() : this.packageDependencies;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageFamilyName")
-      private final @Nullable Input<String> packageFamilyName;
+      private final @Nullable Output<String> packageFamilyName;
 
-    public Input<String> getPackageFamilyName() {
-        return this.packageFamilyName == null ? Input.empty() : this.packageFamilyName;
+    public Output<String> getPackageFamilyName() {
+        return this.packageFamilyName == null ? Output.empty() : this.packageFamilyName;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageName")
-      private final @Nullable Input<String> packageName;
+      private final @Nullable Output<String> packageName;
 
-    public Input<String> getPackageName() {
-        return this.packageName == null ? Input.empty() : this.packageName;
+    public Output<String> getPackageName() {
+        return this.packageName == null ? Output.empty() : this.packageName;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageRelativePath")
-      private final @Nullable Input<String> packageRelativePath;
+      private final @Nullable Output<String> packageRelativePath;
 
-    public Input<String> getPackageRelativePath() {
-        return this.packageRelativePath == null ? Input.empty() : this.packageRelativePath;
+    public Output<String> getPackageRelativePath() {
+        return this.packageRelativePath == null ? Output.empty() : this.packageRelativePath;
     }
 
     /**
@@ -155,9 +155,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -166,27 +166,27 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public MSIXPackageArgs(
-        @Nullable Input<String> displayName,
-        Input<String> hostPoolName,
-        @Nullable Input<String> imagePath,
-        @Nullable Input<Boolean> isActive,
-        @Nullable Input<Boolean> isRegularRegistration,
-        @Nullable Input<String> lastUpdated,
-        @Nullable Input<String> msixPackageFullName,
-        @Nullable Input<List<MsixPackageApplicationsArgs>> packageApplications,
-        @Nullable Input<List<MsixPackageDependenciesArgs>> packageDependencies,
-        @Nullable Input<String> packageFamilyName,
-        @Nullable Input<String> packageName,
-        @Nullable Input<String> packageRelativePath,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> displayName,
+        Output<String> hostPoolName,
+        @Nullable Output<String> imagePath,
+        @Nullable Output<Boolean> isActive,
+        @Nullable Output<Boolean> isRegularRegistration,
+        @Nullable Output<String> lastUpdated,
+        @Nullable Output<String> msixPackageFullName,
+        @Nullable Output<List<MsixPackageApplicationsArgs>> packageApplications,
+        @Nullable Output<List<MsixPackageDependenciesArgs>> packageDependencies,
+        @Nullable Output<String> packageFamilyName,
+        @Nullable Output<String> packageName,
+        @Nullable Output<String> packageRelativePath,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> version) {
         this.displayName = displayName;
         this.hostPoolName = Objects.requireNonNull(hostPoolName, "expected parameter 'hostPoolName' to be non-null");
         this.imagePath = imagePath;
@@ -204,20 +204,20 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MSIXPackageArgs() {
-        this.displayName = Input.empty();
-        this.hostPoolName = Input.empty();
-        this.imagePath = Input.empty();
-        this.isActive = Input.empty();
-        this.isRegularRegistration = Input.empty();
-        this.lastUpdated = Input.empty();
-        this.msixPackageFullName = Input.empty();
-        this.packageApplications = Input.empty();
-        this.packageDependencies = Input.empty();
-        this.packageFamilyName = Input.empty();
-        this.packageName = Input.empty();
-        this.packageRelativePath = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.version = Input.empty();
+        this.displayName = Output.empty();
+        this.hostPoolName = Output.empty();
+        this.imagePath = Output.empty();
+        this.isActive = Output.empty();
+        this.isRegularRegistration = Output.empty();
+        this.lastUpdated = Output.empty();
+        this.msixPackageFullName = Output.empty();
+        this.packageApplications = Output.empty();
+        this.packageDependencies = Output.empty();
+        this.packageFamilyName = Output.empty();
+        this.packageName = Output.empty();
+        this.packageRelativePath = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -229,20 +229,20 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private Input<String> hostPoolName;
-        private @Nullable Input<String> imagePath;
-        private @Nullable Input<Boolean> isActive;
-        private @Nullable Input<Boolean> isRegularRegistration;
-        private @Nullable Input<String> lastUpdated;
-        private @Nullable Input<String> msixPackageFullName;
-        private @Nullable Input<List<MsixPackageApplicationsArgs>> packageApplications;
-        private @Nullable Input<List<MsixPackageDependenciesArgs>> packageDependencies;
-        private @Nullable Input<String> packageFamilyName;
-        private @Nullable Input<String> packageName;
-        private @Nullable Input<String> packageRelativePath;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> displayName;
+        private Output<String> hostPoolName;
+        private @Nullable Output<String> imagePath;
+        private @Nullable Output<Boolean> isActive;
+        private @Nullable Output<Boolean> isRegularRegistration;
+        private @Nullable Output<String> lastUpdated;
+        private @Nullable Output<String> msixPackageFullName;
+        private @Nullable Output<List<MsixPackageApplicationsArgs>> packageApplications;
+        private @Nullable Output<List<MsixPackageDependenciesArgs>> packageDependencies;
+        private @Nullable Output<String> packageFamilyName;
+        private @Nullable Output<String> packageName;
+        private @Nullable Output<String> packageRelativePath;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -266,143 +266,143 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder hostPoolName(Input<String> hostPoolName) {
+        public Builder hostPoolName(Output<String> hostPoolName) {
             this.hostPoolName = Objects.requireNonNull(hostPoolName);
             return this;
         }
 
         public Builder hostPoolName(String hostPoolName) {
-            this.hostPoolName = Input.of(Objects.requireNonNull(hostPoolName));
+            this.hostPoolName = Output.of(Objects.requireNonNull(hostPoolName));
             return this;
         }
 
-        public Builder imagePath(@Nullable Input<String> imagePath) {
+        public Builder imagePath(@Nullable Output<String> imagePath) {
             this.imagePath = imagePath;
             return this;
         }
 
         public Builder imagePath(@Nullable String imagePath) {
-            this.imagePath = Input.ofNullable(imagePath);
+            this.imagePath = Output.ofNullable(imagePath);
             return this;
         }
 
-        public Builder isActive(@Nullable Input<Boolean> isActive) {
+        public Builder isActive(@Nullable Output<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
 
         public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Input.ofNullable(isActive);
+            this.isActive = Output.ofNullable(isActive);
             return this;
         }
 
-        public Builder isRegularRegistration(@Nullable Input<Boolean> isRegularRegistration) {
+        public Builder isRegularRegistration(@Nullable Output<Boolean> isRegularRegistration) {
             this.isRegularRegistration = isRegularRegistration;
             return this;
         }
 
         public Builder isRegularRegistration(@Nullable Boolean isRegularRegistration) {
-            this.isRegularRegistration = Input.ofNullable(isRegularRegistration);
+            this.isRegularRegistration = Output.ofNullable(isRegularRegistration);
             return this;
         }
 
-        public Builder lastUpdated(@Nullable Input<String> lastUpdated) {
+        public Builder lastUpdated(@Nullable Output<String> lastUpdated) {
             this.lastUpdated = lastUpdated;
             return this;
         }
 
         public Builder lastUpdated(@Nullable String lastUpdated) {
-            this.lastUpdated = Input.ofNullable(lastUpdated);
+            this.lastUpdated = Output.ofNullable(lastUpdated);
             return this;
         }
 
-        public Builder msixPackageFullName(@Nullable Input<String> msixPackageFullName) {
+        public Builder msixPackageFullName(@Nullable Output<String> msixPackageFullName) {
             this.msixPackageFullName = msixPackageFullName;
             return this;
         }
 
         public Builder msixPackageFullName(@Nullable String msixPackageFullName) {
-            this.msixPackageFullName = Input.ofNullable(msixPackageFullName);
+            this.msixPackageFullName = Output.ofNullable(msixPackageFullName);
             return this;
         }
 
-        public Builder packageApplications(@Nullable Input<List<MsixPackageApplicationsArgs>> packageApplications) {
+        public Builder packageApplications(@Nullable Output<List<MsixPackageApplicationsArgs>> packageApplications) {
             this.packageApplications = packageApplications;
             return this;
         }
 
         public Builder packageApplications(@Nullable List<MsixPackageApplicationsArgs> packageApplications) {
-            this.packageApplications = Input.ofNullable(packageApplications);
+            this.packageApplications = Output.ofNullable(packageApplications);
             return this;
         }
 
-        public Builder packageDependencies(@Nullable Input<List<MsixPackageDependenciesArgs>> packageDependencies) {
+        public Builder packageDependencies(@Nullable Output<List<MsixPackageDependenciesArgs>> packageDependencies) {
             this.packageDependencies = packageDependencies;
             return this;
         }
 
         public Builder packageDependencies(@Nullable List<MsixPackageDependenciesArgs> packageDependencies) {
-            this.packageDependencies = Input.ofNullable(packageDependencies);
+            this.packageDependencies = Output.ofNullable(packageDependencies);
             return this;
         }
 
-        public Builder packageFamilyName(@Nullable Input<String> packageFamilyName) {
+        public Builder packageFamilyName(@Nullable Output<String> packageFamilyName) {
             this.packageFamilyName = packageFamilyName;
             return this;
         }
 
         public Builder packageFamilyName(@Nullable String packageFamilyName) {
-            this.packageFamilyName = Input.ofNullable(packageFamilyName);
+            this.packageFamilyName = Output.ofNullable(packageFamilyName);
             return this;
         }
 
-        public Builder packageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Output<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Input.ofNullable(packageName);
+            this.packageName = Output.ofNullable(packageName);
             return this;
         }
 
-        public Builder packageRelativePath(@Nullable Input<String> packageRelativePath) {
+        public Builder packageRelativePath(@Nullable Output<String> packageRelativePath) {
             this.packageRelativePath = packageRelativePath;
             return this;
         }
 
         public Builder packageRelativePath(@Nullable String packageRelativePath) {
-            this.packageRelativePath = Input.ofNullable(packageRelativePath);
+            this.packageRelativePath = Output.ofNullable(packageRelativePath);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public MSIXPackageArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.OverheadArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.SchedulingArgs;
@@ -25,10 +25,10 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="overhead")
-      private final @Nullable Input<OverheadArgs> overhead;
+      private final @Nullable Output<OverheadArgs> overhead;
 
-    public Input<OverheadArgs> getOverhead() {
-        return this.overhead == null ? Input.empty() : this.overhead;
+    public Output<OverheadArgs> getOverhead() {
+        return this.overhead == null ? Output.empty() : this.overhead;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="runtimeHandler", required=true)
-      private final Input<String> runtimeHandler;
+      private final Output<String> runtimeHandler;
 
-    public Input<String> getRuntimeHandler() {
+    public Output<String> getRuntimeHandler() {
         return this.runtimeHandler;
     }
 
@@ -47,25 +47,25 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scheduling")
-      private final @Nullable Input<SchedulingArgs> scheduling;
+      private final @Nullable Output<SchedulingArgs> scheduling;
 
-    public Input<SchedulingArgs> getScheduling() {
-        return this.scheduling == null ? Input.empty() : this.scheduling;
+    public Output<SchedulingArgs> getScheduling() {
+        return this.scheduling == null ? Output.empty() : this.scheduling;
     }
 
     public RuntimeClassSpecArgs(
-        @Nullable Input<OverheadArgs> overhead,
-        Input<String> runtimeHandler,
-        @Nullable Input<SchedulingArgs> scheduling) {
+        @Nullable Output<OverheadArgs> overhead,
+        Output<String> runtimeHandler,
+        @Nullable Output<SchedulingArgs> scheduling) {
         this.overhead = overhead;
         this.runtimeHandler = Objects.requireNonNull(runtimeHandler, "expected parameter 'runtimeHandler' to be non-null");
         this.scheduling = scheduling;
     }
 
     private RuntimeClassSpecArgs() {
-        this.overhead = Input.empty();
-        this.runtimeHandler = Input.empty();
-        this.scheduling = Input.empty();
+        this.overhead = Output.empty();
+        this.runtimeHandler = Output.empty();
+        this.scheduling = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<OverheadArgs> overhead;
-        private Input<String> runtimeHandler;
-        private @Nullable Input<SchedulingArgs> scheduling;
+        private @Nullable Output<OverheadArgs> overhead;
+        private Output<String> runtimeHandler;
+        private @Nullable Output<SchedulingArgs> scheduling;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
     	      this.scheduling = defaults.scheduling;
         }
 
-        public Builder overhead(@Nullable Input<OverheadArgs> overhead) {
+        public Builder overhead(@Nullable Output<OverheadArgs> overhead) {
             this.overhead = overhead;
             return this;
         }
 
         public Builder overhead(@Nullable OverheadArgs overhead) {
-            this.overhead = Input.ofNullable(overhead);
+            this.overhead = Output.ofNullable(overhead);
             return this;
         }
 
-        public Builder runtimeHandler(Input<String> runtimeHandler) {
+        public Builder runtimeHandler(Output<String> runtimeHandler) {
             this.runtimeHandler = Objects.requireNonNull(runtimeHandler);
             return this;
         }
 
         public Builder runtimeHandler(String runtimeHandler) {
-            this.runtimeHandler = Input.of(Objects.requireNonNull(runtimeHandler));
+            this.runtimeHandler = Output.of(Objects.requireNonNull(runtimeHandler));
             return this;
         }
 
-        public Builder scheduling(@Nullable Input<SchedulingArgs> scheduling) {
+        public Builder scheduling(@Nullable Output<SchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
         public Builder scheduling(@Nullable SchedulingArgs scheduling) {
-            this.scheduling = Input.ofNullable(scheduling);
+            this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
         public RuntimeClassSpecArgs build() {

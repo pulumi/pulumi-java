@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="date")
-      private final @Nullable Input<Integer> date;
+      private final @Nullable Output<Integer> date;
 
-    public Input<Integer> getDate() {
-        return this.date == null ? Input.empty() : this.date;
+    public Output<Integer> getDate() {
+        return this.date == null ? Output.empty() : this.date;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isLast")
-      private final @Nullable Input<Boolean> isLast;
+      private final @Nullable Output<Boolean> isLast;
 
-    public Input<Boolean> getIsLast() {
-        return this.isLast == null ? Input.empty() : this.isLast;
+    public Output<Boolean> getIsLast() {
+        return this.isLast == null ? Output.empty() : this.isLast;
     }
 
     public DayArgs(
-        @Nullable Input<Integer> date,
-        @Nullable Input<Boolean> isLast) {
+        @Nullable Output<Integer> date,
+        @Nullable Output<Boolean> isLast) {
         this.date = date;
         this.isLast = isLast;
     }
 
     private DayArgs() {
-        this.date = Input.empty();
-        this.isLast = Input.empty();
+        this.date = Output.empty();
+        this.isLast = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> date;
-        private @Nullable Input<Boolean> isLast;
+        private @Nullable Output<Integer> date;
+        private @Nullable Output<Boolean> isLast;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.isLast = defaults.isLast;
         }
 
-        public Builder date(@Nullable Input<Integer> date) {
+        public Builder date(@Nullable Output<Integer> date) {
             this.date = date;
             return this;
         }
 
         public Builder date(@Nullable Integer date) {
-            this.date = Input.ofNullable(date);
+            this.date = Output.ofNullable(date);
             return this;
         }
 
-        public Builder isLast(@Nullable Input<Boolean> isLast) {
+        public Builder isLast(@Nullable Output<Boolean> isLast) {
             this.isLast = isLast;
             return this;
         }
 
         public Builder isLast(@Nullable Boolean isLast) {
-            this.isLast = Input.ofNullable(isLast);
+            this.isLast = Output.ofNullable(isLast);
             return this;
         }
         public DayArgs build() {

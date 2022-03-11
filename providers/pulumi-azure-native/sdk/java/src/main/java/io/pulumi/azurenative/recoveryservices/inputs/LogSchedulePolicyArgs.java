@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scheduleFrequencyInMins")
-      private final @Nullable Input<Integer> scheduleFrequencyInMins;
+      private final @Nullable Output<Integer> scheduleFrequencyInMins;
 
-    public Input<Integer> getScheduleFrequencyInMins() {
-        return this.scheduleFrequencyInMins == null ? Input.empty() : this.scheduleFrequencyInMins;
+    public Output<Integer> getScheduleFrequencyInMins() {
+        return this.scheduleFrequencyInMins == null ? Output.empty() : this.scheduleFrequencyInMins;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="schedulePolicyType", required=true)
-      private final Input<String> schedulePolicyType;
+      private final Output<String> schedulePolicyType;
 
-    public Input<String> getSchedulePolicyType() {
+    public Output<String> getSchedulePolicyType() {
         return this.schedulePolicyType;
     }
 
     public LogSchedulePolicyArgs(
-        @Nullable Input<Integer> scheduleFrequencyInMins,
-        Input<String> schedulePolicyType) {
+        @Nullable Output<Integer> scheduleFrequencyInMins,
+        Output<String> schedulePolicyType) {
         this.scheduleFrequencyInMins = scheduleFrequencyInMins;
         this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType, "expected parameter 'schedulePolicyType' to be non-null");
     }
 
     private LogSchedulePolicyArgs() {
-        this.scheduleFrequencyInMins = Input.empty();
-        this.schedulePolicyType = Input.empty();
+        this.scheduleFrequencyInMins = Output.empty();
+        this.schedulePolicyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> scheduleFrequencyInMins;
-        private Input<String> schedulePolicyType;
+        private @Nullable Output<Integer> scheduleFrequencyInMins;
+        private Output<String> schedulePolicyType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.schedulePolicyType = defaults.schedulePolicyType;
         }
 
-        public Builder scheduleFrequencyInMins(@Nullable Input<Integer> scheduleFrequencyInMins) {
+        public Builder scheduleFrequencyInMins(@Nullable Output<Integer> scheduleFrequencyInMins) {
             this.scheduleFrequencyInMins = scheduleFrequencyInMins;
             return this;
         }
 
         public Builder scheduleFrequencyInMins(@Nullable Integer scheduleFrequencyInMins) {
-            this.scheduleFrequencyInMins = Input.ofNullable(scheduleFrequencyInMins);
+            this.scheduleFrequencyInMins = Output.ofNullable(scheduleFrequencyInMins);
             return this;
         }
 
-        public Builder schedulePolicyType(Input<String> schedulePolicyType) {
+        public Builder schedulePolicyType(Output<String> schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
 
         public Builder schedulePolicyType(String schedulePolicyType) {
-            this.schedulePolicyType = Input.of(Objects.requireNonNull(schedulePolicyType));
+            this.schedulePolicyType = Output.of(Objects.requireNonNull(schedulePolicyType));
             return this;
         }
         public LogSchedulePolicyArgs build() {

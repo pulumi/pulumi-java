@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * 
      */
     @InputImport(name="dxGatewayId")
-      private final @Nullable Input<String> dxGatewayId;
+      private final @Nullable Output<String> dxGatewayId;
 
-    public Input<String> getDxGatewayId() {
-        return this.dxGatewayId == null ? Input.empty() : this.dxGatewayId;
+    public Output<String> getDxGatewayId() {
+        return this.dxGatewayId == null ? Output.empty() : this.dxGatewayId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * 
      */
     @InputImport(name="virtualInterfaceId")
-      private final @Nullable Input<String> virtualInterfaceId;
+      private final @Nullable Output<String> virtualInterfaceId;
 
-    public Input<String> getVirtualInterfaceId() {
-        return this.virtualInterfaceId == null ? Input.empty() : this.virtualInterfaceId;
+    public Output<String> getVirtualInterfaceId() {
+        return this.virtualInterfaceId == null ? Output.empty() : this.virtualInterfaceId;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * 
      */
     @InputImport(name="vpnGatewayId")
-      private final @Nullable Input<String> vpnGatewayId;
+      private final @Nullable Output<String> vpnGatewayId;
 
-    public Input<String> getVpnGatewayId() {
-        return this.vpnGatewayId == null ? Input.empty() : this.vpnGatewayId;
+    public Output<String> getVpnGatewayId() {
+        return this.vpnGatewayId == null ? Output.empty() : this.vpnGatewayId;
     }
 
     public HostedPrivateVirtualInterfaceAccepterState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> dxGatewayId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> virtualInterfaceId,
-        @Nullable Input<String> vpnGatewayId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> dxGatewayId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> virtualInterfaceId,
+        @Nullable Output<String> vpnGatewayId) {
         this.arn = arn;
         this.dxGatewayId = dxGatewayId;
         this.tags = tags;
@@ -97,12 +97,12 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
     }
 
     private HostedPrivateVirtualInterfaceAccepterState() {
-        this.arn = Input.empty();
-        this.dxGatewayId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.virtualInterfaceId = Input.empty();
-        this.vpnGatewayId = Input.empty();
+        this.arn = Output.empty();
+        this.dxGatewayId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.virtualInterfaceId = Output.empty();
+        this.vpnGatewayId = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> dxGatewayId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> virtualInterfaceId;
-        private @Nullable Input<String> vpnGatewayId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> dxGatewayId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> virtualInterfaceId;
+        private @Nullable Output<String> vpnGatewayId;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder dxGatewayId(@Nullable Input<String> dxGatewayId) {
+        public Builder dxGatewayId(@Nullable Output<String> dxGatewayId) {
             this.dxGatewayId = dxGatewayId;
             return this;
         }
 
         public Builder dxGatewayId(@Nullable String dxGatewayId) {
-            this.dxGatewayId = Input.ofNullable(dxGatewayId);
+            this.dxGatewayId = Output.ofNullable(dxGatewayId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder virtualInterfaceId(@Nullable Input<String> virtualInterfaceId) {
+        public Builder virtualInterfaceId(@Nullable Output<String> virtualInterfaceId) {
             this.virtualInterfaceId = virtualInterfaceId;
             return this;
         }
 
         public Builder virtualInterfaceId(@Nullable String virtualInterfaceId) {
-            this.virtualInterfaceId = Input.ofNullable(virtualInterfaceId);
+            this.virtualInterfaceId = Output.ofNullable(virtualInterfaceId);
             return this;
         }
 
-        public Builder vpnGatewayId(@Nullable Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
 
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
-            this.vpnGatewayId = Input.ofNullable(vpnGatewayId);
+            this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
             return this;
         }
         public HostedPrivateVirtualInterfaceAccepterState build() {

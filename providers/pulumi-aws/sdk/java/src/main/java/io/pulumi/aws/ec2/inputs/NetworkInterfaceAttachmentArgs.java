@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
     public static final NetworkInterfaceAttachmentArgs Empty = new NetworkInterfaceAttachmentArgs();
 
     @InputImport(name="attachmentId")
-      private final @Nullable Input<String> attachmentId;
+      private final @Nullable Output<String> attachmentId;
 
-    public Input<String> getAttachmentId() {
-        return this.attachmentId == null ? Input.empty() : this.attachmentId;
+    public Output<String> getAttachmentId() {
+        return this.attachmentId == null ? Output.empty() : this.attachmentId;
     }
 
     /**
@@ -27,9 +27,9 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="deviceIndex", required=true)
-      private final Input<Integer> deviceIndex;
+      private final Output<Integer> deviceIndex;
 
-    public Input<Integer> getDeviceIndex() {
+    public Output<Integer> getDeviceIndex() {
         return this.deviceIndex;
     }
 
@@ -38,25 +38,25 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="instance", required=true)
-      private final Input<String> instance;
+      private final Output<String> instance;
 
-    public Input<String> getInstance() {
+    public Output<String> getInstance() {
         return this.instance;
     }
 
     public NetworkInterfaceAttachmentArgs(
-        @Nullable Input<String> attachmentId,
-        Input<Integer> deviceIndex,
-        Input<String> instance) {
+        @Nullable Output<String> attachmentId,
+        Output<Integer> deviceIndex,
+        Output<String> instance) {
         this.attachmentId = attachmentId;
         this.deviceIndex = Objects.requireNonNull(deviceIndex, "expected parameter 'deviceIndex' to be non-null");
         this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
     }
 
     private NetworkInterfaceAttachmentArgs() {
-        this.attachmentId = Input.empty();
-        this.deviceIndex = Input.empty();
-        this.instance = Input.empty();
+        this.attachmentId = Output.empty();
+        this.deviceIndex = Output.empty();
+        this.instance = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attachmentId;
-        private Input<Integer> deviceIndex;
-        private Input<String> instance;
+        private @Nullable Output<String> attachmentId;
+        private Output<Integer> deviceIndex;
+        private Output<String> instance;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
     	      this.instance = defaults.instance;
         }
 
-        public Builder attachmentId(@Nullable Input<String> attachmentId) {
+        public Builder attachmentId(@Nullable Output<String> attachmentId) {
             this.attachmentId = attachmentId;
             return this;
         }
 
         public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Input.ofNullable(attachmentId);
+            this.attachmentId = Output.ofNullable(attachmentId);
             return this;
         }
 
-        public Builder deviceIndex(Input<Integer> deviceIndex) {
+        public Builder deviceIndex(Output<Integer> deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
 
         public Builder deviceIndex(Integer deviceIndex) {
-            this.deviceIndex = Input.of(Objects.requireNonNull(deviceIndex));
+            this.deviceIndex = Output.of(Objects.requireNonNull(deviceIndex));
             return this;
         }
 
-        public Builder instance(Input<String> instance) {
+        public Builder instance(Output<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
         public Builder instance(String instance) {
-            this.instance = Input.of(Objects.requireNonNull(instance));
+            this.instance = Output.of(Objects.requireNonNull(instance));
             return this;
         }
         public NetworkInterfaceAttachmentArgs build() {

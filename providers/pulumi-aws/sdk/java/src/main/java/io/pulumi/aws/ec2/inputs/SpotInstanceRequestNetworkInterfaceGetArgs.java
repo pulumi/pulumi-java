@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class SpotInstanceRequestNetworkInterfaceGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="deleteOnTermination")
-      private final @Nullable Input<Boolean> deleteOnTermination;
+      private final @Nullable Output<Boolean> deleteOnTermination;
 
-    public Input<Boolean> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
+    public Output<Boolean> getDeleteOnTermination() {
+        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class SpotInstanceRequestNetworkInterfaceGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="deviceIndex", required=true)
-      private final Input<Integer> deviceIndex;
+      private final Output<Integer> deviceIndex;
 
-    public Input<Integer> getDeviceIndex() {
+    public Output<Integer> getDeviceIndex() {
         return this.deviceIndex;
     }
 
@@ -43,25 +43,25 @@ public final class SpotInstanceRequestNetworkInterfaceGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="networkInterfaceId", required=true)
-      private final Input<String> networkInterfaceId;
+      private final Output<String> networkInterfaceId;
 
-    public Input<String> getNetworkInterfaceId() {
+    public Output<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
 
     public SpotInstanceRequestNetworkInterfaceGetArgs(
-        @Nullable Input<Boolean> deleteOnTermination,
-        Input<Integer> deviceIndex,
-        Input<String> networkInterfaceId) {
+        @Nullable Output<Boolean> deleteOnTermination,
+        Output<Integer> deviceIndex,
+        Output<String> networkInterfaceId) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceIndex = Objects.requireNonNull(deviceIndex, "expected parameter 'deviceIndex' to be non-null");
         this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
     }
 
     private SpotInstanceRequestNetworkInterfaceGetArgs() {
-        this.deleteOnTermination = Input.empty();
-        this.deviceIndex = Input.empty();
-        this.networkInterfaceId = Input.empty();
+        this.deleteOnTermination = Output.empty();
+        this.deviceIndex = Output.empty();
+        this.networkInterfaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class SpotInstanceRequestNetworkInterfaceGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> deleteOnTermination;
-        private Input<Integer> deviceIndex;
-        private Input<String> networkInterfaceId;
+        private @Nullable Output<Boolean> deleteOnTermination;
+        private Output<Integer> deviceIndex;
+        private Output<String> networkInterfaceId;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class SpotInstanceRequestNetworkInterfaceGetArgs extends io.pulumi.
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
-        public Builder deleteOnTermination(@Nullable Input<Boolean> deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Input.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
             return this;
         }
 
-        public Builder deviceIndex(Input<Integer> deviceIndex) {
+        public Builder deviceIndex(Output<Integer> deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
 
         public Builder deviceIndex(Integer deviceIndex) {
-            this.deviceIndex = Input.of(Objects.requireNonNull(deviceIndex));
+            this.deviceIndex = Output.of(Objects.requireNonNull(deviceIndex));
             return this;
         }
 
-        public Builder networkInterfaceId(Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Input.of(Objects.requireNonNull(networkInterfaceId));
+            this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
         public SpotInstanceRequestNetworkInterfaceGetArgs build() {

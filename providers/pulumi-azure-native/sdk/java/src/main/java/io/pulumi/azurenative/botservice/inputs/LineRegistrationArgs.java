@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="channelAccessToken")
-      private final @Nullable Input<String> channelAccessToken;
+      private final @Nullable Output<String> channelAccessToken;
 
-    public Input<String> getChannelAccessToken() {
-        return this.channelAccessToken == null ? Input.empty() : this.channelAccessToken;
+    public Output<String> getChannelAccessToken() {
+        return this.channelAccessToken == null ? Output.empty() : this.channelAccessToken;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="channelSecret")
-      private final @Nullable Input<String> channelSecret;
+      private final @Nullable Output<String> channelSecret;
 
-    public Input<String> getChannelSecret() {
-        return this.channelSecret == null ? Input.empty() : this.channelSecret;
+    public Output<String> getChannelSecret() {
+        return this.channelSecret == null ? Output.empty() : this.channelSecret;
     }
 
     public LineRegistrationArgs(
-        @Nullable Input<String> channelAccessToken,
-        @Nullable Input<String> channelSecret) {
+        @Nullable Output<String> channelAccessToken,
+        @Nullable Output<String> channelSecret) {
         this.channelAccessToken = channelAccessToken;
         this.channelSecret = channelSecret;
     }
 
     private LineRegistrationArgs() {
-        this.channelAccessToken = Input.empty();
-        this.channelSecret = Input.empty();
+        this.channelAccessToken = Output.empty();
+        this.channelSecret = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> channelAccessToken;
-        private @Nullable Input<String> channelSecret;
+        private @Nullable Output<String> channelAccessToken;
+        private @Nullable Output<String> channelSecret;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LineRegistrationArgs extends io.pulumi.resources.ResourceArgs
     	      this.channelSecret = defaults.channelSecret;
         }
 
-        public Builder channelAccessToken(@Nullable Input<String> channelAccessToken) {
+        public Builder channelAccessToken(@Nullable Output<String> channelAccessToken) {
             this.channelAccessToken = channelAccessToken;
             return this;
         }
 
         public Builder channelAccessToken(@Nullable String channelAccessToken) {
-            this.channelAccessToken = Input.ofNullable(channelAccessToken);
+            this.channelAccessToken = Output.ofNullable(channelAccessToken);
             return this;
         }
 
-        public Builder channelSecret(@Nullable Input<String> channelSecret) {
+        public Builder channelSecret(@Nullable Output<String> channelSecret) {
             this.channelSecret = channelSecret;
             return this;
         }
 
         public Builder channelSecret(@Nullable String channelSecret) {
-            this.channelSecret = Input.ofNullable(channelSecret);
+            this.channelSecret = Output.ofNullable(channelSecret);
             return this;
         }
         public LineRegistrationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.attestation;
 
 import io.pulumi.azurenative.attestation.inputs.AttestationServiceCreationSpecificParamsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<AttestationServiceCreationSpecificParamsArgs> properties;
+      private final Output<AttestationServiceCreationSpecificParamsArgs> properties;
 
-    public Input<AttestationServiceCreationSpecificParamsArgs> getProperties() {
+    public Output<AttestationServiceCreationSpecificParamsArgs> getProperties() {
         return this.properties;
     }
 
@@ -43,10 +43,10 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="providerName")
-      private final @Nullable Input<String> providerName;
+      private final @Nullable Output<String> providerName;
 
-    public Input<String> getProviderName() {
-        return this.providerName == null ? Input.empty() : this.providerName;
+    public Output<String> getProviderName() {
+        return this.providerName == null ? Output.empty() : this.providerName;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AttestationProviderArgs(
-        @Nullable Input<String> location,
-        Input<AttestationServiceCreationSpecificParamsArgs> properties,
-        @Nullable Input<String> providerName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        Output<AttestationServiceCreationSpecificParamsArgs> properties,
+        @Nullable Output<String> providerName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.providerName = providerName;
@@ -85,11 +85,11 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
     }
 
     private AttestationProviderArgs() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.providerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.providerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<AttestationServiceCreationSpecificParamsArgs> properties;
-        private @Nullable Input<String> providerName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private Output<AttestationServiceCreationSpecificParamsArgs> properties;
+        private @Nullable Output<String> providerName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(Input<AttestationServiceCreationSpecificParamsArgs> properties) {
+        public Builder properties(Output<AttestationServiceCreationSpecificParamsArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(AttestationServiceCreationSpecificParamsArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder providerName(@Nullable Input<String> providerName) {
+        public Builder providerName(@Nullable Output<String> providerName) {
             this.providerName = providerName;
             return this;
         }
 
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Input.ofNullable(providerName);
+            this.providerName = Output.ofNullable(providerName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AttestationProviderArgs build() {

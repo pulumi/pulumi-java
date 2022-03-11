@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.devtestlab.enums.StorageType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskBlobName")
-      private final @Nullable Input<String> diskBlobName;
+      private final @Nullable Output<String> diskBlobName;
 
-    public Input<String> getDiskBlobName() {
-        return this.diskBlobName == null ? Input.empty() : this.diskBlobName;
+    public Output<String> getDiskBlobName() {
+        return this.diskBlobName == null ? Output.empty() : this.diskBlobName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGiB")
-      private final @Nullable Input<Integer> diskSizeGiB;
+      private final @Nullable Output<Integer> diskSizeGiB;
 
-    public Input<Integer> getDiskSizeGiB() {
-        return this.diskSizeGiB == null ? Input.empty() : this.diskSizeGiB;
+    public Output<Integer> getDiskSizeGiB() {
+        return this.diskSizeGiB == null ? Output.empty() : this.diskSizeGiB;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<Either<String,StorageType>> diskType;
+      private final @Nullable Output<Either<String,StorageType>> diskType;
 
-    public Input<Either<String,StorageType>> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<Either<String,StorageType>> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskUri")
-      private final @Nullable Input<String> diskUri;
+      private final @Nullable Output<String> diskUri;
 
-    public Input<String> getDiskUri() {
-        return this.diskUri == null ? Input.empty() : this.diskUri;
+    public Output<String> getDiskUri() {
+        return this.diskUri == null ? Output.empty() : this.diskUri;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostCaching")
-      private final @Nullable Input<String> hostCaching;
+      private final @Nullable Output<String> hostCaching;
 
-    public Input<String> getHostCaching() {
-        return this.hostCaching == null ? Input.empty() : this.hostCaching;
+    public Output<String> getHostCaching() {
+        return this.hostCaching == null ? Output.empty() : this.hostCaching;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-      private final Input<String> labName;
+      private final Output<String> labName;
 
-    public Input<String> getLabName() {
+    public Output<String> getLabName() {
         return this.labName;
     }
 
@@ -89,10 +89,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="leasedByLabVmId")
-      private final @Nullable Input<String> leasedByLabVmId;
+      private final @Nullable Output<String> leasedByLabVmId;
 
-    public Input<String> getLeasedByLabVmId() {
-        return this.leasedByLabVmId == null ? Input.empty() : this.leasedByLabVmId;
+    public Output<String> getLeasedByLabVmId() {
+        return this.leasedByLabVmId == null ? Output.empty() : this.leasedByLabVmId;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedDiskId")
-      private final @Nullable Input<String> managedDiskId;
+      private final @Nullable Output<String> managedDiskId;
 
-    public Input<String> getManagedDiskId() {
-        return this.managedDiskId == null ? Input.empty() : this.managedDiskId;
+    public Output<String> getManagedDiskId() {
+        return this.managedDiskId == null ? Output.empty() : this.managedDiskId;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -133,9 +133,9 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -144,10 +144,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountId")
-      private final @Nullable Input<String> storageAccountId;
+      private final @Nullable Output<String> storageAccountId;
 
-    public Input<String> getStorageAccountId() {
-        return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
+    public Output<String> getStorageAccountId() {
+        return this.storageAccountId == null ? Output.empty() : this.storageAccountId;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -166,27 +166,27 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public DiskArgs(
-        @Nullable Input<String> diskBlobName,
-        @Nullable Input<Integer> diskSizeGiB,
-        @Nullable Input<Either<String,StorageType>> diskType,
-        @Nullable Input<String> diskUri,
-        @Nullable Input<String> hostCaching,
-        Input<String> labName,
-        @Nullable Input<String> leasedByLabVmId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> managedDiskId,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> storageAccountId,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> userName) {
+        @Nullable Output<String> diskBlobName,
+        @Nullable Output<Integer> diskSizeGiB,
+        @Nullable Output<Either<String,StorageType>> diskType,
+        @Nullable Output<String> diskUri,
+        @Nullable Output<String> hostCaching,
+        Output<String> labName,
+        @Nullable Output<String> leasedByLabVmId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> managedDiskId,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> storageAccountId,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> userName) {
         this.diskBlobName = diskBlobName;
         this.diskSizeGiB = diskSizeGiB;
         this.diskType = diskType;
@@ -204,20 +204,20 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.diskBlobName = Input.empty();
-        this.diskSizeGiB = Input.empty();
-        this.diskType = Input.empty();
-        this.diskUri = Input.empty();
-        this.hostCaching = Input.empty();
-        this.labName = Input.empty();
-        this.leasedByLabVmId = Input.empty();
-        this.location = Input.empty();
-        this.managedDiskId = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccountId = Input.empty();
-        this.tags = Input.empty();
-        this.userName = Input.empty();
+        this.diskBlobName = Output.empty();
+        this.diskSizeGiB = Output.empty();
+        this.diskType = Output.empty();
+        this.diskUri = Output.empty();
+        this.hostCaching = Output.empty();
+        this.labName = Output.empty();
+        this.leasedByLabVmId = Output.empty();
+        this.location = Output.empty();
+        this.managedDiskId = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccountId = Output.empty();
+        this.tags = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -229,20 +229,20 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskBlobName;
-        private @Nullable Input<Integer> diskSizeGiB;
-        private @Nullable Input<Either<String,StorageType>> diskType;
-        private @Nullable Input<String> diskUri;
-        private @Nullable Input<String> hostCaching;
-        private Input<String> labName;
-        private @Nullable Input<String> leasedByLabVmId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managedDiskId;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> storageAccountId;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> userName;
+        private @Nullable Output<String> diskBlobName;
+        private @Nullable Output<Integer> diskSizeGiB;
+        private @Nullable Output<Either<String,StorageType>> diskType;
+        private @Nullable Output<String> diskUri;
+        private @Nullable Output<String> hostCaching;
+        private Output<String> labName;
+        private @Nullable Output<String> leasedByLabVmId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managedDiskId;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> storageAccountId;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -266,143 +266,143 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder diskBlobName(@Nullable Input<String> diskBlobName) {
+        public Builder diskBlobName(@Nullable Output<String> diskBlobName) {
             this.diskBlobName = diskBlobName;
             return this;
         }
 
         public Builder diskBlobName(@Nullable String diskBlobName) {
-            this.diskBlobName = Input.ofNullable(diskBlobName);
+            this.diskBlobName = Output.ofNullable(diskBlobName);
             return this;
         }
 
-        public Builder diskSizeGiB(@Nullable Input<Integer> diskSizeGiB) {
+        public Builder diskSizeGiB(@Nullable Output<Integer> diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
-            this.diskSizeGiB = Input.ofNullable(diskSizeGiB);
+            this.diskSizeGiB = Output.ofNullable(diskSizeGiB);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<Either<String,StorageType>> diskType) {
+        public Builder diskType(@Nullable Output<Either<String,StorageType>> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable Either<String,StorageType> diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder diskUri(@Nullable Input<String> diskUri) {
+        public Builder diskUri(@Nullable Output<String> diskUri) {
             this.diskUri = diskUri;
             return this;
         }
 
         public Builder diskUri(@Nullable String diskUri) {
-            this.diskUri = Input.ofNullable(diskUri);
+            this.diskUri = Output.ofNullable(diskUri);
             return this;
         }
 
-        public Builder hostCaching(@Nullable Input<String> hostCaching) {
+        public Builder hostCaching(@Nullable Output<String> hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }
 
         public Builder hostCaching(@Nullable String hostCaching) {
-            this.hostCaching = Input.ofNullable(hostCaching);
+            this.hostCaching = Output.ofNullable(hostCaching);
             return this;
         }
 
-        public Builder labName(Input<String> labName) {
+        public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
         public Builder labName(String labName) {
-            this.labName = Input.of(Objects.requireNonNull(labName));
+            this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder leasedByLabVmId(@Nullable Input<String> leasedByLabVmId) {
+        public Builder leasedByLabVmId(@Nullable Output<String> leasedByLabVmId) {
             this.leasedByLabVmId = leasedByLabVmId;
             return this;
         }
 
         public Builder leasedByLabVmId(@Nullable String leasedByLabVmId) {
-            this.leasedByLabVmId = Input.ofNullable(leasedByLabVmId);
+            this.leasedByLabVmId = Output.ofNullable(leasedByLabVmId);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managedDiskId(@Nullable Input<String> managedDiskId) {
+        public Builder managedDiskId(@Nullable Output<String> managedDiskId) {
             this.managedDiskId = managedDiskId;
             return this;
         }
 
         public Builder managedDiskId(@Nullable String managedDiskId) {
-            this.managedDiskId = Input.ofNullable(managedDiskId);
+            this.managedDiskId = Output.ofNullable(managedDiskId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccountId(@Nullable Input<String> storageAccountId) {
+        public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
         public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Input.ofNullable(storageAccountId);
+            this.storageAccountId = Output.ofNullable(storageAccountId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public DiskArgs build() {

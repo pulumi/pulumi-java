@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validationStatus")
-      private final @Nullable Input<String> validationStatus;
+      private final @Nullable Output<String> validationStatus;
 
-    public Input<String> getValidationStatus() {
-        return this.validationStatus == null ? Input.empty() : this.validationStatus;
+    public Output<String> getValidationStatus() {
+        return this.validationStatus == null ? Output.empty() : this.validationStatus;
     }
 
     public ResolverDnsSecConfigState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<String> resourceId,
-        @Nullable Input<String> validationStatus) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<String> resourceId,
+        @Nullable Output<String> validationStatus) {
         this.arn = arn;
         this.ownerId = ownerId;
         this.resourceId = resourceId;
@@ -70,10 +70,10 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     }
 
     private ResolverDnsSecConfigState() {
-        this.arn = Input.empty();
-        this.ownerId = Input.empty();
-        this.resourceId = Input.empty();
-        this.validationStatus = Input.empty();
+        this.arn = Output.empty();
+        this.ownerId = Output.empty();
+        this.resourceId = Output.empty();
+        this.validationStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<String> validationStatus;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<String> validationStatus;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     	      this.validationStatus = defaults.validationStatus;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder validationStatus(@Nullable Input<String> validationStatus) {
+        public Builder validationStatus(@Nullable Output<String> validationStatus) {
             this.validationStatus = validationStatus;
             return this;
         }
 
         public Builder validationStatus(@Nullable String validationStatus) {
-            this.validationStatus = Input.ofNullable(validationStatus);
+            this.validationStatus = Output.ofNullable(validationStatus);
             return this;
         }
         public ResolverDnsSecConfigState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3control.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class MultiRegionAccessPointPolicyDetailsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -29,22 +29,22 @@ public final class MultiRegionAccessPointPolicyDetailsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
     public MultiRegionAccessPointPolicyDetailsArgs(
-        Input<String> name,
-        Input<String> policy) {
+        Output<String> name,
+        Output<String> policy) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
     }
 
     private MultiRegionAccessPointPolicyDetailsArgs() {
-        this.name = Input.empty();
-        this.policy = Input.empty();
+        this.name = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class MultiRegionAccessPointPolicyDetailsArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> policy;
+        private Output<String> name;
+        private Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class MultiRegionAccessPointPolicyDetailsArgs extends io.pulumi.res
     	      this.policy = defaults.policy;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(String policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
         public MultiRegionAccessPointPolicyDetailsArgs build() {

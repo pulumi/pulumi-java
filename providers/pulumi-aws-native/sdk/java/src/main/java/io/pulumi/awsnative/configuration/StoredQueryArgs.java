@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.configuration;
 
 import io.pulumi.awsnative.configuration.inputs.StoredQueryTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,23 +17,23 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
     public static final StoredQueryArgs Empty = new StoredQueryArgs();
 
     @InputImport(name="queryDescription")
-      private final @Nullable Input<String> queryDescription;
+      private final @Nullable Output<String> queryDescription;
 
-    public Input<String> getQueryDescription() {
-        return this.queryDescription == null ? Input.empty() : this.queryDescription;
+    public Output<String> getQueryDescription() {
+        return this.queryDescription == null ? Output.empty() : this.queryDescription;
     }
 
     @InputImport(name="queryExpression", required=true)
-      private final Input<String> queryExpression;
+      private final Output<String> queryExpression;
 
-    public Input<String> getQueryExpression() {
+    public Output<String> getQueryExpression() {
         return this.queryExpression;
     }
 
     @InputImport(name="queryName", required=true)
-      private final Input<String> queryName;
+      private final Output<String> queryName;
 
-    public Input<String> getQueryName() {
+    public Output<String> getQueryName() {
         return this.queryName;
     }
 
@@ -42,17 +42,17 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<StoredQueryTagArgs>> tags;
+      private final @Nullable Output<List<StoredQueryTagArgs>> tags;
 
-    public Input<List<StoredQueryTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<StoredQueryTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public StoredQueryArgs(
-        @Nullable Input<String> queryDescription,
-        Input<String> queryExpression,
-        Input<String> queryName,
-        @Nullable Input<List<StoredQueryTagArgs>> tags) {
+        @Nullable Output<String> queryDescription,
+        Output<String> queryExpression,
+        Output<String> queryName,
+        @Nullable Output<List<StoredQueryTagArgs>> tags) {
         this.queryDescription = queryDescription;
         this.queryExpression = Objects.requireNonNull(queryExpression, "expected parameter 'queryExpression' to be non-null");
         this.queryName = Objects.requireNonNull(queryName, "expected parameter 'queryName' to be non-null");
@@ -60,10 +60,10 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StoredQueryArgs() {
-        this.queryDescription = Input.empty();
-        this.queryExpression = Input.empty();
-        this.queryName = Input.empty();
-        this.tags = Input.empty();
+        this.queryDescription = Output.empty();
+        this.queryExpression = Output.empty();
+        this.queryName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,10 +75,10 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> queryDescription;
-        private Input<String> queryExpression;
-        private Input<String> queryName;
-        private @Nullable Input<List<StoredQueryTagArgs>> tags;
+        private @Nullable Output<String> queryDescription;
+        private Output<String> queryExpression;
+        private Output<String> queryName;
+        private @Nullable Output<List<StoredQueryTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -92,43 +92,43 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder queryDescription(@Nullable Input<String> queryDescription) {
+        public Builder queryDescription(@Nullable Output<String> queryDescription) {
             this.queryDescription = queryDescription;
             return this;
         }
 
         public Builder queryDescription(@Nullable String queryDescription) {
-            this.queryDescription = Input.ofNullable(queryDescription);
+            this.queryDescription = Output.ofNullable(queryDescription);
             return this;
         }
 
-        public Builder queryExpression(Input<String> queryExpression) {
+        public Builder queryExpression(Output<String> queryExpression) {
             this.queryExpression = Objects.requireNonNull(queryExpression);
             return this;
         }
 
         public Builder queryExpression(String queryExpression) {
-            this.queryExpression = Input.of(Objects.requireNonNull(queryExpression));
+            this.queryExpression = Output.of(Objects.requireNonNull(queryExpression));
             return this;
         }
 
-        public Builder queryName(Input<String> queryName) {
+        public Builder queryName(Output<String> queryName) {
             this.queryName = Objects.requireNonNull(queryName);
             return this;
         }
 
         public Builder queryName(String queryName) {
-            this.queryName = Input.of(Objects.requireNonNull(queryName));
+            this.queryName = Output.of(Objects.requireNonNull(queryName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<StoredQueryTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<StoredQueryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<StoredQueryTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public StoredQueryArgs build() {

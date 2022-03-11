@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="publishMibPerSec", required=true)
-      private final Input<Integer> publishMibPerSec;
+      private final Output<Integer> publishMibPerSec;
 
-    public Input<Integer> getPublishMibPerSec() {
+    public Output<Integer> getPublishMibPerSec() {
         return this.publishMibPerSec;
     }
 
@@ -29,22 +29,22 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="subscribeMibPerSec", required=true)
-      private final Input<Integer> subscribeMibPerSec;
+      private final Output<Integer> subscribeMibPerSec;
 
-    public Input<Integer> getSubscribeMibPerSec() {
+    public Output<Integer> getSubscribeMibPerSec() {
         return this.subscribeMibPerSec;
     }
 
     public LiteTopicPartitionConfigCapacityGetArgs(
-        Input<Integer> publishMibPerSec,
-        Input<Integer> subscribeMibPerSec) {
+        Output<Integer> publishMibPerSec,
+        Output<Integer> subscribeMibPerSec) {
         this.publishMibPerSec = Objects.requireNonNull(publishMibPerSec, "expected parameter 'publishMibPerSec' to be non-null");
         this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec, "expected parameter 'subscribeMibPerSec' to be non-null");
     }
 
     private LiteTopicPartitionConfigCapacityGetArgs() {
-        this.publishMibPerSec = Input.empty();
-        this.subscribeMibPerSec = Input.empty();
+        this.publishMibPerSec = Output.empty();
+        this.subscribeMibPerSec = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<Integer> publishMibPerSec;
-        private Input<Integer> subscribeMibPerSec;
+        private Output<Integer> publishMibPerSec;
+        private Output<Integer> subscribeMibPerSec;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
     	      this.subscribeMibPerSec = defaults.subscribeMibPerSec;
         }
 
-        public Builder publishMibPerSec(Input<Integer> publishMibPerSec) {
+        public Builder publishMibPerSec(Output<Integer> publishMibPerSec) {
             this.publishMibPerSec = Objects.requireNonNull(publishMibPerSec);
             return this;
         }
 
         public Builder publishMibPerSec(Integer publishMibPerSec) {
-            this.publishMibPerSec = Input.of(Objects.requireNonNull(publishMibPerSec));
+            this.publishMibPerSec = Output.of(Objects.requireNonNull(publishMibPerSec));
             return this;
         }
 
-        public Builder subscribeMibPerSec(Input<Integer> subscribeMibPerSec) {
+        public Builder subscribeMibPerSec(Output<Integer> subscribeMibPerSec) {
             this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec);
             return this;
         }
 
         public Builder subscribeMibPerSec(Integer subscribeMibPerSec) {
-            this.subscribeMibPerSec = Input.of(Objects.requireNonNull(subscribeMibPerSec));
+            this.subscribeMibPerSec = Output.of(Objects.requireNonNull(subscribeMibPerSec));
             return this;
         }
         public LiteTopicPartitionConfigCapacityGetArgs build() {

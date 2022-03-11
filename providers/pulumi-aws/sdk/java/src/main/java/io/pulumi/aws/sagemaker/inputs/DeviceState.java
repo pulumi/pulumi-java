@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.DeviceDeviceGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,10 +16,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     public static final DeviceState Empty = new DeviceState();
 
     @InputImport(name="agentVersion")
-      private final @Nullable Input<String> agentVersion;
+      private final @Nullable Output<String> agentVersion;
 
-    public Input<String> getAgentVersion() {
-        return this.agentVersion == null ? Input.empty() : this.agentVersion;
+    public Output<String> getAgentVersion() {
+        return this.agentVersion == null ? Output.empty() : this.agentVersion;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="device")
-      private final @Nullable Input<DeviceDeviceGetArgs> device;
+      private final @Nullable Output<DeviceDeviceGetArgs> device;
 
-    public Input<DeviceDeviceGetArgs> getDevice() {
-        return this.device == null ? Input.empty() : this.device;
+    public Output<DeviceDeviceGetArgs> getDevice() {
+        return this.device == null ? Output.empty() : this.device;
     }
 
     /**
@@ -49,17 +49,17 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceFleetName")
-      private final @Nullable Input<String> deviceFleetName;
+      private final @Nullable Output<String> deviceFleetName;
 
-    public Input<String> getDeviceFleetName() {
-        return this.deviceFleetName == null ? Input.empty() : this.deviceFleetName;
+    public Output<String> getDeviceFleetName() {
+        return this.deviceFleetName == null ? Output.empty() : this.deviceFleetName;
     }
 
     public DeviceState(
-        @Nullable Input<String> agentVersion,
-        @Nullable Input<String> arn,
-        @Nullable Input<DeviceDeviceGetArgs> device,
-        @Nullable Input<String> deviceFleetName) {
+        @Nullable Output<String> agentVersion,
+        @Nullable Output<String> arn,
+        @Nullable Output<DeviceDeviceGetArgs> device,
+        @Nullable Output<String> deviceFleetName) {
         this.agentVersion = agentVersion;
         this.arn = arn;
         this.device = device;
@@ -67,10 +67,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceState() {
-        this.agentVersion = Input.empty();
-        this.arn = Input.empty();
-        this.device = Input.empty();
-        this.deviceFleetName = Input.empty();
+        this.agentVersion = Output.empty();
+        this.arn = Output.empty();
+        this.device = Output.empty();
+        this.deviceFleetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> agentVersion;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<DeviceDeviceGetArgs> device;
-        private @Nullable Input<String> deviceFleetName;
+        private @Nullable Output<String> agentVersion;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<DeviceDeviceGetArgs> device;
+        private @Nullable Output<String> deviceFleetName;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     	      this.deviceFleetName = defaults.deviceFleetName;
         }
 
-        public Builder agentVersion(@Nullable Input<String> agentVersion) {
+        public Builder agentVersion(@Nullable Output<String> agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Input.ofNullable(agentVersion);
+            this.agentVersion = Output.ofNullable(agentVersion);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder device(@Nullable Input<DeviceDeviceGetArgs> device) {
+        public Builder device(@Nullable Output<DeviceDeviceGetArgs> device) {
             this.device = device;
             return this;
         }
 
         public Builder device(@Nullable DeviceDeviceGetArgs device) {
-            this.device = Input.ofNullable(device);
+            this.device = Output.ofNullable(device);
             return this;
         }
 
-        public Builder deviceFleetName(@Nullable Input<String> deviceFleetName) {
+        public Builder deviceFleetName(@Nullable Output<String> deviceFleetName) {
             this.deviceFleetName = deviceFleetName;
             return this;
         }
 
         public Builder deviceFleetName(@Nullable String deviceFleetName) {
-            this.deviceFleetName = Input.ofNullable(deviceFleetName);
+            this.deviceFleetName = Output.ofNullable(deviceFleetName);
             return this;
         }
         public DeviceState build() {

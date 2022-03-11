@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigAutoRollbackConfigurationGetArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class EndpointDeploymentConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="autoRollbackConfiguration")
-      private final @Nullable Input<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> autoRollbackConfiguration;
+      private final @Nullable Output<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> autoRollbackConfiguration;
 
-    public Input<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> getAutoRollbackConfiguration() {
-        return this.autoRollbackConfiguration == null ? Input.empty() : this.autoRollbackConfiguration;
+    public Output<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> getAutoRollbackConfiguration() {
+        return this.autoRollbackConfiguration == null ? Output.empty() : this.autoRollbackConfiguration;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class EndpointDeploymentConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="blueGreenUpdatePolicy", required=true)
-      private final Input<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy;
+      private final Output<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy;
 
-    public Input<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> getBlueGreenUpdatePolicy() {
+    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> getBlueGreenUpdatePolicy() {
         return this.blueGreenUpdatePolicy;
     }
 
     public EndpointDeploymentConfigGetArgs(
-        @Nullable Input<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> autoRollbackConfiguration,
-        Input<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy) {
+        @Nullable Output<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> autoRollbackConfiguration,
+        Output<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy) {
         this.autoRollbackConfiguration = autoRollbackConfiguration;
         this.blueGreenUpdatePolicy = Objects.requireNonNull(blueGreenUpdatePolicy, "expected parameter 'blueGreenUpdatePolicy' to be non-null");
     }
 
     private EndpointDeploymentConfigGetArgs() {
-        this.autoRollbackConfiguration = Input.empty();
-        this.blueGreenUpdatePolicy = Input.empty();
+        this.autoRollbackConfiguration = Output.empty();
+        this.blueGreenUpdatePolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class EndpointDeploymentConfigGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> autoRollbackConfiguration;
-        private Input<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy;
+        private @Nullable Output<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> autoRollbackConfiguration;
+        private Output<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class EndpointDeploymentConfigGetArgs extends io.pulumi.resources.R
     	      this.blueGreenUpdatePolicy = defaults.blueGreenUpdatePolicy;
         }
 
-        public Builder autoRollbackConfiguration(@Nullable Input<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> autoRollbackConfiguration) {
+        public Builder autoRollbackConfiguration(@Nullable Output<EndpointDeploymentConfigAutoRollbackConfigurationGetArgs> autoRollbackConfiguration) {
             this.autoRollbackConfiguration = autoRollbackConfiguration;
             return this;
         }
 
         public Builder autoRollbackConfiguration(@Nullable EndpointDeploymentConfigAutoRollbackConfigurationGetArgs autoRollbackConfiguration) {
-            this.autoRollbackConfiguration = Input.ofNullable(autoRollbackConfiguration);
+            this.autoRollbackConfiguration = Output.ofNullable(autoRollbackConfiguration);
             return this;
         }
 
-        public Builder blueGreenUpdatePolicy(Input<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy) {
+        public Builder blueGreenUpdatePolicy(Output<EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs> blueGreenUpdatePolicy) {
             this.blueGreenUpdatePolicy = Objects.requireNonNull(blueGreenUpdatePolicy);
             return this;
         }
 
         public Builder blueGreenUpdatePolicy(EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs blueGreenUpdatePolicy) {
-            this.blueGreenUpdatePolicy = Input.of(Objects.requireNonNull(blueGreenUpdatePolicy));
+            this.blueGreenUpdatePolicy = Output.of(Objects.requireNonNull(blueGreenUpdatePolicy));
             return this;
         }
         public EndpointDeploymentConfigGetArgs build() {

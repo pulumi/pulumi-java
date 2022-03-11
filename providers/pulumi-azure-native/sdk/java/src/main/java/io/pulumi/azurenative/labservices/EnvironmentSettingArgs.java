@@ -6,7 +6,7 @@ package io.pulumi.azurenative.labservices;
 import io.pulumi.azurenative.labservices.enums.ConfigurationState;
 import io.pulumi.azurenative.labservices.inputs.ResourceSettingsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configurationState")
-      private final @Nullable Input<Either<String,ConfigurationState>> configurationState;
+      private final @Nullable Output<Either<String,ConfigurationState>> configurationState;
 
-    public Input<Either<String,ConfigurationState>> getConfigurationState() {
-        return this.configurationState == null ? Input.empty() : this.configurationState;
+    public Output<Either<String,ConfigurationState>> getConfigurationState() {
+        return this.configurationState == null ? Output.empty() : this.configurationState;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environmentSettingName")
-      private final @Nullable Input<String> environmentSettingName;
+      private final @Nullable Output<String> environmentSettingName;
 
-    public Input<String> getEnvironmentSettingName() {
-        return this.environmentSettingName == null ? Input.empty() : this.environmentSettingName;
+    public Output<String> getEnvironmentSettingName() {
+        return this.environmentSettingName == null ? Output.empty() : this.environmentSettingName;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="labAccountName", required=true)
-      private final Input<String> labAccountName;
+      private final Output<String> labAccountName;
 
-    public Input<String> getLabAccountName() {
+    public Output<String> getLabAccountName() {
         return this.labAccountName;
     }
 
@@ -67,9 +67,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="labName", required=true)
-      private final Input<String> labName;
+      private final Output<String> labName;
 
-    public Input<String> getLabName() {
+    public Output<String> getLabName() {
         return this.labName;
     }
 
@@ -78,10 +78,10 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,9 +111,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceSettings", required=true)
-      private final Input<ResourceSettingsArgs> resourceSettings;
+      private final Output<ResourceSettingsArgs> resourceSettings;
 
-    public Input<ResourceSettingsArgs> getResourceSettings() {
+    public Output<ResourceSettingsArgs> getResourceSettings() {
         return this.resourceSettings;
     }
 
@@ -122,10 +122,10 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -144,25 +144,25 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uniqueIdentifier")
-      private final @Nullable Input<String> uniqueIdentifier;
+      private final @Nullable Output<String> uniqueIdentifier;
 
-    public Input<String> getUniqueIdentifier() {
-        return this.uniqueIdentifier == null ? Input.empty() : this.uniqueIdentifier;
+    public Output<String> getUniqueIdentifier() {
+        return this.uniqueIdentifier == null ? Output.empty() : this.uniqueIdentifier;
     }
 
     public EnvironmentSettingArgs(
-        @Nullable Input<Either<String,ConfigurationState>> configurationState,
-        @Nullable Input<String> description,
-        @Nullable Input<String> environmentSettingName,
-        Input<String> labAccountName,
-        Input<String> labName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> provisioningState,
-        Input<String> resourceGroupName,
-        Input<ResourceSettingsArgs> resourceSettings,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> title,
-        @Nullable Input<String> uniqueIdentifier) {
+        @Nullable Output<Either<String,ConfigurationState>> configurationState,
+        @Nullable Output<String> description,
+        @Nullable Output<String> environmentSettingName,
+        Output<String> labAccountName,
+        Output<String> labName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> provisioningState,
+        Output<String> resourceGroupName,
+        Output<ResourceSettingsArgs> resourceSettings,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> title,
+        @Nullable Output<String> uniqueIdentifier) {
         this.configurationState = configurationState;
         this.description = description;
         this.environmentSettingName = environmentSettingName;
@@ -178,18 +178,18 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EnvironmentSettingArgs() {
-        this.configurationState = Input.empty();
-        this.description = Input.empty();
-        this.environmentSettingName = Input.empty();
-        this.labAccountName = Input.empty();
-        this.labName = Input.empty();
-        this.location = Input.empty();
-        this.provisioningState = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceSettings = Input.empty();
-        this.tags = Input.empty();
-        this.title = Input.empty();
-        this.uniqueIdentifier = Input.empty();
+        this.configurationState = Output.empty();
+        this.description = Output.empty();
+        this.environmentSettingName = Output.empty();
+        this.labAccountName = Output.empty();
+        this.labName = Output.empty();
+        this.location = Output.empty();
+        this.provisioningState = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceSettings = Output.empty();
+        this.tags = Output.empty();
+        this.title = Output.empty();
+        this.uniqueIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -201,18 +201,18 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ConfigurationState>> configurationState;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> environmentSettingName;
-        private Input<String> labAccountName;
-        private Input<String> labName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> provisioningState;
-        private Input<String> resourceGroupName;
-        private Input<ResourceSettingsArgs> resourceSettings;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> title;
-        private @Nullable Input<String> uniqueIdentifier;
+        private @Nullable Output<Either<String,ConfigurationState>> configurationState;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> environmentSettingName;
+        private Output<String> labAccountName;
+        private Output<String> labName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> provisioningState;
+        private Output<String> resourceGroupName;
+        private Output<ResourceSettingsArgs> resourceSettings;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> title;
+        private @Nullable Output<String> uniqueIdentifier;
 
         public Builder() {
     	      // Empty
@@ -234,123 +234,123 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder configurationState(@Nullable Input<Either<String,ConfigurationState>> configurationState) {
+        public Builder configurationState(@Nullable Output<Either<String,ConfigurationState>> configurationState) {
             this.configurationState = configurationState;
             return this;
         }
 
         public Builder configurationState(@Nullable Either<String,ConfigurationState> configurationState) {
-            this.configurationState = Input.ofNullable(configurationState);
+            this.configurationState = Output.ofNullable(configurationState);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environmentSettingName(@Nullable Input<String> environmentSettingName) {
+        public Builder environmentSettingName(@Nullable Output<String> environmentSettingName) {
             this.environmentSettingName = environmentSettingName;
             return this;
         }
 
         public Builder environmentSettingName(@Nullable String environmentSettingName) {
-            this.environmentSettingName = Input.ofNullable(environmentSettingName);
+            this.environmentSettingName = Output.ofNullable(environmentSettingName);
             return this;
         }
 
-        public Builder labAccountName(Input<String> labAccountName) {
+        public Builder labAccountName(Output<String> labAccountName) {
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
 
         public Builder labAccountName(String labAccountName) {
-            this.labAccountName = Input.of(Objects.requireNonNull(labAccountName));
+            this.labAccountName = Output.of(Objects.requireNonNull(labAccountName));
             return this;
         }
 
-        public Builder labName(Input<String> labName) {
+        public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
         public Builder labName(String labName) {
-            this.labName = Input.of(Objects.requireNonNull(labName));
+            this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceSettings(Input<ResourceSettingsArgs> resourceSettings) {
+        public Builder resourceSettings(Output<ResourceSettingsArgs> resourceSettings) {
             this.resourceSettings = Objects.requireNonNull(resourceSettings);
             return this;
         }
 
         public Builder resourceSettings(ResourceSettingsArgs resourceSettings) {
-            this.resourceSettings = Input.of(Objects.requireNonNull(resourceSettings));
+            this.resourceSettings = Output.of(Objects.requireNonNull(resourceSettings));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder uniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
 
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
-            this.uniqueIdentifier = Input.ofNullable(uniqueIdentifier);
+            this.uniqueIdentifier = Output.ofNullable(uniqueIdentifier);
             return this;
         }
         public EnvironmentSettingArgs build() {

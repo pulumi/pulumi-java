@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DatabricksPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeLocation")
-      private final @Nullable Input<String> computeLocation;
+      private final @Nullable Output<String> computeLocation;
 
-    public Input<String> getComputeLocation() {
-        return this.computeLocation == null ? Input.empty() : this.computeLocation;
+    public Output<String> getComputeLocation() {
+        return this.computeLocation == null ? Output.empty() : this.computeLocation;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeType", required=true)
-      private final Input<String> computeType;
+      private final Output<String> computeType;
 
-    public Input<String> getComputeType() {
+    public Output<String> getComputeType() {
         return this.computeType;
     }
 
@@ -47,17 +47,17 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<DatabricksPropertiesArgs> properties;
+      private final @Nullable Output<DatabricksPropertiesArgs> properties;
 
-    public Input<DatabricksPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<DatabricksPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     public DatabricksArgs(
-        @Nullable Input<String> computeLocation,
-        Input<String> computeType,
-        @Nullable Input<String> description,
-        @Nullable Input<DatabricksPropertiesArgs> properties,
-        @Nullable Input<String> resourceId) {
+        @Nullable Output<String> computeLocation,
+        Output<String> computeType,
+        @Nullable Output<String> description,
+        @Nullable Output<DatabricksPropertiesArgs> properties,
+        @Nullable Output<String> resourceId) {
         this.computeLocation = computeLocation;
         this.computeType = Objects.requireNonNull(computeType, "expected parameter 'computeType' to be non-null");
         this.description = description;
@@ -85,11 +85,11 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabricksArgs() {
-        this.computeLocation = Input.empty();
-        this.computeType = Input.empty();
-        this.description = Input.empty();
-        this.properties = Input.empty();
-        this.resourceId = Input.empty();
+        this.computeLocation = Output.empty();
+        this.computeType = Output.empty();
+        this.description = Output.empty();
+        this.properties = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> computeLocation;
-        private Input<String> computeType;
-        private @Nullable Input<String> description;
-        private @Nullable Input<DatabricksPropertiesArgs> properties;
-        private @Nullable Input<String> resourceId;
+        private @Nullable Output<String> computeLocation;
+        private Output<String> computeType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DatabricksPropertiesArgs> properties;
+        private @Nullable Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder computeLocation(@Nullable Input<String> computeLocation) {
+        public Builder computeLocation(@Nullable Output<String> computeLocation) {
             this.computeLocation = computeLocation;
             return this;
         }
 
         public Builder computeLocation(@Nullable String computeLocation) {
-            this.computeLocation = Input.ofNullable(computeLocation);
+            this.computeLocation = Output.ofNullable(computeLocation);
             return this;
         }
 
-        public Builder computeType(Input<String> computeType) {
+        public Builder computeType(Output<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
         public Builder computeType(String computeType) {
-            this.computeType = Input.of(Objects.requireNonNull(computeType));
+            this.computeType = Output.of(Objects.requireNonNull(computeType));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder properties(@Nullable Input<DatabricksPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<DatabricksPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable DatabricksPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
         public DatabricksArgs build() {

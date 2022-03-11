@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ivs;
 
 import io.pulumi.awsnative.ivs.inputs.PlaybackKeyPairTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicKeyMaterial", required=true)
-      private final Input<String> publicKeyMaterial;
+      private final Output<String> publicKeyMaterial;
 
-    public Input<String> getPublicKeyMaterial() {
+    public Output<String> getPublicKeyMaterial() {
         return this.publicKeyMaterial;
     }
 
@@ -43,25 +43,25 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<PlaybackKeyPairTagArgs>> tags;
+      private final @Nullable Output<List<PlaybackKeyPairTagArgs>> tags;
 
-    public Input<List<PlaybackKeyPairTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<PlaybackKeyPairTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PlaybackKeyPairArgs(
-        @Nullable Input<String> name,
-        Input<String> publicKeyMaterial,
-        @Nullable Input<List<PlaybackKeyPairTagArgs>> tags) {
+        @Nullable Output<String> name,
+        Output<String> publicKeyMaterial,
+        @Nullable Output<List<PlaybackKeyPairTagArgs>> tags) {
         this.name = name;
         this.publicKeyMaterial = Objects.requireNonNull(publicKeyMaterial, "expected parameter 'publicKeyMaterial' to be non-null");
         this.tags = tags;
     }
 
     private PlaybackKeyPairArgs() {
-        this.name = Input.empty();
-        this.publicKeyMaterial = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.publicKeyMaterial = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<String> publicKeyMaterial;
-        private @Nullable Input<List<PlaybackKeyPairTagArgs>> tags;
+        private @Nullable Output<String> name;
+        private Output<String> publicKeyMaterial;
+        private @Nullable Output<List<PlaybackKeyPairTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder publicKeyMaterial(Input<String> publicKeyMaterial) {
+        public Builder publicKeyMaterial(Output<String> publicKeyMaterial) {
             this.publicKeyMaterial = Objects.requireNonNull(publicKeyMaterial);
             return this;
         }
 
         public Builder publicKeyMaterial(String publicKeyMaterial) {
-            this.publicKeyMaterial = Input.of(Objects.requireNonNull(publicKeyMaterial));
+            this.publicKeyMaterial = Output.of(Objects.requireNonNull(publicKeyMaterial));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<PlaybackKeyPairTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<PlaybackKeyPairTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<PlaybackKeyPairTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PlaybackKeyPairArgs build() {

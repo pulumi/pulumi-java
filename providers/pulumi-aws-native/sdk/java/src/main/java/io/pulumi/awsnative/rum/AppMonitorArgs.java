@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rum;
 
 import io.pulumi.awsnative.rum.inputs.AppMonitorConfigurationArgs;
 import io.pulumi.awsnative.rum.inputs.AppMonitorTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,10 +19,10 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
     public static final AppMonitorArgs Empty = new AppMonitorArgs();
 
     @InputImport(name="appMonitorConfiguration")
-      private final @Nullable Input<AppMonitorConfigurationArgs> appMonitorConfiguration;
+      private final @Nullable Output<AppMonitorConfigurationArgs> appMonitorConfiguration;
 
-    public Input<AppMonitorConfigurationArgs> getAppMonitorConfiguration() {
-        return this.appMonitorConfiguration == null ? Input.empty() : this.appMonitorConfiguration;
+    public Output<AppMonitorConfigurationArgs> getAppMonitorConfiguration() {
+        return this.appMonitorConfiguration == null ? Output.empty() : this.appMonitorConfiguration;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cwLogEnabled")
-      private final @Nullable Input<Boolean> cwLogEnabled;
+      private final @Nullable Output<Boolean> cwLogEnabled;
 
-    public Input<Boolean> getCwLogEnabled() {
-        return this.cwLogEnabled == null ? Input.empty() : this.cwLogEnabled;
+    public Output<Boolean> getCwLogEnabled() {
+        return this.cwLogEnabled == null ? Output.empty() : this.cwLogEnabled;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-      private final Input<String> domain;
+      private final Output<String> domain;
 
-    public Input<String> getDomain() {
+    public Output<String> getDomain() {
         return this.domain;
     }
 
@@ -52,25 +52,25 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<AppMonitorTagArgs>> tags;
+      private final @Nullable Output<List<AppMonitorTagArgs>> tags;
 
-    public Input<List<AppMonitorTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AppMonitorTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AppMonitorArgs(
-        @Nullable Input<AppMonitorConfigurationArgs> appMonitorConfiguration,
-        @Nullable Input<Boolean> cwLogEnabled,
-        Input<String> domain,
-        @Nullable Input<String> name,
-        @Nullable Input<List<AppMonitorTagArgs>> tags) {
+        @Nullable Output<AppMonitorConfigurationArgs> appMonitorConfiguration,
+        @Nullable Output<Boolean> cwLogEnabled,
+        Output<String> domain,
+        @Nullable Output<String> name,
+        @Nullable Output<List<AppMonitorTagArgs>> tags) {
         this.appMonitorConfiguration = appMonitorConfiguration;
         this.cwLogEnabled = cwLogEnabled;
         this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
@@ -79,11 +79,11 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppMonitorArgs() {
-        this.appMonitorConfiguration = Input.empty();
-        this.cwLogEnabled = Input.empty();
-        this.domain = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.appMonitorConfiguration = Output.empty();
+        this.cwLogEnabled = Output.empty();
+        this.domain = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,11 +95,11 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AppMonitorConfigurationArgs> appMonitorConfiguration;
-        private @Nullable Input<Boolean> cwLogEnabled;
-        private Input<String> domain;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<AppMonitorTagArgs>> tags;
+        private @Nullable Output<AppMonitorConfigurationArgs> appMonitorConfiguration;
+        private @Nullable Output<Boolean> cwLogEnabled;
+        private Output<String> domain;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<AppMonitorTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -114,53 +114,53 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder appMonitorConfiguration(@Nullable Input<AppMonitorConfigurationArgs> appMonitorConfiguration) {
+        public Builder appMonitorConfiguration(@Nullable Output<AppMonitorConfigurationArgs> appMonitorConfiguration) {
             this.appMonitorConfiguration = appMonitorConfiguration;
             return this;
         }
 
         public Builder appMonitorConfiguration(@Nullable AppMonitorConfigurationArgs appMonitorConfiguration) {
-            this.appMonitorConfiguration = Input.ofNullable(appMonitorConfiguration);
+            this.appMonitorConfiguration = Output.ofNullable(appMonitorConfiguration);
             return this;
         }
 
-        public Builder cwLogEnabled(@Nullable Input<Boolean> cwLogEnabled) {
+        public Builder cwLogEnabled(@Nullable Output<Boolean> cwLogEnabled) {
             this.cwLogEnabled = cwLogEnabled;
             return this;
         }
 
         public Builder cwLogEnabled(@Nullable Boolean cwLogEnabled) {
-            this.cwLogEnabled = Input.ofNullable(cwLogEnabled);
+            this.cwLogEnabled = Output.ofNullable(cwLogEnabled);
             return this;
         }
 
-        public Builder domain(Input<String> domain) {
+        public Builder domain(Output<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
         public Builder domain(String domain) {
-            this.domain = Input.of(Objects.requireNonNull(domain));
+            this.domain = Output.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AppMonitorTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AppMonitorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AppMonitorTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AppMonitorArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.logging;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -151,14 +150,14 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationExclusion(String name, OrganizationExclusionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/organizationExclusion:OrganizationExclusion", name, args == null ? OrganizationExclusionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:logging/organizationExclusion:OrganizationExclusion", name, args == null ? OrganizationExclusionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OrganizationExclusion(String name, Input<String> id, @Nullable OrganizationExclusionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationExclusion(String name, Output<String> id, @Nullable OrganizationExclusionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:logging/organizationExclusion:OrganizationExclusion", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -174,7 +173,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationExclusion get(String name, Input<String> id, @Nullable OrganizationExclusionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationExclusion get(String name, Output<String> id, @Nullable OrganizationExclusionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrganizationExclusion(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultConfigurationLink")
-      private final @Nullable Input<String> defaultConfigurationLink;
+      private final @Nullable Output<String> defaultConfigurationLink;
 
-    public Input<String> getDefaultConfigurationLink() {
-        return this.defaultConfigurationLink == null ? Input.empty() : this.defaultConfigurationLink;
+    public Output<String> getDefaultConfigurationLink() {
+        return this.defaultConfigurationLink == null ? Output.empty() : this.defaultConfigurationLink;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="mediaLink", required=true)
-      private final Input<String> mediaLink;
+      private final Output<String> mediaLink;
 
-    public Input<String> getMediaLink() {
+    public Output<String> getMediaLink() {
         return this.mediaLink;
     }
 
     public UserArtifactSourceArgs(
-        @Nullable Input<String> defaultConfigurationLink,
-        Input<String> mediaLink) {
+        @Nullable Output<String> defaultConfigurationLink,
+        Output<String> mediaLink) {
         this.defaultConfigurationLink = defaultConfigurationLink;
         this.mediaLink = Objects.requireNonNull(mediaLink, "expected parameter 'mediaLink' to be non-null");
     }
 
     private UserArtifactSourceArgs() {
-        this.defaultConfigurationLink = Input.empty();
-        this.mediaLink = Input.empty();
+        this.defaultConfigurationLink = Output.empty();
+        this.mediaLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultConfigurationLink;
-        private Input<String> mediaLink;
+        private @Nullable Output<String> defaultConfigurationLink;
+        private Output<String> mediaLink;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.mediaLink = defaults.mediaLink;
         }
 
-        public Builder defaultConfigurationLink(@Nullable Input<String> defaultConfigurationLink) {
+        public Builder defaultConfigurationLink(@Nullable Output<String> defaultConfigurationLink) {
             this.defaultConfigurationLink = defaultConfigurationLink;
             return this;
         }
 
         public Builder defaultConfigurationLink(@Nullable String defaultConfigurationLink) {
-            this.defaultConfigurationLink = Input.ofNullable(defaultConfigurationLink);
+            this.defaultConfigurationLink = Output.ofNullable(defaultConfigurationLink);
             return this;
         }
 
-        public Builder mediaLink(Input<String> mediaLink) {
+        public Builder mediaLink(Output<String> mediaLink) {
             this.mediaLink = Objects.requireNonNull(mediaLink);
             return this;
         }
 
         public Builder mediaLink(String mediaLink) {
-            this.mediaLink = Input.of(Objects.requireNonNull(mediaLink));
+            this.mediaLink = Output.of(Objects.requireNonNull(mediaLink));
             return this;
         }
         public UserArtifactSourceArgs build() {

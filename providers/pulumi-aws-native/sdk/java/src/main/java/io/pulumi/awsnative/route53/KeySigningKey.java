@@ -6,7 +6,6 @@ package io.pulumi.awsnative.route53;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53.KeySigningKeyArgs;
 import io.pulumi.awsnative.route53.enums.KeySigningKeyStatus;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -114,14 +113,14 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeySigningKey(String name, KeySigningKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53:KeySigningKey", name, args == null ? KeySigningKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:route53:KeySigningKey", name, args == null ? KeySigningKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private KeySigningKey(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private KeySigningKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53:KeySigningKey", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -136,7 +135,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static KeySigningKey get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static KeySigningKey get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new KeySigningKey(name, id, options);
     }
 }

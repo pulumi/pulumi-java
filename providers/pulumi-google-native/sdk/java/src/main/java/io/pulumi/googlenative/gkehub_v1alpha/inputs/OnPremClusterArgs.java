@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminCluster")
-      private final @Nullable Input<Boolean> adminCluster;
+      private final @Nullable Output<Boolean> adminCluster;
 
-    public Input<Boolean> getAdminCluster() {
-        return this.adminCluster == null ? Input.empty() : this.adminCluster;
+    public Output<Boolean> getAdminCluster() {
+        return this.adminCluster == null ? Output.empty() : this.adminCluster;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceLink")
-      private final @Nullable Input<String> resourceLink;
+      private final @Nullable Output<String> resourceLink;
 
-    public Input<String> getResourceLink() {
-        return this.resourceLink == null ? Input.empty() : this.resourceLink;
+    public Output<String> getResourceLink() {
+        return this.resourceLink == null ? Output.empty() : this.resourceLink;
     }
 
     public OnPremClusterArgs(
-        @Nullable Input<Boolean> adminCluster,
-        @Nullable Input<String> resourceLink) {
+        @Nullable Output<Boolean> adminCluster,
+        @Nullable Output<String> resourceLink) {
         this.adminCluster = adminCluster;
         this.resourceLink = resourceLink;
     }
 
     private OnPremClusterArgs() {
-        this.adminCluster = Input.empty();
-        this.resourceLink = Input.empty();
+        this.adminCluster = Output.empty();
+        this.resourceLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> adminCluster;
-        private @Nullable Input<String> resourceLink;
+        private @Nullable Output<Boolean> adminCluster;
+        private @Nullable Output<String> resourceLink;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceLink = defaults.resourceLink;
         }
 
-        public Builder adminCluster(@Nullable Input<Boolean> adminCluster) {
+        public Builder adminCluster(@Nullable Output<Boolean> adminCluster) {
             this.adminCluster = adminCluster;
             return this;
         }
 
         public Builder adminCluster(@Nullable Boolean adminCluster) {
-            this.adminCluster = Input.ofNullable(adminCluster);
+            this.adminCluster = Output.ofNullable(adminCluster);
             return this;
         }
 
-        public Builder resourceLink(@Nullable Input<String> resourceLink) {
+        public Builder resourceLink(@Nullable Output<String> resourceLink) {
             this.resourceLink = resourceLink;
             return this;
         }
 
         public Builder resourceLink(@Nullable String resourceLink) {
-            this.resourceLink = Input.ofNullable(resourceLink);
+            this.resourceLink = Output.ofNullable(resourceLink);
             return this;
         }
         public OnPremClusterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.analysisservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayResourceId")
-      private final @Nullable Input<String> gatewayResourceId;
+      private final @Nullable Output<String> gatewayResourceId;
 
-    public Input<String> getGatewayResourceId() {
-        return this.gatewayResourceId == null ? Input.empty() : this.gatewayResourceId;
+    public Output<String> getGatewayResourceId() {
+        return this.gatewayResourceId == null ? Output.empty() : this.gatewayResourceId;
     }
 
-    public GatewayDetailsArgs(@Nullable Input<String> gatewayResourceId) {
+    public GatewayDetailsArgs(@Nullable Output<String> gatewayResourceId) {
         this.gatewayResourceId = gatewayResourceId;
     }
 
     private GatewayDetailsArgs() {
-        this.gatewayResourceId = Input.empty();
+        this.gatewayResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gatewayResourceId;
+        private @Nullable Output<String> gatewayResourceId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.gatewayResourceId = defaults.gatewayResourceId;
         }
 
-        public Builder gatewayResourceId(@Nullable Input<String> gatewayResourceId) {
+        public Builder gatewayResourceId(@Nullable Output<String> gatewayResourceId) {
             this.gatewayResourceId = gatewayResourceId;
             return this;
         }
 
         public Builder gatewayResourceId(@Nullable String gatewayResourceId) {
-            this.gatewayResourceId = Input.ofNullable(gatewayResourceId);
+            this.gatewayResourceId = Output.ofNullable(gatewayResourceId);
             return this;
         }
         public GatewayDetailsArgs build() {

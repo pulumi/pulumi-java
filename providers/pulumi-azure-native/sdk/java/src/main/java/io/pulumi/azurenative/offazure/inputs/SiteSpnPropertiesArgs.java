@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.offazure.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="aadAuthority")
-      private final @Nullable Input<String> aadAuthority;
+      private final @Nullable Output<String> aadAuthority;
 
-    public Input<String> getAadAuthority() {
-        return this.aadAuthority == null ? Input.empty() : this.aadAuthority;
+    public Output<String> getAadAuthority() {
+        return this.aadAuthority == null ? Output.empty() : this.aadAuthority;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="audience")
-      private final @Nullable Input<String> audience;
+      private final @Nullable Output<String> audience;
 
-    public Input<String> getAudience() {
-        return this.audience == null ? Input.empty() : this.audience;
+    public Output<String> getAudience() {
+        return this.audience == null ? Output.empty() : this.audience;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectId")
-      private final @Nullable Input<String> objectId;
+      private final @Nullable Output<String> objectId;
 
-    public Input<String> getObjectId() {
-        return this.objectId == null ? Input.empty() : this.objectId;
+    public Output<String> getObjectId() {
+        return this.objectId == null ? Output.empty() : this.objectId;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rawCertData")
-      private final @Nullable Input<String> rawCertData;
+      private final @Nullable Output<String> rawCertData;
 
-    public Input<String> getRawCertData() {
-        return this.rawCertData == null ? Input.empty() : this.rawCertData;
+    public Output<String> getRawCertData() {
+        return this.rawCertData == null ? Output.empty() : this.rawCertData;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     public SiteSpnPropertiesArgs(
-        @Nullable Input<String> aadAuthority,
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> audience,
-        @Nullable Input<String> objectId,
-        @Nullable Input<String> rawCertData,
-        @Nullable Input<String> tenantId) {
+        @Nullable Output<String> aadAuthority,
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> audience,
+        @Nullable Output<String> objectId,
+        @Nullable Output<String> rawCertData,
+        @Nullable Output<String> tenantId) {
         this.aadAuthority = aadAuthority;
         this.applicationId = applicationId;
         this.audience = audience;
@@ -100,12 +100,12 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SiteSpnPropertiesArgs() {
-        this.aadAuthority = Input.empty();
-        this.applicationId = Input.empty();
-        this.audience = Input.empty();
-        this.objectId = Input.empty();
-        this.rawCertData = Input.empty();
-        this.tenantId = Input.empty();
+        this.aadAuthority = Output.empty();
+        this.applicationId = Output.empty();
+        this.audience = Output.empty();
+        this.objectId = Output.empty();
+        this.rawCertData = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aadAuthority;
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> audience;
-        private @Nullable Input<String> objectId;
-        private @Nullable Input<String> rawCertData;
-        private @Nullable Input<String> tenantId;
+        private @Nullable Output<String> aadAuthority;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> audience;
+        private @Nullable Output<String> objectId;
+        private @Nullable Output<String> rawCertData;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder aadAuthority(@Nullable Input<String> aadAuthority) {
+        public Builder aadAuthority(@Nullable Output<String> aadAuthority) {
             this.aadAuthority = aadAuthority;
             return this;
         }
 
         public Builder aadAuthority(@Nullable String aadAuthority) {
-            this.aadAuthority = Input.ofNullable(aadAuthority);
+            this.aadAuthority = Output.ofNullable(aadAuthority);
             return this;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder audience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = Input.ofNullable(audience);
+            this.audience = Output.ofNullable(audience);
             return this;
         }
 
-        public Builder objectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Input.ofNullable(objectId);
+            this.objectId = Output.ofNullable(objectId);
             return this;
         }
 
-        public Builder rawCertData(@Nullable Input<String> rawCertData) {
+        public Builder rawCertData(@Nullable Output<String> rawCertData) {
             this.rawCertData = rawCertData;
             return this;
         }
 
         public Builder rawCertData(@Nullable String rawCertData) {
-            this.rawCertData = Input.ofNullable(rawCertData);
+            this.rawCertData = Output.ofNullable(rawCertData);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public SiteSpnPropertiesArgs build() {

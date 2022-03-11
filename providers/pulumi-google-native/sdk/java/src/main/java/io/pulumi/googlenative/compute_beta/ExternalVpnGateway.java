@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -186,14 +185,14 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExternalVpnGateway(String name, @Nullable ExternalVpnGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:ExternalVpnGateway", name, args == null ? ExternalVpnGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:compute/beta:ExternalVpnGateway", name, args == null ? ExternalVpnGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ExternalVpnGateway(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ExternalVpnGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:compute/beta:ExternalVpnGateway", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -208,7 +207,7 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ExternalVpnGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ExternalVpnGateway get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ExternalVpnGateway(name, id, options);
     }
 }

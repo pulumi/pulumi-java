@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public GoogleCloudDatacatalogV1SystemTimestampsArgs(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> updateTime) {
         this.createTime = createTime;
         this.updateTime = updateTime;
     }
 
     private GoogleCloudDatacatalogV1SystemTimestampsArgs() {
-        this.createTime = Input.empty();
-        this.updateTime = Input.empty();
+        this.createTime = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public GoogleCloudDatacatalogV1SystemTimestampsArgs build() {

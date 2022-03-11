@@ -15,7 +15,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StorageBlobDeadLetterDestinationAr
 import io.pulumi.azurenative.eventgrid.inputs.StorageQueueEventSubscriptionDestinationArgs;
 import io.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -33,10 +33,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deadLetterDestination")
-      private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
+      private final @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
-    public Input<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
-        return this.deadLetterDestination == null ? Input.empty() : this.deadLetterDestination;
+    public Output<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
+        return this.deadLetterDestination == null ? Output.empty() : this.deadLetterDestination;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destination")
-      private final @Nullable Input<Object> destination;
+      private final @Nullable Output<Object> destination;
 
-    public Input<Object> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<Object> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventDeliverySchema")
-      private final @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema;
+      private final @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
-    public Input<Either<String,EventDeliverySchema>> getEventDeliverySchema() {
-        return this.eventDeliverySchema == null ? Input.empty() : this.eventDeliverySchema;
+    public Output<Either<String,EventDeliverySchema>> getEventDeliverySchema() {
+        return this.eventDeliverySchema == null ? Output.empty() : this.eventDeliverySchema;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventSubscriptionName")
-      private final @Nullable Input<String> eventSubscriptionName;
+      private final @Nullable Output<String> eventSubscriptionName;
 
-    public Input<String> getEventSubscriptionName() {
-        return this.eventSubscriptionName == null ? Input.empty() : this.eventSubscriptionName;
+    public Output<String> getEventSubscriptionName() {
+        return this.eventSubscriptionName == null ? Output.empty() : this.eventSubscriptionName;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expirationTimeUtc")
-      private final @Nullable Input<String> expirationTimeUtc;
+      private final @Nullable Output<String> expirationTimeUtc;
 
-    public Input<String> getExpirationTimeUtc() {
-        return this.expirationTimeUtc == null ? Input.empty() : this.expirationTimeUtc;
+    public Output<String> getExpirationTimeUtc() {
+        return this.expirationTimeUtc == null ? Output.empty() : this.expirationTimeUtc;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<EventSubscriptionFilterArgs> filter;
+      private final @Nullable Output<EventSubscriptionFilterArgs> filter;
 
-    public Input<EventSubscriptionFilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<EventSubscriptionFilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<String>> labels;
+      private final @Nullable Output<List<String>> labels;
 
-    public Input<List<String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="retryPolicy")
-      private final @Nullable Input<RetryPolicyArgs> retryPolicy;
+      private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Input<RetryPolicyArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
+    public Output<RetryPolicyArgs> getRetryPolicy() {
+        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
     }
 
     /**
@@ -121,25 +121,25 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public EventSubscriptionArgs(
-        @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination,
-        @Nullable Input<Object> destination,
-        @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema,
-        @Nullable Input<String> eventSubscriptionName,
-        @Nullable Input<String> expirationTimeUtc,
-        @Nullable Input<EventSubscriptionFilterArgs> filter,
-        @Nullable Input<List<String>> labels,
-        @Nullable Input<RetryPolicyArgs> retryPolicy,
-        Input<String> scope) {
+        @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination,
+        @Nullable Output<Object> destination,
+        @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema,
+        @Nullable Output<String> eventSubscriptionName,
+        @Nullable Output<String> expirationTimeUtc,
+        @Nullable Output<EventSubscriptionFilterArgs> filter,
+        @Nullable Output<List<String>> labels,
+        @Nullable Output<RetryPolicyArgs> retryPolicy,
+        Output<String> scope) {
         this.deadLetterDestination = deadLetterDestination;
         this.destination = destination;
-        this.eventDeliverySchema = eventDeliverySchema == null ? Input.ofLeft("EventGridSchema") : eventDeliverySchema;
+        this.eventDeliverySchema = eventDeliverySchema == null ? Output.ofLeft("EventGridSchema") : eventDeliverySchema;
         this.eventSubscriptionName = eventSubscriptionName;
         this.expirationTimeUtc = expirationTimeUtc;
         this.filter = filter;
@@ -149,15 +149,15 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private EventSubscriptionArgs() {
-        this.deadLetterDestination = Input.empty();
-        this.destination = Input.empty();
-        this.eventDeliverySchema = Input.empty();
-        this.eventSubscriptionName = Input.empty();
-        this.expirationTimeUtc = Input.empty();
-        this.filter = Input.empty();
-        this.labels = Input.empty();
-        this.retryPolicy = Input.empty();
-        this.scope = Input.empty();
+        this.deadLetterDestination = Output.empty();
+        this.destination = Output.empty();
+        this.eventDeliverySchema = Output.empty();
+        this.eventSubscriptionName = Output.empty();
+        this.expirationTimeUtc = Output.empty();
+        this.filter = Output.empty();
+        this.labels = Output.empty();
+        this.retryPolicy = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -169,15 +169,15 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
-        private @Nullable Input<Object> destination;
-        private @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema;
-        private @Nullable Input<String> eventSubscriptionName;
-        private @Nullable Input<String> expirationTimeUtc;
-        private @Nullable Input<EventSubscriptionFilterArgs> filter;
-        private @Nullable Input<List<String>> labels;
-        private @Nullable Input<RetryPolicyArgs> retryPolicy;
-        private Input<String> scope;
+        private @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
+        private @Nullable Output<Object> destination;
+        private @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema;
+        private @Nullable Output<String> eventSubscriptionName;
+        private @Nullable Output<String> expirationTimeUtc;
+        private @Nullable Output<EventSubscriptionFilterArgs> filter;
+        private @Nullable Output<List<String>> labels;
+        private @Nullable Output<RetryPolicyArgs> retryPolicy;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -196,93 +196,93 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     	      this.scope = defaults.scope;
         }
 
-        public Builder deadLetterDestination(@Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
+        public Builder deadLetterDestination(@Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
             this.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
         public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
-            this.deadLetterDestination = Input.ofNullable(deadLetterDestination);
+            this.deadLetterDestination = Output.ofNullable(deadLetterDestination);
             return this;
         }
 
-        public Builder destination(@Nullable Input<Object> destination) {
+        public Builder destination(@Nullable Output<Object> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable Object destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder eventDeliverySchema(@Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema) {
+        public Builder eventDeliverySchema(@Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema) {
             this.eventDeliverySchema = eventDeliverySchema;
             return this;
         }
 
         public Builder eventDeliverySchema(@Nullable Either<String,EventDeliverySchema> eventDeliverySchema) {
-            this.eventDeliverySchema = Input.ofNullable(eventDeliverySchema);
+            this.eventDeliverySchema = Output.ofNullable(eventDeliverySchema);
             return this;
         }
 
-        public Builder eventSubscriptionName(@Nullable Input<String> eventSubscriptionName) {
+        public Builder eventSubscriptionName(@Nullable Output<String> eventSubscriptionName) {
             this.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
 
         public Builder eventSubscriptionName(@Nullable String eventSubscriptionName) {
-            this.eventSubscriptionName = Input.ofNullable(eventSubscriptionName);
+            this.eventSubscriptionName = Output.ofNullable(eventSubscriptionName);
             return this;
         }
 
-        public Builder expirationTimeUtc(@Nullable Input<String> expirationTimeUtc) {
+        public Builder expirationTimeUtc(@Nullable Output<String> expirationTimeUtc) {
             this.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
 
         public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
-            this.expirationTimeUtc = Input.ofNullable(expirationTimeUtc);
+            this.expirationTimeUtc = Output.ofNullable(expirationTimeUtc);
             return this;
         }
 
-        public Builder filter(@Nullable Input<EventSubscriptionFilterArgs> filter) {
+        public Builder filter(@Nullable Output<EventSubscriptionFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable EventSubscriptionFilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<String>> labels) {
+        public Builder labels(@Nullable Output<List<String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder retryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Input.ofNullable(retryPolicy);
+            this.retryPolicy = Output.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public EventSubscriptionArgs build() {

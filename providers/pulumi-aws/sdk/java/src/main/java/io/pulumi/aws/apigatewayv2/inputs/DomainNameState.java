@@ -5,7 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameDomainNameConfigurationGetArgs;
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameMutualTlsAuthenticationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiMappingSelectionExpression")
-      private final @Nullable Input<String> apiMappingSelectionExpression;
+      private final @Nullable Output<String> apiMappingSelectionExpression;
 
-    public Input<String> getApiMappingSelectionExpression() {
-        return this.apiMappingSelectionExpression == null ? Input.empty() : this.apiMappingSelectionExpression;
+    public Output<String> getApiMappingSelectionExpression() {
+        return this.apiMappingSelectionExpression == null ? Output.empty() : this.apiMappingSelectionExpression;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainNameConfiguration")
-      private final @Nullable Input<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
+      private final @Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
 
-    public Input<DomainNameDomainNameConfigurationGetArgs> getDomainNameConfiguration() {
-        return this.domainNameConfiguration == null ? Input.empty() : this.domainNameConfiguration;
+    public Output<DomainNameDomainNameConfigurationGetArgs> getDomainNameConfiguration() {
+        return this.domainNameConfiguration == null ? Output.empty() : this.domainNameConfiguration;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutualTlsAuthentication")
-      private final @Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
+      private final @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
 
-    public Input<DomainNameMutualTlsAuthenticationGetArgs> getMutualTlsAuthentication() {
-        return this.mutualTlsAuthentication == null ? Input.empty() : this.mutualTlsAuthentication;
+    public Output<DomainNameMutualTlsAuthenticationGetArgs> getMutualTlsAuthentication() {
+        return this.mutualTlsAuthentication == null ? Output.empty() : this.mutualTlsAuthentication;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public DomainNameState(
-        @Nullable Input<String> apiMappingSelectionExpression,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> domainName,
-        @Nullable Input<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration,
-        @Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> apiMappingSelectionExpression,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> domainName,
+        @Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration,
+        @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.apiMappingSelectionExpression = apiMappingSelectionExpression;
         this.arn = arn;
         this.domainName = domainName;
@@ -112,13 +112,13 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainNameState() {
-        this.apiMappingSelectionExpression = Input.empty();
-        this.arn = Input.empty();
-        this.domainName = Input.empty();
-        this.domainNameConfiguration = Input.empty();
-        this.mutualTlsAuthentication = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.apiMappingSelectionExpression = Output.empty();
+        this.arn = Output.empty();
+        this.domainName = Output.empty();
+        this.domainNameConfiguration = Output.empty();
+        this.mutualTlsAuthentication = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiMappingSelectionExpression;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
-        private @Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> apiMappingSelectionExpression;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
+        private @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder apiMappingSelectionExpression(@Nullable Input<String> apiMappingSelectionExpression) {
+        public Builder apiMappingSelectionExpression(@Nullable Output<String> apiMappingSelectionExpression) {
             this.apiMappingSelectionExpression = apiMappingSelectionExpression;
             return this;
         }
 
         public Builder apiMappingSelectionExpression(@Nullable String apiMappingSelectionExpression) {
-            this.apiMappingSelectionExpression = Input.ofNullable(apiMappingSelectionExpression);
+            this.apiMappingSelectionExpression = Output.ofNullable(apiMappingSelectionExpression);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder domainNameConfiguration(@Nullable Input<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration) {
+        public Builder domainNameConfiguration(@Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration) {
             this.domainNameConfiguration = domainNameConfiguration;
             return this;
         }
 
         public Builder domainNameConfiguration(@Nullable DomainNameDomainNameConfigurationGetArgs domainNameConfiguration) {
-            this.domainNameConfiguration = Input.ofNullable(domainNameConfiguration);
+            this.domainNameConfiguration = Output.ofNullable(domainNameConfiguration);
             return this;
         }
 
-        public Builder mutualTlsAuthentication(@Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
         public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
-            this.mutualTlsAuthentication = Input.ofNullable(mutualTlsAuthentication);
+            this.mutualTlsAuthentication = Output.ofNullable(mutualTlsAuthentication);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public DomainNameState build() {

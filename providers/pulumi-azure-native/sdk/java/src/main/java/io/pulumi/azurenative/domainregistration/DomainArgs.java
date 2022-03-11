@@ -6,7 +6,7 @@ package io.pulumi.azurenative.domainregistration;
 import io.pulumi.azurenative.domainregistration.enums.DnsType;
 import io.pulumi.azurenative.domainregistration.inputs.ContactArgs;
 import io.pulumi.azurenative.domainregistration.inputs.DomainPurchaseConsentArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     public static final DomainArgs Empty = new DomainArgs();
 
     @InputImport(name="authCode")
-      private final @Nullable Input<String> authCode;
+      private final @Nullable Output<String> authCode;
 
-    public Input<String> getAuthCode() {
-        return this.authCode == null ? Input.empty() : this.authCode;
+    public Output<String> getAuthCode() {
+        return this.authCode == null ? Output.empty() : this.authCode;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoRenew")
-      private final @Nullable Input<Boolean> autoRenew;
+      private final @Nullable Output<Boolean> autoRenew;
 
-    public Input<Boolean> getAutoRenew() {
-        return this.autoRenew == null ? Input.empty() : this.autoRenew;
+    public Output<Boolean> getAutoRenew() {
+        return this.autoRenew == null ? Output.empty() : this.autoRenew;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consent", required=true)
-      private final Input<DomainPurchaseConsentArgs> consent;
+      private final Output<DomainPurchaseConsentArgs> consent;
 
-    public Input<DomainPurchaseConsentArgs> getConsent() {
+    public Output<DomainPurchaseConsentArgs> getConsent() {
         return this.consent;
     }
 
@@ -53,9 +53,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactAdmin", required=true)
-      private final Input<ContactArgs> contactAdmin;
+      private final Output<ContactArgs> contactAdmin;
 
-    public Input<ContactArgs> getContactAdmin() {
+    public Output<ContactArgs> getContactAdmin() {
         return this.contactAdmin;
     }
 
@@ -64,9 +64,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactBilling", required=true)
-      private final Input<ContactArgs> contactBilling;
+      private final Output<ContactArgs> contactBilling;
 
-    public Input<ContactArgs> getContactBilling() {
+    public Output<ContactArgs> getContactBilling() {
         return this.contactBilling;
     }
 
@@ -75,9 +75,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactRegistrant", required=true)
-      private final Input<ContactArgs> contactRegistrant;
+      private final Output<ContactArgs> contactRegistrant;
 
-    public Input<ContactArgs> getContactRegistrant() {
+    public Output<ContactArgs> getContactRegistrant() {
         return this.contactRegistrant;
     }
 
@@ -86,9 +86,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactTech", required=true)
-      private final Input<ContactArgs> contactTech;
+      private final Output<ContactArgs> contactTech;
 
-    public Input<ContactArgs> getContactTech() {
+    public Output<ContactArgs> getContactTech() {
         return this.contactTech;
     }
 
@@ -97,10 +97,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsType")
-      private final @Nullable Input<DnsType> dnsType;
+      private final @Nullable Output<DnsType> dnsType;
 
-    public Input<DnsType> getDnsType() {
-        return this.dnsType == null ? Input.empty() : this.dnsType;
+    public Output<DnsType> getDnsType() {
+        return this.dnsType == null ? Output.empty() : this.dnsType;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsZoneId")
-      private final @Nullable Input<String> dnsZoneId;
+      private final @Nullable Output<String> dnsZoneId;
 
-    public Input<String> getDnsZoneId() {
-        return this.dnsZoneId == null ? Input.empty() : this.dnsZoneId;
+    public Output<String> getDnsZoneId() {
+        return this.dnsZoneId == null ? Output.empty() : this.dnsZoneId;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privacy")
-      private final @Nullable Input<Boolean> privacy;
+      private final @Nullable Output<Boolean> privacy;
 
-    public Input<Boolean> getPrivacy() {
-        return this.privacy == null ? Input.empty() : this.privacy;
+    public Output<Boolean> getPrivacy() {
+        return this.privacy == null ? Output.empty() : this.privacy;
     }
 
     /**
@@ -163,9 +163,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -174,10 +174,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -185,31 +185,31 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetDnsType")
-      private final @Nullable Input<DnsType> targetDnsType;
+      private final @Nullable Output<DnsType> targetDnsType;
 
-    public Input<DnsType> getTargetDnsType() {
-        return this.targetDnsType == null ? Input.empty() : this.targetDnsType;
+    public Output<DnsType> getTargetDnsType() {
+        return this.targetDnsType == null ? Output.empty() : this.targetDnsType;
     }
 
     public DomainArgs(
-        @Nullable Input<String> authCode,
-        @Nullable Input<Boolean> autoRenew,
-        Input<DomainPurchaseConsentArgs> consent,
-        Input<ContactArgs> contactAdmin,
-        Input<ContactArgs> contactBilling,
-        Input<ContactArgs> contactRegistrant,
-        Input<ContactArgs> contactTech,
-        @Nullable Input<DnsType> dnsType,
-        @Nullable Input<String> dnsZoneId,
-        @Nullable Input<String> domainName,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<Boolean> privacy,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<DnsType> targetDnsType) {
+        @Nullable Output<String> authCode,
+        @Nullable Output<Boolean> autoRenew,
+        Output<DomainPurchaseConsentArgs> consent,
+        Output<ContactArgs> contactAdmin,
+        Output<ContactArgs> contactBilling,
+        Output<ContactArgs> contactRegistrant,
+        Output<ContactArgs> contactTech,
+        @Nullable Output<DnsType> dnsType,
+        @Nullable Output<String> dnsZoneId,
+        @Nullable Output<String> domainName,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<Boolean> privacy,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<DnsType> targetDnsType) {
         this.authCode = authCode;
-        this.autoRenew = autoRenew == null ? Input.ofNullable(true) : autoRenew;
+        this.autoRenew = autoRenew == null ? Output.ofNullable(true) : autoRenew;
         this.consent = Objects.requireNonNull(consent, "expected parameter 'consent' to be non-null");
         this.contactAdmin = Objects.requireNonNull(contactAdmin, "expected parameter 'contactAdmin' to be non-null");
         this.contactBilling = Objects.requireNonNull(contactBilling, "expected parameter 'contactBilling' to be non-null");
@@ -227,22 +227,22 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.authCode = Input.empty();
-        this.autoRenew = Input.empty();
-        this.consent = Input.empty();
-        this.contactAdmin = Input.empty();
-        this.contactBilling = Input.empty();
-        this.contactRegistrant = Input.empty();
-        this.contactTech = Input.empty();
-        this.dnsType = Input.empty();
-        this.dnsZoneId = Input.empty();
-        this.domainName = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.privacy = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.targetDnsType = Input.empty();
+        this.authCode = Output.empty();
+        this.autoRenew = Output.empty();
+        this.consent = Output.empty();
+        this.contactAdmin = Output.empty();
+        this.contactBilling = Output.empty();
+        this.contactRegistrant = Output.empty();
+        this.contactTech = Output.empty();
+        this.dnsType = Output.empty();
+        this.dnsZoneId = Output.empty();
+        this.domainName = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.privacy = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.targetDnsType = Output.empty();
     }
 
     public static Builder builder() {
@@ -254,22 +254,22 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authCode;
-        private @Nullable Input<Boolean> autoRenew;
-        private Input<DomainPurchaseConsentArgs> consent;
-        private Input<ContactArgs> contactAdmin;
-        private Input<ContactArgs> contactBilling;
-        private Input<ContactArgs> contactRegistrant;
-        private Input<ContactArgs> contactTech;
-        private @Nullable Input<DnsType> dnsType;
-        private @Nullable Input<String> dnsZoneId;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Boolean> privacy;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<DnsType> targetDnsType;
+        private @Nullable Output<String> authCode;
+        private @Nullable Output<Boolean> autoRenew;
+        private Output<DomainPurchaseConsentArgs> consent;
+        private Output<ContactArgs> contactAdmin;
+        private Output<ContactArgs> contactBilling;
+        private Output<ContactArgs> contactRegistrant;
+        private Output<ContactArgs> contactTech;
+        private @Nullable Output<DnsType> dnsType;
+        private @Nullable Output<String> dnsZoneId;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Boolean> privacy;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<DnsType> targetDnsType;
 
         public Builder() {
     	      // Empty
@@ -295,163 +295,163 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetDnsType = defaults.targetDnsType;
         }
 
-        public Builder authCode(@Nullable Input<String> authCode) {
+        public Builder authCode(@Nullable Output<String> authCode) {
             this.authCode = authCode;
             return this;
         }
 
         public Builder authCode(@Nullable String authCode) {
-            this.authCode = Input.ofNullable(authCode);
+            this.authCode = Output.ofNullable(authCode);
             return this;
         }
 
-        public Builder autoRenew(@Nullable Input<Boolean> autoRenew) {
+        public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
         public Builder autoRenew(@Nullable Boolean autoRenew) {
-            this.autoRenew = Input.ofNullable(autoRenew);
+            this.autoRenew = Output.ofNullable(autoRenew);
             return this;
         }
 
-        public Builder consent(Input<DomainPurchaseConsentArgs> consent) {
+        public Builder consent(Output<DomainPurchaseConsentArgs> consent) {
             this.consent = Objects.requireNonNull(consent);
             return this;
         }
 
         public Builder consent(DomainPurchaseConsentArgs consent) {
-            this.consent = Input.of(Objects.requireNonNull(consent));
+            this.consent = Output.of(Objects.requireNonNull(consent));
             return this;
         }
 
-        public Builder contactAdmin(Input<ContactArgs> contactAdmin) {
+        public Builder contactAdmin(Output<ContactArgs> contactAdmin) {
             this.contactAdmin = Objects.requireNonNull(contactAdmin);
             return this;
         }
 
         public Builder contactAdmin(ContactArgs contactAdmin) {
-            this.contactAdmin = Input.of(Objects.requireNonNull(contactAdmin));
+            this.contactAdmin = Output.of(Objects.requireNonNull(contactAdmin));
             return this;
         }
 
-        public Builder contactBilling(Input<ContactArgs> contactBilling) {
+        public Builder contactBilling(Output<ContactArgs> contactBilling) {
             this.contactBilling = Objects.requireNonNull(contactBilling);
             return this;
         }
 
         public Builder contactBilling(ContactArgs contactBilling) {
-            this.contactBilling = Input.of(Objects.requireNonNull(contactBilling));
+            this.contactBilling = Output.of(Objects.requireNonNull(contactBilling));
             return this;
         }
 
-        public Builder contactRegistrant(Input<ContactArgs> contactRegistrant) {
+        public Builder contactRegistrant(Output<ContactArgs> contactRegistrant) {
             this.contactRegistrant = Objects.requireNonNull(contactRegistrant);
             return this;
         }
 
         public Builder contactRegistrant(ContactArgs contactRegistrant) {
-            this.contactRegistrant = Input.of(Objects.requireNonNull(contactRegistrant));
+            this.contactRegistrant = Output.of(Objects.requireNonNull(contactRegistrant));
             return this;
         }
 
-        public Builder contactTech(Input<ContactArgs> contactTech) {
+        public Builder contactTech(Output<ContactArgs> contactTech) {
             this.contactTech = Objects.requireNonNull(contactTech);
             return this;
         }
 
         public Builder contactTech(ContactArgs contactTech) {
-            this.contactTech = Input.of(Objects.requireNonNull(contactTech));
+            this.contactTech = Output.of(Objects.requireNonNull(contactTech));
             return this;
         }
 
-        public Builder dnsType(@Nullable Input<DnsType> dnsType) {
+        public Builder dnsType(@Nullable Output<DnsType> dnsType) {
             this.dnsType = dnsType;
             return this;
         }
 
         public Builder dnsType(@Nullable DnsType dnsType) {
-            this.dnsType = Input.ofNullable(dnsType);
+            this.dnsType = Output.ofNullable(dnsType);
             return this;
         }
 
-        public Builder dnsZoneId(@Nullable Input<String> dnsZoneId) {
+        public Builder dnsZoneId(@Nullable Output<String> dnsZoneId) {
             this.dnsZoneId = dnsZoneId;
             return this;
         }
 
         public Builder dnsZoneId(@Nullable String dnsZoneId) {
-            this.dnsZoneId = Input.ofNullable(dnsZoneId);
+            this.dnsZoneId = Output.ofNullable(dnsZoneId);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privacy(@Nullable Input<Boolean> privacy) {
+        public Builder privacy(@Nullable Output<Boolean> privacy) {
             this.privacy = privacy;
             return this;
         }
 
         public Builder privacy(@Nullable Boolean privacy) {
-            this.privacy = Input.ofNullable(privacy);
+            this.privacy = Output.ofNullable(privacy);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetDnsType(@Nullable Input<DnsType> targetDnsType) {
+        public Builder targetDnsType(@Nullable Output<DnsType> targetDnsType) {
             this.targetDnsType = targetDnsType;
             return this;
         }
 
         public Builder targetDnsType(@Nullable DnsType targetDnsType) {
-            this.targetDnsType = Input.ofNullable(targetDnsType);
+            this.targetDnsType = Output.ofNullable(targetDnsType);
             return this;
         }
         public DomainArgs build() {

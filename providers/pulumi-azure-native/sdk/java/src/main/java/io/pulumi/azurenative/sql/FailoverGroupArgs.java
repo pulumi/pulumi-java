@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.inputs.FailoverGroupReadOnlyEndpointArgs;
 import io.pulumi.azurenative.sql.inputs.FailoverGroupReadWriteEndpointArgs;
 import io.pulumi.azurenative.sql.inputs.PartnerInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databases")
-      private final @Nullable Input<List<String>> databases;
+      private final @Nullable Output<List<String>> databases;
 
-    public Input<List<String>> getDatabases() {
-        return this.databases == null ? Input.empty() : this.databases;
+    public Output<List<String>> getDatabases() {
+        return this.databases == null ? Output.empty() : this.databases;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failoverGroupName")
-      private final @Nullable Input<String> failoverGroupName;
+      private final @Nullable Output<String> failoverGroupName;
 
-    public Input<String> getFailoverGroupName() {
-        return this.failoverGroupName == null ? Input.empty() : this.failoverGroupName;
+    public Output<String> getFailoverGroupName() {
+        return this.failoverGroupName == null ? Output.empty() : this.failoverGroupName;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerServers", required=true)
-      private final Input<List<PartnerInfoArgs>> partnerServers;
+      private final Output<List<PartnerInfoArgs>> partnerServers;
 
-    public Input<List<PartnerInfoArgs>> getPartnerServers() {
+    public Output<List<PartnerInfoArgs>> getPartnerServers() {
         return this.partnerServers;
     }
 
@@ -57,10 +57,10 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnlyEndpoint")
-      private final @Nullable Input<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
+      private final @Nullable Output<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
-    public Input<FailoverGroupReadOnlyEndpointArgs> getReadOnlyEndpoint() {
-        return this.readOnlyEndpoint == null ? Input.empty() : this.readOnlyEndpoint;
+    public Output<FailoverGroupReadOnlyEndpointArgs> getReadOnlyEndpoint() {
+        return this.readOnlyEndpoint == null ? Output.empty() : this.readOnlyEndpoint;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readWriteEndpoint", required=true)
-      private final Input<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
+      private final Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
 
-    public Input<FailoverGroupReadWriteEndpointArgs> getReadWriteEndpoint() {
+    public Output<FailoverGroupReadWriteEndpointArgs> getReadWriteEndpoint() {
         return this.readWriteEndpoint;
     }
 
@@ -79,9 +79,9 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,9 +90,9 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -101,21 +101,21 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public FailoverGroupArgs(
-        @Nullable Input<List<String>> databases,
-        @Nullable Input<String> failoverGroupName,
-        Input<List<PartnerInfoArgs>> partnerServers,
-        @Nullable Input<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint,
-        Input<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<String>> databases,
+        @Nullable Output<String> failoverGroupName,
+        Output<List<PartnerInfoArgs>> partnerServers,
+        @Nullable Output<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint,
+        Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<Map<String,String>> tags) {
         this.databases = databases;
         this.failoverGroupName = failoverGroupName;
         this.partnerServers = Objects.requireNonNull(partnerServers, "expected parameter 'partnerServers' to be non-null");
@@ -127,14 +127,14 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FailoverGroupArgs() {
-        this.databases = Input.empty();
-        this.failoverGroupName = Input.empty();
-        this.partnerServers = Input.empty();
-        this.readOnlyEndpoint = Input.empty();
-        this.readWriteEndpoint = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.tags = Input.empty();
+        this.databases = Output.empty();
+        this.failoverGroupName = Output.empty();
+        this.partnerServers = Output.empty();
+        this.readOnlyEndpoint = Output.empty();
+        this.readWriteEndpoint = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> databases;
-        private @Nullable Input<String> failoverGroupName;
-        private Input<List<PartnerInfoArgs>> partnerServers;
-        private @Nullable Input<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
-        private Input<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<String>> databases;
+        private @Nullable Output<String> failoverGroupName;
+        private Output<List<PartnerInfoArgs>> partnerServers;
+        private @Nullable Output<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
+        private Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder databases(@Nullable Input<List<String>> databases) {
+        public Builder databases(@Nullable Output<List<String>> databases) {
             this.databases = databases;
             return this;
         }
 
         public Builder databases(@Nullable List<String> databases) {
-            this.databases = Input.ofNullable(databases);
+            this.databases = Output.ofNullable(databases);
             return this;
         }
 
-        public Builder failoverGroupName(@Nullable Input<String> failoverGroupName) {
+        public Builder failoverGroupName(@Nullable Output<String> failoverGroupName) {
             this.failoverGroupName = failoverGroupName;
             return this;
         }
 
         public Builder failoverGroupName(@Nullable String failoverGroupName) {
-            this.failoverGroupName = Input.ofNullable(failoverGroupName);
+            this.failoverGroupName = Output.ofNullable(failoverGroupName);
             return this;
         }
 
-        public Builder partnerServers(Input<List<PartnerInfoArgs>> partnerServers) {
+        public Builder partnerServers(Output<List<PartnerInfoArgs>> partnerServers) {
             this.partnerServers = Objects.requireNonNull(partnerServers);
             return this;
         }
 
         public Builder partnerServers(List<PartnerInfoArgs> partnerServers) {
-            this.partnerServers = Input.of(Objects.requireNonNull(partnerServers));
+            this.partnerServers = Output.of(Objects.requireNonNull(partnerServers));
             return this;
         }
 
-        public Builder readOnlyEndpoint(@Nullable Input<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
+        public Builder readOnlyEndpoint(@Nullable Output<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
             this.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
 
         public Builder readOnlyEndpoint(@Nullable FailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
-            this.readOnlyEndpoint = Input.ofNullable(readOnlyEndpoint);
+            this.readOnlyEndpoint = Output.ofNullable(readOnlyEndpoint);
             return this;
         }
 
-        public Builder readWriteEndpoint(Input<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
+        public Builder readWriteEndpoint(Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
             this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
             return this;
         }
 
         public Builder readWriteEndpoint(FailoverGroupReadWriteEndpointArgs readWriteEndpoint) {
-            this.readWriteEndpoint = Input.of(Objects.requireNonNull(readWriteEndpoint));
+            this.readWriteEndpoint = Output.of(Objects.requireNonNull(readWriteEndpoint));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public FailoverGroupArgs build() {

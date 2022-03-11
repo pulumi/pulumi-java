@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gatewayAuthMethod")
-      private final @Nullable Input<String> gatewayAuthMethod;
+      private final @Nullable Output<String> gatewayAuthMethod;
 
-    public Input<String> getGatewayAuthMethod() {
-        return this.gatewayAuthMethod == null ? Input.empty() : this.gatewayAuthMethod;
+    public Output<String> getGatewayAuthMethod() {
+        return this.gatewayAuthMethod == null ? Output.empty() : this.gatewayAuthMethod;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gatewayType")
-      private final @Nullable Input<String> gatewayType;
+      private final @Nullable Output<String> gatewayType;
 
-    public Input<String> getGatewayType() {
-        return this.gatewayType == null ? Input.empty() : this.gatewayType;
+    public Output<String> getGatewayType() {
+        return this.gatewayType == null ? Output.empty() : this.gatewayType;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lastAccessedGatewayId")
-      private final @Nullable Input<String> lastAccessedGatewayId;
+      private final @Nullable Output<String> lastAccessedGatewayId;
 
-    public Input<String> getLastAccessedGatewayId() {
-        return this.lastAccessedGatewayId == null ? Input.empty() : this.lastAccessedGatewayId;
+    public Output<String> getLastAccessedGatewayId() {
+        return this.lastAccessedGatewayId == null ? Output.empty() : this.lastAccessedGatewayId;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lastAccessedGatewayTime")
-      private final @Nullable Input<String> lastAccessedGatewayTime;
+      private final @Nullable Output<String> lastAccessedGatewayTime;
 
-    public Input<String> getLastAccessedGatewayTime() {
-        return this.lastAccessedGatewayTime == null ? Input.empty() : this.lastAccessedGatewayTime;
+    public Output<String> getLastAccessedGatewayTime() {
+        return this.lastAccessedGatewayTime == null ? Output.empty() : this.lastAccessedGatewayTime;
     }
 
     public DeviceGatewayConfigGetArgs(
-        @Nullable Input<String> gatewayAuthMethod,
-        @Nullable Input<String> gatewayType,
-        @Nullable Input<String> lastAccessedGatewayId,
-        @Nullable Input<String> lastAccessedGatewayTime) {
+        @Nullable Output<String> gatewayAuthMethod,
+        @Nullable Output<String> gatewayType,
+        @Nullable Output<String> lastAccessedGatewayId,
+        @Nullable Output<String> lastAccessedGatewayTime) {
         this.gatewayAuthMethod = gatewayAuthMethod;
         this.gatewayType = gatewayType;
         this.lastAccessedGatewayId = lastAccessedGatewayId;
@@ -75,10 +75,10 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     private DeviceGatewayConfigGetArgs() {
-        this.gatewayAuthMethod = Input.empty();
-        this.gatewayType = Input.empty();
-        this.lastAccessedGatewayId = Input.empty();
-        this.lastAccessedGatewayTime = Input.empty();
+        this.gatewayAuthMethod = Output.empty();
+        this.gatewayType = Output.empty();
+        this.lastAccessedGatewayId = Output.empty();
+        this.lastAccessedGatewayTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gatewayAuthMethod;
-        private @Nullable Input<String> gatewayType;
-        private @Nullable Input<String> lastAccessedGatewayId;
-        private @Nullable Input<String> lastAccessedGatewayTime;
+        private @Nullable Output<String> gatewayAuthMethod;
+        private @Nullable Output<String> gatewayType;
+        private @Nullable Output<String> lastAccessedGatewayId;
+        private @Nullable Output<String> lastAccessedGatewayTime;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
     	      this.lastAccessedGatewayTime = defaults.lastAccessedGatewayTime;
         }
 
-        public Builder gatewayAuthMethod(@Nullable Input<String> gatewayAuthMethod) {
+        public Builder gatewayAuthMethod(@Nullable Output<String> gatewayAuthMethod) {
             this.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
 
         public Builder gatewayAuthMethod(@Nullable String gatewayAuthMethod) {
-            this.gatewayAuthMethod = Input.ofNullable(gatewayAuthMethod);
+            this.gatewayAuthMethod = Output.ofNullable(gatewayAuthMethod);
             return this;
         }
 
-        public Builder gatewayType(@Nullable Input<String> gatewayType) {
+        public Builder gatewayType(@Nullable Output<String> gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
 
         public Builder gatewayType(@Nullable String gatewayType) {
-            this.gatewayType = Input.ofNullable(gatewayType);
+            this.gatewayType = Output.ofNullable(gatewayType);
             return this;
         }
 
-        public Builder lastAccessedGatewayId(@Nullable Input<String> lastAccessedGatewayId) {
+        public Builder lastAccessedGatewayId(@Nullable Output<String> lastAccessedGatewayId) {
             this.lastAccessedGatewayId = lastAccessedGatewayId;
             return this;
         }
 
         public Builder lastAccessedGatewayId(@Nullable String lastAccessedGatewayId) {
-            this.lastAccessedGatewayId = Input.ofNullable(lastAccessedGatewayId);
+            this.lastAccessedGatewayId = Output.ofNullable(lastAccessedGatewayId);
             return this;
         }
 
-        public Builder lastAccessedGatewayTime(@Nullable Input<String> lastAccessedGatewayTime) {
+        public Builder lastAccessedGatewayTime(@Nullable Output<String> lastAccessedGatewayTime) {
             this.lastAccessedGatewayTime = lastAccessedGatewayTime;
             return this;
         }
 
         public Builder lastAccessedGatewayTime(@Nullable String lastAccessedGatewayTime) {
-            this.lastAccessedGatewayTime = Input.ofNullable(lastAccessedGatewayTime);
+            this.lastAccessedGatewayTime = Output.ofNullable(lastAccessedGatewayTime);
             return this;
         }
         public DeviceGatewayConfigGetArgs build() {

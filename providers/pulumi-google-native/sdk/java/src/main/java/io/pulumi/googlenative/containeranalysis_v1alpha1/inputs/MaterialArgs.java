@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digest")
-      private final @Nullable Input<Map<String,String>> digest;
+      private final @Nullable Output<Map<String,String>> digest;
 
-    public Input<Map<String,String>> getDigest() {
-        return this.digest == null ? Input.empty() : this.digest;
+    public Output<Map<String,String>> getDigest() {
+        return this.digest == null ? Output.empty() : this.digest;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public MaterialArgs(
-        @Nullable Input<Map<String,String>> digest,
-        @Nullable Input<String> uri) {
+        @Nullable Output<Map<String,String>> digest,
+        @Nullable Output<String> uri) {
         this.digest = digest;
         this.uri = uri;
     }
 
     private MaterialArgs() {
-        this.digest = Input.empty();
-        this.uri = Input.empty();
+        this.digest = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> digest;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<Map<String,String>> digest;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder digest(@Nullable Input<Map<String,String>> digest) {
+        public Builder digest(@Nullable Output<Map<String,String>> digest) {
             this.digest = digest;
             return this;
         }
 
         public Builder digest(@Nullable Map<String,String> digest) {
-            this.digest = Input.ofNullable(digest);
+            this.digest = Output.ofNullable(digest);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public MaterialArgs build() {

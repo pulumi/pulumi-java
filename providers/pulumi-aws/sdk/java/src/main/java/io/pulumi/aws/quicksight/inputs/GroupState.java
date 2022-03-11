@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsAccountId")
-      private final @Nullable Input<String> awsAccountId;
+      private final @Nullable Output<String> awsAccountId;
 
-    public Input<String> getAwsAccountId() {
-        return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
+    public Output<String> getAwsAccountId() {
+        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     public GroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> awsAccountId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> groupName,
-        @Nullable Input<String> namespace) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> awsAccountId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> groupName,
+        @Nullable Output<String> namespace) {
         this.arn = arn;
         this.awsAccountId = awsAccountId;
         this.description = description;
@@ -83,11 +83,11 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupState() {
-        this.arn = Input.empty();
-        this.awsAccountId = Input.empty();
-        this.description = Input.empty();
-        this.groupName = Input.empty();
-        this.namespace = Input.empty();
+        this.arn = Output.empty();
+        this.awsAccountId = Output.empty();
+        this.description = Output.empty();
+        this.groupName = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> awsAccountId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> groupName;
-        private @Nullable Input<String> namespace;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> awsAccountId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> groupName;
+        private @Nullable Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Input.ofNullable(awsAccountId);
+            this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
         public GroupState build() {

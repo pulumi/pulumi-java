@@ -43,7 +43,7 @@ import io.pulumi.azurenative.datafactory.inputs.ValidationActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -67,9 +67,9 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="activities", required=true)
-      private final Input<List<Object>> activities;
+      private final Output<List<Object>> activities;
 
-    public Input<List<Object>> getActivities() {
+    public Output<List<Object>> getActivities() {
         return this.activities;
     }
 
@@ -78,10 +78,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="batchCount")
-      private final @Nullable Input<Integer> batchCount;
+      private final @Nullable Output<Integer> batchCount;
 
-    public Input<Integer> getBatchCount() {
-        return this.batchCount == null ? Input.empty() : this.batchCount;
+    public Output<Integer> getBatchCount() {
+        return this.batchCount == null ? Output.empty() : this.batchCount;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dependsOn")
-      private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Input<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Input.empty() : this.dependsOn;
+    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+        return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isSequential")
-      private final @Nullable Input<Boolean> isSequential;
+      private final @Nullable Output<Boolean> isSequential;
 
-    public Input<Boolean> getIsSequential() {
-        return this.isSequential == null ? Input.empty() : this.isSequential;
+    public Output<Boolean> getIsSequential() {
+        return this.isSequential == null ? Output.empty() : this.isSequential;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="items", required=true)
-      private final Input<ExpressionArgs> items;
+      private final Output<ExpressionArgs> items;
 
-    public Input<ExpressionArgs> getItems() {
+    public Output<ExpressionArgs> getItems() {
         return this.items;
     }
 
@@ -133,9 +133,9 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -145,9 +145,9 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -156,22 +156,22 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userProperties")
-      private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Input<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Input.empty() : this.userProperties;
+    public Output<List<UserPropertyArgs>> getUserProperties() {
+        return this.userProperties == null ? Output.empty() : this.userProperties;
     }
 
     public ForEachActivityArgs(
-        Input<List<Object>> activities,
-        @Nullable Input<Integer> batchCount,
-        @Nullable Input<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> isSequential,
-        Input<ExpressionArgs> items,
-        Input<String> name,
-        Input<String> type,
-        @Nullable Input<List<UserPropertyArgs>> userProperties) {
+        Output<List<Object>> activities,
+        @Nullable Output<Integer> batchCount,
+        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> isSequential,
+        Output<ExpressionArgs> items,
+        Output<String> name,
+        Output<String> type,
+        @Nullable Output<List<UserPropertyArgs>> userProperties) {
         this.activities = Objects.requireNonNull(activities, "expected parameter 'activities' to be non-null");
         this.batchCount = batchCount;
         this.dependsOn = dependsOn;
@@ -184,15 +184,15 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ForEachActivityArgs() {
-        this.activities = Input.empty();
-        this.batchCount = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.isSequential = Input.empty();
-        this.items = Input.empty();
-        this.name = Input.empty();
-        this.type = Input.empty();
-        this.userProperties = Input.empty();
+        this.activities = Output.empty();
+        this.batchCount = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.isSequential = Output.empty();
+        this.items = Output.empty();
+        this.name = Output.empty();
+        this.type = Output.empty();
+        this.userProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -204,15 +204,15 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<List<Object>> activities;
-        private @Nullable Input<Integer> batchCount;
-        private @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> isSequential;
-        private Input<ExpressionArgs> items;
-        private Input<String> name;
-        private Input<String> type;
-        private @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private Output<List<Object>> activities;
+        private @Nullable Output<Integer> batchCount;
+        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> isSequential;
+        private Output<ExpressionArgs> items;
+        private Output<String> name;
+        private Output<String> type;
+        private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
         public Builder() {
     	      // Empty
@@ -231,93 +231,93 @@ public final class ForEachActivityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder activities(Input<List<Object>> activities) {
+        public Builder activities(Output<List<Object>> activities) {
             this.activities = Objects.requireNonNull(activities);
             return this;
         }
 
         public Builder activities(List<Object> activities) {
-            this.activities = Input.of(Objects.requireNonNull(activities));
+            this.activities = Output.of(Objects.requireNonNull(activities));
             return this;
         }
 
-        public Builder batchCount(@Nullable Input<Integer> batchCount) {
+        public Builder batchCount(@Nullable Output<Integer> batchCount) {
             this.batchCount = batchCount;
             return this;
         }
 
         public Builder batchCount(@Nullable Integer batchCount) {
-            this.batchCount = Input.ofNullable(batchCount);
+            this.batchCount = Output.ofNullable(batchCount);
             return this;
         }
 
-        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Input.ofNullable(dependsOn);
+            this.dependsOn = Output.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder isSequential(@Nullable Input<Boolean> isSequential) {
+        public Builder isSequential(@Nullable Output<Boolean> isSequential) {
             this.isSequential = isSequential;
             return this;
         }
 
         public Builder isSequential(@Nullable Boolean isSequential) {
-            this.isSequential = Input.ofNullable(isSequential);
+            this.isSequential = Output.ofNullable(isSequential);
             return this;
         }
 
-        public Builder items(Input<ExpressionArgs> items) {
+        public Builder items(Output<ExpressionArgs> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(ExpressionArgs items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Input.ofNullable(userProperties);
+            this.userProperties = Output.ofNullable(userProperties);
             return this;
         }
         public ForEachActivityArgs build() {

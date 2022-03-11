@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudWatchRoleArn")
-      private final @Nullable Input<String> cloudWatchRoleArn;
+      private final @Nullable Output<String> cloudWatchRoleArn;
 
-    public Input<String> getCloudWatchRoleArn() {
-        return this.cloudWatchRoleArn == null ? Input.empty() : this.cloudWatchRoleArn;
+    public Output<String> getCloudWatchRoleArn() {
+        return this.cloudWatchRoleArn == null ? Output.empty() : this.cloudWatchRoleArn;
     }
 
-    public AccountArgs(@Nullable Input<String> cloudWatchRoleArn) {
+    public AccountArgs(@Nullable Output<String> cloudWatchRoleArn) {
         this.cloudWatchRoleArn = cloudWatchRoleArn;
     }
 
     private AccountArgs() {
-        this.cloudWatchRoleArn = Input.empty();
+        this.cloudWatchRoleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudWatchRoleArn;
+        private @Nullable Output<String> cloudWatchRoleArn;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cloudWatchRoleArn = defaults.cloudWatchRoleArn;
         }
 
-        public Builder cloudWatchRoleArn(@Nullable Input<String> cloudWatchRoleArn) {
+        public Builder cloudWatchRoleArn(@Nullable Output<String> cloudWatchRoleArn) {
             this.cloudWatchRoleArn = cloudWatchRoleArn;
             return this;
         }
 
         public Builder cloudWatchRoleArn(@Nullable String cloudWatchRoleArn) {
-            this.cloudWatchRoleArn = Input.ofNullable(cloudWatchRoleArn);
+            this.cloudWatchRoleArn = Output.ofNullable(cloudWatchRoleArn);
             return this;
         }
         public AccountArgs build() {

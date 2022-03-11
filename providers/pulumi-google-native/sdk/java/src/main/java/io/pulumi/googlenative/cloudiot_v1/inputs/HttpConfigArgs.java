@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.enums.HttpConfigHttpEnabledState;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpEnabledState")
-      private final @Nullable Input<HttpConfigHttpEnabledState> httpEnabledState;
+      private final @Nullable Output<HttpConfigHttpEnabledState> httpEnabledState;
 
-    public Input<HttpConfigHttpEnabledState> getHttpEnabledState() {
-        return this.httpEnabledState == null ? Input.empty() : this.httpEnabledState;
+    public Output<HttpConfigHttpEnabledState> getHttpEnabledState() {
+        return this.httpEnabledState == null ? Output.empty() : this.httpEnabledState;
     }
 
-    public HttpConfigArgs(@Nullable Input<HttpConfigHttpEnabledState> httpEnabledState) {
+    public HttpConfigArgs(@Nullable Output<HttpConfigHttpEnabledState> httpEnabledState) {
         this.httpEnabledState = httpEnabledState;
     }
 
     private HttpConfigArgs() {
-        this.httpEnabledState = Input.empty();
+        this.httpEnabledState = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<HttpConfigHttpEnabledState> httpEnabledState;
+        private @Nullable Output<HttpConfigHttpEnabledState> httpEnabledState;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.httpEnabledState = defaults.httpEnabledState;
         }
 
-        public Builder httpEnabledState(@Nullable Input<HttpConfigHttpEnabledState> httpEnabledState) {
+        public Builder httpEnabledState(@Nullable Output<HttpConfigHttpEnabledState> httpEnabledState) {
             this.httpEnabledState = httpEnabledState;
             return this;
         }
 
         public Builder httpEnabledState(@Nullable HttpConfigHttpEnabledState httpEnabledState) {
-            this.httpEnabledState = Input.ofNullable(httpEnabledState);
+            this.httpEnabledState = Output.ofNullable(httpEnabledState);
             return this;
         }
         public HttpConfigArgs build() {

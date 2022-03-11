@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.enums.Roles;
 import io.pulumi.azurenative.security.enums.State;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
      * 
      */
     @InputImport(name="roles")
-      private final @Nullable Input<List<Either<String,Roles>>> roles;
+      private final @Nullable Output<List<Either<String,Roles>>> roles;
 
-    public Input<List<Either<String,Roles>>> getRoles() {
-        return this.roles == null ? Input.empty() : this.roles;
+    public Output<List<Either<String,Roles>>> getRoles() {
+        return this.roles == null ? Output.empty() : this.roles;
     }
 
     /**
@@ -38,22 +38,22 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,State>> state;
+      private final @Nullable Output<Either<String,State>> state;
 
-    public Input<Either<String,State>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,State>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public SecurityContactPropertiesNotificationsByRoleArgs(
-        @Nullable Input<List<Either<String,Roles>>> roles,
-        @Nullable Input<Either<String,State>> state) {
+        @Nullable Output<List<Either<String,Roles>>> roles,
+        @Nullable Output<Either<String,State>> state) {
         this.roles = roles;
         this.state = state;
     }
 
     private SecurityContactPropertiesNotificationsByRoleArgs() {
-        this.roles = Input.empty();
-        this.state = Input.empty();
+        this.roles = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,Roles>>> roles;
-        private @Nullable Input<Either<String,State>> state;
+        private @Nullable Output<List<Either<String,Roles>>> roles;
+        private @Nullable Output<Either<String,State>> state;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
     	      this.state = defaults.state;
         }
 
-        public Builder roles(@Nullable Input<List<Either<String,Roles>>> roles) {
+        public Builder roles(@Nullable Output<List<Either<String,Roles>>> roles) {
             this.roles = roles;
             return this;
         }
 
         public Builder roles(@Nullable List<Either<String,Roles>> roles) {
-            this.roles = Input.ofNullable(roles);
+            this.roles = Output.ofNullable(roles);
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,State>> state) {
+        public Builder state(@Nullable Output<Either<String,State>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,State> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public SecurityContactPropertiesNotificationsByRoleArgs build() {

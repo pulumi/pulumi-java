@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,9 +25,9 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -36,10 +36,10 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serviceUri")
-      private final @Nullable Input<String> serviceUri;
+      private final @Nullable Output<String> serviceUri;
 
-    public Input<String> getServiceUri() {
-        return this.serviceUri == null ? Input.empty() : this.serviceUri;
+    public Output<String> getServiceUri() {
+        return this.serviceUri == null ? Output.empty() : this.serviceUri;
     }
 
     public RuleWebhookActionArgs(
-        Input<String> odataType,
-        @Nullable Input<Map<String,String>> properties,
-        @Nullable Input<String> serviceUri) {
+        Output<String> odataType,
+        @Nullable Output<Map<String,String>> properties,
+        @Nullable Output<String> serviceUri) {
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.properties = properties;
         this.serviceUri = serviceUri;
     }
 
     private RuleWebhookActionArgs() {
-        this.odataType = Input.empty();
-        this.properties = Input.empty();
-        this.serviceUri = Input.empty();
+        this.odataType = Output.empty();
+        this.properties = Output.empty();
+        this.serviceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> odataType;
-        private @Nullable Input<Map<String,String>> properties;
-        private @Nullable Input<String> serviceUri;
+        private Output<String> odataType;
+        private @Nullable Output<Map<String,String>> properties;
+        private @Nullable Output<String> serviceUri;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
     	      this.serviceUri = defaults.serviceUri;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder serviceUri(@Nullable Input<String> serviceUri) {
+        public Builder serviceUri(@Nullable Output<String> serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }
 
         public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = Input.ofNullable(serviceUri);
+            this.serviceUri = Output.ofNullable(serviceUri);
             return this;
         }
         public RuleWebhookActionArgs build() {

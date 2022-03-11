@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.azurenative.machinelearningcompute.enums.Status;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxReplicas")
-      private final @Nullable Input<Integer> maxReplicas;
+      private final @Nullable Output<Integer> maxReplicas;
 
-    public Input<Integer> getMaxReplicas() {
-        return this.maxReplicas == null ? Input.empty() : this.maxReplicas;
+    public Output<Integer> getMaxReplicas() {
+        return this.maxReplicas == null ? Output.empty() : this.maxReplicas;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="minReplicas")
-      private final @Nullable Input<Integer> minReplicas;
+      private final @Nullable Output<Integer> minReplicas;
 
-    public Input<Integer> getMinReplicas() {
-        return this.minReplicas == null ? Input.empty() : this.minReplicas;
+    public Output<Integer> getMinReplicas() {
+        return this.minReplicas == null ? Output.empty() : this.minReplicas;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="refreshPeriodInSeconds")
-      private final @Nullable Input<Integer> refreshPeriodInSeconds;
+      private final @Nullable Output<Integer> refreshPeriodInSeconds;
 
-    public Input<Integer> getRefreshPeriodInSeconds() {
-        return this.refreshPeriodInSeconds == null ? Input.empty() : this.refreshPeriodInSeconds;
+    public Output<Integer> getRefreshPeriodInSeconds() {
+        return this.refreshPeriodInSeconds == null ? Output.empty() : this.refreshPeriodInSeconds;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,Status>> status;
+      private final @Nullable Output<Either<String,Status>> status;
 
-    public Input<Either<String,Status>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,Status>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -71,31 +71,31 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="targetUtilization")
-      private final @Nullable Input<Double> targetUtilization;
+      private final @Nullable Output<Double> targetUtilization;
 
-    public Input<Double> getTargetUtilization() {
-        return this.targetUtilization == null ? Input.empty() : this.targetUtilization;
+    public Output<Double> getTargetUtilization() {
+        return this.targetUtilization == null ? Output.empty() : this.targetUtilization;
     }
 
     public AutoScaleConfigurationArgs(
-        @Nullable Input<Integer> maxReplicas,
-        @Nullable Input<Integer> minReplicas,
-        @Nullable Input<Integer> refreshPeriodInSeconds,
-        @Nullable Input<Either<String,Status>> status,
-        @Nullable Input<Double> targetUtilization) {
-        this.maxReplicas = maxReplicas == null ? Input.ofNullable(100) : maxReplicas;
-        this.minReplicas = minReplicas == null ? Input.ofNullable(1) : minReplicas;
+        @Nullable Output<Integer> maxReplicas,
+        @Nullable Output<Integer> minReplicas,
+        @Nullable Output<Integer> refreshPeriodInSeconds,
+        @Nullable Output<Either<String,Status>> status,
+        @Nullable Output<Double> targetUtilization) {
+        this.maxReplicas = maxReplicas == null ? Output.ofNullable(100) : maxReplicas;
+        this.minReplicas = minReplicas == null ? Output.ofNullable(1) : minReplicas;
         this.refreshPeriodInSeconds = refreshPeriodInSeconds;
-        this.status = status == null ? Input.ofLeft("Disabled") : status;
+        this.status = status == null ? Output.ofLeft("Disabled") : status;
         this.targetUtilization = targetUtilization;
     }
 
     private AutoScaleConfigurationArgs() {
-        this.maxReplicas = Input.empty();
-        this.minReplicas = Input.empty();
-        this.refreshPeriodInSeconds = Input.empty();
-        this.status = Input.empty();
-        this.targetUtilization = Input.empty();
+        this.maxReplicas = Output.empty();
+        this.minReplicas = Output.empty();
+        this.refreshPeriodInSeconds = Output.empty();
+        this.status = Output.empty();
+        this.targetUtilization = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxReplicas;
-        private @Nullable Input<Integer> minReplicas;
-        private @Nullable Input<Integer> refreshPeriodInSeconds;
-        private @Nullable Input<Either<String,Status>> status;
-        private @Nullable Input<Double> targetUtilization;
+        private @Nullable Output<Integer> maxReplicas;
+        private @Nullable Output<Integer> minReplicas;
+        private @Nullable Output<Integer> refreshPeriodInSeconds;
+        private @Nullable Output<Either<String,Status>> status;
+        private @Nullable Output<Double> targetUtilization;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder maxReplicas(@Nullable Input<Integer> maxReplicas) {
+        public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = Input.ofNullable(maxReplicas);
+            this.maxReplicas = Output.ofNullable(maxReplicas);
             return this;
         }
 
-        public Builder minReplicas(@Nullable Input<Integer> minReplicas) {
+        public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
         public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = Input.ofNullable(minReplicas);
+            this.minReplicas = Output.ofNullable(minReplicas);
             return this;
         }
 
-        public Builder refreshPeriodInSeconds(@Nullable Input<Integer> refreshPeriodInSeconds) {
+        public Builder refreshPeriodInSeconds(@Nullable Output<Integer> refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
 
         public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
-            this.refreshPeriodInSeconds = Input.ofNullable(refreshPeriodInSeconds);
+            this.refreshPeriodInSeconds = Output.ofNullable(refreshPeriodInSeconds);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,Status>> status) {
+        public Builder status(@Nullable Output<Either<String,Status>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,Status> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder targetUtilization(@Nullable Input<Double> targetUtilization) {
+        public Builder targetUtilization(@Nullable Output<Double> targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }
 
         public Builder targetUtilization(@Nullable Double targetUtilization) {
-            this.targetUtilization = Input.ofNullable(targetUtilization);
+            this.targetUtilization = Output.ofNullable(targetUtilization);
             return this;
         }
         public AutoScaleConfigurationArgs build() {

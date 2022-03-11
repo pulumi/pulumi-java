@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="time")
-      private final @Nullable Input<String> time;
+      private final @Nullable Output<String> time;
 
-    public Input<String> getTime() {
-        return this.time == null ? Input.empty() : this.time;
+    public Output<String> getTime() {
+        return this.time == null ? Output.empty() : this.time;
     }
 
-    public DayDetailsArgs(@Nullable Input<String> time) {
+    public DayDetailsArgs(@Nullable Output<String> time) {
         this.time = time;
     }
 
     private DayDetailsArgs() {
-        this.time = Input.empty();
+        this.time = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> time;
+        private @Nullable Output<String> time;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.time = defaults.time;
         }
 
-        public Builder time(@Nullable Input<String> time) {
+        public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
 
         public Builder time(@Nullable String time) {
-            this.time = Input.ofNullable(time);
+            this.time = Output.ofNullable(time);
             return this;
         }
         public DayDetailsArgs build() {

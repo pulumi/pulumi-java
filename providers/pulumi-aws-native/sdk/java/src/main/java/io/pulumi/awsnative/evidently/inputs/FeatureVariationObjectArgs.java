@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -17,46 +17,46 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
     public static final FeatureVariationObjectArgs Empty = new FeatureVariationObjectArgs();
 
     @InputImport(name="booleanValue")
-      private final @Nullable Input<Boolean> booleanValue;
+      private final @Nullable Output<Boolean> booleanValue;
 
-    public Input<Boolean> getBooleanValue() {
-        return this.booleanValue == null ? Input.empty() : this.booleanValue;
+    public Output<Boolean> getBooleanValue() {
+        return this.booleanValue == null ? Output.empty() : this.booleanValue;
     }
 
     @InputImport(name="doubleValue")
-      private final @Nullable Input<Double> doubleValue;
+      private final @Nullable Output<Double> doubleValue;
 
-    public Input<Double> getDoubleValue() {
-        return this.doubleValue == null ? Input.empty() : this.doubleValue;
+    public Output<Double> getDoubleValue() {
+        return this.doubleValue == null ? Output.empty() : this.doubleValue;
     }
 
     @InputImport(name="longValue")
-      private final @Nullable Input<Double> longValue;
+      private final @Nullable Output<Double> longValue;
 
-    public Input<Double> getLongValue() {
-        return this.longValue == null ? Input.empty() : this.longValue;
+    public Output<Double> getLongValue() {
+        return this.longValue == null ? Output.empty() : this.longValue;
     }
 
     @InputImport(name="stringValue")
-      private final @Nullable Input<String> stringValue;
+      private final @Nullable Output<String> stringValue;
 
-    public Input<String> getStringValue() {
-        return this.stringValue == null ? Input.empty() : this.stringValue;
+    public Output<String> getStringValue() {
+        return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
     @InputImport(name="variationName")
-      private final @Nullable Input<String> variationName;
+      private final @Nullable Output<String> variationName;
 
-    public Input<String> getVariationName() {
-        return this.variationName == null ? Input.empty() : this.variationName;
+    public Output<String> getVariationName() {
+        return this.variationName == null ? Output.empty() : this.variationName;
     }
 
     public FeatureVariationObjectArgs(
-        @Nullable Input<Boolean> booleanValue,
-        @Nullable Input<Double> doubleValue,
-        @Nullable Input<Double> longValue,
-        @Nullable Input<String> stringValue,
-        @Nullable Input<String> variationName) {
+        @Nullable Output<Boolean> booleanValue,
+        @Nullable Output<Double> doubleValue,
+        @Nullable Output<Double> longValue,
+        @Nullable Output<String> stringValue,
+        @Nullable Output<String> variationName) {
         this.booleanValue = booleanValue;
         this.doubleValue = doubleValue;
         this.longValue = longValue;
@@ -65,11 +65,11 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
     }
 
     private FeatureVariationObjectArgs() {
-        this.booleanValue = Input.empty();
-        this.doubleValue = Input.empty();
-        this.longValue = Input.empty();
-        this.stringValue = Input.empty();
-        this.variationName = Input.empty();
+        this.booleanValue = Output.empty();
+        this.doubleValue = Output.empty();
+        this.longValue = Output.empty();
+        this.stringValue = Output.empty();
+        this.variationName = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> booleanValue;
-        private @Nullable Input<Double> doubleValue;
-        private @Nullable Input<Double> longValue;
-        private @Nullable Input<String> stringValue;
-        private @Nullable Input<String> variationName;
+        private @Nullable Output<Boolean> booleanValue;
+        private @Nullable Output<Double> doubleValue;
+        private @Nullable Output<Double> longValue;
+        private @Nullable Output<String> stringValue;
+        private @Nullable Output<String> variationName;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
     	      this.variationName = defaults.variationName;
         }
 
-        public Builder booleanValue(@Nullable Input<Boolean> booleanValue) {
+        public Builder booleanValue(@Nullable Output<Boolean> booleanValue) {
             this.booleanValue = booleanValue;
             return this;
         }
 
         public Builder booleanValue(@Nullable Boolean booleanValue) {
-            this.booleanValue = Input.ofNullable(booleanValue);
+            this.booleanValue = Output.ofNullable(booleanValue);
             return this;
         }
 
-        public Builder doubleValue(@Nullable Input<Double> doubleValue) {
+        public Builder doubleValue(@Nullable Output<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Input.ofNullable(doubleValue);
+            this.doubleValue = Output.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder longValue(@Nullable Input<Double> longValue) {
+        public Builder longValue(@Nullable Output<Double> longValue) {
             this.longValue = longValue;
             return this;
         }
 
         public Builder longValue(@Nullable Double longValue) {
-            this.longValue = Input.ofNullable(longValue);
+            this.longValue = Output.ofNullable(longValue);
             return this;
         }
 
-        public Builder stringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Input.ofNullable(stringValue);
+            this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
 
-        public Builder variationName(@Nullable Input<String> variationName) {
+        public Builder variationName(@Nullable Output<String> variationName) {
             this.variationName = variationName;
             return this;
         }
 
         public Builder variationName(@Nullable String variationName) {
-            this.variationName = Input.ofNullable(variationName);
+            this.variationName = Output.ofNullable(variationName);
             return this;
         }
         public FeatureVariationObjectArgs build() {

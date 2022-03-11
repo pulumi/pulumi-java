@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.WebhookClientConfigArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientConfig")
-      private final @Nullable Input<WebhookClientConfigArgs> clientConfig;
+      private final @Nullable Output<WebhookClientConfigArgs> clientConfig;
 
-    public Input<WebhookClientConfigArgs> getClientConfig() {
-        return this.clientConfig == null ? Input.empty() : this.clientConfig;
+    public Output<WebhookClientConfigArgs> getClientConfig() {
+        return this.clientConfig == null ? Output.empty() : this.clientConfig;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="conversionReviewVersions", required=true)
-      private final Input<List<String>> conversionReviewVersions;
+      private final Output<List<String>> conversionReviewVersions;
 
-    public Input<List<String>> getConversionReviewVersions() {
+    public Output<List<String>> getConversionReviewVersions() {
         return this.conversionReviewVersions;
     }
 
     public WebhookConversionArgs(
-        @Nullable Input<WebhookClientConfigArgs> clientConfig,
-        Input<List<String>> conversionReviewVersions) {
+        @Nullable Output<WebhookClientConfigArgs> clientConfig,
+        Output<List<String>> conversionReviewVersions) {
         this.clientConfig = clientConfig;
         this.conversionReviewVersions = Objects.requireNonNull(conversionReviewVersions, "expected parameter 'conversionReviewVersions' to be non-null");
     }
 
     private WebhookConversionArgs() {
-        this.clientConfig = Input.empty();
-        this.conversionReviewVersions = Input.empty();
+        this.clientConfig = Output.empty();
+        this.conversionReviewVersions = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<WebhookClientConfigArgs> clientConfig;
-        private Input<List<String>> conversionReviewVersions;
+        private @Nullable Output<WebhookClientConfigArgs> clientConfig;
+        private Output<List<String>> conversionReviewVersions;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
     	      this.conversionReviewVersions = defaults.conversionReviewVersions;
         }
 
-        public Builder clientConfig(@Nullable Input<WebhookClientConfigArgs> clientConfig) {
+        public Builder clientConfig(@Nullable Output<WebhookClientConfigArgs> clientConfig) {
             this.clientConfig = clientConfig;
             return this;
         }
 
         public Builder clientConfig(@Nullable WebhookClientConfigArgs clientConfig) {
-            this.clientConfig = Input.ofNullable(clientConfig);
+            this.clientConfig = Output.ofNullable(clientConfig);
             return this;
         }
 
-        public Builder conversionReviewVersions(Input<List<String>> conversionReviewVersions) {
+        public Builder conversionReviewVersions(Output<List<String>> conversionReviewVersions) {
             this.conversionReviewVersions = Objects.requireNonNull(conversionReviewVersions);
             return this;
         }
 
         public Builder conversionReviewVersions(List<String> conversionReviewVersions) {
-            this.conversionReviewVersions = Input.of(Objects.requireNonNull(conversionReviewVersions));
+            this.conversionReviewVersions = Output.of(Objects.requireNonNull(conversionReviewVersions));
             return this;
         }
         public WebhookConversionArgs build() {

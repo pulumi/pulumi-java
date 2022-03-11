@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.securityinsights.inputs.AwsCloudTrailDataConnectorDataTypesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="awsRoleArn")
-      private final @Nullable Input<String> awsRoleArn;
+      private final @Nullable Output<String> awsRoleArn;
 
-    public Input<String> getAwsRoleArn() {
-        return this.awsRoleArn == null ? Input.empty() : this.awsRoleArn;
+    public Output<String> getAwsRoleArn() {
+        return this.awsRoleArn == null ? Output.empty() : this.awsRoleArn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataConnectorId")
-      private final @Nullable Input<String> dataConnectorId;
+      private final @Nullable Output<String> dataConnectorId;
 
-    public Input<String> getDataConnectorId() {
-        return this.dataConnectorId == null ? Input.empty() : this.dataConnectorId;
+    public Output<String> getDataConnectorId() {
+        return this.dataConnectorId == null ? Output.empty() : this.dataConnectorId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataTypes")
-      private final @Nullable Input<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
+      private final @Nullable Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
 
-    public Input<AwsCloudTrailDataConnectorDataTypesArgs> getDataTypes() {
-        return this.dataTypes == null ? Input.empty() : this.dataTypes;
+    public Output<AwsCloudTrailDataConnectorDataTypesArgs> getDataTypes() {
+        return this.dataTypes == null ? Output.empty() : this.dataTypes;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -65,9 +65,9 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,19 +76,19 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public AwsCloudTrailDataConnectorArgs(
-        @Nullable Input<String> awsRoleArn,
-        @Nullable Input<String> dataConnectorId,
-        @Nullable Input<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes,
-        Input<String> kind,
-        Input<String> resourceGroupName,
-        Input<String> workspaceName) {
+        @Nullable Output<String> awsRoleArn,
+        @Nullable Output<String> dataConnectorId,
+        @Nullable Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes,
+        Output<String> kind,
+        Output<String> resourceGroupName,
+        Output<String> workspaceName) {
         this.awsRoleArn = awsRoleArn;
         this.dataConnectorId = dataConnectorId;
         this.dataTypes = dataTypes;
@@ -98,12 +98,12 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
     }
 
     private AwsCloudTrailDataConnectorArgs() {
-        this.awsRoleArn = Input.empty();
-        this.dataConnectorId = Input.empty();
-        this.dataTypes = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.awsRoleArn = Output.empty();
+        this.dataConnectorId = Output.empty();
+        this.dataTypes = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> awsRoleArn;
-        private @Nullable Input<String> dataConnectorId;
-        private @Nullable Input<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
-        private Input<String> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> awsRoleArn;
+        private @Nullable Output<String> dataConnectorId;
+        private @Nullable Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
+        private Output<String> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder awsRoleArn(@Nullable Input<String> awsRoleArn) {
+        public Builder awsRoleArn(@Nullable Output<String> awsRoleArn) {
             this.awsRoleArn = awsRoleArn;
             return this;
         }
 
         public Builder awsRoleArn(@Nullable String awsRoleArn) {
-            this.awsRoleArn = Input.ofNullable(awsRoleArn);
+            this.awsRoleArn = Output.ofNullable(awsRoleArn);
             return this;
         }
 
-        public Builder dataConnectorId(@Nullable Input<String> dataConnectorId) {
+        public Builder dataConnectorId(@Nullable Output<String> dataConnectorId) {
             this.dataConnectorId = dataConnectorId;
             return this;
         }
 
         public Builder dataConnectorId(@Nullable String dataConnectorId) {
-            this.dataConnectorId = Input.ofNullable(dataConnectorId);
+            this.dataConnectorId = Output.ofNullable(dataConnectorId);
             return this;
         }
 
-        public Builder dataTypes(@Nullable Input<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes) {
+        public Builder dataTypes(@Nullable Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
 
         public Builder dataTypes(@Nullable AwsCloudTrailDataConnectorDataTypesArgs dataTypes) {
-            this.dataTypes = Input.ofNullable(dataTypes);
+            this.dataTypes = Output.ofNullable(dataTypes);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public AwsCloudTrailDataConnectorArgs build() {

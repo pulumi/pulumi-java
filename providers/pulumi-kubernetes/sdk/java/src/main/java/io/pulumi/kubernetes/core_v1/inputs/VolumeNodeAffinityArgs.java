@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="required")
-      private final @Nullable Input<NodeSelectorArgs> required;
+      private final @Nullable Output<NodeSelectorArgs> required;
 
-    public Input<NodeSelectorArgs> getRequired() {
-        return this.required == null ? Input.empty() : this.required;
+    public Output<NodeSelectorArgs> getRequired() {
+        return this.required == null ? Output.empty() : this.required;
     }
 
-    public VolumeNodeAffinityArgs(@Nullable Input<NodeSelectorArgs> required) {
+    public VolumeNodeAffinityArgs(@Nullable Output<NodeSelectorArgs> required) {
         this.required = required;
     }
 
     private VolumeNodeAffinityArgs() {
-        this.required = Input.empty();
+        this.required = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<NodeSelectorArgs> required;
+        private @Nullable Output<NodeSelectorArgs> required;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceAr
     	      this.required = defaults.required;
         }
 
-        public Builder required(@Nullable Input<NodeSelectorArgs> required) {
+        public Builder required(@Nullable Output<NodeSelectorArgs> required) {
             this.required = required;
             return this;
         }
 
         public Builder required(@Nullable NodeSelectorArgs required) {
-            this.required = Input.ofNullable(required);
+            this.required = Output.ofNullable(required);
             return this;
         }
         public VolumeNodeAffinityArgs build() {

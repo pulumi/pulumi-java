@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.inputs.BranchArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branches", required=true)
-      private final Input<List<BranchArgs>> branches;
+      private final Output<List<BranchArgs>> branches;
 
-    public Input<List<BranchArgs>> getBranches() {
+    public Output<List<BranchArgs>> getBranches() {
         return this.branches;
     }
 
@@ -35,22 +35,22 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public StepArgs(
-        Input<List<BranchArgs>> branches,
-        Input<String> name) {
+        Output<List<BranchArgs>> branches,
+        Output<String> name) {
         this.branches = Objects.requireNonNull(branches, "expected parameter 'branches' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private StepArgs() {
-        this.branches = Input.empty();
-        this.name = Input.empty();
+        this.branches = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<BranchArgs>> branches;
-        private Input<String> name;
+        private Output<List<BranchArgs>> branches;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder branches(Input<List<BranchArgs>> branches) {
+        public Builder branches(Output<List<BranchArgs>> branches) {
             this.branches = Objects.requireNonNull(branches);
             return this;
         }
 
         public Builder branches(List<BranchArgs> branches) {
-            this.branches = Input.of(Objects.requireNonNull(branches));
+            this.branches = Output.of(Objects.requireNonNull(branches));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public StepArgs build() {

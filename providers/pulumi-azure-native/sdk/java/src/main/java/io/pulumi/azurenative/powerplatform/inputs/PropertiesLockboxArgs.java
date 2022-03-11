@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.enums.State;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,State>> state;
+      private final @Nullable Output<Either<String,State>> state;
 
-    public Input<Either<String,State>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,State>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
-    public PropertiesLockboxArgs(@Nullable Input<Either<String,State>> state) {
+    public PropertiesLockboxArgs(@Nullable Output<Either<String,State>> state) {
         this.state = state;
     }
 
     private PropertiesLockboxArgs() {
-        this.state = Input.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,State>> state;
+        private @Nullable Output<Either<String,State>> state;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
     	      this.state = defaults.state;
         }
 
-        public Builder state(@Nullable Input<Either<String,State>> state) {
+        public Builder state(@Nullable Output<Either<String,State>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,State> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public PropertiesLockboxArgs build() {

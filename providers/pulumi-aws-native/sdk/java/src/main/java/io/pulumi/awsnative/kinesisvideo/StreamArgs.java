@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisvideo;
 
 import io.pulumi.awsnative.kinesisvideo.inputs.StreamTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataRetentionInHours")
-      private final @Nullable Input<Integer> dataRetentionInHours;
+      private final @Nullable Output<Integer> dataRetentionInHours;
 
-    public Input<Integer> getDataRetentionInHours() {
-        return this.dataRetentionInHours == null ? Input.empty() : this.dataRetentionInHours;
+    public Output<Integer> getDataRetentionInHours() {
+        return this.dataRetentionInHours == null ? Output.empty() : this.dataRetentionInHours;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName")
-      private final @Nullable Input<String> deviceName;
+      private final @Nullable Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
-        return this.deviceName == null ? Input.empty() : this.deviceName;
+    public Output<String> getDeviceName() {
+        return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mediaType")
-      private final @Nullable Input<String> mediaType;
+      private final @Nullable Output<String> mediaType;
 
-    public Input<String> getMediaType() {
-        return this.mediaType == null ? Input.empty() : this.mediaType;
+    public Output<String> getMediaType() {
+        return this.mediaType == null ? Output.empty() : this.mediaType;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<StreamTagArgs>> tags;
+      private final @Nullable Output<List<StreamTagArgs>> tags;
 
-    public Input<List<StreamTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<StreamTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public StreamArgs(
-        @Nullable Input<Integer> dataRetentionInHours,
-        @Nullable Input<String> deviceName,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> mediaType,
-        @Nullable Input<String> name,
-        @Nullable Input<List<StreamTagArgs>> tags) {
+        @Nullable Output<Integer> dataRetentionInHours,
+        @Nullable Output<String> deviceName,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> mediaType,
+        @Nullable Output<String> name,
+        @Nullable Output<List<StreamTagArgs>> tags) {
         this.dataRetentionInHours = dataRetentionInHours;
         this.deviceName = deviceName;
         this.kmsKeyId = kmsKeyId;
@@ -99,12 +99,12 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamArgs() {
-        this.dataRetentionInHours = Input.empty();
-        this.deviceName = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.mediaType = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.dataRetentionInHours = Output.empty();
+        this.deviceName = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.mediaType = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> dataRetentionInHours;
-        private @Nullable Input<String> deviceName;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> mediaType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<StreamTagArgs>> tags;
+        private @Nullable Output<Integer> dataRetentionInHours;
+        private @Nullable Output<String> deviceName;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> mediaType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<StreamTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder dataRetentionInHours(@Nullable Input<Integer> dataRetentionInHours) {
+        public Builder dataRetentionInHours(@Nullable Output<Integer> dataRetentionInHours) {
             this.dataRetentionInHours = dataRetentionInHours;
             return this;
         }
 
         public Builder dataRetentionInHours(@Nullable Integer dataRetentionInHours) {
-            this.dataRetentionInHours = Input.ofNullable(dataRetentionInHours);
+            this.dataRetentionInHours = Output.ofNullable(dataRetentionInHours);
             return this;
         }
 
-        public Builder deviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Output<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Input.ofNullable(deviceName);
+            this.deviceName = Output.ofNullable(deviceName);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder mediaType(@Nullable Input<String> mediaType) {
+        public Builder mediaType(@Nullable Output<String> mediaType) {
             this.mediaType = mediaType;
             return this;
         }
 
         public Builder mediaType(@Nullable String mediaType) {
-            this.mediaType = Input.ofNullable(mediaType);
+            this.mediaType = Output.ofNullable(mediaType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<StreamTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<StreamTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public StreamArgs build() {

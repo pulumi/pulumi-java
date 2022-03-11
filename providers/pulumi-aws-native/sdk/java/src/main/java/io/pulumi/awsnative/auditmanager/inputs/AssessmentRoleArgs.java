@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.auditmanager.inputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
     public static final AssessmentRoleArgs Empty = new AssessmentRoleArgs();
 
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     @InputImport(name="roleType")
-      private final @Nullable Input<AssessmentRoleType> roleType;
+      private final @Nullable Output<AssessmentRoleType> roleType;
 
-    public Input<AssessmentRoleType> getRoleType() {
-        return this.roleType == null ? Input.empty() : this.roleType;
+    public Output<AssessmentRoleType> getRoleType() {
+        return this.roleType == null ? Output.empty() : this.roleType;
     }
 
     public AssessmentRoleArgs(
-        @Nullable Input<String> roleArn,
-        @Nullable Input<AssessmentRoleType> roleType) {
+        @Nullable Output<String> roleArn,
+        @Nullable Output<AssessmentRoleType> roleType) {
         this.roleArn = roleArn;
         this.roleType = roleType;
     }
 
     private AssessmentRoleArgs() {
-        this.roleArn = Input.empty();
-        this.roleType = Input.empty();
+        this.roleArn = Output.empty();
+        this.roleType = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<AssessmentRoleType> roleType;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<AssessmentRoleType> roleType;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleType = defaults.roleType;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder roleType(@Nullable Input<AssessmentRoleType> roleType) {
+        public Builder roleType(@Nullable Output<AssessmentRoleType> roleType) {
             this.roleType = roleType;
             return this;
         }
 
         public Builder roleType(@Nullable AssessmentRoleType roleType) {
-            this.roleType = Input.ofNullable(roleType);
+            this.roleType = Output.ofNullable(roleType);
             return this;
         }
         public AssessmentRoleArgs build() {

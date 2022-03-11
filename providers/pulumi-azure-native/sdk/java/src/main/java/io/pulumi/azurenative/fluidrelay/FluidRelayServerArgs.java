@@ -5,7 +5,7 @@ package io.pulumi.azurenative.fluidrelay;
 
 import io.pulumi.azurenative.fluidrelay.enums.ProvisioningState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Input<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-      private final Input<String> resourceGroup;
+      private final Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
+    public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
 
@@ -66,18 +66,18 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public FluidRelayServerArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,ProvisioningState>> provisioningState,
-        Input<String> resourceGroup,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
+        Output<String> resourceGroup,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.name = name;
         this.provisioningState = provisioningState;
@@ -86,11 +86,11 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FluidRelayServerArgs() {
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.provisioningState = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.provisioningState = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,ProvisioningState>> provisioningState;
-        private Input<String> resourceGroup;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+        private Output<String> resourceGroup;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder resourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
+            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public FluidRelayServerArgs build() {

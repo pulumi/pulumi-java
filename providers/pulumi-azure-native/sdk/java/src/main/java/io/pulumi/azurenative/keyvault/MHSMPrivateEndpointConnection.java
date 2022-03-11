@@ -10,7 +10,6 @@ import io.pulumi.azurenative.keyvault.outputs.MHSMPrivateLinkServiceConnectionSt
 import io.pulumi.azurenative.keyvault.outputs.ManagedHsmSkuResponse;
 import io.pulumi.azurenative.keyvault.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -215,21 +214,21 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public MHSMPrivateEndpointConnection(String name, MHSMPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:keyvault:MHSMPrivateEndpointConnection", name, args == null ? MHSMPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:keyvault:MHSMPrivateEndpointConnection", name, args == null ? MHSMPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MHSMPrivateEndpointConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MHSMPrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:keyvault:MHSMPrivateEndpointConnection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20210401preview:MHSMPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20210601preview:MHSMPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20211001:MHSMPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20211101preview:MHSMPrivateEndpointConnection").build())
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20210401preview:MHSMPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20210601preview:MHSMPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20211001:MHSMPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20211101preview:MHSMPrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -243,7 +242,7 @@ public class MHSMPrivateEndpointConnection extends io.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MHSMPrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MHSMPrivateEndpointConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MHSMPrivateEndpointConnection(name, id, options);
     }
 }

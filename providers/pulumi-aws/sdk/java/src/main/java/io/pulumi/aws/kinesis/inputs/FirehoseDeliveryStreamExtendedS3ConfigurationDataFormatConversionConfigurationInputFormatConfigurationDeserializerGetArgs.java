@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="hiveJsonSerDe")
-      private final @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs> hiveJsonSerDe;
+      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs> hiveJsonSerDe;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs> getHiveJsonSerDe() {
-        return this.hiveJsonSerDe == null ? Input.empty() : this.hiveJsonSerDe;
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs> getHiveJsonSerDe() {
+        return this.hiveJsonSerDe == null ? Output.empty() : this.hiveJsonSerDe;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="openXJsonSerDe")
-      private final @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs> openXJsonSerDe;
+      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs> openXJsonSerDe;
 
-    public Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs> getOpenXJsonSerDe() {
-        return this.openXJsonSerDe == null ? Input.empty() : this.openXJsonSerDe;
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs> getOpenXJsonSerDe() {
+        return this.openXJsonSerDe == null ? Output.empty() : this.openXJsonSerDe;
     }
 
     public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs(
-        @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs> hiveJsonSerDe,
-        @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs> openXJsonSerDe) {
+        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs> hiveJsonSerDe,
+        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs> openXJsonSerDe) {
         this.hiveJsonSerDe = hiveJsonSerDe;
         this.openXJsonSerDe = openXJsonSerDe;
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs() {
-        this.hiveJsonSerDe = Input.empty();
-        this.openXJsonSerDe = Input.empty();
+        this.hiveJsonSerDe = Output.empty();
+        this.openXJsonSerDe = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     public static final class Builder {
-        private @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs> hiveJsonSerDe;
-        private @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs> openXJsonSerDe;
+        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs> hiveJsonSerDe;
+        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs> openXJsonSerDe;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     	      this.openXJsonSerDe = defaults.openXJsonSerDe;
         }
 
-        public Builder hiveJsonSerDe(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs> hiveJsonSerDe) {
+        public Builder hiveJsonSerDe(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs> hiveJsonSerDe) {
             this.hiveJsonSerDe = hiveJsonSerDe;
             return this;
         }
 
         public Builder hiveJsonSerDe(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeGetArgs hiveJsonSerDe) {
-            this.hiveJsonSerDe = Input.ofNullable(hiveJsonSerDe);
+            this.hiveJsonSerDe = Output.ofNullable(hiveJsonSerDe);
             return this;
         }
 
-        public Builder openXJsonSerDe(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs> openXJsonSerDe) {
+        public Builder openXJsonSerDe(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs> openXJsonSerDe) {
             this.openXJsonSerDe = openXJsonSerDe;
             return this;
         }
 
         public Builder openXJsonSerDe(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeGetArgs openXJsonSerDe) {
-            this.openXJsonSerDe = Input.ofNullable(openXJsonSerDe);
+            this.openXJsonSerDe = Output.ofNullable(openXJsonSerDe);
             return this;
         }
         public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs build() {

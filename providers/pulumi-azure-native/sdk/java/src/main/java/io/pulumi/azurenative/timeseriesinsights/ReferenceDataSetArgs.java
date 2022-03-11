@@ -6,7 +6,7 @@ package io.pulumi.azurenative.timeseriesinsights;
 import io.pulumi.azurenative.timeseriesinsights.enums.DataStringComparisonBehavior;
 import io.pulumi.azurenative.timeseriesinsights.inputs.ReferenceDataSetKeyPropertyArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataStringComparisonBehavior")
-      private final @Nullable Input<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
+      private final @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
 
-    public Input<Either<String,DataStringComparisonBehavior>> getDataStringComparisonBehavior() {
-        return this.dataStringComparisonBehavior == null ? Input.empty() : this.dataStringComparisonBehavior;
+    public Output<Either<String,DataStringComparisonBehavior>> getDataStringComparisonBehavior() {
+        return this.dataStringComparisonBehavior == null ? Output.empty() : this.dataStringComparisonBehavior;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="environmentName", required=true)
-      private final Input<String> environmentName;
+      private final Output<String> environmentName;
 
-    public Input<String> getEnvironmentName() {
+    public Output<String> getEnvironmentName() {
         return this.environmentName;
     }
 
@@ -46,9 +46,9 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyProperties", required=true)
-      private final Input<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
+      private final Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
 
-    public Input<List<ReferenceDataSetKeyPropertyArgs>> getKeyProperties() {
+    public Output<List<ReferenceDataSetKeyPropertyArgs>> getKeyProperties() {
         return this.keyProperties;
     }
 
@@ -57,10 +57,10 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="referenceDataSetName")
-      private final @Nullable Input<String> referenceDataSetName;
+      private final @Nullable Output<String> referenceDataSetName;
 
-    public Input<String> getReferenceDataSetName() {
-        return this.referenceDataSetName == null ? Input.empty() : this.referenceDataSetName;
+    public Output<String> getReferenceDataSetName() {
+        return this.referenceDataSetName == null ? Output.empty() : this.referenceDataSetName;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,20 +90,20 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ReferenceDataSetArgs(
-        @Nullable Input<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior,
-        Input<String> environmentName,
-        Input<List<ReferenceDataSetKeyPropertyArgs>> keyProperties,
-        @Nullable Input<String> location,
-        @Nullable Input<String> referenceDataSetName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior,
+        Output<String> environmentName,
+        Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties,
+        @Nullable Output<String> location,
+        @Nullable Output<String> referenceDataSetName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.dataStringComparisonBehavior = dataStringComparisonBehavior;
         this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
         this.keyProperties = Objects.requireNonNull(keyProperties, "expected parameter 'keyProperties' to be non-null");
@@ -114,13 +114,13 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ReferenceDataSetArgs() {
-        this.dataStringComparisonBehavior = Input.empty();
-        this.environmentName = Input.empty();
-        this.keyProperties = Input.empty();
-        this.location = Input.empty();
-        this.referenceDataSetName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.dataStringComparisonBehavior = Output.empty();
+        this.environmentName = Output.empty();
+        this.keyProperties = Output.empty();
+        this.location = Output.empty();
+        this.referenceDataSetName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
-        private Input<String> environmentName;
-        private Input<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> referenceDataSetName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
+        private Output<String> environmentName;
+        private Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> referenceDataSetName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder dataStringComparisonBehavior(@Nullable Input<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior) {
+        public Builder dataStringComparisonBehavior(@Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior) {
             this.dataStringComparisonBehavior = dataStringComparisonBehavior;
             return this;
         }
 
         public Builder dataStringComparisonBehavior(@Nullable Either<String,DataStringComparisonBehavior> dataStringComparisonBehavior) {
-            this.dataStringComparisonBehavior = Input.ofNullable(dataStringComparisonBehavior);
+            this.dataStringComparisonBehavior = Output.ofNullable(dataStringComparisonBehavior);
             return this;
         }
 
-        public Builder environmentName(Input<String> environmentName) {
+        public Builder environmentName(Output<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
 
         public Builder environmentName(String environmentName) {
-            this.environmentName = Input.of(Objects.requireNonNull(environmentName));
+            this.environmentName = Output.of(Objects.requireNonNull(environmentName));
             return this;
         }
 
-        public Builder keyProperties(Input<List<ReferenceDataSetKeyPropertyArgs>> keyProperties) {
+        public Builder keyProperties(Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties) {
             this.keyProperties = Objects.requireNonNull(keyProperties);
             return this;
         }
 
         public Builder keyProperties(List<ReferenceDataSetKeyPropertyArgs> keyProperties) {
-            this.keyProperties = Input.of(Objects.requireNonNull(keyProperties));
+            this.keyProperties = Output.of(Objects.requireNonNull(keyProperties));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder referenceDataSetName(@Nullable Input<String> referenceDataSetName) {
+        public Builder referenceDataSetName(@Nullable Output<String> referenceDataSetName) {
             this.referenceDataSetName = referenceDataSetName;
             return this;
         }
 
         public Builder referenceDataSetName(@Nullable String referenceDataSetName) {
-            this.referenceDataSetName = Input.ofNullable(referenceDataSetName);
+            this.referenceDataSetName = Output.ofNullable(referenceDataSetName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ReferenceDataSetArgs build() {

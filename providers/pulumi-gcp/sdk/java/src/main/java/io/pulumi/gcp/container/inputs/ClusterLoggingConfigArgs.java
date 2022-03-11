@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class ClusterLoggingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableComponents", required=true)
-      private final Input<List<String>> enableComponents;
+      private final Output<List<String>> enableComponents;
 
-    public Input<List<String>> getEnableComponents() {
+    public Output<List<String>> getEnableComponents() {
         return this.enableComponents;
     }
 
-    public ClusterLoggingConfigArgs(Input<List<String>> enableComponents) {
+    public ClusterLoggingConfigArgs(Output<List<String>> enableComponents) {
         this.enableComponents = Objects.requireNonNull(enableComponents, "expected parameter 'enableComponents' to be non-null");
     }
 
     private ClusterLoggingConfigArgs() {
-        this.enableComponents = Input.empty();
+        this.enableComponents = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ClusterLoggingConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<List<String>> enableComponents;
+        private Output<List<String>> enableComponents;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ClusterLoggingConfigArgs extends io.pulumi.resources.Resource
     	      this.enableComponents = defaults.enableComponents;
         }
 
-        public Builder enableComponents(Input<List<String>> enableComponents) {
+        public Builder enableComponents(Output<List<String>> enableComponents) {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
 
         public Builder enableComponents(List<String> enableComponents) {
-            this.enableComponents = Input.of(Objects.requireNonNull(enableComponents));
+            this.enableComponents = Output.of(Objects.requireNonNull(enableComponents));
             return this;
         }
         public ClusterLoggingConfigArgs build() {

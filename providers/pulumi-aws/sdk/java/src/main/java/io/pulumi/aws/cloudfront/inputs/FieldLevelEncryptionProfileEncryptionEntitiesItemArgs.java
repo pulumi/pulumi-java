@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemArgs extends
      * 
      */
     @InputImport(name="fieldPatterns", required=true)
-      private final Input<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns;
+      private final Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns;
 
-    public Input<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> getFieldPatterns() {
+    public Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> getFieldPatterns() {
         return this.fieldPatterns;
     }
 
@@ -30,9 +30,9 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemArgs extends
      * 
      */
     @InputImport(name="providerId", required=true)
-      private final Input<String> providerId;
+      private final Output<String> providerId;
 
-    public Input<String> getProviderId() {
+    public Output<String> getProviderId() {
         return this.providerId;
     }
 
@@ -41,25 +41,25 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemArgs extends
      * 
      */
     @InputImport(name="publicKeyId", required=true)
-      private final Input<String> publicKeyId;
+      private final Output<String> publicKeyId;
 
-    public Input<String> getPublicKeyId() {
+    public Output<String> getPublicKeyId() {
         return this.publicKeyId;
     }
 
     public FieldLevelEncryptionProfileEncryptionEntitiesItemArgs(
-        Input<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns,
-        Input<String> providerId,
-        Input<String> publicKeyId) {
+        Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns,
+        Output<String> providerId,
+        Output<String> publicKeyId) {
         this.fieldPatterns = Objects.requireNonNull(fieldPatterns, "expected parameter 'fieldPatterns' to be non-null");
         this.providerId = Objects.requireNonNull(providerId, "expected parameter 'providerId' to be non-null");
         this.publicKeyId = Objects.requireNonNull(publicKeyId, "expected parameter 'publicKeyId' to be non-null");
     }
 
     private FieldLevelEncryptionProfileEncryptionEntitiesItemArgs() {
-        this.fieldPatterns = Input.empty();
-        this.providerId = Input.empty();
-        this.publicKeyId = Input.empty();
+        this.fieldPatterns = Output.empty();
+        this.providerId = Output.empty();
+        this.publicKeyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemArgs extends
     }
 
     public static final class Builder {
-        private Input<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns;
-        private Input<String> providerId;
-        private Input<String> publicKeyId;
+        private Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns;
+        private Output<String> providerId;
+        private Output<String> publicKeyId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemArgs extends
     	      this.publicKeyId = defaults.publicKeyId;
         }
 
-        public Builder fieldPatterns(Input<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns) {
+        public Builder fieldPatterns(Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs> fieldPatterns) {
             this.fieldPatterns = Objects.requireNonNull(fieldPatterns);
             return this;
         }
 
         public Builder fieldPatterns(FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsArgs fieldPatterns) {
-            this.fieldPatterns = Input.of(Objects.requireNonNull(fieldPatterns));
+            this.fieldPatterns = Output.of(Objects.requireNonNull(fieldPatterns));
             return this;
         }
 
-        public Builder providerId(Input<String> providerId) {
+        public Builder providerId(Output<String> providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
 
         public Builder providerId(String providerId) {
-            this.providerId = Input.of(Objects.requireNonNull(providerId));
+            this.providerId = Output.of(Objects.requireNonNull(providerId));
             return this;
         }
 
-        public Builder publicKeyId(Input<String> publicKeyId) {
+        public Builder publicKeyId(Output<String> publicKeyId) {
             this.publicKeyId = Objects.requireNonNull(publicKeyId);
             return this;
         }
 
         public Builder publicKeyId(String publicKeyId) {
-            this.publicKeyId = Input.of(Objects.requireNonNull(publicKeyId));
+            this.publicKeyId = Output.of(Objects.requireNonNull(publicKeyId));
             return this;
         }
         public FieldLevelEncryptionProfileEncryptionEntitiesItemArgs build() {

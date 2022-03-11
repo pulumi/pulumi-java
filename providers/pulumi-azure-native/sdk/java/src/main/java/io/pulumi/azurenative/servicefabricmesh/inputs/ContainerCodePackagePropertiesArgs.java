@@ -13,7 +13,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.ReliableCollectionsRefArgs
 import io.pulumi.azurenative.servicefabricmesh.inputs.ResourceRequirementsArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.SettingArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.VolumeReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -34,10 +34,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="commands")
-      private final @Nullable Input<List<String>> commands;
+      private final @Nullable Output<List<String>> commands;
 
-    public Input<List<String>> getCommands() {
-        return this.commands == null ? Input.empty() : this.commands;
+    public Output<List<String>> getCommands() {
+        return this.commands == null ? Output.empty() : this.commands;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="diagnostics")
-      private final @Nullable Input<DiagnosticsRefArgs> diagnostics;
+      private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
-    public Input<DiagnosticsRefArgs> getDiagnostics() {
-        return this.diagnostics == null ? Input.empty() : this.diagnostics;
+    public Output<DiagnosticsRefArgs> getDiagnostics() {
+        return this.diagnostics == null ? Output.empty() : this.diagnostics;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="endpoints")
-      private final @Nullable Input<List<EndpointPropertiesArgs>> endpoints;
+      private final @Nullable Output<List<EndpointPropertiesArgs>> endpoints;
 
-    public Input<List<EndpointPropertiesArgs>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<EndpointPropertiesArgs>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="entrypoint")
-      private final @Nullable Input<String> entrypoint;
+      private final @Nullable Output<String> entrypoint;
 
-    public Input<String> getEntrypoint() {
-        return this.entrypoint == null ? Input.empty() : this.entrypoint;
+    public Output<String> getEntrypoint() {
+        return this.entrypoint == null ? Output.empty() : this.entrypoint;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="environmentVariables")
-      private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
+      private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Input<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
+    public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
+        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="image", required=true)
-      private final Input<String> image;
+      private final Output<String> image;
 
-    public Input<String> getImage() {
+    public Output<String> getImage() {
         return this.image;
     }
 
@@ -100,10 +100,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="imageRegistryCredential")
-      private final @Nullable Input<ImageRegistryCredentialArgs> imageRegistryCredential;
+      private final @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential;
 
-    public Input<ImageRegistryCredentialArgs> getImageRegistryCredential() {
-        return this.imageRegistryCredential == null ? Input.empty() : this.imageRegistryCredential;
+    public Output<ImageRegistryCredentialArgs> getImageRegistryCredential() {
+        return this.imageRegistryCredential == null ? Output.empty() : this.imageRegistryCredential;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<ContainerLabelArgs>> labels;
+      private final @Nullable Output<List<ContainerLabelArgs>> labels;
 
-    public Input<List<ContainerLabelArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<ContainerLabelArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -133,10 +133,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="reliableCollectionsRefs")
-      private final @Nullable Input<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
+      private final @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
 
-    public Input<List<ReliableCollectionsRefArgs>> getReliableCollectionsRefs() {
-        return this.reliableCollectionsRefs == null ? Input.empty() : this.reliableCollectionsRefs;
+    public Output<List<ReliableCollectionsRefArgs>> getReliableCollectionsRefs() {
+        return this.reliableCollectionsRefs == null ? Output.empty() : this.reliableCollectionsRefs;
     }
 
     /**
@@ -144,9 +144,9 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resources", required=true)
-      private final Input<ResourceRequirementsArgs> resources;
+      private final Output<ResourceRequirementsArgs> resources;
 
-    public Input<ResourceRequirementsArgs> getResources() {
+    public Output<ResourceRequirementsArgs> getResources() {
         return this.resources;
     }
 
@@ -155,10 +155,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<List<SettingArgs>> settings;
+      private final @Nullable Output<List<SettingArgs>> settings;
 
-    public Input<List<SettingArgs>> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<List<SettingArgs>> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumeRefs")
-      private final @Nullable Input<List<VolumeReferenceArgs>> volumeRefs;
+      private final @Nullable Output<List<VolumeReferenceArgs>> volumeRefs;
 
-    public Input<List<VolumeReferenceArgs>> getVolumeRefs() {
-        return this.volumeRefs == null ? Input.empty() : this.volumeRefs;
+    public Output<List<VolumeReferenceArgs>> getVolumeRefs() {
+        return this.volumeRefs == null ? Output.empty() : this.volumeRefs;
     }
 
     /**
@@ -177,27 +177,27 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<ApplicationScopedVolumeArgs>> volumes;
+      private final @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes;
 
-    public Input<List<ApplicationScopedVolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<ApplicationScopedVolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     public ContainerCodePackagePropertiesArgs(
-        @Nullable Input<List<String>> commands,
-        @Nullable Input<DiagnosticsRefArgs> diagnostics,
-        @Nullable Input<List<EndpointPropertiesArgs>> endpoints,
-        @Nullable Input<String> entrypoint,
-        @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables,
-        Input<String> image,
-        @Nullable Input<ImageRegistryCredentialArgs> imageRegistryCredential,
-        @Nullable Input<List<ContainerLabelArgs>> labels,
-        Input<String> name,
-        @Nullable Input<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs,
-        Input<ResourceRequirementsArgs> resources,
-        @Nullable Input<List<SettingArgs>> settings,
-        @Nullable Input<List<VolumeReferenceArgs>> volumeRefs,
-        @Nullable Input<List<ApplicationScopedVolumeArgs>> volumes) {
+        @Nullable Output<List<String>> commands,
+        @Nullable Output<DiagnosticsRefArgs> diagnostics,
+        @Nullable Output<List<EndpointPropertiesArgs>> endpoints,
+        @Nullable Output<String> entrypoint,
+        @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables,
+        Output<String> image,
+        @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential,
+        @Nullable Output<List<ContainerLabelArgs>> labels,
+        Output<String> name,
+        @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs,
+        Output<ResourceRequirementsArgs> resources,
+        @Nullable Output<List<SettingArgs>> settings,
+        @Nullable Output<List<VolumeReferenceArgs>> volumeRefs,
+        @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes) {
         this.commands = commands;
         this.diagnostics = diagnostics;
         this.endpoints = endpoints;
@@ -215,20 +215,20 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     }
 
     private ContainerCodePackagePropertiesArgs() {
-        this.commands = Input.empty();
-        this.diagnostics = Input.empty();
-        this.endpoints = Input.empty();
-        this.entrypoint = Input.empty();
-        this.environmentVariables = Input.empty();
-        this.image = Input.empty();
-        this.imageRegistryCredential = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.reliableCollectionsRefs = Input.empty();
-        this.resources = Input.empty();
-        this.settings = Input.empty();
-        this.volumeRefs = Input.empty();
-        this.volumes = Input.empty();
+        this.commands = Output.empty();
+        this.diagnostics = Output.empty();
+        this.endpoints = Output.empty();
+        this.entrypoint = Output.empty();
+        this.environmentVariables = Output.empty();
+        this.image = Output.empty();
+        this.imageRegistryCredential = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.reliableCollectionsRefs = Output.empty();
+        this.resources = Output.empty();
+        this.settings = Output.empty();
+        this.volumeRefs = Output.empty();
+        this.volumes = Output.empty();
     }
 
     public static Builder builder() {
@@ -240,20 +240,20 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> commands;
-        private @Nullable Input<DiagnosticsRefArgs> diagnostics;
-        private @Nullable Input<List<EndpointPropertiesArgs>> endpoints;
-        private @Nullable Input<String> entrypoint;
-        private @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
-        private Input<String> image;
-        private @Nullable Input<ImageRegistryCredentialArgs> imageRegistryCredential;
-        private @Nullable Input<List<ContainerLabelArgs>> labels;
-        private Input<String> name;
-        private @Nullable Input<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
-        private Input<ResourceRequirementsArgs> resources;
-        private @Nullable Input<List<SettingArgs>> settings;
-        private @Nullable Input<List<VolumeReferenceArgs>> volumeRefs;
-        private @Nullable Input<List<ApplicationScopedVolumeArgs>> volumes;
+        private @Nullable Output<List<String>> commands;
+        private @Nullable Output<DiagnosticsRefArgs> diagnostics;
+        private @Nullable Output<List<EndpointPropertiesArgs>> endpoints;
+        private @Nullable Output<String> entrypoint;
+        private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
+        private Output<String> image;
+        private @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential;
+        private @Nullable Output<List<ContainerLabelArgs>> labels;
+        private Output<String> name;
+        private @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
+        private Output<ResourceRequirementsArgs> resources;
+        private @Nullable Output<List<SettingArgs>> settings;
+        private @Nullable Output<List<VolumeReferenceArgs>> volumeRefs;
+        private @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes;
 
         public Builder() {
     	      // Empty
@@ -277,143 +277,143 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder commands(@Nullable Input<List<String>> commands) {
+        public Builder commands(@Nullable Output<List<String>> commands) {
             this.commands = commands;
             return this;
         }
 
         public Builder commands(@Nullable List<String> commands) {
-            this.commands = Input.ofNullable(commands);
+            this.commands = Output.ofNullable(commands);
             return this;
         }
 
-        public Builder diagnostics(@Nullable Input<DiagnosticsRefArgs> diagnostics) {
+        public Builder diagnostics(@Nullable Output<DiagnosticsRefArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
         public Builder diagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
-            this.diagnostics = Input.ofNullable(diagnostics);
+            this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
 
-        public Builder endpoints(@Nullable Input<List<EndpointPropertiesArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<EndpointPropertiesArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<EndpointPropertiesArgs> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
 
-        public Builder entrypoint(@Nullable Input<String> entrypoint) {
+        public Builder entrypoint(@Nullable Output<String> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
         public Builder entrypoint(@Nullable String entrypoint) {
-            this.entrypoint = Input.ofNullable(entrypoint);
+            this.entrypoint = Output.ofNullable(entrypoint);
             return this;
         }
 
-        public Builder environmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Input.ofNullable(environmentVariables);
+            this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder image(Input<String> image) {
+        public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
         public Builder image(String image) {
-            this.image = Input.of(Objects.requireNonNull(image));
+            this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder imageRegistryCredential(@Nullable Input<ImageRegistryCredentialArgs> imageRegistryCredential) {
+        public Builder imageRegistryCredential(@Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential) {
             this.imageRegistryCredential = imageRegistryCredential;
             return this;
         }
 
         public Builder imageRegistryCredential(@Nullable ImageRegistryCredentialArgs imageRegistryCredential) {
-            this.imageRegistryCredential = Input.ofNullable(imageRegistryCredential);
+            this.imageRegistryCredential = Output.ofNullable(imageRegistryCredential);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<ContainerLabelArgs>> labels) {
+        public Builder labels(@Nullable Output<List<ContainerLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<ContainerLabelArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder reliableCollectionsRefs(@Nullable Input<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs) {
+        public Builder reliableCollectionsRefs(@Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs) {
             this.reliableCollectionsRefs = reliableCollectionsRefs;
             return this;
         }
 
         public Builder reliableCollectionsRefs(@Nullable List<ReliableCollectionsRefArgs> reliableCollectionsRefs) {
-            this.reliableCollectionsRefs = Input.ofNullable(reliableCollectionsRefs);
+            this.reliableCollectionsRefs = Output.ofNullable(reliableCollectionsRefs);
             return this;
         }
 
-        public Builder resources(Input<ResourceRequirementsArgs> resources) {
+        public Builder resources(Output<ResourceRequirementsArgs> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
         public Builder resources(ResourceRequirementsArgs resources) {
-            this.resources = Input.of(Objects.requireNonNull(resources));
+            this.resources = Output.of(Objects.requireNonNull(resources));
             return this;
         }
 
-        public Builder settings(@Nullable Input<List<SettingArgs>> settings) {
+        public Builder settings(@Nullable Output<List<SettingArgs>> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable List<SettingArgs> settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
 
-        public Builder volumeRefs(@Nullable Input<List<VolumeReferenceArgs>> volumeRefs) {
+        public Builder volumeRefs(@Nullable Output<List<VolumeReferenceArgs>> volumeRefs) {
             this.volumeRefs = volumeRefs;
             return this;
         }
 
         public Builder volumeRefs(@Nullable List<VolumeReferenceArgs> volumeRefs) {
-            this.volumeRefs = Input.ofNullable(volumeRefs);
+            this.volumeRefs = Output.ofNullable(volumeRefs);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<ApplicationScopedVolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<ApplicationScopedVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<ApplicationScopedVolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
         public ContainerCodePackagePropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class InstanceTemplateConfidentialInstanceConfigGetArgs extends io.
      * 
      */
     @InputImport(name="enableConfidentialCompute", required=true)
-      private final Input<Boolean> enableConfidentialCompute;
+      private final Output<Boolean> enableConfidentialCompute;
 
-    public Input<Boolean> getEnableConfidentialCompute() {
+    public Output<Boolean> getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
 
-    public InstanceTemplateConfidentialInstanceConfigGetArgs(Input<Boolean> enableConfidentialCompute) {
+    public InstanceTemplateConfidentialInstanceConfigGetArgs(Output<Boolean> enableConfidentialCompute) {
         this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute, "expected parameter 'enableConfidentialCompute' to be non-null");
     }
 
     private InstanceTemplateConfidentialInstanceConfigGetArgs() {
-        this.enableConfidentialCompute = Input.empty();
+        this.enableConfidentialCompute = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class InstanceTemplateConfidentialInstanceConfigGetArgs extends io.
     }
 
     public static final class Builder {
-        private Input<Boolean> enableConfidentialCompute;
+        private Output<Boolean> enableConfidentialCompute;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class InstanceTemplateConfidentialInstanceConfigGetArgs extends io.
     	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
         }
 
-        public Builder enableConfidentialCompute(Input<Boolean> enableConfidentialCompute) {
+        public Builder enableConfidentialCompute(Output<Boolean> enableConfidentialCompute) {
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }
 
         public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
-            this.enableConfidentialCompute = Input.of(Objects.requireNonNull(enableConfidentialCompute));
+            this.enableConfidentialCompute = Output.of(Objects.requireNonNull(enableConfidentialCompute));
             return this;
         }
         public InstanceTemplateConfidentialInstanceConfigGetArgs build() {

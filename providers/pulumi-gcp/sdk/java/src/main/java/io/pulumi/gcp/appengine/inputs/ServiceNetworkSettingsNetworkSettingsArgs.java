@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class ServiceNetworkSettingsNetworkSettingsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ingressTrafficAllowed")
-      private final @Nullable Input<String> ingressTrafficAllowed;
+      private final @Nullable Output<String> ingressTrafficAllowed;
 
-    public Input<String> getIngressTrafficAllowed() {
-        return this.ingressTrafficAllowed == null ? Input.empty() : this.ingressTrafficAllowed;
+    public Output<String> getIngressTrafficAllowed() {
+        return this.ingressTrafficAllowed == null ? Output.empty() : this.ingressTrafficAllowed;
     }
 
-    public ServiceNetworkSettingsNetworkSettingsArgs(@Nullable Input<String> ingressTrafficAllowed) {
+    public ServiceNetworkSettingsNetworkSettingsArgs(@Nullable Output<String> ingressTrafficAllowed) {
         this.ingressTrafficAllowed = ingressTrafficAllowed;
     }
 
     private ServiceNetworkSettingsNetworkSettingsArgs() {
-        this.ingressTrafficAllowed = Input.empty();
+        this.ingressTrafficAllowed = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class ServiceNetworkSettingsNetworkSettingsArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ingressTrafficAllowed;
+        private @Nullable Output<String> ingressTrafficAllowed;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class ServiceNetworkSettingsNetworkSettingsArgs extends io.pulumi.r
     	      this.ingressTrafficAllowed = defaults.ingressTrafficAllowed;
         }
 
-        public Builder ingressTrafficAllowed(@Nullable Input<String> ingressTrafficAllowed) {
+        public Builder ingressTrafficAllowed(@Nullable Output<String> ingressTrafficAllowed) {
             this.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }
 
         public Builder ingressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
-            this.ingressTrafficAllowed = Input.ofNullable(ingressTrafficAllowed);
+            this.ingressTrafficAllowed = Output.ofNullable(ingressTrafficAllowed);
             return this;
         }
         public ServiceNetworkSettingsNetworkSettingsArgs build() {

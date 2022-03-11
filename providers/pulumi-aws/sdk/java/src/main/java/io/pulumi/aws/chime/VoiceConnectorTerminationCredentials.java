@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.chime.VoiceConnectorTerminationCredentialsArgs;
 import io.pulumi.aws.chime.inputs.VoiceConnectorTerminationCredentialsState;
 import io.pulumi.aws.chime.outputs.VoiceConnectorTerminationCredentialsCredential;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -100,14 +99,14 @@ public class VoiceConnectorTerminationCredentials extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public VoiceConnectorTerminationCredentials(String name, VoiceConnectorTerminationCredentialsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:chime/voiceConnectorTerminationCredentials:VoiceConnectorTerminationCredentials", name, args == null ? VoiceConnectorTerminationCredentialsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:chime/voiceConnectorTerminationCredentials:VoiceConnectorTerminationCredentials", name, args == null ? VoiceConnectorTerminationCredentialsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VoiceConnectorTerminationCredentials(String name, Input<String> id, @Nullable VoiceConnectorTerminationCredentialsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VoiceConnectorTerminationCredentials(String name, Output<String> id, @Nullable VoiceConnectorTerminationCredentialsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:chime/voiceConnectorTerminationCredentials:VoiceConnectorTerminationCredentials", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -123,7 +122,7 @@ public class VoiceConnectorTerminationCredentials extends io.pulumi.resources.Cu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VoiceConnectorTerminationCredentials get(String name, Input<String> id, @Nullable VoiceConnectorTerminationCredentialsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VoiceConnectorTerminationCredentials get(String name, Output<String> id, @Nullable VoiceConnectorTerminationCredentialsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VoiceConnectorTerminationCredentials(name, id, state, options);
     }
 }

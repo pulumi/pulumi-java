@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusStatefulPerInstanceConfigArgs;
 import java.lang.Boolean;
@@ -21,10 +21,10 @@ public final class InstanceGroupManagerStatusStatefulArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="hasStatefulConfig")
-      private final @Nullable Input<Boolean> hasStatefulConfig;
+      private final @Nullable Output<Boolean> hasStatefulConfig;
 
-    public Input<Boolean> getHasStatefulConfig() {
-        return this.hasStatefulConfig == null ? Input.empty() : this.hasStatefulConfig;
+    public Output<Boolean> getHasStatefulConfig() {
+        return this.hasStatefulConfig == null ? Output.empty() : this.hasStatefulConfig;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class InstanceGroupManagerStatusStatefulArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="perInstanceConfigs")
-      private final @Nullable Input<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
+      private final @Nullable Output<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
 
-    public Input<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> getPerInstanceConfigs() {
-        return this.perInstanceConfigs == null ? Input.empty() : this.perInstanceConfigs;
+    public Output<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> getPerInstanceConfigs() {
+        return this.perInstanceConfigs == null ? Output.empty() : this.perInstanceConfigs;
     }
 
     public InstanceGroupManagerStatusStatefulArgs(
-        @Nullable Input<Boolean> hasStatefulConfig,
-        @Nullable Input<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs) {
+        @Nullable Output<Boolean> hasStatefulConfig,
+        @Nullable Output<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs) {
         this.hasStatefulConfig = hasStatefulConfig;
         this.perInstanceConfigs = perInstanceConfigs;
     }
 
     private InstanceGroupManagerStatusStatefulArgs() {
-        this.hasStatefulConfig = Input.empty();
-        this.perInstanceConfigs = Input.empty();
+        this.hasStatefulConfig = Output.empty();
+        this.perInstanceConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class InstanceGroupManagerStatusStatefulArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> hasStatefulConfig;
-        private @Nullable Input<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
+        private @Nullable Output<Boolean> hasStatefulConfig;
+        private @Nullable Output<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class InstanceGroupManagerStatusStatefulArgs extends io.pulumi.reso
     	      this.perInstanceConfigs = defaults.perInstanceConfigs;
         }
 
-        public Builder hasStatefulConfig(@Nullable Input<Boolean> hasStatefulConfig) {
+        public Builder hasStatefulConfig(@Nullable Output<Boolean> hasStatefulConfig) {
             this.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
 
         public Builder hasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
-            this.hasStatefulConfig = Input.ofNullable(hasStatefulConfig);
+            this.hasStatefulConfig = Output.ofNullable(hasStatefulConfig);
             return this;
         }
 
-        public Builder perInstanceConfigs(@Nullable Input<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs) {
+        public Builder perInstanceConfigs(@Nullable Output<List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs) {
             this.perInstanceConfigs = perInstanceConfigs;
             return this;
         }
 
         public Builder perInstanceConfigs(@Nullable List<InstanceGroupManagerStatusStatefulPerInstanceConfigArgs> perInstanceConfigs) {
-            this.perInstanceConfigs = Input.ofNullable(perInstanceConfigs);
+            this.perInstanceConfigs = Output.ofNullable(perInstanceConfigs);
             return this;
         }
         public InstanceGroupManagerStatusStatefulArgs build() {

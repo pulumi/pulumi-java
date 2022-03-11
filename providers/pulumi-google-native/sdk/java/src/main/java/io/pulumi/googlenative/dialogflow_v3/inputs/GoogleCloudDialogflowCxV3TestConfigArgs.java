@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="flow")
-      private final @Nullable Input<String> flow;
+      private final @Nullable Output<String> flow;
 
-    public Input<String> getFlow() {
-        return this.flow == null ? Input.empty() : this.flow;
+    public Output<String> getFlow() {
+        return this.flow == null ? Output.empty() : this.flow;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="trackingParameters")
-      private final @Nullable Input<List<String>> trackingParameters;
+      private final @Nullable Output<List<String>> trackingParameters;
 
-    public Input<List<String>> getTrackingParameters() {
-        return this.trackingParameters == null ? Input.empty() : this.trackingParameters;
+    public Output<List<String>> getTrackingParameters() {
+        return this.trackingParameters == null ? Output.empty() : this.trackingParameters;
     }
 
     public GoogleCloudDialogflowCxV3TestConfigArgs(
-        @Nullable Input<String> flow,
-        @Nullable Input<List<String>> trackingParameters) {
+        @Nullable Output<String> flow,
+        @Nullable Output<List<String>> trackingParameters) {
         this.flow = flow;
         this.trackingParameters = trackingParameters;
     }
 
     private GoogleCloudDialogflowCxV3TestConfigArgs() {
-        this.flow = Input.empty();
-        this.trackingParameters = Input.empty();
+        this.flow = Output.empty();
+        this.trackingParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> flow;
-        private @Nullable Input<List<String>> trackingParameters;
+        private @Nullable Output<String> flow;
+        private @Nullable Output<List<String>> trackingParameters;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
     	      this.trackingParameters = defaults.trackingParameters;
         }
 
-        public Builder flow(@Nullable Input<String> flow) {
+        public Builder flow(@Nullable Output<String> flow) {
             this.flow = flow;
             return this;
         }
 
         public Builder flow(@Nullable String flow) {
-            this.flow = Input.ofNullable(flow);
+            this.flow = Output.ofNullable(flow);
             return this;
         }
 
-        public Builder trackingParameters(@Nullable Input<List<String>> trackingParameters) {
+        public Builder trackingParameters(@Nullable Output<List<String>> trackingParameters) {
             this.trackingParameters = trackingParameters;
             return this;
         }
 
         public Builder trackingParameters(@Nullable List<String> trackingParameters) {
-            this.trackingParameters = Input.ofNullable(trackingParameters);
+            this.trackingParameters = Output.ofNullable(trackingParameters);
             return this;
         }
         public GoogleCloudDialogflowCxV3TestConfigArgs build() {

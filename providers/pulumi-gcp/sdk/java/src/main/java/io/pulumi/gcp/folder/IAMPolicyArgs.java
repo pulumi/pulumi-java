@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final IAMPolicyArgs Empty = new IAMPolicyArgs();
 
     @InputImport(name="folder", required=true)
-      private final Input<String> folder;
+      private final Output<String> folder;
 
-    public Input<String> getFolder() {
+    public Output<String> getFolder() {
         return this.folder;
     }
 
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     public IAMPolicyArgs(
-        Input<String> folder,
-        Input<String> policyData) {
+        Output<String> folder,
+        Output<String> policyData) {
         this.folder = Objects.requireNonNull(folder, "expected parameter 'folder' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
     }
 
     private IAMPolicyArgs() {
-        this.folder = Input.empty();
-        this.policyData = Input.empty();
+        this.folder = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> folder;
-        private Input<String> policyData;
+        private Output<String> folder;
+        private Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder folder(Input<String> folder) {
+        public Builder folder(Output<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
 
         public Builder folder(String folder) {
-            this.folder = Input.of(Objects.requireNonNull(folder));
+            this.folder = Output.of(Objects.requireNonNull(folder));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
         public IAMPolicyArgs build() {

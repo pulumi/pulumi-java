@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.budgets.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="groups")
-      private final @Nullable Input<List<String>> groups;
+      private final @Nullable Output<List<String>> groups;
 
-    public Input<List<String>> getGroups() {
-        return this.groups == null ? Input.empty() : this.groups;
+    public Output<List<String>> getGroups() {
+        return this.groups == null ? Output.empty() : this.groups;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="policyArn", required=true)
-      private final Input<String> policyArn;
+      private final Output<String> policyArn;
 
-    public Input<String> getPolicyArn() {
+    public Output<String> getPolicyArn() {
         return this.policyArn;
     }
 
@@ -42,10 +42,10 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="roles")
-      private final @Nullable Input<List<String>> roles;
+      private final @Nullable Output<List<String>> roles;
 
-    public Input<List<String>> getRoles() {
-        return this.roles == null ? Input.empty() : this.roles;
+    public Output<List<String>> getRoles() {
+        return this.roles == null ? Output.empty() : this.roles;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="users")
-      private final @Nullable Input<List<String>> users;
+      private final @Nullable Output<List<String>> users;
 
-    public Input<List<String>> getUsers() {
-        return this.users == null ? Input.empty() : this.users;
+    public Output<List<String>> getUsers() {
+        return this.users == null ? Output.empty() : this.users;
     }
 
     public BudgetActionDefinitionIamActionDefinitionGetArgs(
-        @Nullable Input<List<String>> groups,
-        Input<String> policyArn,
-        @Nullable Input<List<String>> roles,
-        @Nullable Input<List<String>> users) {
+        @Nullable Output<List<String>> groups,
+        Output<String> policyArn,
+        @Nullable Output<List<String>> roles,
+        @Nullable Output<List<String>> users) {
         this.groups = groups;
         this.policyArn = Objects.requireNonNull(policyArn, "expected parameter 'policyArn' to be non-null");
         this.roles = roles;
@@ -71,10 +71,10 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
     }
 
     private BudgetActionDefinitionIamActionDefinitionGetArgs() {
-        this.groups = Input.empty();
-        this.policyArn = Input.empty();
-        this.roles = Input.empty();
-        this.users = Input.empty();
+        this.groups = Output.empty();
+        this.policyArn = Output.empty();
+        this.roles = Output.empty();
+        this.users = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> groups;
-        private Input<String> policyArn;
-        private @Nullable Input<List<String>> roles;
-        private @Nullable Input<List<String>> users;
+        private @Nullable Output<List<String>> groups;
+        private Output<String> policyArn;
+        private @Nullable Output<List<String>> roles;
+        private @Nullable Output<List<String>> users;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class BudgetActionDefinitionIamActionDefinitionGetArgs extends io.p
     	      this.users = defaults.users;
         }
 
-        public Builder groups(@Nullable Input<List<String>> groups) {
+        public Builder groups(@Nullable Output<List<String>> groups) {
             this.groups = groups;
             return this;
         }
 
         public Builder groups(@Nullable List<String> groups) {
-            this.groups = Input.ofNullable(groups);
+            this.groups = Output.ofNullable(groups);
             return this;
         }
 
-        public Builder policyArn(Input<String> policyArn) {
+        public Builder policyArn(Output<String> policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
 
         public Builder policyArn(String policyArn) {
-            this.policyArn = Input.of(Objects.requireNonNull(policyArn));
+            this.policyArn = Output.of(Objects.requireNonNull(policyArn));
             return this;
         }
 
-        public Builder roles(@Nullable Input<List<String>> roles) {
+        public Builder roles(@Nullable Output<List<String>> roles) {
             this.roles = roles;
             return this;
         }
 
         public Builder roles(@Nullable List<String> roles) {
-            this.roles = Input.ofNullable(roles);
+            this.roles = Output.ofNullable(roles);
             return this;
         }
 
-        public Builder users(@Nullable Input<List<String>> users) {
+        public Builder users(@Nullable Output<List<String>> users) {
             this.users = users;
             return this;
         }
 
         public Builder users(@Nullable List<String> users) {
-            this.users = Input.ofNullable(users);
+            this.users = Output.ofNullable(users);
             return this;
         }
         public BudgetActionDefinitionIamActionDefinitionGetArgs build() {

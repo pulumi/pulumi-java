@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.enums.CloudSqlPropertiesType;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.CloudSqlCredentialArgs;
@@ -25,10 +25,10 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="credential")
-      private final @Nullable Input<CloudSqlCredentialArgs> credential;
+      private final @Nullable Output<CloudSqlCredentialArgs> credential;
 
-    public Input<CloudSqlCredentialArgs> getCredential() {
-        return this.credential == null ? Input.empty() : this.credential;
+    public Output<CloudSqlCredentialArgs> getCredential() {
+        return this.credential == null ? Output.empty() : this.credential;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<String> database;
+      private final @Nullable Output<String> database;
 
-    public Input<String> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<String> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<CloudSqlPropertiesType> type;
+      private final @Nullable Output<CloudSqlPropertiesType> type;
 
-    public Input<CloudSqlPropertiesType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<CloudSqlPropertiesType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public CloudSqlPropertiesArgs(
-        @Nullable Input<CloudSqlCredentialArgs> credential,
-        @Nullable Input<String> database,
-        @Nullable Input<String> instanceId,
-        @Nullable Input<CloudSqlPropertiesType> type) {
+        @Nullable Output<CloudSqlCredentialArgs> credential,
+        @Nullable Output<String> database,
+        @Nullable Output<String> instanceId,
+        @Nullable Output<CloudSqlPropertiesType> type) {
         this.credential = credential;
         this.database = database;
         this.instanceId = instanceId;
@@ -76,10 +76,10 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CloudSqlPropertiesArgs() {
-        this.credential = Input.empty();
-        this.database = Input.empty();
-        this.instanceId = Input.empty();
-        this.type = Input.empty();
+        this.credential = Output.empty();
+        this.database = Output.empty();
+        this.instanceId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<CloudSqlCredentialArgs> credential;
-        private @Nullable Input<String> database;
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<CloudSqlPropertiesType> type;
+        private @Nullable Output<CloudSqlCredentialArgs> credential;
+        private @Nullable Output<String> database;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<CloudSqlPropertiesType> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder credential(@Nullable Input<CloudSqlCredentialArgs> credential) {
+        public Builder credential(@Nullable Output<CloudSqlCredentialArgs> credential) {
             this.credential = credential;
             return this;
         }
 
         public Builder credential(@Nullable CloudSqlCredentialArgs credential) {
-            this.credential = Input.ofNullable(credential);
+            this.credential = Output.ofNullable(credential);
             return this;
         }
 
-        public Builder database(@Nullable Input<String> database) {
+        public Builder database(@Nullable Output<String> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable String database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder type(@Nullable Input<CloudSqlPropertiesType> type) {
+        public Builder type(@Nullable Output<CloudSqlPropertiesType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable CloudSqlPropertiesType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public CloudSqlPropertiesArgs build() {

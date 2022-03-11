@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionGetArgs extends i
      * 
      */
     @InputImport(name="groups", required=true)
-      private final Input<List<String>> groups;
+      private final Output<List<String>> groups;
 
-    public Input<List<String>> getGroups() {
+    public Output<List<String>> getGroups() {
         return this.groups;
     }
 
-    public WorkteamMemberDefinitionOidcMemberDefinitionGetArgs(Input<List<String>> groups) {
+    public WorkteamMemberDefinitionOidcMemberDefinitionGetArgs(Output<List<String>> groups) {
         this.groups = Objects.requireNonNull(groups, "expected parameter 'groups' to be non-null");
     }
 
     private WorkteamMemberDefinitionOidcMemberDefinitionGetArgs() {
-        this.groups = Input.empty();
+        this.groups = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionGetArgs extends i
     }
 
     public static final class Builder {
-        private Input<List<String>> groups;
+        private Output<List<String>> groups;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionGetArgs extends i
     	      this.groups = defaults.groups;
         }
 
-        public Builder groups(Input<List<String>> groups) {
+        public Builder groups(Output<List<String>> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
         public Builder groups(List<String> groups) {
-            this.groups = Input.of(Objects.requireNonNull(groups));
+            this.groups = Output.of(Objects.requireNonNull(groups));
             return this;
         }
         public WorkteamMemberDefinitionOidcMemberDefinitionGetArgs build() {

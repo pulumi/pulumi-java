@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvValueFromArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="valueFrom")
-      private final @Nullable Input<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom;
+      private final @Nullable Output<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom;
 
-    public Input<ServiceTemplateSpecContainerEnvValueFromArgs> getValueFrom() {
-        return this.valueFrom == null ? Input.empty() : this.valueFrom;
+    public Output<ServiceTemplateSpecContainerEnvValueFromArgs> getValueFrom() {
+        return this.valueFrom == null ? Output.empty() : this.valueFrom;
     }
 
     public ServiceTemplateSpecContainerEnvArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> value,
-        @Nullable Input<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> value,
+        @Nullable Output<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom) {
         this.name = name;
         this.value = value;
         this.valueFrom = valueFrom;
     }
 
     private ServiceTemplateSpecContainerEnvArgs() {
-        this.name = Input.empty();
-        this.value = Input.empty();
-        this.valueFrom = Input.empty();
+        this.name = Output.empty();
+        this.value = Output.empty();
+        this.valueFrom = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> value;
-        private @Nullable Input<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> value;
+        private @Nullable Output<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
     	      this.valueFrom = defaults.valueFrom;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
 
-        public Builder valueFrom(@Nullable Input<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom) {
+        public Builder valueFrom(@Nullable Output<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom) {
             this.valueFrom = valueFrom;
             return this;
         }
 
         public Builder valueFrom(@Nullable ServiceTemplateSpecContainerEnvValueFromArgs valueFrom) {
-            this.valueFrom = Input.ofNullable(valueFrom);
+            this.valueFrom = Output.ofNullable(valueFrom);
             return this;
         }
         public ServiceTemplateSpecContainerEnvArgs build() {

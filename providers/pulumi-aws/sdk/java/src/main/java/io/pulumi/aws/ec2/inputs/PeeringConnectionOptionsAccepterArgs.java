@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class PeeringConnectionOptionsAccepterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowClassicLinkToRemoteVpc")
-      private final @Nullable Input<Boolean> allowClassicLinkToRemoteVpc;
+      private final @Nullable Output<Boolean> allowClassicLinkToRemoteVpc;
 
-    public Input<Boolean> getAllowClassicLinkToRemoteVpc() {
-        return this.allowClassicLinkToRemoteVpc == null ? Input.empty() : this.allowClassicLinkToRemoteVpc;
+    public Output<Boolean> getAllowClassicLinkToRemoteVpc() {
+        return this.allowClassicLinkToRemoteVpc == null ? Output.empty() : this.allowClassicLinkToRemoteVpc;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PeeringConnectionOptionsAccepterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowRemoteVpcDnsResolution")
-      private final @Nullable Input<Boolean> allowRemoteVpcDnsResolution;
+      private final @Nullable Output<Boolean> allowRemoteVpcDnsResolution;
 
-    public Input<Boolean> getAllowRemoteVpcDnsResolution() {
-        return this.allowRemoteVpcDnsResolution == null ? Input.empty() : this.allowRemoteVpcDnsResolution;
+    public Output<Boolean> getAllowRemoteVpcDnsResolution() {
+        return this.allowRemoteVpcDnsResolution == null ? Output.empty() : this.allowRemoteVpcDnsResolution;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class PeeringConnectionOptionsAccepterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowVpcToRemoteClassicLink")
-      private final @Nullable Input<Boolean> allowVpcToRemoteClassicLink;
+      private final @Nullable Output<Boolean> allowVpcToRemoteClassicLink;
 
-    public Input<Boolean> getAllowVpcToRemoteClassicLink() {
-        return this.allowVpcToRemoteClassicLink == null ? Input.empty() : this.allowVpcToRemoteClassicLink;
+    public Output<Boolean> getAllowVpcToRemoteClassicLink() {
+        return this.allowVpcToRemoteClassicLink == null ? Output.empty() : this.allowVpcToRemoteClassicLink;
     }
 
     public PeeringConnectionOptionsAccepterArgs(
-        @Nullable Input<Boolean> allowClassicLinkToRemoteVpc,
-        @Nullable Input<Boolean> allowRemoteVpcDnsResolution,
-        @Nullable Input<Boolean> allowVpcToRemoteClassicLink) {
+        @Nullable Output<Boolean> allowClassicLinkToRemoteVpc,
+        @Nullable Output<Boolean> allowRemoteVpcDnsResolution,
+        @Nullable Output<Boolean> allowVpcToRemoteClassicLink) {
         this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
         this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
         this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
     }
 
     private PeeringConnectionOptionsAccepterArgs() {
-        this.allowClassicLinkToRemoteVpc = Input.empty();
-        this.allowRemoteVpcDnsResolution = Input.empty();
-        this.allowVpcToRemoteClassicLink = Input.empty();
+        this.allowClassicLinkToRemoteVpc = Output.empty();
+        this.allowRemoteVpcDnsResolution = Output.empty();
+        this.allowVpcToRemoteClassicLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class PeeringConnectionOptionsAccepterArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowClassicLinkToRemoteVpc;
-        private @Nullable Input<Boolean> allowRemoteVpcDnsResolution;
-        private @Nullable Input<Boolean> allowVpcToRemoteClassicLink;
+        private @Nullable Output<Boolean> allowClassicLinkToRemoteVpc;
+        private @Nullable Output<Boolean> allowRemoteVpcDnsResolution;
+        private @Nullable Output<Boolean> allowVpcToRemoteClassicLink;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class PeeringConnectionOptionsAccepterArgs extends io.pulumi.resour
     	      this.allowVpcToRemoteClassicLink = defaults.allowVpcToRemoteClassicLink;
         }
 
-        public Builder allowClassicLinkToRemoteVpc(@Nullable Input<Boolean> allowClassicLinkToRemoteVpc) {
+        public Builder allowClassicLinkToRemoteVpc(@Nullable Output<Boolean> allowClassicLinkToRemoteVpc) {
             this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
             return this;
         }
 
         public Builder allowClassicLinkToRemoteVpc(@Nullable Boolean allowClassicLinkToRemoteVpc) {
-            this.allowClassicLinkToRemoteVpc = Input.ofNullable(allowClassicLinkToRemoteVpc);
+            this.allowClassicLinkToRemoteVpc = Output.ofNullable(allowClassicLinkToRemoteVpc);
             return this;
         }
 
-        public Builder allowRemoteVpcDnsResolution(@Nullable Input<Boolean> allowRemoteVpcDnsResolution) {
+        public Builder allowRemoteVpcDnsResolution(@Nullable Output<Boolean> allowRemoteVpcDnsResolution) {
             this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
             return this;
         }
 
         public Builder allowRemoteVpcDnsResolution(@Nullable Boolean allowRemoteVpcDnsResolution) {
-            this.allowRemoteVpcDnsResolution = Input.ofNullable(allowRemoteVpcDnsResolution);
+            this.allowRemoteVpcDnsResolution = Output.ofNullable(allowRemoteVpcDnsResolution);
             return this;
         }
 
-        public Builder allowVpcToRemoteClassicLink(@Nullable Input<Boolean> allowVpcToRemoteClassicLink) {
+        public Builder allowVpcToRemoteClassicLink(@Nullable Output<Boolean> allowVpcToRemoteClassicLink) {
             this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
             return this;
         }
 
         public Builder allowVpcToRemoteClassicLink(@Nullable Boolean allowVpcToRemoteClassicLink) {
-            this.allowVpcToRemoteClassicLink = Input.ofNullable(allowVpcToRemoteClassicLink);
+            this.allowVpcToRemoteClassicLink = Output.ofNullable(allowVpcToRemoteClassicLink);
             return this;
         }
         public PeeringConnectionOptionsAccepterArgs build() {

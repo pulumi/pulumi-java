@@ -8,7 +8,6 @@ import io.pulumi.aws.sagemaker.WorkteamArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamState;
 import io.pulumi.aws.sagemaker.outputs.WorkteamMemberDefinition;
 import io.pulumi.aws.sagemaker.outputs.WorkteamNotificationConfiguration;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -198,14 +197,14 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workteam(String name, WorkteamArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/workteam:Workteam", name, args == null ? WorkteamArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sagemaker/workteam:Workteam", name, args == null ? WorkteamArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Workteam(String name, Input<String> id, @Nullable WorkteamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Workteam(String name, Output<String> id, @Nullable WorkteamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sagemaker/workteam:Workteam", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -221,7 +220,7 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Workteam get(String name, Input<String> id, @Nullable WorkteamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Workteam get(String name, Output<String> id, @Nullable WorkteamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workteam(name, id, state, options);
     }
 }

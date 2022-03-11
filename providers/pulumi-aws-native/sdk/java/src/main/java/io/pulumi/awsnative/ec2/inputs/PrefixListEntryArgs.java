@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class PrefixListEntryArgs extends io.pulumi.resources.ResourceArgs 
     public static final PrefixListEntryArgs Empty = new PrefixListEntryArgs();
 
     @InputImport(name="cidr", required=true)
-      private final Input<String> cidr;
+      private final Output<String> cidr;
 
-    public Input<String> getCidr() {
+    public Output<String> getCidr() {
         return this.cidr;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     public PrefixListEntryArgs(
-        Input<String> cidr,
-        @Nullable Input<String> description) {
+        Output<String> cidr,
+        @Nullable Output<String> description) {
         this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
         this.description = description;
     }
 
     private PrefixListEntryArgs() {
-        this.cidr = Input.empty();
-        this.description = Input.empty();
+        this.cidr = Output.empty();
+        this.description = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class PrefixListEntryArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> cidr;
-        private @Nullable Input<String> description;
+        private Output<String> cidr;
+        private @Nullable Output<String> description;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class PrefixListEntryArgs extends io.pulumi.resources.ResourceArgs 
     	      this.description = defaults.description;
         }
 
-        public Builder cidr(Input<String> cidr) {
+        public Builder cidr(Output<String> cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
         public Builder cidr(String cidr) {
-            this.cidr = Input.of(Objects.requireNonNull(cidr));
+            this.cidr = Output.of(Objects.requireNonNull(cidr));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
         public PrefixListEntryArgs build() {

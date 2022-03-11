@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.BillingDestinationArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumerDestinations")
-      private final @Nullable Input<List<BillingDestinationArgs>> consumerDestinations;
+      private final @Nullable Output<List<BillingDestinationArgs>> consumerDestinations;
 
-    public Input<List<BillingDestinationArgs>> getConsumerDestinations() {
-        return this.consumerDestinations == null ? Input.empty() : this.consumerDestinations;
+    public Output<List<BillingDestinationArgs>> getConsumerDestinations() {
+        return this.consumerDestinations == null ? Output.empty() : this.consumerDestinations;
     }
 
-    public BillingArgs(@Nullable Input<List<BillingDestinationArgs>> consumerDestinations) {
+    public BillingArgs(@Nullable Output<List<BillingDestinationArgs>> consumerDestinations) {
         this.consumerDestinations = consumerDestinations;
     }
 
     private BillingArgs() {
-        this.consumerDestinations = Input.empty();
+        this.consumerDestinations = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BillingDestinationArgs>> consumerDestinations;
+        private @Nullable Output<List<BillingDestinationArgs>> consumerDestinations;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.consumerDestinations = defaults.consumerDestinations;
         }
 
-        public Builder consumerDestinations(@Nullable Input<List<BillingDestinationArgs>> consumerDestinations) {
+        public Builder consumerDestinations(@Nullable Output<List<BillingDestinationArgs>> consumerDestinations) {
             this.consumerDestinations = consumerDestinations;
             return this;
         }
 
         public Builder consumerDestinations(@Nullable List<BillingDestinationArgs> consumerDestinations) {
-            this.consumerDestinations = Input.ofNullable(consumerDestinations);
+            this.consumerDestinations = Output.ofNullable(consumerDestinations);
             return this;
         }
         public BillingArgs build() {

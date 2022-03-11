@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
     public static final DetectorModelSqsArgs Empty = new DetectorModelSqsArgs();
 
     @InputImport(name="payload")
-      private final @Nullable Input<DetectorModelPayloadArgs> payload;
+      private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Input<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<DetectorModelPayloadArgs> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     /**
@@ -28,9 +28,9 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="queueUrl", required=true)
-      private final Input<String> queueUrl;
+      private final Output<String> queueUrl;
 
-    public Input<String> getQueueUrl() {
+    public Output<String> getQueueUrl() {
         return this.queueUrl;
     }
 
@@ -39,25 +39,25 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="useBase64")
-      private final @Nullable Input<Boolean> useBase64;
+      private final @Nullable Output<Boolean> useBase64;
 
-    public Input<Boolean> getUseBase64() {
-        return this.useBase64 == null ? Input.empty() : this.useBase64;
+    public Output<Boolean> getUseBase64() {
+        return this.useBase64 == null ? Output.empty() : this.useBase64;
     }
 
     public DetectorModelSqsArgs(
-        @Nullable Input<DetectorModelPayloadArgs> payload,
-        Input<String> queueUrl,
-        @Nullable Input<Boolean> useBase64) {
+        @Nullable Output<DetectorModelPayloadArgs> payload,
+        Output<String> queueUrl,
+        @Nullable Output<Boolean> useBase64) {
         this.payload = payload;
         this.queueUrl = Objects.requireNonNull(queueUrl, "expected parameter 'queueUrl' to be non-null");
         this.useBase64 = useBase64;
     }
 
     private DetectorModelSqsArgs() {
-        this.payload = Input.empty();
-        this.queueUrl = Input.empty();
-        this.useBase64 = Input.empty();
+        this.payload = Output.empty();
+        this.queueUrl = Output.empty();
+        this.useBase64 = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<DetectorModelPayloadArgs> payload;
-        private Input<String> queueUrl;
-        private @Nullable Input<Boolean> useBase64;
+        private @Nullable Output<DetectorModelPayloadArgs> payload;
+        private Output<String> queueUrl;
+        private @Nullable Output<Boolean> useBase64;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
     	      this.useBase64 = defaults.useBase64;
         }
 
-        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
 
-        public Builder queueUrl(Input<String> queueUrl) {
+        public Builder queueUrl(Output<String> queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
 
         public Builder queueUrl(String queueUrl) {
-            this.queueUrl = Input.of(Objects.requireNonNull(queueUrl));
+            this.queueUrl = Output.of(Objects.requireNonNull(queueUrl));
             return this;
         }
 
-        public Builder useBase64(@Nullable Input<Boolean> useBase64) {
+        public Builder useBase64(@Nullable Output<Boolean> useBase64) {
             this.useBase64 = useBase64;
             return this;
         }
 
         public Builder useBase64(@Nullable Boolean useBase64) {
-            this.useBase64 = Input.ofNullable(useBase64);
+            this.useBase64 = Output.ofNullable(useBase64);
             return this;
         }
         public DetectorModelSqsArgs build() {

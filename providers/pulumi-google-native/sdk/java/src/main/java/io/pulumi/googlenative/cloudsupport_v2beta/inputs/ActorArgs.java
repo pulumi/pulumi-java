@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsupport_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ActorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ActorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     public ActorArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> email) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> email) {
         this.displayName = displayName;
         this.email = email;
     }
 
     private ActorArgs() {
-        this.displayName = Input.empty();
-        this.email = Input.empty();
+        this.displayName = Output.empty();
+        this.email = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ActorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> email;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> email;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ActorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.email = defaults.email;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
         public ActorArgs build() {

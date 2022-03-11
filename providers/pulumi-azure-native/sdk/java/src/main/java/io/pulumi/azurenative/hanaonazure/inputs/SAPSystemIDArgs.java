@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gid")
-      private final @Nullable Input<String> gid;
+      private final @Nullable Output<String> gid;
 
-    public Input<String> getGid() {
-        return this.gid == null ? Input.empty() : this.gid;
+    public Output<String> getGid() {
+        return this.gid == null ? Output.empty() : this.gid;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sid")
-      private final @Nullable Input<String> sid;
+      private final @Nullable Output<String> sid;
 
-    public Input<String> getSid() {
-        return this.sid == null ? Input.empty() : this.sid;
+    public Output<String> getSid() {
+        return this.sid == null ? Output.empty() : this.sid;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public SAPSystemIDArgs(
-        @Nullable Input<String> gid,
-        @Nullable Input<String> sid,
-        @Nullable Input<String> uid,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> gid,
+        @Nullable Output<String> sid,
+        @Nullable Output<String> uid,
+        @Nullable Output<String> username) {
         this.gid = gid;
         this.sid = sid;
         this.uid = uid;
@@ -74,10 +74,10 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SAPSystemIDArgs() {
-        this.gid = Input.empty();
-        this.sid = Input.empty();
-        this.uid = Input.empty();
-        this.username = Input.empty();
+        this.gid = Output.empty();
+        this.sid = Output.empty();
+        this.uid = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gid;
-        private @Nullable Input<String> sid;
-        private @Nullable Input<String> uid;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> gid;
+        private @Nullable Output<String> sid;
+        private @Nullable Output<String> uid;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder gid(@Nullable Input<String> gid) {
+        public Builder gid(@Nullable Output<String> gid) {
             this.gid = gid;
             return this;
         }
 
         public Builder gid(@Nullable String gid) {
-            this.gid = Input.ofNullable(gid);
+            this.gid = Output.ofNullable(gid);
             return this;
         }
 
-        public Builder sid(@Nullable Input<String> sid) {
+        public Builder sid(@Nullable Output<String> sid) {
             this.sid = sid;
             return this;
         }
 
         public Builder sid(@Nullable String sid) {
-            this.sid = Input.ofNullable(sid);
+            this.sid = Output.ofNullable(sid);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public SAPSystemIDArgs build() {

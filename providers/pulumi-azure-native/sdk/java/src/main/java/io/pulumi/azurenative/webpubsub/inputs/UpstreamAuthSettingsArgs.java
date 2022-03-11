@@ -6,7 +6,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 import io.pulumi.azurenative.webpubsub.enums.UpstreamAuthType;
 import io.pulumi.azurenative.webpubsub.inputs.ManagedIdentitySettingsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class UpstreamAuthSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="managedIdentity")
-      private final @Nullable Input<ManagedIdentitySettingsArgs> managedIdentity;
+      private final @Nullable Output<ManagedIdentitySettingsArgs> managedIdentity;
 
-    public Input<ManagedIdentitySettingsArgs> getManagedIdentity() {
-        return this.managedIdentity == null ? Input.empty() : this.managedIdentity;
+    public Output<ManagedIdentitySettingsArgs> getManagedIdentity() {
+        return this.managedIdentity == null ? Output.empty() : this.managedIdentity;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class UpstreamAuthSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,UpstreamAuthType>> type;
+      private final @Nullable Output<Either<String,UpstreamAuthType>> type;
 
-    public Input<Either<String,UpstreamAuthType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,UpstreamAuthType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public UpstreamAuthSettingsArgs(
-        @Nullable Input<ManagedIdentitySettingsArgs> managedIdentity,
-        @Nullable Input<Either<String,UpstreamAuthType>> type) {
+        @Nullable Output<ManagedIdentitySettingsArgs> managedIdentity,
+        @Nullable Output<Either<String,UpstreamAuthType>> type) {
         this.managedIdentity = managedIdentity;
         this.type = type;
     }
 
     private UpstreamAuthSettingsArgs() {
-        this.managedIdentity = Input.empty();
-        this.type = Input.empty();
+        this.managedIdentity = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class UpstreamAuthSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<ManagedIdentitySettingsArgs> managedIdentity;
-        private @Nullable Input<Either<String,UpstreamAuthType>> type;
+        private @Nullable Output<ManagedIdentitySettingsArgs> managedIdentity;
+        private @Nullable Output<Either<String,UpstreamAuthType>> type;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class UpstreamAuthSettingsArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder managedIdentity(@Nullable Input<ManagedIdentitySettingsArgs> managedIdentity) {
+        public Builder managedIdentity(@Nullable Output<ManagedIdentitySettingsArgs> managedIdentity) {
             this.managedIdentity = managedIdentity;
             return this;
         }
 
         public Builder managedIdentity(@Nullable ManagedIdentitySettingsArgs managedIdentity) {
-            this.managedIdentity = Input.ofNullable(managedIdentity);
+            this.managedIdentity = Output.ofNullable(managedIdentity);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,UpstreamAuthType>> type) {
+        public Builder type(@Nullable Output<Either<String,UpstreamAuthType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,UpstreamAuthType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public UpstreamAuthSettingsArgs build() {

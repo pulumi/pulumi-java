@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentMessageTextGetArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class CxPageEntryFulfillmentMessageGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<CxPageEntryFulfillmentMessageTextGetArgs> text;
+      private final @Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text;
 
-    public Input<CxPageEntryFulfillmentMessageTextGetArgs> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<CxPageEntryFulfillmentMessageTextGetArgs> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
-    public CxPageEntryFulfillmentMessageGetArgs(@Nullable Input<CxPageEntryFulfillmentMessageTextGetArgs> text) {
+    public CxPageEntryFulfillmentMessageGetArgs(@Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text) {
         this.text = text;
     }
 
     private CxPageEntryFulfillmentMessageGetArgs() {
-        this.text = Input.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CxPageEntryFulfillmentMessageGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<CxPageEntryFulfillmentMessageTextGetArgs> text;
+        private @Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CxPageEntryFulfillmentMessageGetArgs extends io.pulumi.resour
     	      this.text = defaults.text;
         }
 
-        public Builder text(@Nullable Input<CxPageEntryFulfillmentMessageTextGetArgs> text) {
+        public Builder text(@Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable CxPageEntryFulfillmentMessageTextGetArgs text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
         public CxPageEntryFulfillmentMessageGetArgs build() {

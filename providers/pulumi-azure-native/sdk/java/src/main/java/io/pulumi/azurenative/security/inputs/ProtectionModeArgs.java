@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exe")
-      private final @Nullable Input<String> exe;
+      private final @Nullable Output<String> exe;
 
-    public Input<String> getExe() {
-        return this.exe == null ? Input.empty() : this.exe;
+    public Output<String> getExe() {
+        return this.exe == null ? Output.empty() : this.exe;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executable")
-      private final @Nullable Input<String> executable;
+      private final @Nullable Output<String> executable;
 
-    public Input<String> getExecutable() {
-        return this.executable == null ? Input.empty() : this.executable;
+    public Output<String> getExecutable() {
+        return this.executable == null ? Output.empty() : this.executable;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msi")
-      private final @Nullable Input<String> msi;
+      private final @Nullable Output<String> msi;
 
-    public Input<String> getMsi() {
-        return this.msi == null ? Input.empty() : this.msi;
+    public Output<String> getMsi() {
+        return this.msi == null ? Output.empty() : this.msi;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="script")
-      private final @Nullable Input<String> script;
+      private final @Nullable Output<String> script;
 
-    public Input<String> getScript() {
-        return this.script == null ? Input.empty() : this.script;
+    public Output<String> getScript() {
+        return this.script == null ? Output.empty() : this.script;
     }
 
     public ProtectionModeArgs(
-        @Nullable Input<String> exe,
-        @Nullable Input<String> executable,
-        @Nullable Input<String> msi,
-        @Nullable Input<String> script) {
+        @Nullable Output<String> exe,
+        @Nullable Output<String> executable,
+        @Nullable Output<String> msi,
+        @Nullable Output<String> script) {
         this.exe = exe;
         this.executable = executable;
         this.msi = msi;
@@ -74,10 +74,10 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProtectionModeArgs() {
-        this.exe = Input.empty();
-        this.executable = Input.empty();
-        this.msi = Input.empty();
-        this.script = Input.empty();
+        this.exe = Output.empty();
+        this.executable = Output.empty();
+        this.msi = Output.empty();
+        this.script = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> exe;
-        private @Nullable Input<String> executable;
-        private @Nullable Input<String> msi;
-        private @Nullable Input<String> script;
+        private @Nullable Output<String> exe;
+        private @Nullable Output<String> executable;
+        private @Nullable Output<String> msi;
+        private @Nullable Output<String> script;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.script = defaults.script;
         }
 
-        public Builder exe(@Nullable Input<String> exe) {
+        public Builder exe(@Nullable Output<String> exe) {
             this.exe = exe;
             return this;
         }
 
         public Builder exe(@Nullable String exe) {
-            this.exe = Input.ofNullable(exe);
+            this.exe = Output.ofNullable(exe);
             return this;
         }
 
-        public Builder executable(@Nullable Input<String> executable) {
+        public Builder executable(@Nullable Output<String> executable) {
             this.executable = executable;
             return this;
         }
 
         public Builder executable(@Nullable String executable) {
-            this.executable = Input.ofNullable(executable);
+            this.executable = Output.ofNullable(executable);
             return this;
         }
 
-        public Builder msi(@Nullable Input<String> msi) {
+        public Builder msi(@Nullable Output<String> msi) {
             this.msi = msi;
             return this;
         }
 
         public Builder msi(@Nullable String msi) {
-            this.msi = Input.ofNullable(msi);
+            this.msi = Output.ofNullable(msi);
             return this;
         }
 
-        public Builder script(@Nullable Input<String> script) {
+        public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
 
         public Builder script(@Nullable String script) {
-            this.script = Input.ofNullable(script);
+            this.script = Output.ofNullable(script);
             return this;
         }
         public ProtectionModeArgs build() {

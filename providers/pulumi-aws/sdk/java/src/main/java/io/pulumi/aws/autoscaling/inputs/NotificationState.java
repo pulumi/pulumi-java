@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupNames")
-      private final @Nullable Input<List<String>> groupNames;
+      private final @Nullable Output<List<String>> groupNames;
 
-    public Input<List<String>> getGroupNames() {
-        return this.groupNames == null ? Input.empty() : this.groupNames;
+    public Output<List<String>> getGroupNames() {
+        return this.groupNames == null ? Output.empty() : this.groupNames;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notifications")
-      private final @Nullable Input<List<String>> notifications;
+      private final @Nullable Output<List<String>> notifications;
 
-    public Input<List<String>> getNotifications() {
-        return this.notifications == null ? Input.empty() : this.notifications;
+    public Output<List<String>> getNotifications() {
+        return this.notifications == null ? Output.empty() : this.notifications;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicArn")
-      private final @Nullable Input<String> topicArn;
+      private final @Nullable Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
-        return this.topicArn == null ? Input.empty() : this.topicArn;
+    public Output<String> getTopicArn() {
+        return this.topicArn == null ? Output.empty() : this.topicArn;
     }
 
     public NotificationState(
-        @Nullable Input<List<String>> groupNames,
-        @Nullable Input<List<String>> notifications,
-        @Nullable Input<String> topicArn) {
+        @Nullable Output<List<String>> groupNames,
+        @Nullable Output<List<String>> notifications,
+        @Nullable Output<String> topicArn) {
         this.groupNames = groupNames;
         this.notifications = notifications;
         this.topicArn = topicArn;
     }
 
     private NotificationState() {
-        this.groupNames = Input.empty();
-        this.notifications = Input.empty();
-        this.topicArn = Input.empty();
+        this.groupNames = Output.empty();
+        this.notifications = Output.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> groupNames;
-        private @Nullable Input<List<String>> notifications;
-        private @Nullable Input<String> topicArn;
+        private @Nullable Output<List<String>> groupNames;
+        private @Nullable Output<List<String>> notifications;
+        private @Nullable Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder groupNames(@Nullable Input<List<String>> groupNames) {
+        public Builder groupNames(@Nullable Output<List<String>> groupNames) {
             this.groupNames = groupNames;
             return this;
         }
 
         public Builder groupNames(@Nullable List<String> groupNames) {
-            this.groupNames = Input.ofNullable(groupNames);
+            this.groupNames = Output.ofNullable(groupNames);
             return this;
         }
 
-        public Builder notifications(@Nullable Input<List<String>> notifications) {
+        public Builder notifications(@Nullable Output<List<String>> notifications) {
             this.notifications = notifications;
             return this;
         }
 
         public Builder notifications(@Nullable List<String> notifications) {
-            this.notifications = Input.ofNullable(notifications);
+            this.notifications = Output.ofNullable(notifications);
             return this;
         }
 
-        public Builder topicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Input.ofNullable(topicArn);
+            this.topicArn = Output.ofNullable(topicArn);
             return this;
         }
         public NotificationState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-      private final Input<String> dataAccountType;
+      private final Output<String> dataAccountType;
 
-    public Input<String> getDataAccountType() {
+    public Output<String> getDataAccountType() {
         return this.dataAccountType;
     }
 
@@ -35,9 +35,9 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupId", required=true)
-      private final Input<String> resourceGroupId;
+      private final Output<String> resourceGroupId;
 
-    public Input<String> getResourceGroupId() {
+    public Output<String> getResourceGroupId() {
         return this.resourceGroupId;
     }
 
@@ -46,10 +46,10 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sharePassword")
-      private final @Nullable Input<String> sharePassword;
+      private final @Nullable Output<String> sharePassword;
 
-    public Input<String> getSharePassword() {
-        return this.sharePassword == null ? Input.empty() : this.sharePassword;
+    public Output<String> getSharePassword() {
+        return this.sharePassword == null ? Output.empty() : this.sharePassword;
     }
 
     /**
@@ -57,28 +57,28 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stagingStorageAccountId", required=true)
-      private final Input<String> stagingStorageAccountId;
+      private final Output<String> stagingStorageAccountId;
 
-    public Input<String> getStagingStorageAccountId() {
+    public Output<String> getStagingStorageAccountId() {
         return this.stagingStorageAccountId;
     }
 
     public ManagedDiskDetailsArgs(
-        Input<String> dataAccountType,
-        Input<String> resourceGroupId,
-        @Nullable Input<String> sharePassword,
-        Input<String> stagingStorageAccountId) {
-        this.dataAccountType = dataAccountType == null ? Input.ofNullable("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        Output<String> dataAccountType,
+        Output<String> resourceGroupId,
+        @Nullable Output<String> sharePassword,
+        Output<String> stagingStorageAccountId) {
+        this.dataAccountType = dataAccountType == null ? Output.ofNullable("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
         this.resourceGroupId = Objects.requireNonNull(resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
         this.sharePassword = sharePassword;
         this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId, "expected parameter 'stagingStorageAccountId' to be non-null");
     }
 
     private ManagedDiskDetailsArgs() {
-        this.dataAccountType = Input.empty();
-        this.resourceGroupId = Input.empty();
-        this.sharePassword = Input.empty();
-        this.stagingStorageAccountId = Input.empty();
+        this.dataAccountType = Output.empty();
+        this.resourceGroupId = Output.empty();
+        this.sharePassword = Output.empty();
+        this.stagingStorageAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> dataAccountType;
-        private Input<String> resourceGroupId;
-        private @Nullable Input<String> sharePassword;
-        private Input<String> stagingStorageAccountId;
+        private Output<String> dataAccountType;
+        private Output<String> resourceGroupId;
+        private @Nullable Output<String> sharePassword;
+        private Output<String> stagingStorageAccountId;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
     	      this.stagingStorageAccountId = defaults.stagingStorageAccountId;
         }
 
-        public Builder dataAccountType(Input<String> dataAccountType) {
+        public Builder dataAccountType(Output<String> dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
         public Builder dataAccountType(String dataAccountType) {
-            this.dataAccountType = Input.of(Objects.requireNonNull(dataAccountType));
+            this.dataAccountType = Output.of(Objects.requireNonNull(dataAccountType));
             return this;
         }
 
-        public Builder resourceGroupId(Input<String> resourceGroupId) {
+        public Builder resourceGroupId(Output<String> resourceGroupId) {
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
 
         public Builder resourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = Input.of(Objects.requireNonNull(resourceGroupId));
+            this.resourceGroupId = Output.of(Objects.requireNonNull(resourceGroupId));
             return this;
         }
 
-        public Builder sharePassword(@Nullable Input<String> sharePassword) {
+        public Builder sharePassword(@Nullable Output<String> sharePassword) {
             this.sharePassword = sharePassword;
             return this;
         }
 
         public Builder sharePassword(@Nullable String sharePassword) {
-            this.sharePassword = Input.ofNullable(sharePassword);
+            this.sharePassword = Output.ofNullable(sharePassword);
             return this;
         }
 
-        public Builder stagingStorageAccountId(Input<String> stagingStorageAccountId) {
+        public Builder stagingStorageAccountId(Output<String> stagingStorageAccountId) {
             this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId);
             return this;
         }
 
         public Builder stagingStorageAccountId(String stagingStorageAccountId) {
-            this.stagingStorageAccountId = Input.of(Objects.requireNonNull(stagingStorageAccountId));
+            this.stagingStorageAccountId = Output.of(Objects.requireNonNull(stagingStorageAccountId));
             return this;
         }
         public ManagedDiskDetailsArgs build() {

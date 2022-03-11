@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.MaxPodsConstraintArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.NodeConfigArgs;
@@ -33,10 +33,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscaling")
-      private final @Nullable Input<NodePoolAutoscalingArgs> autoscaling;
+      private final @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
 
-    public Input<NodePoolAutoscalingArgs> getAutoscaling() {
-        return this.autoscaling == null ? Input.empty() : this.autoscaling;
+    public Output<NodePoolAutoscalingArgs> getAutoscaling() {
+        return this.autoscaling == null ? Output.empty() : this.autoscaling;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<StatusConditionArgs>> conditions;
+      private final @Nullable Output<List<StatusConditionArgs>> conditions;
 
-    public Input<List<StatusConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<StatusConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<NodeConfigArgs> config;
+      private final @Nullable Output<NodeConfigArgs> config;
 
-    public Input<NodeConfigArgs> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<NodeConfigArgs> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialNodeCount")
-      private final @Nullable Input<Integer> initialNodeCount;
+      private final @Nullable Output<Integer> initialNodeCount;
 
-    public Input<Integer> getInitialNodeCount() {
-        return this.initialNodeCount == null ? Input.empty() : this.initialNodeCount;
+    public Output<Integer> getInitialNodeCount() {
+        return this.initialNodeCount == null ? Output.empty() : this.initialNodeCount;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations")
-      private final @Nullable Input<List<String>> locations;
+      private final @Nullable Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
-        return this.locations == null ? Input.empty() : this.locations;
+    public Output<List<String>> getLocations() {
+        return this.locations == null ? Output.empty() : this.locations;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="management")
-      private final @Nullable Input<NodeManagementArgs> management;
+      private final @Nullable Output<NodeManagementArgs> management;
 
-    public Input<NodeManagementArgs> getManagement() {
-        return this.management == null ? Input.empty() : this.management;
+    public Output<NodeManagementArgs> getManagement() {
+        return this.management == null ? Output.empty() : this.management;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxPodsConstraint")
-      private final @Nullable Input<MaxPodsConstraintArgs> maxPodsConstraint;
+      private final @Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint;
 
-    public Input<MaxPodsConstraintArgs> getMaxPodsConstraint() {
-        return this.maxPodsConstraint == null ? Input.empty() : this.maxPodsConstraint;
+    public Output<MaxPodsConstraintArgs> getMaxPodsConstraint() {
+        return this.maxPodsConstraint == null ? Output.empty() : this.maxPodsConstraint;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-      private final @Nullable Input<NodeNetworkConfigArgs> networkConfig;
+      private final @Nullable Output<NodeNetworkConfigArgs> networkConfig;
 
-    public Input<NodeNetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Input.empty() : this.networkConfig;
+    public Output<NodeNetworkConfigArgs> getNetworkConfig() {
+        return this.networkConfig == null ? Output.empty() : this.networkConfig;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementPolicy")
-      private final @Nullable Input<PlacementPolicyArgs> placementPolicy;
+      private final @Nullable Output<PlacementPolicyArgs> placementPolicy;
 
-    public Input<PlacementPolicyArgs> getPlacementPolicy() {
-        return this.placementPolicy == null ? Input.empty() : this.placementPolicy;
+    public Output<PlacementPolicyArgs> getPlacementPolicy() {
+        return this.placementPolicy == null ? Output.empty() : this.placementPolicy;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upgradeSettings")
-      private final @Nullable Input<UpgradeSettingsArgs> upgradeSettings;
+      private final @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
 
-    public Input<UpgradeSettingsArgs> getUpgradeSettings() {
-        return this.upgradeSettings == null ? Input.empty() : this.upgradeSettings;
+    public Output<UpgradeSettingsArgs> getUpgradeSettings() {
+        return this.upgradeSettings == null ? Output.empty() : this.upgradeSettings;
     }
 
     /**
@@ -154,25 +154,25 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public NodePoolArgs(
-        @Nullable Input<NodePoolAutoscalingArgs> autoscaling,
-        @Nullable Input<List<StatusConditionArgs>> conditions,
-        @Nullable Input<NodeConfigArgs> config,
-        @Nullable Input<Integer> initialNodeCount,
-        @Nullable Input<List<String>> locations,
-        @Nullable Input<NodeManagementArgs> management,
-        @Nullable Input<MaxPodsConstraintArgs> maxPodsConstraint,
-        @Nullable Input<String> name,
-        @Nullable Input<NodeNetworkConfigArgs> networkConfig,
-        @Nullable Input<PlacementPolicyArgs> placementPolicy,
-        @Nullable Input<UpgradeSettingsArgs> upgradeSettings,
-        @Nullable Input<String> version) {
+        @Nullable Output<NodePoolAutoscalingArgs> autoscaling,
+        @Nullable Output<List<StatusConditionArgs>> conditions,
+        @Nullable Output<NodeConfigArgs> config,
+        @Nullable Output<Integer> initialNodeCount,
+        @Nullable Output<List<String>> locations,
+        @Nullable Output<NodeManagementArgs> management,
+        @Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint,
+        @Nullable Output<String> name,
+        @Nullable Output<NodeNetworkConfigArgs> networkConfig,
+        @Nullable Output<PlacementPolicyArgs> placementPolicy,
+        @Nullable Output<UpgradeSettingsArgs> upgradeSettings,
+        @Nullable Output<String> version) {
         this.autoscaling = autoscaling;
         this.conditions = conditions;
         this.config = config;
@@ -188,18 +188,18 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodePoolArgs() {
-        this.autoscaling = Input.empty();
-        this.conditions = Input.empty();
-        this.config = Input.empty();
-        this.initialNodeCount = Input.empty();
-        this.locations = Input.empty();
-        this.management = Input.empty();
-        this.maxPodsConstraint = Input.empty();
-        this.name = Input.empty();
-        this.networkConfig = Input.empty();
-        this.placementPolicy = Input.empty();
-        this.upgradeSettings = Input.empty();
-        this.version = Input.empty();
+        this.autoscaling = Output.empty();
+        this.conditions = Output.empty();
+        this.config = Output.empty();
+        this.initialNodeCount = Output.empty();
+        this.locations = Output.empty();
+        this.management = Output.empty();
+        this.maxPodsConstraint = Output.empty();
+        this.name = Output.empty();
+        this.networkConfig = Output.empty();
+        this.placementPolicy = Output.empty();
+        this.upgradeSettings = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -211,18 +211,18 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<NodePoolAutoscalingArgs> autoscaling;
-        private @Nullable Input<List<StatusConditionArgs>> conditions;
-        private @Nullable Input<NodeConfigArgs> config;
-        private @Nullable Input<Integer> initialNodeCount;
-        private @Nullable Input<List<String>> locations;
-        private @Nullable Input<NodeManagementArgs> management;
-        private @Nullable Input<MaxPodsConstraintArgs> maxPodsConstraint;
-        private @Nullable Input<String> name;
-        private @Nullable Input<NodeNetworkConfigArgs> networkConfig;
-        private @Nullable Input<PlacementPolicyArgs> placementPolicy;
-        private @Nullable Input<UpgradeSettingsArgs> upgradeSettings;
-        private @Nullable Input<String> version;
+        private @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
+        private @Nullable Output<List<StatusConditionArgs>> conditions;
+        private @Nullable Output<NodeConfigArgs> config;
+        private @Nullable Output<Integer> initialNodeCount;
+        private @Nullable Output<List<String>> locations;
+        private @Nullable Output<NodeManagementArgs> management;
+        private @Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint;
+        private @Nullable Output<String> name;
+        private @Nullable Output<NodeNetworkConfigArgs> networkConfig;
+        private @Nullable Output<PlacementPolicyArgs> placementPolicy;
+        private @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -244,123 +244,123 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder autoscaling(@Nullable Input<NodePoolAutoscalingArgs> autoscaling) {
+        public Builder autoscaling(@Nullable Output<NodePoolAutoscalingArgs> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
         public Builder autoscaling(@Nullable NodePoolAutoscalingArgs autoscaling) {
-            this.autoscaling = Input.ofNullable(autoscaling);
+            this.autoscaling = Output.ofNullable(autoscaling);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<StatusConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<StatusConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<StatusConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder config(@Nullable Input<NodeConfigArgs> config) {
+        public Builder config(@Nullable Output<NodeConfigArgs> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable NodeConfigArgs config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder initialNodeCount(@Nullable Input<Integer> initialNodeCount) {
+        public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
             this.initialNodeCount = initialNodeCount;
             return this;
         }
 
         public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
-            this.initialNodeCount = Input.ofNullable(initialNodeCount);
+            this.initialNodeCount = Output.ofNullable(initialNodeCount);
             return this;
         }
 
-        public Builder locations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Input.ofNullable(locations);
+            this.locations = Output.ofNullable(locations);
             return this;
         }
 
-        public Builder management(@Nullable Input<NodeManagementArgs> management) {
+        public Builder management(@Nullable Output<NodeManagementArgs> management) {
             this.management = management;
             return this;
         }
 
         public Builder management(@Nullable NodeManagementArgs management) {
-            this.management = Input.ofNullable(management);
+            this.management = Output.ofNullable(management);
             return this;
         }
 
-        public Builder maxPodsConstraint(@Nullable Input<MaxPodsConstraintArgs> maxPodsConstraint) {
+        public Builder maxPodsConstraint(@Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint) {
             this.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
 
         public Builder maxPodsConstraint(@Nullable MaxPodsConstraintArgs maxPodsConstraint) {
-            this.maxPodsConstraint = Input.ofNullable(maxPodsConstraint);
+            this.maxPodsConstraint = Output.ofNullable(maxPodsConstraint);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkConfig(@Nullable Input<NodeNetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<NodeNetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
         public Builder networkConfig(@Nullable NodeNetworkConfigArgs networkConfig) {
-            this.networkConfig = Input.ofNullable(networkConfig);
+            this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder placementPolicy(@Nullable Input<PlacementPolicyArgs> placementPolicy) {
+        public Builder placementPolicy(@Nullable Output<PlacementPolicyArgs> placementPolicy) {
             this.placementPolicy = placementPolicy;
             return this;
         }
 
         public Builder placementPolicy(@Nullable PlacementPolicyArgs placementPolicy) {
-            this.placementPolicy = Input.ofNullable(placementPolicy);
+            this.placementPolicy = Output.ofNullable(placementPolicy);
             return this;
         }
 
-        public Builder upgradeSettings(@Nullable Input<UpgradeSettingsArgs> upgradeSettings) {
+        public Builder upgradeSettings(@Nullable Output<UpgradeSettingsArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
 
         public Builder upgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Input.ofNullable(upgradeSettings);
+            this.upgradeSettings = Output.ofNullable(upgradeSettings);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public NodePoolArgs build() {

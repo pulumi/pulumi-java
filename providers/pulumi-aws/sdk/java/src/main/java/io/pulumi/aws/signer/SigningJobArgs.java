@@ -5,7 +5,7 @@ package io.pulumi.aws.signer;
 
 import io.pulumi.aws.signer.inputs.SigningJobDestinationArgs;
 import io.pulumi.aws.signer.inputs.SigningJobSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<SigningJobDestinationArgs> destination;
+      private final Output<SigningJobDestinationArgs> destination;
 
-    public Input<SigningJobDestinationArgs> getDestination() {
+    public Output<SigningJobDestinationArgs> getDestination() {
         return this.destination;
     }
 
@@ -33,10 +33,10 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreSigningJobFailure")
-      private final @Nullable Input<Boolean> ignoreSigningJobFailure;
+      private final @Nullable Output<Boolean> ignoreSigningJobFailure;
 
-    public Input<Boolean> getIgnoreSigningJobFailure() {
-        return this.ignoreSigningJobFailure == null ? Input.empty() : this.ignoreSigningJobFailure;
+    public Output<Boolean> getIgnoreSigningJobFailure() {
+        return this.ignoreSigningJobFailure == null ? Output.empty() : this.ignoreSigningJobFailure;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -55,17 +55,17 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<SigningJobSourceArgs> source;
+      private final Output<SigningJobSourceArgs> source;
 
-    public Input<SigningJobSourceArgs> getSource() {
+    public Output<SigningJobSourceArgs> getSource() {
         return this.source;
     }
 
     public SigningJobArgs(
-        Input<SigningJobDestinationArgs> destination,
-        @Nullable Input<Boolean> ignoreSigningJobFailure,
-        Input<String> profileName,
-        Input<SigningJobSourceArgs> source) {
+        Output<SigningJobDestinationArgs> destination,
+        @Nullable Output<Boolean> ignoreSigningJobFailure,
+        Output<String> profileName,
+        Output<SigningJobSourceArgs> source) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.ignoreSigningJobFailure = ignoreSigningJobFailure;
         this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
@@ -73,10 +73,10 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SigningJobArgs() {
-        this.destination = Input.empty();
-        this.ignoreSigningJobFailure = Input.empty();
-        this.profileName = Input.empty();
-        this.source = Input.empty();
+        this.destination = Output.empty();
+        this.ignoreSigningJobFailure = Output.empty();
+        this.profileName = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<SigningJobDestinationArgs> destination;
-        private @Nullable Input<Boolean> ignoreSigningJobFailure;
-        private Input<String> profileName;
-        private Input<SigningJobSourceArgs> source;
+        private Output<SigningJobDestinationArgs> destination;
+        private @Nullable Output<Boolean> ignoreSigningJobFailure;
+        private Output<String> profileName;
+        private Output<SigningJobSourceArgs> source;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder destination(Input<SigningJobDestinationArgs> destination) {
+        public Builder destination(Output<SigningJobDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(SigningJobDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder ignoreSigningJobFailure(@Nullable Input<Boolean> ignoreSigningJobFailure) {
+        public Builder ignoreSigningJobFailure(@Nullable Output<Boolean> ignoreSigningJobFailure) {
             this.ignoreSigningJobFailure = ignoreSigningJobFailure;
             return this;
         }
 
         public Builder ignoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
-            this.ignoreSigningJobFailure = Input.ofNullable(ignoreSigningJobFailure);
+            this.ignoreSigningJobFailure = Output.ofNullable(ignoreSigningJobFailure);
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder source(Input<SigningJobSourceArgs> source) {
+        public Builder source(Output<SigningJobSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(SigningJobSourceArgs source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
         public SigningJobArgs build() {

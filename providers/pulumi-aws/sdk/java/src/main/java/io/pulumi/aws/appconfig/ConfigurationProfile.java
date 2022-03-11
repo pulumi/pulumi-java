@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appconfig.ConfigurationProfileArgs;
 import io.pulumi.aws.appconfig.inputs.ConfigurationProfileState;
 import io.pulumi.aws.appconfig.outputs.ConfigurationProfileValidator;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -211,14 +210,14 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationProfile(String name, ConfigurationProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appconfig/configurationProfile:ConfigurationProfile", name, args == null ? ConfigurationProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:appconfig/configurationProfile:ConfigurationProfile", name, args == null ? ConfigurationProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConfigurationProfile(String name, Input<String> id, @Nullable ConfigurationProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConfigurationProfile(String name, Output<String> id, @Nullable ConfigurationProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:appconfig/configurationProfile:ConfigurationProfile", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -234,7 +233,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigurationProfile get(String name, Input<String> id, @Nullable ConfigurationProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigurationProfile get(String name, Output<String> id, @Nullable ConfigurationProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationProfile(name, id, state, options);
     }
 }

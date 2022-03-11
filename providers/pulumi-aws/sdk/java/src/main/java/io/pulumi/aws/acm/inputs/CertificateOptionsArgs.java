@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.acm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class CertificateOptionsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="certificateTransparencyLoggingPreference")
-      private final @Nullable Input<String> certificateTransparencyLoggingPreference;
+      private final @Nullable Output<String> certificateTransparencyLoggingPreference;
 
-    public Input<String> getCertificateTransparencyLoggingPreference() {
-        return this.certificateTransparencyLoggingPreference == null ? Input.empty() : this.certificateTransparencyLoggingPreference;
+    public Output<String> getCertificateTransparencyLoggingPreference() {
+        return this.certificateTransparencyLoggingPreference == null ? Output.empty() : this.certificateTransparencyLoggingPreference;
     }
 
-    public CertificateOptionsArgs(@Nullable Input<String> certificateTransparencyLoggingPreference) {
+    public CertificateOptionsArgs(@Nullable Output<String> certificateTransparencyLoggingPreference) {
         this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
     }
 
     private CertificateOptionsArgs() {
-        this.certificateTransparencyLoggingPreference = Input.empty();
+        this.certificateTransparencyLoggingPreference = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CertificateOptionsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateTransparencyLoggingPreference;
+        private @Nullable Output<String> certificateTransparencyLoggingPreference;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CertificateOptionsArgs extends io.pulumi.resources.ResourceAr
     	      this.certificateTransparencyLoggingPreference = defaults.certificateTransparencyLoggingPreference;
         }
 
-        public Builder certificateTransparencyLoggingPreference(@Nullable Input<String> certificateTransparencyLoggingPreference) {
+        public Builder certificateTransparencyLoggingPreference(@Nullable Output<String> certificateTransparencyLoggingPreference) {
             this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
             return this;
         }
 
         public Builder certificateTransparencyLoggingPreference(@Nullable String certificateTransparencyLoggingPreference) {
-            this.certificateTransparencyLoggingPreference = Input.ofNullable(certificateTransparencyLoggingPreference);
+            this.certificateTransparencyLoggingPreference = Output.ofNullable(certificateTransparencyLoggingPreference);
             return this;
         }
         public CertificateOptionsArgs build() {

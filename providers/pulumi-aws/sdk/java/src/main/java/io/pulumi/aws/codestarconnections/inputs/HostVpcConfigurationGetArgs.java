@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codestarconnections.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -31,9 +31,9 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
@@ -42,10 +42,10 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tlsCertificate")
-      private final @Nullable Input<String> tlsCertificate;
+      private final @Nullable Output<String> tlsCertificate;
 
-    public Input<String> getTlsCertificate() {
-        return this.tlsCertificate == null ? Input.empty() : this.tlsCertificate;
+    public Output<String> getTlsCertificate() {
+        return this.tlsCertificate == null ? Output.empty() : this.tlsCertificate;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public HostVpcConfigurationGetArgs(
-        Input<List<String>> securityGroupIds,
-        Input<List<String>> subnetIds,
-        @Nullable Input<String> tlsCertificate,
-        Input<String> vpcId) {
+        Output<List<String>> securityGroupIds,
+        Output<List<String>> subnetIds,
+        @Nullable Output<String> tlsCertificate,
+        Output<String> vpcId) {
         this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
         this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
         this.tlsCertificate = tlsCertificate;
@@ -71,10 +71,10 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
     }
 
     private HostVpcConfigurationGetArgs() {
-        this.securityGroupIds = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tlsCertificate = Input.empty();
-        this.vpcId = Input.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tlsCertificate = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<String>> securityGroupIds;
-        private Input<List<String>> subnetIds;
-        private @Nullable Input<String> tlsCertificate;
-        private Input<String> vpcId;
+        private Output<List<String>> securityGroupIds;
+        private Output<List<String>> subnetIds;
+        private @Nullable Output<String> tlsCertificate;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder tlsCertificate(@Nullable Input<String> tlsCertificate) {
+        public Builder tlsCertificate(@Nullable Output<String> tlsCertificate) {
             this.tlsCertificate = tlsCertificate;
             return this;
         }
 
         public Builder tlsCertificate(@Nullable String tlsCertificate) {
-            this.tlsCertificate = Input.ofNullable(tlsCertificate);
+            this.tlsCertificate = Output.ofNullable(tlsCertificate);
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public HostVpcConfigurationGetArgs build() {

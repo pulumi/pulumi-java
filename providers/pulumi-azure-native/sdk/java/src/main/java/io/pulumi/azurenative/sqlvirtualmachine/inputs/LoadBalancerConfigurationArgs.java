@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.PrivateIPAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loadBalancerResourceId")
-      private final @Nullable Input<String> loadBalancerResourceId;
+      private final @Nullable Output<String> loadBalancerResourceId;
 
-    public Input<String> getLoadBalancerResourceId() {
-        return this.loadBalancerResourceId == null ? Input.empty() : this.loadBalancerResourceId;
+    public Output<String> getLoadBalancerResourceId() {
+        return this.loadBalancerResourceId == null ? Output.empty() : this.loadBalancerResourceId;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateIpAddress")
-      private final @Nullable Input<PrivateIPAddressArgs> privateIpAddress;
+      private final @Nullable Output<PrivateIPAddressArgs> privateIpAddress;
 
-    public Input<PrivateIPAddressArgs> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
+    public Output<PrivateIPAddressArgs> getPrivateIpAddress() {
+        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="probePort")
-      private final @Nullable Input<Integer> probePort;
+      private final @Nullable Output<Integer> probePort;
 
-    public Input<Integer> getProbePort() {
-        return this.probePort == null ? Input.empty() : this.probePort;
+    public Output<Integer> getProbePort() {
+        return this.probePort == null ? Output.empty() : this.probePort;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="publicIpAddressResourceId")
-      private final @Nullable Input<String> publicIpAddressResourceId;
+      private final @Nullable Output<String> publicIpAddressResourceId;
 
-    public Input<String> getPublicIpAddressResourceId() {
-        return this.publicIpAddressResourceId == null ? Input.empty() : this.publicIpAddressResourceId;
+    public Output<String> getPublicIpAddressResourceId() {
+        return this.publicIpAddressResourceId == null ? Output.empty() : this.publicIpAddressResourceId;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sqlVirtualMachineInstances")
-      private final @Nullable Input<List<String>> sqlVirtualMachineInstances;
+      private final @Nullable Output<List<String>> sqlVirtualMachineInstances;
 
-    public Input<List<String>> getSqlVirtualMachineInstances() {
-        return this.sqlVirtualMachineInstances == null ? Input.empty() : this.sqlVirtualMachineInstances;
+    public Output<List<String>> getSqlVirtualMachineInstances() {
+        return this.sqlVirtualMachineInstances == null ? Output.empty() : this.sqlVirtualMachineInstances;
     }
 
     public LoadBalancerConfigurationArgs(
-        @Nullable Input<String> loadBalancerResourceId,
-        @Nullable Input<PrivateIPAddressArgs> privateIpAddress,
-        @Nullable Input<Integer> probePort,
-        @Nullable Input<String> publicIpAddressResourceId,
-        @Nullable Input<List<String>> sqlVirtualMachineInstances) {
+        @Nullable Output<String> loadBalancerResourceId,
+        @Nullable Output<PrivateIPAddressArgs> privateIpAddress,
+        @Nullable Output<Integer> probePort,
+        @Nullable Output<String> publicIpAddressResourceId,
+        @Nullable Output<List<String>> sqlVirtualMachineInstances) {
         this.loadBalancerResourceId = loadBalancerResourceId;
         this.privateIpAddress = privateIpAddress;
         this.probePort = probePort;
@@ -90,11 +90,11 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private LoadBalancerConfigurationArgs() {
-        this.loadBalancerResourceId = Input.empty();
-        this.privateIpAddress = Input.empty();
-        this.probePort = Input.empty();
-        this.publicIpAddressResourceId = Input.empty();
-        this.sqlVirtualMachineInstances = Input.empty();
+        this.loadBalancerResourceId = Output.empty();
+        this.privateIpAddress = Output.empty();
+        this.probePort = Output.empty();
+        this.publicIpAddressResourceId = Output.empty();
+        this.sqlVirtualMachineInstances = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> loadBalancerResourceId;
-        private @Nullable Input<PrivateIPAddressArgs> privateIpAddress;
-        private @Nullable Input<Integer> probePort;
-        private @Nullable Input<String> publicIpAddressResourceId;
-        private @Nullable Input<List<String>> sqlVirtualMachineInstances;
+        private @Nullable Output<String> loadBalancerResourceId;
+        private @Nullable Output<PrivateIPAddressArgs> privateIpAddress;
+        private @Nullable Output<Integer> probePort;
+        private @Nullable Output<String> publicIpAddressResourceId;
+        private @Nullable Output<List<String>> sqlVirtualMachineInstances;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     	      this.sqlVirtualMachineInstances = defaults.sqlVirtualMachineInstances;
         }
 
-        public Builder loadBalancerResourceId(@Nullable Input<String> loadBalancerResourceId) {
+        public Builder loadBalancerResourceId(@Nullable Output<String> loadBalancerResourceId) {
             this.loadBalancerResourceId = loadBalancerResourceId;
             return this;
         }
 
         public Builder loadBalancerResourceId(@Nullable String loadBalancerResourceId) {
-            this.loadBalancerResourceId = Input.ofNullable(loadBalancerResourceId);
+            this.loadBalancerResourceId = Output.ofNullable(loadBalancerResourceId);
             return this;
         }
 
-        public Builder privateIpAddress(@Nullable Input<PrivateIPAddressArgs> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Output<PrivateIPAddressArgs> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         public Builder privateIpAddress(@Nullable PrivateIPAddressArgs privateIpAddress) {
-            this.privateIpAddress = Input.ofNullable(privateIpAddress);
+            this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder probePort(@Nullable Input<Integer> probePort) {
+        public Builder probePort(@Nullable Output<Integer> probePort) {
             this.probePort = probePort;
             return this;
         }
 
         public Builder probePort(@Nullable Integer probePort) {
-            this.probePort = Input.ofNullable(probePort);
+            this.probePort = Output.ofNullable(probePort);
             return this;
         }
 
-        public Builder publicIpAddressResourceId(@Nullable Input<String> publicIpAddressResourceId) {
+        public Builder publicIpAddressResourceId(@Nullable Output<String> publicIpAddressResourceId) {
             this.publicIpAddressResourceId = publicIpAddressResourceId;
             return this;
         }
 
         public Builder publicIpAddressResourceId(@Nullable String publicIpAddressResourceId) {
-            this.publicIpAddressResourceId = Input.ofNullable(publicIpAddressResourceId);
+            this.publicIpAddressResourceId = Output.ofNullable(publicIpAddressResourceId);
             return this;
         }
 
-        public Builder sqlVirtualMachineInstances(@Nullable Input<List<String>> sqlVirtualMachineInstances) {
+        public Builder sqlVirtualMachineInstances(@Nullable Output<List<String>> sqlVirtualMachineInstances) {
             this.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
             return this;
         }
 
         public Builder sqlVirtualMachineInstances(@Nullable List<String> sqlVirtualMachineInstances) {
-            this.sqlVirtualMachineInstances = Input.ofNullable(sqlVirtualMachineInstances);
+            this.sqlVirtualMachineInstances = Output.ofNullable(sqlVirtualMachineInstances);
             return this;
         }
         public LoadBalancerConfigurationArgs build() {

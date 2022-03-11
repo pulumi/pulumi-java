@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.DestinationArgs;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.SourceArgs;
@@ -25,10 +25,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinations")
-      private final @Nullable Input<List<DestinationArgs>> destinations;
+      private final @Nullable Output<List<DestinationArgs>> destinations;
 
-    public Input<List<DestinationArgs>> getDestinations() {
-        return this.destinations == null ? Input.empty() : this.destinations;
+    public Output<List<DestinationArgs>> getDestinations() {
+        return this.destinations == null ? Output.empty() : this.destinations;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources")
-      private final @Nullable Input<List<SourceArgs>> sources;
+      private final @Nullable Output<List<SourceArgs>> sources;
 
-    public Input<List<SourceArgs>> getSources() {
-        return this.sources == null ? Input.empty() : this.sources;
+    public Output<List<SourceArgs>> getSources() {
+        return this.sources == null ? Output.empty() : this.sources;
     }
 
     public RuleArgs(
-        @Nullable Input<List<DestinationArgs>> destinations,
-        @Nullable Input<List<SourceArgs>> sources) {
+        @Nullable Output<List<DestinationArgs>> destinations,
+        @Nullable Output<List<SourceArgs>> sources) {
         this.destinations = destinations;
         this.sources = sources;
     }
 
     private RuleArgs() {
-        this.destinations = Input.empty();
-        this.sources = Input.empty();
+        this.destinations = Output.empty();
+        this.sources = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DestinationArgs>> destinations;
-        private @Nullable Input<List<SourceArgs>> sources;
+        private @Nullable Output<List<DestinationArgs>> destinations;
+        private @Nullable Output<List<SourceArgs>> sources;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sources = defaults.sources;
         }
 
-        public Builder destinations(@Nullable Input<List<DestinationArgs>> destinations) {
+        public Builder destinations(@Nullable Output<List<DestinationArgs>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
         public Builder destinations(@Nullable List<DestinationArgs> destinations) {
-            this.destinations = Input.ofNullable(destinations);
+            this.destinations = Output.ofNullable(destinations);
             return this;
         }
 
-        public Builder sources(@Nullable Input<List<SourceArgs>> sources) {
+        public Builder sources(@Nullable Output<List<SourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
         public Builder sources(@Nullable List<SourceArgs> sources) {
-            this.sources = Input.ofNullable(sources);
+            this.sources = Output.ofNullable(sources);
             return this;
         }
         public RuleArgs build() {

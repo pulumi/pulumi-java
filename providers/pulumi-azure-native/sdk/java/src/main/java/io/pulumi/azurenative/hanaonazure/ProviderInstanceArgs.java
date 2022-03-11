@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<String> metadata;
+      private final @Nullable Output<String> metadata;
 
-    public Input<String> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<String> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<String> properties;
+      private final @Nullable Output<String> properties;
 
-    public Input<String> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<String> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="providerInstanceName")
-      private final @Nullable Input<String> providerInstanceName;
+      private final @Nullable Output<String> providerInstanceName;
 
-    public Input<String> getProviderInstanceName() {
-        return this.providerInstanceName == null ? Input.empty() : this.providerInstanceName;
+    public Output<String> getProviderInstanceName() {
+        return this.providerInstanceName == null ? Output.empty() : this.providerInstanceName;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -63,9 +63,9 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sapMonitorName", required=true)
-      private final Input<String> sapMonitorName;
+      private final Output<String> sapMonitorName;
 
-    public Input<String> getSapMonitorName() {
+    public Output<String> getSapMonitorName() {
         return this.sapMonitorName;
     }
 
@@ -74,19 +74,19 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ProviderInstanceArgs(
-        @Nullable Input<String> metadata,
-        @Nullable Input<String> properties,
-        @Nullable Input<String> providerInstanceName,
-        Input<String> resourceGroupName,
-        Input<String> sapMonitorName,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> metadata,
+        @Nullable Output<String> properties,
+        @Nullable Output<String> providerInstanceName,
+        Output<String> resourceGroupName,
+        Output<String> sapMonitorName,
+        @Nullable Output<String> type) {
         this.metadata = metadata;
         this.properties = properties;
         this.providerInstanceName = providerInstanceName;
@@ -96,12 +96,12 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ProviderInstanceArgs() {
-        this.metadata = Input.empty();
-        this.properties = Input.empty();
-        this.providerInstanceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sapMonitorName = Input.empty();
-        this.type = Input.empty();
+        this.metadata = Output.empty();
+        this.properties = Output.empty();
+        this.providerInstanceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sapMonitorName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> metadata;
-        private @Nullable Input<String> properties;
-        private @Nullable Input<String> providerInstanceName;
-        private Input<String> resourceGroupName;
-        private Input<String> sapMonitorName;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> metadata;
+        private @Nullable Output<String> properties;
+        private @Nullable Output<String> providerInstanceName;
+        private Output<String> resourceGroupName;
+        private Output<String> sapMonitorName;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder metadata(@Nullable Input<String> metadata) {
+        public Builder metadata(@Nullable Output<String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable String metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder properties(@Nullable Input<String> properties) {
+        public Builder properties(@Nullable Output<String> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable String properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder providerInstanceName(@Nullable Input<String> providerInstanceName) {
+        public Builder providerInstanceName(@Nullable Output<String> providerInstanceName) {
             this.providerInstanceName = providerInstanceName;
             return this;
         }
 
         public Builder providerInstanceName(@Nullable String providerInstanceName) {
-            this.providerInstanceName = Input.ofNullable(providerInstanceName);
+            this.providerInstanceName = Output.ofNullable(providerInstanceName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sapMonitorName(Input<String> sapMonitorName) {
+        public Builder sapMonitorName(Output<String> sapMonitorName) {
             this.sapMonitorName = Objects.requireNonNull(sapMonitorName);
             return this;
         }
 
         public Builder sapMonitorName(String sapMonitorName) {
-            this.sapMonitorName = Input.of(Objects.requireNonNull(sapMonitorName));
+            this.sapMonitorName = Output.of(Objects.requireNonNull(sapMonitorName));
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ProviderInstanceArgs build() {

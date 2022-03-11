@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<DetectorModelActionArgs>> actions;
+      private final @Nullable Output<List<DetectorModelActionArgs>> actions;
 
-    public Input<List<DetectorModelActionArgs>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<DetectorModelActionArgs>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<String> condition;
+      private final @Nullable Output<String> condition;
 
-    public Input<String> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<String> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventName", required=true)
-      private final Input<String> eventName;
+      private final Output<String> eventName;
 
-    public Input<String> getEventName() {
+    public Output<String> getEventName() {
         return this.eventName;
     }
 
     public DetectorModelEventArgs(
-        @Nullable Input<List<DetectorModelActionArgs>> actions,
-        @Nullable Input<String> condition,
-        Input<String> eventName) {
+        @Nullable Output<List<DetectorModelActionArgs>> actions,
+        @Nullable Output<String> condition,
+        Output<String> eventName) {
         this.actions = actions;
         this.condition = condition;
         this.eventName = Objects.requireNonNull(eventName, "expected parameter 'eventName' to be non-null");
     }
 
     private DetectorModelEventArgs() {
-        this.actions = Input.empty();
-        this.condition = Input.empty();
-        this.eventName = Input.empty();
+        this.actions = Output.empty();
+        this.condition = Output.empty();
+        this.eventName = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DetectorModelActionArgs>> actions;
-        private @Nullable Input<String> condition;
-        private Input<String> eventName;
+        private @Nullable Output<List<DetectorModelActionArgs>> actions;
+        private @Nullable Output<String> condition;
+        private Output<String> eventName;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class DetectorModelEventArgs extends io.pulumi.resources.ResourceAr
     	      this.eventName = defaults.eventName;
         }
 
-        public Builder actions(@Nullable Input<List<DetectorModelActionArgs>> actions) {
+        public Builder actions(@Nullable Output<List<DetectorModelActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<DetectorModelActionArgs> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder condition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Output<String> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable String condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder eventName(Input<String> eventName) {
+        public Builder eventName(Output<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
         public Builder eventName(String eventName) {
-            this.eventName = Input.of(Objects.requireNonNull(eventName));
+            this.eventName = Output.of(Objects.requireNonNull(eventName));
             return this;
         }
         public DetectorModelEventArgs build() {

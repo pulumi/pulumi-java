@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deidentifyConfig", required=true)
-      private final Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
+      private final Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
 
-    public Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> getDeidentifyConfig() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> getDeidentifyConfig() {
         return this.deidentifyConfig;
     }
 
@@ -32,10 +32,10 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
     public PreventionDeidentifyTemplateArgs(
-        Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> parent) {
+        Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> parent) {
         this.deidentifyConfig = Objects.requireNonNull(deidentifyConfig, "expected parameter 'deidentifyConfig' to be non-null");
         this.description = description;
         this.displayName = displayName;
@@ -76,10 +76,10 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
     }
 
     private PreventionDeidentifyTemplateArgs() {
-        this.deidentifyConfig = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.parent = Input.empty();
+        this.deidentifyConfig = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.parent = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> parent;
+        private Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> parent;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
     	      this.parent = defaults.parent;
         }
 
-        public Builder deidentifyConfig(Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig) {
+        public Builder deidentifyConfig(Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig) {
             this.deidentifyConfig = Objects.requireNonNull(deidentifyConfig);
             return this;
         }
 
         public Builder deidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigArgs deidentifyConfig) {
-            this.deidentifyConfig = Input.of(Objects.requireNonNull(deidentifyConfig));
+            this.deidentifyConfig = Output.of(Objects.requireNonNull(deidentifyConfig));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
         public PreventionDeidentifyTemplateArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.binaryauthorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class PolicyAdmissionWhitelistPatternArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="namePattern", required=true)
-      private final Input<String> namePattern;
+      private final Output<String> namePattern;
 
-    public Input<String> getNamePattern() {
+    public Output<String> getNamePattern() {
         return this.namePattern;
     }
 
-    public PolicyAdmissionWhitelistPatternArgs(Input<String> namePattern) {
+    public PolicyAdmissionWhitelistPatternArgs(Output<String> namePattern) {
         this.namePattern = Objects.requireNonNull(namePattern, "expected parameter 'namePattern' to be non-null");
     }
 
     private PolicyAdmissionWhitelistPatternArgs() {
-        this.namePattern = Input.empty();
+        this.namePattern = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class PolicyAdmissionWhitelistPatternArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> namePattern;
+        private Output<String> namePattern;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class PolicyAdmissionWhitelistPatternArgs extends io.pulumi.resourc
     	      this.namePattern = defaults.namePattern;
         }
 
-        public Builder namePattern(Input<String> namePattern) {
+        public Builder namePattern(Output<String> namePattern) {
             this.namePattern = Objects.requireNonNull(namePattern);
             return this;
         }
 
         public Builder namePattern(String namePattern) {
-            this.namePattern = Input.of(Objects.requireNonNull(namePattern));
+            this.namePattern = Output.of(Objects.requireNonNull(namePattern));
             return this;
         }
         public PolicyAdmissionWhitelistPatternArgs build() {

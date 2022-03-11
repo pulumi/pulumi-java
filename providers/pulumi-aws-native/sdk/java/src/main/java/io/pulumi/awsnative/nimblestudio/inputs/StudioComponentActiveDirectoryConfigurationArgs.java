@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentActiveDirectoryComputerAttributeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="computerAttributes")
-      private final @Nullable Input<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes;
+      private final @Nullable Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes;
 
-    public Input<List<StudioComponentActiveDirectoryComputerAttributeArgs>> getComputerAttributes() {
-        return this.computerAttributes == null ? Input.empty() : this.computerAttributes;
+    public Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> getComputerAttributes() {
+        return this.computerAttributes == null ? Output.empty() : this.computerAttributes;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="directoryId")
-      private final @Nullable Input<String> directoryId;
+      private final @Nullable Output<String> directoryId;
 
-    public Input<String> getDirectoryId() {
-        return this.directoryId == null ? Input.empty() : this.directoryId;
+    public Output<String> getDirectoryId() {
+        return this.directoryId == null ? Output.empty() : this.directoryId;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="organizationalUnitDistinguishedName")
-      private final @Nullable Input<String> organizationalUnitDistinguishedName;
+      private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
-    public Input<String> getOrganizationalUnitDistinguishedName() {
-        return this.organizationalUnitDistinguishedName == null ? Input.empty() : this.organizationalUnitDistinguishedName;
+    public Output<String> getOrganizationalUnitDistinguishedName() {
+        return this.organizationalUnitDistinguishedName == null ? Output.empty() : this.organizationalUnitDistinguishedName;
     }
 
     public StudioComponentActiveDirectoryConfigurationArgs(
-        @Nullable Input<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes,
-        @Nullable Input<String> directoryId,
-        @Nullable Input<String> organizationalUnitDistinguishedName) {
+        @Nullable Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes,
+        @Nullable Output<String> directoryId,
+        @Nullable Output<String> organizationalUnitDistinguishedName) {
         this.computerAttributes = computerAttributes;
         this.directoryId = directoryId;
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
     }
 
     private StudioComponentActiveDirectoryConfigurationArgs() {
-        this.computerAttributes = Input.empty();
-        this.directoryId = Input.empty();
-        this.organizationalUnitDistinguishedName = Input.empty();
+        this.computerAttributes = Output.empty();
+        this.directoryId = Output.empty();
+        this.organizationalUnitDistinguishedName = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes;
-        private @Nullable Input<String> directoryId;
-        private @Nullable Input<String> organizationalUnitDistinguishedName;
+        private @Nullable Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes;
+        private @Nullable Output<String> directoryId;
+        private @Nullable Output<String> organizationalUnitDistinguishedName;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
     	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
         }
 
-        public Builder computerAttributes(@Nullable Input<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes) {
+        public Builder computerAttributes(@Nullable Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes) {
             this.computerAttributes = computerAttributes;
             return this;
         }
 
         public Builder computerAttributes(@Nullable List<StudioComponentActiveDirectoryComputerAttributeArgs> computerAttributes) {
-            this.computerAttributes = Input.ofNullable(computerAttributes);
+            this.computerAttributes = Output.ofNullable(computerAttributes);
             return this;
         }
 
-        public Builder directoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Output<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Input.ofNullable(directoryId);
+            this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
 
-        public Builder organizationalUnitDistinguishedName(@Nullable Input<String> organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
 
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = Input.ofNullable(organizationalUnitDistinguishedName);
+            this.organizationalUnitDistinguishedName = Output.ofNullable(organizationalUnitDistinguishedName);
             return this;
         }
         public StudioComponentActiveDirectoryConfigurationArgs build() {

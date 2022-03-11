@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
@@ -29,9 +29,9 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="modelId", required=true)
-      private final Input<String> modelId;
+      private final Output<String> modelId;
 
-    public Input<String> getModelId() {
+    public Output<String> getModelId() {
         return this.modelId;
     }
 
@@ -40,25 +40,25 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="projectId", required=true)
-      private final Input<String> projectId;
+      private final Output<String> projectId;
 
-    public Input<String> getProjectId() {
+    public Output<String> getProjectId() {
         return this.projectId;
     }
 
     public JobExtractSourceModelArgs(
-        Input<String> datasetId,
-        Input<String> modelId,
-        Input<String> projectId) {
+        Output<String> datasetId,
+        Output<String> modelId,
+        Output<String> projectId) {
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.modelId = Objects.requireNonNull(modelId, "expected parameter 'modelId' to be non-null");
         this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
     }
 
     private JobExtractSourceModelArgs() {
-        this.datasetId = Input.empty();
-        this.modelId = Input.empty();
-        this.projectId = Input.empty();
+        this.datasetId = Output.empty();
+        this.modelId = Output.empty();
+        this.projectId = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> datasetId;
-        private Input<String> modelId;
-        private Input<String> projectId;
+        private Output<String> datasetId;
+        private Output<String> modelId;
+        private Output<String> projectId;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder modelId(Input<String> modelId) {
+        public Builder modelId(Output<String> modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
 
         public Builder modelId(String modelId) {
-            this.modelId = Input.of(Objects.requireNonNull(modelId));
+            this.modelId = Output.of(Objects.requireNonNull(modelId));
             return this;
         }
 
-        public Builder projectId(Input<String> projectId) {
+        public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Input.of(Objects.requireNonNull(projectId));
+            this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
         public JobExtractSourceModelArgs build() {

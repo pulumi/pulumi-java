@@ -8,7 +8,6 @@ import io.pulumi.azurenative.documentdb.MongoDBResourceMongoDBCollectionArgs;
 import io.pulumi.azurenative.documentdb.outputs.MongoDBCollectionGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.MongoDBCollectionGetPropertiesResponseResource;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,38 +140,38 @@ public class MongoDBResourceMongoDBCollection extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public MongoDBResourceMongoDBCollection(String name, MongoDBResourceMongoDBCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:MongoDBResourceMongoDBCollection", name, args == null ? MongoDBResourceMongoDBCollectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:documentdb:MongoDBResourceMongoDBCollection", name, args == null ? MongoDBResourceMongoDBCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MongoDBResourceMongoDBCollection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MongoDBResourceMongoDBCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:MongoDBResourceMongoDBCollection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20150401:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20150408:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20151106:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20160319:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20160331:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20190801:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20191212:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200301:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200401:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200901:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210115:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210315:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210415:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210515:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210615:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015:MongoDBResourceMongoDBCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:MongoDBResourceMongoDBCollection").build())
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20150401:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20150408:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20151106:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20160319:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20160331:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:MongoDBResourceMongoDBCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:MongoDBResourceMongoDBCollection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -186,7 +185,7 @@ public class MongoDBResourceMongoDBCollection extends io.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MongoDBResourceMongoDBCollection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MongoDBResourceMongoDBCollection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MongoDBResourceMongoDBCollection(name, id, options);
     }
 }

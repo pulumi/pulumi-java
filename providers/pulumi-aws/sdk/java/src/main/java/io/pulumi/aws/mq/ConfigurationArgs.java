@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationStrategy")
-      private final @Nullable Input<String> authenticationStrategy;
+      private final @Nullable Output<String> authenticationStrategy;
 
-    public Input<String> getAuthenticationStrategy() {
-        return this.authenticationStrategy == null ? Input.empty() : this.authenticationStrategy;
+    public Output<String> getAuthenticationStrategy() {
+        return this.authenticationStrategy == null ? Output.empty() : this.authenticationStrategy;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data", required=true)
-      private final Input<String> data;
+      private final Output<String> data;
 
-    public Input<String> getData() {
+    public Output<String> getData() {
         return this.data;
     }
 
@@ -42,10 +42,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineType", required=true)
-      private final Input<String> engineType;
+      private final Output<String> engineType;
 
-    public Input<String> getEngineType() {
+    public Output<String> getEngineType() {
         return this.engineType;
     }
 
@@ -64,9 +64,9 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion", required=true)
-      private final Input<String> engineVersion;
+      private final Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
+    public Output<String> getEngineVersion() {
         return this.engineVersion;
     }
 
@@ -75,10 +75,10 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ConfigurationArgs(
-        @Nullable Input<String> authenticationStrategy,
-        Input<String> data,
-        @Nullable Input<String> description,
-        Input<String> engineType,
-        Input<String> engineVersion,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> authenticationStrategy,
+        Output<String> data,
+        @Nullable Output<String> description,
+        Output<String> engineType,
+        Output<String> engineVersion,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.authenticationStrategy = authenticationStrategy;
         this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
         this.description = description;
@@ -110,13 +110,13 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigurationArgs() {
-        this.authenticationStrategy = Input.empty();
-        this.data = Input.empty();
-        this.description = Input.empty();
-        this.engineType = Input.empty();
-        this.engineVersion = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.authenticationStrategy = Output.empty();
+        this.data = Output.empty();
+        this.description = Output.empty();
+        this.engineType = Output.empty();
+        this.engineVersion = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authenticationStrategy;
-        private Input<String> data;
-        private @Nullable Input<String> description;
-        private Input<String> engineType;
-        private Input<String> engineVersion;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> authenticationStrategy;
+        private Output<String> data;
+        private @Nullable Output<String> description;
+        private Output<String> engineType;
+        private Output<String> engineVersion;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder authenticationStrategy(@Nullable Input<String> authenticationStrategy) {
+        public Builder authenticationStrategy(@Nullable Output<String> authenticationStrategy) {
             this.authenticationStrategy = authenticationStrategy;
             return this;
         }
 
         public Builder authenticationStrategy(@Nullable String authenticationStrategy) {
-            this.authenticationStrategy = Input.ofNullable(authenticationStrategy);
+            this.authenticationStrategy = Output.ofNullable(authenticationStrategy);
             return this;
         }
 
-        public Builder data(Input<String> data) {
+        public Builder data(Output<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
         public Builder data(String data) {
-            this.data = Input.of(Objects.requireNonNull(data));
+            this.data = Output.of(Objects.requireNonNull(data));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder engineType(Input<String> engineType) {
+        public Builder engineType(Output<String> engineType) {
             this.engineType = Objects.requireNonNull(engineType);
             return this;
         }
 
         public Builder engineType(String engineType) {
-            this.engineType = Input.of(Objects.requireNonNull(engineType));
+            this.engineType = Output.of(Objects.requireNonNull(engineType));
             return this;
         }
 
-        public Builder engineVersion(Input<String> engineVersion) {
+        public Builder engineVersion(Output<String> engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
 
         public Builder engineVersion(String engineVersion) {
-            this.engineVersion = Input.of(Objects.requireNonNull(engineVersion));
+            this.engineVersion = Output.of(Objects.requireNonNull(engineVersion));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ConfigurationArgs build() {

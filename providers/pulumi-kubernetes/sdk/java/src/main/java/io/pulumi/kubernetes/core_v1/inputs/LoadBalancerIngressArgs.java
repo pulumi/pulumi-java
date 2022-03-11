@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PortStatusArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hostname")
-      private final @Nullable Input<String> hostname;
+      private final @Nullable Output<String> hostname;
 
-    public Input<String> getHostname() {
-        return this.hostname == null ? Input.empty() : this.hostname;
+    public Output<String> getHostname() {
+        return this.hostname == null ? Output.empty() : this.hostname;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ip")
-      private final @Nullable Input<String> ip;
+      private final @Nullable Output<String> ip;
 
-    public Input<String> getIp() {
-        return this.ip == null ? Input.empty() : this.ip;
+    public Output<String> getIp() {
+        return this.ip == null ? Output.empty() : this.ip;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<PortStatusArgs>> ports;
+      private final @Nullable Output<List<PortStatusArgs>> ports;
 
-    public Input<List<PortStatusArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<PortStatusArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     public LoadBalancerIngressArgs(
-        @Nullable Input<String> hostname,
-        @Nullable Input<String> ip,
-        @Nullable Input<List<PortStatusArgs>> ports) {
+        @Nullable Output<String> hostname,
+        @Nullable Output<String> ip,
+        @Nullable Output<List<PortStatusArgs>> ports) {
         this.hostname = hostname;
         this.ip = ip;
         this.ports = ports;
     }
 
     private LoadBalancerIngressArgs() {
-        this.hostname = Input.empty();
-        this.ip = Input.empty();
-        this.ports = Input.empty();
+        this.hostname = Output.empty();
+        this.ip = Output.empty();
+        this.ports = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostname;
-        private @Nullable Input<String> ip;
-        private @Nullable Input<List<PortStatusArgs>> ports;
+        private @Nullable Output<String> hostname;
+        private @Nullable Output<String> ip;
+        private @Nullable Output<List<PortStatusArgs>> ports;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
     	      this.ports = defaults.ports;
         }
 
-        public Builder hostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Input.ofNullable(hostname);
+            this.hostname = Output.ofNullable(hostname);
             return this;
         }
 
-        public Builder ip(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Output<String> ip) {
             this.ip = ip;
             return this;
         }
 
         public Builder ip(@Nullable String ip) {
-            this.ip = Input.ofNullable(ip);
+            this.ip = Output.ofNullable(ip);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<PortStatusArgs>> ports) {
+        public Builder ports(@Nullable Output<List<PortStatusArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<PortStatusArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
         public LoadBalancerIngressArgs build() {

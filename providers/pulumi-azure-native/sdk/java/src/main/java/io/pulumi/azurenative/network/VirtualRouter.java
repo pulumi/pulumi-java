@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.VirtualRouterArgs;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -227,32 +226,32 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualRouter(String name, VirtualRouterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualRouter", name, args == null ? VirtualRouterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:VirtualRouter", name, args == null ? VirtualRouterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualRouter(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualRouter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VirtualRouter", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:VirtualRouter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:VirtualRouter").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:VirtualRouter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:VirtualRouter").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -266,7 +265,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualRouter get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualRouter get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualRouter(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.RequestUriMatchConditionParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class DeliveryRuleRequestUriConditionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class DeliveryRuleRequestUriConditionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters", required=true)
-      private final Input<RequestUriMatchConditionParametersArgs> parameters;
+      private final Output<RequestUriMatchConditionParametersArgs> parameters;
 
-    public Input<RequestUriMatchConditionParametersArgs> getParameters() {
+    public Output<RequestUriMatchConditionParametersArgs> getParameters() {
         return this.parameters;
     }
 
     public DeliveryRuleRequestUriConditionArgs(
-        Input<String> name,
-        Input<RequestUriMatchConditionParametersArgs> parameters) {
+        Output<String> name,
+        Output<RequestUriMatchConditionParametersArgs> parameters) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
     }
 
     private DeliveryRuleRequestUriConditionArgs() {
-        this.name = Input.empty();
-        this.parameters = Input.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DeliveryRuleRequestUriConditionArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<RequestUriMatchConditionParametersArgs> parameters;
+        private Output<String> name;
+        private Output<RequestUriMatchConditionParametersArgs> parameters;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DeliveryRuleRequestUriConditionArgs extends io.pulumi.resourc
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(Input<RequestUriMatchConditionParametersArgs> parameters) {
+        public Builder parameters(Output<RequestUriMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
         public Builder parameters(RequestUriMatchConditionParametersArgs parameters) {
-            this.parameters = Input.of(Objects.requireNonNull(parameters));
+            this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
         public DeliveryRuleRequestUriConditionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssoadmin;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-      private final Input<String> instanceArn;
+      private final Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
+    public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
 
@@ -42,10 +42,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relayState")
-      private final @Nullable Input<String> relayState;
+      private final @Nullable Output<String> relayState;
 
-    public Input<String> getRelayState() {
-        return this.relayState == null ? Input.empty() : this.relayState;
+    public Output<String> getRelayState() {
+        return this.relayState == null ? Output.empty() : this.relayState;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionDuration")
-      private final @Nullable Input<String> sessionDuration;
+      private final @Nullable Output<String> sessionDuration;
 
-    public Input<String> getSessionDuration() {
-        return this.sessionDuration == null ? Input.empty() : this.sessionDuration;
+    public Output<String> getSessionDuration() {
+        return this.sessionDuration == null ? Output.empty() : this.sessionDuration;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PermissionSetArgs(
-        @Nullable Input<String> description,
-        Input<String> instanceArn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> relayState,
-        @Nullable Input<String> sessionDuration,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        Output<String> instanceArn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> relayState,
+        @Nullable Output<String> sessionDuration,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
         this.name = name;
@@ -97,12 +97,12 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionSetArgs() {
-        this.description = Input.empty();
-        this.instanceArn = Input.empty();
-        this.name = Input.empty();
-        this.relayState = Input.empty();
-        this.sessionDuration = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.instanceArn = Output.empty();
+        this.name = Output.empty();
+        this.relayState = Output.empty();
+        this.sessionDuration = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> instanceArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> relayState;
-        private @Nullable Input<String> sessionDuration;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private Output<String> instanceArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> relayState;
+        private @Nullable Output<String> sessionDuration;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder instanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
+            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder relayState(@Nullable Input<String> relayState) {
+        public Builder relayState(@Nullable Output<String> relayState) {
             this.relayState = relayState;
             return this;
         }
 
         public Builder relayState(@Nullable String relayState) {
-            this.relayState = Input.ofNullable(relayState);
+            this.relayState = Output.ofNullable(relayState);
             return this;
         }
 
-        public Builder sessionDuration(@Nullable Input<String> sessionDuration) {
+        public Builder sessionDuration(@Nullable Output<String> sessionDuration) {
             this.sessionDuration = sessionDuration;
             return this;
         }
 
         public Builder sessionDuration(@Nullable String sessionDuration) {
-            this.sessionDuration = Input.ofNullable(sessionDuration);
+            this.sessionDuration = Output.ofNullable(sessionDuration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PermissionSetArgs build() {
